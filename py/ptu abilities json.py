@@ -68,13 +68,13 @@ def formatter_bloc_en_json(bloc):
     return None
 
 # 📦 Pipeline complet
-pdf_path = 'py/1-6G Indices and Reference.pdf'
+pdf_path = 'SuMo References.pdf'
 blocs = extraire_blocs_abilities_colonnes(pdf_path)
 abilities_json = [formatter_bloc_en_json(bloc) for bloc in blocs]
 abilities_json = [a for a in abilities_json if a]  # Supprimer les Nones
 
 # 💾 Sauvegarde en JSON
-with open("abilities_extract.json", "w", encoding="utf-8") as f:
+with open("7_abilities INC sumo.json", "w", encoding="utf-8") as f:
     json.dump(abilities_json, f, indent=2, ensure_ascii=False)
 
 # 🔍 Aperçu

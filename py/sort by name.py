@@ -1,8 +1,8 @@
 import json
 
 # Replace with your JSON filename
-input_file = '1_moves 1-6G.json'
-output_file = '1_moves 1-6G.json'
+input_file = '7_abilities FULL sumo.json'
+output_file = '7_abilities FULL sumo.json'
 
 # Read the JSON data
 with open(input_file, 'r', encoding='utf-8') as f:
