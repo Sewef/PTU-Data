@@ -126,7 +126,7 @@ moves_json = [formatter_move_en_json(bloc) for bloc in blocs_moves]
 moves_json = [m for m in moves_json if m]
 
 # 💾 Sauvegarde
-with open("moves_extraits.json", "w", encoding="utf-8") as f:
+with open("moves_setup.json", "w", encoding="utf-8") as f:
     json.dump(moves_json, f, indent=2, ensure_ascii=False)
 
 # 🔍 Aperçu
