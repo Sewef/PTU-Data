@@ -7,8 +7,7 @@
     {
         "name": "Absorb Force",
         "type": "Scene – Free Action",
-        "effect": "The user takes damage as if the attack was resisted one step further.",
-        "trigger": "The user is damaged by a Physical Attack"
+        "effect": "The user takes damage as if the attack was resisted one step further. Bonus: The user gains 5 Damage Reduction against Physical Attacks"
     },
     {
         "name": "Accelerate",
@@ -80,7 +79,7 @@
     {
         "name": "Aura Break",
         "type": "Scene - Swift Action",
-        "effect": "The foe reveals its abilities. Pick one ability; any Damage Bonuses (either Damage Base increases or Damage Roll bonuses) granted by the ability instead become Damage Penalties of the same value. Feb 2016 Playtest"
+        "effect": "The foe reveals its abilities. Pick one ability; any Damage Bonuses (either Damage Base increases or Damage Roll bonuses) granted by the ability instead become Damage Penalties of the same value."
     },
     {
         "name": "Aura Storm",
@@ -327,9 +326,8 @@
     },
     {
         "name": "Crush Trap",
-        "type": "Scene – Free Action",
-        "effect": "Connection – Wrap. When you activate this ability, the user may immediately deal damage to the target as if the user had hit with a Struggle Attack. There is no Accuracy Roll and thus this damage cannot miss, be a Critical Hit, or trigger any Effect Ranges.",
-        "trigger": "The user successfully Grapples a target"
+        "type": "Static",
+        "effect": "Connection – Wrap. As long as the user has Dominance in a Grapple, they do not become Vulnerable because of that Grapple. If the user begins their turn as part of a Grapple and has Dominance, they may use the actions listed in the Grapple Maneuver as a Swift Action instead of a Full Action."
     },
     {
         "name": "Curious Medicine",
@@ -842,7 +840,7 @@
     {
         "name": "Helper",
         "type": "Static",
-        "effect": "Connection - Helping Hand. Whenever the user uses a Move that targets a single Ally, that Ally gains a +1 Bonus to Accuracy, Evasion and Skill Checks until the end of the user’s next turn."
+        "effect": "Connection - Helping Hand. Whenever the user uses a Move that targets a single ally, that ally gains a +1 Bonus to Accuracy, Evasion, and Skill Checks until the end of the user’s next turn."
     },
     {
         "name": "Honey Paws",
@@ -1058,8 +1056,8 @@
     },
     {
         "name": "Life Force",
-        "type": "Daily x5 – Swift Action",
-        "effect": "The user gains a Tick of Hit Points."
+        "type": "Daily x3 – Swift Action",
+        "effect": "The user gains two Ticks of Hit Points."
     },
     {
         "name": "Light Metal",
@@ -1277,7 +1275,7 @@
     {
         "name": "Mummy",
         "type": "At-Will – Free Action",
-        "effect": "Disable one of the user’s Abilities for the rest of the Scene or until they are switched out. Feb 2016 Playtest",
+        "effect": "Disable one of the user’s Abilities for the rest of the Scene or until they are switched out.",
         "trigger": "The user is hit by a Melee Attack"
     },
     {
@@ -1734,7 +1732,7 @@
     {
         "name": "Serpent’s Mark",
         "type": "Static",
-        "effect": "Arbok’s Advanced and High Abilities depend on the Arbok’s hood pattern. To determine its pattern, roll 1d6 upon evolution or upon generation. If an Arbok is bred, it will have the same pattern as its parent. If both parents are Arboks with different patterns, flip a coin to decide which pattern is inherited. Pattern Name - Adv Ability / High Ability 1) Attack Pattern - Strong Jaw / Guts 2) Crush Pattern - Crush Trap / Frisk 3) Fear Pattern - Unnerve / Regal Challenge 4) Life Pattern – Regenerator / Defy Death 5) Speed Pattern - Run Away / Speed Boost 6) Stealth Pattern - Infiltrator / Ambush Feb 2016 Playtest"
+        "effect": "Arbok’s Advanced and High Abilities depend on the Arbok’s hood pattern. To determine its pattern, roll 1d6 upon evolution or upon generation. If an Arbok is bred, it will have the same pattern as its parent. If both parents are Arboks with different patterns, flip a coin to decide which pattern is inherited. Pattern Name - Adv Ability / High Ability 1) Attack Pattern - Strong Jaw / Guts 2) Crush Pattern - Crush Trap / Frisk 3) Fear Pattern - Unnerve / Regal Challenge 4) Life Pattern – Regenerator / Defy Death 5) Speed Pattern - Run Away / Speed Boost 6) Stealth Pattern - Infiltrator / Ambush"
     },
     {
         "name": "Shackle",
@@ -1862,7 +1860,7 @@
     {
         "name": "Sorcery",
         "type": "Static",
-        "effect": "The user’s Base Special Attack Stat is increased by +5, and by +1 more for every 10 Levels the user has. This Ability cannot be disabled in any way. Feb 2016 Playtest"
+        "effect": "The user’s Base Special Attack Stat is increased by +5, and by +1 more for every 10 Levels the user has. This Ability cannot be disabled in any way."
     },
     {
         "name": "Soul Heart",
