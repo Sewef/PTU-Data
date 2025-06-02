@@ -32,8 +32,10 @@ def formatter_bloc_en_json(bloc):
     frequency_ = None
     trigger = []
     effect = []
+    special = []
     trigger_started = False
     effect_started = False
+    special_started = False
 
     for line in lignes[1:]:
         l = line.strip()
@@ -42,16 +44,22 @@ def formatter_bloc_en_json(bloc):
 
         if l.lower().startswith("trigger:"):
             trigger_started = True
-            effect_started = False
+            effect_started = special_started = False
             trigger.append(l.split(":", 1)[-1].strip())
         elif l.lower().startswith("effect:"):
             effect_started = True
-            trigger_started = False
+            trigger_started = special_started = False
             effect.append(l.split(":", 1)[-1].strip())
+        elif l.lower().startswith("special:"):
+            special_started = True
+            trigger_started = effect_started = False
+            special.append(l.split(":", 1)[-1].strip())
         elif trigger_started:
             trigger.append(l)
         elif effect_started:
             effect.append(l)
+        elif special_started:
+            special.append(l)
         elif not frequency_:
             frequency_ = l
 
@@ -63,18 +71,21 @@ def formatter_bloc_en_json(bloc):
         }
         if trigger:
             entry["trigger"] = " ".join(trigger).strip()
+        if special:
+            entry["special"] = " ".join(special).strip()
         return entry
 
     return None
 
+
 # 📦 Pipeline complet
-pdf_path = 'SuMo References.pdf'
+pdf_path = 'py/SwSh + Armor_Crown References.pdf'
 blocs = extraire_blocs_abilities_colonnes(pdf_path)
 abilities_json = [formatter_bloc_en_json(bloc) for bloc in blocs]
 abilities_json = [a for a in abilities_json if a]  # Supprimer les Nones
 
 # 💾 Sauvegarde en JSON
-with open("7_abilities INC sumo.json", "w", encoding="utf-8") as f:
+with open("8_abilities INC swsh.json", "w", encoding="utf-8") as f:
     json.dump(abilities_json, f, indent=2, ensure_ascii=False)
 
 # 🔍 Aperçu
