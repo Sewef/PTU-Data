@@ -50,9 +50,9 @@ def formatter_bloc_en_json(bloc):
 
     if nom and type_ and effet:
         entry = {
-            "nom": nom,
+            "name": nom,
             "type": type_.strip(),
-            "effet": " ".join(effet).strip()
+            "effect": " ".join(effet).strip()
         }
         if trigger:
             entry["trigger"] = trigger.strip()
