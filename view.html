@@ -22,13 +22,13 @@
 <body>
 
 <h2>JSON Data as Table</h2>
-<button onclick="loadData('abilities')">Load Abilities</button>
-<button onclick="loadData('moves')">Load Moves</button>
+<button onclick="loadData('abilities.json')">Load Abilities</button>
+<button onclick="loadData('moves.json')">Load Moves</button>
 <div id="table-container"></div>
 
 <script>
 function loadData(request) {
-  fetch(request + '.json')
+  fetch(request)
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
