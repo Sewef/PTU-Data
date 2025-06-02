@@ -120,13 +120,13 @@ def formatter_move_en_json(bloc):
     return None
 
 # 🔁 Utilisation
-pdf_path = "py/SwSh + Armor_Crown References.pdf"
+pdf_path = "Arceus References.pdf"
 blocs_moves = extraire_blocs_moves(pdf_path)
 moves_json = [formatter_move_en_json(bloc) for bloc in blocs_moves]
 moves_json = [m for m in moves_json if m]
 
 # 💾 Sauvegarde
-with open("8_moves INC swsh.json", "w", encoding="utf-8") as f:
+with open("9_moves INC arc.json", "w", encoding="utf-8") as f:
     json.dump(moves_json, f, indent=2, ensure_ascii=False)
 
 # 🔍 Aperçu

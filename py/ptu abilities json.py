@@ -79,13 +79,13 @@ def formatter_bloc_en_json(bloc):
 
 
 # 📦 Pipeline complet
-pdf_path = 'py/SwSh + Armor_Crown References.pdf'
+pdf_path = 'Arceus References.pdf'
 blocs = extraire_blocs_abilities_colonnes(pdf_path)
 abilities_json = [formatter_bloc_en_json(bloc) for bloc in blocs]
 abilities_json = [a for a in abilities_json if a]  # Supprimer les Nones
 
 # 💾 Sauvegarde en JSON
-with open("8_abilities INC swsh.json", "w", encoding="utf-8") as f:
+with open("9_abilities INC arc.json", "w", encoding="utf-8") as f:
     json.dump(abilities_json, f, indent=2, ensure_ascii=False)
 
 # 🔍 Aperçu
