@@ -33,8 +33,8 @@ def replace_nodes(original_nodes, new_nodes):
     return result_nodes
 
 # File paths
-json_file_1 = '3_abilities_full copy.json'  # Replace with your first JSON file path
-json_file_2 = '4_abilities feb 2016.json'  # Replace with your second JSON file path
+json_file_1 = 'abilities.json'  # Replace with your first JSON file path
+json_file_2 = '6_abilities INC sumo.json'  # Replace with your second JSON file path
 output_file = 'output.json'  # Replace with desired output file path
 
 # Load JSON data
