@@ -132,7 +132,7 @@
         "name": "Bone Lord",
         "type": "At-Will - Free Action",
         "effect": "Connection – Bonemerang. Once per Scene per Move, the following Moves may be used as if they had the following bonuses: - Bone Club: Bone Club’s target loses 1 Defense and Special Attack CS. - Bonemerang: Has a Range of Line 6 but loses the Double Strike keyword - Bone Rush: Bone Rush automatically ‘hits’ four times (as per the Five Strike keyword). 3",
-        "trigger": "You hit with Bone Club, Bonemerang, or Bone"
+        "trigger": "The user hits with Bone Club, Bonemerang, or Bone Rush"
     },
     {
         "name": "Bone Wielder",
@@ -153,7 +153,7 @@
         "name": "Bully",
         "type": "Scene – Free Action",
         "effect": "The target of the attack is pushed 2 Meters, becomes Tripped, and gains an Injury.",
-        "trigger": "The user hits a target for Super-Effective"
+        "trigger": "The user hits a target for Super-Effective Damage with a Melee Move"
     },
     {
         "name": "Cave Crasher",
@@ -231,7 +231,7 @@
         "name": "Conqueror",
         "type": "Scene – Free Action",
         "effect": "The user’s Attack, Special Attack, and Speed gain +1 Combat Stage.",
-        "trigger": "The user causes a foe to Faint by using a"
+        "trigger": "The user causes a foe to Faint by using a damaging Physical or Special Attack"
     },
     {
         "name": "Copy Master",
@@ -608,12 +608,12 @@
         "name": "Hay Fever",
         "type": "At-Will – Swift Action",
         "effect": "The user creates a Burst 2 or Close Blast 3 of allergenic pollen. All Trainers and Pokémon in the burst that are not Bug, Grass, or Poison Typed lose a Tick of Hit Points. This Ability cannot be activated in Rainy Weather, Sandstorms, or if it is Hailing.",
-        "trigger": "The user uses a Status Move; or the user ends"
+        "trigger": "The user uses a Status Move; or the user ends their turn while Asleep."
     },
     {
         "name": "Healer",
         "type": "Scene – Free Action",
-        "effect": "The target is cured of all Status conditions. 319"
+        "effect": "The target is cured of all Status conditions."
     },
     {
         "name": "Heat Mirage",
@@ -741,7 +741,7 @@
         "name": "Justified",
         "type": "At-Will - Free Action",
         "effect": "The user may raise its Attack by +1 Combat Stage. Bonus: The user always gains a +4 bonus to Skill Checks made to Intercept.",
-        "trigger": "The user is hit by a damaging Dark Type Move or"
+        "trigger": "The user is hit by a damaging Dark Type Move"
     },
     {
         "name": "Kampfgeist",
@@ -808,7 +808,7 @@
         "name": "Lightning Rod",
         "type": "Scene – Free Action",
         "effect": "The Move is turned into a 1-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or Mind Reader. The user’s Special Attack is then raised by +1 Combat Stage. Bonus: The user is immune to the damage and effects of Electric Type attacks. Defensive.",
-        "trigger": "A ranged Electric Type Move is used within 10"
+        "trigger": "A ranged Electric Type Move is used within 10 Meters of the user."
     },
     {
         "name": "Limber",
@@ -851,7 +851,7 @@
         "name": "Magician",
         "type": "Scene – Free Action",
         "effect": "The user takes the target’s Held Item. This Ability may not be triggered if the user is already holding a Held Item.",
-        "trigger": "The user hits a foe with a damaging Single-"
+        "trigger": "The user hits a foe with a damaging Single-Target attack"
     },
     {
         "name": "Magma Armor",
@@ -882,7 +882,7 @@
         "name": "Migraine",
         "type": "Scene x2 - Free Action",
         "effect": "Connection - Confusion. Confusion automatically gives its target the Confusion Affliction and is a Critical Hit.",
-        "trigger": "The user hits with Confusion while at 50% Hit"
+        "trigger": "The user hits with Confusion while at 50% Hit Points or less"
     },
     {
         "name": "Mimitree",
@@ -1014,7 +1014,7 @@
         "name": "Pack Hunt",
         "type": "At-Will – Free Action",
         "effect": "The user may make a Physical Attack with an AC of 5 against the triggering foe. If the attack hits, the foe loses a Tick of Hit Points.",
-        "trigger": "An adjacent foe is damaged by an ally’s Melee"
+        "trigger": "An adjacent foe is damaged by an ally’s Melee Attack"
     },
     {
         "name": "Parental Bond",
@@ -1041,7 +1041,7 @@
         "name": "Pickpocket",
         "type": "Scene – Free Action",
         "effect": "If the opponent has a Held Item and the user does not, the user takes the Held Item the opponent is holding.",
-        "trigger": "The user is hit by an opponent with a Melee"
+        "trigger": "The user is hit by an opponent with a Melee Attack"
     },
     {
         "name": "Pickup",
@@ -1193,7 +1193,7 @@
         "name": "Regenerator",
         "type": "Daily x2 – Free Action",
         "effect": "The user gains Hit Points equal to 1/3rd of its maximum Hit Points. Regenerator may be activated only once per Scene.",
-        "trigger": "The user is recalled into a Poké Ball, or Takes"
+        "trigger": "The user is recalled into a Poké Ball, or Takes a Breather"
     },
     {
         "name": "Rivalry",
@@ -1326,8 +1326,8 @@
     {
         "name": "Skill Link",
         "type": "Scene – Free Action",
-        "effect": "The Triggering Move automatically hits 5 Times. 329",
-        "trigger": "The user hits with a Move with the Five Strike"
+        "effect": "The Triggering Move automatically hits 5 Times.",
+        "trigger": "The user hits with a Move with the Five Strike keyword."
     },
     {
         "name": "Slow Start",
@@ -1408,7 +1408,7 @@
         "name": "Spray Down",
         "type": "Scene x2 – Free Action",
         "effect": "The triggering attack’s target is knocked down to ground level, and loses all Sky or Levitate Speeds for 3 turns. During this time, they may be hit by Ground-Type Moves even if normally immune.",
-        "trigger": "The user hits an airborne target with a ranged"
+        "trigger": "The user hits an airborne target with a ranged 1-target attack"
     },
     {
         "name": "Sprint",
@@ -1467,7 +1467,7 @@
         "name": "Storm Drain",
         "type": "Scene – Free Action",
         "effect": "The Move is turned into a 1-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or Mind Reader. the user’s Special Attack is then raised by +1 Combat Stage. Bonus: The user is immune to the damage and effects of Water Type attacks. Defensive.",
-        "trigger": "A ranged Water Type Move is used within 10"
+        "trigger": "A ranged Water-Type Move is used within 10 Meters of the user."
     },
     {
         "name": "Strange Tempo",
@@ -1541,7 +1541,7 @@
         "name": "Synchronize",
         "type": "Scene – Free Action",
         "effect": "The foe which caused the Status Condition is given the same Status they inflicted.",
-        "trigger": "The user is Paralyzed, Frozen, Burned,"
+        "trigger": "The user is Paralyzed, Frozen, Burned, Poisoned, or put to Sleep."
     },
     {
         "name": "Tangled Feet",
