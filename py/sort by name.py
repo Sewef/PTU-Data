@@ -1,7 +1,7 @@
 import json
 
 # Replace 'input.json' with your JSON filename
-input_file = '5_abilities_full.json'
+input_file = 'moves.json'
 output_file = 'sorted_output.json'
 
 # Load the JSON data
