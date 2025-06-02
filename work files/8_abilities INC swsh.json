@@ -118,17 +118,20 @@
   {
     "name": "Propeller Tail",
     "frequency": "Scene – Swift Action",
-    "effect": "The user may make a Sprint Maneuver as a Free Action. Bonus: The user may not be Intercepted, nor may any Abilities, Moves, or Features be activated to change the user’s target. Any of those existing effects (such as Follow Me) fail."
+    "effect": "The user may make a Sprint Maneuver as a Free Action.",
+        "bonus": " The user may not be Intercepted, nor may any Abilities, Moves, or Features be activated to change the user’s target. Any of those existing effects (such as Follow Me) fail."
   },
   {
     "name": "Punk Rock",
     "frequency": "Static",
-    "effect": "The user gains +2 DB to moves that have the Sonic keyword. Bonus: The user resists moves with the Sonic keyword one step further. Defensive."
+    "effect": "The user gains +2 DB to moves that have the Sonic keyword.",
+        "bonus": " The user resists moves with the Sonic keyword one step further. Defensive."
   },
   {
     "name": "Quick Draw",
     "frequency": "Scene – Free Action, Interrupt",
-    "effect": "The user immediately uses a Move on the triggering foe as a Standard Action Interrupt (this Move must still obey Frequency and Range). If this Move hits, the foe also gains a -2 penalty to their attack roll for the triggering attack, unless the foe cannot Flinch. Bonus: The user cannot be Flinched. Defensive.",
+    "effect": "The user immediately uses a Move on the triggering foe as a Standard Action Interrupt (this Move must still obey Frequency and Range). If this Move hits, the foe also gains a -2 penalty to their attack roll for the triggering attack, unless the foe cannot Flinch.",
+        "bonus": " The user cannot be Flinched. Defensive.",
     "trigger": "A foe uses a Move, and the user has not acted this round"
   },
   {
@@ -145,7 +148,8 @@
   {
     "name": "Screen Cleaner",
     "frequency": "Daily – Standard Action",
-    "effect": "All Blessings on the field, both ally and enemy, are removed. Bonus: The user is immune to non-Blocking Hazards, and destroys them when moving over them. Blocking Hazards are treated instead as Slow Terrain for the purposes of movement only (the user may still not target through them), and are destroyed if moved through."
+    "effect": "All Blessings on the field, both ally and enemy, are removed.",
+        "bonus": " The user is immune to non-Blocking Hazards, and destroys them when moving over them. Blocking Hazards are treated instead as Slow Terrain for the purposes of movement only (the user may still not target through them), and are destroyed if moved through."
   },
   {
     "name": "Splendorous Rider",
@@ -155,7 +159,8 @@
   {
     "name": "Stalwart",
     "frequency": "Scene – Free Action, Reaction",
-    "effect": "The user’s Attack, Special Attack, Defense, and Special Defense all increase by 1 CS. Bonus: The user may not be Intercepted, nor may any Abilities, Moves, or Features be activated to change the user’s target. Any of those existing effects (such as Follow Me) fail.",
+    "effect": "The user’s Attack, Special Attack, Defense, and Special Defense all increase by 1 CS.",
+        "bonus": " The user may not be Intercepted, nor may any Abilities, Moves, or Features be activated to change the user’s target. Any of those existing effects (such as Follow Me) fail.",
     "trigger": "The user receives Massive Damage"
   },
   {
@@ -189,7 +194,8 @@
   {
     "name": "Klutz",
     "frequency": "Scene – Free Action",
-    "effect": "Choose one of the target’s Held Items or Accessory Slot Items. It is knocked to the ground. Bonus: The Pokémon ignores the effects of all held Items in its possession. The user may drop Held Items At-Will as a Free Action during their turn, even if they have Status Afflictions that prevent them from taking actions.",
+    "effect": "Choose one of the target’s Held Items or Accessory Slot Items. It is knocked to the ground.",
+        "bonus": " The Pokémon ignores the effects of all held Items in its possession. The user may drop Held Items At-Will as a Free Action during their turn, even if they have Status Afflictions that prevent them from taking actions.",
     "trigger": "The user hits with a Melee Attack"
   },
   {

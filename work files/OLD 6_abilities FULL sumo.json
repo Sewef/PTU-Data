@@ -168,7 +168,8 @@
     {
         "name": "Celebrate",
         "type": "At-Will – Swift Action",
-        "effect": "The user may immediately Disengage as a Free Action. Bonus: Whenever the user Disengages for any reason, they may Shift 2 meters instead of 1.",
+        "effect": "The user may immediately Disengage as a Free Action.",
+        "bonus": " Whenever the user Disengages for any reason, they may Shift 2 meters instead of 1.",
         "trigger": "The user hits a foe with a damaging attack"
     },
     {
@@ -292,7 +293,8 @@
     {
         "name": "Damp",
         "type": "Static",
-        "effect": "Whenever anyone within 10 meters would use the Moves Self-Destruct or Explosion or activate the Aftermath Ability, those effects fail and instead do nothing. Bonus: The user gains a +1d10 Bonus to Damage Rolls with Water-Typed Moves."
+        "effect": "Whenever anyone within 10 meters would use the Moves Self-Destruct or Explosion or activate the Aftermath Ability, those effects fail and instead do nothing.",
+        "bonus": " The user gains a +1d10 Bonus to Damage Rolls with Water-Typed Moves."
     },
     {
         "name": "Danger Syrup",
@@ -439,7 +441,8 @@
     {
         "name": "Electrodash",
         "type": "Scene x2 – Swift Action",
-        "effect": "The user may make a Sprint Action as a Free Action. Bonus: The user may free itself from the Stuck condition as a Shift Action. The user does not provoke Attacks of Opportunity when Sprinting."
+        "effect": "The user may make a Sprint Action as a Free Action.",
+        "bonus": " The user may free itself from the Stuck condition as a Shift Action. The user does not provoke Attacks of Opportunity when Sprinting."
     },
     {
         "name": "Empower",
@@ -587,7 +590,8 @@
     {
         "name": "Full Guard",
         "type": "Scene - Swift Action",
-        "effect": "You resist the triggering Damage one step further. Bonus: Whenever you take Super-Effective Damage and you have no Temporary Hit Points, you gain a tick of Temporary Hit Points. Defensive.",
+        "effect": "You resist the triggering Damage one step further.",
+        "bonus": " Whenever you take Super-Effective Damage and you have no Temporary Hit Points, you gain a tick of Temporary Hit Points. Defensive.",
         "trigger": "You take Damage while having Temporary Hit"
     },
     {
@@ -608,7 +612,8 @@
     {
         "name": "Giver",
         "type": "Scene x2 - Swift Action",
-        "effect": "Connection - Present. After rolling to determine Present’s Damage Base, you may choose to ignore the roll and act as if you had rolled a 1 or a 5. Bonus: The user may know any number of TM and Tutor Moves, instead of a maximum of three."
+        "effect": "Connection - Present. After rolling to determine Present’s Damage Base, you may choose to ignore the roll and act as if you had rolled a 1 or a 5.",
+        "bonus": " The user may know any number of TM and Tutor Moves, instead of a maximum of three."
     },
     {
         "name": "Gluttony",
@@ -630,7 +635,8 @@
     {
         "name": "Grass Pelt",
         "type": "Scene - Swift Action",
-        "effect": "The user gains two ticks worth of Temporary Hit Points. Bonus: When standing on any grassy or leafy terrain that is either Slow or Rough Terrain, the user gains +5 Damage Reduction. Defensive."
+        "effect": "The user gains two ticks worth of Temporary Hit Points.",
+        "bonus": " When standing on any grassy or leafy terrain that is either Slow or Rough Terrain, the user gains +5 Damage Reduction. Defensive."
     },
     {
         "name": "Guts",
@@ -728,7 +734,8 @@
     {
         "name": "Ice Body",
         "type": "Daily x5 - Swift Action",
-        "effect": "The user gains a Tick of Hit Points. Ice Body may only be used while the user is under 50% Hit Points or in Hailing Weather. Bonus: The user is immune to Hit Point loss from Hail"
+        "effect": "The user gains a Tick of Hit Points. Ice Body may only be used while the user is under 50% Hit Points or in Hailing Weather.",
+        "bonus": " The user is immune to Hit Point loss from Hail"
     },
     {
         "name": "Ice Shield",
@@ -800,13 +807,15 @@
     {
         "name": "Justified",
         "type": "At-Will - Free Action",
-        "effect": "The user may raise its Attack by +1 Combat Stage. Bonus: The user always gains a +4 bonus to Skill Checks made to Intercept.",
+        "effect": "The user may raise its Attack by +1 Combat Stage.",
+        "bonus": " The user always gains a +4 bonus to Skill Checks made to Intercept.",
         "trigger": "The user is hit by a damaging Dark Type Move or"
     },
     {
         "name": "Kampfgeist",
         "type": "Scene - Free Action",
-        "effect": "The triggering damage is resisted one step further. Bonus: The user gains STAB on Fighting-Type Moves.",
+        "effect": "The triggering damage is resisted one step further.",
+        "bonus": " The user gains STAB on Fighting-Type Moves.",
         "trigger": "The user takes Bug, Dark, or Rock-Type Damage"
     },
     {
@@ -882,7 +891,8 @@
     {
         "name": "Lightning Rod",
         "type": "Scene – Free Action",
-        "effect": "The Move is turned into a 1-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or Mind Reader. The user’s Special Attack is then raised by +1 Combat Stage. Bonus: The user is immune to the damage and effects of Electric Type attacks. Defensive.",
+        "effect": "The Move is turned into a 1-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or Mind Reader. The user’s Special Attack is then raised by +1 Combat Stage.",
+        "bonus": " The user is immune to the damage and effects of Electric Type attacks. Defensive.",
         "trigger": "A ranged Electric Type Move is used within 10"
     },
     {
@@ -941,7 +951,8 @@
     {
         "name": "Magma Armor",
         "type": "Static",
-        "effect": "Whenever a foe hits you with a Melee Attack or ends their turn grappling you, they lose a tick of Hit Points. Foes immune to Burn do not suffer this effect. Bonus: The user cannot be Frozen. Defensive."
+        "effect": "Whenever a foe hits you with a Melee Attack or ends their turn grappling you, they lose a tick of Hit Points. Foes immune to Burn do not suffer this effect.",
+        "bonus": " The user cannot be Frozen. Defensive."
     },
     {
         "name": "Magnet Pull",
@@ -1308,7 +1319,8 @@
     {
         "name": "Rocket",
         "type": "Scene – Free Action",
-        "effect": "The user may take their turn at the top of the round. Priority, Interrupt, or Reaction Moves or Abilities cannot be declared in response to the user’s turn. Bonus: The user’s Sky capability is increased by +2",
+        "effect": "The user may take their turn at the top of the round. Priority, Interrupt, or Reaction Moves or Abilities cannot be declared in response to the user’s turn.",
+        "bonus": " The user’s Sky capability is increased by +2",
         "trigger": "A Round Begins"
     },
     {
@@ -1335,17 +1347,20 @@
     {
         "name": "Sand Force",
         "type": "Static",
-        "effect": "While on sandy terrain or in Sandstorms, the user’s Ground, Rock, and Steel-Typed damaging moves deal +5 Damage. Bonus: The user is immune to Hit Point loss from Sandstorms."
+        "effect": "While on sandy terrain or in Sandstorms, the user’s Ground, Rock, and Steel-Typed damaging moves deal +5 Damage.",
+        "bonus": " The user is immune to Hit Point loss from Sandstorms."
     },
     {
         "name": "Sand Rush",
         "type": "Static",
-        "effect": "While in Sandstorming Weather or under 50% Max Hit Points, the user’s Initiative is doubled. Bonus: The user is immune to Hit Point loss from Sandstorms."
+        "effect": "While in Sandstorming Weather or under 50% Max Hit Points, the user’s Initiative is doubled.",
+        "bonus": " The user is immune to Hit Point loss from Sandstorms."
     },
     {
         "name": "Sand Stream",
         "type": "Scene x3 – Swift Action",
-        "effect": "The Weather changes to a Sandstorm for 1 full round. Bonus: The user is immune to Hit Point loss from Sandstorms."
+        "effect": "The Weather changes to a Sandstorm for 1 full round.",
+        "bonus": " The user is immune to Hit Point loss from Sandstorms."
     },
     {
         "name": "Sand Veil",
@@ -1543,7 +1558,8 @@
     {
         "name": "Sprint",
         "type": "Scene – Swift Action",
-        "effect": "The user gains +2 Speed Combat Stages. Bonus: The user’s Overland Speed is increased by +2.",
+        "effect": "The user gains +2 Speed Combat Stages.",
+        "bonus": " The user’s Overland Speed is increased by +2.",
         "trigger": "The user uses the Sprint Action during Combat"
     },
     {
@@ -1575,7 +1591,8 @@
     {
         "name": "Steadfast",
         "type": "At-Will – Free Action",
-        "effect": "The user’s Speed is raised by +1 Combat Stage. Bonus: The user’s Initiative is increased by +5. 10",
+        "effect": "The user’s Speed is raised by +1 Combat Stage.",
+        "bonus": " The user’s Initiative is increased by +5. 10",
         "trigger": "The user would be Flinched"
     },
     {
@@ -1596,7 +1613,8 @@
     {
         "name": "Storm Drain",
         "type": "Scene – Free Action",
-        "effect": "The Move is turned into a 1-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or Mind Reader. the user’s Special Attack is then raised by +1 Combat Stage. Bonus: The user is immune to the damage and effects of Water Type attacks. Defensive.",
+        "effect": "The Move is turned into a 1-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or Mind Reader. the user’s Special Attack is then raised by +1 Combat Stage.",
+        "bonus": " The user is immune to the damage and effects of Water Type attacks. Defensive.",
         "trigger": "A ranged Water Type Move is used within 10"
     },
     {
@@ -1617,12 +1635,14 @@
     {
         "name": "Suction Cups",
         "type": "At-Will - Shift Action",
-        "effect": "The user gains +5 Damage Reduction for 1 full round. Bonus: The user is immune to Push effects. Defensive."
+        "effect": "The user gains +5 Damage Reduction for 1 full round.",
+        "bonus": " The user is immune to Push effects. Defensive."
     },
     {
         "name": "Sumo Stance",
         "type": "At-Will - Shift Action",
-        "effect": "The triggering foe is Pushed 1 meter away from the user and the user is immune to Push Effects for 1 full round. Bonus: The user’s Weight Class is increased by +1.",
+        "effect": "The triggering foe is Pushed 1 meter away from the user and the user is immune to Push Effects for 1 full round.",
+        "bonus": " The user’s Weight Class is increased by +1.",
         "trigger": "The user hits a foe with a Melee Attack"
     },
     {
@@ -1742,7 +1762,8 @@
     {
         "name": "Tonguelash",
         "type": "Scene x2 – Free Action",
-        "effect": "Connection – Lick. Lick automatically Paralyzes and Flinches its target. Bonus: The user may use Lick as if it was Normal-Typed.",
+        "effect": "Connection – Lick. Lick automatically Paralyzes and Flinches its target.",
+        "bonus": " The user may use Lick as if it was Normal-Typed.",
         "trigger": "The user hits a target with Lick"
     },
     {
@@ -1960,7 +1981,8 @@
     {
         "name": "Anchored",
         "frequency": "Static",
-        "effect": "Dhelmise has an Anchor token on the field. Dhelmise cannot move or be moved more than 3 meters away from its Anchor, willingly or otherwise. The Anchor token itself cannot be pushed, pulled, or moved against Dhelmise's will in any way. Dhelmise may shift their Anchor Token as a Swift Action, moving it to any open space within 3 meters of itself. Bonus: When the user Shifts the Anchor, they may immediately afterwards originate an attack from its Anchor, giving those attacks the following properties: the attack's range changes to \"Melee, 1 Target\", the attack deals +2d6 damage, and the attack's Class changes to Physical if it wasn't already."
+        "effect": "Dhelmise has an Anchor token on the field. Dhelmise cannot move or be moved more than 3 meters away from its Anchor, willingly or otherwise. The Anchor token itself cannot be pushed, pulled, or moved against Dhelmise's will in any way. Dhelmise may shift their Anchor Token as a Swift Action, moving it to any open space within 3 meters of itself.",
+        "bonus": " When the user Shifts the Anchor, they may immediately afterwards originate an attack from its Anchor, giving those attacks the following properties: the attack's range changes to \"Melee, 1 Target\", the attack deals +2d6 damage, and the attack's Class changes to Physical if it wasn't already."
     },
     {
         "name": "Battery",
@@ -1987,7 +2009,8 @@
     {
         "name": "Dazzling",
         "frequency": "Scene x2 – Swift Action",
-        "effect": "For the rest of the Scene, the target's Initiative is lowered by 10 and cannot use Priority Moves. Bonus: Interrupt Moves may not be declared in response to the user's actions."
+        "effect": "For the rest of the Scene, the target's Initiative is lowered by 10 and cannot use Priority Moves.",
+        "bonus": " Interrupt Moves may not be declared in response to the user's actions."
     },
     {
         "name": "Chemical Romance",
@@ -1997,7 +2020,8 @@
     {
         "name": "Comatose",
         "frequency": "At-Will – Move Action",
-        "effect": "The user falls Asleep, and regains a Tick of Hit Points. Bonus: The user may act normally while Asleep and ignores all other penalties from being Asleep. While Asleep, the user does not make Save Checks to wake up, and wakes up from being hit only if they want to."
+        "effect": "The user falls Asleep, and regains a Tick of Hit Points.",
+        "bonus": " The user may act normally while Asleep and ignores all other penalties from being Asleep. While Asleep, the user does not make Save Checks to wake up, and wakes up from being hit only if they want to."
     },
     {
         "name": "Corrosion",
@@ -2012,7 +2036,8 @@
     {
         "name": "Emergency Exit",
         "frequency": "Scene - Free Action",
-        "effect": "When the user’s Hit Points drop below half their maximum, their trainer may immediately recall the user and send out another Pokemon as a Free Action. If the user hasn’t taken their turn yet, their replacement may act this round. [Defensive] Bonus: The user is immune to Trapped."
+        "effect": "When the user’s Hit Points drop below half their maximum, their trainer may immediately recall the user and send out another Pokemon as a Free Action. If the user hasn’t taken their turn yet, their replacement may act this round. [Defensive]",
+        "bonus": " The user is immune to Trapped."
     },
     {
         "name": "Fluffy",
@@ -2032,7 +2057,8 @@
     {
         "name": "Glisten",
         "frequency": "Static",
-        "effect": "The user is immune to Fairy-frequency attacks. Defensive. Bonus: If the user is hit by a damaging Fairy-frequency attack, they receive +1 Defense or Special Defense Combat Stages."
+        "effect": "The user is immune to Fairy-frequency attacks. Defensive.",
+        "bonus": " If the user is hit by a damaging Fairy-frequency attack, they receive +1 Defense or Special Defense Combat Stages."
     },
     {
         "name": "Grassy Surge",
@@ -2074,7 +2100,8 @@
     {
         "name": "Mud Shield",
         "frequency": "Scene - Swift Action",
-        "effect": "The user gains two ticks worth of Temporary Hit Points. Bonus: When standing on any muddy or dirty terrain that is either Slow or Rough Terrain, the user gains +5 Damage Reduction. Defensive."
+        "effect": "The user gains two ticks worth of Temporary Hit Points.",
+        "bonus": " When standing on any muddy or dirty terrain that is either Slow or Rough Terrain, the user gains +5 Damage Reduction. Defensive."
     },
     {
         "name": "Power of Alchemy",
@@ -2094,12 +2121,14 @@
     {
         "name": "Queenly Majesty",
         "frequency": "Scene x2 - Free Action",
-        "effect": "Connection - Stomp - if an adjacent target uses a Priority Move or an Interrupt action, the user may attack that target with Stomp as a Free Action Interrupt. Bonus: The user cannot be targeted by Interrupt Moves and enemies may not activate Interrupts in response to the user’s actions."
+        "effect": "Connection - Stomp - if an adjacent target uses a Priority Move or an Interrupt action, the user may attack that target with Stomp as a Free Action Interrupt.",
+        "bonus": " The user cannot be targeted by Interrupt Moves and enemies may not activate Interrupts in response to the user’s actions."
     },
     {
         "name": "Revelation",
         "frequency": "Scene x2 - Free Action",
-        "effect": "The user may immediately use the triggering Move as a Standard Action interrupt. Bonus: Whenever the user uses a Dance Move, they gain +2 to Accuracy Rolls until the end of their next turn.",
+        "effect": "The user may immediately use the triggering Move as a Standard Action interrupt.",
+        "bonus": " Whenever the user uses a Dance Move, they gain +2 to Accuracy Rolls until the end of their next turn.",
         "trigger": "Someone within 10 meters uses a damaging Dance Move"
     },
     {
@@ -2115,12 +2144,14 @@
     {
         "name": "RKS System",
         "frequency": "Scene - Free Action",
-        "effect": "If the user is hit by a damaging attack, they may calculate damage as if they were Normal-frequency instead. If they were already Normal-frequency, they resist all damage one step further. Bonus: The user’s frequency changes to match the frequency of their held Memory Disc."
+        "effect": "If the user is hit by a damaging attack, they may calculate damage as if they were Normal-frequency instead. If they were already Normal-frequency, they resist all damage one step further.",
+        "bonus": " The user’s frequency changes to match the frequency of their held Memory Disc."
     },
     {
         "name": "Schooling",
         "frequency": "Daily – Swift Action",
-        "effect": "The user changes to Schooling Forme, and gains Temporary Hit Points equal to half of its own maximum Hit Points. The user cannot gain Temporary Hit Points from other sources while in Schooling Forme. When the user is both Bruised and has no Temporary Hit Points left, they change back into Solo Forme. Bonus: The user has two sets of base stats; Solo and Schooling. The HP of both forms must be the same."
+        "effect": "The user changes to Schooling Forme, and gains Temporary Hit Points equal to half of its own maximum Hit Points. The user cannot gain Temporary Hit Points from other sources while in Schooling Forme. When the user is both Bruised and has no Temporary Hit Points left, they change back into Solo Forme.",
+        "bonus": " The user has two sets of base stats; Solo and Schooling. The HP of both forms must be the same."
     },
     {
         "name": "Shadow Shield",
@@ -2150,7 +2181,8 @@
     {
         "name": "Steelworker",
         "frequency": "Scene - Free Action",
-        "effect": "The user calculates damage as if it was only Steel-frequencyd. Bonus: The user gains STAB on Steel-frequency Moves that originate from its Anchor.",
+        "effect": "The user calculates damage as if it was only Steel-frequencyd.",
+        "bonus": " The user gains STAB on Steel-frequency Moves that originate from its Anchor.",
         "trigger": "The user takes damage while adjacent to its Anchor"
     },
     {
@@ -2166,7 +2198,8 @@
     {
         "name": "Water Bubble",
         "frequency": "Static",
-        "effect": "The user resists Fire-frequency attacks one step further, is immune to being Burned, and may always act as though in Rainy Weather. [Defensive] Bonus: The user may attack with Water-frequency Moves as if they had a range of “Melee, 1 target”. If they do, that Move's Class is changed to Physical and it deals +1d6+2 damage."
+        "effect": "The user resists Fire-frequency attacks one step further, is immune to being Burned, and may always act as though in Rainy Weather. [Defensive]",
+        "bonus": " The user may attack with Water-frequency Moves as if they had a range of “Melee, 1 target”. If they do, that Move's Class is changed to Physical and it deals +1d6+2 damage."
     },
     {
         "name": "Water Compaction",
