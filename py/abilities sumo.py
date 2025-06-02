@@ -29,7 +29,7 @@ def extraire_abilities(pdf_path):
         if len(reste) == 0:
             continue
 
-        type_ = reste[0].strip()
+        frequency_ = reste[0].strip()
         trigger = None
         effet = ""
 
@@ -47,7 +47,7 @@ def extraire_abilities(pdf_path):
         # Construction du dictionnaire
         ability = {
             "nom": nom,
-            "type": type_,
+            "frequency": frequency_,
             "effet": effet.strip()
         }
         if trigger:
