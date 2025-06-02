@@ -1,22 +1,22 @@
 import json
 
-# Replace 'input.json' with your JSON filename
+# Replace with your JSON filename
 input_file = 'moves.json'
-output_file = 'sorted_output.json'
+output_file = 'sorted_data.json'
 
-# Load the JSON data
+# Read the JSON data
 with open(input_file, 'r', encoding='utf-8') as f:
     data = json.load(f)
 
-# Ensure data is a list of dictionaries
+# Ensure the data is a list of dictionaries
 if isinstance(data, list):
-    # Sort the list by the 'name' key
-    sorted_data = sorted(data, key=lambda x: x.get('name', ''))
+    # Sort by 'name' key, considering UTF-8 order
+    data_sorted = sorted(data, key=lambda x: x.get('name', ''))
 else:
-    print("JSON data is not a list of objects.")
+    raise ValueError("JSON data is not a list of objects.")
 
-# Save the sorted data to a new file
+# Write the sorted data back to a new JSON file
 with open(output_file, 'w', encoding='utf-8') as f:
-    json.dump(sorted_data, f, indent=4)
+    json.dump(data_sorted, f, ensure_ascii=False, indent=4)
 
-print(f"JSON data sorted by 'name' and saved to {output_file}")
+print(f"Sorted data written to {output_file}")

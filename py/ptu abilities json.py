@@ -61,7 +61,7 @@ def formatter_bloc_en_json(bloc):
     return None
 
 # 📦 Pipeline complet
-pdf_path = 'py\February 2016 Playtest Packet.pdf'
+pdf_path = 'SuMoBasics.pdf'
 #pdf_path = '1-6G Indices and Reference.pdf'
 blocs = extraire_blocs_abilities_colonnes(pdf_path)
 abilities_json = [formatter_bloc_en_json(bloc) for bloc in blocs]
