@@ -2,7 +2,7 @@ import json
 
 # Replace with your JSON filename
 input_file = 'moves.json'
-output_file = 'sorted_data.json'
+output_file = 'moves.json'
 
 # Read the JSON data
 with open(input_file, 'r', encoding='utf-8') as f:
