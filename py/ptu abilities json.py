@@ -28,11 +28,11 @@ def formatter_bloc_en_json(bloc):
     if not lignes or not lignes[0].startswith("Ability:"):
         return None
 
-    nom = lignes[0].split(":", 1)[-1].strip()
+    name = lignes[0].split(":", 1)[-1].strip()
     type_ = None
     trigger = None
-    effet = []
-    effet_started = False
+    effect = []
+    effect_started = False
 
     for line in lignes[1:]:
         l = line.strip()
@@ -41,18 +41,18 @@ def formatter_bloc_en_json(bloc):
         if l.lower().startswith("trigger:"):
             trigger = l.split(":", 1)[-1].strip()
         elif l.lower().startswith("effect:"):
-            effet_started = True
-            effet.append(l.split(":", 1)[-1].strip())
-        elif effet_started:
-            effet.append(l)
+            effect_started = True
+            effect.append(l.split(":", 1)[-1].strip())
+        elif effect_started:
+            effect.append(l)
         elif not type_:
             type_ = l
 
-    if nom and type_ and effet:
+    if name and type_ and effect:
         entry = {
-            "name": nom,
+            "name": name,
             "type": type_.strip(),
-            "effect": " ".join(effet).strip()
+            "effect": " ".join(effect).strip()
         }
         if trigger:
             entry["trigger"] = trigger.strip()
