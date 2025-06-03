@@ -46,13 +46,13 @@ function loadJsonAsCard(file, container) {
                 }
                 else if (key == "damage_base") {
                     if (item[key] !== undefined) {
-                        const regex = /(Damage Base .+): (.*)/;
+                        const regex = /(Damage Base.*:) (.*)/;
                         const match = item[key].match(regex);
                         if (!match) {
                             console.log("Error: damage_base format is incorrect in item:", item);
                         }
                         else {
-                            str += `<strong>${match[1]}:</strong> ${match[2]}<br>`;
+                            str += `<strong>${match[1]}</strong> ${match[2]}<br>`;
                         }
                     }
                 }
