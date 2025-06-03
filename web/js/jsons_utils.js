@@ -44,16 +44,24 @@ function loadJsonAsCard(file, container) {
                 else if (key == "name") {
                     str += `<strong>${item[key] !== undefined ? item[key] : ""}</strong><br>`;
                 }
+                else if (key == "damage_base") {
+                    if (item[key] !== undefined) {
+                        const regex = /(Damage Base .+): (.*)/;
+                        const match = item[key].match(regex);
+                        if (!match) {
+                            console.log("Error: damage_base format is incorrect in item:", item);
+                        }
+                        else {
+                            str += `<strong>${match[1]}:</strong> ${match[2]}<br>`;
+                        }
+                    }
+                }
                 else {
                     const parsedKey = replaceStringsWithDictionary(key, dictionary);
                     str += `<strong>${parsedKey}</strong>: ${item[key] !== undefined ? item[key] : ""}<br>`;
                 }
             });
-            //str = str.slice(0, -2); // Remove the trailing comma and space
-            //console.log(str);
-
-            //container.innerHTML += `<div class=".col-4">${str}</div>`;
-
+            
             const cardDiv = document.createElement('div');
             cardDiv.className = "col-12 col-md-4";
             cardDiv.innerHTML = `<div class="card h-100"><div class="card-body">${str}</div></div>`;
