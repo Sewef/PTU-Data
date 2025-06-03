@@ -1,13 +1,13 @@
 [
-  {
-    "name": "Psionic Screech",
-    "frequency": "Scene x2 – Free Action",
-    "effect": "The Move is changed to be the Psychic Type. Any targets hit by the attack are Flinched.",
-    "trigger": "The user uses a Flying-Type Move"
-  },
-  {
-    "name": "Toxic Nourishment",
-    "frequency": "Scene – Swift Action",
-    "effect": "The target is cured of their Poison and the user gains 3 ticks of Temporary Hit Points."
-  }
+    {
+        "name": "Psionic Screech",
+        "frequency": "Scene x2 – Free Action",
+        "trigger": "The user uses a Flying-Type Move",
+        "effect": "The Move is changed to be the Psychic Type. Any targets hit by the attack are Flinched."
+    },
+    {
+        "name": "Toxic Nourishment",
+        "frequency": "Scene – Swift Action",
+        "effect": "The target is cured of their Poison and the user gains 3 ticks of Temporary Hit Points."
+    }
 ]

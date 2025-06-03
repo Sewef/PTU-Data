@@ -1,295 +1,295 @@
 [
-  {
-    "name": "Anchored",
-    "frequency": "Static",
-    "effect": "Dhelmise has an Anchor token on the field, which occupies one square as if it is Medium sized but is otherwise ignored for cover and targeting. Dhelmise cannot move or be moved more than 3 meters away from its Anchor, willingly or otherwise. The Anchor token itself cannot be pushed, pulled, or moved against Dhelmise's will in any way. Dhelmise may shift their Anchor Token as a Swift Action, moving it to any open space within 3 meters of itself.",
+    {
+        "name": "Anchored",
+        "frequency": "Static",
+        "effect": "Dhelmise has an Anchor token on the field, which occupies one square as if it is Medium sized but is otherwise ignored for cover and targeting. Dhelmise cannot move or be moved more than 3 meters away from its Anchor, willingly or otherwise. The Anchor token itself cannot be pushed, pulled, or moved against Dhelmise's will in any way. Dhelmise may shift their Anchor Token as a Swift Action, moving it to any open space within 3 meters of itself.",
         "bonus": " When the user Shifts the Anchor, it may immediately afterwards originate a damaging attack from its Anchor if it has the appropriate action available, giving that attack the following properties: the attack's range changes to \"Melee, 1 Target\", the attack deals +2d6 damage, and the attack's Class changes to Physical if it wasn't already."
-  },
-  {
-    "name": "Battery",
-    "frequency": "Scene x2 – Swift Action",
-    "effect": "The target's next Special Attack deals +2d6+4 damage. If that attack is Electric-Typed, it deals +3d6+6 more damage instead."
-  },
-  {
-    "name": "Beast Boost",
-    "frequency": "At-Will – Free Action",
-    "effect": "The user receives +1 Combat Stage in their highest non-HP stat.",
-    "trigger": "The user’s Damaging Attack causes an opponent to Faint"
-  },
-  {
-    "name": "Berserk",
-    "frequency": "At-Will – Free Action",
-    "effect": "The user receives +1 Special Attack Combat Stage.",
-    "trigger": "The user’s drops to half HP or below for the first time in an encounter, or becomes Enraged"
-  },
-  {
-    "name": "Chemical Romance",
-    "frequency": "Static",
-    "effect": "Connection – Sweet Scent. Whenever the user hits a male target with Poison Gas, Smog, Sweet Scent, Toxic, or Venom Drench, that target becomes Infatuated with the user."
-  },
-  {
-    "name": "Comatose",
-    "frequency": "At-Will – Move Action",
-    "effect": "The user falls Asleep, and regains a Tick of Hit Points.",
+    },
+    {
+        "name": "Battery",
+        "frequency": "Scene x2 – Swift Action",
+        "effect": "The target's next Special Attack deals +2d6+4 damage. If that attack is Electric-Typed, it deals +3d6+6 more damage instead."
+    },
+    {
+        "name": "Beast Boost",
+        "frequency": "At-Will – Free Action",
+        "trigger": "The user’s Damaging Attack causes an opponent to Faint",
+        "effect": "The user receives +1 Combat Stage in their highest non-HP stat."
+    },
+    {
+        "name": "Berserk",
+        "frequency": "At-Will – Free Action",
+        "trigger": "The user’s drops to half HP or below for the first time in an encounter, or becomes Enraged",
+        "effect": "The user receives +1 Special Attack Combat Stage."
+    },
+    {
+        "name": "Chemical Romance",
+        "frequency": "Static",
+        "effect": "Connection – Sweet Scent. Whenever the user hits a male target with Poison Gas, Smog, Sweet Scent, Toxic, or Venom Drench, that target becomes Infatuated with the user."
+    },
+    {
+        "name": "Comatose",
+        "frequency": "At-Will – Move Action",
+        "effect": "The user falls Asleep, and regains a Tick of Hit Points.",
         "bonus": " The user may act normally while Asleep and ignores all other penalties from being Asleep. While Asleep, the user does not make Save Checks to wake up, and wakes up from being hit only if they want to."
-  },
-  {
-    "name": "Corrosion",
-    "frequency": "Static",
-    "effect": "The user's Poison-Type attacks are resisted one step less, and deal damage to Immune targets as if they were doubly resisted. The user may Poison and Badly Poison Steel and Poison-Type Pokémon."
-  },
-  {
-    "name": "Dancer",
-    "frequency": "Scene x2 – Free Action",
-    "effect": "The user may immediately use the triggering Move as a Free Action.",
-    "trigger": "Someone within 10 meters uses a Status- Class Dance Move"
-  },
-  {
-    "name": "Dazzling",
-    "frequency": "Scene x2 – Swift Action",
-    "effect": "For the rest of the Scene, the target's Initiative is lowered by 10 and cannot use Priority Moves.",
+    },
+    {
+        "name": "Corrosion",
+        "frequency": "Static",
+        "effect": "The user's Poison-Type attacks are resisted one step less, and deal damage to Immune targets as if they were doubly resisted. The user may Poison and Badly Poison Steel and Poison-Type Pokémon."
+    },
+    {
+        "name": "Dancer",
+        "frequency": "Scene x2 – Free Action",
+        "trigger": "Someone within 10 meters uses a Status- Class Dance Move",
+        "effect": "The user may immediately use the triggering Move as a Free Action."
+    },
+    {
+        "name": "Dazzling",
+        "frequency": "Scene x2 – Swift Action",
+        "effect": "For the rest of the Scene, the target's Initiative is lowered by 10 and cannot use Priority Moves.",
         "bonus": " Interrupt Moves may not be declared in response to the user's actions."
-  },
-  {
-    "name": "Disguise",
-    "frequency": "Daily – Free Action",
-    "effect": "The triggering attack instead misses and has no effect. The user then gains +1 CS in a Stat of their choice. Defensive.",
-    "trigger": "The user is hit by a Damaging Move."
-  },
-  {
-    "name": "Electric Surge",
-    "frequency": "Scene x3 – Swift Action",
-    "effect": "The Field becomes Electrified, as if affected by the Move Electric Terrain, for one full round."
-  },
-  {
-    "name": "Emergency Exit",
-    "frequency": "Scene – Free Action",
-    "effect": "When the user’s Hit Points drop below half their maximum, their trainer may immediately recall the user and send out another Pokémon as a Free Action. If the user hasn’t taken their turn yet, their replacement may act this round. Defensive.",
+    },
+    {
+        "name": "Disguise",
+        "frequency": "Daily – Free Action",
+        "trigger": "The user is hit by a Damaging Move.",
+        "effect": "The triggering attack instead misses and has no effect. The user then gains +1 CS in a Stat of their choice. Defensive."
+    },
+    {
+        "name": "Electric Surge",
+        "frequency": "Scene x3 – Swift Action",
+        "effect": "The Field becomes Electrified, as if affected by the Move Electric Terrain, for one full round."
+    },
+    {
+        "name": "Emergency Exit",
+        "frequency": "Scene – Free Action",
+        "effect": "When the user’s Hit Points drop below half their maximum, their trainer may immediately recall the user and send out another Pokémon as a Free Action. If the user hasn’t taken their turn yet, their replacement may act this round. Defensive.",
         "bonus": " The user is immune to being Trapped."
-  },
-  {
-    "name": "Fluffy",
-    "frequency": "Static",
-    "effect": "The user resists damaging Melee attacks one step further, but resists Fire-Type attacks one step less. Defensive."
-  },
-  {
-    "name": "Full Metal Body",
-    "frequency": "Static",
-    "effect": "The user’s Combat Stages may not be lowered by the effect of foes’ Features, Abilities, or Moves. Status Afflictions may still alter their Combat Stages. Defensive."
-  },
-  {
-    "name": "Galvanize",
-    "frequency": "At-Will – Free Action",
-    "effect": "The Move is changed to be Electric-Type.",
-    "trigger": "The user uses a Normal-Type damaging Move"
-  },
-  {
-    "name": "Glisten",
-    "frequency": "Static",
-    "effect": "The user is immune to Fairy-Type attacks. Defensive.",
+    },
+    {
+        "name": "Fluffy",
+        "frequency": "Static",
+        "effect": "The user resists damaging Melee attacks one step further, but resists Fire-Type attacks one step less. Defensive."
+    },
+    {
+        "name": "Full Metal Body",
+        "frequency": "Static",
+        "effect": "The user’s Combat Stages may not be lowered by the effect of foes’ Features, Abilities, or Moves. Status Afflictions may still alter their Combat Stages. Defensive."
+    },
+    {
+        "name": "Galvanize",
+        "frequency": "At-Will – Free Action",
+        "trigger": "The user uses a Normal-Type damaging Move",
+        "effect": "The Move is changed to be Electric-Type."
+    },
+    {
+        "name": "Glisten",
+        "frequency": "Static",
+        "effect": "The user is immune to Fairy-Type attacks. Defensive.",
         "bonus": " If the user is hit by a damaging Fairy-Type attack, they receive +1 Defense or Special Defense Combat Stages."
-  },
-  {
-    "name": "Grassy Surge",
-    "frequency": "Scene x3 – Swift Action",
-    "effect": "The Field becomes Grassy, as if affected by the Move Grassy Terrain, for one full round."
-  },
-  {
-    "name": "Handyman",
-    "frequency": "Static",
-    "effect": "The user may hold two Held Items at once. Whenever an Ability or Move affects the user’s Held Items, you may choose which one is affected."
-  },
-  {
-    "name": "Horde Break",
-    "frequency": "At-Will – Free Action",
-    "effect": "The user is cured of all Status Conditions.",
-    "trigger": "The user changes from School Form to Solo Form"
-  },
-  {
-    "name": "Innards Out",
-    "frequency": "Scene x2 – Free Action",
-    "effect": "The user resists the triggering attack one step further. After the attack is resolved, a foe within 2 meters loses Hit Points equal to twice the amount of Hit Points lost by the user from the triggering attack, even if the triggering attack caused the user to Faint.",
-    "trigger": "The user is hit by a Damaging Attack"
-  },
-  {
-    "name": "Liquid Voice",
-    "frequency": "At-Will – Free Action",
-    "effect": "The triggering move loses the Sonic keyword, but gains the Friendly keyword and becomes Water Typed. If the Move was a Status Class Move, you may treat it as a Special Move with DB1.",
-    "trigger": "The user uses a Move with the Sonic keyword"
-  },
-  {
-    "name": "Long Reach",
-    "frequency": "Static",
-    "effect": "The user may use damaging attacks as if they had a range of \"8, 1 Target\" instead of their usual range."
-  },
-  {
-    "name": "Merciless",
-    "frequency": "Static",
-    "effect": "If the user hits a poisoned target with a damaging attack, it automatically becomes a Critical Hit."
-  },
-  {
-    "name": "Misty Surge",
-    "frequency": "Scene x3 – Swift Action",
-    "effect": "The Field becomes Misty, as if affected by the Move Misty Terrain, for one full round."
-  },
-  {
-    "name": "Mud Shield",
-    "frequency": "Scene – Swift Action",
-    "effect": "The user gains two ticks worth of Temporary Hit Points.",
+    },
+    {
+        "name": "Grassy Surge",
+        "frequency": "Scene x3 – Swift Action",
+        "effect": "The Field becomes Grassy, as if affected by the Move Grassy Terrain, for one full round."
+    },
+    {
+        "name": "Handyman",
+        "frequency": "Static",
+        "effect": "The user may hold two Held Items at once. Whenever an Ability or Move affects the user’s Held Items, you may choose which one is affected."
+    },
+    {
+        "name": "Horde Break",
+        "frequency": "At-Will – Free Action",
+        "trigger": "The user changes from School Form to Solo Form",
+        "effect": "The user is cured of all Status Conditions."
+    },
+    {
+        "name": "Innards Out",
+        "frequency": "Scene x2 – Free Action",
+        "trigger": "The user is hit by a Damaging Attack",
+        "effect": "The user resists the triggering attack one step further. After the attack is resolved, a foe within 2 meters loses Hit Points equal to twice the amount of Hit Points lost by the user from the triggering attack, even if the triggering attack caused the user to Faint."
+    },
+    {
+        "name": "Liquid Voice",
+        "frequency": "At-Will – Free Action",
+        "trigger": "The user uses a Move with the Sonic keyword",
+        "effect": "The triggering move loses the Sonic keyword, but gains the Friendly keyword and becomes Water Typed. If the Move was a Status Class Move, you may treat it as a Special Move with DB1."
+    },
+    {
+        "name": "Long Reach",
+        "frequency": "Static",
+        "effect": "The user may use damaging attacks as if they had a range of \"8, 1 Target\" instead of their usual range."
+    },
+    {
+        "name": "Merciless",
+        "frequency": "Static",
+        "effect": "If the user hits a poisoned target with a damaging attack, it automatically becomes a Critical Hit."
+    },
+    {
+        "name": "Misty Surge",
+        "frequency": "Scene x3 – Swift Action",
+        "effect": "The Field becomes Misty, as if affected by the Move Misty Terrain, for one full round."
+    },
+    {
+        "name": "Mud Shield",
+        "frequency": "Scene – Swift Action",
+        "effect": "The user gains two ticks worth of Temporary Hit Points.",
         "bonus": " When standing on any muddy or dirty terrain that is either Slow or Rough Terrain, the user gains +5 Damage Reduction. Defensive."
-  },
-  {
-    "name": "Neuroforce",
-    "frequency": "Static",
-    "effect": "Whenever you deal Super-Effective Damage to a target, that target treats your Damage Roll as it were increased by +10."
-  },
-  {
-    "name": "Power Construct",
-    "frequency": "Daily – Swift Action",
-    "effect": "The user changes to Complete Forme until the end of the Scene, and gains Temporary Hit Points equal to half of the maximum hit points that Complete Forme would have. The user cannot gain Temporary Hit Points from other sources while in Complete Forme. Special: The user still uses the HP total and HP Maximum of the Forme that it was in (10% or 50% Forme) before entering Complete Forme. Both Formes must still follow BSR.",
-    "special": "The user can only use Power Construct while below 50% HP. The user still uses the HP total and HP Maximum of the Forme that it was in (10% or 50% Forme) before entering Complete Forme. Both Formes must still follow BSR."
-  },
-  {
-    "name": "Power of Alchemy",
-    "frequency": "Scene – Free Action",
-    "effect": "The Pokémon gains an Ability known by the Target for the remainder of the encounter, or until it is Fainted."
-  },
-  {
-    "name": "Prism Armor",
-    "frequency": "Static",
-    "effect": "The user gains +5 Damage Reduction against Super Effective-Damage. Defensive."
-  },
-  {
-    "name": "Psychic Surge",
-    "frequency": "Scene x3 – Swift Action",
-    "effect": "The Field becomes Weird, as if affected by the Move Psychic Terrain, for one full round."
-  },
-  {
-    "name": "Queenly Majesty",
-    "frequency": "Scene x2 – Free Action",
-    "effect": "Connection – Stomp. The user may attack the triggering foe with Stomp as a Free Action Interrupt.",
-        "bonus": " The user cannot be targeted by Interrupt Moves and Interrupts may not be declared in response to the user's actions.",
-    "trigger": "An adjacent foe uses a Priority Move or an Interrupt action"
-  },
-  {
-    "name": "Radiant Beam",
-    "frequency": "Static",
-    "effect": "The user may use damaging Grass-Type attacks as if they had a range of \"Line 4\" instead of their usual range."
-  },
-  {
-    "name": "Receiver",
-    "frequency": "Special – Free Action",
-    "effect": "Each effect below may be used once per scene when triggered: • When an ally faints, the user selects one of their Abilities. The user gains that Ability until the end of the encounter. • When the user faints, they may grant use of one of their Basic Abilities to an ally on the field for the rest of the encounter."
-  },
-  {
-    "name": "Revelation",
-    "frequency": "Scene x2 – Free Action",
-    "effect": "The user may immediately use the triggering Move as a Standard Action interrupt.",
-        "bonus": " Whenever the user uses a Dance Move, they gain +2 to Accuracy Rolls until the end of their next turn.",
-    "trigger": "Someone within 10 meters uses a Damaging Dance Move"
-  },
-  {
-    "name": "RKS System",
-    "frequency": "Scene – Free Action",
-    "effect": "If the user is hit by a damaging attack, they may calculate damage as if they were Normal-Type instead. If they were already Normal-Type, they instead resist the damage one step further.",
+    },
+    {
+        "name": "Neuroforce",
+        "frequency": "Static",
+        "effect": "Whenever you deal Super-Effective Damage to a target, that target treats your Damage Roll as it were increased by +10."
+    },
+    {
+        "name": "Power Construct",
+        "frequency": "Daily – Swift Action",
+        "effect": "The user changes to Complete Forme until the end of the Scene, and gains Temporary Hit Points equal to half of the maximum hit points that Complete Forme would have. The user cannot gain Temporary Hit Points from other sources while in Complete Forme. Special: The user still uses the HP total and HP Maximum of the Forme that it was in (10% or 50% Forme) before entering Complete Forme. Both Formes must still follow BSR.",
+        "special": "The user can only use Power Construct while below 50% HP. The user still uses the HP total and HP Maximum of the Forme that it was in (10% or 50% Forme) before entering Complete Forme. Both Formes must still follow BSR."
+    },
+    {
+        "name": "Power of Alchemy",
+        "frequency": "Scene – Free Action",
+        "effect": "The Pokémon gains an Ability known by the Target for the remainder of the encounter, or until it is Fainted."
+    },
+    {
+        "name": "Prism Armor",
+        "frequency": "Static",
+        "effect": "The user gains +5 Damage Reduction against Super Effective-Damage. Defensive."
+    },
+    {
+        "name": "Psychic Surge",
+        "frequency": "Scene x3 – Swift Action",
+        "effect": "The Field becomes Weird, as if affected by the Move Psychic Terrain, for one full round."
+    },
+    {
+        "name": "Queenly Majesty",
+        "frequency": "Scene x2 – Free Action",
+        "trigger": "An adjacent foe uses a Priority Move or an Interrupt action",
+        "effect": "Connection – Stomp. The user may attack the triggering foe with Stomp as a Free Action Interrupt.",
+        "bonus": " The user cannot be targeted by Interrupt Moves and Interrupts may not be declared in response to the user's actions."
+    },
+    {
+        "name": "Radiant Beam",
+        "frequency": "Static",
+        "effect": "The user may use damaging Grass-Type attacks as if they had a range of \"Line 4\" instead of their usual range."
+    },
+    {
+        "name": "Receiver",
+        "frequency": "Special – Free Action",
+        "effect": "Each effect below may be used once per scene when triggered: • When an ally faints, the user selects one of their Abilities. The user gains that Ability until the end of the encounter. • When the user faints, they may grant use of one of their Basic Abilities to an ally on the field for the rest of the encounter."
+    },
+    {
+        "name": "Revelation",
+        "frequency": "Scene x2 – Free Action",
+        "trigger": "Someone within 10 meters uses a Damaging Dance Move",
+        "effect": "The user may immediately use the triggering Move as a Standard Action interrupt.",
+        "bonus": " Whenever the user uses a Dance Move, they gain +2 to Accuracy Rolls until the end of their next turn."
+    },
+    {
+        "name": "RKS System",
+        "frequency": "Scene – Free Action",
+        "effect": "If the user is hit by a damaging attack, they may calculate damage as if they were Normal-Type instead. If they were already Normal-Type, they instead resist the damage one step further.",
         "bonus": " The user’s Type changes to match the Type of their held Memory Disc."
-  },
-  {
-    "name": "Schooling",
-    "frequency": "Daily – Free Action",
-    "effect": "The user changes to Schooling Forme, and gains Temporary Hit Points equal to half of its own maximum Hit Points. The user cannot gain Temporary Hit Points from other sources while in Schooling Forme. When the user is below half Maximum HP and has no Temporary Hit Points left, they change back into Solo Forme.",
+    },
+    {
+        "name": "Schooling",
+        "frequency": "Daily – Free Action",
+        "effect": "The user changes to Schooling Forme, and gains Temporary Hit Points equal to half of its own maximum Hit Points. The user cannot gain Temporary Hit Points from other sources while in Schooling Forme. When the user is below half Maximum HP and has no Temporary Hit Points left, they change back into Solo Forme.",
         "bonus": " The user has two sets of base stats; Solo and Schooling. The HP of both forms must be the same."
-  },
-  {
-    "name": "Shadow Shield",
-    "frequency": "Static",
-    "effect": "While at full Hit Points, the user resists all damage one step further. Defensive."
-  },
-  {
-    "name": "Shields Down",
-    "frequency": "Static",
-    "effect": "The user has two sets of base stats; Meteor and Core. The HP of both forms must be the same. When the user is in Meteor Forme and are reduced to half Maximum HP or lower, they change to Core Forme. The user returns to Meteor Forme while outside of combat if above half Maximum HP."
-  },
-  {
-    "name": "Slush Rush",
-    "frequency": "Static",
-    "effect": "While in Hailing Weather or under half maximum Hit Points, the user’s Initiative is doubled."
-  },
-  {
-    "name": "Soul Heart",
-    "frequency": "Scene x2 – Free Action",
-    "effect": "The user receives +2 Special Attack Combat Stages and gains a tick of Temporary Hit Points.",
-    "trigger": "A combatant in the encounter Faints"
-  },
-  {
-    "name": "Stakeout",
-    "frequency": "Static",
-    "effect": "The user gains a +2d6+4 bonus on damage rolls against foes that were released from a Pokéball or entered the encounter since the user's last turn."
-  },
-  {
-    "name": "Stamina",
-    "frequency": "At-Will – Free Action",
-    "effect": "The user receives +1 Defense Combat Stage. Defensive.",
-    "trigger": "The user is hit by a Damaging Attack"
-  },
-  {
-    "name": "Steelworker",
-    "frequency": "Scene – Free Action",
-    "effect": "The user calculates damage as if it was only Steel-Typed.",
-        "bonus": " The user gains STAB on Steel-Type Moves that originate from its Anchor.",
-    "trigger": "The user takes damage while adjacent to its Anchor"
-  },
-  {
-    "name": "Surge Surfer",
-    "frequency": "Static",
-    "effect": "On Electric Terrain or while under half maximum Hit Points, the user’s Initiative is doubled."
-  },
-  {
-    "name": "Tangling Hair",
-    "frequency": "At-Will – Free Action",
-    "effect": "The attacker receives -1 Speed Combat Stage and is Slowed until the end of its next turn.",
-    "trigger": "The user is hit by a Melee Attack"
-  },
-  {
-    "name": "Triage",
-    "frequency": "Static",
-    "effect": "The user’s moves with the Healing keyword may be used as Priority moves."
-  },
-  {
-    "name": "Water Bubble",
-    "frequency": "Static",
-    "effect": "The user resists Fire-Type attacks one step further, is immune to being Burned, and may always act as though in Rainy Weather. Defensive.",
+    },
+    {
+        "name": "Shadow Shield",
+        "frequency": "Static",
+        "effect": "While at full Hit Points, the user resists all damage one step further. Defensive."
+    },
+    {
+        "name": "Shields Down",
+        "frequency": "Static",
+        "effect": "The user has two sets of base stats; Meteor and Core. The HP of both forms must be the same. When the user is in Meteor Forme and are reduced to half Maximum HP or lower, they change to Core Forme. The user returns to Meteor Forme while outside of combat if above half Maximum HP."
+    },
+    {
+        "name": "Slush Rush",
+        "frequency": "Static",
+        "effect": "While in Hailing Weather or under half maximum Hit Points, the user’s Initiative is doubled."
+    },
+    {
+        "name": "Soul Heart",
+        "frequency": "Scene x2 – Free Action",
+        "trigger": "A combatant in the encounter Faints",
+        "effect": "The user receives +2 Special Attack Combat Stages and gains a tick of Temporary Hit Points."
+    },
+    {
+        "name": "Stakeout",
+        "frequency": "Static",
+        "effect": "The user gains a +2d6+4 bonus on damage rolls against foes that were released from a Pokéball or entered the encounter since the user's last turn."
+    },
+    {
+        "name": "Stamina",
+        "frequency": "At-Will – Free Action",
+        "trigger": "The user is hit by a Damaging Attack",
+        "effect": "The user receives +1 Defense Combat Stage. Defensive."
+    },
+    {
+        "name": "Steelworker",
+        "frequency": "Scene – Free Action",
+        "trigger": "The user takes damage while adjacent to its Anchor",
+        "effect": "The user calculates damage as if it was only Steel-Typed.",
+        "bonus": " The user gains STAB on Steel-Type Moves that originate from its Anchor."
+    },
+    {
+        "name": "Surge Surfer",
+        "frequency": "Static",
+        "effect": "On Electric Terrain or while under half maximum Hit Points, the user’s Initiative is doubled."
+    },
+    {
+        "name": "Tangling Hair",
+        "frequency": "At-Will – Free Action",
+        "trigger": "The user is hit by a Melee Attack",
+        "effect": "The attacker receives -1 Speed Combat Stage and is Slowed until the end of its next turn."
+    },
+    {
+        "name": "Triage",
+        "frequency": "Static",
+        "effect": "The user’s moves with the Healing keyword may be used as Priority moves."
+    },
+    {
+        "name": "Water Bubble",
+        "frequency": "Static",
+        "effect": "The user resists Fire-Type attacks one step further, is immune to being Burned, and may always act as though in Rainy Weather. Defensive.",
         "bonus": " The user may attack with Water-Type Moves as if they had a range of “Melee, 1 target”. If they do, that Move's Class is changed to Physical and it deals +1d6+2 damage."
-  },
-  {
-    "name": "Water Compaction",
-    "frequency": "At-Will – Free Action",
-    "effect": "The user receives +2 Defense Combat Stages. Defensive.",
-    "trigger": "The user is hit by a Water Type Move"
-  },
-  {
-    "name": "Wily",
-    "frequency": "Static",
-    "effect": "The user's X-target Status Class Moves may target an additional target within range."
-  },
-  {
-    "name": "Accelerate",
-    "frequency": "Scene x2 – Free Action",
-    "effect": "The user may use a damaging Move to which they add STAB as a Priority Move. If the Move hits, the user adds half their Speed Stat to the Damage Roll. If the Move already had Priority, the attack gains a +4 Bonus to Accuracy. Replaces: Maelstrom Pulse, Leaf Rush, & Gale Wings"
-  },
-  {
-    "name": "Frisk",
-    "frequency": "Static",
-    "effect": "The user gains a +2 Bonus to all Accuracy Rolls against adjacent targets."
-  },
-  {
-    "name": "Gale Wings",
-    "frequency": "Static",
-    "effect": "Connection – Quick Attack. The user may use Quick Attack as a Flying-Type Move."
-  },
-  {
-    "name": "Unaware",
-    "frequency": "Static",
-    "effect": "Whenever the user attacks, they ignore all positive Combat Stages to the target’s Defense, Special Defense, and Speed."
-  }
+    },
+    {
+        "name": "Water Compaction",
+        "frequency": "At-Will – Free Action",
+        "trigger": "The user is hit by a Water Type Move",
+        "effect": "The user receives +2 Defense Combat Stages. Defensive."
+    },
+    {
+        "name": "Wily",
+        "frequency": "Static",
+        "effect": "The user's X-target Status Class Moves may target an additional target within range."
+    },
+    {
+        "name": "Accelerate",
+        "frequency": "Scene x2 – Free Action",
+        "effect": "The user may use a damaging Move to which they add STAB as a Priority Move. If the Move hits, the user adds half their Speed Stat to the Damage Roll. If the Move already had Priority, the attack gains a +4 Bonus to Accuracy. Replaces: Maelstrom Pulse, Leaf Rush, & Gale Wings"
+    },
+    {
+        "name": "Frisk",
+        "frequency": "Static",
+        "effect": "The user gains a +2 Bonus to all Accuracy Rolls against adjacent targets."
+    },
+    {
+        "name": "Gale Wings",
+        "frequency": "Static",
+        "effect": "Connection – Quick Attack. The user may use Quick Attack as a Flying-Type Move."
+    },
+    {
+        "name": "Unaware",
+        "frequency": "Static",
+        "effect": "Whenever the user attacks, they ignore all positive Combat Stages to the target’s Defense, Special Defense, and Speed."
+    }
 ]

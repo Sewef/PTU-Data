@@ -7,8 +7,8 @@
     {
         "name": "Absorb Force",
         "frequency": "Scene – Free Action",
-        "effect": "The user takes damage as if the attack was resisted one step further.",
-        "trigger": "The user is damaged by a Physical Attack"
+        "trigger": "The user is damaged by a Physical Attack",
+        "effect": "The user takes damage as if the attack was resisted one step further."
     },
     {
         "name": "Adaptability",
@@ -18,8 +18,8 @@
     {
         "name": "Aerilate",
         "frequency": "At-Will – Free Action",
-        "effect": "The Move is changed to be Flying-Type.",
-        "trigger": "The user uses a Normal-Type damaging Move"
+        "trigger": "The user uses a Normal-Type damaging Move",
+        "effect": "The Move is changed to be Flying-Type."
     },
     {
         "name": "Aftermath",
@@ -124,14 +124,14 @@
     {
         "name": "Bodyguard",
         "frequency": "Scene – Free Action",
-        "effect": "The user and the target switch places, and the user becomes the target of the attack instead, taking damage from the attack as if resisted one step further. If switching places would not move the triggering Ally out of the area-of-effect of a Burst, Blast, Cone, or Line, this Ability does not prevent the ally from being hit. Defensive.",
-        "trigger": "A cardinally adjacent Ally is hit by an attack"
+        "trigger": "A cardinally adjacent Ally is hit by an attack",
+        "effect": "The user and the target switch places, and the user becomes the target of the attack instead, taking damage from the attack as if resisted one step further. If switching places would not move the triggering Ally out of the area-of-effect of a Burst, Blast, Cone, or Line, this Ability does not prevent the ally from being hit. Defensive."
     },
     {
         "name": "Bone Lord",
         "frequency": "Scene – Free Action",
-        "effect": "Connection – Bonemerang. This Ability may be activated when hitting with Bone Club to automatically Flinch its target; or to use Bonemerang as a Priority Move; or when hitting with Bone Rush to cause the attack to automatically hit 5 times.",
-        "trigger": "The user hits with Bone Club, Bonemerang, or"
+        "trigger": "The user hits with Bone Club, Bonemerang, or",
+        "effect": "Connection – Bonemerang. This Ability may be activated when hitting with Bone Club to automatically Flinch its target; or to use Bonemerang as a Priority Move; or when hitting with Bone Rush to cause the attack to automatically hit 5 times."
     },
     {
         "name": "Bone Wielder",
@@ -151,8 +151,8 @@
     {
         "name": "Bully",
         "frequency": "Scene – Free Action",
-        "effect": "The target of the attack is pushed 2 Meters, becomes Tripped, and gains an Injury.",
-        "trigger": "The user hits a target for Super-Effective"
+        "trigger": "The user hits a target for Super-Effective",
+        "effect": "The target of the attack is pushed 2 Meters, becomes Tripped, and gains an Injury."
     },
     {
         "name": "Cave Crasher",
@@ -162,8 +162,8 @@
     {
         "name": "Celebrate",
         "frequency": "At-Will – Free Action",
-        "effect": "The user increases their Speed by 1 Combat Stage and may immediately take an additional Shift Action to move as if they were Slowed. This Ability may only be activated if the user is not prevented from shifting.",
-        "trigger": "The user causes a foe to Faint by using a"
+        "trigger": "The user causes a foe to Faint by using a",
+        "effect": "The user increases their Speed by 1 Combat Stage and may immediately take an additional Shift Action to move as if they were Slowed. This Ability may only be activated if the user is not prevented from shifting."
     },
     {
         "name": "Cherry Power",
@@ -198,8 +198,8 @@
     {
         "name": "Color Change",
         "frequency": "At-Will – Free Action",
-        "effect": "The user’s Type changes to match the Type of the triggering Move.",
-        "trigger": "The user is hit by a Move"
+        "trigger": "The user is hit by a Move",
+        "effect": "The user’s Type changes to match the Type of the triggering Move."
     },
     {
         "name": "Color Theory",
@@ -229,8 +229,8 @@
     {
         "name": "Conqueror",
         "frequency": "Scene – Free Action",
-        "effect": "The user’s Attack, Special Attack, and Speed gain +1 Combat Stage.",
-        "trigger": "The user causes a foe to Faint by using a"
+        "trigger": "The user causes a foe to Faint by using a",
+        "effect": "The user’s Attack, Special Attack, and Speed gain +1 Combat Stage."
     },
     {
         "name": "Copy Master",
@@ -250,32 +250,32 @@
     {
         "name": "Cruelty",
         "frequency": "Scene – Swift Action",
-        "effect": "After Damage is Resolved, the foe gains an Injury. The user is then informed of the total number of Injuries currently on the target, and may use that number to “purchase” the effects listed below. » 1 Injury: The target loses 2 Hit Points. May be “pur- chased” multiple times. » 1 Injury: The target is Slowed. » 2 Injuries: Until the end of the encounter, the target may not gain Hit Points or Temporary Hit Points from any source. This effect ends if the target is switched out or Takes a Breather.",
-        "trigger": "The user hits a foe with a damaging attack"
+        "trigger": "The user hits a foe with a damaging attack",
+        "effect": "After Damage is Resolved, the foe gains an Injury. The user is then informed of the total number of Injuries currently on the target, and may use that number to “purchase” the effects listed below. » 1 Injury: The target loses 2 Hit Points. May be “pur- chased” multiple times. » 1 Injury: The target is Slowed. » 2 Injuries: Until the end of the encounter, the target may not gain Hit Points or Temporary Hit Points from any source. This effect ends if the target is switched out or Takes a Breather."
     },
     {
         "name": "Crush Trap",
         "frequency": "Scene – Free Action",
-        "effect": "Connection – Wrap. When you activate this ability, the user may immediately deal damage to the target as if the user had hit with a Struggle Attack. There is no Accuracy Roll and thus this damage cannot miss, be a Critical Hit, or trigger any Effect Ranges.",
-        "trigger": "The user successfully Grapples a target"
+        "trigger": "The user successfully Grapples a target",
+        "effect": "Connection – Wrap. When you activate this ability, the user may immediately deal damage to the target as if the user had hit with a Struggle Attack. There is no Accuracy Roll and thus this damage cannot miss, be a Critical Hit, or trigger any Effect Ranges."
     },
     {
         "name": "Cursed Body",
         "frequency": "Scene – Free Action",
-        "effect": "The Move becomes Disabled.",
-        "trigger": "The user is hit by a Damaging Move."
+        "trigger": "The user is hit by a Damaging Move.",
+        "effect": "The Move becomes Disabled."
     },
     {
         "name": "Cute Charm",
         "frequency": "Scene – Free Action",
-        "effect": "The foe becomes Infatuated.",
-        "trigger": "A foe of the opposite gender attacks the user"
+        "trigger": "A foe of the opposite gender attacks the user",
+        "effect": "The foe becomes Infatuated."
     },
     {
         "name": "Cute Tears",
         "frequency": "Scene – Free Action",
-        "effect": "The attacking foe loses 2 Combat Stages in the Attack Stat used by the triggering Move.",
-        "trigger": "The user is hit by a Damaging Attack"
+        "trigger": "The user is hit by a Damaging Attack",
+        "effect": "The attacking foe loses 2 Combat Stages in the Attack Stat used by the triggering Move."
     },
     {
         "name": "Damp",
@@ -295,8 +295,8 @@
     {
         "name": "Deadly Poison",
         "frequency": "Daily – Free Action",
-        "effect": "The target is Badly Poisoned instead.",
-        "trigger": "The user Poisons a target"
+        "trigger": "The user Poisons a target",
+        "effect": "The target is Badly Poisoned instead."
     },
     {
         "name": "Decoy",
@@ -326,8 +326,8 @@
     {
         "name": "Delayed Reaction",
         "frequency": "Scene – Free Action",
-        "effect": "Halve the damage taken by the user. At the end of the user’s next turn, the user loses Hit Points equal to the other half of the damage. For example, if the user is hit for 11 damage and triggers this Ability, the user would take 5 damage upon being hit and 6 damage at the end of its next turn. Defensive.",
-        "trigger": "The user is hit by a direct damaging attack"
+        "trigger": "The user is hit by a direct damaging attack",
+        "effect": "Halve the damage taken by the user. At the end of the user’s next turn, the user loses Hit Points equal to the other half of the damage. For example, if the user is hit for 11 damage and triggers this Ability, the user would take 5 damage upon being hit and 6 damage at the end of its next turn. Defensive."
     },
     {
         "name": "Desert Weather",
@@ -357,8 +357,8 @@
     {
         "name": "Dodge",
         "frequency": "Daily – Free Action",
-        "effect": "The triggering Move instead misses. Defensive.",
-        "trigger": "The user is hit by a Damaging Move"
+        "trigger": "The user is hit by a Damaging Move",
+        "effect": "The triggering Move instead misses. Defensive."
     },
     {
         "name": "Download",
@@ -378,8 +378,8 @@
     {
         "name": "Drown Out",
         "frequency": "Scene – Free Action",
-        "effect": "The user makes a Focus Check with a DC equal to the Move’s Accuracy Roll. If the user succeeds, the triggering Move fails. 316",
-        "trigger": "A foe uses a Move with the Sonic keyword"
+        "trigger": "A foe uses a Move with the Sonic keyword",
+        "effect": "The user makes a Focus Check with a DC equal to the Move’s Accuracy Roll. If the user succeeds, the triggering Move fails. 316"
     },
     {
         "name": "Drought",
@@ -404,8 +404,8 @@
     {
         "name": "Effect Spore",
         "frequency": "Scene – Free Action",
-        "effect": "Roll 1d6. On a result of 1 or 2, the attacker is Poisoned. On a result of 3 or 4, the attacker is Paralyzed. On a result of 5 or 6, the attacker falls Asleep.",
-        "trigger": "The user is hit by a Melee Attack"
+        "trigger": "The user is hit by a Melee Attack",
+        "effect": "Roll 1d6. On a result of 1 or 2, the attacker is Poisoned. On a result of 3 or 4, the attacker is Paralyzed. On a result of 5 or 6, the attacker falls Asleep."
     },
     {
         "name": "Enfeebling Lips",
@@ -450,14 +450,14 @@
     {
         "name": "Flame Body",
         "frequency": "Scene – Free Action",
-        "effect": "The attacking foe becomes Burned.",
-        "trigger": "The user is hit by a Melee Attack"
+        "trigger": "The user is hit by a Melee Attack",
+        "effect": "The attacking foe becomes Burned."
     },
     {
         "name": "Flame Tongue",
         "frequency": "Scene – Free Action",
-        "effect": "Connection – Lick. The foe hit with Lick gains an Injury and becomes Burned.",
-        "trigger": "The user hits a foe with Lick."
+        "trigger": "The user hits a foe with Lick.",
+        "effect": "Connection – Lick. The foe hit with Lick gains an Injury and becomes Burned."
     },
     {
         "name": "Flare Boost",
@@ -532,8 +532,8 @@
     {
         "name": "Friend Guard",
         "frequency": "Scene – Free Action",
-        "effect": "The damage is resisted one step further. Defensive.",
-        "trigger": "An adjacent Ally takes Damage"
+        "trigger": "An adjacent Ally takes Damage",
+        "effect": "The damage is resisted one step further. Defensive."
     },
     {
         "name": "Frighten",
@@ -573,8 +573,8 @@
     {
         "name": "Gooey",
         "frequency": "At-Will – Free Action",
-        "effect": "The triggering attacker has their Speed lowered by 1 Combat Stage.",
-        "trigger": "The user is hit by a Melee Attack"
+        "trigger": "The user is hit by a Melee Attack",
+        "effect": "The triggering attacker has their Speed lowered by 1 Combat Stage."
     },
     {
         "name": "Gore",
@@ -604,8 +604,8 @@
     {
         "name": "Hay Fever",
         "frequency": "At-Will – Swift Action",
-        "effect": "The user creates a Burst 2 or Close Blast 3 of allergenic pollen. All Trainers and Pokémon in the burst that are not Bug, Grass, or Poison Typed lose a Tick of Hit Points. This Ability cannot be activated in Rainy Weather, Sandstorms, or if it is Hailing.",
-        "trigger": "The user uses a Status Move; or the user ends"
+        "trigger": "The user uses a Status Move; or the user ends",
+        "effect": "The user creates a Burst 2 or Close Blast 3 of allergenic pollen. All Trainers and Pokémon in the burst that are not Bug, Grass, or Poison Typed lose a Tick of Hit Points. This Ability cannot be activated in Rainy Weather, Sandstorms, or if it is Hailing."
     },
     {
         "name": "Healer",
@@ -615,8 +615,8 @@
     {
         "name": "Heat Mirage",
         "frequency": "At-Will – Free Action",
-        "effect": "The user’s Evasion is increased by +3 until the beginning of their next turn.",
-        "trigger": "The user uses a Fire-Type Move"
+        "trigger": "The user uses a Fire-Type Move",
+        "effect": "The user’s Evasion is increased by +3 until the beginning of their next turn."
     },
     {
         "name": "Heatproof",
@@ -696,8 +696,8 @@
     {
         "name": "Imposter",
         "frequency": "At-Will – Free Action",
-        "effect": "When Ditto is sent out, it may use the Move Transform as a free action. If the target of Transform has any modified Combat Stages, apply these Combat Stages to Ditto. One of the target’s Abilities is randomly assigned to Ditto until Ditto uses Transform again.",
-        "trigger": "Ditto enters the encounter"
+        "trigger": "Ditto enters the encounter",
+        "effect": "When Ditto is sent out, it may use the Move Transform as a free action. If the target of Transform has any modified Combat Stages, apply these Combat Stages to Ditto. One of the target’s Abilities is randomly assigned to Ditto until Ditto uses Transform again."
     },
     {
         "name": "Infiltrator",
@@ -727,8 +727,8 @@
     {
         "name": "Iron Barbs",
         "frequency": "At-Will - Free Action, Reaction",
-        "effect": "The attacker loses Hit Points equal to Tick of Hit Points.",
-        "trigger": "The user is hit by a damaging Melee Attack"
+        "trigger": "The user is hit by a damaging Melee Attack",
+        "effect": "The attacker loses Hit Points equal to Tick of Hit Points."
     },
     {
         "name": "Iron Fist",
@@ -738,8 +738,8 @@
     {
         "name": "Justified",
         "frequency": "At-Will - Free Action",
-        "effect": "The user may raise its Attack 1 Combat Stage. The user always gains a +4 bonus to Skill Checks made to Intercept.",
-        "trigger": "The user is hit by a damaging Dark Type Move"
+        "trigger": "The user is hit by a damaging Dark Type Move",
+        "effect": "The user may raise its Attack 1 Combat Stage. The user always gains a +4 bonus to Skill Checks made to Intercept."
     },
     {
         "name": "Kampfgeist",
@@ -804,8 +804,8 @@
     {
         "name": "Lightning Rod",
         "frequency": "Scene – Free Action",
-        "effect": "The Move is turned into a Single-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or Mind Reader. Additionally, the user is immune to the damage and effects of Electric Type attacks, and each time they are hit by an Electric attack, the user’s Special Attack is raised 1 Combat Stage. Defensive.",
-        "trigger": "A ranged Electric Type Move is used within 10"
+        "trigger": "A ranged Electric Type Move is used within 10",
+        "effect": "The Move is turned into a Single-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or Mind Reader. Additionally, the user is immune to the damage and effects of Electric Type attacks, and each time they are hit by an Electric attack, the user’s Special Attack is raised 1 Combat Stage. Defensive."
     },
     {
         "name": "Limber",
@@ -825,8 +825,8 @@
     {
         "name": "Lunchbox",
         "frequency": "Scene – Free Action",
-        "effect": "The user gains 5 Temporary Hit Points. These Temporary Hit Points stack with any Temporary Hit Points granted by the triggering Buff.",
-        "trigger": "The user trades in a Digestion Buff"
+        "trigger": "The user trades in a Digestion Buff",
+        "effect": "The user gains 5 Temporary Hit Points. These Temporary Hit Points stack with any Temporary Hit Points granted by the triggering Buff."
     },
     {
         "name": "Mach Speed",
@@ -836,8 +836,8 @@
     {
         "name": "Magic Bounce",
         "frequency": "Scene – Free Action",
-        "effect": "The user may reflect the Move back to the attacker. This Ability may be used to change the placement and affiliation of any Hazards being set within 10 meters of the user as well. Defensive.",
-        "trigger": "The user is hit by a Status Move"
+        "trigger": "The user is hit by a Status Move",
+        "effect": "The user may reflect the Move back to the attacker. This Ability may be used to change the placement and affiliation of any Hazards being set within 10 meters of the user as well. Defensive."
     },
     {
         "name": "Magic Guard",
@@ -847,8 +847,8 @@
     {
         "name": "Magician",
         "frequency": "Scene – Free Action",
-        "effect": "The user takes the target’s Held Item. This Ability may not be triggered if the user is already holding a Held Item.",
-        "trigger": "The user hits a foe with a damaging Single-"
+        "trigger": "The user hits a foe with a damaging Single-",
+        "effect": "The user takes the target’s Held Item. This Ability may not be triggered if the user is already holding a Held Item."
     },
     {
         "name": "Magma Armor",
@@ -918,8 +918,8 @@
     {
         "name": "Moody",
         "frequency": "At-Will – Free Action",
-        "effect": "Moody must be activated whenever it is triggered. Roll 1d10 to determine a Stat to be raised by +2 Combat Stages, then roll 1d10 to determine a Stat to be lowered by 2 Combat Stages. 1 or 2 is Attack, 3 or 4 is Defense, 5 or 6 is Special Attack, 7 or 8 is Special Defense, 9 or 10 is Speed. 324",
-        "trigger": "The user joins an encounter, misses with a"
+        "trigger": "The user joins an encounter, misses with a",
+        "effect": "Moody must be activated whenever it is triggered. Roll 1d10 to determine a Stat to be raised by +2 Combat Stages, then roll 1d10 to determine a Stat to be lowered by 2 Combat Stages. 1 or 2 is Attack, 3 or 4 is Defense, 5 or 6 is Special Attack, 7 or 8 is Special Defense, 9 or 10 is Speed. 324"
     },
     {
         "name": "Motor Drive",
@@ -954,8 +954,8 @@
     {
         "name": "Mummy",
         "frequency": "Daily – Free Action",
-        "effect": "Replace all of the Attacker’s Abilities with Mummy until the end of the encounter.",
-        "trigger": "The user is hit by a Melee Attack"
+        "trigger": "The user is hit by a Melee Attack",
+        "effect": "Replace all of the Attacker’s Abilities with Mummy until the end of the encounter."
     },
     {
         "name": "Natural Cure",
@@ -1010,8 +1010,8 @@
     {
         "name": "Pack Hunt",
         "frequency": "At-Will – Free Action",
-        "effect": "The user may make a Physical Attack with an AC of 5 against the triggering foe. If the attack hits, the foe loses a Tick of Hit Points.",
-        "trigger": "An adjacent foe is damaged by an ally’s Melee"
+        "trigger": "An adjacent foe is damaged by an ally’s Melee",
+        "effect": "The user may make a Physical Attack with an AC of 5 against the triggering foe. If the attack hits, the foe loses a Tick of Hit Points."
     },
     {
         "name": "Parental Bond",
@@ -1021,14 +1021,14 @@
     {
         "name": "Parry",
         "frequency": "Scene – Free Action",
-        "effect": "The attack instead misses. Defensive.",
-        "trigger": "The user is hit by a Melee Attack"
+        "trigger": "The user is hit by a Melee Attack",
+        "effect": "The attack instead misses. Defensive."
     },
     {
         "name": "Perception",
         "frequency": "At-Will – Shift Action, Interrupt",
-        "effect": "You may Shift to remove yourself from the area- of-effect.",
-        "trigger": "An ally uses an area-of-effect attack that would"
+        "trigger": "An ally uses an area-of-effect attack that would",
+        "effect": "You may Shift to remove yourself from the area- of-effect."
     },
     {
         "name": "Permafrost",
@@ -1038,8 +1038,8 @@
     {
         "name": "Pickpocket",
         "frequency": "Scene – Free Action",
-        "effect": "If the opponent has a Held Item and the user does not, the user takes the Held Item the opponent is holding.",
-        "trigger": "The user is hit by an opponent with a Melee"
+        "trigger": "The user is hit by an opponent with a Melee",
+        "effect": "If the opponent has a Held Item and the user does not, the user takes the Held Item the opponent is holding."
     },
     {
         "name": "Pickup",
@@ -1049,8 +1049,8 @@
     {
         "name": "Pixilate",
         "frequency": "At-Will - Free Action",
-        "effect": "The Move is changed to be Fairy-Type.",
-        "trigger": "The user uses a Normal-Type damaging Move"
+        "trigger": "The user uses a Normal-Type damaging Move",
+        "effect": "The Move is changed to be Fairy-Type."
     },
     {
         "name": "Plus",
@@ -1060,14 +1060,14 @@
     {
         "name": "Poison Heal",
         "frequency": "Daily – Free Action",
-        "effect": "For the rest of the encounter, while Poisoned or Badly Poisoned, the user gains a Tick of Hit Points at the beginning of each turn instead of losing any Hit Points from Poison. At the end of the encounter, the user is cured of the Poison Status. Additionally, the user does not have any Combat Stages lowered from being Poisoned.",
-        "trigger": "The user becomes Poisoned"
+        "trigger": "The user becomes Poisoned",
+        "effect": "For the rest of the encounter, while Poisoned or Badly Poisoned, the user gains a Tick of Hit Points at the beginning of each turn instead of losing any Hit Points from Poison. At the end of the encounter, the user is cured of the Poison Status. Additionally, the user does not have any Combat Stages lowered from being Poisoned."
     },
     {
         "name": "Poison Point",
         "frequency": "Scene – Free Action",
-        "effect": "The attacking foe is Poisoned.",
-        "trigger": "The user is hit by a Melee Move"
+        "trigger": "The user is hit by a Melee Move",
+        "effect": "The attacking foe is Poisoned."
     },
     {
         "name": "Poison Touch",
@@ -1112,8 +1112,8 @@
     {
         "name": "Protean",
         "frequency": "At-Will – Swift Action",
-        "effect": "The user’s Type changes to match the Type of the triggering Move. This Ability resolves before the Move is resolved (And thus you may apply STAB, and trigger other Features and Abilities appropriately).",
-        "trigger": "The user uses a Move"
+        "trigger": "The user uses a Move",
+        "effect": "The user’s Type changes to match the Type of the triggering Move. This Ability resolves before the Move is resolved (And thus you may apply STAB, and trigger other Features and Abilities appropriately)."
     },
     {
         "name": "Pumpkingrab",
@@ -1158,8 +1158,8 @@
     {
         "name": "Rattled",
         "frequency": "At-Will – Free Action",
-        "effect": "The user’s Speed is raised by +1 Combat Stage.",
-        "trigger": "The user is hit by a Bug, Dark, or Ghost Type"
+        "trigger": "The user is hit by a Bug, Dark, or Ghost Type",
+        "effect": "The user’s Speed is raised by +1 Combat Stage."
     },
     {
         "name": "Razor Edge",
@@ -1179,8 +1179,8 @@
     {
         "name": "Refrigerate",
         "frequency": "At-Will – Free Action",
-        "effect": "The Move is changed to be Ice-Type.",
-        "trigger": "The user uses a Normal-Type damaging Move"
+        "trigger": "The user uses a Normal-Type damaging Move",
+        "effect": "The Move is changed to be Ice-Type."
     },
     {
         "name": "Regal Challenge",
@@ -1190,8 +1190,8 @@
     {
         "name": "Regenerator",
         "frequency": "Daily x2 – Free Action",
-        "effect": "The user gains Hit Points equal to 1/3rd of its maximum Hit Points. Regenerator may be activated only once per Scene.",
-        "trigger": "The user is recalled into a Poké Ball, or Takes"
+        "trigger": "The user is recalled into a Poké Ball, or Takes",
+        "effect": "The user gains Hit Points equal to 1/3rd of its maximum Hit Points. Regenerator may be activated only once per Scene."
     },
     {
         "name": "Rivalry",
@@ -1216,8 +1216,8 @@
     {
         "name": "Rough Skin",
         "frequency": "At-Will - Free Action, Reaction",
-        "effect": "The attacker loses a tick of Hit Points.",
-        "trigger": "The user is hit by a damaging Melee Attack"
+        "trigger": "The user is hit by a damaging Melee Attack",
+        "effect": "The attacker loses a tick of Hit Points."
     },
     {
         "name": "Run Away",
@@ -1322,8 +1322,8 @@
     {
         "name": "Skill Link",
         "frequency": "Scene – Free Action",
-        "effect": "The Triggering Move automatically hits 5 Times. 329",
-        "trigger": "The user hits with a Move with the Five Strike"
+        "trigger": "The user hits with a Move with the Five Strike",
+        "effect": "The Triggering Move automatically hits 5 Times. 329"
     },
     {
         "name": "Slow Start",
@@ -1358,8 +1358,8 @@
     {
         "name": "Sonic Courtship",
         "frequency": "Scene – Free Action",
-        "effect": "Connection - Attract. Treat Attract as a Cone 2 Move with the Sonic keyword for this use, which affects all targets regardless of Gender.",
-        "trigger": "The user uses Attract"
+        "trigger": "The user uses Attract",
+        "effect": "Connection - Attract. Treat Attract as a Cone 2 Move with the Sonic keyword for this use, which affects all targets regardless of Gender."
     },
     {
         "name": "Soothing Tone",
@@ -1369,14 +1369,14 @@
     {
         "name": "Soulstealer",
         "frequency": "Scene – Free Action",
-        "effect": "The user removes one Injury from themselves and recovers 25% of their Maximum Hit Points. If the triggering attack killed its target, the user instead removes all Injuries and recovers all Hit Points.",
-        "trigger": "The user’s attack causes a foe to Faint"
+        "trigger": "The user’s attack causes a foe to Faint",
+        "effect": "The user removes one Injury from themselves and recovers 25% of their Maximum Hit Points. If the triggering attack killed its target, the user instead removes all Injuries and recovers all Hit Points."
     },
     {
         "name": "Sound Lance",
         "frequency": "Scene x2 - Swift Action",
-        "effect": "Connection – Supersonic. The target of Supersonic takes Special Normal-Type damage equal to the user’s Special Attack score. This effect functions independently of whether Supersonic hits its target.",
-        "trigger": "The user uses Supersonic"
+        "trigger": "The user uses Supersonic",
+        "effect": "Connection – Supersonic. The target of Supersonic takes Special Normal-Type damage equal to the user’s Special Attack score. This effect functions independently of whether Supersonic hits its target."
     },
     {
         "name": "Soundproof",
@@ -1391,8 +1391,8 @@
     {
         "name": "Spinning Dance",
         "frequency": "At-Will - Free Action",
-        "effect": "If not Fainted, Paralyzed, or Asleep, the user gains +1 Evasion and may immediately Shift 1 meter.",
-        "trigger": "The user is targeted by an attack, but is missed"
+        "trigger": "The user is targeted by an attack, but is missed",
+        "effect": "If not Fainted, Paralyzed, or Asleep, the user gains +1 Evasion and may immediately Shift 1 meter."
     },
     {
         "name": "Spiteful Intervention",
@@ -1402,20 +1402,20 @@
     {
         "name": "Spray Down",
         "frequency": "Scene – Free Action",
-        "effect": "The triggering attack’s target is knocked down to ground level, and loses all Sky or Levitate Speeds for 3 turns. During this time, they may be hit by Ground- Type Moves even if normally immune.",
-        "trigger": "The user hits an airborne target with a ranged"
+        "trigger": "The user hits an airborne target with a ranged",
+        "effect": "The triggering attack’s target is knocked down to ground level, and loses all Sky or Levitate Speeds for 3 turns. During this time, they may be hit by Ground- Type Moves even if normally immune."
     },
     {
         "name": "Sprint",
         "frequency": "Scene – Swift Action",
-        "effect": "The user gains +2 Speed Combat Stages. Additionally, the user’s Overland Speed is always increased by +2.",
-        "trigger": "The user uses the Sprint Action during Combat"
+        "trigger": "The user uses the Sprint Action during Combat",
+        "effect": "The user gains +2 Speed Combat Stages. Additionally, the user’s Overland Speed is always increased by +2."
     },
     {
         "name": "Static",
         "frequency": "Scene – Free Action",
-        "effect": "The attacking foe becomes Paralyzed.",
-        "trigger": "The user is hit by a Melee Attack"
+        "trigger": "The user is hit by a Melee Attack",
+        "effect": "The attacking foe becomes Paralyzed."
     },
     {
         "name": "Stall",
@@ -1440,8 +1440,8 @@
     {
         "name": "Steadfast",
         "frequency": "At-Will – Free Action",
-        "effect": "The user’s Speed is raised by +1 Combat Stage.",
-        "trigger": "The user is Flinched"
+        "trigger": "The user is Flinched",
+        "effect": "The user’s Speed is raised by +1 Combat Stage."
     },
     {
         "name": "Stench",
@@ -1461,8 +1461,8 @@
     {
         "name": "Storm Drain",
         "frequency": "Scene – Free Action",
-        "effect": "The Move is turned into a Single-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or Mind Reader. Additionally, the user is immune to the damage and effects of Water Type attacks, and each time they are hit by a Water- Type attack, the user’s Special Attack is raised 1 Combat Stage. Defensive.",
-        "trigger": "A ranged Water-Type Move is used within 10"
+        "trigger": "A ranged Water-Type Move is used within 10",
+        "effect": "The Move is turned into a Single-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or Mind Reader. Additionally, the user is immune to the damage and effects of Water Type attacks, and each time they are hit by a Water- Type attack, the user’s Special Attack is raised 1 Combat Stage. Defensive."
     },
     {
         "name": "Strange Tempo",
@@ -1512,8 +1512,8 @@
     {
         "name": "Sway",
         "frequency": "Scene – Standard Action, Interrupt",
-        "effect": "The triggering attack misses the user and hits the foe that made the attack instead. That foe may then be pushed to any empty square adjacent to the user. 332",
-        "trigger": "The user is hit by a damaging Melee attack"
+        "trigger": "The user is hit by a damaging Melee attack",
+        "effect": "The triggering attack misses the user and hits the foe that made the attack instead. That foe may then be pushed to any empty square adjacent to the user. 332"
     },
     {
         "name": "Sweet Veil",
@@ -1533,8 +1533,8 @@
     {
         "name": "Synchronize",
         "frequency": "Scene – Free Action",
-        "effect": "The foe which caused the Status Condition is given the same Status they inflicted.",
-        "trigger": "The user is Paralyzed, Frozen, Burned,"
+        "trigger": "The user is Paralyzed, Frozen, Burned,",
+        "effect": "The foe which caused the Status Condition is given the same Status they inflicted."
     },
     {
         "name": "Tangled Feet",
@@ -1559,14 +1559,14 @@
     {
         "name": "Telepathy",
         "frequency": "At-Will - Shift Action, Interrupt",
-        "effect": "You may Shift to remove yourself from the area- of-effect.",
-        "trigger": "An ally uses an area-of-effect attack that would"
+        "trigger": "An ally uses an area-of-effect attack that would",
+        "effect": "You may Shift to remove yourself from the area- of-effect."
     },
     {
         "name": "Teravolt",
         "frequency": "At-Will - Free Action",
-        "effect": "The damaged foe’s Abilities are disabled for the remainder of the encounter.",
-        "trigger": "The user damages a foe"
+        "trigger": "The user damages a foe",
+        "effect": "The damaged foe’s Abilities are disabled for the remainder of the encounter."
     },
     {
         "name": "Thermosensitive",
@@ -1626,8 +1626,8 @@
     {
         "name": "Turboblaze",
         "frequency": "At-Will - Free Action",
-        "effect": "The damaged foe’s Abilities are disabled for the remainder of the encounter.",
-        "trigger": "The user damages a foe"
+        "trigger": "The user damages a foe",
+        "effect": "The damaged foe’s Abilities are disabled for the remainder of the encounter."
     },
     {
         "name": "Type Strategist",
@@ -1672,8 +1672,8 @@
     {
         "name": "Vicious",
         "frequency": "Scene – Special",
-        "effect": "Connection – Hone Claws. When this Ability is activated, choose one effect; the user gains another Standard Action this round; or the user increase their Critical Hit Range on all attacks by +2 for the remainder of the encounter.",
-        "trigger": "The user uses Hone Claws"
+        "trigger": "The user uses Hone Claws",
+        "effect": "Connection – Hone Claws. When this Ability is activated, choose one effect; the user gains another Standard Action this round; or the user increase their Critical Hit Range on all attacks by +2 for the remainder of the encounter."
     },
     {
         "name": "Victory Star",
@@ -1683,8 +1683,8 @@
     {
         "name": "Vigor",
         "frequency": "Daily – Free Action",
-        "effect": "Connection – Endure. When this Ability is activated, after being set to 1 Hit Point, the user gains a Tick of Hit Points. Furthermore, if the Move that triggered Endure gave the user an Injury from Massive Damage, the user does not gain that Injury. Defensive.",
-        "trigger": "The user uses Endure"
+        "trigger": "The user uses Endure",
+        "effect": "Connection – Endure. When this Ability is activated, after being set to 1 Hit Point, the user gains a Tick of Hit Points. Furthermore, if the Move that triggered Endure gave the user an Injury from Massive Damage, the user does not gain that Injury. Defensive."
     },
     {
         "name": "Vital Spirit",
@@ -1699,8 +1699,8 @@
     {
         "name": "Voodoo Doll",
         "frequency": "Daily – Free Action",
-        "effect": "Connection - Curse. Choose an additional target within 8 meters of the user to become Cursed.",
-        "trigger": "The user uses the Move Curse as a Ghost Type"
+        "trigger": "The user uses the Move Curse as a Ghost Type",
+        "effect": "Connection - Curse. Choose an additional target within 8 meters of the user to become Cursed."
     },
     {
         "name": "Wallmaster",
@@ -1710,8 +1710,8 @@
     {
         "name": "Wash Away",
         "frequency": "Daily – Free Action",
-        "effect": "Before the Move “hits”, all Combat Stages on targets hit by the Move are reset to their default (usually 0), and all coats on the targets, except ones placed by Water Sport, are destroyed.",
-        "trigger": "The user hits with a Water Type Move"
+        "trigger": "The user hits with a Water Type Move",
+        "effect": "Before the Move “hits”, all Combat Stages on targets hit by the Move are reset to their default (usually 0), and all coats on the targets, except ones placed by Water Sport, are destroyed."
     },
     {
         "name": "Water Absorb",
@@ -1726,8 +1726,8 @@
     {
         "name": "Weak Armor",
         "frequency": "At-Will – Free Action",
-        "effect": "The user may lower its Defense by 1 Combat Stage, and gain +1 Speed Combat Stage. This is done after the triggering damage is resolved.",
-        "trigger": "The user takes Physical damage."
+        "trigger": "The user takes Physical damage.",
+        "effect": "The user may lower its Defense by 1 Combat Stage, and gain +1 Speed Combat Stage. This is done after the triggering damage is resolved."
     },
     {
         "name": "Weaponize",
@@ -1737,8 +1737,8 @@
     {
         "name": "Weeble",
         "frequency": "At-Will – Standard Action, Reaction",
-        "effect": "The user may make an AC4 Physical Attack against an adjacent target. If the attack hits, the target loses Hit Points equal to 1/3rd of the damage taken by the user from the attack that triggered Weeble.",
-        "trigger": "The user is hit by a damaging attack"
+        "trigger": "The user is hit by a damaging attack",
+        "effect": "The user may make an AC4 Physical Attack against an adjacent target. If the attack hits, the target loses Hit Points equal to 1/3rd of the damage taken by the user from the attack that triggered Weeble."
     },
     {
         "name": "Whirlwind Kicks",
@@ -1778,8 +1778,8 @@
     {
         "name": "Wobble",
         "frequency": "Scene – Free Action",
-        "effect": "The user may use either Counter or Mirror Coat as a Reaction, ignoring Frequency.",
-        "trigger": "The user is hit by a damaging attack"
+        "trigger": "The user is hit by a damaging attack",
+        "effect": "The user may use either Counter or Mirror Coat as a Reaction, ignoring Frequency."
     },
     {
         "name": "Wonder Guard",
