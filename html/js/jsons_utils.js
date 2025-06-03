@@ -29,38 +29,38 @@ function replaceStringsWithDictionary(inputString, dictionary) {
 
 function loadJsonAsText(file, container) {
     console.log(container);
-        $.getJSON(file, function(data) {
-                if (!Array.isArray(data) || data.length === 0) {
-                    alert(`Error: no data found in ${file}`);
-                    return;
+    $.getJSON(file, function (data) {
+        if (!Array.isArray(data) || data.length === 0) {
+            alert(`Error: no data found in ${file}`);
+            return;
+        }
+
+        data.forEach(item => {
+            let str = '';
+            Object.keys(item).forEach(key => {
+                if (key == "frequency") {
+                    str += `${item[key] !== undefined ? item[key] : ""}<br>`;
                 }
+                else if (key == "name") {
+                    str += `<strong>${item[key] !== undefined ? item[key] : ""}</strong><br>`;
+                }
+                else {
+                    const parsedKey = replaceStringsWithDictionary(key, dictionary);
+                    str += `<strong>${parsedKey}</strong>: ${item[key] !== undefined ? item[key] : ""}<br>`;
+                }
+            });
+            //str = str.slice(0, -2); // Remove the trailing comma and space
+            //console.log(str);
 
-                data.forEach(item => {
-                    let str = '';
-                    Object.keys(item).forEach(key => {
-                        if (key == "frequency") {
-                            str += `${item[key] !== undefined ? item[key] : ""}<br>`;
-                        }
-                        else if (key == "name") {
-                            str += `<strong>${item[key] !== undefined ? item[key] : ""}</strong><br>`;
-                        }
-                        else {
-                            const parsedKey = replaceStringsWithDictionary(key, dictionary);
-                            str += `<strong>${parsedKey}</strong>: ${item[key] !== undefined ? item[key] : ""}<br>`;
-                        }
-                    });
-                    //str = str.slice(0, -2); // Remove the trailing comma and space
-                    //console.log(str);
+            //container.innerHTML += `<div class=".col-4">${str}</div>`;
 
-                    //container.innerHTML += `<div class=".col-4">${str}</div>`;
-
-                    container.innerHTML += `<div class="col-12 col-md-4"><div class="card h-100"><div class="card-body">${str}</div></div></div>`;
-                });
+            container.innerHTML += `<div class="col-12 col-md-4"><div class="card h-100"><div class="card-body">${str}</div></div></div>`;
         });
+    });
 }
 
 function loadJsonToTable(file, tableId) {
-    $.getJSON(file, function(data) {
+    $.getJSON(file, function (data) {
         if (!Array.isArray(data) || data.length === 0) {
             $(`#${tableId} tbody`).append('<tr><td colspan="100%">Aucune donnée</td></tr>');
             return;
@@ -90,7 +90,7 @@ function loadJsonToTable(file, tableId) {
             });
             $(`#${tableId} tbody`).append(`<tr>${rowHtml}</tr>`);
         });
-    }).fail(function() {
+    }).fail(function () {
         alert("Erreur lors du chargement du JSON.");
     });
 }
