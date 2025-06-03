@@ -26,7 +26,7 @@ def extraire_blocs_moves(pdf_path):
 def formatter_move_en_json(bloc):
     lines = bloc.splitlines()
     move = {
-        "nom": None,
+        "name": None,
         "type": None,
         "frequency": None,
         "ac": None,
@@ -51,7 +51,7 @@ def formatter_move_en_json(bloc):
 
         # Champs fixes
         if l.startswith("Move:"):
-            move["nom"] = l.split(":", 1)[-1].strip()
+            move["name"] = l.split(":", 1)[-1].strip()
         elif l.startswith("Type:"):
             move["type"] = l.split(":", 1)[-1].strip()
         elif l.startswith("Frequency:"):
@@ -84,10 +84,10 @@ def formatter_move_en_json(bloc):
     # Nettoyer les champs vides
     move = {k: v for k, v in move.items() if v}
 
-    return move if "nom" in move and "effect" in move else None
+    return move if "name" in move and "effect" in move else None
 
 # 🔁 Utilisation
-pdf_path = 'SuMoBasics.pdf'
+pdf_path = 'py/Community Gen 9 Homebrew Dex.pdf'
 blocs_moves = extraire_blocs_moves(pdf_path)
 moves_json = [formatter_move_en_json(bloc) for bloc in blocs_moves]
 moves_json = [m for m in moves_json if m]
