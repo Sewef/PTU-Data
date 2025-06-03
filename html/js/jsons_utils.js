@@ -54,7 +54,10 @@ function loadJsonAsText(file, container) {
 
             //container.innerHTML += `<div class=".col-4">${str}</div>`;
 
-            container.innerHTML += `<div class="col-12 col-md-4"><div class="card h-100"><div class="card-body">${str}</div></div></div>`;
+            const cardDiv = document.createElement('div');
+            cardDiv.className = "col-12 col-md-4";
+            cardDiv.innerHTML = `<div class="card h-100"><div class="card-body">${str}</div></div>`;
+            container.appendChild(cardDiv);
         });
     });
 }
