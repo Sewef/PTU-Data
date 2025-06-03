@@ -37,11 +37,11 @@ function loadJsonAsCard(file, container) {
         data.forEach(item => {
             let str = '';
             Object.keys(item).forEach(key => {
-                if (key == "frequency") {
-                    str += `${item[key] !== undefined ? item[key] : ""}<br>`;
+                if (key == "name") {
+                    str += `<h3>${item[key] !== undefined ? item[key] : ""}</h3>`;
                 }
-                else if (key == "name") {
-                    str += `<strong>${item[key] !== undefined ? item[key] : ""}</strong><br>`;
+                else if (key == "frequency" && 1==0) {
+                    str += `${item[key] !== undefined ? item[key] : ""}<br>`;
                 }
                 else if (key == "damage_base") {
                     if (item[key] !== undefined) {
