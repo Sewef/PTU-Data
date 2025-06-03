@@ -28,7 +28,6 @@ function replaceStringsWithDictionary(inputString, dictionary) {
 
 
 function loadJsonAsCard(file, container) {
-    console.log(container);
     $.getJSON(file, function (data) {
         if (!Array.isArray(data) || data.length === 0) {
             alert(`Error: no data found in ${file}`);
