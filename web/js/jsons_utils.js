@@ -14,6 +14,14 @@ dictionary = {
     "contest_effect": "Contest Effect",
     "set_up_effect": "Set-Up Effect",
     "resolution_effect": "Resolution Effect",
+    "target": "Target",
+    "sliceMoves": "Slice Moves",
+    "formeEffects": "Forme Effects",
+    "notes": "Notes",
+    "plumage": "Plumage",
+    "masks": "Masks",
+    "windMoves": "Wind Moves",
+    "types": "Types",
 }
 
 function replaceStringsWithDictionary(inputString, dictionary) {
@@ -58,6 +66,7 @@ function loadJsonAsCard(file, container) {
                 else {
                     const parsedKey = replaceStringsWithDictionary(key, dictionary);
                     str += `<strong>${parsedKey}</strong>: ${item[key] !== undefined ? item[key] : ""}<br>`;
+                    str = str.replaceAll("\n", "<br>");
                 }
             });
             

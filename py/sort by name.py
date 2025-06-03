@@ -1,8 +1,8 @@
 import json
 
 # Replace with your JSON filename
-input_file = '9_abilities FULL arc.json'
-output_file = '9_abilities FULL arc.json'
+input_file = '10_abilities FULL 9G.json'
+output_file = '10_abilities FULL 9G.json'
 
 # Read the JSON data
 with open(input_file, 'r', encoding='utf-8') as f:
