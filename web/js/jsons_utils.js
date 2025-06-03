@@ -27,7 +27,7 @@ function replaceStringsWithDictionary(inputString, dictionary) {
 }
 
 
-function loadJsonAsText(file, container) {
+function loadJsonAsCard(file, container) {
     console.log(container);
     $.getJSON(file, function (data) {
         if (!Array.isArray(data) || data.length === 0) {
