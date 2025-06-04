@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jsons_utils.js"></script>
   <script src="js/helpers.js"></script>
@@ -28,8 +29,20 @@
 
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="abilities.html" class="nav-link">Abilities</a></li>
-        <li class="nav-item"><a href="moves.html" class="nav-link">Moves</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="abilitiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Abilities</a>
+          <ul class="dropdown-menu" aria-labelledby="abilitiesDropdown">
+            <li><a class="dropdown-item" href="abilities_9G.html">Ability 9G</a></li>
+            <li><a class="dropdown-item" href="abilities_8G.html">Ability 8G</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="movesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Moves</a>
+          <ul class="dropdown-menu" aria-labelledby="movesDropdown">
+            <li><a class="dropdown-item" href="moves_9G.html">Move 9G</a></li>
+            <li><a class="dropdown-item" href="moves_8G.html">Move 8G</a></li>
+          </ul>
+        </li>
       </ul>
     </header>
   </div>
