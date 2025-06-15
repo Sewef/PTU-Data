@@ -5,24 +5,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="/ptujs/jquery-3.7.1.min.js"></script>
-  <script src="/ptujs/popper.min.js"></script>
-  <script src="/ptujs/bootstrap.min.js"></script>
-  <script src="/ptujs/jsons_utils.js"></script>
-  <script src="/ptujs/helpers.js"></script>
+  <script src="/ptu/js/jquery-3.7.1.min.js"></script>
+  <script src="/ptu/js/popper.min.js"></script>
+  <script src="/ptu/js/bootstrap.min.js"></script>
+  <script src="/ptu/js/jsons_utils.js"></script>
+  <script src="/ptu/js/helpers.js"></script>
 
   <title>PTU Data - Home</title>
 </head>
 
 <body>
-  <div w3-include-html="/ptu/header.html"></div>
+  <div w3-include-html="header.html"></div>
   <div class="container py-4">
     <div class="row g-3" id="home">
-      <h1>Bienvenue sur le site de données PTU</h1>
-      <p>Ce site est dédié à la visualisation des données du jeu de rôle Pokémon Tabletop United (PTU).</p>
-      <p>Vous pouvez explorer les différentes sections pour découvrir les capacités, les talents et d'autres
-        informations utiles.</p>
-      <p>Utilisez le menu en haut pour naviguer entre les différentes pages.</p>
+      <h1>PTU Data Home</h1>
+      <p>Welcome to the Pokémon Tabletop United (PTU) Data repository. Here you can find various resources related to PTU, including moves, abilities, and more.</p>
+      <p>Please select a dataset:</p>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Core Data</h5>
+            <p class="card-text">The main PTU rulebook, including core mechanics, classes, and more.</p>
+            <a href="ptucore/index.html" class="btn btn-primary">View Core Data</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Gen9 Data</h5>
+            <p class="card-text">Core rulebook with all Community Gen 9 Homebrew Dex adds. Includes full Moves and Abilities.</p>
+            <a href="ptugen9/index.html" class="btn btn-primary">View Gen 9 Data</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Homebrew</h5>
+            <p class="card-text">
+              What we use. Includes "PTU 1.05 Editation" (
+              <a href="https://www.tapatalk.com/groups/pokemon_tabletop/ptu-extremely-unofficial-ptu-1-05-39-balance-patch-t3521.html" target="_blank" rel="noopener">source</a>
+              ) modifications and other homebrew content.
+            </p>
+            <a href="ptuhomebrew/index.html" class="btn btn-primary">View Homebrew Data</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
