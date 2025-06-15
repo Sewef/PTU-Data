@@ -5,22 +5,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="js/jquery-3.7.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jsons_utils.js"></script>
-  <script src="js/helpers.js"></script>
+  <script src="/ptu/js/jquery-3.7.1.min.js"></script>
+  <script src="/ptu/js/popper.min.js"></script>
+  <script src="/ptu/js/bootstrap.min.js"></script>
+  <script src="/ptu/js/jsons_utils.js"></script>
+  <script src="/ptu/js/helpers.js"></script>
 
-  <title>PTU Data - Moves 8G</title>
+  <title>PTU Data - Moves 9G</title>
 </head>
 
 <body>
   <div w3-include-html="header.html"></div>
   <div class="container py-4">
     <div class="row g-3" id="moves">
-      <h1>Moves 8G (A-Z)</h1>
+      <h1>Moves Gen 9 (A-Z)</h1>
       <script>
-        loadJsonAsCard("./data/moves_8G.json", document.currentScript.parentNode);
+        loadJsonAsCard("/ptu/data/moves_9G.json", document.currentScript.parentNode);
       </script>
     </div>
   </div>
