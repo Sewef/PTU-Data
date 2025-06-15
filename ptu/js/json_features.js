@@ -13,7 +13,7 @@ function renderData(data, container, depth = 0) {
             renderData(value, container, depth + 1);
         } else {
             const p = document.createElement("p");
-            p.innerHTML = `<strong>${key}:</strong> ${value}`;
+            p.innerHTML = `<strong>${key}:</strong> ${value.replaceAll("\n", "<br>")}`;
             container.appendChild(p);
         }
     }
