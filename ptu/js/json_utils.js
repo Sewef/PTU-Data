@@ -8,13 +8,13 @@ function loadJsonAsCard(file, container) {
         data.forEach(item => {
             let str = '';
             Object.keys(item).forEach(key => {
-                if (key == "name") {
+                if (key == "Name") {
                     str += `<h3>${item[key] !== undefined ? item[key] : ""}</h3>`;
                 }
-                else if (key == "frequency" && 1==0) {
+                else if (key == "Frequency" && 1==0) {
                     str += `${item[key] !== undefined ? item[key] : ""}<br>`;
                 }
-                else if (key == "damage_base") {
+                else if (key == "Damage Base") {
                     if (item[key] !== undefined) {
                         const regex = /(Damage Base.*:) (.*)/;
                         const match = item[key].match(regex);
