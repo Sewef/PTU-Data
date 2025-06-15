@@ -4571,7 +4571,7 @@
     {
         "name": "Leech Life",
         "type": "Bug",
-        "frequency": "EOT",
+        "frequency": "Scene x2",
         "ac": "2",
         "damage_base": "Damage Base 8: 2d8+10 / 19",
         "class": "Physical",
@@ -8037,14 +8037,14 @@
     {
         "name": "Steam Eruption",
         "type": "Water",
-        "frequency": "Scene x2",
+        "frequency": "Scene",
         "ac": "3",
         "damage_base": "Damage Base 11: 3d10+10 / 27",
         "class": "Special",
-        "range": "Burst 1",
-        "effect": "Steam Eruption Burns all Legal Targets on 15+. Steam Eruption may be used even if the user is Frozen, and cures the user and all Legal Targets of the Frozen condition.",
-        "contest_type": "Beauty",
-        "contest_effect": "Inversed Appeal"
+        "range": "Close Blast 3, Smite",
+        "effect": "Steam Eruption burns all legal targets on a 15+.",
+        "contest_type": "Cool",
+        "contest_effect": "Seen Nothing Yet"
     },
     {
         "name": "Steamroller",
@@ -8882,7 +8882,7 @@
         "name": "Thunder Wave",
         "type": "Electric",
         "frequency": "Scene x2",
-        "ac": "2",
+        "ac": "4",
         "class": "Status",
         "range": "6, 1 Target",
         "effect": "Thunder Wave Paralyzes the target. Targets immune to Electric Attacks are immune to Thunder Wave’s effects.",
