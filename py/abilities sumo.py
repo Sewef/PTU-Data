@@ -47,11 +47,11 @@ def extraire_abilities(pdf_path):
         # Construction du dictionnaire
         ability = {
             "nom": nom,
-            "frequency": frequency_,
+            "Frequency": frequency_,
             "effet": effet.strip()
         }
         if trigger:
-            ability["trigger"] = trigger
+            ability["Trigger"] = trigger
         abilities.append(ability)
 
     return abilities

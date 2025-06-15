@@ -1,40 +1,3 @@
-dictionary = {
-    "name": "Name",
-    "frequency": "Frequency",
-    "effect": "Effect",
-    "trigger": "Trigger",
-    "bonus": "Bonus",
-    "special": "Special",
-    "type": "Type",
-    "ac": "AC",
-    "damage_base": "Damage Base",
-    "class": "Class",
-    "range": "Range",
-    "contest_type": "Contest Type",
-    "contest_effect": "Contest Effect",
-    "set_up_effect": "Set-Up Effect",
-    "resolution_effect": "Resolution Effect",
-    "target": "Target",
-    "sliceMoves": "Slice Moves",
-    "formeEffects": "Forme Effects",
-    "notes": "Notes",
-    "plumage": "Plumage",
-    "masks": "Masks",
-    "windMoves": "Wind Moves",
-    "types": "Types",
-}
-
-function replaceStringsWithDictionary(inputString, dictionary) {
-    let str = inputString;
-    Object.keys(dictionary).forEach(key => {
-        if (str == key) {
-            str = dictionary[key];
-        }
-    });
-    return str;
-}
-
-
 function loadJsonAsCard(file, container) {
     $.getJSON(file, function (data) {
         if (!Array.isArray(data) || data.length === 0) {
@@ -64,8 +27,7 @@ function loadJsonAsCard(file, container) {
                     }
                 }
                 else {
-                    const parsedKey = replaceStringsWithDictionary(key, dictionary);
-                    str += `<strong>${parsedKey}</strong>: ${item[key] !== undefined ? item[key] : ""}<br>`;
+                    str += `<strong>${key}</strong>: ${item[key] !== undefined ? item[key] : ""}<br>`;
                     str = str.replaceAll("\n", "<br>");
                 }
             });
