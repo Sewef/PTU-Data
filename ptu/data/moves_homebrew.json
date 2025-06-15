@@ -141,6 +141,16 @@
         "contest_effect": "Exhausting Act"
     },
     {
+        "name": "Alluring Voice",
+        "type": "Fairy",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Special",
+        "range": "Burst 1, Sonic, Spirit Surge",
+        "effect": "After this Move has resolved, the user may choose to Confuse foes within 5m that have had any CS raised since the beginning of that foe’s last turn. This Effect may trigger only once per Scene."
+    },
+    {
         "name": "Ally Switch",
         "type": "Psychic",
         "frequency": "Scene",
@@ -199,6 +209,16 @@
         "contest_effect": "Unsettling"
     },
     {
+        "name": "Aqua Cutter",
+        "type": "Water",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 7: 2d6+10 / 17",
+        "class": "Physical",
+        "range": "6, 1 Target, Slice",
+        "effect": "This Move is a Critical Hit on 18+."
+    },
+    {
         "name": "Aqua Jet",
         "type": "Water",
         "frequency": "At-Will",
@@ -220,6 +240,16 @@
         "effect": "Aqua Ring covers the user in a Coat that heals the user at the beginning of their turn. The user is healed a Tick of Hit Points each turn.",
         "contest_type": "Beauty",
         "contest_effect": "Safe Option"
+    },
+    {
+        "name": "Aqua Step",
+        "type": "Water",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Spirit Surge",
+        "effect": "Raise the user’s Speed 1 Combat Stage."
     },
     {
         "name": "Aqua Tail",
@@ -246,6 +276,18 @@
         "contest_effect": "Reliable"
     },
     {
+        "name": "Armor Cannon",
+        "type": "Fire",
+        "frequency": "Scene",
+        "ac": "2",
+        "damage_base": "Damage Base 12: 3d12+10 / 30",
+        "class": "Special",
+        "range": "Line 4, Reckless",
+        "effect": "The user’s Defense and Special Defense are each lowered by -1 Combat Stage.",
+        "contest_type": "Smart",
+        "contest_effect": "Seen Nothing Yet"
+    },
+    {
         "name": "Aromatherapy",
         "type": "Grass",
         "frequency": "Scene",
@@ -266,6 +308,17 @@
         "effect": "All allies in Aromatic Mist’s area of effect have their Special Defense raised 1 Combat Stage.",
         "contest_type": "Cute",
         "contest_effect": "Get Ready!"
+    },
+    {
+        "name": "Artillerolives* [New]",
+        "type": "Grass",
+        "frequency": "EOT",
+        "ac": "3",
+        "damage_base": "Damage Base 5: 1d8+8 / 13",
+        "class": "Special",
+        "range": "4, 2 Targets; or 4, 1 Target (see Effect)",
+        "effect": "Once per Scene, you may create Slick Hazards in two Blasts 3, anywhere within range. If used on only 1 target, this Move gains the Double Strike keyword, and if Slick Hazards are created, you may create them in a single Blast 5, centered on the target. Hazards and does not have to stop shifting or become Vulnerable from them.",
+        "special": "The user may ignore Slick"
     },
     {
         "name": "Assist",
@@ -411,6 +464,18 @@
         "contest_effect": "Double Time"
     },
     {
+        "name": "Axe Kick",
+        "type": "Fighting",
+        "frequency": "EOT",
+        "ac": "3",
+        "damage_base": "Damage Base 12: 3d12+10 / 30",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Dash, Reckless",
+        "effect": "Confuses the target on 15+. If this Move misses, the user loses Hit Points equal to 1/4th of their Max Hit Points. A failure to hit due to a Move with the Shield keyword does not count as a miss. This Move cannot be used if Gravity is in effect.",
+        "contest_type": "Tough",
+        "contest_effect": "Steady Performance"
+    },
+    {
         "name": "Baby-Doll Eyes",
         "type": "Fairy",
         "frequency": "EOT",
@@ -499,6 +564,16 @@
         "effect": "The user and up to two allies adjacent to the target may each make a Struggle Attack against the target. These Struggle Attacks hit for Dark-Type Damage instead of their usual Type. Beat Up may trigger Pack Hunt only once, no matter the number of attacks.",
         "contest_type": "Smart",
         "contest_effect": "Reliable"
+    },
+    {
+        "name": "Beckon* [New]",
+        "type": "Ghost",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 12: 3d12+10 / 30",
+        "class": "Special",
+        "range": "7, 1 Target, Sonic",
+        "effect": "The target immediately Shifts towards the user, forfeiting their next Shift Action. This movement does not provoke Attacks of Opportunity. On 17+, the target additionally is Infatuated with the user and Trapped."
     },
     {
         "name": "Behemoth Bash",
@@ -591,6 +666,18 @@
         "contest_effect": "Steady Performance"
     },
     {
+        "name": "Bitter Blade",
+        "type": "Fire",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 9: 2d10+10 / 21",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Slice",
+        "effect": "After the target takes damage, the user gains HP equal to half of the damage they dealt to the target.",
+        "contest_type": "Smart",
+        "contest_effect": "Good Show"
+    },
+    {
         "name": "Bitter Malice",
         "type": "Ghost",
         "frequency": "At-Will",
@@ -627,6 +714,18 @@
         "contest_effect": "Exhausting Act"
     },
     {
+        "name": "Blazing Torque",
+        "type": "Fire",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 10: 3d8+10 / 24",
+        "class": "Physical",
+        "range": "Melee, Dash, Pass",
+        "effect": "Burns all legal targets on 15+.",
+        "contest_type": "Beautiful",
+        "contest_effect": "Catching Up"
+    },
+    {
         "name": "Bleakwind Storm",
         "type": "Flying",
         "frequency": "Scene",
@@ -660,6 +759,16 @@
         "effect": "The target is Stuck and Trapped until the beginning of your next turn.",
         "contest_type": "Cute",
         "contest_effect": "Sabotage"
+    },
+    {
+        "name": "Blood Moon",
+        "type": "Normal",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 14: 4d10+15 / 40",
+        "class": "Special",
+        "range": "Line 4, Smite, Reckless",
+        "effect": "After dealing damage, the user becomes Slowed and Vulnerable until the end of their next turn."
     },
     {
         "name": "Blue Flare",
@@ -831,6 +940,16 @@
         "contest_effect": "Incentives"
     },
     {
+        "name": "Brutal Beatdown* [Close Combat]",
+        "type": "Dark",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 12: 3d12+10 / 30",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Dash, Reckless",
+        "effect": "The user’s Defense and Special Defense are each lowered by -1 Combat Stage."
+    },
+    {
         "name": "Bubble",
         "type": "Water",
         "frequency": "At-Will",
@@ -938,6 +1057,15 @@
         "contest_effect": "Attention Grabber"
     },
     {
+        "name": "Burning Bulwark",
+        "type": "Fire",
+        "frequency": "Scene",
+        "ac": "None",
+        "class": "Status",
+        "range": "Self, Interrupt, Shield, Trigger",
+        "effect": "If the user is hit by an attack, the user may use this Move. The user is instead not hit by the attack. You do not take any damage nor are you affected by any of the attack’s effects. In addition, if the triggering attack was Melee ranged, the attacker is Burned."
+    },
+    {
         "name": "Burning Jealousy",
         "type": "Fire",
         "frequency": "EOT",
@@ -948,6 +1076,16 @@
         "effect": "After Burning Jealousy has resolved, the user may choose to Burn foes within 5m that have had any CS raised since the beginning of that foe’s last turn. This Effect may trigger only once per Scene.",
         "contest_type": "Smart",
         "contest_effect": "Sabotage"
+    },
+    {
+        "name": "Butterfly Knife* [Fury Cutter]",
+        "type": "Fairy",
+        "frequency": "At-Will",
+        "ac": "3",
+        "damage_base": "Damage Base is increased by +4 to a",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Dash, Slice",
+        "effect": "If this Move is used successfully and consecutively on the same target, the maximum of 16. For example, the first hit would have a DB of 4; the second hit a DB of 8; the third hit a DB of 12; the fourth and further hits a DB of 16. If this Move misses or fails to damage its target, its Damage Base resets."
     },
     {
         "name": "Calm Mind",
@@ -1042,6 +1180,27 @@
         "contest_effect": "Catching Up"
     },
     {
+        "name": "Chilling Water",
+        "type": "Water",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 5: 1d8+8 / 13",
+        "class": "Special",
+        "range": "5, 1 Target",
+        "effect": "The target cannot make Attacks of Opportunity for 1 full round and their Attack is lowered by -1 Combat Stage."
+    },
+    {
+        "name": "Chilly Reception",
+        "type": "Ice",
+        "frequency": "Scene",
+        "ac": "None",
+        "class": "Status",
+        "range": "Field",
+        "effect": "The weather changes to Snowy for 5 rounds and the user may immediately be recalled in the same turn. A new Pokémon may immediately be sent out. Using this Move lets a Trapped user be recalled. If the user is not recalled, their movement this turn does not provoke Attacks of Opportunity instead. NOTE: If you are using the Weathers from Domovoi’s Rework, the user’s side also gains 2 charges of the [Hailing] Blessing, as if they used Hail or Snowscape.",
+        "contest_type": "Beauty",
+        "contest_effect": "Catching Up"
+    },
+    {
         "name": "Chip Away",
         "type": "Normal",
         "frequency": "EOT",
@@ -1110,6 +1269,16 @@
         "contest_effect": "Seen Nothing Yet"
     },
     {
+        "name": "Clayball* [Tackle+]",
+        "type": "Ground",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 4: 1d8+6 / 11",
+        "class": "Physical",
+        "range": "4, 1 Target, Dash, Push",
+        "effect": "The user may push the target up to 2 meters away."
+    },
+    {
         "name": "Clear Smog",
         "type": "Poison",
         "frequency": "Scene x2",
@@ -1156,6 +1325,28 @@
         "contest_effect": "Get Ready!"
     },
     {
+        "name": "Collision Course",
+        "type": "Fighting",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 10: 3d8+10 / 24",
+        "class": "Physical",
+        "range": "Melee, Dash, Pass",
+        "effect": "Create Slow Terrain in all squares the user Shifted through during Pass, and in a Burst 1 around the user after finishing movement. The user may ignore this Slow Terrain. Whenever this Move deals Super-Effective Damage to a target, that target treats your Damage Roll as if it was increased by +10."
+    },
+    {
+        "name": "Combat Torque",
+        "type": "Fighting",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 10: 3d8+10 / 24",
+        "class": "Physical",
+        "range": "Melee, Dash, Pass",
+        "effect": "Paralyzes all legal targets on 15+.",
+        "contest_type": "Cool",
+        "contest_effect": "Catching Up"
+    },
+    {
         "name": "Comet Punch",
         "type": "Normal",
         "frequency": "At-Will",
@@ -1166,6 +1357,17 @@
         "effect": "None",
         "contest_type": "Tough",
         "contest_effect": "Reliable"
+    },
+    {
+        "name": "Comeuppance",
+        "type": "Dark",
+        "frequency": "Scene",
+        "ac": "None",
+        "class": "Physical",
+        "range": "Any, 1 Target, Reaction, Trigger",
+        "effect": "This Move may be used as a Reaction when the user is hit by a damaging attack. Resolve the triggering attack, with the user resisting the attack one step further. After the attack is resolved, if the user was not Fainted, the triggering foe then loses Hit Points equal to the amount of Hit Points lost by the user from the triggering attack. The triggering foe then becomes Tripped and you may choose 2 allies. The chosen allies may Disengage 2 meters towards the triggering foe as a Free Action.",
+        "contest_type": "Beauty",
+        "contest_effect": "Double Time"
     },
     {
         "name": "Confide",
@@ -1420,6 +1622,18 @@
         "contest_effect": "Double Time"
     },
     {
+        "name": "Crush* [Dizzy Punch]",
+        "type": "Fairy",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 7: 2d6+10 / 17",
+        "class": "Physical",
+        "range": "Melee, 1 Target",
+        "effect": "The target becomes Infatuated with the user on 17+.",
+        "contest_type": "Lol",
+        "contest_effect": "Lmao, even."
+    },
+    {
         "name": "Curse",
         "type": "Ghost",
         "frequency": "See Text",
@@ -1629,6 +1843,18 @@
         "contest_effect": "Exhausting Act"
     },
     {
+        "name": "Disorient* [Confusion]",
+        "type": "Dark",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 5: 1d8+8 / 13",
+        "class": "Special",
+        "range": "6, 1 Target",
+        "effect": "Confuses the target on 19+.",
+        "contest_type": "Smart",
+        "contest_effect": "Steady Performance"
+    },
+    {
         "name": "Dive",
         "type": "Water",
         "frequency": "Scene x2",
@@ -1653,6 +1879,15 @@
         "effect": "Dizzy Punch Confuses the target on 17+",
         "contest_type": "Cool",
         "contest_effect": "Inversed Appeal"
+    },
+    {
+        "name": "Doodle",
+        "type": "Normal",
+        "frequency": "Scene",
+        "ac": "None",
+        "class": "Status",
+        "range": "6, 1 Target",
+        "effect": "The user gains 1 Ability of their choice from the target, and may also grant that Ability to an ally within range, both for the remainder of the encounter. This Move cannot miss."
     },
     {
         "name": "Doom Desire",
@@ -1703,6 +1938,16 @@
         "contest_effect": "Reliable"
     },
     {
+        "name": "Double Shock",
+        "type": "Electric",
+        "frequency": "Daily x2",
+        "ac": "2",
+        "damage_base": "Damage Base 12: 3d12+10 / 30",
+        "class": "Physical",
+        "range": "Close Blast 2, Smite, Spirit Surge",
+        "effect": "If the user is an Electric Type, they lose the Electric Type until the start of their next turn."
+    },
+    {
         "name": "Double Slap",
         "type": "Normal",
         "frequency": "At-Will",
@@ -1736,6 +1981,16 @@
         "effect": "None",
         "contest_type": "Tough",
         "contest_effect": "Big Show"
+    },
+    {
+        "name": "Draco Jet* [Quick Attack]",
+        "type": "Dragon",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 4: 1d8+6 / 11",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Priority",
+        "effect": "None"
     },
     {
         "name": "Draco Meteor",
@@ -1772,6 +2027,17 @@
         "effect": "Dragon Breath Paralyzes the Target on 15+.",
         "contest_type": "Cool",
         "contest_effect": "Exhausting Act"
+    },
+    {
+        "name": "Dragon Cheer",
+        "type": "Dragon",
+        "frequency": "Scene",
+        "ac": "None",
+        "class": "Status",
+        "range": "Blessing",
+        "effect": "Blessing - Any user affected by this Blessing may activate it when making a successful attack to turn the attack into a Critical Hit against one legal target of their choice. The Blessing may be activated 2 times, then disappears. The first time a Scene a Dragon-Type Pokémon activates this Blessing, that activation does not count towards this limit.",
+        "contest_type": "Cute",
+        "contest_effect": "Sabotage"
     },
     {
         "name": "Dragon Claw",
@@ -2072,6 +2338,26 @@
         "contest_effect": "Double Time"
     },
     {
+        "name": "Electro Drift",
+        "type": "Electric",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 10: 3d8+10 / 24",
+        "class": "Special",
+        "range": "Melee, Dash, Pass",
+        "effect": "After dealing damage, the user may Disengage 4 meters in a straight line. Whenever this Move deals Super-Effective Damage to a target, that target treats your Damage Roll as if it was increased by +10."
+    },
+    {
+        "name": "Electro Shot",
+        "type": "Electric",
+        "frequency": "Scene",
+        "ac": "4",
+        "damage_base": "Damage Base 13: 4d10+10 / 35",
+        "class": "Special",
+        "range": "Line 4, Full Action, Smite",
+        "effect": "For 1 round, any ally that enters a square adjacent to the user, or starts movement there, may Disengage into any square of the Area of Effect of this Move without expending Movement, and then continue their Shift. If the user is in Rainy Weather, this Move is a Standard Action."
+    },
+    {
         "name": "Electroweb",
         "type": "Electric",
         "frequency": "EOT",
@@ -2364,6 +2650,26 @@
         "contest_effect": "Desperation"
     },
     {
+        "name": "Fey Wild* [Superpower]",
+        "type": "Fairy",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 12: 3d12+10 / 30",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Dash, Reckless",
+        "effect": "The user’s Defense and Special Defense are each lowered by -1 Combat Stage."
+    },
+    {
+        "name": "Fickle Beam",
+        "type": "Dragon",
+        "frequency": "Scene",
+        "ac": "5",
+        "damage_base": "Damage Base 12: 3d12+10 / 30",
+        "class": "Special",
+        "range": "Line 3",
+        "effect": "Roll Accuracy for this Move 3 times. For each target, if one of these rolls succeeds, this Move hits that target. For each successful roll after the first, choose one of the following additional effects:\n» That target is Slowed for 1 full round.\n» That target is Suppressed.\nIf one or more of the rolls crit, this Move is a Critical Hit. This Move is 1 step more effective against targets that have hit the user for Super Effective damage since the beginning of their last turn."
+    },
+    {
         "name": "Fiery Dance",
         "type": "Fire",
         "frequency": "EOT",
@@ -2386,6 +2692,15 @@
         "effect": "Fiery Wrath Flinches the target on a 17+. Once per Scene, Fiery Wrath may instead be used as a Fire- Type Move.",
         "contest_type": "Tough",
         "contest_effect": "Inversed Appeal"
+    },
+    {
+        "name": "Fillet Away",
+        "type": "Normal",
+        "frequency": "Daily x2",
+        "ac": "None",
+        "class": "Status",
+        "range": "Self",
+        "effect": "The next successful damaging Psychic attack made by the user is automatically a Critical Hit. The user may sacrifice three Ticks of Hit Points. If they do so, choose one: » Fillet Away becomes a Swift Action. » An adjacent Ally gains 3 Ticks of Temporary Hit Points."
     },
     {
         "name": "Final Gambit",
@@ -2604,6 +2919,16 @@
         "contest_effect": "Exhausting Act"
     },
     {
+        "name": "Flash Step* [New]",
+        "type": "Psychic",
+        "frequency": "EOT",
+        "ac": "None",
+        "damage_base": "Damage Base 6: 2d6+8 / 15",
+        "class": "Physical",
+        "range": "Melee, 1 Target",
+        "effect": "This Move cannot miss. Before attacking, the user may Teleport 4 into a square adjacent to a foe as a Shift Action."
+    },
+    {
         "name": "Flatter",
         "type": "Dark",
         "frequency": "At-Will",
@@ -2671,6 +2996,18 @@
         "effect": "All Grass Type Pokémon in Flower Shield’s area of effect have their Defense raised by +2 Combat Stages.",
         "contest_type": "Cute",
         "contest_effect": "Get Ready!"
+    },
+    {
+        "name": "Flower Trick",
+        "type": "Grass",
+        "frequency": "Scene x2",
+        "ac": "None",
+        "damage_base": "Damage Base 7: 2d6+10 / 17",
+        "class": "Physical",
+        "range": "4, 1 Target",
+        "effect": "This Move cannot miss. If this Move hits, it is a Critical Hit.",
+        "contest_type": "Cool",
+        "contest_effect": "Excitement"
     },
     {
         "name": "Fly",
@@ -3006,6 +3343,18 @@
         "contest_effect": "Seen Nothing Yet"
     },
     {
+        "name": "Gigaton Hammer",
+        "type": "Steel",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 16: 5d10+20 / 50",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Smite, Reckless",
+        "effect": "After dealing damage, the user becomes Slowed and Vulnerable until the end of their next turn.",
+        "contest_type": "Tough",
+        "contest_effect": "Exhausting Act"
+    },
+    {
         "name": "Glacial Lance",
         "type": "Ice",
         "frequency": "Daily",
@@ -3030,6 +3379,18 @@
         "contest_effect": "Steady Performance"
     },
     {
+        "name": "Glaive Rush",
+        "type": "Dragon",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 12: 3d12+10 / 30",
+        "class": "Physical",
+        "range": "Melee, Pass, Smite, Reckless",
+        "effect": "On hit, you may choose to become Vulnerable for 1 full round. If you do, this attack is one step more effective. Additionally, the next successful damaging attack against you while Vulnerable this way is automatically a Critical Hit.",
+        "contest_type": "Tough",
+        "contest_effect": "Exhausting Act"
+    },
+    {
         "name": "Glare",
         "type": "Normal",
         "frequency": "Scene x2",
@@ -3039,6 +3400,16 @@
         "effect": "Glare Paralyzes the target.",
         "contest_type": "Tough",
         "contest_effect": "Excitement"
+    },
+    {
+        "name": "Glint* [Chilling Water]",
+        "type": "Steel",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 5: 1d8+8 / 13",
+        "class": "Special",
+        "range": "5, 1 Target",
+        "effect": "The target cannot make Attacks of Opportunity for 1 full round and their Attack is lowered by -1 Combat Stage."
     },
     {
         "name": "Grass Knot",
@@ -3247,6 +3618,18 @@
         "effect": "The user lowers their Speed 1 Combat Stage.",
         "contest_type": "Cool",
         "contest_effect": "Desperation"
+    },
+    {
+        "name": "Hard Press",
+        "type": "Steel",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 6: 2d6+8 / 15",
+        "class": "Physical",
+        "range": "Melee, 1 Target",
+        "effect": "If the target’s Hit Points are above 50%, this Move’s Damage Base is doubled to Damage Base 12 (3d12+10 / 30).",
+        "contest_type": "Tough",
+        "contest_effect": "Seen Nothing Yet"
     },
     {
         "name": "Harden",
@@ -3594,6 +3977,16 @@
         "contest_effect": "Exhausting Act"
     },
     {
+        "name": "Hydro Steam",
+        "type": "Water",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Special",
+        "range": "6, 1 Target",
+        "effect": "This Move does not deal reduced damage in Sunny Weather. It instead deals +10 damage in Sunny Weather. NOTE: If you are using the Weathers from Domovoi’s Rework, the [Sun Shining] Blessing may not be activated against this Move."
+    },
+    {
         "name": "Hyper Beam",
         "type": "Normal",
         "frequency": "Daily x2",
@@ -3604,6 +3997,16 @@
         "effect": "None",
         "contest_type": "Cool",
         "contest_effect": "Seen Nothing Yet"
+    },
+    {
+        "name": "Hyper Drill",
+        "type": "Normal",
+        "frequency": "Scene",
+        "ac": "2",
+        "damage_base": "Damage Base 10: 3d8+10 / 24",
+        "class": "Physical",
+        "range": "Melee, Pass, Smite",
+        "effect": "Blessings or Moves with the Shield keyword may not be activated in response to this Move."
     },
     {
         "name": "Hyper Fang",
@@ -3748,6 +4151,28 @@
         "effect": "None",
         "contest_type": "Beauty",
         "contest_effect": "Saving Grace"
+    },
+    {
+        "name": "Ice Spinner",
+        "type": "Ice",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Physical",
+        "range": "Burst 1",
+        "effect": "All targets are Tripped on a roll of 18+. If the user moves through an area of Terrain, or a Field-range Terrain is active, those effects immediately end.",
+        "contest_type": "Beauty",
+        "contest_effect": "Steady Performance"
+    },
+    {
+        "name": "Icebreaker* [Double Edge+]",
+        "type": "Ice",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 12: 3d12+10 / 30",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Dash, Recoil 1/3",
+        "effect": "You may use this Move as if it had the Priority and Pass keywords in the first round after joining an encounter. Switching out resets this requirement."
     },
     {
         "name": "Icicle Crash",
@@ -3913,6 +4338,16 @@
         "contest_effect": "Desperation"
     },
     {
+        "name": "Ivy Cudgel",
+        "type": "Grass",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 10: 3d8+10 / 24",
+        "class": "Physical",
+        "range": "Melee, 1 Target",
+        "effect": "Ivy Cudgel may be any Type the user currently possesses. Ivy Cudgel is a critical hit on a roll of 18+."
+    },
+    {
         "name": "Jaw Lock",
         "type": "Dark",
         "frequency": "Scene x2",
@@ -3923,6 +4358,16 @@
         "effect": "You may perform a Grapple Maneuver against the target as a Free Action.",
         "contest_type": "Tough",
         "contest_effect": "Sabotage"
+    },
+    {
+        "name": "Jet Punch",
+        "type": "Water",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 6: 2d6+8 / 15",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Dash, Priority",
+        "effect": "None"
     },
     {
         "name": "Judgment",
@@ -3974,10 +4419,10 @@
     {
         "name": "Kinesis",
         "type": "Psychic",
-        "frequency": "Scene",
+        "frequency": "Scene, Swift Action",
         "ac": "None",
         "class": "Status",
-        "range": "6, 1 Target, Trigger, Interrupt, Swift Action",
+        "range": "6, 1 Target, Trigger, Interrupt",
         "effect": "If the user or an Ally within 6 meters is about to be hit by an attack, the user may use Kinesis as an interrupt. The triggering Accuracy Roll receives a -4 penalty. This may cause Moves to miss.",
         "contest_type": "Smart",
         "contest_effect": "Get Ready!"
@@ -4004,6 +4449,18 @@
         "effect": "Choose one of the target’s Held Items or Accessory Slot Items. It is knocked to the ground.",
         "contest_type": "Smart",
         "contest_effect": "Steady Performance"
+    },
+    {
+        "name": "Kowtow Cleave",
+        "type": "Dark",
+        "frequency": "EOT",
+        "ac": "None",
+        "damage_base": "Damage Base 9: 2d10+10 / 21",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Slice",
+        "effect": "This Move cannot miss.",
+        "contest_type": "Smart",
+        "contest_effect": "Desperation"
     },
     {
         "name": "Land’s Wrath",
@@ -4052,6 +4509,16 @@
         "effect": "Last Resort can only be used after the user has performed 5 other different Moves in its Move List during a single fight, without being switched out.",
         "contest_type": "Cute",
         "contest_effect": "Safe Option"
+    },
+    {
+        "name": "Last Respects",
+        "type": "Ghost",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 10: 3d8+10 / 24",
+        "class": "Physical",
+        "range": "4, 1 Target",
+        "effect": "This Move gains additional Effects depending on the number of allies that have Fainted this Scene. These Effects are cumulative. 1: The target is Flinched on 15+. 2: The target is Cursed on 17+. 3: This Move gains Smite. Once per Scene, this Move may Deal damage of a Type of any of the Fainted allies instead of Ghost. This does not affect whether this Move gains STAB or not."
     },
     {
         "name": "Lava Plume",
@@ -4251,6 +4718,16 @@
         "contest_effect": "Sabotage"
     },
     {
+        "name": "Lumina Crash",
+        "type": "Psychic",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Special",
+        "range": "6, 1 Target",
+        "effect": "The target’s Special Defense is lowered by -2 Combat Stages."
+    },
+    {
         "name": "Lunar Blessing",
         "type": "Psychic",
         "frequency": "Daily",
@@ -4354,6 +4831,18 @@
         "contest_effect": "Exhausting Act"
     },
     {
+        "name": "Magical Torque",
+        "type": "Fairy",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 10: 3d8+10 / 24",
+        "class": "Physical",
+        "range": "Melee, Dash, Pass",
+        "effect": "Confuses all legal targets on 15+.",
+        "contest_type": "Cute",
+        "contest_effect": "Catching Up"
+    },
+    {
         "name": "Magma Storm",
         "type": "Fire",
         "frequency": "Scene",
@@ -4415,6 +4904,26 @@
         "special": "Grants Groundshaper"
     },
     {
+        "name": "Make It Rain",
+        "type": "Steel",
+        "frequency": "Scene",
+        "ac": "2",
+        "damage_base": "Damage Base 12: 3d12+10 / 30",
+        "class": "Special",
+        "range": "Cone 3",
+        "effect": "The user’s Special Attack is lowered by -1 Combat Stage. Once per Day, this Move scatters metal coins equal in value to 1d8 times the user’s Level. If it is a trainer battle, the winner gets to pick up the coins."
+    },
+    {
+        "name": "Malignant Chain",
+        "type": "Poison",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 10: 3d8+10 / 24",
+        "class": "Special",
+        "range": "6, 1 Target",
+        "effect": "The target is Poisoned. Then, choose an ally. That ally and the target become Linked to each other. Whenever the Linked ally takes damage, the Linked foe loses a Tick of Hit Points. This effect ends when the user is Fainted or the Scene ends."
+    },
+    {
         "name": "Mat Block",
         "type": "Fighting",
         "frequency": "Scene",
@@ -4423,6 +4932,16 @@
         "effect": "If the user or an adjacent ally is hit by a damaging attack, the user may use Mat Block. The attack instead does not hit any targets, and it deals no damage and no has effects. You may only use Mat Block during the first round of an encounter.",
         "contest_type": "Tough",
         "contest_effect": "Reflective Appeal"
+    },
+    {
+        "name": "Matcha Gotcha",
+        "type": "Grass",
+        "frequency": "Scene x2",
+        "ac": "4",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Special",
+        "range": "Cone 2",
+        "effect": "After the targets take damage, choose one of the targets, the user gains HP equal to half of the damage they dealt to that target. Matcha Gotcha Burns all Legal Targets on 17+."
     },
     {
         "name": "Me First",
@@ -4586,6 +5105,16 @@
         "effect": "Metronome randomly uses any other Move except for After You, Assist, Bestow, Copycat, Counter, Covet, Crafty Shield, Destiny Bond, Detect, Endure, Feint, Focus Punch, Follow Me, Helping Hand, King’s Shield, Metronome, Me First, Mimic, Mirror Coat, Mirror Move, Protect, Quash, Quick Guard, Rage Powder, Sketch, Sleep Talk, Snatch, Snore, Spiky Shield, Switcheroo, Thief, Transform, Trick, and Wide Guard. The GM helps to pick the random Move.",
         "contest_type": "Cute",
         "contest_effect": "Tease"
+    },
+    {
+        "name": "Mighty Cleave",
+        "type": "Rock",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 10: 3d8+10 / 24",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Spirit Surge, Slice",
+        "effect": "The user gains +10 Damage Reduction for 1 full round. Interrupts may not be activated in response to this Move."
     },
     {
         "name": "Milk Drink",
@@ -4782,6 +5311,28 @@
         "contest_effect": "Reflective Appeal"
     },
     {
+        "name": "Mortal Spin",
+        "type": "Poison",
+        "frequency": "Scene",
+        "ac": "2",
+        "damage_base": "Damage Base 5: 1d8+8 / 13",
+        "class": "Special",
+        "range": "Burst 1, Spirit Surge",
+        "effect": "This Move destroys all Hazards within a Burst 5 that were placed by foes, removes Leech Seeds, and removes the user’s Trapped or Stuck conditions. All targets that are hit are Poisoned."
+    },
+    {
+        "name": "Mould* [Hex]",
+        "type": "Grass",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base be 13 instead (4d10+10 /",
+        "class": "Special",
+        "range": "6, 1 Target",
+        "effect": "Once a Scene, if the target has a Status Affliction, you may have this Move’s Move’s Damage Base be 13 instead (4d10+10 / 35).",
+        "contest_type": "Smart",
+        "contest_effect": "Incentives"
+    },
+    {
         "name": "Mountain Gale",
         "type": "Ice",
         "frequency": "EOT",
@@ -4851,6 +5402,16 @@
         "effect": "As a Shift Action, the user may Move to any open square in Muddy Water’s area of effect without provoking any Attacks of Opportunity. On 16+, the Accuracy of all targets is lowered by 1.",
         "contest_type": "Tough",
         "contest_effect": "Desperation"
+    },
+    {
+        "name": "Mudslide* [Rock Slide+]",
+        "type": "Ground",
+        "frequency": "Scene x2",
+        "ac": "4",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Special",
+        "range": "6, Ranged Blast 3, Groundsource,",
+        "effect": "Choose a direction. All legal targets are Pushed 2 meters in that direction."
     },
     {
         "name": "Multi-Attack",
@@ -5015,6 +5576,18 @@
         "contest_effect": "Excitement"
     },
     {
+        "name": "Noxious Torque",
+        "type": "Poison",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 10: 3d8+10 / 24",
+        "class": "Physical",
+        "range": "Melee, Dash, Pass",
+        "effect": "Poisons all targets on 15+.",
+        "contest_type": "Tough",
+        "contest_effect": "Catching Up"
+    },
+    {
         "name": "Nuzzle",
         "type": "Electric",
         "frequency": "Scene",
@@ -5048,6 +5621,16 @@
         "effect": "If the user is hit by a Move, the user may use Obstruct. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move’s effects. In addition, if the triggering attack was Melee ranged, the attacker’s Defense is lowered by 2 Combat Stages.",
         "contest_type": "Smart",
         "contest_effect": "Inversed Appeal"
+    },
+    {
+        "name": "Occult Razor* [New]",
+        "type": "Psychic",
+        "frequency": "Scene",
+        "ac": "5",
+        "damage_base": "Damage Base 11: 3d10+10 / 27",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Slice",
+        "effect": "This Move automatically Critically Hits targets at or below half of their Max Hit Points. After dealing damage, the target becomes Suppressed for 1 full round."
     },
     {
         "name": "Octazooka",
@@ -5095,6 +5678,16 @@
         "effect": "On 19+, the user has each of its stats raised by +1 Combat Stage.",
         "contest_type": "Smart",
         "contest_effect": "Get Ready!"
+    },
+    {
+        "name": "Order Up",
+        "type": "Dragon",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Versatile",
+        "range": "Melee, 1 Target, Versatile, Spirit Surge",
+        "effect": "If the user, target, an Attached Commander or a pokemon Grappled by the user has a Food Buff, you may consume one of those Buffs (ignoring its normal trigger condition), gain its effects, and this attack is one step more effective. The target cannot activate Food Buffs in response to this Move."
     },
     {
         "name": "Origin Pulse",
@@ -5416,6 +6009,27 @@
         "contest_effect": "Unsettling"
     },
     {
+        "name": "Population Bomb",
+        "type": "Normal",
+        "frequency": "Scene x2",
+        "ac": "5",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Physical",
+        "range": "4, 1 Target, Smite, Slice",
+        "effect": "Roll Accuracy for this Move 3 times. If one of these rolls succeeds, this Move hits. For each successful roll after the first, choose one of the following additional effects: » The target is Vulnerable until the end of their next turn. » The target's Moves are resisted 1 step further until the end of their next turn. » This Move's damage cannot be resisted. If one or more of the rolls crit, this Move is a Critical Hit, and you may choose an additional effect."
+    },
+    {
+        "name": "Pounce",
+        "type": "Bug",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 5: 1d8+8 / 13",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Dash",
+        "effect": "After dealing damage, the target is Slowed for 1 round. A target may only be Slowed by this Move once per Scene. +1",
+        "special": "Grants Overland and Long Jump +1"
+    },
+    {
         "name": "Pound",
         "type": "Normal",
         "frequency": "At-Will",
@@ -5580,6 +6194,16 @@
         "contest_effect": "Inversed Appeal"
     },
     {
+        "name": "Psy Kick* [Tackle]",
+        "type": "Psychic",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 4: 1d8+6 / 11",
+        "class": "Physical",
+        "range": "4, 1 Target, Dash, Push",
+        "effect": "The user may push the target up to 2 meters."
+    },
+    {
         "name": "Psybeam",
         "type": "Psychic",
         "frequency": "At-Will",
@@ -5590,6 +6214,16 @@
         "effect": "Psybeam Confuses the target on 19+.",
         "contest_type": "Beauty",
         "contest_effect": "Exhausting Act"
+    },
+    {
+        "name": "Psyblade",
+        "type": "Psychic",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Slice",
+        "effect": "This Move deals +10 damage if the user or target are in Electric Terrain."
     },
     {
         "name": "Psych Up",
@@ -5626,6 +6260,18 @@
         "effect": "Light Screen, Reflect and Aurora Veil cannot be declared in response to Psychic Fangs.",
         "contest_type": "Smart",
         "contest_effect": "Steady Performance"
+    },
+    {
+        "name": "Psychic Noise",
+        "type": "Psychic",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Special",
+        "range": "Burst 1, Sonic",
+        "effect": "Choose a legal target. The chosen target may not gain Hit Points or Temporary Hit Points from any source, until it is switched out. This counts as a Volatile Affliction.",
+        "contest_type": "Smart",
+        "contest_effect": "Good Show!"
     },
     {
         "name": "Psychic Terrain",
@@ -5825,6 +6471,16 @@
         "contest_effect": "Get Ready!"
     },
     {
+        "name": "Rage Fist",
+        "type": "Ghost",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 5: 1d8+8 / 13",
+        "class": "Physical",
+        "range": "Melee, 1 Target",
+        "effect": "If the user has at least 1 Injury when using this Move, its Damage Base gets doubled to DB 10 (3d8+10 / 24). Additionally, if the user is under 50% Max HP, this Move instead becomes DB 12 (3d12+10 / 30) and cannot miss."
+    },
+    {
         "name": "Rage Powder",
         "type": "Bug",
         "frequency": "Scene x2",
@@ -5834,6 +6490,16 @@
         "effect": "All targets hit by Rage Powder are Enraged. While enraged, they must shift to target the user when using a Move or Attack if the user is within reach. If the user is Fainted or Switched out, all targets hit by Rage Powder are cured of rage.",
         "contest_type": "Smart",
         "contest_effect": "Tease"
+    },
+    {
+        "name": "Raging Bull",
+        "type": "Fighting",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 9: 2d10+10 / 21",
+        "class": "Physical",
+        "range": "Melee, Pass",
+        "effect": "As a Free Action, the user may change this Move's Type to any Type that the user possesses. Blessings may not be activated in response to this Move."
     },
     {
         "name": "Raging Fury",
@@ -5928,6 +6594,16 @@
         "effect": "The effect of a consumable item used earlier in the encounter is used again as if it had not been destroyed. The item is still gone.",
         "contest_type": "Smart",
         "contest_effect": "Attention Grabber"
+    },
+    {
+        "name": "Redline* [New]",
+        "type": "Dragon",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Versatile",
+        "range": "Melee, 1 Target, Dash, Versatile",
+        "effect": "The target may not make Attacks of Opportunity until the end of the Round. If the target has any positive Combat Stages, it loses them, and this Move is 1 step more Effective. After attacking, the user may Move up to their remaining Movement as a Free Action."
     },
     {
         "name": "Reflect",
@@ -6044,6 +6720,15 @@
         "effect": "For each Injury the user has, Reversal’s Damage Base is increased by +1.",
         "contest_type": "Cool",
         "contest_effect": "Double Time"
+    },
+    {
+        "name": "Revival Blessing",
+        "type": "Normal",
+        "frequency": "Daily",
+        "ac": "None",
+        "class": "Status",
+        "range": "None",
+        "effect": "An ally that Fainted this Scene may use a Move as a Free Action as if they were not Fainted, originating from a square adjacent to the user. The chosen ally may be a Pokémon in a Poké Ball."
     },
     {
         "name": "Rising Voltage",
@@ -6248,6 +6933,17 @@
         "contest_effect": "Reliable"
     },
     {
+        "name": "Ruination",
+        "type": "Dark",
+        "frequency": "Scene x2",
+        "ac": "4",
+        "class": "Status",
+        "range": "4, 1 Target",
+        "effect": "The target becomes Cursed and Vulnerable until it is switched out.",
+        "contest_type": "Tough",
+        "contest_effect": "Steady Performance"
+    },
+    {
         "name": "Sacred Fire",
         "type": "Fire",
         "frequency": "EOT",
@@ -6281,6 +6977,16 @@
         "effect": "Blessing – Any user affected by Safeguard may activate it when receiving a Status Affliction to ignore the effects of that Status Affliction on their next turn. Safeguard may be activated 3 times, and then disappears.",
         "contest_type": "Beauty",
         "contest_effect": "Sabotage"
+    },
+    {
+        "name": "Salt Cure",
+        "type": "Rock",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 4: 1d8+6 / 11",
+        "class": "Physical",
+        "range": "4, 1 Target",
+        "effect": "The target becomes Lightly Salted as a Volatile Affliction. While Lightly Salted, they lose 1 Tick of HP at the beginning of each of their turns. Water and Steel-Type Pokemon hit by Salt Cure lose 2 Ticks of HP instead."
     },
     {
         "name": "Sand Attack",
@@ -6566,6 +7272,15 @@
         "contest_effect": "Get Ready!"
     },
     {
+        "name": "Shed Tail",
+        "type": "Normal",
+        "frequency": "Scene",
+        "ac": "None",
+        "class": "Status",
+        "range": "Self, Coat, Illusion, Interrupt, Shield,",
+        "effect": "If the user is hit by a Move while above 1/4th Hit Points, after being told how much damage it would deal, they may use this Move. The user is instead not hit by the triggering Move, and does not take any damage, nor are they affected by any of the Move’s effects. Instead, they lose 1/4th of their maximum Hit Points. This Hit Point loss cannot be prevented in any way. The user may then Disengage up to their full Movement as a Free Action, or be switched out, even if they are Trapped. They leave behind a Tail Token on any one square they occupied. The Tail Token counts as Rough Terrain for foes, and if an ally Shifts over it, they may remove it from the field to gain the same amount of Temporary Hit Points as the user lost when activating this Move. This Move may not be activated against Moves with the Sonic keyword."
+    },
+    {
         "name": "Sheer Cold",
         "type": "Ice",
         "frequency": "Daily",
@@ -6667,6 +7382,18 @@
         "effect": "Signal Beam confuses the target on 19+.",
         "contest_type": "Beauty",
         "contest_effect": "Incentives"
+    },
+    {
+        "name": "Silk Trap",
+        "type": "Bug",
+        "frequency": "Scene",
+        "ac": "None",
+        "class": "Status",
+        "range": "Self, Interrupt, Shield, Trigger",
+        "effect": "If the user is hit by a Move, the user may use this Move. The user is instead not hit by the triggering Move. You do not take any damage nor are you affected by any of the Move’s effects. In addition, if the triggering Move was Melee ranged, the attacker's Speed is lowered by -2 Combat Stages and they are Slowed until the end of the user's next turn. If the target already has negative Speed Combat Stages, the target is Stuck and Trapped instead of Slowed.",
+        "contest_type": "Smart",
+        "contest_effect": "Inversed Appeal",
+        "special": "Grants Threaded"
     },
     {
         "name": "Silver Wind",
@@ -6999,6 +7726,17 @@
         "contest_effect": "Steady Performance"
     },
     {
+        "name": "Snowscape",
+        "type": "Ice",
+        "frequency": "Daily x2",
+        "ac": "None",
+        "class": "Status",
+        "range": "Field, Weather",
+        "effect": "The weather changes to Snowy for 5 rounds. While it is Snowing, all Ice-Type Pokémon gain 5 Damage Reduction, or +2 to any existing Damage Reduction. NOTE: For all intents and purposes, Snowscape retroactively replaces Hail in all contexts, including Movepools and Ability effects. If you are using the Weathers from Domovoi’s Rework however, Snowscape should be replaced again with Hail from that Homebrew in anything but Name.",
+        "contest_type": "Beauty",
+        "contest_effect": "Sabotage"
+    },
+    {
         "name": "Soak",
         "type": "Water",
         "frequency": "Daily",
@@ -7117,6 +7855,15 @@
         "contest_effect": "Inversed Appeal"
     },
     {
+        "name": "Spicy Extract",
+        "type": "Grass",
+        "frequency": "Scene x2",
+        "ac": "None",
+        "class": "Status",
+        "range": "Self or 4, 1 Target",
+        "effect": "Choose either Attack or Special Attack. Raise the chosen Stat of the user or an ally within range by +3 Combat Stages. You cannot make the same choice twice in the same Scene."
+    },
+    {
         "name": "Spider Web",
         "type": "Bug",
         "frequency": "Scene x2",
@@ -7161,6 +7908,16 @@
         "effect": "If the user is hit by an attack, the user may use Spiky Shield. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move’s effects. In addition, if the triggering attack was Melee ranged, the attacker loses a Tick of Hit Points.",
         "contest_type": "Tough",
         "contest_effect": "Inversed Appeal"
+    },
+    {
+        "name": "Spin Out",
+        "type": "Steel",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 10: 3d8+10 / 24",
+        "class": "Physical",
+        "range": "Burst 1",
+        "effect": "This Move may be used as a Free Action at the end of a Sprint Maneuver taken as a Standard Action, as long as the user Shifted at least 3 meters in a straight line and ended in range of a target. When used this way, this Move gains the Smite keyword, and lowers the user's Speed by -2 Combat Stages."
     },
     {
         "name": "Spirit Break",
@@ -7220,6 +7977,16 @@
         "contest_type": "Cute",
         "contest_effect": "Inversed Appeal",
         "special": "Grants Long Jump +1"
+    },
+    {
+        "name": "Spook* [Ember]",
+        "type": "Ghost",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 4: 1d8+6 / 11",
+        "class": "Special",
+        "range": "4, 1 Target",
+        "effect": "Lower the target’s Special Defense by -1 Combat Stage on 18+."
     },
     {
         "name": "Spore",
@@ -7540,6 +8307,16 @@
         "contest_effect": "Saving Grace"
     },
     {
+        "name": "Sugar Rush* [Trailblaze]",
+        "type": "Fairy",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 5: 1d8+8 / 13",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Dash, Full Action",
+        "effect": "The user Shifts before or after attacking, ignoring Slow Terrain. If the user did not move through Slow Terrain during this Shift, raise the user’s Speed 1 Combat Stage."
+    },
+    {
         "name": "Sunny Day",
         "type": "Fire",
         "frequency": "Daily x2",
@@ -7572,6 +8349,18 @@
         "effect": "The target loses 1/2 of their current Hit Points.",
         "contest_type": "Tough",
         "contest_effect": "Steady Performance"
+    },
+    {
+        "name": "Supercell Slam",
+        "type": "Electric",
+        "frequency": "At-Will",
+        "ac": "3",
+        "damage_base": "Damage Base 10: 3d8+10 / 24",
+        "class": "Physical",
+        "range": "Melee, Dash, Pass",
+        "effect": "If this Move misses, the user loses Hit Points equal to 1/4th of their Max Hit Points. A failure to hit due to a Move with the Shield keyword does not count as a miss. This Move cannot be used if Gravity is in effect.",
+        "contest_type": "Tough",
+        "contest_effect": "Seen Nothing Yet"
     },
     {
         "name": "Superpower",
@@ -7607,6 +8396,16 @@
         "effect": "As a Shift Action, the user may Move to any open square in Surf’s area of effect without provoking any Attacks of Opportunity.",
         "contest_type": "Beauty",
         "contest_effect": "Exhausting Act"
+    },
+    {
+        "name": "Surge* [Quick Attack+]",
+        "type": "Electric",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 4: 1d8+6 / 11",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Priority",
+        "effect": "The target cannot make Attacks of Opportunity for 1 full round."
     },
     {
         "name": "Surging Strikes",
@@ -7721,6 +8520,26 @@
         "effect": "The user regains Hit Points equal to half of its full Hit Point value. If it is Sunny, the user gains 2/3 of its full Hit Point value instead. If it is Rainy, Sand Storming or Hailing the user gains 1/4 of their full Hit Point value instead.",
         "contest_type": "Smart",
         "contest_effect": "Reflective Appeal"
+    },
+    {
+        "name": "Syrup Bomb",
+        "type": "Grass",
+        "frequency": "At-Will",
+        "ac": "5",
+        "damage_base": "Damage Base 6: 2d6+8 / 15",
+        "class": "Special",
+        "range": "6, 1 Target, Smite",
+        "effect": "The target and all foes adjacent to them are Slowed for 1 full Round. If an affected foe was already Slowed or Stuck, it becomes Stuck instead."
+    },
+    {
+        "name": "Tachyon Cutter",
+        "type": "Steel",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 5: 1d8+8 / 13",
+        "class": "Special",
+        "range": "6, 2 Targets, Slice",
+        "effect": "If the targets are not adjacent to each other, this Move cannot miss."
     },
     {
         "name": "Tackle",
@@ -7895,6 +8714,38 @@
         "special": "Grants Teleporter 4"
     },
     {
+        "name": "Temper Flare",
+        "type": "Fire",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Physical",
+        "range": "Melee, 1 Target",
+        "effect": "If the user’s last attack failed or missed, this Move is DB 15 (4d10+10 / 45) instead.",
+        "contest_type": "Cool",
+        "contest_effect": "Seen Nothing Yet"
+    },
+    {
+        "name": "Tera Blast",
+        "type": "Normal",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Versatile",
+        "range": "8, 1 Target, Versatile",
+        "effect": "If the user is Terastalized, this move’s Type becomes the user’s Tera Type."
+    },
+    {
+        "name": "Tera Starstorm",
+        "type": "Normal",
+        "frequency": "Scene",
+        "ac": "2",
+        "damage_base": "Damage Base 12: 3d12+10 / 30",
+        "class": "Special",
+        "range": "6, Ranged Blast 3, Smite",
+        "effect": "Place a Star Shard in any square of the Area of Effect. Any ally entering that square, or starting their turn on it, may consume the Shard to gain a +10 Damage Bonus on their next successful damaging attack. If a target has changed Forme, this attack is one step more effective against that target. This may not cause the Effectiveness to be raised above Doubly Super Effective. Note: Changing Forme includes any effect that switches Base Stat Sets, such as the Abilities like Stance Change or Schooling; Mega Evolution; Dynamax; Terastilization; or being in any Altered, Origin, or Primal Forme; even if they started the encounter that way."
+    },
+    {
         "name": "Terrain Pulse",
         "type": "Normal",
         "frequency": "EOT",
@@ -8051,6 +8902,16 @@
         "contest_effect": "Exhausting Act"
     },
     {
+        "name": "Thunderclap",
+        "type": "Electric",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 7: 2d6+10 / 17",
+        "class": "Special",
+        "range": "3, 1 Target",
+        "effect": "If a foe within Range uses a damaging Move, or leaves Range, the user may use this Move as an Interrupt against that foe. If they do, the target receives a -10 damage penalty to its next Move, or the triggering one, if any."
+    },
+    {
         "name": "Thunderous Kick",
         "type": "Fighting",
         "frequency": "EOT",
@@ -8074,6 +8935,15 @@
         "contest_effect": "Excitement"
     },
     {
+        "name": "Tidy Up",
+        "type": "Normal",
+        "frequency": "Scene",
+        "ac": "None",
+        "class": "Status",
+        "range": "Self",
+        "effect": "Choose Slow or Rough Terrain. The chosen Terrain, any Terrain Effects of your choice caused by Moves, and all Hazards are removed from the squares within a Burst 4. Then, the user's Attack and Speed are raised by +1 Combat Stage."
+    },
+    {
         "name": "Topsy-Turvy",
         "type": "Dark",
         "frequency": "EOT",
@@ -8083,6 +8953,18 @@
         "effect": "The target’s Combat Stages are inverted; +1 Stage becomes -1 Stage, -3 Stages becomes +3 Stages, etc.",
         "contest_type": "Smart",
         "contest_effect": "Unsettling"
+    },
+    {
+        "name": "Torch Song",
+        "type": "Fire",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Special",
+        "range": "5, 1 Target, Sonic",
+        "effect": "Raise the Special Attack of either the user or an ally within 3 meters by +1 Combat Stage.",
+        "contest_type": "Beauty",
+        "contest_effect": "Big Show"
     },
     {
         "name": "Torment",
@@ -8126,6 +9008,18 @@
         "range": "6, 1 Target",
         "effect": "The target is Poisoned and has their Speed lowered by 1 Combat Stage. If the target is already Poisoned, they instead lose a Tick of Hit Points and has their Speed lowered by 2 Combat Stages.",
         "contest_type": "Smart",
+        "contest_effect": "Excitement"
+    },
+    {
+        "name": "Trailblaze",
+        "type": "Grass",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 5: 1d8+8 / 13",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Dash, Full Action",
+        "effect": "The user Shifts before or after attacking, ignoring Slow Terrain. If the user did not move through Slow Terrain during this Shift, raise the user’s Speed 1 Combat Stage.",
+        "contest_type": "Tough",
         "contest_effect": "Excitement"
     },
     {
@@ -8209,6 +9103,16 @@
         "contest_effect": "Special Attention"
     },
     {
+        "name": "Triple Dive",
+        "type": "Water",
+        "frequency": "EOT",
+        "ac": "3",
+        "damage_base": "Damage Base 6: 2d6+8 / 15",
+        "class": "Physical",
+        "range": "Melee, 1 Target",
+        "effect": "After attacking, hit or miss, the user may Disengage 2 meters and attack a different target with this Move. This effect may be repeated a second time, targeting a creature that has not been targeted by either prior attack. Before making each Accuracy Check, the user can elect to give up triggering all remaining additional Shifts and attacks. This Move gains +5 to its damage roll for each attack that is given up."
+    },
+    {
         "name": "Triple Kick",
         "type": "Fighting",
         "frequency": "At-Will",
@@ -8245,6 +9149,16 @@
         "contest_effect": "Exhausting Act"
     },
     {
+        "name": "Twin Beam",
+        "type": "Psychic",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 4: 1d8+6 / 11",
+        "class": "Special",
+        "range": "6, 2 Targets; or 6, 1 Target (see Effect)",
+        "effect": "If used on only 1 target, this Move gains the Double Strike keyword."
+    },
+    {
         "name": "Twineedle",
         "type": "Bug",
         "frequency": "At-Will",
@@ -8279,6 +9193,18 @@
         "effect": "If U-Turn successfully hits its target, the user deals damage and then immediately is returned to its Poké Ball in the same turn. A New Pokémon may immediately be sent out. Using U-Turn lets a Trapped user be recalled.",
         "contest_type": "Cute",
         "contest_effect": "Inversed Appeal"
+    },
+    {
+        "name": "Upper Hand",
+        "type": "Fighting",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 7: 2d6+10 / 17",
+        "class": "Physical",
+        "range": "Melee, 1 Target",
+        "effect": "If an adjacent foe declares Priority or an Interrupt, this Move may be used as an Interrupt against the triggering foe. If used this way, this Move Flinches the target. If the triggering Interrupt was itself triggered by the user’s Standard Action, that Action is relinquished, in favor of giving up the Action on the following round, to use this Move.",
+        "contest_type": "Smart",
+        "contest_effect": "Saving Grace"
     },
     {
         "name": "Uproar",
@@ -8509,6 +9435,18 @@
         "contest_effect": "Steady Performance"
     },
     {
+        "name": "Wave Dash* [New]",
+        "type": "Water",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 5: 1d8+8 / 13",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Dash",
+        "effect": "The user may make the Disengage Maneuver as a Free Action either right before or after using this Move.",
+        "contest_type": "Tough",
+        "contest_effect": "Excitement"
+    },
+    {
         "name": "Weather Ball",
         "type": "Normal",
         "frequency": "EOT",
@@ -8548,12 +9486,24 @@
         "type": "Dark",
         "frequency": "EOT",
         "ac": "2",
-        "damage_base": "Damage Base 8: 2d6+10 / 19",
+        "damage_base": "Damage Base 8: 2d6+8 / 19",
         "class": "Physical",
         "range": "Melee, 1 Target, Push",
         "effect": "If Wicked Blow hits, it is a Critical Hit. The target is Pushed 6 meters minus their Weight Class. On a roll of 15+, the target is also Tripped.",
         "contest_type": "Tough",
         "contest_effect": "Steady Performance"
+    },
+    {
+        "name": "Wicked Torque",
+        "type": "Dark",
+        "frequency": "Scene x2",
+        "ac": "2",
+        "damage_base": "Damage Base 10: 3d8+10 / 24",
+        "class": "Physical",
+        "range": "Melee, Dash, Pass",
+        "effect": "All legal targets fall Asleep on 18+.",
+        "contest_type": "Smart",
+        "contest_effect": "Catching Up"
     },
     {
         "name": "Wide Guard",
@@ -8634,6 +9584,18 @@
         "effect": "The user becomes Withdrawn. While Withdrawn, the user becomes immune to Critical Hits and gain 15 Damage Reduction. However, while Withdrawn, the user cannot Shift, and may only use self-targeting Moves. The user may stop being Withdrawn as a Shift Action.",
         "contest_type": "Cute",
         "contest_effect": "Sabotage"
+    },
+    {
+        "name": "Wither* [New]",
+        "type": "Dark",
+        "frequency": "Scene x2",
+        "ac": "7",
+        "damage_base": "Damage Base 11: 3d10+10 / 27",
+        "class": "Special",
+        "range": "6, 1 Target, Smite, Spirit Surge",
+        "effect": "Suppresses all legal targets on 15+. Any foes adjacent to the target lose 10 Hit Points.",
+        "contest_type": "Beauty",
+        "contest_effect": "Exhausting Act"
     },
     {
         "name": "Wonder Room",
@@ -8723,6 +9685,16 @@
         "effect": "The target falls Asleep at the end of their next turn. Yawn cannot miss.",
         "contest_type": "Cute",
         "contest_effect": "Excitement"
+    },
+    {
+        "name": "Zantetsuken* [New]",
+        "type": "Steel",
+        "frequency": "Scene",
+        "ac": "5",
+        "damage_base": "Damage Base 11: 3d10+10 / 27",
+        "class": "Physical",
+        "range": "Melee, 1 Target",
+        "effect": "This Move automatically Critically Hits targets at or below half of their Max Hit Points. After dealing damage, the target becomes Vulnerable for one full round."
     },
     {
         "name": "Zap Cannon",
