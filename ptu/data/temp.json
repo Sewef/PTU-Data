@@ -1,0 +1,660 @@
+{
+	"General": {
+		"Command Versatility": {
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Command": 4,
+						"Guile": 4,
+						"Pokémon Education": 4
+					}
+				]
+			},
+			"Freq": "1 AP — Free Action",
+			"Trigger": "Your Pokémon takes its turn",
+			"Effect": "Your Pokémon may give up use of a Scene or Daily Move to regain use of a Scene or Daily Move which it has already used. Your Pokémon may give up use of a Daily Move to regain use of a Scene Move, but not vice-versa. You may use Command Versatility only once per Scene per Pokémon."
+		},
+		"Press": {
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Intimidate": 4
+					}
+				]
+			},
+			"Freq": "At-Will — Standard Action",
+			"Target": "Your own Pokémon",
+			"Effect": "You hit your Pokémon, and they lose 1/6th of their Max Hit Points and are cured of Sleep. Raise any two of their Stats by +1 CS each, and you may add half of your Intimidate Rank to any Skill Checks made this round to make this Pokémon obey orders. Using Press on a Pokémon may make them dislike you."
+		},
+		"Quick Switch": {
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Acrobatics": 3,
+						"Guile": 3
+					}
+				]
+			},
+			"Freq": "2 AP — Free Action",
+			"Trigger": "Your Pokémon Faints; or an opponent sends out a Pokémon",
+			"Effect": "You may return and send out a Pokémon as a Free Action. You may perform this Feature on your turn without a Trigger. Pokémon sent out by Quick Switch cannot trigger another Trainer's Quick Switch. When you swap Pokémon using Quick Switch, you do not lose a Pokémon turn."
+		},
+		"Species Savant": {
+			"Prerequisites": {
+				"Other": [
+					"3 different individual Pokémon of the same evolutionary line"
+				]
+			},
+			"Freq": "Static",
+			"Effect": "When you take Species Savant, choose a single Evolutionary Family. Your Pokémon of your Chosen Evolutionary Family have each of their Base Stats increased by +1."
+		},
+		"Tutoring": {
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Pokémon Education": 3
+					}
+				],
+				"Other": [
+					"A move that you or three of your Pokémon know"
+				]
+			},
+			"Freq": "One Time Use x 3 — Extended Action",
+			"Effect": "When activating this Feature, select a Move known either by yourself or by 3 Pokémon you own. This Move is Mastered. As an Extended Action, you may have Pokémon spend 2 Tutor Points to learn a Move you have Mastered. Pokémon targeted this way can only learn Moves that they could learn by Level Up, TM, Egg Move, or Move Tutor. You may take Tutoring multiple times, each time gaining 3 uses of the Feature"
+		},
+		"Agility Training": {
+			"Tags": [
+				"Training",
+				"Orders"
+			],
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Athletics": 3
+					},
+					{
+						"Command": 2
+					}
+				]
+			},
+			"Freq": "At-Will — Special",
+			"Effect": "The target becomes Agile until the end of the effect duration. Agile Pokémon gain a +1 bonus to Movement Capabilities and +4 to Initiative."
+		},
+		"Brutal Training": {
+			"Tags": [
+				"Training",
+				"Orders"
+			],
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Intimidate": 3
+					},
+					{
+						"Command": 2
+					}
+				]
+			},
+			"Freq": "At-Will — Special",
+			"Effect": "The target becomes Brutal until the end of the effect duration. Brutal Pokémon increase the Critical- Hit and Effect Range of all attacks by +1."
+		},
+		"Focused Training": {
+			"Tags": [
+				"Training",
+				"Orders"
+			],
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Command": 3
+					}
+				]
+			},
+			"Freq": "At-Will — Special",
+			"Effect": "The target becomes Focused until the end of the effect duration. Focused Pokémon gain a +1 bonus to Accuracy Rolls and +2 to Skill Checks."
+		},
+		"Inspired Training": {
+			"Tags": [
+				"Training",
+				"Orders"
+			],
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Charm": 3
+					},
+					{
+						"Command": 2
+					}
+				]
+			},
+			"Freq": "At-Will — Special",
+			"Effect": "The target becomes Inspired until the end of the effect duration. Inspired Pokémon gain a +1 bonus to Evasion and +2 to Save Checks."
+		},
+		"Commander's Voice": {
+			"Prerequisites": {
+				"Feats": [
+					{
+						"Tags": "Orders"
+					},
+					{
+						"Tags": "Orders"
+					}
+				]
+			},
+			"Freq": "Static",
+			"Effect": "You may give two different [Orders] as a single Standard Action, or you may give one set of [Orders] as a Swift Action.\nIf this is used to use Focused Command and another [Order] that has targets, the second Order applies to both Pokémon you are commanding that turn. Commander's Voice doesn't allow you to use Focused Command as a Swift Action."
+		},
+		"Focused Command": {
+			"Tags": [
+				"Orders"
+			],
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Command": 6
+					},
+					{
+						"Focus": 5,
+						"Guile": 5,
+						"Intimidate": 5,
+						"Pokémon Education": 5
+					}
+				]
+			},
+			"Freq": "At-Will — Standard Action + Swift Action",
+			"Effect": "You may have a second Pokémon take a turn this round, but both Pokémon can only take At-Will actions that round. Additionally, both Pokémon receive a -5 Penalty on all Damage Rolls. You may pay 1 AP at the beginning of the round to lift the Frequency Restriction OR the Damage Penalty for the remainder of the round, or pay 2 AP to lift both."
+		},
+		"Ravager Orders": {
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Command": 5,
+						"Intimidate": 5
+					}
+				]
+			},
+			"Freq": "Static",
+			"Effect": "You gain the Reckless Advance and Strike Again! Orders.",
+			"Gives": []
+		},
+		"Marksman Orders": {
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Perception": 5,
+						"Guile": 5
+					}
+				]
+			},
+			"Freq": "Static",
+			"Effect": "You gain the Trick Shot and Long Shot Orders.",
+			"Gives": []
+		},
+		"Trickster Orders": {
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Charm": 5,
+						"Guile": 5
+					}
+				]
+			},
+			"Freq": "Static",
+			"Effect": "You gain the Capricious Whirl and Dazzling Dervish Orders.",
+			"Gives": []
+		},
+		"Guardian Orders": {
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Charm": 5,
+						"Intimidate": 5
+					}
+				]
+			},
+			"Freq": "Static",
+			"Effect": "You gain the Brace for Impact and Sentinel Stance Orders.",
+			"Gives": []
+		},
+		"Precision Orders": {
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Command": 5,
+						"Perception": 5
+					}
+				]
+			},
+			"Freq": "Static",
+			"Effect": "You gain the Pinpoint Strike and Perfect Aim Orders.",
+			"Gives": []
+		},
+		"Blur": {
+			"Tags": [
+				"+Speed"
+			],
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Acrobatics": 5
+					},
+					{
+						"Stealth": 5
+					}
+				]
+			},
+			"Freq": "Static",
+			"Effect": "Attacks and Moves targeting you that don't require an Accuracy Check now require one, as though they had Accuracy Check of 2. You may only apply half of your Evasion to these Attacks and Moves."
+		},
+		"Defender": {
+			"Tags": [
+				"+HP"
+			],
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Athletics": 4
+					}
+				]
+			},
+			"Freq": "Static",
+			"Effect": "Using the Intercept Maneuvers requires only a Shift Action Interrupt."
+		},
+		"Dive": {
+			"Tags": [
+				"+Speed"
+			],
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Acrobatics": 4
+					}
+				]
+			},
+			"Freq": "Scene x2 — Shift Action, Interrupt",
+			"Trigger": "You are targeted by a Ranged 1-Target Attack, or are in a Cone, Burst, Blast, or Line.",
+			"Effect": "You may immediately Shift 1 Meter, and then become Tripped. This Feature cannot be used if you are Stuck, Grappled, or otherwise impaired from Shifting. This Feature causes you to dodge Ranged attacks aimed at you, and may let you avoid Cones, Bursts, Blasts, or Lines if the shift removes you from the area of effect."
+		},
+		"Fighter's Versatility": {
+			"Tags": [
+				"+Any Stat"
+			],
+			"Prerequisites": {
+				"Moves": [
+					{
+						"Freq": [
+							"Scene",
+							"Daily"
+						]
+					},
+					{
+						"Freq": [
+							"Scene",
+							"Daily"
+						]
+					}
+				]
+			},
+			"Freq": "Scene — Free Action",
+			"Trigger": "You gain Initiative.",
+			"Effect": "You may give up use of a Scene or Daily Move to regain use of a Scene or Daily Move which you have already used. You may give up use of a Daily Move to regain use of a Scene Move, but not vice-versa."
+		},
+		"Multi-Tasking": {
+			"Tags": [
+				"+Speed"
+			],
+			"Prerequisites": {
+				"Stat": {
+					"Speed": 20
+				},
+				"Skills": [
+					{
+						"Acrobatics": 6
+					}
+				]
+			},
+			"Freq": "Scene x2 — Swift Action",
+			"Trigger": "You gain Initiative.",
+			"Effect": "You may take two Standard Actions instead of one this turn, but both actions must have an At-Will Frequency."
+		},
+		"Signature Move": {
+			"Tags": [
+				"+Any Stat"
+			],
+			"Prerequisites": {
+				"Moves": [
+					"Any",
+					"Any",
+					"Any",
+					"Any"
+				]
+			},
+			"Freq": "Static",
+			"Effect": "Choose a Move you know. Increase the Move's Frequency one step, as if you had used a PP Up. This choice cannot be changed once made. This Feature may not select Moves known through temporary means, nor can these Moves be used to qualify for this Feature."
+		},
+		"Type Expertise": {
+			"Tags": [
+				"Ranked 2",
+				"+Any Stat"
+			],
+			"Prerequisites": {
+				"Rank 1": {
+					"Level": 9,
+					"Moves": [
+						{
+							"Type": "x"
+						},
+						{
+							"Type": "x"
+						},
+						{
+							"Type": "x"
+						}
+					]
+				},
+				"Rank 2": {
+					"Level": 9,
+					"Moves": [
+						{
+							"Type": "x"
+						},
+						{
+							"Type": "x"
+						},
+						{
+							"Type": "x"
+						}
+					]
+				}
+			},
+			"Freq": "Static",
+			"Effect": "Each Rank, choose a Type of which you know at least 3 Moves. You gain STAB for the chosen Type. STAB is never applied to Struggle Attacks."
+		},
+		"Walk It Off": {
+			"Tags": [
+				"+HP"
+			],
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Athletics": 4
+					},
+					{
+						"Focus": 3
+					}
+				]
+			},
+			"Freq": "Daily — Extended Action",
+			"Effect": "Remove one Injury from yourself and regain 1/4th of your maximum Hit Points. This Injury removal doesn't count against the natural healing limit on Injuries each day."
+		},
+		"First Aid Expertise": {
+			"Prerequisites": {
+				"Edges": [
+					"Medic Training"
+				],
+				"Skills": [
+					{
+						"Medicine Education": 5
+					}
+				]
+			},
+			"Freq": "Daily x3 — Extended Action",
+			"Target": "Pokémon or Trainers",
+			"Effect": "The target may remove one Injury, has all Hit Points restored, and is cured of all Status Afflictions. You may use First Aid Expertise only once per day per target. First Aid Expertise requires access to a First Aid Kit."
+		},
+		"Let Me Help You With That": {
+			"Freq": "Daily x3 — Full Action, Interrupt",
+			"Trigger": "An allied Trainer fails a Skill Check in a Skill you have Ranked at Novice or higher.",
+			"Effect": "The ally may re-roll the Skill Check with a Bonus equal to your Skill Rank."
+		},
+		"Poké Ball Crafter": {
+			"Prerequisites": {
+				"Edges": [
+					"Basic Balls",
+					"Poké Ball Repair"
+				],
+				"Skills": [
+					{
+						"Technology": 5
+					}
+				]
+			},
+			"Freq": "Static",
+			"Effect": "You may craft Dusk, Dive, Heal, Luxury, Net, Nest, Quick, Repeat, or Timer Balls for $700. Requires access to a Poké Ball Tool Box."
+		},
+		"PokéManiac": {
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Pokémon Education": 4
+					}
+				]
+			},
+			"Freq": "At-Will — Standard Action",
+			"Target": "A Pokémon",
+			"Effect": "Make a Pokemon Education Check with a DC of 10. If you succeed, you determine the target's Level, Types, Nature, and Abilities."
+		},
+		"Psionic Sight": {
+			"Tags": [
+				"+Special Defense"
+			],
+			"Prerequisites": {
+				"Edges": [
+					"Elemental Connection (Psychic)"
+				]
+			},
+			"Freq": "Static",
+			"Effect": "You are able to visibly see any Psychic Residue left on Humans or Pokémon due to the effects of Psionic abilities. Each Human or Pokémon leaves distinct Psychic Residue on their targets; you are easily able to distinguish which targets have been affected by the same Psionic, though to identify that Psionic you need to have a way of knowing their signature (such as simply seeing them do it, and seeing the resulting signature)."
+		},
+		"Skill Monkey": {
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Any": 4
+					},
+					{
+						"Any": 4
+					},
+					{
+						"Any": 4
+					}
+				]
+			},
+			"Freq": "Daily x3 — Free Action",
+			"Trigger": "You make a Skill Check",
+			"Effect": "You may re-roll the triggering Skill Check with a +2 Bonus, taking the new result. This Feature may be used to re-roll a specific roll only once."
+		},
+		"Arcane Training": {
+			"Tags": [
+				"+Special Attack",
+				"Weapon"
+			],
+			"Prerequisites": {
+				"Feats": [
+					"Farcast"
+				],
+				"Skills": [
+					{
+						"Occult Education": 3
+					}
+				]
+			},
+			"Freq": "Static",
+			"Effect": " You may use Arcane Weapons. Attacks made with your Arcane Weapons share the Type of your Elemental Connection. If you have Mystic Senses, these Attacks deal Normal Type Damage. Arcane Weapon users that qualified through Mystic Senses or Elemental Connection (Normal) gain a +5 Bonus to Damage Rolls and a +2 Bonus to Effect Range when using Arcane Weapon Attacks. When wielding an Arcane Weapon, you may resist Disarm Maneuvers with your Occult Education."
+		},
+		"Smith": {
+			"Tags": [
+				"Ranked 2",
+				"+Attack"
+			],
+			"Prerequisites": {
+				"Rank 1": {
+					"Skills": [
+						{
+							"Focus": 3,
+							"Athletics": 3
+						}
+					]
+				},
+				"Rank 2": {
+					"Skills": [
+						{
+							"Focus": 3,
+							"Athletics": 3
+						}
+					]
+				}
+			},
+			"Freq": "Static",
+			"Effect": {
+				"Rank 1": "You may create Simple Weapons for $1000, Light Shields for $1,500, and Light Armor for $4,000.",
+				"Rank 2": "You may create Fine Weapons for $2,000, Helmets for $1,125, Heavy Shields for $2,250 and Heavy Armor for $5,000."
+			}
+		},
+		"Type Sync": {
+			"Tags": [
+				"Ranked 2",
+				"+Attack"
+			],
+			"Prerequisites": {
+				"Edges": [
+					"Elemental Connection"
+				],
+				"Feats": [
+					"Type-Linked Class"
+				],
+				"Skills": [
+					{
+						"Medicine Education": 4,
+						"Occult Education": 4,
+						"Technology Education": 4
+					}
+				]
+			},
+			"Freq": "Special — Extended Action",
+			"Target": "Your Pokémon",
+			"Effect": "The Target gains the Type of your Elemental Connection as an additional Type, or has one of their Types replaced by that Type. See the Type Changes sec- tion (page 436) for more information and suggestions. A Pokémon may be targeted by Type Sync only once. This Feature may be performed One Time for each Rank above Untrained you have of your highest of Medicine, Occult, or Tech Education, up to a maximum of 4 times at Master Rank."
+		},
+		"Nurse": {
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Medicine Education": 5
+					}
+				]
+			},
+			"Freq": "Drain 2 AP — Free Action",
+			"Trigger": "You take an Extended Rest",
+			"Effect": "During this Extended Rest, Pokémon and Trainers in your care gain the benefits listed below. The AP Drain cost from triggering this Feature is applied after the Extended Rest is completed and AP Drain has otherwise been restored.\n» They heal 1/8th of their Max Hit Points per half hour of rest instead of 1/16th (does not stack with Bandages).\n» If the Extended Rest lasts at least 6 hours, they may remove 1 Injury."
+		},
+		"Gotta Catch 'Em All": {
+			"Prerequisites": {
+				"Feats": [
+					"Advanced Capture Techniques Rank 3"
+				]
+			},
+			"Freq": "Static",
+			"Effect": "Every time you Capture a Wild Pokémon that is a member of an evolutionary family of which you own no other Pokémon, you gain 1 Collector Stack. Whenever you make a Capture Roll, you may spend up to three Collector Stacks to gain an equal bonus to your Capture Roll, or you may spend three Collector Stacks to re-roll entirely."
+		}
+	},
+	"Ace Trainer": {
+		"Ace Trainer": {
+			"Tags": [
+				"Class"
+			],
+			"Prerequisites": {
+				"Skills": [
+					{
+						"Command": 3
+					}
+				]
+			},
+			"Freq": "Drain 1 AP — Extended Action",
+			"Trigger": "You spend at least half an hour Training your Pokémon",
+			"Effect": "For each Pokémon that has been Trained during this time, choose a Stat besides HP; that Stat becomes Trained until an Extended Rest is taken. The default State of Trained Stats is +1 Combat Stages instead of 0. A Pokémon may have only one Trained Stat at a time."
+		},
+		"Perseverance": {
+			"Prerequisites": {
+				"Feats": [
+					"Ace Trainer"
+				]
+			},
+			"Freq": "1 AP — Free Action",
+			"Trigger": "Your Pokémon gains an Injury",
+			"Effect": "The target instead does not gain an Injury. Perseverance may activate only once per Scene per target."
+		},
+		"Elite Trainer": {
+			"Prerequisites": {
+				"Feats": [
+					"Ace Trainer"
+				]
+			},
+			"Freq": "Static",
+			"Effect": "Choose Agility Training, Brutal Training, Focused Training, or Inspired Training. You gain the chosen Feature, even if you do not meet the prerequisites. When training, you may apply up to two different [Training] Features on each of your Pokémon. If you already have all of these Features, instead pick another Feature for which you qualify."
+		},
+		"Critical Moment": {
+			"Prerequisites": {
+				"Feats": [
+					"Elite Trainer"
+				],
+				"Skills": [
+					{
+						"Command": 4
+					}
+				]
+			},
+			"Freq": "Scene x2 — Standard Action",
+			"Target": "Your Pokemon with [Training] Features applied",
+			"Effect": "The bonuses from your Pokemon's [Training] are tripled until the end of your next turn."
+		},
+		"Top Percentage": {
+			"Prerequisites": {
+				"Feats": [
+					"Ace Trainer"
+				],
+				"Skills": [
+					{
+						"Command": 5
+					}
+				]
+			},
+			"Freq": "At-Will — Free Action",
+			"Trigger": "Your Pokémon levels up to a Level evenly divisible by 5",
+			"Effect": "Your Pokémon gains an extra Tutor Point. Top Percentage may be used on a single Pokémon a maximum of 4 times. Once a Pokémon has gained 4 Tutor Points in this way, increase each of that Pokémon's Base Stats by +1."
+		},
+		"Signature Technique": {
+			"Prerequisites": {
+				"Feats": [
+					"Elite Trainer"
+				],
+				"Skills": [
+					{
+						"Command": 5
+					}
+				]
+			},
+			"Freq": "At-Will — Extended Action",
+			"Trigger": "Your Pokémon with at least 2 Tutor Points remaining",
+			"Effect": "The target loses 2 Tutor Points. Choose one Move on the Target's Move List. That Move becomes the target's Signature Technique, and you may apply one of the modifications on the next page to the Move. The Move being modified must fit the category of the modification, and you must have the associated Training Feature to apply a modification. A Pokémon may only have one Signature Technique at a time. If you choose to teach a Pokémon a different Signature Technique, the old one is lost, and 1 Tutor Point is refunded. 1 Tutor Point is also refunded if the Pokémon ever forgets a Signature Technique Move."
+		},
+		"Champ in the Making": {
+			"Prerequisites": {
+				"Feats": [
+					"Any Ace Trainer",
+					"Any Ace Trainer",
+					"Any Ace Trainer",
+					"Any Ace Trainer"
+				],
+				"Skills": [
+					{
+						"Command": 6
+					}
+				]
+			},
+			"Freq": "Drain 1 AP — Free Action",
+			"Trigger": "You use Ace Trainer to give Pokémon Trained Stats",
+			"Effect": "Choose two Trained Stats for each Pokémon instead of one. A Pokémon may only have two Trained Stats this way."
+		}
+	}
+}

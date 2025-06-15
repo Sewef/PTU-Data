@@ -113,3 +113,14 @@ function loadJsonToTable(file, tableId) {
         alert("Erreur lors du chargement du JSON.");
     });
 }
+
+function loadJsonAsText(url, container) {
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      container.innerText = JSON.stringify(data, null, 2);
+    })
+    .catch(err => {
+      container.innerText = "Erreur lors du chargement.";
+    });
+}
