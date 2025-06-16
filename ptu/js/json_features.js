@@ -42,35 +42,36 @@ function createCard(title, data) {
     return col;
 }
 
+function loadFeatures(file) {
+	fetch(file)
+		.then(response => {
+			if (!response.ok) throw new Error("Failed to load JSON");
+			return response.json();
+		})
+		.then(jsonData => {
+			const container = document.getElementById("cards-container");
 
-fetch('/ptu/data/features_core.json')
-    .then(response => {
-        if (!response.ok) throw new Error("Failed to load JSON");
-        return response.json();
-    })
-    .then(jsonData => {
-        const container = document.getElementById("cards-container");
+			for (const sectionTitle in jsonData) {
+				const section = jsonData[sectionTitle];
 
-        for (const sectionTitle in jsonData) {
-            const section = jsonData[sectionTitle];
+				const header = document.createElement("h2");
+				header.className = "my-4";
+				header.textContent = sectionTitle;
+				container.appendChild(header);
 
-            const header = document.createElement("h2");
-            header.className = "my-4";
-            header.textContent = sectionTitle;
-            container.appendChild(header);
+				const row = document.createElement("div");
+				row.className = "row";
 
-            const row = document.createElement("div");
-            row.className = "row";
+				for (const cardTitle in section) {
+					const card = createCard(cardTitle, section[cardTitle]);
+					row.appendChild(card);
+				}
 
-            for (const cardTitle in section) {
-                const card = createCard(cardTitle, section[cardTitle]);
-                row.appendChild(card);
-            }
-
-            container.appendChild(row); // Add the row after the section header
-        }
-        
-    })
-    .catch(error => {
-        console.error("Error loading JSON:", error);
-    });
+				container.appendChild(row); // Add the row after the section header
+			}
+			
+		})
+		.catch(error => {
+			console.error("Error loading JSON:", error);
+		});
+}
