@@ -183,7 +183,7 @@
             "Tags": "[Ranked 2][+Attack]",
             "Prerequisites": "\nRank 1: Skills Focus 3, Athletics 3\nRank 2: Skills Focus 3, Athletics 3",
             "Frequency": "Static",
-            "Effect": "\nRank 1:=You may create Simple Weapons for $1000, Light Shields for $1,500, and Light Armor for $4,000.\nRank 2:=You may create Fine Weapons for $2,000, Helmets for $1,125, Heavy Shields for $2,250 and Heavy Armor for $5,000."
+            "Effect": "\nRank 1:You may create Simple Weapons for $1000, Light Shields for $1,500, and Light Armor for $4,000.\nRank 2:You may create Fine Weapons for $2,000, Helmets for $1,125, Heavy Shields for $2,250 and Heavy Armor for $5,000."
         },
         "Type Sync": {
             "Tags": "[Ranked 2][+Attack]",
@@ -750,49 +750,259 @@
     },
     "Stat Ace": {
         "Speed": {
-            "Stat Ace": "Tags=Class, Branch, Prerequisites=1=Feats=Ace Trainer, Style Expert (Cute), Skills=Command=3, Focus=3, Other=1 Pokémon with 15 or more Speed, 2=Skills=Command=3, Focus=3, Other=3 Pokémon with 20 or more Speed, Freq=Static, Effect=Your Pokémon have their Base Speed increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Speed increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Speed, and you do not need to \"correct\" Stats due to this inflated Stat Value.",
-            "Stat Link": "Tags=Branch, Prerequisites=Feats=Stat Ace (Speed), Freq=1 AP — Free Action, Trigger=At the end of your Pokémon's turn, their Speed Stat is at its default number of Combat Stages or less., Effect=The triggering Pokémon gains +1 Combat Stage to Speed. (Note: The \"Default\" number of Combat Stages is usually 0)",
-            "Stat Training": "Tags=Branch, Prerequisites=Feats=Stat Ace (Speed), Freq=At-Will — Extended Action, Target=Your Pokémon with at least 1 Tutor Point, Effect=Your Pokémon loses 1 Tutor Point and learns Agility or After You, even if your Pokémon cannot normally learn either move",
-            "Stat Maneuver": "Tags=Branch, Prerequisites=Feats=Stat Ace (Speed), Skills=Command=4, Focus=4, Freq=Scene — Free Action, Effect=You may activate this Feature at any time to cause your Pokémon to use a Move as Priority or a Priority Move as Priority (Advanced).",
-            "Stat Mastery": "Tags=Branch, Prerequisites=Feats=Stat Maneuver (Speed), Freq=Static, Effect=Your Pokémon may take Disengage Maneuvers as Swift Actions.",
-            "Stat Embodiment": "Tags=Branch, Prerequisites=Feats=Any Stat Ace (Speed), Any Stat Ace (Speed), Any Stat Ace (Speed), Any Stat Ace (Speed), Skills=Command=5, Focus=5, Freq=1 AP — Swift Action, Priority (Limited), Target=Your Pokémon, Effect=Your Pokémon gains either Speed Boost or Vanguard for the remainder of the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability.",
-            "Stat Stratagem": "Tags=Branch, Order, Strategem, Prerequisites=Feats=Stat Link (Speed)\nStat Training (Speed), Skills=Command=6, Focus=6, Freq=2 AP — Standard Action, Target=Your Pokémon, Effect=While this Feature is Bound, the target's Movement Capabilities are increased by 1 for each positive Combat Stage they have in Speed, up to a maximum of +3."
+            "Stat Ace": {
+                "Tags": "Class, Branch",
+                "Prerequisites": "1=Feats=Ace Trainer, Style Expert (Cute), Skills=Command=3, Focus=3, Other=1 Pokémon with 15 or more Speed, 2=Skills=Command=3, Focus=3, Other=3 Pokémon with 20 or more Speed",
+                "Freq": "Static",
+                "Effect": "Your Pokémon have their Base Speed increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Speed increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Speed, and you do not need to \"correct\" Stats due to this inflated Stat Value."
+            },
+            "Stat Link": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Ace (Speed)",
+                "Freq": "1 AP — Free Action",
+                "Trigger": "At the end of your Pokémon's turn, their Speed Stat is at its default number of Combat Stages or less.",
+                "Effect": "The triggering Pokémon gains +1 Combat Stage to Speed. (Note: The \"Default\" number of Combat Stages is usually 0)"
+            },
+            "Stat Training": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Ace (Speed)",
+                "Freq": "At-Will — Extended Action",
+                "Target": "Your Pokémon with at least 1 Tutor Point",
+                "Effect": "Your Pokémon loses 1 Tutor Point and learns Agility or After You, even if your Pokémon cannot normally learn either move"
+            },
+            "Stat Maneuver": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Ace (Speed)",
+                "Skills": "Command=4, Focus=4",
+                "Freq": "Scene — Free Action",
+                "Effect": "You may activate this Feature at any time to cause your Pokémon to use a Move as Priority or a Priority Move as Priority (Advanced)."
+            },
+            "Stat Mastery": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Maneuver (Speed)",
+                "Freq": "Static",
+                "Effect": "Your Pokémon may take Disengage Maneuvers as Swift Actions."
+            },
+            "Stat Embodiment": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Any Stat Ace (Speed), Any Stat Ace (Speed), Any Stat Ace (Speed), Any Stat Ace (Speed)",
+                "Skills": "Command=5, Focus=5",
+                "Freq": "1 AP — Swift Action, Priority (Limited)",
+                "Target": "Your Pokémon",
+                "Effect": "Your Pokémon gains either Speed Boost or Vanguard for the remainder of the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
+            },
+            "Stat Stratagem": {
+                "Tags": "Branch, Order, Strategem",
+                "Prerequisites": "Feats=Stat Link (Speed)\nStat Training (Speed)",
+                "Skills": "Command=6, Focus=6",
+                "Freq": "2 AP — Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "While this Feature is Bound, the target's Movement Capabilities are increased by 1 for each positive Combat Stage they have in Speed, up to a maximum of +3."
+            }
         },
         "Special Defense": {
-            "Stat Ace": "Tags=Class, Branch, Prerequisites=1=Feats=Ace Trainer, Style Expert (Smart), Skills=Command=3, Focus=3, Other=1 Pokémon with 15 or more Special Defense, 2=Skills=Command=3, Focus=3, Other=3 Pokémon with 20 or more Special Defense, Freq=Static, Effect=Your Pokémon have their Base Special Defense increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Special Defense increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Special Defense, and you do not need to \"correct\" Stats due to this inflated Stat Value.",
-            "Stat Link": "Tags=Branch, Prerequisites=Feats=Stat Ace (Special Defense), Freq=1 AP — Free Action, Trigger=At the end of your Pokémon's turn, their Special Defense Stat is at its default number of Combat Stages or less., Effect=The triggering Pokémon gains +1 Combat Stage to Special Defense. (Note: The \"Default\" number of Combat Stages is usually 0)",
-            "Stat Training": "Tags=Branch, Prerequisites=Feats=Stat Ace (Special Defense), Freq=At-Will — Extended Action, Target=Your Pokémon with at least 1 Tutor Point, Effect=Your Pokémon loses 1 Tutor Point and learns Amnesia or Light Screen, even if your Pokémon cannot normally learn either move",
-            "Stat Maneuver": "Tags=Branch, Prerequisites=Feats=Stat Ace (Special Defense), Skills=Command=4, Focus=4, Freq=Scene — Free Action, Effect=You may activate this Feature whenever your Pokémon is hit by a Special Attack to receive the blow as if your Pokémon's Special Defense Combat Stages were at +6 instead of their current value.",
-            "Stat Mastery": "Tags=Branch, Prerequisites=Feats=Stat Maneuver (Special Defense), Freq=Static, Effect=Whenever your Pokémon would lose a Tick of Hit Points from Status Afflictions, Weather, or other effects, they lose 5 fewer Hit Points, to a minimum of 1.",
-            "Stat Embodiment": "Tags=Branch, Prerequisites=Feats=Any Stat Ace (Special Defense), Any Stat Ace (Special Defense), Any Stat Ace (Special Defense), Any Stat Ace (Special Defense), Skills=Command=5, Focus=5, Freq=1 AP — Swift Action, Priority (Limited), Target=Your Pokémon, Effect=Your Pokémon gains either Multiscale or Tolerance for the remainder of the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability.",
-            "Stat Stratagem": "Tags=Branch, Order, Strategem, Prerequisites=Feats=Stat Link (Special Defense)\nStat Training (Special Defense), Skills=Command=6, Focus=6, Freq=2 AP — Standard Action, Target=Your Pokémon, Effect=While this Feature is Bound, the target gains a +2 bonus to Save Checks against Confusion, Rage, and Infatuation for each positive Combat Stage they have in Special Defense, up to a maximum of +6."
+            "Stat Ace": {
+                "Tags": "Class, Branch",
+                "Prerequisites": "1=Feats=Ace Trainer, Style Expert (Smart), Skills=Command=3, Focus=3, Other=1 Pokémon with 15 or more Special Defense, 2=Skills=Command=3, Focus=3, Other=3 Pokémon with 20 or more Special Defense",
+                "Freq": "Static",
+                "Effect": "Your Pokémon have their Base Special Defense increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Special Defense increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Special Defense, and you do not need to \"correct\" Stats due to this inflated Stat Value."
+            },
+            "Stat Link": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Ace (Special Defense)",
+                "Freq": "1 AP — Free Action",
+                "Trigger": "At the end of your Pokémon's turn, their Special Defense Stat is at its default number of Combat Stages or less.",
+                "Effect": "The triggering Pokémon gains +1 Combat Stage to Special Defense. (Note: The \"Default\" number of Combat Stages is usually 0)"
+            },
+            "Stat Training": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Ace (Special Defense)",
+                "Freq": "At-Will — Extended Action",
+                "Target": "Your Pokémon with at least 1 Tutor Point",
+                "Effect": "Your Pokémon loses 1 Tutor Point and learns Amnesia or Light Screen, even if your Pokémon cannot normally learn either move"
+            },
+            "Stat Maneuver": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Ace (Special Defense)",
+                "Skills": "Command=4, Focus=4",
+                "Freq": "Scene — Free Action",
+                "Effect": "You may activate this Feature whenever your Pokémon is hit by a Special Attack to receive the blow as if your Pokémon's Special Defense Combat Stages were at +6 instead of their current value."
+            },
+            "Stat Mastery": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Maneuver (Special Defense)",
+                "Freq": "Static",
+                "Effect": "Whenever your Pokémon would lose a Tick of Hit Points from Status Afflictions, Weather, or other effects, they lose 5 fewer Hit Points, to a minimum of 1."
+            },
+            "Stat Embodiment": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Any Stat Ace (Special Defense), Any Stat Ace (Special Defense), Any Stat Ace (Special Defense), Any Stat Ace (Special Defense)",
+                "Skills": "Command=5, Focus=5",
+                "Freq": "1 AP — Swift Action, Priority (Limited)",
+                "Target": "Your Pokémon",
+                "Effect": "Your Pokémon gains either Multiscale or Tolerance for the remainder of the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
+            },
+            "Stat Stratagem": {
+                "Tags": "Branch, Order, Strategem",
+                "Prerequisites": "Feats=Stat Link (Special Defense)\nStat Training (Special Defense)",
+                "Skills": "Command=6, Focus=6",
+                "Freq": "2 AP — Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "While this Feature is Bound, the target gains a +2 bonus to Save Checks against Confusion, Rage, and Infatuation for each positive Combat Stage they have in Special Defense, up to a maximum of +6."
+            }
         },
         "Special Attack": {
-            "Stat Ace": "Tags=Class, Branch, Prerequisites=1=Feats=Ace Trainer, Style Expert (Beauty), Skills=Command=3, Focus=3, Other=1 Pokémon with 15 or more Special Attack, 2=Skills=Command=3, Focus=3, Other=3 Pokémon with 20 or more Special Attack, Freq=Static, Effect=Your Pokémon have their Base Special Attack increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Special Attack increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Special Attack, and you do not need to \"correct\" Stats due to this inflated Stat Value.",
-            "Stat Link": "Tags=Branch, Prerequisites=Feats=Stat Ace (Special Attack), Freq=1 AP — Free Action, Trigger=At the end of your Pokémon's turn, their Special Attack Stat is at its default number of Combat Stages or less., Effect=The triggering Pokémon gains +1 Combat Stage to Special Attack. (Note: The \"Default\" number of Combat Stages is usually 0)",
-            "Stat Training": "Tags=Branch, Prerequisites=Feats=Stat Ace (Special Attack), Freq=At-Will — Extended Action, Target=Your Pokémon with at least 1 Tutor Point, Effect=Your Pokémon loses 1 Tutor Point and learns Nasty Plot or Hidden Power, even if your Pokémon cannot normally learn either move",
-            "Stat Maneuver": "Tags=Branch, Prerequisites=Feats=Stat Ace (Special Attack), Skills=Command=4, Focus=4, Freq=Scene — Free Action, Effect=You may activate this Feature to allow your Pokémon to use a Special Burst, Cone, Close Blast, Ranged Blast, or Line of any size as a Burst 1, Cone 2, Close Blast 2, or Line 4 instead.",
-            "Stat Mastery": "Tags=Branch, Prerequisites=Feats=Stat Maneuver (Special Attack), Freq=Static, Effect=The Range of your Pokémon's Special Non-Melee Moves is increased by +2. This does not affect the size of Area-Of-Effect moves (But does affect the range at which you can place Ranged Blasts)",
-            "Stat Embodiment": "Tags=Branch, Prerequisites=Feats=Any Stat Ace (Special Attack), Any Stat Ace (Special Attack), Any Stat Ace (Special Attack), Any Stat Ace (Special Attack), Skills=Command=5, Focus=5, Freq=1 AP — Swift Action, Priority (Limited), Target=Your Pokémon, Effect=Your Pokémon gains either Tinted Lens or Competitive for the remainder of the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability.",
-            "Stat Stratagem": "Tags=Branch, Order, Strategem, Prerequisites=Feats=Stat Link (Special Attack)\nStat Training (Special Attack), Skills=Command=6, Focus=6, Freq=2 AP — Standard Action, Target=Your Pokémon, Effect=While this Feature is Bound, the target's damaging Ranged Attacks have their Effect Range increased by 1 for each positive Combat Stage they have in Special Attack, up to a maximum of +3."
+            "Stat Ace": {
+                "Tags": "Class, Branch",
+                "Prerequisites": "1=Feats=Ace Trainer, Style Expert (Beauty), Skills=Command=3, Focus=3, Other=1 Pokémon with 15 or more Special Attack, 2=Skills=Command=3, Focus=3, Other=3 Pokémon with 20 or more Special Attack",
+                "Freq": "Static",
+                "Effect": "Your Pokémon have their Base Special Attack increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Special Attack increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Special Attack, and you do not need to \"correct\" Stats due to this inflated Stat Value."
+            },
+            "Stat Link": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Ace (Special Attack)",
+                "Freq": "1 AP — Free Action",
+                "Trigger": "At the end of your Pokémon's turn, their Special Attack Stat is at its default number of Combat Stages or less.",
+                "Effect": "The triggering Pokémon gains +1 Combat Stage to Special Attack. (Note: The \"Default\" number of Combat Stages is usually 0)"
+            },
+            "Stat Training": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Ace (Special Attack)",
+                "Freq": "At-Will — Extended Action",
+                "Target": "Your Pokémon with at least 1 Tutor Point",
+                "Effect": "Your Pokémon loses 1 Tutor Point and learns Nasty Plot or Hidden Power, even if your Pokémon cannot normally learn either move"
+            },
+            "Stat Maneuver": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Ace (Special Attack)",
+                "Skills": "Command=4, Focus=4",
+                "Freq": "Scene — Free Action",
+                "Effect": "You may activate this Feature to allow your Pokémon to use a Special Burst, Cone, Close Blast, Ranged Blast, or Line of any size as a Burst 1, Cone 2, Close Blast 2, or Line 4 instead."
+            },
+            "Stat Mastery": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Maneuver (Special Attack)",
+                "Freq": "Static",
+                "Effect": "The Range of your Pokémon's Special Non-Melee Moves is increased by +2. This does not affect the size of Area-Of-Effect moves (But does affect the range at which you can place Ranged Blasts)"
+            },
+            "Stat Embodiment": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Any Stat Ace (Special Attack), Any Stat Ace (Special Attack), Any Stat Ace (Special Attack), Any Stat Ace (Special Attack)",
+                "Skills": "Command=5, Focus=5",
+                "Freq": "1 AP — Swift Action, Priority (Limited)",
+                "Target": "Your Pokémon",
+                "Effect": "Your Pokémon gains either Tinted Lens or Competitive for the remainder of the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
+            },
+            "Stat Stratagem": {
+                "Tags": "Branch, Order, Strategem",
+                "Prerequisites": "Feats=Stat Link (Special Attack)\nStat Training (Special Attack)",
+                "Skills": "Command=6, Focus=6",
+                "Freq": "2 AP — Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "While this Feature is Bound, the target's damaging Ranged Attacks have their Effect Range increased by 1 for each positive Combat Stage they have in Special Attack, up to a maximum of +3."
+            }
         },
         "Defense": {
-            "Stat Ace": "Tags=Class, Branch, Prerequisites=1=Feats=Ace Trainer, Style Expert (Tough), Skills=Command=3, Focus=3, Other=1 Pokémon with 15 or more Defense, 2=Skills=Command=3, Focus=3, Other=3 Pokémon with 20 or more Defense, Freq=Static, Effect=Your Pokémon have their Base Defense increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Defense increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Defense, and you do not need to \"correct\" Stats due to this inflated Stat Value.",
-            "Stat Link": "Tags=Branch, Prerequisites=Feats=Stat Ace (Defense), Freq=1 AP — Free Action, Trigger=At the end of your Pokémon's turn, their Defense Stat is at its default number of Combat Stages or less., Effect=The triggering Pokémon gains +1 Combat Stage to Defense. (Note: The \"Default\" number of Combat Stages is usually 0)",
-            "Stat Training": "Tags=Branch, Prerequisites=Feats=Stat Ace (Defense), Freq=At-Will — Extended Action, Target=Your Pokémon with at least 1 Tutor Point, Effect=Your Pokémon loses 1 Tutor Point and learns Iron Defense or Reflect, even if your Pokémon cannot normally learn either move",
-            "Stat Maneuver": "Tags=Branch, Prerequisites=Feats=Stat Ace (Defense), Skills=Command=4, Focus=4, Freq=Scene — Free Action, Effect=You may activate this Feature whenever your Pokémon is hit by a Physical Attack to receive the blow as if your Pokémon's Defense Combat Stages were at +6 instead of their current value.",
-            "Stat Mastery": "Tags=Branch, Prerequisites=Feats=Stat Maneuver (Defense), Freq=Static, Effect=Whenever your Pokémon do not spend their Shift Action to Shift during a turn, they gain +5 Damage Reduction for one full round.",
-            "Stat Embodiment": "Tags=Branch, Prerequisites=Feats=Any Stat Ace (Defense), Any Stat Ace (Defense), Any Stat Ace (Defense), Any Stat Ace (Defense), Skills=Command=5, Focus=5, Freq=1 AP — Swift Action, Priority (Limited), Target=Your Pokémon, Effect=Your Pokémon gains either Filter or Battle Armor for the remainder of the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability.",
-            "Stat Stratagem": "Tags=Branch, Order, Strategem, Prerequisites=Feats=Stat Link (Defense)\nStat Training (Defense), Skills=Command=6, Focus=6, Freq=2 AP — Standard Action, Target=Your Pokémon, Effect=While this Feature is Bound, the target gains a +2 bonus to Save Checks against Paralysis, Sleep, and Freeze for each positive Combat Stage they have in Defense, up to a maximum of +6."
+            "Stat Ace": {
+                "Tags": "Class, Branch",
+                "Prerequisites": "1=Feats=Ace Trainer, Style Expert (Tough), Skills=Command=3, Focus=3, Other=1 Pokémon with 15 or more Defense, 2=Skills=Command=3, Focus=3, Other=3 Pokémon with 20 or more Defense",
+                "Freq": "Static",
+                "Effect": "Your Pokémon have their Base Defense increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Defense increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Defense, and you do not need to \"correct\" Stats due to this inflated Stat Value."
+            },
+            "Stat Link": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Ace (Defense)",
+                "Freq": "1 AP — Free Action",
+                "Trigger": "At the end of your Pokémon's turn, their Defense Stat is at its default number of Combat Stages or less.",
+                "Effect": "The triggering Pokémon gains +1 Combat Stage to Defense. (Note: The \"Default\" number of Combat Stages is usually 0)"
+            },
+            "Stat Training": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Ace (Defense)",
+                "Freq": "At-Will — Extended Action",
+                "Target": "Your Pokémon with at least 1 Tutor Point",
+                "Effect": "Your Pokémon loses 1 Tutor Point and learns Iron Defense or Reflect, even if your Pokémon cannot normally learn either move"
+            },
+            "Stat Maneuver": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Ace (Defense)",
+                "Skills": "Command=4, Focus=4",
+                "Freq": "Scene — Free Action",
+                "Effect": "You may activate this Feature whenever your Pokémon is hit by a Physical Attack to receive the blow as if your Pokémon's Defense Combat Stages were at +6 instead of their current value."
+            },
+            "Stat Mastery": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Maneuver (Defense)",
+                "Freq": "Static",
+                "Effect": "Whenever your Pokémon do not spend their Shift Action to Shift during a turn, they gain +5 Damage Reduction for one full round."
+            },
+            "Stat Embodiment": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Any Stat Ace (Defense), Any Stat Ace (Defense), Any Stat Ace (Defense), Any Stat Ace (Defense)",
+                "Skills": "Command=5, Focus=5",
+                "Freq": "1 AP — Swift Action, Priority (Limited)",
+                "Target": "Your Pokémon",
+                "Effect": "Your Pokémon gains either Filter or Battle Armor for the remainder of the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
+            },
+            "Stat Stratagem": {
+                "Tags": "Branch, Order, Strategem",
+                "Prerequisites": "Feats=Stat Link (Defense)\nStat Training (Defense)",
+                "Skills": "Command=6, Focus=6",
+                "Freq": "2 AP — Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "While this Feature is Bound, the target gains a +2 bonus to Save Checks against Paralysis, Sleep, and Freeze for each positive Combat Stage they have in Defense, up to a maximum of +6."
+            }
         },
         "Attack": {
-            "Stat Ace": "Tags=Class, Branch, Prerequisites=1=Feats=Ace Trainer, Style Expert (Cool), Skills=Command=3, Focus=3, Other=1 Pokémon with 15 or more Attack, 2=Skills=Command=3, Focus=3, Other=3 Pokémon with 20 or more Attack, Freq=Static, Effect=Your Pokémon have their Base Attack increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Attack increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Attack, and you do not need to \"correct\" Stats due to this inflated Stat Value.",
-            "Stat Link": "Tags=Branch, Prerequisites=Feats=Stat Ace (Attack), Freq=1 AP — Free Action, Trigger=At the end of your Pokémon's turn, their Attack Stat is at its default number of Combat Stages or less., Effect=The triggering Pokémon gains +1 Combat Stage to Attack. (Note: The \"Default\" number of Combat Stages is usually 0)",
-            "Stat Training": "Tags=Branch, Prerequisites=Feats=Stat Ace (Attack), Freq=At-Will — Extended Action, Target=Your Pokémon with at least 1 Tutor Point, Effect=Your Pokémon loses 1 Tutor Point and learns Swords Dance or Rage, even if your Pokémon cannot normally learn either move",
-            "Stat Maneuver": "Tags=Branch, Prerequisites=Feats=Stat Ace (Attack), Skills=Command=4, Focus=4, Freq=Scene — Free Action, Effect=You may activate this Feature to cause one of your Pokémon to use a Physical \"Melee, 1-Target\" Move as if its range was \"Melee, Pass\" or \"Melee, 3-Targets\" instead.",
-            "Stat Mastery": "Tags=Branch, Prerequisites=Feats=Stat Maneuver (Attack), Freq=Static, Effect=When your Pokémon successfully uses a Push, Disarm, or Dirty Trick Combat Maneuver, the target of the Maneuver loses a Tick of Hit Points.",
-            "Stat Embodiment": "Tags=Branch, Prerequisites=Feats=Any Stat Ace (Attack), Any Stat Ace (Attack), Any Stat Ace (Attack), Any Stat Ace (Attack), Skills=Command=5, Focus=5, Freq=1 AP — Swift Action, Priority (Limited), Target=Your Pokémon, Effect=Your Pokémon gains either Sheer Force or Defiant for the remainder of the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability.",
-            "Stat Stratagem": "Tags=Branch, Order, Strategem, Prerequisites=Feats=Stat Link (Attack)\nStat Training (Attack), Skills=Command=6, Focus=6, Freq=2 AP — Standard Action, Target=Your Pokémon, Effect=While this Feature is Bound, the target's damaging Melee Attacks have their Critical Hit Range increased by 1 for each positive Combat Stage they have in Attack, up to a maximum of +3."
+            "Stat Ace": {
+                "Tags": "Class, Branch",
+                "Prerequisites": "1=Feats=Ace Trainer, Style Expert (Cool), Skills=Command=3, Focus=3, Other=1 Pokémon with 15 or more Attack, 2=Skills=Command=3, Focus=3, Other=3 Pokémon with 20 or more Attack",
+                "Freq": "Static",
+                "Effect": "Your Pokémon have their Base Attack increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Attack increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Attack, and you do not need to \"correct\" Stats due to this inflated Stat Value."
+            },
+            "Stat Link": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Ace (Attack)",
+                "Freq": "1 AP — Free Action",
+                "Trigger": "At the end of your Pokémon's turn, their Attack Stat is at its default number of Combat Stages or less.",
+                "Effect": "The triggering Pokémon gains +1 Combat Stage to Attack. (Note: The \"Default\" number of Combat Stages is usually 0)"
+            },
+            "Stat Training": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Ace (Attack)",
+                "Freq": "At-Will — Extended Action",
+                "Target": "Your Pokémon with at least 1 Tutor Point",
+                "Effect": "Your Pokémon loses 1 Tutor Point and learns Swords Dance or Rage, even if your Pokémon cannot normally learn either move"
+            },
+            "Stat Maneuver": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Ace (Attack)",
+                "Skills": "Command=4, Focus=4",
+                "Freq": "Scene — Free Action",
+                "Effect": "You may activate this Feature to cause one of your Pokémon to use a Physical \"Melee, 1-Target\" Move as if its range was \"Melee, Pass\" or \"Melee, 3-Targets\" instead."
+            },
+            "Stat Mastery": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Stat Maneuver (Attack)",
+                "Freq": "Static",
+                "Effect": "When your Pokémon successfully uses a Push, Disarm, or Dirty Trick Combat Maneuver, the target of the Maneuver loses a Tick of Hit Points."
+            },
+            "Stat Embodiment": {
+                "Tags": "Branch",
+                "Prerequisites": "Feats=Any Stat Ace (Attack), Any Stat Ace (Attack), Any Stat Ace (Attack), Any Stat Ace (Attack)",
+                "Skills": "Command=5, Focus=5",
+                "Freq": "1 AP — Swift Action, Priority (Limited)",
+                "Target": "Your Pokémon",
+                "Effect": "Your Pokémon gains either Sheer Force or Defiant for the remainder of the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
+            },
+            "Stat Stratagem": {
+                "Tags": "Branch, Order, Strategem",
+                "Prerequisites": "Feats=Stat Link (Attack)\nStat Training (Attack)",
+                "Skills": "Command=6, Focus=6",
+                "Freq": "2 AP — Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "While this Feature is Bound, the target's damaging Melee Attacks have their Critical Hit Range increased by 1 for each positive Combat Stage they have in Attack, up to a maximum of +3."
+            }
         }
     },
     "Style Expert": {
@@ -800,7 +1010,7 @@
             "Style Expert": "Tags=Class, Branch, Prerequisites=1=Feats=Coordinator, Other=1 Pokémon with 3d6 in their Tough Stat from Poffins, 2=Other=3 Pokémon with 3d6 in their Tough Stat from Poffins, Freq=Static, Effect=Your Pokémon gain +2d6 to their Tough Stat. These dice are counted as if coming from Poffins.",
             "Style Flourish": "Tags=Branch, Prerequisites=Feats=Any Style Expert (Tough), Any Style Expert (Tough), Any Style Expert (Tough), Freq=1 AP — Free Action, Trigger=Your Pokémon uses a Tough Move, Effect=In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene.",
             "Style Entrainment": "Tags=Branch, Prerequisites=Feats=Any Style Expert (Tough), Any Style Expert (Tough), Any Style Expert (Tough), Any Style Expert (Tough), Freq=1 AP — Swift Action, Priority (Limited), Target=Your Pokémon, Effect=Your Pokémon gains either Sturdy or Intimidate for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability.",
-            "Tough Tumble": "Tags=Ranked 2, Prerequisites=\nRank 1:=Feats=Style Expert (Tough), Skills=Intimidate=3\nRank 2:=Skills=Intimidate=5, Freq=1 AP — Special, Effect=Your Pokémon with at least 3d6 in their Tough Stat from Poffins may activate Tough Tumble as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Scary Face, Spite\nRank 2:: Glare, Bide",
+            "Tough Tumble": "Tags=Ranked 2, Prerequisites=\nRank 1:Feats=Style Expert (Tough), Skills=Intimidate=3\nRank 2:Skills=Intimidate=5, Freq=1 AP — Special, Effect=Your Pokémon with at least 3d6 in their Tough Stat from Poffins may activate Tough Tumble as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Scary Face, Spite\nRank 2:: Glare, Bide",
             "Macho Charge": "Prerequisites=Feats=Tough Tumble \nRank 1:, Freq=At-Will — Free Action, Trigger=Your Pokémon uses a Tough-Type Move, Effect=In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: All targets hit by the Move are pushed away from the triggering Pokémon by 3 meters. You may activate Macho Charge only once per Pokémon per Scene.",
             "Endurance": "Prerequisites=Feats=Tough Tumble \nRank 1:, Freq=Scene — Free Action, Trigger=Your Pokémon takes falling damage, begins to suffocate, or is Heavily Injured., Effect=Your Pokémon can ignore up to X meters of falling when calculating falling damage, act without beginning to suffocate for X additional rounds, or ignore the Hit Point loss effects from acting while Heavily Injured for X rounds. X is equal to half its number of Tough Dice from Poffins."
         },
@@ -808,7 +1018,7 @@
             "Style Expert": "Tags=Class, Branch, Prerequisites=1=Feats=Coordinator, Other=1 Pokémon with 3d6 in their Smart Stat from Poffins, 2=Other=3 Pokémon with 3d6 in their Smart Stat from Poffins, Freq=Static, Effect=Your Pokémon gain +2d6 to their Smart Stat. These dice are counted as if coming from Poffins.",
             "Style Flourish": "Tags=Branch, Prerequisites=Feats=Any Style Expert (Smart), Any Style Expert (Smart), Any Style Expert (Smart), Freq=1 AP — Free Action, Trigger=Your Pokémon uses a Smart Move, Effect=In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Special Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene.",
             "Style Entrainment": "Tags=Branch, Prerequisites=Feats=Any Style Expert (Smart), Any Style Expert (Smart), Any Style Expert (Smart), Any Style Expert (Smart), Freq=1 AP — Swift Action, Priority (Limited), Target=Your Pokémon, Effect=Your Pokémon gains either Analytic or Anticipation for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability.",
-            "Smart Scheme": "Tags=Ranked 2, Prerequisites=\nRank 1:=Feats=Style Expert (Smart), Skills=Guile=3\nRank 2:=Skills=Guile=5, Freq=1 AP — Special, Effect=Your Pokémon with at least 3d6 in their Smart Stat from Poffins may activate Smart Scheme as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Fake Tears, Calm Mind\nRank 2:: Taunt, Flatter",
+            "Smart Scheme": "Tags=Ranked 2, Prerequisites=\nRank 1:Feats=Style Expert (Smart), Skills=Guile=3\nRank 2:Skills=Guile=5, Freq=1 AP — Special, Effect=Your Pokémon with at least 3d6 in their Smart Stat from Poffins may activate Smart Scheme as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Fake Tears, Calm Mind\nRank 2:: Taunt, Flatter",
             "Calculated Assault": "Prerequisites=Feats=Smart Scheme \nRank 1:, Freq=At-Will — Free Action, Trigger=Your Pokémon uses a Smart-Type Move, Effect=In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: Choose one: The triggering Pokémon gains a +1 bonus on its Accuracy Roll for each ally that hit a target of its Move this round, or all allies get a +1 bonus to their Accuracy Rolls against targets of the triggering Pokémon's Move until the end of your Pokémon's next turn. You may activate Calculated Assault only once per Pokémon per Scene.",
             "Learn From Your Mistakes": "Prerequisites=Feats=Smart Scheme \nRank 1:, Freq=Daily x3 — Free Action, Trigger=Your Pokémon fails a Skill Check., Effect=Your Pokémon may re-roll the Skill Check with a Bonus equal to its number of Smart Dice from Poffins."
         },
@@ -816,7 +1026,7 @@
             "Style Expert": "Tags=Class, Branch, Prerequisites=1=Feats=Coordinator, Other=1 Pokémon with 3d6 in their Cute Stat from Poffins, 2=Other=3 Pokémon with 3d6 in their Cute Stat from Poffins, Freq=Static, Effect=Your Pokémon gain +2d6 to their Cute Stat. These dice are counted as if coming from Poffins.",
             "Style Flourish": "Tags=Branch, Prerequisites=Feats=Any Style Expert (Cute), Any Style Expert (Cute), Any Style Expert (Cute), Freq=1 AP — Free Action, Trigger=Your Pokémon uses a Cute Move, Effect=In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Speed, after the Move and all effects have been resolved. This may only affect a target once per Scene.",
             "Style Entrainment": "Tags=Branch, Prerequisites=Feats=Any Style Expert (Cute), Any Style Expert (Cute), Any Style Expert (Cute), Any Style Expert (Cute), Freq=1 AP — Swift Action, Priority (Limited), Target=Your Pokémon, Effect=Your Pokémon gains either Cute Charm or Cute Tears for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability.",
-            "Cute Cuddle": "Tags=Ranked 2, Prerequisites=\nRank 1:=Feats=Style Expert (Cute), Skills=Charm=3\nRank 2:=Skills=Charm=5, Freq=1 AP — Special, Effect=Your Pokémon with at least 3d6 in their Cute Stat from Poffins may activate Cute Cuddle as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Charm, Block\nRank 2:: Teeter Dance, Attract",
+            "Cute Cuddle": "Tags=Ranked 2, Prerequisites=\nRank 1:Feats=Style Expert (Cute), Skills=Charm=3\nRank 2:Skills=Charm=5, Freq=1 AP — Special, Effect=Your Pokémon with at least 3d6 in their Cute Stat from Poffins may activate Cute Cuddle as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Charm, Block\nRank 2:: Teeter Dance, Attract",
             "Gleeful Steps": "Prerequisites=Feats=Cute Cuddle \nRank 1:, Freq=At-Will — Free Action, Trigger=Your Pokémon uses a Cute-Type Move, Effect=In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: In Battles:The triggering Pokémon may immediately shift up to half their Movement speed in meters in any direction after their attack is resolved. You may activate Gleeful Steps only once per Pokémon per Scene.",
             "Let's Be Friends!": "Prerequisites=Feats=Cute Cuddle \nRank 1:, Freq=Scene — Free Action, Target=Your Pokémon, Effect=The target may attempt to improve the disposition of a Wild Pokémon as if making a Charm Check. They roll their Cute Dice from Poffins and add their number of Cute Dice from Stats as a modifier. For example, a Pokémon with 4d6 Cute from Poffins and 3d6 Cute from Speed rolls 4d6+3 in place of a Charm Check"
         },
@@ -824,7 +1034,7 @@
             "Style Expert": "Tags=Class, Branch, Prerequisites=1=Feats=Coordinator, Other=1 Pokémon with 3d6 in their Cool Stat from Poffins, 2=Other=3 Pokémon with 3d6 in their Cool Stat from Poffins, Freq=Static, Effect=Your Pokémon gain +2d6 to their Cool Stat. These dice are counted as if coming from Poffins.",
             "Style Flourish": "Tags=Branch, Prerequisites=Feats=Any Style Expert (Cool), Any Style Expert (Cool), Any Style Expert (Cool), Freq=1 AP — Free Action, Trigger=Your Pokémon uses a Cool Move, Effect=In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene.",
             "Style Entrainment": "Tags=Branch, Prerequisites=Feats=Any Style Expert (Cool), Any Style Expert (Cool), Any Style Expert (Cool), Any Style Expert (Cool), Freq=1 AP — Swift Action, Priority (Limited), Target=Your Pokémon, Effect=Your Pokémon gains either Defiant or Sniper for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability.",
-            "Cool Conduct": "Tags=Ranked 2, Prerequisites=\nRank 1:=Feats=Style Expert (Cool), Skills=Command=3\nRank 2:=Skills=Command=5, Freq=1 AP — Special, Effect=Your Pokémon with at least 3d6 in their Cool Stat from Poffins may activate Cool Conduct as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Focus Energy, Noble Roar\nRank 2:: Roar, Double Team",
+            "Cool Conduct": "Tags=Ranked 2, Prerequisites=\nRank 1:Feats=Style Expert (Cool), Skills=Command=3\nRank 2:Skills=Command=5, Freq=1 AP — Special, Effect=Your Pokémon with at least 3d6 in their Cool Stat from Poffins may activate Cool Conduct as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Focus Energy, Noble Roar\nRank 2:: Roar, Double Team",
             "Rule of Cool": "Prerequisites=Feats=Cool Conduct \nRank 1:, Freq=At-Will — Free Action, Trigger=Your Pokémon uses a Cool-Type Move, Effect=In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: The triggering Move's Crit Range is increased by 3, and the Moves with the Interrupt Keyword may not be activated in reaction to this Move. You may activate Rule of Cool only once per Pokémon per Scene.",
             "Action Hero Stunt": "Prerequisites=Feats=Cool Conduct \nRank 1:, Freq=Daily x2 — Free Action, Trigger=Your Pokémon makes a Skill Check for a dramatic, high risk action, Effect=Instead of using a Skill for this Check, your Pokémon rolls their Cool Dice from Poffins and adds their number of Cool Dice from Stats as a modifier. For example, a Pokémon with 5d6 Cool from Poffins and 2d6 from Attack rolls 5d6+2. Skill Checks invoked by Intercepting attacks, Combat Maneuvers, Moves, and Abilities don't trigger this Feature."
         },
@@ -832,7 +1042,7 @@
             "Style Expert": "Tags=Class, Branch, Prerequisites=1=Feats=Coordinator, Other=1 Pokémon with 3d6 in their Beauty Stat from Poffins, 2=Other=3 Pokémon with 3d6 in their Beauty Stat from Poffins, Freq=Static, Effect=Your Pokémon gain +2d6 to their Beauty Stat. These dice are counted as if coming from Poffins.",
             "Style Flourish": "Tags=Branch, Prerequisites=Feats=Any Style Expert (Beauty), Any Style Expert (Beauty), Any Style Expert (Beauty), Freq=1 AP — Free Action, Trigger=Your Pokémon uses a Beauty Move, Effect=In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Special Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene.",
             "Style Entrainment": "Tags=Branch, Prerequisites=Feats=Any Style Expert (Beauty), Any Style Expert (Beauty), Any Style Expert (Beauty), Any Style Expert (Beauty), Freq=1 AP — Swift Action, Priority (Limited), Target=Your Pokémon, Effect=Your Pokémon gains either Gentle Vibe or Serene Grace for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability.",
-            "Beautiful Ballet": "Tags=Ranked 2, Prerequisites=\nRank 1:=Feats=Style Expert (Beauty), Skills=Intuition=3\nRank 2:=Skills=Intuition=5, Freq=1 AP — Special, Effect=Your Pokémon with at least 3d6 in their Beauty Stat from Poffins may activate Beautiful Ballet as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Captivate, Mist\nRank 2:: Lovely Kiss, Mean Look",
+            "Beautiful Ballet": "Tags=Ranked 2, Prerequisites=\nRank 1:Feats=Style Expert (Beauty), Skills=Intuition=3\nRank 2:Skills=Intuition=5, Freq=1 AP — Special, Effect=Your Pokémon with at least 3d6 in their Beauty Stat from Poffins may activate Beautiful Ballet as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Captivate, Mist\nRank 2:: Lovely Kiss, Mean Look",
             "Fabulous Max": "Prerequisites=Feats=Beautiful Ballet \nRank 1:, Freq=At-Will — Free Action, Trigger=Your Pokémon uses a Beauty-Type Move, Effect=In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: The move gains the keyword Burst 1 if Melee, or Blast 2 if ranged. If the move is already a Burst, Blast, or Cone, increase the size of the Move's Range by 1. This does not cause a target to be hit multiple times. You may activate Fabulous Max only once per Pokémon per Scene.",
             "Enticing Beauty": "Prerequisites=Feats=Beautiful Ballet \nRank 1:, Freq=Scene — Free Action, Trigger=Your Pokémon, Effect=The target acts as a Bait item as if it had the Alluring Capability. Add its number of Beauty Dice from Poffins as a Bonus to all d20 lure rolls."
         }
@@ -1150,7 +1360,7 @@
             "Fistful of Force": "Prerequisites=Feats=Crystal Artificer, Skills=Occult Education=6, Freq=Scene — Standard Action, Trigger=You must have a Shard in your Main Hand or Off-Hand to use Fistful of Force., Effect=You may destroy the Shard to use the Move Judgment. Judgment's Type must be one of the Types associated with the used Shard. Instead of adding your Special Attack when using this attack, you may choose to add your Occult Education Rank tripled."
         },
         "Botany": {
-            "Seed Bag": "Prerequisites=\nRank 1:=Edges=Green Thumb, Skills=General Education=4, Survival=4\nRank 2:=Skills=General Education=6, Survival=6, Freq=X Daily — Extended Action, Target=A Willing Pokémon, Effect=\nRank 1:=You become adept at harvesting Seeds and Spores from Pokémon. You may target a willing Grass-Type Pokémon that knows Sleep Powder, Stun Spore, or Poison Powder. Add this move to your Move list for the remainder of the day. You may not use Seed Bag to have multiple instances of the same move in your Move list. Seed Bag may be used twice per day per Rank.\nRank 2:=You may also harvest Cotton Spore, Leech Seed, Spore, or Worry Seed.",
+            "Seed Bag": "Prerequisites=\nRank 1:Edges=Green Thumb, Skills=General Education=4, Survival=4\nRank 2:Skills=General Education=6, Survival=6, Freq=X Daily — Extended Action, Target=A Willing Pokémon, Effect=\nRank 1:You become adept at harvesting Seeds and Spores from Pokémon. You may target a willing Grass-Type Pokémon that knows Sleep Powder, Stun Spore, or Poison Powder. Add this move to your Move list for the remainder of the day. You may not use Seed Bag to have multiple instances of the same move in your Move list. Seed Bag may be used twice per day per Rank.\nRank 2:You may also harvest Cotton Spore, Leech Seed, Spore, or Worry Seed.",
             "Top Tier Berries": "Prerequisites=Edges=Green Thumb, Freq=Static, Effect=You may grow additional Berries and Herbs, depending on the higher of your General Education or Survival Rank.\n» Novice: You may grow Tier 2 Berries\n» Adept: You may grow Mental Herbs, Power Herbs, White Herbs, and Tiny Mushrooms.\n» Expert: You may grow Revival Herbs, Energy Roots,Big Mushrooms, and Tier 3 Berries\n» Master: Increase the Soil Quality of all your plants by +1.",
             "Herb Lore": "Prerequisites=Feats=Seed Bag \nRank 1:, Freq=Static, Effect=You may create Energy Powder, Heal Powder, or Poultices from ingredients, as listed below.\nEnergy Powder: A Sitrus Berry or Tiny Mushroom creates x2 Energy Powders. An Energy Root creates x3 Energy Powders.\nHeal Powder: A Lum Berry or Big Mushroom creates x2 Heal Powders. A Revival Herb creates x3 Heal Powders\nPoultice: x1 Energy Powder and x1 Heal Powder create x3 Poultices."
         },
@@ -1386,42 +1596,42 @@
     "Martial Artist": {
         "Technician": {
             "Martial Artist": "Tags=Class, +Speed, Prerequisites=Edges=Basic Martial Arts, Skills=Combat=3, Freq=Static, Effect=You gain Technician, and all Martial Artist Features gain the [+Speed] Tag.",
-            "Martial Training": "Tags=+Speed, Prerequisites=\nRank 1:=Feats=Martial Artist\nRank 2:=Feats=Martial Artist, Skills=Combat=5\nRank 3:=Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
+            "Martial Training": "Tags=+Speed, Prerequisites=\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
             "My Kung-Fu is Stronger": "Tags=+Speed, Prerequisites=Feats=Martial Training \nRank 1: (Technician), Freq=At-Will — Free Action, Trigger=A foe provokes an Attack of Opportunity, Effect=You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
             "Martial Achievement": "Tags=+Speed, Prerequisites=Feats=Martial Artist (Technician), Freq=Static, Effect=You gain the Whirlwind Strikes Martial Achievement.",
             "Second Strike": "Tags=+Speed, Prerequisites=Feats=Martial Artist (Technician), Freq=At-Will — Free Action, Trigger=You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll, Effect=You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
         },
         "Reckless": {
             "Martial Artist": "Tags=Class, +Attack, Prerequisites=Edges=Basic Martial Arts, Skills=Combat=3, Freq=Static, Effect=You gain Reckless, and all Martial Artist Features gain the [+Attack] Tag.",
-            "Martial Training": "Tags=+Attack, Prerequisites=\nRank 1:=Feats=Martial Artist\nRank 2:=Feats=Martial Artist, Skills=Combat=5\nRank 3:=Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
+            "Martial Training": "Tags=+Attack, Prerequisites=\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
             "My Kung-Fu is Stronger": "Tags=+Attack, Prerequisites=Feats=Martial Training \nRank 1: (Reckless), Freq=At-Will — Free Action, Trigger=A foe provokes an Attack of Opportunity, Effect=You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
             "Martial Achievement": "Tags=+Attack, Prerequisites=Feats=Martial Artist (Reckless), Freq=Static, Effect=You gain the Soft Landing Martial Achievement.",
             "Second Strike": "Tags=+Attack, Prerequisites=Feats=Martial Artist (Reckless), Freq=At-Will — Free Action, Trigger=You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll, Effect=You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
         },
         "Limber": {
             "Martial Artist": "Tags=Class, +Speed, Prerequisites=Edges=Basic Martial Arts, Skills=Combat=3, Freq=Static, Effect=You gain Limber, and all Martial Artist Features gain the [+Speed] Tag.",
-            "Martial Training": "Tags=+Speed, Prerequisites=\nRank 1:=Feats=Martial Artist\nRank 2:=Feats=Martial Artist, Skills=Combat=5\nRank 3:=Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
+            "Martial Training": "Tags=+Speed, Prerequisites=\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
             "My Kung-Fu is Stronger": "Tags=+Speed, Prerequisites=Feats=Martial Training \nRank 1: (Limber), Freq=At-Will — Free Action, Trigger=A foe provokes an Attack of Opportunity, Effect=You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
             "Martial Achievement": "Tags=+Speed, Prerequisites=Feats=Martial Artist (Limber), Freq=Static, Effect=You gain the Bend Like the Willow Martial Achievement.",
             "Second Strike": "Tags=+Speed, Prerequisites=Feats=Martial Artist (Limber), Freq=At-Will — Free Action, Trigger=You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll, Effect=You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
         },
         "Iron Fist": {
             "Martial Artist": "Tags=Class, +Defense, Prerequisites=Edges=Basic Martial Arts, Skills=Combat=3, Freq=Static, Effect=You gain Iron Fist, and all Martial Artist Features gain the [+Defense] Tag.",
-            "Martial Training": "Tags=+Defense, Prerequisites=\nRank 1:=Feats=Martial Artist\nRank 2:=Feats=Martial Artist, Skills=Combat=5\nRank 3:=Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
+            "Martial Training": "Tags=+Defense, Prerequisites=\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
             "My Kung-Fu is Stronger": "Tags=+Defense, Prerequisites=Feats=Martial Training \nRank 1: (Iron Fist), Freq=At-Will — Free Action, Trigger=A foe provokes an Attack of Opportunity, Effect=You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
             "Martial Achievement": "Tags=+Defense, Prerequisites=Feats=Martial Artist (Iron Fist), Freq=Static, Effect=You gain the Pummeling Momentum Martial Achievement.",
             "Second Strike": "Tags=+Defense, Prerequisites=Feats=Martial Artist (Iron Fist), Freq=At-Will — Free Action, Trigger=You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll, Effect=You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
         },
         "Inner Focus": {
             "Martial Artist": "Tags=Class, +Speed, Prerequisites=Edges=Basic Martial Arts, Skills=Combat=3, Freq=Static, Effect=You gain Inner Focus, and all Martial Artist Features gain the [+Speed] Tag.",
-            "Martial Training": "Tags=+Speed, Prerequisites=\nRank 1:=Feats=Martial Artist\nRank 2:=Feats=Martial Artist, Skills=Combat=5\nRank 3:=Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
+            "Martial Training": "Tags=+Speed, Prerequisites=\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
             "My Kung-Fu is Stronger": "Tags=+Speed, Prerequisites=Feats=Martial Training \nRank 1: (Inner Focus), Freq=At-Will — Free Action, Trigger=A foe provokes an Attack of Opportunity, Effect=You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
             "Martial Achievement": "Tags=+Speed, Prerequisites=Feats=Martial Artist (Inner Focus), Freq=Static, Effect=You gain the Heightened Intensity Martial Achievement.",
             "Second Strike": "Tags=+Speed, Prerequisites=Feats=Martial Artist (Inner Focus), Freq=At-Will — Free Action, Trigger=You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll, Effect=You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
         },
         "Guts": {
             "Martial Artist": "Tags=Class, +HP, Prerequisites=Edges=Basic Martial Arts, Skills=Combat=3, Freq=Static, Effect=You gain Guts, and all Martial Artist Features gain the [+HP] Tag.",
-            "Martial Training": "Tags=+HP, Prerequisites=\nRank 1:=Feats=Martial Artist\nRank 2:=Feats=Martial Artist, Skills=Combat=5\nRank 3:=Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
+            "Martial Training": "Tags=+HP, Prerequisites=\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
             "My Kung-Fu is Stronger": "Tags=+HP, Prerequisites=Feats=Martial Training \nRank 1: (Guts), Freq=At-Will — Free Action, Trigger=A foe provokes an Attack of Opportunity, Effect=You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
             "Martial Achievement": "Tags=+HP, Prerequisites=Feats=Martial Artist (Guts), Freq=Static, Effect=You gain the Wrestlemania Martial Achievement.",
             "Second Strike": "Tags=+HP, Prerequisites=Feats=Martial Artist (Guts), Freq=At-Will — Free Action, Trigger=You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll, Effect=You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
@@ -2177,7 +2387,7 @@
             "Tags": "[Ranked 2][+Special Attack]",
             "Prerequisites": "\nRank 1: Feature Metamagic\nRank 2: Feature Authentic Thaumaturgy",
             "Frequency": "Static",
-            "Effect": "\nRank 1:=Select a \nRank 1: Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate.\nRank 2:=Select a \nRank 1: Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate.\nOR\nSelect a Rank 2 power Manipulation. This Manipulation may be used once per Scene without activating Authentic Thaumaturgy's Frequency."
+            "Effect": "\nRank 1:Select a \nRank 1: Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate.\nRank 2:Select a \nRank 1: Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate.\nOR\nSelect a Rank 2 power Manipulation. This Manipulation may be used once per Scene without activating Authentic Thaumaturgy's Frequency."
         },
         "Recoup Energy": {
             "Tags": "[+Special Attack]",
@@ -2339,14 +2549,14 @@
             "How To Shoot Web": "Tags=+Special Attack, Prerequisites=Feats=Swarmlord (Monarch's Embrace), Freq=Static, Effect=You gain the Threaded and Wallclimber Capabilities.",
             "Broodlord": "Tags=+Special Attack, Prerequisites=Feats=Enhanced Embrace Rank 2 (Monarch's Embrace), Skills=Survival=5, Command=5, Freq=Static, Effect=You gain Compound Eyes.",
             "Pheromone Markers": "Tags=+Special Attack, Prerequisites=Feats=Enhanced Embrace \nRank 1: (Monarch's Embrace), Freq=1 AP — Free Action, Trigger=You hit a foe with a damaging Bug-Type attack, Effect=The triggering foe gains 1 Pheromone Stack. Your Bug-Type attacks gain a +2 bonus to Accuracy Rolls and +1 Critical Hit range against foes for each Pheromone Stack they have. Once per Scene per foe, when they gain their third or higher Pheromone Stack, you may choose to roll 1d6. On a result of 1 or 2, the foe becomes Con- fused; on a result of 3 or 4 the foe becomes Suppressed; on a result of 5 or 6 the foe becomes Enraged.",
-            "Enhanced Embrace": "Tags=+Special Attack, Prerequisites=\nRank 1:=Feats=Swarmlord (Monarch's Embrace)\nRank 2:=Skills=Survival=4, Command=4\nRank 3:=Skills=Survival=5, Command=5, Freq=Static, Effect=Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen."
+            "Enhanced Embrace": "Tags=+Special Attack, Prerequisites=\nRank 1:Feats=Swarmlord (Monarch's Embrace)\nRank 2:Skills=Survival=4, Command=4\nRank 3:Skills=Survival=5, Command=5, Freq=Static, Effect=Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen."
         },
         "Arachnid's Embrace": {
             "Swarmlord": "Tags=Class, +Attack, Prerequisites=Edges=Elemental Connection (Bug), Skills=Survival=3, Command=3, Freq=Static, Effect=You gain Unnerve.",
             "How To Shoot Web": "Tags=+Attack, Prerequisites=Feats=Swarmlord (Arachnid's Embrace), Freq=Static, Effect=You gain the Threaded and Wallclimber Capabilities.",
             "Broodlord": "Tags=+Attack, Prerequisites=Feats=Enhanced Embrace Rank 2 (Arachnid's Embrace), Skills=Survival=5, Command=5, Freq=Static, Effect=You gain Tinted Lens.",
             "Pheromone Markers": "Tags=+Attack, Prerequisites=Feats=Enhanced Embrace \nRank 1: (Arachnid's Embrace), Freq=1 AP — Free Action, Trigger=You hit a foe with a damaging Bug-Type attack, Effect=The triggering foe gains 1 Pheromone Stack. Your Bug-Type attacks gain a +2 bonus to Accuracy Rolls and +1 Critical Hit range against foes for each Pheromone Stack they have. Once per Scene per foe, when they gain their third or higher Pheromone Stack, you may choose to roll 1d6. On a result of 1 or 2, the foe becomes Con- fused; on a result of 3 or 4 the foe becomes Suppressed; on a result of 5 or 6 the foe becomes Enraged.",
-            "Enhanced Embrace": "Tags=+Attack, Prerequisites=\nRank 1:=Feats=Swarmlord (Arachnid's Embrace)\nRank 2:=Skills=Survival=4, Command=4\nRank 3:=Skills=Survival=5, Command=5, Freq=Static, Effect=Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen."
+            "Enhanced Embrace": "Tags=+Attack, Prerequisites=\nRank 1:Feats=Swarmlord (Arachnid's Embrace)\nRank 2:Skills=Survival=4, Command=4\nRank 3:Skills=Survival=5, Command=5, Freq=Static, Effect=Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen."
         }
     },
     "Shade Caller": {
@@ -2638,21 +2848,21 @@
             "Green Path": "Tags=+Attack, Prerequisites=Feats=Druid (Wood Oath), Freq=Static, Effect=You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword.",
             "Overgrowth": "Tags=+Attack, Prerequisites=Feats=Nature's Embrace Rank 3 (Wood Oath), Freq=2 AP — Swift Action, Trigger=You hit with a Druid Move, Effect=One target of the triggering Move is afflicted with Overgrowth. As long as the target is afflicted, they are one step less Resistant to Grass-Type attacks, to a maximum of neutral damage, and they cannot recover Hit Points or gain Temporary Hit Points. Whenever they would do so, you gain those Hit Points or Temporary Hit Points instead. Overgrowth is removed when the target Takes a Breather or is hit by a damaging Fire, Ice, Poison, Flying, or Bug-Type attack. Overgrowth may only affect a target once per Scene.",
             "Druid's Call": "Tags=+Attack, Prerequisites=Feats=Green Path (Wood Oath), Freq=Scene x2 — Standard Action, Effect=6 small saplings suddenly grow within 6 meters of you, occupying 1 square each. This veg- etation lasts until the end of the encounter, and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) Capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)",
-            "Nature's Embrace": "Tags=+Attack, Prerequisites=\nRank 1:=Feats=Druid (Wood Oath)\nRank 2:=Skills=Survival=5, General Education=5, Freq=Static, Effect=You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
+            "Nature's Embrace": "Tags=+Attack, Prerequisites=\nRank 1:Feats=Druid (Wood Oath)\nRank 2:Skills=Survival=5, General Education=5, Freq=Static, Effect=You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
         },
         "Fungal Oath": {
             "Druid": "Tags=Class, +Special Defense, Prerequisites=Edges=Elemental Connection (Grass), Skills=Survival=3, General Education=3, Freq=Static, Effect=You gain Fungal.",
             "Green Path": "Tags=+Special Defense, Prerequisites=Feats=Druid (Fungal Oath), Freq=Static, Effect=You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword.",
             "Overgrowth": "Tags=+Special Defense, Prerequisites=Feats=Nature's Embrace Rank 3 (Fungal Oath), Freq=2 AP — Swift Action, Trigger=You hit with a Druid Move, Effect=One target of the triggering Move is afflicted with Overgrowth. As long as the target is afflicted, they are one step less Resistant to Grass-Type attacks, to a maximum of neutral damage, and they cannot recover Hit Points or gain Temporary Hit Points. Whenever they would do so, you gain those Hit Points or Temporary Hit Points instead. Overgrowth is removed when the target Takes a Breather or is hit by a damaging Fire, Ice, Poison, Flying, or Bug-Type attack. Overgrowth may only affect a target once per Scene.",
             "Druid's Call": "Tags=+Special Defense, Prerequisites=Feats=Green Path (Fungal Oath), Freq=Scene x2 — Standard Action, Effect=6 mushroom patches suddenly grow within 6 meters of you, occupying 1 square each. This veg- etation lasts until the end of the encounter, and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) Capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)",
-            "Nature's Embrace": "Tags=+Special Defense, Prerequisites=\nRank 1:=Feats=Druid (Fungal Oath)\nRank 2:=Skills=Survival=5, General Education=5, Freq=Static, Effect=You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
+            "Nature's Embrace": "Tags=+Special Defense, Prerequisites=\nRank 1:Feats=Druid (Fungal Oath)\nRank 2:Skills=Survival=5, General Education=5, Freq=Static, Effect=You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
         },
         "Flower Oath": {
             "Druid": "Tags=Class, +Special Attack, Prerequisites=Edges=Elemental Connection (Grass), Skills=Survival=3, General Education=3, Freq=Static, Effect=You gain Flower.",
             "Green Path": "Tags=+Special Attack, Prerequisites=Feats=Druid (Flower Oath), Freq=Static, Effect=You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword.",
             "Overgrowth": "Tags=+Special Attack, Prerequisites=Feats=Nature's Embrace Rank 3 (Flower Oath), Freq=2 AP — Swift Action, Trigger=You hit with a Druid Move, Effect=One target of the triggering Move is afflicted with Overgrowth. As long as the target is afflicted, they are one step less Resistant to Grass-Type attacks, to a maximum of neutral damage, and they cannot recover Hit Points or gain Temporary Hit Points. Whenever they would do so, you gain those Hit Points or Temporary Hit Points instead. Overgrowth is removed when the target Takes a Breather or is hit by a damaging Fire, Ice, Poison, Flying, or Bug-Type attack. Overgrowth may only affect a target once per Scene.",
             "Druid's Call": "Tags=+Special Attack, Prerequisites=Feats=Green Path (Flower Oath), Freq=Scene x2 — Standard Action, Effect=6 flowery bushes suddenly grow within 6 meters of you, occupying 1 square each. This veg- etation lasts until the end of the encounter, and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) Capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)",
-            "Nature's Embrace": "Tags=+Special Attack, Prerequisites=\nRank 1:=Feats=Druid (Flower Oath)\nRank 2:=Skills=Survival=5, General Education=5, Freq=Static, Effect=You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
+            "Nature's Embrace": "Tags=+Special Attack, Prerequisites=\nRank 1:Feats=Druid (Flower Oath)\nRank 2:Skills=Survival=5, General Education=5, Freq=Static, Effect=You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
         }
     },
     "Earth Shaker": {
