@@ -1,51 +1,30 @@
 import json
-from pathlib import Path
-import re
 
-def is_ranked_prereq(key):
-    return re.fullmatch(r"Rank \d+ Prerequisites", key)
-
-def is_ranked_effect(key):
-    return re.fullmatch(r"Rank \d+ Effect", key)
-
-def deep_insert_ranked_fields(data, updates):
+def deep_update_matching_key(base, updates):
     """
-    Recursively search `data` and insert matching keys from `updates`.
-    Removes 'Effect' and/or 'Prerequisites' only if ranked versions are present.
+    Recursively find any matching keys in the base JSON and update their fields from updates.
     """
-    if isinstance(data, dict):
-        for key, value in data.items():
-            if key in updates and isinstance(value, dict) and isinstance(updates[key], dict):
-                ranked_effects = {k: v for k, v in updates[key].items() if is_ranked_effect(k)}
-                ranked_prereqs = {k: v for k, v in updates[key].items() if is_ranked_prereq(k)}
-
-                # Only remove if we're adding replacements
-                if ranked_effects:
-                    value.pop("Effect", None)
-                    value.update(ranked_effects)
-
-                if ranked_prereqs:
-                    value.pop("Prerequisites", None)
-                    value.update(ranked_prereqs)
-
+    if isinstance(base, dict):
+        for key in list(base.keys()):
+            if key in updates and isinstance(base[key], dict):
+                base[key].update(updates[key])
             else:
-                deep_insert_ranked_fields(value, updates)
+                deep_update_matching_key(base[key], updates)
+    elif isinstance(base, list):
+        for item in base:
+            deep_update_matching_key(item, updates)
 
-    elif isinstance(data, list):
-        for item in data:
-            deep_insert_ranked_fields(item, updates)
+def main(base_file, update_file, output_file):
+    with open(base_file, 'r', encoding='utf-8') as f:
+        base_data = json.load(f)
 
-def main(file1_path, file2_path, output_path):
-    with open(file1_path, 'r', encoding='utf-8') as f1:
-        data1 = json.load(f1)
+    with open(update_file, 'r', encoding='utf-8') as f:
+        update_data = json.load(f)
 
-    with open(file2_path, 'r', encoding='utf-8') as f2:
-        data2 = json.load(f2)
+    deep_update_matching_key(base_data, update_data)
 
-    deep_insert_ranked_fields(data1, data2)
-
-    with open(output_path, 'w', encoding='utf-8') as fout:
-        json.dump(data1, fout, indent=4, ensure_ascii=False)
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(base_data, f, indent=4, ensure_ascii=False)
 
 if __name__ == "__main__":
     main("ptu/data/features_core.json", "py/output.json", "py/merged.json")

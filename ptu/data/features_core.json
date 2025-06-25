@@ -128,7 +128,7 @@
             "Effect": "Choose a Move you know. Increase the Move's Frequency one step, as if you had used a PP Up. This choice cannot be changed once made. This Feature may not select Moves known through temporary means, nor can these Moves be used to qualify for this Feature."
         },
         "Type Expertise": {
-            "Tags": "[Ranked§2][+Any Stat]",
+            "Tags": "[Ranked 2][+Any Stat]",
             "Prerequisites": "\nRank 1: Level 9\nMoves Type x, Type x, Type x\nRank 2: Level 9\nMoves Type x, Type x, Type x",
             "Frequency": "Static",
             "Effect": "Each Rank, choose a Type of which you know at least 3 Moves. You gain STAB for the chosen Type. STAB is never applied to Struggle Attacks."
@@ -180,7 +180,7 @@
             "Effect": " You may use Arcane Weapons. Attacks made with your Arcane Weapons share the Type of your Elemental Connection. If you have Mystic Senses, these Attacks deal Normal Type Damage. Arcane Weapon users that qualified through Mystic Senses or Elemental Connection (Normal) gain a +5 Bonus to Damage Rolls and a +2 Bonus to Effect Range when using Arcane Weapon Attacks. When wielding an Arcane Weapon, you may resist Disarm Maneuvers with your Occult Education."
         },
         "Smith": {
-            "Tags": "[Ranked§2][+Attack]",
+            "Tags": "[Ranked 2][+Attack]",
             "Rank 1 Prerequisites": "Novice Focus, Novice Athletics",
             "Rank 2 Prerequisites": "Adept Focus, Adept Athletics",
             "Frequency": "Static",
@@ -188,7 +188,7 @@
             "Rank 2 Effect": " You may create Fine Weapons for $2,000, Helmets for $1,125, Heavy Shields for $2,250 and Heavy Armor for $5,000."
         },
         "Type Sync": {
-            "Tags": "[Ranked§2][+Attack]",
+            "Tags": "[Ranked 2][+Attack]",
             "Prerequisites": "Elemental Connection; a Type-Linked Class; Adept Medicine, Occult, or Tech Education",
             "Frequency": "Special — Extended Action",
             "Target": "Your Pokémon",
@@ -244,7 +244,7 @@
             "Effect": "The target loses 2 Tutor Points. Choose one Move on the Target's Move List. That Move becomes the target's Signature Technique, and you may apply one of the modifications on the next page to the Move. The Move being modified must fit the category of the modification, and you must have the associated Training Feature to apply a modification. A Pokémon may only have one Signature Technique at a time. If you choose to teach a Pokémon a different Signature Technique, the old one is lost, and 1 Tutor Point is refunded. 1 Tutor Point is also refunded if the Pokémon ever forgets a Signature Technique Move."
         },
         "Champ in the Making": {
-            "Prerequisites": "Any Ace Trainer, Any Ace Trainer, Any Ace Trainer, Any Ace Trainer, Master Command",
+            "Prerequisites": "4 Ace Trainer Features, Master Command",
             "Frequency": "Drain 1 AP — Free Action",
             "Trigger": "You use Ace Trainer to give Pokémon Trained Stats",
             "Effect": "Choose two Trained Stats for each Pokémon instead of one. A Pokémon may only have two Trained Stats this way."
@@ -258,7 +258,7 @@
             "Effect": " You gain two Capture Techniques of your choice, found on the next page. You must meet any prerequisites of the Technique."
         },
         "Advanced Capture Techniques": {
-            "Tags": "[Ranked§4][+Speed]",
+            "Tags": "[Ranked 4][+Speed]",
             "Rank 1 Prerequisites": "Capture Specialist",
             "Rank 2 Prerequisites": "Capture Specialist, any 2 Skills at Adept Rank",
             "Rank 3 Prerequisites": "Capture Specialist, any 2 Skills at Expert Rank",
@@ -378,7 +378,7 @@
             "Effect": "You gain three Skill Edges for which you qualify."
         },
         "Dilettante": {
-            "Tags": "[Ranked§4]",
+            "Tags": "[Ranked 4]",
             "Prerequisites": "\nRank 1: Feature Hobbyist\nRank 2: Feature Hobbyist\nRank 3: Feature Hobbyist\nRank 4: Feature Hobbyist",
             "Frequency": "Static",
             "Effect": "Each Rank of Dilettante, you gain both an Edge and a General Feature from the lists below. You may gain the chosen Edge and Feature even if you do not meet the Skill prerequisites. You must meet any other Prerequisites. Whenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead."
@@ -476,7 +476,7 @@
         },
         "Keep Fighting!": {
             "Tags": "[Orders]",
-            "Prerequisites": "Any Cheerleader, Any Cheerleader, Any Cheerleader, Any Cheerleader, Any Cheerleader, Master Charm",
+            "Prerequisites": "5 Cheerleader Features, Master Charm",
             "Frequency": "Daily x2 — Free Action",
             "Trigger": "Your Pokémon or an Ally Trainer with over 1 Hit Point is reduced to 0 Hit Points or lower",
             "Effect": "That Ally's Hit Point count is reduced to 1 instead, and then gains Temporary Hit Points equal to your Charm Rank doubled."
@@ -710,7 +710,7 @@
             "Effect": "Your Pokemon may apply the effects of Cruelty to the attack without expending Cruelty's Frequency. Cruelty's effects may be purchased as if the foe had additional injuries equal to the number of injuries on the user. Desperate Strike may be used once per Scene per Pokémon."
         },
         "Deadly Gambit": {
-            "Prerequisites": "Any Taskmaster, Any Taskmaster, Any Taskmaster, Any Taskmaster, Any Taskmaster, Master Intimidate",
+            "Prerequisites": "5 Taskmaster Features, Master Intimidate",
             "Frequency": "Scene — Free Action",
             "Trigger": "Your Pokémon is the target of a foe's damaging melee attack",
             "Effect": "The triggering attack automatically hits as if it was a Critical Hit. Before damage resolves, your Pokémon may use a 1-Target damaging attack on the foe making the triggering attack as an Interrupt, Frequency allowing, and also automatically hits as a Critical Hit. Damage for both attacks then resolve at the same time."
@@ -725,7 +725,7 @@
             "Effect": "After the Move is resolved, your Pokémon may perform a Dirty Trick or Manipulate Maneuver on that foe as a Free Action. The Maneuver automatically hits, but the target must be in range for the chosen Maneuver. Use your own Guile to resolve Manipulate Rolls."
         },
         "Bag of Tricks": {
-            "Tags": "[Ranked§2]",
+            "Tags": "[Ranked 2]",
             "Rank 1 Prerequisites": "Trickster",
             "Rank 2 Prerequisites": "Trickster",
             "Frequency": "Static",
@@ -743,13 +743,13 @@
             "Effect": "Your Pokémon's Status-Class Moves that affect foes ignore non-Stat Evasion. They may Critically Hit like damaging Moves on a roll of 20. Upon such a Critical Hit, choose one effect from the list below. This Critical Hit rate may be modified as normal.\n» If the Move inflicts a Status Affliction with a Save Check, all affected targets get a -4 penalty to their first Save Check.\n» If the Move lowers Combat Stages, then pick a Stat that the Move lowers and lower it by 1 additional Combat Stage.\n» Your Pokémon gains a Tick of Temporary Hit Points."
         },
         "Encore Performance": {
-            "Prerequisites": "Any Trickster, Any Trickster, Any Trickster, Expert Guile",
+            "Prerequisites": "3 Trickster Features, Expert Guile",
             "Frequency": "Daily x3 — Free Action",
             "Trigger": "Your Pokémon uses a Status-Class Move that does not target foes.",
             "Effect": "Choose One: Your Pokémon gains +1 Combat Stage in any Stat in which they haven't gained a Combat Stage this turn; or gains a second Standard Action this round that must be used to make an At-Will action that does not trigger Encore Peformance; or, if they are placing Hazards, they may place an additional two units; or, if they are activating a Weather Effect, it lasts an additional two turns; or, if they are activating a Blessing, it gains an additional use."
         },
         "Sleight": {
-            "Prerequisites": "Any Trickster, Any Trickster, Any Trickster, Any Trickster, Master Guile",
+            "Prerequisites": "4 Trickster Features, Master Guile",
             "Frequency": "Scene x2 — Free Action",
             "Effect": "Your Pokémon may activate Sleight as an Interrupt to immediately take their turn and use a Status- Class Move as a Standard Action. If this Move targets a foe, it ignores Substitute and Defensive Abilities, and Blessings may not be activated against the Move."
         }
@@ -2097,7 +2097,7 @@
             "Effect": "Your Pokemon can benefit from a maximum of 7 Vitamins."
         },
         "Dumplings": {
-            "Prerequisites": "Any Chef, Any Chef, Any Chef, Any Chef, Master Intuition",
+            "Prerequisites": "4 Chef Features, Master Intuition",
             "Frequency": "At-Will — Extended Action",
             "Effect": "Ingredient 1: Leftovers, Preserves, or a Snack made with Chef\nIngredient 2: Leftovers or Preserves\nEffect: You mix the two ingredients into one Snack that has the same effect as its ingredients. The two ingredients must be different items."
         }
@@ -2111,7 +2111,7 @@
             "Effect": "You make Record of the target. Records can be placed in an Archive as an Extended Action. When you take Chronicler, you gain one Archive."
         },
         "Archival Training": {
-            "Tags": "[Ranked§2]",
+            "Tags": "[Ranked 2]",
             "Prerequisites": "\nRank 1: Features Chronicler\nRank 2: Features Chronicler",
             "Frequency": "Static",
             "Effect": "Each Rank, you gain an Archive."
@@ -2137,7 +2137,7 @@
         },
         "Cinematic Analysis": {
             "Tags": "[Orders]",
-            "Prerequisites": "Any Chronicler, Any Chronicler, Any Chronicler, Any Chronicler, Master Perception",
+            "Prerequisites": "4 Chronicler Features, Master Perception",
             "Frequency": "Daily x3 — Free Action",
             "Effect": "You analyze a Record in one of your Archives. Cinematic Analysis's effect depends on the Archive the Record is in. Each of these effects may only be used once per Scene.\nCharacter Study — Profile Archive: You may trigger Character Study when you or an ally makes a Charm, Command, Guile, Intimidate, or Intuition Check targeting the subject of your Record. Make a Perception Check and substitute the triggering Skill Check with the result.\nRecreation — Technique Archive: Recreation may be triggered as your Pokémon gains Initiative. Select a Record of a Move in your Technique Archive that your Pokémon can learn by Level Up, TM, or Move Tutor. Your Pokémon may perform that Move as if it was on its Move List. You may select a specific Move only once per day.\nSituational Awareness — Travel Archive: You may only use Situational Awareness if you analyze a Record of your current Location. When used this way, you may activate it as an Interrupt. Choose an ally; that ally may take their next action as Priority (Advanced)."
         }
@@ -2616,7 +2616,7 @@
             "Effect": "You gain +1 Combat Stage in each of your Trained Stats, are cured of up to two Status Afflictions, and gain a Tick of Temporary Hit Points. Adrenaline Rush may be used only once per Scene"
         },
         "Athletic Moves": {
-            "Tags": "[Ranked§3][+HP]",
+            "Tags": "[Ranked 3][+HP]",
             "Rank 1 Prerequisites": "Athlete",
             "Rank 2 Prerequisites": "Athlete, Expert Athletics",
             "Rank 3 Prerequisites": "Athlete, Master Athletics",
@@ -3080,7 +3080,7 @@
         },
         "Tough as Nails": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Any Roughneck, Any Roughneck, Any Roughneck, Master Intimidate",
+            "Prerequisites": "3 Roughneck Features, Master Intimidate",
             "Frequency": "Static",
             "Effect": "You learn the Moves Endure and Slack Off."
         }
@@ -3125,7 +3125,7 @@
         },
         "Burst of Speed": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Any Tumbler, Any Tumbler, Any Tumbler, Any Tumbler, Any Tumbler, Master Acrobatics",
+            "Prerequisites": "5 Tumbler Features, Master Acrobatics",
             "Frequency": "Scene — Free Action",
             "Trigger": "You end your turn",
             "Effect": "Select an Initiative Count equal to half of your own Initiative or less; you may take an extra turn at that point in the round."
@@ -3145,7 +3145,7 @@
             "Effect": "You gain the Aura Reader Capability for the rest of the scene. If your Intuition is Adept Rank or higher, you also gain the Aura Pulse Capability."
         },
         "The Power of Aura": {
-            "Tags": "[Ranked§2][+Attack or Special Attack]",
+            "Tags": "[Ranked 2][+Attack or Special Attack]",
             "Rank 1 Prerequisites": "Aura Guardian",
             "Rank 2 Prerequisites": "Aura Guardian, Expert Intuition",
             "Frequency": "2 AP — Swift Action",
@@ -3225,7 +3225,7 @@
             "Effect": "Choose Cursed Body or Omen. You gain the Chosen Ability"
         },
         "Hex Maniac Studies": {
-            "Tags": "[Ranked§3][+HP]",
+            "Tags": "[Ranked 3][+HP]",
             "Rank 1 Prerequisites": "Hex Maniac",
             "Rank 2 Prerequisites": "Hex Maniac",
             "Rank 3 Prerequisites": "Hex Maniac, Expert Occult Education",
@@ -3334,7 +3334,7 @@
         },
         "Two-Second Preview": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Feat Any Oracle, Any Oracle, Any Oracle, Expert Perception",
+            "Prerequisites": "3 Oracle Features, Expert Perception",
             "Frequency": "Static",
             "Effect": "You gain the Instinct Ability."
         },
@@ -3651,7 +3651,7 @@
             "Effect": "You may apply a Rank 2 Power Manipulation to your attack."
         },
         "Signature Manipulations": {
-            "Tags": "[Ranked§2][+Special Attack]",
+            "Tags": "[Ranked 2][+Special Attack]",
             "Rank 1 Prerequisites": "Metamagic",
             "Rank 2 Prerequisites": "Authentic Thaumaturgy",
             "Frequency": "Static",
@@ -3807,7 +3807,7 @@
         },
         "Swift Strikes": {
             "Tags": "[+Speed][Weapon]",
-            "Prerequisites": "Any Skirmisher, Any Skirmisher, Any Skirmisher, Any Skirmisher, Master Combat, Master Acrobatics",
+            "Prerequisites": "4 Skirmisher Features, Master Combat, Master Acrobatics",
             "Frequency": "1 AP — Standard Action, Special",
             "Effect": "Use a Weapon Attack as if it had the Priority Key- word. If the Move already had the Priority Keyword, use it as if it had the Priority (Advanced) Keyword instead."
         }
@@ -4001,7 +4001,7 @@
             "Effect": "Choose one of your Electric Type Moves with a target. You Charge the target item with this Move. Bot- tled Lightning counts as using the Move for frequency purposes. You may expend this Charge as a Swift Ac- tion on your turn to use the Move the item was charged with, originating from the item. If a Pokémon or Train- er touches a Charged item, you may instead activate this Swift Action as if it had the Priority keyword. At the end of a Scene, all items lose their Charge, and you may only have X items Charged at a time where X is half your Focus Rank."
         },
         "Storm Wizard": {
-            "Tags": "[Ranked§3][+Speed]",
+            "Tags": "[Ranked 3][+Speed]",
             "Rank 1 Prerequisites": "Spark Master",
             "Rank 2 Prerequisites": "Expert Acrobatics or Focus",
             "Rank 3 Prerequisites": "Master Acrobatics or Focus",
@@ -4036,7 +4036,7 @@
         },
         "Glamour Mastery": {
             "Tags": "[+Special Attack]",
-            "Prerequisites": "Any Glamour Weaver, Any Glamour Weaver, Any Glamour Weaver, Any Glamour Weaver",
+            "Prerequisites": "4 Glamour Weaver Features",
             "Frequency": "Static",
             "Effect": "Choose Magic Guard or Magic Bounce. You gain the Chosen Ability."
         },
@@ -4119,7 +4119,7 @@
             "Effect": "Choose Celebrate or Gale Wings. You gain the chosen Ability."
         },
         "Raging Winds": {
-            "Tags": "[Ranked§3]][+Speed]",
+            "Tags": "[Ranked 3]][+Speed]",
             "Rank 1 Prerequisites": "Wind Runner",
             "Rank 2 Prerequisites": "Expert Acrobatics or Perception",
             "Rank 3 Prerequisites": "Master Acrobatics or Perception",
@@ -4293,7 +4293,7 @@
             "Effect": "You gain the Tremorsense Capability, and you gain Naturewalk for Cave, Mountain and Desert."
         },
         "Earth Mother's Blessing": {
-            "Tags": "[Ranked§2][+Defense]",
+            "Tags": "[Ranked 2][+Defense]",
             "Rank 1 Prerequisites": "Earth Shaker, Adept Focus or Intuition",
             "Rank 2 Prerequisites": "Ground Out, Master Focus or Intuition",
             "Frequency": "Static",
@@ -4351,7 +4351,7 @@
             "Effect": "You gain the Frostbite Ability."
         },
         "Winter's Herald": {
-            "Tags": "[Ranked§2][+Attack or Special Attack]",
+            "Tags": "[Ranked 2][+Attack or Special Attack]",
             "Rank 1 Prerequisites": "Frost Touched, Expert Athletics or Survival",
             "Rank 2 Prerequisites": "Master Athletics or Survival",
             "Frequency": "Static",
@@ -4397,7 +4397,7 @@
         },
         "Prismatic Alignment": {
             "Tags": "[+Special Attack]",
-            "Prerequisites": "Any Prism, Any Prism, Any Prism, Any Prism, Master Charm, Master General Education",
+            "Prerequisites": "4 Prism Features, Master Charm, Master General Education",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You use a Prism Move",
             "Effect": "The effect of this Feature depends on the Triggering Move. You may only use Prismatic Alignment with each Move once per Scene.\n» Flash: Flash also Blinds all targets it hits until the end of their next turn.\n» Swift:Swift instead has a range of 8, 3 Targets\n» Tri Attack: Roll twice for Tri Attack's Accuracy Roll and take the better result. If you trigger its Effect Range, you may choose the effect instead of rolling for it.\n» Weather Ball: You use Weather Ball as if you were in the Weather of your choice.\n» Hyper Beam: Hyper Beam instead has a Range of Burst 2, Smite or 10, Ranged Blast 3, Smite.\n» Morning Sun: You use Morning Sun as if you were in Sunny Weather, and you may cure yourself of one Status Affliction."
@@ -4462,7 +4462,7 @@
             "Effect": "You adopt one of the stances below, gaining the effects of the stance while this Feature remains bound. You may switch your active Stance as a Standard Action without rebinding your AP. The benefits from this Feature do not apply if you are not standing on a solid surface, such as deep mud or snow, or if you are outright swimming or even flying.\n» Falling Boulder Stance: You gain a +5 bonus to all Damage Rolls, but lose 5 HP from Recoil whenever you hit with an attack.\n» Moon Mountain Stance: Your initiative is lowered by -5, but you gain 5 Damage Reduction and are im- mune to Push or Pull effects.\n» Roiling Earth Stance: After a successful Intercept action, you may make a Struggle Attack against a foe within range."
         },
         "Rock Power": {
-            "Tags": "[Ranked§2][+Defense]",
+            "Tags": "[Ranked 2][+Defense]",
             "Rank 1 Prerequisites": "Stone Warrior, Adept Combat or Survival",
             "Rank 2 Prerequisites": "Expert Combat or Survival",
             "Frequency": "Static",
@@ -4561,7 +4561,7 @@
             "Effect": "You may activate Oceanic Feeling when either Wash Away or Storm Drain would be triggered to gain that Ability for 1 full round, if you do not already have it, and immediately Trigger it. Activating an Ability this way ignores its usual Frequency. You may use each Ability once per Scene this way."
         },
         "Call The Current": {
-            "Tags": "[Ranked§3][+Speed]",
+            "Tags": "[Ranked 3][+Speed]",
             "Rank 1 Prerequisites": "Maelstrom",
             "Rank 2 Prerequisites": "Adept Athletics or Acrobatics",
             "Rank 3 Prerequisites": "Expert Athletics or Acrobatics",
@@ -4589,7 +4589,7 @@
             "Effect": "Use or Equip an Item or piece of Equipment which would normally require a Standard Action to use or equip. You may not make an Attack with a Weapon this way - using other Items or Equipment that requires \"Attacks\" (such as Cap Cannons or Poké Balls) is acceptable."
         },
         "Hero's Journey": {
-            "Tags": "[Ranked§3][+Speed]",
+            "Tags": "[Ranked 3][+Speed]",
             "Rank 1 Prerequisites": "Backpacker",
             "Rank 2 Prerequisites": "Adept Survival",
             "Rank 3 Prerequisites": "Expert Survival",
@@ -4662,7 +4662,7 @@
             "Effect": "The target of the triggering action gains a Tick of Hit Points, plus an additional amount of Hit Points equal to your Medicine Education Rank."
         },
         "I'm a Doctor": {
-            "Tags": "[Ranked§2][Gift]",
+            "Tags": "[Ranked 2][Gift]",
             "Rank 1 Prerequisites": "Medic",
             "Rank 2 Prerequisites": "Medic, Adept Medicine Education",
             "Frequency": "Static",
