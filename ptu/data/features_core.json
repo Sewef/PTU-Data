@@ -2440,46 +2440,174 @@
     },
     "Martial Artist": {
         "Technician": {
-            "Martial Artist": "Tags=Class, +Speed, Prerequisites=Edges=Basic Martial Arts, Skills=Combat=3, Freq=Static, Effect=You gain Technician, and all Martial Artist Features gain the [+Speed] Tag.",
-            "Martial Training": "Tags=+Speed, Prerequisites=\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
-            "My Kung-Fu is Stronger": "Tags=+Speed, Prerequisites=Feats=Martial Training \nRank 1: (Technician), Freq=At-Will — Free Action, Trigger=A foe provokes an Attack of Opportunity, Effect=You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
-            "Martial Achievement": "Tags=+Speed, Prerequisites=Feats=Martial Artist (Technician), Freq=Static, Effect=You gain the Whirlwind Strikes Martial Achievement.",
-            "Second Strike": "Tags=+Speed, Prerequisites=Feats=Martial Artist (Technician), Freq=At-Will — Free Action, Trigger=You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll, Effect=You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
+            "Martial Artist": {
+                "Tags": "Class, +Speed",
+                "Prerequisites": "Edges=Basic Martial Arts, Skills=Combat=3",
+                "Frequency": "Static",
+                "Effect": "You gain Technician, and all Martial Artist Features gain the [+Speed] Tag."
+            },
+            "Martial Training": {
+                "Tags": "+Speed",
+                "Prerequisites": "\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6",
+                "Frequency": "Static",
+                "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move."
+            },
+            "My Kung-Fu is Stronger": {
+                "Tags": "+Speed",
+                "Prerequisites": "Feats=Martial Training \nRank 1: (Technician)",
+                "Frequency": "At-Will — Free Action",
+                "Trigger": "A foe provokes an Attack of Opportunity",
+                "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
+            },
+            "Martial Achievement": {
+                "Tags": "+Speed",
+                "Prerequisites": "Feats=Martial Artist (Technician)",
+                "Frequency": "Static",
+                "Effect": "You gain the Whirlwind Strikes Martial Achievement."
+            },
+            "Second Strike": {
+                "Tags": "+Speed",
+                "Prerequisites": "Feats=Martial Artist (Technician)",
+                "Frequency": "At-Will — Free Action",
+                "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
+                "Effect": "You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
+            }
         },
         "Reckless": {
-            "Martial Artist": "Tags=Class, +Attack, Prerequisites=Edges=Basic Martial Arts, Skills=Combat=3, Freq=Static, Effect=You gain Reckless, and all Martial Artist Features gain the [+Attack] Tag.",
-            "Martial Training": "Tags=+Attack, Prerequisites=\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
-            "My Kung-Fu is Stronger": "Tags=+Attack, Prerequisites=Feats=Martial Training \nRank 1: (Reckless), Freq=At-Will — Free Action, Trigger=A foe provokes an Attack of Opportunity, Effect=You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
-            "Martial Achievement": "Tags=+Attack, Prerequisites=Feats=Martial Artist (Reckless), Freq=Static, Effect=You gain the Soft Landing Martial Achievement.",
-            "Second Strike": "Tags=+Attack, Prerequisites=Feats=Martial Artist (Reckless), Freq=At-Will — Free Action, Trigger=You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll, Effect=You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
+            "Martial Artist": {
+                "Tags": "Class, +Attack",
+                "Prerequisites": "Edges=Basic Martial Arts, Skills=Combat=3",
+                "Frequency": "Static",
+                "Effect": "You gain Reckless, and all Martial Artist Features gain the [+Attack] Tag."
+            },
+            "Martial Training": {
+                "Tags": "+Attack",
+                "Prerequisites": "\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6",
+                "Frequency": "Static",
+                "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move."
+            },
+            "My Kung-Fu is Stronger": {
+                "Tags": "+Attack",
+                "Prerequisites": "Feats=Martial Training \nRank 1: (Reckless)",
+                "Frequency": "At-Will — Free Action",
+                "Trigger": "A foe provokes an Attack of Opportunity",
+                "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
+            },
+            "Martial Achievement": {
+                "Tags": "+Attack",
+                "Prerequisites": "Feats=Martial Artist (Reckless)",
+                "Frequency": "Static",
+                "Effect": "You gain the Soft Landing Martial Achievement."
+            },
+            "Second Strike": {
+                "Tags": "+Attack",
+                "Prerequisites": "Feats=Martial Artist (Reckless)",
+                "Frequency": "At-Will — Free Action",
+                "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
+                "Effect": "You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
+            }
         },
         "Limber": {
-            "Martial Artist": "Tags=Class, +Speed, Prerequisites=Edges=Basic Martial Arts, Skills=Combat=3, Freq=Static, Effect=You gain Limber, and all Martial Artist Features gain the [+Speed] Tag.",
-            "Martial Training": "Tags=+Speed, Prerequisites=\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
-            "My Kung-Fu is Stronger": "Tags=+Speed, Prerequisites=Feats=Martial Training \nRank 1: (Limber), Freq=At-Will — Free Action, Trigger=A foe provokes an Attack of Opportunity, Effect=You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
-            "Martial Achievement": "Tags=+Speed, Prerequisites=Feats=Martial Artist (Limber), Freq=Static, Effect=You gain the Bend Like the Willow Martial Achievement.",
-            "Second Strike": "Tags=+Speed, Prerequisites=Feats=Martial Artist (Limber), Freq=At-Will — Free Action, Trigger=You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll, Effect=You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
+            "Martial Artist": {
+                "Tags": "Class, +Speed",
+                "Prerequisites": "Edges=Basic Martial Arts, Skills=Combat=3",
+                "Frequency": "Static",
+                "Effect": "You gain Limber, and all Martial Artist Features gain the [+Speed] Tag."
+            },
+            "Martial Training": {
+                "Tags": "+Speed",
+                "Prerequisites": "\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6",
+                "Frequency": "Static",
+                "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move."
+            },
+            "My Kung-Fu is Stronger": {
+                "Tags": "+Speed",
+                "Prerequisites": "Feats=Martial Training \nRank 1: (Limber)",
+                "Frequency": "At-Will — Free Action",
+                "Trigger": "A foe provokes an Attack of Opportunity",
+                "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
+            },
+            "Martial Achievement": {
+                "Tags": "+Speed",
+                "Prerequisites": "Feats=Martial Artist (Limber)",
+                "Frequency": "Static",
+                "Effect": "You gain the Bend Like the Willow Martial Achievement."
+            },
+            "Second Strike": {
+                "Tags": "+Speed",
+                "Prerequisites": "Feats=Martial Artist (Limber)",
+                "Frequency": "At-Will — Free Action",
+                "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
+                "Effect": "You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
+            }
         },
         "Iron Fist": {
-            "Martial Artist": "Tags=Class, +Defense, Prerequisites=Edges=Basic Martial Arts, Skills=Combat=3, Freq=Static, Effect=You gain Iron Fist, and all Martial Artist Features gain the [+Defense] Tag.",
-            "Martial Training": "Tags=+Defense, Prerequisites=\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
-            "My Kung-Fu is Stronger": "Tags=+Defense, Prerequisites=Feats=Martial Training \nRank 1: (Iron Fist), Freq=At-Will — Free Action, Trigger=A foe provokes an Attack of Opportunity, Effect=You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
-            "Martial Achievement": "Tags=+Defense, Prerequisites=Feats=Martial Artist (Iron Fist), Freq=Static, Effect=You gain the Pummeling Momentum Martial Achievement.",
-            "Second Strike": "Tags=+Defense, Prerequisites=Feats=Martial Artist (Iron Fist), Freq=At-Will — Free Action, Trigger=You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll, Effect=You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
-        },
-        "Inner Focus": {
-            "Martial Artist": "Tags=Class, +Speed, Prerequisites=Edges=Basic Martial Arts, Skills=Combat=3, Freq=Static, Effect=You gain Inner Focus, and all Martial Artist Features gain the [+Speed] Tag.",
-            "Martial Training": "Tags=+Speed, Prerequisites=\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
-            "My Kung-Fu is Stronger": "Tags=+Speed, Prerequisites=Feats=Martial Training \nRank 1: (Inner Focus), Freq=At-Will — Free Action, Trigger=A foe provokes an Attack of Opportunity, Effect=You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
-            "Martial Achievement": "Tags=+Speed, Prerequisites=Feats=Martial Artist (Inner Focus), Freq=Static, Effect=You gain the Heightened Intensity Martial Achievement.",
-            "Second Strike": "Tags=+Speed, Prerequisites=Feats=Martial Artist (Inner Focus), Freq=At-Will — Free Action, Trigger=You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll, Effect=You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
+            "Martial Artist": {
+                "Tags": "Class, +Defense",
+                "Prerequisites": "Edges=Basic Martial Arts, Skills=Combat=3",
+                "Frequency": "Static",
+                "Effect": "You gain Iron Fist, and all Martial Artist Features gain the [+Defense] Tag."
+            },
+            "Martial Training": {
+                "Tags": "+Defense",
+                "Prerequisites": "\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6",
+                "Frequency": "Static",
+                "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move."
+            },
+            "My Kung-Fu is Stronger": {
+                "Tags": "+Defense",
+                "Prerequisites": "Feats=Martial Training \nRank 1: (Iron Fist)",
+                "Frequency": "At-Will — Free Action",
+                "Trigger": "A foe provokes an Attack of Opportunity",
+                "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
+            },
+            "Martial Achievement": {
+                "Tags": "+Defense",
+                "Prerequisites": "Feats=Martial Artist (Iron Fist)",
+                "Frequency": "Static",
+                "Effect": "You gain the Pummeling Momentum Martial Achievement."
+            },
+            "Second Strike": {
+                "Tags": "+Defense",
+                "Prerequisites": "Feats=Martial Artist (Iron Fist)",
+                "Frequency": "At-Will — Free Action",
+                "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
+                "Effect": "You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
+            }
         },
         "Guts": {
-            "Martial Artist": "Tags=Class, +HP, Prerequisites=Edges=Basic Martial Arts, Skills=Combat=3, Freq=Static, Effect=You gain Guts, and all Martial Artist Features gain the [+HP] Tag.",
-            "Martial Training": "Tags=+HP, Prerequisites=\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6, Freq=Static, Effect=Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
-            "My Kung-Fu is Stronger": "Tags=+HP, Prerequisites=Feats=Martial Training \nRank 1: (Guts), Freq=At-Will — Free Action, Trigger=A foe provokes an Attack of Opportunity, Effect=You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
-            "Martial Achievement": "Tags=+HP, Prerequisites=Feats=Martial Artist (Guts), Freq=Static, Effect=You gain the Wrestlemania Martial Achievement.",
-            "Second Strike": "Tags=+HP, Prerequisites=Feats=Martial Artist (Guts), Freq=At-Will — Free Action, Trigger=You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll, Effect=You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
+            "Martial Artist": {
+                "Tags": "Class, +HP",
+                "Prerequisites": "Edges=Basic Martial Arts, Skills=Combat=3",
+                "Frequency": "Static",
+                "Effect": "You gain Guts, and all Martial Artist Features gain the [+HP] Tag."
+            },
+            "Martial Training": {
+                "Tags": "+HP",
+                "Prerequisites": "\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6",
+                "Frequency": "Static",
+                "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move."
+            },
+            "My Kung-Fu is Stronger": {
+                "Tags": "+HP",
+                "Prerequisites": "Feats=Martial Training \nRank 1: (Guts)",
+                "Frequency": "At-Will — Free Action",
+                "Trigger": "A foe provokes an Attack of Opportunity",
+                "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
+            },
+            "Martial Achievement": {
+                "Tags": "+HP",
+                "Prerequisites": "Feats=Martial Artist (Guts)",
+                "Frequency": "Static",
+                "Effect": "You gain the Wrestlemania Martial Achievement."
+            },
+            "Second Strike": {
+                "Tags": "+HP",
+                "Prerequisites": "Feats=Martial Artist (Guts)",
+                "Frequency": "At-Will — Free Action",
+                "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
+                "Effect": "You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action."
+            }
         }
     },
     "Musician": {
@@ -3390,18 +3518,70 @@
     },
     "Swarmlord": {
         "Monarch's Embrace": {
-            "Swarmlord": "Tags=Class, +Special Attack, Prerequisites=Edges=Elemental Connection (Bug), Skills=Survival=3, Command=3, Freq=Static, Effect=You gain Shield Dust.",
-            "How To Shoot Web": "Tags=+Special Attack, Prerequisites=Feats=Swarmlord (Monarch's Embrace), Freq=Static, Effect=You gain the Threaded and Wallclimber Capabilities.",
-            "Broodlord": "Tags=+Special Attack, Prerequisites=Feats=Enhanced Embrace Rank 2 (Monarch's Embrace), Skills=Survival=5, Command=5, Freq=Static, Effect=You gain Compound Eyes.",
-            "Pheromone Markers": "Tags=+Special Attack, Prerequisites=Feats=Enhanced Embrace \nRank 1: (Monarch's Embrace), Freq=1 AP — Free Action, Trigger=You hit a foe with a damaging Bug-Type attack, Effect=The triggering foe gains 1 Pheromone Stack. Your Bug-Type attacks gain a +2 bonus to Accuracy Rolls and +1 Critical Hit range against foes for each Pheromone Stack they have. Once per Scene per foe, when they gain their third or higher Pheromone Stack, you may choose to roll 1d6. On a result of 1 or 2, the foe becomes Con- fused; on a result of 3 or 4 the foe becomes Suppressed; on a result of 5 or 6 the foe becomes Enraged.",
-            "Enhanced Embrace": "Tags=+Special Attack, Prerequisites=\nRank 1:Feats=Swarmlord (Monarch's Embrace)\nRank 2:Skills=Survival=4, Command=4\nRank 3:Skills=Survival=5, Command=5, Freq=Static, Effect=Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen."
+            "Swarmlord": {
+                "Tags": "Class, +Special Attack",
+                "Prerequisites": "Edges=Elemental Connection (Bug), Skills=Survival=3, Command=3",
+                "Frequency": "Static",
+                "Effect": "You gain the Shield Dust Ability."
+            },
+            "How To Shoot Web": {
+                "Tags": "+Special Attack",
+                "Prerequisites": "Feats=Swarmlord (Monarch's Embrace)",
+                "Frequency": "Static",
+                "Effect": "You gain the Threaded and Wallclimber Capabilities."
+            },
+            "Broodlord": {
+                "Tags": "+Special Attack",
+                "Prerequisites": "Feats=Enhanced Embrace Rank 2 (Monarch's Embrace), Skills=Survival=5, Command=5",
+                "Frequency": "Static",
+                "Effect": "You gain Compound Eyes."
+            },
+            "Pheromone Markers": {
+                "Tags": "+Special Attack",
+                "Prerequisites": "Feats=Enhanced Embrace \nRank 1: (Monarch's Embrace)",
+                "Frequency": "1 AP — Free Action",
+                "Trigger": "You hit a foe with a damaging Bug-Type attack",
+                "Effect": "The triggering foe gains 1 Pheromone Stack. Your Bug-Type attacks gain a +2 bonus to Accuracy Rolls and +1 Critical Hit range against foes for each Pheromone Stack they have. Once per Scene per foe, when they gain their third or higher Pheromone Stack, you may choose to roll 1d6. On a result of 1 or 2, the foe becomes Confused; on a result of 3 or 4 the foe becomes Suppressed; on a result of 5 or 6 the foe becomes Enraged."
+            },
+            "Enhanced Embrace": {
+                "Tags": "+Special Attack",
+                "Prerequisites": "\nRank 1:Feats=Swarmlord (Monarch's Embrace)\nRank 2:Skills=Survival=4, Command=4\nRank 3:Skills=Survival=5, Command=5",
+                "Frequency": "Static",
+                "Effect": "Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen."
+            }
         },
         "Arachnid's Embrace": {
-            "Swarmlord": "Tags=Class, +Attack, Prerequisites=Edges=Elemental Connection (Bug), Skills=Survival=3, Command=3, Freq=Static, Effect=You gain Unnerve.",
-            "How To Shoot Web": "Tags=+Attack, Prerequisites=Feats=Swarmlord (Arachnid's Embrace), Freq=Static, Effect=You gain the Threaded and Wallclimber Capabilities.",
-            "Broodlord": "Tags=+Attack, Prerequisites=Feats=Enhanced Embrace Rank 2 (Arachnid's Embrace), Skills=Survival=5, Command=5, Freq=Static, Effect=You gain Tinted Lens.",
-            "Pheromone Markers": "Tags=+Attack, Prerequisites=Feats=Enhanced Embrace \nRank 1: (Arachnid's Embrace), Freq=1 AP — Free Action, Trigger=You hit a foe with a damaging Bug-Type attack, Effect=The triggering foe gains 1 Pheromone Stack. Your Bug-Type attacks gain a +2 bonus to Accuracy Rolls and +1 Critical Hit range against foes for each Pheromone Stack they have. Once per Scene per foe, when they gain their third or higher Pheromone Stack, you may choose to roll 1d6. On a result of 1 or 2, the foe becomes Con- fused; on a result of 3 or 4 the foe becomes Suppressed; on a result of 5 or 6 the foe becomes Enraged.",
-            "Enhanced Embrace": "Tags=+Attack, Prerequisites=\nRank 1:Feats=Swarmlord (Arachnid's Embrace)\nRank 2:Skills=Survival=4, Command=4\nRank 3:Skills=Survival=5, Command=5, Freq=Static, Effect=Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen."
+            "Swarmlord": {
+                "Tags": "Class, +Attack",
+                "Prerequisites": "Edges=Elemental Connection (Bug), Skills=Survival=3, Command=3",
+                "Frequency": "Static",
+                "Effect": "You gain the Unnerve Ability."
+            },
+            "How To Shoot Web": {
+                "Tags": "+Attack",
+                "Prerequisites": "Feats=Swarmlord (Arachnid's Embrace)",
+                "Frequency": "Static",
+                "Effect": "You gain the Threaded and Wallclimber Capabilities."
+            },
+            "Broodlord": {
+                "Tags": "+Attack",
+                "Prerequisites": "Feats=Enhanced Embrace Rank 2 (Arachnid's Embrace), Skills=Survival=5, Command=5",
+                "Frequency": "Static",
+                "Effect": "You gain Tinted Lens."
+            },
+            "Pheromone Markers": {
+                "Tags": "+Attack",
+                "Prerequisites": "Feats=Enhanced Embrace \nRank 1: (Arachnid's Embrace)",
+                "Frequency": "1 AP — Free Action",
+                "Trigger": "You hit a foe with a damaging Bug-Type attack",
+                "Effect": "The triggering foe gains 1 Pheromone Stack. Your Bug-Type attacks gain a +2 bonus to Accuracy Rolls and +1 Critical Hit range against foes for each Pheromone Stack they have. Once per Scene per foe, when they gain their third or higher Pheromone Stack, you may choose to roll 1d6. On a result of 1 or 2, the foe becomes Confused; on a result of 3 or 4 the foe becomes Suppressed; on a result of 5 or 6 the foe becomes Enraged."
+            },
+            "Enhanced Embrace": {
+                "Tags": "+Attack",
+                "Prerequisites": "\nRank 1:Feats=Swarmlord (Arachnid's Embrace)\nRank 2:Skills=Survival=4, Command=4\nRank 3:Skills=Survival=5, Command=5",
+                "Frequency": "Static",
+                "Effect": "Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen."
+            }
         }
     },
     "Shade Caller": {
@@ -3689,25 +3869,103 @@
     },
     "Druid": {
         "Wood Oath": {
-            "Druid": "Tags=Class, +Attack, Prerequisites=Edges=Elemental Connection (Grass), Skills=Survival=3, General Education=3, Freq=Static, Effect=You gain Wood.",
-            "Green Path": "Tags=+Attack, Prerequisites=Feats=Druid (Wood Oath), Freq=Static, Effect=You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword.",
-            "Overgrowth": "Tags=+Attack, Prerequisites=Feats=Nature's Embrace Rank 3 (Wood Oath), Freq=2 AP — Swift Action, Trigger=You hit with a Druid Move, Effect=One target of the triggering Move is afflicted with Overgrowth. As long as the target is afflicted, they are one step less Resistant to Grass-Type attacks, to a maximum of neutral damage, and they cannot recover Hit Points or gain Temporary Hit Points. Whenever they would do so, you gain those Hit Points or Temporary Hit Points instead. Overgrowth is removed when the target Takes a Breather or is hit by a damaging Fire, Ice, Poison, Flying, or Bug-Type attack. Overgrowth may only affect a target once per Scene.",
-            "Druid's Call": "Tags=+Attack, Prerequisites=Feats=Green Path (Wood Oath), Freq=Scene x2 — Standard Action, Effect=6 small saplings suddenly grow within 6 meters of you, occupying 1 square each. This veg- etation lasts until the end of the encounter, and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) Capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)",
-            "Nature's Embrace": "Tags=+Attack, Prerequisites=\nRank 1:Feats=Druid (Wood Oath)\nRank 2:Skills=Survival=5, General Education=5, Freq=Static, Effect=You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
+            "Druid": {
+                "Tags": "Class, +Attack",
+                "Prerequisites": "Edges=Elemental Connection (Grass), Skills=Survival=3, General Education=3",
+                "Frequency": "Static",
+                "Effect": "You gain Wood."
+            },
+            "Green Path": {
+                "Tags": "+Attack",
+                "Prerequisites": "Feats=Druid (Wood Oath)",
+                "Frequency": "Static",
+                "Effect": "You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword."
+            },
+            "Overgrowth": {
+                "Tags": "+Attack",
+                "Prerequisites": "Feats=Nature's Embrace Rank 3 (Wood Oath)",
+                "Frequency": "2 AP — Swift Action",
+                "Trigger": "You hit with a Druid Move",
+                "Effect": "One target of the triggering Move is afflicted with Overgrowth. As long as the target is afflicted, they are one step less Resistant to Grass-Type attacks, to a maximum of neutral damage, and they cannot recover Hit Points or gain Temporary Hit Points. Whenever they would do so, you gain those Hit Points or Temporary Hit Points instead. Overgrowth is removed when the target Takes a Breather or is hit by a damaging Fire, Ice, Poison, Flying, or Bug-Type attack. Overgrowth may only affect a target once per Scene."
+            },
+            "Druid's Call": {
+                "Tags": "+Attack",
+                "Prerequisites": "Feats=Green Path (Wood Oath)",
+                "Frequency": "Scene x2 — Standard Action",
+                "Effect": "6 small saplings suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter, and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) Capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)"
+            },
+            "Nature's Embrace": {
+                "Tags": "+Attack",
+                "Prerequisites": "\nRank 1:Feats=Druid (Wood Oath)\nRank 2:Skills=Survival=4, General Education=4\nRank 3:Skills=Survival=5, General Education=5",
+                "Frequency": "Static",
+                "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
+            }
         },
         "Fungal Oath": {
-            "Druid": "Tags=Class, +Special Defense, Prerequisites=Edges=Elemental Connection (Grass), Skills=Survival=3, General Education=3, Freq=Static, Effect=You gain Fungal.",
-            "Green Path": "Tags=+Special Defense, Prerequisites=Feats=Druid (Fungal Oath), Freq=Static, Effect=You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword.",
-            "Overgrowth": "Tags=+Special Defense, Prerequisites=Feats=Nature's Embrace Rank 3 (Fungal Oath), Freq=2 AP — Swift Action, Trigger=You hit with a Druid Move, Effect=One target of the triggering Move is afflicted with Overgrowth. As long as the target is afflicted, they are one step less Resistant to Grass-Type attacks, to a maximum of neutral damage, and they cannot recover Hit Points or gain Temporary Hit Points. Whenever they would do so, you gain those Hit Points or Temporary Hit Points instead. Overgrowth is removed when the target Takes a Breather or is hit by a damaging Fire, Ice, Poison, Flying, or Bug-Type attack. Overgrowth may only affect a target once per Scene.",
-            "Druid's Call": "Tags=+Special Defense, Prerequisites=Feats=Green Path (Fungal Oath), Freq=Scene x2 — Standard Action, Effect=6 mushroom patches suddenly grow within 6 meters of you, occupying 1 square each. This veg- etation lasts until the end of the encounter, and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) Capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)",
-            "Nature's Embrace": "Tags=+Special Defense, Prerequisites=\nRank 1:Feats=Druid (Fungal Oath)\nRank 2:Skills=Survival=5, General Education=5, Freq=Static, Effect=You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
+            "Druid": {
+                "Tags": "Class, +Special Defense",
+                "Prerequisites": "Edges=Elemental Connection (Grass), Skills=Survival=3, General Education=3",
+                "Frequency": "Static",
+                "Effect": "You gain Fungal."
+            },
+            "Green Path": {
+                "Tags": "+Special Defense",
+                "Prerequisites": "Feats=Druid (Fungal Oath)",
+                "Frequency": "Static",
+                "Effect": "You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword."
+            },
+            "Overgrowth": {
+                "Tags": "+Special Defense",
+                "Prerequisites": "Feats=Nature's Embrace Rank 3 (Fungal Oath)",
+                "Frequency": "2 AP — Swift Action",
+                "Trigger": "You hit with a Druid Move",
+                "Effect": "One target of the triggering Move is afflicted with Overgrowth. As long as the target is afflicted, they are one step less Resistant to Grass-Type attacks, to a maximum of neutral damage, and they cannot recover Hit Points or gain Temporary Hit Points. Whenever they would do so, you gain those Hit Points or Temporary Hit Points instead. Overgrowth is removed when the target Takes a Breather or is hit by a damaging Fire, Ice, Poison, Flying, or Bug-Type attack. Overgrowth may only affect a target once per Scene."
+            },
+            "Druid's Call": {
+                "Tags": "+Special Defense",
+                "Prerequisites": "Feats=Green Path (Fungal Oath)",
+                "Frequency": "Scene x2 — Standard Action",
+                "Effect": "6 mushroom patches suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter, and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) Capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)"
+            },
+            "Nature's Embrace": {
+                "Tags": "+Special Defense",
+                "Prerequisites": "\nRank 1:Feats=Druid (Fungal Oath)\nRank 2:Skills=Survival=5, General Education=5\nRank 3:Skills=Survival=6, General Education=6",
+                "Frequency": "Static",
+                "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
+            }
         },
         "Flower Oath": {
-            "Druid": "Tags=Class, +Special Attack, Prerequisites=Edges=Elemental Connection (Grass), Skills=Survival=3, General Education=3, Freq=Static, Effect=You gain Flower.",
-            "Green Path": "Tags=+Special Attack, Prerequisites=Feats=Druid (Flower Oath), Freq=Static, Effect=You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword.",
-            "Overgrowth": "Tags=+Special Attack, Prerequisites=Feats=Nature's Embrace Rank 3 (Flower Oath), Freq=2 AP — Swift Action, Trigger=You hit with a Druid Move, Effect=One target of the triggering Move is afflicted with Overgrowth. As long as the target is afflicted, they are one step less Resistant to Grass-Type attacks, to a maximum of neutral damage, and they cannot recover Hit Points or gain Temporary Hit Points. Whenever they would do so, you gain those Hit Points or Temporary Hit Points instead. Overgrowth is removed when the target Takes a Breather or is hit by a damaging Fire, Ice, Poison, Flying, or Bug-Type attack. Overgrowth may only affect a target once per Scene.",
-            "Druid's Call": "Tags=+Special Attack, Prerequisites=Feats=Green Path (Flower Oath), Freq=Scene x2 — Standard Action, Effect=6 flowery bushes suddenly grow within 6 meters of you, occupying 1 square each. This veg- etation lasts until the end of the encounter, and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) Capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)",
-            "Nature's Embrace": "Tags=+Special Attack, Prerequisites=\nRank 1:Feats=Druid (Flower Oath)\nRank 2:Skills=Survival=5, General Education=5, Freq=Static, Effect=You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
+            "Druid": {
+                "Tags": "Class, +Special Attack",
+                "Prerequisites": "Edges=Elemental Connection (Grass), Skills=Survival=3, General Education=3",
+                "Frequency": "Static",
+                "Effect": "You gain Flower."
+            },
+            "Green Path": {
+                "Tags": "+Special Attack",
+                "Prerequisites": "Feats=Druid (Flower Oath)",
+                "Frequency": "Static",
+                "Effect": "You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword."
+            },
+            "Overgrowth": {
+                "Tags": "+Special Attack",
+                "Prerequisites": "Feats=Nature's Embrace Rank 3 (Flower Oath)",
+                "Frequency": "2 AP — Swift Action",
+                "Trigger": "You hit with a Druid Move",
+                "Effect": "One target of the triggering Move is afflicted with Overgrowth. As long as the target is afflicted, they are one step less Resistant to Grass-Type attacks, to a maximum of neutral damage, and they cannot recover Hit Points or gain Temporary Hit Points. Whenever they would do so, you gain those Hit Points or Temporary Hit Points instead. Overgrowth is removed when the target Takes a Breather or is hit by a damaging Fire, Ice, Poison, Flying, or Bug-Type attack. Overgrowth may only affect a target once per Scene."
+            },
+            "Druid's Call": {
+                "Tags": "+Special Attack",
+                "Prerequisites": "Feats=Green Path (Flower Oath)",
+                "Frequency": "Scene x2 — Standard Action",
+                "Effect": "6 flowery bushes suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter, and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) Capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)"
+            },
+            "Nature's Embrace": {
+                "Tags": "+Special Attack",
+                "Prerequisites": "\nRank 1:Feats=Druid (Flower Oath)\nRank 2:Skills=Survival=5, General Education=5\nRank 3:Skills=Survival=6, General Education=6",
+                "Frequency": "Static",
+                "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
+            }
         }
     },
     "Earth Shaker": {
