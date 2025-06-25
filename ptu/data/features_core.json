@@ -1029,7 +1029,7 @@
             },
             "Tough Tumble": {
                 "Tags": "Ranked 2",
-                "Prerequisites": "Rank 1:Feats=Style Expert (Tough), Skills=Intimidate=3\nRank 2:Skills=Intimidate=5",
+                "Prerequisites": "Rank 1:Feats=Style Expert (Tough), Skills=Intimidate=3\nRank 2: Skills=Intimidate=5",
                 "Freq": "1 AP — Special",
                 "Effect": "Your Pokémon with at least 3d6 in their Tough Stat from Poffins may activate Tough Tumble as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Scary Face, Spite\nRank 2:: Glare, Bide"
             },
@@ -1069,7 +1069,7 @@
             },
             "Smart Scheme": {
                 "Tags": "Ranked 2",
-                "Prerequisites": "Rank 1:Feats=Style Expert (Smart), Skills=Guile=3\nRank 2:Skills=Guile=5",
+                "Prerequisites": "Rank 1:Feats=Style Expert (Smart), Skills=Guile=3\nRank 2: Skills=Guile=5",
                 "Freq": "1 AP — Special",
                 "Effect": "Your Pokémon with at least 3d6 in their Smart Stat from Poffins may activate Smart Scheme as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Fake Tears, Calm Mind\nRank 2:: Taunt, Flatter"
             },
@@ -1109,7 +1109,7 @@
             },
             "Cute Cuddle": {
                 "Tags": "Ranked 2",
-                "Prerequisites": "Rank 1:Feats=Style Expert (Cute), Skills=Charm=3\nRank 2:Skills=Charm=5",
+                "Prerequisites": "Rank 1:Feats=Style Expert (Cute), Skills=Charm=3\nRank 2: Skills=Charm=5",
                 "Freq": "1 AP — Special",
                 "Effect": "Your Pokémon with at least 3d6 in their Cute Stat from Poffins may activate Cute Cuddle as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Charm, Block\nRank 2:: Teeter Dance, Attract"
             },
@@ -1149,7 +1149,7 @@
             },
             "Cool Conduct": {
                 "Tags": "Ranked 2",
-                "Prerequisites": "Rank 1:Feats=Style Expert (Cool), Skills=Command=3\nRank 2:Skills=Command=5",
+                "Prerequisites": "Rank 1:Feats=Style Expert (Cool), Skills=Command=3\nRank 2: Skills=Command=5",
                 "Freq": "1 AP — Special",
                 "Effect": "Your Pokémon with at least 3d6 in their Cool Stat from Poffins may activate Cool Conduct as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Focus Energy, Noble Roar\nRank 2:: Roar, Double Team"
             },
@@ -1189,7 +1189,7 @@
             },
             "Beautiful Ballet": {
                 "Tags": "Ranked 2",
-                "Prerequisites": "Rank 1:Feats=Style Expert (Beauty), Skills=Intuition=3\nRank 2:Skills=Intuition=5",
+                "Prerequisites": "Rank 1:Feats=Style Expert (Beauty), Skills=Intuition=3\nRank 2: Skills=Intuition=5",
                 "Freq": "1 AP — Special",
                 "Effect": "Your Pokémon with at least 3d6 in their Beauty Stat from Poffins may activate Beautiful Ballet as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Captivate, Mist\nRank 2:: Lovely Kiss, Mean Look"
             },
@@ -2217,7 +2217,7 @@
             "Fistful of Force": "Prerequisites=Feats=Crystal Artificer, Skills=Occult Education=6, Freq=Scene — Standard Action, Trigger=You must have a Shard in your Main Hand or Off-Hand to use Fistful of Force., Effect=You may destroy the Shard to use the Move Judgment. Judgment's Type must be one of the Types associated with the used Shard. Instead of adding your Special Attack when using this attack, you may choose to add your Occult Education Rank tripled."
         },
         "Botany": {
-            "Seed Bag": "Prerequisites=\nRank 1:Edges=Green Thumb, Skills=General Education=4, Survival=4\nRank 2:Skills=General Education=6, Survival=6, Freq=X Daily — Extended Action, Target=A Willing Pokémon, Effect=\nRank 1:You become adept at harvesting Seeds and Spores from Pokémon. You may target a willing Grass-Type Pokémon that knows Sleep Powder, Stun Spore, or Poison Powder. Add this move to your Move list for the remainder of the day. You may not use Seed Bag to have multiple instances of the same move in your Move list. Seed Bag may be used twice per day per Rank.\nRank 2:You may also harvest Cotton Spore, Leech Seed, Spore, or Worry Seed.",
+            "Seed Bag": "Prerequisites=\nRank 1:Edges=Green Thumb, Skills=General Education=4, Survival=4\nRank 2: Skills=General Education=6, Survival=6, Freq=X Daily — Extended Action, Target=A Willing Pokémon, Effect=\nRank 1:You become adept at harvesting Seeds and Spores from Pokémon. You may target a willing Grass-Type Pokémon that knows Sleep Powder, Stun Spore, or Poison Powder. Add this move to your Move list for the remainder of the day. You may not use Seed Bag to have multiple instances of the same move in your Move list. Seed Bag may be used twice per day per Rank.\nRank 2:You may also harvest Cotton Spore, Leech Seed, Spore, or Worry Seed.",
             "Top Tier Berries": "Prerequisites=Edges=Green Thumb, Freq=Static, Effect=You may grow additional Berries and Herbs, depending on the higher of your General Education or Survival Rank.\n» Novice: You may grow Tier 2 Berries\n» Adept: You may grow Mental Herbs, Power Herbs, White Herbs, and Tiny Mushrooms.\n» Expert: You may grow Revival Herbs, Energy Roots,Big Mushrooms, and Tier 3 Berries\n» Master: Increase the Soil Quality of all your plants by +1.",
             "Herb Lore": "Prerequisites=Feats=Seed Bag \nRank 1:, Freq=Static, Effect=You may create Energy Powder, Heal Powder, or Poultices from ingredients, as listed below.\nEnergy Powder: A Sitrus Berry or Tiny Mushroom creates x2 Energy Powders. An Energy Root creates x3 Energy Powders.\nHeal Powder: A Lum Berry or Big Mushroom creates x2 Heal Powders. A Revival Herb creates x3 Heal Powders\nPoultice: x1 Energy Powder and x1 Heal Powder create x3 Poultices."
         },
@@ -3360,7 +3360,7 @@
             "Tags": "[Ranked 2][+Special Attack]",
             "Prerequisites": "\nRank 1: Feature Metamagic\nRank 2: Feature Authentic Thaumaturgy",
             "Frequency": "Static",
-            "Effect": "\nRank 1:Select a \nRank 1: Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate.\nRank 2:Select a \nRank 1: Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate.\nOR\nSelect a Rank 2 power Manipulation. This Manipulation may be used once per Scene without activating Authentic Thaumaturgy's Frequency."
+            "Effect": "\nRank 1: Select a \nRank 1: Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate.\nRank 2: Select a \nRank 1: Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate.\nOR\nSelect a Rank 2 power Manipulation. This Manipulation may be used once per Scene without activating Authentic Thaumaturgy's Frequency."
         },
         "Recoup Energy": {
             "Tags": "[+Special Attack]",
@@ -3545,7 +3545,7 @@
             },
             "Enhanced Embrace": {
                 "Tags": "+Special Attack",
-                "Prerequisites": "\nRank 1:Feats=Swarmlord (Monarch's Embrace)\nRank 2:Skills=Survival=4, Command=4\nRank 3:Skills=Survival=5, Command=5",
+                "Prerequisites": "\nRank 1:Feats=Swarmlord (Monarch's Embrace)\nRank 2: Skills=Survival=4, Command=4\nRank 3: Skills=Survival=5, Command=5",
                 "Frequency": "Static",
                 "Effect": "Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen."
             }
@@ -3578,7 +3578,7 @@
             },
             "Enhanced Embrace": {
                 "Tags": "+Attack",
-                "Prerequisites": "\nRank 1:Feats=Swarmlord (Arachnid's Embrace)\nRank 2:Skills=Survival=4, Command=4\nRank 3:Skills=Survival=5, Command=5",
+                "Prerequisites": "\nRank 1:Feats=Swarmlord (Arachnid's Embrace)\nRank 2: Skills=Survival=4, Command=4\nRank 3: Skills=Survival=5, Command=5",
                 "Frequency": "Static",
                 "Effect": "Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen."
             }
@@ -3896,7 +3896,7 @@
             },
             "Nature's Embrace": {
                 "Tags": "+Attack",
-                "Prerequisites": "\nRank 1:Feats=Druid (Wood Oath)\nRank 2:Skills=Survival=4, General Education=4\nRank 3:Skills=Survival=5, General Education=5",
+                "Prerequisites": "\nRank 1:Feats=Druid (Wood Oath)\nRank 2: Skills=Survival=4, General Education=4\nRank 3: Skills=Survival=5, General Education=5",
                 "Frequency": "Static",
                 "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
             }
@@ -3929,7 +3929,7 @@
             },
             "Nature's Embrace": {
                 "Tags": "+Special Defense",
-                "Prerequisites": "\nRank 1:Feats=Druid (Fungal Oath)\nRank 2:Skills=Survival=5, General Education=5\nRank 3:Skills=Survival=6, General Education=6",
+                "Prerequisites": "\nRank 1:Feats=Druid (Fungal Oath)\nRank 2: Skills=Survival=4, General Education=4\nRank 3: Skills=Survival=5, General Education=5",
                 "Frequency": "Static",
                 "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
             }
@@ -3962,7 +3962,7 @@
             },
             "Nature's Embrace": {
                 "Tags": "+Special Attack",
-                "Prerequisites": "\nRank 1:Feats=Druid (Flower Oath)\nRank 2:Skills=Survival=5, General Education=5\nRank 3:Skills=Survival=6, General Education=6",
+                "Prerequisites": "\nRank 1:Feats=Druid (Flower Oath)\nRank 2: Skills=Survival=4, General Education=4\nRank 3: Skills=Survival=5, General Education=5",
                 "Frequency": "Static",
                 "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
             }
