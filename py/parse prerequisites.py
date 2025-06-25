@@ -1,18 +1,28 @@
 import json
+import re
 
-def extract_prerequisites(input_file, output_file):
+def extract_rank_data(input_file, output_file):
     with open(input_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
     output = {}
+    pattern = re.compile(r"Rank \d+ (Prerequisites|Effect)", re.IGNORECASE)
+
     for key, value in data.items():
         fields = value.get("fields", [])
-        prereq = next((field["value"] for field in fields if field.get("name") == "Prerequisites"), None)
-        if prereq:
-            output[key] = {"Prerequisites": prereq}
+        extracted = {}
+
+        for field in fields:
+            name = field.get("name", "")
+            value = field.get("value", "")
+            if pattern.fullmatch(name):
+                extracted[name] = value
+
+        if extracted:
+            output[key] = extracted
 
     with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(output, f, indent=4)
+        json.dump(output, f, indent=4, ensure_ascii=False)
 
 # Example usage
-extract_prerequisites("py/input.json", "py/output.json")
+extract_rank_data("py/input.json", "py/output.json")

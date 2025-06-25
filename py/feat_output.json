@@ -1,19 +1,19 @@
 {
     "General": {
         "Command Versatility": {
-            "Prerequisites": "Adept Command, Guile, or Pokémon Education",
+            "Prerequisites": "Skills Command 4, Guile 4, Pokémon Education 4",
             "Frequency": "1 AP — Free Action",
             "Trigger": "Your Pokémon takes its turn",
             "Effect": "Your Pokémon may give up use of a Scene or Daily Move to regain use of a Scene or Daily Move which it has already used. Your Pokémon may give up use of a Daily Move to regain use of a Scene Move, but not vice-versa. You may use Command Versatility only once per Scene per Pokémon."
         },
         "Press": {
-            "Prerequisites": "Adept Intimidate",
+            "Prerequisites": "Skills Intimidate 4",
             "Frequency": "At-Will — Standard Action",
             "Target": "Your own Pokémon",
             "Effect": "You hit your Pokémon, and they lose 1/6th of their Max Hit Points and are cured of Sleep. Raise any two of their Stats by +1 CS each, and you may add half of your Intimidate Rank to any Skill Checks made this round to make this Pokémon obey orders. Using Press on a Pokémon may make them dislike you."
         },
         "Quick Switch": {
-            "Prerequisites": "Novice Acrobatics or Guile",
+            "Prerequisites": "Skills Acrobatics 3, Guile 3",
             "Frequency": "2 AP — Free Action",
             "Trigger": "Your Pokémon Faints; or an opponent sends out a Pokémon",
             "Effect": "You may return and send out a Pokémon as a Free Action. You may perform this Feature on your turn without a Trigger. Pokémon sent out by Quick Switch cannot trigger another Trainer's Quick Switch. When you swap Pokémon using Quick Switch, you do not lose a Pokémon turn."
@@ -24,67 +24,67 @@
             "Effect": "When you take Species Savant, choose a single Evolutionary Family. Your Pokémon of your Chosen Evolutionary Family have each of their Base Stats increased by +1."
         },
         "Tutoring": {
-            "Prerequisites": "Novice Pokémon Education, a move that you or three of your Pokémon know",
+            "Prerequisites": "Skills Pokémon Education 3, A move that you or three of your Pokémon know",
             "Frequency": "One Time Use x 3 — Extended Action",
             "Effect": "When activating this Feature, select a Move known either by yourself or by 3 Pokémon you own. This Move is Mastered. As an Extended Action, you may have Pokémon spend 2 Tutor Points to learn a Move you have Mastered. Pokémon targeted this way can only learn Moves that they could learn by Level Up, TM, Egg Move, or Move Tutor. You may take Tutoring multiple times, each time gaining 3 uses of the Feature"
         },
         "Agility Training": {
             "Tags": "[Training][Orders]",
-            "Prerequisites": "Novice Athletics, Untrained Command",
+            "Prerequisites": "Skills Athletics 3, Command 2",
             "Frequency": "At-Will — Special",
             "Effect": "The target becomes Agile until the end of the effect duration. Agile Pokémon gain a +1 bonus to Movement Capabilities and +4 to Initiative."
         },
         "Brutal Training": {
             "Tags": "[Training][Orders]",
-            "Prerequisites": "Novice Intimidate, Untrained Command",
+            "Prerequisites": "Skills Intimidate 3, Command 2",
             "Frequency": "At-Will — Special",
             "Effect": "The target becomes Brutal until the end of the effect duration. Brutal Pokémon increase the Critical- Hit and Effect Range of all attacks by +1."
         },
         "Focused Training": {
             "Tags": "[Training][Orders]",
-            "Prerequisites": "Novice Command",
+            "Prerequisites": "Skills Command 3",
             "Frequency": "At-Will — Special",
             "Effect": "The target becomes Focused until the end of the effect duration. Focused Pokémon gain a +1 bonus to Accuracy Rolls and +2 to Skill Checks."
         },
         "Inspired Training": {
             "Tags": "[Training][Orders]",
-            "Prerequisites": "Novice Charm, Untrained Command",
+            "Prerequisites": "Skills Charm 3, Command 2",
             "Frequency": "At-Will — Special",
             "Effect": "The target becomes Inspired until the end of the effect duration. Inspired Pokémon gain a +1 bonus to Evasion and +2 to Save Checks."
         },
         "Commander's Voice": {
-            "Prerequisites": "Two Features with the [Orders] tag",
+            "Prerequisites": "Feature Tags Orders, Tags Orders",
             "Frequency": "Static",
             "Effect": "You may give two different [Orders] as a single Standard Action, or you may give one set of [Orders] as a Swift Action.\nIf this is used to use Focused Command and another [Order] that has targets, the second Order applies to both Pokémon you are commanding that turn. Commander's Voice doesn't allow you to use Focused Command as a Swift Action."
         },
         "Focused Command": {
             "Tags": "[Orders]",
-            "Prerequisites": "Master Command, one of Focus, Guile, Intimidate, or Pokémon Education at Expert",
+            "Prerequisites": "Skills Command 6, Focus 5, Guile 5, Intimidate 5, Pokémon Education 5",
             "Frequency": "At-Will — Standard Action + Swift Action",
             "Effect": "You may have a second Pokémon take a turn this round, but both Pokémon can only take At-Will actions that round. Additionally, both Pokémon receive a -5 Penalty on all Damage Rolls. You may pay 1 AP at the beginning of the round to lift the Frequency Restriction OR the Damage Penalty for the remainder of the round, or pay 2 AP to lift both."
         },
         "Ravager Orders": {
-            "Prerequisites": "Expert Command or Intimidate",
+            "Prerequisites": "Skills Command 5, Intimidate 5",
             "Frequency": "Static",
             "Effect": "You gain the Reckless Advance and Strike Again! Orders."
         },
         "Marksman Orders": {
-            "Prerequisites": "Expert Perception or Guile",
+            "Prerequisites": "Skills Perception 5, Guile 5",
             "Frequency": "Static",
             "Effect": "You gain the Trick Shot and Long Shot Orders."
         },
         "Trickster Orders": {
-            "Prerequisites": "Expert Charm or Guile",
+            "Prerequisites": "Skills Charm 5, Guile 5",
             "Frequency": "Static",
             "Effect": "You gain the Capricious Whirl and Dazzling Dervish Orders."
         },
         "Guardian Orders": {
-            "Prerequisites": "Expert Charm or Intimidate",
+            "Prerequisites": "Skills Charm 5, Intimidate 5",
             "Frequency": "Static",
             "Effect": "You gain the Brace for Impact and Sentinel Stance Orders."
         },
         "Precision Orders": {
-            "Prerequisites": "Expert Command or Perception",
+            "Prerequisites": "Skills Command 5, Perception 5",
             "Frequency": "Static",
             "Effect": "You gain the Pinpoint Strike and Perfect Aim Orders."
         },
@@ -96,7 +96,7 @@
         },
         "Defender": {
             "Tags": "[+HP]",
-            "Prerequisites": "Adept Athletics",
+            "Prerequisites": "Skills Athletics 4",
             "Frequency": "Static",
             "Effect": "Using the Intercept Maneuvers requires only a Shift Action Interrupt."
         },
@@ -109,21 +109,21 @@
         },
         "Fighter's Versatility": {
             "Tags": "[+Any Stat]",
-            "Prerequisites": "Learned two Scene or Daily Moves",
+            "Prerequisites": "Moves Freq Scene, Daily, Freq Scene, Daily",
             "Frequency": "Scene — Free Action",
             "Trigger": "You gain Initiative.",
             "Effect": "You may give up use of a Scene or Daily Move to regain use of a Scene or Daily Move which you have already used. You may give up use of a Daily Move to regain use of a Scene Move, but not vice-versa."
         },
         "Multi-Tasking": {
             "Tags": "[+Speed]",
-            "Prerequisites": "20 Speed Stat, Master Acrobatics",
+            "Prerequisites": "Stat Speed 20\nSkills Acrobatics 6",
             "Frequency": "Scene x2 — Swift Action",
             "Trigger": "You gain Initiative.",
             "Effect": "You may take two Standard Actions instead of one this turn, but both actions must have an At-Will Frequency."
         },
         "Signature Move": {
             "Tags": "[+Any Stat]",
-            "Prerequisites": "Learned four Moves",
+            "Prerequisites": "Moves Any, Any, Any, Any",
             "Frequency": "Static",
             "Effect": "Choose a Move you know. Increase the Move's Frequency one step, as if you had used a PP Up. This choice cannot be changed once made. This Feature may not select Moves known through temporary means, nor can these Moves be used to qualify for this Feature."
         },
@@ -135,12 +135,12 @@
         },
         "Walk It Off": {
             "Tags": "[+HP]",
-            "Prerequisites": "Adept Athletics, Novice Focus",
+            "Prerequisites": "Skills Athletics 4, Focus 3",
             "Frequency": "Daily — Extended Action",
             "Effect": "Remove one Injury from yourself and regain 1/4th of your maximum Hit Points. This Injury removal doesn't count against the natural healing limit on Injuries each day."
         },
         "First Aid Expertise": {
-            "Prerequisites": "Medic Training, Expert Medicine Education",
+            "Prerequisites": "Edges Medic Training\nSkills Medicine Education 5",
             "Frequency": "Daily x3 — Extended Action",
             "Target": "Pokémon or Trainers",
             "Effect": "The target may remove one Injury, has all Hit Points restored, and is cured of all Status Afflictions. You may use First Aid Expertise only once per day per target. First Aid Expertise requires access to a First Aid Kit."
@@ -151,31 +151,31 @@
             "Effect": "The ally may re-roll the Skill Check with a Bonus equal to your Skill Rank."
         },
         "Poké Ball Crafter": {
-            "Prerequisites": "Basic Balls, Poké Ball Repair, Expert Technology",
+            "Prerequisites": "Edges Basic Balls, Poké Ball Repair\nSkills Technology 5",
             "Frequency": "Static",
             "Effect": "You may craft Dusk, Dive, Heal, Luxury, Net, Nest, Quick, Repeat, or Timer Balls for $700. Requires access to a Poké Ball Tool Box."
         },
         "PokéManiac": {
-            "Prerequisites": "Adept Pokémon Education",
+            "Prerequisites": "Skills Pokémon Education 4",
             "Frequency": "At-Will — Standard Action",
             "Target": "A Pokémon",
             "Effect": "Make a Pokemon Education Check with a DC of 10. If you succeed, you determine the target's Level, Types, Nature, and Abilities."
         },
         "Psionic Sight": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Elemental Connection (Psychic)",
+            "Prerequisites": "Edges Elemental Connection (Psychic)",
             "Frequency": "Static",
             "Effect": "You are able to visibly see any Psychic Residue left on Humans or Pokémon due to the effects of Psionic abilities. Each Human or Pokémon leaves distinct Psychic Residue on their targets; you are easily able to distinguish which targets have been affected by the same Psionic, though to identify that Psionic you need to have a way of knowing their signature (such as simply seeing them do it, and seeing the resulting signature)."
         },
         "Skill Monkey": {
-            "Prerequisites": "Three Skills at Adept Rank or higher",
+            "Prerequisites": "Skills Any 4, Any 4, Any 4",
             "Frequency": "Daily x3 — Free Action",
             "Trigger": "You make a Skill Check",
             "Effect": "You may re-roll the triggering Skill Check with a +2 Bonus, taking the new result. This Feature may be used to re-roll a specific roll only once."
         },
         "Arcane Training": {
             "Tags": "[+Special Attack][Weapon]",
-            "Prerequisites": "Novice Occult Education, Elemental Connection or Mystic Senses",
+            "Prerequisites": "Feature Farcast\nSkills Occult Education 3",
             "Frequency": "Static",
             "Effect": " You may use Arcane Weapons. Attacks made with your Arcane Weapons share the Type of your Elemental Connection. If you have Mystic Senses, these Attacks deal Normal Type Damage. Arcane Weapon users that qualified through Mystic Senses or Elemental Connection (Normal) gain a +5 Bonus to Damage Rolls and a +2 Bonus to Effect Range when using Arcane Weapon Attacks. When wielding an Arcane Weapon, you may resist Disarm Maneuvers with your Occult Education."
         },
@@ -187,19 +187,19 @@
         },
         "Type Sync": {
             "Tags": "[Ranked 2][+Attack]",
-            "Prerequisites": "Elemental Connection; a Type-Linked Class; Adept Medicine, Occult, or Tech Education",
+            "Prerequisites": "Edges Elemental Connection\nFeature Type-Linked Class\nSkills Medicine Education 4, Occult Education 4, Technology Education 4",
             "Frequency": "Special — Extended Action",
             "Target": "Your Pokémon",
             "Effect": "The Target gains the Type of your Elemental Connection as an additional Type, or has one of their Types replaced by that Type. See the Type Changes sec- tion (page 436) for more information and suggestions. A Pokémon may be targeted by Type Sync only once. This Feature may be performed One Time for each Rank above Untrained you have of your highest of Medicine, Occult, or Tech Education, up to a maximum of 4 times at Master Rank."
         },
         "Nurse": {
-            "Prerequisites": "Expert Medicine Education",
+            "Prerequisites": "Skills Medicine Education 5",
             "Frequency": "Drain 2 AP — Free Action",
             "Trigger": "You take an Extended Rest",
             "Effect": "During this Extended Rest, Pokémon and Trainers in your care gain the benefits listed below. The AP Drain cost from triggering this Feature is applied after the Extended Rest is completed and AP Drain has otherwise been restored.\n» They heal 1/8th of their Max Hit Points per half hour of rest instead of 1/16th (does not stack with Bandages).\n» If the Extended Rest lasts at least 6 hours, they may remove 1 Injury."
         },
         "Gotta Catch 'Em All": {
-            "Prerequisites": "Advanced Capture Techniques Rank 3",
+            "Prerequisites": "Feature Advanced Capture Techniques Rank 3",
             "Frequency": "Static",
             "Effect": "Every time you Capture a Wild Pokémon that is a member of an evolutionary family of which you own no other Pokémon, you gain 1 Collector Stack. Whenever you make a Capture Roll, you may spend up to three Collector Stacks to gain an equal bonus to your Capture Roll, or you may spend three Collector Stacks to re-roll entirely."
         }
@@ -2374,40 +2374,40 @@
         },
         "Dance Form": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Dancer",
+            "Prerequisites": "Feature Dancer",
             "Frequency": "Static",
             "Effect": "Create and learn two Dance Moves, plus one more for each other Dancer Feature you have. Whenever you gain another Dancer Feature, create and learn another Dance Move."
         },
         "Beguiling Dance": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Dance Form",
+            "Prerequisites": "Feature Dance Form",
             "Frequency": "Static",
             "Effect": "When creating Dance Moves, you can choose to create a Dance Move that has Range: 4, 1 Target, AC 3, and lowers a Combat Stat (chosen at creation) by -2 Combat Stages. This Move is otherwise the same as other Dance Moves you could create except that Dance Moves created with this template have the Contest Effect Excitement instead of Get Ready!."
         },
         "Dance Practice": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Dancer",
+            "Prerequisites": "Feature Dancer",
             "Frequency": "At-Will — Extended Action",
             "Target": "Your Pokémon with at least 2 Tutor Points",
             "Effect": "The target loses 2 Tutor Points and gains your choice of Spinning Dance or Own Tempo. Dance Practice may target a Pokémon only once."
         },
         "Choreographer": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Dance Form; Adept Acrobatics, Athletics, or Charm",
+            "Prerequisites": "Feature Dance Form\nSkills Acrobatics 4, Athletics 4, Charm 4",
             "Frequency": "At-Will — Extended Action",
             "Target": "Your Pokémon with at least 2 Tutor Points",
             "Effect": "The target loses 2 Tutor Point and learns a Dance Move created by yourself. Choreographer may target a Pokémon multiple times."
         },
         "Power Pirouette": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Dance Form; Expert Acrobatics, Athletics, or Charm",
+            "Prerequisites": "Feature Dance Form\nSkills Acrobatics 5, Athletics 5, Charm 5",
             "Frequency": "Scene x2 — Swift Action",
             "Trigger": "You perform a Dance Move",
             "Effect": "Choose one effect:\n» All adjacent targets are Confused.\n» You gain +1 Combat Stage to a Stat of your choice not raised by the triggering Move.\n» Destroy all Hazards within 5 meters, and remove Leech Seed, Trapped, and Stuck from yourself."
         },
         "Passing Waltz": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Dance Practice; Master Acrobatics, Athletics, or Charm",
+            "Prerequisites": "Feature Dance Practice\nSkills Acrobatics 6, Athletics 6, Charm 6",
             "Frequency": "1 AP — Free Action",
             "Trigger": "You or one of your Pokémon with Own Tempo or Spinning Dance uses a Dance Move",
             "Effect": "Choose an ally within 3 meters of the triggering target. That ally gains Combat Stages from the triggering Move instead of the user."
@@ -3144,31 +3144,31 @@
         },
         "PK Alpha": {
             "Tags": "[+Special Attack]",
-            "Prerequisites": "Telekinetic",
+            "Prerequisites": "Feature Telekinetic",
             "Frequency": "Static",
             "Effect": "You learn the Moves Kinesis and Barrier."
         },
         "PK Omega": {
             "Tags": "[+Special Attack]",
-            "Prerequisites": "PK Alpha, Expert Focus",
+            "Prerequisites": "Feature PK Alpha\nSkills Focus 5",
             "Frequency": "Static",
             "Effect": "You learn the Moves Telekinesis and Psychic."
         },
         "Power of the Mind": {
             "Tags": "[+Special Attack]",
-            "Prerequisites": "Telekinetic",
+            "Prerequisites": "Feature Telekinetic",
             "Frequency": "Static",
             "Effect": "Choose Interference or Levitate. You gain the chosen Ability."
         },
         "PK Combat": {
             "Tags": "[+Special Attack][Weapon]",
-            "Prerequisites": "Telekinetic, Adept Focus",
+            "Prerequisites": "Feature Telekinetic\nSkills Focus 4",
             "Frequency": "Bind 1 AP — Standard Action",
             "Effect": "You may also wield weapons and items with your Telekinesis capability, as long as you are able to lift them. This means you may use Items and Melee Weapons that normally require you to be adjacent to your target at a range limited only by your Telekinesis. When wielding Weapons with your Telekinesis, you qualify for Moves using Focus instead of Combat and may add your Special Attack instead of your Attack Stat. The Attacks remain Physical, however."
         },
         "Telekinetic Burst": {
             "Tags": "[+Special Attack]",
-            "Prerequisites": "PK Combat, Expert Focus",
+            "Prerequisites": "Feature PK Omega\nSkills Focus 6",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You hit with Psychic or use another Telekinetic Move",
             "Effect": "The effect of this Feature depends on the Triggering Move.\n» Kinesis: The user of the triggering attack becomes Confused.\n» Barrier: Place 2 additional segments of Barrier, and you may place the Barriers anywhere within 6 meters of yourself. They do not need to remain contiguous, nor does one segment have to touch you.\n» Psychic: The target becomes Vulnerable for one full round.\n» Telekinesis: At the end of each turn that the target remains Lifted, they lose a Tick of Hit Points."
@@ -3183,38 +3183,38 @@
         },
         "Honed Mind": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Telepath",
+            "Prerequisites": "Feature Telepath",
             "Frequency": "Static",
             "Effect": "You learn the Moves Mind Reader and Calm Mind."
         },
         "Telepathic Awareness": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Telepath",
+            "Prerequisites": "Feature Telepath",
             "Frequency": "Static",
             "Effect": "Choose Gentle Vibe or Telepathy. You gain the chosen Ability."
         },
         "Thought Detection": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Telepathic Awareness",
+            "Prerequisites": "Feature Telepathic Awareness",
             "Frequency": "Scene — Standard Action",
             "Effect": "You become aware of the number of living Humans or Pokémon within X meters of yourself; X is equal to your Focus Rank tripled. Pokémon or Trainers with the Mindlock Capability are not detected by this Ability. You may only use Thought Detection as long as you have the Telepathy Capability."
         },
         "Telepathic Warning": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Telepathic Awareness, Expert Focus or Intuition",
+            "Prerequisites": "Feature Telepathic Awareness\nSkills Focus 5, Intuition 5",
             "Frequency": "1 AP — Free Action",
             "Trigger": "You or an Ally use an Attack",
             "Effect": "You're able to give your allies heed of attacks. All allies that would be hit by the attack may take a Shift Action as an Interrupt to move out of the area of effect of the attack. Using this leaves discoverable Psychic Residue on each affected ally. You may only use Telepathic Warning as long as you have the Telepath Capability."
         },
         "Mental Assault": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Telepath, Expert Focus or Intuition",
+            "Prerequisites": "Feature Telepath\nSkills Focus 5, Intuition 5",
             "Frequency": "Static",
             "Effect": "You learn the Moves Extrasensory and Psyshock."
         },
         "Suggestion": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Honed Mind, Master Focus or Intuition",
+            "Prerequisites": "Feature Honed Mind\nSkills Focus 6, Intuition 6",
             "Frequency": "Bind 1 AP — Standard Action",
             "Target": "Pokémon or Trainers",
             "Effect": "You smoothly plant a thought into the subject's head that lasts as long as this Feature is Bound. They won't know exactly why or how they thought of it; they will naturally assume they thought of it themselves, and their brain will attempt to get there as logically as it can. The target may not necessarily act on the Suggestion, especially if it is against their nature. Using Suggestion to plant a specific thought may cause the target to think about a specific subject, dredging up surface thoughts related to the matter. Using this on a target leaves discoverable psychic residue. You may only use Suggestion as long as you have the Telepathy Capability, though you may keep it Bound without having Telepathy active."
@@ -4341,26 +4341,26 @@
     "Cheerleader_n": {
         "Cheerleader": {
             "Tags": "[Class]",
-            "Prerequisites": "Inspired Training, Novice Charm",
+            "Prerequisites": "Feature Inspired Training\nSkills Charm 3",
             "Frequency": "At-Will — Extended Action",
             "Target": "Your Pokémon with at least 2 Tutor Points remaining",
             "Effect": "Your Pokémon loses 2 Tutor Points and gains the Friend Guard Ability."
         },
         "Moment of Action": {
             "Tags": "[Orders]",
-            "Prerequisites": "Cheerleader",
+            "Prerequisites": "Feature Cheerleader",
             "Frequency": "At-Will — Standard Action",
             "Target": "Up to two Allied Trainers",
             "Effect": "Each target gains 1 Temporary Action Point. These Action Points disappear after one full Round."
         },
         "Cheers": {
-            "Prerequisites": "Cheerleader",
+            "Prerequisites": "Feature Cheerleader",
             "Frequency": "X AP — Swift Action",
             "Trigger": "You use [Orders]",
             "Effect": "The target or targets of the triggering [Orders] are Cheered for 1 full round. While Cheered, the target's Combat Stages cannot be lowered by foe's attacks, features, or abilities. This Feature costs 0 AP if the triggering effect affects only one ally, and costs 1 AP if it affects two or more."
         },
         "Inspirational Support": {
-            "Prerequisites": "Cheers, Adept Charm",
+            "Prerequisites": "Feature Cheers\nSkills Charm 4",
             "Frequency": "Static",
             "Effect": "Whenever your Pokémon with Friend Guard targets an Ally with an Ability or Status Move, the targeted Ally becomes Cheered."
         },
@@ -4371,12 +4371,12 @@
         },
         "Go, Fight, Win!": {
             "Tags": "[Orders]",
-            "Prerequisites": "Moment of Action, Expert Charm",
+            "Prerequisites": "Feature Moment of Action\nSkills Charm 5",
             "Frequency": "Scene x3 — Standard Action",
             "Effect": "Choose and perform one of the cheers below. You may perform each Cheer only once per Scene.\n» Show Your Best!: Choose Defense or Special Defense. All allies on the field gain +1 Combat Stage in the Chosen Stat.\n» Don't Stop Now!: All allies on the field gain Temporary Hit Points equal to your Charm Rank.\n I Believe In You!: All allies on the field gain a +2 bonus to Evasion for one full Round."
         },
         "Keep Fighting!": {
-            "Prerequisites": "5 Cheerleader Features, Master Charm",
+            "Prerequisites": "Feature Any Cheerleader, Any Cheerleader, Any Cheerleader, Any Cheerleader, Any Cheerleader\nSkills Charm 6",
             "Frequency": "Daily x2 — Free Action",
             "Trigger": "Your Pokémon or an Ally Trainer with over 1 Hit Point is reduced to 0 Hit Points or lower",
             "Effect": "That Ally's Hit Point count is reduced to 1 instead, and then gains Temporary Hit Points equal to your Charm Rank doubled."
