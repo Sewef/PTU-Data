@@ -1006,33 +1006,35 @@
             },
             "Style Flourish": {
                 "Tags": "Branch",
-                "Prerequisites": "Feats=Any Style Expert (Tough), Any Style Expert (Tough), Any Style Expert (Tough)",
+                "Prerequisites": "3 Style Expert (Tough) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Tough Move",
                 "Effect": "In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
                 "Tags": "Branch",
-                "Prerequisites": "Feats=Any Style Expert (Tough), Any Style Expert (Tough), Any Style Expert (Tough), Any Style Expert (Tough)",
+                "Prerequisites": "4 Style Expert (Tough) Features",
                 "Frequency": "1 AP — Swift Action, Priority (Limited)",
                 "Target": "Your Pokémon",
                 "Effect": "Your Pokémon gains either Sturdy or Intimidate for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
             },
             "Tough Tumble": {
                 "Tags": "Ranked 2",
-                "Frequency": "1 AP — Special",
-                "Effect": "Your Pokémon with at least 3d6 in their Tough Stat from Poffins may activate Tough Tumble as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Scary Face, Spite\nRank 2:: Glare, Bide",
                 "Rank 1 Prerequisites": "Style Expert (Tough), Novice Intimidate",
-                "Rank 2 Prerequisites": " Expert Intimidate"
+                "Rank 2 Prerequisites": " Expert Intimidate",
+                "Frequency": "1 AP — Special",
+                "Effect": "Your Pokémon with at least 3d6 in their Tough Stat from Poffins may activate Tough Tumble as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
+                "Rank 1": "Scary Face, Spite",
+                "Rank 2": "Glare, Bide"
             },
             "Macho Charge": {
-                "Prerequisites": "Feats=Tough Tumble \nRank 1:",
+                "Prerequisites": "Tough Tumble Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Pokémon uses a Tough-Type Move",
                 "Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: All targets hit by the Move are pushed away from the triggering Pokémon by 3 meters. You may activate Macho Charge only once per Pokémon per Scene."
             },
             "Endurance": {
-                "Prerequisites": "Feats=Tough Tumble \nRank 1:",
+                "Prerequisites": "Tough Tumble Rank 1",
                 "Frequency": "Scene — Free Action",
                 "Trigger": "Your Pokémon takes falling damage, begins to suffocate, or is Heavily Injured.",
                 "Effect": "Your Pokémon can ignore up to X meters of falling when calculating falling damage, act without beginning to suffocate for X additional rounds, or ignore the Hit Point loss effects from acting while Heavily Injured for X rounds. X is equal to half its number of Tough Dice from Poffins."
@@ -1047,33 +1049,35 @@
             },
             "Style Flourish": {
                 "Tags": "Branch",
-                "Prerequisites": "Feats=Any Style Expert (Smart), Any Style Expert (Smart), Any Style Expert (Smart)",
+                "Prerequisites": "3 Style Expert (Smart) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Smart Move",
                 "Effect": "In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Special Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
                 "Tags": "Branch",
-                "Prerequisites": "Feats=Any Style Expert (Smart), Any Style Expert (Smart), Any Style Expert (Smart), Any Style Expert (Smart)",
+                "Prerequisites": "4 Style Expert (Smart) Features",
                 "Frequency": "1 AP — Swift Action, Priority (Limited)",
                 "Target": "Your Pokémon",
                 "Effect": "Your Pokémon gains either Analytic or Anticipation for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
             },
             "Smart Scheme": {
                 "Tags": "Ranked 2",
-                "Frequency": "1 AP — Special",
-                "Effect": "Your Pokémon with at least 3d6 in their Smart Stat from Poffins may activate Smart Scheme as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Fake Tears, Calm Mind\nRank 2:: Taunt, Flatter",
                 "Rank 1 Prerequisites": "Style Expert (Smart), Novice Guile",
-                "Rank 2 Prerequisites": " Expert Guile"
+                "Rank 2 Prerequisites": " Expert Guile",
+                "Frequency": "1 AP — Special",
+                "Effect": "Your Pokémon with at least 3d6 in their Smart Stat from Poffins may activate Smart Scheme as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
+                "Rank 1": "Fake Tears, Calm Mind",
+                "Rank 2": "Taunt, Flatter"
             },
             "Calculated Assault": {
-                "Prerequisites": "Feats=Smart Scheme \nRank 1:",
+                "Prerequisites": "Smart Scheme Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Pokémon uses a Smart-Type Move",
                 "Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: Choose one: The triggering Pokémon gains a +1 bonus on its Accuracy Roll for each ally that hit a target of its Move this round, or all allies get a +1 bonus to their Accuracy Rolls against targets of the triggering Pokémon's Move until the end of your Pokémon's next turn. You may activate Calculated Assault only once per Pokémon per Scene."
             },
             "Learn From Your Mistakes": {
-                "Prerequisites": "Feats=Smart Scheme \nRank 1:",
+                "Prerequisites": "Smart Scheme Rank 1",
                 "Frequency": "Daily x3 — Free Action",
                 "Trigger": "Your Pokémon fails a Skill Check.",
                 "Effect": "Your Pokémon may re-roll the Skill Check with a Bonus equal to its number of Smart Dice from Poffins."
@@ -1088,33 +1092,35 @@
             },
             "Style Flourish": {
                 "Tags": "Branch",
-                "Prerequisites": "Feats=Any Style Expert (Cute), Any Style Expert (Cute), Any Style Expert (Cute)",
+                "Prerequisites": "3 Style Expert (Cute) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Cute Move",
                 "Effect": "In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Speed, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
                 "Tags": "Branch",
-                "Prerequisites": "Feats=Any Style Expert (Cute), Any Style Expert (Cute), Any Style Expert (Cute), Any Style Expert (Cute)",
+                "Prerequisites": "4 Style Expert (Cute) Features",
                 "Frequency": "1 AP — Swift Action, Priority (Limited)",
                 "Target": "Your Pokémon",
                 "Effect": "Your Pokémon gains either Cute Charm or Cute Tears for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
             },
             "Cute Cuddle": {
                 "Tags": "Ranked 2",
-                "Frequency": "1 AP — Special",
-                "Effect": "Your Pokémon with at least 3d6 in their Cute Stat from Poffins may activate Cute Cuddle as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Charm, Block\nRank 2:: Teeter Dance, Attract",
                 "Rank 1 Prerequisites": "Style Expert (Cute), Novice Charm",
-                "Rank 2 Prerequisites": " Expert Charm"
+                "Rank 2 Prerequisites": " Expert Charm",
+                "Frequency": "1 AP — Special",
+                "Effect": "Your Pokémon with at least 3d6 in their Cute Stat from Poffins may activate Cute Cuddle as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
+                "Rank 1": "Charm, Block",
+                "Rank 2": "Teeter Dance, Attract"
             },
             "Gleeful Steps": {
-                "Prerequisites": "Feats=Cute Cuddle \nRank 1:",
+                "Prerequisites": "Cute Cuddle Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Pokémon uses a Cute-Type Move",
                 "Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: The triggering Pokémon may immediately shift up to half their Movement speed in meters in any direction after their attack is resolved. You may activate Gleeful Steps only once per Pokémon per Scene."
             },
             "Let's Be Friends!": {
-                "Prerequisites": "Feats=Cute Cuddle \nRank 1:",
+                "Prerequisites": "Cute Cuddle Rank 1",
                 "Frequency": "Scene — Free Action",
                 "Target": "Your Pokémon",
                 "Effect": "The target may attempt to improve the disposition of a Wild Pokémon as if making a Charm Check. They roll their Cute Dice from Poffins and add their number of Cute Dice from Stats as a modifier. For example, a Pokémon with 4d6 Cute from Poffins and 3d6 Cute from Speed rolls 4d6+3 in place of a Charm Check."
@@ -1129,33 +1135,35 @@
             },
             "Style Flourish": {
                 "Tags": "Branch",
-                "Prerequisites": "Feats=Any Style Expert (Cool), Any Style Expert (Cool), Any Style Expert (Cool)",
+                "Prerequisites": "3 Style Expert (Cool) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Cool Move",
                 "Effect": "In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
                 "Tags": "Branch",
-                "Prerequisites": "Feats=Any Style Expert (Cool), Any Style Expert (Cool), Any Style Expert (Cool), Any Style Expert (Cool)",
+                "Prerequisites": "4 Style Expert (Cool) Features",
                 "Frequency": "1 AP — Swift Action, Priority (Limited)",
                 "Target": "Your Pokémon",
                 "Effect": "Your Pokémon gains either Defiant or Sniper for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
             },
             "Cool Conduct": {
                 "Tags": "Ranked 2",
-                "Frequency": "1 AP — Special",
-                "Effect": "Your Pokémon with at least 3d6 in their Cool Stat from Poffins may activate Cool Conduct as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Focus Energy, Noble Roar\nRank 2:: Roar, Double Team",
                 "Rank 1 Prerequisites": "Style Expert (Cool), Novice Command",
-                "Rank 2 Prerequisites": " Expert Command"
+                "Rank 2 Prerequisites": " Expert Command",
+                "Frequency": "1 AP — Special",
+                "Effect": "Your Pokémon with at least 3d6 in their Cool Stat from Poffins may activate Cool Conduct as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
+                "Rank 1": "Focus Energy, Noble Roar",
+                "Rank 2": "Roar, Double Team"
             },
             "Rule of Cool": {
-                "Prerequisites": "Feats=Cool Conduct \nRank 1:",
+                "Prerequisites": "Cool Conduct Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Pokémon uses a Cool-Type Move",
                 "Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: The triggering Move's Crit Range is increased by 3, and the Moves with the Interrupt Keyword may not be activated in reaction to this Move. You may activate Rule of Cool only once per Pokémon per Scene."
             },
             "Action Hero Stunt": {
-                "Prerequisites": "Feats=Cool Conduct \nRank 1:",
+                "Prerequisites": "Cool Conduct Rank 1",
                 "Frequency": "Daily x2 — Free Action",
                 "Trigger": "Your Pokémon makes a Skill Check for a dramatic, high risk action",
                 "Effect": "Instead of using a Skill for this Check, your Pokémon rolls their Cool Dice from Poffins and adds their number of Cool Dice from Stats as a modifier. For example, a Pokémon with 5d6 Cool from Poffins and 2d6 from Attack rolls 5d6+2. Skill Checks invoked by Intercepting attacks, Combat Maneuvers, Moves, and Abilities don't trigger this Feature."
@@ -1170,33 +1178,35 @@
             },
             "Style Flourish": {
                 "Tags": "Branch",
-                "Prerequisites": "Feats=Any Style Expert (Beauty), Any Style Expert (Beauty), Any Style Expert (Beauty)",
+                "Prerequisites": "3 Style Expert (Beauty) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Beauty Move",
                 "Effect": "In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Special Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
                 "Tags": "Branch",
-                "Prerequisites": "Feats=Any Style Expert (Beauty), Any Style Expert (Beauty), Any Style Expert (Beauty), Any Style Expert (Beauty)",
+                "Prerequisites": "4 Style Expert (Beauty) Features",
                 "Frequency": "1 AP — Swift Action, Priority (Limited)",
                 "Target": "Your Pokémon",
                 "Effect": "Your Pokémon gains either Gentle Vibe or Serene Grace for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
             },
             "Beautiful Ballet": {
                 "Tags": "Ranked 2",
-                "Frequency": "1 AP — Special",
-                "Effect": "Your Pokémon with at least 3d6 in their Beauty Stat from Poffins may activate Beautiful Ballet as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Captivate, Mist\nRank 2:: Lovely Kiss, Mean Look",
                 "Rank 1 Prerequisites": "Style Expert (Beauty), Novice Intuition",
-                "Rank 2 Prerequisites": " Expert Intuition"
+                "Rank 2 Prerequisites": " Expert Intuition",
+                "Frequency": "1 AP — Special",
+                "Effect": "Your Pokémon with at least 3d6 in their Beauty Stat from Poffins may activate Beautiful Ballet as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
+                "Rank 1": "Captivate, Mist",
+                "Rank 2": "Lovely Kiss, Mean Look"
             },
             "Fabulous Max": {
-                "Prerequisites": "Feats=Beautiful Ballet \nRank 1:",
+                "Prerequisites": "Beautiful Ballet Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Pokémon uses a Beauty-Type Move",
                 "Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: The move gains the keyword Burst 1 if Melee, or Blast 2 if ranged. If the move is already a Burst, Blast, or Cone, increase the size of the Move's Range by 1. This does not cause a target to be hit multiple times. You may activate Fabulous Max only once per Pokémon per Scene."
             },
             "Enticing Beauty": {
-                "Prerequisites": "Feats=Beautiful Ballet \nRank 1:",
+                "Prerequisites": "Beautiful Ballet Rank 1",
                 "Frequency": "Scene — Free Action",
                 "Trigger": "Your Pokémon",
                 "Effect": "The target acts as a Bait item as if it had the Alluring Capability. Add its number of Beauty Dice from Poffins as a Bonus to all d20 lure rolls."
