@@ -2,24 +2,32 @@ import json
 from pathlib import Path
 import re
 
-def is_ranked_field(key):
-    return re.fullmatch(r"Rank \d+ (Prerequisites|Effect)", key)
+def is_ranked_prereq(key):
+    return re.fullmatch(r"Rank \d+ Prerequisites", key)
+
+def is_ranked_effect(key):
+    return re.fullmatch(r"Rank \d+ Effect", key)
 
 def deep_insert_ranked_fields(data, updates):
     """
     Recursively search `data` and insert matching keys from `updates`.
-    Removes old 'Prerequisites' and 'Effect' keys when inserting ranked ones.
+    Removes 'Effect' and/or 'Prerequisites' only if ranked versions are present.
     """
     if isinstance(data, dict):
         for key, value in data.items():
             if key in updates and isinstance(value, dict) and isinstance(updates[key], dict):
-                # Remove generic keys
-                value.pop("Prerequisites", None)
-                value.pop("Effect", None)
-                # Only insert ranked fields
-                for rk, rv in updates[key].items():
-                    if is_ranked_field(rk):
-                        value[rk] = rv
+                ranked_effects = {k: v for k, v in updates[key].items() if is_ranked_effect(k)}
+                ranked_prereqs = {k: v for k, v in updates[key].items() if is_ranked_prereq(k)}
+
+                # Only remove if we're adding replacements
+                if ranked_effects:
+                    value.pop("Effect", None)
+                    value.update(ranked_effects)
+
+                if ranked_prereqs:
+                    value.pop("Prerequisites", None)
+                    value.update(ranked_prereqs)
+
             else:
                 deep_insert_ranked_fields(value, updates)
 

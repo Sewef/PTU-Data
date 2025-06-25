@@ -758,7 +758,7 @@
         "Attack": {
             "Stat Ace": {
                 "Tags": "Class, Branch",
-                "Prerequisites": "Ace Trainer or Style Expert (Cool), 1 Pokémon with the Attack stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Attack stat of 20 or higher, Novice Command or Focus",
+                "Prerequisites": "1=Feats=Ace Trainer, Style Expert (Cool), Skills=Command=3, Focus=3, Other=1 Pokémon with 15 or more Attack, 2=Skills=Command=3, Focus=3, Other=3 Pokémon with 20 or more Attack",
                 "Freq": "Static",
                 "Effect": "Your Pokémon have their Base Attack increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Attack increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Attack, and you do not need to \"correct\" Stats due to this inflated Stat Value."
             },
@@ -809,7 +809,7 @@
         "Defense": {
             "Stat Ace": {
                 "Tags": "Class, Branch",
-                "Prerequisites": "Ace Trainer or Style Expert (Tough), 1 Pokémon with the Defense stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Defense stat of 20 or higher, Novice Command or Focus",
+                "Prerequisites": "1=Feats=Ace Trainer, Style Expert (Tough), Skills=Command=3, Focus=3, Other=1 Pokémon with 15 or more Defense, 2=Skills=Command=3, Focus=3, Other=3 Pokémon with 20 or more Defense",
                 "Freq": "Static",
                 "Effect": "Your Pokémon have their Base Defense increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Defense increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Defense, and you do not need to \"correct\" Stats due to this inflated Stat Value."
             },
@@ -860,7 +860,7 @@
         "Special Attack": {
             "Stat Ace": {
                 "Tags": "Class, Branch",
-                "Prerequisites": "Ace Trainer or Style Expert (Beauty), 1 Pokémon with the Special Attack stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Special Attack stat of 20 or higher, Novice Command or Focus",
+                "Prerequisites": "1=Feats=Ace Trainer, Style Expert (Beauty), Skills=Command=3, Focus=3, Other=1 Pokémon with 15 or more Special Attack, 2=Skills=Command=3, Focus=3, Other=3 Pokémon with 20 or more Special Attack",
                 "Freq": "Static",
                 "Effect": "Your Pokémon have their Base Special Attack increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Special Attack increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Special Attack, and you do not need to \"correct\" Stats due to this inflated Stat Value."
             },
@@ -911,7 +911,7 @@
         "Special Defense": {
             "Stat Ace": {
                 "Tags": "Class, Branch",
-                "Prerequisites": "Ace Trainer or Style Expert (Smart), 1 Pokémon with the Special Defense stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Special Defense stat of 20 or higher, Novice Command or Focus",
+                "Prerequisites": "1=Feats=Ace Trainer, Style Expert (Smart), Skills=Command=3, Focus=3, Other=1 Pokémon with 15 or more Special Defense, 2=Skills=Command=3, Focus=3, Other=3 Pokémon with 20 or more Special Defense",
                 "Freq": "Static",
                 "Effect": "Your Pokémon have their Base Special Defense increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Special Defense increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Special Defense, and you do not need to \"correct\" Stats due to this inflated Stat Value."
             },
@@ -962,7 +962,7 @@
         "Speed": {
             "Stat Ace": {
                 "Tags": "Class, Branch",
-                "Prerequisites": "Ace Trainer or Style Expert (Cute), 1 Pokémon with the Speed stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Speed stat of 20 or higher, Novice Command or Focus",
+                "Prerequisites": "1=Feats=Ace Trainer, Style Expert (Cute), Skills=Command=3, Focus=3, Other=1 Pokémon with 15 or more Speed, 2=Skills=Command=3, Focus=3, Other=3 Pokémon with 20 or more Speed",
                 "Freq": "Static",
                 "Effect": "Your Pokémon have their Base Speed increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Speed increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Speed, and you do not need to \"correct\" Stats due to this inflated Stat Value."
             },
