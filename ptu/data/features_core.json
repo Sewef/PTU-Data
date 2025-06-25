@@ -2193,93 +2193,365 @@
             "Effect": "Choose two Researcher Fields of Study. You may take Features from those Fields with this instance of Researcher. Gain one Feature from a chosen Researcher Field for which you qualify."
         },
         "General": {
-            "Breadth of Knowledge": "Prerequisites=Skills=General Education=3, Freq=Static, Effect=You gain three Skill Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet.",
-            "Live and Learn": "Prerequisites=Skills=General Education=4, Freq=Daily x3 — Free Action, Trigger=You or your Pokémon miss with an attack, fail a Skill Check, or fail a Save Check, Effect= Add half of your General Education Rank to the next roll of the same type that the triggering user makes.",
-            "Instant Analysis": "Prerequisites=Skills=General Education=5, Freq=At-Will — Extended Action, Target=Your Pokémon with at least 2 Tutor Points remaining, Effect=Your Pokémon loses 2 Tutor Points and gains the Forewarn Ability.",
-            "Echoes of the Future": "Prerequisites=Skills=General Education=6, Feats=Breadth of Knowledge, Freq=Daily x2 — Free Action, Trigger=You or your Pokémon make a roll, Effect=You may roll twice and keep the best result."
+            "Breadth of Knowledge": {
+                "Prerequisites": "Skills General Education 3",
+                "Frequency": "Static",
+                "Effect": "You gain three Skill Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet."
+            },
+            "Live and Learn": {
+                "Prerequisites": "Skills General Education 4",
+                "Frequency": "Daily x3 — Free Action",
+                "Trigger": "You or your Pokémon miss with an attack, fail a Skill Check, or fail a Save Check",
+                "Effect": "Add half of your General Education Rank to the next roll of the same type that the triggering user makes."
+            },
+            "Instant Analysis": {
+                "Prerequisites": "Skills General Education 5",
+                "Frequency": "At-Will — Extended Action",
+                "Target": "Your Pokémon with at least 2 Tutor Points remaining",
+                "Effect": "Your Pokémon loses 2 Tutor Points and gains the Forewarn Ability."
+            },
+            "Echoes of the Future": {
+                "Prerequisites": "Skills General Education 6, Feats Breadth of Knowledge",
+                "Frequency": "Daily x2 — Free Action",
+                "Trigger": "You or your Pokémon make a roll",
+                "Effect": "You may roll twice and keep the best result."
+            }
         },
         "General_May2015": {
-            "Breadth of Knowledge": "Prerequisites=Skills=General Education=3, Freq=Static, Effect=You gain three Skill Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet.",
-            "Bookworm": "Prerequisites=Feats=Breadth of Knowledge, Freq=Static, Effect=You gain X Study Points, where X is equal to 2 plus one more for every other General Research Feature you have. You may Drain Study Points to benefit from studying Books, instead of Draining your Action Points. Study Points are restored to your maximum after an Extended Rest, just like Action Points.",
-            "Well Read": "Prerequisites=Feats=Bookworm, Skills=General Education=5, Freq=Static, Effect=You may use your General Education Rank to qualify for Books, instead of the Book's usual Skill Prerequisites, provided you have the normal Prerequisite at at least Novice Rank.",
-            "Echoes of the Future": "Prerequisites=Skills=General Education=6, Feats=Breadth of Knowledge, Freq=Daily x2 — Free Action, Trigger=You or your Pokémon make a roll, Effect=You may roll twice and keep the best result."
+            "Breadth of Knowledge": {
+                "Prerequisites": "Skills General Education 3",
+                "Frequency": "Static",
+                "Effect": "You gain three Skill Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet."
+            },
+            "Bookworm": {
+                "Prerequisites": "Feats Breadth of Knowledge",
+                "Frequency": "Static",
+                "Effect": "You gain X Study Points, where X is equal to 2 plus one more for every other General Research Feature you have. You may Drain Study Points to benefit from studying Books, instead of Draining your Action Points. Study Points are restored to your maximum after an Extended Rest, just like Action Points."
+            },
+            "Well Read": {
+                "Prerequisites": "Feats Bookworm, Skills General Education 5",
+                "Frequency": "Static",
+                "Effect": "You may use your General Education Rank to qualify for Books, instead of the Book's usual Skill Prerequisites, provided you have the normal Prerequisite at at least Novice Rank."
+            },
+            "Echoes of the Future": {
+                "Prerequisites": "Skills General Education 6, Feats Breadth of Knowledge",
+                "Frequency": "Daily x2 — Free Action",
+                "Trigger": "You or your Pokémon make a roll",
+                "Effect": "You may roll twice and keep the best result."
+            }
         },
         "Apothecary": {
-            "Apothecary": "Prerequisites=Skills=Medicine Education=3, Freq=At-Will — Extended Action, Effect=You gain use any Apothecary Recipe for which you qualify.",
-            "Patch Cure": "Prerequisites=Feats=Apothecary, Skills=Medicine Education=4, Freq=At-Will — Extended Action, Target=A Restorative Item, Effect=You distill the target, gaining 3 Restorative Patches. Restorative Patches have the same effect as the items from which they were created, but can only be applied as an Extended Action.",
-            "Medical Techniques": "Prerequisites=Feats=Patch Cure, Skills=Medicine Education=5, Freq=1 AP — Swift Action, Trigger=You apply a Restorative Item, Effect=The target gains a Tick of Hit Points, plus an additional amount of Hit Points equal to your Medicine Education Rank.",
-            "Medicinal Blend": "Prerequisites=Feats=Apothecary, Skills=Medicine Education=6, Freq=At-Will — Extended Action, Trigger=You or your Pokémon make a roll, Effect=Ingredients: Two Restoratives, or a Restorative and an X-Item\nEffect: You fuse the two Ingredients, creating an Item that has the properties of both. If you choose two Restoratives, they cannot be Restoratives with the same effect (you could not for example, mix a Potion and a Super Potion). If a Restorative Patch is used as an Ingredient, the resulting item can only be used as an Extended Action."
+            "Apothecary": {
+                "Prerequisites": "Skills Medicine Education 3",
+                "Frequency": "At-Will — Extended Action",
+                "Effect": "You gain use any Apothecary Recipe for which you qualify."
+            },
+            "Patch Cure": {
+                "Prerequisites": "Feats Apothecary, Skills Medicine Education 4",
+                "Frequency": "At-Will — Extended Action",
+                "Target": "A Restorative Item",
+                "Effect": "You distill the target, gaining 3 Restorative Patches. Restorative Patches have the same effect as the items from which they were created, but can only be applied as an Extended Action."
+            },
+            "Medical Techniques": {
+                "Prerequisites": "Feats Patch Cure, Skills Medicine Education 5",
+                "Frequency": "1 AP — Swift Action",
+                "Trigger": "You apply a Restorative Item",
+                "Effect": "The target gains a Tick of Hit Points, plus an additional amount of Hit Points equal to your Medicine Education Rank."
+            },
+            "Medicinal Blend": {
+                "Prerequisites": "Feats Apothecary, Skills Medicine Education 6",
+                "Frequency": "At-Will — Extended Action",
+                "Trigger": "You or your Pokémon make a roll",
+                "Effect": "Ingredients: Two Restoratives, or a Restorative and an X-Item\nEffect: You fuse the two Ingredients, creating an Item that has the properties of both. If you choose two Restoratives, they cannot be Restoratives with the same effect (you could not for example, mix a Potion and a Super Potion). If a Restorative Patch is used as an Ingredient, the resulting item can only be used as an Extended Action."
+            }
         },
         "Apothecary_Sept2015": {
-            "Apothecary": "Prerequisites=Skills=Medicine Education=3, Freq=At-Will — Extended Action, Effect=You gain use any Apothecary Recipe for which you qualify.",
-            "Patch Cure": "Prerequisites=Feats=Apothecary, Skills=Medicine Education=4, Freq=At-Will — Extended Action, Target=A Restorative Item, Effect=You distill the target, gaining 3 Restorative Patches. Restorative Patches have the same effect as the items from which they were created, but can only be applied as an Extended Action.",
-            "Affliction Techniques": "Prerequisites=Feats=Patch Cure, Skills=Medicine Education=5, Freq=1 AP — Free Action, Trigger=You use a Antidote, Burn Heal, Ice Heal, or Paralyze Heal, Effect=If the target successfully cures the target of its linked Status Affliction, the item has additional effects.\n»Antidote: The target gains +1 Special Defense Combat Stage.\n» Burn Heal The target gains +1 Defense Combat Stage.\n»Ice Heal: The target gains +1 Attack or Special Attack Combat Stage\n»Paralyze Heal:The target gains +1 Speed Combat Stage.",
-            "Medicinal Blend": "Prerequisites=Feats=Apothecary, Skills=Medicine Education=6, Freq=At-Will — Extended Action, Trigger=You or your Pokémon make a roll, Effect=Ingredients: Two Restoratives, or a Restorative and an X-Item\nEffect: You fuse the two Ingredients, creating an Item that has the properties of both. If you choose two Restoratives, they cannot be Restoratives with the same effect (you could not for example, mix a Potion and a Super Potion). If a Restorative Patch is used as an Ingredient, the resulting item can only be used as an Extended Action."
+            "Apothecary": {
+                "Prerequisites": "Skills Medicine Education 3",
+                "Frequency": "At-Will — Extended Action",
+                "Effect": "You gain use any Apothecary Recipe for which you qualify."
+            },
+            "Patch Cure": {
+                "Prerequisites": "Feats Apothecary, Skills Medicine Education 4",
+                "Frequency": "At-Will — Extended Action",
+                "Target": "A Restorative Item",
+                "Effect": "You distill the target, gaining 3 Restorative Patches. Restorative Patches have the same effect as the items from which they were created, but can only be applied as an Extended Action."
+            },
+            "Affliction Techniques": {
+                "Prerequisites": "Feats Patch Cure, Skills Medicine Education 5",
+                "Frequency": "1 AP — Free Action",
+                "Trigger": "You use a Antidote, Burn Heal, Ice Heal, or Paralyze Heal",
+                "Effect": "If the target successfully cures the target of its linked Status Affliction, the item has additional effects.\n» Antidote: The target gains +1 Special Defense Combat Stage.\n» Burn Heal The target gains +1 Defense Combat Stage.\n» Ice Heal: The target gains +1 Attack or Special Attack Combat Stage\n» Paralyze Heal:The target gains +1 Speed Combat Stage."
+            },
+            "Medicinal Blend": {
+                "Prerequisites": "Feats Apothecary, Skills Medicine Education 6",
+                "Frequency": "At-Will — Extended Action",
+                "Trigger": "You or your Pokémon make a roll",
+                "Effect": "Ingredients: Two Restoratives, or a Restorative and an X-Item\nEffect: You fuse the two Ingredients, creating an Item that has the properties of both. If you choose two Restoratives, they cannot be Restoratives with the same effect (you could not for example, mix a Potion and a Super Potion). If a Restorative Patch is used as an Ingredient, the resulting item can only be used as an Extended Action."
+            }
         },
         "Artificer": {
-            "Crystal Artificer": "Prerequisites=Edges=Gem Lore, Freq=At-Will — Extended Action, Effect=You may use any Crystal Artificer Recipe for which you qualify.",
-            "Crystal Resonance": "Prerequisites=Feats=Crystal Artificer, Edges=Skill Stunt (Dowsing), Freq=Static, Effect=You roll an additional 3d6 when determining how many Shards you find when Dowsing.",
-            "Rainbow Light": "Prerequisites=Feats=Crystal Artificer, Skills=Occult Education=5, Freq=2 AP — Standard Action, Trigger=You are wearing a Rainbow Gem, Effect=You create a Rainbow lasting one full round. While this Rainbow persists, the Effect Range of all Allies is increased by +3.",
-            "Fistful of Force": "Prerequisites=Feats=Crystal Artificer, Skills=Occult Education=6, Freq=Scene — Standard Action, Trigger=You must have a Shard in your Main Hand or Off-Hand to use Fistful of Force., Effect=You may destroy the Shard to use the Move Judgment. Judgment's Type must be one of the Types associated with the used Shard. Instead of adding your Special Attack when using this attack, you may choose to add your Occult Education Rank tripled."
+            "Crystal Artificer": {
+                "Prerequisites": "Edges=Gem Lore",
+                "Frequency": "At-Will — Extended Action",
+                "Effect": "You may use any Crystal Artificer Recipe for which you qualify."
+            },
+            "Crystal Resonance": {
+                "Prerequisites": "Feats=Crystal Artificer, Edges=Skill Stunt (Dowsing)",
+                "Frequency": "Static",
+                "Effect": "You roll an additional 3d6 when determining how many Shards you find when Dowsing."
+            },
+            "Rainbow Light": {
+                "Prerequisites": "Feats=Crystal Artificer, Skills=Occult Education=5",
+                "Frequency": "2 AP — Standard Action",
+                "Trigger": "You are wearing a Rainbow Gem",
+                "Effect": "You create a Rainbow lasting one full round. While this Rainbow persists, the Effect Range of all Allies is increased by +3."
+            },
+            "Fistful of Force": {
+                "Prerequisites": "Feats=Crystal Artificer, Skills=Occult Education=6",
+                "Frequency": "Scene — Standard Action",
+                "Trigger": "You must have a Shard in your Main Hand or Off-Hand to use Fistful of Force.",
+                "Effect": "You may destroy the Shard to use the Move Judgment. Judgment's Type must be one of the Types associated with the used Shard. Instead of adding your Special Attack when using this attack, you may choose to add your Occult Education Rank tripled."
+            }
         },
         "Botany": {
-            "Seed Bag": "Prerequisites=\nRank 1:Edges=Green Thumb, Skills=General Education=4, Survival=4\nRank 2: Skills=General Education=6, Survival=6, Freq=X Daily — Extended Action, Target=A Willing Pokémon, Effect=\nRank 1:You become adept at harvesting Seeds and Spores from Pokémon. You may target a willing Grass-Type Pokémon that knows Sleep Powder, Stun Spore, or Poison Powder. Add this move to your Move list for the remainder of the day. You may not use Seed Bag to have multiple instances of the same move in your Move list. Seed Bag may be used twice per day per Rank.\nRank 2:You may also harvest Cotton Spore, Leech Seed, Spore, or Worry Seed.",
-            "Top Tier Berries": "Prerequisites=Edges=Green Thumb, Freq=Static, Effect=You may grow additional Berries and Herbs, depending on the higher of your General Education or Survival Rank.\n» Novice: You may grow Tier 2 Berries\n» Adept: You may grow Mental Herbs, Power Herbs, White Herbs, and Tiny Mushrooms.\n» Expert: You may grow Revival Herbs, Energy Roots,Big Mushrooms, and Tier 3 Berries\n» Master: Increase the Soil Quality of all your plants by +1.",
-            "Herb Lore": "Prerequisites=Feats=Seed Bag \nRank 1:, Freq=Static, Effect=You may create Energy Powder, Heal Powder, or Poultices from ingredients, as listed below.\nEnergy Powder: A Sitrus Berry or Tiny Mushroom creates x2 Energy Powders. An Energy Root creates x3 Energy Powders.\nHeal Powder: A Lum Berry or Big Mushroom creates x2 Heal Powders. A Revival Herb creates x3 Heal Powders\nPoultice: x1 Energy Powder and x1 Heal Powder create x3 Poultices."
+            "Seed Bag": {
+                "Rank 1 Prerequisites": "Edges=Green Thumb, Skills=General Education=4, Survival=4",
+                "Rank 2 Prerequisites": "Skills=General Education=6, Survival=6",
+                "Frequency": "X Daily — Extended Action",
+                "Target": "A Willing Pokémon",
+                "Rank 1 Effect": "You become adept at harvesting Seeds and Spores from Pokémon. You may target a willing Grass-Type Pokémon that knows Sleep Powder, Stun Spore, or Poison Powder. Add this move to your Move list for the remainder of the day. You may not use Seed Bag to have multiple instances of the same move in your Move list. Seed Bag may be used twice per day per Rank.",
+                "Rank 2 Effect": "You may also harvest Cotton Spore, Leech Seed, Spore, or Worry Seed."
+            },
+            "Top Tier Berries": {
+                "Prerequisites": "Edges=Green Thumb",
+                "Frequency": "Static",
+                "Effect": "You may grow additional Berries and Herbs, depending on the higher of your General Education or Survival Rank.\n» Novice: You may grow Tier 2 Berries\n» Adept: You may grow Mental Herbs, Power Herbs, White Herbs, and Tiny Mushrooms.\n» Expert: You may grow Revival Herbs, Energy Roots,Big Mushrooms, and Tier 3 Berries\n» Master: Increase the Soil Quality of all your plants by +1."
+            },
+            "Herb Lore": {
+                "Prerequisites": "Feats=Seed Bag Rank 1",
+                "Frequency": "Static",
+                "Effect": "You may create Energy Powder, Heal Powder, or Poultices from ingredients, as listed below.\nEnergy Powder: A Sitrus Berry or Tiny Mushroom creates x2 Energy Powders. An Energy Root creates x3 Energy Powders.\nHeal Powder: A Lum Berry or Big Mushroom creates x2 Heal Powders. A Revival Herb creates x3 Heal Powders\nPoultice: x1 Energy Powder and x1 Heal Powder create x3 Poultices."
+            }
         },
         "Chemistry": {
-            "Chemist": "Prerequisites=Edges=Repel Crafter, Freq=At-Will — Extended Action, Effect=You may craft any Chemistry Recipe for which you qualify using your Chemistry Set.",
-            "Chemical Warfare": "Prerequisites=Feats=Chemist, Skills=Technology Education=4, Freq=Scene x2 — Free Action, Trigger=You throw a Pester Ball, Effect=The Pester Ball creates a Blast 2, affecting all targets in the area.",
-            "Caustic Chemistry": "Prerequisites=Feats=Chemist, Skills=Technology Education=5, Freq=1 AP — Swift Action, Trigger=You hit with a Pester Ball or apply a Repel to a Pokémon, Effect=Make a Technology Education Roll. All targets affected by this Feature's trigger lose Hit Points equal to your roll. This may only affect a target once per Scene.",
-            "Playing God": "Prerequisites=Feats=Chemist, Skills=Technology Education=5, Freq=At-Will — Extended Action, Effect=Cost: $3500\nChoose Castform, Grimer, Koffing, Magnemite, Porygon, Solosis, Trubbish, or Voltorb. Using your chemistry set, you create an artificial Egg of the Chosen Pokémon, that hatches within a day. The resulting Pokemon is born at level 5, with the Nature and Ability of your choice (Abilities chosen from its species' Basic Abilities). Additionally, you may enhance the Pokemon in several ways. Choose a number of upgrades below equal to your Technology Education Rank.\n» The Pokémon is of an unusual coloration, gaining a +2d6 Bonus to the Introduction Stage of a Contest toward a single Contest Stat.\n The Pokémon adds a Move from its Egg Move or Move Tutor List to its Inheritance List. This may be performed up to 3 times.\n» Increase one of the Pokémon's Base Stats by +1. Thiscounts as use of a Vitamin. This may be performed up to 5 times."
+            "Chemist": {
+                "Prerequisites": "Edges=Repel Crafter",
+                "Frequency": "At-Will — Extended Action",
+                "Effect": "You may use any Chemistry Recipe for which you qualify using your Chemistry Set."
+            },
+            "Chemical Warfare": {
+                "Prerequisites": "Feats=Chemist, Skills=Technology Education=4",
+                "Frequency": "Scene x2 — Free Action",
+                "Trigger": "You throw a Pester Ball",
+                "Effect": "The Pester Ball creates a Blast 2, affecting all targets in the area."
+            },
+            "Caustic Chemistry": {
+                "Prerequisites": "Feats=Chemist, Skills=Technology Education=5",
+                "Frequency": "1 AP — Swift Action",
+                "Trigger": "You hit with a Pester Ball or apply a Repel to a Pokémon",
+                "Effect": "Make a Technology Education Roll. All targets affected by this Feature's trigger lose Hit Points equal to your roll. This may only affect a target once per Scene."
+            },
+            "Playing God": {
+                "Prerequisites": "Feats=Chemist, Skills=Technology Education=5",
+                "Frequency": "At-Will — Extended Action",
+                "Effect": "Cost: $3500\nChoose Castform, Grimer, Koffing, Magnemite, Porygon, Solosis, Trubbish, or Voltorb. Using your chemistry set, you create an artificial Egg of the Chosen Pokémon, that hatches within a day. The resulting Pokémon is born at level 5, with the Nature and Ability of your choice (Abilities chosen from its species' Basic Abilities). Additionally, you may enhance the Pokémon in several ways. Choose a number of upgrades below equal to your Technology Education Rank.\n» The Pokémon is of an unusual coloration, gaining a +2d6 Bonus to the Introduction Stage of a Contest toward a single Contest Stat.\n The Pokémon adds a Move from its Egg Move or Move Tutor List to its Inheritance List. This may be performed up to 3 times.\n» Increase one of the Pokémon's Base Stats by +1. This counts as use of a Vitamin. This may be performed up to 5 times."
+            }
         },
         "Climatology": {
-            "Climatology": "Prerequisites=Skills=Survival=3, Freq=Static, Effect=You gain the Overcoat Ability.",
-            "Climate Control": "Prerequisites=Feats=Climatology, Freq=1 AP — Free Action, Trigger=A Move or Ability creates a Weather Effect while non-standard Weather is already in effect, Effect=The triggering Weather Effect does not replace the already extant Weather in effect; both exist simultaneously on the field. If a new Weather effect is placed on the field after the two that are out, both are replaced by the third, unless you activate this Feature again to replace only one.",
-            "Weather Systems": "Prerequisites=Feats=Chemist, Skills=Survival=5, Freq=At-Will — Extended Action, Target=Your Pokemon with at least 2 Tutor Point, Effect=Your Pokemon loses 2 Tutor Points, and learns your choice of Hail, Rain Dance, Sandstorm, or Sunny Day. The target must be able to learn the chosen Move through Level-Up, TM, or Tutor Moves. If the target has the chosen Move in their Level-Up List, Weather Systems costs no Tutor Points.",
-            "Extreme Weather": "Prerequisites=Feats=Climate Control, Skills=Survival=6, Freq=Daily x3 — Free Action, Trigger=You or your Pokémon create a Weather Condition, Effect=The Weather is particularly intense and has additional effects.\n» Hail: All Trainers and Pokémon that take Hail Damage take a -5 Penalty to all Damage Rolls.\n» Rain: All Trainers and Pokémon that are not Water or Grass typed are Slowed.\n» Sandstorm: All Trainers and Pokémon that takeSandstorm damage take a -2 Penalty to Accuracy Rolls.\n» Sun: Trainers and Pokémon that are not Fire or Grass Typed are Suppressed."
+            "Climatology": {
+                "Prerequisites": "Skills=Survival=3",
+                "Frequency": "Static",
+                "Effect": "You gain the Overcoat Ability."
+            },
+            "Weather Control": {
+                "Prerequisites": "Feats=Climatology",
+                "Frequency": "1 AP — Free Action",
+                "Trigger": "A Move or Ability creates a Weather Effect while non-standard Weather is already in effect",
+                "Effect": "The triggering Weather Effect does not replace the already extant Weather in effect; both exist simultaneously on the field. If a new Weather effect is placed on the field after the two that are out, both are replaced by the third, unless you activate this Feature again to replace only one."
+            },
+            "Weather Systems": {
+                "Prerequisites": "Feats=Chemist, Skills=Survival=5",
+                "Frequency": "At-Will — Extended Action",
+                "Target": "Your Pokémon with at least 2 Tutor Points",
+                "Effect": "Your Pokémon loses 2 Tutor Points, and learns your choice of Hail, Rain Dance, Sandstorm, or Sunny Day. The target must be able to learn the chosen Move through Level-Up, TM, or Tutor Moves. If the target has the chosen Move in their Level-Up List, Weather Systems costs no Tutor Points."
+            },
+            "Extreme Weather": {
+                "Prerequisites": "Feats=Climate Control, Skills=Survival=6",
+                "Frequency": "Daily x3 — Free Action",
+                "Trigger": "You or your Pokémon create a Weather Condition",
+                "Effect": "The Weather is particularly intense and has additional effects.\n» Hail: All Trainers and Pokémon that take Hail Damage take a -5 Penalty to all Damage Rolls.\n» Rain: All Trainers and Pokémon that are not Water or Grass typed are Slowed.\n» Sandstorm: All Trainers and Pokémon that take Sandstorm damage take a -2 Penalty to Accuracy Rolls.\n» Sun: Trainers and Pokémon that are not Fire or Grass Typed are Suppressed."
+            }
         },
         "Occultism": {
-            "Witch Hunter": "Prerequisites=Skills=Occult Education=3, Freq=Static, Effect=You gain the \"Psionic Sight\" Feature, even if you do not meet the prerequisites. If you already had the Psionic Sight Feature, you instead gain another Feature for which you qualify.",
-            "Psionic Analysis": "Prerequisites=Feats=Witch Hunter, Skills=Occult Education=6, Freq=Scene — Extended Action, Effect=You are able to analyze Psychic Residue and can determine the following information about the Trainer or Pokémon that left the residue:\n» Whether they are a Human or a Pokémon\n» Which Psychic-Type Moves they know\n» If they're Human, which of the following Class Features they have: Telepath, Telekinetic, Warper",
-            "Mental Resistance": "Prerequisites=Feats=Witch Hunter, Freq=Static, Effect=You gain the Mindlock Capability and 10 Damage Reduction against Special Psychic, Ghost, and Dark-Type damage.",
-            "Immutable Mind": "Prerequisites=Feats=Mental Resistance, Skills=Occult Education=5, Freq=Scene — Free Action, Trigger=You're hit by a Psychic, Ghost, or Dark-Type Move, Effect=If the triggering Move was a Status-Class Move, the Move fails. If the Triggering Move was a Damaging Move with a Secondary Effect that triggers on a certain roll, you are immune to the secondary effect."
+            "Witch Hunter": {
+                "Prerequisites": "Skills=Occult Education=3",
+                "Frequency": "Static",
+                "Effect": "You gain the Psionic Sight Feature, even if you do not meet the prerequisites. If you already had the Psionic Sight Feature, you instead gain another Feature for which you qualify."
+            },
+            "Psionic Analysis": {
+                "Prerequisites": "Feats=Witch Hunter, Skills=Occult Education=6",
+                "Frequency": "Scene — Extended Action",
+                "Effect": "You are able to analyze Psychic Residue and can determine the following information about the Trainer or Pokémon that left the residue:\n» Whether they are a Human or a Pokémon\n» Which Psychic-Type Moves they know\n» If they're Human, which of the following Class Features they have: Telepath, Telekinetic, Warper"
+            },
+            "Mental Resistance": {
+                "Prerequisites": "Feats=Witch Hunter",
+                "Frequency": "Static",
+                "Effect": "You gain the Mindlock Capability and 10 Damage Reduction against Special Psychic, Ghost, and Dark-Type damage."
+            },
+            "Immutable Mind": {
+                "Prerequisites": "Feats=Mental Resistance, Skills=Occult Education=5",
+                "Frequency": "Scene — Free Action",
+                "Trigger": "You're hit by a Psychic, Ghost, or Dark-Type Move",
+                "Effect": "If the triggering Move was a Status-Class Move, the Move fails. If the Triggering Move was a Damaging Move with a Secondary Effect that triggers on a certain roll, you are immune to the secondary effect."
+            }
         },
         "Paleontology": {
-            "Fossil Restoration": "Prerequisites=Edges=Paleontologist, Skills=Pokémon Education=3, Freq=At-Will — Extended Action, Target=A Fossil you are reviving, Effect=The resulting Pokémon is born with 2 fewer Tutor Points, and gains its second Basic Ability. If it has only has one Basic Ability, it gains one of its Advanced Abilities, chosen by the GM. This Feature does not affect how the Pokémon continues to gain Abilities.",
-            "Ancient Heritage": "Prerequisites=Feats=Fossil Restoration, Freq=At-Will — Extended Action, Target=Your Fossil Pokémon with at least 2 Tutor Points remaining, Effect=The target loses 2 Tutor Points and learns Ancient Power. If the target has Ancient Power in its Level-Up List, Ancient Heritage costs no Tutor Points. As a static effect, whenever your Pokémon use Ancient Power, its activated effect occurs on 18+ and you may always choose whether it deals Physical or Special Damage, using the appropriate attack Stat.",
-            "Genetic Memory": "Prerequisites=Feats=Ancient Heritage, Skills=Pokémon Education=5, Freq=Daily x2 — Extended Action, Target=Your Fossil Pokémon with at least 2 Tutor Points remaining, Effect=The target loses 2 Tutor Points and learns any Move from its Egg Move or Tutor Move List. Genetic Memory may target a Pokémon only twice: once with a Tutor Move and once with an Egg Move. Egg Moves tutored this way do not count against the limit of 3 for TM and Tutor Moves.",
-            "Prehistoric Bond": "Prerequisites=Feats=Fossil Restoration, Skills=Pokémon Education=5, Freq=At-Will — Extended Action, Target=The remains of a Fossil you revived, Effect=You also produce a Held Item from the remnants of the Fossil. The effect of this Held Item is based on the highest Base Stat of the individual Pokémon being Revived, counting the effects of Nature but no other effects that alter Base Stats. If there is a tie, the GM decides which Base Stat is used. This Held Item may only be used by Pokémon revived from Fossils"
+            "Fossil Restoration": {
+                "Prerequisites": "Edges=Paleontologist, Skills=Pokémon Education=3",
+                "Frequency": "At-Will — Extended Action",
+                "Target": "A Fossil you are reviving",
+                "Effect": "You may revive a Fossil into a Fossil Pokémon. The resulting Pokémon is born with 2 Tutor Points, and gains its first Basic Ability. If it has only one Basic Ability, it gains one of its Advanced Abilities, chosen by the GM. This Feature does not affect how the Pokémon continues to gain Abilities."
+            },
+            "Ancient Heritage": {
+                "Prerequisites": "Feats=Fossil Restoration",
+                "Frequency": "At-Will — Extended Action",
+                "Target": "Your Fossil Pokémon with at least 2 Tutor Points remaining",
+                "Effect": "The target loses 2 Tutor Points and learns Ancient Power. If the target has Ancient Power in its Level-Up List, Ancient Heritage costs no Tutor Points. As a static effect, whenever your Pokémon use Ancient Power, its activated effect occurs on 18+ and you may always choose whether it deals Physical or Special Damage, using the appropriate attack Stat."
+            },
+            "Genetic Memory": {
+                "Prerequisites": "Feats=Ancient Heritage, Skills=Pokémon Education=5",
+                "Frequency": "Daily x2 — Extended Action",
+                "Target": "Your Fossil Pokémon with at least 2 Tutor Points remaining",
+                "Effect": "The target loses 2 Tutor Points and learns any Move from its Egg Move or Tutor Move List. Genetic Memory may target a Pokémon only twice: once with a Tutor Move and once with an Egg Move. Egg Moves tutored this way do not count against the limit of 3 for TM and Tutor Moves."
+            },
+            "Prehistoric Bond": {
+                "Prerequisites": "Feats=Fossil Restoration, Skills=Pokémon Education=5",
+                "Frequency": "At-Will — Extended Action",
+                "Target": "The remains of a Fossil you revived",
+                "Effect": "You also produce a Held Item from the remnants of the Fossil. The effect of this Held Item is based on the highest Base Stat of the individual Pokémon being Revived, counting the effects of Nature but no other effects that alter Base Stats. If there is a tie, the GM decides which Base Stat is used. This Held Item may only be used by Pokémon revived from Fossils."
+            }
         },
         "Pokémon Caretaking": {
-            "Pusher": "Prerequisites=Skills=Pokémon Education=3, Freq=Static, Effect=Your Pokémon gain the Basic Ranged Attacks, Aura Pulse, Enticing Bait, Extended Invisibility, Far Reading, Precise Threadings, Seismometer, TK Mastery, and Trail Sniffer Poke Edges automatically if they qualify for them, without having to invest any Tutor Points.",
-            "This One's Special, I Know It": "Prerequisites=Feats=Pusher, Freq=Special — Free Action, Target=A hatching egg., Effect=The Pokémon is born with special qualities, determined by the GM. This Feature may be activated one time per Pokémon Education Rank above Untrained.",
-            "Skill Trainer": "Prerequisites=Feats=Pusher, Freq=At-Will — Free Action, Trigger=You Train your Pokémon, Effect=For each of your Pokémon that has been Trained during this time, choose a Skill; that Skill becomes Pushed until an Extended Rest is taken. Pokémon rolls +1d6 with Pushed Skills, unless that would cause you to roll more than 6d6; if so, that Pokémon rolls with a +3 Bonus instead. A Pokémon may have only one Pushed Skill at a time.",
-            "Re-Balancing": "Prerequisites=Feats=Pusher, Skills=Pokémon Education=6, Freq=At-Will — Extended Action, Target=A Pokémon with 2 Tutor Points, Effect=The target loses 2 Tutor Points, and gains one of the following: +1 to all Base Stats, +2 to two different Base Stats, or +3 to a single Base Stat. The target then redistributes their Stat Points. A Pokémon may be targeted by Re-Balancing only once."
+            "Pusher": {
+                "Prerequisites": "Skills=Pokémon Education=3",
+                "Frequency": "Static",
+                "Effect": "Your Pokémon gain the Basic Ranged Attacks, Aura Pulse, Enticing Bait, Extended Invisibility, Far Reading, Precise Threadings, Seismometer, TK Mastery, and Trail Sniffer Poke Edges automatically if they qualify for them, without having to invest any Tutor Points."
+            },
+            "This One's Special, I Know It": {
+                "Prerequisites": "Feats=Pusher",
+                "Frequency": "Special — Free Action",
+                "Target": "A hatching egg.",
+                "Effect": "The Pokémon is born with special qualities, determined by the GM. This Feature may be activated one time per Pokémon Education Rank above Untrained."
+            },
+            "Skill Trainer": {
+                "Prerequisites": "Feats=Pusher",
+                "Frequency": "At-Will — Free Action",
+                "Trigger": "You Train your Pokémon",
+                "Effect": "For each of your Pokémon that has been Trained during this time, choose a Skill; that Skill becomes Pushed until an Extended Rest is taken. Pokémon rolls +1d6 with Pushed Skills, unless that would cause you to roll more than 6d6; if so, that Pokémon rolls with a +3 Bonus instead. A Pokémon may have only one Pushed Skill at a time."
+            },
+            "Re-Balancing": {
+                "Prerequisites": "Feats=Pusher, Skills=Pokémon Education=6",
+                "Frequency": "At-Will — Extended Action",
+                "Target": "A Pokémon with 2 Tutor Points",
+                "Effect": "The target loses 2 Tutor Points, and gains one of the following: +1 to all Base Stats, +2 to two different Base Stats, or +3 to a single Base Stat. The target then redistributes their Stat Points. A Pokémon may be targeted by Re-Balancing only once."
+            }
         },
         "Gadgeteer": {
-            "Improvised Gadgets": "Prerequisites=Skills=Technology Education=3, Freq=Bind 2 AP — Extended Action, Target=A willing Pokémon with the Magnetic, Zapper, or Threaded Capability, Effect=Choose one of the Capabilities listed in the Target line that the target Pokémon has. You create a Main or Off-Hand Equipment Item usable by Trainers that grants the user the chosen Capability. Whenever a Trainer makes Struggle Attacks using Zapper through this Item, they may choose to use your Technology Education Rank tripled in place of an offensive Stat. When this Feature is Unbound, the Equipment Item breaks and cannot be repaired. You may only have X instances of this Feature Bound at once, where X is equal to half your Technology Education Rank.",
-            "I Meant to Do That": "Prerequisites=Feats=Improvised Gadgets, Skills=Technology Education=4, Freq=At-Will — Special, Trigger=You must have at least one Equipment Item you created with Improvised Gadgets equipped to use this Feature., Effect=Choose one of your equipped items you created with Improved Gadgets. It is destroyed and cannot be repaired, and that instance of Improvised Gadgets is immediately Unbound. Use the effect below corresponding to the Capability granted by the chosen item.\n»Magnetic:You may activate this effect as a Standard Action Interrupt whenever a Steel or Electric-Type attack or an attack with a metal Weapon would hit a target within 5 meters. The attack instead misses all targets within 5 meters.\n»Threaded:Choose up to 3 targets within 4 meters and perform an AC 4 Status Attack against them as a Standard Acion. All hit targets become Stuck and Trapped for one full round.\nZapper:You may activate this effect as a Swift Action upon hitting a foe with a Zapper-modified Struggle Attack. The foe is Paralyzed.",
-            "Capsule Science": "Prerequisites=Feats=Improvised Gadgets, Skills=Technology Education=5, Freq=Static, Effect=You learn the Cap Cannon, Cap Ammo, and Wonder Launcher recipes, and you gain the following additional effects when using those items.\n»Bean Caps: You gain a +10 Damage Bonus when using Bean Caps.\n»Glue Caps: Your Effect Range when using Glue Caps is increased by +3.\n»Net Caps: Targets affected by your Net Caps gain a -X penalty to all Damage Rolls, where X is your Technology Education Rank.\n» Wonder Launcher: Whenever you apply an item to a target using the Wonder Launcher, they gain Temporary Hit Points equal to your Technology Education Rank.",
-            "Enhanced Capsules": "Prerequisites=Feats=Capsule Science, Skills=Technology Education=6, Freq=Daily x3 — Extended Action, Target=A willing Pokémon with one of the Capabilities listed below, Effect=Choose one of the Capabilities below which the target Pokémon has. You create a consumable item with the effect below, depending on the chosen Capability. All unused items created with Enhanced Capsules are rendered inert after an Extended Rest (including modifications to other items).\n»Glow: This item may be attached to a Wonder Launcher as a Standard Action to give the following effect for the rest of the Scene: Whenever you apply an Item to a target using this Wonder Launcher, that target gains the Illuminate Ability for one full round.\n»Magnetic: This item may be loaded into a Cap Cannon to provide two Bean Cap Ammo. When fired, these Bean Caps cannot miss.\n»Threaded: This item may be loaded into a Cap Cannon to provide two Glue Cap Ammo. When fired, they affect a Blast 2 instead of a single target.\n»Zapper:This item may be loaded into a Cap Cannon as a single Net Cap Ammo. Targets trapped by this Net Cap are Suppressed while trapped. Targets immune to Electric-Type attacks are immune to this effect."
+            "Improvised Gadgets": {
+                "Prerequisites": "Skills=Technology Education=3",
+                "Frequency": "Bind 2 AP — Extended Action",
+                "Target": "A willing Pokémon with the Magnetic, Zapper, or Threaded Capability",
+                "Effect": "Choose one of the Capabilities listed in the Target line that the target Pokémon has. You create a Main or Off-Hand Equipment Item usable by Trainers that grants the user the chosen Capability. Whenever a Trainer makes Struggle Attacks using Zapper through this Item, they may choose to use your Technology Education Rank tripled in place of an offensive Stat. When this Feature is Unbound, the Equipment Item breaks and cannot be repaired. You may only have X instances of this Feature Bound at once, where X is equal to half your Technology Education Rank."
+            },
+            "I Meant to Do That": {
+                "Prerequisites": "Feats=Improvised Gadgets, Skills=Technology Education=4",
+                "Frequency": "At-Will — Special",
+                "Trigger": "You must have at least one Equipment Item you created with Improvised Gadgets equipped to use this Feature.",
+                "Effect": "Choose one of your equipped items you created with Improved Gadgets. It is destroyed and cannot be repaired, and that instance of Improvised Gadgets is immediately Unbound. Use the effect below corresponding to the Capability granted by the chosen item.\n» Magnetic: You may activate this effect as a Standard Action Interrupt whenever a Steel or Electric-Type attack or an attack with a metal Weapon would hit a target within 5 meters. The attack instead misses all targets within 5 meters.\n» Threaded: Choose up to 3 targets within 4 meters and perform an AC 4 Status Attack against them as a Standard Action. All hit targets become Stuck and Trapped for one full round.\nZapper: You may activate this effect as a Swift Action upon hitting a foe with a Zapper-modified Struggle Attack. The foe is Paralyzed."
+            },
+            "Capsule Science": {
+                "Prerequisites": "Feats=Improvised Gadgets, Skills=Technology Education=5",
+                "Frequency": "Static",
+                "Effect": "You learn the Cap Cannon, Cap Ammo, and Wonder Launcher recipes, and you gain the following additional effects when using those items.\n» Bean Caps: You gain a +10 Damage Bonus when using Bean Caps.\n» Glue Caps: Your Effect Range when using Glue Caps is increased by +3.\n» Net Caps: Targets affected by your Net Caps gain a -X penalty to all Damage Rolls, where X is your Technology Education Rank.\n» Wonder Launcher: Whenever you apply an item to a target using the Wonder Launcher, they gain Temporary Hit Points equal to your Technology Education Rank."
+            },
+            "Enhanced Capsules": {
+                "Prerequisites": "Feats=Capsule Science, Skills=Technology Education=6",
+                "Frequency": "Daily x3 — Extended Action",
+                "Target": "A willing Pokémon with one of the Capabilities listed below",
+                "Effect": "Choose one of the Capabilities below which the target Pokémon has. You create a consumable item with the effect below, depending on the chosen Capability. All unused items created with Enhanced Capsules are rendered inert after an Extended Rest (including modifications to other items).\n» Glow: This item may be attached to a Wonder Launcher as a Standard Action to give the following effect for the rest of the Scene: Whenever you apply an Item to a target using this Wonder Launcher, that target gains the Illuminate Ability for one full round.\n» Magnetic: This item may be loaded into a Cap Cannon to provide two Bean Cap Ammo. When fired, these Bean Caps cannot miss.\n» Threaded: This item may be loaded into a Cap Cannon to provide two Glue Cap Ammo. When fired, they affect a Blast 2 instead of a single target.\n» Zapper: This item may be loaded into a Cap Cannon as a single Net Cap Ammo. Targets trapped by this Net Cap are Suppressed while trapped. Targets immune to Electric-Type attacks are immune to this effect."
+            }
         },
         "Engineer": {
-            "Engineer": "Prerequisites=Edges=Pokébot Training, Freq=At-Will — Extended Action, Effect=You may craft any Engineer Recipe for which you qualify.",
-            "Robofighter": "Prerequisites=Feats=Engineer, Skills=Technology Education=4, Freq=Bind 2 AP — Standard Action, Effect=As long as this feature is Bound, you can command your Pokébot using a Standard Action rather than a Pokémon turn. Your Pokébots may still only act once a round.",
-            "Overclock": "Prerequisites=Feats=Engineer, Skills=Technology Education=5, Freq=Scene — Swift Action, Target=Your Pokébot, Effect=The target is cured of all Persistent Statuses, resets all negative Combat Stages to default, and gains two Ticks of Temporary Hit Points. For the rest of the Scene, it deals and takes additional damage with all attacks equal to your Technology Education Rank.",
-            "Experimental AI": "Prerequisites=Feats=Engineer, Skills=Technology Education=6, Freq=Static, Effect=Increase the maximum complexity of all Pokébots you create by 2, and increase the maximum complexity of Pokébots you can control by 2."
+            "Engineer": {
+                "Prerequisites":"Edges=Pokébot Training",
+                "Frequency": "At-Will — Extended Action",
+                "Effect": "You may craft any Engineer Recipe for which you qualify"
+
+            },
+            "Robofighter": {
+                "Prerequisites": "Feats=Engineer, Skills=Technology Education=4",
+                "Frequency": "Bind 2 AP — Standard Action",
+                "Effect": "As long as this Feature is Bound, you can command your Pokébot using a Standard Action rather than a Pokémon turn. Your Pokébots may still only act once a round."
+            },
+            "Overclock": {
+                "Prerequisites": "Feats=Engineer, Skills=Technology Education=5",
+                "Frequency": "Scene — Swift Action",
+                "Target": "Your Pokébot",
+                "Effect": "The target is cured of all Persistent Statuses, resets all negative Combat Stages to default, and gains two Ticks of Temporary Hit Points. For the rest of the Scene, it deals and takes additional damage with all attacks equal to your Technology Education Rank."
+            },
+            "Experimental AI": {
+                "Prerequisites": "Feats=Engineer, Skills=Technology Education=6",
+                "Frequency": "Static",
+                "Effect": "Increase the maximum complexity of all Pokébots you create by 2, and increase the maximum complexity of Pokébots you can control by 2."
+            }
         },
         "Jailbreaker": {
-            "Jailbreaker": "Prerequisites=Edges=Basic Balls, Freq=At-Will — Extended Action, Effect=You may craft any Poké Ball Case Recipe for which you qualify.",
-            "Poké Ball Mods": "Prerequisites=Feats=Jailbreaker, Freq=Static, Effect=You may craft any of the Poké Ball Modifications on the next page.",
-            "Fusion Cases": "Prerequisites=Feats=Jailbreaker, Skills=Technology Education=6, Freq=At-Will — Extended Action, Effect=You combine two different Poké Ball Cases into a single Fusion Case with both effects and types. Fusion Cases may not be used as Ingredients for this Feature.",
-            "Case Specialist": "Prerequisites=Feats=Jailbreaker, Skills=Technology Education=4, Freq=1 AP — Swift Action, Trigger=You hit a target with a Poké Ball with a Spray, Flash, Bounce, or Zap Case applied to it., Effect=The Case has additional effects according to its type(s).\n»Spray Case: After resolving the effects of the Case, the target loses a Tick of Health Points for each Persistent or Volatile Status Affliction they have. This may only affect a target once per Scene.\n»Flash Case: The Case uses the Move Flash as a Burst 2 instead of a Cone 2\n»Bounce Case: The Poké Ball bounces an additional time. This may not cause it to hit a target more than once.\n»Zap Case: The target can only use At-Will actions until the end of their next turn. This may only affect a target once per Scene."
+            "Jailbreaker": {
+                "Prerequisites":"Edges=Basic Balls",
+                "Frequency": "At-Will — Extended Action",
+                "Effect": "You may craft any Poké Ball Case Recipe for which you qualify."
+            },
+            "Poké Ball Mods": {
+                "Prerequisites": "Feats=Jailbreaker",
+                "Frequency": "Static",
+                "Effect": "You may craft any of the Poké Ball Modifications on the next page."
+            },
+            "Fusion Cases": {
+                "Prerequisites": "Feats=Jailbreaker, Skills=Technology Education=6",
+                "Frequency": "At-Will — Extended Action",
+                "Effect": "You combine two different Poké Ball Cases into a single Fusion Case with both effects and types. Fusion Cases may not be used as Ingredients for this Feature."
+            },
+            "Case Specialist": {
+                "Prerequisites": "Feats=Jailbreaker, Skills=Technology Education=4",
+                "Frequency": "1 AP — Swift Action",
+                "Trigger": "You hit a target with a Poké Ball with a Spray, Flash, Bounce, or Zap Case applied to it.",
+                "Effect": "The Case has additional effects according to its type(s).\n» Spray Case: After resolving the effects of the Case, the target loses a Tick of Health Points for each Persistent or Volatile Status Affliction they have. This may only affect a target once per Scene.\n» Flash Case: The Case uses the Move Flash as a Burst 2 instead of a Cone 2\n» Bounce Case: The Poké Ball bounces an additional time. This may not cause it to hit a target more than once.\n» Zap Case: The target can only use At-Will actions until the end of their next turn. This may only affect a target once per Scene."
+            }
         },
         "Upgrader": {
-            "Upgrader": "Prerequisites=Skills=Medicine Education=3, Technology Education=3, Freq=At-Will — Extended Action, Effect=You may craft any Augmentation Recipe for which you qualify and install them on yourself and willing Pokémon and Trainers.",
-            "Emergency Reactivation": "Prerequisites=Feats=Upgrader, Skills=Technology Education=4, Freq=1 AP — Free Action, Trigger=You or your Pokémon suffer Augmentation Shock, Effect=The triggering user does not suffer Augmenta- tion Shock and their Augmentations are not disabled. This Feature may affect a target only once per Scene.",
-            "Efficient Installation": "Prerequisites=Feats=Upgrader, Skills=Technology Education=5, Freq=Static, Effect=You and your Pokémon gain a +2 boost to their maximum Augmentation Capacity and count their used Capacity as 2 lower for the purposes of Augmentation Shock. You and your Pokémon can install multiple Augmentations in the same Slot.",
-            "Experimental Designs": "Prerequisites=Feats=Upgrader, Skills=Technology Education=6, Freq=At-Will — Extended Action, Target=You or your Pokémon with Augmentations, Effect=Choose an Augmentation the target has and apply the upgrade below. Experimental Designs may affect a target twice.\n»Enhanced Sight: The user gains the X-Ray Vision Capability.\n»Smart Vision: The user learns the Move Feint without taking a Move Slot.\n»Synthetic Muscle: The user recovers from Injuries twice as fast and heals one more Injury per day.\n»Embedded Weaponry: The weapon is Fine and gains Deadly Strike as a Master Move.\n»Wired Reflexes: The user gains one more Reflex Point per Scene and may also spend Reflex Points to gain +2 Critical Hit Range for one full round.\n»Medical Nanobots: Once a Scene, the user may cure themselves of all Persistent Status Afflictions as a Standard Action.\n»Dermal Plating: The user may also activate Dermal Plating to resist Special Damage.\n»Thermal-Optic Camo: While active, the user is invisible to Aura Reading and Thought Detection."
+            "Upgrader": {
+                "Prerequisites":"Skills=Medicine Education=3, Technology Education=3",
+                "Frequency": "At-Will — Extended Action",
+                "Effect": "You may craft any Augmentation Recipe for which you qualify and install them on yourself and willing Pokémon and Trainers."
+            },
+            "Emergency Reactivation": {
+                "Prerequisites": "Feats=Upgrader, Skills=Technology Education=4",
+                "Frequency": "1 AP — Free Action",
+                "Trigger": "You or your Pokémon suffer Augmentation Shock",
+                "Effect": "The triggering user does not suffer Augmentation Shock and their Augmentations are not disabled. This Feature may affect a target only once per Scene."
+            },
+            "Efficient Installation": {
+                "Prerequisites": "Feats=Upgrader, Skills=Technology Education=5",
+                "Frequency": "Static",
+                "Effect": "You and your Pokémon gain a +2 boost to their maximum Augmentation Capacity and count their used Capacity as 2 lower for the purposes of Augmentation Shock. You and your Pokémon can install multiple Augmentations in the same Slot."
+            },
+            "Experimental Designs": {
+                "Prerequisites": "Feats=Upgrader, Skills=Technology Education=6",
+                "Frequency": "At-Will — Extended Action",
+                "Target": "You or your Pokémon with Augmentations",
+                "Effect": "Choose an Augmentation the target has and apply the upgrade below. Experimental Designs may affect a target twice.\n» Enhanced Sight: The user gains the X-Ray Vision Capability.\n» Smart Vision: The user learns the Move Feint without taking a Move Slot.\n» Synthetic Muscle: The user recovers from Injuries twice as fast and heals one more Injury per day.\n» Embedded Weaponry: The weapon is Fine and gains Deadly Strike as a Master Move.\n» Wired Reflexes: The user gains one more Reflex Point per Scene and may also spend Reflex Points to gain +2 Critical Hit Range for one full round.\n» Medical Nanobots: Once a Scene, the user may cure themselves of all Persistent Status Afflictions as a Standard Action.\n» Dermal Plating: The user may also activate Dermal Plating to resist Special Damage.\n» Thermal-Optic Camo: While active, the user is invisible to Aura Reading and Thought Detection."
+            }
         }
     },
     "Survivalist": {
@@ -3362,7 +3634,7 @@
             "Prerequisites": "Feature Arcane Training",
             "Frequency": "At-Will — Extended Action",
             "Target": "An Arcane Weapon",
-            "Effect": "You create a Soul Bond with the target Weapon. You may make a Soul Bond with only one weapon at a time. If you create a new Soul Bond, previously Soul Bound weapons lose the Bond. Soul Bound Weapons gain the following benefits:\n»Increase the Damage Base and Effect Range of Struggle Attacks and Arcane Weapon Moves made with your Soul Bonded Weapon by +1 for each Occult Education Rank you have above Novice, up to a maximum of +3 at Master Rank.\n»As a Shift Action, you may beckon your Soul Bonded Weapon to your hands if it is within 10 meters. If it is being held by someone else who does not want to let go of the weapon, make an Occult vs Athletics Opposed Check. If you win, they their lose grip on your Weapon and it flies to your hand as normal"
+            "Effect": "You create a Soul Bond with the target Weapon. You may make a Soul Bond with only one weapon at a time. If you create a new Soul Bond, previously Soul Bound weapons lose the Bond. Soul Bound Weapons gain the following benefits:\n» Increase the Damage Base and Effect Range of Struggle Attacks and Arcane Weapon Moves made with your Soul Bonded Weapon by +1 for each Occult Education Rank you have above Novice, up to a maximum of +3 at Master Rank.\n» As a Shift Action, you may beckon your Soul Bonded Weapon to your hands if it is within 10 meters. If it is being held by someone else who does not want to let go of the weapon, make an Occult vs Athletics Opposed Check. If you win, they their lose grip on your Weapon and it flies to your hand as normal"
         },
         "Metamagic": {
             "Tags": "[+Special Attack]",
@@ -4128,7 +4400,7 @@
             "Prerequisites": "Feature Any Prism, Any Prism, Any Prism, Any Prism\nSkills Charm 6, General Education 6",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You use a Prism Move",
-            "Effect": "The effect of this Feature depends on the Triggering Move. You may only use Prismatic Alignment with each Move once per Scene.\n»Flash: Flash also Blinds all targets it hits until the end of their next turn.\n»Swift:Swift instead has a range of 8, 3 Targets\n»Tri Attack: Roll twice for Tri Attack's Accuracy Roll and take the better result. If you trigger its Effect Range, you may choose the effect instead of rolling for it.\n»Weather Ball: You use Weather Ball as if you were in the Weather of your choice.\n»Hyper Beam: Hyper Beam instead has a Range of Burst 2, Smite or 10, Ranged Blast 3, Smite.\n»Morning Sun: You use Morning Sun as if you were in Sunny Weather, and you may cure yourself of one Status Affliction."
+            "Effect": "The effect of this Feature depends on the Triggering Move. You may only use Prismatic Alignment with each Move once per Scene.\n» Flash: Flash also Blinds all targets it hits until the end of their next turn.\n» Swift:Swift instead has a range of 8, 3 Targets\n» Tri Attack: Roll twice for Tri Attack's Accuracy Roll and take the better result. If you trigger its Effect Range, you may choose the effect instead of rolling for it.\n» Weather Ball: You use Weather Ball as if you were in the Weather of your choice.\n» Hyper Beam: Hyper Beam instead has a Range of Burst 2, Smite or 10, Ranged Blast 3, Smite.\n» Morning Sun: You use Morning Sun as if you were in Sunny Weather, and you may cure yourself of one Status Affliction."
         }
     },
     "Miasmic": {
@@ -4173,7 +4445,7 @@
             "Prerequisites": "Feature Miasma's Call\nSkills Stealth 6, Guile 6",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You hit with Acid, Clear Smog, Sludge Bomb, Sludge Wave, or Toxic; or use Acid Armor.",
-            "Effect": "The Effect of this feature depends on the triggering move.\n»Acid: Instead of its usual effect, Acid lowers the Spe- cial Defense of all targets hit by -2 Combat Stages.\n»Clear Smog: Clear Smog's target loses 5 HP for each combat stage lost.\n»Sludge Bomb: The Target receives a -3 penalty to Accuracy Rolls until the end of your next turn.\n»Sludge Wave: All targets in Sludge Wave's Burst are Slowed until the end of their next turn.\n»Toxic: The target's Badly Poison Hit Point Loss be- gins at 10 instead of 5.\n»Acid Armor: You are not slowed while liquefied and resist all special damage one step."
+            "Effect": "The Effect of this feature depends on the triggering move.\n» Acid: Instead of its usual effect, Acid lowers the Spe- cial Defense of all targets hit by -2 Combat Stages.\n» Clear Smog: Clear Smog's target loses 5 HP for each combat stage lost.\n» Sludge Bomb: The Target receives a -3 penalty to Accuracy Rolls until the end of your next turn.\n» Sludge Wave: All targets in Sludge Wave's Burst are Slowed until the end of their next turn.\n» Toxic: The target's Badly Poison Hit Point Loss be- gins at 10 instead of 5.\n» Acid Armor: You are not slowed while liquefied and resist all special damage one step."
         }
     },
     "Stone Warrior": {
@@ -4187,7 +4459,7 @@
             "Tags": "[+Defense]",
             "Prerequisites": "Feature Stone Warrior",
             "Frequency": "Bind 2 AP — Standard Action",
-            "Effect": "You adopt one of the stances below, gaining the effects of the stance while this Feature remains bound. You may switch your active Stance as a Standard Action without rebinding your AP. The benefits from this Feature do not apply if you are not standing on a solid surface, such as deep mud or snow, or if you are outright swimming or even flying.\n»Falling Boulder Stance: You gain a +5 bonus to all Damage Rolls, but lose 5 HP from Recoil whenever you hit with an attack.\n»Moon Mountain Stance: Your initiative is lowered by -5, but you gain 5 Damage Reduction and are im- mune to Push or Pull effects.\n»Roiling Earth Stance: After a successful Intercept action, you may make a Struggle Attack against a foe within range."
+            "Effect": "You adopt one of the stances below, gaining the effects of the stance while this Feature remains bound. You may switch your active Stance as a Standard Action without rebinding your AP. The benefits from this Feature do not apply if you are not standing on a solid surface, such as deep mud or snow, or if you are outright swimming or even flying.\n» Falling Boulder Stance: You gain a +5 bonus to all Damage Rolls, but lose 5 HP from Recoil whenever you hit with an attack.\n» Moon Mountain Stance: Your initiative is lowered by -5, but you gain 5 Damage Reduction and are im- mune to Push or Pull effects.\n» Roiling Earth Stance: After a successful Intercept action, you may make a Struggle Attack against a foe within range."
         },
         "Rock Power": {
             "Tags": "[Ranked 2][+Defense]",
@@ -4440,7 +4712,7 @@
             "Prerequisites": "Feature Corrupt Reality",
             "Frequency": "1 AP — Standard Action",
             "Target": "A Pokémon or Trainer within 5 meters",
-            "Effect": "You may use any of the Glitches below. They are treated as a Status-Class attack with an AC of 2. You may only use each Glitch once per Scene, and each target may only be affected by Code Injection once per Scene.\n»Object Not Found: The target may not benefit from Equipment, Held Items, and consumable Items for one full round.\n»Access Denied: The target is Slowed and may only take At-Will actions for one full round.\n»Blue Screen: The target is Blinded and Vulnerable for one full round."
+            "Effect": "You may use any of the Glitches below. They are treated as a Status-Class attack with an AC of 2. You may only use each Glitch once per Scene, and each target may only be affected by Code Injection once per Scene.\n» Object Not Found: The target may not benefit from Equipment, Held Items, and consumable Items for one full round.\n» Access Denied: The target is Slowed and may only take At-Will actions for one full round.\n» Blue Screen: The target is Blinded and Vulnerable for one full round."
         },
         "Glitch Shuffle": {
             "Tags": "[+Special Defense]",
@@ -4453,7 +4725,7 @@
             "Prerequisites": "Feature Glitch Shuffle\nSkills Focus 6, Perception 6",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You hit with Topsy-Turvy or use another Glitch Bender Move",
-            "Effect": "Glitch Burst's effect depends on the triggering Move.\n»Disable: The target of Disable is also Suppressed.\n»Snatch: Regain one use of a Glitch Bender Move. This may only affect each Move once per Scene.\n»Metronome: Generate three random Moves instead of one, and choose which Move to use.\n»Topsy-Turvy: The target of Topsy-Turvy becomes Confused. They are automatically cured of this Confusion at the end of their next turn."
+            "Effect": "Glitch Burst's effect depends on the triggering Move.\n» Disable: The target of Disable is also Suppressed.\n» Snatch: Regain one use of a Glitch Bender Move. This may only affect each Move once per Scene.\n» Metronome: Generate three random Moves instead of one, and choose which Move to use.\n» Topsy-Turvy: The target of Topsy-Turvy becomes Confused. They are automatically cured of this Confusion at the end of their next turn."
         },
         "Prerequisites": "Glitched Existence, Novice Focus, Occult Education, or Perception"
     }
