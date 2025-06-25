@@ -181,9 +181,11 @@
         },
         "Smith": {
             "Tags": "[Ranked 2][+Attack]",
-            "Prerequisites": "\nRank 1: Skills Focus 3, Athletics 3\nRank 2: Skills Focus 3, Athletics 3",
             "Frequency": "Static",
-            "Effect": "\nRank 1:You may create Simple Weapons for $1000, Light Shields for $1,500, and Light Armor for $4,000.\nRank 2:You may create Fine Weapons for $2,000, Helmets for $1,125, Heavy Shields for $2,250 and Heavy Armor for $5,000."
+            "Rank 1 Prerequisites": "Novice Focus, Novice Athletics",
+            "Rank 2 Prerequisites": " Adept Focus, Adept Athletics",
+            "Rank 1 Effect": " You may create Simple Weapons for $1000, Light Shields for $1,500, and Light Armor for $4,000.",
+            "Rank 2 Effect": " You may create Fine Weapons for $2,000, Helmets for $1,125, Heavy Shields for $2,250 and Heavy Armor for $5,000."
         },
         "Type Sync": {
             "Tags": "[Ranked 2][+Attack]",
@@ -258,9 +260,11 @@
         },
         "Advanced Capture Techniques": {
             "Tags": "[Ranked 4][+Speed]",
-            "Prerequisites": "\nRank 1: Feature Capture Specialist\nRank 2: Feature Capture Specialist\nSkills Acrobatics 4, Athletics 4, Stealth 4, Survival 4, Guile 4, Perception 4, Acrobatics 4, Athletics 4, Stealth 4, Survival 4, Guile 4, Perception 4\nRank 3: Feature Capture Specialist\nSkills Acrobatics 5, Athletics 5, Stealth 5, Survival 5, Guile 5, Perception 5, Acrobatics 5, Athletics 5, Stealth 5, Survival 5, Guile 5, Perception 5\nRank 4: Feature Capture Specialist\nSkills Acrobatics 5, Athletics 5, Stealth 5, Survival 5, Guile 5, Perception 5, Acrobatics 5, Athletics 5, Stealth 5, Survival 5, Guile 5, Perception 5, Acrobatics 5, Athletics 5, Stealth 5, Survival 5, Guile 5, Perception 5",
             "Frequency": "Static",
-            "Effect": "At each Rank, you gain two Capture Techniques of your choice, found on the next page. You must meet any prerequisites of the Technique. You may qualify for Advanced Capture Techniques' prerequisites with the Acrobatics, Athletics, Stealth, Survival, Guile, or Perception Skills only."
+            "Rank 1 Prerequisites": "Capture Specialist",
+            "Rank 2 Prerequisites": " Capture Specialist, any 2 Skills at Adept Rank",
+            "Rank 3 Prerequisites": " Capture Specialist, any 2 Skills at Expert Rank",
+            "Rank 4 Prerequisites": " Capture Specialist, any 3 Skills at Expert Rank"
         },
         "Captured Momentum": {
             "Tags": "[+Speed]",
@@ -733,9 +737,9 @@
         },
         "Bag of Tricks": {
             "Tags": "[Ranked 2]",
-            "Prerequisites": "\nRank 1: Feature Trickster\nRank 2: Feature Trickster",
             "Frequency": "Static",
-            "Effect": "You gain two Trickster Techniques of your choice, found on the next page."
+            "Rank 1 Prerequisites": "Trickster",
+            "Rank 2 Prerequisites": " Trickster"
         },
         "Stacked Deck": {
             "Prerequisites": "Feature Trickster\nSkills Guile 4",
@@ -1043,9 +1047,9 @@
             },
             "Tough Tumble": {
                 "Tags": "Ranked 2",
-                "Prerequisites": "Rank 1:Feats=Style Expert (Tough), Skills=Intimidate=3\nRank 2: Skills=Intimidate=5",
                 "Freq": "1 AP — Special",
-                "Effect": "Your Pokémon with at least 3d6 in their Tough Stat from Poffins may activate Tough Tumble as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Scary Face, Spite\nRank 2:: Glare, Bide"
+                "Rank 1 Prerequisites": "Style Expert (Tough), Novice Intimidate",
+                "Rank 2 Prerequisites": " Expert Intimidate"
             },
             "Macho Charge": {
                 "Prerequisites": "Feats=Tough Tumble \nRank 1:",
@@ -1083,9 +1087,9 @@
             },
             "Smart Scheme": {
                 "Tags": "Ranked 2",
-                "Prerequisites": "Rank 1:Feats=Style Expert (Smart), Skills=Guile=3\nRank 2: Skills=Guile=5",
                 "Freq": "1 AP — Special",
-                "Effect": "Your Pokémon with at least 3d6 in their Smart Stat from Poffins may activate Smart Scheme as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Fake Tears, Calm Mind\nRank 2:: Taunt, Flatter"
+                "Rank 1 Prerequisites": "Style Expert (Smart), Novice Guile",
+                "Rank 2 Prerequisites": " Expert Guile"
             },
             "Calculated Assault": {
                 "Prerequisites": "Feats=Smart Scheme \nRank 1:",
@@ -1123,9 +1127,9 @@
             },
             "Cute Cuddle": {
                 "Tags": "Ranked 2",
-                "Prerequisites": "Rank 1:Feats=Style Expert (Cute), Skills=Charm=3\nRank 2: Skills=Charm=5",
                 "Freq": "1 AP — Special",
-                "Effect": "Your Pokémon with at least 3d6 in their Cute Stat from Poffins may activate Cute Cuddle as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Charm, Block\nRank 2:: Teeter Dance, Attract"
+                "Rank 1 Prerequisites": "Style Expert (Cute), Novice Charm",
+                "Rank 2 Prerequisites": " Expert Charm"
             },
             "Gleeful Steps": {
                 "Prerequisites": "Feats=Cute Cuddle \nRank 1:",
@@ -1163,9 +1167,9 @@
             },
             "Cool Conduct": {
                 "Tags": "Ranked 2",
-                "Prerequisites": "Rank 1:Feats=Style Expert (Cool), Skills=Command=3\nRank 2: Skills=Command=5",
                 "Freq": "1 AP — Special",
-                "Effect": "Your Pokémon with at least 3d6 in their Cool Stat from Poffins may activate Cool Conduct as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Focus Energy, Noble Roar\nRank 2:: Roar, Double Team"
+                "Rank 1 Prerequisites": "Style Expert (Cool), Novice Command",
+                "Rank 2 Prerequisites": " Expert Command"
             },
             "Rule of Cool": {
                 "Prerequisites": "Feats=Cool Conduct \nRank 1:",
@@ -1203,9 +1207,9 @@
             },
             "Beautiful Ballet": {
                 "Tags": "Ranked 2",
-                "Prerequisites": "Rank 1:Feats=Style Expert (Beauty), Skills=Intuition=3\nRank 2: Skills=Intuition=5",
                 "Freq": "1 AP — Special",
-                "Effect": "Your Pokémon with at least 3d6 in their Beauty Stat from Poffins may activate Beautiful Ballet as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\n\nRank 1:: Captivate, Mist\nRank 2:: Lovely Kiss, Mean Look"
+                "Rank 1 Prerequisites": "Style Expert (Beauty), Novice Intuition",
+                "Rank 2 Prerequisites": " Expert Intuition"
             },
             "Fabulous Max": {
                 "Prerequisites": "Feats=Beautiful Ballet \nRank 1:",
@@ -2323,10 +2327,10 @@
         },
         "Terrain Talent": {
             "Tags": "[+HP]",
-            "Prerequisites": "Feature Any Survivalist, Any Survivalist, Any Survivalist, Any Survivalist\nSkills Survival 6",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "You or your Pokémon gain Initiative",
-            "Effect": "The triggering target takes their turn as if they were in a terrain adjacent to the terrain they are in on the following graphic. For example, if you are standing in Wetlands terrain, you may act as if you are standing in Forest or Ocean Terrain. This affects Survivalist Features, Naturewalk Capabilities\nMoves with the Environ Keyword, etc."
+            "Rank 1 Prerequisites": "Survivalist, 2 Mastered Terrains",
+            "Rank 2 Prerequisites": " Survivalist, 4 Mastered Terrains"
         },
         "Prerequisites": "Novice Survival"
     },
@@ -2359,9 +2363,10 @@
         },
         "Athletic Moves": {
             "Tags": "[Ranked 3][+HP]",
-            "Prerequisites": "\nRank 1: Feature Athlete\nRank 2: Feature Athlete\nSkills Athletics 6",
             "Frequency": "Static",
-            "Effect": "You learn two Athlete Moves marked with the Rank of this Feature you are taking or lower."
+            "Rank 1 Prerequisites": "Athlete",
+            "Rank 2 Prerequisites": " Athlete, Expert Athletics",
+            "Rank 3 Prerequisites": " Athlete, Master Athletics"
         },
         "Prerequisites": "Novice Athletics, One of Athletic Prowess, Mounted Prowess, Power Boost, Stamina, or Swimmer"
     },
@@ -2471,9 +2476,10 @@
             },
             "Martial Training": {
                 "Tags": "+Speed",
-                "Prerequisites": "\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6",
                 "Frequency": "Static",
-                "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move."
+                "Rank 1 Prerequisites": "Martial Artist",
+                "Rank 2 Prerequisites": " Martial Artist, Expert Combat",
+                "Rank 3 Prerequisites": " Martial Artist, Master Combat"
             },
             "My Kung-Fu is Stronger": {
                 "Tags": "+Speed",
@@ -2505,9 +2511,10 @@
             },
             "Martial Training": {
                 "Tags": "+Attack",
-                "Prerequisites": "\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6",
                 "Frequency": "Static",
-                "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move."
+                "Rank 1 Prerequisites": "Martial Artist",
+                "Rank 2 Prerequisites": " Martial Artist, Expert Combat",
+                "Rank 3 Prerequisites": " Martial Artist, Master Combat"
             },
             "My Kung-Fu is Stronger": {
                 "Tags": "+Attack",
@@ -2539,9 +2546,10 @@
             },
             "Martial Training": {
                 "Tags": "+Speed",
-                "Prerequisites": "\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6",
                 "Frequency": "Static",
-                "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move."
+                "Rank 1 Prerequisites": "Martial Artist",
+                "Rank 2 Prerequisites": " Martial Artist, Expert Combat",
+                "Rank 3 Prerequisites": " Martial Artist, Master Combat"
             },
             "My Kung-Fu is Stronger": {
                 "Tags": "+Speed",
@@ -2573,9 +2581,10 @@
             },
             "Martial Training": {
                 "Tags": "+Defense",
-                "Prerequisites": "\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6",
                 "Frequency": "Static",
-                "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move."
+                "Rank 1 Prerequisites": "Martial Artist",
+                "Rank 2 Prerequisites": " Martial Artist, Expert Combat",
+                "Rank 3 Prerequisites": " Martial Artist, Master Combat"
             },
             "My Kung-Fu is Stronger": {
                 "Tags": "+Defense",
@@ -2607,9 +2616,10 @@
             },
             "Martial Training": {
                 "Tags": "+HP",
-                "Prerequisites": "\nRank 1:Feats=Martial Artist\nRank 2:Feats=Martial Artist, Skills=Combat=5\nRank 3:Feats=Martial Artist, Skills=Combat=6",
                 "Frequency": "Static",
-                "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move."
+                "Rank 1 Prerequisites": "Martial Artist",
+                "Rank 2 Prerequisites": " Martial Artist, Expert Combat",
+                "Rank 3 Prerequisites": " Martial Artist, Master Combat"
             },
             "My Kung-Fu is Stronger": {
                 "Tags": "+HP",
@@ -2884,9 +2894,9 @@
         },
         "The Power of Aura": {
             "Tags": "[Ranked 2][+Attack or Special Attack]",
-            "Prerequisites": "Feature Aura Guardian, \nRank 1: Feature Aura Guardian\nRank 2: Feature Aura Guardian\nSkills Intuition 5",
             "Frequency": "2 AP — Swift Action",
-            "Effect": "Each Rank, choose Scrappy or Aura Storm. You gain the Chosen Ability."
+            "Rank 1 Prerequisites": "Aura Guardian",
+            "Rank 2 Prerequisites": " Aura Guardian, Expert Intuition"
         },
         "Sword of Body and Soul": {
             "Tags": "[+Attack or Special Attack]",
@@ -2965,9 +2975,10 @@
         },
         "Hex Maniac Studies": {
             "Tags": "[Ranked 3][+HP]",
-            "Prerequisites": "\nRank 1: Feature Hex Maniac\nRank 2: Feature Hex Maniac\nRank 3: Feature Hex Maniac\nSkills Occult Education 5",
             "Frequency": "Static",
-            "Effect": "Learn two Hex Maniac Moves. You may choose any Move marked with the Hex Maniac Studies Rank you are taking or lower."
+            "Rank 1 Prerequisites": "Hex Maniac",
+            "Rank 2 Prerequisites": " Hex Maniac",
+            "Rank 3 Prerequisites": " Hex Maniac, Expert Occult Education"
         },
         "Diffuse Pain": {
             "Tags": "[+HP]",
@@ -3396,9 +3407,11 @@
         },
         "Signature Manipulations": {
             "Tags": "[Ranked 2][+Special Attack]",
-            "Prerequisites": "\nRank 1: Feature Metamagic\nRank 2: Feature Authentic Thaumaturgy",
             "Frequency": "Static",
-            "Effect": "\nRank 1: Select a \nRank 1: Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate.\nRank 2: Select a \nRank 1: Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate.\nOR\nSelect a Rank 2 power Manipulation. This Manipulation may be used once per Scene without activating Authentic Thaumaturgy's Frequency."
+            "Rank 1 Prerequisites": "Metamagic",
+            "Rank 2 Prerequisites": " Authentic Thaumaturgy",
+            "Rank 1 Effect": " Select a Rank 1 Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate.",
+            "Rank 2 Effect": " Select a Rank 1 Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate. OR Select a Rank 2 power Manipulation. This Manipulation may be used once per Scene without activating Authentic Thaumaturgy's Frequency."
         },
         "Recoup Energy": {
             "Tags": "[+Special Attack]",
@@ -3587,9 +3600,10 @@
             },
             "Enhanced Embrace": {
                 "Tags": "+Special Attack",
-                "Prerequisites": "\nRank 1:Feats=Swarmlord (Monarch's Embrace)\nRank 2: Skills=Survival=4, Command=4\nRank 3: Skills=Survival=5, Command=5",
                 "Frequency": "Static",
-                "Effect": "Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen."
+                "Rank 1 Prerequisites": "Swarmlord",
+                "Rank 2 Prerequisites": " Adept Command or Survival",
+                "Rank 3 Prerequisites": " Expert Command or Survival"
             }
         },
         "Arachnid's Embrace": {
@@ -3620,9 +3634,10 @@
             },
             "Enhanced Embrace": {
                 "Tags": "+Attack",
-                "Prerequisites": "\nRank 1:Feats=Swarmlord (Arachnid's Embrace)\nRank 2: Skills=Survival=4, Command=4\nRank 3: Skills=Survival=5, Command=5",
                 "Frequency": "Static",
-                "Effect": "Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen."
+                "Rank 1 Prerequisites": "Swarmlord",
+                "Rank 2 Prerequisites": " Adept Command or Survival",
+                "Rank 3 Prerequisites": " Expert Command or Survival"
             }
         },
         "Prerequisites": "Elemental Connection (Bug), Novice Survival, Novice Command"
@@ -3747,9 +3762,10 @@
         },
         "Storm Wizard": {
             "Tags": "[Ranked 3][+Speed]",
-            "Prerequisites": "\nRank 1: Feature Spark Master\nRank 2: Skills Acrobatics 5, Focus 5\nRank 3: Skills Acrobatics 6, Focus 6",
             "Frequency": "Static",
-            "Effect": "You may learn two Moves from the list below, marked with the Storm Wizard Rank you are gaining or lower."
+            "Rank 1 Prerequisites": "Spark Master",
+            "Rank 2 Prerequisites": " Expert Acrobatics or Focus",
+            "Rank 3 Prerequisites": " Master Acrobatics or Focus"
         },
         "Prerequisites": "Elemental Connection (Electric), Novice Focus, Novice Acrobatics"
     },
@@ -3832,9 +3848,9 @@
         },
         "Fire Breather": {
             "Tags": "[Class][+Attack and Special Attack]",
-            "Prerequisites": "\nRank 1: Skills Combat 5, Focus 5\nRank 2: Skills Combat 6, Focus 6",
             "Frequency": "Static",
-            "Effect": "Learn two Fire Bringer Moves from the list be- low. You may choose any Move marked with the Fire Breather Rank you are taking or lower."
+            "Rank 1 Prerequisites": "Fire Bringer, Expert Focus or Combat",
+            "Rank 2 Prerequisites": " Master Focus or Combat"
         },
         "Prerequisites": "Elemental Connection (Fire), Novice Combat"
     },
@@ -3865,9 +3881,10 @@
         },
         "Raging Winds": {
             "Tags": "[Ranked 3]][+Speed]",
-            "Prerequisites": "\nRank 1: Feature Wind Runner\nRank 2: Skills Acrobatics 5, Perception 5\nRank 3: Skills Acrobatics 6, Perception 6",
             "Frequency": "Static",
-            "Effect": "You may learn two Moves from the list below, marked with the Raging Winds Rank you are gaining or lower."
+            "Rank 1 Prerequisites": "Wind Runner",
+            "Rank 2 Prerequisites": " Expert Acrobatics or Perception",
+            "Rank 3 Prerequisites": " Master Acrobatics or Perception"
         },
         "Prerequisites": "Elemental Connection (Flying), Novice Acrobatics, Novice Perception"
     },
@@ -3946,9 +3963,10 @@
             },
             "Nature's Embrace": {
                 "Tags": "+Attack",
-                "Prerequisites": "\nRank 1:Feats=Druid (Wood Oath)\nRank 2: Skills=Survival=4, General Education=4\nRank 3: Skills=Survival=5, General Education=5",
                 "Frequency": "Static",
-                "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
+                "Rank 1 Prerequisites": "Druid",
+                "Rank 2 Prerequisites": " Adept Survival or General Education",
+                "Rank 3 Prerequisites": " Expert Survival or General Education"
             }
         },
         "Fungal Oath": {
@@ -3979,9 +3997,10 @@
             },
             "Nature's Embrace": {
                 "Tags": "+Special Defense",
-                "Prerequisites": "\nRank 1:Feats=Druid (Fungal Oath)\nRank 2: Skills=Survival=4, General Education=4\nRank 3: Skills=Survival=5, General Education=5",
                 "Frequency": "Static",
-                "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
+                "Rank 1 Prerequisites": "Druid",
+                "Rank 2 Prerequisites": " Adept Survival or General Education",
+                "Rank 3 Prerequisites": " Expert Survival or General Education"
             }
         },
         "Flower Oath": {
@@ -4012,9 +4031,10 @@
             },
             "Nature's Embrace": {
                 "Tags": "+Special Attack",
-                "Prerequisites": "\nRank 1:Feats=Druid (Flower Oath)\nRank 2: Skills=Survival=4, General Education=4\nRank 3: Skills=Survival=5, General Education=5",
                 "Frequency": "Static",
-                "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
+                "Rank 1 Prerequisites": "Druid",
+                "Rank 2 Prerequisites": " Adept Survival or General Education",
+                "Rank 3 Prerequisites": " Expert Survival or General Education"
             }
         },
         "Prerequisites": "Elemental Connection (Grass), Novice Survival, Novice General Education"
@@ -4034,9 +4054,9 @@
         },
         "Earth Mother's Blessing": {
             "Tags": "[Ranked 2][+Defense]",
-            "Prerequisites": "\nRank 1: Feature Earth Shaker\nSkills Intuition 4, Focus 4\nRank 2: Feature Ground Out\nSkills Intuition 6, Focus 6",
             "Frequency": "Static",
-            "Effect": "Each Rank, choose Arena Trap or Lightning Rod. You gain the chosen Ability."
+            "Rank 1 Prerequisites": "Earth Shaker, Adept Focus or Intuition",
+            "Rank 2 Prerequisites": " Ground Out, Master Focus or Intuition"
         },
         "Earthshifter": {
             "Tags": "[+Defense]",
@@ -4092,9 +4112,9 @@
         },
         "Winter's Herald": {
             "Tags": "[Ranked 2][+Attack or Special Attack]",
-            "Prerequisites": "\nRank 1: Feature Frost Touched\nSkills Athletics 5, Survival 5\nRank 2: Skills Athletics 6, Survival 6",
             "Frequency": "Static",
-            "Effect": "You may learn two Moves from the list below, marked with the Rank of Winter's Herald you are gaining or lower."
+            "Rank 1 Prerequisites": "Frost Touched, Expert Athletics or Survival",
+            "Rank 2 Prerequisites": " Master Athletics or Survival"
         },
         "Prerequisites": "Elemental Connection (Ice), Novice Athletics, Novice Survival"
     },
@@ -4205,9 +4225,9 @@
         },
         "Rock Power": {
             "Tags": "[Ranked 2][+Defense]",
-            "Prerequisites": "\nRank 1: Feature Stone Warrior\nSkills Combat 3, Survival 3\nRank 2: Feature Stone Warrior\nSkills Combat 5, Survival 5",
             "Frequency": "Static",
-            "Effect": "Each Rank, choose one of Sturdy, Rock Head, Run Up, or Sand Veil. You gain the chosen Ability. If you choose Sand Veil, you may consider sand a \"solid surface\" for the purposes of Stone Stance."
+            "Rank 1 Prerequisites": "Stone Warrior, Adept Combat or Survival",
+            "Rank 2 Prerequisites": " Expert Combat or Survival"
         },
         "Shards of Stone": {
             "Tags": "[+Defense]",
@@ -4305,9 +4325,10 @@
         },
         "Call The Current": {
             "Tags": "[Ranked 3][+Speed]",
-            "Prerequisites": "\nRank 1: Feature Maelstrom\nRank 2: Skills Athletics 4, Acrobatics 4\nRank 3: Skills Athletics 5, Acrobatics 5",
             "Frequency": "Static",
-            "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
+            "Rank 1 Prerequisites": "Maelstrom",
+            "Rank 2 Prerequisites": " Adept Athletics or Acrobatics",
+            "Rank 3 Prerequisites": " Expert Athletics or Acrobatics"
         },
         "Prerequisites": "Elemental Connection (Water), Novice Athletics, Novice Acrobatics"
     },
@@ -4332,9 +4353,10 @@
         },
         "Hero's Journey": {
             "Tags": "[Ranked 3][+Speed]",
-            "Prerequisites": "\nRank 1: Feature Backpacker\nRank 2: Feature Backpacker\nSkills Survival 4\nRank 3: Feature Backpacker\nSkills Survival 5\nRank 4: Feature Backpacker\nSkills Survival 5",
             "Frequency": "Static",
-            "Effect": "Each Rank, you may gain two Backpacker Talents for which you qualify."
+            "Rank 1 Prerequisites": "Backpacker",
+            "Rank 2 Prerequisites": " Adept Survival",
+            "Rank 3 Prerequisites": " Expert Survival"
         },
         "Prerequisites": "Traveler"
     },
@@ -4404,9 +4426,9 @@
         },
         "I'm a Doctor": {
             "Tags": "[Ranked 2][Gift]",
-            "Prerequisites": "\nRank 1: Feature Medic\nRank 2: Feature Medic\nSkills Medicine Education 4",
             "Frequency": "Static",
-            "Effect": "Each Rank, you gain one of Field Clinic or Medic Training and one of Nurse or First Aid Expertise."
+            "Rank 1 Prerequisites": "Medic",
+            "Rank 2 Prerequisites": " Medic, Adept Medicine Education"
         },
         "Proper Care": {
             "Prerequisites": "Feature I'm a Doctor\nEdges Field Clinic\nSkills Medicine Education 5",
