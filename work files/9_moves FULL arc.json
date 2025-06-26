@@ -783,6 +783,18 @@
         "special": "Grants High Jump +1"
     },
     {
+        "name": "Branch Poke",
+        "type": "Grass",
+        "frequency": "At-Will",
+        "ac": "2",
+        "damage_base": "Damage Base 4: 1d8+6 / 11",
+        "class": "Physical",
+        "range": "2, 1 Target",
+        "contest_type": "Tough",
+        "contest_effect": "Steady Performance",
+        "effect": "None."
+    },
+    {
         "name": "Brave Bird",
         "type": "Flying",
         "frequency": "Scene x2",
@@ -1108,17 +1120,6 @@
         "effect": "The user loses 1/3rd of their Max Hit Points and has each of its stats raised by +1 Combat Stage.",
         "contest_type": "Cool",
         "contest_effect": "Seen Nothing Yet"
-    },
-    {
-        "name": "Dragon Darts",
-        "type": "Dragon",
-        "frequency": "EOT",
-        "ac": "2",
-        "class": "Physical",
-        "range": "6, 1 Target, Double Strike; or 6, 2 Targets",
-        "effect": "None.",
-        "contest_type": "Smart",
-        "contest_effect": "Double Time"
     },
     {
         "name": "Clear Smog",
@@ -1808,6 +1809,29 @@
         "contest_effect": "Get Ready!"
     },
     {
+        "name": "Dragon Darts",
+        "type": "Dragon",
+        "frequency": "EOT",
+        "ac": "2",
+        "class": "Physical",
+        "range": "6, 1 Target, Double Strike; or 6, 2 Targets",
+        "effect": "None.",
+        "contest_type": "Smart",
+        "contest_effect": "Double Time"
+    },
+    {
+        "name": "Dragon Darts",
+        "type": "Dragon",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 5: 1d8+8 / 13",
+        "class": "Physical",
+        "range": "6, 1 Target, Double Strike; or 6, 2 Targets",
+        "contest_type": "Smart",
+        "contest_effect": "Double Time",
+        "effect": "None."
+    },
+    {
         "name": "Dragon Energy",
         "type": "Dragon",
         "frequency": "Daily x2",
@@ -1950,6 +1974,18 @@
         "effect": "None",
         "contest_type": "Tough",
         "contest_effect": "Reliable"
+    },
+    {
+        "name": "Dual Wingbeat",
+        "type": "Flying",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 4: 1d8+6 / 11",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Double Strike",
+        "contest_type": "Cool",
+        "contest_effect": "Reliable",
+        "effect": "None."
     },
     {
         "name": "Dynamax Cannon",
@@ -2198,6 +2234,18 @@
         "effect": "Esper Wing is a Critical Hit on an 18+.",
         "contest_type": "Smart",
         "contest_effect": "Steady Performance"
+    },
+    {
+        "name": "Eternabeam",
+        "type": "Dragon",
+        "frequency": "Scene",
+        "ac": "4",
+        "damage_base": "Damage Base 16: 5d10+20 / 50",
+        "class": "Special",
+        "range": "Line 6, Smite, Exhaust",
+        "contest_type": "Cool",
+        "contest_effect": "Seen Nothing Yet",
+        "effect": "None."
     },
     {
         "name": "Expanding Force",
@@ -4563,6 +4611,18 @@
         "contest_effect": "Unsettling"
     },
     {
+        "name": "Meteor Assault",
+        "type": "Fighting",
+        "frequency": "Daily x2",
+        "ac": "2",
+        "damage_base": "Damage Base 15: 4d10+20 / 45",
+        "class": "Physical",
+        "range": "Burst 1, Smite, Exhaust",
+        "contest_type": "Tough",
+        "contest_effect": "Exhausting Act",
+        "effect": "None."
+    },
+    {
         "name": "Meteor Beam",
         "type": "Rock",
         "frequency": "Scene x2",
@@ -4574,6 +4634,20 @@
         "contest_effect": "Special Attention",
         "set_up_effect": "The user’s Special Attack is raised by +1 Combat Stage.",
         "resolution_effect": "The user attacks with Meteor Beam."
+    },
+    {
+        "name": "Meteor Beam",
+        "type": "Rock",
+        "frequency": "Scene x2",
+        "ac": "4",
+        "damage_base": "Damage Base 12: 3d12+10 / 30",
+        "class": "Special",
+        "range": "Cone 3, Set-Up",
+        "contest_type": "Tough",
+        "contest_effect": "Special Attention",
+        "set_up_effect": "The user’s Special Attack is raised by +1 Combat Stage.",
+        "resolution_effect": "The user attacks with Meteor Beam.",
+        "effect": "None."
     },
     {
         "name": "Meteor Mash",
@@ -5130,6 +5204,18 @@
         "effect": "After damage is dealt, the user becomes Enraged and Confused.",
         "contest_type": "Cool",
         "contest_effect": "Reliable"
+    },
+    {
+        "name": "Overdrive",
+        "type": "Electric",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Special",
+        "range": "Cone 2, Sonic",
+        "contest_type": "Cool",
+        "contest_effect": "Attention Grabber",
+        "effect": "None."
     },
     {
         "name": "Overheat",

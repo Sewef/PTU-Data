@@ -114,19 +114,25 @@ def formatter_move_en_json(bloc):
     # Nettoyage des champs vides
     move = {k: v for k, v in move.items() if v}
 
+    if not "effect" in move:
+        print(f"Attention: Move '{move.get('name', 'Unknown')}' n'a pas d'effet défini.")
+        move["effect"] = "None."
+        return move
+    return None
+
     # Validation minimale
     if "name" in move and ("effect" in move or "set_up_effect" in move or "resolution_effect" in move):
         return move
     return None
 
 # 🔁 Utilisation
-pdf_path = "Arceus References.pdf"
+pdf_path = "py/SwSh + Armor_Crown References.pdf"
 blocs_moves = extraire_blocs_moves(pdf_path)
 moves_json = [formatter_move_en_json(bloc) for bloc in blocs_moves]
 moves_json = [m for m in moves_json if m]
 
 # 💾 Sauvegarde
-with open("9_moves INC arc.json", "w", encoding="utf-8") as f:
+with open("py/0_output g8.json", "w", encoding="utf-8") as f:
     json.dump(moves_json, f, indent=2, ensure_ascii=False)
 
 # 🔍 Aperçu
