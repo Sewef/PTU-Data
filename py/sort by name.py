@@ -1,8 +1,8 @@
 import json
 
 # Replace with your JSON filename
-input_file = 'work files/8_moves FULL swsh.json'
-output_file = 'work files/8_moves FULL swsh.json'
+input_file = 'ptu/data/moves_homebrew.json'
+output_file = 'ptu/data/moves_homebrew.json'
 
 # Read the JSON data
 with open(input_file, 'r', encoding='utf-8') as f:
