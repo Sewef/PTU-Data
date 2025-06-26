@@ -9520,6 +9520,18 @@
         "contest_effect": "Seen Nothing Yet"
     },
     {
+        "name": "Wave Crash",
+        "type": "Water",
+        "frequency": "EOT",
+        "ac": "2",
+        "damage_base": "Damage Base 8: 2d8+10 / 19",
+        "class": "Physical",
+        "range": "Melee, 1 Target, Priority, Recoil 1/4",
+        "contest_type": "Tough",
+        "contest_effect": "Steady Performance",
+        "effect": "None."
+    },
+    {
         "name": "Waterfall",
         "type": "Water",
         "frequency": "EOT",
