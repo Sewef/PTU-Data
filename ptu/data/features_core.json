@@ -3388,7 +3388,23 @@
             "Tags": "[Class][+Special Attack]",
             "Prerequisites": "Novice Charm, Novice Focus",
             "Frequency": "Static",
-            "Effect": "You may use Musician Songs."
+            "Effect": "You may use Musician Songs.",
+            "Mechanic: Songs": "Musician Songs can be triggered one of four ways. Regardless of the Area of Effect, Songs always affect the user.\n» When using a Move with the Sonic keyword, Songs may be triggered as a Swift Action, and the Song’s Area of Effect is the same as the triggering Move’s.\n» When using a Dance Move, Songs may be triggered as a Shift Action with an Area of Effect of Burst 2.\n» As a Standard Action, you may trigger one Song, with an Area of Effect of Burst 4.\n» As a Full Action, you may trigger two Songs, each with an Area of Effect of Burst 4.",
+            "Song of Courage": {
+                "Frequency": "1 AP – Special",
+                "Trigger": "Song",
+                "Effect": "All Allies in the Area of Effect gain a +2 Bonus to Skill Checks and Save Checks until the end of your next turn."
+            },
+            "Song of Might": {
+                "Frequency": "AP – Special",
+                "Trigger": "Song",
+                "Effect": "All Allies in the Area of Effect gain a +5 Bonus to Damage Rolls until the end of your next turn."
+            },
+            "Song of Life": {
+                "Frequency": "1 AP – Special",
+                "Trigger": "Song",
+                "Effect": "All Allies in the Area of Effect gain 5 Damage Reduction until the end of your next turn."
+            }
         },
         "Musical Ability": {
             "Tags": "[+Special Attack]",
@@ -3404,13 +3420,13 @@
         },
         "Cacophony": {
             "Tags": "[+Special Attack]",
-            "Prerequisites": "Mt. Moon Blues, Adept Charm, Adept Focus",
+            "Prerequisites": "Mt. Moon Blues, Adept Charm or Focus",
             "Frequency": "Static",
             "Effect": "You learn the Moves Screech and Metal Sound."
         },
         "Noise Complaint": {
             "Tags": "[+Special Attack]",
-            "Prerequisites": "Cacophony, Expert Charm, Expert Focus",
+            "Prerequisites": "Cacophony, Expert Charm or Focus",
             "Frequency": "Static",
             "Effect": "You learn the Moves Uproar and Hyper Voice."
         },
@@ -3422,7 +3438,7 @@
         },
         "Power Chord": {
             "Tags": "[+Special Attack]",
-            "Prerequisites": "Noise Complaint, Master Charm, Master Focus",
+            "Prerequisites": "Noise Complaint, Master Charm or Focus",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "You play a Song",
             "Effect": "Make a Charm or Focus Check, and add your Special Attack. Foes in the area of effect take Special Normal-Type Damage equal to the result."
@@ -3431,9 +3447,10 @@
     "Provocateur": {
         "Provocateur": {
             "Tags": "[Class][+Speed]",
-            "Prerequisites": "Confidence Artist, Intimidating Presence, Charmer",
+            "Prerequisites": "One of Confidence Artist, Intimidating Presence, or Charmer",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Sweet Kiss and Taunt."
+            "Effect": "You learn the Moves Sweet Kiss and Taunt.",
+            "Note:":"The Provocateur Skills are Charm, Guile, and Intimidation."
         },
         "Push Buttons": {
             "Tags": "[+Speed]",
@@ -3443,32 +3460,32 @@
         },
         "Quick Wit": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Provocateur, Adept Charm, Adept Guile, Adept Intimidate",
+            "Prerequisites": "Provocateur, a Provocateur Skill at Adept Rank",
             "Frequency": "Scene x3 — Swift Action",
             "Effect": "You may make a Manipulate Maneuver or use a Social Move you know, Frequency allowing."
         },
         "Mixed Messages": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Provocateur, Adept Charm, Adept Guile, Adept Intimidate, Adept Charm, Adept Guile, Adept Intimidate",
+            "Prerequisites": "Provocateur, two Provocateur Skills at Adept Rank",
             "Frequency": "Static",
             "Effect": "You learn the Moves Lovely Kiss and Torment."
         },
         "Powerful Motivator": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Provocateur, Adept Charm, Adept Guile, Adept Intimidate, Adept Charm, Adept Guile, Adept Intimidate",
+            "Prerequisites": "Provocateur, two Provocateur Skills at Adept Rank",
             "Frequency": "Static",
             "Effect": "Baby-Doll Eyes, Confide, Leer, and your Provocateur Moves gain additional effects. These effects occur whether the Move hits or misses.\n» Baby-Doll Eyes: The target cannot Critically Strike for 1 full round.\n» Confide: The target cannot trigger Effect Ranges for 1 full round.\n» Leer: The target is Slowed for 1 Full Round.\n» Sweet Kiss: The target gains a -3 penalty to Evasion for 1 full round.\n» Taunt: The target gains a -3 penalty to Accuracy Rolls 1 full round.\n» Torment: The target gains a -10 penalty to Damage Rolls against your allies for 1 full round.\n» Lovely Kiss: The target gains a -3 penalty to Save Checks for 1 full round."
         },
         "Play Them Like a Fiddle": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Powerful Motivator, Expert Charm, Expert Guile, Expert Intimidate",
+            "Prerequisites": "Powerful Motivator, a Provocateur Skill at Expert Rank",
             "Frequency": "Scene x3 — Swift Action",
             "Trigger": "You hit with Leer, Confide, Baby-Doll Eyes, or a Provocateur Move",
             "Effect": "The Move gains additional effects as listed below. You may use the effects of each Move only once per Scene.\n» Baby-Doll Eyes: The target becomes Infatuated with you for the rest of the Scene, and cannot be cured of this condition by any means, including Taking a Breather. This does not bypass immunity to Infatuation.\n» Confide: You choose a Move the target has used this Scene. That Move becomes Disabled for the target.\n» Leer: The target's Defense is lowered an additional Combat Stage, and their Special Defense is lowered by 2 Combat Stages.\n» Sweet Kiss: While the target is Confused, they may not perform Disengage Maneuvers, and whenever they hit themselves in Confusion, they provoke an Attack of Opportunity from all of their adjacent foes.\n» Taunt: For 1 full round, the next damaging attack to hit the target of Taunt deals +3d8+10 Damage.\n» Torment: The target's Ability is disabled until the end of the encounter. If the target has more than one Ability, you choose one of them to disable.\n» Lovely Kiss: The target's Evasion is lowered by 2 for the rest of the Scene."
         },
         "Enchanting Gaze": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Quick Wit, Expert Charm, Expert Guile, Expert Intimidate, Expert Charm, Expert Guile, Expert Intimidate",
+            "Prerequisites": "Quick Wit, two Provocateur Skills at Expert Rank",
             "Frequency": "2 AP — Standard Action",
             "Effect": "Choose a Manipulate Maneuver effect; apply that Effect to all foes in a Cone 2. This ignores Frequency Limitations with that Maneuver and automatically succeeds against all targets without an opposed roll."
         }
@@ -3476,9 +3493,10 @@
     "Rogue": {
         "Rogue": {
             "Tags": "[Class][+Attack]",
-            "Prerequisites": "Novice Acrobatics, Novice Athletics, Novice Stealth, Novice Acrobatics, Novice Athletics, Novice Stealth",
+            "Prerequisites": "Two of Acrobatics, Athletics, and Stealth at Novice Rank",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Feint Attack and Thief."
+            "Effect": "You learn the Moves Feint Attack and Thief.",
+            "Note": "Acrobatics, Athletics, and Stealth are referred to as “Rogue Skills” as short-hand."
         },
         "Cutthroat": {
             "Tags": "[+Attack][Weapon]",
@@ -3488,26 +3506,26 @@
         },
         "Dirty Fighting": {
             "Tags": "[+Attack]",
-            "Prerequisites": "Rogue, Adept Acrobatics, Adept Athletics, Adept Stealth",
+            "Prerequisites": "Rogue, a Rogue Skill at Adept Rank",
             "Frequency": "1 AP — Swift Action",
             "Trigger": "You hit a foe with Weapon Attack",
             "Effect": "After the attack is Resolved, you may immediately use the Dirty Trick Maneuver if the target is within range. You automatically hit with Dirty Trick, but must still make an Opposed Roll."
         },
         "Unexpected Attacks": {
             "Tags": "[+Attack]",
-            "Prerequisites": "Rogue, Adept Acrobatics, Adept Athletics, Adept Stealth, Adept Acrobatics, Adept Athletics, Adept Stealth",
+            "Prerequisites": "Rogue, two Rogue Skills at Adept Rank",
             "Frequency": "Static",
             "Effect": "You learn the Moves Pursuit and Sucker Punch."
         },
         "Underhanded Tactics": {
             "Tags": "[+Attack]",
-            "Prerequisites": "Rogue, Expert Acrobatics, Expert Athletics, Expert Stealth",
+            "Prerequisites": "Rogue, a Rogue Skill at Expert Rank",
             "Frequency": "Static",
             "Effect": "You gain your choice of Ambush or Cruelty."
         },
         "Street Fighter": {
             "Tags": "[+Attack]",
-            "Prerequisites": "Unexpected Attacks, Expert Acrobatics, Expert Athletics, Expert Stealth, Expert Acrobatics, Expert Athletics, Expert Stealth",
+            "Prerequisites": "Unexpected Attacks, two Rogue Skills at Expert Rank",
             "Frequency": "Static",
             "Effect": "You learn the Moves Assurance and Payback."
         },
@@ -3522,7 +3540,7 @@
     "Roughneck": {
         "Roughneck": {
             "Tags": "[Class][+Defense]",
-            "Prerequisites": "Intimidating Presence, Novice Athletics",
+            "Prerequisites": "Novice Athletics, Intimidating Presence",
             "Frequency": "1 AP — Swift Action",
             "Trigger": "You hit a foe with an Attack",
             "Effect": "The foe loses a Combat Stage in the Stat of your choice."
