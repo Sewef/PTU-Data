@@ -423,7 +423,7 @@
             "Prerequisites": "Adaptable Performance",
             "Frequency": "Daily — Extended Action",
             "Target": "A Pokémon with at least 1 Tutor Point.",
-            "Effect": "The target loses 1 Tutor Point, and then learns a Move created with Innovation. See the next section for details on creating Moves for this Feature. A Pokémon may only have one Move created by Innovation at a time.",
+            "Effect": "The target loses 1 Tutor Point, and then learns a Move created with Innovation. See the next section for details on creating Moves for this Feature. A Pokémon may only have one Move created by Innovation at a time."
         },
         "Nuanced Performance": {
             "Prerequisites": "Coordinator, Expert Charm, Expert Command, Expert Guile, Expert Intimidate, Expert Intuition",
@@ -497,7 +497,7 @@
         "Look and Learn": {
             "Prerequisites": "Hobbyist, Expert Perception, Expert General Education",
             "Frequency": "x2 Uses — Extended Action",
-            "Effect": "When you activate Look and Learn, you may gain any of the Features below even though they are Features from other Classes. You do not need to meet their normal prerequisites, but you must meet their Prerequisites listed here. Look and Learn can be used two times; once to learn a Feature from the \"Scene Features\" List, and once to learn a Feature from the \"Action Point Features List\"."
+            "Effect": "When you activate Look and Learn, you may gain any of the Features below even though they are Features from other Classes. You do not need to meet their normal prerequisites, but you must meet their Prerequisites listed here. Look and Learn can be used two times; once to learn a Feature from the \"Scene Features\" List, and once to learn a Feature from the \"Action Point Features List\".\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"3\">Scene Features List </th><th colspan=\"3\">Action Point Features List </th></tr></thead><tbody><tr><td>Trainer Class</td><td>Feature</td><td>Prerequisite</td><td>Trainer Class</td><td>Feature</td><td>Prerequisite</td></tr><tr><td>Ace Trainer</td><td>Critical Moment</td><td>Commander's Voice</td><td>Coordinator</td><td>Nuanced Performance</td><td>Grace</td></tr><tr><td>Capture Specialist</td><td>Capture Techniques\n(False Strike and Catch Combo only)</td><td>Poké Ball Crafter</td><td>Juggler</td><td>Round Trip</td><td>Quick Switch</td></tr><tr><td>Enduring</td><td>Staying Power</td><td>Medic Training</td><td>Chef</td><td>Hits the Spot</td><td>Basic Cooking</td></tr><tr><td>Trickster</td><td>Sleight</td><td>Command Versatility</td><td>Fashionista</td><td>Style is Eternal</td><td>Groomer</td></tr><tr><td>Researcher</td><td>Chemical Warfare</td><td>Repel Crafter</td><td>Athlete</td><td>Coaching</td><td>Swimmer</td></tr><tr><td>Roughneck</td><td>Mettle</td><td>Defender</td><td>Tumbler</td><td>Quick Gymnastics</td><td>Acrobat</td></tr></tbody></table></div>"
         }
     },
     "Mentor": {
@@ -540,6 +540,29 @@
             "Prerequisites": "Move Tutor, Mentor 6",
             "Frequency": "Static",
             "Effect": "Your Pokémon may have up to 4 Moves from their Move List come from TMs or Move Tutors."
+        },
+        "Mentor Lessons": {
+            "Changing Viewpoints": {
+                "Prerequisites": "Mentor, Intuition as a Mentor Skill",
+                "Target": "A Pokémon with at least 1 Tutor Point.",
+                "Effect": "The \"Target\" loses a Tutor Point, and you may change the \"Target\"’s Nature to any other Nature which either raises the same Stat as its current nature, or lowers the same Stat as its current Nature."
+            },
+            "Empowered Development": {
+                "Prerequisites": "Mentor, Charm as a Mentor Skill",
+                "Target": "A Pokémon with at least 1 Tutor Point",
+                "Effect": "The \"Target\" loses 1 Tutor Point, and gains any three of the following Poké Edges: Skill Improvement, Advanced Mobility, or Capability Training. A Pokémon may be \"Target\"ed only once by Empowered Development. The \"Target\" may gain Poké Edges this way even if they do not meet the \"Prerequisites\", however, they must still follow other limitations; Advanced Mobility can only improve a Movement Capability once, for example."
+            },
+            "Corrective Learning": {
+                "Prerequisites": "Mentor, Intimidate as a Mentor Skill",
+                "Target": "A Pokémon that has spent Tutor Points on a Poké Edge or a Feature’s effect",
+                "Effect": "The \"Target\" loses one \"Effect\" gained from a Poké Edge or Feature and refunds all Tutor Points spent on it."
+            },
+            "Versatile Teachings": {
+                "Prerequisites": "Mentor, Pokémon Education as a Mentor Skill",
+                "Target": "A Pokémon with at least 1 Tutor Point",
+                "Effect": "The \"Target\" loses 1 Tutor Point and may exchange one of its Basic Abilities for any other of its species’ Basic Abilities or one of its Advanced Abilities for any of its species’ Basic or Advanced Abilities.",
+                "Note": "You may NOT activate Versatile Teachings to reroll Abilities that require a roll to determine characteristics, such as Serpent’s Mark and Color Theory."
+            }
         }
     },
     "Cheerleader": {
@@ -565,7 +588,8 @@
         "Inspirational Support": {
             "Prerequisites": "Cheer Brigade, Adept Charm",
             "Frequency": "Static",
-            "Effect": "You may trigger Cheerleader as a Free Action when your Pokémon with Friend Guard activate an Ability or Status Move that affects only allies."
+            "Effect": "You may trigger Cheerleader as a Free Action when your Pokémon with Friend Guard activate an Ability or Status Move that affects only allies.",
+            "Note":"When considering effects that could trigger Cheerleader this way, aside from the obvious Moves like Helping Hand and Abilities like Plus and Minus, think about Blessings, Coats, etc too!"
         },
         "Moment of Action": {
             "Tags": "[Orders]",
@@ -784,7 +808,8 @@
         "Quick Healing": {
             "Prerequisites": "Taskmaster",
             "Frequency": "At-Will — Extended Action",
-            "Effect": "Your Hardened Pokémon may use Quick Healing to remove up to three injuries, and gains two Ticks of Hit Points for each Injury removed this way."
+            "Effect": "Your Hardened Pokémon may use Quick Healing to remove up to three injuries, and gains two Ticks of Hit Points for each Injury removed this way.",
+            "Note": "The Injury Removal from this Feature counts as Natural Healing, and thus counts against the total number of Injuries that can be removed in a day."
         },
         "Savage Strike": {
             "Prerequisites": "Taskmaster",
@@ -807,7 +832,8 @@
         "Press On!": {
             "Prerequisites": "Taskmaster, Expert Intimidate",
             "Frequency": "Static",
-            "Effect": "Your Hardened Pokemon gain the following benefits, based on your Intimidate Rank\n» Expert: When your Pokemon Faints, you may pay 1 AP. If you do, your Pokemon Faints at -30% Hit Points instead.\n» Master: While acting at 0 Hit Points or less, your Pokemon's Critical Hit, Effect Range, Evasion, Initiative, Damage Reduction, and Resistance Bonuses from being Hardened are doubled."
+            "Effect": "Your Hardened Pokemon gain the following benefits, based on your Intimidate Rank\n» Expert: When your Pokemon Faints, you may pay 1 AP. If you do, your Pokemon Faints at -30% Hit Points instead.\n» Master: While acting at 0 Hit Points or less, your Pokemon's Critical Hit, Effect Range, Evasion, Initiative, Damage Reduction, and Resistance Bonuses from being Hardened are doubled.",
+            "Note": "Pokémon cannot use the Moves Explosion, Endure, Pain Split, or Self-Destruct while they have 0 Hit Points or less. Pokémon with the Soulless capability cannot benefit from Press On!"
         },
         "Desperate Strike": {
             "Prerequisites": "Savage Strike, Expert Intimidate",
@@ -819,7 +845,8 @@
             "Prerequisites": "5 Taskmaster Features, Master Intimidate",
             "Frequency": "Scene — Free Action",
             "Trigger": "Your Pokémon is the target of a foe's damaging melee attack",
-            "Effect": "The triggering attack automatically hits as if it was a Critical Hit. Before damage resolves, your Pokémon may use a 1-Target damaging attack on the foe making the triggering attack as an Interrupt, Frequency allowing, and also automatically hits as a Critical Hit. Damage for both attacks then resolve at the same time."
+            "Effect": "The triggering attack automatically hits as if it was a Critical Hit. Before damage resolves, your Pokémon may use a 1-Target damaging attack on the foe making the triggering attack as an Interrupt, Frequency allowing, and also automatically hits as a Critical Hit. Damage for both attacks then resolve at the same time.",
+            "Note": "This effect bypasses immunity to Critical Hits on your own Pokémon, but not on the target. Though both attacks hit automatically and are Critical Hits, you may still roll to activate effects."
         }
     },
     "Trickster": {
