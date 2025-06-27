@@ -4,9 +4,11 @@ function renderData(data, container, depth = 0) {
         const value = data[key];
 
         if (typeof value === "object" && value !== null) {
-            if (!Array.isArray(value) && depth <= 2) {
-                const label = document.createElement("h5");
-                label.className = "card-subtitle mb-2 text-muted";
+            if (!Array.isArray(value)) {
+                // Choose heading size based on depth (h5, h6, small)
+                const label = document.createElement(depth < 2 ? `h${5 + depth}` : "div");
+                label.className = `text-muted mb-2 ${depth >= 2 ? "small fs-6" : ""}`;
+
                 label.textContent = key;
                 container.appendChild(label);
             }
@@ -18,6 +20,7 @@ function renderData(data, container, depth = 0) {
         }
     }
 }
+
 
 function createCard(title, data) {
     // Create the column wrapper

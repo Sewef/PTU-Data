@@ -2255,6 +2255,63 @@
             "Prerequisites": "4 Chef Features, Master Intuition",
             "Frequency": "At-Will — Extended Action",
             "Effect": "Ingredient 1: Leftovers, Preserves, or a Snack made with Chef\nIngredient 2: Leftovers or Preserves\nEffect: You mix the two ingredients into one Snack that has the same effect as its ingredients. The two ingredients must be different items."
+        },
+        "Chef Recipes": {
+            "Tasty Snacks": {
+                "Prerequisites": "Chef",
+                "Cost": "$100",
+                "Effect": "You create a Salty Surprise, Spicy Wrap, Sour Candy, Dry Wafer, Bitter Treat, or Sweet Confection."
+            },
+            "Salty Surprise": {
+                "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by an attack to gain 5 Temporary Hit Points. If the user likes Salty Flavors, they gain 10 Temporary Hit Points Instead. If the user dislikes Salty Food, they become Enraged."
+            },
+            "Spicy Wrap": {
+                "Effect": "The user may trade in this Snack’s Digestion Buff when making a Physical attack to deal +5 additional Damage. If the user prefers Spicy Food, it deals +10 additional Damage instead. If the user dislikes Spicy Food, they become Enraged."
+            },
+            "Sour Candy": {
+                "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by a Physical Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Sour Food, they gain +10 Damage Reduction instead. If the user dislikes Sour Food, they become Enraged."
+            },
+            "Dry Wafer": {
+                "Effect": "The user may trade in this Snack’s Digestion Buff when making a Special attack to deal +5 additional Damage. If the user prefers Dry Food, it deals +10 additional Damage instead. If the user dislikes Dry Food, they become Enraged."
+            },
+            "Bitter Treat": {
+                "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by a Special Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Bitter Food, they gain +10 Damage Reduction instead. If the user dislikes Bitter Food, they become Enraged."
+            },
+            "Sweet Confection": {
+                "Effect": "The user may trade in this Snack’s Digestion Buff to gain +4 Evasion until the end of their next turn. If the user prefers Sweet Food, they gain +4 Accuracy as well. If the user dislikes Sweet Food, they become Enraged."
+            },
+            "Meal Planner": {
+                "Prerequisites": "Chef",
+                "Effect": "You may create the following items, based on your Intuition Rank",
+                "\n» Novice": "“Enriched Water” for $40",
+                "\n» Adept": "“Super Soda Pop” for $65",
+                "\n» Expert": "“Sparkling Lemonade” for $125",
+                "\n» Master": "“MooMoo Milk” for $250"
+            },
+            "Hearty Meal": {
+                "Prerequisites": "Hits the Spot",
+                "Ingredients": "x2 Tiny Mushrooms; or x1 Big Mushroom; or x1 Balm Mushroom, or x2 Power Herbs, White Herbs, or Mental Herbs",
+                "Effect": "You create up to five Hearty Meals, which may be consumed by Trainers as an Extended Action. When consumed, that Trainer gains +2 to their Max AP until the end of their next extended rest. A Trainer may only be under the effect of one Hearty Meal at a time. Hearty Meals not consumed within 20 minutes of being created lose all flavor and all effect."
+            },
+            "Bait Mixer": {
+                "Prerequisites": "Culinary Appreciation",
+                "Cost": "$150 or Honey.",
+                "Effect": "You may create Bait. For $50 more, you may create Bait as Super Bait or Vile Bait instead. Super Bait works like regular Bait, but you may add your Intuition Rank to 1d20 Rolls made to attract Pokémon. Vile Bait works like regular Bait, but Pokémon that eat it are Poisoned."
+            },
+            "Preserves": {
+                "Prerequisites": "Accentuated Taste",
+                "Ingredients": "$50, any Berry, Herb, or Mushroom",
+                "Effect": "The user creates x2 Units of Preserves from the Berry, Herb, or Mushroom. Preserves have the same effect as the consumable from which they were made."
+            },
+            "Leftovers": {
+                "Prerequisites": "Complex Aftertaste",
+                "Cost": "$100",
+                "Effect": "You create Leftovers."
+            },
+            "Vitamins": {
+                "Prerequisites": "Dietician",
+                "Effect": "You create an HP Up, Protein, Iron, Calcium, Zinc, or Carbos for $2450, or Stat Suppressants for $200."
+            }
         }
     },
     "Chronicler": {
@@ -2295,7 +2352,10 @@
             "Tags": "[Orders]",
             "Prerequisites": "4 Chronicler Features, Master Perception",
             "Frequency": "Daily x3 — Free Action",
-            "Effect": "You analyze a Record in one of your Archives. Cinematic Analysis's effect depends on the Archive the Record is in. Each of these effects may only be used once per Scene.\nCharacter Study — Profile Archive: You may trigger Character Study when you or an ally makes a Charm, Command, Guile, Intimidate, or Intuition Check targeting the subject of your Record. Make a Perception Check and substitute the triggering Skill Check with the result.\nRecreation — Technique Archive: Recreation may be triggered as your Pokémon gains Initiative. Select a Record of a Move in your Technique Archive that your Pokémon can learn by Level Up, TM, or Move Tutor. Your Pokémon may perform that Move as if it was on its Move List. You may select a specific Move only once per day.\nSituational Awareness — Travel Archive: You may only use Situational Awareness if you analyze a Record of your current Location. When used this way, you may activate it as an Interrupt. Choose an ally; that ally may take their next action as Priority (Advanced)."
+            "Effect": "You analyze a Record in one of your Archives. Cinematic Analysis's effect depends on the Archive the Record is in. Each of these effects may only be used once per Scene.",
+            "Character Study — Profile Archive": "You may trigger Character Study when you or an ally makes a Charm, Command, Guile, Intimidate, or Intuition Check targeting the subject of your Record. Make a Perception Check and substitute the triggering Skill Check with the result.",
+            "Recreation — Technique Archive": "Recreation may be triggered as your Pokémon gains Initiative. Select a Record of a Move in your Technique Archive that your Pokémon can learn by Level Up, TM, or Move Tutor. Your Pokémon may perform that Move as if it was on its Move List. You may select a specific Move only once per day.",
+            "Situational Awareness — Travel Archive": "You may only use Situational Awareness if you analyze a Record of your current Location. When used this way, you may activate it as an Interrupt. Choose an ally; that ally may take their next action as Priority (Advanced)."
         }
     },
     "Fashionista": {
@@ -2331,7 +2391,8 @@
             "Prerequisites": "Fashionista, Adept Charm, Adept Command, Adept Guile, Adept Intimidate, Adept Intuition, Adept Charm, Adept Command, Adept Guile, Adept Intimidate, Adept Intuition",
             "Frequency": "At-Will — Extended Action",
             "Target": "Your Pokémon with at least 2 Tutor Points remaining",
-            "Effect": "The target loses 2 Tutor Points and then becomes chic. Chic Pokémon gain two extra Held Item slots with which they can carry Held Items. However, the items in these slots have no effect and are not treated as equipped. As a Swift Action on their turn, Chic Pokémon may swap a currently active Held Item with an item stored in these slots. Chic Pokémon may not carry multiple items of the same type or with repeated effects."
+            "Effect": "The target loses 2 Tutor Points and then becomes chic. Chic Pokémon gain two extra Held Item slots with which they can carry Held Items. However, the items in these slots have no effect and are not treated as equipped. As a Swift Action on their turn, Chic Pokémon may swap a currently active Held Item with an item stored in these slots. Chic Pokémon may not carry multiple items of the same type or with repeated effects.",
+            "Note": "A Chic Pokémon does not become Suppressed until they switch a Choice Item into their active Held Item slot, but even if they then switch the Choice Item out, they remain Suppressed for the remainder of combat. A Mega-Evolved Chic Pokémon remains Mega-Evolved even if they switch their active Held Item."
         },
         "Dress to Impress": {
             "Tags": "[Orders]",
@@ -2339,6 +2400,49 @@
             "Frequency": "Scene x2 — Standard Action",
             "Target": "Your Chic Pokémon",
             "Effect": "Whenever you create an Incense Held Item, choose Sweet Scent or Aromatic Mist. While your Pokémon is holding that Incense Item in an active Held Item slot, they add the chosen Move to their Move List."
+        },
+        "Fashionista Recipes": {
+            "Contest Trends": {
+                "Prerequisites": "Fashionista",
+                "Effect": "You can create Contest Accessories for $750, Contest Fashion Items for $500, and Fancy Clothes for $2500."
+            },
+            "Basic Fashion": {
+                "Prerequisites": "Fashionista",
+                "Cost": "$500",
+                "Effect": "You create one of the Basic Fashion Items below for which you have the chosen Fashionista Skill. These are Accessory Slot Items and may be used as Held Items by Pokémon.",
+                "Adorable Fashion": {
+                    "Fashionista Skill": "Charm",
+                    "Effect": "The holder may activate this item once a Scene as a Free Action to gain +2 Evasion for one full round."
+                },
+                "Elegant Fashion": {
+                    "Fashionista Skill": "Intuition",
+                    "Effect": "The holder may activate this item once a Scene as a Free Action when losing Combat Stages from a foe’s effect to instead not lose those Combat Stages."
+                },
+                "Rad Fashion": {
+                    "Fashionista Skill": "Command",
+                    "Effect": "The holder may activate this item once a Scene as a Free Action to gain a +4 bonus to a single Save Check."
+                },
+                "Rough Fashion": {
+                    "Fashionista Skill": "Intimidate",
+                    "Effect": "The holder may activate this item once a Scene as a Free Action to cause a foe within 5 meters to take a -2 penalty to all rolls for one full round."
+                },
+                "Slick Fashion": {
+                    "Fashionista Skill": "Guile",
+                    "Effect": "The holder may activate this item once a Scene as a Free Action when provoking an Attack of Opportunity to instead not provoke one."
+                }
+            },
+            "Practical Fashion": {
+                "Prerequisites": "Dashing Makeover",
+                "Effect": "You can create Go-Goggles, Safety Goggles, or Winter Cloaks for $750."
+            },
+            "Focused Fashion": {
+                "Prerequisites": "Style is Eternal",
+                "Effect": "You can create Focus Bands and Focus Sashes for $2000."
+            },
+            "Incense Maker": {
+                "Prerequisites": "Parfumier",
+                "Effect": "You can create Lax Incense for $1000, Luck Incense for $900, and Full Incense for $450."
+            }
         }
     },
     "Researcher": {

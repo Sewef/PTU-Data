@@ -16,19 +16,20 @@ function loadJsonAsCard(file, container) {
     });
 }
 
-// Recursive renderer
-function renderItemAsCard(item) {
+function renderItemAsCard(item, depth = 0) {
     let str = '';
 
     Object.keys(item).forEach(key => {
         const value = item[key];
 
         if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
-            // Nested object: render as nested card
-            const nestedHTML = renderItemAsCard(value);
+            // Determine appropriate heading tag (max out at <h6>)
+            const headingLevel = Math.min(4 + depth, 6); // h4, h5, h6...
+            const nestedHTML = renderItemAsCard(value, depth + 1);
+
             str += `
                 <div class="mt-3">
-                    <strong>${key}</strong>:
+                    <h${headingLevel} class="text-muted">${key}</h${headingLevel}>
                     <div class="card mt-1">
                         <div class="card-body">
                             ${nestedHTML}
@@ -53,6 +54,7 @@ function renderItemAsCard(item) {
 
     return str;
 }
+
 
 
 function loadJsonToTable(file, tableId) {
