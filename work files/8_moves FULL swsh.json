@@ -8586,5 +8586,91 @@
         "effect": "Zing Zap Flinches the target on 15+.",
         "contest_type": "Cool",
         "contest_effect": "Tease"
+    },,
+    {
+        "Name": "Dragon Darts",
+        "Type": "Dragon",
+        "Frequency": "EOT",
+        "AC": "2",
+        "Damage Base": "Damage Base 5: 1d8+8 / 13",
+        "Class": "Physical",
+        "Range": "6, 1 Target, Double Strike; or 6, 2 Targets",
+        "Contest Type": "Smart",
+        "Contest Effect": "Double Time",
+        "Effect": "None."
+    },
+    {
+        "Name": "Eternabeam",
+        "Type": "Dragon",
+        "Frequency": "Scene",
+        "AC": "4",
+        "Damage Base": "Damage Base 16: 5d10+20 / 50",
+        "Class": "Special",
+        "Range": "Line 6, Smite, Exhaust",
+        "Contest Type": "Cool",
+        "Contest Effect": "Seen Nothing Yet",
+        "Effect": "None."
+    },
+    {
+        "Name": "Overdrive",
+        "Type": "Electric",
+        "Frequency": "EOT",
+        "AC": "2",
+        "Damage Base": "Damage Base 8: 2d8+10 / 19",
+        "Class": "Special",
+        "Range": "Cone 2, Sonic",
+        "Contest Type": "Cool",
+        "Contest Effect": "Attention Grabber",
+        "Effect": "None."
+    },
+    {
+        "Name": "Meteor Assault",
+        "Type": "Fighting",
+        "Frequency": "Daily x2",
+        "AC": "2",
+        "Damage Base": "Damage Base 15: 4d10+20 / 45",
+        "Class": "Physical",
+        "Range": "Burst 1, Smite, Exhaust",
+        "Contest Type": "Tough",
+        "Contest Effect": "Exhausting Act",
+        "Effect": "None."
+    },
+    {
+        "Name": "Dual Wingbeat",
+        "Type": "Flying",
+        "Frequency": "EOT",
+        "AC": "2",
+        "Damage Base": "Damage Base 4: 1d8+6 / 11",
+        "Class": "Physical",
+        "Range": "Melee, 1 Target, Double Strike",
+        "Contest Type": "Cool",
+        "Contest Effect": "Reliable",
+        "Effect": "None."
+    },
+    {
+        "Name": "Branch Poke",
+        "Type": "Grass",
+        "Frequency": "At-Will",
+        "AC": "2",
+        "Damage Base": "Damage Base 4: 1d8+6 / 11",
+        "Class": "Physical",
+        "Range": "2, 1 Target",
+        "Contest Type": "Tough",
+        "Contest Effect": "Steady Performance",
+        "Effect": "None."
+    },
+    {
+        "Name": "Meteor Beam",
+        "Type": "Rock",
+        "Frequency": "Scene x2",
+        "AC": "4",
+        "Damage Base": "Damage Base 12: 3d12+10 / 30",
+        "Class": "Special",
+        "Range": "Cone 3, Set-Up",
+        "Contest Type": "Tough",
+        "Contest Effect": "Special Attention",
+        "Set-Up Effect": "The user’s Special Attack is raised by +1 Combat Stage.",
+        "Resolution Effect": "The user attacks with Meteor Beam.",
+        "Effect": "None."
     }
 ]

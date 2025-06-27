@@ -53,70 +53,70 @@ def formatter_move_en_json(bloc):
 
         # Champs identifiés
         if l.startswith("Move:"):
-            move["name"] = l.split(":", 1)[-1].strip()
+            move["Name"] = l.split(":", 1)[-1].strip()
             current_section = None
         elif l.startswith("Type:"):
-            move["type"] = l.split(":", 1)[-1].strip()
+            move["Type"] = l.split(":", 1)[-1].strip()
             current_section = None
         elif l.startswith("Frequency:"):
-            move["frequency"] = l.split(":", 1)[-1].strip()
+            move["Frequency"] = l.split(":", 1)[-1].strip()
             current_section = None
         elif l.startswith("AC:"):
-            move["ac"] = l.split(":", 1)[-1].strip()
+            move["AC"] = l.split(":", 1)[-1].strip()
             current_section = None
         elif l.startswith("Damage Base"):
-            move["damage_base"] = l
+            move["Damage Base"] = l
             current_section = None
         elif l.startswith("Class:"):
-            move["class"] = l.split(":", 1)[-1].strip()
+            move["Class"] = l.split(":", 1)[-1].strip()
             current_section = None
         elif l.startswith("Range:"):
-            move["range"] = l.split(":", 1)[-1].strip()
+            move["Range"] = l.split(":", 1)[-1].strip()
             current_section = None
         elif l.startswith("Trigger:"):
-            move["trigger"] = l.split(":", 1)[-1].strip()
+            move["Trigger"] = l.split(":", 1)[-1].strip()
             current_section = None
         elif l.startswith("Special:"):
-            move["special"] = l.split(":", 1)[-1].strip()
+            move["Special"] = l.split(":", 1)[-1].strip()
             current_section = None
         elif l.startswith("Contest Type:"):
-            move["contest_type"] = l.split(":", 1)[-1].strip()
+            move["Contest Type"] = l.split(":", 1)[-1].strip()
             current_section = None
         elif l.startswith("Contest Effect:"):
-            move["contest_effect"] = l.split(":", 1)[-1].strip()
+            move["Contest Effect"] = l.split(":", 1)[-1].strip()
             current_section = None
         elif l.startswith("Set-Up Effect:"):
             setup_lines.append(l.split(":", 1)[-1].strip())
-            current_section = "set_up"
+            current_section = "Set-Up Effect"
         elif l.startswith("Resolution Effect:"):
             resolution_lines.append(l.split(":", 1)[-1].strip())
-            current_section = "resolution"
+            current_section = "Resolution Effect"
         elif l.startswith("Effect:"):
             effect_lines.append(l.split(":", 1)[-1].strip())
-            current_section = "effect"
+            current_section = "Effect"
         else:
             # Lignes suivantes
-            if current_section == "effect":
+            if current_section == "Effect":
                 effect_lines.append(l)
-            elif current_section == "set_up":
+            elif current_section == "Set-Up Effect":
                 setup_lines.append(l)
-            elif current_section == "resolution":
+            elif current_section == "Resolution Effect":
                 resolution_lines.append(l)
 
     # Attribuer les sections dans move
     if setup_lines:
-        move["set_up_effect"] = " ".join(setup_lines).strip()
+        move["Set-Up Effect"] = " ".join(setup_lines).strip()
     if resolution_lines:
-        move["resolution_effect"] = " ".join(resolution_lines).strip()
+        move["Resolution Effect"] = " ".join(resolution_lines).strip()
     if not (setup_lines or resolution_lines) and effect_lines:
-        move["effect"] = " ".join(effect_lines).strip()
+        move["Effect"] = " ".join(effect_lines).strip()
 
     # Nettoyage des champs vides
     move = {k: v for k, v in move.items() if v}
 
-    if not "effect" in move:
-        print(f"Attention: Move '{move.get('name', 'Unknown')}' n'a pas d'effet défini.")
-        move["effect"] = "None."
+    if not "Effect" in move:
+        print(f"Attention: Move '{move.get('Name', 'Unknown')}' n'a pas d'effet défini.")
+        move["Effect"] = "None."
         return move
     return None
 
@@ -132,7 +132,7 @@ moves_json = [formatter_move_en_json(bloc) for bloc in blocs_moves]
 moves_json = [m for m in moves_json if m]
 
 # 💾 Sauvegarde
-with open("py/0_output arc.json", "w", encoding="utf-8") as f:
+with open("py/0_output g8.json", "w", encoding="utf-8") as f:
     json.dump(moves_json, f, indent=2, ensure_ascii=False)
 
 # 🔍 Aperçu
