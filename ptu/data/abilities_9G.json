@@ -1825,7 +1825,8 @@
     {
         "Name": "Reckless",
         "Frequency": "Static",
-        "Effect": "Increases the Damage Base of Moves with the Exhaust, Recoil, or Reckless Keywords by +3. \nReckless Moves: Jump Kick, Hi Jump Kick, Close Combat, Draco Meteor, Hammer Arm, Leaf Storm, Outrage, Overheat, Petal Dance, Psycho Boost, Superpower, Thrash, and V-Create."
+        "Effect": "Increases the Damage Base of Moves with the Exhaust, Recoil, or Reckless Keywords by +3.",
+        "Reckless Moves": "Reckless Moves: Jump Kick, Hi Jump Kick, Close Combat, Draco Meteor, Hammer Arm, Leaf Storm, Outrage, Overheat, Petal Dance, Psycho Boost, Superpower, Thrash, and V-Create."
     },
     {
         "Name": "Refreshing Veil",
@@ -2274,10 +2275,8 @@
         "Trigger": "The user hits a foe with a Move",
         "Effect": "Connection – Tera Blast. Choose a Type of the triggering foe. The user then Radiates that Type until the end of the Encounter or they begin Radiating another Type. While Radiating, the user and all allies within a Burst 2 around them receive a +10 Damage Bonus when using Moves of that Type.",
         "Bonus": "While Radiating a Type, the user may use Tera Blast as that Type. This does not change whether or not they gain STAB. Additionally, when using Tera Blast against a target that has changed Forme, it is one step more effective. This may not cause the Effectiveness to be raised above Doubly Super Effective.",
-        "Notes": [
-            "Changing Forme includes any effect that switches Base Stat Sets, such as the Abilities like Stance Change or Schooling; Mega Evolution; Dynamax; Terastilization; or being in any Altered, Origin, or Primal Forme; even if they started the encounter that way.",
-            "If a GM desires to emulate a Pokémon being Stellar Type, they should grant this Ability."
-        ]
+        "Notes 1": "Changing Forme includes any effect that switches Base Stat Sets, such as the Abilities like Stance Change or Schooling; Mega Evolution; Dynamax; Terastilization; or being in any Altered, Origin, or Primal Forme; even if they started the encounter that way.",
+        "Notes 2": "If a GM desires to emulate a Pokémon being Stellar Type, they should grant this Ability."
     },
     {
         "Name": "Stench",
