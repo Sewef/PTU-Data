@@ -17,23 +17,29 @@
 
 <body>
   <div w3-include-html="header.html"></div>
-  <div class="container py-4">
-    <div class="row g-3">
-        <div class="container">
-          <h1 class="mb-4">JSON Rendered Cards</h1>
-          <div id="cards-container" class="container"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="list-group">
+          <!-- Sidebar content -->
         </div>
-
-        <!-- Your JS File -->
-        <script>
-			loadFeatures('/ptu/data/features_core.json');
-		</script>
+      </div>
+      <div class="col-md-9">
+        <div id="cards-container" class="container py-4">
+          <!-- Main content -->
+        </div>
+      </div>
     </div>
+  </div>
 
-    <script>
-      includeHTML();
-      setActive("Features");
-    </script>
+  <script>
+    includeHTML();
+    setActive("Features");
+  </script>
+  <script>
+    loadFeatures("/ptu/data/features_core.json");
+  </script>
+  
 </body>
 
 </html>

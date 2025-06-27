@@ -44,37 +44,74 @@ function createCard(title, data) {
 
     return col;
 }
+let fullData = {};
+let currentActiveLink = null;
 
 function loadFeatures(file) {
-	fetch(file)
-		.then(response => {
-			if (!response.ok) throw new Error("Failed to load JSON");
-			return response.json();
-		})
-		.then(jsonData => {
-			const container = document.getElementById("cards-container");
+    fetch(file)
+        .then(response => {
+            if (!response.ok) throw new Error("Failed to load JSON");
+            return response.json();
+        })
+        .then(jsonData => {
+            fullData = jsonData;
+            const sidebar = document.getElementById("sidebar");
 
-			for (const sectionTitle in jsonData) {
-				const section = jsonData[sectionTitle];
+            Object.keys(jsonData).forEach((sectionTitle, index) => {
+                const link = document.createElement("a");
+                link.href = "#";
+                link.className = "list-group-item list-group-item-action";
+                link.textContent = sectionTitle;
+                link.dataset.section = sectionTitle;
 
-				const header = document.createElement("h2");
-				header.className = "my-4";
-				header.textContent = sectionTitle;
-				container.appendChild(header);
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    renderSection(sectionTitle);
+                    setActiveLink(link);
+                });
 
-				const row = document.createElement("div");
-				row.className = "row";
+                sidebar.appendChild(link);
 
-				for (const cardTitle in section) {
-					const card = createCard(cardTitle, section[cardTitle]);
-					row.appendChild(card);
-				}
+                // Automatically load the first section
+                if (index === 0) {
+                    renderSection(sectionTitle);
+                    setActiveLink(link);
+                }
+            });
+        })
+        .catch(error => {
+            console.error("Error loading JSON:", error);
+        });
+}
+function renderSection(sectionTitle) {
+    const container = document.getElementById("cards-container");
+    container.innerHTML = "";
 
-				container.appendChild(row); // Add the row after the section header
-			}
-			
-		})
-		.catch(error => {
-			console.error("Error loading JSON:", error);
-		});
+    const section = fullData[sectionTitle];
+    if (!section) return;
+
+    const row = document.createElement("div");
+    row.className = "row";
+
+    for (const cardTitle in section) {
+        const card = createCard(cardTitle, section[cardTitle]);
+        row.appendChild(card);
+    }
+
+    container.appendChild(row);
+
+    // Scroll to just below the header
+    const header = document.querySelector('div[w3-include-html="header.html"]') || document.querySelector("header");
+    const headerHeight = header ? header.offsetHeight : 0;
+
+    const scrollTop = container.offsetTop - headerHeight - 16; // add padding
+}
+
+
+function setActiveLink(link) {
+    if (currentActiveLink) {
+        currentActiveLink.classList.remove("active");
+    }
+    link.classList.add("active");
+    currentActiveLink = link;
 }
