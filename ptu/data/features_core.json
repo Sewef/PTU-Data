@@ -2523,6 +2523,27 @@
                 "Frequency": "At-Will — Extended Action",
                 "Trigger": "You or your Pokémon make a roll",
                 "Effect": "Ingredients: Two Restoratives, or a Restorative and an X-Item\nEffect: You fuse the two Ingredients, creating an Item that has the properties of both. If you choose two Restoratives, they cannot be Restoratives with the same effect (you could not for example, mix a Potion and a Super Potion). If a Restorative Patch is used as an Ingredient, the resulting item can only be used as an Extended Action."
+            },
+            "Apothecary Recipes": {
+                "Restorative Science": {
+                    "Prerequisites": "Apothecary",
+                    "Cost": "$100",
+                    "Effect": "You create an Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal, or Potion."
+                },
+                "Super Cures": {
+                    "Prerequisites": "Patch Cure",
+                    "Cost": "$200",
+                    "Effect": "You can create Revives and Super Potions."
+                },
+                "Hyper Cures": {
+                    "Prerequisites": "Medical Techniques",
+                    "Effect": "You can create Full Heals for $300, Hyper Potions for $400, and Full Restores for $700."
+                },
+                "Performance Enhancers": {
+                    "Prerequisites": "Medicinal Blend",
+                    "Cost": "$4900",
+                    "Effect": "You create a PP Up or Heart Booster. If you have a Heart Scale, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost."
+                }
             }
         },
         "Apothecary_Sept2015": {
@@ -2548,6 +2569,27 @@
                 "Frequency": "At-Will — Extended Action",
                 "Trigger": "You or your Pokémon make a roll",
                 "Effect": "Ingredients: Two Restoratives, or a Restorative and an X-Item\nEffect: You fuse the two Ingredients, creating an Item that has the properties of both. If you choose two Restoratives, they cannot be Restoratives with the same effect (you could not for example, mix a Potion and a Super Potion). If a Restorative Patch is used as an Ingredient, the resulting item can only be used as an Extended Action."
+            },
+            "Apothecary Recipes": {
+                "Restorative Science": {
+                    "Prerequisites": "Apothecary",
+                    "Cost": "$100",
+                    "Effect": "You create an Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal, or Potion."
+                },
+                "Super Cures": {
+                    "Prerequisites": "Patch Cure",
+                    "Cost": "$200",
+                    "Effect": "You can create Revives and Super Potions."
+                },
+                "Hyper Cures": {
+                    "Prerequisites": "Affliction Techniques",
+                    "Effect": "You can create Full Heals for $300, Hyper Potions for $400, and Full Restores for $700."
+                },
+                "Performance Enhancers": {
+                    "Prerequisites": "Medicinal Blend",
+                    "Cost": "$4900",
+                    "Effect": "You create a PP Up or Heart Booster. If you have a Heart Scale, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost."
+                }
             }
         },
         "Artificer": {
@@ -2572,6 +2614,38 @@
                 "Frequency": "Scene — Standard Action",
                 "Trigger": "You must have a Shard in your Main Hand or Off-Hand to use Fistful of Force.",
                 "Effect": "You may destroy the Shard to use the Move Judgment. Judgment's Type must be one of the Types associated with the used Shard. Instead of adding your Special Attack when using this attack, you may choose to add your Occult Education Rank tripled."
+            },
+            "Artificer Recipes": {
+                "Type Booster": {
+                    "Prerequisites": "Crystal Artificer",
+                    "Ingredients": "x4 Shards of the same Color",
+                    "Effects": "You create a Type Booster. The Type chosen must be one of the Types associated with the color of the shards used."
+                },
+                "Type Brace": {
+                    "Prerequisites": "Crystal Artificer",
+                    "Ingredients": "x4 Shards of the same Color",
+                    "Effects": "You create a Type Brace. The Type chosen must be one of the Types associated with the color of the shards used."
+                },
+                "Focus Gem": {
+                    "Prerequisites": "Crystal Resonance",
+                    "Ingredients": "Any Six Shards.",
+                    "Effect": "You create a Focus that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item."
+                },
+                "Chakra Crystal": {
+                    "Prerequisites": "Crystal Resonance",
+                    "Ingredients": "Any Six Shards",
+                    "Effect": "You create a Stat Booster."
+                },
+                "Rainbow Gem": {
+                    "Prerequisites": "Rainbow Light, Expert Occult Education",
+                    "Ingredients": "Two Shards of each Color.",
+                    "Effect": "You create a Rainbow Gem that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item. This item has the same effect as a Focus, except that as an Extended Action, any Trainer with Expert Occult Education Rank or higher may change which Stat the Rainbow Amulet is attuned to."
+                },
+                "Plate Crafter": {
+                    "Prerequisites": "Rainbow Light, Expert Occult Education",
+                    "Ingredients": "A Type Booster and a Type Brace of the same Type.",
+                    "Effects": "You create a Type Plate matching the Type Booster and Brace used."
+                }
             }
         },
         "Botany": {
@@ -2616,6 +2690,28 @@
                 "Prerequisites": "Chemist, Expert Technology Education",
                 "Frequency": "At-Will — Extended Action",
                 "Effect": "Cost: $3500\nChoose Castform, Grimer, Koffing, Magnemite, Porygon, Solosis, Trubbish, or Voltorb. Using your chemistry set, you create an artificial Egg of the Chosen Pokémon, that hatches within a day. The resulting Pokémon is born at level 5, with the Nature and Ability of your choice (Abilities chosen from its species' Basic Abilities). Additionally, you may enhance the Pokémon in several ways. Choose a number of upgrades below equal to your Technology Education Rank.\n» The Pokémon is of an unusual coloration, gaining a +2d6 Bonus to the Introduction Stage of a Contest toward a single Contest Stat.\n The Pokémon adds a Move from its Egg Move or Move Tutor List to its Inheritance List. This may be performed up to 3 times.\n» Increase one of the Pokémon's Base Stats by +1. This counts as use of a Vitamin. This may be performed up to 5 times."
+            },
+            "Chemistry Recipes": {
+                "Enhancers": {
+                    "Prerequisites": "Chemist",
+                    "Cost": "$100",
+                    "Effect": "You can create any X-Item, Dire Hit, or Guard Spec."
+                },
+                "Pester Balls: Disorient": {
+                    "Prerequisites": "Chemist",
+                    "Cost": "$50",
+                    "Effect": "You create Pester Balls that can inflict Rage or Confusion."
+                },
+                "Pester Balls: Pain": {
+                    "Prerequisites": "Chemical Warfare",
+                    "Cost": "$50",
+                    "Effect": "You create Pester Balls that can inflict Burn or Poison."
+                },
+                "Pester Balls: Shut Down": {
+                    "Prerequisites": "Caustic Chemistry",
+                    "Cost": "$50",
+                    "Effect": "You create Pester Balls that can inflict Paralysis or Sleep."
+                }
             }
         },
         "Climatology": {
@@ -2824,7 +2920,8 @@
             "Tags": "[+HP]",
             "Prerequisites": "Survivalist",
             "Frequency": "1 AP — Special",
-            "Effect": "You and your Pokémon become adept at using the environment to your advantage in battle. You or your Pokémon may activate Natural Fighter as a Standard Action to use the Move below corresponding to the current terrain. You and your Pokémon must still follow all Frequency limitations for the Move.\n\nGrassland: Cotton Spore; Forest: Grass Whistle; Wetlands: Mud Slap; Ocean: Aqua Ring; Tundra: Haze; Mountain: Smack Down; Cave: Astonish; Urban: Fling; Desert: Sand Attack"
+            "Effect": "You and your Pokémon become adept at using the environment to your advantage in battle. You or your Pokémon may activate Natural Fighter as a Standard Action to use the Move below corresponding to the current terrain. You and your Pokémon must still follow all Frequency limitations for the Move.\nGrassland: Cotton Spore; Forest: Grass Whistle; Wetlands: Mud Slap; Ocean: Aqua Ring; Tundra: Haze; Mountain: Smack Down; Cave: Astonish; Urban: Fling; Desert: Sand Attack",
+            "Note": "GMs! Don’t be super duper strict about the terrains here. Obviously a beach is analogous enough to a desert to use Sand Attack, and a lake can count as ocean terrain. In urban terrain, there’ll probably at least be trash around to Fling with the standard 6 DB option. On the other hand, most standard arenas for League matches won’t qualify for any of the terrains. However, some arenas may be specifically designed to emulate a terrain type, such as a rocky stadium or a set of floating platforms in a pool."
         },
         "Trapper": {
             "Tags": "[+HP]",
@@ -2842,9 +2939,54 @@
             "Tags": "[+HP]",
             "Rank 1 Prerequisites": "Survivalist, 2 Mastered Terrains",
             "Rank 2 Prerequisites": "Survivalist, 4 Mastered Terrains",
+            "Frequency": "Static",
+            "Effect": "Each Rank, you gain two Terrain Talents, chosen from the Terrains for which you gained Naturewalk from Survivalist.",
+            "Note": "You do not have to be in the corresponding terrain to take advantage of Terrain Talents! They work everywhere."
+        },
+        "Adaptive Geography": {
+            "Tags": "[+HP]",
+            "Prerequisites": "4 Survivalist Features, Master Survival",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "You or your Pokémon gain Initiative",
-            "Effect": "The triggering target takes their turn as if they were in a terrain adjacent to the terrain they are in on the following graphic. For example, if you are standing in Wetlands terrain, you may act as if you are standing in Forest or Ocean Terrain. This affects Survivalist Features, Naturewalk Capabilities\nMoves with the Environ Keyword, etc."
+            "Effect": "The triggering target takes their turn as if they were in a terrain adjacent to the terrain they are in on the following graphic. For example, if you are standing in Wetlands terrain, you may act as if you are standing in Forest or Ocean Terrain. This affects Survivalist Features, Naturewalk Capabilities Moves with the Environ Keyword, etc.\n<img src=\"/ptu/data/feature_survivalist_adaptive_geography.png\">"
+        },
+        "Terrain Talents": {
+            "Plains Runner – Grassland Terrain": {
+                "Frequency": "Static",
+                "Effect": "Your Overland Speed is increased by +2. You gain a +2 bonus to Perception Checks to spot or identify objects in the far distance."
+            },
+            "Forest Ranger – Forest Terrain": {
+                "Frequency": "Static",
+                "Effect": "You’re used to navigating the dense plant life of large forests. You gain the Stealth Capability."
+            },
+            "Marsh Stomper – Wetland Terrain": {
+                "Frequency": "Static",
+                "Effect": "You can handle the toxic fauna and flora of the marshes. You do not lose Hit Points from Poison and lose only 1 instead of 2 Combat Stages from Poison. You still count as Poisoned for the purpose of Moves and effects."
+            },
+            "Deep Diver – Ocean Terrain": {
+                "Frequency": "Static",
+                "Effect": "You love nothing better than the smell of the sea. Your Swimming Capability is equal to your Overland Capability instead of half. Additionally, you may hold your breath underwater for a number of minutes equal to your Survival Rank before you start suffocating."
+            },
+            "Arctic Pilgrim – Tundra Terrain": {
+                "Frequency": "Static",
+                "Effect": "Neither deep slow nor slippery ice can deter you. You are immune to the effects of Hail and to the Frozen condition, and gain 5 Damage Reduction against Ice- Type attacks."
+            },
+            "Surefooted – Mountain Terrain": {
+                "Frequency": "Static",
+                "Effect": "You’re not afraid of precarious ledges and steep hills. You gain a +2 Bonus to Skill Checks made to climb, balance, or maintain footing – including resisting Push and Trip maneuvers. Whenever you take falling damage, ignore one meter and receive one less Injury when determining damage."
+            },
+            "Cave Dweller – Cave Terrain": {
+                "Frequency": "Static",
+                "Effect": "Your eyes are used to very low levels of light. You do not suffer Blindness for being in Low-Light conditions. If you would be Totally Blinded by complete darkness, you instead suffer the penalties of Blindness, and may make Survival Checks instead of Acrobatics to avoid becoming Tripped. You are immune to Stealth Rock Hazards."
+            },
+            "Traceur – Urban Terrain": {
+                "Frequency": "Static",
+                "Effect": "The city is your jungle. You gain a +1 Bonus to your Jump Capabilities. Add half your Survival Rank to your Evasion against Push, Trip, and Attack of Opportunity Maneuvers."
+            },
+            "Dune Walker – Desert Terrain": {
+                "Frequency": "Static",
+                "Effect": "Your long hours in the unforgiving desert have made you inured to sand and heat. You’re immune to the effects of Sandstorm, Sand-Attack, and Sand Tomb, and you gain 5 Damage Reduction against Fire-Type attacks."
+            }
         }
     },
     "Athlete": {
@@ -2880,7 +3022,7 @@
             "Rank 2 Prerequisites": "Athlete, Expert Athletics",
             "Rank 3 Prerequisites": "Athlete, Master Athletics",
             "Frequency": "Static",
-            "Effect": "You learn two Athlete Moves marked with the Rank of this Feature you are taking or lower."
+            "Effect": "You learn two Athlete Moves marked with the Rank of this Feature you are taking or lower.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th>Rank 1</th><th>Rank 2</th><th>Rank 3</th></tr></thead><tbody><tr><td>Bind Body</td><td>Slam</td><td>Mega Kick</td></tr><tr><td>Block</td><td>Take Down</td><td>Facade</td></tr><tr><td>Slam</td><td>Extreme Speed</td><td>Retaliate</td></tr><tr><td>Strength</td><td></td><td></td></tr></tbody></table></div>"
         }
     },
     "Dancer": {
@@ -2888,7 +3030,18 @@
             "Tags": "[Class][+Speed]",
             "Prerequisites": "Novice Acrobatics, Novice Athletics, Novice Charm",
             "Frequency": "Static",
-            "Effect": "Choose Spinning Dance or Own Tempo. You gain the chosen Ability."
+            "Effect": "Choose Spinning Dance or Own Tempo. You gain the chosen Ability.",
+            "Mechanic – Dance Moves": "Dance Moves you create with the Dance Form Feature look like the Move on the right. First, name the Dance Move whatever you like. Secondly, choose two Combat Stage gains for the effect. This may either be +2 Combat Stages to a single Stat, like Swords Dance, or +1 Combat Stage to two different Stats, like Dragon Dance. Once chosen, this cannot be changed. Dragon Dance, Quiver Dance, and Swords Dance count as Dance Moves for the purposes of Dancer Features as well. A Dance Move’s Contest Type must be chosen from a Contest Type associated with a Stat that the Dance Move affects. Cool is associated with Attack, Tough is associated with Defense, Beauty is associated with Special Attack, Smart is associated with Special Defense, and Cute is associated with Speed.",
+            "Template": {
+                "Name": "Dance Move",
+                "Type": "Normal",
+                "Frequency": "EOT",
+                "AC": "None",
+                "Range": "Self",
+                "Effect": "",
+                "Contest Type": "",
+                "Contest Effect": "Get Ready!"
+            }
         },
         "Dance Form": {
             "Tags": "[+Speed]",
