@@ -589,7 +589,7 @@
             "Prerequisites": "Cheer Brigade, Adept Charm",
             "Frequency": "Static",
             "Effect": "You may trigger Cheerleader as a Free Action when your Pokémon with Friend Guard activate an Ability or Status Move that affects only allies.",
-            "Note":"When considering effects that could trigger Cheerleader this way, aside from the obvious Moves like Helping Hand and Abilities like Plus and Minus, think about Blessings, Coats, etc too!"
+            "Note": "When considering effects that could trigger Cheerleader this way, aside from the obvious Moves like Helping Hand and Abilities like Plus and Minus, think about Blessings, Coats, etc too!"
         },
         "Moment of Action": {
             "Tags": "[Orders]",
@@ -868,7 +868,7 @@
             "Prerequisites": "Trickster, Adept Guile",
             "Frequency": "1 AP — Free Action",
             "Trigger": "Your Pokémon hits a foe suffering from a Status Affliction or one of the other conditions in the table below",
-            "Effect": "Choose a Status Affliction or condition the triggering target is suffering from; the target suffers an additional effect according to the table below. Stacked Deck may only affect a foe once per Scene."
+            "Effect": "Choose a Status Affliction or condition the triggering target is suffering from; the target suffers an additional effect according to the table below. Stacked Deck may only affect a foe once per Scene.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th>Condition</th><th>Effect</th></tr></thead><tbody><tr><td>Bad Dreams, Cursed, Seeded, Burn, Poison</td><td>Whenever the target loses Hit Points from the chosen condition, they lose an additional 5 Hit Points.</td></tr><tr><td>Paralysis, Frozen, Vortex, Sleep</td><td>The next time the target passes their Save Check for the chosen condition, they become Tripped and Slowed..</td></tr><tr><td>Confuse, Enrage, Suppression, Infatuation</td><td>The target suffers a -2 penalty to their Accuracy and Evasion while suffering from the chosen condition.</td></tr></tbody></table>"
         },
         "Flourish": {
             "Prerequisites": "Trickster",
@@ -885,6 +885,28 @@
             "Prerequisites": "4 Trickster Features, Master Guile",
             "Frequency": "Scene x2 — Free Action",
             "Effect": "Your Pokémon may activate Sleight as an Interrupt to immediately take their turn and use a Status- Class Move as a Standard Action. If this Move targets a foe, it ignores Substitute and Defensive Abilities, and Blessings may not be activated against the Move."
+        },
+        "Trickster Techniques": {
+            "Mind Games": {
+                "Frequency": "Scene x2 — Free Action",
+                "Trigger": "Your Pokémon hits a foe with a Move with the Social keyword",
+                "Effect": "The foe becomes Vulnerable for one full round. If the foe is afflicted with Rage, Suppression, Infatuation, or Confusion you may change one of the listed Volatile Status to another listed Volatile Status. Mind Games may only be activated once per Scene per foe. When inflicting Infatuation this way, the object of Infatuation is your Pokémon, regardless of gender."
+            },
+            "Escape Artist": {
+                "Frequency": "1 AP – Free Action",
+                "Trigger": "Your Pokémon targets an adjacent foe with a Status-Class Move",
+                "Effect": "The triggering Move cannot provoke an Attack of Opportunity, and your Pokémon may immediately perform a Disengage Maneuver as a Free Action. Escape Artist may only be activated once per Scene per Pokémon."
+            },
+            "Shell Game": {
+                "Frequency": "Scene x2 – Special",
+                "Target": "Allied Hazards",
+                "Effect": "Your Pokémon may activate Shell Game when placing Hazards as as Free Action or otherwise as a Standard Action. Choose one type of Hazard and move all allied instances of that Hazard up to X meters, where X is equal to half your Guile Rank; they do not have to remain contiguous. You may use Shell Game to place Hazards of different types on the same square or create layers of Toxic Spikes."
+            },
+            "Impromptu Trick": {
+                "Frequency": "1 AP – Free Action",
+                "Trigger": "A foe triggers an Attack of Opportunity from your Pokémon",
+                "Effect": "Your Pokémon may use a Move with the Hazard Keyword or an At-Will or EOT Frequency Status-Class Move targeting that foe instead of a Struggle Attack."
+            }
         }
     },
     "Stat Ace": {
