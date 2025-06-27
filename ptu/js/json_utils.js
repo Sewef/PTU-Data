@@ -5,40 +5,55 @@ function loadJsonAsCard(file, container) {
             return;
         }
 
+        // Render each item
         data.forEach(item => {
-            let str = '';
-            Object.keys(item).forEach(key => {
-                if (key == "Name") {
-                    str += `<h3>${item[key] !== undefined ? item[key] : ""}</h3>`;
-                }
-                else if (key == "Frequency" && 1==0) {
-                    str += `${item[key] !== undefined ? item[key] : ""}<br>`;
-                }
-                else if (key == "Damage Base") {
-                    if (item[key] !== undefined) {
-                        const regex = /(Damage Base.*:) (.*)/;
-                        const match = item[key].match(regex);
-                        if (!match) {
-                            console.log("Error: damage_base format is incorrect in item:", item);
-                        }
-                        else {
-                            str += `<strong>${match[1]}</strong> ${match[2]}<br>`;
-                        }
-                    }
-                }
-                else {
-                    str += `<strong>${key}</strong>: ${item[key] !== undefined ? item[key] : ""}<br>`;
-                    str = str.replaceAll("\n", "<br>");
-                }
-            });
-            
+            const cardHTML = renderItemAsCard(item);
             const cardDiv = document.createElement('div');
             cardDiv.className = "col-12 col-md-4";
-            cardDiv.innerHTML = `<div class="card h-100"><div class="card-body">${str}</div></div>`;
+            cardDiv.innerHTML = `<div class="card h-100"><div class="card-body">${cardHTML}</div></div>`;
             container.appendChild(cardDiv);
         });
     });
 }
+
+// Recursive renderer
+function renderItemAsCard(item) {
+    let str = '';
+
+    Object.keys(item).forEach(key => {
+        const value = item[key];
+
+        if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
+            // Nested object: render as nested card
+            const nestedHTML = renderItemAsCard(value);
+            str += `
+                <div class="mt-3">
+                    <strong>${key}</strong>:
+                    <div class="card mt-1">
+                        <div class="card-body">
+                            ${nestedHTML}
+                        </div>
+                    </div>
+                </div>`;
+        } else if (key === "Name") {
+            str += `<h3>${value ?? ""}</h3>`;
+        } else if (key === "Damage Base") {
+            const regex = /(Damage Base.*:) (.*)/;
+            const match = value?.match(regex);
+            if (match) {
+                str += `<strong>${match[1]}</strong> ${match[2]}<br>`;
+            } else {
+                console.log("Error: damage_base format is incorrect in item:", item);
+            }
+        } else {
+            str += `<strong>${key}</strong>: ${value ?? ""}<br>`;
+            str = str.replaceAll("\n", "<br>");
+        }
+    });
+
+    return str;
+}
+
 
 function loadJsonToTable(file, tableId) {
     $.getJSON(file, function (data) {

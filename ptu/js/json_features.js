@@ -22,10 +22,10 @@ function renderData(data, container, depth = 0) {
 function createCard(title, data) {
     // Create the column wrapper
     const col = document.createElement("div");
-    col.className = "col-md-6 mb-4"; // 2-column layout on medium+ screens
+    col.className = "col-md-12 mb-3";
 
     const card = document.createElement("div");
-    card.className = "card h-100"; // Full height card inside column
+    card.className = "card h-100";
 
     const cardBody = document.createElement("div");
     cardBody.className = "card-body";
