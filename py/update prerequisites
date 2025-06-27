@@ -1,0 +1,32 @@
+import json
+
+def replace_prerequisites(base_data, updates):
+    if isinstance(base_data, dict):
+        for key, value in base_data.items():
+            if isinstance(value, dict):
+                # If 'Prerequisites' exists in the base and in updates, update it
+                if "Prerequisites" in value and key in updates and "Prerequisites" in updates[key]:
+                    value["Prerequisites"] = updates[key]["Prerequisites"]
+                # Recurse deeper
+                replace_prerequisites(value, updates)
+            elif isinstance(value, list):
+                for item in value:
+                    replace_prerequisites(item, updates)
+    elif isinstance(base_data, list):
+        for item in base_data:
+            replace_prerequisites(item, updates)
+
+def main(base_file, update_file, output_file):
+    with open(base_file, 'r', encoding='utf-8') as f:
+        base_data = json.load(f)
+    with open(update_file, 'r', encoding='utf-8') as f:
+        updates = json.load(f)
+
+    replace_prerequisites(base_data, updates)
+
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(base_data, f, indent=4, ensure_ascii=False)
+
+if __name__ == "__main__":
+    main("py/base.json", "py/updates.json", "py/updated.json")
+

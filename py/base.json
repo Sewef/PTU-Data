@@ -245,7 +245,7 @@
             "Effect": "The target loses 2 Tutor Points. Choose one Move on the Target's Move List. That Move becomes the target's Signature Technique, and you may apply one of the modifications on the next page to the Move. The Move being modified must fit the category of the modification, and you must have the associated Training Feature to apply a modification. A Pokémon may only have one Signature Technique at a time. If you choose to teach a Pokémon a different Signature Technique, the old one is lost, and 1 Tutor Point is refunded. 1 Tutor Point is also refunded if the Pokémon ever forgets a Signature Technique Move."
         },
         "Champ in the Making": {
-            "Prerequisites": "Four Ace Trainer Feats, Master Command",
+            "Prerequisites": "4 Ace Trainer Features, Master Command",
             "Frequency": "Drain 1 AP — Free Action",
             "Trigger": "You use Ace Trainer to give Pokémon Trained Stats",
             "Effect": "Choose two Trained Stats for each Pokémon instead of one. A Pokémon may only have two Trained Stats this way."
@@ -375,7 +375,7 @@
             "Effect": "You may target up to two additional Allies with the [Orders]."
         },
         "Complex Orders": {
-            "Prerequisites": "Commander, at least two Features with the [Orders] Tag that have targets",
+            "Prerequisites": "Commander, Tags Orders, Target 1, Tags Orders, Target 1",
             "Frequency": "At-Will — Shift Action",
             "Trigger": "You give [Orders] that have targets.",
             "Effect": "You may choose a different Order to give to each Target. You must pay all AP costs and follow Frequency restrictions for all Orders used in this way."
@@ -396,7 +396,7 @@
     "Coordinator": {
         "Coordinator": {
             "Tags": "[Class]",
-            "Prerequisites": "Grace, Novice Charm, Command, Guile, Intimidate, or Intuition",
+            "Prerequisites": "Grace, Novice Charm, Novice Command, Novice Guile, Novice Intimidate, Novice Intuition",
             "Frequency": "At-Will — Free Action",
             "Effect": "Your Pokémon may reroll a single Appeal Roll or Damage Roll. This Feature may be used only once per Contest, and once per Pokémon per Scene."
         },
@@ -414,7 +414,7 @@
             "Effect": "Choose two of your Pokémon's Moves. Your Pokémon may perform your Contest Move as if had the Contest Typing of one of your chosen Moves, and had the effects of the other. You may not use either move on the next round of the contest. This effect may be used once per Contest."
         },
         "Flexible Preparations": {
-            "Prerequisites": "Adaptable Performance, Adept Charm, Command, Guile, Intimidate, or Intuition",
+            "Prerequisites": "Adaptable Performance, Adept Charm, Adept Command, Adept Guile, Adept Intimidate, Adept Intuition",
             "Frequency": "Daily — Extended Action",
             "Target": "A Pokémon that has Contest Stats from Poffins",
             "Effect": "The target may reallocate up to 2d6 of Poffin-Derived Contest Stats from one Contest Stat to another. This effect lasts until the end of the day."
@@ -426,13 +426,13 @@
             "Effect": "The target loses 1 Tutor Point, and then learns a Move created with Innovation. See the next section for details on creating Moves for this Feature. A Pokémon may only have one Move created by Innovation at a time."
         },
         "Nuanced Performance": {
-            "Prerequisites": "Coordinator, Expert Charm, Command, Guile, Intimidate, or Intuition",
+            "Prerequisites": "Coordinator, Expert Charm, Expert Command, Expert Guile, Expert Intimidate, Expert Intuition",
             "Frequency": "1 AP — Free Action",
             "Trigger": "Your Pokémon miss all targets with a Move",
             "Effect": "That Move's Frequency is not expended. This does not work with Moves that may fail to activate, such as moves with the Execute keyword."
         },
         "Reliable Performance": {
-            "Prerequisites": "Nuanced Performance, Master Charm, Command, Guile, Intimidate, or Intuition",
+            "Prerequisites": "Nuanced Performance, Master Charm, Master Command, Master Guile, Master Intimidate, Master Intuition",
             "Frequency": "2 AP — Free Action",
             "Trigger": "Your Pokémon makes an Appeal Roll, Accuracy Check, or Skill Check",
             "Effect": "For appeal rolls, instead of making the Appeal Roll, you gain 1 Appeal Point for each Dice you would have rolled. For Accuracy Checks, act as if you had rolled a 10. For Skill Checks, multiply 3.5 by your Pokémon's Skill Rank, and use the resulting number as the result of your roll, rounded down. For all rolls, add or subtract any modifiers as normal."
@@ -490,12 +490,12 @@
             "Effect": "Each Rank of Dilettante, you gain both an Edge and a General Feature from the lists below. You may gain the chosen Edge and Feature even if you do not meet the Skill prerequisites. You must meet any other Prerequisites. Whenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead."
         },
         "Dabbler": {
-            "Prerequisites": "Hobbyist, Expert General Education or Perception",
+            "Prerequisites": "Hobbyist, Expert Perception, Expert General Education",
             "Frequency": "Static",
             "Effect": "At the Level 5, 10, 20, 30, and 40 Character Advancement Level Milestones, if you choose to gain Bonus Stats, you also gain an Edge for which you qualify. If you choose Bonus Edges or Features, you also gain +2 to your choice of Attack or Special Attack. This applies retroactively."
         },
         "Look and Learn": {
-            "Prerequisites": "Hobbyist, Expert General Education or Perception",
+            "Prerequisites": "Hobbyist, Expert Perception, Expert General Education",
             "Frequency": "x2 Uses — Extended Action",
             "Effect": "When you activate Look and Learn, you may gain any of the Features below even though they are Features from other Classes. You do not need to meet their normal prerequisites, but you must meet their Prerequisites listed here. Look and Learn can be used two times; once to learn a Feature from the \"Scene Features\" List, and once to learn a Feature from the \"Action Point Features List\".\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"3\">Scene Features List </th><th colspan=\"3\">Action Point Features List </th></tr></thead><tbody><tr><td>Trainer Class</td><td>Feature</td><td>Prerequisite</td><td>Trainer Class</td><td>Feature</td><td>Prerequisite</td></tr><tr><td>Ace Trainer</td><td>Critical Moment</td><td>Commander's Voice</td><td>Coordinator</td><td>Nuanced Performance</td><td>Grace</td></tr><tr><td>Capture Specialist</td><td>Capture Techniques\n(False Strike and Catch Combo only)</td><td>Poké Ball Crafter</td><td>Juggler</td><td>Round Trip</td><td>Quick Switch</td></tr><tr><td>Enduring</td><td>Staying Power</td><td>Medic Training</td><td>Chef</td><td>Hits the Spot</td><td>Basic Cooking</td></tr><tr><td>Trickster</td><td>Sleight</td><td>Command Versatility</td><td>Fashionista</td><td>Style is Eternal</td><td>Groomer</td></tr><tr><td>Researcher</td><td>Chemical Warfare</td><td>Repel Crafter</td><td>Athlete</td><td>Coaching</td><td>Swimmer</td></tr><tr><td>Roughneck</td><td>Mettle</td><td>Defender</td><td>Tumbler</td><td>Quick Gymnastics</td><td>Acrobat</td></tr></tbody></table></div>"
         }
@@ -503,7 +503,7 @@
     "Mentor": {
         "Mentor": {
             "Tags": "[Class]",
-            "Prerequisites": "Two of Charm, Intimidate, Intuition, or Pokémon Education at Novice Rank",
+            "Prerequisites": "Novice Charm, Novice Intimidate, Novice Intuition, Novice Pokémon Education, Novice Charm, Novice Intimidate, Novice Intuition, Novice Pokémon Education",
             "Frequency": "Daily x3 — Extended Action",
             "Target": "A Pokémon with at least 1 Tutor Point remaining",
             "Effect": "The target loses 1 Tutor Point, and then learns a move from its tutor list marked with a (N), or any move on its level-up list learned at X Level or lower, where X is the target's current Level plus the sum of your Mentor Skill Ranks. Note that despite being Tutored, these Moves count as if they were \"natural\" for organizational purposes."
@@ -525,7 +525,7 @@
             "Effect": "Your Pokémon's base Move List Limit is increased by +1 (Reminder: The default Move List Limit is 6)."
         },
         "Move Tutor": {
-            "Prerequisites": "Mentor, one Mentor Skill at Expert Rank",
+            "Prerequisites": "Mentor, Mentor 5",
             "Frequency": "Daily — Extended Action",
             "Target": "A Pokémon with at least 2 Tutor Points.",
             "Effect": "The target loses 2 Tutor Points, and learns any move from its Tutor List."
@@ -537,7 +537,7 @@
             "Effect": "The target loses 2 Tutor Points, and learns any Move from its Egg Move List. A Pokémon may be targeted by Egg Tutor only one time."
         },
         "Lifelong Learning": {
-            "Prerequisites": "Move Tutor, one Mentor Skill at Master Rank",
+            "Prerequisites": "Move Tutor, Mentor 6",
             "Frequency": "Static",
             "Effect": "Your Pokémon may have up to 4 Moves from their Move List come from TMs or Move Tutors."
         },
@@ -661,7 +661,7 @@
     "Enduring Soul": {
         "Enduring Soul": {
             "Tags": "[Class]",
-            "Prerequisites": "Novice Athletics and Focus",
+            "Prerequisites": "Novice Athletics, Novice Focus",
             "Frequency": "Static",
             "Effect": "You may add to your Pokémon's HP stat when they level up, ignoring Base Relation, and you do not need to \"correct\" Stats due to this inflated HP."
         },
@@ -682,19 +682,19 @@
             "Effect": "Your Pokémon add +2 to all Save Checks."
         },
         "Resilience": {
-            "Prerequisites": "Awareness, Expert Athletics or Focus",
+            "Prerequisites": "Awareness, Expert Athletics, Expert Focus",
             "Frequency": "2 AP — Free Action",
             "Trigger": "Your Pokémon is hit by a Critical Hit or gains a Status Affliction (or both)",
             "Effect": "Your Pokémon does not gain a Status Affliction, and the triggering attack does damage as if it was not a Critical Hit. Resilience may only be used once per target per Scene."
         },
         "Not Yet!": {
-            "Prerequisites": "Enduring Soul, Expert Athletics or Focus",
+            "Prerequisites": "Enduring Soul, Expert Athletics, Expert Focus",
             "Frequency": "Scene — Free Action",
             "Trigger": "Your Pokémon is Fainted, but is not at less than -100% Hit Points.",
             "Effect": "Before fainting, the targeted Pokémon gains an Injury, and may then use a Move as an Interrupt. When the Move is resolved, the Pokémon then immediately faints. This consumes a Pokémon turn as normal. This cannot be used with the Moves Explosion, Pain Split, or Self-Destruct."
         },
         "Vim and Vigor": {
-            "Prerequisites": "Shrug Off, Master Athletics or Focus",
+            "Prerequisites": "Shrug Off, Master Athletics, Master Focus",
             "Frequency": "At-Will — Extended Action",
             "Trigger": "Your Pokémon with at least 2 Tutor Points",
             "Effect": "The target loses 2 Tutor Points, and gains the Vigor Ability."
@@ -722,27 +722,27 @@
         },
         "Round Trip": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Juggler, Adept Acrobatics or Guile",
+            "Prerequisites": "Juggler, Adept Acrobatics, Adept Guile",
             "Frequency": "1 AP — Free Action",
             "Trigger": "Your Pokémon uses a Move.",
             "Effect": "You may immediately switch your Pokémon that just performed a Move for another of your Pokémon. This effect lets Pokémon with the Trapped condition switch out."
         },
         "Tag In": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Round Trip, Expert Acrobatics or Guile",
+            "Prerequisites": "Round Trip, Expert Acrobatics, Expert Guile",
             "Frequency": "1 AP — Free Action",
             "Trigger": "You recall a Pokémon",
             "Effect": "The next Pokémon you send out is treated as if the recalled Pokémon had used Baton Pass on it."
         },
         "Emergency Release": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Juggler, Expert Acrobatics or Guile",
+            "Prerequisites": "Juggler, Expert Acrobatics, Expert Guile",
             "Frequency": "2 AP — Shift Action, Interrupt",
             "Effect": "The next Pokémon you send out is treated as if the recalled Pokémon had used Baton Pass on it."
         },
         "First Blood": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Tag In, Master Acrobatics or Guile",
+            "Prerequisites": "Tag In, Master Acrobatics, Master Guile",
             "Frequency": "Scene — Free Action",
             "Trigger": "You release a Pokémon from its Poké Ball",
             "Effect": "If you have a Pokémon turn available this round or next, your Pokémon may use a Move as an Interrupt as soon as it is sent out. This consumes your Pokémon turn for the round (or the following round) as normal."
@@ -751,7 +751,7 @@
     "Rider": {
         "Rider": {
             "Tags": "[Class][+Speed]",
-            "Prerequisites": "Mounted Prowess, Agility Training, Novice Acrobatics or Athletics",
+            "Prerequisites": "Mounted Prowess\nFeature Agility Training, Novice Acrobatics, Novice Athletics",
             "Frequency": "Static",
             "Effect": "While you are Mounted on a Pokemon under the effects of Agility Training, the bonuses from Agility Training are doubled."
         },
@@ -764,7 +764,7 @@
         },
         "Conqueror's March": {
             "Tags": "[Orders][+Speed]",
-            "Prerequisites": "Ramming Speed, Adept Acrobatics or Athletics",
+            "Prerequisites": "Ramming Speed, Adept Acrobatics, Adept Athletics",
             "Frequency": "At-Will — Standard Action",
             "Target": "Your Pokémon with Run Up",
             "Effect": "This round, if being used as a Mount, the target may use Dash, Burst, Blast, Cone, or Line range Moves with a range of Pass instead of their usual range."
@@ -784,14 +784,14 @@
         },
         "Cavalier's Reprisal": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Ride as One, Expert Acrobatics or Athletics",
+            "Prerequisites": "Ride as One, Expert Acrobatics, Expert Athletics",
             "Frequency": "1 AP — Free Action",
             "Trigger": "An adjacent foe hits your Mount with an attack",
             "Effect": "You may make a Struggle Attack against the triggering foe."
         },
         "Overrun": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Conqueror’s March, Expert Acrobatics or Athletics",
+            "Prerequisites": "Conqueror's March, Expert Acrobatics, Expert Athletics",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "Your Mount with Run Up makes a Damage Roll for a Dash or Pass Move",
             "Effect": "Your Pokémon adds their Speed Stat in addition to their normal attacking Stat to their Damage Roll. The target gains Damage Reduction against this attack equal to their own Speed Stat."
@@ -1048,7 +1048,7 @@
             },
             "Stat Stratagem": {
                 "Tags": "Branch, Order, Strategem",
-                "Prerequisites": "Stat Link (Special Attack), Stat Training (Special Attack), Master Focus or Command",
+                "Prerequisites": "Stat Link 0(Special Attack), Stat Training (Special Attack), Master Focus or Command",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
                 "Effect": "While this Feature is Bound, the target's damaging Ranged Attacks have their Effect Range increased by 1 for each positive Combat Stage they have in Special Attack, up to a maximum of +3."
@@ -2330,21 +2330,21 @@
             "Effect": "Each Rank, you gain an Archive."
         },
         "Archive Tutor": {
-            "Prerequisites": "Technique Archive, Expert Perception",
+            "Prerequisites": "Archive Technique, Expert Perception",
             "Frequency": "Daily — Extended Action",
             "Target": "A Pokémon with 2 Tutor Points.",
             "Effect": "Select a Record in your Technique Archive that is of a Move that the target can learn by Level Up, TM or by Move Tutor. The target learns the Move and loses 2 Tutor Points. You can target someone else's Pokémon only once with Archive Tutor; you may target your own Pokémon any number of times with Archive Tutor, but they must still abide by any Move Pool Limitations (ie: no more than 3 of the user's Move Pool can come from TMs or Tutor Moves)."
         },
         "Targeted Profiling": {
             "Tags": "[Orders]",
-            "Prerequisites": "Profile Archive, Expert Perception",
+            "Prerequisites": "Archive Profile, Expert Perception",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
             "Effect": "On the target's next turn, they act as if they had the Mold Breaker Ability against all Pokémon and Trainers in your Profile Archive and gains a +2 bonus to Accuracy Rolls against these targets."
         },
         "Observation Party": {
             "Tags": "[Orders]",
-            "Prerequisites": "Travel Archive, Adept Perception",
+            "Prerequisites": "Archive Travel, Adept Perception",
             "Frequency": "Static",
             "Effect": "While they are in a Location in your Travel Archive, your Pokémon have the Ability you chose when gaining Travel Archive and gain a +2 bonus to Perception Checks to notice the environment."
         },
@@ -2361,7 +2361,7 @@
     "Fashionista": {
         "Fashionista": {
             "Tags": "[Class]",
-            "Prerequisites": "Two of Charm, Command, Guile, Intimidate, or Intuition at Novice",
+            "Prerequisites": "Novice Charm, Novice Command, Novice Guile, Novice Intimidate, Novice Intuition, Novice Charm, Novice Command, Novice Guile, Novice Intimidate, Novice Intuition",
             "Frequency": "At-Will — Extended Action",
             "Effect": "You may craft any Fashionista Recipe for which you qualify."
         },
@@ -2378,17 +2378,17 @@
             "Effect": "Your Pokémon instead retains their Held Item. Style is Eternal may only be used once per Scene per Pokémon."
         },
         "Accessorize": {
-            "Prerequisites": "Dashing Makeover, one Fashionista Skill at Adept",
+            "Prerequisites": "Dashing Makeover, Adept Charm, Adept Command, Adept Guile, Adept Intimidate, Adept Intuition",
             "Frequency": "Static",
             "Effect": "You may wear and benefit from two Accessory Slot Items at once. The two items must be of different types and must not share an effect. For example, a Fire Brace cannot be paired with another Fire Brace or a Fire Plate, but it could be paired with an Ice Brace, a Fire Booster, or a Stat Booster."
         },
         "Parfumier": {
-            "Prerequisites": "Fashionista, one Fashionista Skill at Expert",
+            "Prerequisites": "Fashionista, Expert Charm, Expert Command, Expert Guile, Expert Intimidate, Expert Intuition",
             "Frequency": "Static",
             "Effect": "Whenever you create an Incense Held Item, choose Sweet Scent or Aromatic Mist. While your Pokémon is holding that Incense Item in an active Held Item slot, they add the chosen Move to their Move List."
         },
         "Versatile Wardrobe": {
-            "Prerequisites": "Fashionista, two Fashionista Skills at Adept",
+            "Prerequisites": "Fashionista, Adept Charm, Adept Command, Adept Guile, Adept Intimidate, Adept Intuition, Adept Charm, Adept Command, Adept Guile, Adept Intimidate, Adept Intuition",
             "Frequency": "At-Will — Extended Action",
             "Target": "Your Pokémon with at least 2 Tutor Points remaining",
             "Effect": "The target loses 2 Tutor Points and then becomes chic. Chic Pokémon gain two extra Held Item slots with which they can carry Held Items. However, the items in these slots have no effect and are not treated as equipped. As a Swift Action on their turn, Chic Pokémon may swap a currently active Held Item with an item stored in these slots. Chic Pokémon may not carry multiple items of the same type or with repeated effects.",
@@ -2396,7 +2396,7 @@
         },
         "Dress to Impress": {
             "Tags": "[Orders]",
-            "Prerequisites": "Versatile Wardrobe, two Fashionista Skills at Expert",
+            "Prerequisites": "Versatile Wardrobe, Expert Charm, Expert Command, Expert Guile, Expert Intimidate, Expert Intuition, Expert Charm, Expert Command, Expert Guile, Expert Intimidate, Expert Intuition",
             "Frequency": "Scene x2 — Standard Action",
             "Target": "Your Chic Pokémon",
             "Effect": "Whenever you create an Incense Held Item, choose Sweet Scent or Aromatic Mist. While your Pokémon is holding that Incense Item in an active Held Item slot, they add the chosen Move to their Move List."
@@ -2448,13 +2448,13 @@
     "Researcher": {
         "Researcher": {
             "Tags": "[Class][Branch]",
-            "Prerequisites": "An Education Skill at Novice Rank",
+            "Prerequisites": "Novice Survival, Novice General Education, Novice Medicine Education, Novice Occult Education, Novice Pokémon Education, Novice Technology Education",
             "Frequency": "Static",
             "Effect": "Choose two Researcher Fields of Study. You may take Features from those Fields with this instance of Researcher. Gain one Feature from a chosen Researcher Field for which you qualify."
         },
         "General": {
             "Breadth of Knowledge": {
-                "Prerequisites": "General Research Field, Novice General Education",
+                "Prerequisites": "Novice General Education",
                 "Frequency": "Static",
                 "Effect": "You gain three Skill Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet."
             },
@@ -2471,7 +2471,7 @@
                 "Effect": "Your Pokémon loses 2 Tutor Points and gains the Forewarn Ability."
             },
             "Echoes of the Future": {
-                "Prerequisites": "Breadth of Knowledge, Master General Education",
+                "Prerequisites": "Master General Education, Feats Breadth of Knowledge",
                 "Frequency": "Daily x2 — Free Action",
                 "Trigger": "You or your Pokémon make a roll",
                 "Effect": "You may roll twice and keep the best result."
@@ -2479,22 +2479,22 @@
         },
         "General_May2015": {
             "Breadth of Knowledge": {
-                "Prerequisites": "General Research Field, Novice General Education",
+                "Prerequisites": "Novice General Education",
                 "Frequency": "Static",
                 "Effect": "You gain three Skill Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet."
             },
             "Bookworm": {
-                "Prerequisites": "Breadth of Knowledge",
+                "Prerequisites": "Feats Breadth of Knowledge",
                 "Frequency": "Static",
                 "Effect": "You gain X Study Points, where X is equal to 2 plus one more for every other General Research Feature you have. You may Drain Study Points to benefit from studying Books, instead of Draining your Action Points. Study Points are restored to your maximum after an Extended Rest, just like Action Points."
             },
             "Well Read": {
-                "Prerequisites": "Bookworm, Expert General Education",
+                "Prerequisites": "Feats Bookworm, Skills Expert General Education",
                 "Frequency": "Static",
                 "Effect": "You may use your General Education Rank to qualify for Books, instead of the Book's usual Skill Prerequisites, provided you have the normal Prerequisite at at least Novice Rank."
             },
             "Echoes of the Future": {
-                "Prerequisites": "Breadth of Knowledge, Master General Education",
+                "Prerequisites": "Master General Education, Feats Breadth of Knowledge",
                 "Frequency": "Daily x2 — Free Action",
                 "Trigger": "You or your Pokémon make a roll",
                 "Effect": "You may roll twice and keep the best result."
@@ -2502,24 +2502,24 @@
         },
         "Apothecary": {
             "Apothecary": {
-                "Prerequisites": "Apothecary Research Field, Novice Medicine Education",
+                "Prerequisites": "Novice Medicine Education",
                 "Frequency": "At-Will — Extended Action",
                 "Effect": "You gain use any Apothecary Recipe for which you qualify."
             },
             "Patch Cure": {
-                "Prerequisites": "Apothecary, Adept Medicine Education",
+                "Prerequisites": "Feats Apothecary, Skills Adept Medicine Education",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "A Restorative Item",
                 "Effect": "You distill the target, gaining 3 Restorative Patches. Restorative Patches have the same effect as the items from which they were created, but can only be applied as an Extended Action."
             },
             "Medical Techniques": {
-                "Prerequisites": "Medic, Adept Medicine Education",
+                "Prerequisites": "Feats Patch Cure, Skills Expert Medicine Education",
                 "Frequency": "1 AP — Swift Action",
                 "Trigger": "You apply a Restorative Item",
                 "Effect": "The target gains a Tick of Hit Points, plus an additional amount of Hit Points equal to your Medicine Education Rank."
             },
             "Medicinal Blend": {
-                "Prerequisites": "Apothecary, Master Medicine Education",
+                "Prerequisites": "Feats Apothecary, Skills Master Medicine Education",
                 "Frequency": "At-Will — Extended Action",
                 "Trigger": "You or your Pokémon make a roll",
                 "Effect": "Ingredients: Two Restoratives, or a Restorative and an X-Item\nEffect: You fuse the two Ingredients, creating an Item that has the properties of both. If you choose two Restoratives, they cannot be Restoratives with the same effect (you could not for example, mix a Potion and a Super Potion). If a Restorative Patch is used as an Ingredient, the resulting item can only be used as an Extended Action."
@@ -2548,24 +2548,24 @@
         },
         "Apothecary_Sept2015": {
             "Apothecary": {
-                "Prerequisites": "Apothecary Research Field, Novice Medicine Education",
+                "Prerequisites": "Novice Medicine Education",
                 "Frequency": "At-Will — Extended Action",
                 "Effect": "You gain use any Apothecary Recipe for which you qualify."
             },
             "Patch Cure": {
-                "Prerequisites": "Apothecary, Adept Medicine Education",
+                "Prerequisites": "Feats Apothecary, Skills Adept Medicine Education",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "A Restorative Item",
                 "Effect": "You distill the target, gaining 3 Restorative Patches. Restorative Patches have the same effect as the items from which they were created, but can only be applied as an Extended Action."
             },
             "Affliction Techniques": {
-                "Prerequisites": "Patch Cure, Expert Medicine Education",
+                "Prerequisites": "Feats Patch Cure, Skills Expert Medicine Education",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "You use a Antidote, Burn Heal, Ice Heal, or Paralyze Heal",
                 "Effect": "If the target successfully cures the target of its linked Status Affliction, the item has additional effects.\n» Antidote: The target gains +1 Special Defense Combat Stage.\n» Burn Heal The target gains +1 Defense Combat Stage.\n» Ice Heal: The target gains +1 Attack or Special Attack Combat Stage\n» Paralyze Heal:The target gains +1 Speed Combat Stage."
             },
             "Medicinal Blend": {
-                "Prerequisites": "Apothecary, Master Medicine Education",
+                "Prerequisites": "Feats Apothecary, Skills Master Medicine Education",
                 "Frequency": "At-Will — Extended Action",
                 "Trigger": "You or your Pokémon make a roll",
                 "Effect": "Ingredients: Two Restoratives, or a Restorative and an X-Item\nEffect: You fuse the two Ingredients, creating an Item that has the properties of both. If you choose two Restoratives, they cannot be Restoratives with the same effect (you could not for example, mix a Potion and a Super Potion). If a Restorative Patch is used as an Ingredient, the resulting item can only be used as an Extended Action."
@@ -2594,7 +2594,7 @@
         },
         "Artificer": {
             "Crystal Artificer": {
-                "Prerequisites": "Artificer Research Field, Gem Lore",
+                "Prerequisites": "Gem Lore",
                 "Frequency": "At-Will — Extended Action",
                 "Effect": "You may use any Crystal Artificer Recipe for which you qualify."
             },
@@ -2658,7 +2658,7 @@
                 "Rank 2 Effect": "You may also harvest Cotton Spore, Leech Seed, Spore, or Worry Seed."
             },
             "Top Tier Berries": {
-                "Prerequisites": "Botany Research Field, Green Thumb",
+                "Prerequisites": "Green Thumb",
                 "Frequency": "Static",
                 "Effect": "You may grow additional Berries and Herbs, depending on the higher of your General Education or Survival Rank.\n» Novice: You may grow Tier 2 Berries\n» Adept: You may grow Mental Herbs, Power Herbs, White Herbs, and Tiny Mushrooms.\n» Expert: You may grow Revival Herbs, Energy Roots,Big Mushrooms, and Tier 3 Berries\n» Master: Increase the Soil Quality of all your plants by +1."
             },
@@ -2670,7 +2670,7 @@
         },
         "Chemistry": {
             "Chemist": {
-                "Prerequisites": "Chemistry Research Field, Repel Crafter",
+                "Prerequisites": "Repel Crafter",
                 "Frequency": "At-Will — Extended Action",
                 "Effect": "You may use any Chemistry Recipe for which you qualify using your Chemistry Set."
             },
@@ -2716,7 +2716,7 @@
         },
         "Climatology": {
             "Climatology": {
-                "Prerequisites": "Climatology Research Field, Novice Survival",
+                "Prerequisites": "Novice Survival",
                 "Frequency": "Static",
                 "Effect": "You gain the Overcoat Ability."
             },
@@ -2727,7 +2727,7 @@
                 "Effect": "The triggering Weather Effect does not replace the already extant Weather in effect; both exist simultaneously on the field. If a new Weather effect is placed on the field after the two that are out, both are replaced by the third, unless you activate this Feature again to replace only one."
             },
             "Weather Systems": {
-                "Prerequisites": "Climatology, Expert Survival",
+                "Prerequisites": "Chemist, Expert Survival",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points",
                 "Effect": "Your Pokémon loses 2 Tutor Points, and learns your choice of Hail, Rain Dance, Sandstorm, or Sunny Day. The target must be able to learn the chosen Move through Level-Up, TM, or Tutor Moves. If the target has the chosen Move in their Level-Up List, Weather Systems costs no Tutor Points."
@@ -2741,7 +2741,7 @@
         },
         "Occultism": {
             "Witch Hunter": {
-                "Prerequisites": "Occultism Research Field, Novice Occult Education",
+                "Prerequisites": "Novice Occult Education",
                 "Frequency": "Static",
                 "Effect": "You gain the Psionic Sight Feature, even if you do not meet the prerequisites. If you already had the Psionic Sight Feature, you instead gain another Feature for which you qualify."
             },
@@ -2764,7 +2764,7 @@
         },
         "Paleontology": {
             "Fossil Restoration": {
-                "Prerequisites": "Paleontology Research Field, Paleontologist, Novice Pokémon Education",
+                "Prerequisites": "Paleontologist, Novice Pokémon Education",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "A Fossil you are reviving",
                 "Effect": "You may revive a Fossil into a Fossil Pokémon. The resulting Pokémon is born with 2 Tutor Points, and gains its first Basic Ability. If it has only one Basic Ability, it gains one of its Advanced Abilities, chosen by the GM. This Feature does not affect how the Pokémon continues to gain Abilities."
@@ -2776,13 +2776,13 @@
                 "Effect": "The target loses 2 Tutor Points and learns Ancient Power. If the target has Ancient Power in its Level-Up List, Ancient Heritage costs no Tutor Points. As a static effect, whenever your Pokémon use Ancient Power, its activated effect occurs on 18+ and you may always choose whether it deals Physical or Special Damage, using the appropriate attack Stat."
             },
             "Genetic Memory": {
-                "Prerequisites": "Ancient Heritage, Expert Pokémon Education",
+                "Prerequisites": "Ancient Heritage, Expert Pokémon Education",
                 "Frequency": "Daily x2 — Extended Action",
                 "Target": "Your Fossil Pokémon with at least 2 Tutor Points remaining",
                 "Effect": "The target loses 2 Tutor Points and learns any Move from its Egg Move or Tutor Move List. Genetic Memory may target a Pokémon only twice: once with a Tutor Move and once with an Egg Move. Egg Moves tutored this way do not count against the limit of 3 for TM and Tutor Moves."
             },
             "Prehistoric Bond": {
-                "Prerequisites": "Fossil Restoration, Expert Pokémon Education",
+                "Prerequisites": "Fossil Restoration, Expert Pokémon Education",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "The remains of a Fossil you revived",
                 "Effect": "You also produce a Held Item from the remnants of the Fossil. The effect of this Held Item is based on the highest Base Stat of the individual Pokémon being Revived, counting the effects of Nature but no other effects that alter Base Stats. If there is a tie, the GM decides which Base Stat is used. This Held Item may only be used by Pokémon revived from Fossils."
@@ -2790,7 +2790,7 @@
         },
         "Pokémon Caretaking": {
             "Pusher": {
-                "Prerequisites": "Pokémon Caretaking Research Field, Novice Pokémon Education",
+                "Prerequisites": "Novice Pokémon Education",
                 "Frequency": "Static",
                 "Effect": "Your Pokémon gain the Basic Ranged Attacks, Aura Pulse, Enticing Bait, Extended Invisibility, Far Reading, Precise Threadings, Seismometer, TK Mastery, and Trail Sniffer Poke Edges automatically if they qualify for them, without having to invest any Tutor Points."
             },
@@ -2807,7 +2807,7 @@
                 "Effect": "For each of your Pokémon that has been Trained during this time, choose a Skill; that Skill becomes Pushed until an Extended Rest is taken. Pokémon rolls +1d6 with Pushed Skills, unless that would cause you to roll more than 6d6; if so, that Pokémon rolls with a +3 Bonus instead. A Pokémon may have only one Pushed Skill at a time."
             },
             "Re-Balancing": {
-                "Prerequisites": "Pusher, Master Pokémon Education",
+                "Prerequisites": "Pusher, Master Pokémon Education",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "A Pokémon with 2 Tutor Points",
                 "Effect": "The target loses 2 Tutor Points, and gains one of the following: +1 to all Base Stats, +2 to two different Base Stats, or +3 to a single Base Stat. The target then redistributes their Stat Points. A Pokémon may be targeted by Re-Balancing only once."
@@ -2815,7 +2815,7 @@
         },
         "Gadgeteer": {
             "Improvised Gadgets": {
-                "Prerequisites": "Gadgeteer Research Field, Novice Technology Education",
+                "Prerequisites": "Novice Technology Education",
                 "Frequency": "Bind 2 AP — Extended Action",
                 "Target": "A willing Pokémon with the Magnetic, Zapper, or Threaded Capability",
                 "Effect": "Choose one of the Capabilities listed in the Target line that the target Pokémon has. You create a Main or Off-Hand Equipment Item usable by Trainers that grants the user the chosen Capability. Whenever a Trainer makes Struggle Attacks using Zapper through this Item, they may choose to use your Technology Education Rank tripled in place of an offensive Stat. When this Feature is Unbound, the Equipment Item breaks and cannot be repaired. You may only have X instances of this Feature Bound at once, where X is equal to half your Technology Education Rank."
@@ -2840,7 +2840,7 @@
         },
         "Engineer": {
             "Engineer": {
-                "Prerequisites": "Engineer Research Field, Pokébot Training",
+                "Prerequisites": "Pokébot Training",
                 "Frequency": "At-Will — Extended Action",
                 "Effect": "You may craft any Engineer Recipe for which you qualify"
             },
@@ -2856,14 +2856,14 @@
                 "Effect": "The target is cured of all Persistent Statuses, resets all negative Combat Stages to default, and gains two Ticks of Temporary Hit Points. For the rest of the Scene, it deals and takes additional damage with all attacks equal to your Technology Education Rank."
             },
             "Experimental AI": {
-                "Prerequisites": "Engineer, Master Tech Education",
+                "Prerequisites": "Engineer, Master Technology Education",
                 "Frequency": "Static",
                 "Effect": "Increase the maximum complexity of all Pokébots you create by 2, and increase the maximum complexity of Pokébots you can control by 2."
             }
         },
         "Jailbreaker": {
             "Jailbreaker": {
-                "Prerequisites": "Jailbreaker Research Field, Basic Balls",
+                "Prerequisites": "Basic Balls",
                 "Frequency": "At-Will — Extended Action",
                 "Effect": "You may craft any Poké Ball Case Recipe for which you qualify."
             },
@@ -2886,23 +2886,23 @@
         },
         "Upgrader": {
             "Upgrader": {
-                "Prerequisites": "Upgrader Research Field, Novice Medicine Edu, Novice Technology Edu",
+                "Prerequisites": "Novice Medicine Education, Novice Technology Education",
                 "Frequency": "At-Will — Extended Action",
                 "Effect": "You may craft any Augmentation Recipe for which you qualify and install them on yourself and willing Pokémon and Trainers."
             },
             "Emergency Reactivation": {
-                "Prerequisites": "Upgrader, Adept Technology Edu",
+                "Prerequisites": "Upgrader, Adept Technology Education",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "You or your Pokémon suffer Augmentation Shock",
                 "Effect": "The triggering user does not suffer Augmentation Shock and their Augmentations are not disabled. This Feature may affect a target only once per Scene."
             },
             "Efficient Installation": {
-                "Prerequisites": "Upgrader, Expert Technology Edu",
+                "Prerequisites": "Upgrader, Expert Technology Education",
                 "Frequency": "Static",
                 "Effect": "You and your Pokémon gain a +2 boost to their maximum Augmentation Capacity and count their used Capacity as 2 lower for the purposes of Augmentation Shock. You and your Pokémon can install multiple Augmentations in the same Slot."
             },
             "Experimental Designs": {
-                "Prerequisites": "Upgrader, Master Technology Edu",
+                "Prerequisites": "Upgrader, Master Technology Education",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "You or your Pokémon with Augmentations",
                 "Effect": "Choose an Augmentation the target has and apply the upgrade below. Experimental Designs may affect a target twice.\n» Enhanced Sight: The user gains the X-Ray Vision Capability.\n» Smart Vision: The user learns the Move Feint without taking a Move Slot.\n» Synthetic Muscle: The user recovers from Injuries twice as fast and heals one more Injury per day.\n» Embedded Weaponry: The weapon is Fine and gains Deadly Strike as a Master Move.\n» Wired Reflexes: The user gains one more Reflex Point per Scene and may also spend Reflex Points to gain +2 Critical Hit Range for one full round.\n» Medical Nanobots: Once a Scene, the user may cure themselves of all Persistent Status Afflictions as a Standard Action.\n» Dermal Plating: The user may also activate Dermal Plating to resist Special Damage.\n» Thermal-Optic Camo: While active, the user is invisible to Aura Reading and Thought Detection."
@@ -2992,7 +2992,7 @@
     "Athlete": {
         "Athlete": {
             "Tags": "[Class][+HP]",
-            "Prerequisites": "Novice Athletics, One of Athletic Prowess, Mounted Prowess, Power Boost, Stamina, or Swimmer",
+            "Prerequisites": "Athletic Initiative, Mounted Prowess, Power Boost, Stamina, Swimmer, Novice Athletics",
             "Frequency": "At-Will — Extended Action",
             "Effect": "After an hour of exercise, an Athlete may choose two different Stats besides HP; both of those stats become Trained Stats. The default State of Trained Stats is +1 Combat Stages instead of 0. An Athlete may have two Trained Stats at a time."
         },
@@ -3087,7 +3087,7 @@
     "Hunter": {
         "Hunter": {
             "Tags": "[Class][+Speed]",
-            "Prerequisites": "Novice Survial, Novice Stealth",
+            "Prerequisites": "Novice Survival, Novice Stealth",
             "Frequency": "Static",
             "Effect": "Choose Teamwork or Pack Hunt. You gain the Chosen Ability."
         },
@@ -3100,33 +3100,33 @@
         },
         "Surprise!": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Hunter, Adept Stealth or Survival",
+            "Prerequisites": "Hunter, Adept Survival, Adept Stealth",
             "Frequency": "X AP — Swift Action",
             "Trigger": "You make an attack against a foe that does not anticipate an attack or is adjacent to your Pokémon with Pack Hunt or Teamwork",
             "Effect": "Make two attack rolls for the triggering action, and use the better result to finalize the attack. If both attacks would hit, the target is Flinched. Surprise! may be used only once per Scene per target. If the triggering attack was a Poké Ball, Hand Net, Weighted Net, Glue Cannon, or Struggle Attack, Surprise! costs 1 AP to activate; otherwise, it costs 2 AP."
         },
         "Hunter's Reflexes": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Hunter, Adept Stealth or Survival",
+            "Prerequisites": "Hunter, Adept Survival, Adept Stealth",
             "Frequency": "Static",
             "Effect": "You and your Pokémon may make up to three Attacks of Opportunity each round, instead of only one. Additionally, your attacks always consider you to be adjacent to your target for the purposes of benefiting from your Pokémon's Teamwork Ability, and count as Melee attacks for the purposes of triggering their Pack Hunt Ability."
         },
         "Finisher": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Hunter, Adept Stealth, Adept Survival",
+            "Prerequisites": "Hunter, Adept Survival, Adept Stealth",
             "Frequency": "Static",
             "Effect": "You and your Pokémon gain a +5 bonus to Damage Rolls against Fainted, Flinched, Sleeping, Stuck, Slowed, Trapped, or Tripped targets."
         },
         "Don't Look Away": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Pack Tactics, Adept Stealth, Adept Survival",
+            "Prerequisites": "Pack Tactics, Adept Survival, Adept Stealth",
             "Frequency": "1 AP — Free Action",
             "Trigger": "You or your Pokémon with Pack Hunt or Teamwork hits with an Attack of Opportunity",
             "Effect": "The hit foe loses a Tick of Hit Points, and is Slowed for 1 round. Don't Look Away may be triggered once per round."
         },
         "Pack Master": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Pack Tactics, Expert Stealth, Expert Survival",
+            "Prerequisites": "Pack Tactics, Expert Survival, Expert Stealth",
             "Frequency": "Static",
             "Effect": "For you and your Pokémon with Teamwork, Teamwork's effect now reads \"While you are adjacent to an opponent, allies targeting that opponent receive a +2 bonus to Accuracy Checks\". Whenever you or your Pokémon successfully hit a foe with Pack Hunt, they gain a +2 Bonus to Accuracy Rolls and a +5 Bonus to Damage Rolls against that foe until the end of their next turn."
         }
@@ -3450,7 +3450,7 @@
             "Prerequisites": "One of Confidence Artist, Intimidating Presence, or Charmer",
             "Frequency": "Static",
             "Effect": "You learn the Moves Sweet Kiss and Taunt.",
-            "Note:": "The Provocateur Skills are Charm, Guile, and Intimidation."
+            "Note:":"The Provocateur Skills are Charm, Guile, and Intimidation."
         },
         "Push Buttons": {
             "Tags": "[+Speed]",
@@ -3734,14 +3734,14 @@
         },
         "Diffuse Pain": {
             "Tags": "[+HP]",
-            "Prerequisites": "Hex Maniac Studies Rank 1",
+            "Prerequisites": "Hex Maniac Studies \nRank 1:",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You use a Status-Class Move gained from Hex Maniac Studies",
             "Effect": "Choose an additional target for the Move."
         },
         "Malediction": {
             "Tags": "[+HP]",
-            "Prerequisites": "Hex Maniac Studies Rank 1, Expert Occult Education",
+            "Prerequisites": "Hex Maniac Studies \nRank 1:, Expert Occult Education",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "A foe within 5 meters misses all targets with an attack",
             "Effect": "Use a Status-Class Move gained from Hex Maniac Studies targeting the triggering foe as a Free Action, Frequency-permitting."
@@ -3782,7 +3782,7 @@
         },
         "Utility Drop": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Ninja’s Arsenal, Expert Stealth",
+            "Prerequisites": "Ninja's Arsenal, Expert Stealth",
             "Frequency": "At-Will — Swift Action",
             "Trigger": "You Shift",
             "Effect": "You may use a Smoke Ball, Caltrops, or Toxic Caltrops as a Free action during your Shift. Instead of the Move's usual area of effect, you leave one square of Smokescreen, Spikes, or Toxic Spikes on each square you leave as you Shift. Once you place 8 meters of Smoke, Spikes, or Toxic Spikes you may not place any more."
@@ -3809,25 +3809,25 @@
         },
         "Divination": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Oracle",
+            "Prerequisites": "Feat Oracle",
             "Frequency": "Daily x3 — Extended Action",
             "Effect": "You may perform an Augury or Scrying."
         },
         "Unveiled Sight": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Oracle",
+            "Prerequisites": "Feat Oracle",
             "Frequency": "Static",
             "Effect": "You can see through Illusions. This means you can spot Illusions from the Illusionist capability, Illusion Ability, and Genjutsu Feature as being fake. You are immune to Moves with the Illusion keyword, Double Team cannot be activated against you, and you bypass Substitutes. As a Standard Action, you can create a Burst 4, dispelling all Illusion effects within."
         },
         "Small Prophecies": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Divination, Adept Perception",
+            "Prerequisites": "Feat Divination, Adept Perception",
             "Frequency": "1 AP — Swift Action",
             "Effect": "Roll 1d20 and note the result. Until the end of your next turn, you may choose to replace a single d20 roll you or a willing ally makes with the noted result."
         },
         "Mark of Vision": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Oracle, Adept Perception",
+            "Prerequisites": "Feat Oracle, Adept Perception",
             "Frequency": "Bind 1 AP — Extended Action",
             "Target": "A willing Trainer",
             "Effect": "You mark the target with a mystical power which allows you to close your eyes and focus to perceive the world with their senses from their perspective. You may Bind this Ability multiple times, each time on a different target, but you may only concentrate on one Mark of Vision at a time, and you may only have a number of Marks at one time equal to half your Perception Rank. A target may choose to end this effect at any time, or to deny you access to their senses temporarily without ending the effect entirely. You have a rough sense of how far away and in what direction marked targets are."
@@ -3840,7 +3840,7 @@
         },
         "Prescience": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Unveiled Sight, Master Perception",
+            "Prerequisites": "Feat Unveiled Sight, Master Perception",
             "Frequency": "Scene — Free Action",
             "Trigger": "You are hit by an attack",
             "Effect": "The attack instead misses."
@@ -3868,7 +3868,7 @@
         },
         "Sage's Benediction": {
             "Tags": "[Class][+HP]",
-            "Prerequisites": "Sacred Shield or Mystic Defense, Adept Occult Education",
+            "Prerequisites": "Sacred Shield, Mystic Defense, Adept Occult Education",
             "Frequency": "1 AP — Free Action",
             "Target": "An ally activates one of your Moves with the Blessing Keyword.",
             "Effect": "The triggering ally gains an additional benefit as follows, depending on the Move used. The benefit takes effect after the Blessing and the attack that triggered it are resolved.\n» Reflect: +1 Defense Combat Stage\n» Light Screen: +1 Sp. Defense Combat Stage\n» Safeguard: +1 Evasion\n» Lucky Chant: +1 Accuracy"
@@ -3888,7 +3888,7 @@
         },
         "Divine Wind": {
             "Tags": "[Class][+HP]",
-            "Prerequisites": "Sage’s Benediction, Master Occult Education",
+            "Prerequisites": "Sage's Benediction, Master Occult Education",
             "Frequency": "2 AP — Free Action, Interrupt",
             "Target": "Blessings you generated with a Sage Move",
             "Effect": "Choose a type of Blessing you can generate with a Sage Move. All Blessings you generated of another type become Blessings of the chosen type. This may not be used to generate more uses of a Blessing than the original Move creates. For example, three Lucky Chant Blessings would become two Reflect or Light Screen Blessings, not three. You may only choose a Blessing type once per Scene."
@@ -4075,7 +4075,7 @@
     "Rune Master": {
         "Rune Master": {
             "Tags": "[Class][+Attack or Special Attack]",
-            "Prerequisites": "Own 2 Unown, Novice Occult Education",
+            "Prerequisites": "Novice Occult Education, Own 2 Unown",
             "Frequency": "Static",
             "Effect": "You gain the Gather Unown capability, and your Unown gain the Letter Press Capability. When using Gather Unown, you are treated as a level 20 Pokémon."
         },
@@ -4101,7 +4101,7 @@
         },
         "Words of Power": {
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Adept Occult Education, Hidden Power Static",
+            "Prerequisites": "Hidden Power, Adept Occult Education",
             "Frequency": "Static",
             "Trigger": "You or your Pokémon use Hidden Power",
             "Effect": "Instead of a Burst, you may choose to have Hidden Power be a 1 Target Melee, 1 Target 6m, or Cone 2. Additionally, you and your Prime Unown always have STAB on Hidden Power as if you or they were of the same Type."
@@ -4115,14 +4115,14 @@
         },
         "Explosive Runes": {
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Adept Occult Education, Glyph, Hidden Power",
+            "Prerequisites": "Glyph, Hidden Power, Adept Occult Education",
             "Frequency": "1 AP — Standard Action",
             "Target": "A Glyph you have put down, regardless of distance",
             "Effect": "You may use Hidden Power, originating the attack from the location of the targeted Glyph. Use your own Stats and Hidden Power values to calculate damage. Using this Feature causes the Glyph to become visible and glow for a minute afterwards."
         },
         "Sentry Runes": {
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Expert Occult Education, Explosive Runes, Hidden Power",
+            "Prerequisites": "Explosive Runes, Expert Occult Education",
             "Frequency": "1 AP — Standard Action",
             "Target": "A Glyph you have put down, regardless of distance",
             "Effect": "The target Glyph becomes an Unown of your Trainer Level, its Stats allocated as you wish. This Unown knows a single instance of Hidden Power, identical to your own. The Glyph can fight on its own without needing you to command it. At the end of the encounter, or after 5 minutes, the Unown returns to Unown Space forever, destroying the Glyph. You may only have one Glyph active in this way at a time; if various Alarm Glyphs are triggered to become Sentries at the same time, only one does so; the others will do so once the previous one has been destroyed if the Trigger condition is still being met."
@@ -4201,20 +4201,20 @@
         },
         "Wall of Iron": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Fortress, Adept Combat or Focus",
+            "Prerequisites": "Fortress, Adept Combat, Adept Focus",
             "Frequency": "Static",
             "Effect": "You learn the moves Iron Defense and Protect."
         },
         "Guardian's Punishment": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Fortress, Expert Combat or Focus",
+            "Prerequisites": "Fortress, Expert Combat, Expert Focus",
             "Frequency": "Scene x2 — Swift Action",
             "Trigger": "You hit a Marked Foe with a Damaging Weapon Attack",
             "Effect": "Add your Defense Stat to the Damage Roll. The Marked Foe takes a penalty to Damage Rolls equal to your Combat or Focus Rank for 1 full round."
         },
         "Unstoppable Will": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Slow or Steady, Expert Combat or Focus",
+            "Prerequisites": "Slow or Steady, Expert Combat, Expert Focus",
             "Frequency": "Static",
             "Effect": "You gain the Discipline Ability."
         }
@@ -4240,26 +4240,26 @@
         },
         "Overwatch": {
             "Tags": "[+Attack][Weapon]",
-            "Prerequisites": "Marksman, Adept Perception or Combat",
+            "Prerequisites": "Marksman, Adept Combat, Adept Perception",
             "Frequency": "At-Will — Standard Action",
             "Effect": "Create a Line X, and place a Blast 3 with at least three meters overlapping the Line's area. X is equal to your Weapon's Range. For one full round, if a foe moves in or out of that area, you may make a Ranged Weapon attack, Frequency allowing, against that foe as a Free Ac- tion. You may not attack a specific foe more than once per round this way. While this is in effect, if you Move from your current location, Overwatch's effect is lost."
         },
         "Clear Shot": {
             "Tags": "[+Attack][Weapon]",
-            "Prerequisites": "Marksman, Expert Perception or Combat",
+            "Prerequisites": "Marksman, Expert Combat, Expert Perception",
             "Frequency": "Scene x2 — Swift Action",
             "Trigger": "You make a ranged Weapon Attack against a target with no other combatants or Rough or Blocking Terrain within 2 meters",
             "Effect": "The target is considered Vulnerable against this attack, and you increase your Critical Hit range by +4 for this attack."
         },
         "Crippling Shot": {
             "Tags": "[+Attack][Weapon]",
-            "Prerequisites": "Marksman, Expert Perception or Combat",
+            "Prerequisites": "Marksman, Expert Combat, Expert Perception",
             "Frequency": "2 AP — Full Action",
             "Effect": "Make a Ranged Struggle Attack attack with a -2 penalty to Accuracy. If you hit, the attack deals Damage as if it was resisted one step, but the target becomes Slowed, loses 1 Speed Combat Stage, and you initiate a Trip Maneuver against the target. You may use your Perception Skill to resolve the Opposed Check if you wish."
         },
         "Dead-Eye Shot": {
             "Tags": "[+Attack][Weapon]",
-            "Prerequisites": "Marksman, Master Combat or Perception",
+            "Prerequisites": "Marksman, Master Combat, Master Perception",
             "Frequency": "Scene x2 — Standard, Priority",
             "Effect": "Use of Dead-Eye Shot must be declared at the start of the round. Nothings happens at this time. At the end of the round, the user may use their Shift Action, and then make a Ranged Weapon Attack and roll twice for Accuracy. You may resolve the attack using either result, but if you choose to use the lower result and the attack hits, it is automatically a Critical Hit."
         }
@@ -4293,21 +4293,21 @@
         },
         "Weapon Finesse": {
             "Tags": "[+Speed][Weapon]",
-            "Prerequisites": "Counter Stance, Adept Combat or Acrobatics",
+            "Prerequisites": "Counter Stance, Adept Combat, Adept Acrobatics",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You hit a foe with a Weapon Attack.",
             "Effect": "After the attack is resolved, you may immediate- ly use a Disarm, Trip, or Push Maneuver against that foe as a Free Action. The Maneuver automatically hits, but you must still make an Opposed Roll."
         },
         "Outmaneuver": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Harrier, Adept Combat or Acrobatics",
+            "Prerequisites": "Skirmisher, Adept Combat, Adept Acrobatics",
             "Frequency": "Scene x3 — Free Action",
             "Trigger": "You use a damaging Attack",
             "Effect": "Add half your Evasion to your Accuracy Roll for the attack, and all foes hit by the attack have their Initia- tive reduced by your full Evasion value."
         },
         "Swift Strikes": {
             "Tags": "[+Speed][Weapon]",
-            "Prerequisites": "4 Skirmisher Features, Master Combat or Acrobatics",
+            "Prerequisites": "4 Skirmisher Features, Master Combat, Master Acrobatics",
             "Frequency": "1 AP — Standard Action, Special",
             "Effect": "Use a Weapon Attack as if it had the Priority Key- word. If the Move already had the Priority Keyword, use it as if it had the Priority (Advanced) Keyword instead."
         }
@@ -4322,19 +4322,19 @@
             },
             "How To Shoot Web": {
                 "Tags": "+Special Attack",
-                "Prerequisites": "Swarmlord",
+                "Prerequisites": "Swarmlord (Monarch's Embrace)",
                 "Frequency": "Static",
                 "Effect": "You gain the Threaded and Wallclimber Capabilities."
             },
             "Broodlord": {
                 "Tags": "+Special Attack",
-                "Prerequisites": "Enhanced Embrace Rank 2, Expert Command or Survival",
+                "Prerequisites": "Enhanced Embrace Rank 2 (Monarch's Embrace), Expert Survival, Expert Command",
                 "Frequency": "Static",
                 "Effect": "You gain Compound Eyes."
             },
             "Pheromone Markers": {
                 "Tags": "+Special Attack",
-                "Prerequisites": "Enhanced Embrace Rank 1",
+                "Prerequisites": "Enhanced Embrace \nRank 1: (Monarch's Embrace)",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "You hit a foe with a damaging Bug-Type attack",
                 "Effect": "The triggering foe gains 1 Pheromone Stack. Your Bug-Type attacks gain a +2 bonus to Accuracy Rolls and +1 Critical Hit range against foes for each Pheromone Stack they have. Once per Scene per foe, when they gain their third or higher Pheromone Stack, you may choose to roll 1d6. On a result of 1 or 2, the foe becomes Confused; on a result of 3 or 4 the foe becomes Suppressed; on a result of 5 or 6 the foe becomes Enraged."
@@ -4357,19 +4357,19 @@
             },
             "How To Shoot Web": {
                 "Tags": "+Attack",
-                "Prerequisites": "Swarmlord",
+                "Prerequisites": "Swarmlord (Arachnid's Embrace)",
                 "Frequency": "Static",
                 "Effect": "You gain the Threaded and Wallclimber Capabilities."
             },
             "Broodlord": {
                 "Tags": "+Attack",
-                "Prerequisites": "Enhanced Embrace Rank 2, Expert Command or Survival",
+                "Prerequisites": "Enhanced Embrace Rank 2 (Arachnid's Embrace), Expert Survival, Expert Command",
                 "Frequency": "Static",
                 "Effect": "You gain Tinted Lens."
             },
             "Pheromone Markers": {
                 "Tags": "+Attack",
-                "Prerequisites": "Enhanced Embrace Rank 1",
+                "Prerequisites": "Enhanced Embrace \nRank 1: (Arachnid's Embrace)",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "You hit a foe with a damaging Bug-Type attack",
                 "Effect": "The triggering foe gains 1 Pheromone Stack. Your Bug-Type attacks gain a +2 bonus to Accuracy Rolls and +1 Critical Hit range against foes for each Pheromone Stack they have. Once per Scene per foe, when they gain their third or higher Pheromone Stack, you may choose to roll 1d6. On a result of 1 or 2, the foe becomes Confused; on a result of 3 or 4 the foe becomes Suppressed; on a result of 5 or 6 the foe becomes Enraged."
@@ -4405,25 +4405,25 @@
         },
         "Sharpen Shadows": {
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Shade Caller, Expert Guile or Stealth",
+            "Prerequisites": "Shade Caller, Expert Guile, Expert Stealth",
             "Frequency": "Static",
             "Effect": "You learn Dark Pulse and Night Slash"
         },
         "Heart of Darkness": {
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Sharpen Shadows, Master Guile or Stealth",
+            "Prerequisites": "Sharpen Shadows, Master Guile, Master Stealth",
             "Frequency": "Static",
             "Effect": "You learn Night Daze and Punishment"
         },
         "World of Darkness": {
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Shade Caller, Adept Guile or Stealth",
+            "Prerequisites": "Shade Caller, Adept Guile, Adept Stealth",
             "Frequency": "2 AP — Standard Action",
             "Effect": "You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the en- counter. All targets without Darkvision attacking from or i nto the Shifting Darkness receive a -3 penalty to Ac- curacy. You may count Shifting Darkness as complete darkness for the purposes of activating your Living Shadow. As a Static effect, you also gain the Darkvision Capability."
         },
         "Dark Soul": {
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Shade Caller, Master Guile or Stealth",
+            "Prerequisites": "Shade Caller, Master Guile, Master Stealth",
             "Frequency": "Static",
             "Effect": "Choose Shadow Tag or Super Luck. You gain the chosen Ability."
         }
@@ -4450,26 +4450,26 @@
         },
         "Bare the Dragon's Claws": {
             "Tags": "[+Attack][Weapon]",
-            "Prerequisites": "Herald of Pride, Adept Command or Intimidate",
+            "Prerequisites": "Herald of Pride, Adept Command, Adept Intimidate",
             "Frequency": "Static",
             "Effect": "Your learn the Moves Dragon Claw and Dragon Tail. You may use these Moves as Weapon Attacks when wielding Melee Weapons."
         },
         "Call the Dragon's Rage": {
             "Tags": "[+Attack][Weapon]",
-            "Prerequisites": "Bare the Dragon’s Claws, Master Com- mand or Intimidate",
+            "Prerequisites": "Bare the Dragon's Claws, Master Command, Master Intimidate",
             "Frequency": "Static",
             "Effect": "Your learn the Moves Dragon Claw and Dragon Tail. You may use these Moves as Weapon Attacks when wielding Melee Weapons."
         },
         "Rouse the Dragon's Blood": {
             "Tags": "[+Attack]",
-            "Prerequisites": "Herald of Pride, Expert Command or Intimidate",
+            "Prerequisites": "Herald of Pride, Expert Command, Expert Intimidate",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "You suffer a Critical Hit or gain an Injury from a foe's attack",
             "Effect": "For 1 full round, the next Herald of Pride Move you use against the triggering foe cannot miss, cannot be Intercepted, and effects that would cause it to miss cannot be activated against it."
         },
         "Sovereignty": {
             "Tags": "[+Attack]",
-            "Prerequisites": "Herald of Pride, Expert Command or Intimidate",
+            "Prerequisites": "Herald of Pride, Expert Command, Expert Intimidate",
             "Frequency": "Bind 2 AP — Standard Action",
             "Effect": "While this Feature is bound, you gain a +2 Bonus to Save Checks against Volatile Status Afflictions, and a +2 Bonus to Opposed Checks when defending against being Disarmed, Grappled, Pushed, or Tripped."
         }
@@ -4483,19 +4483,19 @@
         },
         "Magnetize": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Storm Wizard Rank 1, Adept Acrobatics",
+            "Prerequisites": "Storm Wizard \nRank 1:, Adept Acrobatics",
             "Frequency": "Static",
             "Effect": "You gain the Magnetic Capability and may use this magnetism to stick to surfaces with significant met- al content (ex: metal walls obviously, concrete with met- al I-beams inside, etc). You may use your Overland to traverse any such surfaces, even if that means walking vertically up a wall or upside down on a ceiling. You may choose not to be Pushed when on such a surface."
         },
         "Body of Lightning": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Spark Master, Master Acrobatics or Focus",
+            "Prerequisites": "Spark Master, Master Acrobatics, Master Focus",
             "Frequency": "Static",
             "Effect": "Choose Volt Absorb or Motor Drive. You gain the Chosen Ability."
         },
         "Bottled Lightning": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Storm Wizard Rank 1, Adept Focus",
+            "Prerequisites": "Storm Wizard \nRank 1:, Adept Focus",
             "Frequency": "2 AP - Standard Action",
             "Target": "An item made of conductive material",
             "Effect": "Choose one of your Electric Type Moves with a target. You Charge the target item with this Move. Bot- tled Lightning counts as using the Move for frequency purposes. You may expend this Charge as a Swift Ac- tion on your turn to use the Move the item was charged with, originating from the item. If a Pokémon or Train- er touches a Charged item, you may instead activate this Swift Action as if it had the Priority keyword. At the end of a Scene, all items lose their Charge, and you may only have X items Charged at a time where X is half your Focus Rank."
@@ -4524,13 +4524,13 @@
         },
         "Passionato Harmony": {
             "Tags": "[+Special Attack]",
-            "Prerequisites": "Glamour Weaver, Expert Charm or Occult Education",
+            "Prerequisites": "Glamour Weaver, Expert Charm, Expert Occult Education",
             "Frequency": "Static",
             "Effect": "You learn the Moves Dazzling Gleam and Draining Kiss."
         },
         "Lucky Clover Grand Finale": {
             "Tags": "[+Special Attack]",
-            "Prerequisites": "Passionato Harmony, Master Charm or Occult Education",
+            "Prerequisites": "Passionato Harmony, Master Charm, Master Occult Education",
             "Frequency": "Static",
             "Effect": "You learn the Moves Moonblast and Aromatic Mist."
         },
@@ -4557,7 +4557,7 @@
     "Fire Bringer": {
         "Fire Bringer": {
             "Tags": "[Class][+Attack and Special Attack]",
-            "Prerequisites": "Elemental Connection (Fire), Novice Combat",
+            "Prerequisites": "Elemental Connection (Fire), Novice Combat, Novice Focus",
             "Frequency": "Static",
             "Effect": "Choose two of Flame Burst, Flame Wheel, Flame Charge, or Will-O-Wisp. You learn the chosen Moves"
         },
@@ -4569,19 +4569,19 @@
         },
         "Firebrand": {
             "Tags": "[+Attack and Special Attack]",
-            "Prerequisites": "Fire Bringer, Adept Focus or Combat",
+            "Prerequisites": "Fire Bringer, Adept Combat, Adept Focus",
             "Frequency": "Static",
             "Effect": "Your Fire-Type Moves Burn Targets on a roll of 19+. If a move already has a chance of Burning foes, Firebrand increases the effect range by +2."
         },
         "Burning Passion": {
             "Tags": "[+Attack and Special Attack]",
-            "Prerequisites": "Fire Bringer, Expert Focus or Combat",
+            "Prerequisites": "Fire Bringer, Expert Combat, Expert Focus",
             "Frequency": "Static",
             "Effect": "Choose Flash Fire or Flame Body. You gain the chosen Ability."
         },
         "Blazing Inferno": {
             "Tags": "[+Attack and Special Attack]",
-            "Prerequisites": "Fire Breather Rank 2, Master Focus or Combat",
+            "Prerequisites": "Fire Breather Rank 2, Master Combat, Master Focus",
             "Frequency": "2 AP — Swift Action",
             "Effect": "You becoming Blazing. While you are Blaz- ing, whenever your Fire-Type Moves Inflict Burn, the Burned target immediately loses a Tick of Hit Points, and loses an additional Combat Stage in Defense. While Blazing, when you hit a foe with a damaging Fire-Type Move, you may choose to automatically burn one target of the Move. If you do, you lose the Blazing Condition after the Move's effects are resolved."
         },
@@ -4614,7 +4614,7 @@
         },
         "Gale Speed": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Raging Winds Rank 1, Master Acrobatics or Perception",
+            "Prerequisites": "Raging Winds \nRank 1:, Master Acrobatics, Master Perception",
             "Frequency": "Static",
             "Effect": "Choose Celebrate or Gale Wings. You gain the chosen Ability."
         },
@@ -4648,25 +4648,25 @@
         },
         "Silent Assassin": {
             "Tags": "[+Attack][Weapon]",
-            "Prerequisites": "Apparition, Adept Intimidate or Occult Education",
+            "Prerequisites": "Apparition, Adept Intimidate",
             "Frequency": "Bind 2 AP — Standard Action",
             "Effect": "While this Feature is Bound, your Struggle Attacks and Weapon Attacks deal Ghost-Type Damage, and you gain the Dead Silent Capability."
         },
         "Shadow Form": {
             "Tags": "[+Attack]",
-            "Prerequisites": "Silent Assassin, Expert Intimidate or Occult Education",
+            "Prerequisites": "Silent Assassin, Expert Intimidate",
             "Frequency": "Bind 2 AP — Swift Action",
             "Effect": "While this Feature is Bound, your appearance becomes wan and obviously otherworldly. Your natural Weaknesses, Resistances, and Immunities change to match that of the Ghost Type. Additionally, while in Shadow Form, you are immune to the Cursed Status (if you were previously Cursed, you are instantly cured upon going into Shadow Form) and gain the Phasing Capability. You may unbind this Feature as a Swift Action, returning to your normal appearance."
         },
         "Phantom Menace": {
             "Tags": "[+Attack][Weapon]",
-            "Prerequisites": "Shadow Arms, Expert Intimidate or Occult Education",
+            "Prerequisites": "Shadow Arms, Expert Intimidate",
             "Frequency": "Static",
             "Effect": "You gain the Moves Shadow Claw and Phantom Force. You may use these Moves as Weapon Attacks when wielding Melee Weapons."
         },
         "Haunted Wounds": {
             "Tags": "[+Attack][Weapon]",
-            "Prerequisites": "Shadow Arms, Master Intimidate or Occult Education",
+            "Prerequisites": "Shadow Arms, Master Intimidate",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "You hit with an Apparition Move or Ghost- Typed Weapon Attack",
             "Effect": "After one full round, repeat the triggering attack against one target as a Free Action, regardless of range. If this attack hits, it deals damage as if it were resisted one step further. Haunted Wounds may only affect a target once per Scene."
@@ -4840,19 +4840,19 @@
         },
         "Frozen Domain": {
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Expert Athletics or Survival",
+            "Prerequisites": "Frost Touched, Expert Athletics, Expert Survival",
             "Frequency": "2 AP — Standard Action",
             "Effect": "Set 6 square meters of Frozen Domain within range 6. All 6 meters must be adjacent with at least one other space of Frozen Domain. All legal targets passing through these squares must make an Acrobatics check with a DC equal to 4 + twice your Survival Rank. On failure, the target is Tripped. Pokémon who are flying, levitating, or have the Naturewalk (Tundra) Capability are immune to this effect. When standing on a square affected by Frozen Domain, you may act as if you were in Hail weather. When a Fire-Type attack originates from or targets a square of Frozen Domain, that square of Frozen Domain melts and is cleared. Frozen Domain is considered a Hazard."
         },
         "Winter is Coming": {
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Master Athletics or Survival",
+            "Prerequisites": "Frost Touched, Master Athletics, Master Survival",
             "Frequency": "Static",
             "Effect": "You gain the Frostbite Ability."
         },
         "Winter's Herald": {
             "Tags": "[Ranked 2][+Attack or Special Attack]",
-            "Rank 1 Prerequisites": "Expert Athletics or Survival",
+            "Rank 1 Prerequisites": "Frost Touched, Expert Athletics or Survival",
             "Rank 2 Prerequisites": "Master Athletics or Survival",
             "Frequency": "Static",
             "Effect": "You may learn two Moves from the list below, marked with the Rank of Winter's Herald you are gaining or lower."
@@ -4861,7 +4861,7 @@
     "Prism": {
         "Prism": {
             "Tags": "[Class][+Special Attack]",
-            "Prerequisites": "Elemental Connection (Normal), Novice General Education, Novice Charm",
+            "Prerequisites": "Elemental Connection (Normal), Novice Charm, Novice General Education",
             "Frequency": "Static",
             "Effect": "You learn the Moves Flash and Swift."
         },
@@ -4873,13 +4873,13 @@
         },
         "Sparkle": {
             "Tags": "[+Special Attack]",
-            "Prerequisites": "Prism, Expert Charm or General Education",
+            "Prerequisites": "Prism, Expert Charm, Expert General Education",
             "Frequency": "Static",
             "Effect": "You learn the Moves Tri-Attack and Weather Ball."
         },
         "Rainbow Surge": {
             "Tags": "[+Special Attack]",
-            "Prerequisites": "Sparkle, Master Charm or General Education",
+            "Prerequisites": "Sparkle, Master Charm, Master General Education",
             "Frequency": "Static",
             "Effect": "You learn the Moves Hyper Beam and Morning Sun."
         },
@@ -4891,13 +4891,13 @@
         },
         "Luminous Aura": {
             "Tags": "[+Special Attack]",
-            "Prerequisites": "Blinding Brightness, Adept Charm or General Education",
+            "Prerequisites": "Blinding Brightness, Adept Charm, Adept General Education",
             "Frequency": "Static",
             "Effect": "Choose Starlight or Sunglow. You gain the Chosen Ability."
         },
         "Prismatic Alignment": {
             "Tags": "[+Special Attack]",
-            "Prerequisites": "4 Prism Features, Master Charm or General Education",
+            "Prerequisites": "4 Prism Features, Master Charm, Master General Education",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You use a Prism Move",
             "Effect": "The effect of this Feature depends on the Triggering Move. You may only use Prismatic Alignment with each Move once per Scene.\n» Flash: Flash also Blinds all targets it hits until the end of their next turn.\n» Swift:Swift instead has a range of 8, 3 Targets\n» Tri Attack: Roll twice for Tri Attack's Accuracy Roll and take the better result. If you trigger its Effect Range, you may choose the effect instead of rolling for it.\n» Weather Ball: You use Weather Ball as if you were in the Weather of your choice.\n» Hyper Beam: Hyper Beam instead has a Range of Burst 2, Smite or 10, Ranged Blast 3, Smite.\n» Morning Sun: You use Morning Sun as if you were in Sunny Weather, and you may cure yourself of one Status Affliction."
@@ -4924,25 +4924,25 @@
         },
         "Vile Body": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Miasmic, Adept Guile or Stealth",
+            "Prerequisites": "Miasmic, Adept Stealth, Adept Guile",
             "Frequency": "Static",
             "Effect": "Choose Absorb Force, Poison Point, or Poison Touch. You gain the chosen Ability."
         },
         "Miasma's Call": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Vile Body, Expert Stealth or Guile",
+            "Prerequisites": "Vile Body, Expert Stealth, Expert Guile",
             "Frequency": "Static",
             "Effect": "You learn the moves Acid Armor and Sludge Bomb."
         },
         "Miasma Unleashed": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Miasma’s Call, Master Stealth or Guile",
+            "Prerequisites": "Miasma's Call, Master Stealth, Master Guile",
             "Frequency": "Static",
             "Effect": "You learn the moves Sludge Wave and Toxic."
         },
         "Miasmic Spray": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Miasma’s Call, Master Stealth or Guile",
+            "Prerequisites": "Miasma's Call, Master Stealth, Master Guile",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You hit with Acid, Clear Smog, Sludge Bomb, Sludge Wave, or Toxic; or use Acid Armor.",
             "Effect": "The Effect of this feature depends on the triggering move.\n» Acid: Instead of its usual effect, Acid lowers the Spe- cial Defense of all targets hit by -2 Combat Stages.\n» Clear Smog: Clear Smog's target loses 5 HP for each combat stage lost.\n» Sludge Bomb: The Target receives a -3 penalty to Accuracy Rolls until the end of your next turn.\n» Sludge Wave: All targets in Sludge Wave's Burst are Slowed until the end of their next turn.\n» Toxic: The target's Badly Poison Hit Point Loss be- gins at 10 instead of 5.\n» Acid Armor: You are not slowed while liquefied and resist all special damage one step."
@@ -4970,19 +4970,19 @@
         },
         "Shards of Stone": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Stone Warrior, Expert Combat or Survival",
+            "Prerequisites": "Stone Warrior, Expert Combat, Expert Survival",
             "Frequency": "Static",
             "Effect": "You learn the Moves Rock Slide and Stealth Rock"
         },
         "Stone Cold Finish": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Shards of Stone, Master Combat or Survival",
+            "Prerequisites": "Shards of Stone, Master Combat, Master Survival",
             "Frequency": "Static",
             "Effect": "You learn the Moves Stone Edge and Head Smash."
         },
         "Stone Stance Mastery": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Stone Stance, Master Combat or Survival",
+            "Prerequisites": "Stone Stance, Master Combat, Master Survival",
             "Frequency": "Static",
             "Effect": "Whenever you bind Stone Stance, you may choose two Stances and apply the effects of both."
         }
@@ -5009,26 +5009,26 @@
         },
         "Reactive Armour": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Steelheart, Adept Athletics or Focus",
+            "Prerequisites": "Steelheart, Adept Athletics, Adept Focus",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "You gain an Injury or take a Critical Hit while wearing metallic Armor",
             "Effect": "All foes within a Burst 1 lose Hit Points equal to double your Athletics or Focus Rank, and you gain Damage Reduction equal to double your Athletics or Focus Rank for one full round."
         },
         "Impenetrable": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Steelheart, Expert Athletics or Focus",
+            "Prerequisites": "Steelheart, Expert Athletics, Expert Focus",
             "Frequency": "Static",
             "Effect": "You gain the Bulletproof Ability."
         },
         "Master of Arms": {
             "Tags": "[+Defense][Weapon]",
-            "Prerequisites": "Steelheart, Expert Athletics or Focus",
+            "Prerequisites": "Steelheart, Expert Athletics, Expert Focus",
             "Frequency": "Static",
             "Effect": "You learn the Call to Arms and Unlimited Steel Works Talents."
         },
         "Man of Steel": {
             "Tags": "[+Defense][Weapon]",
-            "Prerequisites": "Steelheart, Master Athletics or Focus",
+            "Prerequisites": "Steelheart, Master Athletics, Master Focus",
             "Frequency": "Static",
             "Effect": "You learn the Moves Meteor Mash and King's Shield. You may use these Moves as Weapon Attacks when wielding Melee Weapons."
         }
@@ -5048,14 +5048,14 @@
         },
         "Hydro Jet": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Call The Current Rank 1",
+            "Prerequisites": "Call The Current \nRank 1:",
             "Frequency": "1 AP — Free Action",
             "Trigger": "You use a damaging single target Water-Type Move",
             "Effect": "Hydro Jet's effect depends on if the triggering Move was Melee or Ranged."
         },
         "Oceanic Feeling": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Water’s Shroud, Master Athletics or Acrobatics",
+            "Prerequisites": "Water's Shroud, Master Athletics, Master Acrobatics",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "See Text",
             "Effect": "You may activate Oceanic Feeling when either Wash Away or Storm Drain would be triggered to gain that Ability for 1 full round, if you do not already have it, and immediately Trigger it. Activating an Ability this way ignores its usual Frequency. You may use each Ability once per Scene this way."
@@ -5169,7 +5169,7 @@
             "Effect": "Each Rank, you gain one of Field Clinic or Medic Training and one of Nurse or First Aid Expertise."
         },
         "Proper Care": {
-            "Prerequisites": "I'm a Doctor, Field Clinic, Expert Medicine Education",
+            "Prerequisites": "I'm a Doctor\nField Clinic, Expert Medicine Education",
             "Frequency": "Static",
             "Effect": "You gain additional bonuses to using Restoratives and Features while in a Field Clinic, Poke Center, Hospital, or other dedicated healing space that lets you access supplies.\n» When you trigger First Aid Expertise here, the injury that is Removed does not count towards the total number of Injuries that may be removed each day.\n» When you trigger Nurse here, Bandages cure 1 Injury after three hours, in addition the injury healed after 6 hours.\n» All Restoratives heal an additional 5 Hit Points. This stacks with the bonus granted by Field Clinic."
         },
@@ -5183,7 +5183,7 @@
     "Glitch Bender": {
         "Glitch Bender": {
             "Tags": "[Class][+Special Defense]",
-            "Prerequisites": "Glitched Existence, Novice Focus, Occult Education, or Perception",
+            "Prerequisites": "Glitched Existence, Novice Focus, Novice Perception, Novice Occult Education",
             "Frequency": "Static",
             "Effect": "You gain the Synchronize Ability."
         },
@@ -5202,7 +5202,7 @@
         },
         "Corrupt Reality": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Glitch Bender, Adept Perception, Occult Education, or Focus",
+            "Prerequisites": "Glitch Bender, Adept Focus, Adept Perception, Adept Occult Education",
             "Frequency": "Scene - Free Action",
             "Target": "Any roll made by a foe",
             "Effect": "You may force the foe to reroll that roll."
@@ -5216,13 +5216,13 @@
         },
         "Glitch Shuffle": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Glitch Bender, Expert Perception, Occult Education, or Focus",
+            "Prerequisites": "Glitch Bender, Expert Focus, Expert Perception, Master Occult Education",
             "Frequency": "Static",
             "Effect": "You learn the Moves Metronome and Topsy- Turvy"
         },
         "Glitch Burst": {
             "Tags": "[+Special Defense]",
-            "Prerequisites": "Glitch Shuffle, Master Perception, Occult Education, or Focus",
+            "Prerequisites": "Glitch Shuffle, Master Focus, Master Perception",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You hit with Topsy-Turvy or use another Glitch Bender Move",
             "Effect": "Glitch Burst's effect depends on the triggering Move.\n» Disable: The target of Disable is also Suppressed.\n» Snatch: Regain one use of a Glitch Bender Move. This may only affect each Move once per Scene.\n» Metronome: Generate three random Moves instead of one, and choose which Move to use.\n» Topsy-Turvy: The target of Topsy-Turvy becomes Confused. They are automatically cured of this Confusion at the end of their next turn."
