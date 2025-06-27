@@ -129,7 +129,8 @@
         },
         "Type Expertise": {
             "Tags": "[Ranked 2][+Any Stat]",
-            "Prerequisites": "\nRank 1: Level 9\nMoves Type x, Type x, Type x\nRank 2: Level 9\nMoves Type x, Type x, Type x",
+            "Rank 1 Prerequisites": "Level 9, 3 Moves of the Chosen Type in your Move List",
+            "Rank 2 Prerequisites": "Level 9, 3 Moves of the Chosen Type in your Move List",
             "Frequency": "Static",
             "Effect": "Each Rank, choose a Type of which you know at least 3 Moves. You gain STAB for the chosen Type. STAB is never applied to Struggle Attacks."
         },
@@ -253,7 +254,7 @@
     "Capture Specialist": {
         "Capture Specialist": {
             "Tags": "[Class][+Speed]",
-            "Prerequisites": "Novice Acrobatics, Novice Athletics, Novice Stealth, Novice Survival, Novice Guile, Novice Perception",
+            "Prerequisites": "Acrobatics, Athletics, Stealth, or Survival at Novice; Guile, or Perception at Novice",
             "Frequency": "Static",
             "Effect": " You gain two Capture Techniques of your choice, found on the next page. You must meet any prerequisites of the Technique."
         },
@@ -379,7 +380,10 @@
         },
         "Dilettante": {
             "Tags": "[Ranked 4]",
-            "Prerequisites": "\nRank 1: Feature Hobbyist\nRank 2: Feature Hobbyist\nRank 3: Feature Hobbyist\nRank 4: Feature Hobbyist",
+            "Rank 1 Prerequisites": "Hobbyist",
+            "Rank 2 Prerequisites": "Hobbyist",
+            "Rank 3 Prerequisites": "Hobbyist",
+            "Rank 4 Prerequisites": "Hobbyist",
             "Frequency": "Static",
             "Effect": "Each Rank of Dilettante, you gain both an Edge and a General Feature from the lists below. You may gain the chosen Edge and Feature even if you do not meet the Skill prerequisites. You must meet any other Prerequisites. Whenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead."
         },
@@ -2112,7 +2116,8 @@
         },
         "Archival Training": {
             "Tags": "[Ranked 2]",
-            "Prerequisites": "\nRank 1: Features Chronicler\nRank 2: Features Chronicler",
+            "Rank 1 Prerequisites": "Chronicler",
+            "Rank 2 Prerequisites": "Chronicler",
             "Frequency": "Static",
             "Effect": "Each Rank, you gain an Archive."
         },
