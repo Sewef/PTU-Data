@@ -2856,6 +2856,24 @@
                 "Prerequisites": "Engineer, Master Tech Education",
                 "Frequency": "Static",
                 "Effect": "Increase the maximum complexity of all Pokébots you create by 2, and increase the maximum complexity of Pokébots you can control by 2."
+            },
+            "Engineer Recipes": {
+                "Robotics 101": {
+                    "Prerequisites": "Engineer",
+                    "Effect": "You can create a Small Pokébot for $1000, a Medium Pokébot for $2000, or a Large Pokébot for $3000. Pokébots you create begin at Level 5. You can create and install Basic Combat and Basic Utility Parts for Pokébots."
+                },
+                "Firmware Update": {
+                    "Prerequisites": "Robofighter",
+                    "Effect": "You can create and install Advanced Combat and Advanced Utility Parts for Pokébots."
+                },
+                "Kitbash King": {
+                    "Prerequisites": "Overclocked",
+                    "Effect": "You can create and install Sympathetic Drives and Repair Nanites for Pokébots."
+                },
+                "Futuretech": {
+                    "Prerequisites": "Experimental AI",
+                    "Effect": "You can create and install Wired Compatibility Cores for Pokébots."
+                }
             }
         },
         "Jailbreaker": {
@@ -2879,6 +2897,20 @@
                 "Frequency": "1 AP — Swift Action",
                 "Trigger": "You hit a target with a Poké Ball with a Spray, Flash, Bounce, or Zap Case applied to it.",
                 "Effect": "The Case has additional effects according to its type(s).\n» Spray Case: After resolving the effects of the Case, the target loses a Tick of Health Points for each Persistent or Volatile Status Affliction they have. This may only affect a target once per Scene.\n» Flash Case: The Case uses the Move Flash as a Burst 2 instead of a Cone 2\n» Bounce Case: The Poké Ball bounces an additional time. This may not cause it to hit a target more than once.\n» Zap Case: The target can only use At-Will actions until the end of their next turn. This may only affect a target once per Scene."
+            },
+            "Jailbreaker Recipes": {
+                "Basic Cases": {
+                    "Prerequisites": "Jailbreaker",
+                    "Effect": "You may create a Contest Case, Lock Case, or Medicine Case for $200."
+                },
+                "Trick Cases": {
+                    "Prerequisites": "Case Specialist",
+                    "Effect": "You may create a Spray Case, Flash Case, or Bounce Case for $400."
+                },
+                "Advanced Cases": {
+                    "Prerequisites": "Fusion Cases",
+                    "Effect": "You may create a Zap Case for $500, a Devil Case for $1000, or a Storage Case for $5000."
+                }
             }
         },
         "Upgrader": {
@@ -2903,6 +2935,28 @@
                 "Frequency": "At-Will — Extended Action",
                 "Target": "You or your Pokémon with Augmentations",
                 "Effect": "Choose an Augmentation the target has and apply the upgrade below. Experimental Designs may affect a target twice.\n» Enhanced Sight: The user gains the X-Ray Vision Capability.\n» Smart Vision: The user learns the Move Feint without taking a Move Slot.\n» Synthetic Muscle: The user recovers from Injuries twice as fast and heals one more Injury per day.\n» Embedded Weaponry: The weapon is Fine and gains Deadly Strike as a Master Move.\n» Wired Reflexes: The user gains one more Reflex Point per Scene and may also spend Reflex Points to gain +2 Critical Hit Range for one full round.\n» Medical Nanobots: Once a Scene, the user may cure themselves of all Persistent Status Afflictions as a Standard Action.\n» Dermal Plating: The user may also activate Dermal Plating to resist Special Damage.\n» Thermal-Optic Camo: While active, the user is invisible to Aura Reading and Thought Detection."
+            },
+            "Upgrader Recipes": {
+                "Datajack": {
+                    "Prerequisites": "Upgrader",
+                    "Effect": "You may build and install the Datajack Augmentaion for $250."
+                },
+                "Eye Augments": {
+                    "Prerequisites": "Upgrader",
+                    "Effect": "You may build and install the Enhanced Sight Augmentation for $1000 and Smart Vision Augmentation for $1500."
+                },
+                "Limb Augments": {
+                    "Prerequisites": "Emergency Reactivation",
+                    "Effect": "You build and install the Synthetic Muscle Augmentation for $1000 and the Embedded Weaponry Augmentation for $2000."
+                },
+                "Body Augments": {
+                    "Prerequisites": "Efficient Installation",
+                    "Effect": "You may build and install the Medical Nanobots Augmentation for $1000 and the Wired Reflexes Augmentation for $1500."
+                },
+                "Dermal Augments": {
+                    "Prerequisites": "Experimental Designs",
+                    "Effect": "You may build and install the Dermal Plating Augmentation for $2000 and the Thermal-Optic Camo Augmentation for $4000."
+                }
             }
         }
     },
