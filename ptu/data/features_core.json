@@ -564,6 +564,50 @@
         "Cheerleader": {
             "Tags": "[Class]",
             "Prerequisites": "Inspired Training, Novice Charm",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "Your Pokémon with at least 2 Tutor Points remaining",
+            "Effect": "Your Pokémon loses 2 Tutor Points and gains the Friend Guard Ability."
+        },
+        "Moment of Action": {
+            "Tags": "[Orders]",
+            "Prerequisites": "Cheerleader",
+            "Frequency": "At-Will — Standard Action",
+            "Target": "Up to two Allied Trainers",
+            "Effect": "Each target gains 1 Temporary Action Point. These Action Points disappear after one full Round."
+        },
+        "Cheers": {
+            "Prerequisites": "Cheerleader",
+            "Frequency": "X AP — Swift Action",
+            "Trigger": "You use [Orders]",
+            "Effect": "The target or targets of the triggering [Orders] are Cheered for 1 full round. While Cheered, the target's Combat Stages cannot be lowered by foe's attacks, features, or abilities. This Feature costs 0 AP if the triggering effect affects only one ally, and costs 1 AP if it affects two or more."
+        },
+        "Inspirational Support": {
+            "Prerequisites": "Cheers, Adept Charm",
+            "Frequency": "Static",
+            "Effect": "Whenever your Pokémon with Friend Guard targets an Ally with an Ability or Status Move, the targeted Ally becomes Cheered."
+        },
+        "Bring it On!": {
+            "Prerequisites": "Cheers, Adept Charm",
+            "Frequency": "1 AP — Free Action",
+            "Effect": "You may trigger Bring It On! whenever...\n» A Cheered Ally takes Damage, to grant them 5 Damage Reduction agains the triggering Damage.\n» A Cheered Ally makes a Save Check, to grant them a +2 Bonus on that check.\n» A Cheered Ally Takes a Breather, to grant them Temporary Hit Points equal to your Charm Rank. A target may benefit from each \"Bring It On!\" effect only once per Scene."
+        },
+        "Go, Fight, Win!": {
+            "Tags": "[Orders]",
+            "Prerequisites": "Moment of Action, Expert Charm",
+            "Frequency": "Scene x3 — Standard Action",
+            "Effect": "Choose and perform one of the cheers below. You may perform each Cheer only once per Scene.\n» Show Your Best!: Choose Defense or Special Defense. All allies on the field gain +1 Combat Stage in the Chosen Stat.\n» Don't Stop Now!: All allies on the field gain Temporary Hit Points equal to your Charm Rank.\n» I Believe In You!: All allies on the field gain a +2 bonus to Evasion for one full Round."
+        },
+        "Keep Fighting!": {
+            "Prerequisites": "5 Cheerleader Features, Master Charm",
+            "Frequency": "Daily x2 — Free Action",
+            "Trigger": "Your Pokémon or an Ally Trainer with over 1 Hit Point is reduced to 0 Hit Points or lower",
+            "Effect": "That Ally's Hit Point count is reduced to 1 instead, and then gains Temporary Hit Points equal to your Charm Rank doubled."
+        }
+    },
+    "Cheerleader_old": {
+        "Cheerleader": {
+            "Tags": "[Class]",
+            "Prerequisites": "Inspired Training, Novice Charm",
             "Frequency": "X AP — Free Action",
             "Trigger": "You use Orders",
             "Effect": "Choose Cheered, Excited, or Motivated. All allies affected by the triggering effect gain the chosen condition. This Feature costs 0 AP if the triggering effect affects only one ally, and costs 1 AP if it affects two or more."
@@ -2455,6 +2499,29 @@
                 "Frequency": "Static",
                 "Effect": "You gain three Skill Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet."
             },
+            "Bookworm": {
+                "Prerequisites": "Breadth of Knowledge",
+                "Frequency": "Static",
+                "Effect": "You gain X Study Points, where X is equal to 2 plus one more for every other General Research Feature you have. You may Drain Study Points to benefit from studying Books, instead of Draining your Action Points. Study Points are restored to your maximum after an Extended Rest, just like Action Points."
+            },
+            "Well Read": {
+                "Prerequisites": "Bookworm, Expert General Education",
+                "Frequency": "Static",
+                "Effect": "You may use your General Education Rank to qualify for Books, instead of the Book's usual Skill Prerequisites, provided you have the normal Prerequisite at at least Novice Rank."
+            },
+            "Echoes of the Future": {
+                "Prerequisites": "Breadth of Knowledge, Master General Education",
+                "Frequency": "Daily x2 — Free Action",
+                "Trigger": "You or your Pokémon make a roll",
+                "Effect": "You may roll twice and keep the best result."
+            }
+        },
+        "General_old": {
+            "Breadth of Knowledge": {
+                "Prerequisites": "General Research Field, Novice General Education",
+                "Frequency": "Static",
+                "Effect": "You gain three Skill Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet."
+            },
             "Live and Learn": {
                 "Prerequisites": "Adept General Education",
                 "Frequency": "Daily x3 — Free Action",
@@ -2474,76 +2541,7 @@
                 "Effect": "You may roll twice and keep the best result."
             }
         },
-        "General_May2015": {
-            "Breadth of Knowledge": {
-                "Prerequisites": "General Research Field, Novice General Education",
-                "Frequency": "Static",
-                "Effect": "You gain three Skill Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet."
-            },
-            "Bookworm": {
-                "Prerequisites": "Breadth of Knowledge",
-                "Frequency": "Static",
-                "Effect": "You gain X Study Points, where X is equal to 2 plus one more for every other General Research Feature you have. You may Drain Study Points to benefit from studying Books, instead of Draining your Action Points. Study Points are restored to your maximum after an Extended Rest, just like Action Points."
-            },
-            "Well Read": {
-                "Prerequisites": "Bookworm, Expert General Education",
-                "Frequency": "Static",
-                "Effect": "You may use your General Education Rank to qualify for Books, instead of the Book's usual Skill Prerequisites, provided you have the normal Prerequisite at at least Novice Rank."
-            },
-            "Echoes of the Future": {
-                "Prerequisites": "Breadth of Knowledge, Master General Education",
-                "Frequency": "Daily x2 — Free Action",
-                "Trigger": "You or your Pokémon make a roll",
-                "Effect": "You may roll twice and keep the best result."
-            }
-        },
         "Apothecary": {
-            "Apothecary": {
-                "Prerequisites": "Apothecary Research Field, Novice Medicine Education",
-                "Frequency": "At-Will — Extended Action",
-                "Effect": "You gain use any Apothecary Recipe for which you qualify."
-            },
-            "Patch Cure": {
-                "Prerequisites": "Apothecary, Adept Medicine Education",
-                "Frequency": "At-Will — Extended Action",
-                "Target": "A Restorative Item",
-                "Effect": "You distill the target, gaining 3 Restorative Patches. Restorative Patches have the same effect as the items from which they were created, but can only be applied as an Extended Action."
-            },
-            "Medical Techniques": {
-                "Prerequisites": "Medic, Adept Medicine Education",
-                "Frequency": "1 AP — Swift Action",
-                "Trigger": "You apply a Restorative Item",
-                "Effect": "The target gains a Tick of Hit Points, plus an additional amount of Hit Points equal to your Medicine Education Rank."
-            },
-            "Medicinal Blend": {
-                "Prerequisites": "Apothecary, Master Medicine Education",
-                "Frequency": "At-Will — Extended Action",
-                "Trigger": "You or your Pokémon make a roll",
-                "Effect": "Ingredients: Two Restoratives, or a Restorative and an X-Item\nEffect: You fuse the two Ingredients, creating an Item that has the properties of both. If you choose two Restoratives, they cannot be Restoratives with the same effect (you could not for example, mix a Potion and a Super Potion). If a Restorative Patch is used as an Ingredient, the resulting item can only be used as an Extended Action."
-            },
-            "Apothecary Recipes": {
-                "Restorative Science": {
-                    "Prerequisites": "Apothecary",
-                    "Cost": "$100",
-                    "Effect": "You create an Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal, or Potion."
-                },
-                "Super Cures": {
-                    "Prerequisites": "Patch Cure",
-                    "Cost": "$200",
-                    "Effect": "You can create Revives and Super Potions."
-                },
-                "Hyper Cures": {
-                    "Prerequisites": "Medical Techniques",
-                    "Effect": "You can create Full Heals for $300, Hyper Potions for $400, and Full Restores for $700."
-                },
-                "Performance Enhancers": {
-                    "Prerequisites": "Medicinal Blend",
-                    "Cost": "$4900",
-                    "Effect": "You create a PP Up or Heart Booster. If you have a Heart Scale, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost."
-                }
-            }
-        },
-        "Apothecary_Sept2015": {
             "Apothecary": {
                 "Prerequisites": "Apothecary Research Field, Novice Medicine Education",
                 "Frequency": "At-Will — Extended Action",
@@ -2580,6 +2578,52 @@
                 },
                 "Hyper Cures": {
                     "Prerequisites": "Affliction Techniques",
+                    "Effect": "You can create Full Heals for $300, Hyper Potions for $400, and Full Restores for $700."
+                },
+                "Performance Enhancers": {
+                    "Prerequisites": "Medicinal Blend",
+                    "Cost": "$4900",
+                    "Effect": "You create a PP Up or Heart Booster. If you have a Heart Scale, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost."
+                }
+            }
+        },
+        "Apothecary_old": {
+            "Apothecary": {
+                "Prerequisites": "Apothecary Research Field, Novice Medicine Education",
+                "Frequency": "At-Will — Extended Action",
+                "Effect": "You gain use any Apothecary Recipe for which you qualify."
+            },
+            "Patch Cure": {
+                "Prerequisites": "Apothecary, Adept Medicine Education",
+                "Frequency": "At-Will — Extended Action",
+                "Target": "A Restorative Item",
+                "Effect": "You distill the target, gaining 3 Restorative Patches. Restorative Patches have the same effect as the items from which they were created, but can only be applied as an Extended Action."
+            },
+            "Medical Techniques": {
+                "Prerequisites": "Medic, Adept Medicine Education",
+                "Frequency": "1 AP — Swift Action",
+                "Trigger": "You apply a Restorative Item",
+                "Effect": "The target gains a Tick of Hit Points, plus an additional amount of Hit Points equal to your Medicine Education Rank."
+            },
+            "Medicinal Blend": {
+                "Prerequisites": "Apothecary, Master Medicine Education",
+                "Frequency": "At-Will — Extended Action",
+                "Trigger": "You or your Pokémon make a roll",
+                "Effect": "Ingredients: Two Restoratives, or a Restorative and an X-Item\nEffect: You fuse the two Ingredients, creating an Item that has the properties of both. If you choose two Restoratives, they cannot be Restoratives with the same effect (you could not for example, mix a Potion and a Super Potion). If a Restorative Patch is used as an Ingredient, the resulting item can only be used as an Extended Action."
+            },
+            "Apothecary Recipes": {
+                "Restorative Science": {
+                    "Prerequisites": "Apothecary",
+                    "Cost": "$100",
+                    "Effect": "You create an Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal, or Potion."
+                },
+                "Super Cures": {
+                    "Prerequisites": "Patch Cure",
+                    "Cost": "$200",
+                    "Effect": "You can create Revives and Super Potions."
+                },
+                "Hyper Cures": {
+                    "Prerequisites": "Medical Techniques",
                     "Effect": "You can create Full Heals for $300, Hyper Potions for $400, and Full Restores for $700."
                 },
                 "Performance Enhancers": {
@@ -5182,50 +5226,6 @@
                 "Frequency": "Static",
                 "Effect": "While wearing Body Equipment worth at least $1000, you gain +5 Damage Reduction. This does not stack with any Damage Reduction granted by any Body Equipment."
             }
-        }
-    },
-    "Cheerleader_n": {
-        "Cheerleader": {
-            "Tags": "[Class]",
-            "Prerequisites": "Inspired Training, Novice Charm",
-            "Frequency": "At-Will — Extended Action",
-            "Target": "Your Pokémon with at least 2 Tutor Points remaining",
-            "Effect": "Your Pokémon loses 2 Tutor Points and gains the Friend Guard Ability."
-        },
-        "Moment of Action": {
-            "Tags": "[Orders]",
-            "Prerequisites": "Cheerleader",
-            "Frequency": "At-Will — Standard Action",
-            "Target": "Up to two Allied Trainers",
-            "Effect": "Each target gains 1 Temporary Action Point. These Action Points disappear after one full Round."
-        },
-        "Cheers": {
-            "Prerequisites": "Cheerleader",
-            "Frequency": "X AP — Swift Action",
-            "Trigger": "You use [Orders]",
-            "Effect": "The target or targets of the triggering [Orders] are Cheered for 1 full round. While Cheered, the target's Combat Stages cannot be lowered by foe's attacks, features, or abilities. This Feature costs 0 AP if the triggering effect affects only one ally, and costs 1 AP if it affects two or more."
-        },
-        "Inspirational Support": {
-            "Prerequisites": "Cheers, Adept Charm",
-            "Frequency": "Static",
-            "Effect": "Whenever your Pokémon with Friend Guard targets an Ally with an Ability or Status Move, the targeted Ally becomes Cheered."
-        },
-        "Bring it On!": {
-            "Prerequisites": "Cheers, Adept Charm",
-            "Frequency": "1 AP — Free Action",
-            "Effect": "You may trigger Bring It On! whenever...\n» A Cheered Ally takes Damage, to grant them 5 Damage Reduction agains the triggering Damage.\n» A Cheered Ally makes a Save Check, to grant them a +2 Bonus on that check.\n» A Cheered Ally Takes a Breather, to grant them Temporary Hit Points equal to your Charm Rank. A target may benefit from each \"Bring It On!\" effect only once per Scene."
-        },
-        "Go, Fight, Win!": {
-            "Tags": "[Orders]",
-            "Prerequisites": "Moment of Action, Expert Charm",
-            "Frequency": "Scene x3 — Standard Action",
-            "Effect": "Choose and perform one of the cheers below. You may perform each Cheer only once per Scene.\n» Show Your Best!: Choose Defense or Special Defense. All allies on the field gain +1 Combat Stage in the Chosen Stat.\n» Don't Stop Now!: All allies on the field gain Temporary Hit Points equal to your Charm Rank.\n» I Believe In You!: All allies on the field gain a +2 bonus to Evasion for one full Round."
-        },
-        "Keep Fighting!": {
-            "Prerequisites": "5 Cheerleader Features, Master Charm",
-            "Frequency": "Daily x2 — Free Action",
-            "Trigger": "Your Pokémon or an Ally Trainer with over 1 Hit Point is reduced to 0 Hit Points or lower",
-            "Effect": "That Ally's Hit Point count is reduced to 1 instead, and then gains Temporary Hit Points equal to your Charm Rank doubled."
         }
     },
     "Medic": {
