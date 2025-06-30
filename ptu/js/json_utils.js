@@ -1,3 +1,5 @@
+let allItems = [];
+
 function loadJsonAsCard(file, container) {
     $.getJSON(file, function (data) {
         if (!Array.isArray(data) || data.length === 0) {
@@ -5,14 +7,30 @@ function loadJsonAsCard(file, container) {
             return;
         }
 
-        // Render each item
-        data.forEach(item => {
-            const cardHTML = renderItemAsCard(item);
-            const cardDiv = document.createElement('div');
-            cardDiv.className = "col-12 col-md-4";
-            cardDiv.innerHTML = `<div class="card h-100"><div class="card-body">${cardHTML}</div></div>`;
-            container.appendChild(cardDiv);
+        allItems = data;
+        renderFilteredCards(data, container);
+
+        const searchInput = document.getElementById("card-search");
+        searchInput.addEventListener("input", function () {
+            const query = this.value.toLowerCase();
+            const filtered = allItems.filter(item =>
+                Object.values(item).some(value =>
+                    typeof value === "string" && value.toLowerCase().includes(query)
+                )
+            );
+            renderFilteredCards(filtered, container);
         });
+    });
+}
+
+function renderFilteredCards(data, container) {
+    container.innerHTML = "";
+    data.forEach(item => {
+        const cardHTML = renderItemAsCard(item);
+        const cardDiv = document.createElement("div");
+        cardDiv.className = "col-12 col-md-4";
+        cardDiv.innerHTML = `<div class="card h-100"><div class="card-body">${cardHTML}</div></div>`;
+        container.appendChild(cardDiv);
     });
 }
 
@@ -53,44 +71,6 @@ function renderItemAsCard(item, depth = 0) {
     });
 
     return str;
-}
-
-
-
-function loadJsonToTable(file, tableId) {
-    $.getJSON(file, function (data) {
-        if (!Array.isArray(data) || data.length === 0) {
-            $(`#${tableId} tbody`).append('<tr><td colspan="100%">Aucune donnée</td></tr>');
-            return;
-        }
-
-        // Obtenir toutes les clés uniques de tous les objets
-        const allKeys = new Set();
-        data.forEach(item => {
-            Object.keys(item).forEach(key => allKeys.add(key));
-        });
-        const keysArray = Array.from(allKeys);
-        console.log(data);
-        console.log(keysArray);
-
-        // Créer l'en-tête du tableau
-        let theadHtml = "";
-        keysArray.forEach(key => {
-            theadHtml += `<th>${key}</th>`;
-        });
-        $(`#${tableId} thead tr`).html(theadHtml);
-
-        // Créer les lignes du tableau
-        data.forEach(item => {
-            let rowHtml = "";
-            keysArray.forEach(key => {
-                rowHtml += `<td>${item[key] !== undefined ? item[key] : ""}</td>`;
-            });
-            $(`#${tableId} tbody`).append(`<tr>${rowHtml}</tr>`);
-        });
-    }).fail(function () {
-        alert("Erreur lors du chargement du JSON.");
-    });
 }
 
 function loadJsonAsText(url, container) {

@@ -46,7 +46,6 @@ function createCard(title, data) {
 }
 let fullData = {};
 let currentActiveLink = null;
-
 function loadFeatures(file) {
     fetch(file)
         .then(response => {
@@ -56,6 +55,22 @@ function loadFeatures(file) {
         .then(jsonData => {
             fullData = jsonData;
             const sidebar = document.getElementById("sidebar");
+            sidebar.innerHTML = ""; // Clear existing
+
+            // Create search input
+            const searchInput = document.createElement("input");
+            searchInput.type = "text";
+            searchInput.className = "form-control mb-2";
+            searchInput.placeholder = "Search classes...";
+            sidebar.appendChild(searchInput);
+
+            // Container for links
+            const linkContainer = document.createElement("div");
+            linkContainer.className = "list-group";
+            sidebar.appendChild(linkContainer);
+
+            // Map of sectionTitle → link element
+            const linkMap = {};
 
             Object.keys(jsonData).forEach((sectionTitle, index) => {
                 const link = document.createElement("a");
@@ -70,12 +85,23 @@ function loadFeatures(file) {
                     setActiveLink(link);
                 });
 
-                sidebar.appendChild(link);
+                linkMap[sectionTitle] = link;
+                linkContainer.appendChild(link);
 
-                // Automatically load the first section
                 if (index === 0) {
                     renderSection(sectionTitle);
                     setActiveLink(link);
+                }
+            });
+
+            // Filter sidebar links
+            searchInput.addEventListener("input", () => {
+                const query = searchInput.value.toLowerCase();
+                linkContainer.innerHTML = ""; // Clear links
+                for (const title in linkMap) {
+                    if (title.toLowerCase().includes(query)) {
+                        linkContainer.appendChild(linkMap[title]);
+                    }
                 }
             });
         })
@@ -83,6 +109,7 @@ function loadFeatures(file) {
             console.error("Error loading JSON:", error);
         });
 }
+
 function renderSection(sectionTitle) {
     const container = document.getElementById("cards-container");
     container.innerHTML = "";
@@ -90,21 +117,52 @@ function renderSection(sectionTitle) {
     const section = fullData[sectionTitle];
     if (!section) return;
 
+    // Create and insert search input
+    const searchDiv = document.createElement("div");
+    searchDiv.className = "mb-3";
+
+    const searchInput = document.createElement("input");
+    searchInput.type = "text";
+    searchInput.placeholder = "Search features...";
+    searchInput.className = "form-control";
+    searchInput.id = "search-input";
+
+    searchDiv.appendChild(searchInput);
+    container.appendChild(searchDiv);
+
     const row = document.createElement("div");
     row.className = "row";
+    row.id = "feature-row";
+
+    // Save cards so we can filter later
+    const cardMap = {};
 
     for (const cardTitle in section) {
         const card = createCard(cardTitle, section[cardTitle]);
+        card.dataset.title = cardTitle.toLowerCase(); // for filtering
+        cardMap[cardTitle] = card;
         row.appendChild(card);
     }
 
     container.appendChild(row);
 
-    // Scroll to just below the header
+    // Filter logic
+    searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+        row.innerHTML = "";
+
+        for (const title in cardMap) {
+            if (title.toLowerCase().includes(query)) {
+                row.appendChild(cardMap[title]);
+            }
+        }
+    });
+
+    // Optional: scroll behavior (if you want to use it again)
     const header = document.querySelector('div[w3-include-html="header.html"]') || document.querySelector("header");
     const headerHeight = header ? header.offsetHeight : 0;
-
-    const scrollTop = container.offsetTop - headerHeight - 16; // add padding
+    const scrollTop = container.offsetTop - headerHeight - 16;
+    // window.scrollTo({ top: scrollTop, behavior: "smooth" }); // Uncomment if needed
 }
 
 
