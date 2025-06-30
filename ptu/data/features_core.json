@@ -5225,7 +5225,7 @@
             "Prerequisites": "Glitch Bender",
             "Frequency": "2 AP — Free Action",
             "Trigger": "You gain a Status Affliction",
-            "Effect": "Roll 1d10 and change which Status Affliction is gained according to the following chart. If the target already has that Status Affliction, roll again."
+            "Effect": "Roll 1d10 and change which Status Affliction is gained according to the following chart. If the target already has that Status Affliction, roll again.\n<table class=\"table table-bordered\"><tbody><tr><td>1: Sleep</td><td>6: Confused</td></tr><tr><td>2: Burn</td><td>7: Paralysis</td></tr><tr><td>3: Frozen</td><td>8: Enraged</td></tr><tr><td>4: Infatuation - Choose target of Infatuation randomly among foes.</td><td>9: Disabled - Choose Move at random out of known Moves.</td></tr><tr><td>5: Poison</td><td>10: Suppressed</td></tr></tbody></table>"
         },
         "Null Error": {
             "Tags": "[+Special Defense]",
