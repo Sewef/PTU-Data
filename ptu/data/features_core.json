@@ -193,18 +193,13 @@
             "Prerequisites": "Elemental Connection; a Type-Linked Class; Adept Medicine, Occult, or Tech Education",
             "Frequency": "Special — Extended Action",
             "Target": "Your Pokémon",
-            "Effect": "The Target gains the Type of your Elemental Connection as an additional Type, or has one of their Types replaced by that Type. See the Type Changes sec- tion (page 436) for more information and suggestions. A Pokémon may be targeted by Type Sync only once. This Feature may be performed One Time for each Rank above Untrained you have of your highest of Medicine, Occult, or Tech Education, up to a maximum of 4 times at Master Rank."
+            "Effect": "The Target gains the Type of your Elemental Connection as an additional Type, or has one of their Types replaced by that Type. See the Type Changes section (page 436) for more information and suggestions. A Pokémon may be targeted by Type Sync only once. This Feature may be performed One Time for each Rank above Untrained you have of your highest of Medicine, Occult, or Tech Education, up to a maximum of 4 times at Master Rank."
         },
         "Nurse": {
             "Prerequisites": "Expert Medicine Education",
             "Frequency": "Drain 2 AP — Free Action",
             "Trigger": "You take an Extended Rest",
             "Effect": "During this Extended Rest, Pokémon and Trainers in your care gain the benefits listed below. The AP Drain cost from triggering this Feature is applied after the Extended Rest is completed and AP Drain has otherwise been restored.\n» They heal 1/8th of their Max Hit Points per half hour of rest instead of 1/16th (does not stack with Bandages).\n» If the Extended Rest lasts at least 6 hours, they may remove 1 Injury."
-        },
-        "Gotta Catch 'Em All": {
-            "Prerequisites": "Advanced Capture Techniques Rank 3",
-            "Frequency": "Static",
-            "Effect": "Every time you Capture a Wild Pokémon that is a member of an evolutionary family of which you own no other Pokémon, you gain 1 Collector Stack. Whenever you make a Capture Roll, you may spend up to three Collector Stacks to gain an equal bonus to your Capture Roll, or you may spend three Collector Stacks to re-roll entirely."
         }
     },
     "Ace Trainer": {
@@ -545,22 +540,22 @@
             "Changing Viewpoints": {
                 "Prerequisites": "Mentor, Intuition as a Mentor Skill",
                 "Target": "A Pokémon with at least 1 Tutor Point.",
-                "Effect": "The \"Target\" loses a Tutor Point, and you may change the \"Target\"’s Nature to any other Nature which either raises the same Stat as its current nature, or lowers the same Stat as its current Nature."
+                "Effect": "The target loses a Tutor Point, and you may change the target’s Nature to any other Nature which either raises the same Stat as its current nature, or lowers the same Stat as its current Nature."
             },
             "Empowered Development": {
                 "Prerequisites": "Mentor, Charm as a Mentor Skill",
                 "Target": "A Pokémon with at least 1 Tutor Point",
-                "Effect": "The \"Target\" loses 1 Tutor Point, and gains any three of the following Poké Edges: Skill Improvement, Advanced Mobility, or Capability Training. A Pokémon may be \"Target\"ed only once by Empowered Development. The \"Target\" may gain Poké Edges this way even if they do not meet the \"Prerequisites\", however, they must still follow other limitations; Advanced Mobility can only improve a Movement Capability once, for example."
+                "Effect": "The target loses 1 Tutor Point, and gains any three of the following Poké Edges: Skill Improvement, Advanced Mobility, or Capability Training. A Pokémon may be targeted only once by Empowered Development. The target may gain Poké Edges this way even if they do not meet the \"Prerequisites\", however, they must still follow other limitations; Advanced Mobility can only improve a Movement Capability once, for example."
             },
             "Corrective Learning": {
                 "Prerequisites": "Mentor, Intimidate as a Mentor Skill",
                 "Target": "A Pokémon that has spent Tutor Points on a Poké Edge or a Feature’s effect",
-                "Effect": "The \"Target\" loses one \"Effect\" gained from a Poké Edge or Feature and refunds all Tutor Points spent on it."
+                "Effect": "The target loses one \"Effect\" gained from a Poké Edge or Feature and refunds all Tutor Points spent on it."
             },
             "Versatile Teachings": {
                 "Prerequisites": "Mentor, Pokémon Education as a Mentor Skill",
                 "Target": "A Pokémon with at least 1 Tutor Point",
-                "Effect": "The \"Target\" loses 1 Tutor Point and may exchange one of its Basic Abilities for any other of its species’ Basic Abilities or one of its Advanced Abilities for any of its species’ Basic or Advanced Abilities.",
+                "Effect": "The target loses 1 Tutor Point and may exchange one of its Basic Abilities for any other of its species’ Basic Abilities or one of its Advanced Abilities for any of its species’ Basic or Advanced Abilities.",
                 "Note": "You may NOT activate Versatile Teachings to reroll Abilities that require a roll to determine characteristics, such as Serpent’s Mark and Color Theory."
             }
         }
@@ -738,7 +733,7 @@
             "Tags": "[+Speed]",
             "Prerequisites": "Juggler, Expert Acrobatics or Guile",
             "Frequency": "2 AP — Shift Action, Interrupt",
-            "Effect": "The next Pokémon you send out is treated as if the recalled Pokémon had used Baton Pass on it."
+            "Effect": "You may Release a Pokémon as an Interrupt."
         },
         "First Blood": {
             "Tags": "[+Speed]",
@@ -2238,7 +2233,7 @@
         "Accentuated Taste": {
             "Prerequisites": "Chef, Adept Intuition",
             "Frequency": "Static",
-            "Effect": "Whenever you create a Snack with a Chef Feature, you may assign it a Taste chosen from Salty, Sour, Spicy, Dry, and Sweet. Tasty Snacks must be assigned their corresponding Taste. Whenever a Pokémon trades in a Digestion Buff from a Snack with an assigned Taste they do not dislike, they gain the following bonuses:\n» Salty: The user gains 5 Temporary Hit Points. This stacks with any Temporary Hit Points gained through Chef Features, the Lunchbox Ability, and the Digestion Buff.\n» Spicy: Increase the user's Critical Hit Range by 1.\n» Sour: Increase the user's Evasion against damaging attacks by 1.\n» Dry: Increase the user's Effect Range of all attacks by 1.\n» Bitter: The user gets a +1 Bonus to all Save Checks.\n Sweet: Increase the user's Initiative by 5."
+            "Effect": "Whenever you create a Snack with a Chef Feature, you may assign it a Taste chosen from Salty, Sour, Spicy, Dry, and Sweet. Tasty Snacks must be assigned their corresponding Taste. Whenever a Pokémon trades in a Digestion Buff from a Snack with an assigned Taste they do not dislike, they gain the following bonuses:\n» Salty: The user gains 5 Temporary Hit Points. This stacks with any Temporary Hit Points gained through Chef Features, the Lunchbox Ability, and the Digestion Buff.\n» Spicy: Increase the user's Critical Hit Range by 1.\n» Sour: Increase the user's Evasion against damaging attacks by 1.\n» Dry: Increase the user's Effect Range of all attacks by 1.\n» Bitter: The user gets a +1 Bonus to all Save Checks.\n» Sweet: Increase the user's Initiative by 5."
         },
         "Complex Aftertaste": {
             "Prerequisites": "Accentuated Taste",
@@ -2254,7 +2249,9 @@
         "Dumplings": {
             "Prerequisites": "4 Chef Features, Master Intuition",
             "Frequency": "At-Will — Extended Action",
-            "Effect": "Ingredient 1: Leftovers, Preserves, or a Snack made with Chef\nIngredient 2: Leftovers or Preserves\nEffect: You mix the two ingredients into one Snack that has the same effect as its ingredients. The two ingredients must be different items."
+            "Ingredient 1": "Leftovers, Preserves, or a Snack made with Chef",
+            "Ingredient 2": "Leftovers or Preserves",
+            "Effect": "You mix the two ingredients into one Snack that has the same effect as its ingredients. The two ingredients must be different items."
         },
         "Chef Recipes": {
             "Tasty Snacks": {
@@ -2689,7 +2686,7 @@
             "Playing God": {
                 "Prerequisites": "Chemist, Expert Technology Education",
                 "Frequency": "At-Will — Extended Action",
-                "Effect": "Cost: $3500\nChoose Castform, Grimer, Koffing, Magnemite, Porygon, Solosis, Trubbish, or Voltorb. Using your chemistry set, you create an artificial Egg of the Chosen Pokémon, that hatches within a day. The resulting Pokémon is born at level 5, with the Nature and Ability of your choice (Abilities chosen from its species' Basic Abilities). Additionally, you may enhance the Pokémon in several ways. Choose a number of upgrades below equal to your Technology Education Rank.\n» The Pokémon is of an unusual coloration, gaining a +2d6 Bonus to the Introduction Stage of a Contest toward a single Contest Stat.\n The Pokémon adds a Move from its Egg Move or Move Tutor List to its Inheritance List. This may be performed up to 3 times.\n» Increase one of the Pokémon's Base Stats by +1. This counts as use of a Vitamin. This may be performed up to 5 times."
+                "Effect": "Cost: $3500\nChoose Castform, Grimer, Koffing, Magnemite, Porygon, Solosis, Trubbish, or Voltorb. Using your chemistry set, you create an artificial Egg of the Chosen Pokémon, that hatches within a day. The resulting Pokémon is born at level 5, with the Nature and Ability of your choice (Abilities chosen from its species' Basic Abilities). Additionally, you may enhance the Pokémon in several ways. Choose a number of upgrades below equal to your Technology Education Rank.\n» The Pokémon is of an unusual coloration, gaining a +2d6 Bonus to the Introduction Stage of a Contest toward a single Contest Stat.\n» The Pokémon adds a Move from its Egg Move or Move Tutor List to its Inheritance List. This may be performed up to 3 times.\n» Increase one of the Pokémon's Base Stats by +1. This counts as use of a Vitamin. This may be performed up to 5 times."
             },
             "Chemistry Recipes": {
                 "Enhancers": {
@@ -4069,7 +4066,7 @@
             "Prerequisites": "Lessons in Rage and Pain, Expert Intimidate",
             "Frequency": "At-Will — Free Action",
             "Trigger": "You hit with a Berserker Move or Weapon Attack",
-            "Effect": "Immediately gain one Injury before resolving the triggering attack. You gain a Tick of Temporary Hit Points and may cure yourself of a Persistent Status Af- fliction. The triggering attack doubles your damage bo- nus from Lessons in Rage and Pain."
+            "Effect": "Immediately gain one Injury before resolving the triggering attack. You gain a Tick of Temporary Hit Points and may cure yourself of a Persistent Status Affliction. The triggering attack doubles your damage bo- nus from Lessons in Rage and Pain."
         }
     },
     "Rune Master": {
@@ -4090,7 +4087,7 @@
             "Prerequisites": "Hidden Power",
             "Frequency": "Daily — Extended Action",
             "Target": "Self or a willing Pokémon with Hidden Power.",
-            "Effect": "Reroll the Type for an instance of Hidden Pow- er the target knows If you target an Unown, you may transform the target into a different letter."
+            "Effect": "Reroll the Type for an instance of Hidden Power the target knows If you target an Unown, you may transform the target into a different letter."
         },
         "Glyph": {
             "Tags": "[+Attack or Special Attack]",
@@ -4141,7 +4138,7 @@
             "Prerequisites": "Arcanist, Adept Occult Education",
             "Frequency": "1 AP — Swift Action",
             "Trigger": "You use a Special Move",
-            "Effect": "You may apply a \nRank 1: Power Manipulation to your attack."
+            "Effect": "You may apply a Rank 1 Power Manipulation to your attack."
         },
         "Authentic Thaumaturgy": {
             "Tags": "[+Special Attack]",
@@ -4345,7 +4342,7 @@
                 "Rank 2 Prerequisites": "Adept Command or Survival",
                 "Rank 3 Prerequisites": "Expert Command or Survival",
                 "Frequency": "Static",
-                "Effect": "Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen."
+                "Effect": "Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Defend Order</td><td>None</td><td>Infestation</td><td>None</td><td>Bug Buzz</td><td>None</td></tr><tr><td>Fury Cutter</td><td>None</td><td>Powder</td><td>Monarch</td><td>Mega Horn</td><td>None</td></tr><tr><td>Fell Needle</td><td>None</td><td>Signal Beam</td><td>None</td><td>Quiver Dance</td><td>Monarch</td></tr><tr><td>Struggle Bug</td><td>Monarch</td><td>Steamroller</td><td>None</td><td></td><td></td></tr></tbody></table></div>"
             }
         },
         "Arachnid's Embrace": {
@@ -4380,7 +4377,7 @@
                 "Rank 2 Prerequisites": "Adept Command or Survival",
                 "Rank 3 Prerequisites": "Expert Command or Survival",
                 "Frequency": "Static",
-                "Effect": "Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen."
+                "Effect": "Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Defend Order</td><td>None</td><td>Attack Order</td><td>Arachnid</td><td>Bug Buzz</td><td>None</td></tr><tr><td>Fury Cutter</td><td>None</td><td>Infestation</td><td>None</td><td>Mega Horn</td><td>None</td></tr><tr><td>Fell Needle</td><td>None</td><td>Signal Beam</td><td>None</td><td>Spider Web</td><td>Arachnid</td></tr><tr><td>Sticky Web</td><td>Arachnid</td><td>Steamroller</td><td>None</td><td></td><td></td></tr></tbody></table></div>"
             }
         }
     },
@@ -4506,7 +4503,7 @@
             "Rank 2 Prerequisites": "Expert Acrobatics or Focus",
             "Rank 3 Prerequisites": "Master Acrobatics or Focus",
             "Frequency": "Static",
-            "Effect": "You may learn two Moves from the list below, marked with the Storm Wizard Rank you are gaining or lower."
+            "Effect": "You may learn two Moves from the list below, marked with the Storm Wizard Rank you are gaining or lower.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th>Rank 1 Moves</th><th>Rank 2 Moves</th><th>Rank 3 Moves</th></tr></thead><tbody><tr><td>Charge Beam</td><td>Charge</td><td>Discharge</td></tr><tr><td>Eerie Impulse</td><td>Thunder Punch</td><td>Thunder</td></tr><tr><td>Shock Wave</td><td>Thunderbolt</td><td>Thunder Wave</td></tr><tr><td>Spark</td><td>-</td><td>Volt Tackle</td></tr></tbody></table></div>"
         }
     },
     "Glamour Weaver": {
@@ -4583,14 +4580,14 @@
             "Tags": "[+Attack and Special Attack]",
             "Prerequisites": "Fire Breather Rank 2, Master Focus or Combat",
             "Frequency": "2 AP — Swift Action",
-            "Effect": "You becoming Blazing. While you are Blaz- ing, whenever your Fire-Type Moves Inflict Burn, the Burned target immediately loses a Tick of Hit Points, and loses an additional Combat Stage in Defense. While Blazing, when you hit a foe with a damaging Fire-Type Move, you may choose to automatically burn one target of the Move. If you do, you lose the Blazing Condition after the Move's effects are resolved."
+            "Effect": "You becoming Blazing. While you are Blazing, whenever your Fire-Type Moves Inflict Burn, the Burned target immediately loses a Tick of Hit Points, and loses an additional Combat Stage in Defense. While Blazing, when you hit a foe with a damaging Fire-Type Move, you may choose to automatically burn one target of the Move. If you do, you lose the Blazing Condition after the Move's effects are resolved."
         },
         "Fire Breather": {
             "Tags": "[Class][+Attack and Special Attack]",
             "Rank 1 Prerequisites": "Fire Bringer, Expert Focus or Combat",
             "Rank 2 Prerequisites": "Master Focus or Combat",
             "Frequency": "Static",
-            "Effect": "Learn two Fire Bringer Moves from the list be- low. You may choose any Move marked with the Fire Breather Rank you are taking or lower."
+            "Effect": "Learn two Fire Bringer Moves from the list below. You may choose any Move marked with the Fire Breather Rank you are taking or lower.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th>Rank 1 Moves</th><th>Rank 2 Moves</th></tr></thead><tbody><tr><td>Flamethrower</td><td>Blaze Kick</td></tr><tr><td>Fire Punch</td><td>Fiery Dance</td></tr><tr><td>Fire Spin</td><td>Flare Blitz</td></tr><tr><td>Sunny Day</td><td>Heat Wave</td></tr></tbody></table></div>"
         }
     },
     "Wind Runner": {
@@ -4900,7 +4897,7 @@
             "Prerequisites": "4 Prism Features, Master Charm or General Education",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You use a Prism Move",
-            "Effect": "The effect of this Feature depends on the Triggering Move. You may only use Prismatic Alignment with each Move once per Scene.\n» Flash: Flash also Blinds all targets it hits until the end of their next turn.\n» Swift:Swift instead has a range of 8, 3 Targets\n» Tri Attack: Roll twice for Tri Attack's Accuracy Roll and take the better result. If you trigger its Effect Range, you may choose the effect instead of rolling for it.\n» Weather Ball: You use Weather Ball as if you were in the Weather of your choice.\n» Hyper Beam: Hyper Beam instead has a Range of Burst 2, Smite or 10, Ranged Blast 3, Smite.\n» Morning Sun: You use Morning Sun as if you were in Sunny Weather, and you may cure yourself of one Status Affliction."
+            "Effect": "The effect of this Feature depends on the Triggering Move. You may only use Prismatic Alignment with each Move once per Scene.\n» Flash: Flash also Blinds all targets it hits until the end of their next turn.\n» Swift: Swift instead has a range of 8, 3 Targets\n» Tri Attack: Roll twice for Tri Attack's Accuracy Roll and take the better result. If you trigger its Effect Range, you may choose the effect instead of rolling for it.\n» Weather Ball: You use Weather Ball as if you were in the Weather of your choice.\n» Hyper Beam: Hyper Beam instead has a Range of Burst 2, Smite or 10, Ranged Blast 3, Smite.\n» Morning Sun: You use Morning Sun as if you were in Sunny Weather, and you may cure yourself of one Status Affliction."
         }
     },
     "Miasmic": {
@@ -4945,7 +4942,7 @@
             "Prerequisites": "Miasma’s Call, Master Stealth or Guile",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You hit with Acid, Clear Smog, Sludge Bomb, Sludge Wave, or Toxic; or use Acid Armor.",
-            "Effect": "The Effect of this feature depends on the triggering move.\n» Acid: Instead of its usual effect, Acid lowers the Spe- cial Defense of all targets hit by -2 Combat Stages.\n» Clear Smog: Clear Smog's target loses 5 HP for each combat stage lost.\n» Sludge Bomb: The Target receives a -3 penalty to Accuracy Rolls until the end of your next turn.\n» Sludge Wave: All targets in Sludge Wave's Burst are Slowed until the end of their next turn.\n» Toxic: The target's Badly Poison Hit Point Loss be- gins at 10 instead of 5.\n» Acid Armor: You are not slowed while liquefied and resist all special damage one step."
+            "Effect": "The Effect of this feature depends on the triggering move.\n» Acid: Instead of its usual effect, Acid lowers the Spe- cial Defense of all targets hit by -2 Combat Stages.\n» Clear Smog: Clear Smog's target loses 5 HP for each combat stage lost.\n» Sludge Bomb: The Target receives a -3 penalty to Accuracy Rolls until the end of your next turn.\n» Sludge Wave: All targets in Sludge Wave's Burst are Slowed until the end of their next turn.\n» Toxic: The target's Badly Poison Hit Point Loss begins at 10 instead of 5.\n» Acid Armor: You are not slowed while liquefied and resist all special damage one step."
         }
     },
     "Stone Warrior": {
@@ -5066,7 +5063,7 @@
             "Rank 2 Prerequisites": "Adept Athletics or Acrobatics",
             "Rank 3 Prerequisites": "Expert Athletics or Acrobatics",
             "Frequency": "Static",
-            "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower."
+            "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th>Rank 1 Moves</th><th>Rank 2 Moves</th><th>Rank 3 Moves</th></tr></thead><tbody><tr><td>Aqua Jet</td><td>Bubblebeam</td><td>Aqua Tail</td></tr><tr><td>Aqua Ring</td><td>Waterfall</td><td>Rain Dance</td></tr><tr><td>Water Pulse</td><td>Whirlpool</td><td>Surf</td></tr></tbody></table></div>"
         }
     },
     "Backpacker": {
@@ -5091,10 +5088,46 @@
         "Hero's Journey": {
             "Tags": "[Ranked 3][+Speed]",
             "Rank 1 Prerequisites": "Backpacker",
-            "Rank 2 Prerequisites": "Adept Survival",
-            "Rank 3 Prerequisites": "Expert Survival",
+            "Rank 2 Prerequisites": "Backpacker, Adept Survival",
+            "Rank 3 Prerequisites": "Backpacker, Expert Survival",
+            "Rank 4 Prerequisites": "Backpacker, Expert Survival",
             "Frequency": "Static",
             "Effect": "Each Rank, you may gain two Backpacker Talents for which you qualify."
+        },
+        "Backpacker Talents": {
+            "Call to Adventure": {
+                "Frequency": "Static",
+                "Effect": "You gain the Instinctive Aptitude Edge, even if you do not meet its prerequisites. If you already have this Edge, gain another Edge for which you qualify. During Combat or tense situations (never Extended Actions), if you spend AP to add a bonus to a Skill Check, you may add +1d6 instead of +2."
+            },
+            "Frisk": {
+                "Frequency": "Static",
+                "Effect": "You gain the Frisk Ability."
+            },
+            "Handyman": {
+                "Frequency": "Static",
+                "Effect": "Whenever you use an item or a non-Weapon piece of equipment which calls for a Skill Check or has an effect or prerequisite based on a Skill Rank, you may substitute Survival for the used Skill. This does not affect prerequisites for Books."
+            },
+            "Hat Trick": {
+                "Frequency": "Static",
+                "Effect": "While wearing Head Equipment worth at least $1000, you gain 15 Damage Reduction against Critical Hits. This does not stack with any Damage Reduction granted by any Head Equipment."
+            },
+            "Movement Mastery": {
+                "Frequency": "Static",
+                "Effect": "Choose one of Art of Stealth, Athletic Initiative, Mounted Prowess, Nimble Movement, Slippery, Stamina, Swimmer, or Wallrunner. You gain the chosen Edge, even if you do not meet the prerequisites. Additionally, you may take any of these Edges in the future as if you did meet the prerequisites."
+            },
+            "Sole Power": {
+                "Frequency": "Static",
+                "Effect": "While wearing Feet Equipment worth at least $1000, you do not trigger Hazards while Shifting. However, you still trigger any Hazards that you are standing on at the start or end of your turn. Reactive Hazards such as Stealth Rock cannot be triggered against you."
+            },
+            "Wayfarer": {
+                "Frequency": "Static",
+                "Effect": "You may use your Survival Skill when making Opposed Rolls when defending against Disarm, Grapple, Push, and Trip Maneuvers. When wielding a Weapon, you may use Survival instead of Combat to determine the Damage Base of your Struggle Attacks and to qualify for a Weapon’s Moves."
+            },
+            "Wear it Better": {
+                "Prerequisites": "Expert Survival",
+                "Frequency": "Static",
+                "Effect": "While wearing Body Equipment worth at least $1000, you gain +5 Damage Reduction. This does not stack with any Damage Reduction granted by any Body Equipment."
+            }
         }
     },
     "Cheerleader_n": {
@@ -5132,7 +5165,7 @@
             "Tags": "[Orders]",
             "Prerequisites": "Moment of Action, Expert Charm",
             "Frequency": "Scene x3 — Standard Action",
-            "Effect": "Choose and perform one of the cheers below. You may perform each Cheer only once per Scene.\n» Show Your Best!: Choose Defense or Special Defense. All allies on the field gain +1 Combat Stage in the Chosen Stat.\n» Don't Stop Now!: All allies on the field gain Temporary Hit Points equal to your Charm Rank.\n I Believe In You!: All allies on the field gain a +2 bonus to Evasion for one full Round."
+            "Effect": "Choose and perform one of the cheers below. You may perform each Cheer only once per Scene.\n» Show Your Best!: Choose Defense or Special Defense. All allies on the field gain +1 Combat Stage in the Chosen Stat.\n» Don't Stop Now!: All allies on the field gain Temporary Hit Points equal to your Charm Rank.\n» I Believe In You!: All allies on the field gain a +2 bonus to Evasion for one full Round."
         },
         "Keep Fighting!": {
             "Prerequisites": "5 Cheerleader Features, Master Charm",
@@ -5226,7 +5259,6 @@
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You hit with Topsy-Turvy or use another Glitch Bender Move",
             "Effect": "Glitch Burst's effect depends on the triggering Move.\n» Disable: The target of Disable is also Suppressed.\n» Snatch: Regain one use of a Glitch Bender Move. This may only affect each Move once per Scene.\n» Metronome: Generate three random Moves instead of one, and choose which Move to use.\n» Topsy-Turvy: The target of Topsy-Turvy becomes Confused. They are automatically cured of this Confusion at the end of their next turn."
-        },
-        "Prerequisites": "Glitched Existence, Novice Focus, Occult Education, or Perception"
+        }
     }
 }
