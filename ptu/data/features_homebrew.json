@@ -390,47 +390,55 @@
     },
     "Coordinator": {
         "Coordinator": {
-            "Tags": "[Class]",
+            "Tags": "[Class] [+Any]",
             "Prerequisites": "Grace, Novice Charm, Command, Guile, Intimidate, or Intuition",
-            "Frequency": "At-Will — Free Action",
-            "Effect": "Your Pokémon may reroll a single Appeal Roll or Damage Roll. This Feature may be used only once per Contest, and once per Pokémon per Scene."
+            "Frequency": "X AP — Free Action",
+            "Effect": "Your Pokémon may re-roll a single Appeal Roll or Damage Roll, and must use the new result. The first time per day you use this Feature, it costs 0 AP. Each time thereafter, the cost increases by 1 AP. The cost of this Feature resets when you take an Extended Rest."
         },
         "Decisive Director": {
-            "Tags": "[Orders]",
+            "Tags": "[Orders] [+Any]",
             "Prerequisites": "Coordinator",
             "Frequency": "At-Will — Standard Action",
             "Target": "A Pokémon",
-            "Effect": "Add or subtract X from the target's Initiative until the end of your next turn. X is equal to your Charm Rank doubled."
-        },
-        "Adaptable Performance": {
-            "Prerequisites": "Coordinator",
-            "Frequency": "Scene — Free Action",
-            "Trigger": "Your Pokémon's Turn to use a Move in a Contest",
-            "Effect": "Choose two of your Pokémon's Moves. Your Pokémon may perform your Contest Move as if had the Contest Typing of one of your chosen Moves, and had the effects of the other. You may not use either move on the next round of the contest. This effect may be used once per Contest."
-        },
-        "Flexible Preparations": {
-            "Prerequisites": "Adaptable Performance, Adept Charm, Command, Guile, Intimidate, or Intuition",
-            "Frequency": "Daily — Extended Action",
-            "Target": "A Pokémon that has Contest Stats from Poffins",
-            "Effect": "The target may reallocate up to 2d6 of Poffin-Derived Contest Stats from one Contest Stat to another. This effect lasts until the end of the day."
+            "Effect": "Add or subtract X from the target's Initiative until the end of your next turn. X is equal to your highest Coordinator Skill Rank doubled."
         },
         "Innovation": {
-            "Prerequisites": "Adaptable Performance",
+            "Tags": "[+Any]",
+            "Prerequisites": "Coordinator",
             "Frequency": "Daily — Extended Action",
             "Target": "A Pokémon with at least 1 Tutor Point.",
-            "Effect": "The target loses 1 Tutor Point, and then learns a Move created with Innovation. See the next section for details on creating Moves for this Feature. A Pokémon may only have one Move created by Innovation at a time."
+            "Effect": "The target loses 1 Tutor Point, and then learns a Move created with Innovation. See the next section for details on creating Moves for this Feature. A Pokémon may only have one Move created by Innovation at a time. If you target your own Pokémon, the Move does not take up a Move Slot."
         },
         "Nuanced Performance": {
-            "Prerequisites": "Coordinator, Expert Charm, Command, Guile, Intimidate, or Intuition",
+            "Tags": "[+Any]",
+            "Prerequisites": "Coordinator, one Coordinator Skill at Adept",
             "Frequency": "1 AP — Free Action",
-            "Trigger": "Your Pokémon miss all targets with a Move",
-            "Effect": "That Move's Frequency is not expended. This does not work with Moves that may fail to activate, such as moves with the Execute keyword."
+            "Trigger": "Your Pokémon misses all targets with a Move",
+            "Effect": "That Move's Frequency is not expended. This does not work with Moves that may fail to activate, such as moves with the Execute keyword.",
+            "Note": "You may activate Nuanced Performance even if your Pokemon’s Move missed due to a Move with the Shield Keyword or an effect such as Dodge or Parry."
+        },
+        "Flexible Preparations": {
+            "Tags": "[+Any]",
+            "Prerequisites": "Adaptable Performance, one Coordinator Skill at Adept",
+            "Frequency": "Daily — Extended Action",
+            "Target": "You spend at least half an hour training your Pokémon",
+            "Effect": "All Pokemon you Train during this time may reallocate up to 2d6 of Poffin Derived Contest Stats from one Contest Stat to another. They may also reallocate up to 10 Stat Points between their Stats and trade one Naturally Learned Move in their movepool for any other move on their Level-Up list that they could learn at their current level or lower. The Pokemon must still adhere to Base Stat Relation. These effects last until the end of the day."
+        },
+        "Adaptable Performance": {
+            "Tags": " [+Any]",
+            "Prerequisites": "Flexible Preparations, one Coordinator Skill at Expert",
+            "Frequency": "Scene — Free Action",
+            "Trigger": "Your Pokémon's Turn to use a Move in a Contest, or your Pokémon gains Initiative",
+            "Contest Effect": "Choose two of your Pokémon's Moves. Your Pokémon may perform their Contest Move as if had the Contest Typing of one of the chosen Moves, and had the effects of the other. The Pokémon may not use either Move on the next round of the contest. This effect may be used once per Contest.",
+            "Battle Effect": "Choose two of your Pokémon's Moves with a Damage Base. This turn, your Pokémon may perform their attack as if it had the Damage Base and Range of one of the chosen Moves, and had the Accuracy and Effects of the other. If the chosen Moves are of different Types or Classes, the resulting attack may be either Type or Class. This consumes the Frequency of both of the chosen Moves.",
+            "Note": "Adaptable Performance may not be used with the Moves Explosion or Self-Destruct."
         },
         "Reliable Performance": {
-            "Prerequisites": "Nuanced Performance, Master Charm, Command, Guile, Intimidate, or Intuition",
-            "Frequency": "2 AP — Free Action",
-            "Trigger": "Your Pokémon makes an Appeal Roll, Accuracy Check, or Skill Check",
-            "Effect": "For appeal rolls, instead of making the Appeal Roll, you gain 1 Appeal Point for each Dice you would have rolled. For Accuracy Checks, act as if you had rolled a 10. For Skill Checks, multiply 3.5 by your Pokémon's Skill Rank, and use the resulting number as the result of your roll, rounded down. For all rolls, add or subtract any modifiers as normal."
+            "Tags": " [+Any]",
+            "Prerequisites": "Nuanced Performance, one Coordinator Skill at Expert",
+            "Frequency": "Scene x2 – Swift Action Interrupt",
+            "Trigger": "You or your Pokemon make an Appeal Roll, Accuracy Check, or Skill Check",
+            "Effect": "For appeal rolls, instead of making the Appeal Roll, you gain 1 Appeal Point for each Die you would have rolled. For Accuracy Checks, act as if you had rolled an 11. For Skill Checks, multiply 3.5 by the Skill Rank in question, and use the resulting number as the result of the roll, rounded down. For all rolls, add or subtract any modifiers as normal."
         },
         "Innovation Moves": {
             "Description": "The Coordinator’s “Innovation” Feature lets the Coordinator create new Moves for their Pokémon. These Moves can serve to fill voids in Move Lists for both Battles and Contests and provide utility.\nTo create a Move, first choose a Contest Type. This affects the Move’s effects and of course its role in Contests.\nNext choose a Contest Effect. Look at the “Contest Effects” section (page 266) under “Contests” for the full list. Pick one. That’s right, any of them. This determines what the Move does during a Contest, of course.\nThird, choose one of the four templates below. This determines the Move’s effects in Battle. These are modified by the Contest Type of the Move. Remember, Cool is associated with Attack, Tough with Defense, Beauty with Special Attack, Smart with Special Defense, and Cute with Speed.\nAnd finally, name your Move! This is the best part!",
@@ -439,7 +447,7 @@
                 "Frequency": "Scene",
                 "AC": "None",
                 "Class": "Status",
-                "Range": "Self",
+                "Range": "Self, Swift Action",
                 "Effect": "The user generates 3 Contest Boons. These may be used as a Swift Action on their turn to gain one of the effects below, based on this Move’s Contest Type.\n» Beauty: Use when declaring an attack (before Accuracy Roll) to gain a +3 bonus to Effect Range for that attack.\n» Cool: Use when declaring an attack (before Accuracy Roll) to gain a +3 bonus to Critical Hit Range for that attack.\n» Cute: Use during your turn to gain +3 Evasion for one full round.\n» Smart: Use when declaring an attack (before Accuracy Roll) to gain a +3 bonus to Accuracy for that attack.\n» Tough: Use at the start of a turn to avoid all loss of Hit Points from Status Afflictions, Weather, and Recoil for that turn."
             },
             "Template #2": {
@@ -448,7 +456,7 @@
                 "AC": "None",
                 "Class": "Status",
                 "Range": "6, 1 Target",
-                "Effect": "The target has the Stat associated with this Move’s Contest Type lowered by -2 Combat Stages. This Move cannot miss."
+                "Effect": "The target loses a Tick of Hit Points and has the Stat associated with this Move's Contest Type lowered by -2 Combat Stages. This Move cannot miss."
             },
             "Template #3": {
                 "Type": "Varies",
@@ -456,7 +464,8 @@
                 "AC": "Varies",
                 "Class": "Varies",
                 "Range": "Varies, Spirit Surge",
-                "Effect": "Make a Struggle Attack, increasing the damage roll by +5. Follow all other normal rules for making Struggle attacks, including any modifications from capabilities, features, or special effects. On 18+, the user’s Stat associated with the Contest Type of this Move is raised by +1 Combat Stage. This Move’s Effect Range is extended by +1 for every two Contest Dice the user has that matches this Move’s Contest Type."
+                "Effect": "Make a Versatile Struggle Attack, increasing the damage roll by +5. Follow all other normal rules for making Struggle attacks, including any modifications from capabilities, weapons, features, or special effects. On 18+, the user's Stat associated with the Contest Type of this Move is raised by +1 Combat Stage. This Move's Effect Range is extended by +1 for every two Contest Dice the user has that matches this Move's Contest Type.",
+                "Note": "Versatile means that the attack can be the user’s choice of Physical or Special."
             },
             "Template #4": {
                 "Type": "Normal",
@@ -464,7 +473,7 @@
                 "AC": "None",
                 "Class": "Status",
                 "Range": "Burst 2",
-                "Effect": "All allies in the Burst besides the user gain +1 Combat Stage in the Stat associated with the Contest Type of this Move."
+                "Effect": "The user and all allies in the Burst gain a Tick of Temporary Hit Points and +1 Combat Stage in the Stat associated with the Contest Type of this Move."
             }
         }
     },
