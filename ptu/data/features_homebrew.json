@@ -370,7 +370,7 @@
             "Effect": "You may choose a different Order to give to each Target. You must pay all AP costs and follow Frequency restrictions for all Orders used in this way."
         },
         "Leadership": {
-            "Tags":"[Gift]",
+            "Tags": "[Gift]",
             "Prerequisites": "Complex Orders, Expert Command",
             "Frequency": "Static",
             "Effect": "Choose one of Ravager Orders, Marksman Orders, Trickster Orders, Guardian Orders, or Precision Orders. You gain the chosen Feature and the Leader Edge, even if you do not meet their prerequisites."
@@ -1171,16 +1171,17 @@
         "Beauty": {
             "Style Expert": {
                 "Tags": "Class, Branch",
-                "Prerequisites": "3 Pokémon with 3d6 in their Beauty Stat from Poffins OR Coordinator, 1 Pokémon with 3d6 in their Beauty Stat from Poffins",
+                "Prerequisites": "3 Pokémon with 3d6 in their Beauty Stat from Poffins OR Fashionista or Coordinator, 1 Pokémon with 3d6 in their Beauty Stat from Poffins",
                 "Frequency": "Static",
-                "Effect": "Your Pokémon gain +2d6 to their Beauty Stat. These dice are counted as if coming from Poffins."
+                "Effect": "Your Pokémon gain +2d6 to their Beauty Stat. These dice are counted as if coming from Poffins. Your Pokémon gain a +5 bonus to damage with attacks that match Beauty Stat. When your Pokémon uses a non-damaging attack that matches your Beauty Stat, it gains a +1 bonus to its Evasion for one full round."
             },
             "Style Flourish": {
                 "Tags": "Branch",
                 "Prerequisites": "3 Style Expert (Beauty) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Beauty Move",
-                "Effect": "In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Special Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
+                "Contests Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
+                "Battle Effect": "The target gains +1 CS to their Special Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
                 "Tags": "Branch",
@@ -1202,28 +1203,30 @@
                 "Prerequisites": "Beautiful Ballet Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Pokémon uses a Beauty-Type Move",
-                "Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: The move gains the keyword Burst 1 if Melee, or Blast 2 if ranged. If the move is already a Burst, Blast, or Cone, increase the size of the Move's Range by 1. This does not cause a target to be hit multiple times. You may activate Fabulous Max only once per Pokémon per Scene."
+                "Contest Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
+                "Battle Effect": "The move gains the keyword Burst 1 if Melee, or Blast 2 if ranged. If the move is already a Burst, Blast, or Cone, increase the size of the Move's Range by 1. This does not cause a target to be hit multiple times. You may activate Fabulous Max only once per Pokémon per Scene."
             },
             "Enticing Beauty": {
                 "Prerequisites": "Beautiful Ballet Rank 1",
                 "Frequency": "Scene — Free Action",
-                "Trigger": "Your Pokémon",
-                "Effect": "The target acts as a Bait item as if it had the Alluring Capability. Add its number of Beauty Dice from Poffins as a Bonus to all d20 lure rolls."
+                "Trigger": "Your Pokémon hits with a Beauty Type attack",
+                "Effect": "All targets hit by the attack become Infatuated with Your Pokémon, regardless of gender."
             }
         },
         "Cool": {
             "Style Expert": {
                 "Tags": "Class, Branch",
-                "Prerequisites": "3 Pokémon with 3d6 in their Cool Stat from Poffins OR Coordinator, 1 Pokémon with 3d6 in their Cool Stat from Poffins",
+                "Prerequisites": "3 Pokémon with 3d6 in their Cool Stat from Poffins OR Fashionista or Coordinator, 1 Pokémon with 3d6 in their Cool Stat from Poffins",
                 "Frequency": "Static",
-                "Effect": "Your Pokémon gain +2d6 to their Cool Stat. These dice are counted as if coming from Poffins."
+                "Effect": "Your Pokémon gain +2d6 to their Cool Stat. These dice are counted as if coming from Poffins. Your Pokémon gain a +5 bonus to damage with attacks that match Cool Stat. When your Pokémon uses a non-damaging attack that matches your Cool Stat, it gains a +1 bonus to its Evasion for one full round."
             },
             "Style Flourish": {
                 "Tags": "Branch",
                 "Prerequisites": "3 Style Expert (Cool) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Cool Move",
-                "Effect": "In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
+                "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
+                "Battle Effect": "The target gains +1 CS to their Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
                 "Tags": "Branch",
@@ -1245,28 +1248,31 @@
                 "Prerequisites": "Cool Conduct Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Pokémon uses a Cool-Type Move",
-                "Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: The triggering Move's Crit Range is increased by 3, and the Moves with the Interrupt Keyword may not be activated in reaction to this Move. You may activate Rule of Cool only once per Pokémon per Scene."
+                "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
+                "Battle Effect": "The triggering Move's Crit Range is increased by 3, and Moves with the Interrupt or Shield Keywords may not be activated in reaction to this Move. The triggering Move may not be Intercepted. You may activate Rule of Cool only once per Pokémon per Scene."
             },
             "Action Hero Stunt": {
                 "Prerequisites": "Cool Conduct Rank 1",
                 "Frequency": "Daily x2 — Free Action",
                 "Trigger": "Your Pokémon makes a Skill Check for a dramatic, high risk action",
-                "Effect": "Instead of using a Skill for this Check, your Pokémon rolls their Cool Dice from Poffins and adds their number of Cool Dice from Stats as a modifier. For example, a Pokémon with 5d6 Cool from Poffins and 2d6 from Attack rolls 5d6+2. Skill Checks invoked by Intercepting attacks, Combat Maneuvers, Moves, and Abilities don't trigger this Feature."
+                "Effect": "Instead of using a Skill for this Check, you roll your Cool Dice from Poffins and add your number of Cool Dice from Stats and your Spirit Attribute as modifiers. For example, a Pokémon with 5d6 Cool from Poffins and 2d6 from Attack rolls 5d6+2. Even Skill Checks invoked by Intercepting attacks, Combat Maneuvers, Moves, and Abilities may trigger this Feature.",
+                "Example Trigger": "Charging into a burning building for a heroic rescue, Intercepting a powerful attack"
             }
         },
         "Cute": {
             "Style Expert": {
                 "Tags": "Class, Branch",
-                "Prerequisites": "3 Pokémon with 3d6 in their Cute Stat from Poffins OR Coordinator, 1 Pokémon with 3d6 in their Cute Stat from Poffins",
+                "Prerequisites": "3 Pokémon with 3d6 in their Cute Stat from Poffins OR Fashionista or Coordinator, 1 Pokémon with 3d6 in their Cute Stat from Poffins",
                 "Frequency": "Static",
-                "Effect": "Your Pokémon gain +2d6 to their Cute Stat. These dice are counted as if coming from Poffins."
+                "Effect": "Your Pokémon gain +2d6 to their Cute Stat. These dice are counted as if coming from Poffins. Your Pokémon gain a +5 bonus to damage with attacks that match Cute Stat. When your Pokémon uses a non-damaging attack that matches your Cute Stat, it gains a +1 bonus to its Evasion for one full round."
             },
             "Style Flourish": {
                 "Tags": "Branch",
                 "Prerequisites": "3 Style Expert (Cute) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Cute Move",
-                "Effect": "In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Speed, after the Move and all effects have been resolved. This may only affect a target once per Scene."
+                "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
+                "Battle Effect": "The target gains +1 CS to their Speed, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
                 "Tags": "Branch",
@@ -1288,28 +1294,30 @@
                 "Prerequisites": "Cute Cuddle Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Pokémon uses a Cute-Type Move",
-                "Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: The triggering Pokémon may immediately shift up to half their Movement speed in meters in any direction after their attack is resolved. You may activate Gleeful Steps only once per Pokémon per Scene."
+                "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
+                "Battle Effect": "Your Pokémon may immediately Disengage up to half their Movement speed in meters in any direction after the attack is resolved. You may activate Gleeful Steps only once per Pokémon per Scene."
             },
             "Let's Be Friends!": {
                 "Prerequisites": "Cute Cuddle Rank 1",
                 "Frequency": "Scene — Free Action",
-                "Target": "Your Pokémon",
-                "Effect": "The target may attempt to improve the disposition of a Wild Pokémon as if making a Charm Check. They roll their Cute Dice from Poffins and add their number of Cute Dice from Stats as a modifier. For example, a Pokémon with 4d6 Cute from Poffins and 3d6 Cute from Speed rolls 4d6+3 in place of a Charm Check."
+                "Target": "Your Pokémon and a number of foes up to half your Charm Rank",
+                "Effect": "For one Full Round, your targeted Pokemon is treated in all ways as the targeted foes’ Ally for both parties’ Moves, Abilities, and Features. The targeted foes may not include your targeted Pokemon as a target of a Damaging Move on their next turn, unless that Move has the Friendly keyword."
             }
         },
         "Smart": {
             "Style Expert": {
                 "Tags": "Class, Branch",
-                "Prerequisites": "3 Pokémon with 3d6 in their Smart Stat from Poffins OR Coordinator, 1 Pokémon with 3d6 in their Smart Stat from Poffins",
+                "Prerequisites": "3 Pokémon with 3d6 in their Smart Stat from Poffins OR Fashionista or Coordinator, 1 Pokémon with 3d6 in their Smart Stat from Poffins",
                 "Frequency": "Static",
-                "Effect": "Your Pokémon gain +2d6 to their Smart Stat. These dice are counted as if coming from Poffins."
+                "Effect": "Your Pokémon gain +2d6 to their Smart Stat. These dice are counted as if coming from Poffins. Your Pokémon gain a +5 bonus to damage with attacks that match Smart Stat. When your Pokémon uses a non-damaging attack that matches your Smart Stat, it gains a +1 bonus to its Evasion for one full round."
             },
             "Style Flourish": {
                 "Tags": "Branch",
                 "Prerequisites": "3 Style Expert (Smart) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Smart Move",
-                "Effect": "In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Special Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
+                "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
+                "Battle Effect": "The target gains +1 CS to their Special Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
                 "Tags": "Branch",
@@ -1331,7 +1339,8 @@
                 "Prerequisites": "Smart Scheme Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Pokémon uses a Smart-Type Move",
-                "Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: Choose one: The triggering Pokémon gains a +1 bonus on its Accuracy Roll for each ally that hit a target of its Move this round, or all allies get a +1 bonus to their Accuracy Rolls against targets of the triggering Pokémon's Move until the end of your Pokémon's next turn. You may activate Calculated Assault only once per Pokémon per Scene."
+                "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
+                "Battle Effect": "Choose one: The triggering move gains a +1 bonus on its Accuracy Roll for each ally that attacked a target of the Move this round, or all allies get a +1 bonus to their Accuracy and Evasion against targets of the triggering Move until the end of your next turn."
             },
             "Learn From Your Mistakes": {
                 "Prerequisites": "Smart Scheme Rank 1",
@@ -1343,16 +1352,17 @@
         "Tough": {
             "Style Expert": {
                 "Tags": "Class, Branch",
-                "Prerequisites": "3 Pokémon with 3d6 in their Tough Stat from Poffins OR Coordinator, 1 Pokémon with 3d6 in their Tough Stat from Poffins",
+                "Prerequisites": "3 Pokémon with 3d6 in their Tough Stat from Poffins OR Fashionista or Coordinator, 1 Pokémon with 3d6 in their Tough Stat from Poffins",
                 "Frequency": "Static",
-                "Effect": "Your Pokémon gain +2d6 to their Tough Stat. These dice are counted as if coming from Poffins."
+                "Effect": "Your Pokémon gain +2d6 to their Tough Stat. These dice are counted as if coming from Poffins. Your Pokémon gain a +5 bonus to damage with attacks that match Tough Stat. When your Pokémon uses a non-damaging attack that matches your Tough Stat, it gains a +1 bonus to its Evasion for one full round."
             },
             "Style Flourish": {
                 "Tags": "Branch",
                 "Prerequisites": "3 Style Expert (Tough) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Tough Move",
-                "Effect": "In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
+                "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
+                "Battle Effect": "The target gains +1 CS to their Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
                 "Tags": "Branch",
@@ -1374,13 +1384,14 @@
                 "Prerequisites": "Tough Tumble Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Pokémon uses a Tough-Type Move",
-                "Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: All targets hit by the Move are pushed away from the triggering Pokémon by 3 meters. You may activate Macho Charge only once per Pokémon per Scene."
+                "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
+                "Battle Effect": "All targets hit by the Move lose a Tick of Hit Points and are pushed 3 meters away from the triggering Pokémon. You may activate Macho Charge only once per Scene per Pokemon."
             },
             "Endurance": {
                 "Prerequisites": "Tough Tumble Rank 1",
                 "Frequency": "Scene — Free Action",
-                "Trigger": "Your Pokémon takes falling damage, begins to suffocate, or is Heavily Injured.",
-                "Effect": "Your Pokémon can ignore up to X meters of falling when calculating falling damage, act without beginning to suffocate for X additional rounds, or ignore the Hit Point loss effects from acting while Heavily Injured for X rounds. X is equal to half its number of Tough Dice from Poffins."
+                "Trigger": "Your Pokémon takes falling damage, begins to suffocate, would gain an Injury, or is Heavily Injured.",
+                "Effect": "Your Pokémon can ignore up to X meters of falling when calculating falling damage, act without beginning to suffocate for X additional rounds, ignore the Hit Point loss effects from acting while Heavily Injured for X rounds, or not gain the Injury. X is equal to half your number of Tough Dice from Poffins. Endurance may only prevent an Injury once per Pokemon per Scene."
             }
         }
     },
