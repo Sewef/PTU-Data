@@ -1203,7 +1203,8 @@
                 "Prerequisites": "3 Style Expert (Beauty) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Beauty Move",
-                "Effect": "In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Special Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
+                "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
+                "Battle Effect": "The target gains +1 CS to their Special Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
                 "Tags": "Branch",
@@ -1225,7 +1226,8 @@
                 "Prerequisites": "Beautiful Ballet Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Pokémon uses a Beauty-Type Move",
-                "Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: The move gains the keyword Burst 1 if Melee, or Blast 2 if ranged. If the move is already a Burst, Blast, or Cone, increase the size of the Move's Range by 1. This does not cause a target to be hit multiple times. You may activate Fabulous Max only once per Pokémon per Scene."
+                "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
+                "Battle Effect": "The move gains the keyword Burst 1 if Melee, or Blast 2 if ranged. If the move is already a Burst, Blast, or Cone, increase the size of the Move's Range by 1. This does not cause a target to be hit multiple times. You may activate Fabulous Max only once per Pokémon per Scene."
             },
             "Enticing Beauty": {
                 "Prerequisites": "Beautiful Ballet Rank 1",
@@ -1246,7 +1248,8 @@
                 "Prerequisites": "3 Style Expert (Cool) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Cool Move",
-                "Effect": "In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
+                "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
+                "Battle Effect": "The target gains +1 CS to their Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
                 "Tags": "Branch",
@@ -1268,7 +1271,8 @@
                 "Prerequisites": "Cool Conduct Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Pokémon uses a Cool-Type Move",
-                "Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: The triggering Move's Crit Range is increased by 3, and the Moves with the Interrupt Keyword may not be activated in reaction to this Move. You may activate Rule of Cool only once per Pokémon per Scene."
+                "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
+                "Battle Effect": "The triggering Move's Crit Range is increased by 3, and the Moves with the Interrupt Keyword may not be activated in reaction to this Move. You may activate Rule of Cool only once per Pokémon per Scene."
             },
             "Action Hero Stunt": {
                 "Prerequisites": "Cool Conduct Rank 1",
@@ -1289,7 +1293,8 @@
                 "Prerequisites": "3 Style Expert (Cute) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Cute Move",
-                "Effect": "In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Speed, after the Move and all effects have been resolved. This may only affect a target once per Scene."
+                "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
+                "Battle Effect": "The target gains +1 CS to their Speed, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
                 "Tags": "Branch",
@@ -1311,7 +1316,8 @@
                 "Prerequisites": "Cute Cuddle Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Pokémon uses a Cute-Type Move",
-                "Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: The triggering Pokémon may immediately shift up to half their Movement speed in meters in any direction after their attack is resolved. You may activate Gleeful Steps only once per Pokémon per Scene."
+                "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
+                "Battle Effect": "The triggering Pokémon may immediately shift up to half their Movement speed in meters in any direction after their attack is resolved. You may activate Gleeful Steps only once per Pokémon per Scene."
             },
             "Let's Be Friends!": {
                 "Prerequisites": "Cute Cuddle Rank 1",
@@ -1332,7 +1338,8 @@
                 "Prerequisites": "3 Style Expert (Smart) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Smart Move",
-                "Effect": "In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Special Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
+                "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
+                "Battle Effect": "The target gains +1 CS to their Special Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
                 "Tags": "Branch",
@@ -1354,7 +1361,8 @@
                 "Prerequisites": "Smart Scheme Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Pokémon uses a Smart-Type Move",
-                "Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: Choose one: The triggering Pokémon gains a +1 bonus on its Accuracy Roll for each ally that hit a target of its Move this round, or all allies get a +1 bonus to their Accuracy Rolls against targets of the triggering Pokémon's Move until the end of your Pokémon's next turn. You may activate Calculated Assault only once per Pokémon per Scene."
+                "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
+                "Battle Effect": "Choose one: The triggering Pokémon gains a +1 bonus on its Accuracy Roll for each ally that hit a target of its Move this round, or all allies get a +1 bonus to their Accuracy Rolls against targets of the triggering Pokémon's Move until the end of your Pokémon's next turn. You may activate Calculated Assault only once per Pokémon per Scene."
             },
             "Learn From Your Mistakes": {
                 "Prerequisites": "Smart Scheme Rank 1",
@@ -1375,7 +1383,8 @@
                 "Prerequisites": "3 Style Expert (Tough) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Tough Move",
-                "Effect": "In Contests: Re-Roll all dice that result in 1s. This effect may only be used once per Contest.\nIn Battle: The target gains +1 CS to their Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
+                "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
+                "Battle Effect": "The target gains +1 CS to their Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
                 "Tags": "Branch",
@@ -1397,7 +1406,8 @@
                 "Prerequisites": "Tough Tumble Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Pokémon uses a Tough-Type Move",
-                "Effect": "In Contests: Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.\nIn Battles: All targets hit by the Move are pushed away from the triggering Pokémon by 3 meters. You may activate Macho Charge only once per Pokémon per Scene."
+                "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
+                "Battle Effect": "All targets hit by the Move are pushed away from the triggering Pokémon by 3 meters. You may activate Macho Charge only once per Pokémon per Scene."
             },
             "Endurance": {
                 "Prerequisites": "Tough Tumble Rank 1",
