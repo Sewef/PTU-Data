@@ -3956,9 +3956,10 @@
         "Sage": {
             "Tags": "[Class][+HP]",
             "Prerequisites": "Novice Occult Education",
-            "Frequency": "At-Will — Standard Action",
+            "Frequency": "X AP — Standard Action",
             "Target": "An ally within 5 meters",
-            "Effect": "The target gains Damage Reduction equal to your Occult Education Rank doubled or their Tick Value, whichever is higher, for one full round. Multiple uses of Sage from different Trainers do not stack on one target."
+            "Effect": "The target gains Damage Reduction equal to your Occult Education Rank doubled or their Tick Value, whichever is higher, for one full round. If used as a Standard Action on your turn to target one Ally, Sage costs 0 AP. However, you may pay 1 AP to use Sage as an Interrupt, or you may pay 1 AP to use Sage on two different Allies. You may spend 2 AP for both of these effects.",
+            "Note": "Multiple uses of Sage from different Trainers do not stack on the same target."
         },
         "Sacred Shield": {
             "Tags": "[+HP]",
@@ -3977,20 +3978,20 @@
             "Prerequisites": "Sacred Shield or Mystic Defense, Adept Occult Education",
             "Frequency": "1 AP — Free Action",
             "Target": "An ally activates one of your Moves with the Blessing Keyword.",
-            "Effect": "The triggering ally gains an additional benefit as follows, depending on the Move used. The benefit takes effect after the Blessing and the attack that triggered it are resolved.\n» Reflect: +1 Defense Combat Stage\n» Light Screen: +1 Sp. Defense Combat Stage\n» Safeguard: +1 Evasion\n» Lucky Chant: +1 Accuracy"
+            "Effect": "The triggering ally gains an additional benefit as follows, depending on the Move used. The benefit takes effect before the Blessing and the attack that triggered it are resolved.\n» Reflect: +1 Defense Combat Stage\n» Light Screen: +1 Sp. Defense Combat Stage\n» Safeguard: +1 Evasion\n» Lucky Chant: +1 Accuracy"
         },
-        "Lay on Hands": {
-            "Tags": "[Class][+HP]",
+        "Mountain Of Faith": {
+            "Tags": "[+HP]",
             "Prerequisites": "Sage, Expert Occult Education",
             "Frequency": "Static",
-            "Effect": "Choose Blessed Touch or Healer. You gain the Chosen Ability."
+            "Effect": "Choose Wishmaster or Soothing Tone. You gain the Chosen Ability and learn its Connected Move."
         },
         "Highly Responsive to Prayers": {
             "Tags": "[+HP]",
-            "Prerequisites": "Lay on Hands",
+            "Prerequisites": "Mountain of Faith",
             "Frequency": "Scene x3 — Free Action",
-            "Trigger": "You use the Blessed Touch or Healer Ability on an ally, or an ally receives an Injury",
-            "Effect": "You may use the Sage Feature as a Free Action targeting the triggering ally. Multiple instances of Sage's effect that you use may stack when used this way."
+            "Trigger": "You use Wish or Heal Bell, or an ally receives an Injury",
+            "Effect": "You may use the Sage Feature as a Free Action targeting one of the triggering allies. Multiple instances of Sage's effect that you use may stack when used this way."
         },
         "Divine Wind": {
             "Tags": "[Class][+HP]",
