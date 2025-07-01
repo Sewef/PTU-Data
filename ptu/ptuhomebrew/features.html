@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="/ptu/js/jquery-3.7.1.min.js"></script>
+  <script src="/ptu/js/popper.min.js"></script>
+  <script src="/ptu/js/bootstrap.min.js"></script>
+  <script src="/ptu/js/json_utils.js"></script>
+  <script src="/ptu/js/json_features.js"></script>
+  <script src="/ptu/js/helpers.js"></script>
+
+  <title>PTU Data - Features</title>
+</head>
+
+<body>
+  <div w3-include-html="header.html"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <div id="sidebar" class="list-group">
+          <!-- Sidebar content -->
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div id="cards-container" class="container py-4">
+          <!-- Main content -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    includeHTML();
+    setActive("Features");
+  </script>
+  <script>
+    loadFeatures("/ptu/data/features_homebrew.json");
+  </script>
+  
+</body>
+
+</html>
