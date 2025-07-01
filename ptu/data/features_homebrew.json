@@ -2326,7 +2326,7 @@
             "Frequency": "1 AP — Swift Action, Interrupt",
             "Target": "A Pokémon, Trainer, Move, or Location.",
             "Effect": "You make a Record of the target. Records can be placed in an Archive as an Extended Action. When you take Chronicler, you gain one Archive.",
-            "Archives":"» Profile Archive: You may place Records of specific Pokémon and Trainers in your Profile Archive. You and your Pokemon gain a +1 bonus to Accuracy and a +2 bonus on all Opposed Checks against Pokémon and Trainers in your Profile Archive.\n» Technique Archive: You may place Records of Moves in your Technique Archive. You and your Pokémon gain +2 Evasion against Moves in your Technique Archive.\n» Travel Archive: You may place Records of Locations in your Travel Archive. While you are in a Location in your Travel Archive, you gain the Keen Eye Ability and a +2 bonus to Perception Checks to notice the environment."
+            "Archives": "» Profile Archive: You may place Records of specific Pokémon and Trainers in your Profile Archive. You and your Pokemon gain a +1 bonus to Accuracy and a +2 bonus on all Opposed Checks against Pokémon and Trainers in your Profile Archive.\n» Technique Archive: You may place Records of Moves in your Technique Archive. You and your Pokémon gain +2 Evasion against Moves in your Technique Archive.\n» Travel Archive: You may place Records of Locations in your Travel Archive. While you are in a Location in your Travel Archive, you gain the Keen Eye Ability and a +2 bonus to Perception Checks to notice the environment."
         },
         "Archival Training": {
             "Tags": "[Ranked 2]",
@@ -2365,46 +2365,58 @@
     },
     "Fashionista": {
         "Fashionista": {
-            "Tags": "[Class]",
+            "Tags": "[Class][+Any]",
             "Prerequisites": "Two of Charm, Command, Guile, Intimidate, or Intuition at Novice",
             "Frequency": "At-Will — Extended Action",
-            "Effect": "You may craft any Fashionista Recipe for which you qualify."
+            "Effect": "You may craft any Fashionista Recipe for which you qualify.",
+            "Special": "When you take Fashionista, choose two of Charm, Command, Guile, Intimidate, or Intuition to become your Fashionista Skills. The Skills you choose must be at Novice Rank or higher."
         },
         "Dashing Makeover": {
+            "Tags": "[+Any]",
             "Prerequisites": "Fashionista",
             "Frequency": "Bind 2 AP — Extended Action",
             "Target": "A Trainer or Pokémon",
             "Effect": "When you activate Dashing Makeover, choose one Equipment or Held Item you can create. While this Feature is Bound, the target gains the effects of the chosen item, as long as they would normally be able to equip it (ex: Trainers cannot equip Incense Items).They do not need to take up an Equipment or Held Item slot to gain this benefit. A target may only be affected by one instance of Dashing Makeover at a time."
         },
         "Style is Eternal": {
+            "Tags": "[+Any]",
             "Prerequisites": "Fashionista",
-            "Frequency": "1 AP — Free Action",
+            "Frequency": "Scene — Free Action",
             "Trigger": "Your Pokémon is Disarmed or would have their Held Item removed by another effect such as Thief or Covet",
-            "Effect": "Your Pokémon instead retains their Held Item. Style is Eternal may only be used once per Scene per Pokémon."
+            "Effect": "The Held Item is instead retained."
         },
         "Accessorize": {
+            "Tags": "[+Any]",
             "Prerequisites": "Dashing Makeover, one Fashionista Skill at Adept",
             "Frequency": "Static",
             "Effect": "You may wear and benefit from two Accessory Slot Items at once. The two items must be of different types and must not share an effect. For example, a Fire Brace cannot be paired with another Fire Brace or a Fire Plate, but it could be paired with an Ice Brace, a Fire Booster, or a Stat Booster."
         },
         "Parfumier": {
+            "Tags": "[+Any]",
             "Prerequisites": "Fashionista, one Fashionista Skill at Expert",
             "Frequency": "Static",
-            "Effect": "Whenever you create an Incense Held Item, choose Sweet Scent or Aromatic Mist. While your Pokémon is holding that Incense Item in an active Held Item slot, they add the chosen Move to their Move List."
+            "Effect": "Whenever you create an Incense Held Item, choose Sweet Scent or Aromatic Mist. While holding that Incense Item in an active Held Item slot, the user adds the chosen Move to their Move List."
         },
         "Versatile Wardrobe": {
+            "Tags": "[+Any]",
             "Prerequisites": "Fashionista, two Fashionista Skills at Adept",
             "Frequency": "At-Will — Extended Action",
             "Target": "Your Pokémon with at least 2 Tutor Points remaining",
-            "Effect": "The target loses 2 Tutor Points and then becomes chic. Chic Pokémon gain two extra Held Item slots with which they can carry Held Items. However, the items in these slots have no effect and are not treated as equipped. As a Swift Action on their turn, Chic Pokémon may swap a currently active Held Item with an item stored in these slots. Chic Pokémon may not carry multiple items of the same type or with repeated effects.",
-            "Note": "A Chic Pokémon does not become Suppressed until they switch a Choice Item into their active Held Item slot, but even if they then switch the Choice Item out, they remain Suppressed for the remainder of combat. A Mega-Evolved Chic Pokémon remains Mega-Evolved even if they switch their active Held Item."
+            "Effect": "The target loses 2 Tutor Points and then becomes Chic. Chic Pokémon gain two extra Slots with which they can carry Accessories or Off-Hand items. However, the items in these slots have no effect and are not treated as equipped. As a Swift Action on their turn, Chic Pokémon may swap a currently active Accessory or Off-Hand item with an item stored in these slots. Chic Pokémon may not carry multiple items of the same type or with repeated effects.",
+            "Note": "A Chic Pokémon does not become Suppressed until they switch a Choice Item into their active Held Item slot, but even if they then switch the Choice Item out, they remain Suppressed for the remainder of combat."
         },
         "Dress to Impress": {
             "Tags": "[Orders]",
             "Prerequisites": "Versatile Wardrobe, two Fashionista Skills at Expert",
             "Frequency": "Scene x2 — Standard Action",
             "Target": "Your Chic Pokémon",
-            "Effect": "Whenever you create an Incense Held Item, choose Sweet Scent or Aromatic Mist. While your Pokémon is holding that Incense Item in an active Held Item slot, they add the chosen Move to their Move List."
+            "Effect": "Your Pokémon gains the effects of all items in extra slots granted by Versatile Wardrobe for one full round."
+        },
+        "Design Time": {
+            "Tags": "[+Any]",
+            "Prerequisites": "4 Fashionista Features, Two Fashionista Skills at Master",
+            "Frequency": "Static",
+            "Effect": "You gain the Designer Ability. You may create the clothes out of suitable material you like, and you may design the outfit for any Trainer or Pokémon instead of yourself. Using the Designer Ability costs $2000 each time, and you may only have one outfit active at a time; if another is created, any previous outfit loses its potency."
         },
         "Fashionista Recipes": {
             "Contest Trends": {
@@ -2414,26 +2426,26 @@
             "Basic Fashion": {
                 "Prerequisites": "Fashionista",
                 "Cost": "$500",
-                "Effect": "You create one of the Basic Fashion Items below for which you have the chosen Fashionista Skill. These are Accessory Slot Items and may be used as Held Items by Pokémon.",
+                "Effect": "ou create one of the Basic Fashion Items below for which you have the chosen Fashionista Skill. These are Accessory Slot Items.",
                 "Adorable Fashion": {
                     "Fashionista Skill": "Charm",
-                    "Effect": "The holder may activate this item once a Scene as a Free Action to gain +2 Evasion for one full round."
+                    "Effect": "The holder may activate this item once a Scene as a Free Action to gain +3 Evasion for one full round."
                 },
                 "Elegant Fashion": {
                     "Fashionista Skill": "Intuition",
-                    "Effect": "The holder may activate this item once a Scene as a Free Action when losing Combat Stages from a foe’s effect to instead not lose those Combat Stages."
+                    "Effect": "The holder may activate this item once a Scene as a Free Action when losing Combat Stages from a foe's effect to instead gain a Combat Stage in the Stat that would have been lowered."
                 },
                 "Rad Fashion": {
                     "Fashionista Skill": "Command",
-                    "Effect": "The holder may activate this item once a Scene as a Free Action to gain a +4 bonus to a single Save Check."
+                    "Effect": "The holder gains a +1 bonus to Save Checks against Volatile Status Conditions. The holder may activate this item once a Scene as a Free Action to gain a +4 bonus to a single Save Check."
                 },
                 "Rough Fashion": {
                     "Fashionista Skill": "Intimidate",
-                    "Effect": "The holder may activate this item once a Scene as a Free Action to cause a foe within 5 meters to take a -2 penalty to all rolls for one full round."
+                    "Effect": "The holder may activate this item once a Scene as a Free Action to cause all foes within 5 meters to take a -2 penalty to all rolls for one full round."
                 },
                 "Slick Fashion": {
                     "Fashionista Skill": "Guile",
-                    "Effect": "The holder may activate this item once a Scene as a Free Action when provoking an Attack of Opportunity to instead not provoke one."
+                    "Effect": "The holder gains +1 Evasion against Attacks of Opportunity. The holder may activate this item once a Scene as a Free Action to not provoke Attacks of Opportunities for one full round."
                 }
             },
             "Practical Fashion": {
@@ -2811,7 +2823,7 @@
                 "Frequency": "Special — Free Action",
                 "Target": "A hatching egg.",
                 "Effect": "Choose two of the traits from the list below. The Pokémon is born with these special qualities. This Feature may be activated one time per Pokémon Education Rank above Untrained.",
-                "Traits":"» Altered Type: Replace one of the Pokémon's Types with a Type of your choice that one of its parents possesses. Ask the GM to help you adjust the Pokemon's Move List and Abilities to properly fit the new Type.\n» Altered Ability: The Pokémon's starting Ability is one not normally native to its Species; ask the GM to help you with this.\n» Unique Move: The Pokémon knows a Move that matches one of its Types, but that is not normally available to its Species; ask the GM for help determining this Move.\n» Exceptionally Powerful: Increase two of the Pokémon's Base Stats by +2 each, and the Pokemon hatches at a Level equal to 5 + your Pokemon Education Rank doubled.\n» Savant: The Pokemon gains a Skill Template. You are not limited to the examples in the book, but must follow the same rules as them. Ask your GM for help assigning the Skills. Additionally, the Pokemon may use any Manipulate Maneuver for which it has Ranks in the necessary Skill, and may attempt to improve a wild Pokemon's Disposition if it possesses Ranks in Charm.",
+                "Traits": "» Altered Type: Replace one of the Pokémon's Types with a Type of your choice that one of its parents possesses. Ask the GM to help you adjust the Pokemon's Move List and Abilities to properly fit the new Type.\n» Altered Ability: The Pokémon's starting Ability is one not normally native to its Species; ask the GM to help you with this.\n» Unique Move: The Pokémon knows a Move that matches one of its Types, but that is not normally available to its Species; ask the GM for help determining this Move.\n» Exceptionally Powerful: Increase two of the Pokémon's Base Stats by +2 each, and the Pokemon hatches at a Level equal to 5 + your Pokemon Education Rank doubled.\n» Savant: The Pokemon gains a Skill Template. You are not limited to the examples in the book, but must follow the same rules as them. Ask your GM for help assigning the Skills. Additionally, the Pokemon may use any Manipulate Maneuver for which it has Ranks in the necessary Skill, and may attempt to improve a wild Pokemon's Disposition if it possesses Ranks in Charm.",
                 "Note": "If the Skill Templates optional rule is already in effect, Savant's effect is as follows: The Pokemon is born with +1d6 in two Skills it has access to, or with Novice Ranks and a +2 bonus in two Skills it would not normally have access to. When the Pokemon reaches Levels 25 and 40, it may increase one of these Skills by 1d6 or by +2, and the other Skill by the other value. Additionally, the Pokemon may use any Manipulate Maneuver for which it has Ranks in the necessary Skill, and may attempt to improve a wild Pokemon's Disposition if it possesses Ranks in Charm."
             },
             "Skill Trainer": {
