@@ -3635,24 +3635,24 @@
     "Roughneck": {
         "Roughneck": {
             "Tags": "[Class][+Defense]",
-            "Prerequisites": "Novice Athletics, Intimidating Presence",
-            "Frequency": "1 AP — Swift Action",
-            "Trigger": "You hit a foe with an Attack",
-            "Effect": "The foe loses a Combat Stage in the Stat of your choice."
+            "Prerequisites": "Intimidating Presence",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "You hit with an Attack on your turn",
+            "Effect": "One target of the attack loses a Combat Stage in the Stat of your choice. Roughneck may only be used once per Round."
         },
         "Menace": {
             "Tags": "[+Defense]",
             "Prerequisites": "Roughneck",
             "Frequency": "At-Will — Swift Action",
-            "Trigger": "You hit a foe with the Terrorize Manipulation",
-            "Effect": "Until their next turn, the target has their Initiative lowered to 0. For one full round, attacks against them cause them to Flinch on 17+ or have their existing Flinch Range increased by +4."
+            "Trigger": "You hit a foe with the Terrorize Manipulation, or you activate Roughneck",
+            "Effect": "Until their next turn, the target has their Initiative lowered to 0. For one full round, attacks against them cause them to lose a Tick of Hit Points and become Vulnerable for one full round on 16+. Menace may only affect each foe once per Scene."
         },
         "Mettle": {
             "Tags": "[+Defense]",
             "Prerequisites": "Roughneck",
             "Frequency": "Scene x2 — Free Action",
             "Target": "You take Massive Damage or Intercept a Damaging Attack.",
-            "Effect": "Resolve Damage as if the triggering attack was resisted one step. The triggering foe then loses 2 Combat Stages in the Attack Stat used by the triggering Attack."
+            "Effect": "Resolve Damage as if the triggering attack was resisted one step further. The triggering foe then loses 2 Combat Stages in the Attack Stat used by the triggering Attack."
         },
         "Malice": {
             "Tags": "[+Defense]",
@@ -3665,7 +3665,7 @@
             "Prerequisites": "Malice",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You use Leer or a Roughneck Move",
-            "Effect": "The Move gains additional effects.\n» Leer: Attacks against affected foes gain a +2 Bonus to their Critical Range for one full round.\n» Chip Away: The target is considered Vulnerable against this attack.\n» Headbutt: The target has their Initiative set to 0 until the end of their next turn.\n» Glare: The target loses 2 Speed Combat Stages. This occurs whether Glare hits or misses.\n» Mean Look: The target is Suppressed.\n» Endure: You gain two Ticks of Temporary Hit Points.\n» Slack Off: You are cured of one Status Affliction."
+            "Effect": "The Move gains additional effects. You may only use each of these effects once per Scene.\n» Leer: Affected foes immediately Shift away from you using their highest available Movement capability. This movement provokes Attacks of Opportunity as normal.\n» Chip Away: The target is considered Vulnerable against this attack, and may not activate Interrupts or Moves with the Shield Keyword in response to it.\n» Headbutt: The target is automatically Flinched, and you may initiate a Push Maneuver against the target, using your Intimidate or Athletics skill. This Maneuver automatically hits, but you must still roll an opposed check.\n» Glare: The target loses 2 Speed Combat Stages, and is Slowed for one full round. This occurs whether Glare hits or misses.\n» Mean Look: The target is Suppressed for one full round, and has a random Move Disabled.\n» Endure: You gain two Ticks of Temporary Hit Points, and gain 5 Damage Reduction for one full round.\n» Slack Off: You are cured of one Status Affliction. You may activate Fearsome Display to use Slack Off even if you would be denied your turn by a Status Affliction."
         },
         "Cruel Gaze": {
             "Tags": "[+Defense]",
