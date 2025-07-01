@@ -772,34 +772,35 @@
             "Prerequisites": "Rider",
             "Frequency": "At-Will — Extended Action",
             "Target": "Your Pokémon with at least 2 Tutor Points",
-            "Effect": "The target loses 2 Tutor Points and gains the Run Up Ability."
+            "Effect": "The target loses 2 Tutor Points and gains the Rock Head Ability. For your Pokémon, Rock Head applies to any Move with a Range of Pass, or the Dash keyword, in addition to Physical attacks."
         },
         "Conqueror's March": {
             "Tags": "[Orders][+Speed]",
             "Prerequisites": "Ramming Speed, Adept Acrobatics or Athletics",
             "Frequency": "At-Will — Standard Action",
-            "Target": "Your Pokémon with Run Up",
-            "Effect": "This round, if being used as a Mount, the target may use Dash, Burst, Blast, Cone, or Line range Moves with a range of Pass instead of their usual range."
+            "Target": "Your Pokémon with Rock Head",
+            "Effect": "This round, if being used as a Mount, the target may use Dash, Burst, Blast, Cone, or Line range Moves with a range of Pass instead of their usual range, and they may change direction during the 4 meters of Pass."
         },
         "Ride as One": {
             "Tags": "[+Speed]",
             "Prerequisites": "Rider",
             "Frequency": "Static",
-            "Effect": "While you are Mounted, you and your Mount each use the highest of each other's Speed Evasion. If both you and your Mount have the same Speed Evasion, you instead each receive a +1 bonus to Speed Evasion. Whenever one of you receives Initiative, either of you may take your turn. When the next person would receive initiative, the person that did not take their turn then takes it."
+            "Effect": "While you are Mounted, you and your Mount each use the highest of each other's Speed Evasion. If both you and your Mount have the same Speed Evasion, you instead each receive a +1 bonus to Speed Evasion and Movement Capabilities. Whenever one of you receives Initiative, either of you may take your turn. When the next person would receive initiative, the person that did not take their turn then takes it."
         },
         "Lean In": {
             "Tags": "[+Speed]",
             "Prerequisites": "Ride as One",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "You and your Mount both take Damage from a Burst, Blast, Cone, or Line",
-            "Effect": "Both you and your Mount Resist the attack one step further."
+            "Effect": "Both you and your Mount Resist the attack one step further.",
+            "Bonus": "You and your Mount may Intercept for each other as a Shift Action Interrupt."
         },
         "Cavalier's Reprisal": {
             "Tags": "[+Speed]",
             "Prerequisites": "Ride as One, Expert Acrobatics or Athletics",
             "Frequency": "1 AP — Free Action",
             "Trigger": "An adjacent foe hits your Mount with an attack",
-            "Effect": "You may make a Struggle Attack against the triggering foe."
+            "Effect": "You or your Mount (whichever was not hit by the triggering attack) may make a Struggle Attack against the triggering foe as a Free Action."
         },
         "Overrun": {
             "Tags": "[+Speed]",
