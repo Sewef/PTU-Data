@@ -2604,21 +2604,21 @@
                 "Effect": "You may use any Crystal Artificer Recipe for which you qualify."
             },
             "Crystal Resonance": {
-                "Prerequisites": "Crystal Artificer, Skill Stunt (Dowsing)",
+                "Prerequisites": "Crystal Artificer, Adept Occult Education",
                 "Frequency": "Static",
-                "Effect": "You roll an additional 3d6 when determining how many Shards you find when Dowsing."
+                "Effect": "You roll an additional 3d6 when determining how many Shards you find when Dowsing. Additionally, while you have a Shard in your Main Hand and/or Off-Hand, you gain one of the following benefits, depending on the color of the Shard(s):\n» Red: You gain a +5 damage bonus with Special Attacks\n» Orange: You gain a +5 damage bonus with Physical Attacks.\n » Yellow: You gain 5 DR against Physical Attacks.\n » Green: Your Initiative is increased by +5.\n » Blue: You gain 5 DR against Special Attacks.\n» Violet: You gain +2 Evasion against Status-Class Attacks."
             },
             "Rainbow Light": {
                 "Prerequisites": "Crystal Artificer, Expert Occult Education",
-                "Frequency": "2 AP — Standard Action",
-                "Trigger": "You are wearing a Rainbow Gem",
+                "Frequency": "2 AP — Swift Action",
+                "Condition": "You are wearing a Rainbow Gem",
                 "Effect": "You create a Rainbow lasting one full round. While this Rainbow persists, the Effect Range of all Allies is increased by +3."
             },
             "Fistful of Force": {
                 "Prerequisites": "Crystal Artificer, Master Occult Education",
                 "Frequency": "Scene — Standard Action",
-                "Trigger": "You must have a Shard in your Main Hand or Off-Hand to use Fistful of Force.",
-                "Effect": "You may destroy the Shard to use the Move Judgment. Judgment's Type must be one of the Types associated with the used Shard. Instead of adding your Special Attack when using this attack, you may choose to add your Occult Education Rank tripled."
+                "Condition": "You must have a Shard in your Main Hand or Off-Hand to use Fistful of Force.",
+                "Effect": "You may destroy the Shard to use the Move Judgment. Judgment's Type must be one of the Types associated with the used Shard. You may choose to add your Occult Education Rank tripled in place of your Special Attack Stat to Judgment's Damage."
             },
             "Artificer Recipes": {
                 "Type Booster": {
@@ -2644,7 +2644,7 @@
                 "Rainbow Gem": {
                     "Prerequisites": "Rainbow Light, Expert Occult Education",
                     "Ingredients": "Two Shards of each Color.",
-                    "Effect": "You create a Rainbow Gem that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item. This item has the same effect as a Focus, except that as an Extended Action, any Trainer with Expert Occult Education Rank or higher may change which Stat the Rainbow Amulet is attuned to."
+                    "Effect": "You create a Rainbow Gem that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item. This item has the same effect as a Focus, except that as a Standard Action, any Trainer with Expert Occult Education Rank or higher may change which Stat the Rainbow Amulet is attuned to."
                 },
                 "Plate Crafter": {
                     "Prerequisites": "Rainbow Light, Expert Occult Education",
@@ -2778,7 +2778,7 @@
                 "Prerequisites": "Paleontology Research Field, Paleontologist, Novice Pokémon Education",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "A Fossil you are reviving",
-                "Effect": "You may revive a Fossil into a Fossil Pokémon. The resulting Pokémon is born with 2 Tutor Points, and gains its first Basic Ability. If it has only one Basic Ability, it gains one of its Advanced Abilities, chosen by the GM. This Feature does not affect how the Pokémon continues to gain Abilities."
+                "Effect": "The resulting Pokémon is born with 2 fewer Tutor Points, and gains its second Basic Ability. If it has only has one Basic Ability, it gains one of its Advanced Abilities, chosen by the GM. This Feature does not affect how the Pokémon continues to gain Abilities."
             },
             "Ancient Heritage": {
                 "Prerequisites": "Fossil Restoration",
@@ -2786,30 +2786,33 @@
                 "Target": "Your Fossil Pokémon with at least 2 Tutor Points remaining",
                 "Effect": "The target loses 2 Tutor Points and learns Ancient Power. If the target has Ancient Power in its Level-Up List, Ancient Heritage costs no Tutor Points. As a static effect, whenever your Pokémon use Ancient Power, its activated effect occurs on 18+ and you may always choose whether it deals Physical or Special Damage, using the appropriate attack Stat."
             },
-            "Genetic Memory": {
+            "Primordial Power": {
                 "Prerequisites": "Ancient Heritage, Expert Pokémon Education",
-                "Frequency": "Daily x2 — Extended Action",
+                "Frequency": "At-Will – Extended Action",
                 "Target": "Your Fossil Pokémon with at least 2 Tutor Points remaining",
-                "Effect": "The target loses 2 Tutor Points and learns any Move from its Egg Move or Tutor Move List. Genetic Memory may target a Pokémon only twice: once with a Tutor Move and once with an Egg Move. Egg Moves tutored this way do not count against the limit of 3 for TM and Tutor Moves."
+                "Effect": "The target loses 2 Tutor Points and gains your choice of the Solid Rock or Mountain Peak Ability. You may only target a Pokemon once with Primordial Power."
             },
             "Prehistoric Bond": {
                 "Prerequisites": "Fossil Restoration, Expert Pokémon Education",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "The remains of a Fossil you revived",
-                "Effect": "You also produce a Held Item from the remnants of the Fossil. The effect of this Held Item is based on the highest Base Stat of the individual Pokémon being Revived, counting the effects of Nature but no other effects that alter Base Stats. If there is a tie, the GM decides which Base Stat is used. This Held Item may only be used by Pokémon revived from Fossils."
+                "Effect": "You also produce a Held Item from the remnants of the Fossil. The effect of this Held Item is based on the highest Base Stat of the individual Pokémon being Revived, counting the effects of Nature but no other effects that alter Base Stats. If there is a tie, the GM decides which Base Stat is used. If the user is a Fossil Pokemon, they may hold a single Item made with Prehistoric Bond without taking up their Held Item slot. (They may still not hold two Items with the same effect, and holding a second one of these Items will take up their Item Slot as normal)\n» HP – Relic Crown: The holder gains a +2 Bonus to all Save Checks.\n» Attack – Primal Frame: The holder's damaging attacks have their Critical Hit Range extended by +1.\n» Defense – Prehistoric Razors: When a foe hits the holder with a damaging Melee Attack, the holder may cause them to lose a Tick of Hit Points as a Reaction.\n» Special Attack – Primal Cloak: The holder's damaging attacks have their Effect Range extended by +1.\n» Special Defense – Prehistoric Aegis: The holder gains 5 Damage Reduction against Ranged Attacks.\n» Speed – Relic Sash: The holder gains +2 Evasion against Status Moves."
             }
         },
         "Pokémon Caretaking": {
             "Pusher": {
                 "Prerequisites": "Pokémon Caretaking Research Field, Novice Pokémon Education",
                 "Frequency": "Static",
-                "Effect": "Your Pokémon gain the Basic Ranged Attacks, Aura Pulse, Enticing Bait, Extended Invisibility, Far Reading, Precise Threadings, Seismometer, TK Mastery, and Trail Sniffer Poke Edges automatically if they qualify for them, without having to invest any Tutor Points."
+                "Effect": "Your Pokémon gain the Basic Ranged Attacks, Aura Pulse, Enticing Bait, Extended Invisibility, Far Reading, Precise Threadings, Seismometer, TK Mastery, and Trail Sniffer Poke Edges automatically if they qualify for them, without having to invest any Tutor Points.",
+                "Bonus": "If you own a Pokemon above Level 25, your Pokémon under level 25 gain +25% Experience."
             },
             "This One's Special, I Know It": {
                 "Prerequisites": "Pusher",
                 "Frequency": "Special — Free Action",
                 "Target": "A hatching egg.",
-                "Effect": "The Pokémon is born with special qualities, determined by the GM. This Feature may be activated one time per Pokémon Education Rank above Untrained."
+                "Effect": "Choose two of the traits from the list below. The Pokémon is born with these special qualities. This Feature may be activated one time per Pokémon Education Rank above Untrained.",
+                "Traits":"» Altered Type: Replace one of the Pokémon's Types with a Type of your choice that one of its parents possesses. Ask the GM to help you adjust the Pokemon's Move List and Abilities to properly fit the new Type.\n» Altered Ability: The Pokémon's starting Ability is one not normally native to its Species; ask the GM to help you with this.\n» Unique Move: The Pokémon knows a Move that matches one of its Types, but that is not normally available to its Species; ask the GM for help determining this Move.\n» Exceptionally Powerful: Increase two of the Pokémon's Base Stats by +2 each, and the Pokemon hatches at a Level equal to 5 + your Pokemon Education Rank doubled.\n» Savant: The Pokemon gains a Skill Template. You are not limited to the examples in the book, but must follow the same rules as them. Ask your GM for help assigning the Skills. Additionally, the Pokemon may use any Manipulate Maneuver for which it has Ranks in the necessary Skill, and may attempt to improve a wild Pokemon's Disposition if it possesses Ranks in Charm.",
+                "Note": "If the Skill Templates optional rule is already in effect, Savant's effect is as follows: The Pokemon is born with +1d6 in two Skills it has access to, or with Novice Ranks and a +2 bonus in two Skills it would not normally have access to. When the Pokemon reaches Levels 25 and 40, it may increase one of these Skills by 1d6 or by +2, and the other Skill by the other value. Additionally, the Pokemon may use any Manipulate Maneuver for which it has Ranks in the necessary Skill, and may attempt to improve a wild Pokemon's Disposition if it possesses Ranks in Charm."
             },
             "Skill Trainer": {
                 "Prerequisites": "Pusher",
@@ -2819,9 +2822,9 @@
             },
             "Re-Balancing": {
                 "Prerequisites": "Pusher, Master Pokémon Education",
-                "Frequency": "At-Will — Extended Action",
-                "Target": "A Pokémon with 2 Tutor Points",
-                "Effect": "The target loses 2 Tutor Points, and gains one of the following: +1 to all Base Stats, +2 to two different Base Stats, or +3 to a single Base Stat. The target then redistributes their Stat Points. A Pokémon may be targeted by Re-Balancing only once."
+                "Frequency": "Daily x2 – Extended Action",
+                "Target": "A Pokémon",
+                "Effect": "The target gains one of the following: +1 to all Base Stats, +2 to two different Base Stats, or +3 to a single Base Stat. The target then redistributes their Stat Points. A Pokémon may be targeted by Re-Balancing only once."
             }
         },
         "Gadgeteer": {
