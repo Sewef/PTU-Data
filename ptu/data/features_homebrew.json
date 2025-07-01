@@ -3087,7 +3087,7 @@
     "Athlete": {
         "Athlete": {
             "Tags": "[Class][+HP]",
-            "Prerequisites": "Novice Athletics, One of Athletic Prowess, Mounted Prowess, Power Boost, Stamina, or Swimmer",
+            "Prerequisites": "Adept Athletics OR Novice Athletics, One of Athletic Prowess, Mounted Prowess, Power Boost, Stamina, or Swimmer",
             "Frequency": "At-Will — Extended Action",
             "Effect": "After an hour of exercise, an Athlete may choose two different Stats besides HP; both of those stats become Trained Stats. The default State of Trained Stats is +1 Combat Stages instead of 0. An Athlete may have two Trained Stats at a time."
         },
@@ -3095,21 +3095,21 @@
             "Tags": "[+HP]",
             "Prerequisites": "Athlete",
             "Frequency": "Static",
-            "Effect": "You gain additional static bonuses based on your Trained Stats.\n» Attack: You gain a +2 Bonus on Accuracy Checks to hit with Combat Maneuvers.\n» Defense: You gain 5 Damage Reduction when Intercepting attacks.\n» Special Attack: You may add half your Special Attack Stat to Damaging Athlete Moves. This does not stack with Twisted Power.\n» Special Defense: You gain a +2 Bonus to Opposed Checks to resist Combat Maneuvers.\n» Speed: When you Sprint, you double your Movement Capability instead of increasing by 50%."
+            "Effect": "You gain additional static bonuses based on your Trained Stats.\n» Attack: You gain a +2 Bonus on Accuracy Checks to hit with Combat Maneuvers.\n» Defense: You gain 5 Damage Reduction when Intercepting attacks.\n» Special Attack: Your Damaging Athlete Moves may be your choice of Physical or Special, adding the appropriate Attack stat.\n» Special Defense: You gain +1 Evasion against Combat Maneuvers and a +2 Bonus to Opposed Checks to resist them.\n» Speed: When you Sprint, you double your Movement Capability instead of increasing it by 50%."
         },
         "Coaching": {
             "Tags": "[+HP]",
             "Prerequisites": "Training Regime",
             "Frequency": "1 AP — Free Action",
             "Trigger": "Your Pokémon makes a Combat Maneuver",
-            "Effect": "Your Pokémon gains a bonus based on the type of Combat maneuver they are making. This Feature may be triggered once per Scene per Pokémon.\n» Your Pokémon gains a +1d6 bonus to Opposed Acrobatics, Athletics, Combat, or Stealth Skill Checks. » If your Pokémon was Sprinting, they double their Movement Capabilities instead of increasing by 50%.\n» If your Pokémon was making an Attack of Opportunity, they automatically hit.\n» You may also activate this Feature to let them Intercept for any Ally regardless of Loyalty, and they automatically succeed on the Skill Check to do so."
+            "Effect": "Your Pokémon gains a bonus based on the type of Combat maneuver they are making. This Feature may be triggered once per Scene per Pokémon.\n» Your Pokémon gains a +1 bonus to its Accuracy Roll, and a +1d6 bonus to any Opposed Acrobatics, Athletics, Combat, or Stealth Skill Checks.\n» If your Pokémon was Sprinting, they double their Movement Capabilities instead of increasing by 50%, and they may make a Struggle Attack any time during their Sprint as a Free Action. They may continue their movement afterwards if they wish.\n» If your Pokémon was making an Attack of Opportunity, they automatically hit.\n» You may also activate this Feature to let your Pokemon Intercept for any Ally regardless of Loyalty, and they automatically succeed on the Skill Check to do so. They gain 5 DR for this Intercept."
         },
         "Adrenaline Rush": {
             "Tags": "[+HP]",
             "Prerequisites": "Athlete, Expert Athletics",
             "Frequency": "Daily x3 — Free Action",
             "Trigger": "You are lowered to half or your Maximum Hit Points or less",
-            "Effect": "You gain +1 Combat Stage in each of your Trained Stats, are cured of up to two Status Afflictions, and gain a Tick of Temporary Hit Points. Adrenaline Rush may be used only once per Scene"
+            "Effect": "You gain +1 Combat Stage in each of your Trained Stats, are cured of up to two Status Afflictions, and gain a Tick of Temporary Hit Points. Adrenaline Rush may be used only once per Scene."
         },
         "Athletic Moves": {
             "Tags": "[Ranked 3][+HP]",
@@ -3117,7 +3117,7 @@
             "Rank 2 Prerequisites": "Athlete, Expert Athletics",
             "Rank 3 Prerequisites": "Athlete, Master Athletics",
             "Frequency": "Static",
-            "Effect": "You learn two Athlete Moves marked with the Rank of this Feature you are taking or lower.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th>Rank 1</th><th>Rank 2</th><th>Rank 3</th></tr></thead><tbody><tr><td>Bind Body</td><td>Slam</td><td>Mega Kick</td></tr><tr><td>Block</td><td>Take Down</td><td>Facade</td></tr><tr><td>Slam</td><td>Extreme Speed</td><td>Retaliate</td></tr><tr><td>Strength</td><td></td><td></td></tr></tbody></table></div>"
+            "Effect": "You learn two Athlete Moves marked with the Rank of this Feature you are taking or lower.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th>Rank 1</th><th>Rank 2</th><th>Rank 3</th></tr></thead><tbody><tr><td>Bind</td><td>Body Slam</td><td>Mega Kick</td></tr><tr><td>Block</td><td>Take Down</td><td>Facade</td></tr><tr><td>Slam</td><td>Extreme Speed</td><td>Retaliate</td></tr><tr><td>Strength</td><td>Hold Back</td><td>Bide</td></tr></tbody></table></div>"
         }
     },
     "Dancer": {
