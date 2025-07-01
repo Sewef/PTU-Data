@@ -714,10 +714,10 @@
     },
     "Juggler": {
         "Juggler": {
-            "Tags": "[Class][+Speed]",
-            "Prerequisites": "Quick Switch, Novice Acrobatics, Novice Guile",
+            "Tags": "[Class][+Speed][Gift]",
+            "Prerequisites": "Novice Acrobatics, Novice Guile",
             "Frequency": "Static",
-            "Effect": "Using Quick Switch costs only 1 AP. Whenever you send a Pokémon into an encounter from a Poké Ball, they receive a +10 bonus to their Initiative during that round."
+            "Effect": "You gain the Quick Switch Feature, and using it costs only 1 AP."
         },
         "Bounce Shot": {
             "Tags": "[+Speed]",
@@ -726,11 +726,12 @@
             "Trigger": "You throw a Poké Ball",
             "Effect": "After hitting its mark or landing, your Poké Ball bounces 3 meters in any direction. You may have your Poké Ball trigger captures or releases before or after the bounce."
         },
-        "Juggling Show": {
+        "You Deserve A Rest": {
             "Tags": "[+Speed]",
             "Prerequisites": "Juggler",
-            "Frequency": "Static",
-            "Effect": "You may roll an additional Xd6 during the In- troduction Stage of a Contest, where X is half of your Acrobatics Rank. You may choose any Contest Stat to attempt to gain Dice for with this roll."
+            "Frequency": "Scene x2 — Free Action",
+            "Trigger": "You recall a Pokémon",
+            "Effect": "Choose one: The recalled Pokémon is cured of one Persistent Status Affliction; or the recalled Pokémon gains Hit Points equal to 1/3rd its Maximum Hit Points. You Deserve A Rest may only be used once per Pokémon per Scene."
         },
         "Round Trip": {
             "Tags": "[+Speed]",
@@ -750,7 +751,8 @@
             "Tags": "[+Speed]",
             "Prerequisites": "Juggler, Expert Acrobatics or Guile",
             "Frequency": "2 AP — Shift Action, Interrupt",
-            "Effect": "You may Release a Pokémon as an Interrupt."
+            "Effect": "You may Release a Pokémon as an Interrupt.",
+            "Bonus": "Whenever you send a Pokémon into an encounter from a Poké Ball, they receive a +10 bonus to their Initiative during that round."
         },
         "First Blood": {
             "Tags": "[+Speed]",
