@@ -2325,7 +2325,8 @@
             "Prerequisites": "Novice Perception",
             "Frequency": "1 AP — Swift Action, Interrupt",
             "Target": "A Pokémon, Trainer, Move, or Location.",
-            "Effect": "You make Record of the target. Records can be placed in an Archive as an Extended Action. When you take Chronicler, you gain one Archive."
+            "Effect": "You make a Record of the target. Records can be placed in an Archive as an Extended Action. When you take Chronicler, you gain one Archive.",
+            "Archives":"» Profile Archive: You may place Records of specific Pokémon and Trainers in your Profile Archive. You and your Pokemon gain a +1 bonus to Accuracy and a +2 bonus on all Opposed Checks against Pokémon and Trainers in your Profile Archive.\n» Technique Archive: You may place Records of Moves in your Technique Archive. You and your Pokémon gain +2 Evasion against Moves in your Technique Archive.\n» Travel Archive: You may place Records of Locations in your Travel Archive. While you are in a Location in your Travel Archive, you gain the Keen Eye Ability and a +2 bonus to Perception Checks to notice the environment."
         },
         "Archival Training": {
             "Tags": "[Ranked 2]",
@@ -2343,22 +2344,21 @@
         "Targeted Profiling": {
             "Tags": "[Orders]",
             "Prerequisites": "Profile Archive, Expert Perception",
-            "Frequency": "2 AP — Standard Action",
+            "Frequency": "1 AP — Standard Action",
             "Target": "Your Pokémon",
-            "Effect": "On the target's next turn, they act as if they had the Mold Breaker Ability against all Pokémon and Trainers in your Profile Archive and gains a +2 bonus to Accuracy Rolls against these targets."
+            "Effect": "On the target's next turn, it acts as if it had the Mold Breaker Ability against all Pokémon and Trainers in your Profile Archive and gains a +1 bonus to Accuracy Rolls, Critical Hit Range, and Effect Range against these targets."
         },
         "Observation Party": {
-            "Tags": "[Orders]",
             "Prerequisites": "Travel Archive, Adept Perception",
             "Frequency": "Static",
-            "Effect": "While they are in a Location in your Travel Archive, your Pokémon have the Ability you chose when gaining Travel Archive and gain a +2 bonus to Perception Checks to notice the environment."
+            "Effect": "While they are in a Location in your Travel Archive, your Pokémon gain the Keen Eye Ability and gain a +2 bonus to Perception Checks to notice the environment.",
+            "Bonus": "While in a Location in your Travel Archive, you and your Pokémon are immune to being Flanked."
         },
         "Cinematic Analysis": {
-            "Tags": "[Orders]",
             "Prerequisites": "4 Chronicler Features, Master Perception",
             "Frequency": "Daily x3 — Free Action",
-            "Effect": "You analyze a Record in one of your Archives. Cinematic Analysis's effect depends on the Archive the Record is in. Each of these effects may only be used once per Scene.",
-            "Character Study — Profile Archive": "You may trigger Character Study when you or an ally makes a Charm, Command, Guile, Intimidate, or Intuition Check targeting the subject of your Record. Make a Perception Check and substitute the triggering Skill Check with the result.",
+            "Effect": "You analyze a Record in one of your Archives. Cinematic Analysis's eﬀect depends on the Archive the Record is in. Each of these effects may only be used once per Scene.",
+            "Character Study — Profile Archive": "You may trigger Character Study when you or an ally makes an Opposed Check against the subject of your Record. Make a Perception Check and substitute the triggering Skill Check with the result. This Perception Check is still an Opposed Check.",
             "Recreation — Technique Archive": "Recreation may be triggered as your Pokémon gains Initiative. Select a Record of a Move in your Technique Archive that your Pokémon can learn by Level Up, TM, or Move Tutor. Your Pokémon may perform that Move as if it was on its Move List. You may select a specific Move only once per day.",
             "Situational Awareness — Travel Archive": "You may only use Situational Awareness if you analyze a Record of your current Location. When used this way, you may activate it as an Interrupt. Choose an ally; that ally may take their next action as Priority (Advanced)."
         }
