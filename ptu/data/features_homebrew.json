@@ -1599,26 +1599,27 @@
             "Fairy Lights": {
                 "Prerequisites": "Type Ace (Fairy)",
                 "Frequency": "At-Will — Special",
-                "Effect": "Your Fairy-Type Pokemon may activate Fairy Lights as a Standard Action to create 3 Fairy Lights that hover around themselves. Whenever the target is attacked by a foe within 6 meters, they may expend a Fairy Light to either immediately gain a Tick of Temporary Hit Points, or to use the Move Fairy Wind as a Free Action.\nSpecial: Fairy Lights also provide mild lighting, comparable to a candle. As an extended action your Pokemon can control the lights individually, but they must stay within 6 meters of the Pokemon that created them."
+                "Effect": "Your Fairy-Type Pokemon may activate Fairy Lights as a Standard Action to create 3 Fairy Lights that hover around themselves. Whenever the target is attacked by a foe within 6 meters, they may expend a Fairy Light to either immediately gain Temporary Hit Points equal to their Tick Value + your Type-Linked Skill Rank, or to use the Move Fairy Wind as a Free Action.",
+                "Special": "Fairy Lights also provide mild lighting, comparable to a candle. As a Shift Action, your Pokemon can control the lights individually, but they must stay within 6 meters of the Pokemon that created them."
             },
             "Arcane Favor": {
                 "Prerequisites": "Fairy Lights, Adept Charm or Guile",
                 "Frequency": "Scene x2 — Free Action",
                 "Trigger": "Your Pokémon uses a Fairy-Type Move",
-                "Effect": "Your Pokémon and all allies on the Field gain a +1 Bonus to all rolls for one full round."
+                "Effect": "Your Pokémon and a number of allies up to your Type-Linked Skill Rank gain a +2 Bonus to all rolls for one full round."
             },
             "Fey Trance": {
                 "Prerequisites": "Fairy Lights, Expert Charm or Guile",
                 "Tags": "Orders, Stratagem",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Pokémon",
-                "Effect": "While this Feature is bound, whenever the target uses a 1-Target Move with the Social Keyword or a Fairy-Type Status Move, the foe hit by the triggering Move becomes Infatuated with your Pokemon, and immediately Shifts towards your Pokemon, forfeiting their next Shift Action. This may affect a specific foe only once per Scene."
+                "Effect": "While this Feature is bound, whenever the target uses a Move with the Social Keyword or a Fairy-Type Status Move, one foe hit by the triggering Move becomes Infatuated with your Pokemon, and immediately Shifts towards your Pokemon, forfeiting their next Shift Action. This may aﬀect a specific foe only once per Scene."
             },
             "Fairy Rite": {
                 "Prerequisites": "Fairy Lights, Master Charm or Guile",
                 "Frequency": "Daily x3 — Special",
                 "Trigger": "Your Pokémon creates Fairy Lights as a Standard Action",
-                "Effect": "Your Fairy-Type Pokémon may activate Fairy Rite as a Standard Action to lose any number of Hit Points, up to a maximum equal to your Pokémon's Level, and heal an adjacent Ally by that many Hit Points. Then, if your Fairy-Type Pokémon has any Fairy Lights, they may immediately expend any Fairy Lights to gain a Tick of Hit Points, or cause an ally within 6 meters to gain a Tick of Hit Points."
+                "Effect": "Your Fairy-Type Pokémon may lose any number of Hit Points as a Free Action, up to a maximum equal to your Pokémon's Level, and heal an Ally within X meters by an amount equal to the lost Hit Points + X. Then, if your Fairy-Type Pokémon has any Fairy Lights, they may immediately expend any number of Fairy Lights. For each Fairy Light expended this way, they may cause themselves or an ally within X meters to gain Hit Points equal to that target's Tick Value + X. X is your Type-Linked Skill Rank. Your Pokemon may choose to activate Fairy Rite as a Standard Action on its turn without creating Fairy Lights."
             }
         },
         "Fighting": {
@@ -1648,24 +1649,26 @@
                 "Tags": "Orders, Stratagem",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Pokémon",
-                "Effect": "While this Feature is Bound, the target's Fighting-Type Moves cause foes to become Marked by the target for 1 full round. If the target is a Fighting-Type Pokémon, they may also Mark the Foe for one full round when hitting with a Grapple, Trip, or Push Maneuver. Marked Foes provoke an attack of Opportunity from the Pokémon that marked them if they Shift out of an adjacent square into a square that is not adjacent, even if they use a Disengage Maneuver. Targets cannot be Marked by more than one Pokémon at a time."
+                "Effect": "While this Feature is Bound, your Pokémon's Fighting-Type Moves cause foes to become Marked for 1 full round. Your Fighting-Type Pokémon may also Mark Foes for one full round when hitting with a Grapple, Trip, or Push Maneuver.\nMarked foes take a -X penalty to Accuracy Rolls and a -10 penalty to Damage Rolls on attacks that do not target the Pokemon that Marked them. X is equal to half your Type-Linked Skill Rank. Additionally, Marked Foes provoke an attack of Opportunity from the Pokémon that marked them if they Shift out of an adjacent square into a square that is not adjacent, even if they use a Disengage Maneuver. Targets cannot be Marked by more than one Pokémon at a time."
             },
             "Brawler": {
                 "Prerequisites": "Close Quarters Mastery, Adept Combat or Intuition",
                 "Frequency": "Scene x2 — Free Action",
                 "Trigger": "Your Pokémon makes a Struggle Attack",
-                "Effect": "This Struggle Attack has a range of Burst 1, Friendly instead of the usual range, and deals Fighting-Type Damage."
+                "Effect": "This Struggle Attack has a range of Burst 1, Friendly instead of the usual range, and may deal Fighting Type Damage if you wish",
+                "Bonus": "Your Pokemon's Fighting-Type attacks gain a +1 Accuracy bonus against adjacent foes."
             },
-            "Face Me Whelp": {
+            "Face Me, Whelp": {
                 "Prerequisites": "Close Quarters Mastery, Expert Combat or Intuition",
                 "Frequency": "Static",
-                "Effect": "While your Pokémon is adjacent to a foe they Marked, that foe gains a -X penalty to Accuracy Rolls and a -10 penalty to Damage Rolls on attacks that do not target the Pokémon that Marked them. X is equal to half your Type-Linked Skill Rank."
+                "Effect": "Whenever your Pokemon hits an adjacent foe with a Struggle Attack or a single-target DB8 or lower Fighting-Type attack, that foe becomes Slowed for one full Round."
             },
             "Smashing Punishment": {
                 "Prerequisites": "Close Quarters Mastery, Master Combat or Intuition",
                 "Frequency": "Daily x3 — Free Action",
-                "Trigger": "A Marked Foe provokes an Attack of Opportunity from your Fighting-Type Pokémon",
-                "Effect": "The Attack of Opportunity automatically hits, deals Fighting-Type Damage, and is a Critical Hit."
+                "Trigger": "A Marked Foe provokes an Attack of Opportunity from your Pokémon",
+                "Effect": "The Attack of Opportunity automatically hits, may deal Fighting-Type Damage if you wish, and is a Critical Hit.",
+                "Bonus": "Whenever your Fighting-Type Pokémon hits a Marked foe with a Struggle Attack(including an Attack of Opportunity), that foe becomes Vulnerable until the next time they are hit with an attack."
             }
         },
         "Fire": {
@@ -2072,14 +2075,14 @@
             "Psionic Sponge": {
                 "Prerequisites": "Type Ace (Psychic)",
                 "Frequency": "At-Will — Special",
-                "Effect": "Your Psychic-Type Pokémon may activate Psychic Sponge as a Shift Action to add a Psychic Type Move known by an ally within X meters to their Move List until the end of their turn. This does not allow them to have duplicate Moves in their Move List. This Feature may only be used once per Pokémon per Scene, and X is equal to your Type-Linked Skill Rank."
+                "Effect": "Your Psychic-Type Pokémon may activate Psychic Sponge as a Shift Action to add a Psychic Type Move known by an ally within X meters to their Move List until the end of their turn. This does not allow them to have duplicate Moves in their Move List. This Feature may only be used once per Pokémon per Scene. X is equal to your Type-Linked Skill Rank."
             },
             "Mindbreak": {
                 "Prerequisites": "Psionic Sponge, Adept Focus or Occult Education",
                 "Tags": "Orders, Stratagem",
                 "Frequency": "Bind 2 AP — Standard Action",
-                "Target": "Your Psychic-Type Pokémon",
-                "Effect": "While this Feature is Bound, the target's damaging Psychic-Type Moves gain a +1 Bonus to Effect Range and a +3 Bonus to Damage Rolls for each of the following conditions that the target is suffering: Bad Sleep, Confusion, Curse, Disabled, Flinch, Infatuation, Rage, or Suppression."
+                "Target": "Your Pokémon",
+                "Effect": "While this Feature is Bound, the target's damaging Psychic-Type Moves gains a bonus to Accuracy and Effect Range equal to the number of Status Moves known by the triggering Pokémon. If the triggering Pokémon is Psychic-Type, the attack also gains a +3 bonus to damage for each Status Affliction, Other Affliction, and Negative Combat Stage the target has, to a maximum of 3 times your Type-Linked Skill Rank."
             },
             "Psychic Resonance": {
                 "Prerequisites": "Psionic Sponge, Expert Focus or Occult Education",
