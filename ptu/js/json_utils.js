@@ -5,7 +5,8 @@ function loadJsonAsCard(file, container, cols = 3) {
             return;
         }
 
-        allItems = Object.entries(data).map(([name, value]) => {
+        // Déclare allItems localement
+        const allItems = Object.entries(data).map(([name, value]) => {
             if (typeof value === "string") {
                 return { Name: name, Description: value };
             } else {
@@ -15,9 +16,10 @@ function loadJsonAsCard(file, container, cols = 3) {
 
         renderFilteredCards(allItems, container, cols);
 
+        // Supprime ancien listener s'il existe (évite multi écouteurs)
         const searchInput = document.getElementById("card-search");
         if (searchInput) {
-            searchInput.addEventListener("input", function () {
+            searchInput.oninput = function () {
                 const query = this.value.toLowerCase();
                 const filtered = allItems.filter(item =>
                     Object.values(item).some(value =>
@@ -25,10 +27,11 @@ function loadJsonAsCard(file, container, cols = 3) {
                     )
                 );
                 renderFilteredCards(filtered, container, cols);
-            });
+            };
         }
     });
 }
+
 
 function renderFilteredCards(data, container, cols) {
     container.innerHTML = "";
@@ -79,77 +82,66 @@ function renderItemAsCard(item, depth = 0) {
 // Used in statuses, structure name is Section name
 
 
-function loadJsonAsCard_2(file, container) {
+function loadJsonAsCard_2(file, container, searchInputId) {
     $.getJSON(file, function (data) {
         if (typeof data !== 'object' || Object.keys(data).length === 0) {
             alert(`Error: no data found in ${file}`);
             return;
         }
 
-        container.innerHTML = ""; // Clear container
+        function render(dataToRender) {
+            container.innerHTML = "";
+            Object.entries(dataToRender).forEach(([sectionTitle, entries]) => {
+                const header = document.createElement("h2");
+                header.textContent = sectionTitle;
+                container.appendChild(header);
 
-        Object.entries(data).forEach(([sectionTitle, entries]) => {
-            // Create section header
-            const header = document.createElement("h2");
-            header.textContent = sectionTitle;
-            container.appendChild(header);
+                const row = document.createElement("div");
+                row.className = "row g-3";
 
-            // Create row for cards
-            const row = document.createElement("div");
-            row.className = "row g-3";
-
-            Object.entries(entries).forEach(([name, description]) => {
-                const cardHTML = renderItemAsCard({
-                    Name: name,
-                    Description: description
+                Object.entries(entries).forEach(([name, description]) => {
+                    const cardHTML = renderItemAsCard({
+                        Name: name,
+                        Description: description
+                    });
+                    const cardDiv = document.createElement("div");
+                    cardDiv.className = "col-12 col-md-4";
+                    cardDiv.innerHTML = `<div class="card h-100"><div class="card-body">${cardHTML}</div></div>`;
+                    row.appendChild(cardDiv);
                 });
-                const cardDiv = document.createElement("div");
-                cardDiv.className = "col-12 col-md-4";
-                cardDiv.innerHTML = `<div class="card h-100"><div class="card-body">${cardHTML}</div></div>`;
-                row.appendChild(cardDiv);
+
+                container.appendChild(row);
             });
+        }
 
-            container.appendChild(row);
-        });
+        // Initial render
+        render(data);
 
-        // Search filtering
-        const searchInput = document.getElementById("card-search");
+        // Setup search filtering
+        const searchInput = document.getElementById(searchInputId);
         if (searchInput) {
             searchInput.addEventListener("input", function () {
                 const query = this.value.toLowerCase();
-                container.innerHTML = ""; // Reset
+
+                const filteredData = {};
 
                 Object.entries(data).forEach(([sectionTitle, entries]) => {
-                    const filtered = Object.entries(entries).filter(([name, desc]) =>
+                    const filteredEntries = Object.entries(entries).filter(([name, desc]) =>
                         name.toLowerCase().includes(query) || desc.toLowerCase().includes(query)
                     );
-                    if (filtered.length === 0) return;
 
-                    const header = document.createElement("h2");
-                    header.className = "my-4";
-                    header.textContent = sectionTitle;
-                    container.appendChild(header);
-
-                    const row = document.createElement("div");
-                    row.className = "row";
-
-                    filtered.forEach(([name, description]) => {
-                        const cardHTML = renderItemAsCard({
-                            Name: name,
-                            Description: description
-                        });
-                        const cardDiv = document.createElement("div");
-                        cardDiv.className = "col-12 col-md-4";
-                        cardDiv.innerHTML = `<div class="card h-100"><div class="card-body">${cardHTML}</div></div>`;
-                        row.appendChild(cardDiv);
-                    });
-
-                    container.appendChild(row);
+                    if (filteredEntries.length > 0) {
+                        filteredData[sectionTitle] = Object.fromEntries(filteredEntries);
+                    }
                 });
+
+                render(filteredData);
             });
         }
     });
 }
+
+
 
 
 function renderFilteredCards_2(data, container) {
