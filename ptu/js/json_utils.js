@@ -118,25 +118,27 @@ function loadJsonAsCard_2(file, container, searchInputId) {
         render(data);
 
         // Setup search filtering
-        const searchInput = document.getElementById(searchInputId);
-        if (searchInput) {
-            searchInput.addEventListener("input", function () {
-                const query = this.value.toLowerCase();
+        if (searchInputId) {
+            const searchInput = document.getElementById(searchInputId);
+            if (searchInput) {
+                searchInput.addEventListener("input", function () {
+                    const query = this.value.toLowerCase();
 
-                const filteredData = {};
+                    const filteredData = {};
 
-                Object.entries(data).forEach(([sectionTitle, entries]) => {
-                    const filteredEntries = Object.entries(entries).filter(([name, desc]) =>
-                        name.toLowerCase().includes(query) || desc.toLowerCase().includes(query)
-                    );
+                    Object.entries(data).forEach(([sectionTitle, entries]) => {
+                        const filteredEntries = Object.entries(entries).filter(([name, desc]) =>
+                            name.toLowerCase().includes(query) || desc.toLowerCase().includes(query)
+                        );
 
-                    if (filteredEntries.length > 0) {
-                        filteredData[sectionTitle] = Object.fromEntries(filteredEntries);
-                    }
+                        if (filteredEntries.length > 0) {
+                            filteredData[sectionTitle] = Object.fromEntries(filteredEntries);
+                        }
+                    });
+
+                    render(filteredData);
                 });
-
-                render(filteredData);
-            });
+            }
         }
     });
 }
