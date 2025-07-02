@@ -3634,7 +3634,7 @@
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Feature Shade Caller",
             "Frequency": "Static",
-            "Effect": "Your own Shadow can attack others; you may have your Dark Type Moves originate from any Square adjacent to you. If you are fighting among complete darkness, you may have your Dark Type Moves origi- nate from any square within X meters that is completely dark, where X is the higher of your Guile or Stealth Rank. Attacks originating from Living Shadow do not trigger effects that rely on being hit with a melee attack."
+            "Effect": "Your own Shadow can attack others; you may have your Dark Type Moves originate from any Square adjacent to you. If you are fighting among complete darkness, you may have your Dark Type Moves originate from any square within X meters that is completely dark, where X is the higher of your Guile or Stealth Rank. Attacks originating from Living Shadow do not trigger effects that rely on being hit with a melee attack."
         },
         "Sharpen Shadows": {
             "Tags": "[+Attack or Special Attack]",
@@ -3652,7 +3652,7 @@
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Feature Shade Caller\nSkills Guile 4, Stealth 4",
             "Frequency": "2 AP — Standard Action",
-            "Effect": "You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the en- counter. All targets without Darkvision attacking from or i nto the Shifting Darkness receive a -3 penalty to Ac- curacy. You may count Shifting Darkness as complete darkness for the purposes of activating your Living Shadow. As a Static effect, you also gain the Darkvision Capability."
+            "Effect": "You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the en- counter. All targets without Darkvision attacking from or into the Shifting Darkness receive a -3 penalty to Ac- curacy. You may count Shifting Darkness as complete darkness for the purposes of activating your Living Shadow. As a Static effect, you also gain the Darkvision Capability."
         },
         "Dark Soul": {
             "Tags": "[+Attack or Special Attack]",
@@ -3871,7 +3871,7 @@
             "Tags": "[+Attack][Weapon]",
             "Prerequisites": "Feature Apparition",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Shadow Punch and Shad- ow Sneak. You may use these as Weapon Attacks when wielding Melee Weapons."
+            "Effect": "You learn the Moves Shadow Punch and Shadow Sneak. You may use these as Weapon Attacks when wielding Melee Weapons."
         },
         "Too Spooky": {
             "Tags": "[+Attack]",
@@ -3901,7 +3901,7 @@
             "Tags": "[+Attack][Weapon]",
             "Prerequisites": "Feature Shadow Arms\nSkills Intimidate 6",
             "Frequency": "Scene x2 — Free Action",
-            "Trigger": "You hit with an Apparition Move or Ghost- Typed Weapon Attack",
+            "Trigger": "You hit with an Apparition Move or Ghost-Typed Weapon Attack",
             "Effect": "After one full round, repeat the triggering attack against one target as a Free Action, regardless of range. If this attack hits, it deals damage as if it were resisted one step further. Haunted Wounds may only affect a target once per Scene."
         }
     },

@@ -4268,8 +4268,8 @@
             "Rank 1 Prerequisites": "Metamagic",
             "Rank 2 Prerequisites": "Authentic Thaumaturgy",
             "Frequency": "Static",
-            "Rank 1 Effect": " Select a Rank 1 Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate.",
-            "Rank 2 Effect": " Select a Rank 1 Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate. OR Select a Rank 2 power Manipulation. This Manipulation may be used once per Scene without activating Authentic Thaumaturgy's Frequency."
+            "Rank 1 Effect": "Select a Rank 1 Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate.",
+            "Rank 2 Effect": "Select a Rank 1 Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate. OR Select a Rank 2 power Manipulation. This Manipulation may be used once per Scene without activating Authentic Thaumaturgy's Frequency."
         },
         "Recoup Energy": {
             "Tags": "[+Special Attack]",
@@ -4284,6 +4284,39 @@
             "Frequency": "Bind 2 AP — Extended Action",
             "Target": "Your Soul Bonded Weapon",
             "Effect": "Choose one Novice and one Expert Arcane Weapon Move. Your Soul Bonded Weapon adds those Moves to your Move List as long as this Feature is Bound. You may only Bind one instance of this Feature at a time, and you may not have multiple instances of the same Move in your Move List."
+        },
+        "Power Manipulations": {
+            "Rank 1 Power Manipulations": {
+                "Energy Finesse": {
+                    "Condition": "The triggering Move is an Arcane Weapon Move and has an Effect Range",
+                    "Effect": "In addition to its existing Effect Range, the Effect triggers on all natural Even-Numbered Rolls."
+                },
+                "Warp Energy": {
+                    "Condition": "The triggering Move is a Cone, Line, Burst, or Blast",
+                    "Effect": "Instead of its usual range, you may use the Move as if it had a range of Burst 1, Cone 2, Close Blast 2, Line 4, or 2-Target with a range of 4."
+                },
+                "Directed Barrier": {
+                    "Effect": "You gain Damage Reduction equal to your Tick Value against the targets of the triggering Move for one fullround."
+                },
+                "Power Overdrive": {
+                    "Effect": "If the triggering attack hits, you lose a Tick of Hit Points, and the triggering attack deals bonus damage equal to your Tick Value plus your Occult Education Rank. This loss of Hit Points cannot be prevented in any way."
+                }
+            },
+            "Rank 2 Power Manipulations": {
+                "Berserk Blow": {
+                    "Condition": "The Triggering Move is 1-Target",
+                    "Effect": "The Move causes the target to become Vulnerable for 1 full round, and the Move’s Critical Hit Range is increased by +3."
+                },
+                "Energy Link": {
+                    "Effect": "For one full round, the next Normal-Type attack to hit the target instead deals Damage of the same Type as this Attack. If the Attack Energy Link was applied to was already Normal-Typed, for one full round, the next Normal-Type attack to hit the target instead deals damage as if it was one step more Super-Effective."
+                },
+                "Enlarged Power": {
+                    "Effect": "The Move gains the keyword Burst 1 if Melee 1-Target, or Blast 2 if ranged 1-Target. If the Move is already a Burst, Blast, Cone, or Line, increase the size of the Move’s Range by 1."
+                },
+                "Lock of Fate": {
+                    "Effect": "The Move cannot be Intercepted, and targets may not avoid the attack in any way if hits (such as via Dodge, Parry, Shield Moves, etc). Evasion still applies, and the Move can still Miss."
+                }
+            }
         }
     },
     "Fortress": {
@@ -4514,7 +4547,7 @@
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Shade Caller",
             "Frequency": "Static",
-            "Effect": "Your own Shadow can attack others; you may have your Dark Type Moves originate from any Square adjacent to you. If you are fighting among complete darkness, you may have your Dark Type Moves origi- nate from any square within X meters that is completely dark, where X is the higher of your Guile or Stealth Rank. Attacks originating from Living Shadow do not trigger effects that rely on being hit with a melee attack."
+            "Effect": "Your own Shadow can attack others; you may have your Dark Type Moves originate from any Square adjacent to you. If you are fighting among complete darkness, you may have your Dark Type Moves originate from any square within X meters that is completely dark, where X is the higher of your Guile or Stealth Rank. Attacks originating from Living Shadow do not trigger effects that rely on being hit with a melee attack."
         },
         "Sharpen Shadows": {
             "Tags": "[+Attack or Special Attack]",
@@ -4532,7 +4565,7 @@
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Shade Caller, Adept Guile or Stealth",
             "Frequency": "2 AP — Standard Action",
-            "Effect": "You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the en- counter. All targets without Darkvision attacking from or i nto the Shifting Darkness receive a -3 penalty to Ac- curacy. You may count Shifting Darkness as complete darkness for the purposes of activating your Living Shadow. As a Static effect, you also gain the Darkvision Capability."
+            "Effect": "You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the en- counter. All targets without Darkvision attacking from or into the Shifting Darkness receive a -3 penalty to Ac- curacy. You may count Shifting Darkness as complete darkness for the purposes of activating your Living Shadow. As a Static effect, you also gain the Darkvision Capability."
         },
         "Dark Soul": {
             "Tags": "[+Attack or Special Attack]",
@@ -4751,7 +4784,7 @@
             "Tags": "[+Attack][Weapon]",
             "Prerequisites": "Apparition",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Shadow Punch and Shad- ow Sneak. You may use these as Weapon Attacks when wielding Melee Weapons."
+            "Effect": "You learn the Moves Shadow Punch and Shadow Sneak. You may use these as Weapon Attacks when wielding Melee Weapons."
         },
         "Too Spooky": {
             "Tags": "[+Attack]",
@@ -4781,7 +4814,7 @@
             "Tags": "[+Attack][Weapon]",
             "Prerequisites": "Shadow Arms, Master Intimidate or Occult Education",
             "Frequency": "Scene x2 — Free Action",
-            "Trigger": "You hit with an Apparition Move or Ghost- Typed Weapon Attack",
+            "Trigger": "You hit with an Apparition Move or Ghost-Typed Weapon Attack",
             "Effect": "After one full round, repeat the triggering attack against one target as a Free Action, regardless of range. If this attack hits, it deals damage as if it were resisted one step further. Haunted Wounds may only affect a target once per Scene."
         }
     },

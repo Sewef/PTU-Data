@@ -4250,10 +4250,10 @@
     "Arcanist": {
         "Arcanist": {
             "Tags": "[Class, +Special Attack][Weapon]",
-            "Prerequisites": "Arcane Training",
+            "Prerequisites": "Adept Occult Education",
             "Frequency": "At-Will — Extended Action",
             "Target": "An Arcane Weapon",
-            "Effect": "You create a Soul Bond with the target Weapon. You may make a Soul Bond with only one weapon at a time. If you create a new Soul Bond, previously Soul Bound weapons lose the Bond. Soul Bound Weapons gain the following benefits:\n» Increase the Damage Base and Effect Range of Struggle Attacks and Arcane Weapon Moves made with your Soul Bonded Weapon by +1 for each Occult Education Rank you have above Novice, up to a maximum of +3 at Master Rank.\n» As a Shift Action, you may beckon your Soul Bonded Weapon to your hands if it is within 10 meters. If it is being held by someone else who does not want to let go of the weapon, make an Occult vs Athletics Opposed Check. If you win, they their lose grip on your Weapon and it flies to your hand as normal"
+            "Effect": "You create a Soul Bond with the target Weapon. You may make a Soul Bond with only one weapon at a time. If you create a new Soul Bond, previously Soul Bound weapons lose the Bond. Soul Bound Weapons gain the following benefits:\n» Increase the Effect Range of Struggle Attacks and Arcane Weapon Moves made with your Soul Bonded Weapon by +1 for each Occult Education Rank you have above Novice, up to a maximum of +3 at Master Rank. Additionally, you gain a bonus to Damage with these Moves equal to half your Occult Education Rank.\n» As a Shift Action, you may beckon your Soul Bonded Weapon to your hands if it is within 10 meters. If it is being held by someone else who does not want to let go of the weapon, make an Occult vs Athletics Opposed Check. If you win, they their lose grip on your Weapon and it flies to your hand as normal."
         },
         "Metamagic": {
             "Tags": "[+Special Attack]",
@@ -4274,8 +4274,7 @@
             "Rank 1 Prerequisites": "Metamagic",
             "Rank 2 Prerequisites": "Authentic Thaumaturgy",
             "Frequency": "Static",
-            "Rank 1 Effect": " Select a Rank 1 Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate.",
-            "Rank 2 Effect": " Select a Rank 1 Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate. OR Select a Rank 2 power Manipulation. This Manipulation may be used once per Scene without activating Authentic Thaumaturgy's Frequency."
+            "Effect":"Each Rank, select a Power Manipulation of the same Signature Manipulation Rank you are taking or lower.\n» For Rank 1 Manipulations, this Manipulation may be used twice per Scene without spending AP to activate.\n» For Rank 2 Manipulations, this Manipulation may be used once per Scene without activating Authentic Thaumaturgy’s Frequency."
         },
         "Recoup Energy": {
             "Tags": "[+Special Attack]",
@@ -4289,7 +4288,40 @@
             "Prerequisites": "Arcanist, Master Occult Education",
             "Frequency": "Bind 2 AP — Extended Action",
             "Target": "Your Soul Bonded Weapon",
-            "Effect": "Choose one Novice and one Expert Arcane Weapon Move. Your Soul Bonded Weapon adds those Moves to your Move List as long as this Feature is Bound. You may only Bind one instance of this Feature at a time, and you may not have multiple instances of the same Move in your Move List."
+            "Effect": "Choose one Adept and one Master Arcane Weapon Move. Your Soul Bonded Weapon adds those Moves to your Move List as long as this Feature is Bound. You may only Bind one instance of this Feature at a time, and you may not have multiple instances of the same Move in your Move List."
+        },
+        "Power Manipulations": {
+            "Rank 1 Power Manipulations": {
+                "Energy Finesse": {
+                    "Condition": "The triggering Move is an Arcane Weapon Move and has an Effect Range",
+                    "Effect": "In addition to its existing Effect Range, the Effect triggers on all natural Even-Numbered Rolls."
+                },
+                "Warp Energy": {
+                    "Condition": "The triggering Move is a Cone, Line, Burst, or Blast",
+                    "Effect": "Instead of its usual range, you may use the Move as if it had a range of Burst 1, Cone 2, Close Blast 2, Line 4, or 2-Target with a range of 4."
+                },
+                "Directed Barrier": {
+                    "Effect": "You gain Damage Reduction equal to your Tick Value against the targets of the triggering Move for one fullround."
+                },
+                "Power Overdrive": {
+                    "Effect": "If the triggering attack hits, you lose a Tick of Hit Points, and the triggering attack deals bonus damage equal to your Tick Value plus your Occult Education Rank. This loss of Hit Points cannot be prevented in any way."
+                }
+            },
+            "Rank 2 Power Manipulations": {
+                "Berserk Blow": {
+                    "Condition": "The Triggering Move is 1-Target",
+                    "Effect": "The Move causes the target to become Vulnerable for 1 full round, and the Move’s Critical Hit Range is increased by +3."
+                },
+                "Energy Link": {
+                    "Effect": "For one full round, the next Normal-Type attack to hit the target instead deals Damage of the same Type as this Attack. If the Attack Energy Link was applied to was already Normal-Typed, for one full round, the next Normal-Type attack to hit the target instead deals damage as if it was one step more Super-Effective."
+                },
+                "Enlarged Power": {
+                    "Effect": "The Move gains the keyword Burst 1 if Melee 1-Target, or Blast 2 if ranged 1-Target. If the Move is already a Burst, Blast, Cone, or Line, increase the size of the Move’s Range by 1."
+                },
+                "Lock of Fate": {
+                    "Effect": "The Move cannot be Intercepted, and targets may not avoid the attack in any way if hits (such as via Dodge, Parry, Shield Moves, etc). Evasion still applies, and the Move can still Miss."
+                }
+            }
         }
     },
     "Fortress": {
@@ -4514,13 +4546,19 @@
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Shade Caller",
             "Frequency": "Static",
-            "Effect": "You gain the Twisted Power Ability."
+            "Effect": "You gain the Conqueror Ability."
         },
         "Living Shadow": {
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Shade Caller",
             "Frequency": "Static",
-            "Effect": "Your own Shadow can attack others; you may have your Dark Type Moves originate from any Square adjacent to you. If you are fighting among complete darkness, you may have your Dark Type Moves origi- nate from any square within X meters that is completely dark, where X is the higher of your Guile or Stealth Rank. Attacks originating from Living Shadow do not trigger effects that rely on being hit with a melee attack."
+            "Effect": "Your own Shadow can attack others; you may have your Dark Type Moves originate from any Square adjacent to you. If you are fighting among complete darkness, you may have your Dark Type Moves originate from any square within X meters that is completely dark, where X is the higher of your Guile or Stealth Rank. Attacks originating from Living Shadow do not trigger effects that rely on being hit with a melee attack."
+        },
+        "World of Darkness": {
+            "Tags": "[+Attack or Special Attack]",
+            "Prerequisites": "Shade Caller, Adept Guile or Stealth",
+            "Frequency": "2 AP — Standard Action",
+            "Effect": "You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the en- counter. All targets without Darkvision attacking from or into the Shifting Darkness receive a -3 penalty to Ac- curacy. You may count Shifting Darkness as complete darkness for the purposes of activating your Living Shadow. As a Static effect, you also gain the Darkvision Capability."
         },
         "Sharpen Shadows": {
             "Tags": "[+Attack or Special Attack]",
@@ -4533,12 +4571,6 @@
             "Prerequisites": "Sharpen Shadows, Master Guile or Stealth",
             "Frequency": "Static",
             "Effect": "You learn Night Daze and Punishment"
-        },
-        "World of Darkness": {
-            "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Shade Caller, Adept Guile or Stealth",
-            "Frequency": "2 AP — Standard Action",
-            "Effect": "You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the en- counter. All targets without Darkvision attacking from or i nto the Shifting Darkness receive a -3 penalty to Ac- curacy. You may count Shifting Darkness as complete darkness for the purposes of activating your Living Shadow. As a Static effect, you also gain the Darkvision Capability."
         },
         "Dark Soul": {
             "Tags": "[+Attack or Special Attack]",
@@ -4757,19 +4789,20 @@
             "Tags": "[+Attack][Weapon]",
             "Prerequisites": "Apparition",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Shadow Punch and Shad- ow Sneak. You may use these as Weapon Attacks when wielding Melee Weapons."
+            "Effect": "You learn the Moves Shadow Punch and Shadow Sneak. You may use these as Weapon Attacks when wielding Melee Weapons."
         },
         "Too Spooky": {
             "Tags": "[+Attack]",
             "Prerequisites": "Apparition",
             "Frequency": "Static",
-            "Effect": "Choose Pressure or Frighten. You gain the chosen Ability."
+            "Effect": "Choose Pressure, Omen, or Frighten. You gain the chosen Ability"
         },
         "Silent Assassin": {
             "Tags": "[+Attack][Weapon]",
             "Prerequisites": "Apparition, Adept Intimidate or Occult Education",
             "Frequency": "Bind 2 AP — Standard Action",
-            "Effect": "While this Feature is Bound, your Struggle Attacks and Weapon Attacks deal Ghost-Type Damage, and you gain the Dead Silent Capability."
+            "Effect": "While this Feature is Bound, your Struggle Attacks and Weapon Attacks Flinch targets on 18+, and may deal Ghost-Type Damage if you wish.",
+            "Bonus": "You gain the Dead Silent Capability, and a bonus to Stealth checks equal to half your Intimidate or Occult Education Rank."
         },
         "Shadow Form": {
             "Tags": "[+Attack]",
@@ -4787,8 +4820,8 @@
             "Tags": "[+Attack][Weapon]",
             "Prerequisites": "Shadow Arms, Master Intimidate or Occult Education",
             "Frequency": "Scene x2 — Free Action",
-            "Trigger": "You hit with an Apparition Move or Ghost- Typed Weapon Attack",
-            "Effect": "After one full round, repeat the triggering attack against one target as a Free Action, regardless of range. If this attack hits, it deals damage as if it were resisted one step further. Haunted Wounds may only affect a target once per Scene."
+            "Trigger": "You hit with an Apparition Move or Ghost-Typed Weapon Attack",
+            "Effect": "After one full round, repeat the triggering attack against one target as a Free Action, regardless of range. If this attack hits, it deals damage as if it were resisted one step further. Haunted Wounds may only aﬀect a target once per Scene."
         }
     },
     "Druid": {
