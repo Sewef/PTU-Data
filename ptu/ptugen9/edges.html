@@ -11,24 +11,29 @@
   <script src="/ptu/js/json_utils.js"></script>
   <script src="/ptu/js/helpers.js"></script>
 
-  <title>PTU Data - Home gen 9</title>
+  <title>PTU Data - Edges Gen 9</title>
 </head>
 
 <body>
   <div w3-include-html="header.html"></div>
   <div class="container py-4">
-    <div class="row g-3" id="home">
-      <h1>Welcome to the PTU Data Site</h1>
-      <p>This site is dedicated to visualizing data for the Pokémon Tabletop United (PTU) role-playing game.</p>
-      <p>You can explore the different sections to discover moves, abilities, and other useful information.</p>
-      <p>Use the menu at the top to navigate between the different pages.</p>
+    <div class="row g-3" id="edges">
+      <h1>Edges Gen 9 (A-Z)</h1>
+      <div class="mb-3 w-100">
+        <input type="text" id="card-search" class="form-control" placeholder="Search edges...">
+      </div>
 
+      <div id="card-container" class="row g-3 w-100"></div>
+
+      <script>
+        loadJsonAsCard("/ptu/data/edges_core.json", document.getElementById("card-container"));
+      </script>
     </div>
   </div>
 
   <script>
     includeHTML();
-    setActive("Home");
+    setActive("Edges");
   </script>
 </body>
 
