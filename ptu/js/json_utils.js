@@ -1,13 +1,10 @@
-let allItems = [];
-
-function loadJsonAsCard(file, container) {
+function loadJsonAsCard(file, container, cols = 3) {
     $.getJSON(file, function (data) {
         if (typeof data !== 'object' || Object.keys(data).length === 0) {
             alert(`Error: no data found in ${file}`);
             return;
         }
 
-        // Convert object into array of {Name, ...fields} or {Name, Description}
         allItems = Object.entries(data).map(([name, value]) => {
             if (typeof value === "string") {
                 return { Name: name, Description: value };
@@ -16,7 +13,7 @@ function loadJsonAsCard(file, container) {
             }
         });
 
-        renderFilteredCards(allItems, container);
+        renderFilteredCards(allItems, container, cols);
 
         const searchInput = document.getElementById("card-search");
         if (searchInput) {
@@ -27,18 +24,24 @@ function loadJsonAsCard(file, container) {
                         typeof value === "string" && value.toLowerCase().includes(query)
                     )
                 );
-                renderFilteredCards(filtered, container);
+                renderFilteredCards(filtered, container, cols);
             });
         }
     });
 }
 
-function renderFilteredCards(data, container) {
+function renderFilteredCards(data, container, cols) {
     container.innerHTML = "";
+
+    // Calcule la classe bootstrap en fonction du nombre de colonnes
+    // Exemple : cols=3 → col-md-4 (12/3=4), cols=2 → col-md-6, cols=4 → col-md-3
+    const colSize = Math.floor(12 / cols);
+    const colClass = `col-12 col-md-${colSize}`;
+
     data.forEach(item => {
         const cardHTML = renderItemAsCard(item);
         const cardDiv = document.createElement("div");
-        cardDiv.className = "col-12 col-md-4";
+        cardDiv.className = colClass;
         cardDiv.innerHTML = `<div class="card h-100"><div class="card-body">${cardHTML}</div></div>`;
         container.appendChild(cardDiv);
     });
