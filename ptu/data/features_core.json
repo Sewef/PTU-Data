@@ -542,12 +542,13 @@
             "Rank 3 Prerequisites": "Hobbyist",
             "Rank 4 Prerequisites": "Hobbyist",
             "Frequency": "Static",
-            "Effect": "Each Rank of Dilettante, you gain both an Edge and a General Feature from the lists below. You may gain the chosen Edge and Feature even if you do not meet the Skill prerequisites. You must meet any other Prerequisites. Whenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead."
+            "Effect": "Each Rank of Dilettante, you gain both an Edge and a General Feature from the lists below. You may gain the chosen Edge and Feature even if you do not meet the Skill prerequisites. You must meet any other Prerequisites. Whenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead.\n» Edges: Acrobat, Apricorn Balls, Basic Balls, Basic Cooking, Basic Martial Arts, Beast Master, Breeder, Dynamism, Gem Lore, Grace, Green Thumb, Groomer, Instinctive Aptitude, Instruction, Intimidating Presence, Iron Mind, Medic Training, Mounted Prowess, Repel Crafter, Slippery, Swimmer, Train the Reserves.\n» Features: Command Versatility, Commander’s Voice, Defender, Dive, First Aid Expertise, Let Me Help You With That, Poké Ball Crafter, PokéManiac, Press, Quick Switch, Skill Monkey, Species Savant, any [Training] Feature, Tutoring, Walk It Off.\nWhenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead."
         },
         "Dabbler": {
             "Prerequisites": "Hobbyist, Expert General Education or Perception",
             "Frequency": "Static",
-            "Effect": "At the Level 5, 10, 20, 30, and 40 Character Advancement Level Milestones, if you choose to gain Bonus Stats, you also gain an Edge for which you qualify. If you choose Bonus Edges or Features, you also gain +2 to your choice of Attack or Special Attack. This applies retroactively."
+            "Effect": "At the Level 5, 10, 20, 30, and 40 Character Advancement Level Milestones, if you choose to gain Bonus Stats, you also gain an Edge for which you qualify. If you choose Bonus Edges or Features, you also gain +2 to your choice of Attack or Special Attack. This applies retroactively.",
+            "Note": "It takes a long time for this Feature to bear fruit. Talk to your GM about how long the campaign will last and whether you will reach higher Levels."
         },
         "Look and Learn": {
             "Prerequisites": "Hobbyist, Expert General Education or Perception",
@@ -817,7 +818,7 @@
             "Tags": "[+Speed]",
             "Prerequisites": "Juggler",
             "Frequency": "Static",
-            "Effect": "You may roll an additional Xd6 during the In- troduction Stage of a Contest, where X is half of your Acrobatics Rank. You may choose any Contest Stat to attempt to gain Dice for with this roll."
+            "Effect": "You may roll an additional Xd6 during the Introduction Stage of a Contest, where X is half of your Acrobatics Rank. You may choose any Contest Stat to attempt to gain Dice for with this roll."
         },
         "Round Trip": {
             "Tags": "[+Speed]",
@@ -3079,7 +3080,7 @@
             "Tags": "[Class][+HP]",
             "Prerequisites": "Novice Survival",
             "Frequency": "One Time Use — Extended Action",
-            "Effect": "Choose a Terrain in which you have spent at least three nights. You gain Naturewalk for that terrain and a +2 bonus to Athletics, Acrobatics, Stealth, Perception, and Survival Checks in that terrain. When you have 2 Sur- vivalist Features, you may choose a second Terrain. When you have 4 Survivalist Features, you may choose a third terrain. When you have 6 Survivalist Features, you may choose a fourth terrain."
+            "Effect": "Choose a Terrain in which you have spent at least three nights. You gain Naturewalk for that terrain and a +2 bonus to Athletics, Acrobatics, Stealth, Perception, and Survival Checks in that terrain. When you have 2 Survivalist Features, you may choose a second Terrain. When you have 4 Survivalist Features, you may choose a third terrain. When you have 6 Survivalist Features, you may choose a fourth terrain."
         },
         "Natural Fighter": {
             "Tags": "[+HP]",
@@ -3861,7 +3862,7 @@
             "Tags": "[Orders][Stratagem]",
             "Prerequisites": "Channeler",
             "Frequency": "Bind 2 AP — Standard Action",
-            "Effect": "When you use Spirit Boost, choose a Channeled Pokémon. You may choose the target of Spirit Boost if you wish. While Spirit Boost is Bound, the target has one of the following effects, depending on the highest Combat Stat of the chosen Pokémon. (In the event of a tie, you choose which Stat to use)\nAttack: The target gains Bonus Damage when using Physical attacks equal to your Intuition Rank.\nDefense: The target gains Damage Reduction against Physical attacks equal to your Intuition Rank.\nSpecial Attack: The target gains gain Bonus Damage when using Special attacks equal to your Intuition Rank.\nSpecial Defense: The target gains Damage Reduc- tion against Special attacks equal to your Intuition Rank.\nSpeed: The target gains a bonus to their Initiative equal to your Intuition Rank."
+            "Effect": "When you use Spirit Boost, choose a Channeled Pokémon. You may choose the target of Spirit Boost if you wish. While Spirit Boost is Bound, the target has one of the following effects, depending on the highest Combat Stat of the chosen Pokémon. (In the event of a tie, you choose which Stat to use)\nAttack: The target gains Bonus Damage when using Physical attacks equal to your Intuition Rank.\nDefense: The target gains Damage Reduction against Physical attacks equal to your Intuition Rank.\nSpecial Attack: The target gains gain Bonus Damage when using Special attacks equal to your Intuition Rank.\nSpecial Defense: The target gains Damage Reduction against Special attacks equal to your Intuition Rank.\nSpeed: The target gains a bonus to their Initiative equal to your Intuition Rank."
         },
         "Power Conduit": {
             "Prerequisites": "Channeler, Adept Intuition",
@@ -4242,7 +4243,7 @@
             "Prerequisites": "Lessons in Rage and Pain, Expert Intimidate",
             "Frequency": "At-Will — Free Action",
             "Trigger": "You hit with a Berserker Move or Weapon Attack",
-            "Effect": "Immediately gain one Injury before resolving the triggering attack. You gain a Tick of Temporary Hit Points and may cure yourself of a Persistent Status Affliction. The triggering attack doubles your damage bo- nus from Lessons in Rage and Pain."
+            "Effect": "Immediately gain one Injury before resolving the triggering attack. You gain a Tick of Temporary Hit Points and may cure yourself of a Persistent Status Affliction. The triggering attack doubles your damage bonus from Lessons in Rage and Pain."
         }
     },
     "Rune Master": {
@@ -4256,7 +4257,7 @@
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Rune Master",
             "Frequency": "Static",
-            "Effect": "You learn the Move Hidden Power. Whenever you use Hidden Power, it may be either Physical or Spe- cial, adding the appropriate Attack Stat."
+            "Effect": "You learn the Move Hidden Power. Whenever you use Hidden Power, it may be either Physical or Special, adding the appropriate Attack Stat."
         },
         "Rewrite": {
             "Tags": "[+Attack or Special Attack]",
@@ -4270,7 +4271,7 @@
             "Prerequisites": "Rune Master",
             "Frequency": "At-Will — Extended Action",
             "Target": "Your Unown that is not part of a Prime Unown",
-            "Effect": "You may set the target Unown against any flat surface, and turn the Unown into a glyph. Glyphs have HP equal to your Level, and no other stats. Glyphs last until they are destroyed or intentionally de-activated, at which time the Unown returns to Unown Space, dis- appearing forever. You may have a number of active Glyphs equal to your Occult Education Rank. When setting a Glyph, you may have the Glyphs be either visi- ble or invisible, as you prefer. At any time, as a Standard Action, you may Channel any Glyph youhave set down. This causes the Glyph's eye to open and become visi- ble if it was not. While you are channeling a Glyph, you are able to see through the Glyph, listen through it, and project your voice through it."
+            "Effect": "You may set the target Unown against any flat surface, and turn the Unown into a glyph. Glyphs have HP equal to your Level, and no other stats. Glyphs last until they are destroyed or intentionally de-activated, at which time the Unown returns to Unown Space, disappearing forever. You may have a number of active Glyphs equal to your Occult Education Rank. When setting a Glyph, you may have the Glyphs be either visible or invisible, as you prefer. At any time, as a Standard Action, you may Channel any Glyph youhave set down. This causes the Glyph's eye to open and become visible if it was not. While you are channeling a Glyph, you are able to see through the Glyph, listen through it, and project your voice through it."
         },
         "Words of Power": {
             "Tags": "[+Attack or Special Attack]",
@@ -4284,7 +4285,7 @@
             "Prerequisites": "Glyph",
             "Frequency": "Bind 1 AP — Standard Action",
             "Target": "A Glyph you have put down, regardless of distance",
-            "Effect": "You give the Glyph a Trigger, which may be as vague or as precise as you like (i.e.: \"If anyone enters the room\", \"if James peeks in my diary\", \"If a Torkoal uses Surf while I scream the word 'Gelato'\"). If the trigger is met within the Rune's 30 meters, the Rune will become visible, and will begin screeching loudly, alerting any- one nearby. You are capable of hearing this screeching noise in your head, regardless of your current distance. Glyphs will remember their Triggers as long as the AP spent on the Feature is Bound. If you have the Explosive Runes or Sentry Runes Features, you may instruct this Glyph to automatically use the chosen Feature as a Free Action when it is triggered if you have the AP to spend. You may have only one Glyph use Explosive Runes per round, even if multiple Runes are triggered at the same time."
+            "Effect": "You give the Glyph a Trigger, which may be as vague or as precise as you like (i.e.: \"If anyone enters the room\", \"if James peeks in my diary\", \"If a Torkoal uses Surf while I scream the word 'Gelato'\"). If the trigger is met within the Rune's 30 meters, the Rune will become visible, and will begin screeching loudly, alerting anyone nearby. You are capable of hearing this screeching noise in your head, regardless of your current distance. Glyphs will remember their Triggers as long as the AP spent on the Feature is Bound. If you have the Explosive Runes or Sentry Runes Features, you may instruct this Glyph to automatically use the chosen Feature as a Free Action when it is triggered if you have the AP to spend. You may have only one Glyph use Explosive Runes per round, even if multiple Runes are triggered at the same time."
         },
         "Explosive Runes": {
             "Tags": "[+Attack or Special Attack]",
@@ -4336,7 +4337,7 @@
             "Prerequisites": "Arcanist, Expert Occult Education",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "Your Special Move misses all targets",
-            "Effect": "You do not expend the Frequency of the trig- gering Move. If you applied a Power Manipulation to the triggering Move, you are refunded the AP for the Manipulation or do not expend the Frequency for it."
+            "Effect": "You do not expend the Frequency of the triggering Move. If you applied a Power Manipulation to the triggering Move, you are refunded the AP for the Manipulation or do not expend the Frequency for it."
         },
         "Soul Investment": {
             "Tags": "[+Special Attack]",
@@ -4448,7 +4449,7 @@
             "Tags": "[+Attack][Weapon]",
             "Prerequisites": "Marksman, Adept Perception or Combat",
             "Frequency": "At-Will — Standard Action",
-            "Effect": "Create a Line X, and place a Blast 3 with at least three meters overlapping the Line's area. X is equal to your Weapon's Range. For one full round, if a foe moves in or out of that area, you may make a Ranged Weapon attack, Frequency allowing, against that foe as a Free Ac- tion. You may not attack a specific foe more than once per round this way. While this is in effect, if you Move from your current location, Overwatch's effect is lost."
+            "Effect": "Create a Line X, and place a Blast 3 with at least three meters overlapping the Line's area. X is equal to your Weapon's Range. For one full round, if a foe moves in or out of that area, you may make a Ranged Weapon attack, Frequency allowing, against that foe as a Free Action. You may not attack a specific foe more than once per round this way. While this is in effect, if you Move from your current location, Overwatch's effect is lost."
         },
         "Clear Shot": {
             "Tags": "[+Attack][Weapon]",
@@ -4495,27 +4496,27 @@
             "Prerequisites": "Skirmisher",
             "Frequency": "At-Will — Free Action",
             "Trigger": "You hit a foe with a damaging Attack",
-            "Effect": "Until the end of your next turn, that foe is con- sidered Flanked, is Slowed, and cannot take actions as Priority or Interrupt. Harrier may only be used on a foe once per Scene."
+            "Effect": "Until the end of your next turn, that foe is considered Flanked, is Slowed, and cannot take actions as Priority or Interrupt. Harrier may only be used on a foe once per Scene."
         },
         "Weapon Finesse": {
             "Tags": "[+Speed][Weapon]",
             "Prerequisites": "Counter Stance, Adept Combat or Acrobatics",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You hit a foe with a Weapon Attack.",
-            "Effect": "After the attack is resolved, you may immediate- ly use a Disarm, Trip, or Push Maneuver against that foe as a Free Action. The Maneuver automatically hits, but you must still make an Opposed Roll."
+            "Effect": "After the attack is resolved, you may immediately use a Disarm, Trip, or Push Maneuver against that foe as a Free Action. The Maneuver automatically hits, but you must still make an Opposed Roll."
         },
         "Outmaneuver": {
             "Tags": "[+Speed]",
             "Prerequisites": "Harrier, Adept Combat or Acrobatics",
             "Frequency": "Scene x3 — Free Action",
             "Trigger": "You use a damaging Attack",
-            "Effect": "Add half your Evasion to your Accuracy Roll for the attack, and all foes hit by the attack have their Initia- tive reduced by your full Evasion value."
+            "Effect": "Add half your Evasion to your Accuracy Roll for the attack, and all foes hit by the attack have their Initiative reduced by your full Evasion value."
         },
         "Swift Strikes": {
             "Tags": "[+Speed][Weapon]",
             "Prerequisites": "4 Skirmisher Features, Master Combat or Acrobatics",
             "Frequency": "1 AP — Standard Action, Special",
-            "Effect": "Use a Weapon Attack as if it had the Priority Key- word. If the Move already had the Priority Keyword, use it as if it had the Priority (Advanced) Keyword instead."
+            "Effect": "Use a Weapon Attack as if it had the Priority Keyword. If the Move already had the Priority Keyword, use it as if it had the Priority (Advanced) Keyword instead."
         }
     },
     "Swarmlord": {
@@ -4625,7 +4626,7 @@
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Shade Caller, Adept Guile or Stealth",
             "Frequency": "2 AP — Standard Action",
-            "Effect": "You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the en- counter. All targets without Darkvision attacking from or into the Shifting Darkness receive a -3 penalty to Ac- curacy. You may count Shifting Darkness as complete darkness for the purposes of activating your Living Shadow. As a Static effect, you also gain the Darkvision Capability."
+            "Effect": "You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the encounter. All targets without Darkvision attacking from or into the Shifting Darkness receive a -3 penalty to Accuracy. You may count Shifting Darkness as complete darkness for the purposes of activating your Living Shadow. As a Static effect, you also gain the Darkvision Capability."
         },
         "Dark Soul": {
             "Tags": "[+Attack or Special Attack]",
@@ -4662,7 +4663,7 @@
         },
         "Call the Dragon's Rage": {
             "Tags": "[+Attack][Weapon]",
-            "Prerequisites": "Bare the Dragon’s Claws, Master Com- mand or Intimidate",
+            "Prerequisites": "Bare the Dragon’s Claws, Master Command or Intimidate",
             "Frequency": "Static",
             "Effect": "Your learn the Moves Dragon Claw and Dragon Tail. You may use these Moves as Weapon Attacks when wielding Melee Weapons."
         },
@@ -4691,7 +4692,7 @@
             "Tags": "[+Speed]",
             "Prerequisites": "Storm Wizard Rank 1, Adept Acrobatics",
             "Frequency": "Static",
-            "Effect": "You gain the Magnetic Capability and may use this magnetism to stick to surfaces with significant met- al content (ex: metal walls obviously, concrete with met- al I-beams inside, etc). You may use your Overland to traverse any such surfaces, even if that means walking vertically up a wall or upside down on a ceiling. You may choose not to be Pushed when on such a surface."
+            "Effect": "You gain the Magnetic Capability and may use this magnetism to stick to surfaces with significant metal content (ex: metal walls obviously, concrete with metal I-beams inside, etc). You may use your Overland to traverse any such surfaces, even if that means walking vertically up a wall or upside down on a ceiling. You may choose not to be Pushed when on such a surface."
         },
         "Body of Lightning": {
             "Tags": "[+Speed]",
@@ -4704,7 +4705,7 @@
             "Prerequisites": "Storm Wizard Rank 1, Adept Focus",
             "Frequency": "2 AP - Standard Action",
             "Target": "An item made of conductive material",
-            "Effect": "Choose one of your Electric Type Moves with a target. You Charge the target item with this Move. Bot- tled Lightning counts as using the Move for frequency purposes. You may expend this Charge as a Swift Ac- tion on your turn to use the Move the item was charged with, originating from the item. If a Pokémon or Train- er touches a Charged item, you may instead activate this Swift Action as if it had the Priority keyword. At the end of a Scene, all items lose their Charge, and you may only have X items Charged at a time where X is half your Focus Rank."
+            "Effect": "Choose one of your Electric Type Moves with a target. You Charge the target item with this Move. Bottled Lightning counts as using the Move for frequency purposes. You may expend this Charge as a Swift Action on your turn to use the Move the item was charged with, originating from the item. If a Pokémon or Trainer touches a Charged item, you may instead activate this Swift Action as if it had the Priority keyword. At the end of a Scene, all items lose their Charge, and you may only have X items Charged at a time where X is half your Focus Rank."
         },
         "Storm Wizard": {
             "Tags": "[Ranked 3][+Speed]",
@@ -5126,7 +5127,7 @@
             "Tags": "[+Defense]",
             "Prerequisites": "Miasmic",
             "Frequency": "Static",
-            "Effect": "Your body becomes more malleable, and even your bones are able to flex when required. You do not gain Injuries from taking Massive damage, and you gain a +2 Bonus to any Acrobatics or Athletics Check made to bend, squeeze, or otherwise contort your body -in- cluding those to avoid Trip or Grapple maneuvers."
+            "Effect": "Your body becomes more malleable, and even your bones are able to flex when required. You do not gain Injuries from taking Massive damage, and you gain a +2 Bonus to any Acrobatics or Athletics Check made to bend, squeeze, or otherwise contort your body -including those to avoid Trip or Grapple maneuvers."
         },
         "Vile Body": {
             "Tags": "[+Defense]",
@@ -5151,7 +5152,7 @@
             "Prerequisites": "Miasma’s Call, Master Stealth or Guile",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You hit with Acid, Clear Smog, Sludge Bomb, Sludge Wave, or Toxic; or use Acid Armor.",
-            "Effect": "The Effect of this feature depends on the triggering move.\n» Acid: Instead of its usual effect, Acid lowers the Spe- cial Defense of all targets hit by -2 Combat Stages.\n» Clear Smog: Clear Smog's target loses 5 HP for each combat stage lost.\n» Sludge Bomb: The Target receives a -3 penalty to Accuracy Rolls until the end of your next turn.\n» Sludge Wave: All targets in Sludge Wave's Burst are Slowed until the end of their next turn.\n» Toxic: The target's Badly Poison Hit Point Loss begins at 10 instead of 5.\n» Acid Armor: You are not slowed while liquefied and resist all special damage one step."
+            "Effect": "The Effect of this feature depends on the triggering move.\n» Acid: Instead of its usual effect, Acid lowers the Special Defense of all targets hit by -2 Combat Stages.\n» Clear Smog: Clear Smog's target loses 5 HP for each combat stage lost.\n» Sludge Bomb: The Target receives a -3 penalty to Accuracy Rolls until the end of your next turn.\n» Sludge Wave: All targets in Sludge Wave's Burst are Slowed until the end of their next turn.\n» Toxic: The target's Badly Poison Hit Point Loss begins at 10 instead of 5.\n» Acid Armor: You are not slowed while liquefied and resist all special damage one step."
         }
     },
     "Stone Warrior": {
@@ -5165,7 +5166,7 @@
             "Tags": "[+Defense]",
             "Prerequisites": "Stone Warrior",
             "Frequency": "Bind 2 AP — Standard Action",
-            "Effect": "You adopt one of the stances below, gaining the effects of the stance while this Feature remains bound. You may switch your active Stance as a Standard Action without rebinding your AP. The benefits from this Feature do not apply if you are not standing on a solid surface, such as deep mud or snow, or if you are outright swimming or even flying.\n» Falling Boulder Stance: You gain a +5 bonus to all Damage Rolls, but lose 5 HP from Recoil whenever you hit with an attack.\n» Moon Mountain Stance: Your initiative is lowered by -5, but you gain 5 Damage Reduction and are im- mune to Push or Pull effects.\n» Roiling Earth Stance: After a successful Intercept action, you may make a Struggle Attack against a foe within range."
+            "Effect": "You adopt one of the stances below, gaining the effects of the stance while this Feature remains bound. You may switch your active Stance as a Standard Action without rebinding your AP. The benefits from this Feature do not apply if you are not standing on a solid surface, such as deep mud or snow, or if you are outright swimming or even flying.\n» Falling Boulder Stance: You gain a +5 bonus to all Damage Rolls, but lose 5 HP from Recoil whenever you hit with an attack.\n» Moon Mountain Stance: Your initiative is lowered by -5, but you gain 5 Damage Reduction and are immune to Push or Pull effects.\n» Roiling Earth Stance: After a successful Intercept action, you may make a Struggle Attack against a foe within range."
         },
         "Rock Power": {
             "Tags": "[Ranked 2][+Defense]",
@@ -5292,7 +5293,7 @@
             "Tags": "[+Speed]",
             "Prerequisites": "Backpacker, Expert Survival",
             "Frequency": "2 AP — Swift Action",
-            "Effect": "Use or Equip an Item or piece of Equipment which would normally require a Standard Action to use or equip. You may not make an Attack with a Weapon this way - using other Items or Equipment that requires \"Attacks\" (such as Cap Cannons or Poké Balls) is acceptable."
+            "Effect": "Use or Equip an Item or piece of Equipment which would normally require a Standard Action to use or equip. You may not make an Attack with a Weapon this way  - using other Items or Equipment that requires \"Attacks\" (such as Cap Cannons or Poké Balls) is acceptable."
         },
         "Hero's Journey": {
             "Tags": "[Ranked 3][+Speed]",
