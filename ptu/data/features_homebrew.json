@@ -3862,42 +3862,43 @@
     },
     "Ninja": {
         "Ninja": {
-            "Tags": "[Class][+Speed]",
-            "Prerequisites": "Novice Stealth, Novice Combat",
+            "Tags": "[Class][+Speed][Gift]",
+            "Prerequisites": "Novice Stealth",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Double Team and Poison Powder."
+            "Effect": "You learn the Moves Double Team and Poison Powder.",
+            "Bonus": "You gain the Sneak's Tricks Edge, even if you do not meet the prerequisites."
         },
         "Ninja's Arsenal": {
             "Tags": "[+Speed]",
             "Prerequisites": "Ninja",
             "Frequency": "At-Will — Extended Action",
-            "Effect": "You may craft an Antidote, Smoke Ball, Caltrops, or Toxic Caltrops for $100."
+            "Effect": "You may craft an Antidote, Smoke Ball, Caltrops, or Toxic Caltrops for $100. You are treated as if you know the Moves Smokescreen, Spikes, and Toxic Spikes for any Features or Prerequisites."
         },
         "Poison Weapons": {
             "Tags": "[+Speed][Weapon]",
             "Prerequisites": "Ninja, Adept Stealth",
-            "Frequency": "1 AP — Free Action",
-            "Trigger": "You make a Weapon Attack.",
-            "Effect": "The attack or Move Poisons its targets on 16+, and you may have it deal Poison-Type Damage if you wish."
+            "Frequency": "Static",
+            "Effect": "You learn the Moves Cross Poison and Poison Fang. You may use these Moves as Weapon Attacks when wielding Melee or Short Range Weapons."
         },
         "Genjutsu": {
             "Tags": "[+Speed]",
             "Prerequisites": "Ninja, Adept Stealth",
             "Frequency": "At-Will — Standard Action",
-            "Effect": "You form an Illusion around yourself. This Illusion may be used to hide yourself in a shroud of darkness if in darkness, or to make yourself look like a mundane object (such as a crate, potted plant, or similar). The Illusion can even fool Aura, concealing you from Aura Sight for its duration. However, the Illusion requires complete concentration, and is broken if you take any actions at all. Anyone that interacts with the Illusion directly may make an Occult Education or Intuition Check with a DC equal to 10 plus your Stealth Rank; if they succeed, the Illusion is broken."
+            "Effect": "You form an Illusion around yourself. This Illusion may be used to hide yourself in a shroud of darkness if in darkness, or to make yourself look like a mundane object (such as a crate, potted plant, or similar). The Illusion can even fool Aura, concealing you from Aura Sight for its duration. However, the Illusion requires complete concentration, and is broken if you take any actions at all. Anyone that interacts with the Illusion directly may make an Occult Education or Intuition Check with a DC equal to 10 plus your Stealth Rank; if they succeed, the Illusion is broken.",
+            "Bonus": "You gain the Blender Capability."
         },
         "Utility Drop": {
             "Tags": "[+Speed]",
             "Prerequisites": "Ninja’s Arsenal, Expert Stealth",
             "Frequency": "At-Will — Swift Action",
             "Trigger": "You Shift",
-            "Effect": "You may use a Smoke Ball, Caltrops, or Toxic Caltrops as a Free action during your Shift. Instead of the Move's usual area of effect, you leave one square of Smokescreen, Spikes, or Toxic Spikes on each square you leave as you Shift. Once you place 8 meters of Smoke, Spikes, or Toxic Spikes you may not place any more."
+            "Effect": "You may use a Smoke Ball, Caltrops, or Toxic Caltrops as a Free Action during your Shift. Instead of the Move's usual area of effect, you leave one square of Smokescreen, Spikes, or Toxic Spikes on each square you leave as you Shift. Once you have placed 8 meters of Smoke, Spikes, or Toxic Spikes, you may not place any more."
         },
         "Weightless Step": {
             "Tags": "[+Speed]",
             "Prerequisites": "Ninja, Expert Stealth",
             "Frequency": "Static",
-            "Effect": "You gain the Infiltrator Ability."
+            "Effect": "Choose Infiltrator or Quick Feet. You gain the chosen Ability."
         },
         "Kinjutsu": {
             "Tags": "[+Speed]",
@@ -3911,19 +3912,27 @@
             "Tags": "[Class][+Special Defense]",
             "Prerequisites": "Mystic Senses, Novice Perception",
             "Frequency": "Static",
-            "Effect": "You gain the Pickup Ability."
+            "Effect": "You gain the Forewarn Ability."
         },
         "Divination": {
             "Tags": "[+Special Defense]",
             "Prerequisites": "Oracle",
             "Frequency": "Daily x3 — Extended Action",
-            "Effect": "You may perform an Augury or Scrying."
+            "Effect": "You may perform an Augury or Scrying.",
+            "Augury": {
+                "Target": "Self",
+                "Effect": "The user has a vision, dream, or similar that may depict past, present, or future events. The clarity of the dream may vary, as well as the user’s ability to remember it. See the next page for more details (p.187)."
+            },
+            "Scrying": {
+                "Target": "An item you are touching, or your current location",
+                "Effect": "You see visions of what has happened to the target over the last 24 hours. The images may be jumbled or unclear, to the discretion of your GM. See the next page for more details (p.187)."
+            }
         },
         "Unveiled Sight": {
             "Tags": "[+Special Defense]",
             "Prerequisites": "Oracle",
             "Frequency": "Static",
-            "Effect": "You can see through Illusions. This means you can spot Illusions from the Illusionist capability, Illusion Ability, and Genjutsu Feature as being fake. You are immune to Moves with the Illusion keyword, Double Team cannot be activated against you, and you bypass Substitutes. As a Standard Action, you can create a Burst 4, dispelling all Illusion effects within."
+            "Effect": "You gain the Darkvision capability, and you may see through Invisibility and Illusions. You are Immune to and ignore the effects of foes' Moves with the Illusion keyword, and these Moves may not be activated against you. You may target characters removed from the field due to Ghost Step, Phasing, or any Ghost-Type Move as if they were in the square from which they disappeared, and you ignore the effects of the Blender and Stealth Capabilities. Additionally, when you spend AP to increase an Accuracy roll, you gain a +2 bonus instead of +1(this bonus stacks with Instinctive Aptitude)."
         },
         "Small Prophecies": {
             "Tags": "[+Special Defense]",
@@ -3939,10 +3948,11 @@
             "Effect": "You mark the target with a mystical power which allows you to close your eyes and focus to perceive the world with their senses from their perspective. You may Bind this Ability multiple times, each time on a different target, but you may only concentrate on one Mark of Vision at a time, and you may only have a number of Marks at one time equal to half your Perception Rank. A target may choose to end this effect at any time, or to deny you access to their senses temporarily without ending the effect entirely. You have a rough sense of how far away and in what direction marked targets are."
         },
         "Two-Second Preview": {
-            "Tags": "[+Special Defense]",
-            "Prerequisites": "3 Oracle Features, Expert Perception",
+            "Tags": "[+Special Defense] [Gift]",
+            "Rank 1 Prerequisites": "2 Oracle Features, Adept Perception",
+            "Rank 2 Prerequisites": "Prescience",
             "Frequency": "Static",
-            "Effect": "You gain the Instinct Ability."
+            "Effect": "Each Rank, you gain one of Dive or All-Seeing Eyes, and one of Hawkeye or Saw That Coming, even if you do not meet the prerequisites."
         },
         "Prescience": {
             "Tags": "[+Special Defense]",
