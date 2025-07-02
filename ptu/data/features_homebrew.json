@@ -4192,57 +4192,59 @@
     "Rune Master": {
         "Rune Master": {
             "Tags": "[Class][+Attack or Special Attack]",
-            "Prerequisites": "Own 2 Unown, Novice Occult Education",
+            "Prerequisites": "Basic Runes",
             "Frequency": "Static",
-            "Effect": "You gain the Gather Unown capability, and your Unown gain the Letter Press Capability. When using Gather Unown, you are treated as a level 20 Pokémon."
-        },
-        "Hidden Power": {
-            "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Rune Master",
-            "Frequency": "Static",
-            "Effect": "You learn the Move Hidden Power. Whenever you use Hidden Power, it may be either Physical or Spe- cial, adding the appropriate Attack Stat."
+            "Effect": "You learn the Move Hidden Power. You gain an additional instance of Hidden Power when you have 3 Rune Master Features, and another when you have 5, to a total of 3 instances. Whenever you use Hidden Power, it may be either Physical or Special, adding the appropriate Attack Stat."
         },
         "Rewrite": {
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Hidden Power",
+            "Prerequisites": "Rune Master",
             "Frequency": "Daily — Extended Action",
             "Target": "Self or a willing Pokémon with Hidden Power.",
-            "Effect": "Reroll the Type for an instance of Hidden Power the target knows If you target an Unown, you may transform the target into a different letter."
+            "Effect": "Reroll the Type for an instance of Hidden Power that the target knows. If you target an Unown, you may transform it into a different letter."
         },
         "Glyph": {
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Rune Master",
-            "Frequency": "At-Will — Extended Action",
-            "Target": "Your Unown that is not part of a Prime Unown",
-            "Effect": "You may set the target Unown against any flat surface, and turn the Unown into a glyph. Glyphs have HP equal to your Level, and no other stats. Glyphs last until they are destroyed or intentionally de-activated, at which time the Unown returns to Unown Space, dis- appearing forever. You may have a number of active Glyphs equal to your Occult Education Rank. When setting a Glyph, you may have the Glyphs be either visi- ble or invisible, as you prefer. At any time, as a Standard Action, you may Channel any Glyph youhave set down. This causes the Glyph's eye to open and become visi- ble if it was not. While you are channeling a Glyph, you are able to see through the Glyph, listen through it, and project your voice through it."
+            "Prerequisites": "Rune Master, Tag Scribe",
+            "Frequency": "At-Will — Special",
+            "Effect": "As an Extended Action, you may set a Cleanse Tag against any ﬂat surface, turning it into a Glyph. Glyphs have HP equal to your Level, and no other stats. Glyphs last until they are destroyed or intentionally deactivated. You may have a number of active Glyphs equal to your Occult Education Rank. When setting a Glyph, you may have the Glyphs be either visible or invisible, as you prefer. At any time, as a Standard Action, you may Channel any Glyph you have set down. This causes the Glyph to become visible if it was not. While you are channeling a Glyph, you are able to see through the Glyph, listen through it, and project your voice through it. Alternatively, you may pay 1 AP to set a Glyph as a Swift Action.",
+            "Bonus": "Your Unown gain the Letter Press Capability."
         },
         "Words of Power": {
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Adept Occult Education, Hidden Power Static",
-            "Frequency": "Static",
+            "Prerequisites": "Rune Master, Adept Occult Education",
+            "Frequency": "At-Will - Free Action",
             "Trigger": "You or your Pokémon use Hidden Power",
-            "Effect": "Instead of a Burst, you may choose to have Hidden Power be a 1 Target Melee, 1 Target 6m, or Cone 2. Additionally, you and your Prime Unown always have STAB on Hidden Power as if you or they were of the same Type."
+            "Effect": "Instead of a Burst, you may choose to have Hidden Power be a 1 Target Melee, 1 Target 6m, Line 3, or Cone 2.",
+            "Bonus": "You and your Prime Unown always have STAB on Hidden Power as if you were of the same Type."
         },
         "Alarm Runes": {
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Glyph",
             "Frequency": "Bind 1 AP — Standard Action",
             "Target": "A Glyph you have put down, regardless of distance",
-            "Effect": "You give the Glyph a Trigger, which may be as vague or as precise as you like (i.e.: \"If anyone enters the room\", \"if James peeks in my diary\", \"If a Torkoal uses Surf while I scream the word 'Gelato'\"). If the trigger is met within the Rune's 30 meters, the Rune will become visible, and will begin screeching loudly, alerting any- one nearby. You are capable of hearing this screeching noise in your head, regardless of your current distance. Glyphs will remember their Triggers as long as the AP spent on the Feature is Bound. If you have the Explosive Runes or Sentry Runes Features, you may instruct this Glyph to automatically use the chosen Feature as a Free Action when it is triggered if you have the AP to spend. You may have only one Glyph use Explosive Runes per round, even if multiple Runes are triggered at the same time."
+            "Effect": "You give the Glyph a Trigger, which may be as vague or as precise as you like. If the trigger is met within 30 meters of the Rune, the Rune will become visible and begin screeching loudly, alerting anyone nearby. You are capable of hearing this screeching noise in your head, regardless of your current distance, and you may deactivate it as a Free Action. Glyphs will remember their Triggers as long as the AP spent on the Feature is Bound. If you have the Explosive Runes Feature, you may instruct this Glyph to automatically use Hidden Power as a Free Action when it is triggered for 1 AP. You may have only one Glyph use Explosive Runes per round, even if multiple Runes are triggered at the same time. Each Alarm Rune may only be triggered once per Scene."
         },
         "Explosive Runes": {
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Adept Occult Education, Glyph, Hidden Power",
-            "Frequency": "1 AP — Standard Action",
+            "Prerequisites": "Glyph, Adept Occult Education",
+            "Frequency": "2 AP – Shift Action",
             "Target": "A Glyph you have put down, regardless of distance",
-            "Effect": "You may use Hidden Power, originating the attack from the location of the targeted Glyph. Use your own Stats and Hidden Power values to calculate damage. Using this Feature causes the Glyph to become visible and glow for a minute afterwards."
+            "Effect": "You may use Hidden Power, originating from the location of the targeted Glyph. Use your own Stats and Hidden Power values to calculate damage. Using this Feature causes the Glyph to become visible and glow for a minute afterwards. Additionally, whenever you use Hidden Power, you may have it originate from any Glyph within X meters of you. X is your Occult Education Rank."
         },
-        "Sentry Runes": {
+        "Unlocked Potential": {
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Expert Occult Education, Explosive Runes, Hidden Power",
-            "Frequency": "1 AP — Standard Action",
-            "Target": "A Glyph you have put down, regardless of distance",
-            "Effect": "The target Glyph becomes an Unown of your Trainer Level, its Stats allocated as you wish. This Unown knows a single instance of Hidden Power, identical to your own. The Glyph can fight on its own without needing you to command it. At the end of the encounter, or after 5 minutes, the Unown returns to Unown Space forever, destroying the Glyph. You may only have one Glyph active in this way at a time; if various Alarm Glyphs are triggered to become Sentries at the same time, only one does so; the others will do so once the previous one has been destroyed if the Trigger condition is still being met."
+            "Prerequisites": "Words of Power, Expert Occult Education",
+            "Frequency": "Scene x2 - Swift Action",
+            "Trigger": "You or your Pokémon use Hidden Power",
+            "Effect": "For this use, Hidden Power gains a bonus to damage equal to your Occult Education Rank, and its Range(including any Area of Effect Ranges) is increased by +1. If you used it as a 1 Target 6m Move, it becomes a Ranged Blast 2. If this Feature is used in combination with Ley Lines, the range is not increased, but all Legal Targets are Vulnerable against the attack and for one Full Round afterward if the attack hits. Unlocked Potential may be used only once per target per Scene."
+        },
+        "Ley Lines": {
+            "Tags": "[+Attack or Special Attack]",
+            "Prerequisites": "4 Rune Master Features including Glyph, Master Occult Education",
+            "Frequency": "Scene x2 - Standard Action",
+            "Trigger": "2 or more squares that contain Glyphs within X meters of you",
+            "Effect": "Create a closed polygon by drawing straight lines connecting yourself and the targeted squares, then use the Move Hidden Power. For this use, Hidden Power gains the Friendly Keyword, and affects all Legal Targets within the area of the created polygon. X is equal to your Occult Education Rank doubled."
         }
     },
     "Arcanist": {
@@ -4338,7 +4340,7 @@
     },
     "Marksman": {
         "Marksman": {
-            "Tags": "[Class, +Attack][Weapon]",
+            "Tags": "[Class][+Attack][Weapon]",
             "Prerequisites": "Novice Combat, Novice Perception",
             "Frequency": "Static",
             "Effect": "You gain the Sniper Ability."
@@ -4353,7 +4355,7 @@
             "Tags": "[+Attack][Weapon]",
             "Prerequisites": "Marksman, Adept Combat",
             "Frequency": "1 AP — Standard Action",
-            "Effect": "You may make two Struggle Attacks with a -2 penalty to Accuracy, each targeting the same foe. If the first attack gains the benefit of Aiming Down the Sights or Clear Shot, the second attack also gains the same benefits for free."
+            "Effect": "You may make two Struggle Attacks, each targeting the same foe. If the first attack gains the benefit of Aiming Down the Sights or Clear Shot, the second attack also gains the same benefits for free."
         },
         "Overwatch": {
             "Tags": "[+Attack][Weapon]",
@@ -4371,8 +4373,8 @@
         "Crippling Shot": {
             "Tags": "[+Attack][Weapon]",
             "Prerequisites": "Marksman, Expert Perception or Combat",
-            "Frequency": "2 AP — Full Action",
-            "Effect": "Make a Ranged Struggle Attack attack with a -2 penalty to Accuracy. If you hit, the attack deals Damage as if it was resisted one step, but the target becomes Slowed, loses 1 Speed Combat Stage, and you initiate a Trip Maneuver against the target. You may use your Perception Skill to resolve the Opposed Check if you wish."
+            "Frequency": "2 AP — Standard Action",
+            "Effect": "Make a Ranged Weapon Attack with a Damage Base of 8 or lower. If you hit, the target is Slowed for 1 Full Round, loses 1 Speed Combat Stage, and you initiate a Trip Maneuver against the target. You must still hit with the Trip Maneuver, and you may use your Perception Skill to resolve the Opposed Check if you wish."
         },
         "Dead-Eye Shot": {
             "Tags": "[+Attack][Weapon]",
@@ -4901,39 +4903,45 @@
             "Tags": "[Class][+Defense]",
             "Prerequisites": "Elemental Connection (Ground), Novice Intuition, Novice Focus",
             "Frequency": "Static",
-            "Effect": "Pick two of Bulldoze, Mud Shot, or Sand-Attack. You learn the chosen Moves."
+            "Effect": "Choose two of Bulldoze, Mud Shot, Mud-Slap, or Sand-Attack. You learn the chosen Moves."
         },
         "Earthen Bond": {
             "Tags": "[+Defense]",
             "Prerequisites": "Earth Shaker",
             "Frequency": "Static",
-            "Effect": "You gain the Tremorsense Capability, and you gain Naturewalk for Cave, Mountain and Desert."
+            "Effect": "You gain the Tremorsense and Groundshaper Capabilities, and you gain Naturewalk for Cave, Mountain and Desert."
         },
         "Earth Mother's Blessing": {
             "Tags": "[Ranked 2][+Defense]",
             "Rank 1 Prerequisites": "Earth Shaker, Adept Focus or Intuition",
             "Rank 2 Prerequisites": "Ground Out, Master Focus or Intuition",
             "Frequency": "Static",
-            "Effect": "Each Rank, choose Arena Trap or Lightning Rod. You gain the chosen Ability."
+            "Effect": "Each Rank, choose Mud Dweller, Arena Trap, or Lightning Rod. You gain the chosen Ability."
+        },
+        "Wall Of Earth": {
+            "Tags": "[+Defense]",
+            "Prerequisites": "Earth Shaker",
+            "Frequency": "X AP - Special",
+            "Effect": "You create up to 4 meters of wall within 8 Meters. All 4 meters must be adjacent with at least one other space of the wall. You may have up to 8 Meters of wall active at any time. You may use this Feature on your own turn as a Standard Action for no AP cost, or, once per Scene, you may activate this Feature as a Standard Action Interrupt for 2 AP. You may only use this Feature in areas with sufficient sources of soil or mud nearby."
+        },
+        "Ground Out": {
+            "Tags": "[+Defense]",
+            "Prerequisites": "Earth Shaker, Expert Focus or Intuition",
+            "Frequency": "Static",
+            "Effect": "Choose two of Drill Run, Spikes, Magnitude, or Mud Bomb. You learn the chosen Moves."
         },
         "Earthshifter": {
             "Tags": "[+Defense]",
             "Prerequisites": "Ground Out",
-            "Frequency": "2 AP — Swift Action",
+            "Frequency": "Scene x2 – Swift Action",
             "Trigger": "You hit with a damaging Ground Type Move",
-            "Effect": "You initiate a Trip Maneuver against 1 target of the Move. The Maneuver automatically hits, and you may use your Focus or Intuition for the opposed check"
-        },
-        "Ground Out": {
-            "Tags": "[+Defense]",
-            "Prerequisites": "Earth Shaker, Expert Intuition, Expert Focus",
-            "Frequency": "Static",
-            "Effect": "Pick two of Drill Run, Magnitude, or Mud Bomb. You learn the chosen Moves."
+            "Effect": "You initiate a Trip Maneuver against all targets of the Move. The Maneuver automatically hits, and you may use your Focus or Intuition for the opposed check."
         },
         "Tectonic Shift": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Ground Out, Master Intuition, Master Focus",
+            "Prerequisites": "Ground Out, Master Intuition or Master Focus",
             "Frequency": "Static",
-            "Effect": "Pick two of Earthquake, Earth Power, or Sand Tomb. You learn the chosen Moves."
+            "Effect": "Pick two of Earthquake, Shore Up, Earth Power, or Sand Tomb. You learn the chosen Moves."
         }
     },
     "Frost Touched": {
@@ -5070,24 +5078,24 @@
             "Tags": "[Class][+Defense]",
             "Prerequisites": "Elemental Connection (Rock), Novice Combat, Novice Survival",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Rock Tomb and Wide Guard."
+            "Effect": "Choose two of Accelerock, Rock Tomb, and Wide Guard. You gain the chosen Moves."
         },
         "Stone Stance": {
             "Tags": "[+Defense]",
             "Prerequisites": "Stone Warrior",
             "Frequency": "Bind 2 AP — Standard Action",
-            "Effect": "You adopt one of the stances below, gaining the effects of the stance while this Feature remains bound. You may switch your active Stance as a Standard Action without rebinding your AP. The benefits from this Feature do not apply if you are not standing on a solid surface, such as deep mud or snow, or if you are outright swimming or even flying.\n» Falling Boulder Stance: You gain a +5 bonus to all Damage Rolls, but lose 5 HP from Recoil whenever you hit with an attack.\n» Moon Mountain Stance: Your initiative is lowered by -5, but you gain 5 Damage Reduction and are im- mune to Push or Pull effects.\n» Roiling Earth Stance: After a successful Intercept action, you may make a Struggle Attack against a foe within range."
+            "Effect": "You adopt one of the stances below, gaining the effects of the stance while this Feature remains bound. You may switch your active Stance as a Standard Action without rebinding your AP. The benefits from this Feature do not apply if you are not standing on a solid surface, such as deep mud or snow, or if you are outright swimming or even ﬂying.\n» Falling Boulder Stance: You gain a +1 bonus to Accuracy with Rock-type attacks and a +5 bonus to all Damage Rolls, but lose 5 HP from Recoil whenever you hit with an attack.\n» Moon Mountain Stance: Your initiative is lowered by -5, but you gain 5 Damage Reduction and are immune to Push or Pull effects.\n» Roiling Earth Stance: After a successful Intercept action, you may make a Struggle Attack or use Accelerock against a foe within range as a Free Action. You must know Accelerock in order to use it."
         },
         "Rock Power": {
             "Tags": "[Ranked 2][+Defense]",
-            "Rank 1 Prerequisites": "Stone Warrior, Adept Combat or Survival",
+            "Rank 1 Prerequisites": "Adept Combat or Survival",
             "Rank 2 Prerequisites": "Expert Combat or Survival",
             "Frequency": "Static",
-            "Effect": "Each Rank, choose one of Sturdy, Rock Head, Run Up, or Sand Veil. You gain the chosen Ability. If you choose Sand Veil, you may consider sand a \"solid surface\" for the purposes of Stone Stance."
+            "Effect": "Each Rank, choose one of Cave Crasher, Sturdy, Rock Head, or Sand Veil. You gain the chosen Ability. If you choose Sand Veil, you may consider sand a \"solid surface\" for the purposes of Stone Stance."
         },
         "Shards of Stone": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Stone Warrior, Expert Combat or Survival",
+            "Prerequisites": "Expert Combat or Survival",
             "Frequency": "Static",
             "Effect": "You learn the Moves Rock Slide and Stealth Rock"
         },
