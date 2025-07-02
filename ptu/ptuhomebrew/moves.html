@@ -17,19 +17,36 @@
 <body>
   <div w3-include-html="header.html"></div>
   <div class="container py-4">
-    <div class="row g-3" id="moves">
-      <h1>Moves Homebrew (A-Z)</h1>
-      <div class="mb-3 w-100">
-        <input type="text" id="card-search" class="form-control" placeholder="Search moves...">
+
+    <div class="row g-3" id="keywords">
+      <div class="col-12">
+        <h1>Keywords Homebrew (A-Z)</h1>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#keywords-container"
+          aria-expanded="false" aria-controls="keywords-container">
+          Show / Hide
+        </button>
       </div>
 
-      <div id="card-container" class="row g-3 w-100"></div>
-      <script>
-        loadJsonAsCard("/ptu/data/moves/moves_homebrew.json", document.getElementById("card-container"));
-      </script>
+      <div id="keywords-container" class="collapse mt-3 row g-3 w-100"></div>
     </div>
-  </div>
 
+    <div class="row g-3" id="moves">
+      <div class="col-12">
+        <h1>Moves Homebrew (A-Z)</h1>
+        <div class="mb-3 w-100">
+          <input type="text" id="card-search" class="form-control" placeholder="Search moves...">
+        </div>
+      </div>
+    </div>
+
+    <div id="moves-container" class="row g-3 w-100"></div>
+
+    <script>
+      loadJsonAsCard("/ptu/data/moves/keywords_9G.json", document.getElementById("keywords-container"), 2);
+      loadJsonAsCard("/ptu/data/moves/moves_9G.json", document.getElementById("moves-container"));
+    </script>
+  </div>
+  
   <script>
     includeHTML();
     setActive("Moves");
