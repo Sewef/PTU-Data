@@ -117,6 +117,12 @@ function renderSection(sectionTitle) {
     const section = fullData[sectionTitle];
     if (!section) return;
 
+    // Add section title heading
+    const sectionHeading = document.createElement("h2");
+    sectionHeading.textContent = sectionTitle;
+    sectionHeading.className = "mb-4 mt-3";
+    container.appendChild(sectionHeading);
+
     // Create and insert search input
     const searchDiv = document.createElement("div");
     searchDiv.className = "mb-3";
@@ -131,10 +137,9 @@ function renderSection(sectionTitle) {
     container.appendChild(searchDiv);
 
     const row = document.createElement("div");
-    row.className = "row";
+    row.className = "row g-3";  // ensure proper spacing between cards
     row.id = "feature-row";
 
-    // Save cards so we can filter later
     const cardMap = {};
 
     for (const cardTitle in section) {
@@ -158,12 +163,10 @@ function renderSection(sectionTitle) {
         }
     });
 
-    // Optional: scroll behavior (if you want to use it again)
-    const header = document.querySelector('div[w3-include-html="header.html"]') || document.querySelector("header");
-    const headerHeight = header ? header.offsetHeight : 0;
-    const scrollTop = container.offsetTop - headerHeight - 16;
-    // window.scrollTo({ top: scrollTop, behavior: "smooth" }); // Uncomment if needed
+    // Optional scroll behavior
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Uncomment if needed
 }
+
 
 
 function setActiveLink(link) {
