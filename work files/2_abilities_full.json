@@ -779,7 +779,7 @@
     },
     {
         "name": "Interference",
-        "frequency": "At-Will - Standard Action",
+         "frequency": "At-Will – Standard Action",
         "effect": "The accuracy of all foes within 3 meters is reduced by -2 until the end of the user’s next turn."
     },
     {
@@ -789,7 +789,7 @@
     },
     {
         "name": "Iron Barbs",
-        "frequency": "At-Will - Free Action, Reaction",
+         "frequency": "At-Will – Free Action, Reaction",
         "trigger": "The user is hit by a damaging Melee Attack",
         "effect": "The attacker loses Hit Points equal to Tick of Hit Points."
     },
@@ -800,7 +800,7 @@
     },
     {
         "name": "Justified",
-        "frequency": "At-Will - Free Action",
+         "frequency": "At-Will – Free Action",
         "trigger": "The user is hit by a damaging Dark Type Move",
         "effect": "The user may raise its Attack 1 Combat Stage. The user always gains a +4 bonus to Skill Checks made to Intercept."
     },
@@ -935,7 +935,7 @@
     },
     {
         "name": "Memory Wipe",
-        "frequency": "Scene - Special",
+         "frequency": "Scene – Special",
         "effect": "The user selects a Pokémon or Trainer within 10 meters. If used as a Swift Action, the last Move used by the target becomes Disabled. If used as a Standard Action, the target is Flinched. If used as an Extended Action that takes about 1 minute, it can erase up to 5 minutes that have occurred within the last 30 minutes from the target’s memory."
     },
     {
@@ -955,7 +955,7 @@
     },
     {
         "name": "Mini-Noses",
-        "frequency": "Daily - Standard Action",
+         "frequency": "Daily – Standard Action",
         "effect": "The user detaches up to three Mini-Noses from themselves and places them adjacent to them on the battlefield. These Mini-Noses have HP equal to the user’s level but otherwise uses their user’s stats. Each Mini- Nose has a Levitate Speed of 4. The user may Shift them each round on their turn, and they may originate any Ranged Move from one of the Mini-Noses instead of themselves if they choose. If a Mini-Nose is reduced to 0 HP, it is destroyed and takes a full 24 hours to regrow, one at a time. If the user has less than three grown Mini- Noses, then this ability can only place as many on the field as are available. All Mini-Noses deactivate, but are not destroyed, if the user is Fainted. Mini-Noses cannot be made to Shift more than 5 meters away from the user; if they are forced farther away, they will automatically Shift toward the user on the user’s turn."
     },
     {
@@ -1116,7 +1116,7 @@
     },
     {
         "name": "Pixilate",
-        "frequency": "At-Will - Free Action",
+         "frequency": "At-Will – Free Action",
         "trigger": "The user uses a Normal-Type damaging Move",
         "effect": "The Move is changed to be Fairy-Type."
     },
@@ -1283,7 +1283,7 @@
     },
     {
         "name": "Rough Skin",
-        "frequency": "At-Will - Free Action, Reaction",
+         "frequency": "At-Will – Free Action, Reaction",
         "trigger": "The user is hit by a damaging Melee Attack",
         "effect": "The attacker loses a tick of Hit Points."
     },
@@ -1447,7 +1447,7 @@
     },
     {
         "name": "Sound Lance",
-        "frequency": "Scene x2 - Swift Action",
+         "frequency": "Scene x2 – Swift Action",
         "trigger": "The user uses Supersonic",
         "effect": "Connection – Supersonic. The target of Supersonic takes Special Normal-Type damage equal to the user’s Special Attack score. This effect functions independently of whether Supersonic hits its target."
     },
@@ -1463,7 +1463,7 @@
     },
     {
         "name": "Spinning Dance",
-        "frequency": "At-Will - Free Action",
+         "frequency": "At-Will – Free Action",
         "trigger": "The user is targeted by an attack, but is missed",
         "effect": "If not Fainted, Paralyzed, or Asleep, the user gains +1 Evasion and may immediately Shift 1 meter."
     },
@@ -1539,7 +1539,7 @@
     },
     {
         "name": "Strange Tempo",
-        "frequency": "At-Will - Special",
+         "frequency": "At-Will – Special",
         "effect": "While Confused, the user may choose either to 1) As a Free Action, not to roll for Confusion, instead acting normally or 2) As a Standard Action, cure themselves of Confusion and gain +2 Combat Stages to the Stat of their choice."
     },
     {
@@ -1600,7 +1600,7 @@
     },
     {
         "name": "Symbiosis",
-        "frequency": "At-Will - Swift Action",
+         "frequency": "At-Will – Swift Action",
         "effect": "The user may pass its held item to an adjacent ally."
     },
     {
@@ -1631,13 +1631,13 @@
     },
     {
         "name": "Telepathy",
-        "frequency": "At-Will - Shift Action, Interrupt",
+         "frequency": "At-Will – Shift Action, Interrupt",
         "trigger": "An ally uses an area-of-effect attack that would",
         "effect": "You may Shift to remove yourself from the area- of-effect."
     },
     {
         "name": "Teravolt",
-        "frequency": "At-Will - Free Action",
+         "frequency": "At-Will – Free Action",
         "trigger": "The user damages a foe",
         "effect": "The damaged foe’s Abilities are disabled for the remainder of the encounter."
     },
@@ -1710,7 +1710,7 @@
     },
     {
         "name": "Turboblaze",
-        "frequency": "At-Will - Free Action",
+         "frequency": "At-Will – Free Action",
         "trigger": "The user damages a foe",
         "effect": "The damaged foe’s Abilities are disabled for the remainder of the encounter."
     },

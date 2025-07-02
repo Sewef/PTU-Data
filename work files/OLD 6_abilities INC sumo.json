@@ -12,18 +12,18 @@
     },
     {
         "name": "Beast Boost",
-        "frequency": "At-Will - Free Action",
+         "frequency": "At-Will – Free Action",
         "effect": "Whenever the user knocks out a target, they receive +1 Combat Stage in their highest (non- HP) stat."
     },
     {
         "name": "Dancer",
-        "frequency": "Scene x2 - Free Action",
+         "frequency": "Scene x2 – Free Action",
         "trigger": "Someone within 10 meters uses a Status-Class Dance Move",
         "effect": "The user may immediately use the triggering Move as a free action."
     },
     {
         "name": "Disguise",
-        "frequency": "Daily - Free Action",
+         "frequency": "Daily – Free Action",
         "trigger": "The user is hit by a damaging Move",
         "effect": "The triggering attack attack instead misses and has no effect. The user then gains +1 CS in a Stat of their choice. [Defensive]"
     },
@@ -35,7 +35,7 @@
     },
     {
         "name": "Chemical Romance",
-        "frequency": "Effect: Connection - Sweet Scent. Whenever the user hits a male target with Poison Gas, Smog,",
+         "frequency": "Effect: Connection – Sweet Scent. Whenever the user hits a male target with Poison Gas, Smog,",
         "effect": ""
     },
     {
@@ -51,12 +51,12 @@
     },
     {
         "name": "Electric Surge",
-        "frequency": "Scene x3 - Swift Action",
+         "frequency": "Scene x3 – Swift Action",
         "effect": "The Field becomes Electrified, as if affected by the Move Electric Terrain, for one full round."
     },
     {
         "name": "Emergency Exit",
-        "frequency": "Scene - Free Action",
+         "frequency": "Scene – Free Action",
         "effect": "When the user’s Hit Points drop below half their maximum, their trainer may immediately recall the user and send out another Pokemon as a Free Action. If the user hasn’t taken their turn yet, their replacement may act this round. [Defensive]",
         "bonus": " The user is immune to Trapped."
     },
@@ -72,7 +72,7 @@
     },
     {
         "name": "Galvanize",
-        "frequency": "At-Will - Free Action",
+         "frequency": "At-Will – Free Action",
         "effect": "If the user attacks with a Normal-frequency Move, that Move is Electric-frequency instead."
     },
     {
@@ -83,7 +83,7 @@
     },
     {
         "name": "Grassy Surge",
-        "frequency": "Scene x3 - Swift Action",
+         "frequency": "Scene x3 – Swift Action",
         "effect": "The Field becomes Grassy, as if affected by the Move Grassy Terrain, for one full round."
     },
     {
@@ -93,13 +93,13 @@
     },
     {
         "name": "Innards Out",
-        "frequency": "Scene x2 - Free Action",
+         "frequency": "Scene x2 – Free Action",
         "trigger": "The user is hit by a damaging attack",
         "effect": "The user resists the triggering attack one step further. After the attack is resolved, a foe within 2 meters loses Hit Points equal to twice the amount of Hit Points lost by the user from the triggering attack, even if the triggering attack caused the user to Faint."
     },
     {
         "name": "Liquid Voice",
-        "frequency": "At-Will - Free Action",
+         "frequency": "At-Will – Free Action",
         "trigger": "The user uses a Move with the [Sonic] keyword",
         "effect": "The triggering move loses the [Sonic] keyword, but gains the Friendly keyword and becomes Water frequencyd. If the Move was a Status Class Move, you may treat it as a Special Move with DB1."
     },
@@ -115,12 +115,12 @@
     },
     {
         "name": "Misty Surge",
-        "frequency": "Scene x3 - Swift Action",
+         "frequency": "Scene x3 – Swift Action",
         "effect": "The Field becomes Misty, as if affected by the Move Misty Terrain for one full round."
     },
     {
         "name": "Mud Shield",
-        "frequency": "Scene - Swift Action",
+         "frequency": "Scene – Swift Action",
         "effect": "The user gains two ticks worth of Temporary Hit Points.",
         "bonus": " When standing on any muddy or dirty terrain that is either Slow or Rough Terrain, the user gains +5 Damage Reduction. Defensive."
     },
@@ -136,18 +136,18 @@
     },
     {
         "name": "Psychic Surge",
-        "frequency": "Scene x3 - Swift Action",
+         "frequency": "Scene x3 – Swift Action",
         "effect": "The Field becomes Weird, as if affected by the Move Psychic Terrain, for one full round."
     },
     {
         "name": "Queenly Majesty",
-        "frequency": "Scene x2 - Free Action",
+         "frequency": "Scene x2 – Free Action",
         "effect": "Connection - Stomp - if an adjacent target uses a Priority Move or an Interrupt action, the user may attack that target with Stomp as a Free Action Interrupt.",
         "bonus": " The user cannot be targeted by Interrupt Moves and enemies may not activate Interrupts in response to the user’s actions."
     },
     {
         "name": "Revelation",
-        "frequency": "Scene x2 - Free Action",
+         "frequency": "Scene x2 – Free Action",
         "trigger": "Someone within 10 meters uses a damaging Dance Move",
         "effect": "The user may immediately use the triggering Move as a Standard Action interrupt.",
         "bonus": " Whenever the user uses a Dance Move, they gain +2 to Accuracy Rolls until the end of their next turn."
@@ -159,12 +159,12 @@
     },
     {
         "name": "Receiver",
-        "frequency": "Special - Free Action",
+         "frequency": "Special – Free Action",
         "effect": "Each of the effects below may be used once per Scene when triggered; – When an ally faints, the user selects one of their Abilities. The user gains that Ability until the end of the encounter. – When the user faints, they may grant use of their Basic Ability to an ally on the field for the rest of the encounter."
     },
     {
         "name": "RKS System",
-        "frequency": "Scene - Free Action",
+         "frequency": "Scene – Free Action",
         "effect": "If the user is hit by a damaging attack, they may calculate damage as if they were Normal-frequency instead. If they were already Normal-frequency, they resist all damage one step further.",
         "bonus": " The user’s frequency changes to match the frequency of their held Memory Disc."
     },
@@ -191,24 +191,24 @@
     },
     {
         "name": "Soul Heart",
-        "frequency": "Scene x2 - Free Action",
+         "frequency": "Scene x2 – Free Action",
         "effect": "Whenever a combatant faints, the user receives +2 Special Attack Combat Stages and gains a tick of Temporary Hit Points."
     },
     {
         "name": "Stamina",
-        "frequency": "At-Will - Free Action",
+         "frequency": "At-Will – Free Action",
         "effect": "On Electric Terrain or while under half maximum Hit Points, the user’s Initiative is doubled."
     },
     {
         "name": "Steelworker",
-        "frequency": "Scene - Free Action",
+         "frequency": "Scene – Free Action",
         "trigger": "The user takes damage while adjacent to its Anchor",
         "effect": "The user calculates damage as if it was only Steel-frequencyd.",
         "bonus": " The user gains STAB on Steel-frequency Moves that originate from its Anchor."
     },
     {
         "name": "Tangling Hair",
-        "frequency": "At-Will - Free Action",
+         "frequency": "At-Will – Free Action",
         "effect": "When the user is hit by a Melee attack, the attacker receives -1 Speed Combat Stage and is Slowed."
     },
     {
@@ -224,7 +224,7 @@
     },
     {
         "name": "Water Compaction",
-        "frequency": "At-Will - Free Action",
+         "frequency": "At-Will – Free Action",
         "effect": "Whenever the user is hit by a Water-frequency Move, they receive +2 Defense Combat Stages. [Defensive]"
     },
     {
@@ -234,7 +234,7 @@
     },
     {
         "name": "Accelerate",
-        "frequency": "Scene x2 - Standard Action, Priority",
+         "frequency": "Scene x2 – Standard Action, Priority",
         "effect": "The user may activate a damaging Move to which they add STAB with Priority. If the Move hits, the user adds half their Speed Stat to the Damage Roll. If the Move already had Priority, the attack gains a +4 Bonus to Accuracy."
     },
     {

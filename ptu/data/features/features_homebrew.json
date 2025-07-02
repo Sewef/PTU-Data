@@ -264,7 +264,7 @@
         "Combat Medic": {
             "Tags": "[+Defense or Special Defense]",
             "Prerequisites": "Adept Medicine Education, Novice Combat",
-            "Frequency": "1 AP - Free Action",
+             "Frequency": "1 AP – Free Action",
             "Trigger": "You apply a Restorative Item",
             "Effect": "You may make a Struggle Attack against an adjacent foe as a Free Action. This Struggle Attack counts as an Attack of Opportunity for any Features or Edges you may have, but does not count against the number of Attacks of Opportunity you may make per round."
         },
@@ -277,7 +277,7 @@
         "Speed Demon": {
             "Tags": "[+Speed]",
             "Prerequisites": "Speed's My Game, Expert Acrobatics or Athletics; 20 Speed",
-            "Frequency": "Scene - Swift Action",
+             "Frequency": "Scene – Swift Action",
             "Effect": "You gain 3 Speed Tokens. If not spent, these tokens disappear at the end of the Scene. You can spend a Speed Token as a Free Action whenever:\n» You are hit by an attack, to gain DR against that attack equal to your Speed Evasion;\n» You make an Accuracy Check, to add half your Speed Evasion to the result;\n» You hit with a damaging melee attack, to gain a bonus to damage equal to 2 + your Speed Evasion"
         },
         "Ow The Edge": {
@@ -779,7 +779,7 @@
         "Shrug Off": {
             "Tags": "[+HP][Gift]",
             "Prerequisites": "Enduring Soul, Adept Athletics or Focus",
-            "Frequency": "At-Will - Extended Action",
+             "Frequency": "At-Will – Extended Action",
             "Target": "Your Pokémon with at least 2 Tutor Points remaining",
             "Effect": "The target loses 2 Tutor Points, and gains the Walk It Off Feature, treated in all ways as an Ability for the target.",
             "Bonus": "You gain the Walk It Off Feature, even if you do not meet the prerequisites."
@@ -4312,7 +4312,7 @@
         "Words of Power": {
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Rune Master, Adept Occult Education",
-            "Frequency": "At-Will - Free Action",
+             "Frequency": "At-Will – Free Action",
             "Trigger": "You or your Pokémon use Hidden Power",
             "Effect": "Instead of a Burst, you may choose to have Hidden Power be a 1 Target Melee, 1 Target 6m, Line 3, or Cone 2.",
             "Bonus": "You and your Prime Unown always have STAB on Hidden Power as if you were of the same Type."
@@ -4334,14 +4334,14 @@
         "Unlocked Potential": {
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Words of Power, Expert Occult Education",
-            "Frequency": "Scene x2 - Swift Action",
+             "Frequency": "Scene x2 – Swift Action",
             "Trigger": "You or your Pokémon use Hidden Power",
             "Effect": "For this use, Hidden Power gains a bonus to damage equal to your Occult Education Rank, and its Range(including any Area of Effect Ranges) is increased by +1. If you used it as a 1 Target 6m Move, it becomes a Ranged Blast 2. If this Feature is used in combination with Ley Lines, the range is not increased, but all Legal Targets are Vulnerable against the attack and for one Full Round afterward if the attack hits. Unlocked Potential may be used only once per target per Scene."
         },
         "Ley Lines": {
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "4 Rune Master Features including Glyph, Master Occult Education",
-            "Frequency": "Scene x2 - Standard Action",
+             "Frequency": "Scene x2 – Standard Action",
             "Trigger": "2 or more squares that contain Glyphs within X meters of you",
             "Effect": "Create a closed polygon by drawing straight lines connecting yourself and the targeted squares, then use the Move Hidden Power. For this use, Hidden Power gains the Friendly Keyword, and affects all Legal Targets within the area of the created polygon. X is equal to your Occult Education Rank doubled."
         }
@@ -4746,7 +4746,7 @@
         "Bottled Lightning": {
             "Tags": "[+Speed]",
             "Prerequisites": "Storm Wizard Rank 1, Adept Focus",
-            "Frequency": "2 AP - Standard Action",
+             "Frequency": "2 AP – Standard Action",
             "Target": "An item made of conductive material",
             "Effect": "Choose one of your Electric Type Moves with a target. You Charge the target item with this Move. Bottled Lightning counts as using the Move for frequency purposes. You may expend this Charge as a Swift Action on your turn to use the Move the item was charged with, originating from the item. If a Pokémon or Trainer touches a Charged item, you may instead activate this Swift Action as if it had the Priority keyword. At the end of a Scene, all items lose their Charge, and you may only have X items Charged at a time where X is half your Focus Rank."
         },
@@ -5053,7 +5053,7 @@
         "Wall Of Earth": {
             "Tags": "[+Defense]",
             "Prerequisites": "Earth Shaker",
-            "Frequency": "X AP - Special",
+             "Frequency": "X AP – Special",
             "Effect": "You create up to 4 meters of wall within 8 Meters. All 4 meters must be adjacent with at least one other space of the wall. You may have up to 8 Meters of wall active at any time. You may use this Feature on your own turn as a Standard Action for no AP cost, or, once per Scene, you may activate this Feature as a Standard Action Interrupt for 2 AP. You may only use this Feature in areas with sufficient sources of soil or mud nearby."
         },
         "Ground Out": {
@@ -5452,7 +5452,7 @@
         "Corrupt Reality": {
             "Tags": "[+Special Defense]",
             "Prerequisites": "Glitch Bender, Adept Perception, Occult Education, or Focus",
-            "Frequency": "Scene - Free Action",
+             "Frequency": "Scene – Free Action",
             "Target": "Any roll made by a foe",
             "Effect": "You may force the foe to reroll that roll."
         },

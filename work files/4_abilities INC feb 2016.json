@@ -32,7 +32,7 @@
     },
     {
         "name": "Aura Break",
-        "frequency": "Scene - Swift Action",
+         "frequency": "Scene – Swift Action",
         "effect": "The foe reveals its abilities. Pick one ability; any Damage Bonuses (either Damage Base increases or Damage Roll bonuses) granted by the ability instead become Damage Penalties of the same value."
     },
     {
@@ -42,7 +42,7 @@
     },
     {
         "name": "Bad Dreams",
-        "frequency": "At-Will - Swift Action",
+         "frequency": "At-Will – Swift Action",
         "effect": "All Sleeping targets within 5 meters lose a Tick of Hit Points. If at least one target lost Hit Points this way, the user gains a tick of Temporary Hit Points."
     },
     {
@@ -63,7 +63,7 @@
     },
     {
         "name": "Bone Lord",
-        "frequency": "At-Will - Free Action",
+         "frequency": "At-Will – Free Action",
         "trigger": "You hit with Bone Club, Bonemerang, or Bone",
         "effect": "Connection – Bonemerang. Once per Scene per Move, the following Moves may be used as if they had the following bonuses: - Bone Club: Bone Club’s target loses 1 Defense and Special Attack CS. - Bonemerang: Has a Range of Line 6 but loses the Double Strike keyword - Bone Rush: Bone Rush automatically ‘hits’ four times (as per the Five Strike keyword)."
     },
@@ -175,7 +175,7 @@
     },
     {
         "name": "Flare Boost",
-        "frequency": "Scene - Swift Action",
+         "frequency": "Scene – Swift Action",
         "effect": "The user gains +3Attack and Special Attack Combat Stages. Flare Boost may only be used while Burned."
     },
     {
@@ -200,7 +200,7 @@
     },
     {
         "name": "Gale Wings",
-        "frequency": "Scene x2 - Free Action, Priority",
+         "frequency": "Scene x2 – Free Action, Priority",
         "effect": "The user may activate Gale Wings to use a Flying- Type Move with Priority. If the Move is a Damaging Move, the user adds half their Speed Stat to the Damage Roll."
     },
     {
@@ -210,13 +210,13 @@
     },
     {
         "name": "Gore",
-        "frequency": "Scene x2 - Swift Action",
+         "frequency": "Scene x2 – Swift Action",
         "trigger": "The user uses Horn Attack",
         "effect": "Connection - Horn Attack. Horn Attack gains the Double Strike keyword, and pushes its target 2 meters."
     },
     {
         "name": "Grass Pelt",
-        "frequency": "Scene - Swift Action",
+         "frequency": "Scene – Swift Action",
         "effect": "The user gains two ticks worth of Temporary Hit Points.",
         "bonus": " When standing on any grassy or leafy terrain that is either Slow or Rough Terrain, the user gains +5 Damage Reduction. Defensive."
     },
@@ -247,12 +247,12 @@
     },
     {
         "name": "Hydration",
-        "frequency": "Scene - Swift Action",
+         "frequency": "Scene – Swift Action",
         "effect": "The user is cured of one Status Affliction. Hydration’s Frequency is ignored if used during Rainy Weather."
     },
     {
         "name": "Ice Body",
-        "frequency": "Daily x5 - Swift Action",
+         "frequency": "Daily x5 – Swift Action",
         "effect": "The user gains a Tick of Hit Points. Ice Body may only be used while the user is under 50% Hit Points or in Hailing Weather.",
         "bonus": " The user is immune to Hit Point loss from Hail"
     },
@@ -268,7 +268,7 @@
     },
     {
         "name": "Interference",
-        "frequency": "Scene - Swift Action",
+         "frequency": "Scene – Swift Action",
         "effect": "The accuracy of all foes within 3 meters is reduced by -2 for 1 full round."
     },
     {
@@ -278,21 +278,21 @@
     },
     {
         "name": "Justified",
-        "frequency": "At-Will - Free Action",
+         "frequency": "At-Will – Free Action",
         "trigger": "The user is hit by a damaging Dark Type Move or",
         "effect": "The user may raise its Attack by +1 Combat Stage.",
         "bonus": " The user always gains a +4 bonus to Skill Checks made to Intercept."
     },
     {
         "name": "Kampfgeist",
-        "frequency": "Scene - Free Action",
+         "frequency": "Scene – Free Action",
         "trigger": "The user takes Bug, Dark, or Rock-Type Damage",
         "effect": "The triggering damage is resisted one step further.",
         "bonus": " The user gains STAB on Fighting-Type Moves."
     },
     {
         "name": "Leaf Guard",
-        "frequency": "Scene - Swift Action",
+         "frequency": "Scene – Swift Action",
         "effect": "The user is cured of one Status Affliction. Leaf Guard’s Frequency is ignored if used during Sunny Weather."
     },
     {
@@ -346,12 +346,12 @@
     },
     {
         "name": "Memory Wipe",
-        "frequency": "Scene - Special",
+         "frequency": "Scene – Special",
         "effect": "If used as a Swift Action, the last Move used by the target becomes Disabled. If used as a Standard Action, the target is Flinched and Paralyzed. If used as an Extended Action that takes about 1 minute, it can erase up to 10 minutes that have occurred within the last 30 minutes from the target’s memory."
     },
     {
         "name": "Migraine",
-        "frequency": "Scene x2 - Free Action",
+         "frequency": "Scene x2 – Free Action",
         "trigger": "The user hits with Confusion while at 50% Hit",
         "effect": "Connection - Confusion. Confusion automatically gives its target the Confusion Affliction and is a Critical Hit."
     },
@@ -403,7 +403,7 @@
     },
     {
         "name": "Pressure",
-        "frequency": "Scene - Swift Action",
+         "frequency": "Scene – Swift Action",
         "effect": "All foes within 3 meters are Suppressed for 1 full round."
     },
     {
@@ -413,7 +413,7 @@
     },
     {
         "name": "Pumpkingrab",
-        "frequency": "Scene - Standard Action",
+         "frequency": "Scene – Standard Action",
         "effect": "The user automatically Grapples an adjacent foe and gains dominance."
     },
     {
@@ -428,7 +428,7 @@
     },
     {
         "name": "Rain Dish",
-        "frequency": "Daily x5 - Swift Action",
+         "frequency": "Daily x5 – Swift Action",
         "effect": "The user gains a Tick of Hit Points. Rain Dish may only be used while the user is under 50% Hit Points or in Rainy Weather."
     },
     {
@@ -574,7 +574,7 @@
     },
     {
         "name": "Sound Lance",
-        "frequency": "Scene x2 - Swift Action",
+         "frequency": "Scene x2 – Swift Action",
         "trigger": "The user uses Supersonic",
         "effect": "Connection – Supersonic. The target of Supersonic loses Hit Points equal to the user’s Special Attack. This occurs even if Supersonic misses."
     },
@@ -627,13 +627,13 @@
     },
     {
         "name": "Suction Cups",
-        "frequency": "At-Will - Shift Action",
+         "frequency": "At-Will – Shift Action",
         "effect": "The user gains +5 Damage Reduction for 1 full round.",
         "bonus": " The user is immune to Push effects. Defensive."
     },
     {
         "name": "Sumo Stance",
-        "frequency": "At-Will - Shift Action",
+         "frequency": "At-Will – Shift Action",
         "trigger": "The user hits a foe with a Melee Attack",
         "effect": "The triggering foe is Pushed 1 meter away from the user and the user is immune to Push Effects for 1 full round.",
         "bonus": " The user’s Weight Class is increased by +1."
@@ -645,7 +645,7 @@
     },
     {
         "name": "Sun Blanket",
-        "frequency": "Daily x5 - Swift Action",
+         "frequency": "Daily x5 – Swift Action",
         "trigger": "The user gains Initiative.",
         "effect": "The user gains a Tick of Hit Points. Sun Blanket may only be triggered while the user is under 50% Hit Points or in Sunny Weather."
     },
@@ -656,7 +656,7 @@
     },
     {
         "name": "Symbiosis",
-        "frequency": "Scene - Swift Action",
+         "frequency": "Scene – Swift Action",
         "effect": "The user choses a Held Item they are holding. If the target is willing, they also gain the effects of the chosen item for the rest of the Scene. Items that are activated at a frequency may be activated independently by the user and the the target."
     },
     {
@@ -676,7 +676,7 @@
     },
     {
         "name": "Toxic Boost",
-        "frequency": "Scene - Swift Action",
+         "frequency": "Scene – Swift Action",
         "effect": "The user gains +3 Attack and Special Attack Combat Stages. Toxic Boost may only be used while Poisoned or Badly Poisoned. Special: If the user has the Immunity Ability, they can still become Poisoned and Badly Poisoned but do not lose Hit Points from these conditions."
     },
     {
@@ -691,7 +691,7 @@
     },
     {
         "name": "Unnerve",
-        "frequency": "At-Will - Swift Action",
+         "frequency": "At-Will – Swift Action",
         "effect": "The target cannot gain positive Combat Stages or trade in Digestion Buffs for 1 full round."
     },
     {
@@ -706,7 +706,7 @@
     },
     {
         "name": "Zen Mode",
-        "frequency": "Scene - Swift Action",
+         "frequency": "Scene – Swift Action",
         "effect": "The user changes into Zen Mode forme for the rest of the Scene, and may use the Moves “Flamethrower” and “Psychic” as if they were on its Move List."
     },
     {
@@ -721,7 +721,7 @@
     },
     {
         "name": "Combo Striker",
-        "frequency": "At-Will - Free Action",
+         "frequency": "At-Will – Free Action",
         "trigger": "The user rolls a natural 1, 10, or 11 on an attack roll",
         "effect": "After the triggering attack is resolved, the user may use a Struggle Attack as a Free Action. Note: Yes, Struggle Attacks made due to Combo Striker may trigger Combo Striker."
     },
@@ -738,7 +738,7 @@
     },
     {
         "name": "Empower",
-        "frequency": "Scene - Swift Action",
+         "frequency": "Scene – Swift Action",
         "effect": "The user may use a self-targeting Status-Class Move as a Free Action."
     },
     {
@@ -748,20 +748,20 @@
     },
     {
         "name": "Full Guard",
-        "frequency": "Scene - Swift Action",
+         "frequency": "Scene – Swift Action",
         "trigger": "You take Damage while having Temporary Hit",
         "effect": "You resist the triggering Damage one step further.",
         "bonus": " Whenever you take Super-Effective Damage and you have no Temporary Hit Points, you gain a tick of Temporary Hit Points. Defensive."
     },
     {
         "name": "Giver",
-        "frequency": "Scene x2 - Swift Action",
+         "frequency": "Scene x2 – Swift Action",
         "effect": "Connection - Present. After rolling to determine Present’s Damage Base, you may choose to ignore the roll and act as if you had rolled a 1 or a 5.",
         "bonus": " The user may know any number of TM and Tutor Moves, instead of a maximum of three."
     },
     {
         "name": "Heliovolt",
-        "frequency": "At-Will - Swift Action",
+         "frequency": "At-Will – Swift Action",
         "trigger": "The user uses an Electric-Type Move",
         "effect": "For 1 full round, the user gains +1 Evasion and is considered to be in Sunny Weather."
     },
@@ -778,7 +778,7 @@
     },
     {
         "name": "Leaf Rush",
-        "frequency": "Scene x2 - Free Action, Priority",
+         "frequency": "Scene x2 – Free Action, Priority",
         "effect": "The user may activate Leaf Rush to use a Grass-Type Move with Priority. If the Move is a Damaging Move, the user adds half their Speed Stat to the Damage Roll."
     },
     {
@@ -793,7 +793,7 @@
     },
     {
         "name": "Maelstrom Pulse",
-        "frequency": "Scene x2 - Free Action, Priority",
+         "frequency": "Scene x2 – Free Action, Priority",
         "effect": "The user may activate Maelstrom Pulse to use a Water-Type Move with Priority. If the Move is a Damaging Move, the user adds half their Speed Stat to the Damage Roll."
     },
     {
@@ -823,7 +823,7 @@
     },
     {
         "name": "Snuggle",
-        "frequency": "Scene - Standard Action",
+         "frequency": "Scene – Standard Action",
         "effect": "The user and the target each gain two ticks of Temporary Hit Points."
     },
     {
@@ -843,7 +843,7 @@
     },
     {
         "name": "Tingle",
-        "frequency": "At-Will - Free Action",
+         "frequency": "At-Will – Free Action",
         "trigger": "The user hits an adjacent target foe with a 1-Target",
         "effect": "The target loses a Tick of Hit Points and takes a -5 penalty to Damage Rolls for 1 full round."
     },
