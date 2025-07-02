@@ -1,6 +1,5 @@
-[
-    {
-        "Name": "Absorb",
+{
+    "Absorb": {
         "Type": "Grass",
         "Frequency": "At-Will",
         "AC": "2",
@@ -11,8 +10,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Acid",
+    "Acid": {
         "Type": "Poison",
         "Frequency": "At-Will",
         "AC": "2",
@@ -23,8 +21,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Acid Armor",
+    "Acid Armor": {
         "Type": "Poison",
         "Frequency": "Scene",
         "AC": "None",
@@ -35,8 +32,7 @@
         "Set-Up Effect": "The user becomes Liquefied. While Liquefied, the user is Slowed and cannot take Standard Actions except to Resolve the effect of Acid Armor, and the user’s Movement is never obstructed by rough or slow terrain, and they can shift even through the smallest openings. Furthermore, while liquefied, the user is completely immune to all Physical damage, and becomes completely invisible if fully submerged in any liquid.",
         "Resolution Effect": "The user gains +1 Defense Combat Stage, and then stops being liquified."
     },
-    {
-        "Name": "Acid Spray",
+    "Acid Spray": {
         "Type": "Poison",
         "Frequency": "EOT",
         "AC": "2",
@@ -47,8 +43,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Acrobatics",
+    "Acrobatics": {
         "Type": "Flying",
         "Frequency": "EOT",
         "AC": "2",
@@ -59,8 +54,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Acupressure",
+    "Acupressure": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -70,8 +64,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Aerial Ace",
+    "Aerial Ace": {
         "Type": "Flying",
         "Frequency": "EOT",
         "AC": "None",
@@ -82,8 +75,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Aeroblast",
+    "Aeroblast": {
         "Type": "Flying",
         "Frequency": "Daily",
         "AC": "3",
@@ -94,8 +86,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "After You",
+    "After You": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -105,8 +96,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Agility",
+    "Agility": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "None",
@@ -116,8 +106,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Saving Grace"
     },
-    {
-        "Name": "Air Cutter",
+    "Air Cutter": {
         "Type": "Flying",
         "Frequency": "At-Will",
         "AC": "2",
@@ -128,8 +117,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Air Slash",
+    "Air Slash": {
         "Type": "Flying",
         "Frequency": "EOT",
         "AC": "3",
@@ -140,8 +128,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Ally Switch",
+    "Ally Switch": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "None",
@@ -151,8 +138,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Tease"
     },
-    {
-        "Name": "Amnesia",
+    "Amnesia": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "None",
@@ -162,8 +148,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Anchor Shot",
+    "Anchor Shot": {
         "Type": "Steel",
         "Frequency": "EOT",
         "AC": "2",
@@ -174,8 +159,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Ancient Power",
+    "Ancient Power": {
         "Type": "Rock",
         "Frequency": "EOT",
         "AC": "2",
@@ -186,8 +170,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Apple Acid",
+    "Apple Acid": {
         "Type": "Grass",
         "Frequency": "EOT",
         "AC": "2",
@@ -198,8 +181,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Aqua Jet",
+    "Aqua Jet": {
         "Type": "Water",
         "Frequency": "At-Will",
         "AC": "2",
@@ -210,8 +192,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Saving Grace"
     },
-    {
-        "Name": "Aqua Ring",
+    "Aqua Ring": {
         "Type": "Water",
         "Frequency": "Scene",
         "AC": "None",
@@ -221,8 +202,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Aqua Tail",
+    "Aqua Tail": {
         "Type": "Water",
         "Frequency": "EOT",
         "AC": "4",
@@ -233,8 +213,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Arm Thrust",
+    "Arm Thrust": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "4",
@@ -245,8 +224,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Aromatherapy",
+    "Aromatherapy": {
         "Type": "Grass",
         "Frequency": "Scene",
         "AC": "None",
@@ -256,8 +234,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Aromatic Mist",
+    "Aromatic Mist": {
         "Type": "Fairy",
         "Frequency": "EOT",
         "AC": "None",
@@ -267,8 +244,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Assist",
+    "Assist": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -278,8 +254,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Tease"
     },
-    {
-        "Name": "Assurance",
+    "Assurance": {
         "Type": "Dark",
         "Frequency": "At-Will",
         "AC": "2",
@@ -290,8 +265,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Astonish",
+    "Astonish": {
         "Type": "Ghost",
         "Frequency": "At-Will",
         "AC": "2",
@@ -302,8 +276,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Astral Barrage",
+    "Astral Barrage": {
         "Type": "Ghost",
         "Frequency": "Daily",
         "AC": "2",
@@ -314,8 +287,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Attack Order",
+    "Attack Order": {
         "Type": "Bug",
         "Frequency": "EOT",
         "AC": "2",
@@ -326,8 +298,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Attract",
+    "Attract": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -337,8 +308,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Aura Sphere",
+    "Aura Sphere": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "None",
@@ -349,8 +319,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Aura Wheel",
+    "Aura Wheel": {
         "Type": "Electric",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -362,8 +331,7 @@
         "Contest Effect": "Special Attention",
         "Special": "If the user is in Hangry Mode, Aura Wheel is Dark-Types."
     },
-    {
-        "Name": "Aurora Beam",
+    "Aurora Beam": {
         "Type": "Ice",
         "Frequency": "At-Will",
         "AC": "2",
@@ -375,8 +343,7 @@
         "Contest Effect": "Exhausting Act",
         "Special": "Grants Freezer"
     },
-    {
-        "Name": "Aurora Veil",
+    "Aurora Veil": {
         "Type": "Ice",
         "Frequency": "Scene",
         "AC": "None",
@@ -387,8 +354,7 @@
         "Contest Effect": "Excitement",
         "Special": "Aurora Veil can only be used when the user"
     },
-    {
-        "Name": "Autotomize",
+    "Autotomize": {
         "Type": "Steel",
         "Frequency": "EOT",
         "AC": "None",
@@ -398,8 +364,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Avalanche",
+    "Avalanche": {
         "Type": "Ice",
         "Frequency": "EOT",
         "AC": "2",
@@ -410,8 +375,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Baby-Doll Eyes",
+    "Baby-Doll Eyes": {
         "Type": "Fairy",
         "Frequency": "EOT",
         "AC": "2",
@@ -421,8 +385,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Baneful Bunker",
+    "Baneful Bunker": {
         "Type": "Poison",
         "Frequency": "Scene",
         "AC": "None",
@@ -432,8 +395,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Barb Barrage",
+    "Barb Barrage": {
         "Type": "Poison",
         "Frequency": "EOT",
         "AC": "2",
@@ -444,8 +406,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Barrage",
+    "Barrage": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "4",
@@ -456,8 +417,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Barrier",
+    "Barrier": {
         "Type": "Psychic",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -467,8 +427,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Baton Pass",
+    "Baton Pass": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "None",
@@ -478,8 +437,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Beak Blast",
+    "Beak Blast": {
         "Type": "Flying",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -490,8 +448,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Special Attention"
     },
-    {
-        "Name": "Beat Up",
+    "Beat Up": {
         "Type": "Dark",
         "Frequency": "EOT",
         "Class": "Physical",
@@ -500,8 +457,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Behemoth Bash",
+    "Behemoth Bash": {
         "Type": "Steel",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -512,8 +468,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Behemoth Blade",
+    "Behemoth Blade": {
         "Type": "Steel",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -524,8 +479,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Good Show"
     },
-    {
-        "Name": "Belch",
+    "Belch": {
         "Type": "Poison",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -536,8 +490,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Belly Drum",
+    "Belly Drum": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -547,8 +500,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Bestow",
+    "Bestow": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "None",
@@ -558,8 +510,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Bide",
+    "Bide": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -569,8 +520,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Bind",
+    "Bind": {
         "Type": "Normal",
         "Frequency": "Static",
         "Class": "Static",
@@ -578,8 +528,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Bite",
+    "Bite": {
         "Type": "Dark",
         "Frequency": "At-Will",
         "AC": "2",
@@ -590,8 +539,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Bitter Malice",
+    "Bitter Malice": {
         "Type": "Ghost",
         "Frequency": "At-Will",
         "AC": "2",
@@ -602,8 +550,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Blast Burn",
+    "Blast Burn": {
         "Type": "Fire",
         "Frequency": "Daily x2",
         "AC": "4",
@@ -614,8 +561,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Blaze Kick",
+    "Blaze Kick": {
         "Type": "Fire",
         "Frequency": "EOT",
         "AC": "4",
@@ -626,8 +572,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Bleakwind Storm",
+    "Bleakwind Storm": {
         "Type": "Flying",
         "Frequency": "Scene",
         "AC": "5",
@@ -638,8 +583,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Blizzard",
+    "Blizzard": {
         "Type": "Ice",
         "Frequency": "Scene x2",
         "AC": "7",
@@ -650,8 +594,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Block",
+    "Block": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -661,8 +604,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Blue Flare",
+    "Blue Flare": {
         "Type": "Fire",
         "Frequency": "Scene x2",
         "AC": "5",
@@ -673,8 +615,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Body Press",
+    "Body Press": {
         "Type": "Fighting",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -685,8 +626,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Gamble"
     },
-    {
-        "Name": "Body Slam",
+    "Body Slam": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -697,8 +637,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Bolt Beak",
+    "Bolt Beak": {
         "Type": "Electric",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -709,8 +648,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Bolt Strike",
+    "Bolt Strike": {
         "Type": "Electric",
         "Frequency": "Scene x2",
         "AC": "5",
@@ -721,8 +659,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Bone Club",
+    "Bone Club": {
         "Type": "Ground",
         "Frequency": "At-Will",
         "AC": "5",
@@ -733,8 +670,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Bone Rush",
+    "Bone Rush": {
         "Type": "Ground",
         "Frequency": "EOT",
         "AC": "4",
@@ -745,8 +681,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Bonemerang",
+    "Bonemerang": {
         "Type": "Ground",
         "Frequency": "EOT",
         "AC": "3",
@@ -757,8 +692,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Boomburst",
+    "Boomburst": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "2",
@@ -769,8 +703,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Bounce",
+    "Bounce": {
         "Type": "Flying",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -782,8 +715,7 @@
         "Contest Effect": "Special Attention",
         "Special": "Grants High Jump +1"
     },
-    {
-        "Name": "Brave Bird",
+    "Brave Bird": {
         "Type": "Flying",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -794,8 +726,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Breaking Swipe",
+    "Breaking Swipe": {
         "Type": "Dragon",
         "Frequency": "EOT",
         "AC": "2",
@@ -806,8 +737,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Brick Break",
+    "Brick Break": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "2",
@@ -818,8 +748,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Brine",
+    "Brine": {
         "Type": "Water",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -830,8 +759,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Bubble",
+    "Bubble": {
         "Type": "Water",
         "Frequency": "At-Will",
         "AC": "2",
@@ -842,8 +770,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Bubble Beam",
+    "Bubble Beam": {
         "Type": "Water",
         "Frequency": "At-Will",
         "AC": "2",
@@ -854,8 +781,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Bug Bite",
+    "Bug Bite": {
         "Type": "Bug",
         "Frequency": "At-Will",
         "AC": "2",
@@ -866,8 +792,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Bug Buzz",
+    "Bug Buzz": {
         "Type": "Bug",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -878,8 +803,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Bulk Up",
+    "Bulk Up": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "None",
@@ -889,8 +813,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Bulldoze",
+    "Bulldoze": {
         "Type": "Ground",
         "Frequency": "EOT",
         "AC": "2",
@@ -901,8 +824,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Bullet Punch",
+    "Bullet Punch": {
         "Type": "Steel",
         "Frequency": "At-Will",
         "AC": "2",
@@ -913,8 +835,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Saving Grace"
     },
-    {
-        "Name": "Bullet Seed",
+    "Bullet Seed": {
         "Type": "Grass",
         "Frequency": "EOT",
         "AC": "4",
@@ -925,8 +846,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Burn Up",
+    "Burn Up": {
         "Type": "Fire",
         "Frequency": "Daily x2",
         "AC": "2",
@@ -937,8 +857,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Burning Jealousy",
+    "Burning Jealousy": {
         "Type": "Fire",
         "Frequency": "EOT",
         "AC": "2",
@@ -949,8 +868,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Calm Mind",
+    "Calm Mind": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "None",
@@ -960,8 +878,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Camouflage",
+    "Camouflage": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "None",
@@ -972,8 +889,7 @@
         "Contest Effect": "Sabotage",
         "Special": "Grants Blender"
     },
-    {
-        "Name": "Captivate",
+    "Captivate": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "2",
@@ -983,8 +899,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Ceaseless Edge",
+    "Ceaseless Edge": {
         "Type": "Dark",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -995,8 +910,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Charge",
+    "Charge": {
         "Type": "Electric",
         "Frequency": "EOT",
         "AC": "None",
@@ -1006,8 +920,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Charge Beam",
+    "Charge Beam": {
         "Type": "Electric",
         "Frequency": "At-Will",
         "AC": "4",
@@ -1018,8 +931,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Charm",
+    "Charm": {
         "Type": "Fairy",
         "Frequency": "EOT",
         "AC": "2",
@@ -1029,8 +941,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Chatter",
+    "Chatter": {
         "Type": "Flying",
         "Frequency": "At-Will",
         "AC": "2",
@@ -1041,8 +952,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Chip Away",
+    "Chip Away": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -1053,8 +963,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Chloroblast",
+    "Chloroblast": {
         "Type": "Grass",
         "Frequency": "Daily",
         "AC": "3",
@@ -1065,8 +974,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Circle Throw",
+    "Circle Throw": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "4",
@@ -1077,8 +985,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Clamp",
+    "Clamp": {
         "Type": "Water",
         "Frequency": "Static",
         "Class": "Static",
@@ -1086,8 +993,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Clanging Scales",
+    "Clanging Scales": {
         "Type": "Dragon",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -1098,8 +1004,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Good Show"
     },
-    {
-        "Name": "Clangorous Soul",
+    "Clangorous Soul": {
         "Type": "Dragon",
         "Frequency": "Scene",
         "AC": "None",
@@ -1109,8 +1014,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Clear Smog",
+    "Clear Smog": {
         "Type": "Poison",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -1121,8 +1025,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Close Combat",
+    "Close Combat": {
         "Type": "Fighting",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -1133,8 +1036,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Coaching",
+    "Coaching": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "None",
@@ -1144,8 +1046,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Get Ready"
     },
-    {
-        "Name": "Coil",
+    "Coil": {
         "Type": "Poison",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -1155,8 +1056,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Comet Punch",
+    "Comet Punch": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "4",
@@ -1167,8 +1067,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Confide",
+    "Confide": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -1178,8 +1077,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Confuse Ray",
+    "Confuse Ray": {
         "Type": "Ghost",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -1189,8 +1087,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Confusion",
+    "Confusion": {
         "Type": "Psychic",
         "Frequency": "At-Will",
         "AC": "2",
@@ -1201,8 +1098,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Constrict",
+    "Constrict": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -1213,8 +1109,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Conversion",
+    "Conversion": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "None",
@@ -1224,8 +1119,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Conversion2",
+    "Conversion2": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "None",
@@ -1235,8 +1129,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Copycat",
+    "Copycat": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -1246,8 +1139,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Core Enforcer",
+    "Core Enforcer": {
         "Type": "Dragon",
         "Frequency": "Daily x2",
         "AC": "2",
@@ -1258,8 +1150,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Corrosive Gas",
+    "Corrosive Gas": {
         "Type": "Poison",
         "Frequency": "EOT",
         "AC": "2",
@@ -1269,8 +1160,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Cosmic Power",
+    "Cosmic Power": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "None",
@@ -1280,8 +1170,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Cotton Guard",
+    "Cotton Guard": {
         "Type": "Grass",
         "Frequency": "Scene",
         "AC": "None",
@@ -1291,8 +1180,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Cotton Spore",
+    "Cotton Spore": {
         "Type": "Grass",
         "Frequency": "EOT",
         "AC": "2",
@@ -1302,8 +1190,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Saving Grace"
     },
-    {
-        "Name": "Counter",
+    "Counter": {
         "Type": "Fighting",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -1313,8 +1200,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Court Change",
+    "Court Change": {
         "Type": "Normal",
         "Frequency": "Daily",
         "AC": "None",
@@ -1324,8 +1210,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Covet",
+    "Covet": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -1336,8 +1221,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Crabhammer",
+    "Crabhammer": {
         "Type": "Water",
         "Frequency": "EOT",
         "AC": "4",
@@ -1348,8 +1232,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Crafty Shield",
+    "Crafty Shield": {
         "Type": "Fairy",
         "Frequency": "Scene",
         "AC": "None",
@@ -1359,8 +1242,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Cross Chop",
+    "Cross Chop": {
         "Type": "Fighting",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -1371,8 +1253,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Cross Poison",
+    "Cross Poison": {
         "Type": "Poison",
         "Frequency": "EOT",
         "AC": "2",
@@ -1383,8 +1264,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Crunch",
+    "Crunch": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "2",
@@ -1395,8 +1275,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Crush Claw",
+    "Crush Claw": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "3",
@@ -1407,8 +1286,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Crush Grip",
+    "Crush Grip": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "2",
@@ -1419,8 +1297,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Curse",
+    "Curse": {
         "Type": "Ghost",
         "Frequency": "See Text",
         "AC": "None",
@@ -1430,8 +1307,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Cut",
+    "Cut": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "3",
@@ -1442,8 +1318,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Dark Pulse",
+    "Dark Pulse": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "2",
@@ -1454,8 +1329,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Dark Void",
+    "Dark Void": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "10",
@@ -1465,8 +1339,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Darkest Lariat",
+    "Darkest Lariat": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "2",
@@ -1477,8 +1350,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Dazzling Gleam",
+    "Dazzling Gleam": {
         "Type": "Fairy",
         "Frequency": "EOT",
         "AC": "2",
@@ -1489,8 +1361,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Decorate",
+    "Decorate": {
         "Type": "Fairy",
         "Frequency": "Scene",
         "AC": "None",
@@ -1500,8 +1371,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Defend Order",
+    "Defend Order": {
         "Type": "Bug",
         "Frequency": "EOT",
         "AC": "None",
@@ -1511,8 +1381,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Defense Curl",
+    "Defense Curl": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "None",
@@ -1522,8 +1391,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Defog",
+    "Defog": {
         "Type": "Flying",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -1533,8 +1401,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Destiny Bond",
+    "Destiny Bond": {
         "Type": "Ghost",
         "Frequency": "EOT",
         "AC": "None",
@@ -1544,8 +1411,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Detect",
+    "Detect": {
         "Type": "Fighting",
         "Frequency": "Scene",
         "AC": "None",
@@ -1555,8 +1421,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Diamond Storm",
+    "Diamond Storm": {
         "Type": "Rock",
         "Frequency": "Scene",
         "AC": "3",
@@ -1567,8 +1432,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Dig",
+    "Dig": {
         "Type": "Ground",
         "Frequency": "EOT",
         "AC": "2",
@@ -1581,8 +1445,7 @@
         "Set-Up Effect": "The user shifts 25 meters underground and their turn ends.",
         "Resolution Effect": "The user may shift horizontally using their burrow or overland speed, and then shifts 25 meters straight up. Upon reaching the surface, the user attacks with Dig, creating a Burst 1."
     },
-    {
-        "Name": "Dire Claw",
+    "Dire Claw": {
         "Type": "Poison",
         "Frequency": "EOT",
         "AC": "2",
@@ -1593,8 +1456,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Disable",
+    "Disable": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -1604,8 +1466,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Disarming Voice",
+    "Disarming Voice": {
         "Type": "Fairy",
         "Frequency": "At-Will",
         "AC": "None",
@@ -1616,8 +1477,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Discharge",
+    "Discharge": {
         "Type": "Electric",
         "Frequency": "EOT",
         "AC": "2",
@@ -1628,8 +1488,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Dive",
+    "Dive": {
         "Type": "Water",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -1642,8 +1501,7 @@
         "Set-Up Effect": "The user moves underwater and their turn ends. The user must be in water at least 10 meters deep to use Dive. While underwater, the user may not be targeted by Moves.",
         "Resolution Effect": "The user may shift horizontally using their underwater speed, and then may shift straight up until reaching a target. The user then attacks with Dive, creating a Burst 1."
     },
-    {
-        "Name": "Dizzy Punch",
+    "Dizzy Punch": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -1654,8 +1512,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Doom Desire",
+    "Doom Desire": {
         "Type": "Steel",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -1666,8 +1523,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Double Hit",
+    "Double Hit": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "3",
@@ -1678,8 +1534,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Double Iron Bash",
+    "Double Iron Bash": {
         "Type": "Steel",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -1690,8 +1545,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Double Kick",
+    "Double Kick": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "3",
@@ -1702,8 +1556,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Double Slap",
+    "Double Slap": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "4",
@@ -1714,8 +1567,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Double Team",
+    "Double Team": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -1725,8 +1577,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Double-Edge",
+    "Double-Edge": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -1737,8 +1588,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Draco Meteor",
+    "Draco Meteor": {
         "Type": "Dragon",
         "Frequency": "Scene",
         "AC": "4",
@@ -1749,8 +1599,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Dragon Ascent",
+    "Dragon Ascent": {
         "Type": "Flying",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -1761,8 +1610,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Dragon Breath",
+    "Dragon Breath": {
         "Type": "Dragon",
         "Frequency": "EOT",
         "AC": "2",
@@ -1773,8 +1621,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Dragon Claw",
+    "Dragon Claw": {
         "Type": "Dragon",
         "Frequency": "At-Will",
         "AC": "2",
@@ -1785,8 +1632,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Dragon Dance",
+    "Dragon Dance": {
         "Type": "Dragon",
         "Frequency": "EOT",
         "AC": "None",
@@ -1796,8 +1642,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Dragon Energy",
+    "Dragon Energy": {
         "Type": "Dragon",
         "Frequency": "Daily x2",
         "AC": "2",
@@ -1808,8 +1653,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Dragon Pulse",
+    "Dragon Pulse": {
         "Type": "Dragon",
         "Frequency": "EOT",
         "AC": "2",
@@ -1820,8 +1664,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Dragon Rage",
+    "Dragon Rage": {
         "Type": "Dragon",
         "Frequency": "At-Will",
         "AC": "2",
@@ -1832,8 +1675,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Dragon Rush",
+    "Dragon Rush": {
         "Type": "Dragon",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -1844,8 +1686,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Dragon Tail",
+    "Dragon Tail": {
         "Type": "Dragon",
         "Frequency": "At-Will",
         "AC": "3",
@@ -1856,8 +1697,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Drain Punch",
+    "Drain Punch": {
         "Type": "Fighting",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -1868,8 +1708,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Draining Kiss",
+    "Draining Kiss": {
         "Type": "Fairy",
         "Frequency": "EOT",
         "AC": "2",
@@ -1880,8 +1719,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Dream Eater",
+    "Dream Eater": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "2",
@@ -1892,8 +1730,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Drill Peck",
+    "Drill Peck": {
         "Type": "Flying",
         "Frequency": "At-Will",
         "AC": "2",
@@ -1904,8 +1741,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Drill Run",
+    "Drill Run": {
         "Type": "Ground",
         "Frequency": "At-Will",
         "AC": "3",
@@ -1916,8 +1752,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Drum Beating",
+    "Drum Beating": {
         "Type": "Grass",
         "Frequency": "EOT",
         "AC": "2",
@@ -1928,8 +1763,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Dual Chop",
+    "Dual Chop": {
         "Type": "Dragon",
         "Frequency": "EOT",
         "AC": "3",
@@ -1940,8 +1774,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Dynamax Cannon",
+    "Dynamax Cannon": {
         "Type": "Dragon",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -1952,8 +1785,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Dynamic Punch",
+    "Dynamic Punch": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "9",
@@ -1964,8 +1796,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Earth Power",
+    "Earth Power": {
         "Type": "Ground",
         "Frequency": "EOT",
         "AC": "2",
@@ -1976,8 +1807,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Earthquake",
+    "Earthquake": {
         "Type": "Ground",
         "Frequency": "Scene",
         "AC": "2",
@@ -1989,8 +1819,7 @@
         "Contest Effect": "Desperation",
         "Special": "Grants Groundshaper"
     },
-    {
-        "Name": "Echoed Voice",
+    "Echoed Voice": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -2001,8 +1830,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Eerie Impulse",
+    "Eerie Impulse": {
         "Type": "Electric",
         "Frequency": "EOT",
         "AC": "2",
@@ -2013,8 +1841,7 @@
         "Contest Effect": "Excitement",
         "Special": "Grants Glow"
     },
-    {
-        "Name": "Eerie Spell",
+    "Eerie Spell": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "2",
@@ -2025,8 +1852,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Egg Bomb",
+    "Egg Bomb": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "6",
@@ -2037,8 +1863,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Electric Terrain",
+    "Electric Terrain": {
         "Type": "Electric",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -2048,8 +1873,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Electrify",
+    "Electrify": {
         "Type": "Electric",
         "Frequency": "EOT",
         "AC": "None",
@@ -2059,8 +1883,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Electro Ball",
+    "Electro Ball": {
         "Type": "Electric",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -2071,8 +1894,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Electroweb",
+    "Electroweb": {
         "Type": "Electric",
         "Frequency": "EOT",
         "AC": "3",
@@ -2083,8 +1905,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Embargo",
+    "Embargo": {
         "Type": "Dark",
         "Frequency": "At-Will",
         "AC": "2",
@@ -2094,8 +1915,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Ember",
+    "Ember": {
         "Type": "Fire",
         "Frequency": "At-Will",
         "AC": "2",
@@ -2107,8 +1927,7 @@
         "Contest Effect": "Steady Performance",
         "Special": "Grants Firestarter"
     },
-    {
-        "Name": "Encore",
+    "Encore": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -2118,8 +1937,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Endeavor",
+    "Endeavor": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "2",
@@ -2130,8 +1948,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Endure",
+    "Endure": {
         "Type": "Normal",
         "Frequency": "Daily",
         "AC": "None",
@@ -2141,8 +1958,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Energy Ball",
+    "Energy Ball": {
         "Type": "Grass",
         "Frequency": "EOT",
         "AC": "2",
@@ -2153,8 +1969,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Entrainment",
+    "Entrainment": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "2",
@@ -2164,8 +1979,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Eruption",
+    "Eruption": {
         "Type": "Fire",
         "Frequency": "Daily",
         "AC": "4",
@@ -2176,8 +1990,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Esper Wing",
+    "Esper Wing": {
         "Type": "Psychic",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -2188,8 +2001,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Expanding Force",
+    "Expanding Force": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "2",
@@ -2200,8 +2012,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Explosion",
+    "Explosion": {
         "Type": "Normal",
         "Frequency": "Daily",
         "AC": "2",
@@ -2212,8 +2023,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Extrasensory",
+    "Extrasensory": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "2",
@@ -2224,8 +2034,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Extreme Speed",
+    "Extreme Speed": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -2236,8 +2045,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Saving Grace"
     },
-    {
-        "Name": "Fairy Lock",
+    "Fairy Lock": {
         "Type": "Fairy",
         "Frequency": "Scene",
         "AC": "None",
@@ -2247,8 +2055,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Fairy Wind",
+    "Fairy Wind": {
         "Type": "Fairy",
         "Frequency": "At-Will",
         "AC": "2",
@@ -2259,8 +2066,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Fake Out",
+    "Fake Out": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -2271,8 +2077,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Fake Tears",
+    "Fake Tears": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "2",
@@ -2282,8 +2087,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "False Surrender",
+    "False Surrender": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "None",
@@ -2294,8 +2098,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "False Swipe",
+    "False Swipe": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -2306,8 +2109,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Façade",
+    "Façade": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -2318,8 +2120,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Feather Dance",
+    "Feather Dance": {
         "Type": "Flying",
         "Frequency": "EOT",
         "AC": "2",
@@ -2329,8 +2130,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Feint",
+    "Feint": {
         "Type": "Normal",
         "Frequency": "Scene",
         "Class": "Status",
@@ -2339,8 +2139,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Feint Attack",
+    "Feint Attack": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "None",
@@ -2351,8 +2150,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Fell Stinger",
+    "Fell Stinger": {
         "Type": "Bug",
         "Frequency": "At-Will",
         "AC": "2",
@@ -2363,8 +2161,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Fiery Dance",
+    "Fiery Dance": {
         "Type": "Fire",
         "Frequency": "EOT",
         "AC": "2",
@@ -2375,8 +2172,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Fiery Wrath",
+    "Fiery Wrath": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "2",
@@ -2387,8 +2183,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Final Gambit",
+    "Final Gambit": {
         "Type": "Fighting",
         "Frequency": "Scene",
         "AC": "2",
@@ -2398,8 +2193,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Fire Blast",
+    "Fire Blast": {
         "Type": "Fire",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -2410,8 +2204,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Fire Fang",
+    "Fire Fang": {
         "Type": "Fire",
         "Frequency": "At-Will",
         "AC": "3",
@@ -2422,8 +2215,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Fire Lash",
+    "Fire Lash": {
         "Type": "Fire",
         "Frequency": "EOT",
         "AC": "2",
@@ -2434,8 +2226,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Fire Pledge",
+    "Fire Pledge": {
         "Type": "Fire",
         "Frequency": "Scene",
         "AC": "2",
@@ -2446,8 +2237,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Fire Punch",
+    "Fire Punch": {
         "Type": "Fire",
         "Frequency": "At-Will",
         "AC": "2",
@@ -2458,8 +2248,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Fire Spin",
+    "Fire Spin": {
         "Type": "Fire",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -2471,8 +2260,7 @@
         "Contest Effect": "Safe Option",
         "Special": "Grants Firestarter"
     },
-    {
-        "Name": "First Impression",
+    "First Impression": {
         "Type": "Bug",
         "Frequency": "EOT",
         "AC": "2",
@@ -2483,8 +2271,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Fishious Rend",
+    "Fishious Rend": {
         "Type": "Water",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -2495,8 +2282,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Fissure",
+    "Fissure": {
         "Type": "Ground",
         "Frequency": "Daily",
         "AC": "None",
@@ -2507,8 +2293,7 @@
         "Contest Effect": "Big Show",
         "Special": "Grants Groundshaper"
     },
-    {
-        "Name": "Flail",
+    "Flail": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -2519,8 +2304,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Flame Burst",
+    "Flame Burst": {
         "Type": "Fire",
         "Frequency": "At-Will",
         "AC": "2",
@@ -2531,8 +2315,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Flame Charge",
+    "Flame Charge": {
         "Type": "Fire",
         "Frequency": "At-Will",
         "AC": "2",
@@ -2543,8 +2326,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Flame Wheel",
+    "Flame Wheel": {
         "Type": "Fire",
         "Frequency": "At-Will",
         "AC": "2",
@@ -2555,8 +2337,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Flamethrower",
+    "Flamethrower": {
         "Type": "Fire",
         "Frequency": "EOT",
         "AC": "2",
@@ -2567,8 +2348,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Flare Blitz",
+    "Flare Blitz": {
         "Type": "Fire",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -2579,8 +2359,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Flash",
+    "Flash": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -2591,8 +2370,7 @@
         "Contest Effect": "Unsettling",
         "Special": "Grants Glow"
     },
-    {
-        "Name": "Flash Cannon",
+    "Flash Cannon": {
         "Type": "Steel",
         "Frequency": "EOT",
         "AC": "2",
@@ -2603,8 +2381,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Flatter",
+    "Flatter": {
         "Type": "Dark",
         "Frequency": "At-Will",
         "AC": "2",
@@ -2614,8 +2391,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Fleur Cannon",
+    "Fleur Cannon": {
         "Type": "Fairy",
         "Frequency": "Scene",
         "AC": "4",
@@ -2626,8 +2402,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Fling",
+    "Fling": {
         "Type": "Dark",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -2638,8 +2413,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Flip Turn",
+    "Flip Turn": {
         "Type": "Water",
         "Frequency": "At-Will",
         "AC": "2",
@@ -2650,8 +2424,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Floral Healing",
+    "Floral Healing": {
         "Type": "Fairy",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -2661,8 +2434,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Flower Shield",
+    "Flower Shield": {
         "Type": "Fairy",
         "Frequency": "Scene",
         "AC": "None",
@@ -2672,8 +2444,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Fly",
+    "Fly": {
         "Type": "Flying",
         "Frequency": "At-Will",
         "AC": "3",
@@ -2686,8 +2457,7 @@
         "Set-Up Effect": "The user is moved up 25 meters into the air.",
         "Resolution Effect": "The user may shift twice while in the air, using their overland or sky speed, and then comes down next to a legal target, and attacks with Fly."
     },
-    {
-        "Name": "Flying Press",
+    "Flying Press": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "3",
@@ -2698,8 +2468,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Focus Blast",
+    "Focus Blast": {
         "Type": "Fighting",
         "Frequency": "Scene x2",
         "AC": "7",
@@ -2710,8 +2479,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Focus Energy",
+    "Focus Energy": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "None",
@@ -2721,8 +2489,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Focus Punch",
+    "Focus Punch": {
         "Type": "Fighting",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -2733,8 +2500,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Special Attention"
     },
-    {
-        "Name": "Follow Me",
+    "Follow Me": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -2744,8 +2510,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Tease"
     },
-    {
-        "Name": "Force Palm",
+    "Force Palm": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "2",
@@ -2756,8 +2521,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Foresight",
+    "Foresight": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -2767,8 +2531,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Forest’s Curse",
+    "Forest’s Curse": {
         "Type": "Grass",
         "Frequency": "Daily",
         "AC": "2",
@@ -2778,8 +2541,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Good Show"
     },
-    {
-        "Name": "Foul Play",
+    "Foul Play": {
         "Type": "Dark",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -2790,8 +2552,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Freeze Shock",
+    "Freeze Shock": {
         "Type": "Ice",
         "Frequency": "Scene",
         "AC": "4",
@@ -2803,8 +2564,7 @@
         "Set-Up Effect": "The user may shift, then ends their turn.",
         "Resolution Effect": "The user uses Freeze Shock. Freeze Shock paralyzes on 15+."
     },
-    {
-        "Name": "Freeze-Dry",
+    "Freeze-Dry": {
         "Type": "Ice",
         "Frequency": "EOT",
         "AC": "2",
@@ -2815,8 +2575,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Saving Grace"
     },
-    {
-        "Name": "Freezing Glare",
+    "Freezing Glare": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "2",
@@ -2827,8 +2586,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Frenzy Plant",
+    "Frenzy Plant": {
         "Type": "Grass",
         "Frequency": "Daily x2",
         "AC": "4",
@@ -2839,8 +2597,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Frost Breath",
+    "Frost Breath": {
         "Type": "Ice",
         "Frequency": "EOT",
         "AC": "3",
@@ -2852,8 +2609,7 @@
         "Contest Effect": "Steady Performance",
         "Special": "Grants Freezer"
     },
-    {
-        "Name": "Frustration",
+    "Frustration": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -2864,8 +2620,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Fury Attack",
+    "Fury Attack": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "4",
@@ -2876,8 +2631,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Fury Cutter",
+    "Fury Cutter": {
         "Type": "Bug",
         "Frequency": "At-Will",
         "AC": "3",
@@ -2888,8 +2642,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Fury Swipes",
+    "Fury Swipes": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "5",
@@ -2900,8 +2653,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Fusion Bolt",
+    "Fusion Bolt": {
         "Type": "Electric",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -2912,8 +2664,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Fusion Flare",
+    "Fusion Flare": {
         "Type": "Fire",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -2924,8 +2675,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Future Sight",
+    "Future Sight": {
         "Type": "Psychic",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -2936,8 +2686,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Gastro Acid",
+    "Gastro Acid": {
         "Type": "Poison",
         "Frequency": "Scene",
         "AC": "2",
@@ -2947,8 +2696,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Gear Grind",
+    "Gear Grind": {
         "Type": "Steel",
         "Frequency": "EOT",
         "AC": "3",
@@ -2959,8 +2707,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Gear Up",
+    "Gear Up": {
         "Type": "Steel",
         "Frequency": "Scene x2",
         "Class": "Status",
@@ -2969,8 +2716,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Get Ready"
     },
-    {
-        "Name": "Geomancy",
+    "Geomancy": {
         "Type": "Fairy",
         "Frequency": "Scene",
         "AC": "None",
@@ -2981,8 +2727,7 @@
         "Set-Up Effect": "The user may not shift this round. The user may create as many squares of Rough Terrain as it wants within a Burst 3 as plants burst through the ground, regardless of the surface material.",
         "Resolution Effect": "The user raises its Special Attack, Special Defense, and Speed by 2 Combat Stages each."
     },
-    {
-        "Name": "Giga Drain",
+    "Giga Drain": {
         "Type": "Grass",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -2993,8 +2738,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Giga Impact",
+    "Giga Impact": {
         "Type": "Normal",
         "Frequency": "Daily x2",
         "AC": "4",
@@ -3005,8 +2749,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Glacial Lance",
+    "Glacial Lance": {
         "Type": "Ice",
         "Frequency": "Daily",
         "AC": "2",
@@ -3017,8 +2760,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Special Attention"
     },
-    {
-        "Name": "Glaciate",
+    "Glaciate": {
         "Type": "Ice",
         "Frequency": "EOT",
         "AC": "3",
@@ -3029,8 +2771,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Glare",
+    "Glare": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -3040,8 +2781,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Grass Knot",
+    "Grass Knot": {
         "Type": "Grass",
         "Frequency": "EOT",
         "AC": "2",
@@ -3052,8 +2792,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Grass Pledge",
+    "Grass Pledge": {
         "Type": "Grass",
         "Frequency": "Scene",
         "AC": "2",
@@ -3064,8 +2803,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Grass Whistle",
+    "Grass Whistle": {
         "Type": "Grass",
         "Frequency": "Scene x2",
         "AC": "6",
@@ -3075,8 +2813,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Grassy Glide",
+    "Grassy Glide": {
         "Type": "Grass",
         "Frequency": "EOT",
         "AC": "2",
@@ -3087,8 +2824,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Grassy Terrain",
+    "Grassy Terrain": {
         "Type": "Grass",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -3098,8 +2834,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Get Ready"
     },
-    {
-        "Name": "Grav Apple",
+    "Grav Apple": {
         "Type": "Grass",
         "Frequency": "EOT",
         "AC": "2",
@@ -3110,8 +2845,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Gravity",
+    "Gravity": {
         "Type": "Psychic",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -3121,8 +2855,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Growl",
+    "Growl": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -3132,8 +2865,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Growth",
+    "Growth": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "None",
@@ -3144,8 +2876,7 @@
         "Contest Effect": "Get Ready!",
         "Special": "Grants Inflatable"
     },
-    {
-        "Name": "Grudge",
+    "Grudge": {
         "Type": "Ghost",
         "Frequency": "Daily",
         "AC": "None",
@@ -3155,8 +2886,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Guard Split",
+    "Guard Split": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "None",
@@ -3166,8 +2896,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Guard Swap",
+    "Guard Swap": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "None",
@@ -3177,8 +2906,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Guillotine",
+    "Guillotine": {
         "Type": "Normal",
         "Frequency": "Daily",
         "AC": "None",
@@ -3188,8 +2916,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Gunk Shot",
+    "Gunk Shot": {
         "Type": "Poison",
         "Frequency": "Daily x2",
         "AC": "5",
@@ -3200,8 +2927,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Gust",
+    "Gust": {
         "Type": "Flying",
         "Frequency": "At-Will",
         "AC": "2",
@@ -3213,8 +2939,7 @@
         "Contest Effect": "Steady Performance",
         "Special": "Grants Guster"
     },
-    {
-        "Name": "Gyro Ball",
+    "Gyro Ball": {
         "Type": "Steel",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -3225,8 +2950,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Hail",
+    "Hail": {
         "Type": "Ice",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -3236,8 +2960,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Hammer Arm",
+    "Hammer Arm": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "3",
@@ -3248,8 +2971,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Harden",
+    "Harden": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "None",
@@ -3259,8 +2981,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Haze",
+    "Haze": {
         "Type": "Ice",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -3270,8 +2991,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Head Charge",
+    "Head Charge": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -3282,8 +3002,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Head Smash",
+    "Head Smash": {
         "Type": "Rock",
         "Frequency": "Scene",
         "AC": "5",
@@ -3294,8 +3013,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Headbutt",
+    "Headbutt": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -3306,8 +3024,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Headlong Rush",
+    "Headlong Rush": {
         "Type": "Ground",
         "Frequency": "Scene",
         "AC": "2",
@@ -3318,8 +3035,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Heal Bell",
+    "Heal Bell": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -3329,8 +3045,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Heal Block",
+    "Heal Block": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "2",
@@ -3340,8 +3055,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Heal Order",
+    "Heal Order": {
         "Type": "Bug",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -3351,8 +3065,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Heal Pulse",
+    "Heal Pulse": {
         "Type": "Psychic",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -3362,8 +3075,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Healing Wish",
+    "Healing Wish": {
         "Type": "Psychic",
         "Frequency": "Daily",
         "AC": "None",
@@ -3373,8 +3085,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Heart Stamp",
+    "Heart Stamp": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "2",
@@ -3385,8 +3096,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Heart Swap",
+    "Heart Swap": {
         "Type": "Psychic",
         "Frequency": "Daily",
         "AC": "None",
@@ -3396,8 +3106,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Heat Crash",
+    "Heat Crash": {
         "Type": "Fire",
         "Frequency": "EOT",
         "AC": "2",
@@ -3408,8 +3117,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Heat Wave",
+    "Heat Wave": {
         "Type": "Fire",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -3420,8 +3128,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Heavy Slam",
+    "Heavy Slam": {
         "Type": "Steel",
         "Frequency": "EOT",
         "AC": "2",
@@ -3432,8 +3139,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Helping Hand",
+    "Helping Hand": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "None",
@@ -3443,8 +3149,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Hex",
+    "Hex": {
         "Type": "Ghost",
         "Frequency": "EOT",
         "AC": "2",
@@ -3455,8 +3160,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Hidden Power",
+    "Hidden Power": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -3467,8 +3171,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "High Horsepower",
+    "High Horsepower": {
         "Type": "Ground",
         "Frequency": "Scene x2",
         "AC": "3",
@@ -3479,8 +3182,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "High Jump Kick",
+    "High Jump Kick": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "3",
@@ -3491,8 +3193,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Hold Hands",
+    "Hold Hands": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -3500,8 +3201,7 @@
         "Range": "Melee, 1 Target",
         "Effect": "Both the user and the target become Cheered. They may give up the Cheered condition when making a Save Check to roll twice and take the best result."
     },
-    {
-        "Name": "Hone Claws",
+    "Hone Claws": {
         "Type": "Dark",
         "Frequency": "At-Will",
         "AC": "None",
@@ -3511,8 +3211,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Horn Attack",
+    "Horn Attack": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -3523,8 +3222,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Horn Drill",
+    "Horn Drill": {
         "Type": "Normal",
         "Frequency": "Daily",
         "AC": "None",
@@ -3534,8 +3232,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Horn Leech",
+    "Horn Leech": {
         "Type": "Grass",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -3546,8 +3243,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Howl",
+    "Howl": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "None",
@@ -3557,8 +3253,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Get Ready"
     },
-    {
-        "Name": "Hurricane",
+    "Hurricane": {
         "Type": "Flying",
         "Frequency": "Scene x2",
         "AC": "7",
@@ -3569,8 +3264,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Hydro Cannon",
+    "Hydro Cannon": {
         "Type": "Water",
         "Frequency": "Daily x2",
         "AC": "4",
@@ -3581,8 +3275,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Hydro Pump",
+    "Hydro Pump": {
         "Type": "Water",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -3593,8 +3286,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Hyper Beam",
+    "Hyper Beam": {
         "Type": "Normal",
         "Frequency": "Daily x2",
         "AC": "4",
@@ -3605,8 +3297,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Hyper Fang",
+    "Hyper Fang": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "4",
@@ -3617,8 +3308,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Hyper Voice",
+    "Hyper Voice": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -3629,8 +3319,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Hyperspace Fury",
+    "Hyperspace Fury": {
         "Type": "Dark",
         "Frequency": "Daily",
         "AC": "2",
@@ -3641,8 +3330,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Hyperspace Hole",
+    "Hyperspace Hole": {
         "Type": "Psychic",
         "Frequency": "Daily",
         "AC": "2",
@@ -3653,8 +3341,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Gamble"
     },
-    {
-        "Name": "Hypnosis",
+    "Hypnosis": {
         "Type": "Psychic",
         "Frequency": "Scene x2",
         "AC": "6",
@@ -3664,8 +3351,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Ice Ball",
+    "Ice Ball": {
         "Type": "Ice",
         "Frequency": "At-Will",
         "AC": "4",
@@ -3676,8 +3362,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Ice Beam",
+    "Ice Beam": {
         "Type": "Ice",
         "Frequency": "EOT",
         "AC": "2",
@@ -3688,8 +3373,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Ice Burn",
+    "Ice Burn": {
         "Type": "Ice",
         "Frequency": "Scene",
         "AC": "4",
@@ -3701,8 +3385,7 @@
         "Set-Up Effect": "The user may shift, then ends their turn.",
         "Resolution Effect": "The user uses Ice Burn. Ice Burn Burns on 15+."
     },
-    {
-        "Name": "Ice Fang",
+    "Ice Fang": {
         "Type": "Ice",
         "Frequency": "At-Will",
         "AC": "3",
@@ -3713,8 +3396,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Ice Hammer",
+    "Ice Hammer": {
         "Type": "Ice",
         "Frequency": "EOT",
         "AC": "4",
@@ -3725,8 +3407,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Good Show"
     },
-    {
-        "Name": "Ice Punch",
+    "Ice Punch": {
         "Type": "Ice",
         "Frequency": "At-Will",
         "AC": "2",
@@ -3737,8 +3418,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Ice Shard",
+    "Ice Shard": {
         "Type": "Ice",
         "Frequency": "At-Will",
         "AC": "2",
@@ -3749,8 +3429,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Saving Grace"
     },
-    {
-        "Name": "Icicle Crash",
+    "Icicle Crash": {
         "Type": "Ice",
         "Frequency": "EOT",
         "AC": "4",
@@ -3761,8 +3440,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Icicle Spear",
+    "Icicle Spear": {
         "Type": "Ice",
         "Frequency": "EOT",
         "AC": "4",
@@ -3773,8 +3451,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Icy Wind",
+    "Icy Wind": {
         "Type": "Ice",
         "Frequency": "EOT",
         "AC": "3",
@@ -3785,8 +3462,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Imprison",
+    "Imprison": {
         "Type": "Psychic",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -3796,8 +3472,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Incinerate",
+    "Incinerate": {
         "Type": "Fire",
         "Frequency": "At-Will",
         "AC": "2",
@@ -3808,8 +3483,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Infernal Parade",
+    "Infernal Parade": {
         "Type": "Ghost",
         "Frequency": "EOT",
         "AC": "2",
@@ -3820,8 +3494,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Inferno",
+    "Inferno": {
         "Type": "Fire",
         "Frequency": "At-Will",
         "AC": "9",
@@ -3832,8 +3505,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Infestation",
+    "Infestation": {
         "Type": "Bug",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -3844,8 +3516,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Gamble"
     },
-    {
-        "Name": "Ingrain",
+    "Ingrain": {
         "Type": "Grass",
         "Frequency": "Scene",
         "AC": "None",
@@ -3855,8 +3526,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Instruct",
+    "Instruct": {
         "Type": "Psychic",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -3866,8 +3536,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Ion Deluge",
+    "Ion Deluge": {
         "Type": "Electric",
         "Frequency": "Scene",
         "AC": "None",
@@ -3877,8 +3546,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Iron Defense",
+    "Iron Defense": {
         "Type": "Steel",
         "Frequency": "EOT",
         "AC": "None",
@@ -3888,8 +3556,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Iron Head",
+    "Iron Head": {
         "Type": "Steel",
         "Frequency": "EOT",
         "AC": "2",
@@ -3900,8 +3567,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Iron Tail",
+    "Iron Tail": {
         "Type": "Steel",
         "Frequency": "Scene x2",
         "AC": "6",
@@ -3912,8 +3578,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Jaw Lock",
+    "Jaw Lock": {
         "Type": "Dark",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -3924,8 +3589,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Judgment",
+    "Judgment": {
         "Type": "Normal",
         "Frequency": "Daily",
         "AC": "2",
@@ -3936,8 +3600,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Tease"
     },
-    {
-        "Name": "Jump Kick",
+    "Jump Kick": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "3",
@@ -3948,8 +3611,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Jungle Healing",
+    "Jungle Healing": {
         "Type": "Grass",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -3959,8 +3621,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Karate Chop",
+    "Karate Chop": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "2",
@@ -3971,8 +3632,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Kinesis",
+    "Kinesis": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "None",
@@ -3982,8 +3642,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "King’s Shield",
+    "King’s Shield": {
         "Type": "Steel",
         "Frequency": "Scene",
         "AC": "None",
@@ -3993,8 +3652,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Knock Off",
+    "Knock Off": {
         "Type": "Dark",
         "Frequency": "Scene",
         "AC": "2",
@@ -4005,8 +3663,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Land’s Wrath",
+    "Land’s Wrath": {
         "Type": "Ground",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -4018,8 +3675,7 @@
         "Contest Effect": "Big Show",
         "Special": "Grants Groundshaper"
     },
-    {
-        "Name": "Laser Focus",
+    "Laser Focus": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -4029,8 +3685,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Get Ready"
     },
-    {
-        "Name": "Lash Out",
+    "Lash Out": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "2",
@@ -4041,8 +3696,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Last Resort",
+    "Last Resort": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -4053,8 +3707,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Lava Plume",
+    "Lava Plume": {
         "Type": "Fire",
         "Frequency": "EOT",
         "AC": "2",
@@ -4065,8 +3718,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Leaf Blade",
+    "Leaf Blade": {
         "Type": "Grass",
         "Frequency": "EOT",
         "AC": "2",
@@ -4077,8 +3729,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Leaf Storm",
+    "Leaf Storm": {
         "Type": "Grass",
         "Frequency": "Scene",
         "AC": "4",
@@ -4089,8 +3740,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Leaf Tornado",
+    "Leaf Tornado": {
         "Type": "Grass",
         "Frequency": "EOT",
         "AC": "4",
@@ -4101,8 +3751,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Leech Life",
+    "Leech Life": {
         "Type": "Bug",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -4113,8 +3762,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Good Show"
     },
-    {
-        "Name": "Leech Seed",
+    "Leech Seed": {
         "Type": "Grass",
         "Frequency": "Daily x2",
         "AC": "4",
@@ -4124,8 +3772,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Leer",
+    "Leer": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -4135,8 +3782,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Lick",
+    "Lick": {
         "Type": "Ghost",
         "Frequency": "At-Will",
         "AC": "2",
@@ -4147,8 +3793,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Life Dew",
+    "Life Dew": {
         "Type": "Water",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -4158,8 +3803,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Saving Grace"
     },
-    {
-        "Name": "Light Screen",
+    "Light Screen": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "None",
@@ -4169,8 +3813,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Light of Ruin",
+    "Light of Ruin": {
         "Type": "Fairy",
         "Frequency": "Scene",
         "AC": "4",
@@ -4181,8 +3824,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Liquidation",
+    "Liquidation": {
         "Type": "Water",
         "Frequency": "EOT",
         "AC": "2",
@@ -4193,8 +3835,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Lock-On",
+    "Lock-On": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "None",
@@ -4204,8 +3845,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Lovely Kiss",
+    "Lovely Kiss": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "6",
@@ -4215,8 +3855,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Low Kick",
+    "Low Kick": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "2",
@@ -4227,8 +3866,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Low Sweep",
+    "Low Sweep": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "2",
@@ -4239,8 +3877,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Lucky Chant",
+    "Lucky Chant": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -4250,8 +3887,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Lunar Blessing",
+    "Lunar Blessing": {
         "Type": "Psychic",
         "Frequency": "Daily",
         "AC": "None",
@@ -4261,8 +3897,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Lunar Dance",
+    "Lunar Dance": {
         "Type": "Psychic",
         "Frequency": "Daily",
         "AC": "None",
@@ -4272,8 +3907,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Lunge",
+    "Lunge": {
         "Type": "Bug",
         "Frequency": "EOT",
         "AC": "2",
@@ -4284,8 +3918,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Luster Purge",
+    "Luster Purge": {
         "Type": "Psychic",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -4296,8 +3929,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Mach Punch",
+    "Mach Punch": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "2",
@@ -4308,8 +3940,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Saving Grace"
     },
-    {
-        "Name": "Magic Coat",
+    "Magic Coat": {
         "Type": "Psychic",
         "Frequency": "Daily",
         "AC": "None",
@@ -4319,8 +3950,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Magic Powder",
+    "Magic Powder": {
         "Type": "Psychic",
         "Frequency": "Daily",
         "AC": "2",
@@ -4330,8 +3960,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Magic Room",
+    "Magic Room": {
         "Type": "Psychic",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -4341,8 +3970,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Tease"
     },
-    {
-        "Name": "Magical Leaf",
+    "Magical Leaf": {
         "Type": "Grass",
         "Frequency": "EOT",
         "AC": "None",
@@ -4353,8 +3981,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Magma Storm",
+    "Magma Storm": {
         "Type": "Fire",
         "Frequency": "Scene",
         "AC": "6",
@@ -4365,8 +3992,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Magnet Bomb",
+    "Magnet Bomb": {
         "Type": "Steel",
         "Frequency": "EOT",
         "AC": "None",
@@ -4378,8 +4004,7 @@
         "Contest Effect": "Steady Performance",
         "Special": "Grants Magnetic"
     },
-    {
-        "Name": "Magnet Rise",
+    "Magnet Rise": {
         "Type": "Electric",
         "Frequency": "Daily x2",
         "AC": "2",
@@ -4390,8 +4015,7 @@
         "Contest Effect": "Sabotage",
         "Special": "Grants Magnetic"
     },
-    {
-        "Name": "Magnetic Flux",
+    "Magnetic Flux": {
         "Type": "Electric",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -4402,8 +4026,7 @@
         "Contest Effect": "Incentives",
         "Special": "Grants Magnetic"
     },
-    {
-        "Name": "Magnitude",
+    "Magnitude": {
         "Type": "Ground",
         "Frequency": "EOT",
         "Damage Base": "Damage Base: See Effect",
@@ -4414,8 +4037,7 @@
         "Contest Effect": "Desperation",
         "Special": "Grants Groundshaper"
     },
-    {
-        "Name": "Mat Block",
+    "Mat Block": {
         "Type": "Fighting",
         "Frequency": "Scene",
         "AC": "None",
@@ -4424,8 +4046,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Me First",
+    "Me First": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -4435,8 +4056,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Saving Grace"
     },
-    {
-        "Name": "Mean Look",
+    "Mean Look": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -4446,8 +4066,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Meditate",
+    "Meditate": {
         "Type": "Psychic",
         "Frequency": "At-Will",
         "AC": "None",
@@ -4457,8 +4076,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Mega Drain",
+    "Mega Drain": {
         "Type": "Grass",
         "Frequency": "At-Will",
         "AC": "2",
@@ -4469,8 +4087,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Mega Kick",
+    "Mega Kick": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "6",
@@ -4481,8 +4098,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Mega Punch",
+    "Mega Punch": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "4",
@@ -4493,8 +4109,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Megahorn",
+    "Megahorn": {
         "Type": "Bug",
         "Frequency": "Scene x2",
         "AC": "5",
@@ -4505,8 +4120,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Memento",
+    "Memento": {
         "Type": "Dark",
         "Frequency": "Scene",
         "AC": "None",
@@ -4516,8 +4130,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Metal Burst",
+    "Metal Burst": {
         "Type": "Steel",
         "Frequency": "Scene",
         "AC": "None",
@@ -4528,8 +4141,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Metal Claw",
+    "Metal Claw": {
         "Type": "Steel",
         "Frequency": "At-Will",
         "AC": "3",
@@ -4540,8 +4152,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Metal Sound",
+    "Metal Sound": {
         "Type": "Steel",
         "Frequency": "EOT",
         "AC": "4",
@@ -4551,8 +4162,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Meteor Beam",
+    "Meteor Beam": {
         "Type": "Rock",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -4564,8 +4174,7 @@
         "Set-Up Effect": "The user’s Special Attack is raised by +1 Combat Stage.",
         "Resolution Effect": "The user attacks with Meteor Beam."
     },
-    {
-        "Name": "Meteor Mash",
+    "Meteor Mash": {
         "Type": "Steel",
         "Frequency": "EOT",
         "AC": "4",
@@ -4576,8 +4185,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Metronome",
+    "Metronome": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -4587,8 +4195,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Tease"
     },
-    {
-        "Name": "Milk Drink",
+    "Milk Drink": {
         "Type": "Normal",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -4598,8 +4205,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Mimic",
+    "Mimic": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -4609,8 +4215,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Mind Blown",
+    "Mind Blown": {
         "Type": "Fire",
         "Frequency": "Daily",
         "AC": "2",
@@ -4621,8 +4226,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Mind Reader",
+    "Mind Reader": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -4632,8 +4236,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Minimize",
+    "Minimize": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -4644,8 +4247,7 @@
         "Contest Effect": "Sabotage",
         "Special": "Grants Shrinkable"
     },
-    {
-        "Name": "Miracle Eye",
+    "Miracle Eye": {
         "Type": "Psychic",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -4655,8 +4257,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Mirror Coat",
+    "Mirror Coat": {
         "Type": "Psychic",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -4666,8 +4267,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Mirror Move",
+    "Mirror Move": {
         "Type": "Flying",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -4677,8 +4277,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Mirror Shot",
+    "Mirror Shot": {
         "Type": "Steel",
         "Frequency": "EOT",
         "AC": "5",
@@ -4689,8 +4288,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Mist",
+    "Mist": {
         "Type": "Ice",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -4700,8 +4298,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Mist Ball",
+    "Mist Ball": {
         "Type": "Psychic",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -4712,8 +4309,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Misty Explosion",
+    "Misty Explosion": {
         "Type": "Fairy",
         "Frequency": "Daily",
         "AC": "2",
@@ -4724,8 +4320,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Misty Terrain",
+    "Misty Terrain": {
         "Type": "Fairy",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -4735,8 +4330,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Get Ready"
     },
-    {
-        "Name": "Moonblast",
+    "Moonblast": {
         "Type": "Fairy",
         "Frequency": "EOT",
         "AC": "2",
@@ -4747,8 +4341,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Moongeist Beam",
+    "Moongeist Beam": {
         "Type": "Ghost",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -4759,8 +4352,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Good Show"
     },
-    {
-        "Name": "Moonlight",
+    "Moonlight": {
         "Type": "Fairy",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -4770,8 +4362,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Morning Sun",
+    "Morning Sun": {
         "Type": "Normal",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -4781,8 +4372,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Mountain Gale",
+    "Mountain Gale": {
         "Type": "Ice",
         "Frequency": "EOT",
         "AC": "5",
@@ -4793,8 +4383,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Mud Bomb",
+    "Mud Bomb": {
         "Type": "Ground",
         "Frequency": "At-Will",
         "AC": "4",
@@ -4805,8 +4394,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Mud Shot",
+    "Mud Shot": {
         "Type": "Ground",
         "Frequency": "At-Will",
         "AC": "3",
@@ -4817,8 +4405,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Mud Sport",
+    "Mud Sport": {
         "Type": "Ground",
         "Frequency": "EOT",
         "AC": "None",
@@ -4828,8 +4415,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Mud-Slap",
+    "Mud-Slap": {
         "Type": "Ground",
         "Frequency": "At-Will",
         "AC": "2",
@@ -4840,8 +4426,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Muddy Water",
+    "Muddy Water": {
         "Type": "Water",
         "Frequency": "EOT",
         "AC": "5",
@@ -4852,8 +4437,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Multi-Attack",
+    "Multi-Attack": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -4864,8 +4448,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Mystical Fire",
+    "Mystical Fire": {
         "Type": "Fire",
         "Frequency": "EOT",
         "AC": "2",
@@ -4876,8 +4459,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Special Attention"
     },
-    {
-        "Name": "Mystical Power",
+    "Mystical Power": {
         "Type": "Psychic",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -4888,8 +4470,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Get Ready"
     },
-    {
-        "Name": "Nasty Plot",
+    "Nasty Plot": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "None",
@@ -4899,8 +4480,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Natural Gift",
+    "Natural Gift": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "2",
@@ -4911,8 +4491,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Nature Power",
+    "Nature Power": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "See Effect",
@@ -4923,8 +4502,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Tease"
     },
-    {
-        "Name": "Nature’s Madness",
+    "Nature’s Madness": {
         "Type": "Fairy",
         "Frequency": "Scene",
         "AC": "4",
@@ -4934,8 +4512,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Needle Arm",
+    "Needle Arm": {
         "Type": "Grass",
         "Frequency": "At-Will",
         "AC": "2",
@@ -4946,8 +4523,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Night Daze",
+    "Night Daze": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "3",
@@ -4958,8 +4534,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Night Shade",
+    "Night Shade": {
         "Type": "Ghost",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -4969,8 +4544,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Night Slash",
+    "Night Slash": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "2",
@@ -4981,8 +4555,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Nightmare",
+    "Nightmare": {
         "Type": "Ghost",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -4992,8 +4565,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "No Retreat",
+    "No Retreat": {
         "Type": "Fighting",
         "Frequency": "Scene",
         "AC": "None",
@@ -5003,8 +4575,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Get Ready"
     },
-    {
-        "Name": "Noble Roar",
+    "Noble Roar": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -5014,8 +4585,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Nuzzle",
+    "Nuzzle": {
         "Type": "Electric",
         "Frequency": "Scene",
         "AC": "2",
@@ -5026,8 +4596,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Oblivion Wing",
+    "Oblivion Wing": {
         "Type": "Flying",
         "Frequency": "Daily",
         "AC": "2",
@@ -5038,8 +4607,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Obstruct",
+    "Obstruct": {
         "Type": "Dark",
         "Frequency": "Scene",
         "AC": "None",
@@ -5049,8 +4617,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Octazooka",
+    "Octazooka": {
         "Type": "Water",
         "Frequency": "At-Will",
         "AC": "3",
@@ -5061,8 +4628,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Octolock",
+    "Octolock": {
         "Type": "Fighting",
         "Frequency": "Scene",
         "AC": "2",
@@ -5072,8 +4638,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Odor Sleuth",
+    "Odor Sleuth": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -5084,8 +4649,7 @@
         "Contest Effect": "Good Show!",
         "Special": "Grants Tracker"
     },
-    {
-        "Name": "Ominous Wind",
+    "Ominous Wind": {
         "Type": "Ghost",
         "Frequency": "EOT",
         "AC": "2",
@@ -5096,8 +4660,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Origin Pulse",
+    "Origin Pulse": {
         "Type": "Water",
         "Frequency": "Scene x2",
         "AC": "5",
@@ -5108,8 +4671,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Outrage",
+    "Outrage": {
         "Type": "Dragon",
         "Frequency": "Scene x2",
         "AC": "3",
@@ -5120,8 +4682,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Overheat",
+    "Overheat": {
         "Type": "Fire",
         "Frequency": "Scene",
         "AC": "4",
@@ -5132,8 +4693,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Pain Split",
+    "Pain Split": {
         "Type": "Normal",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -5143,8 +4703,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Parabolic Charge",
+    "Parabolic Charge": {
         "Type": "Electric",
         "Frequency": "Scene",
         "AC": "2",
@@ -5155,8 +4714,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Parting Shot",
+    "Parting Shot": {
         "Type": "Dark",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5166,8 +4724,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Pay Day",
+    "Pay Day": {
         "Type": "Normal",
         "Frequency": "Daily",
         "AC": "2",
@@ -5178,8 +4735,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Payback",
+    "Payback": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "2",
@@ -5190,8 +4746,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Special Attention"
     },
-    {
-        "Name": "Peck",
+    "Peck": {
         "Type": "Flying",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5202,8 +4757,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Perish Song",
+    "Perish Song": {
         "Type": "Normal",
         "Frequency": "Daily",
         "AC": "None",
@@ -5213,8 +4767,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Petal Blizzard",
+    "Petal Blizzard": {
         "Type": "Grass",
         "Frequency": "EOT",
         "AC": "2",
@@ -5225,8 +4778,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Petal Dance",
+    "Petal Dance": {
         "Type": "Grass",
         "Frequency": "Scene x2",
         "AC": "3",
@@ -5237,8 +4789,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Phantom Force",
+    "Phantom Force": {
         "Type": "Ghost",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -5250,8 +4801,7 @@
         "Set-Up Effect": "The user is removed from the field, and their turn ends.",
         "Resolution Effect": "Phantom Force’s user appears adjacent to any legal target on the field, ignoring Movement Capabilities, and then uses Phantom Force’s attack. Phantom Force cannot be avoided by Moves with the Shield Keyword, the Dodge Ability, or similar effects, and Intercepts may not be attempted in response."
     },
-    {
-        "Name": "Photon Geyser",
+    "Photon Geyser": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "2",
@@ -5262,8 +4812,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Pin Missile",
+    "Pin Missile": {
         "Type": "Bug",
         "Frequency": "EOT",
         "AC": "4",
@@ -5274,8 +4823,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Plasma Fists",
+    "Plasma Fists": {
         "Type": "Electric",
         "Frequency": "Scene",
         "AC": "2",
@@ -5286,8 +4834,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Special Attention"
     },
-    {
-        "Name": "Play Nice",
+    "Play Nice": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5297,8 +4844,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Play Rough",
+    "Play Rough": {
         "Type": "Fairy",
         "Frequency": "EOT",
         "AC": "4",
@@ -5309,8 +4855,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Pluck",
+    "Pluck": {
         "Type": "Flying",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5321,8 +4866,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Poison Fang",
+    "Poison Fang": {
         "Type": "Poison",
         "Frequency": "EOT",
         "AC": "2",
@@ -5333,8 +4877,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Poison Gas",
+    "Poison Gas": {
         "Type": "Poison",
         "Frequency": "Scene",
         "AC": "6",
@@ -5344,8 +4887,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Poison Jab",
+    "Poison Jab": {
         "Type": "Poison",
         "Frequency": "EOT",
         "AC": "2",
@@ -5356,8 +4898,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Poison Powder",
+    "Poison Powder": {
         "Type": "Poison",
         "Frequency": "EOT",
         "AC": "6",
@@ -5367,8 +4908,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Poison Sting",
+    "Poison Sting": {
         "Type": "Poison",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5379,8 +4919,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Poison Tail",
+    "Poison Tail": {
         "Type": "Poison",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5391,8 +4930,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Pollen Puff",
+    "Pollen Puff": {
         "Type": "Bug",
         "Frequency": "EOT",
         "AC": "2",
@@ -5403,8 +4941,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Poltergeist",
+    "Poltergeist": {
         "Type": "Ghost",
         "Frequency": "Scene",
         "AC": "4",
@@ -5415,8 +4952,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Pound",
+    "Pound": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5427,8 +4963,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Powder",
+    "Powder": {
         "Type": "Bug",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -5438,8 +4973,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Powder Snow",
+    "Powder Snow": {
         "Type": "Ice",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5451,8 +4985,7 @@
         "Contest Effect": "Steady Performance",
         "Special": "Grants Freezer"
     },
-    {
-        "Name": "Power Gem",
+    "Power Gem": {
         "Type": "Rock",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5463,8 +4996,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Power Shift",
+    "Power Shift": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -5474,8 +5006,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Power Split",
+    "Power Split": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "None",
@@ -5485,8 +5016,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Power Swap",
+    "Power Swap": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "None",
@@ -5496,8 +5026,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Power Trick",
+    "Power Trick": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "None",
@@ -5507,8 +5036,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Power Trip",
+    "Power Trip": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "2",
@@ -5519,8 +5047,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Power Whip",
+    "Power Whip": {
         "Type": "Grass",
         "Frequency": "Scene x2",
         "AC": "5",
@@ -5532,8 +5059,7 @@
         "Contest Effect": "Steady Performance",
         "Special": "Grants Threaded"
     },
-    {
-        "Name": "Power-Up Punch",
+    "Power-Up Punch": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "2",
@@ -5544,8 +5070,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Precipice Blades",
+    "Precipice Blades": {
         "Type": "Ground",
         "Frequency": "Scene x2",
         "AC": "5",
@@ -5556,8 +5081,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Present",
+    "Present": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "3",
@@ -5568,8 +5092,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Protect",
+    "Protect": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -5579,8 +5102,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Psybeam",
+    "Psybeam": {
         "Type": "Psychic",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5591,8 +5113,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Psych Up",
+    "Psych Up": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -5602,8 +5123,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Psychic",
+    "Psychic": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "2",
@@ -5615,8 +5135,7 @@
         "Contest Effect": "Exhausting Act",
         "Special": "Grants Telekinetic"
     },
-    {
-        "Name": "Psychic Fangs",
+    "Psychic Fangs": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "2",
@@ -5627,8 +5146,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Psychic Terrain",
+    "Psychic Terrain": {
         "Type": "Psychic",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -5638,8 +5156,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Psycho Boost",
+    "Psycho Boost": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "4",
@@ -5650,8 +5167,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Psycho Cut",
+    "Psycho Cut": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "2",
@@ -5662,8 +5178,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Psycho Shift",
+    "Psycho Shift": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "None",
@@ -5673,8 +5188,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Psyshield Bash",
+    "Psyshield Bash": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "4",
@@ -5685,8 +5199,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Good Show"
     },
-    {
-        "Name": "Psyshock",
+    "Psyshock": {
         "Type": "Psychic",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5697,8 +5210,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Psystrike",
+    "Psystrike": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "2",
@@ -5709,8 +5221,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Psywave",
+    "Psywave": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "5",
@@ -5720,8 +5231,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Punishment",
+    "Punishment": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "2",
@@ -5732,8 +5242,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Purify",
+    "Purify": {
         "Type": "Poison",
         "Frequency": "Scene",
         "AC": "None",
@@ -5743,8 +5252,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Pursuit",
+    "Pursuit": {
         "Type": "Dark",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5755,8 +5263,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Good Show!"
     },
-    {
-        "Name": "Pyro Ball",
+    "Pyro Ball": {
         "Type": "Fire",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -5767,8 +5274,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Quash",
+    "Quash": {
         "Type": "Dark",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5778,8 +5284,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Saving Grace"
     },
-    {
-        "Name": "Quick Attack",
+    "Quick Attack": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5790,8 +5295,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Saving Grace"
     },
-    {
-        "Name": "Quick Guard",
+    "Quick Guard": {
         "Type": "Fighting",
         "Frequency": "Scene",
         "AC": "None",
@@ -5801,8 +5305,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Quiver Dance",
+    "Quiver Dance": {
         "Type": "Bug",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -5812,8 +5315,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Rage",
+    "Rage": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5824,8 +5326,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Rage Powder",
+    "Rage Powder": {
         "Type": "Bug",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -5835,8 +5336,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Tease"
     },
-    {
-        "Name": "Raging Fury",
+    "Raging Fury": {
         "Type": "Fire",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -5847,8 +5347,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Rain Dance",
+    "Rain Dance": {
         "Type": "Water",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -5858,8 +5357,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Rapid Spin",
+    "Rapid Spin": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -5870,8 +5368,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Razor Leaf",
+    "Razor Leaf": {
         "Type": "Grass",
         "Frequency": "At-Will",
         "AC": "4",
@@ -5882,8 +5379,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Razor Shell",
+    "Razor Shell": {
         "Type": "Water",
         "Frequency": "EOT",
         "AC": "3",
@@ -5894,8 +5390,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Razor Wind",
+    "Razor Wind": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -5907,8 +5402,7 @@
         "Set-Up Effect": "The user may not shift this round. The user whips up a whirlwind around themselves, granting +2 Evasion until the end of their next turn, and destroying any Smokescreen or Hazards on any squares they are standing on and in all squares adjacent to them.",
         "Resolution Effect": "The user attacks with Razor Wind. Razor Wind is a Critical Hit on 18+."
     },
-    {
-        "Name": "Recover",
+    "Recover": {
         "Type": "Normal",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -5918,8 +5412,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Recycle",
+    "Recycle": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -5929,8 +5422,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Reflect",
+    "Reflect": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "None",
@@ -5940,8 +5432,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Reflect Type",
+    "Reflect Type": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "2",
@@ -5951,8 +5442,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Refresh",
+    "Refresh": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -5962,8 +5452,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Relic Song",
+    "Relic Song": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "2",
@@ -5974,8 +5463,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Rest",
+    "Rest": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "None",
@@ -5985,8 +5473,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Retaliate",
+    "Retaliate": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -5997,8 +5484,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Return",
+    "Return": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -6009,8 +5495,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Revelation Dance",
+    "Revelation Dance": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -6021,8 +5506,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Revenge",
+    "Revenge": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "2",
@@ -6033,8 +5517,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Reversal",
+    "Reversal": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "2",
@@ -6045,8 +5528,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Rising Voltage",
+    "Rising Voltage": {
         "Type": "Electric",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -6057,8 +5539,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Roar",
+    "Roar": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "2",
@@ -6068,8 +5549,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Roar of Time",
+    "Roar of Time": {
         "Type": "Dragon",
         "Frequency": "Daily x2",
         "AC": "4",
@@ -6080,8 +5560,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Rock Blast",
+    "Rock Blast": {
         "Type": "Rock",
         "Frequency": "EOT",
         "AC": "5",
@@ -6093,8 +5572,7 @@
         "Contest Effect": "Reliable",
         "Special": "Grants Materializer"
     },
-    {
-        "Name": "Rock Climb",
+    "Rock Climb": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "5",
@@ -6105,8 +5583,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Rock Polish",
+    "Rock Polish": {
         "Type": "Rock",
         "Frequency": "EOT",
         "AC": "None",
@@ -6116,8 +5593,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Rock Slide",
+    "Rock Slide": {
         "Type": "Rock",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -6128,8 +5604,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Rock Smash",
+    "Rock Smash": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "2",
@@ -6140,8 +5615,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Rock Throw",
+    "Rock Throw": {
         "Type": "Rock",
         "Frequency": "At-Will",
         "AC": "4",
@@ -6152,8 +5626,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Rock Tomb",
+    "Rock Tomb": {
         "Type": "Rock",
         "Frequency": "At-Will",
         "AC": "5",
@@ -6165,8 +5638,7 @@
         "Contest Effect": "Desperation",
         "Special": "Grants Materializer"
     },
-    {
-        "Name": "Rock Wrecker",
+    "Rock Wrecker": {
         "Type": "Rock",
         "Frequency": "Daily x2",
         "AC": "4",
@@ -6178,8 +5650,7 @@
         "Contest Effect": "Seen Nothing Yet",
         "Special": "Grants Materializer"
     },
-    {
-        "Name": "Role Play",
+    "Role Play": {
         "Type": "Psychic",
         "Frequency": "Daily",
         "AC": "None",
@@ -6189,8 +5660,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Rolling Kick",
+    "Rolling Kick": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "4",
@@ -6201,8 +5671,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Rollout",
+    "Rollout": {
         "Type": "Rock",
         "Frequency": "At-Will",
         "AC": "4",
@@ -6213,8 +5682,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Roost",
+    "Roost": {
         "Type": "Flying",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -6224,8 +5692,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Rototiller",
+    "Rototiller": {
         "Type": "Ground",
         "Frequency": "Scene",
         "AC": "None",
@@ -6235,8 +5702,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Special Attention"
     },
-    {
-        "Name": "Round",
+    "Round": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -6247,8 +5713,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Sacred Fire",
+    "Sacred Fire": {
         "Type": "Fire",
         "Frequency": "EOT",
         "AC": "3",
@@ -6259,8 +5724,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Sacred Sword",
+    "Sacred Sword": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "None",
@@ -6271,8 +5735,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Safeguard",
+    "Safeguard": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -6282,8 +5745,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Sand Attack",
+    "Sand Attack": {
         "Type": "Ground",
         "Frequency": "EOT",
         "AC": "2",
@@ -6293,8 +5755,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Sand Tomb",
+    "Sand Tomb": {
         "Type": "Ground",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -6305,8 +5766,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Sandstorm",
+    "Sandstorm": {
         "Type": "Rock",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -6316,8 +5776,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Sandstorm Sear",
+    "Sandstorm Sear": {
         "Type": "Ground",
         "Frequency": "Scene",
         "AC": "5",
@@ -6328,8 +5787,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Scald",
+    "Scald": {
         "Type": "Water",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -6340,8 +5798,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Scale Shot",
+    "Scale Shot": {
         "Type": "Dragon",
         "Frequency": "EOT",
         "AC": "4",
@@ -6352,8 +5809,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Scary Face",
+    "Scary Face": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -6363,8 +5819,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Scorching Sands",
+    "Scorching Sands": {
         "Type": "Ground",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -6375,8 +5830,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Scratch",
+    "Scratch": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -6387,8 +5841,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Screech",
+    "Screech": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "4",
@@ -6398,8 +5851,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Searing Shot",
+    "Searing Shot": {
         "Type": "Fire",
         "Frequency": "EOT",
         "AC": "2",
@@ -6410,8 +5862,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Secret Power",
+    "Secret Power": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -6422,8 +5873,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Tease"
     },
-    {
-        "Name": "Secret Sword",
+    "Secret Sword": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "2",
@@ -6434,8 +5884,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Seed Bomb",
+    "Seed Bomb": {
         "Type": "Grass",
         "Frequency": "At-Will",
         "AC": "2",
@@ -6446,8 +5895,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Seed Flare",
+    "Seed Flare": {
         "Type": "Grass",
         "Frequency": "Scene",
         "AC": "5",
@@ -6458,8 +5906,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Seismic Toss",
+    "Seismic Toss": {
         "Type": "Fighting",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -6469,8 +5916,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Self-Destruct",
+    "Self-Destruct": {
         "Type": "Normal",
         "Frequency": "Daily",
         "AC": "2",
@@ -6481,8 +5927,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Shadow Ball",
+    "Shadow Ball": {
         "Type": "Ghost",
         "Frequency": "EOT",
         "AC": "2",
@@ -6493,8 +5938,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Shadow Bone",
+    "Shadow Bone": {
         "Type": "Ghost",
         "Frequency": "EOT",
         "AC": "2",
@@ -6505,8 +5949,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Shadow Claw",
+    "Shadow Claw": {
         "Type": "Ghost",
         "Frequency": "EOT",
         "AC": "2",
@@ -6517,8 +5960,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Shadow Force",
+    "Shadow Force": {
         "Type": "Ghost",
         "Frequency": "Daily x3",
         "AC": "2",
@@ -6530,8 +5972,7 @@
         "Set-Up Effect": "The user is removed from the field, and their turn ends.",
         "Resolution Effect": "Shadow Force’s user appears adjacent to any legal Target, ignoring Movement Capabilities, and then uses Shadow Force’s attack. Shadow Force cannot be avoided by Moves with the Shield Keyword, the Dodge Ability, or similar effects, and Intercepts may not be attempted in response."
     },
-    {
-        "Name": "Shadow Punch",
+    "Shadow Punch": {
         "Type": "Ghost",
         "Frequency": "EOT",
         "AC": "None",
@@ -6542,8 +5983,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Shadow Sneak",
+    "Shadow Sneak": {
         "Type": "Ghost",
         "Frequency": "At-Will",
         "AC": "2",
@@ -6554,8 +5994,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Saving Grace"
     },
-    {
-        "Name": "Sharpen",
+    "Sharpen": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "None",
@@ -6565,8 +6004,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Sheer Cold",
+    "Sheer Cold": {
         "Type": "Ice",
         "Frequency": "Daily",
         "AC": "None",
@@ -6577,8 +6015,7 @@
         "Contest Effect": "Big Show",
         "Special": "Grants Freezer"
     },
-    {
-        "Name": "Shell Side Arm",
+    "Shell Side Arm": {
         "Type": "Poison",
         "Frequency": "EOT",
         "AC": "2",
@@ -6589,8 +6026,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Shell Smash",
+    "Shell Smash": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -6600,8 +6036,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Shell Trap",
+    "Shell Trap": {
         "Type": "Fire",
         "Frequency": "Scene",
         "AC": "2",
@@ -6612,8 +6047,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Shelter",
+    "Shelter": {
         "Type": "Steel",
         "Frequency": "Scene",
         "Class": "Status",
@@ -6622,8 +6056,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Shift Gear",
+    "Shift Gear": {
         "Type": "Steel",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -6633,8 +6066,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Shock Wave",
+    "Shock Wave": {
         "Type": "Electric",
         "Frequency": "At-Will",
         "AC": "None",
@@ -6646,8 +6078,7 @@
         "Contest Effect": "Exhausting Act",
         "Special": "Grants Zapper"
     },
-    {
-        "Name": "Shore Up",
+    "Shore Up": {
         "Type": "Ground",
         "Frequency": "Daily x2",
         "Class": "Status",
@@ -6656,8 +6087,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Signal Beam",
+    "Signal Beam": {
         "Type": "Bug",
         "Frequency": "EOT",
         "AC": "2",
@@ -6668,8 +6098,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Silver Wind",
+    "Silver Wind": {
         "Type": "Bug",
         "Frequency": "At-Will",
         "AC": "2",
@@ -6680,8 +6109,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Simple Beam",
+    "Simple Beam": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "2",
@@ -6691,8 +6119,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Sing",
+    "Sing": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "10",
@@ -6702,8 +6129,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Sketch",
+    "Sketch": {
         "Type": "Normal",
         "Frequency": "Daily",
         "AC": "None",
@@ -6713,8 +6139,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Skill Swap",
+    "Skill Swap": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "None",
@@ -6724,8 +6149,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Skitter Smack",
+    "Skitter Smack": {
         "Type": "Bug",
         "Frequency": "EOT",
         "AC": "2",
@@ -6736,8 +6160,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Skull Bash",
+    "Skull Bash": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -6749,8 +6172,7 @@
         "Set-Up Effect": "The use gains +1 Defense CS.",
         "Resolution Effect": "The user may attack with Skull Bash. The target is pushed 3 meters."
     },
-    {
-        "Name": "Sky Attack",
+    "Sky Attack": {
         "Type": "Flying",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -6762,8 +6184,7 @@
         "Set-Up Effect": "The user is moved up 25 meters into the air.",
         "Resolution Effect": "The user may shift until they are next to a legal target in the encounter. They may then shift again, and pass through legal targets to attack with Sky Attack. Sky Attack Flinches a target on 17-20 during Accuracy Check."
     },
-    {
-        "Name": "Sky Drop",
+    "Sky Drop": {
         "Type": "Flying",
         "Frequency": "Scene x2",
         "AC": "3",
@@ -6775,8 +6196,7 @@
         "Set-Up Effect": "Make Sky Drop’s Accuracy Check. If the user hits, the user and target are moved 25 meters into the air. The target forfeits their next turn, and cannot Shift or take actions until Sky Drop is resolved.",
         "Resolution Effect": "Shift while in the air, and lower both the user and the target heights back to the ground. Then apply Sky Drop’s damage. If the target has a Sky or Levitate Speed, Sky Drop fails to deal damage. If the user is Fainted after the Set-Up but before the Resolution, the target falls to the ground and takes damage as if Sky Drop had a Damage Base of 3 (1d6+5/8) unless they have a Sky or Levitate Speed, in which case they take no damage."
     },
-    {
-        "Name": "Sky Uppercut",
+    "Sky Uppercut": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "4",
@@ -6787,8 +6207,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Slack Off",
+    "Slack Off": {
         "Type": "Normal",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -6798,8 +6217,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Slam",
+    "Slam": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "6",
@@ -6810,8 +6228,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Slash",
+    "Slash": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -6822,8 +6239,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Sleep Powder",
+    "Sleep Powder": {
         "Type": "Grass",
         "Frequency": "Scene x2",
         "AC": "6",
@@ -6833,8 +6249,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Sleep Talk",
+    "Sleep Talk": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -6844,8 +6259,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Sludge",
+    "Sludge": {
         "Type": "Poison",
         "Frequency": "EOT",
         "AC": "2",
@@ -6856,8 +6270,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Sludge Bomb",
+    "Sludge Bomb": {
         "Type": "Poison",
         "Frequency": "EOT",
         "AC": "2",
@@ -6868,8 +6281,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Sludge Wave",
+    "Sludge Wave": {
         "Type": "Poison",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -6880,8 +6292,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Smack Down",
+    "Smack Down": {
         "Type": "Rock",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -6892,8 +6303,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Smart Strike",
+    "Smart Strike": {
         "Type": "Steel",
         "Frequency": "EOT",
         "AC": "None",
@@ -6904,8 +6314,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Smelling Salts",
+    "Smelling Salts": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -6916,8 +6325,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Smog",
+    "Smog": {
         "Type": "Poison",
         "Frequency": "At-Will",
         "AC": "7",
@@ -6928,8 +6336,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Smokescreen",
+    "Smokescreen": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "None",
@@ -6939,8 +6346,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Snap Trap",
+    "Snap Trap": {
         "Type": "Grass",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -6951,8 +6357,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Snarl",
+    "Snarl": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "3",
@@ -6963,8 +6368,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Snatch",
+    "Snatch": {
         "Type": "Dark",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -6974,8 +6378,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Snipe Shot",
+    "Snipe Shot": {
         "Type": "Water",
         "Frequency": "EOT",
         "AC": "2",
@@ -6986,8 +6389,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Snore",
+    "Snore": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -6998,8 +6400,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Soak",
+    "Soak": {
         "Type": "Water",
         "Frequency": "Daily",
         "AC": "2",
@@ -7009,8 +6410,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Soft-Boiled",
+    "Soft-Boiled": {
         "Type": "Normal",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -7020,8 +6420,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Solar Beam",
+    "Solar Beam": {
         "Type": "Grass",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -7033,8 +6432,7 @@
         "Set-Up Effect": "If the weather is not Sunny, the user’s turn ends. If the weather is Sunny, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword.",
         "Resolution Effect": "The user attacks with Solar Beam. If the weather is Rainy, Sandstorming, or Hailing, Solar Beam’s Damage Base is lowered to 6 (2d6+8 / 15)."
     },
-    {
-        "Name": "Solar Blade",
+    "Solar Blade": {
         "Type": "Grass",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -7045,8 +6443,7 @@
         "Contest Effect": "Special Attention",
         "Set-Up Effect": "If the weather is not Sunny, the user gains +1 Combat Stage in Attack and Special Defense, and the user’s turn ends. If the weather is Sunny, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword."
     },
-    {
-        "Name": "Sonic Boom",
+    "Sonic Boom": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "6",
@@ -7057,8 +6454,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Spacial Rend",
+    "Spacial Rend": {
         "Type": "Dragon",
         "Frequency": "Daily x2",
         "AC": "3",
@@ -7069,8 +6465,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Spark",
+    "Spark": {
         "Type": "Electric",
         "Frequency": "EOT",
         "AC": "2",
@@ -7081,8 +6476,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Sparkling Aria",
+    "Sparkling Aria": {
         "Type": "Water",
         "Frequency": "EOT",
         "AC": "2",
@@ -7093,8 +6487,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Spectral Thief",
+    "Spectral Thief": {
         "Type": "Ghost",
         "Frequency": "Scene",
         "AC": "2",
@@ -7105,8 +6498,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Speed Swap",
+    "Speed Swap": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "2",
@@ -7116,8 +6508,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Spider Web",
+    "Spider Web": {
         "Type": "Bug",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -7128,8 +6519,7 @@
         "Contest Effect": "Sabotage",
         "Special": "Grants Threaded"
     },
-    {
-        "Name": "Spike Cannon",
+    "Spike Cannon": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "4",
@@ -7140,8 +6530,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Spikes",
+    "Spikes": {
         "Type": "Ground",
         "Frequency": "At-Will",
         "AC": "None",
@@ -7151,8 +6540,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Spiky Shield",
+    "Spiky Shield": {
         "Type": "Grass",
         "Frequency": "Scene",
         "AC": "None",
@@ -7162,8 +6550,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Spirit Break",
+    "Spirit Break": {
         "Type": "Fairy",
         "Frequency": "EOT",
         "AC": "2",
@@ -7174,8 +6561,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Spirit Shackle",
+    "Spirit Shackle": {
         "Type": "Ghost",
         "Frequency": "EOT",
         "AC": "2",
@@ -7186,8 +6572,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Spit Up",
+    "Spit Up": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "2",
@@ -7198,8 +6583,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Spite",
+    "Spite": {
         "Type": "Ghost",
         "Frequency": "Scene",
         "AC": "None",
@@ -7209,8 +6593,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Splash",
+    "Splash": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "None",
@@ -7221,8 +6604,7 @@
         "Contest Effect": "Inversed Appeal",
         "Special": "Grants Long Jump +1"
     },
-    {
-        "Name": "Spore",
+    "Spore": {
         "Type": "Grass",
         "Frequency": "Scene",
         "AC": "None",
@@ -7232,8 +6614,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Spotlight",
+    "Spotlight": {
         "Type": "Normal",
         "Frequency": "Daily",
         "AC": "None",
@@ -7243,8 +6624,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Springtide Storm",
+    "Springtide Storm": {
         "Type": "Fairy",
         "Frequency": "Scene",
         "AC": "5",
@@ -7255,8 +6635,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Stealth Rock",
+    "Stealth Rock": {
         "Type": "Rock",
         "Frequency": "Scene",
         "AC": "None",
@@ -7267,8 +6646,7 @@
         "Contest Effect": "Sabotage",
         "Special": "Grants Materializer"
     },
-    {
-        "Name": "Steam Eruption",
+    "Steam Eruption": {
         "Type": "Water",
         "Frequency": "Scene",
         "AC": "3",
@@ -7279,8 +6657,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Steamroller",
+    "Steamroller": {
         "Type": "Bug",
         "Frequency": "EOT",
         "AC": "2",
@@ -7291,8 +6668,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Steel Beam",
+    "Steel Beam": {
         "Type": "Steel",
         "Frequency": "Daily",
         "AC": "3",
@@ -7303,8 +6679,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Steel Roller",
+    "Steel Roller": {
         "Type": "Steel",
         "Frequency": "Daily x2",
         "AC": "2",
@@ -7315,8 +6690,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Steel Wing",
+    "Steel Wing": {
         "Type": "Steel",
         "Frequency": "At-Will",
         "AC": "3",
@@ -7327,8 +6701,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Sticky Web",
+    "Sticky Web": {
         "Type": "Bug",
         "Frequency": "EOT",
         "AC": "None",
@@ -7339,8 +6712,7 @@
         "Contest Effect": "Sabotage",
         "Special": "Grants Threaded"
     },
-    {
-        "Name": "Stockpile",
+    "Stockpile": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "None",
@@ -7350,8 +6722,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Stomp",
+    "Stomp": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -7362,8 +6733,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Stomping Tantrum",
+    "Stomping Tantrum": {
         "Type": "Ground",
         "Frequency": "EOT",
         "AC": "2",
@@ -7374,8 +6744,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Stone Axe",
+    "Stone Axe": {
         "Type": "Rock",
         "Frequency": "EOT",
         "AC": "4",
@@ -7386,8 +6755,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Stone Edge",
+    "Stone Edge": {
         "Type": "Rock",
         "Frequency": "EOT",
         "AC": "5",
@@ -7398,8 +6766,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Stored Power",
+    "Stored Power": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "2",
@@ -7410,8 +6777,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Storm Throw",
+    "Storm Throw": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "2",
@@ -7422,8 +6788,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Strange Steam",
+    "Strange Steam": {
         "Type": "Fairy",
         "Frequency": "Scene x2",
         "AC": "3",
@@ -7434,8 +6799,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Good Show"
     },
-    {
-        "Name": "Strength",
+    "Strength": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -7447,8 +6811,7 @@
         "Contest Effect": "Steady Performance",
         "Special": "Grants +1 Power"
     },
-    {
-        "Name": "Strength Sap",
+    "Strength Sap": {
         "Type": "Grass",
         "Frequency": "Daily x2",
         "AC": "2",
@@ -7458,8 +6821,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "String Shot",
+    "String Shot": {
         "Type": "Bug",
         "Frequency": "At-Will",
         "AC": "3",
@@ -7470,8 +6832,7 @@
         "Contest Effect": "Excitement",
         "Special": "Grants Threaded"
     },
-    {
-        "Name": "Struggle Bug",
+    "Struggle Bug": {
         "Type": "Bug",
         "Frequency": "At-Will",
         "AC": "2",
@@ -7482,8 +6843,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Stuff Cheeks",
+    "Stuff Cheeks": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -7493,8 +6853,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Get Ready"
     },
-    {
-        "Name": "Stun Spore",
+    "Stun Spore": {
         "Type": "Grass",
         "Frequency": "Scene x2",
         "AC": "6",
@@ -7504,8 +6863,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Submission",
+    "Submission": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "6",
@@ -7516,8 +6874,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Substitute",
+    "Substitute": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -7527,8 +6884,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Sucker Punch",
+    "Sucker Punch": {
         "Type": "Dark",
         "Frequency": "At-Will",
         "AC": "2",
@@ -7539,8 +6895,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Saving Grace"
     },
-    {
-        "Name": "Sunny Day",
+    "Sunny Day": {
         "Type": "Fire",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -7550,8 +6905,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Sunsteel Strike",
+    "Sunsteel Strike": {
         "Type": "Steel",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -7562,8 +6916,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Super Fang",
+    "Super Fang": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "4",
@@ -7573,8 +6926,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Superpower",
+    "Superpower": {
         "Type": "Fighting",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -7585,8 +6937,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Supersonic",
+    "Supersonic": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "6",
@@ -7596,8 +6947,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Surf",
+    "Surf": {
         "Type": "Water",
         "Frequency": "EOT",
         "AC": "2",
@@ -7608,8 +6958,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Surging Strikes",
+    "Surging Strikes": {
         "Type": "Water",
         "Frequency": "EOT",
         "AC": "2",
@@ -7620,8 +6969,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Special Attention"
     },
-    {
-        "Name": "Swagger",
+    "Swagger": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "5",
@@ -7631,8 +6979,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Swallow",
+    "Swallow": {
         "Type": "Normal",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -7642,8 +6989,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Sweet Kiss",
+    "Sweet Kiss": {
         "Type": "Fairy",
         "Frequency": "Scene x2",
         "AC": "6",
@@ -7653,8 +6999,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Sweet Scent",
+    "Sweet Scent": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "2",
@@ -7665,8 +7010,7 @@
         "Contest Effect": "Excitement",
         "Special": "Grants Alluring"
     },
-    {
-        "Name": "Swift",
+    "Swift": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "None",
@@ -7677,8 +7021,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Switcheroo",
+    "Switcheroo": {
         "Type": "Dark",
         "Frequency": "At-Will",
         "AC": "2",
@@ -7688,8 +7031,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Swords Dance",
+    "Swords Dance": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "None",
@@ -7699,8 +7041,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Synchronoise",
+    "Synchronoise": {
         "Type": "Psychic",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -7711,8 +7052,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Synthesis",
+    "Synthesis": {
         "Type": "Grass",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -7722,8 +7062,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Tackle",
+    "Tackle": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -7734,8 +7073,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Tail Glow",
+    "Tail Glow": {
         "Type": "Bug",
         "Frequency": "Scene",
         "AC": "None",
@@ -7746,8 +7084,7 @@
         "Contest Effect": "Get Ready!",
         "Special": "Grants Glow"
     },
-    {
-        "Name": "Tail Slap",
+    "Tail Slap": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "4",
@@ -7758,8 +7095,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Tail Whip",
+    "Tail Whip": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -7769,8 +7105,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Tailwind",
+    "Tailwind": {
         "Type": "Flying",
         "Frequency": "Scene",
         "AC": "None",
@@ -7780,8 +7115,7 @@
         "Contest Effect": "Saving Grace",
         "Special": "Grants Guster"
     },
-    {
-        "Name": "Take Down",
+    "Take Down": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "5",
@@ -7792,8 +7126,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Take Heart",
+    "Take Heart": {
         "Type": "Psychic",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -7803,8 +7136,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Tar Shot",
+    "Tar Shot": {
         "Type": "Rock",
         "Frequency": "Scene",
         "AC": "2",
@@ -7814,8 +7146,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Taunt",
+    "Taunt": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "3",
@@ -7825,8 +7156,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Tearful Look",
+    "Tearful Look": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -7836,8 +7166,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Teatime",
+    "Teatime": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "None",
@@ -7847,8 +7176,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Techno Blast",
+    "Techno Blast": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "2",
@@ -7859,8 +7187,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Teeter Dance",
+    "Teeter Dance": {
         "Type": "Normal",
         "Frequency": "Scene",
         "AC": "2",
@@ -7870,8 +7197,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Tease"
     },
-    {
-        "Name": "Telekinesis",
+    "Telekinesis": {
         "Type": "Psychic",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -7882,8 +7208,7 @@
         "Contest Effect": "Steady Performance",
         "Special": "Grants Telekinetic"
     },
-    {
-        "Name": "Teleport",
+    "Teleport": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "None",
@@ -7894,8 +7219,7 @@
         "Contest Effect": "Saving Grace",
         "Special": "Grants Teleporter 4"
     },
-    {
-        "Name": "Terrain Pulse",
+    "Terrain Pulse": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -7906,8 +7230,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Thief",
+    "Thief": {
         "Type": "Dark",
         "Frequency": "At-Will",
         "AC": "2",
@@ -7918,8 +7241,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Thousand Arrows",
+    "Thousand Arrows": {
         "Type": "Ground",
         "Frequency": "Scene",
         "AC": "2",
@@ -7930,8 +7252,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Thousand Waves",
+    "Thousand Waves": {
         "Type": "Ground",
         "Frequency": "Scene",
         "AC": "2",
@@ -7942,8 +7263,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Tease"
     },
-    {
-        "Name": "Thrash",
+    "Thrash": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "3",
@@ -7954,8 +7274,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Throat Chop",
+    "Throat Chop": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "2",
@@ -7966,8 +7285,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Thunder",
+    "Thunder": {
         "Type": "Electric",
         "Frequency": "Scene x2",
         "AC": "7",
@@ -7978,8 +7296,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Thunder Cage",
+    "Thunder Cage": {
         "Type": "Electric",
         "Frequency": "Daily x2",
         "AC": "4",
@@ -7990,8 +7307,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Thunder Fang",
+    "Thunder Fang": {
         "Type": "Electric",
         "Frequency": "At-Will",
         "AC": "3",
@@ -8002,8 +7318,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Thunder Punch",
+    "Thunder Punch": {
         "Type": "Electric",
         "Frequency": "At-Will",
         "AC": "2",
@@ -8014,8 +7329,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Thunder Shock",
+    "Thunder Shock": {
         "Type": "Electric",
         "Frequency": "At-Will",
         "AC": "2",
@@ -8027,8 +7341,7 @@
         "Contest Effect": "Steady Performance",
         "Special": "Grants Zapper"
     },
-    {
-        "Name": "Thunder Wave",
+    "Thunder Wave": {
         "Type": "Electric",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -8038,8 +7351,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Thunderbolt",
+    "Thunderbolt": {
         "Type": "Electric",
         "Frequency": "EOT",
         "AC": "2",
@@ -8050,8 +7362,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Thunderous Kick",
+    "Thunderous Kick": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "2",
@@ -8062,8 +7373,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Good Show"
     },
-    {
-        "Name": "Tickle",
+    "Tickle": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -8073,8 +7383,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Topsy-Turvy",
+    "Topsy-Turvy": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "4",
@@ -8084,8 +7393,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Torment",
+    "Torment": {
         "Type": "Dark",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -8095,8 +7403,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Toxic",
+    "Toxic": {
         "Type": "Poison",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -8106,8 +7413,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Toxic Spikes",
+    "Toxic Spikes": {
         "Type": "Poison",
         "Frequency": "EOT",
         "AC": "None",
@@ -8117,8 +7423,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Toxic Thread",
+    "Toxic Thread": {
         "Type": "Poison",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -8128,8 +7433,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Transform",
+    "Transform": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "None",
@@ -8139,8 +7443,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Catching Up"
     },
-    {
-        "Name": "Tri Attack",
+    "Tri Attack": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -8151,8 +7454,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Trick",
+    "Trick": {
         "Type": "Psychic",
         "Frequency": "Scene",
         "AC": "2",
@@ -8162,8 +7464,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Attention Grabber"
     },
-    {
-        "Name": "Trick Room",
+    "Trick Room": {
         "Type": "Psychic",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -8173,8 +7474,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Tease"
     },
-    {
-        "Name": "Trick-or-Treat",
+    "Trick-or-Treat": {
         "Type": "Ghost",
         "Frequency": "Daily",
         "AC": "2",
@@ -8184,8 +7484,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Good Show"
     },
-    {
-        "Name": "Triple Arrows",
+    "Triple Arrows": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "2",
@@ -8196,8 +7495,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Special Attention"
     },
-    {
-        "Name": "Triple Axel",
+    "Triple Axel": {
         "Type": "Ice",
         "Frequency": "EOT",
         "AC": "4",
@@ -8208,8 +7506,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Special Attention"
     },
-    {
-        "Name": "Triple Kick",
+    "Triple Kick": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "3",
@@ -8220,8 +7517,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Trop Kick",
+    "Trop Kick": {
         "Type": "Grass",
         "Frequency": "EOT",
         "AC": "2",
@@ -8232,8 +7528,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Double Time"
     },
-    {
-        "Name": "Trump Card",
+    "Trump Card": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -8244,8 +7539,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Twineedle",
+    "Twineedle": {
         "Type": "Bug",
         "Frequency": "At-Will",
         "AC": "3",
@@ -8256,8 +7550,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Twister",
+    "Twister": {
         "Type": "Dragon",
         "Frequency": "At-Will",
         "AC": "2",
@@ -8268,8 +7561,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "U-Turn",
+    "U-Turn": {
         "Type": "Bug",
         "Frequency": "At-Will",
         "AC": "2",
@@ -8280,8 +7572,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Uproar",
+    "Uproar": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -8292,8 +7583,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "V-Create",
+    "V-Create": {
         "Type": "Fire",
         "Frequency": "Daily",
         "AC": "5",
@@ -8304,8 +7594,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Vacuum Wave",
+    "Vacuum Wave": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "2",
@@ -8316,8 +7605,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Saving Grace"
     },
-    {
-        "Name": "Vename Drench",
+    "Vename Drench": {
         "Type": "Poison",
         "Frequency": "EOT",
         "AC": "None",
@@ -8327,8 +7615,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Venoshock",
+    "Venoshock": {
         "Type": "Poison",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -8339,8 +7626,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Vice Grip",
+    "Vice Grip": {
         "Type": "Normal",
         "Frequency": "At-Will",
         "AC": "2",
@@ -8351,8 +7637,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Victory Dance",
+    "Victory Dance": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "None",
@@ -8362,8 +7647,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Get Ready"
     },
-    {
-        "Name": "Vine Whip",
+    "Vine Whip": {
         "Type": "Grass",
         "Frequency": "At-Will",
         "AC": "2",
@@ -8375,8 +7659,7 @@
         "Contest Effect": "Steady Performance",
         "Special": "Grants Threaded"
     },
-    {
-        "Name": "Vital Throw",
+    "Vital Throw": {
         "Type": "Fighting",
         "Frequency": "EOT",
         "AC": "None",
@@ -8387,8 +7670,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Volt Switch",
+    "Volt Switch": {
         "Type": "Electric",
         "Frequency": "At-Will",
         "AC": "2",
@@ -8399,8 +7681,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Volt Tackle",
+    "Volt Tackle": {
         "Type": "Electric",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -8411,8 +7692,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Wake-Up Slap",
+    "Wake-Up Slap": {
         "Type": "Fighting",
         "Frequency": "At-Will",
         "AC": "2",
@@ -8423,8 +7703,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Water Gun",
+    "Water Gun": {
         "Type": "Water",
         "Frequency": "At-Will",
         "AC": "2",
@@ -8436,8 +7715,7 @@
         "Contest Effect": "Steady Performance",
         "Special": "Grants Fountain"
     },
-    {
-        "Name": "Water Pledge",
+    "Water Pledge": {
         "Type": "Water",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -8448,8 +7726,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Water Pulse",
+    "Water Pulse": {
         "Type": "Water",
         "Frequency": "At-Will",
         "AC": "2",
@@ -8460,8 +7737,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Water Shuriken",
+    "Water Shuriken": {
         "Type": "Water",
         "Frequency": "EOT",
         "AC": "2",
@@ -8472,8 +7748,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Reliable"
     },
-    {
-        "Name": "Water Sport",
+    "Water Sport": {
         "Type": "Water",
         "Frequency": "EOT",
         "AC": "None",
@@ -8484,8 +7759,7 @@
         "Contest Effect": "Sabotage",
         "Special": "Grants Fountain"
     },
-    {
-        "Name": "Water Spout",
+    "Water Spout": {
         "Type": "Water",
         "Frequency": "Daily",
         "AC": "4",
@@ -8496,8 +7770,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "Waterfall",
+    "Waterfall": {
         "Type": "Water",
         "Frequency": "EOT",
         "AC": "2",
@@ -8508,8 +7781,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Weather Ball",
+    "Weather Ball": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "2",
@@ -8520,8 +7792,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Whirlpool",
+    "Whirlpool": {
         "Type": "Water",
         "Frequency": "Scene x2",
         "AC": "4",
@@ -8532,8 +7803,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Whirlwind",
+    "Whirlwind": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -8543,8 +7813,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Big Show"
     },
-    {
-        "Name": "Wicked Blow",
+    "Wicked Blow": {
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "2",
@@ -8555,8 +7824,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Wide Guard",
+    "Wide Guard": {
         "Type": "Rock",
         "Frequency": "Scene",
         "AC": "None",
@@ -8566,8 +7834,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Inversed Appeal"
     },
-    {
-        "Name": "Wild Charge",
+    "Wild Charge": {
         "Type": "Electric",
         "Frequency": "At-Will",
         "AC": "2",
@@ -8578,8 +7845,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Wildbolt Storm",
+    "Wildbolt Storm": {
         "Type": "Electric",
         "Frequency": "Scene",
         "AC": "5",
@@ -8590,8 +7856,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Unsettling"
     },
-    {
-        "Name": "Will-O-Wisp",
+    "Will-O-Wisp": {
         "Type": "Fire",
         "Frequency": "EOT",
         "AC": "5",
@@ -8601,8 +7866,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Wing Attack",
+    "Wing Attack": {
         "Type": "Flying",
         "Frequency": "At-Will",
         "AC": "2",
@@ -8613,8 +7877,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Steady Performance"
     },
-    {
-        "Name": "Wish",
+    "Wish": {
         "Type": "Normal",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -8624,8 +7887,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Reflective Appeal"
     },
-    {
-        "Name": "Withdraw",
+    "Withdraw": {
         "Type": "Water",
         "Frequency": "At-Will",
         "AC": "None",
@@ -8635,8 +7897,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Sabotage"
     },
-    {
-        "Name": "Wonder Room",
+    "Wonder Room": {
         "Type": "Psychic",
         "Frequency": "Daily x2",
         "AC": "None",
@@ -8646,8 +7907,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Tease"
     },
-    {
-        "Name": "Wood Hammer",
+    "Wood Hammer": {
         "Type": "Grass",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -8658,8 +7918,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Work Up",
+    "Work Up": {
         "Type": "Normal",
         "Frequency": "EOT",
         "AC": "None",
@@ -8669,8 +7928,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Get Ready!"
     },
-    {
-        "Name": "Worry Seed",
+    "Worry Seed": {
         "Type": "Grass",
         "Frequency": "Scene",
         "AC": "2",
@@ -8680,8 +7938,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Wrap",
+    "Wrap": {
         "Type": "Normal",
         "Frequency": "Static",
         "Class": "Static",
@@ -8689,8 +7946,7 @@
         "Contest Type": "Tough",
         "Contest Effect": "Safe Option"
     },
-    {
-        "Name": "Wring Out",
+    "Wring Out": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "2",
@@ -8701,8 +7957,7 @@
         "Contest Type": "Smart",
         "Contest Effect": "Seen Nothing Yet"
     },
-    {
-        "Name": "X-Scissor",
+    "X-Scissor": {
         "Type": "Bug",
         "Frequency": "At-Will",
         "AC": "2",
@@ -8713,8 +7968,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Exhausting Act"
     },
-    {
-        "Name": "Yawn",
+    "Yawn": {
         "Type": "Normal",
         "Frequency": "Scene x2",
         "AC": "None",
@@ -8724,8 +7978,7 @@
         "Contest Type": "Cute",
         "Contest Effect": "Excitement"
     },
-    {
-        "Name": "Zap Cannon",
+    "Zap Cannon": {
         "Type": "Electric",
         "Frequency": "At-Will",
         "AC": "9",
@@ -8736,8 +7989,7 @@
         "Contest Type": "Cool",
         "Contest Effect": "Incentives"
     },
-    {
-        "Name": "Zen Headbutt",
+    "Zen Headbutt": {
         "Type": "Psychic",
         "Frequency": "EOT",
         "AC": "4",
@@ -8748,8 +8000,7 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Desperation"
     },
-    {
-        "Name": "Zing Zap",
+    "Zing Zap": {
         "Type": "Electric",
         "Frequency": "EOT",
         "AC": "2",
@@ -8760,4 +8011,4 @@
         "Contest Type": "Cool",
         "Contest Effect": "Tease"
     }
-]
+}
