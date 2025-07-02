@@ -12,4 +12,4 @@ def sort_json_top_level(input_path, output_path):
         json.dump(sorted_data, f, indent=4, ensure_ascii=False)
 
 # Example usage
-sort_json_top_level("py/outputedge.json", "py/outputedge.json")
+sort_json_top_level("ptu/data/capabilities/capabilities_9G.json", "ptu/data/capabilities/capabilities_9G.json")
