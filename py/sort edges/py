@@ -1,0 +1,29 @@
+import json
+from collections import OrderedDict
+
+def reorder_fields(input_file, output_file):
+    with open(input_file, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    reordered_data = {}
+
+    for key, entry in data.items():
+        reordered = OrderedDict()
+
+        # Add in preferred order if present
+        for field in ["Prerequisites", "Frequency", "Description"]:
+            if field in entry:
+                reordered[field] = entry[field]
+
+        # Add any remaining keys in original order
+        for field in entry:
+            if field not in reordered:
+                reordered[field] = entry[field]
+
+        reordered_data[key] = reordered
+
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(reordered_data, f, indent=4, ensure_ascii=False)
+
+# Example usage
+reorder_fields("py/outputedge.json", "py/outputedge.json")
