@@ -66,27 +66,87 @@
         "Ravager Orders": {
             "Prerequisites": "Expert Command or Intimidate",
             "Frequency": "Static",
-            "Effect": "You gain the Reckless Advance and Strike Again! Orders."
+            "Effect": "You gain the Reckless Advance and Strike Again! Orders.",
+            "Reckless Advance": {
+                "Tags": "[Orders] [Stratagem]",
+                "Frequency": "Bind 2 AP – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "While this Feature is Bound, increase the damage rolls of the target’s damaging melee attacks by +8, and these attacks Trip targets on Accuracy Rolls of 18+. When the target of Reckless Advance hits with a damaging melee attack, they become Vulnerable for one full round."
+            },
+            "Strike Again!": {
+                "Tags": "[Orders]",
+                "Frequency": "Scene – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "The target may immediately take an additional Standard Action to use an At-Will attack."
+            }
         },
         "Marksman Orders": {
             "Prerequisites": "Expert Perception or Guile",
             "Frequency": "Static",
-            "Effect": "You gain the Trick Shot and Long Shot Orders."
+            "Effect": "You gain the Trick Shot and Long Shot Orders.",
+            "Trick Shot": {
+                "Tags": "[Orders] [Stratagem]",
+                "Frequency": "Bind 2 AP – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "While this Feature is Bound, decrease the Accuracy Roll of the target’s damaging ranged attacks by -2. The Critical Hit range of those attacks is increased by +3. This Feature does not affect Moves without an AC value."
+            },
+            "Long Shot": {
+                "Tags": "[Orders]",
+                "Frequency": "Scene x2 – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "The target’s damaging ranged attacks have their range doubled until the end of their next turn, and deal X additional damage. X is equal to the distance in meters that the attack traveled. Long Shot does not increase the size of area of effect attacks. If attacks altered by Long Shot are Critical Hits, add the value of the Damage Dice Roll an additional time to the total damage."
+            }
         },
         "Trickster Orders": {
             "Prerequisites": "Expert Charm or Guile",
             "Frequency": "Static",
-            "Effect": "You gain the Capricious Whirl and Dazzling Dervish Orders."
+            "Effect": "You gain the Capricious Whirl and Dazzling Dervish Orders.",
+            "Capricious Whirl": {
+                "Tags": "[Orders] [Stratagem]",
+                "Frequency": "Bind 2 AP – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "While this Feature is Bound, the target has a +3 bonus to its Evasion but deals 5 less damage with all damaging attacks."
+            },
+            "Dazzling Dervish": {
+                "Tags": "[Orders]",
+                "Frequency": "Scene x2 – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "Until the end of their next turn, the target adds their non-stat Evasion to their Movement Capabilities and whenever they attack a foe or Shift through a square occupied by a foe, that foe suffers a -3 penalty to all rolls until the end of their next turn. This effect may only affect a foe once per round."
+            }
         },
         "Guardian Orders": {
             "Prerequisites": "Expert Charm or Intimidate",
             "Frequency": "Static",
-            "Effect": "You gain the Brace for Impact and Sentinel Stance Orders."
+            "Effect": "You gain the Brace for Impact and Sentinel Stance Orders.",
+            "Brace for Impact": {
+                "Tags": "[Orders] [Stratagem]",
+                "Frequency": "Bind 2 AP – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "While this Feature is Bound, once a round, when the target uses a self-targeting Status Move, they may gain 5 Damage Reduction until the end of their next turn. They may also activate this effect as a Standard Action."
+            },
+            "Sentinel Stance": {
+                "Tags": "[Orders]",
+                "Frequency": "Scene x2 – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "Until the end of your next turn, the target may attempt to Intercept attacks for allies as a Shift Action. If they do so, they gain 10 Damage Reduction against the attack. If the target is also under the effect of Brace for Impact, they may gain 5 Damage Reduction from it as if they had used a self-targeting Status Move."
+            }
         },
         "Precision Orders": {
             "Prerequisites": "Expert Command or Perception",
             "Frequency": "Static",
-            "Effect": "You gain the Pinpoint Strike and Perfect Aim Orders."
+            "Effect": "You gain the Pinpoint Strike and Perfect Aim Orders.",
+            "Pinpoint Strike": {
+                "Tags": "[Orders] [Stratagem]",
+                "Frequency": "Bind 2 AP – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "Increase the Accuracy and Effect Range of the target’s damaging attacks by +2. These attacks deal 5 less damage, before applying weakness and resistance."
+            },
+            "Perfect Aim": {
+                "Tags": "[Orders]",
+                "Frequency": "Scene x2 – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "The next damaging attack the target performs before the end of your next turn automatically hits and ignores Defensive Abilities but deals damage as if it were resisted one step further than normal. You may still roll to trigger any Effect Ranges or Critical Hits. All targets of the attack may not activate any Blessings in response, and the attack may not be Intercepted or avoided in any way (ex: with Dodge, Shield Moves, etc)."
+            }
         },
         "Blur": {
             "Tags": "[+Speed]",
