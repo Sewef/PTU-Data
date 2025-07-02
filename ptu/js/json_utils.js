@@ -7,11 +7,12 @@ function loadJsonAsCard(file, container) {
             return;
         }
 
-        // Convert object into array of {name, ...fields}
-        allItems = Object.entries(data).map(([name, fields]) => ({
-            Name: name,
-            ...fields
-        }));
+        // Handle both object and primitive entries
+        allItems = Object.entries(data).map(([name, fields]) => {
+            return typeof fields === "string"
+                ? { Name: name, Description: fields }
+                : { Name: name, ...fields };
+        });
 
         renderFilteredCards(allItems, container);
 
