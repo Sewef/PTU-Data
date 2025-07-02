@@ -66,7 +66,7 @@
         "Ravager Orders": {
             "Prerequisites": "Expert Command or Intimidate",
             "Frequency": "Static",
-            "Effect": "You gain the Reckless Advance and Strike Again! Orders."
+            "Effect": "You gain the Reckless Advance and Strike There! Orders."
         },
         "Marksman Orders": {
             "Prerequisites": "Expert Perception or Guile",
@@ -137,8 +137,8 @@
         "Walk It Off": {
             "Tags": "[+HP]",
             "Prerequisites": "Adept Athletics, Novice Focus",
-            "Frequency": "Daily — Extended Action",
-            "Effect": "Remove one Injury from yourself and regain 1/4th of your maximum Hit Points. This Injury removal doesn't count against the natural healing limit on Injuries each day."
+            "Frequency": "Daily – Standard Action",
+            "Effect": "You may remove one Injury from yourself, and regain 1/4th of your maximum Hit Points. This Injury removal doesn't count against the natural healing limit on Injuries each day. Use of Walk It Off counts as Taking A Breather for any Features, Abilities, and Moves(but not Status Afflictions or other conditions)."
         },
         "First Aid Expertise": {
             "Prerequisites": "Medic Training, Expert Medicine Education",
@@ -200,6 +200,43 @@
             "Frequency": "Drain 2 AP — Free Action",
             "Trigger": "You take an Extended Rest",
             "Effect": "During this Extended Rest, Pokémon and Trainers in your care gain the benefits listed below. The AP Drain cost from triggering this Feature is applied after the Extended Rest is completed and AP Drain has otherwise been restored.\n» They heal 1/8th of their Max Hit Points per half hour of rest instead of 1/16th (does not stack with Bandages).\n» If the Extended Rest lasts at least 6 hours, they may remove 1 Injury."
+        },
+        "Combat Medic": {
+            "Tags": "[+Defense or Special Defense] [Hobbyist]",
+            "Prerequisites": "Adept Medicine Education, Novice Combat",
+            "Frequency": "1 AP - Free Action",
+            "Trigger": "You apply a Restorative Item",
+            "Effect": "You may make a Struggle Attack against an adjacent foe as a Free Action. This Struggle Attack counts as an Attack of Opportunity for any Features or Edges you may have, but does not count against the number of Attacks of Opportunity you may make per round."
+        },
+        "Mixed Power": {
+            "Tags": "[+Attack or Special Attack] [Hobbyist]",
+            "Prerequisites": "Level 5, at least 10 Attack and Special Attack",
+            "Frequency": "Static",
+            "Effect": "You gain the Twisted Power Ability."
+        },
+        "Speed Demon": {
+            "Tags": "[+Speed]",
+            "Prerequisites": "Speed's My Game, Expert Acrobatics or Athletics; 20 Speed",
+            "Frequency": "Scene - Swift Action",
+            "Effect": "You gain 3 Speed Tokens. If not spent, these tokens disappear at the end of the Scene. You can spend a Speed Token as a Free Action whenever:\n» You are hit by an attack, to gain DR against that attack equal to your Speed Evasion;\n» You make an Accuracy Check, to add half your Speed Evasion to the result;\n» You hit with a damaging melee attack, to gain a bonus to damage equal to 2 + your Speed Evasion"
+        },
+        "Ow The Edge [Hobbyist]": {
+            "Tags": "[+Any]",
+            "Prerequisites": "None",
+            "Frequency": "Static",
+            "Effect": "You gain two Edges for which you qualify."
+        },
+        "Natural Selection": {
+            "Tags": "[+HP]",
+            "Prerequisites": "Expert Survival; Traveler or Survival Drive",
+            "Frequency": "Static",
+            "Effect": "You learn the Moves Secret Power and Nature Power. When you take this Feature, choose Physical or Special. Whenever you use these moves, they are treated as the chosen Damage Class, adding the appropriate Attack Stat."
+        },
+        "All-Seeing Eyes": {
+            "Tags": "[+Special Defense] [Hobbyist]",
+            "Prerequisites": "Adept Perception",
+            "Frequency": "Static",
+            "Effect": "You gain the Perception Ability."
         }
     },
     "Ace Trainer": {
@@ -4274,7 +4311,7 @@
             "Rank 1 Prerequisites": "Metamagic",
             "Rank 2 Prerequisites": "Authentic Thaumaturgy",
             "Frequency": "Static",
-            "Effect":"Each Rank, select a Power Manipulation of the same Signature Manipulation Rank you are taking or lower.\n» For Rank 1 Manipulations, this Manipulation may be used twice per Scene without spending AP to activate.\n» For Rank 2 Manipulations, this Manipulation may be used once per Scene without activating Authentic Thaumaturgy’s Frequency."
+            "Effect": "Each Rank, select a Power Manipulation of the same Signature Manipulation Rank you are taking or lower.\n» For Rank 1 Manipulations, this Manipulation may be used twice per Scene without spending AP to activate.\n» For Rank 2 Manipulations, this Manipulation may be used once per Scene without activating Authentic Thaumaturgy’s Frequency."
         },
         "Recoup Energy": {
             "Tags": "[+Special Attack]",
