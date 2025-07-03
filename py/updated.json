@@ -3140,7 +3140,7 @@
                 "Effect": "You gain Technician, and all Martial Artist Features gain the [+Speed] Tag."
             },
             "Martial Training": {
-                "Tags": "+Speed",
+                "Tags": "[+Speed]",
                 "Rank 1 Prerequisites": "Martial Artist",
                 "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
                 "Rank 3 Prerequisites": "Martial Artist, Master Combat",
@@ -3148,14 +3148,14 @@
                 "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Arm Thrust</td><td>Technician</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Double Kick</td><td>None</td><td>Quick Guard</td><td>Technician</td><td>Triple Kick</td><td>Technician</td></tr><tr><td>Focus Energy</td><td>None</td><td></td><td></td><td></td><td></td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>"
             },
             "My Kung-Fu is Stronger": {
-                "Tags": "+Speed",
+                "Tags": "[+Speed]",
                 "Prerequisites": "Martial Training Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "A foe provokes an Attack of Opportunity",
                 "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
             },
             "Martial Achievement": {
-                "Tags": "+Speed",
+                "Tags": "[+Speed]",
                 "Prerequisites": "Martial Artist",
                 "Frequency": "Static",
                 "Effect": "You gain the Whirlwind Strikes Martial Achievement.",
@@ -3166,7 +3166,7 @@
                 }
             },
             "Second Strike": {
-                "Tags": "+Speed",
+                "Tags": "[+Speed]",
                 "Prerequisites": "Martial Artist",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
@@ -3181,7 +3181,7 @@
                 "Effect": "You gain Reckless, and all Martial Artist Features gain the [+Attack] Tag."
             },
             "Martial Training": {
-                "Tags": "+Attack",
+                "Tags": "[+Attack]",
                 "Rank 1 Prerequisites": "Martial Artist",
                 "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
                 "Rank 3 Prerequisites": "Martial Artist, Master Combat",
@@ -3189,14 +3189,14 @@
                 "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Double Kick</td><td>None</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Focus Energy</td><td>None</td><td>Jump Kick</td><td>Reckless</td><td>High Jump Kick</td><td>Reckless</td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr><tr><td>Rolling Kick</td><td>Reckless</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>"
             },
             "My Kung-Fu is Stronger": {
-                "Tags": "+Attack",
+                "Tags": "[+Attack]",
                 "Prerequisites": "Martial Training Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "A foe provokes an Attack of Opportunity",
                 "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
             },
             "Martial Achievement": {
-                "Tags": "+Attack",
+                "Tags": "[+Attack]",
                 "Prerequisites": "Martial Artist",
                 "Frequency": "Static",
                 "Effect": "You gain the Soft Landing Martial Achievement.",
@@ -3208,7 +3208,7 @@
                 }
             },
             "Second Strike": {
-                "Tags": "+Attack",
+                "Tags": "[+Attack]",
                 "Prerequisites": "Martial Artist",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
@@ -3223,7 +3223,7 @@
                 "Effect": "You gain Limber, and all Martial Artist Features gain the [+Speed] Tag."
             },
             "Martial Training": {
-                "Tags": "+Speed",
+                "Tags": "[+Speed]",
                 "Rank 1 Prerequisites": "Martial Artist",
                 "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
                 "Rank 3 Prerequisites": "Martial Artist, Master Combat",
@@ -3231,14 +3231,14 @@
                 "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Acupressure</td><td>Limber</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Double Kick</td><td>None</td><td>Counter</td><td>Limber</td><td></td><td></td></tr><tr><td>Focus Energy</td><td>None</td><td>Power Trick</td><td>Limber</td><td></td><td></td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>"
             },
             "My Kung-Fu is Stronger": {
-                "Tags": "+Speed",
+                "Tags": "[+Speed]",
                 "Prerequisites": "Martial Training Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "A foe provokes an Attack of Opportunity",
                 "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
             },
             "Martial Achievement": {
-                "Tags": "+Speed",
+                "Tags": "[+Speed]",
                 "Prerequisites": "Martial Artist",
                 "Frequency": "Static",
                 "Effect": "You gain the Bend Like the Willow Martial Achievement.",
@@ -3250,7 +3250,7 @@
                 }
             },
             "Second Strike": {
-                "Tags": "+Speed",
+                "Tags": "[+Speed]",
                 "Prerequisites": "Martial Artist",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
@@ -3265,7 +3265,7 @@
                 "Effect": "You gain Iron Fist, and all Martial Artist Features gain the [+Defense] Tag."
             },
             "Martial Training": {
-                "Tags": "+Defense",
+                "Tags": "[+Defense]",
                 "Rank 1 Prerequisites": "Martial Artist",
                 "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
                 "Rank 3 Prerequisites": "Martial Artist, Master Combat",
@@ -3273,14 +3273,14 @@
                 "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Double Kick</td><td>None</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Focus Energy</td><td>None</td><td>Comet Punch</td><td>Iron Fist</td><td>Sky Uppercut</td><td>Iron Fist</td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr><tr><td>Mach Punch</td><td>Iron Fist</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>"
             },
             "My Kung-Fu is Stronger": {
-                "Tags": "+Defense",
+                "Tags": "[+Defense]",
                 "Prerequisites": "Martial Training Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "A foe provokes an Attack of Opportunity",
                 "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
             },
             "Martial Achievement": {
-                "Tags": "+Defense",
+                "Tags": "[+Defense]",
                 "Prerequisites": "Martial Artist",
                 "Frequency": "Static",
                 "Effect": "You gain the Pummeling Momentum Martial Achievement.",
@@ -3292,7 +3292,7 @@
                 }
             },
             "Second Strike": {
-                "Tags": "+Defense",
+                "Tags": "[+Defense]",
                 "Prerequisites": "Martial Artist",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
@@ -3307,7 +3307,7 @@
                 "Effect": "You gain Inner Focus, and all Martial Artist Features gain the [+Speed] Tag."
             },
             "Martial Training": {
-                "Tags": "+Speed",
+                "Tags": "[+Speed]",
                 "Rank 1 Prerequisites": "Martial Artist",
                 "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
                 "Rank 3 Prerequisites": "Martial Artist, Master Combat",
@@ -3315,14 +3315,14 @@
                 "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Double Kick</td><td>None</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Focus Energy</td><td>None</td><td>Circle Throw</td><td>Guts</td><td>Storm Throw</td><td>Guts</td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr><tr><td>Vital Throw</td><td>Guts</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>"
             },
             "My Kung-Fu is Stronger": {
-                "Tags": "+Speed",
+                "Tags": "[+Speed]",
                 "Prerequisites": "Martial Training Rank 1",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "A foe provokes an Attack of Opportunity",
                 "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
             },
             "Martial Achievement": {
-                "Tags": "+Speed",
+                "Tags": "[+Speed]",
                 "Prerequisites": "Martial Artist",
                 "Frequency": "Static",
                 "Effect": "You gain the Heightened Intensity Martial Achievement.",
@@ -3333,7 +3333,7 @@
                 }
             },
             "Second Strike": {
-                "Tags": "+Speed",
+                "Tags": "[+Speed]",
                 "Prerequisites": "Martial Artist",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
@@ -4356,26 +4356,26 @@
                 "Effect": "You gain the Unnerve Ability."
             },
             "How To Shoot Web": {
-                "Tags": "+Attack",
+                "Tags": "[+Attack]",
                 "Prerequisites": "Swarmlord",
                 "Frequency": "Static",
                 "Effect": "You gain the Threaded and Wallclimber Capabilities."
             },
             "Broodlord": {
-                "Tags": "+Attack",
+                "Tags": "[+Attack]",
                 "Prerequisites": "Enhanced Embrace Rank 2, Expert Command or Survival",
                 "Frequency": "Static",
                 "Effect": "You gain Tinted Lens."
             },
             "Pheromone Markers": {
-                "Tags": "+Attack",
+                "Tags": "[+Attack]",
                 "Prerequisites": "Enhanced Embrace Rank 1",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "You hit a foe with a damaging Bug-Type attack",
                 "Effect": "The triggering foe gains 1 Pheromone Stack. Your Bug-Type attacks gain a +2 bonus to Accuracy Rolls and +1 Critical Hit range against foes for each Pheromone Stack they have. Once per Scene per foe, when they gain their third or higher Pheromone Stack, you may choose to roll 1d6. On a result of 1 or 2, the foe becomes Confused; on a result of 3 or 4 the foe becomes Suppressed; on a result of 5 or 6 the foe becomes Enraged."
             },
             "Enhanced Embrace": {
-                "Tags": "+Attack",
+                "Tags": "[+Attack]",
                 "Rank 1 Prerequisites": "Swarmlord",
                 "Rank 2 Prerequisites": "Adept Command or Survival",
                 "Rank 3 Prerequisites": "Expert Command or Survival",
@@ -4681,26 +4681,26 @@
                 "Effect": "You gain Wood."
             },
             "Green Path": {
-                "Tags": "+Attack",
+                "Tags": "[+Attack]",
                 "Prerequisites": "Druid",
                 "Frequency": "Static",
                 "Effect": "You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword."
             },
             "Overgrowth": {
-                "Tags": "+Attack",
+                "Tags": "[+Attack]",
                 "Prerequisites": "Nature's Embrace Rank 3",
                 "Frequency": "2 AP — Swift Action",
                 "Trigger": "You hit with a Druid Move",
                 "Effect": "One target of the triggering Move is afflicted with Overgrowth. As long as the target is afflicted, they are one step less Resistant to Grass-Type attacks, to a maximum of neutral damage, and they cannot recover Hit Points or gain Temporary Hit Points. Whenever they would do so, you gain those Hit Points or Temporary Hit Points instead. Overgrowth is removed when the target Takes a Breather or is hit by a damaging Fire, Ice, Poison, Flying, or Bug-Type attack. Overgrowth may only affect a target once per Scene."
             },
             "Druid's Call": {
-                "Tags": "+Attack",
+                "Tags": "[+Attack]",
                 "Prerequisites": "Green Path (Flower Oath)",
                 "Frequency": "Scene x2 — Standard Action",
                 "Effect": "6 small saplings suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter, and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) Capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)"
             },
             "Nature's Embrace": {
-                "Tags": "+Attack",
+                "Tags": "[+Attack]",
                 "Rank 1 Prerequisites": "Druid",
                 "Rank 2 Prerequisites": "Adept Survival or General Education",
                 "Rank 3 Prerequisites": "Expert Survival or General Education",
