@@ -1,14 +1,17 @@
 function renderData(data, container, depth = 0) {
+    const skipFields = new Set(["Source", "Category"]);
+
     for (const key in data) {
         if (!data.hasOwnProperty(key)) continue;
         const value = data[key];
+
+        if (skipFields.has(key)) continue;
 
         if (typeof value === "object" && value !== null) {
             if (!Array.isArray(value)) {
                 // Choose heading size based on depth (h5, h6, small)
                 const label = document.createElement(depth < 2 ? `h${5 + depth}` : "div");
                 label.className = `text-muted mb-2 ${depth >= 2 ? "small fs-6" : ""}`;
-
                 label.textContent = key;
                 container.appendChild(label);
             }
@@ -21,9 +24,7 @@ function renderData(data, container, depth = 0) {
     }
 }
 
-
-function createCard(title, data) {
-    // Create the column wrapper
+function createCard(title, data, meta) {
     const col = document.createElement("div");
     col.className = "col-md-12 mb-3";
 
@@ -35,15 +36,23 @@ function createCard(title, data) {
 
     const cardTitle = document.createElement("h4");
     cardTitle.className = "card-title";
-    cardTitle.textContent = title;
+
+    const actualCategory = meta?.Category ?? "Unknown";
+    const actualSource = data?.Source ?? meta?.Source ?? "Unknown";
+    console.log(`Creating card for ${title} with category ${actualCategory} and source ${actualSource}`);
+
+    cardTitle.innerHTML = `${title} 
+        <span class="badge bg-secondary">${actualCategory}</span> 
+        <span class="badge bg-info">${actualSource}</span>`;
 
     cardBody.appendChild(cardTitle);
     renderData(data, cardBody);
     card.appendChild(cardBody);
     col.appendChild(card);
-
     return col;
 }
+
+
 
 
 function slugify(str) {
@@ -228,7 +237,12 @@ function loadFeatures(file) {
                                 parentToggle.setAttribute("aria-controls", collapseId);
 
                                 const labelSpan = document.createElement("span");
-                                labelSpan.textContent = className;
+                                labelSpan.innerHTML = `
+                                <span>${className}</span>
+                                <span class="badge bg-light text-muted ms-auto">${source}</span>
+                                `;
+                                labelSpan.className = "d-flex justify-content-between align-items-center w-100";
+
 
                                 const triangleSpan = document.createElement("span");
                                 triangleSpan.className = "triangle-toggle ms-auto"; // ms-auto pour le pousser à droite
@@ -267,7 +281,14 @@ function loadFeatures(file) {
                                         const link = document.createElement("a");
                                         link.href = "#";
                                         link.className = "list-group-item list-group-item-action ps-4";
-                                        link.textContent = branch;
+                                        const branchData = branchObj[className];
+                                        const branchSource = branchData?.Source || source; // fallback sur classe
+                                        link.innerHTML = `
+                                        <span>${branch}</span>
+                                        <span class="badge bg-light text-muted ms-auto">${branchSource}</span>
+                                        `;
+                                        link.classList.add("d-flex", "justify-content-between", "align-items-center");
+
                                         link.dataset.section = className;
                                         link.dataset.subsection = branch;
 
@@ -290,7 +311,11 @@ function loadFeatures(file) {
                                 const link = document.createElement("a");
                                 link.href = "#";
                                 link.className = "list-group-item list-group-item-action ps-3";
-                                link.textContent = className;
+                                link.innerHTML = `
+                                <span>${className}</span>
+                                <span class="badge bg-light text-muted ms-auto">${source}</span>
+                                `;
+                                link.classList.add("d-flex", "justify-content-between", "align-items-center");
                                 link.dataset.section = className;
                                 link.addEventListener("click", e => {
                                     e.preventDefault();
@@ -340,26 +365,23 @@ function loadFeatures(file) {
                 renderSidebarLinks();
             }
 
-
-
             buildSidebar(jsonData);
-
-
-
             // Render first visible section
-            const firstKey = Object.keys(linkMap).find(title =>
-                activeSources.has(jsonData[title].Source) &&
-                activeCategories.has(jsonData[title].Category)
+            // Trouver la première classe dont la source ET la catégorie sont visibles
+            const firstVisibleClass = Object.entries(jsonData).find(([className, cls]) =>
+                activeSources.has(cls.Source ?? "Unknown") &&
+                activeCategories.has(cls.Category ?? "Other")
             );
+
+            const firstKey = firstVisibleClass?.[0];
             if (firstKey) {
                 renderSection(firstKey);
-                setActiveLink(linkMap[firstKey]);
+                const sidebarLink = document.querySelector(`[data-section="${firstKey}"]:not([data-subsection])`);
+                if (sidebarLink) setActiveLink(sidebarLink);
             }
+
         })
         .catch(err => console.error("Error loading JSON:", err));
-
-
-
 }
 
 function renderSection(sectionTitle, subSection = null) {
@@ -394,11 +416,18 @@ function renderSection(sectionTitle, subSection = null) {
     const cardMap = {};
 
     for (const featTitle in featuresToRender) {
-        const card = createCard(featTitle, featuresToRender[featTitle], section);
+        const featData = featuresToRender[featTitle];
+
+        // 🔎 Si on est dans une branche, featData est { Researcher: { ... } }
+        const actualData = featData[sectionTitle] ?? featData;
+
+        const card = createCard(featTitle, actualData, section);
         card.dataset.title = featTitle.toLowerCase();
         cardMap[featTitle] = card;
         row.appendChild(card);
     }
+
+
 
     container.appendChild(row);
 
@@ -428,9 +457,14 @@ function createCard(title, data, meta) {
 
     const cardTitle = document.createElement("h4");
     cardTitle.className = "card-title";
+
+    // Récupérer la vraie source : d'abord celle du feature, sinon celle de la classe
+    const actualSource = data?.Source ?? meta?.Source ?? "Unknown";
+    const actualCategory = meta?.Category ?? "Other";
+
     cardTitle.innerHTML = `${title} 
-      <span class="badge bg-secondary">${meta.Category}</span> 
-      <span class="badge bg-info">${meta.Source}</span>`;
+      <span class="badge bg-secondary">${actualCategory}</span> 
+      <span class="badge bg-info">${actualSource}</span>`;
 
     cardBody.appendChild(cardTitle);
     renderData(data, cardBody);
@@ -438,6 +472,7 @@ function createCard(title, data, meta) {
     col.appendChild(card);
     return col;
 }
+
 
 function setActiveLink(link) {
     if (currentActiveLink) {

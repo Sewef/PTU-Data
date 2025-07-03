@@ -2657,6 +2657,7 @@
       },
       "General": {
         "Researcher": {
+          "Source": "Erratum May 2015",
           "Breadth of Knowledge": {
             "Prerequisites": "General Research Field, Novice General Education",
             "Frequency": "Static",
@@ -2680,7 +2681,7 @@
           }
         }
       },
-      "General_old": {
+      "General (old)": {
         "Researcher": {
           "Breadth of Knowledge": {
             "Prerequisites": "General Research Field, Novice General Education",
@@ -2709,6 +2710,7 @@
       },
       "Apothecary": {
         "Researcher": {
+          "Source": "Erratum September 2015",
           "Apothecary": {
             "Prerequisites": "Apothecary Research Field, Novice Medicine Education",
             "Frequency": "At-Will — Extended Action",
@@ -2755,7 +2757,7 @@
           }
         }
       },
-      "Apothecary_old": {
+      "Apothecary (old)": {
         "Researcher": {
           "Apothecary": {
             "Prerequisites": "Apothecary Research Field, Novice Medicine Education",
@@ -3067,6 +3069,7 @@
       },
       "Engineer": {
         "Researcher": {
+          "Source": "Do Porygon Dream of Mareep",
           "Engineer": {
             "Prerequisites": "Engineer Research Field, Pokébot Training",
             "Frequency": "At-Will — Extended Action",
@@ -3110,6 +3113,7 @@
       },
       "Jailbreaker": {
         "Researcher": {
+          "Source": "Do Porygon Dream of Mareep",
           "Jailbreaker": {
             "Prerequisites": "Jailbreaker Research Field, Basic Balls",
             "Frequency": "At-Will — Extended Action",
@@ -3149,6 +3153,7 @@
       },
       "Upgrader": {
         "Researcher": {
+          "Source": "Do Porygon Dream of Mareep",
           "Upgrader": {
             "Prerequisites": "Upgrader Research Field, Novice Medicine Edu, Novice Technology Edu",
             "Frequency": "At-Will — Extended Action",
