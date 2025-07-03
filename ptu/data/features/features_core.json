@@ -3300,7 +3300,7 @@
     "Martial Artist": {
         "Guts": {
             "Martial Artist": {
-                "Tags": "Class, +HP",
+                "Tags": "[Class][+HP]",
                 "Prerequisites": "Basic Martial Arts, Novice Combat",
                 "Frequency": "Static",
                 "Effect": "You gain Guts, and all Martial Artist Features gain the [+HP] Tag."
@@ -3342,7 +3342,7 @@
         },
         "Inner Focus": {
             "Martial Artist": {
-                "Tags": "Class, +Speed",
+                "Tags": "[Class][+Speed]",
                 "Prerequisites": "Basic Martial Arts, Novice Combat",
                 "Frequency": "Static",
                 "Effect": "You gain Inner Focus, and all Martial Artist Features gain the [+Speed] Tag."
@@ -3383,7 +3383,7 @@
         },
         "Iron Fist": {
             "Martial Artist": {
-                "Tags": "Class, +Defense",
+                "Tags": "[Class][+Defense]",
                 "Prerequisites": "Basic Martial Arts, Novice Combat",
                 "Frequency": "Static",
                 "Effect": "You gain Iron Fist, and all Martial Artist Features gain the [+Defense] Tag."
@@ -3425,7 +3425,7 @@
         },
         "Limber": {
             "Martial Artist": {
-                "Tags": "Class, +Speed",
+                "Tags": "[Class][+Speed]",
                 "Prerequisites": "Basic Martial Arts, Novice Combat",
                 "Frequency": "Static",
                 "Effect": "You gain Limber, and all Martial Artist Features gain the [+Speed] Tag."
@@ -3467,7 +3467,7 @@
         },
         "Reckless": {
             "Martial Artist": {
-                "Tags": "Class, +Attack",
+                "Tags": "[Class][+Attack]",
                 "Prerequisites": "Basic Martial Arts, Novice Combat",
                 "Frequency": "Static",
                 "Effect": "You gain Reckless, and all Martial Artist Features gain the [+Attack] Tag."
@@ -3509,7 +3509,7 @@
         },
         "Technician": {
             "Martial Artist": {
-                "Tags": "Class, +Speed",
+                "Tags": "[Class][+Speed]",
                 "Prerequisites": "Basic Martial Arts, Novice Combat",
                 "Frequency": "Static",
                 "Effect": "You gain Technician, and all Martial Artist Features gain the [+Speed] Tag."
@@ -4304,7 +4304,7 @@
     },
     "Arcanist": {
         "Arcanist": {
-            "Tags": "[Class, +Special Attack][Weapon]",
+            "Tags": "[[Class][+Special Attack]][Weapon]",
             "Prerequisites": "Arcane Training",
             "Frequency": "At-Will — Extended Action",
             "Target": "An Arcane Weapon",
@@ -4382,7 +4382,7 @@
     },
     "Fortress": {
         "Fortress": {
-            "Tags": "[Class, +Defense][Weapon]",
+            "Tags": "[[Class][+Defense]][Weapon]",
             "Prerequisites": "Novice Combat, Novice Focus",
             "Frequency": "At-Will — Free Action",
             "Target": "You target an enemy with a Struggle attack or Weapon Attack and end your turn adjacent to the target.",
@@ -4473,7 +4473,7 @@
     },
     "Skirmisher": {
         "Skirmisher": {
-            "Tags": "[Class, +Speed][Weapon]",
+            "Tags": "[[Class][+Speed]][Weapon]",
             "Prerequisites": "Novice Combat, Novice Acrobatics",
             "Frequency": "Static",
             "Effect": "Choose Flutter or Vanguard. You gain the Chosen Ability."
@@ -4522,7 +4522,7 @@
     "Swarmlord": {
         "Monarch's Embrace": {
             "Swarmlord": {
-                "Tags": "Class, +Special Attack",
+                "Tags": "[Class][+Special Attack]",
                 "Prerequisites": "Elemental Connection (Bug), Novice Survival, Novice Command",
                 "Frequency": "Static",
                 "Effect": "You gain the Shield Dust Ability."
@@ -4557,7 +4557,7 @@
         },
         "Arachnid's Embrace": {
             "Swarmlord": {
-                "Tags": "Class, +Attack",
+                "Tags": "[Class][+Attack]",
                 "Prerequisites": "Elemental Connection (Bug), Novice Survival, Novice Command",
                 "Frequency": "Static",
                 "Effect": "You gain the Unnerve Ability."
@@ -4637,7 +4637,7 @@
     },
     "Herald of Pride": {
         "Herald of Pride": {
-            "Tags": "[Class, +Attack][Weapon]",
+            "Tags": "[[Class][+Attack]][Weapon]",
             "Prerequisites": "Elemental Connection (Dragon), Novice Command, Novice Intimidate",
             "Frequency": "Static",
             "Effect": "When wielding Melee Weapons, you may use Command or Intimidate instead of Combat to determine the Damage Base of your Struggle Attacks, to resist Disarm Maneuvers, and to qualify for a Weapon's Moves. Your Weapon Attacks ignore Damage Reduction up to your Command or Intimidate Rank."
@@ -4836,7 +4836,7 @@
     },
     "Apparition": {
         "Apparition": {
-            "Tags": "[Class, +Attack][Weapon]",
+            "Tags": "[[Class][+Attack]][Weapon]",
             "Prerequisites": "Elemental Connection (Ghost), Novice Intimidate, Novice Occult Education",
             "Frequency": "Static",
             "Effect": "When wielding Melee Weapons, you may use Occult Education or Intimidate instead of Combat to determine the Damage Base of your Struggle Attacks, to resist Disarm Maneuvers, and to qualify for a Weapon's Moves. Your Weapon Attacks always treat you as having the Reach Capability, and foes may not activate Reaction effects against them that specify being hit by a Melee Attack."
@@ -4882,7 +4882,7 @@
     "Druid": {
         "Wood Oath": {
             "Druid": {
-                "Tags": "Class, +Attack",
+                "Tags": "[Class][+Attack]",
                 "Prerequisites": "Elemental Connection (Grass), Novice Survival, Novice General Education",
                 "Frequency": "Static",
                 "Effect": "You gain Wood."
@@ -4917,7 +4917,7 @@
         },
         "Fungal Oath": {
             "Druid": {
-                "Tags": "Class, +Special Defense",
+                "Tags": "[Class][+Special Defense]",
                 "Prerequisites": "Elemental Connection (Grass), Novice Survival, Novice General Education",
                 "Frequency": "Static",
                 "Effect": "You gain Fungal."
@@ -4952,7 +4952,7 @@
         },
         "Flower Oath": {
             "Druid": {
-                "Tags": "Class, +Special Attack",
+                "Tags": "[Class][+Special Attack]",
                 "Prerequisites": "Elemental Connection (Grass), Novice Survival, Novice General Education",
                 "Frequency": "Static",
                 "Effect": "You gain Flower."
@@ -5196,7 +5196,7 @@
     },
     "Steelheart": {
         "Steelheart": {
-            "Tags": "[Class, +Defense][Weapon]",
+            "Tags": "[[Class][+Defense]][Weapon]",
             "Prerequisites": "Elemental Connection (Steel), Novice Athletics, Novice Focus",
             "Frequency": "Static",
             "Effect": "When wielding metal Melee Weapons, you may use Athletics or Focus instead of Combat to determine the Damage Base of your Struggle Attacks, to qualify for a Weapon's Moves, and to resist Disarm Checks. Whenever your Weapon Attacks hit a foe who has previously hit you with a Melee attack in the same round, the foe loses a Tick of Hit Points."

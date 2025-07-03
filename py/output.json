@@ -1,7 +1,7 @@
 {
     "Guts": {
         "Martial Artist": {
-            "Tags": "Class, +HP",
+            "Tags": "[Class][+HP]",
             "Prerequisites": "Basic Martial Arts, Novice Combat",
             "Frequency": "Static",
             "Effect": "You gain Guts, and all Martial Artist Features gain the [+HP] Tag."
@@ -43,7 +43,7 @@
     },
     "Inner Focus": {
         "Martial Artist": {
-            "Tags": "Class, +Speed",
+            "Tags": "[Class][+Speed]",
             "Prerequisites": "Basic Martial Arts, Novice Combat",
             "Frequency": "Static",
             "Effect": "You gain Inner Focus, and all Martial Artist Features gain the [+Speed] Tag."
@@ -84,7 +84,7 @@
     },
     "Iron Fist": {
         "Martial Artist": {
-            "Tags": "Class, +Defense",
+            "Tags": "[Class][+Defense]",
             "Prerequisites": "Basic Martial Arts, Novice Combat",
             "Frequency": "Static",
             "Effect": "You gain Iron Fist, and all Martial Artist Features gain the [+Defense] Tag."
@@ -126,7 +126,7 @@
     },
     "Limber": {
         "Martial Artist": {
-            "Tags": "Class, +Speed",
+            "Tags": "[Class][+Speed]",
             "Prerequisites": "Basic Martial Arts, Novice Combat",
             "Frequency": "Static",
             "Effect": "You gain Limber, and all Martial Artist Features gain the [+Speed] Tag."
@@ -168,7 +168,7 @@
     },
     "Reckless": {
         "Martial Artist": {
-            "Tags": "Class, +Attack",
+            "Tags": "[Class][+Attack]",
             "Prerequisites": "Basic Martial Arts, Novice Combat",
             "Frequency": "Static",
             "Effect": "You gain Reckless, and all Martial Artist Features gain the [+Attack] Tag."
@@ -210,7 +210,7 @@
     },
     "Technician": {
         "Martial Artist": {
-            "Tags": "Class, +Speed",
+            "Tags": "[Class][+Speed]",
             "Prerequisites": "Basic Martial Arts, Novice Combat",
             "Frequency": "Static",
             "Effect": "You gain Technician, and all Martial Artist Features gain the [+Speed] Tag."

@@ -52,13 +52,6 @@ function createCard(title, data, meta) {
     return col;
 }
 
-
-
-
-function slugify(str) {
-    return str.toLowerCase().replace(/[^a-z0-9]/g, "-");
-}
-
 let fullData = {};
 let currentActiveLink = null;
 let activeSources = new Set();
@@ -178,17 +171,49 @@ function loadFeatures(file) {
                 sidebar.appendChild(linkContainer);
 
                 function renderSidebarLinks() {
-                    linkContainer.innerHTML = "";
+
+                    // SECTION SPÉCIALE POUR LA CLASSE "General"
 
                     // Grouper les classes par catégorie
                     const classesByCategory = {};
+                    let generalEntry = null;
 
-                    for (const [className, cls] of Object.entries(data)) {
-                        const category = cls.Category || "Other";
+                    // Trier les classes, General d'abord
+                    const orderedEntries = Object.entries(data).sort(([aName], [bName]) => {
+                        if (aName === "General") return -1;
+                        if (bName === "General") return 1;
+                        return aName.localeCompare(bName);
+                    });
+
+                    for (const [className, cls] of orderedEntries) {
                         const source = cls.Source || "Unknown";
+                        const category = cls.Category || "Other";
+
+                        if (className === "General") {
+                            generalEntry = { className, cls, source };
+                            continue;
+                        }
+
                         if (!classesByCategory[category]) classesByCategory[category] = [];
                         classesByCategory[category].push({ className, cls, source });
                     }
+                    if (generalEntry && activeSources.has(generalEntry.source)) {
+                        const link = document.createElement("a");
+                        link.href = "#";
+                        link.className = "list-group-item list-group-item-action ps-3 mb-2 d-flex justify-content-between align-items-center";
+                        link.dataset.section = generalEntry.className;
+                        link.innerHTML = `
+                            <span>${generalEntry.className}</span>
+                            <span class="badge bg-light text-muted ms-auto">${generalEntry.source}</span>
+                        `;
+                        link.addEventListener("click", e => {
+                            e.preventDefault();
+                            renderSection(generalEntry.className);
+                            setActiveLink(link);
+                        });
+                        linkContainer.appendChild(link);
+                    }
+
 
                     // Pour chaque catégorie
                     for (const [category, classList] of Object.entries(classesByCategory)) {
