@@ -1378,7 +1378,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Water) or Type Strategist (Water). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -1398,7 +1398,7 @@
             },
             "Fishbowl Technique": {
                 "Prerequisites": "Flood!, Type-Linked Skill at Adept",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Pokémon",
                 "Effect": "While this Stratagem is bound, your Pokémon may activate Moves and Abilities as if they were in Rainy Weather."
@@ -1425,7 +1425,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Steel) or Type Strategist (Steel). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -1445,7 +1445,7 @@
             },
             "Iron Grit": {
                 "Prerequisites": "Polished Shine, Type-Linked Skill at Adept",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Pokémon",
                 "Effect": "When this Feature becomes Bound, the target gains +1 Defense Combat Stage. While the Feature remains bound, the target's Defense Stat cannot be lowered, and its Defense Combat Stages cannot be lowered."
@@ -1466,7 +1466,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Rock) or Type Strategist (Rock). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -1493,7 +1493,7 @@
             },
             "Tough as Schist": {
                 "Prerequisites": "Gravel Before Me, Type-Linked Skill at Expert",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Rock-Type Pokémon",
                 "Effect": "While this Feature is Bound, allied Stealth Rock Hazards within 4 meters of your Pokémon are not used when a foe triggers them unless you want them to be. Whenever the target takes Super-Effective Damage from a Water, Grass, Ground, Fighting, or Steel Type Attack, they may consume an allied Stealth Rock Hazard within 4 meters to create temporary armor that grants them Damage Reduction equal to your Type-Linked Skill Rank for one full round."
@@ -1514,7 +1514,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Psychic) or Type Strategist (Psychic). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -1534,7 +1534,7 @@
             },
             "Mindbreak": {
                 "Prerequisites": "Psionic Sponge, Type-Linked Skill at Adept",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Psychic-Type Pokémon",
                 "Effect": "While this Feature is Bound, the target's damaging Psychic-Type Moves gain a +1 Bonus to Effect Range and a +3 Bonus to Damage Rolls for each of the following conditions that the target is suffering: Bad Sleep, Confusion, Curse, Disabled, Flinch, Infatuation, Rage, or Suppression."
@@ -1561,7 +1561,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Poison) or Type Strategist (Poison). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -1582,7 +1582,7 @@
             },
             "Debilitate": {
                 "Prerequisites": "Potent Venom, Type-Linked Skill at Adept",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Poison-Type Pokémon",
                 "Effect": "While this Feature is Bound, when the target successfully hits a Poisoned or Blighted foe with a Poison-Type Move, the foe gains a -2 penalty to Accuracy Rolls and Evasion for one full round."
@@ -1609,7 +1609,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Normal) or Type Strategist (Normal). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -1630,7 +1630,7 @@
             },
             "Plainly Perfect": {
                 "Prerequisites": "Extra Ordinary, Type-Linked Skill at Adept",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Pokémon",
                 "Effect": "While this Feature is bound, instead of rolling for damage with Normal-Type Moves, your Pokémon acts as if they rolled the maximum value on their Damage Dice Roll. Plainly Perfect only works for the first instance of the Damage Dice Roll on Critical Hits."
@@ -1657,7 +1657,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Ice) or Type Strategist (Ice). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -1677,7 +1677,7 @@
             },
             "Polar Vortex": {
                 "Prerequisites": "Glacial Ice, Type-Linked Skill at Adept",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Pokémon",
                 "Effect": "While this Stratagem is bound, your Pokémon may activate Moves and Abilities as if they were in Hail."
@@ -1704,7 +1704,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Ground) or Type Strategist (Ground). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -1725,7 +1725,7 @@
             },
             "Desert Heart": {
                 "Prerequisites": "Mold the Earth, Type-Linked Skill at Adept",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Pokémon",
                 "Effect": "While this Stratagem is bound, your Pokémon may activate Moves and Abilities as if they were in a Sandstorm."
@@ -1751,7 +1751,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Grass) or Type Strategist (Grass). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -1772,7 +1772,7 @@
             },
             "Sunlight Within": {
                 "Prerequisites": "Foiling Foliage, Type-Linked Skill at Adept",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Pokémon",
                 "Effect": "While this Stratagem is bound, your Pokémon may activate Moves and Abilities as if they were in Sunny Weather."
@@ -1799,7 +1799,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Ghost) or Type Strategist (Ghost). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -1819,7 +1819,7 @@
             },
             "Haunting Curse": {
                 "Prerequisites": "Ghost Step, Type-Linked Skill at Adept",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Pokémon",
                 "Effect": "While this Feature is bound, the target gains a Curse Token each time they use a Ghost-Type Move or Ghost Step. Ghost-Type Moves with a Set-Up and Resolution Phase give a Curse Token for each Phase. As a Standard Action during their turn, or as Free Action upon Fainting, the target may spend their Curse Tokens to apply conditions to a foe within 6 meters.\n» 1 Curse Token: The target loses a Combat Stage of your choice.\n» 2 Curse Tokens: The target becomes Cursed.\n» 3 Curse Tokens: The target becomes Suppressed.\n» 4 Curse Tokens: The target falls Asleep and gains Bad Sleep."
@@ -1846,7 +1846,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Flying) or Type Strategist (Flying). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -1861,7 +1861,7 @@
             },
             "Celerity": {
                 "Prerequisites": "Type Ace (Flying)",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "A Flying-Type Pokémon, or a Pokémon with a Sky or Levitate Speed",
                 "Effect": "While this Feature is Bound, add your Type-Linked Skill to the target's Initiative. Additionally, if the Target uses a Disengage Maneuver, they may Shift as if Slowed instead of shifting only 1 Meter."
@@ -1893,7 +1893,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Flying) or Type Strategist (Flying). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -1919,7 +1919,7 @@
             },
             "Incandescence": {
                 "Prerequisites": "Brightest Flame, Type-Linked Skill at Expert",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Pokémon",
                 "Effect": "While this Feature is Bound, the target adds both their Attack and Special Attack Stat to all damaging Fire-Type Attacks, instead of one or the other. This does not stack with Twisted Power."
@@ -1940,7 +1940,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Fighting) or Type Strategist (Fighting). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -1955,7 +1955,7 @@
             },
             "Close Quarters Mastery": {
                 "Prerequisites": "Type Ace (Fighting)",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Pokémon",
                 "Effect": "While this Feature is Bound, the target's Fighting-Type Moves cause foes to become Marked by the target for 1 full round. If the target is a Fighting-Type Pokémon, they may also Mark the Foe for one full round when hitting with a Grapple, Trip, or Push Maneuver. Marked Foes provoke an attack of Opportunity from the Pokémon that marked them if they Shift out of an adjacent square into a square that is not adjacent, even if they use a Disengage Maneuver. Targets cannot be Marked by more than one Pokémon at a time."
@@ -1987,7 +1987,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Fighting) or Type Strategist (Fighting). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -2013,7 +2013,7 @@
             },
             "Fey Trance": {
                 "Prerequisites": "Fairy Lights, Type-Linked Skill at Expert",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Pokémon",
                 "Effect": "While this Feature is bound, whenever the target uses a 1-Target Move with the Social Keyword or a Fairy-Type Status Move, the foe hit by the triggering Move becomes Infatuated with your Pokemon, and immediately Shifts towards your Pokemon, forfeiting their next Shift Action. This may affect a specific foe only once per Scene."
@@ -2034,7 +2034,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Fighting) or Type Strategist (Fighting). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -2055,7 +2055,7 @@
             },
             "Overload": {
                 "Prerequisites": "Lockdown, Type-Linked Skill at Adept",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Pokémon",
                 "Effect": "While this Feature is Bound, whenever the target hits a foe with an Electric Attack, they may choose to have the foe lose Hit Points equal to the target's Tick value plus your Type-Linked Skill Rank. If they do, the target loses a Tick of Hit Points after the attack is resolved."
@@ -2081,7 +2081,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Dragon) or Type Strategist (Dragon). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -2102,7 +2102,7 @@
             },
             "Highlander": {
                 "Prerequisites": "Tyrant’s Roar, Type-Linked Skill at Adept",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Dragon-Type Pokémon",
                 "Effect": "While this Feature is Bound, the target gains X Damage Reduction against Dragon-Type attacks, and gain a +X Bonus to Damage Rolls with Dragon-Typed attacks against other Dragon-Typed targets. X is equal to your Type-Linked Skill Rank."
@@ -2129,7 +2129,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Dark) or Type Strategist (Dark). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -2150,7 +2150,7 @@
             },
             "Sneak Attack": {
                 "Prerequisites": "Clever Ruse, Type-Linked Skill at Adept",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Dark-Type Pokémon",
                 "Effect": "While this Feature is bound, when attacking foes that are Fainted, Flanked, Flinched, Sleeping, Stuck, Tripped, unaware of your Pokémon's presence, or otherwise do not expect an attack, the target gains a +2 bonus to Accuracy Rolls and a bonus to Damage Rolls equal to your Type-Linked Skill Rank."
@@ -2177,7 +2177,7 @@
                 "Effect": "The target loses 2 Tutor Points and learns Last Chance (Bug) or Type Strategist (Bug). You may target a Pokémon only once with Type Ace."
             },
             "Type Refresh": {
-                "Tags": "Branch, Orders",
+                "Tags": "[Branch][Orders]",
                 "Prerequisites": "Type Ace",
                 "Frequency": "2 AP — Standard Action",
                 "Target": "Your Pokémon",
@@ -2197,7 +2197,7 @@
             },
             "Iterative Evolution": {
                 "Prerequisites": "Insectoid Utility, Type-Linked Skill at Adept",
-                "Tags": "Orders, Stratagem",
+                "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Pokémon",
                 "Effect": "While this Feature is bound, if your Pokémon's Bug-Type attack would deal Super-Effective Damage, it gains a +2 Bonus to Accuracy Check. If it would deal Neutral Damage, it gains a Bonus to its Damage Roll equal to your Type-Linked Skill Rank. If it would be resisted, it is resisted one step less. This is calculated after applying any other effects that would modify effectiveness before the Accuracy Roll is made, such as the Tinted Lens Ability."
