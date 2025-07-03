@@ -1027,39 +1027,39 @@
     "Stat Ace": {
         "Attack": {
             "Stat Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "Ace Trainer or Style Expert (Cool), 1 Pokémon with the Attack stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Attack stat of 20 or higher, Novice Command or Focus",
                 "Frequency": "Static",
                 "Effect": "Your Pokémon have their Base Attack increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Attack increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Attack, and you do not need to \"correct\" Stats due to this inflated Stat Value."
             },
             "Stat Link": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Ace (Attack)",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "At the end of your Pokémon's turn, their Attack Stat is at its default number of Combat Stages or less.",
                 "Effect": "The triggering Pokémon gains +1 Combat Stage to Attack. (Note: The \"Default\" number of Combat Stages is usually 0)"
             },
             "Stat Training": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Ace (Attack)",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point",
                 "Effect": "Your Pokémon loses 1 Tutor Point and learns Swords Dance or Rage, even if your Pokémon cannot normally learn either move"
             },
             "Stat Maneuver": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Ace (Attack), Adept Command or Focus",
                 "Frequency": "Scene — Free Action",
                 "Effect": "You may activate this Feature to cause one of your Pokémon to use a Physical \"Melee, 1-Target\" Move as if its range was \"Melee, Pass\" or \"Melee, 3-Targets\" instead."
             },
             "Stat Mastery": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Maneuver (Attack)",
                 "Frequency": "Static",
                 "Effect": "When your Pokémon successfully uses a Push, Disarm, or Dirty Trick Combat Maneuver, the target of the Maneuver loses a Tick of Hit Points."
             },
             "Stat Embodiment": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "4 Stat Ace (Attack) Features, Expert Command or Focus",
                 "Frequency": "1 AP — Swift Action, Priority (Limited)",
                 "Target": "Your Pokémon",
@@ -1075,39 +1075,39 @@
         },
         "Defense": {
             "Stat Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "Ace Trainer or Style Expert (Tough), 1 Pokémon with the Defense stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Defense stat of 20 or higher, Novice Command or Focus",
                 "Frequency": "Static",
                 "Effect": "Your Pokémon have their Base Defense increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Defense increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Defense, and you do not need to \"correct\" Stats due to this inflated Stat Value."
             },
             "Stat Link": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Ace (Defense)",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "At the end of your Pokémon's turn, their Defense Stat is at its default number of Combat Stages or less.",
                 "Effect": "The triggering Pokémon gains +1 Combat Stage to Defense. (Note: The \"Default\" number of Combat Stages is usually 0)"
             },
             "Stat Training": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Ace (Defense)",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point",
                 "Effect": "Your Pokémon loses 1 Tutor Point and learns Iron Defense or Reflect, even if your Pokémon cannot normally learn either move"
             },
             "Stat Maneuver": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Ace (Defense), Adept Command or Focus",
                 "Frequency": "Scene — Free Action",
                 "Effect": "You may activate this Feature whenever your Pokémon is hit by a Physical Attack to receive the blow as if your Pokémon's Defense Combat Stages were at +6 instead of their current value."
             },
             "Stat Mastery": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Maneuver (Defense)",
                 "Frequency": "Static",
                 "Effect": "Whenever your Pokémon do not spend their Shift Action to Shift during a turn, they gain +5 Damage Reduction for one full round."
             },
             "Stat Embodiment": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "4 Stat Ace (Defense) Features, Expert Command or Focus",
                 "Frequency": "1 AP — Swift Action, Priority (Limited)",
                 "Target": "Your Pokémon",
@@ -1123,39 +1123,39 @@
         },
         "Special Attack": {
             "Stat Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "Ace Trainer or Style Expert (Beauty), 1 Pokémon with the Special Attack stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Special Attack stat of 20 or higher, Novice Command or Focus",
                 "Frequency": "Static",
                 "Effect": "Your Pokémon have their Base Special Attack increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Special Attack increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Special Attack, and you do not need to \"correct\" Stats due to this inflated Stat Value."
             },
             "Stat Link": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Ace (Special Attack)",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "At the end of your Pokémon's turn, their Special Attack Stat is at its default number of Combat Stages or less.",
                 "Effect": "The triggering Pokémon gains +1 Combat Stage to Special Attack. (Note: The \"Default\" number of Combat Stages is usually 0)"
             },
             "Stat Training": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Ace (Special Attack)",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point",
                 "Effect": "Your Pokémon loses 1 Tutor Point and learns Nasty Plot or Hidden Power, even if your Pokémon cannot normally learn either move"
             },
             "Stat Maneuver": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Ace (Special Attack), Adept Command or Focus",
                 "Frequency": "Scene — Free Action",
                 "Effect": "You may activate this Feature to allow your Pokémon to use a Special Burst, Cone, Close Blast, Ranged Blast, or Line of any size as a Burst 1, Cone 2, Close Blast 2, or Line 4 instead."
             },
             "Stat Mastery": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Maneuver (Special Attack)",
                 "Frequency": "Static",
                 "Effect": "The Range of your Pokémon's Special Non-Melee Moves is increased by +2. This does not affect the size of Area-Of-Effect moves (But does affect the range at which you can place Ranged Blasts)"
             },
             "Stat Embodiment": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "4 Stat Ace (Special Attack) Features, Expert Command or Focus",
                 "Frequency": "1 AP — Swift Action, Priority (Limited)",
                 "Target": "Your Pokémon",
@@ -1171,39 +1171,39 @@
         },
         "Special Defense": {
             "Stat Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "Ace Trainer or Style Expert (Smart), 1 Pokémon with the Special Defense stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Special Defense stat of 20 or higher, Novice Command or Focus",
                 "Frequency": "Static",
                 "Effect": "Your Pokémon have their Base Special Defense increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Special Defense increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Special Defense, and you do not need to \"correct\" Stats due to this inflated Stat Value."
             },
             "Stat Link": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Ace (Special Defense)",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "At the end of your Pokémon's turn, their Special Defense Stat is at its default number of Combat Stages or less.",
                 "Effect": "The triggering Pokémon gains +1 Combat Stage to Special Defense. (Note: The \"Default\" number of Combat Stages is usually 0)"
             },
             "Stat Training": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Ace (Special Defense)",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point",
                 "Effect": "Your Pokémon loses 1 Tutor Point and learns Amnesia or Light Screen, even if your Pokémon cannot normally learn either move"
             },
             "Stat Maneuver": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Ace (Special Defense), Adept Command or Focus",
                 "Frequency": "Scene — Free Action",
                 "Effect": "You may activate this Feature whenever your Pokémon is hit by a Special Attack to receive the blow as if your Pokémon's Special Defense Combat Stages were at +6 instead of their current value."
             },
             "Stat Mastery": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Maneuver (Special Defense)",
                 "Frequency": "Static",
                 "Effect": "Whenever your Pokémon would lose a Tick of Hit Points from Status Afflictions, Weather, or other effects, they lose 5 fewer Hit Points, to a minimum of 1."
             },
             "Stat Embodiment": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "4 Stat Ace (Special Defense) Features, Expert Command or Focus",
                 "Frequency": "1 AP — Swift Action, Priority (Limited)",
                 "Target": "Your Pokémon",
@@ -1219,39 +1219,39 @@
         },
         "Speed": {
             "Stat Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "Ace Trainer or Style Expert (Cute), 1 Pokémon with the Speed stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Speed stat of 20 or higher, Novice Command or Focus",
                 "Frequency": "Static",
                 "Effect": "Your Pokémon have their Base Speed increased by +1, and by +1 more for every 10 Levels they have (for example, a Level 20 Pokémon would have their Base Speed increased by +3). Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Speed, and you do not need to \"correct\" Stats due to this inflated Stat Value."
             },
             "Stat Link": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Ace (Speed)",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "At the end of your Pokémon's turn, their Speed Stat is at its default number of Combat Stages or less.",
                 "Effect": "The triggering Pokémon gains +1 Combat Stage to Speed. (Note: The \"Default\" number of Combat Stages is usually 0)"
             },
             "Stat Training": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Ace (Speed)",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point",
                 "Effect": "Your Pokémon loses 1 Tutor Point and learns Agility or After You, even if your Pokémon cannot normally learn either move"
             },
             "Stat Maneuver": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Ace (Speed), Adept Command or Focus",
                 "Frequency": "Scene — Free Action",
                 "Effect": "You may activate this Feature at any time to cause your Pokémon to use a Move as Priority or a Priority Move as Priority (Advanced)."
             },
             "Stat Mastery": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "Stat Maneuver (Speed)",
                 "Frequency": "Static",
                 "Effect": "Your Pokémon may take Disengage Maneuvers as Swift Actions."
             },
             "Stat Embodiment": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "4 Stat Ace (Speed) Features, Expert Command or Focus",
                 "Frequency": "1 AP — Swift Action, Priority (Limited)",
                 "Target": "Your Pokémon",
@@ -1269,13 +1269,13 @@
     "Style Expert": {
         "Beauty": {
             "Style Expert": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "3 Pokémon with 3d6 in their Beauty Stat from Poffins OR Fashionista or Coordinator, 1 Pokémon with 3d6 in their Beauty Stat from Poffins",
                 "Frequency": "Static",
                 "Effect": "Your Pokémon gain +2d6 to their Beauty Stat. These dice are counted as if coming from Poffins. Your Pokémon gain a +5 bonus to damage with attacks that match Beauty Stat. When your Pokémon uses a non-damaging attack that matches your Beauty Stat, it gains a +1 bonus to its Evasion for one full round."
             },
             "Style Flourish": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Style Expert (Beauty) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Beauty Move",
@@ -1283,7 +1283,7 @@
                 "Battle Effect": "The target gains +1 CS to their Special Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "4 Style Expert (Beauty) Features",
                 "Frequency": "1 AP — Swift Action, Priority (Limited)",
                 "Target": "Your Pokémon",
@@ -1314,13 +1314,13 @@
         },
         "Cool": {
             "Style Expert": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "3 Pokémon with 3d6 in their Cool Stat from Poffins OR Fashionista or Coordinator, 1 Pokémon with 3d6 in their Cool Stat from Poffins",
                 "Frequency": "Static",
                 "Effect": "Your Pokémon gain +2d6 to their Cool Stat. These dice are counted as if coming from Poffins. Your Pokémon gain a +5 bonus to damage with attacks that match Cool Stat. When your Pokémon uses a non-damaging attack that matches your Cool Stat, it gains a +1 bonus to its Evasion for one full round."
             },
             "Style Flourish": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Style Expert (Cool) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Cool Move",
@@ -1328,7 +1328,7 @@
                 "Battle Effect": "The target gains +1 CS to their Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "4 Style Expert (Cool) Features",
                 "Frequency": "1 AP — Swift Action, Priority (Limited)",
                 "Target": "Your Pokémon",
@@ -1360,13 +1360,13 @@
         },
         "Cute": {
             "Style Expert": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "3 Pokémon with 3d6 in their Cute Stat from Poffins OR Fashionista or Coordinator, 1 Pokémon with 3d6 in their Cute Stat from Poffins",
                 "Frequency": "Static",
                 "Effect": "Your Pokémon gain +2d6 to their Cute Stat. These dice are counted as if coming from Poffins. Your Pokémon gain a +5 bonus to damage with attacks that match Cute Stat. When your Pokémon uses a non-damaging attack that matches your Cute Stat, it gains a +1 bonus to its Evasion for one full round."
             },
             "Style Flourish": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Style Expert (Cute) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Cute Move",
@@ -1374,7 +1374,7 @@
                 "Battle Effect": "The target gains +1 CS to their Speed, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "4 Style Expert (Cute) Features",
                 "Frequency": "1 AP — Swift Action, Priority (Limited)",
                 "Target": "Your Pokémon",
@@ -1405,13 +1405,13 @@
         },
         "Smart": {
             "Style Expert": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "3 Pokémon with 3d6 in their Smart Stat from Poffins OR Fashionista or Coordinator, 1 Pokémon with 3d6 in their Smart Stat from Poffins",
                 "Frequency": "Static",
                 "Effect": "Your Pokémon gain +2d6 to their Smart Stat. These dice are counted as if coming from Poffins. Your Pokémon gain a +5 bonus to damage with attacks that match Smart Stat. When your Pokémon uses a non-damaging attack that matches your Smart Stat, it gains a +1 bonus to its Evasion for one full round."
             },
             "Style Flourish": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Style Expert (Smart) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Smart Move",
@@ -1419,7 +1419,7 @@
                 "Battle Effect": "The target gains +1 CS to their Special Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "4 Style Expert (Smart) Features",
                 "Frequency": "1 AP — Swift Action, Priority (Limited)",
                 "Target": "Your Pokémon",
@@ -1450,13 +1450,13 @@
         },
         "Tough": {
             "Style Expert": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "3 Pokémon with 3d6 in their Tough Stat from Poffins OR Fashionista or Coordinator, 1 Pokémon with 3d6 in their Tough Stat from Poffins",
                 "Frequency": "Static",
                 "Effect": "Your Pokémon gain +2d6 to their Tough Stat. These dice are counted as if coming from Poffins. Your Pokémon gain a +5 bonus to damage with attacks that match Tough Stat. When your Pokémon uses a non-damaging attack that matches your Tough Stat, it gains a +1 bonus to its Evasion for one full round."
             },
             "Style Flourish": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Style Expert (Tough) Features",
                 "Frequency": "1 AP — Free Action",
                 "Trigger": "Your Pokémon uses a Tough Move",
@@ -1464,7 +1464,7 @@
                 "Battle Effect": "The target gains +1 CS to their Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
             },
             "Style Entrainment": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "4 Style Expert (Tough) Features",
                 "Frequency": "1 AP — Swift Action, Priority (Limited)",
                 "Target": "Your Pokémon",
@@ -1497,7 +1497,7 @@
     "Type Ace": {
         "Bug": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Bug-Type Pokémon, Novice Command or Survival OR Elemental Connection (Bug), 1 Bug-Type Pokémon, Novice Command or Survival",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -1511,7 +1511,7 @@
                 "Effect": "The target regains one use of a Bug-Type Scene-Frequency Move, and refreshes the Frequency of all Bug-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Bug) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -1544,7 +1544,7 @@
         },
         "Dark": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Dark-Type Pokémon, Novice Guile or Stealth OR Elemental Connection (Dark), 1 Dark-Type Pokémon, Novice Guile or Stealth",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -1558,7 +1558,7 @@
                 "Effect": "The target regains one use of a Dark-Type Scene-Frequency Move, and refreshes the Frequency of all Dark-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Dark) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -1592,7 +1592,7 @@
         },
         "Dragon": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Dragon-Type Pokémon, Novice Command or Intimidate OR Elemental Connection (Dragon), 1 Dragon-Type Pokémon, Novice Command or Intimidate",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -1606,7 +1606,7 @@
                 "Effect": "The target regains one use of a Dragon-Type Scene-Frequency Move, and refreshes the Frequency of all Dragon-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Dragon) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -1640,7 +1640,7 @@
         },
         "Electric": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Fighting-Type Pokémon, Novice Command or Intimidate OR Elemental Connection (Fighting), 1 Fighting-Type Pokémon, Novice Command or Intimidate",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -1654,7 +1654,7 @@
                 "Effect": "The target regains one use of an Electric-Type Scene-Frequency Move, and refreshes the Frequency of all Electric-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Electric) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -1687,7 +1687,7 @@
         },
         "Fairy": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Fighting-Type Pokémon, Novice Focus or Combat OR Elemental Connection (Fighting), 1 Fighting-Type Pokémon, Novice Focus or Combat",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -1701,7 +1701,7 @@
                 "Effect": "The target regains one use of a Fairy-Type Scene-Frequency Move, and refreshes the Frequency of all Fairy-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Fairy) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -1735,7 +1735,7 @@
         },
         "Fighting": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Fighting-Type Pokémon, Novice Combat or Intuition OR Elemental Connection (Fighting), 1 Fighting-Type Pokémon, Novice Combat or Intuition",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -1749,7 +1749,7 @@
                 "Effect": "The target regains one use of a Fighting-Type Scene-Frequency Move, and refreshes the Frequency of all Fighting-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Fighting) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -1784,7 +1784,7 @@
         },
         "Fire": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Flying-Type Pokémon, Novice Combat or Intuition OR Elemental Connection (Flying), 1 Flying-Type Pokémon, Novice Combat or Intuition",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -1798,7 +1798,7 @@
                 "Effect": "The target regains one use of a Fire-Type Scene-Frequency Move, and refreshes the Frequency of all Fire-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Fire) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -1831,7 +1831,7 @@
         },
         "Flying": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Flying-Type Pokémon, Novice Acrobatics or Perception OR Elemental Connection (Flying), 1 Flying-Type Pokémon, Novice Acrobatics or Perception",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -1845,7 +1845,7 @@
                 "Effect": "The target regains one use of a Flying-Type Scene-Frequency Move, and refreshes the Frequency of all Flying-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Flying) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -1878,7 +1878,7 @@
         },
         "Ghost": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Ghost-Type Pokémon, Novice Intimidate or Occult Education OR Elemental Connection (Ghost), 1 Ghost-Type Pokémon, Novice Intimidate or Occult Education",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -1892,7 +1892,7 @@
                 "Effect": "The target regains one use of a Ghost-Type Scene-Frequency Move, and refreshes the Frequency of all Ghost-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Ghost) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -1925,7 +1925,7 @@
         },
         "Grass": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Grass-Type Pokémon, Novice Survival or General Education OR Elemental Connection (Grass), 1 Grass-Type Pokémon, Novice Survival or General Education",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -1939,7 +1939,7 @@
                 "Effect": "The target regains one use of a Grass-Type Scene-Frequency Move, and refreshes the Frequency of all Grass-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Grass) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -1973,7 +1973,7 @@
         },
         "Ground": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Ground-Type Pokémon, Novice Athletics or Survival OR Elemental Connection (Ground), 1 Ground-Type Pokémon, Novice Athletics or Survival",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -1987,7 +1987,7 @@
                 "Effect": "The target regains one use of a Ground-Type Scene-Frequency Move, and refreshes the Frequency of all Ground-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Ground) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -2020,7 +2020,7 @@
         },
         "Ice": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Ice-Type Pokémon, Novice Athletics or Survival OR Elemental Connection (Ice), 1 Ice-Type Pokémon, Novice Athletics or Survival",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -2034,7 +2034,7 @@
                 "Effect": "The target regains one use of an Ice-Type Scene-Frequency Move, and refreshes the Frequency of all Ice-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Ice) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -2067,7 +2067,7 @@
         },
         "Normal": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Normal-Type Pokémon, Novice Charm or Intuition OR Elemental Connection (Normal), 1 Normal-Type Pokémon, Novice Charm or Intuition",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -2081,7 +2081,7 @@
                 "Effect": "The target regains one use of a Normal-Type Scene-Frequency Move, and refreshes the Frequency of all Normal-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Normal) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -2115,7 +2115,7 @@
         },
         "Poison": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Poison-Type Pokémon, Novice Charm or Intuition OR Elemental Connection (Poison), 1 Poison-Type Pokémon, Novice Charm or Intuition",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -2129,7 +2129,7 @@
                 "Effect": "The target regains one use of a Poison-Type Scene-Frequency Move, and refreshes the Frequency of all Poison-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Poison) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -2163,7 +2163,7 @@
         },
         "Psychic": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Psychic-Type Pokémon, Novice Focus or Occult Education OR Elemental Connection (Psychic), 1 Psychic-Type Pokémon, Novice Focus or Occult Education",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -2177,7 +2177,7 @@
                 "Effect": "The target regains one use of a Psychic-Type Scene-Frequency Move, and refreshes the Frequency of all Psychic-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Psychic) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -2210,7 +2210,7 @@
         },
         "Rock": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Rock-Type Pokémon, Novice Combat or Survival OR Elemental Connection (Rock), 1 Rock-Type Pokémon, Novice Combat or Survival",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -2224,7 +2224,7 @@
                 "Effect": "The target regains one use of a Rock-Type Scene-Frequency Move, and refreshes the Frequency of all Rock-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Rock) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -2258,7 +2258,7 @@
         },
         "Steel": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Steel-Type Pokémon, Novice Athletics or Intimidate OR Elemental Connection (Steel), 1 Steel-Type Pokémon, Novice Athletics or Intimidate",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -2272,7 +2272,7 @@
                 "Effect": "The target regains one use of a Steel-Type Scene-Frequency Move, and refreshes the Frequency of all Steel-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Steel) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",
@@ -2299,7 +2299,7 @@
         },
         "Water": {
             "Type Ace": {
-                "Tags": "Class, Branch",
+                "Tags": "[Class][Branch]",
                 "Prerequisites": "2 Different Water-Type Pokémon, Novice Athletics or Intuition OR Elemental Connection (Water), 1 Water-Type Pokémon, Novice Athletics or Intuition",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
@@ -2313,7 +2313,7 @@
                 "Effect": "The target regains one use of a Water-Type Scene-Frequency Move, and refreshes the Frequency of all Water-Type EOT-Frequency Moves. A Target can be affected by Type Refresh only once per Scene."
             },
             "Move Sync": {
-                "Tags": "Branch",
+                "Tags": "[Branch]",
                 "Prerequisites": "3 Type Ace (Water) Features",
                 "Frequency": "At-Will — Extended Action",
                 "Target": "Your Pokémon with at least 1 Tutor Point.",

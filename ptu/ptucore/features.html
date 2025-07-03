@@ -11,6 +11,21 @@
   <script src="/ptu/js/json_utils.js"></script>
   <script src="/ptu/js/json_features.js"></script>
   <script src="/ptu/js/helpers.js"></script>
+  <style>
+    .triangle-toggle::before {
+        content: "";
+        display: inline-block;
+        margin-left: 4px;
+        border-style: solid;
+        border-width: 10px 6px 0 6px;
+        border-color: #666 transparent transparent transparent;
+        transition: transform 0.2s ease-in-out;
+      }
+      
+      .triangle-toggle.open::before {
+        transform: rotate(90deg);
+      }
+      </style>
 
   <title>PTU Data - Features Core</title>
 </head>
@@ -37,7 +52,7 @@
     setActive("Features");
   </script>
   <script>
-    loadFeatures("/ptu/data/features/features_core.json");
+    loadFeatures("/ptu/data/features/features_with_meta.json");
   </script>
   
 </body>
