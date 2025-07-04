@@ -52,6 +52,10 @@ function createCard(title, data, meta) {
     return col;
 }
 
+// en haut de ton script
+let sidebarData = {};      // contiendra les features
+let activeSources = new Set();
+let linkContainer = null;  // on le créera dans buildSidebar
 let fullData = {};
 let currentActiveLink = null;
 let activeCategories = new Set();
@@ -81,10 +85,6 @@ function loadFeatures(file) {
         .catch(err => console.error("Error loading JSON:", err));
 }
 
-// en haut de ton script
-let sidebarData = {};      // contiendra les features
-let activeSources = new Set();
-let linkContainer = null;  // on le créera dans buildSidebar
 
 function buildSidebar(data) {
     // on « globalise » data
@@ -159,10 +159,10 @@ function renderSidebarLinks() {
 
     // 2) Texte de recherche
     const searchQuery = document
-      .getElementById("sidebar-search")
-      .value
-      .trim()
-      .toLowerCase();
+        .getElementById("sidebar-search")
+        .value
+        .trim()
+        .toLowerCase();
 
     // 3) Sauvegarde des panels ouverts
     const openCatIds = Array.from(
@@ -197,7 +197,7 @@ function renderSidebarLinks() {
         const txt = generalEntry.className.toLowerCase();
         if (!searchQuery || txt.includes(searchQuery)) {
             linkContainer.appendChild(
-              createLinkItem(generalEntry.className, generalEntry.source)
+                createLinkItem(generalEntry.className, generalEntry.source)
             );
         }
     }
@@ -224,94 +224,97 @@ function renderSidebarLinks() {
         list.sort((a, b) => a.className.localeCompare(b.className))
             .forEach(({ className, cls, source }) => {
 
-            const featureKeys = Object.keys(cls.Features);
-            const hasBranches = featureKeys.some(k =>
-                typeof cls.Features[k] === "object" &&
-                cls.Features[k][className]
-            );
+                const featureKeys = Object.keys(cls.Features);
+                const hasBranches = featureKeys.some(k =>
+                    typeof cls.Features[k] === "object" &&
+                    cls.Features[k][className]
+                );
 
-            if (hasBranches) {
-                // parent + branches
-                const branchWrapper = document.createElement("div");
-                branchWrapper.className = "list-group";
+                if (hasBranches) {
+                    // parent + branches
+                    const branchWrapper = document.createElement("div");
+                    branchWrapper.className = "list-group";
 
-                // toggle parent
-                const parentToggle = document.createElement("a");
-                parentToggle.href = "#";
-                parentToggle.className = "list-group-item list-group-item-action ps-3 d-flex justify-content-between align-items-center";
-                parentToggle.dataset.bsToggle = "collapse";
-                parentToggle.dataset.bsTarget = `#collapse-${className.replace(/\s+/g, "-")}`;
-                parentToggle.setAttribute("aria-expanded", "false");
+                    // toggle parent
+                    const parentToggle = document.createElement("a");
+                    parentToggle.href = "#";
+                    parentToggle.className = "list-group-item list-group-item-action ps-3 d-flex justify-content-between align-items-center";
+                    parentToggle.dataset.bsToggle = "collapse";
+                    parentToggle.dataset.bsTarget = `#collapse-${className.replace(/\s+/g, "-")}`;
+                    parentToggle.setAttribute("aria-expanded", "false");
 
-                const labelSpan = document.createElement("span");
-                labelSpan.className = "d-flex justify-content-between align-items-center w-100";
-                labelSpan.innerHTML = `
+                    const labelSpan = document.createElement("span");
+                    labelSpan.className = "d-flex justify-content-between align-items-center w-100";
+                    labelSpan.innerHTML = `
                   <span>${className}</span>
                   <span class="badge bg-light text-muted ms-auto">${source}</span>
                 `;
-                const triangleSpan = document.createElement("span");
-                triangleSpan.className = "triangle-toggle ms-auto";
+                    const triangleSpan = document.createElement("span");
+                    triangleSpan.className = "triangle-toggle ms-auto";
 
-                parentToggle.append(labelSpan, triangleSpan);
+                    parentToggle.append(labelSpan, triangleSpan);
 
-                const branchCollapse = document.createElement("div");
-                branchCollapse.className = "collapse";
-                branchCollapse.id = `collapse-${className.replace(/\s+/g, "-")}`;
+                    const branchCollapse = document.createElement("div");
+                    branchCollapse.className = "collapse";
+                    branchCollapse.id = `collapse-${className.replace(/\s+/g, "-")}`;
 
-                let visibleBranches = 0;
-                featureKeys.forEach(branch => {
-                    const branchObj = cls.Features[branch];
-                    if (
-                      typeof branchObj === "object" &&
-                      branchObj[className]
-                    ) {
-                        const branchData = branchObj[className];
-                        const branchSource = branchData.Source || source;
-                        const txt = branch.toLowerCase();
-
+                    let visibleBranches = 0;
+                    featureKeys.forEach(branch => {
+                        const branchObj = cls.Features[branch];
                         if (
-                          activeSources.has(branchSource) &&
-                          (!searchQuery ||
-                            txt.includes(searchQuery) ||
-                            className.toLowerCase().includes(searchQuery))
+                            typeof branchObj === "object" &&
+                            branchObj[className]
                         ) {
-                            visibleBranches++;
-                            const link = createLinkItem(
-                              branch,
-                              branchSource,
-                              4,
-                              { section: className, subsection: branch }
-                            );
-                            branchCollapse.appendChild(link);
+                            const branchData = branchObj[className];
+                            const branchSource = branchData.Source || source;
+                            const txt = branch.toLowerCase();
+
+                            if (
+                                activeSources.has(branchSource) &&
+                                (!searchQuery ||
+                                    txt.includes(searchQuery) ||
+                                    className.toLowerCase().includes(searchQuery))
+                            ) {
+                                visibleBranches++;
+                                const link = createLinkItem(
+                                    branch,
+                                    branchSource,
+                                    4,
+                                    { section: className, subsection: branch }
+                                );
+                                branchCollapse.appendChild(link);
+                            }
                         }
+                    });
+
+                    if (visibleBranches > 0) {
+                        branchWrapper.append(parentToggle, branchCollapse);
+                        catCollapse.appendChild(branchWrapper);
                     }
-                });
 
-                if (visibleBranches > 0) {
-                    branchWrapper.append(parentToggle, branchCollapse);
-                    catCollapse.appendChild(branchWrapper);
+                } else {
+                    // classe simple
+                    const txt = className.toLowerCase();
+                    if (
+                        activeSources.has(source) &&
+                        (!searchQuery || txt.includes(searchQuery))
+                    ) {
+                        const link = createLinkItem(
+                            className,
+                            source,
+                            3,
+                            { section: className }
+                        );
+                        catCollapse.appendChild(link);
+                    }
                 }
+            });
 
-            } else {
-                // classe simple
-                const txt = className.toLowerCase();
-                if (
-                  activeSources.has(source) &&
-                  (!searchQuery || txt.includes(searchQuery))
-                ) {
-                    const link = createLinkItem(
-                      className,
-                      source,
-                      3,
-                      { section: className }
-                    );
-                    catCollapse.appendChild(link);
-                }
-            }
-        });
-
-        wrapper.appendChild(catCollapse);
-        linkContainer.appendChild(wrapper);
+        // **NOUVEAU** : n'appendre wrapper que si on a des liens à l’intérieur
+        if (catCollapse.children.length > 0) {
+            wrapper.appendChild(catCollapse);
+            linkContainer.appendChild(wrapper);
+        }
     });
 
     // 8) Sync Bootstrap et réouverture
