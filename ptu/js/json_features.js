@@ -67,11 +67,11 @@ function loadFeatures(file) {
             sidebar.innerHTML = "";
 
             // === SEARCH BAR ===
-            const searchInput = document.createElement("input");
+            /* const searchInput = document.createElement("input");
             searchInput.type = "text";
             searchInput.className = "form-control mb-2";
             searchInput.placeholder = "Search classes...";
-            sidebar.appendChild(searchInput);
+            sidebar.appendChild(searchInput); */
 
             // === FILTERS ===
             const sources = new Set();
@@ -122,11 +122,11 @@ function loadFeatures(file) {
                 sidebar.innerHTML = "";
 
                 // === SEARCH BAR ===
-                const searchInput = document.createElement("input");
+                /* const searchInput = document.createElement("input");
                 searchInput.type = "text";
                 searchInput.className = "form-control mb-2";
                 searchInput.placeholder = "Search classes...";
-                sidebar.appendChild(searchInput);
+                sidebar.appendChild(searchInput); */
 
                 // === SOURCE FILTERS ===
                 const sources = Array.from(new Set(Object.values(data).map(e => e.Source || "Unknown"))).sort();
@@ -378,14 +378,14 @@ function loadFeatures(file) {
                 }
 
                 // === RECHERCHE ===
-                searchInput.addEventListener("input", () => {
+                /* searchInput.addEventListener("input", () => {
                     const query = searchInput.value.toLowerCase();
                     const links = linkContainer.querySelectorAll("a.list-group-item");
                     links.forEach(link => {
                         const text = link.textContent.toLowerCase();
                         link.style.display = text.includes(query) ? "" : "none";
                     });
-                });
+                }); */
 
                 renderSidebarLinks();
             }
