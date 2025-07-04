@@ -409,120 +409,118 @@ function loadFeatures(file) {
         .catch(err => console.error("Error loading JSON:", err));
 }
 
+// ───── RENDER SECTION ─────
 function renderSection(sectionTitle, subSection = null) {
-    // 1) Vide le container
     const container = document.getElementById("cards-container");
     container.innerHTML = "";
-  
-    // 2) Récupère la classe et ses Features
+
     const section = fullData[sectionTitle];
     if (!section || !section.Features) return;
-  
-    // 3) Titre de la vue
+
+    // Titre
     const heading = document.createElement("h2");
     heading.className = "mb-4 mt-3";
     heading.textContent = subSection || sectionTitle;
     container.appendChild(heading);
-  
-    // 4) Barre de recherche
-    const searchWrapper = document.createElement("div");
-    searchWrapper.className = "mb-3";
+
+    // Search bar
+    const searchDiv = document.createElement("div");
+    searchDiv.className = "mb-3";
     const searchInput = document.createElement("input");
     searchInput.type = "text";
     searchInput.placeholder = "Search features…";
     searchInput.className = "form-control";
-    searchWrapper.appendChild(searchInput);
-    container.appendChild(searchWrapper);
-  
-    // 5) Grille de cards
+    searchDiv.appendChild(searchInput);
+    container.appendChild(searchDiv);
+
+    // Row container
     const row = document.createElement("div");
     row.className = "row g-3";
-    row.id = "feature-row";
     container.appendChild(row);
-  
-    // 6) Détermine si on est sur la classe "General"
-    const alwaysShowBadges = sectionTitle === "General";
-    let isFirst = true;  // pour les autres classes
-  
-    // 7) Récupère les features courantes (mini-branche ou pas)
-    const featuresToRender = subSection
-      ? { [subSection]: section.Features[subSection] }
-      : section.Features;
-  
-    // 8) Pour chaque feature, on crée une card
-    Object.entries(featuresToRender).forEach(([featTitle, featData]) => {
-      // Si c'est une branche, on récupère l'objet interne
-      const actualData = (featData[sectionTitle] && typeof featData[sectionTitle] === 'object')
-        ? featData[sectionTitle]
-        : featData;
-  
-      // On décide si on affiche les badges : 
-      //   • toutes pour General 
-      //   • sinon uniquement pour la première carte
-      const showBadges = alwaysShowBadges || isFirst;
-  
-      // Création et ajout de la card
-      const card = createCard(featTitle, actualData, section, showBadges);
-      row.appendChild(card);
-  
-      isFirst = false;
-    });
-  
-    // 9) Filtre live
-    searchInput.addEventListener("input", () => {
-      const q = searchInput.value.toLowerCase();
-      row.childNodes.forEach(col => {
-        const titleEl = col.querySelector(".card-title");
-        const title = titleEl ? titleEl.textContent.toLowerCase() : "";
-        col.style.display = title.includes(q) ? "" : "none";
-      });
-    });
-  
-    // 10) Scroll top
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
 
-  function createCard(title, data, meta, showBadges) {
+    const alwaysBadges = sectionTitle === "General";
+    let firstBadge = true;
+
+    const features = subSection
+        ? { [subSection]: section.Features[subSection] }
+        : section.Features;
+
+    Object.entries(features).forEach(([featKey, featVal]) => {
+        // Cas « branché » : on a un objet dont la clé sectionTitle contient les sous-features
+        if (featVal[sectionTitle] && typeof featVal[sectionTitle] === "object") {
+            const branchData = featVal[sectionTitle];
+
+            // *** On NE crée PLUS la carte principale pour les sections à une seule branche ***
+            const isSingleBranchSection =
+                Object.keys(section.Features).length === 1;
+
+            // Parcours des sous-features
+            Object.entries(branchData).forEach(([subKey, subVal]) => {
+                if (typeof subVal === "object") {
+                    // injecte Source/Category si manquants
+                    const data = { ...subVal };
+                    if (!data.Source) data.Source = featVal.Source || section.Source;
+                    if (!data.Category) data.Category = section.Category;
+
+                    // badge uniquement sur la première ou toujours si General
+                    const showBadge = alwaysBadges || firstBadge;
+                    row.appendChild(createCard(subKey, data, section, showBadge));
+                    firstBadge = false;
+                }
+            });
+        } else {
+            // feature simple (pas de branche)
+            const showBadge = alwaysBadges || firstBadge;
+            row.appendChild(createCard(featKey, featVal, section, showBadge));
+            firstBadge = false;
+        }
+    });
+
+    // Recherche
+    searchInput.addEventListener("input", () => {
+        const q = searchInput.value.toLowerCase();
+        row.childNodes.forEach(col => {
+            const title = col.querySelector(".card-title")?.textContent.toLowerCase() || "";
+            col.style.display = title.includes(q) ? "" : "none";
+        });
+    });
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+
+
+// ───── CREATE CARD ─────
+function createCard(title, data, meta, showBadges) {
     const col = document.createElement("div");
     col.className = "col-md-12 mb-3";
-  
+
     const card = document.createElement("div");
     card.className = "card h-100";
-  
-    const cardBody = document.createElement("div");
-    cardBody.className = "card-body";
-  
-    const cardTitle = document.createElement("h4");
-    cardTitle.className = "card-title";
-  
+
+    const body = document.createElement("div");
+    body.className = "card-body";
+
+    // titre + badges
+    const h4 = document.createElement("h4");
+    h4.className = "card-title";
+    let html = title;
     if (showBadges) {
-      // Ne récupère la catégorie que si elle n'est pas "Unknown"
-      const actualCategory = meta.Category || "Unknown";
-      const actualSource   = data.Source  || meta.Source || "Unknown";
-  
-      let inner = `${title}`;
-  
-      if (actualCategory !== "Unknown") {
-        inner += ` <span class="badge bg-secondary">${actualCategory}</span>`;
-      }
-  
-      inner += ` <span class="badge bg-info">${actualSource}</span>`;
-      cardTitle.innerHTML = inner;
-    } else {
-      cardTitle.textContent = title;
+        const cat = data.Category || meta.Category;
+        const src = data.Source || meta.Source;
+        if (cat && cat !== "Unknown") html += ` <span class="badge bg-secondary">${cat}</span>`;
+        if (src) html += ` <span class="badge bg-info">${src}</span>`;
     }
-  
-    cardBody.appendChild(cardTitle);
-    renderData(data, cardBody);
-  
-    card.appendChild(cardBody);
+    h4.innerHTML = html;
+    body.appendChild(h4);
+
+    // contenu
+    renderData(data, body, 0);
+
+    card.appendChild(body);
     col.appendChild(card);
     return col;
-  }
-  
-  
-  
-
+}
 
 function setActiveLink(link) {
     if (currentActiveLink) {
