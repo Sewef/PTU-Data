@@ -874,11 +874,6 @@
     {
         "Name": "Huge Power",
         "Frequency": "Static",
-        "Effect": "The Pokémon’s Base Attack stat is doubled. This may double any bonuses from Nature or Vitamins, but not bonuses from Trainer Features."
-    },
-    {
-        "Name": "Huge Power / Pure Power",
-        "Frequency": "Static",
         "Effect": "The user’s Base Attack Stat is increased by +5, and by +1 more for every 10 Levels the user has. This Ability cannot be disabled in any way."
     },
     {
@@ -1544,7 +1539,7 @@
     {
         "Name": "Pure Power",
         "Frequency": "Static",
-        "Effect": "The Pokémon’s base attack stat is doubled. This may double any bonuses from Nature or Vitamins, but not bonuses from Features."
+        "Effect": "The user’s Base Attack Stat is increased by +5, and by +1 more for every 10 Levels the user has. This Ability cannot be disabled in any way."
     },
     {
         "Name": "Queenly Majesty",
@@ -2255,9 +2250,9 @@
         "Effect": "The user’s Fire-Type Attacks ignore the effect of enemies’ Defensive Abilities, and if they would be resisted they deal neutral damage instead."
     },
     {
-        "name": "Twisted Power",
-        "frequency": "Static",
-        "effect": "The user adds half of their Attack Stat to the damage rolls of their Special Moves; and the user adds half of their Special Attack Stat to the damage of their Physical Moves. This does not change the Damage Class of any attack."
+        "Name": "Twisted Power",
+        "Frequency": "Static",
+        "Effect": "The user adds half of their Attack Stat to the damage rolls of their Special Moves; and the user adds half of their Special Attack Stat to the damage of their Physical Moves. This does not change the Damage Class of any attack."
     },
     {
         "Name": "Type Aura",

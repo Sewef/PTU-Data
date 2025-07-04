@@ -993,11 +993,6 @@
     {
         "Name": "Huge Power",
         "Frequency": "Static",
-        "Effect": "The Pokémon’s Base Attack stat is doubled. This may double any bonuses from Nature or Vitamins, but not bonuses from Trainer Features."
-    },
-    {
-        "Name": "Huge Power / Pure Power",
-        "Frequency": "Static",
         "Effect": "The user’s Base Attack Stat is increased by +5, and by +1 more for every 10 Levels the user has. This Ability cannot be disabled in any way."
     },
     {
@@ -1733,7 +1728,7 @@
     {
         "Name": "Pure Power",
         "Frequency": "Static",
-        "Effect": "The Pokémon’s base attack stat is doubled. This may double any bonuses from Nature or Vitamins, but not bonuses from Features."
+        "Effect": "The user’s Base Attack Stat is increased by +5, and by +1 more for every 10 Levels the user has. This Ability cannot be disabled in any way."
     },
     {
         "Name": "Purifying Salt",
@@ -2584,15 +2579,15 @@
         "Effect": "At the beginning of each of its turns, the user must roll 1d20. On a roll of 7 or lower, the target refuses to act; they heal a Tick of Hit Points, and do not get a Standard Action that turn. Turns in which the user refuses to act count towards turns used up by Interrupts or the Exhausted Condition, and the user may make Rolls to cure themselves from Status Effects with a +3 Bonus that turn."
     },
     {
-        "name": "Turboblaze",
-         "frequency": "At-Will – Free Action",
-        "trigger": "The user damages a foe",
-        "effect": "The damaged foe’s Abilities are disabled for the remainder of the encounter."
+        "Name": "Turboblaze",
+        "Frequency": "At-Will – Free Action",
+        "Trigger": "The user damages a foe",
+        "Effect": "The damaged foe’s Abilities are disabled for the remainder of the encounter."
     },
     {
-        "name": "Twisted Power",
-        "frequency": "Static",
-        "effect": "The user adds half of their Attack Stat to the damage rolls of their Special Moves; and the user adds half of their Special Attack Stat to the damage of their Physical Moves. This does not change the Damage Class of any attack."
+        "Name": "Twisted Power",
+        "Frequency": "Static",
+        "Effect": "The user adds half of their Attack Stat to the damage rolls of their Special Moves; and the user adds half of their Special Attack Stat to the damage of their Physical Moves. This does not change the Damage Class of any attack."
     },
     {
         "Name": "Type Aura",
