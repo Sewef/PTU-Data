@@ -413,34 +413,18 @@ function renderSection(sectionTitle, subSection = null) {
     // 1) Vide le container
     const container = document.getElementById("cards-container");
     container.innerHTML = "";
-
+  
     // 2) Récupère la classe et ses Features
     const section = fullData[sectionTitle];
     if (!section || !section.Features) return;
-
-    // 3) Détecte si la classe est vraiment branchée
-    const entries = Object.entries(section.Features);
-    const isBranched = entries.some(
-        ([, featObj]) =>
-            featObj &&
-            typeof featObj === "object" &&
-            featObj[sectionTitle] &&
-            typeof featObj[sectionTitle] === "object"
-    );
-
-    // 4) Si on est au niveau racine d'une classe branchée, redirige vers sa 1ère branche
-    if (!subSection && isBranched) {
-        const firstBranch = entries[0][0];
-        return renderSection(sectionTitle, firstBranch);
-    }
-
-    // 5) Titre de la vue
+  
+    // 3) Titre de la vue
     const heading = document.createElement("h2");
     heading.className = "mb-4 mt-3";
     heading.textContent = subSection || sectionTitle;
     container.appendChild(heading);
-
-    // 6) Barre de recherche
+  
+    // 4) Barre de recherche
     const searchWrapper = document.createElement("div");
     searchWrapper.className = "mb-3";
     const searchInput = document.createElement("input");
@@ -449,102 +433,95 @@ function renderSection(sectionTitle, subSection = null) {
     searchInput.className = "form-control";
     searchWrapper.appendChild(searchInput);
     container.appendChild(searchWrapper);
-
-    // 7) Grille de cards
+  
+    // 5) Grille de cards
     const row = document.createElement("div");
     row.className = "row g-3";
     row.id = "feature-row";
     container.appendChild(row);
-
-    // 8) Si on est sur une sous-branche
-    if (subSection && section.Features[subSection]) {
-        // 8a) Récupère l'objet de la branche
-        const branchObj = section.Features[subSection] || {};
-
-        // 8b) Descend d’un niveau si c’est un conteneur (Druid, Type Ace, Style Expert…)
-        const inner =
-            branchObj[sectionTitle] && typeof branchObj[sectionTitle] === "object"
-                ? branchObj[sectionTitle]
-                : branchObj;
-
-        // 8c) Sépare champs primitifs vs sous-features
-        const mainFields = {};
-        const subFeatures = {};
-        Object.entries(inner).forEach(([key, val]) => {
-            if (val !== null && typeof val === "object") {
-                subFeatures[key] = val;
-            } else {
-                mainFields[key] = val;
-            }
-        });
-
-        // 8d) Carte principale **seulement si** on a des champs primitifs
-        // 8d) Carte principale **seulement** si on a des champs primitifs
-        //  autres que "Source" et "Category"
-        const primitiveKeys = Object.keys(mainFields)
-            .filter(key => key !== "Source" && key !== "Category");
-        if (primitiveKeys.length > 0) {
-            const card = createCard(sectionTitle, mainFields, section);
-            row.appendChild(card);
-        }
-
-
-        // 8e) Cartes pour chaque sous-feature
-        Object.entries(subFeatures).forEach(([featTitle, featData]) => {
-            const card = createCard(featTitle, featData, section);
-            row.appendChild(card);
-        });
-
-    } else {
-        // 9) Mode classe plate (ex: Researcher sans branche réelle)
-        entries.forEach(([featTitle, featData]) => {
-            const actualData = featData[sectionTitle] ?? featData;
-            const card = createCard(featTitle, actualData, section);
-            row.appendChild(card);
-        });
-    }
-
-    // 10) Filtre live
-    searchInput.addEventListener("input", () => {
-        const q = searchInput.value.toLowerCase();
-        row.childNodes.forEach(col => {
-            const titleEl = col.querySelector(".card-title");
-            const title = titleEl ? titleEl.textContent.toLowerCase() : "";
-            col.style.display = title.includes(q) ? "" : "none";
-        });
+  
+    // 6) Détermine si on est sur la classe "General"
+    const alwaysShowBadges = sectionTitle === "General";
+    let isFirst = true;  // pour les autres classes
+  
+    // 7) Récupère les features courantes (mini-branche ou pas)
+    const featuresToRender = subSection
+      ? { [subSection]: section.Features[subSection] }
+      : section.Features;
+  
+    // 8) Pour chaque feature, on crée une card
+    Object.entries(featuresToRender).forEach(([featTitle, featData]) => {
+      // Si c'est une branche, on récupère l'objet interne
+      const actualData = (featData[sectionTitle] && typeof featData[sectionTitle] === 'object')
+        ? featData[sectionTitle]
+        : featData;
+  
+      // On décide si on affiche les badges : 
+      //   • toutes pour General 
+      //   • sinon uniquement pour la première carte
+      const showBadges = alwaysShowBadges || isFirst;
+  
+      // Création et ajout de la card
+      const card = createCard(featTitle, actualData, section, showBadges);
+      row.appendChild(card);
+  
+      isFirst = false;
     });
-
-    // 11) Scroll top
+  
+    // 9) Filtre live
+    searchInput.addEventListener("input", () => {
+      const q = searchInput.value.toLowerCase();
+      row.childNodes.forEach(col => {
+        const titleEl = col.querySelector(".card-title");
+        const title = titleEl ? titleEl.textContent.toLowerCase() : "";
+        col.style.display = title.includes(q) ? "" : "none";
+      });
+    });
+  
+    // 10) Scroll top
     window.scrollTo({ top: 0, behavior: "smooth" });
-}
+  }
 
-function createCard(title, data, meta) {
+  function createCard(title, data, meta, showBadges) {
     const col = document.createElement("div");
     col.className = "col-md-12 mb-3";
-
+  
     const card = document.createElement("div");
     card.className = "card h-100";
-
+  
     const cardBody = document.createElement("div");
     cardBody.className = "card-body";
-
+  
     const cardTitle = document.createElement("h4");
     cardTitle.className = "card-title";
-
-    // Récupérer la vraie source : d'abord celle du feature, sinon celle de la classe
-    const actualSource = data?.Source ?? meta?.Source ?? "Unknown";
-    const actualCategory = meta?.Category ?? "Other";
-
-    cardTitle.innerHTML = `${title} 
-      <span class="badge bg-secondary">${actualCategory}</span> 
-      <span class="badge bg-info">${actualSource}</span>`;
-
+  
+    if (showBadges) {
+      // Ne récupère la catégorie que si elle n'est pas "Unknown"
+      const actualCategory = meta.Category || "Unknown";
+      const actualSource   = data.Source  || meta.Source || "Unknown";
+  
+      let inner = `${title}`;
+  
+      if (actualCategory !== "Unknown") {
+        inner += ` <span class="badge bg-secondary">${actualCategory}</span>`;
+      }
+  
+      inner += ` <span class="badge bg-info">${actualSource}</span>`;
+      cardTitle.innerHTML = inner;
+    } else {
+      cardTitle.textContent = title;
+    }
+  
     cardBody.appendChild(cardTitle);
     renderData(data, cardBody);
+  
     card.appendChild(cardBody);
     col.appendChild(card);
     return col;
-}
+  }
+  
+  
+  
 
 
 function setActiveLink(link) {
