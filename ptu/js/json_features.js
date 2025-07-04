@@ -63,60 +63,6 @@ function loadFeatures(file) {
         .then(jsonData => {
             fullData = jsonData;
 
-            const sidebar = document.getElementById("sidebar");
-            sidebar.innerHTML = "";
-
-            // === SEARCH BAR ===
-            /* const searchInput = document.createElement("input");
-            searchInput.type = "text";
-            searchInput.className = "form-control mb-2";
-            searchInput.placeholder = "Search classes...";
-            sidebar.appendChild(searchInput); */
-
-            // === FILTERS ===
-            const sources = new Set();
-            const categories = new Set();
-            for (const cls of Object.values(jsonData)) {
-                sources.add(cls.Source ?? "Unknown");
-                categories.add(cls.Category ?? "Other");
-            }
-
-            activeSources = new Set(sources);
-            activeCategories = new Set(categories);
-
-            const filterContainer = document.createElement("div");
-            filterContainer.className = "mb-3";
-
-            filterContainer.innerHTML = `
-              <label class="form-label">Filter by Source:</label>
-              <div class="d-flex flex-wrap gap-2 mb-2" id="source-filters"></div>
-              <label class="form-label mt-2">Filter by Category:</label>
-              <div class="d-flex flex-wrap gap-2" id="category-filters"></div>
-            `;
-            sidebar.appendChild(filterContainer);
-
-            // Source Filters
-            const srcDiv = filterContainer.querySelector("#source-filters");
-            sources.forEach(src => {
-                const id = `filter-src-${src}`;
-                srcDiv.innerHTML += `
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="${id}" checked>
-                    <label class="form-check-label" for="${id}">${src}</label>
-                  </div>`;
-            });
-
-            // Category Filters
-            const catDiv = filterContainer.querySelector("#category-filters");
-            categories.forEach(cat => {
-                const id = `filter-cat-${cat}`;
-                catDiv.innerHTML += `
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="${id}" checked>
-                    <label class="form-check-label" for="${id}">${cat}</label>
-                  </div>`;
-            });
-
             buildSidebar(jsonData);
             // Render first visible section
             // Trouver la première classe dont la source ET la catégorie sont visibles
@@ -140,13 +86,6 @@ function buildSidebar(data) {
     const sidebar = document.getElementById("sidebar");
     sidebar.innerHTML = "";
 
-    // === SEARCH BAR ===
-    /* const searchInput = document.createElement("input");
-    searchInput.type = "text";
-    searchInput.className = "form-control mb-2";
-    searchInput.placeholder = "Search classes...";
-    sidebar.appendChild(searchInput); */
-
     // === SOURCE FILTERS ===
     const sources = Array.from(new Set(Object.values(data).map(e => e.Source || "Unknown"))).sort();
     activeSources = new Set(sources);
@@ -158,40 +97,59 @@ function buildSidebar(data) {
 
     const srcFilterGroup = document.createElement("div");
     srcFilterGroup.className = "mb-3 d-flex flex-column gap-1";
+    sidebar.appendChild(srcFilterGroup);
+
     sources.forEach(src => {
         const id = `filter-source-${src}`;
-        const wrapper = document.createElement("div");
-        wrapper.className = "form-check";
-
-        const input = document.createElement("input");
-        input.type = "checkbox";
-        input.className = "form-check-input";
-        input.id = id;
-        input.checked = true;
-
-        const label = document.createElement("label");
-        label.className = "form-check-label";
-        label.htmlFor = id;
-        label.textContent = src;
-
-        input.addEventListener("change", () => {
-            if (input.checked) activeSources.add(src);
-            else activeSources.delete(src);
-            renderSidebarLinks();
-        });
-
-        wrapper.appendChild(input);
-        wrapper.appendChild(label);
-        srcFilterGroup.appendChild(wrapper);
+        srcFilterGroup.innerHTML += `
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="${id}" checked>
+              <label class="form-check-label" for="${id}">${src}</label>
+            </div>`;
     });
-    sidebar.appendChild(srcFilterGroup);
+
+    // === CATEGORY FILTERS ===
+    /* const categories = Array.from(new Set(Object.values(data).map(e => e.Category || "Other"))).sort();
+    activeCategories = new Set(categories);
+
+    const catTitle = document.createElement("label");
+    catTitle.className = "form-label mt-2";
+    catTitle.textContent = "Filter by Category:";
+    sidebar.appendChild(catTitle);
+
+    const catFilterGroup = document.createElement("div");
+    catFilterGroup.className = "mb-3 d-flex flex-column gap-1";
+    sidebar.appendChild(catFilterGroup);
+
+    categories.forEach(cat => {
+        const id = `filter-cat-${cat}`;
+        catFilterGroup.innerHTML += `
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="${id}" checked>
+              <label class="form-check-label" for="${id}">${cat}</label>
+            </div>`;
+    }); */
 
     const linkContainer = document.createElement("div");
     sidebar.appendChild(linkContainer);
 
+    // on rattache renderSidebarLinks à TOUTES les cases
+    sidebar.querySelectorAll('input[type="checkbox"]').forEach(input => {
+        input.addEventListener("change", renderSidebarLinks);
+    });
+
     function renderSidebarLinks() {
 
         // SECTION SPÉCIALE POUR LA CLASSE "General"
+        activeSources.clear();
+        sources.forEach(src => {
+            const cb = document.getElementById(`filter-source-${src}`);
+            if (cb && cb.checked) activeSources.add(src);
+        });
+        const openCatIds = Array.from(
+            document.querySelectorAll('.collapse.show')
+          ).map(el => el.id);
+        linkContainer.innerHTML = "";
 
         // Grouper les classes par catégorie
         const classesByCategory = {};
@@ -392,6 +350,18 @@ function buildSidebar(data) {
                 target.addEventListener("hide.bs.collapse", () => triangle.classList.remove("open"));
             });
         }, 0);
+        setTimeout(() => {
+            document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(toggle => {
+              const target = document.querySelector(toggle.getAttribute("data-bs-target"));
+              const inst = bootstrap.Collapse.getOrCreateInstance(target, { toggle: false });
+            });
+          
+            // → on ré-ouvre les panels précédemment ouverts
+            openCatIds.forEach(id => {
+              const el = document.getElementById(id);
+              if (el) bootstrap.Collapse.getOrCreateInstance(el).show();
+            });
+          }, 0);
 
 
     }
