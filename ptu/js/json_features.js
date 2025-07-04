@@ -24,34 +24,6 @@ function renderData(data, container, depth = 0) {
     }
 }
 
-function createCard(title, data, meta) {
-    const col = document.createElement("div");
-    col.className = "col-md-12 mb-3";
-
-    const card = document.createElement("div");
-    card.className = "card h-100";
-
-    const cardBody = document.createElement("div");
-    cardBody.className = "card-body";
-
-    const cardTitle = document.createElement("h4");
-    cardTitle.className = "card-title";
-
-    const actualCategory = meta?.Category ?? "Unknown";
-    const actualSource = data?.Source ?? meta?.Source ?? "Unknown";
-    console.log(`Creating card for ${title} with category ${actualCategory} and source ${actualSource}`);
-
-    cardTitle.innerHTML = `${title} 
-        <span class="badge bg-secondary">${actualCategory}</span> 
-        <span class="badge bg-info">${actualSource}</span>`;
-
-    cardBody.appendChild(cardTitle);
-    renderData(data, cardBody);
-    card.appendChild(cardBody);
-    col.appendChild(card);
-    return col;
-}
-
 // en haut de ton script
 let sidebarData = {};      // contiendra les features
 let activeSources = new Set();
@@ -193,14 +165,15 @@ function renderSidebarLinks() {
     });
 
     // 6) Afficher « General » si ok
-    if (generalEntry && activeSources.has(generalEntry.source)) {
-        const txt = generalEntry.className.toLowerCase();
-        if (!searchQuery || txt.includes(searchQuery)) {
-            linkContainer.appendChild(
-                createLinkItem(generalEntry.className, generalEntry.source)
-            );
-        }
-    }
+    linkContainer.appendChild(
+        createLinkItem(
+            generalEntry.className,
+            generalEntry.source,
+            3,                          // indentation de niveau 3 (comme les autres)
+            { section: generalEntry.className }  // <-- on passe bien section="General"
+        )
+    );
+
 
     // 7) Parcours des catégories
     Object.entries(classesByCategory).forEach(([category, list]) => {
@@ -322,6 +295,8 @@ function renderSidebarLinks() {
 }
 
 function createLinkItem(label, src, psLevel = 3, data = {}) {
+    // si on a oublié de fournir data.section, on le remplit avec le label
+    if (!data.section) data.section = label;
     const link = document.createElement("a");
     link.href = "#";
     link.className = `list-group-item list-group-item-action ps-${psLevel} d-flex justify-content-between align-items-center`;
@@ -440,15 +415,15 @@ function renderSection(sectionTitle, subSection = null) {
 
 
 // ───── CREATE CARD ─────
-function createCard(title, data, meta, showBadges) {
+function createCard(title, data, meta, showBadges = true) {
     const col = document.createElement("div");
     col.className = "col-md-12 mb-3";
 
     const card = document.createElement("div");
-    card.className = "card h-100";
+    card.className = "card h-100 bg-white border shadow-sm";
 
     const body = document.createElement("div");
-    body.className = "card-body";
+    body.className = "card-body bg-light";
 
     // titre + badges
     const h4 = document.createElement("h4");
