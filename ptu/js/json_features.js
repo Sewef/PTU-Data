@@ -410,65 +410,113 @@ function loadFeatures(file) {
 }
 
 function renderSection(sectionTitle, subSection = null) {
+    // 1) Vide le container
     const container = document.getElementById("cards-container");
     container.innerHTML = "";
 
+    // 2) Récupère la classe et ses Features
     const section = fullData[sectionTitle];
     if (!section || !section.Features) return;
 
-    const featuresToRender = subSection
-        ? { [subSection]: section.Features[subSection] }
-        : section.Features;
+    // 3) Détecte si la classe est vraiment branchée
+    const entries = Object.entries(section.Features);
+    const isBranched = entries.some(
+        ([, featObj]) =>
+            featObj &&
+            typeof featObj === "object" &&
+            featObj[sectionTitle] &&
+            typeof featObj[sectionTitle] === "object"
+    );
 
-    const sectionHeading = document.createElement("h2");
-    sectionHeading.textContent = subSection || sectionTitle;
-    sectionHeading.className = "mb-4 mt-3";
-    container.appendChild(sectionHeading);
+    // 4) Si on est au niveau racine d'une classe branchée, redirige vers sa 1ère branche
+    if (!subSection && isBranched) {
+        const firstBranch = entries[0][0];
+        return renderSection(sectionTitle, firstBranch);
+    }
 
-    const searchDiv = document.createElement("div");
-    searchDiv.className = "mb-3";
+    // 5) Titre de la vue
+    const heading = document.createElement("h2");
+    heading.className = "mb-4 mt-3";
+    heading.textContent = subSection || sectionTitle;
+    container.appendChild(heading);
+
+    // 6) Barre de recherche
+    const searchWrapper = document.createElement("div");
+    searchWrapper.className = "mb-3";
     const searchInput = document.createElement("input");
     searchInput.type = "text";
-    searchInput.placeholder = "Search features...";
+    searchInput.placeholder = "Search features…";
     searchInput.className = "form-control";
-    searchInput.id = "search-input";
-    searchDiv.appendChild(searchInput);
-    container.appendChild(searchDiv);
+    searchWrapper.appendChild(searchInput);
+    container.appendChild(searchWrapper);
 
+    // 7) Grille de cards
     const row = document.createElement("div");
     row.className = "row g-3";
     row.id = "feature-row";
-    const cardMap = {};
-
-    for (const featTitle in featuresToRender) {
-        const featData = featuresToRender[featTitle];
-
-        // 🔎 Si on est dans une branche, featData est { Researcher: { ... } }
-        const actualData = featData[sectionTitle] ?? featData;
-
-        const card = createCard(featTitle, actualData, section);
-        card.dataset.title = featTitle.toLowerCase();
-        cardMap[featTitle] = card;
-        row.appendChild(card);
-    }
-
-
-
     container.appendChild(row);
 
-    searchInput.addEventListener("input", () => {
-        const query = searchInput.value.toLowerCase();
-        row.innerHTML = "";
-        for (const title in cardMap) {
-            if (title.toLowerCase().includes(query)) {
-                row.appendChild(cardMap[title]);
+    // 8) Si on est sur une sous-branche
+    if (subSection && section.Features[subSection]) {
+        // 8a) Récupère l'objet de la branche
+        const branchObj = section.Features[subSection] || {};
+
+        // 8b) Descend d’un niveau si c’est un conteneur (Druid, Type Ace, Style Expert…)
+        const inner =
+            branchObj[sectionTitle] && typeof branchObj[sectionTitle] === "object"
+                ? branchObj[sectionTitle]
+                : branchObj;
+
+        // 8c) Sépare champs primitifs vs sous-features
+        const mainFields = {};
+        const subFeatures = {};
+        Object.entries(inner).forEach(([key, val]) => {
+            if (val !== null && typeof val === "object") {
+                subFeatures[key] = val;
+            } else {
+                mainFields[key] = val;
             }
+        });
+
+        // 8d) Carte principale **seulement si** on a des champs primitifs
+        // 8d) Carte principale **seulement** si on a des champs primitifs
+        //  autres que "Source" et "Category"
+        const primitiveKeys = Object.keys(mainFields)
+            .filter(key => key !== "Source" && key !== "Category");
+        if (primitiveKeys.length > 0) {
+            const card = createCard(sectionTitle, mainFields, section);
+            row.appendChild(card);
         }
+
+
+        // 8e) Cartes pour chaque sous-feature
+        Object.entries(subFeatures).forEach(([featTitle, featData]) => {
+            const card = createCard(featTitle, featData, section);
+            row.appendChild(card);
+        });
+
+    } else {
+        // 9) Mode classe plate (ex: Researcher sans branche réelle)
+        entries.forEach(([featTitle, featData]) => {
+            const actualData = featData[sectionTitle] ?? featData;
+            const card = createCard(featTitle, actualData, section);
+            row.appendChild(card);
+        });
+    }
+
+    // 10) Filtre live
+    searchInput.addEventListener("input", () => {
+        const q = searchInput.value.toLowerCase();
+        row.childNodes.forEach(col => {
+            const titleEl = col.querySelector(".card-title");
+            const title = titleEl ? titleEl.textContent.toLowerCase() : "";
+            col.style.display = title.includes(q) ? "" : "none";
+        });
     });
 
+    // 11) Scroll top
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
 
 function createCard(title, data, meta) {
     const col = document.createElement("div");
