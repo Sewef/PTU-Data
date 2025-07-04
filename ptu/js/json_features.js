@@ -139,41 +139,43 @@ function buildSidebar(data) {
     });
 
     function renderSidebarLinks() {
-
-        // SECTION SPÉCIALE POUR LA CLASSE "General"
+        // Récupérer et mettre à jour les sources actives
         activeSources.clear();
         sources.forEach(src => {
             const cb = document.getElementById(`filter-source-${src}`);
             if (cb && cb.checked) activeSources.add(src);
         });
+    
+        // Sauvegarder les catégories ouvertes pour les réouvrir après
         const openCatIds = Array.from(
             document.querySelectorAll('.collapse.show')
-          ).map(el => el.id);
+        ).map(el => el.id);
+    
+        // Vider le conteneur de liens
         linkContainer.innerHTML = "";
-
-        // Grouper les classes par catégorie
+    
+        // Grouper les classes par catégorie, en isolant "General"
         const classesByCategory = {};
         let generalEntry = null;
-
-        // Trier les classes, General d'abord
         const orderedEntries = Object.entries(data).sort(([aName], [bName]) => {
             if (aName === "General") return -1;
             if (bName === "General") return 1;
             return aName.localeCompare(bName);
         });
-
+    
         for (const [className, cls] of orderedEntries) {
             const source = cls.Source || "Unknown";
             const category = cls.Category || "Other";
-
+    
             if (className === "General") {
                 generalEntry = { className, cls, source };
-                continue;
+            } else {
+                if (!classesByCategory[category]) classesByCategory[category] = [];
+                classesByCategory[category].push({ className, cls, source });
             }
-
-            if (!classesByCategory[category]) classesByCategory[category] = [];
-            classesByCategory[category].push({ className, cls, source });
         }
+    
+        // Afficher "General" en premier, si coché
         if (generalEntry && activeSources.has(generalEntry.source)) {
             const link = document.createElement("a");
             link.href = "#";
@@ -190,16 +192,14 @@ function buildSidebar(data) {
             });
             linkContainer.appendChild(link);
         }
-
-
-        // Pour chaque catégorie
+    
+        // Parcourir chaque catégorie
         for (const [category, classList] of Object.entries(classesByCategory)) {
             const collapseId = `collapse-cat-${category.replace(/\s+/g, "-")}`;
-
             const wrapper = document.createElement("div");
             wrapper.className = "mb-2";
-
-            // === Titre de la catégorie (cliquable)
+    
+            // Bouton pour ouvrir/fermer la catégorie
             const catBtn = document.createElement("button");
             catBtn.className = "btn btn-sm btn-light w-100 text-start collapse-toggle collapsed";
             catBtn.setAttribute("data-bs-toggle", "collapse");
@@ -207,164 +207,136 @@ function buildSidebar(data) {
             catBtn.setAttribute("aria-expanded", "false");
             catBtn.innerHTML = `📁 ${category}`;
             wrapper.appendChild(catBtn);
-
-            // === Contenu repliable
+    
+            // Conteneur repliable
             const catCollapse = document.createElement("div");
             catCollapse.className = "collapse";
             catCollapse.id = collapseId;
-
-            // === Pour chaque classe de cette catégorie
-            classList.sort((a, b) => a.className.localeCompare(b.className)).forEach(({ className, cls, source }) => {
-                if (!activeSources.has(source)) return;
-
-                const featureKeys = Object.keys(cls.Features);
-                const hasBranches = featureKeys.some(k =>
-                    typeof cls.Features[k] === "object" &&
-                    cls.Features[k][className]
-                );
-
-                if (hasBranches) {
-                    const collapseId = `collapse-${className.replace(/\s+/g, "-")}`;
-                    const branchWrapper = document.createElement("div");
-                    branchWrapper.className = "list-group"; // pour éviter un espacement supplémentaire
-
-
-                    const parentToggle = document.createElement("a");
-                    parentToggle.href = "#";
-                    parentToggle.className = "list-group-item list-group-item-action ps-3 d-flex justify-content-between align-items-center";
-                    parentToggle.dataset.section = className;
-                    parentToggle.dataset.bsToggle = "collapse";
-                    parentToggle.dataset.bsTarget = `#${collapseId}`;
-                    parentToggle.setAttribute("aria-expanded", "false");
-                    parentToggle.setAttribute("aria-controls", collapseId);
-
-                    const labelSpan = document.createElement("span");
-                    labelSpan.innerHTML = `
-                    <span>${className}</span>
-                    <span class="badge bg-light text-muted ms-auto">${source}</span>
-                    `;
-                    labelSpan.className = "d-flex justify-content-between align-items-center w-100";
-
-
-                    const triangleSpan = document.createElement("span");
-                    triangleSpan.className = "triangle-toggle ms-auto"; // ms-auto pour le pousser à droite
-                    parentToggle.appendChild(triangleSpan);
-
-
-                    parentToggle.appendChild(labelSpan);
-                    parentToggle.appendChild(triangleSpan);
-
-                    parentToggle.addEventListener("click", e => {
-                        // Ne pas empêcher le collapse natif de Bootstrap
-                        if (!e.target.closest("span:first-child")) return;
-                        e.preventDefault();
-                        renderSection(className);
-                        setActiveLink(parentToggle);
-                    });
-
-
-                    parentToggle.addEventListener("click", e => {
-                        if (!e.target.closest("span:first-child")) return;
-                        e.preventDefault();
-                        renderSection(className);
-                        setActiveLink(parentToggle);
-                    });
-
-                    const collapse = document.createElement("div");
-                    collapse.className = "collapse";
-                    collapse.id = collapseId;
-
-                    for (const branch of featureKeys) {
-                        const branchObj = cls.Features[branch];
-                        if (
-                            typeof branchObj === "object" &&
-                            branchObj[className]
-                        ) {
-                            const link = document.createElement("a");
-                            link.href = "#";
-                            link.className = "list-group-item list-group-item-action ps-4";
-                            const branchData = branchObj[className];
-                            const branchSource = branchData?.Source || source; // fallback sur classe
-                            link.innerHTML = `
-                            <span>${branch}</span>
-                            <span class="badge bg-light text-muted ms-auto">${branchSource}</span>
-                            `;
-                            link.classList.add("d-flex", "justify-content-between", "align-items-center");
-
-                            link.dataset.section = className;
-                            link.dataset.subsection = branch;
-
-                            link.addEventListener("click", e => {
-                                e.preventDefault();
-                                renderSection(className, branch);
-                                setActiveLink(link);
-                            });
-
-                            collapse.appendChild(link);
+    
+            // Pour chaque classe de la catégorie
+            classList
+                .sort((a, b) => a.className.localeCompare(b.className))
+                .forEach(({ className, cls, source }) => {
+                    // Si la classe parent n'est pas cochée, on peut tout de même checker ses branches
+                    const featureKeys = Object.keys(cls.Features);
+                    const hasBranches = featureKeys.some(k =>
+                        typeof cls.Features[k] === "object" &&
+                        cls.Features[k][className]
+                    );
+    
+                    if (hasBranches) {
+                        // On va construire les branches visibles
+                        const branchWrapper = document.createElement("div");
+                        branchWrapper.className = "list-group";
+    
+                        // Toggle du parent
+                        const parentToggle = document.createElement("a");
+                        parentToggle.href = "#";
+                        parentToggle.className = "list-group-item list-group-item-action ps-3 d-flex justify-content-between align-items-center";
+                        parentToggle.dataset.bsToggle = "collapse";
+                        parentToggle.dataset.bsTarget = `#collapse-${className.replace(/\s+/g, "-")}`;
+                        parentToggle.setAttribute("aria-expanded", "false");
+    
+                        const labelSpan = document.createElement("span");
+                        labelSpan.innerHTML = `
+                            <span>${className}</span>
+                            <span class="badge bg-light text-muted ms-auto">${source}</span>
+                        `;
+                        labelSpan.className = "d-flex justify-content-between align-items-center w-100";
+    
+                        const triangleSpan = document.createElement("span");
+                        triangleSpan.className = "triangle-toggle ms-auto";
+    
+                        parentToggle.appendChild(labelSpan);
+                        parentToggle.appendChild(triangleSpan);
+    
+                        // Conteneur repliable des branches
+                        const collapse = document.createElement("div");
+                        collapse.className = "collapse";
+                        collapse.id = `collapse-${className.replace(/\s+/g, "-")}`;
+    
+                        let visibleBranchCount = 0;
+                        // Pour chaque branche de la classe
+                        featureKeys.forEach(branch => {
+                            const branchObj = cls.Features[branch];
+                            if (
+                                typeof branchObj === "object" &&
+                                branchObj[className]
+                            ) {
+                                const branchData = branchObj[className];
+                                const branchSource = branchData.Source || source;
+                                // Filtrer la branche selon sa source
+                                if (!activeSources.has(branchSource)) return;
+                                visibleBranchCount++;
+    
+                                const link = document.createElement("a");
+                                link.href = "#";
+                                link.className = "list-group-item list-group-item-action ps-4 d-flex justify-content-between align-items-center";
+                                link.dataset.section = className;
+                                link.dataset.subsection = branch;
+                                link.innerHTML = `
+                                    <span>${branch}</span>
+                                    <span class="badge bg-light text-muted ms-auto">${branchSource}</span>
+                                `;
+                                link.addEventListener("click", e => {
+                                    e.preventDefault();
+                                    renderSection(className, branch);
+                                    setActiveLink(link);
+                                });
+                                collapse.appendChild(link);
+                            }
+                        });
+    
+                        // N'ajouter l'ensemble que si au moins une branche est visible
+                        if (visibleBranchCount > 0) {
+                            branchWrapper.appendChild(parentToggle);
+                            branchWrapper.appendChild(collapse);
+                            catCollapse.appendChild(branchWrapper);
                         }
+                    } else {
+                        // Classe sans branches
+                        if (!activeSources.has(source)) return;
+                        const link = document.createElement("a");
+                        link.href = "#";
+                        link.className = "list-group-item list-group-item-action ps-3 d-flex justify-content-between align-items-center";
+                        link.dataset.section = className;
+                        link.innerHTML = `
+                            <span>${className}</span>
+                            <span class="badge bg-light text-muted ms-auto">${source}</span>
+                        `;
+                        link.addEventListener("click", e => {
+                            e.preventDefault();
+                            renderSection(className);
+                            setActiveLink(link);
+                        });
+                        catCollapse.appendChild(link);
                     }
-
-                    branchWrapper.appendChild(parentToggle);
-                    branchWrapper.appendChild(collapse);
-                    catCollapse.appendChild(branchWrapper);
-
-                } else {
-                    // Classe simple
-                    const link = document.createElement("a");
-                    link.href = "#";
-                    link.className = "list-group-item list-group-item-action ps-3";
-                    link.innerHTML = `
-                    <span>${className}</span>
-                    <span class="badge bg-light text-muted ms-auto">${source}</span>
-                    `;
-                    link.classList.add("d-flex", "justify-content-between", "align-items-center");
-                    link.dataset.section = className;
-                    link.addEventListener("click", e => {
-                        e.preventDefault();
-                        renderSection(className);
-                        setActiveLink(link);
-                    });
-                    catCollapse.appendChild(link);
-                }
-            });
-
+                });
+    
             wrapper.appendChild(catCollapse);
             linkContainer.appendChild(wrapper);
         }
-
+    
+        // Après insertion, synchroniser les toggles Bootstrap et réouvrir les catégories précédemment ouvertes
         setTimeout(() => {
             document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(toggle => {
-                const targetSelector = toggle.getAttribute("data-bs-target") || toggle.getAttribute("href");
+                const targetSelector = toggle.getAttribute("data-bs-target");
                 const target = document.querySelector(targetSelector);
                 const triangle = toggle.querySelector(".triangle-toggle");
-
                 if (!target || !triangle) return;
-
-                const collapse = bootstrap.Collapse.getOrCreateInstance(target, { toggle: false });
-
-                // Synchroniser l’état initial
+                const inst = bootstrap.Collapse.getOrCreateInstance(target, { toggle: false });
                 triangle.classList.toggle("open", target.classList.contains("show"));
-
-                // Gérer les événements Bootstrap
                 target.addEventListener("show.bs.collapse", () => triangle.classList.add("open"));
                 target.addEventListener("hide.bs.collapse", () => triangle.classList.remove("open"));
             });
-        }, 0);
-        setTimeout(() => {
-            document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(toggle => {
-              const target = document.querySelector(toggle.getAttribute("data-bs-target"));
-              const inst = bootstrap.Collapse.getOrCreateInstance(target, { toggle: false });
-            });
-          
-            // → on ré-ouvre les panels précédemment ouverts
+    
             openCatIds.forEach(id => {
-              const el = document.getElementById(id);
-              if (el) bootstrap.Collapse.getOrCreateInstance(el).show();
+                const el = document.getElementById(id);
+                if (el) bootstrap.Collapse.getOrCreateInstance(el).show();
             });
-          }, 0);
-
-
+        }, 0);
     }
+    
 
     // === RECHERCHE ===
     /* searchInput.addEventListener("input", () => {
