@@ -108,8 +108,17 @@ function buildSidebar(data) {
 
     // Re-bind des filtres source
     sidebar.querySelectorAll('input[type="checkbox"]').forEach(cb =>
-        cb.addEventListener("change", renderSidebarLinks)
-    );
+        cb.addEventListener("change", () => {
+          // 1) met à jour la sidebar
+          renderSidebarLinks();
+          // 2) si on a déjà une section active, on la rerender
+          if (currentActiveLink) {
+            const sec = currentActiveLink.dataset.section;
+            const sub = currentActiveLink.dataset.subsection || null;
+            renderSection(sec, sub);
+          }
+        })
+      );
 
     // création du conteneur de liens
     linkContainer = document.createElement("div");
@@ -370,6 +379,11 @@ function renderSection(sectionTitle, subSection = null) {
         : section.Features;
 
     Object.entries(features).forEach(([featKey, featVal]) => {
+        // ------> récupération de la source effective de la feature
+        const featSource = featVal.Source || section.Source;
+        // si cette source n'est pas active dans la sidebar, on skip
+        if (!activeSources.has(featSource)) return;
+
         // Cas « branché » : on a un objet dont la clé sectionTitle contient les sous-features
         if (featVal[sectionTitle] && typeof featVal[sectionTitle] === "object") {
             const branchData = featVal[sectionTitle];
@@ -380,6 +394,8 @@ function renderSection(sectionTitle, subSection = null) {
 
             // Parcours des sous-features
             Object.entries(branchData).forEach(([subKey, subVal]) => {
+                const subSource = subVal.Source || featVal.Source || section.Source;
+                if (!activeSources.has(subSource)) return;
                 if (typeof subVal === "object") {
                     // injecte Source/Category si manquants
                     const data = { ...subVal };
