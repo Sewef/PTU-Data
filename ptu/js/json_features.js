@@ -304,14 +304,20 @@ function renderSidebarLinks() {
 }
 
 function createLinkItem(label, src, psLevel = 3, data = {}) {
-    // si on a oublié de fournir data.section, on le remplit avec le label
     if (!data.section) data.section = label;
     const link = document.createElement("a");
     link.href = "#";
     link.className = `list-group-item list-group-item-action ps-${psLevel} d-flex justify-content-between align-items-center`;
     link.innerHTML = `
       <span>${label}</span>
-      <span class="badge bg-light text-muted ms-auto">${src}</span>
+      <!-- badge avec text-truncate et tooltip -->
+      <span
+        class="badge bg-light text-muted ms-auto text-truncate"
+        style="max-width: 10rem;"
+        title="${src}"
+      >
+        ${src}
+      </span>
     `;
     Object.entries(data).forEach(([k, v]) => link.dataset[k] = v);
     link.addEventListener("click", e => {
@@ -321,6 +327,7 @@ function createLinkItem(label, src, psLevel = 3, data = {}) {
     });
     return link;
 }
+
 
 function syncCollapses() {
     const openCatIds = Array.from(

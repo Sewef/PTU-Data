@@ -1,3 +1,20 @@
 html {
     overflow-y: scroll;
 }
+
+/* Pour tous les badges dans la sidebar */
+#sidebar .badge {
+    max-width: 6rem;           /* ajustez selon l’espace disponible */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Si vous voulez cibler uniquement les badges de source : */
+  #sidebar .list-group-item .badge.bg-light {
+    max-width: 6rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
