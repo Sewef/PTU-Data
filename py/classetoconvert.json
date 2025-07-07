@@ -1,0 +1,306 @@
+{
+  "Martial Artist": {
+    "category": "Fighter",
+    "source": "Core",
+    "branches": [
+      {
+        "name": "Guts",
+        "features": [
+          {
+            "Tags": "[Class][+HP]",
+            "Prerequisites": "Basic Martial Arts, Novice Combat",
+            "Frequency": "Static",
+            "Effect": "You gain Guts, and all Martial Artist Features gain the [+HP] Tag.",
+            "name": "Martial Artist"
+          },
+          {
+            "Tags": "[+HP]",
+            "Rank 1 Prerequisites": "Martial Artist",
+            "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
+            "Rank 3 Prerequisites": "Martial Artist, Master Combat",
+            "Frequency": "Static",
+            "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Double Kick</td><td>None</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Focus Energy</td><td>None</td><td>Circle Throw</td><td>Guts</td><td>Storm Throw</td><td>Guts</td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr><tr><td>Vital Throw</td><td>Guts</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>",
+            "name": "Martial Training"
+          },
+          {
+            "Tags": "[+HP]",
+            "Prerequisites": "Martial Training Rank 1 (Guts)",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "A foe provokes an Attack of Opportunity",
+            "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
+            "name": "My Kung-Fu is Stronger"
+          },
+          {
+            "Tags": "[+HP]",
+            "Prerequisites": "Martial Artist (Guts)",
+            "Frequency": "Static",
+            "Effect": "You gain the Wrestlemania Martial Achievement.",
+            "Wrestlemania": {
+              "Prerequisites": "Guts Ability",
+              "Frequency": "1 AP – Swift Action",
+              "Trigger": "You begin your turn with Dominance in a Grapple",
+              "Effect": "This turn, you may perform two different Grappling Effects as a Full Action instead of just one."
+            },
+            "name": "Martial Achievement"
+          },
+          {
+            "Tags": "[+HP]",
+            "Prerequisites": "Martial Artist (Guts)",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
+            "Effect": "You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action.",
+            "name": "Second Strike"
+          }
+        ]
+      },
+      {
+        "name": "Inner Focus",
+        "features": [
+          {
+            "Tags": "[Class][+Speed]",
+            "Prerequisites": "Basic Martial Arts, Novice Combat",
+            "Frequency": "Static",
+            "Effect": "You gain Inner Focus, and all Martial Artist Features gain the [+Speed] Tag.",
+            "name": "Martial Artist"
+          },
+          {
+            "Tags": "[+Speed]",
+            "Rank 1 Prerequisites": "Martial Artist",
+            "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
+            "Rank 3 Prerequisites": "Martial Artist, Master Combat",
+            "Frequency": "Static",
+            "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Double Kick</td><td>None</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Focus Energy</td><td>None</td><td>Circle Throw</td><td>Guts</td><td>Storm Throw</td><td>Guts</td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr><tr><td>Vital Throw</td><td>Guts</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>",
+            "name": "Martial Training"
+          },
+          {
+            "Tags": "[+Speed]",
+            "Prerequisites": "Martial Training Rank 1 (Inner Focus)",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "A foe provokes an Attack of Opportunity",
+            "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
+            "name": "My Kung-Fu is Stronger"
+          },
+          {
+            "Tags": "[+Speed]",
+            "Prerequisites": "Martial Artist (Inner Focus)",
+            "Frequency": "Static",
+            "Effect": "You gain the Heightened Intensity Martial Achievement.",
+            "Heightened Intensity": {
+              "Prerequisites": "Inner Focus Ability",
+              "Frequency": "AP – Shift Action",
+              "Effect": "You may use Focus Energy as a Free Action"
+            },
+            "name": "Martial Achievement"
+          },
+          {
+            "Tags": "[+Speed]",
+            "Prerequisites": "Martial Artist (Inner Focus)",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
+            "Effect": "You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action.",
+            "name": "Second Strike"
+          }
+        ]
+      },
+      {
+        "name": "Iron Fist",
+        "features": [
+          {
+            "Tags": "[Class][+Defense]",
+            "Prerequisites": "Basic Martial Arts, Novice Combat",
+            "Frequency": "Static",
+            "Effect": "You gain Iron Fist, and all Martial Artist Features gain the [+Defense] Tag.",
+            "name": "Martial Artist"
+          },
+          {
+            "Tags": "[+Defense]",
+            "Rank 1 Prerequisites": "Martial Artist",
+            "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
+            "Rank 3 Prerequisites": "Martial Artist, Master Combat",
+            "Frequency": "Static",
+            "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Double Kick</td><td>None</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Focus Energy</td><td>None</td><td>Comet Punch</td><td>Iron Fist</td><td>Sky Uppercut</td><td>Iron Fist</td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr><tr><td>Mach Punch</td><td>Iron Fist</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>",
+            "name": "Martial Training"
+          },
+          {
+            "Tags": "[+Defense]",
+            "Prerequisites": "Martial Training Rank 1 (Iron Fist)",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "A foe provokes an Attack of Opportunity",
+            "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
+            "name": "My Kung-Fu is Stronger"
+          },
+          {
+            "Tags": "[+Defense]",
+            "Prerequisites": "Martial Artist (Iron Fist)",
+            "Frequency": "Static",
+            "Effect": "You gain the Pummeling Momentum Martial Achievement.",
+            "Pummeling Momentum": {
+              "Prerequisites": "Iron Fist Ability",
+              "Frequency": "1 AP – Free Action",
+              "Trigger": "You hit a foe with a Move affected by Iron Fist",
+              "Effect": "You Tag the triggering foe and gain a +1 bonus to your Accuracy Rolls and Evasion against that foe. Each subsequent time that you hit the Tagged foe with a Move affected by Iron Fist, this bonus increases by +1, to a maximum of your Combat Rank. If you ever spend a turn without successfully hitting your Tagged foe, the foe loses their Tag and the bonus is lost."
+            },
+            "name": "Martial Achievement"
+          },
+          {
+            "Tags": "[+Defense]",
+            "Prerequisites": "Martial Artist (Iron Fist)",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
+            "Effect": "You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action.",
+            "name": "Second Strike"
+          }
+        ]
+      },
+      {
+        "name": "Limber",
+        "features": [
+          {
+            "Tags": "[Class][+Speed]",
+            "Prerequisites": "Basic Martial Arts, Novice Combat",
+            "Frequency": "Static",
+            "Effect": "You gain Limber, and all Martial Artist Features gain the [+Speed] Tag.",
+            "name": "Martial Artist"
+          },
+          {
+            "Tags": "[+Speed]",
+            "Rank 1 Prerequisites": "Martial Artist",
+            "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
+            "Rank 3 Prerequisites": "Martial Artist, Master Combat",
+            "Frequency": "Static",
+            "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Acupressure</td><td>Limber</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Double Kick</td><td>None</td><td>Counter</td><td>Limber</td><td></td><td></td></tr><tr><td>Focus Energy</td><td>None</td><td>Power Trick</td><td>Limber</td><td></td><td></td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>",
+            "name": "Martial Training"
+          },
+          {
+            "Tags": "[+Speed]",
+            "Prerequisites": "Martial Training Rank 1 (Limber)",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "A foe provokes an Attack of Opportunity",
+            "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
+            "name": "My Kung-Fu is Stronger"
+          },
+          {
+            "Tags": "[+Speed]",
+            "Prerequisites": "Martial Artist (Limber)",
+            "Frequency": "Static",
+            "Effect": "You gain the Bend Like the Willow Martial Achievement.",
+            "Bend Like the Willow": {
+              "Prerequisites": "Limber Ability",
+              "Frequency": "2 AP – Free Action, Interrupt",
+              "Trigger": "An adjacent foe initiates a Disarm, Grapple, Push, or Trip Maneuver against you, and either misses or fails the Opposed Check.",
+              "Effect": "You may attempt the same Combat Maneuver against the triggering foe as a Free Action."
+            },
+            "name": "Martial Achievement"
+          },
+          {
+            "Tags": "[+Speed]",
+            "Prerequisites": "Martial Artist (Limber)",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
+            "Effect": "You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action.",
+            "name": "Second Strike"
+          }
+        ]
+      },
+      {
+        "name": "Reckless",
+        "features": [
+          {
+            "Tags": "[Class][+Attack]",
+            "Prerequisites": "Basic Martial Arts, Novice Combat",
+            "Frequency": "Static",
+            "Effect": "You gain Reckless, and all Martial Artist Features gain the [+Attack] Tag.",
+            "name": "Martial Artist"
+          },
+          {
+            "Tags": "[+Attack]",
+            "Rank 1 Prerequisites": "Martial Artist",
+            "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
+            "Rank 3 Prerequisites": "Martial Artist, Master Combat",
+            "Frequency": "Static",
+            "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Double Kick</td><td>None</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Focus Energy</td><td>None</td><td>Jump Kick</td><td>Reckless</td><td>High Jump Kick</td><td>Reckless</td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr><tr><td>Rolling Kick</td><td>Reckless</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>",
+            "name": "Martial Training"
+          },
+          {
+            "Tags": "[+Attack]",
+            "Prerequisites": "Martial Training Rank 1 (Reckless)",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "A foe provokes an Attack of Opportunity",
+            "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
+            "name": "My Kung-Fu is Stronger"
+          },
+          {
+            "Tags": "[+Attack]",
+            "Prerequisites": "Martial Artist (Reckless)",
+            "Frequency": "Static",
+            "Effect": "You gain the Soft Landing Martial Achievement.",
+            "Soft Landing": {
+              "Prerequisites": "Reckless Ability",
+              "Frequency": "1 AP – Full Action",
+              "Trigger": "You take fall damage, or miss with Jump Kick or High Jump Kick",
+              "Effect": "When taking fall damage, calculate the result as if you had fallen X meters less, where X is half your Combat Rank. If you miss with Jump Kick or High Jump Kick, you lose no Hit Points as a result."
+            },
+            "name": "Martial Achievement"
+          },
+          {
+            "Tags": "[+Attack]",
+            "Prerequisites": "Martial Artist (Reckless)",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
+            "Effect": "You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action.",
+            "name": "Second Strike"
+          }
+        ]
+      },
+      {
+        "name": "Technician",
+        "features": [
+          {
+            "Tags": "[Class][+Speed]",
+            "Prerequisites": "Basic Martial Arts, Novice Combat",
+            "Frequency": "Static",
+            "Effect": "You gain Technician, and all Martial Artist Features gain the [+Speed] Tag.",
+            "name": "Martial Artist"
+          },
+          {
+            "Tags": "[+Speed]",
+            "Rank 1 Prerequisites": "Martial Artist",
+            "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
+            "Rank 3 Prerequisites": "Martial Artist, Master Combat",
+            "Frequency": "Static",
+            "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Arm Thrust</td><td>Technician</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Double Kick</td><td>None</td><td>Quick Guard</td><td>Technician</td><td>Triple Kick</td><td>Technician</td></tr><tr><td>Focus Energy</td><td>None</td><td></td><td></td><td></td><td></td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>",
+            "name": "Martial Training"
+          },
+          {
+            "Tags": "[+Speed]",
+            "Prerequisites": "Martial Training Rank 1 (Technician)",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "A foe provokes an Attack of Opportunity",
+            "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2.",
+            "name": "My Kung-Fu is Stronger"
+          },
+          {
+            "Tags": "[+Speed]",
+            "Prerequisites": "Martial Artist (Technician)",
+            "Frequency": "Static",
+            "Effect": "You gain the Whirlwind Strikes Martial Achievement.",
+            "Whirlwind Strikes": {
+              "Prerequisites": "Technician",
+              "Frequency": "1 AP – Full Action",
+              "Effect": "You may use Rock Smash, targeting against any number of adjacent foes. You do not count as Flanked for one full round."
+            },
+            "name": "Martial Achievement"
+          },
+          {
+            "Tags": "[+Speed]",
+            "Prerequisites": "Martial Artist (Technician)",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
+            "Effect": "You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action.",
+            "name": "Second Strike"
+          }
+        ]
+      }
+    ]
+  }
+}
