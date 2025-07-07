@@ -81,7 +81,7 @@
         "Frequency": "Static",
         "Effect": "You gain the Reckless Advance and Strike Again! Orders.",
         "Reckless Advance": {
-          "Tags": "[Orders] [Stratagem]",
+          "Tags": "[Orders][Stratagem]",
           "Frequency": "Bind 2 AP – Standard Action",
           "Target": "Your Pokémon",
           "Effect": "While this Feature is Bound, increase the damage rolls of the target’s damaging melee attacks by +8, and these attacks Trip targets on Accuracy Rolls of 18+. When the target of Reckless Advance hits with a damaging melee attack, they become Vulnerable for one full round.",
@@ -101,7 +101,7 @@
         "Frequency": "Static",
         "Effect": "You gain the Trick Shot and Long Shot Orders.",
         "Trick Shot": {
-          "Tags": "[Orders] [Stratagem]",
+          "Tags": "[Orders][Stratagem]",
           "Frequency": "Bind 2 AP – Standard Action",
           "Target": "Your Pokémon",
           "Effect": "While this Feature is Bound, decrease the Accuracy Roll of the target’s damaging ranged attacks by -2. The Critical Hit range of those attacks is increased by +3. This Feature does not affect Moves without an AC value.",
@@ -121,7 +121,7 @@
         "Frequency": "Static",
         "Effect": "You gain the Capricious Whirl and Dazzling Dervish Orders.",
         "Capricious Whirl": {
-          "Tags": "[Orders] [Stratagem]",
+          "Tags": "[Orders][Stratagem]",
           "Frequency": "Bind 2 AP – Standard Action",
           "Target": "Your Pokémon",
           "Effect": "While this Feature is Bound, the target has a +3 bonus to its Evasion but deals 5 less damage with all damaging attacks.",
@@ -141,7 +141,7 @@
         "Frequency": "Static",
         "Effect": "You gain the Brace for Impact and Sentinel Stance Orders.",
         "Brace for Impact": {
-          "Tags": "[Orders] [Stratagem]",
+          "Tags": "[Orders][Stratagem]",
           "Frequency": "Bind 2 AP – Standard Action",
           "Target": "Your Pokémon",
           "Effect": "While this Feature is Bound, once a round, when the target uses a self-targeting Status Move, they may gain 5 Damage Reduction until the end of their next turn. They may also activate this effect as a Standard Action.",
@@ -161,7 +161,7 @@
         "Frequency": "Static",
         "Effect": "You gain the Pinpoint Strike and Perfect Aim Orders.",
         "Pinpoint Strike": {
-          "Tags": "[Orders] [Stratagem]",
+          "Tags": "[Orders][Stratagem]",
           "Frequency": "Bind 2 AP – Standard Action",
           "Target": "Your Pokémon",
           "Effect": "Increase the Accuracy and Effect Range of the target’s damaging attacks by +2. These attacks deal 5 less damage, before applying weakness and resistance.",
@@ -556,13 +556,13 @@
     "Source": "Homebrew",
     "Features": {
       "Coordinator": {
-        "Tags": "[Class] [+Any]",
+        "Tags": "[Class][+Any]",
         "Prerequisites": "Grace, Novice Charm, Command, Guile, Intimidate, or Intuition",
         "Frequency": "X AP — Free Action",
         "Effect": "Your Pokémon may re-roll a single Appeal Roll or Damage Roll, and must use the new result. The first time per day you use this Feature, it costs 0 AP. Each time thereafter, the cost increases by 1 AP. The cost of this Feature resets when you take an Extended Rest."
       },
       "Decisive Director": {
-        "Tags": "[Orders] [+Any]",
+        "Tags": "[Orders][+Any]",
         "Prerequisites": "Coordinator",
         "Frequency": "At-Will — Standard Action",
         "Target": "A Pokémon",
@@ -591,7 +591,7 @@
         "Effect": "All Pokemon you Train during this time may reallocate up to 2d6 of Poffin Derived Contest Stats from one Contest Stat to another. They may also reallocate up to 10 Stat Points between their Stats and trade one Naturally Learned Move in their movepool for any other move on their Level-Up list that they could learn at their current level or lower. The Pokemon must still adhere to Base Stat Relation. These effects last until the end of the day."
       },
       "Adaptable Performance": {
-        "Tags": " [+Any]",
+        "Tags": "[+Any]",
         "Prerequisites": "Flexible Preparations, one Coordinator Skill at Expert",
         "Frequency": "Scene — Free Action",
         "Trigger": "Your Pokémon's Turn to use a Move in a Contest, or your Pokémon gains Initiative",
@@ -600,7 +600,7 @@
         "Note": "Adaptable Performance may not be used with the Moves Explosion or Self-Destruct."
       },
       "Reliable Performance": {
-        "Tags": " [+Any]",
+        "Tags": "[+Any]",
         "Prerequisites": "Nuanced Performance, one Coordinator Skill at Expert",
         "Frequency": "Scene x2 – Swift Action Interrupt",
         "Trigger": "You or your Pokemon make an Appeal Roll, Accuracy Check, or Skill Check",
@@ -1464,7 +1464,7 @@
             "Effect": "Your Pokémon gains either Gentle Vibe or Serene Grace for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
           },
           "Beautiful Ballet": {
-            "Tags": "Ranked 2",
+            "Tags": "[Ranked 2]",
             "Rank 1 Prerequisites": "Style Expert (Beauty), Novice Intuition",
             "Rank 2 Prerequisites": "Expert Intuition",
             "Frequency": "1 AP — Special",
@@ -1511,7 +1511,7 @@
             "Effect": "Your Pokémon gains either Defiant or Sniper for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
           },
           "Cool Conduct": {
-            "Tags": "Ranked 2",
+            "Tags": "[Ranked 2]",
             "Rank 1 Prerequisites": "Style Expert (Cool), Novice Command",
             "Rank 2 Prerequisites": "Expert Command",
             "Frequency": "1 AP — Special",
@@ -1559,7 +1559,7 @@
             "Effect": "Your Pokémon gains either Cute Charm or Cute Tears for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
           },
           "Cute Cuddle": {
-            "Tags": "Ranked 2",
+            "Tags": "[Ranked 2]",
             "Rank 1 Prerequisites": "Style Expert (Cute), Novice Charm",
             "Rank 2 Prerequisites": "Expert Charm",
             "Frequency": "1 AP — Special",
@@ -1606,7 +1606,7 @@
             "Effect": "Your Pokémon gains either Analytic or Anticipation for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
           },
           "Smart Scheme": {
-            "Tags": "Ranked 2",
+            "Tags": "[Ranked 2]",
             "Rank 1 Prerequisites": "Style Expert (Smart), Novice Guile",
             "Rank 2 Prerequisites": "Expert Guile",
             "Frequency": "1 AP — Special",
@@ -1653,7 +1653,7 @@
             "Effect": "Your Pokémon gains either Sturdy or Intimidate for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
           },
           "Tough Tumble": {
-            "Tags": "Ranked 2",
+            "Tags": "[Ranked 2]",
             "Rank 1 Prerequisites": "Style Expert (Tough), Novice Intimidate",
             "Rank 2 Prerequisites": "Expert Intimidate",
             "Frequency": "1 AP — Special",
@@ -1690,7 +1690,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Bug) or Type Strategist (Bug). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Bug)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -1710,7 +1710,7 @@
           },
           "Iterative Evolution": {
             "Prerequisites": "Insectoid Utility, Adept Command or Survival",
-            "Tags": "Orders, Stratagem",
+            "Tags": "[Orders][Stratagem]",
             "Frequency": "Bind 2 AP — Standard Action",
             "Target": "Your Pokémon",
             "Effect": "While this Feature is bound, if your Pokémon's Bug-Type attack would deal Super-Effective Damage, it gains a +2 Bonus to Accuracy Check. If it would deal Neutral Damage, it gains a Bonus to its Damage Roll equal to your Type-Linked Skill Rank. If it would be resisted, it is resisted one step less. This is calculated after applying any other effects that would modify effectiveness before the Accuracy Roll is made, such as the Tinted Lens Ability."
@@ -1737,7 +1737,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Dark) or Type Strategist (Dark). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Dark)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -1758,7 +1758,7 @@
           },
           "Sneak Attack": {
             "Prerequisites": "Clever Ruse, Adept Guile or Stealth",
-            "Tags": "Orders, Stratagem",
+            "Tags": "[Orders][Stratagem]",
             "Frequency": "Bind 2 AP — Standard Action",
             "Target": "Your Dark-Type Pokémon",
             "Effect": "While this Feature is bound, when attacking foes that are Fainted, Flanked, Flinched, Sleeping, Stuck, Tripped, unaware of your Pokémon's presence, or otherwise do not expect an attack, the target gains a +2 bonus to Accuracy Rolls and a bonus to Damage Rolls equal to your Type-Linked Skill Rank."
@@ -1786,7 +1786,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Dragon) or Type Strategist (Dragon). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Dragon)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -1834,7 +1834,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Fighting) or Type Strategist (Fighting). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Electric)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -1855,7 +1855,7 @@
           },
           "Overload": {
             "Prerequisites": "Lockdown, Adept Focus or Technology Education",
-            "Tags": "Orders, Stratagem",
+            "Tags": "[Orders][Stratagem]",
             "Frequency": "Bind 2 AP — Standard Action",
             "Target": "Your Pokémon",
             "Effect": "While this Feature is Bound, whenever the target hits a foe with an Electric Attack, they may choose to have the foe lose Hit Points equal to the target's Tick value plus your Type-Linked Skill Rank. If they do, the target loses a Tick of Hit Points after the attack is resolved."
@@ -1882,7 +1882,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Fighting) or Type Strategist (Fighting). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Fairy)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -1931,7 +1931,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Fighting) or Type Strategist (Fighting). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Fighting)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -1980,7 +1980,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Flying) or Type Strategist (Flying). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Fire)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -2006,7 +2006,7 @@
           },
           "Incandescence": {
             "Prerequisites": "Brightest Flame, Expert Focus or Intimidate",
-            "Tags": "Orders, Stratagem",
+            "Tags": "[Orders][Stratagem]",
             "Frequency": "Bind 2 AP — Standard Action",
             "Target": "Your Pokémon",
             "Effect": "While this Feature is Bound, the target adds both their Attack and Special Attack Stat to all damaging Fire-Type Attacks, instead of one or the other. This does not stack with Twisted Power."
@@ -2027,7 +2027,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Flying) or Type Strategist (Flying). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Flying)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -2042,7 +2042,7 @@
           },
           "Celerity": {
             "Prerequisites": "Type Ace (Flying)",
-            "Tags": "Orders, Stratagem",
+            "Tags": "[Orders][Stratagem]",
             "Frequency": "Bind 2 AP — Standard Action",
             "Target": "A Flying-Type Pokémon, or a Pokémon with a Sky or Levitate Speed",
             "Effect": "While this Feature is Bound, add your Type-Linked Skill to the target's Initiative. Additionally, if the Target uses a Disengage Maneuver, they may Shift as if Slowed instead of shifting only 1 Meter."
@@ -2074,7 +2074,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Ghost) or Type Strategist (Ghost). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Ghost)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -2094,7 +2094,7 @@
           },
           "Haunting Curse": {
             "Prerequisites": "Ghost Step, Adept Intimidate or Occult Education",
-            "Tags": "Orders, Stratagem",
+            "Tags": "[Orders][Stratagem]",
             "Frequency": "Bind 2 AP — Standard Action",
             "Target": "Your Pokémon",
             "Effect": "While this Feature is bound, the target gains a Curse Token each time they use a Ghost-Type Move or Ghost Step. Ghost-Type Moves with a Set-Up and Resolution Phase give a Curse Token for each Phase. As a Standard Action during their turn, or as Free Action upon Fainting, the target may spend their Curse Tokens to apply conditions to a foe within 6 meters.\n» 1 Curse Token: The target loses a Combat Stage of your choice.\n» 2 Curse Tokens: The target becomes Cursed.\n» 3 Curse Tokens: The target becomes Suppressed.\n» 4 Curse Tokens: The target falls Asleep and gains Bad Sleep."
@@ -2121,7 +2121,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Grass) or Type Strategist (Grass). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Grass)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -2142,7 +2142,7 @@
           },
           "Sunlight Within": {
             "Prerequisites": "Foiling Foliage, Adept Survival or General Education",
-            "Tags": "Orders, Stratagem",
+            "Tags": "[Orders][Stratagem]",
             "Frequency": "Bind 2 AP — Standard Action",
             "Target": "Your Pokémon",
             "Effect": "While this Stratagem is bound, your Pokémon may activate Moves and Abilities as if they were in Sunny Weather."
@@ -2169,7 +2169,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Ground) or Type Strategist (Ground). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Ground)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -2190,7 +2190,7 @@
           },
           "Desert Heart": {
             "Prerequisites": "Mold the Earth, Adept Perception or Intuition",
-            "Tags": "Orders, Stratagem",
+            "Tags": "[Orders][Stratagem]",
             "Frequency": "Bind 2 AP — Standard Action",
             "Target": "Your Pokémon",
             "Effect": "While this Stratagem is bound, your Pokémon may activate Moves and Abilities as if they were in a Sandstorm."
@@ -2216,7 +2216,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Ice) or Type Strategist (Ice). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Ice)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -2236,7 +2236,7 @@
           },
           "Polar Vortex": {
             "Prerequisites": "Glacial Ice, Adept Athletics or Survival",
-            "Tags": "Orders, Stratagem",
+            "Tags": "[Orders][Stratagem]",
             "Frequency": "Bind 2 AP — Standard Action",
             "Target": "Your Pokémon",
             "Effect": "While this Stratagem is bound, your Pokémon may activate Moves and Abilities as if they were in Hail."
@@ -2263,7 +2263,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Normal) or Type Strategist (Normal). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Normal)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -2284,7 +2284,7 @@
           },
           "Plainly Perfect": {
             "Prerequisites": "Extra Ordinary, Adept Charm or Intuition",
-            "Tags": "Orders, Stratagem",
+            "Tags": "[Orders][Stratagem]",
             "Frequency": "Bind 2 AP — Standard Action",
             "Target": "Your Pokémon",
             "Effect": "While this Feature is bound, instead of rolling for damage with Normal-Type Moves, your Pokémon acts as if they rolled the maximum value on their Damage Dice Roll. Plainly Perfect only works for the first instance of the Damage Dice Roll on Critical Hits."
@@ -2311,7 +2311,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Poison) or Type Strategist (Poison). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Poison)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -2332,7 +2332,7 @@
           },
           "Debilitate": {
             "Prerequisites": "Potent Venom, Adept Intimidate or Stealth",
-            "Tags": "Orders, Stratagem",
+            "Tags": "[Orders][Stratagem]",
             "Frequency": "Bind 2 AP — Standard Action",
             "Target": "Your Poison-Type Pokémon",
             "Effect": "While this Feature is Bound, when the target successfully hits a Poisoned or Blighted foe with a Poison-Type Move, the foe gains a -2 penalty to Accuracy Rolls and Evasion for one full round."
@@ -2360,7 +2360,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Psychic) or Type Strategist (Psychic). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Psychic)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -2407,7 +2407,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Rock) or Type Strategist (Rock). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Rock)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -2434,7 +2434,7 @@
           },
           "Tough as Schist": {
             "Prerequisites": "Gravel Before Me, Expert Combat or Survival",
-            "Tags": "Orders, Stratagem",
+            "Tags": "[Orders][Stratagem]",
             "Frequency": "Bind 2 AP — Standard Action",
             "Target": "Your Rock-Type Pokémon",
             "Effect": "While this Feature is Bound, allied Stealth Rock Hazards within 4 meters of your Pokémon are not used when a foe triggers them unless you want them to be. Whenever the target takes Super-Effective Damage from a Water, Grass, Ground, Fighting, or Steel Type Attack, they may consume an allied Stealth Rock Hazard within 4 meters to create temporary armor that grants them Damage Reduction equal to your Type-Linked Skill Rank for one full round."
@@ -2455,7 +2455,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Steel) or Type Strategist (Steel). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Steel)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -2475,7 +2475,7 @@
           },
           "Iron Grit": {
             "Prerequisites": "Polished Shine, Adept Athletics or Intimidate",
-            "Tags": "Orders, Stratagem",
+            "Tags": "[Orders][Stratagem]",
             "Frequency": "Bind 2 AP — Standard Action",
             "Target": "Your Pokémon",
             "Effect": "When this Feature becomes Bound, the target gains +1 Defense Combat Stage. While the Feature remains bound, the target's Defense Stat cannot be lowered, and its Defense Combat Stages cannot be lowered."
@@ -2496,7 +2496,7 @@
           "Target": "Your Pokémon with at least 2 Tutor Points remaining.",
           "Effect": "The target loses 2 Tutor Points and learns Last Chance (Water) or Type Strategist (Water). You may target a Pokémon only once with Type Ace.",
           "Type Refresh": {
-            "Tags": "Branch, Orders",
+            "Tags": "[Branch][Orders]",
             "Prerequisites": "Type Ace (Water)",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
@@ -2516,7 +2516,7 @@
           },
           "Fishbowl Technique": {
             "Prerequisites": "Flood!, Adept Athletics or Intuition",
-            "Tags": "Orders, Stratagem",
+            "Tags": "[Orders][Stratagem]",
             "Frequency": "Bind 2 AP — Standard Action",
             "Target": "Your Pokémon",
             "Effect": "While this Stratagem is bound, your Pokémon may activate Moves and Abilities as if they were in Rainy Weather."
@@ -3116,13 +3116,13 @@
         "Researcher": {
           "Source": "Homebrew",
           "Witch Hunter": {
-            "Tags": "[+Special Defense] [Gift]",
+            "Tags": "[+Special Defense][Gift]",
             "Prerequisites": "Occultism Research Field, Novice Occult Education",
             "Frequency": "Static",
             "Effect": "You gain the Psionic Sight Feature, even if you do not meet the prerequisites. Additionally, you gain the Mindlock Capability, and you and your Pokémon's attacks gain a +2 bonus to Accuracy against Psychic-, Ghost-, and Dark-Types."
           },
           "Psionic Analysis": {
-            "Tags": "[+Special Defense] [Gift]",
+            "Tags": "[+Special Defense][Gift]",
             "Prerequisites": "Witch Hunter, Master Occult Education",
             "Frequency": "Scene — Extended Action",
             "Effect": "You are able to analyze Psychic Residue and can determine the following information about the Trainer or Pokémon that left the residue:\n» Whether they are a Human or a Pokémon\n» Which Psychic-Type Moves they know\n» If they’re Human, which of the following Class Features they have: Telepath, Telekinetic, Warper",
@@ -3616,7 +3616,7 @@
             "Effect": "You gain Guts, and all Martial Artist Features gain the [+HP] Tag."
           },
           "Martial Training": {
-            "Tags": "+HP",
+            "Tags": "[+HP]",
             "Rank 1 Prerequisites": "Martial Artist",
             "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
             "Rank 3 Prerequisites": "Martial Artist, Master Combat",
@@ -3624,14 +3624,14 @@
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Double Kick</td><td>None</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Focus Energy</td><td>None</td><td>Circle Throw</td><td>Guts</td><td>Storm Throw</td><td>Guts</td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr><tr><td>Vital Throw</td><td>Guts</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>"
           },
           "My Kung-Fu is Stronger": {
-            "Tags": "+HP",
+            "Tags": "[+HP]",
             "Prerequisites": "Martial Training Rank 1 (Guts)",
             "Frequency": "At-Will — Free Action",
             "Trigger": "A foe provokes an Attack of Opportunity",
             "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
           },
           "Martial Achievement": {
-            "Tags": "+HP",
+            "Tags": "[+HP]",
             "Prerequisites": "Martial Artist (Guts)",
             "Frequency": "Static",
             "Effect": "You gain the Wrestlemania Martial Achievement.",
@@ -3643,7 +3643,7 @@
             }
           },
           "Second Strike": {
-            "Tags": "+HP",
+            "Tags": "[+HP]",
             "Prerequisites": "Martial Artist (Guts)",
             "Frequency": "At-Will — Free Action",
             "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
@@ -3660,7 +3660,7 @@
             "Effect": "You gain Inner Focus, and all Martial Artist Features gain the [+Speed] Tag."
           },
           "Martial Training": {
-            "Tags": "+Speed",
+            "Tags": "[+Speed]",
             "Rank 1 Prerequisites": "Martial Artist",
             "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
             "Rank 3 Prerequisites": "Martial Artist, Master Combat",
@@ -3668,14 +3668,14 @@
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Double Kick</td><td>None</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Focus Energy</td><td>None</td><td>Circle Throw</td><td>Guts</td><td>Storm Throw</td><td>Guts</td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr><tr><td>Vital Throw</td><td>Guts</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>"
           },
           "My Kung-Fu is Stronger": {
-            "Tags": "+Speed",
+            "Tags": "[+Speed]",
             "Prerequisites": "Martial Training Rank 1 (Inner Focus)",
             "Frequency": "At-Will — Free Action",
             "Trigger": "A foe provokes an Attack of Opportunity",
             "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
           },
           "Martial Achievement": {
-            "Tags": "+Speed",
+            "Tags": "[+Speed]",
             "Prerequisites": "Martial Artist (Inner Focus)",
             "Frequency": "Static",
             "Effect": "You gain the Heightened Intensity Martial Achievement.",
@@ -3686,7 +3686,7 @@
             }
           },
           "Second Strike": {
-            "Tags": "+Speed",
+            "Tags": "[+Speed]",
             "Prerequisites": "Martial Artist (Inner Focus)",
             "Frequency": "At-Will — Free Action",
             "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
@@ -3703,7 +3703,7 @@
             "Effect": "You gain Iron Fist, and all Martial Artist Features gain the [+Defense] Tag."
           },
           "Martial Training": {
-            "Tags": "+Defense",
+            "Tags": "[+Defense]",
             "Rank 1 Prerequisites": "Martial Artist",
             "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
             "Rank 3 Prerequisites": "Martial Artist, Master Combat",
@@ -3711,14 +3711,14 @@
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Double Kick</td><td>None</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Focus Energy</td><td>None</td><td>Comet Punch</td><td>Iron Fist</td><td>Sky Uppercut</td><td>Iron Fist</td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr><tr><td>Mach Punch</td><td>Iron Fist</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>"
           },
           "My Kung-Fu is Stronger": {
-            "Tags": "+Defense",
+            "Tags": "[+Defense]",
             "Prerequisites": "Martial Training Rank 1 (Iron Fist)",
             "Frequency": "At-Will — Free Action",
             "Trigger": "A foe provokes an Attack of Opportunity",
             "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
           },
           "Martial Achievement": {
-            "Tags": "+Defense",
+            "Tags": "[+Defense]",
             "Prerequisites": "Martial Artist (Iron Fist)",
             "Frequency": "Static",
             "Effect": "You gain the Pummeling Momentum Martial Achievement.",
@@ -3730,7 +3730,7 @@
             }
           },
           "Second Strike": {
-            "Tags": "+Defense",
+            "Tags": "[+Defense]",
             "Prerequisites": "Martial Artist (Iron Fist)",
             "Frequency": "At-Will — Free Action",
             "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
@@ -3747,7 +3747,7 @@
             "Effect": "You gain Limber, and all Martial Artist Features gain the [+Speed] Tag."
           },
           "Martial Training": {
-            "Tags": "+Speed",
+            "Tags": "[+Speed]",
             "Rank 1 Prerequisites": "Martial Artist",
             "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
             "Rank 3 Prerequisites": "Martial Artist, Master Combat",
@@ -3755,14 +3755,14 @@
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Acupressure</td><td>Limber</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Double Kick</td><td>None</td><td>Counter</td><td>Limber</td><td></td><td></td></tr><tr><td>Focus Energy</td><td>None</td><td>Power Trick</td><td>Limber</td><td></td><td></td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>"
           },
           "My Kung-Fu is Stronger": {
-            "Tags": "+Speed",
+            "Tags": "[+Speed]",
             "Prerequisites": "Martial Training Rank 1 (Limber)",
             "Frequency": "At-Will — Free Action",
             "Trigger": "A foe provokes an Attack of Opportunity",
             "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
           },
           "Martial Achievement": {
-            "Tags": "+Speed",
+            "Tags": "[+Speed]",
             "Prerequisites": "Martial Artist (Limber)",
             "Frequency": "Static",
             "Effect": "You gain the Bend Like the Willow Martial Achievement.",
@@ -3774,7 +3774,7 @@
             }
           },
           "Second Strike": {
-            "Tags": "+Speed",
+            "Tags": "[+Speed]",
             "Prerequisites": "Martial Artist (Limber)",
             "Frequency": "At-Will — Free Action",
             "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
@@ -3791,7 +3791,7 @@
             "Effect": "You gain Reckless, and all Martial Artist Features gain the [+Attack] Tag."
           },
           "Martial Training": {
-            "Tags": "+Attack",
+            "Tags": "[+Attack]",
             "Rank 1 Prerequisites": "Martial Artist",
             "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
             "Rank 3 Prerequisites": "Martial Artist, Master Combat",
@@ -3799,14 +3799,14 @@
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Double Kick</td><td>None</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Focus Energy</td><td>None</td><td>Jump Kick</td><td>Reckless</td><td>High Jump Kick</td><td>Reckless</td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr><tr><td>Rolling Kick</td><td>Reckless</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>"
           },
           "My Kung-Fu is Stronger": {
-            "Tags": "+Attack",
+            "Tags": "[+Attack]",
             "Prerequisites": "Martial Training Rank 1 (Reckless)",
             "Frequency": "At-Will — Free Action",
             "Trigger": "A foe provokes an Attack of Opportunity",
             "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
           },
           "Martial Achievement": {
-            "Tags": "+Attack",
+            "Tags": "[+Attack]",
             "Prerequisites": "Martial Artist (Reckless)",
             "Frequency": "Static",
             "Effect": "You gain the Soft Landing Martial Achievement.",
@@ -3818,7 +3818,7 @@
             }
           },
           "Second Strike": {
-            "Tags": "+Attack",
+            "Tags": "[+Attack]",
             "Prerequisites": "Martial Artist (Reckless)",
             "Frequency": "At-Will — Free Action",
             "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
@@ -3835,7 +3835,7 @@
             "Effect": "You gain Technician, and all Martial Artist Features gain the [+Speed] Tag."
           },
           "Martial Training": {
-            "Tags": "+Speed",
+            "Tags": "[+Speed]",
             "Rank 1 Prerequisites": "Martial Artist",
             "Rank 2 Prerequisites": "Martial Artist, Expert Combat",
             "Rank 3 Prerequisites": "Martial Artist, Master Combat",
@@ -3843,14 +3843,14 @@
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"2\">Rank 1 Moves</th><th colspan=\"2\">Rank 2 Moves</th><th colspan=\"2\">Rank 3 Moves</th></tr></thead><tbody><tr><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td><td>Move</td><td>Prerequisites</td></tr><tr><td>Arm Thrust</td><td>Technician</td><td>Brick Break</td><td>None</td><td>Close Combat</td><td>None</td></tr><tr><td>Double Kick</td><td>None</td><td>Quick Guard</td><td>Technician</td><td>Triple Kick</td><td>Technician</td></tr><tr><td>Focus Energy</td><td>None</td><td></td><td></td><td></td><td></td></tr><tr><td>Low Sweep</td><td>None</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>"
           },
           "My Kung-Fu is Stronger": {
-            "Tags": "+Speed",
+            "Tags": "[+Speed]",
             "Prerequisites": "Martial Training Rank 1 (Technician)",
             "Frequency": "At-Will — Free Action",
             "Trigger": "A foe provokes an Attack of Opportunity",
             "Effect": "You may use Rock Smash instead of an unarmed Struggle Attack. If you do, Rock Smash's Effect Range is increased by +2."
           },
           "Martial Achievement": {
-            "Tags": "+Speed",
+            "Tags": "[+Speed]",
             "Prerequisites": "Martial Artist (Technician)",
             "Frequency": "Static",
             "Effect": "You gain the Whirlwind Strikes Martial Achievement.",
@@ -3861,7 +3861,7 @@
             }
           },
           "Second Strike": {
-            "Tags": "+Speed",
+            "Tags": "[+Speed]",
             "Prerequisites": "Martial Artist (Technician)",
             "Frequency": "At-Will — Free Action",
             "Trigger": "You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll",
@@ -4369,7 +4369,7 @@
         "Effect": "You mark the target with a mystical power which allows you to close your eyes and focus to perceive the world with their senses from their perspective. You may Bind this Ability multiple times, each time on a different target, but you may only concentrate on one Mark of Vision at a time, and you may only have a number of Marks at one time equal to half your Perception Rank. A target may choose to end this effect at any time, or to deny you access to their senses temporarily without ending the effect entirely. You have a rough sense of how far away and in what direction marked targets are."
       },
       "Two-Second Preview": {
-        "Tags": "[+Special Defense] [Gift]",
+        "Tags": "[+Special Defense][Gift]",
         "Rank 1 Prerequisites": "2 Oracle Features, Adept Perception",
         "Rank 2 Prerequisites": "Prescience",
         "Frequency": "Static",
@@ -4938,26 +4938,26 @@
             "Effect": "You gain the Shield Dust Ability."
           },
           "How To Shoot Web": {
-            "Tags": "+Special Attack",
+            "Tags": "[+Special Attack]",
             "Prerequisites": "Swarmlord",
             "Frequency": "Static",
             "Effect": "You gain the Threaded and Wallclimber Capabilities."
           },
           "Broodlord": {
-            "Tags": "+Special Attack",
+            "Tags": "[+Special Attack]",
             "Prerequisites": "Enhanced Embrace Rank 2, Expert Command or Survival",
             "Frequency": "Static",
             "Effect": "You gain Compound Eyes."
           },
           "Pheromone Markers": {
-            "Tags": "+Special Attack",
+            "Tags": "[+Special Attack]",
             "Prerequisites": "Enhanced Embrace Rank 1",
             "Frequency": "1 AP — Free Action",
             "Trigger": "You hit a foe with a damaging Bug-Type attack",
             "Effect": "The triggering foe gains 1 Pheromone Stack. Your Bug-Type attacks gain a +2 bonus to Accuracy Rolls and +1 Critical Hit range against foes for each Pheromone Stack they have. Once per Scene per foe, when they gain their third or higher Pheromone Stack, you may choose to roll 1d6. On a result of 1 or 2, the foe becomes Confused; on a result of 3 or 4 the foe becomes Suppressed; on a result of 5 or 6 the foe becomes Enraged."
           },
           "Enhanced Embrace": {
-            "Tags": "+Special Attack",
+            "Tags": "[+Special Attack]",
             "Rank 1 Prerequisites": "Swarmlord",
             "Rank 2 Prerequisites": "Adept Command or Survival",
             "Rank 3 Prerequisites": "Expert Command or Survival",
@@ -4975,26 +4975,26 @@
             "Effect": "You gain the Unnerve Ability."
           },
           "How To Shoot Web": {
-            "Tags": "+Attack",
+            "Tags": "[+Attack]",
             "Prerequisites": "Swarmlord",
             "Frequency": "Static",
             "Effect": "You gain the Threaded and Wallclimber Capabilities."
           },
           "Broodlord": {
-            "Tags": "+Attack",
+            "Tags": "[+Attack]",
             "Prerequisites": "Enhanced Embrace Rank 2, Expert Command or Survival",
             "Frequency": "Static",
             "Effect": "You gain Tinted Lens."
           },
           "Pheromone Markers": {
-            "Tags": "+Attack",
+            "Tags": "[+Attack]",
             "Prerequisites": "Enhanced Embrace Rank 1",
             "Frequency": "1 AP — Free Action",
             "Trigger": "You hit a foe with a damaging Bug-Type attack",
             "Effect": "The triggering foe gains 1 Pheromone Stack. Your Bug-Type attacks gain a +2 bonus to Accuracy Rolls and +1 Critical Hit range against foes for each Pheromone Stack they have. Once per Scene per foe, when they gain their third or higher Pheromone Stack, you may choose to roll 1d6. On a result of 1 or 2, the foe becomes Confused; on a result of 3 or 4 the foe becomes Suppressed; on a result of 5 or 6 the foe becomes Enraged."
           },
           "Enhanced Embrace": {
-            "Tags": "+Attack",
+            "Tags": "[+Attack]",
             "Rank 1 Prerequisites": "Swarmlord",
             "Rank 2 Prerequisites": "Adept Command or Survival",
             "Rank 3 Prerequisites": "Expert Command or Survival",
@@ -5263,7 +5263,7 @@
         "Effect": "Choose Celebrate or Gale Wings. You gain the chosen Ability."
       },
       "Raging Winds": {
-        "Tags": "[Ranked 3]][+Speed]",
+        "Tags": "[Ranked 3][+Speed]",
         "Rank 1 Prerequisites": "Wind Runner",
         "Rank 2 Prerequisites": "Expert Acrobatics or Perception",
         "Rank 3 Prerequisites": "Master Acrobatics or Perception",
@@ -5335,26 +5335,26 @@
             "Effect": "You gain Wood."
           },
           "Green Path": {
-            "Tags": "+Attack",
+            "Tags": "[+Attack]",
             "Prerequisites": "Druid (Wood Oath)",
             "Frequency": "Static",
             "Effect": "You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword."
           },
           "Overgrowth": {
-            "Tags": "+Attack",
+            "Tags": "[+Attack]",
             "Prerequisites": "Nature's Embrace Rank 3 (Wood Oath)",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You hit with a Druid Move",
             "Effect": "One target of the triggering Move is afflicted with Overgrowth. As long as the target is afflicted, they are one step less Resistant to Grass-Type attacks, to a maximum of neutral damage, and they cannot recover Hit Points or gain Temporary Hit Points. Whenever they would do so, you gain those Hit Points or Temporary Hit Points instead. Overgrowth is removed when the target Takes a Breather or is hit by a damaging Fire, Ice, Poison, Flying, or Bug-Type attack. Overgrowth may only affect a target once per Scene."
           },
           "Druid's Call": {
-            "Tags": "+Attack",
+            "Tags": "[+Attack]",
             "Prerequisites": "Green Path (Wood Oath)",
             "Frequency": "Scene x2 — Standard Action",
             "Effect": "6 small saplings suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter, and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) Capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)"
           },
           "Nature's Embrace": {
-            "Tags": "+Attack",
+            "Tags": "[+Attack]",
             "Rank 1 Prerequisites": "Druid",
             "Rank 2 Prerequisites": "Adept Survival or General Education",
             "Rank 3 Prerequisites": "Expert Survival or General Education",
@@ -5372,26 +5372,26 @@
             "Effect": "You gain Fungal."
           },
           "Green Path": {
-            "Tags": "+Special Defense",
+            "Tags": "[+Special Defense]",
             "Prerequisites": "Druid (Fungal Oath)",
             "Frequency": "Static",
             "Effect": "You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword."
           },
           "Overgrowth": {
-            "Tags": "+Special Defense",
+            "Tags": "[+Special Defense]",
             "Prerequisites": "Nature's Embrace Rank 3 (Fungal Oath)",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You hit with a Druid Move",
             "Effect": "One target of the triggering Move is afflicted with Overgrowth. As long as the target is afflicted, they are one step less Resistant to Grass-Type attacks, to a maximum of neutral damage, and they cannot recover Hit Points or gain Temporary Hit Points. Whenever they would do so, you gain those Hit Points or Temporary Hit Points instead. Overgrowth is removed when the target Takes a Breather or is hit by a damaging Fire, Ice, Poison, Flying, or Bug-Type attack. Overgrowth may only affect a target once per Scene."
           },
           "Druid's Call": {
-            "Tags": "+Special Defense",
+            "Tags": "[+Special Defense]",
             "Prerequisites": "Green Path (Fungal Oath)",
             "Frequency": "Scene x2 — Standard Action",
             "Effect": "6 mushroom patches suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter, and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) Capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)"
           },
           "Nature's Embrace": {
-            "Tags": "+Special Defense",
+            "Tags": "[+Special Defense]",
             "Rank 1 Prerequisites": "Druid",
             "Rank 2 Prerequisites": "Adept Survival or General Education",
             "Rank 3 Prerequisites": "Expert Survival or General Education",
@@ -5409,26 +5409,26 @@
             "Effect": "You gain Flower."
           },
           "Green Path": {
-            "Tags": "+Special Attack",
+            "Tags": "[+Special Attack]",
             "Prerequisites": "Druid (Flower Oath)",
             "Frequency": "Static",
             "Effect": "You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword."
           },
           "Overgrowth": {
-            "Tags": "+Special Attack",
+            "Tags": "[+Special Attack]",
             "Prerequisites": "Nature's Embrace Rank 3 (Flower Oath)",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You hit with a Druid Move",
             "Effect": "One target of the triggering Move is afflicted with Overgrowth. As long as the target is afflicted, they are one step less Resistant to Grass-Type attacks, to a maximum of neutral damage, and they cannot recover Hit Points or gain Temporary Hit Points. Whenever they would do so, you gain those Hit Points or Temporary Hit Points instead. Overgrowth is removed when the target Takes a Breather or is hit by a damaging Fire, Ice, Poison, Flying, or Bug-Type attack. Overgrowth may only affect a target once per Scene."
           },
           "Druid's Call": {
-            "Tags": "+Special Attack",
+            "Tags": "[+Special Attack]",
             "Prerequisites": "Green Path (Flower Oath)",
             "Frequency": "Scene x2 — Standard Action",
             "Effect": "6 flowery bushes suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter, and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) Capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)"
           },
           "Nature's Embrace": {
-            "Tags": "+Special Attack",
+            "Tags": "[+Special Attack]",
             "Rank 1 Prerequisites": "Druid",
             "Rank 2 Prerequisites": "Adept Survival or General Education",
             "Rank 3 Prerequisites": "Expert Survival or General Education",
