@@ -1,32 +1,32 @@
 function renderData(data, container, depth = 0) {
     const skipFields = new Set(["Source", "Category"]);
-  
+
     for (const key in data) {
-      if (!data.hasOwnProperty(key)) continue;
-      const value = data[key];
-  
-      if (skipFields.has(key)) continue;
-  
-      if (typeof value === "object" && value !== null) {
-        if (!Array.isArray(value)) {
-          const label = document.createElement(depth < 2 ? `h${5 + depth}` : "div");
-          label.className = `text-muted mb-2 ${depth >= 2 ? "small fs-6" : ""}`;
-          label.textContent = key;
-          container.appendChild(label);
-        }
-        // Si on tombe sur un wrapper "Features", on descend un cran
-        if (key === "Features") {
-          renderData(value, container, depth);
+        if (!data.hasOwnProperty(key)) continue;
+        const value = data[key];
+
+        if (skipFields.has(key)) continue;
+
+        if (typeof value === "object" && value !== null) {
+            if (!Array.isArray(value)) {
+                const label = document.createElement(depth < 2 ? `h${5 + depth}` : "div");
+                label.className = `text-muted mb-2 ${depth >= 2 ? "small fs-6" : ""}`;
+                label.textContent = key;
+                container.appendChild(label);
+            }
+            // Si on tombe sur un wrapper "Features", on descend un cran
+            if (key === "Features") {
+                renderData(value, container, depth);
+            } else {
+                renderData(value, container, depth + 1);
+            }
         } else {
-          renderData(value, container, depth + 1);
+            const p = document.createElement("p");
+            p.innerHTML = `<strong>${key}:</strong> ${value.replaceAll("\n", "<br>")}`;
+            container.appendChild(p);
         }
-      } else {
-        const p = document.createElement("p");
-        p.innerHTML = `<strong>${key}:</strong> ${value.replaceAll("\n", "<br>")}`;
-        container.appendChild(p);
-      }
     }
-  }
+}
 
 // en haut de ton script
 let sidebarData = {};      // contiendra les features
@@ -113,16 +113,16 @@ function buildSidebar(data) {
     // Re-bind des filtres source
     sidebar.querySelectorAll('input[type="checkbox"]').forEach(cb =>
         cb.addEventListener("change", () => {
-          // 1) met à jour la sidebar
-          renderSidebarLinks();
-          // 2) si on a déjà une section active, on la rerender
-          if (currentActiveLink) {
-            const sec = currentActiveLink.dataset.section;
-            const sub = currentActiveLink.dataset.subsection || null;
-            renderSection(sec, sub);
-          }
+            // 1) met à jour la sidebar
+            renderSidebarLinks();
+            // 2) si on a déjà une section active, on la rerender
+            if (currentActiveLink) {
+                const sec = currentActiveLink.dataset.section;
+                const sub = currentActiveLink.dataset.subsection || null;
+                renderSection(sec, sub);
+            }
         })
-      );
+    );
 
     // création du conteneur de liens
     linkContainer = document.createElement("div");
@@ -136,187 +136,187 @@ function renderSidebarLinks() {
     // 1) Mise à jour des sources cochées
     activeSources.clear();
     document.querySelectorAll('input[type="checkbox"][id^="filter-source-"]')
-      .forEach(cb => {
-        if (cb.checked) {
-          activeSources.add(cb.id.replace("filter-source-", ""));
-        }
-      });
-  
+        .forEach(cb => {
+            if (cb.checked) {
+                activeSources.add(cb.id.replace("filter-source-", ""));
+            }
+        });
+
     // 2) Texte de recherche
     const searchQuery = document
-      .getElementById("sidebar-search")
-      .value
-      .trim()
-      .toLowerCase();
-  
+        .getElementById("sidebar-search")
+        .value
+        .trim()
+        .toLowerCase();
+
     // 3) Sauvegarde des panels ouverts
     const openCatIds = Array.from(
-      document.querySelectorAll('.collapse.show')
+        document.querySelectorAll('.collapse.show')
     ).map(el => el.id);
-  
+
     // 4) Vide le container de liens
     linkContainer.innerHTML = "";
-  
+
     // 5) Regroupement & ordre (General + catégories)
     const classesByCategory = {};
     let generalEntry = null;
     const orderedEntries = Object.entries(sidebarData).sort(([a], [b]) => {
-      if (a === "General") return -1;
-      if (b === "General") return 1;
-      return a.localeCompare(b);
+        if (a === "General") return -1;
+        if (b === "General") return 1;
+        return a.localeCompare(b);
     });
-  
+
     orderedEntries.forEach(([className, cls]) => {
-      const src = cls.Source || "Unknown";
-      const cat = cls.Category || "Other";
-      if (className === "General") {
-        generalEntry = { className, cls, source: src };
-      } else {
-        if (!classesByCategory[cat]) classesByCategory[cat] = [];
-        classesByCategory[cat].push({ className, cls, source: src });
-      }
+        const src = cls.Source || "Unknown";
+        const cat = cls.Category || "Other";
+        if (className === "General") {
+            generalEntry = { className, cls, source: src };
+        } else {
+            if (!classesByCategory[cat]) classesByCategory[cat] = [];
+            classesByCategory[cat].push({ className, cls, source: src });
+        }
     });
-  
+
     // 6) Afficher « General »
     if (generalEntry) {
-      linkContainer.appendChild(
-        createLinkItem(
-          generalEntry.className,
-          generalEntry.source,
-          3,
-          { section: generalEntry.className }
-        )
-      );
+        linkContainer.appendChild(
+            createLinkItem(
+                generalEntry.className,
+                generalEntry.source,
+                3,
+                { section: generalEntry.className }
+            )
+        );
     }
-  
+
     // 7) Parcours des catégories
     Object.entries(classesByCategory).forEach(([category, list]) => {
-      const collapseId = `collapse-cat-${category.replace(/\s+/g, "-")}`;
-      const wrapper = document.createElement("div");
-      wrapper.className = "mb-2";
-  
-      // bouton category
-      const catBtn = document.createElement("button");
-      catBtn.className = "btn btn-sm btn-light w-100 text-start collapse-toggle collapsed";
-      catBtn.setAttribute("data-bs-toggle", "collapse");
-      catBtn.setAttribute("data-bs-target", `#${collapseId}`);
-      catBtn.setAttribute("aria-expanded", "false");
-      catBtn.textContent = `📁 ${category}`;
-      wrapper.appendChild(catBtn);
-  
-      const catCollapse = document.createElement("div");
-      catCollapse.className = "collapse";
-      catCollapse.id = collapseId;
-  
-      list.sort((a, b) => a.className.localeCompare(b.className))
-        .forEach(({ className, cls, source }) => {
-          // Clés de sous-classes
-          const featureKeys = Object.keys(cls.Features);
-  
-          // Détection de branches : présence d'un wrapper .Features
-          const hasBranches = featureKeys.some(branch =>
-            typeof cls.Features[branch] === "object" &&
-            cls.Features[branch].Features
-          );
-  
-          if (hasBranches) {
-            // parent + branches
-            const branchWrapper = document.createElement("div");
-            branchWrapper.className = "list-group";
-  
-            const parentToggle = document.createElement("a");
-            parentToggle.href = "#";
-            parentToggle.className = "list-group-item list-group-item-action ps-3 d-flex justify-content-between align-items-center";
-            parentToggle.dataset.bsToggle = "collapse";
-            parentToggle.dataset.bsTarget = `#collapse-${className.replace(/\s+/g, "-")}`;
-            parentToggle.setAttribute("aria-expanded", "false");
-  
-            parentToggle.innerHTML = `
+        const collapseId = `collapse-cat-${category.replace(/\s+/g, "-")}`;
+        const wrapper = document.createElement("div");
+        wrapper.className = "mb-2";
+
+        // bouton category
+        const catBtn = document.createElement("button");
+        catBtn.className = "btn btn-sm btn-light w-100 text-start collapse-toggle collapsed";
+        catBtn.setAttribute("data-bs-toggle", "collapse");
+        catBtn.setAttribute("data-bs-target", `#${collapseId}`);
+        catBtn.setAttribute("aria-expanded", "false");
+        catBtn.textContent = `📁 ${category}`;
+        wrapper.appendChild(catBtn);
+
+        const catCollapse = document.createElement("div");
+        catCollapse.className = "collapse";
+        catCollapse.id = collapseId;
+
+        list.sort((a, b) => a.className.localeCompare(b.className))
+            .forEach(({ className, cls, source }) => {
+                // Clés de sous-classes
+                const featureKeys = Object.keys(cls.Features);
+
+                // Détection de branches : présence d'un wrapper .Features
+                const hasBranches = featureKeys.some(branch =>
+                    typeof cls.Features[branch] === "object" &&
+                    cls.Features[branch].Features
+                );
+
+                if (hasBranches) {
+                    // parent + branches
+                    const branchWrapper = document.createElement("div");
+                    branchWrapper.className = "list-group";
+
+                    const parentToggle = document.createElement("a");
+                    parentToggle.href = "#";
+                    parentToggle.className = "list-group-item list-group-item-action ps-3 d-flex justify-content-between align-items-center";
+                    parentToggle.dataset.bsToggle = "collapse";
+                    parentToggle.dataset.bsTarget = `#collapse-${className.replace(/\s+/g, "-")}`;
+                    parentToggle.setAttribute("aria-expanded", "false");
+
+                    parentToggle.innerHTML = `
               <span>${className}</span>
               <span class="badge bg-light text-muted ms-auto">${source}</span>
               <span class="triangle-toggle ms-2"></span>
             `;
-  
-            const branchCollapse = document.createElement("div");
-            branchCollapse.className = "collapse";
-            branchCollapse.id = `collapse-${className.replace(/\s+/g, "-")}`;
-  
-            let visibleBranches = 0;
-            featureKeys.forEach(branch => {
-              const branchObj = cls.Features[branch];
-              if (branchObj.Features) {
-                const branchData = branchObj.Features;
-                const branchSource = branchData.Source || source;
-                const txt = branch.toLowerCase();
-  
-                if (
-                  activeSources.has(branchSource) &&
-                  (!searchQuery ||
-                    txt.includes(searchQuery) ||
-                    className.toLowerCase().includes(searchQuery))
-                ) {
-                  visibleBranches++;
-                  const link = createLinkItem(
-                    branch,
-                    branchSource,
-                    4,
-                    { section: className, subsection: branch }
-                  );
-                  branchCollapse.appendChild(link);
+
+                    const branchCollapse = document.createElement("div");
+                    branchCollapse.className = "collapse";
+                    branchCollapse.id = `collapse-${className.replace(/\s+/g, "-")}`;
+
+                    let visibleBranches = 0;
+                    featureKeys.forEach(branch => {
+                        const branchObj = cls.Features[branch];
+                        if (branchObj.Features) {
+                            const branchData = branchObj.Features;
+                            const branchSource = branchData.Source || source;
+                            const txt = branch.toLowerCase();
+
+                            if (
+                                activeSources.has(branchSource) &&
+                                (!searchQuery ||
+                                    txt.includes(searchQuery) ||
+                                    className.toLowerCase().includes(searchQuery))
+                            ) {
+                                visibleBranches++;
+                                const link = createLinkItem(
+                                    branch,
+                                    branchSource,
+                                    4,
+                                    { section: className, subsection: branch }
+                                );
+                                branchCollapse.appendChild(link);
+                            }
+                        }
+                    });
+
+                    if (visibleBranches > 0) {
+                        branchWrapper.append(parentToggle, branchCollapse);
+                        catCollapse.appendChild(branchWrapper);
+                    }
+
+                } else {
+                    // classe simple
+                    const txt = className.toLowerCase();
+                    if (
+                        activeSources.has(source) &&
+                        (!searchQuery || txt.includes(searchQuery))
+                    ) {
+                        const link = createLinkItem(
+                            className,
+                            source,
+                            3,
+                            { section: className }
+                        );
+                        catCollapse.appendChild(link);
+                    }
                 }
-              }
             });
-  
-            if (visibleBranches > 0) {
-              branchWrapper.append(parentToggle, branchCollapse);
-              catCollapse.appendChild(branchWrapper);
-            }
-  
-          } else {
-            // classe simple
-            const txt = className.toLowerCase();
-            if (
-              activeSources.has(source) &&
-              (!searchQuery || txt.includes(searchQuery))
-            ) {
-              const link = createLinkItem(
-                className,
-                source,
-                3,
-                { section: className }
-              );
-              catCollapse.appendChild(link);
-            }
-          }
-        });
-  
-      // n'append que si des liens sont présents
-      if (catCollapse.children.length > 0) {
-        wrapper.appendChild(catCollapse);
-        linkContainer.appendChild(wrapper);
-      }
+
+        // n'append que si des liens sont présents
+        if (catCollapse.children.length > 0) {
+            wrapper.appendChild(catCollapse);
+            linkContainer.appendChild(wrapper);
+        }
     });
-  
+
     // 8) Restauration des états open + triangles
     setTimeout(() => {
-      // conserver ouvert
-      openCatIds.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) bootstrap.Collapse.getOrCreateInstance(el).show();
-      });
-      // mettre à jour icônes
-      document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(toggle => {
-        const target = document.querySelector(toggle.dataset.bsTarget);
-        const triangle = toggle.querySelector(".triangle-toggle");
-        if (target && triangle) {
-          triangle.classList.toggle("open", target.classList.contains("show"));
-          target.addEventListener("show.bs.collapse", () => triangle.classList.add("open"));
-          target.addEventListener("hide.bs.collapse", () => triangle.classList.remove("open"));
-        }
-      });
+        // conserver ouvert
+        openCatIds.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) bootstrap.Collapse.getOrCreateInstance(el).show();
+        });
+        // mettre à jour icônes
+        document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(toggle => {
+            const target = document.querySelector(toggle.dataset.bsTarget);
+            const triangle = toggle.querySelector(".triangle-toggle");
+            if (target && triangle) {
+                triangle.classList.toggle("open", target.classList.contains("show"));
+                target.addEventListener("show.bs.collapse", () => triangle.classList.add("open"));
+                target.addEventListener("hide.bs.collapse", () => triangle.classList.remove("open"));
+            }
+        });
     }, 0);
-  }
-  
+}
+
 
 function createLinkItem(label, src, psLevel = 3, data = {}) {
     if (!data.section) data.section = label;
@@ -363,6 +363,42 @@ function syncCollapses() {
     });
 }
 
+/* Remplace les deux fonctions utilitaires par celles-ci */
+
+/**
+ * Retourne true si l’objet ressemble à une Feature “feuille”
+ * (il possède au moins un des champs caractéristiques).
+ */
+function isLeafFeature(obj) {
+    const keys = ["Effect", "Frequency", "Tags", "Trigger", "Target"];
+    return keys.some(k => k in obj);
+  }
+  
+  /**
+   * Récupère récursivement toutes les Features-feuilles.
+   * @param {object} node    Segment courant
+   * @param {object} meta    Fallback pour Source / Category
+   * @returns {Array<{title, data, meta}>}
+   */
+  function collectLeafFeatures(node, meta) {
+    const out = [];
+  
+    Object.entries(node).forEach(([key, val]) => {
+      if (val && typeof val === "object") {
+        if (isLeafFeature(val)) {
+          out.push({ title: key, data: val, meta });
+        } else {
+          // on transmet le wrapper comme nouveau meta s’il porte Source/Category
+          const nextMeta = val.Source || val.Category ? val : meta;
+          out.push(...collectLeafFeatures(val, nextMeta));
+        }
+      }
+    });
+  
+    return out;
+  }
+  
+
 
 // ───── RENDER SECTION ─────
 function renderSection(sectionTitle, subSection = null) {
@@ -400,43 +436,19 @@ function renderSection(sectionTitle, subSection = null) {
         ? { [subSection]: section.Features[subSection] }
         : section.Features;
 
-    Object.entries(features).forEach(([featKey, featVal]) => {
-        // ------> récupération de la source effective de la feature
-        const featSource = featVal.Source || section.Source;
-        // si cette source n'est pas active dans la sidebar, on skip
-        if (!activeSources.has(featSource)) return;
+    // Préparation des Features à afficher
+    const root = subSection
+    ? { [subSection]: section.Features[subSection] }
+    : section.Features;
 
-        // Cas « branché » : on a un objet dont la clé sectionTitle contient les sous-features
-        if (featVal[sectionTitle] && typeof featVal[sectionTitle] === "object") {
-            const branchData = featVal[sectionTitle];
+// 1) collecte des vraies Features
+const leafFeatures = collectLeafFeatures(root, section);
 
-            // *** On NE crée PLUS la carte principale pour les sections à une seule branche ***
-            const isSingleBranchSection =
-                Object.keys(section.Features).length === 1;
-
-            // Parcours des sous-features
-            Object.entries(branchData).forEach(([subKey, subVal]) => {
-                const subSource = subVal.Source || featVal.Source || section.Source;
-                if (!activeSources.has(subSource)) return;
-                if (typeof subVal === "object") {
-                    // injecte Source/Category si manquants
-                    const data = { ...subVal };
-                    if (!data.Source) data.Source = featVal.Source || section.Source;
-                    if (!data.Category) data.Category = section.Category;
-
-                    // badge uniquement sur la première ou toujours si General
-                    const showBadge = alwaysBadges || firstBadge;
-                    row.appendChild(createCard(subKey, data, section, showBadge));
-                    firstBadge = false;
-                }
-            });
-        } else {
-            // feature simple (pas de branche)
-            const showBadge = alwaysBadges || firstBadge;
-            row.appendChild(createCard(featKey, featVal, section, showBadge));
-            firstBadge = false;
-        }
-    });
+// 2) rendu des cartes
+leafFeatures.forEach(({ title, data, meta }, idx) => {
+  const showBadge = sectionTitle === "General" || idx === 0;
+  row.appendChild(createCard(title, data, meta, showBadge));
+});
 
     // Recherche
     searchInput.addEventListener("input", () => {
