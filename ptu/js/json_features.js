@@ -1,505 +1,259 @@
-function renderData(data, container, depth = 0) {
-    const skipFields = new Set(["Source", "Category"]);
+// === Citronnades – Unified Classes Viewer =============================
+// JSON unifié :
+//   "ClassName" → { category, source, branches:[ { name, features:[…] } ] }
+// ---------------------------------------------------------------------------
+// UI
+// ─ Sidebar
+//     • Lien direct « General » (hors dossier, toujours en tête)
+//     • Catégorie ▼ Classe ▼ Branche (Bootstrap collapse)
+// ─ Paneau central
+//     • Affiche les Features de la branche sélectionnée
+//     • Cartes Bootstrap récursives (une carte par Feature – sous‑Features incluses)
+//     • Pour *General*, chaque carte affiche un badge *Source*
+//     • La propriété "Source" n'est plus répétée en bas du contenu ; seules les
+//       pastilles servent d’indicateur.
+// ---------------------------------------------------------------------------
+// Dépendances : Bootstrap 5 (CSS + JS). Ajoute en CSS une règle `.triangle-toggle`
+// si tu veux faire pivoter une icône ▼▲ sur l’attribut `[aria-expanded]`.
+// ---------------------------------------------------------------------------
 
-    for (const key in data) {
-        if (!data.hasOwnProperty(key)) continue;
-        const value = data[key];
+// ----------------------- VARIABLES GLOBALES --------------------------------
+let classesData = {};          // contiendra tout le JSON
+let activeSources = new Set(); // filtres source
+let currentLink   = null;      // lien actif dans la sidebar
 
-        if (skipFields.has(key)) continue;
-
-        if (typeof value === "object" && value !== null) {
-            if (!Array.isArray(value)) {
-                const label = document.createElement(depth < 2 ? `h${5 + depth}` : "div");
-                label.className = `text-muted mb-2 ${depth >= 2 ? "small fs-6" : ""}`;
-                label.textContent = key;
-                container.appendChild(label);
-            }
-            // Si on tombe sur un wrapper "Features", on descend un cran
-            if (key === "Features") {
-                renderData(value, container, depth);
-            } else {
-                renderData(value, container, depth + 1);
-            }
-        } else {
-            const p = document.createElement("p");
-            p.innerHTML = `<strong>${key}:</strong> ${value.replaceAll("\n", "<br>")}`;
-            container.appendChild(p);
-        }
-    }
+// ----------------------- CHARGEMENT DU JSON --------------------------------
+function loadClasses(file) {
+  fetch(file)
+    .then(r => r.json())
+    .then(json => {
+      classesData = json;
+      buildSidebar();
+      // affichage par défaut : General si dispo
+      if (classesData.General) {
+        renderSection("General");
+        const g = document.querySelector('[data-section="General"]');
+        if (g) setActiveLink(g);
+      }
+    })
+    .catch(err => console.error("JSON load error:", err));
 }
 
-// en haut de ton script
-let sidebarData = {};      // contiendra les features
-let activeSources = new Set();
-let linkContainer = null;  // on le créera dans buildSidebar
-let fullData = {};
-let currentActiveLink = null;
-let activeCategories = new Set();
+// ----------------------- SIDEBAR : construction ---------------------------
+function buildSidebar() {
+  const sb = document.getElementById("sidebar");
+  sb.innerHTML = "";
 
-function loadFeatures(file) {
-    fetch(file)
-        .then(response => response.json())
-        .then(jsonData => {
-            fullData = jsonData;
+  // --- recherche globale ---
+  sb.insertAdjacentHTML("beforeend", `
+    <div class="mb-3">
+      <input type="text" id="sidebar-search" class="form-control" placeholder="Rechercher…">
+    </div>`);
+  document.getElementById("sidebar-search").addEventListener("input", renderSidebarLinks);
 
-            buildSidebar(jsonData);
-            // Render first visible section
-            // Trouver la première classe dont la source ET la catégorie sont visibles
-            const firstVisibleClass = Object.entries(jsonData).find(([className, cls]) =>
-                activeSources.has(cls.Source ?? "Unknown") &&
-                activeCategories.has(cls.Category ?? "Other")
-            );
+  // --- filtres Source ---
+  const sources = Array.from(new Set(Object.values(classesData).map(c => c.source || "Unknown"))).sort();
+  activeSources = new Set(sources);
 
-            const firstKey = firstVisibleClass?.[0];
-            if (firstKey) {
-                renderSection(firstKey);
-                const sidebarLink = document.querySelector(`[data-section="${firstKey}"]:not([data-subsection])`);
-                if (sidebarLink) setActiveLink(sidebarLink);
-            }
+  const fWrap = document.createElement("div");
+  fWrap.className = "mb-3";
+  fWrap.innerHTML = `<label class="form-label">Filter by Source:</label>`;
+  sb.appendChild(fWrap);
+  sources.forEach(src => {
+    const id = `filter-src-${src}`;
+    fWrap.insertAdjacentHTML("beforeend", `
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="${id}" checked>
+        <label class="form-check-label" for="${id}">${src}</label>
+      </div>`);
+  });
+  fWrap.querySelectorAll("input").forEach(cb => cb.addEventListener("change", renderSidebarLinks));
 
-        })
-        .catch(err => console.error("Error loading JSON:", err));
+  // conteneur de liens
+  sb.insertAdjacentHTML("beforeend", `<div id="sidebar-links"></div>`);
+  renderSidebarLinks();
 }
 
-
-function buildSidebar(data) {
-    // on « globalise » data
-    sidebarData = data;
-
-    const sidebar = document.getElementById("sidebar");
-    sidebar.innerHTML = "";
-
-    // === CHAMP DE RECHERCHE ===
-    const searchWrapper = document.createElement("div");
-    searchWrapper.className = "mb-3";
-    searchWrapper.innerHTML = `
-      <input
-        type="text"
-        id="sidebar-search"
-        class="form-control"
-        placeholder="Rechercher..."
-      >
-    `;
-    sidebar.appendChild(searchWrapper);
-
-    const searchInput = document.getElementById("sidebar-search");
-    // on rafraîchit à chaque frappe
-    searchInput.addEventListener("input", renderSidebarLinks);
-
-    // === SOURCE FILTERS ===
-    const sources = Array.from(
-        new Set(Object.values(sidebarData).map(e => e.Source || "Unknown"))
-    ).sort();
-    activeSources = new Set(sources);
-
-    const srcTitle = document.createElement("label");
-    srcTitle.className = "form-label mt-2";
-    srcTitle.textContent = "Filter by Source:";
-    sidebar.appendChild(srcTitle);
-
-    const srcFilterGroup = document.createElement("div");
-    srcFilterGroup.className = "mb-3 d-flex flex-column gap-1";
-    sidebar.appendChild(srcFilterGroup);
-
-    sources.forEach(src => {
-        const id = `filter-source-${src}`;
-        srcFilterGroup.innerHTML += `
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="${id}" checked>
-              <label class="form-check-label" for="${id}">${src}</label>
-            </div>`;
-    });
-
-    // Re-bind des filtres source
-    sidebar.querySelectorAll('input[type="checkbox"]').forEach(cb =>
-        cb.addEventListener("change", () => {
-            // 1) met à jour la sidebar
-            renderSidebarLinks();
-            // 2) si on a déjà une section active, on la rerender
-            if (currentActiveLink) {
-                const sec = currentActiveLink.dataset.section;
-                const sub = currentActiveLink.dataset.subsection || null;
-                renderSection(sec, sub);
-            }
-        })
-    );
-
-    // création du conteneur de liens
-    linkContainer = document.createElement("div");
-    sidebar.appendChild(linkContainer);
-
-    // première passe
-    renderSidebarLinks();
-}
-
+// ----------------------- SIDEBAR : liens ----------------------------------
 function renderSidebarLinks() {
-    // 1) Mise à jour des sources cochées
-    activeSources.clear();
-    document.querySelectorAll('input[type="checkbox"][id^="filter-source-"]')
-        .forEach(cb => {
-            if (cb.checked) {
-                activeSources.add(cb.id.replace("filter-source-", ""));
-            }
-        });
+  const box = document.getElementById("sidebar-links");
+  box.innerHTML = "";
 
-    // 2) Texte de recherche
-    const searchQuery = document
-        .getElementById("sidebar-search")
-        .value
-        .trim()
-        .toLowerCase();
+  // MAJ Source actives
+  activeSources.clear();
+  document.querySelectorAll('[id^="filter-src-"]:checked').forEach(cb => {
+    activeSources.add(cb.id.replace("filter-src-", ""));
+  });
 
-    // 3) Sauvegarde des panels ouverts
-    const openCatIds = Array.from(
-        document.querySelectorAll('.collapse.show')
-    ).map(el => el.id);
+  const q = document.getElementById("sidebar-search").value.trim().toLowerCase();
 
-    // 4) Vide le container de liens
-    linkContainer.innerHTML = "";
-
-    // 5) Regroupement & ordre (General + catégories)
-    const classesByCategory = {};
-    let generalEntry = null;
-    const orderedEntries = Object.entries(sidebarData).sort(([a], [b]) => {
-        if (a === "General") return -1;
-        if (b === "General") return 1;
-        return a.localeCompare(b);
-    });
-
-    orderedEntries.forEach(([className, cls]) => {
-        const src = cls.Source || "Unknown";
-        const cat = cls.Category || "Other";
-        if (className === "General") {
-            generalEntry = { className, cls, source: src };
-        } else {
-            if (!classesByCategory[cat]) classesByCategory[cat] = [];
-            classesByCategory[cat].push({ className, cls, source: src });
-        }
-    });
-
-    // 6) Afficher « General »
-    if (generalEntry) {
-        linkContainer.appendChild(
-            createLinkItem(
-                generalEntry.className,
-                generalEntry.source,
-                3,
-                { section: generalEntry.className }
-            )
-        );
+  // ----- 1) lien GENERAL ---------------------------------------------------
+  if (classesData.General && activeSources.has(classesData.General.source)) {
+    if (!q || "general".includes(q)) {
+      box.appendChild(makeLink("General", classesData.General.source, { section: "General" }));
     }
-
-    // 7) Parcours des catégories
-    Object.entries(classesByCategory).forEach(([category, list]) => {
-        const collapseId = `collapse-cat-${category.replace(/\s+/g, "-")}`;
-        const wrapper = document.createElement("div");
-        wrapper.className = "mb-2";
-
-        // bouton category
-        const catBtn = document.createElement("button");
-        catBtn.className = "btn btn-sm btn-light w-100 text-start collapse-toggle collapsed";
-        catBtn.setAttribute("data-bs-toggle", "collapse");
-        catBtn.setAttribute("data-bs-target", `#${collapseId}`);
-        catBtn.setAttribute("aria-expanded", "false");
-        catBtn.textContent = `📁 ${category}`;
-        wrapper.appendChild(catBtn);
-
-        const catCollapse = document.createElement("div");
-        catCollapse.className = "collapse";
-        catCollapse.id = collapseId;
-
-        list.sort((a, b) => a.className.localeCompare(b.className))
-            .forEach(({ className, cls, source }) => {
-                // Clés de sous-classes
-                const featureKeys = Object.keys(cls.Features);
-
-                // Détection de branches : présence d'un wrapper .Features
-                const hasBranches = featureKeys.some(branch =>
-                    typeof cls.Features[branch] === "object" &&
-                    cls.Features[branch].Features
-                );
-
-                if (hasBranches) {
-                    // parent + branches
-                    const branchWrapper = document.createElement("div");
-                    branchWrapper.className = "list-group";
-
-                    const parentToggle = document.createElement("a");
-                    parentToggle.href = "#";
-                    parentToggle.className = "list-group-item list-group-item-action ps-3 d-flex justify-content-between align-items-center";
-                    parentToggle.dataset.bsToggle = "collapse";
-                    parentToggle.dataset.bsTarget = `#collapse-${className.replace(/\s+/g, "-")}`;
-                    parentToggle.setAttribute("aria-expanded", "false");
-
-                    parentToggle.innerHTML = `
-              <span>${className}</span>
-              <span class="badge bg-light text-muted ms-auto">${source}</span>
-              <span class="triangle-toggle ms-2"></span>
-            `;
-
-                    const branchCollapse = document.createElement("div");
-                    branchCollapse.className = "collapse";
-                    branchCollapse.id = `collapse-${className.replace(/\s+/g, "-")}`;
-
-                    let visibleBranches = 0;
-                    featureKeys.forEach(branch => {
-                        const branchObj = cls.Features[branch];
-                        if (branchObj.Features) {
-                            const branchData = branchObj.Features;
-                            const branchSource = branchData.Source || source;
-                            const txt = branch.toLowerCase();
-
-                            if (
-                                activeSources.has(branchSource) &&
-                                (!searchQuery ||
-                                    txt.includes(searchQuery) ||
-                                    className.toLowerCase().includes(searchQuery))
-                            ) {
-                                visibleBranches++;
-                                const link = createLinkItem(
-                                    branch,
-                                    branchSource,
-                                    4,
-                                    { section: className, subsection: branch }
-                                );
-                                branchCollapse.appendChild(link);
-                            }
-                        }
-                    });
-
-                    if (visibleBranches > 0) {
-                        branchWrapper.append(parentToggle, branchCollapse);
-                        catCollapse.appendChild(branchWrapper);
-                    }
-
-                } else {
-                    // classe simple
-                    const txt = className.toLowerCase();
-                    if (
-                        activeSources.has(source) &&
-                        (!searchQuery || txt.includes(searchQuery))
-                    ) {
-                        const link = createLinkItem(
-                            className,
-                            source,
-                            3,
-                            { section: className }
-                        );
-                        catCollapse.appendChild(link);
-                    }
-                }
-            });
-
-        // n'append que si des liens sont présents
-        if (catCollapse.children.length > 0) {
-            wrapper.appendChild(catCollapse);
-            linkContainer.appendChild(wrapper);
-        }
-    });
-
-    // 8) Restauration des états open + triangles
-    setTimeout(() => {
-        // conserver ouvert
-        openCatIds.forEach(id => {
-            const el = document.getElementById(id);
-            if (el) bootstrap.Collapse.getOrCreateInstance(el).show();
-        });
-        // mettre à jour icônes
-        document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(toggle => {
-            const target = document.querySelector(toggle.dataset.bsTarget);
-            const triangle = toggle.querySelector(".triangle-toggle");
-            if (target && triangle) {
-                triangle.classList.toggle("open", target.classList.contains("show"));
-                target.addEventListener("show.bs.collapse", () => triangle.classList.add("open"));
-                target.addEventListener("hide.bs.collapse", () => triangle.classList.remove("open"));
-            }
-        });
-    }, 0);
-}
-
-
-function createLinkItem(label, src, psLevel = 3, data = {}) {
-    if (!data.section) data.section = label;
-    const link = document.createElement("a");
-    link.href = "#";
-    link.className = `list-group-item list-group-item-action ps-${psLevel} d-flex justify-content-between align-items-center`;
-    link.innerHTML = `
-      <span>${label}</span>
-      <!-- badge avec text-truncate et tooltip -->
-      <span
-        class="badge bg-light text-muted ms-auto text-truncate"
-        style="max-width: 10rem;"
-        title="${src}"
-      >
-        ${src}
-      </span>
-    `;
-    Object.entries(data).forEach(([k, v]) => link.dataset[k] = v);
-    link.addEventListener("click", e => {
-        e.preventDefault();
-        renderSection(data.section, data.subsection);
-        setActiveLink(link);
-    });
-    return link;
-}
-
-
-function syncCollapses() {
-    const openCatIds = Array.from(
-        document.querySelectorAll('.collapse.show')
-    ).map(el => el.id);
-    document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(toggle => {
-        const target = document.querySelector(toggle.dataset.bsTarget);
-        const triangle = toggle.querySelector(".triangle-toggle");
-        if (!target || !triangle) return;
-        const inst = bootstrap.Collapse.getOrCreateInstance(target, { toggle: false });
-        triangle.classList.toggle("open", target.classList.contains("show"));
-        target.addEventListener("show.bs.collapse", () => triangle.classList.add("open"));
-        target.addEventListener("hide.bs.collapse", () => triangle.classList.remove("open"));
-    });
-    openCatIds.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) bootstrap.Collapse.getOrCreateInstance(el).show();
-    });
-}
-
-/* Remplace les deux fonctions utilitaires par celles-ci */
-
-/**
- * Retourne true si l’objet ressemble à une Feature “feuille”
- * (il possède au moins un des champs caractéristiques).
- */
-function isLeafFeature(obj) {
-    const keys = ["Effect", "Frequency", "Tags", "Trigger", "Target"];
-    return keys.some(k => k in obj);
   }
-  
-  /**
-   * Récupère récursivement toutes les Features-feuilles.
-   * @param {object} node    Segment courant
-   * @param {object} meta    Fallback pour Source / Category
-   * @returns {Array<{title, data, meta}>}
-   */
-  function collectLeafFeatures(node, meta) {
-    const out = [];
-  
-    Object.entries(node).forEach(([key, val]) => {
-      if (val && typeof val === "object") {
-        if (isLeafFeature(val)) {
-          out.push({ title: key, data: val, meta });
-        } else {
-          // on transmet le wrapper comme nouveau meta s’il porte Source/Category
-          const nextMeta = val.Source || val.Category ? val : meta;
-          out.push(...collectLeafFeatures(val, nextMeta));
-        }
+
+  // ----- 2) classes regroupées par catégorie ------------------------------
+  const byCat = {};
+  Object.entries(classesData).forEach(([name, cls]) => {
+    if (name === "General") return;
+    if (!activeSources.has(cls.source)) return;
+    if (q && !name.toLowerCase().includes(q)) return;
+    const cat = cls.category || "Other";
+    if (!byCat[cat]) byCat[cat] = [];
+    byCat[cat].push([name, cls]);
+  });
+
+  Object.keys(byCat).sort().forEach(cat => {
+    const catId = `collapse-cat-${cat.replace(/\s+/g, "-")}`;
+    box.insertAdjacentHTML("beforeend", `
+      <button class="btn btn-sm btn-light w-100 text-start collapse-toggle mb-1" data-bs-toggle="collapse" data-bs-target="#${catId}">
+        📁 ${cat}
+      </button>`);
+    const catCol = document.createElement("div");
+    catCol.className = "collapse mb-2";
+    catCol.id = catId;
+    box.appendChild(catCol);
+
+    byCat[cat].sort(([a], [b]) => a.localeCompare(b)).forEach(([clsName, cls]) => {
+      const clsId = `collapse-cls-${clsName.replace(/\s+/g, "-")}`;
+      catCol.insertAdjacentHTML("beforeend", `
+        <a href="#" class="list-group-item list-group-item-action ps-3 d-flex justify-content-between align-items-center collapse-toggle" data-bs-toggle="collapse" data-bs-target="#${clsId}">
+          <span>${clsName}</span>
+          <span class="badge bg-light text-muted ms-auto text-truncate" style="max-width:10rem" title="${cls.source}">${cls.source}</span>
+          <span class="triangle-toggle ms-2"></span>
+        </a>`);
+      const brWrap = document.createElement("div");
+      brWrap.className = "collapse";
+      brWrap.id = clsId;
+      catCol.appendChild(brWrap);
+
+      if (cls.branches.length === 1 && cls.branches[0].name === "Default") {
+        brWrap.appendChild(makeLink(clsName, cls.source, { section: clsName, branch: "Default" }, 4));
+      } else {
+        cls.branches.forEach(br => {
+          brWrap.appendChild(makeLink(br.name, cls.source, { section: clsName, branch: br.name }, 4));
+        });
       }
     });
-  
-    return out;
-  }
-  
-
-
-// ───── RENDER SECTION ─────
-function renderSection(sectionTitle, subSection = null) {
-    const container = document.getElementById("cards-container");
-    container.innerHTML = "";
-
-    const section = fullData[sectionTitle];
-    if (!section || !section.Features) return;
-
-    // Titre
-    const heading = document.createElement("h2");
-    heading.className = "mb-4 mt-3";
-    heading.textContent = subSection || sectionTitle;
-    container.appendChild(heading);
-
-    // Search bar
-    const searchDiv = document.createElement("div");
-    searchDiv.className = "mb-3";
-    const searchInput = document.createElement("input");
-    searchInput.type = "text";
-    searchInput.placeholder = "Search features…";
-    searchInput.className = "form-control";
-    searchDiv.appendChild(searchInput);
-    container.appendChild(searchDiv);
-
-    // Row container
-    const row = document.createElement("div");
-    row.className = "row g-3";
-    container.appendChild(row);
-
-    const alwaysBadges = sectionTitle === "General";
-    let firstBadge = true;
-
-    const features = subSection
-        ? { [subSection]: section.Features[subSection] }
-        : section.Features;
-
-    // Préparation des Features à afficher
-    const root = subSection
-    ? { [subSection]: section.Features[subSection] }
-    : section.Features;
-
-// 1) collecte des vraies Features
-const leafFeatures = collectLeafFeatures(root, section);
-
-// 2) rendu des cartes
-leafFeatures.forEach(({ title, data, meta }, idx) => {
-  const showBadge = sectionTitle === "General" || idx === 0;
-  row.appendChild(createCard(title, data, meta, showBadge));
-});
-
-    // Recherche
-    searchInput.addEventListener("input", () => {
-        const q = searchInput.value.toLowerCase();
-        row.childNodes.forEach(col => {
-            const title = col.querySelector(".card-title")?.textContent.toLowerCase() || "";
-            col.style.display = title.includes(q) ? "" : "none";
-        });
-    });
-
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }
 
-
-
-// ───── CREATE CARD ─────
-function createCard(title, data, meta, showBadges = true) {
-    const col = document.createElement("div");
-    col.className = "col-md-12 mb-3";
-
-    const card = document.createElement("div");
-    card.className = "card h-100 bg-white border shadow-sm";
-
-    const body = document.createElement("div");
-    body.className = "card-body bg-light";
-
-    // titre + badges
-    const h4 = document.createElement("h4");
-    h4.className = "card-title";
-    let html = title;
-    if (showBadges) {
-        const cat = data.Category || meta.Category;
-        const src = data.Source || meta.Source;
-        if (cat && cat !== "Unknown") html += ` <span class="badge bg-secondary">${cat}</span>`;
-        if (src) html += ` <span class="badge bg-info">${src}</span>`;
-    }
-    h4.innerHTML = html;
-    body.appendChild(h4);
-
-    // contenu
-    renderData(data, body, 0);
-
-    card.appendChild(body);
-    col.appendChild(card);
-    return col;
+function makeLink(label, src, data = {}, pad = 3) {
+  const a = document.createElement("a");
+  a.href = "#";
+  a.className = `list-group-item list-group-item-action ps-${pad} d-flex justify-content-between align-items-center`;
+  a.innerHTML = `
+      <span>${label}</span>
+      <span class="badge bg-light text-muted ms-auto text-truncate" style="max-width:10rem" title="${src}">${src}</span>`;
+  Object.entries(data).forEach(([k, v]) => a.dataset[k] = v);
+  a.addEventListener("click", e => {
+    e.preventDefault();
+    renderSection(data.section, data.branch);
+    setActiveLink(a);
+  });
+  return a;
 }
 
 function setActiveLink(link) {
-    if (currentActiveLink) {
-        currentActiveLink.classList.remove("active");
-    }
-    link.classList.add("active");
-    currentActiveLink = link;
+  if (currentLink) currentLink.classList.remove("active");
+  link.classList.add("active");
+  currentLink = link;
 }
+
+// ----------------------- SECTION (branche) ---------------------------------
+function renderSection(className, branchName = null) {
+  const pane = document.getElementById("cards-container");
+  pane.innerHTML = "";
+
+  const cls = classesData[className];
+  if (!cls) return;
+
+  const title = branchName && branchName !== "Default" ? `${className} – ${branchName}` : className;
+  pane.insertAdjacentHTML("beforeend", `<h2 class="mt-3 mb-4">${title}</h2>`);
+  pane.insertAdjacentHTML("beforeend", `<div class="mb-3"><input type="text" id="features-search" class="form-control" placeholder="Search features…"></div>`);
+
+  const row = document.createElement("div");
+  row.className = "row g-3";
+  pane.appendChild(row);
+
+  const branches = branchName ? cls.branches.filter(b => b.name === branchName) : cls.branches;
+
+  branches.forEach(br => {
+    br.features.forEach((feat, idx) => {
+      row.appendChild(createCard(feat, cls, idx === 0, className === "General"));
+    });
+  });
+
+  document.getElementById("features-search").addEventListener("input", e => {
+    const q = e.target.value.toLowerCase();
+    row.querySelectorAll(".card").forEach(cd => {
+      const t = cd.dataset.title.toLowerCase();
+      cd.parentElement.style.display = t.includes(q) ? "" : "none";
+    });
+  });
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// ----------------------- CARTE : récursif ----------------------------------
+function createCard(feat, clsMeta, firstInBranch, forceBadges) {
+  const col = document.createElement("div");
+  col.className = "col-md-12";
+
+  const card = document.createElement("div");
+  card.className = "card h-100 bg-white border shadow-sm";
+  card.dataset.title = feat.name || "(unnamed)";
+
+  const body = document.createElement("div");
+  body.className = "card-body bg-light";
+
+  // ---------- titre + badges ----------
+  const h5 = document.createElement("h5");
+  h5.className = "card-title";
+
+  const badgeSrc = feat.Source || feat.source || clsMeta.source;
+  let html = feat.name || "(unnamed)";
+  if (forceBadges || firstInBranch) {
+    if (clsMeta.category) html += ` <span class="badge bg-secondary">${clsMeta.category}</span>`;
+    if (badgeSrc)         html += ` <span class="badge bg-info">${badgeSrc}</span>`;
+  }
+  h5.innerHTML = html;
+  body.appendChild(h5);
+
+  // ---------- contenu clé/valeur ----------
+  Object.entries(feat).forEach(([k, v]) => {
+    if (["name", "children", "Source", "source"].includes(k)) return; // on masque Source (voyant déjà en badge)
+    if (v == null || v === "") return;
+
+    if (typeof v === "object") {
+      // sous‑Feature → carte enfant indentée
+      const sub = createCard({ name: k, ...v }, clsMeta, false, forceBadges);
+      sub.querySelector(".card").classList.add("ms-3");
+      body.appendChild(sub);
+    } else {
+      const p = document.createElement("p");
+      p.innerHTML = `<strong>${k}:</strong> ${v.toString().replaceAll("\n", "<br>")}`;
+      body.appendChild(p);
+    }
+  });
+
+  // ---------- children explicites ----------
+  if (Array.isArray(feat.children)) {
+    feat.children.forEach(child => {
+      const sub = createCard(child, clsMeta, false, forceBadges);
+      sub.querySelector(".card").classList.add("ms-3");
+      body.appendChild(sub);
+    });
+  }
+
+  card.appendChild(body);
+  col.appendChild(card);
+  return col;
+}
+
+// ---------------------------------------------------------------------------
+// Lance le chargement  (⚠️ adapter le chemin vers votre JSON)
+// ---------------------------------------------------------------------------
+loadClasses("/ptu/data/features/features_core.json");
