@@ -2224,6 +2224,12 @@
         "Effect": "The Pokémon gains an Ability known by the Target for the remainder of the encounter, or until it is Fainted."
     },
     {
+        "Name": "Transporter",
+        "Frequency": "Daily x3 – Free Action",
+        "Trigger":"You Teleport",
+        "Effect": "Connection – Teleport.\nChoose one effect: You activate Teleporter as if your Teleporter value were three times its normal value; or you may take one willing adjacent Pokémon or Trainer along with you as you teleport so long as you are touching them when you activate Transporter. You may expend two uses of Transporter at once to choose both effects."
+    },
+    {
         "Name": "Transistor",
         "Frequency": "Scene x2 – Free Action",
         "Trigger": "The user hits with a damaging Electric-Type Move",
