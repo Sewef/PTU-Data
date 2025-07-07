@@ -1,35 +1,25 @@
 // === Citronnades – Unified Classes Viewer =============================
-// Schéma JSON unifié :
-//   {
-//     "ClassName": {
-//       "category": "Battling",
-//       "source":   "Core",
-//       "branches": [
-//         { "name": "Attack", "features": [ … ] },
-//         ...
-//       ]
-//     }
-//   }
+// Affichage dynamique du JSON unifié :
+//   Classe → { category, source, branches:[ { name, features:[…] } ] }
 // ---------------------------------------------------------------------------
-// UI PRINCIPES
-//   • Sidebar
-//       – Lien direct « General » toujours en tête (hors dossiers)
-//       – Catégorie ▼ Classe ▼ Branche
-//       – Si une classe n’a qu’une unique branche nommée « Default », on supprime
-//         un niveau : la classe devient un lien direct (pas de sous‑branche).
-//       – Les **filtres Source** sont évalués AU NIVEAU DES BRANCHES : une classe
-//         reste visible tant qu’au moins une de ses branches correspond à une
-//         source cochée, même si sa `source` principale est décochée.
-//   • Paneau central
-//       – Affiche les cartes des Features de la branche sélectionnée.
-//       – Pour la classe « General », chaque carte montre un badge Source.
+// EXIGENCES PARTICULIÈRES
+//   • « General » : toujours lien direct en tête de sidebar. Chaque Feature
+//     arbore un badge Source.
+//   • Sidebar : Catégorie ▼ Classe ▼ Branche sauf si la classe n'a qu'une
+//     unique branche nommée « Default » (dans ce cas, lien direct).
+//   • Filtre Source appliqué AU NIVEAU DES BRANCHES (une classe reste visible
+//     si ≥1 branche correspond). Le badge de chaque lien reprend la source de
+//     la branche.
+//   • **NOUVEAU** : dans le panneau central, **une carte = une Feature**.
+//     Quand un objet contient des sous‑features, on ne rend PAS une « carte
+//     mère » englobante. Toutes les leaves (features feuilles) sont rendues
+//     au même niveau.
 // ---------------------------------------------------------------------------
-// Dépendances : Bootstrap 5 (collapse). Ajouter du CSS pour `.triangle-toggle`
-//               si vous souhaitez l’icône qui pivote.
+// Dépendances : Bootstrap 5 (collapse). Facultatif : CSS pour .triangle-toggle.
 // ---------------------------------------------------------------------------
 
 // ------------------------- VARIABLES GLOBALES ------------------------------
-let classesData  = {};
+let classesData = {};
 let activeSources = new Set();
 let currentLink   = null;
 
@@ -40,11 +30,10 @@ function loadClasses(path) {
     .then(json => {
       classesData = json;
       buildSidebar();
-      // Sélection : General sinon première classe visible
-      const firstCls = classesData.General ? "General" : Object.keys(classesData)[0];
-      const firstBranch = classesData[firstCls].branches[0]?.name || "Default";
-      renderSection(firstCls, firstBranch);
-      const l = document.querySelector(`[data-section="${firstCls}"][data-branch="${firstBranch}"]`);
+      const firstCls   = classesData.General ? "General" : Object.keys(classesData)[0];
+      const firstBr    = classesData[firstCls].branches[0].name;
+      renderSection(firstCls, firstBr);
+      const l = document.querySelector(`[data-section="${firstCls}"][data-branch="${firstBr}"]`);
       if (l) setActiveLink(l);
     })
     .catch(err => console.error("JSON load error:", err));
@@ -53,87 +42,77 @@ function loadClasses(path) {
 // ------------------------- SIDEBAR -----------------------------------------
 function buildSidebar() {
   const sb = document.getElementById("sidebar");
-  sb.innerHTML = "";
-
-  sb.insertAdjacentHTML("beforeend", `
+  sb.innerHTML = `
     <div class="mb-3">
       <input type="text" id="sidebar-search" class="form-control" placeholder="Rechercher…">
-    </div>`);
+    </div>`;
   document.getElementById("sidebar-search").addEventListener("input", renderSidebar);
 
-  // liste complète des sources (classe & branche) pour les filtres
-  const allSources = new Set();
+  // -- filtres Source -------------------------------------------------------
+  const sourcesSet = new Set();
   Object.values(classesData).forEach(cls => {
-    if (cls.source) allSources.add(cls.source);
+    if (cls.source) sourcesSet.add(cls.source);
     cls.branches.forEach(br => {
       const src = branchSource(br, cls.source);
-      if (src) allSources.add(src);
+      if (src) sourcesSet.add(src);
     });
   });
 
-  const filterWrap = document.createElement("div");
-  filterWrap.className = "mb-3";
-  filterWrap.innerHTML = `<label class="form-label">Filter by Source:</label>`;
-  sb.appendChild(filterWrap);
-
-  [...allSources].sort().forEach(src => {
+  const fWrap = document.createElement("div");
+  fWrap.className = "mb-3";
+  fWrap.innerHTML = `<label class="form-label">Filter by Source:</label>`;
+  sb.appendChild(fWrap);
+  [...sourcesSet].sort().forEach(src => {
     const id = `filter-src-${src}`;
-    filterWrap.insertAdjacentHTML("beforeend", `
+    fWrap.insertAdjacentHTML("beforeend", `
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="${id}" checked>
         <label class="form-check-label" for="${id}">${src}</label>
       </div>`);
   });
-  filterWrap.querySelectorAll("input").forEach(cb => cb.addEventListener("change", renderSidebar));
+  fWrap.querySelectorAll("input").forEach(cb => cb.addEventListener("change", renderSidebar));
 
   sb.insertAdjacentHTML("beforeend", `<div id="sidebar-links"></div>`);
   renderSidebar();
 }
 
-// ---------- Source dominante d’une branche ---------------------------------
+// ------------- Source d'une branche ---------------------------------------
 function branchSource(branch, fallback) {
-  const f = branch.features.find(fe => fe.Source || fe.source);
-  return f ? (f.Source || f.source) : fallback || "Unknown";
+  const featWithSrc = branch.features.find(f => f.Source || f.source);
+  return featWithSrc ? (featWithSrc.Source || featWithSrc.source) : fallback || "Unknown";
 }
 
-// ---------- Render Sidebar -------------------------------------------------
+// ------------- Rendu Sidebar ----------------------------------------------
 function renderSidebar() {
   const box = document.getElementById("sidebar-links");
   box.innerHTML = "";
 
-  // maj activeSources depuis les checkboxes
   activeSources.clear();
   document.querySelectorAll('[id^="filter-src-"]:checked').forEach(cb => activeSources.add(cb.id.replace("filter-src-", "")));
 
-  const query = document.getElementById("sidebar-search").value.trim().toLowerCase();
+  const q = document.getElementById("sidebar-search").value.trim().toLowerCase();
 
-  // ========== GENERAL ======================================================
+  // ----- GENERAL -----------------------------------------------------------
   if (classesData.General) {
-    // General visible si au moins une Feature a une source cochée
     const genVisible = classesData.General.branches[0].features.some(f => activeSources.has(f.Source || f.source || classesData.General.source));
-    if (genVisible && (!query || "general".includes(query))) {
+    if (genVisible && (!q || "general".includes(q))) {
       box.appendChild(makeLink("General", classesData.General.source, { section: "General", branch: "Default" }, 3));
     }
   }
 
-  // ========== PAR CATÉGORIE ===============================================
-  const byCat = {};
-
+  // ----- CATÉGORIES --------------------------------------------------------
+  const cats = {};
   Object.entries(classesData).forEach(([clsName, cls]) => {
     if (clsName === "General") return;
+    if (q && !clsName.toLowerCase().includes(q)) return;
 
-    // Filtre texte au niveau classe
-    if (query && !clsName.toLowerCase().includes(query)) return;
-
-    // Conserver seulement les branches dont la source est active
     const visibleBranches = cls.branches.filter(br => activeSources.has(branchSource(br, cls.source)));
-    if (visibleBranches.length === 0) return; // rien à montrer si aucune branche autorisée
+    if (visibleBranches.length === 0) return;
 
-    const cat = cls.category || "Other";
-    (byCat[cat] ??= []).push([clsName, cls, visibleBranches]);
+    (cats[cls.category || "Other"] ??= []).push([clsName, cls, visibleBranches]);
   });
 
-  Object.keys(byCat).sort().forEach(cat => {
+  Object.keys(cats).sort().forEach(cat => {
     const catId = `collapse-cat-${cat.replace(/\s+/g, "-")}`;
     box.insertAdjacentHTML("beforeend", `
       <button class="btn btn-sm btn-light w-100 text-start collapse-toggle mb-1" data-bs-toggle="collapse" data-bs-target="#${catId}">📁 ${cat}</button>`);
@@ -142,11 +121,10 @@ function renderSidebar() {
     catCol.id = catId;
     box.appendChild(catCol);
 
-    byCat[cat].sort(([a], [b]) => a.localeCompare(b)).forEach(([clsName, cls, branches]) => {
+    cats[cat].sort(([a], [b]) => a.localeCompare(b)).forEach(([clsName, cls, branches]) => {
       const singleDefault = branches.length === 1 && branches[0].name === "Default";
       if (singleDefault) {
-        const src = branchSource(branches[0], cls.source);
-        catCol.appendChild(makeLink(clsName, src, { section: clsName, branch: "Default" }, 4));
+        catCol.appendChild(makeLink(clsName, branchSource(branches[0], cls.source), { section: clsName, branch: "Default" }, 4));
       } else {
         const clsId = `collapse-cls-${clsName.replace(/\s+/g, "-")}`;
         catCol.insertAdjacentHTML("beforeend", `
@@ -159,15 +137,13 @@ function renderSidebar() {
         brWrap.className = "collapse";
         brWrap.id = clsId;
         catCol.appendChild(brWrap);
-        branches.forEach(br => brWrap.appendChild(
-          makeLink(br.name, branchSource(br, cls.source), { section: clsName, branch: br.name }, 5)
-        ));
+        branches.forEach(br => brWrap.appendChild(makeLink(br.name, branchSource(br, cls.source), { section: clsName, branch: br.name }, 5)));
       }
     });
   });
 }
 
-// ---------- Helper : crée un lien -----------------------------------------
+// ------------- Helper : Création de lien ----------------------------------
 function makeLink(label, src, data = {}, pad = 3) {
   const a = document.createElement("a");
   a.href = "#";
@@ -183,7 +159,6 @@ function makeLink(label, src, data = {}, pad = 3) {
   });
   return a;
 }
-
 function setActiveLink(el) {
   if (currentLink) currentLink.classList.remove("active");
   el.classList.add("active");
@@ -197,16 +172,20 @@ function renderSection(clsName, branchName = "Default") {
   const cls = classesData[clsName];
   if (!cls) return;
 
-  const multiBranch = !(cls.branches.length === 1 && branchName === "Default");
-  pane.insertAdjacentHTML("beforeend", `<h2 class="mt-3 mb-4">${multiBranch ? clsName + " – " + branchName : clsName}</h2>`);
+  const branches = cls.branches.filter(b => b.name === branchName);
+  const title = cls.branches.length === 1 && branchName === "Default" ? clsName : `${clsName} – ${branchName}`;
+  pane.insertAdjacentHTML("afterbegin", `<h2 class="mt-3 mb-4">${title}</h2>`);
   pane.insertAdjacentHTML("beforeend", `<div class="mb-3"><input type="text" id="features-search" class="form-control" placeholder="Search features…"></div>`);
 
   const row = document.createElement("div");
   row.className = "row g-3";
   pane.appendChild(row);
 
-  const branches = cls.branches.filter(b => b.name === branchName);
-  branches.forEach(br => br.features.forEach((feat, idx) => row.appendChild(createCard(feat, cls, idx === 0, clsName === "General"))));
+  // --------- FLATTEN ALL LEAF FEATURES ------------------------------------
+  const leafs = [];
+  branches.forEach(br => br.features.forEach(f => leafs.push(...collectLeafFeatures(f))));
+
+  leafs.forEach((leaf, idx) => row.appendChild(createCard(leaf, cls, idx === 0, clsName === "General")));
 
   document.getElementById("features-search").addEventListener("input", e => {
     const q = e.target.value.toLowerCase();
@@ -216,43 +195,55 @@ function renderSection(clsName, branchName = "Default") {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+// --------- Collecte récursive des Features feuilles -----------------------
+const LEAF_KEYS = ["Effect", "Frequency", "Tags", "Trigger", "Target", "effect", "frequency", "tags", "trigger", "target"];
+function isLeaf(obj) {
+  return LEAF_KEYS.some(k => k in obj);
+}
+function collectLeafFeatures(featObj, nameOverride) {
+  const list = [];
+  const name = nameOverride || featObj.name || "(unnamed)";
+
+  // a) si c'est déjà une feuille, on la prend
+  if (isLeaf(featObj)) {
+    list.push({ ...featObj, name });
+  }
+
+  // b) puis on creuse pour récupérer d'éventuelles sous-features
+  Object.entries(featObj).forEach(([k, v]) => {
+    if (v && typeof v === "object" && !Array.isArray(v)) {
+      list.push(...collectLeafFeatures(v, k));
+    }
+  });
+  // c) children[] éventuel
+  if (Array.isArray(featObj.children)) {
+    featObj.children.forEach(ch => list.push(...collectLeafFeatures(ch)));
+  }
+  return list;
+}
+
 // ------------------------- CARTE -----------------------------------------
 function createCard(feat, clsMeta, firstInBranch, forceBadges) {
   const col = document.createElement("div");
   col.className = "col-md-12";
-
   const card = document.createElement("div");
   card.className = "card h-100 bg-white border shadow-sm";
-  card.dataset.title = feat.name || "(unnamed)";
+  card.dataset.title = feat.name;
 
   const body = document.createElement("div");
   body.className = "card-body bg-light";
-
   const badgeSrc = feat.Source || feat.source || clsMeta.source;
-  let titleHTML = feat.name || "(unnamed)";
+  let titleHTML = feat.name;
   if (forceBadges || firstInBranch) {
     if (clsMeta.category) titleHTML += ` <span class="badge bg-secondary">${clsMeta.category}</span>`;
     if (badgeSrc)         titleHTML += ` <span class="badge bg-info">${badgeSrc}</span>`;
   }
-  body.insertAdjacentHTML("beforeend", `<h5 class="card-title">${titleHTML}</h5>`);
+  body.insertAdjacentHTML("afterbegin", `<h5 class="card-title">${titleHTML}</h5>`);
 
   Object.entries(feat).forEach(([k, v]) => {
     if (["name", "children", "Source", "source"].includes(k)) return;
-    if (v == null || v === "") return;
-
-    if (typeof v === "object") {
-      const sub = createCard({ name: k, ...v }, clsMeta, false, forceBadges);
-      sub.querySelector(".card").classList.add("ms-3");
-      body.appendChild(sub);
-    } else {
-      body.insertAdjacentHTML("beforeend", `<p><strong>${k}:</strong> ${v.toString().replaceAll("\n", "<br>")}</p>`);
-    }
-  });
-
-  if (Array.isArray(feat.children)) feat.children.forEach(ch => {
-    const sub = createCard(ch, clsMeta, false, forceBadges);
-    sub.querySelector(".card").classList.add("ms-3");
-    body.appendChild(sub);
+    if (v == null || typeof v === "object") return; // les objets ont été éclatés en cartes
+    body.insertAdjacentHTML("beforeend", `<p><strong>${k}:</strong> ${v.toString().replaceAll("\n", "<br>")}</p>`);
   });
 
   card.appendChild(body);
@@ -260,5 +251,5 @@ function createCard(feat, clsMeta, firstInBranch, forceBadges) {
   return col;
 }
 
-// ----------------------- INIT --------------------------------------------
+// ------------------------- INIT -------------------------------------------
 loadClasses("/ptu/data/features/features_core.json");
