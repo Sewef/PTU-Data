@@ -306,13 +306,18 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
   body.className = "card-body bg-light";
 
   /* ---------- badges ------------------------------------------------ */
-  const catBadge =
-    // Dans « General », on prend toujours la Category de la Feature
-    isGeneral && feat.Category ? feat.Category :
-      // Pour les autres classes, on l’affiche seulement sur les cartes racines
-      (!nested ? clsMeta.category : null);
+  // Règle d’affichage :
+  //   • Dans « General » : TOUS les badges, même imbriqués.
+  //   • Ailleurs        : badges UNIQUEMENT sur la 1ʳᵉ carte racine (firstInBranch).
+  const showBadges = isGeneral ? true : (!nested && firstInBranch);
 
-  const srcBadge = feat.Source || feat.source || clsMeta.source;
+  const catBadge = isGeneral
+        ? (feat.Category || null)        // badge individuel
+        : (showBadges ? clsMeta.category : null);   // badge de la classe
+
+  const srcBadge = (isGeneral || showBadges)
+        ? (feat.Source || feat.source || clsMeta.source)
+        : null;
 
   let titleHTML = feat.name || "(unnamed)";
   if (catBadge) titleHTML += ` <span class="badge bg-secondary">${catBadge}</span>`;
