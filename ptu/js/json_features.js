@@ -312,12 +312,12 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
   const showBadges = isGeneral ? true : (!nested && firstInBranch);
 
   const catBadge = isGeneral
-        ? (feat.Category || null)        // badge individuel
-        : (showBadges ? clsMeta.category : null);   // badge de la classe
+    ? (feat.Category || null)        // badge individuel
+    : (showBadges ? clsMeta.category : null);   // badge de la classe
 
   const srcBadge = (isGeneral || showBadges)
-        ? (feat.Source || feat.source || clsMeta.source)
-        : null;
+    ? (feat.Source || feat.source || clsMeta.source)
+    : null;
 
   let titleHTML = feat.name || "(unnamed)";
   if (catBadge) titleHTML += ` <span class="badge bg-secondary">${catBadge}</span>`;
