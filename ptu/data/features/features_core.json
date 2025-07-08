@@ -12,7 +12,7 @@
             "Frequency": "1 AP — Free Action",
             "Trigger": "Your Pokémon takes its turn",
             "Effect": "Your Pokémon may give up use of a Scene or Daily Move to regain use of a Scene or Daily Move which it has already used. Your Pokémon may give up use of a Daily Move to regain use of a Scene Move, but not vice-versa. You may use Command Versatility only once per Scene per Pokémon.",
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Raising and Battling"
           },
           {
             "name": "Press",
@@ -20,7 +20,7 @@
             "Frequency": "At-Will — Standard Action",
             "Target": "Your own Pokémon",
             "Effect": "You hit your Pokémon, and they lose 1/6th of their Max Hit Points and are cured of Sleep. Raise any two of their Stats by +1 CS each, and you may add half of your Intimidate Rank to any Skill Checks made this round to make this Pokémon obey orders. Using Press on a Pokémon may make them dislike you.",
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Raising and Battling"
           },
           {
             "name": "Quick Switch",
@@ -28,21 +28,21 @@
             "Frequency": "2 AP — Free Action",
             "Trigger": "Your Pokémon Faints; or an opponent sends out a Pokémon",
             "Effect": "You may return and send out a Pokémon as a Free Action. You may perform this Feature on your turn without a Trigger. Pokémon sent out by Quick Switch cannot trigger another Trainer's Quick Switch. When you swap Pokémon using Quick Switch, you do not lose a Pokémon turn.",
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Raising and Battling"
           },
           {
             "name": "Species Savant",
             "Prerequisites": "3 different individual Pokémon of the same evolutionary line",
             "Frequency": "Static",
             "Effect": "When you take Species Savant, choose a single Evolutionary Family. Your Pokémon of your Chosen Evolutionary Family have each of their Base Stats increased by +1.",
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Raising and Battling"
           },
           {
             "name": "Tutoring",
             "Prerequisites": "Novice Pokémon Education, a move that you or three of your Pokémon know",
             "Frequency": "One Time Use x 3 — Extended Action",
             "Effect": "When activating this Feature, select a Move known either by yourself or by 3 Pokémon you own. This Move is Mastered. As an Extended Action, you may have Pokémon spend 2 Tutor Points to learn a Move you have Mastered. Pokémon targeted this way can only learn Moves that they could learn by Level Up, TM, Egg Move, or Move Tutor. You may take Tutoring multiple times, each time gaining 3 uses of the Feature",
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Raising and Battling"
           },
           {
             "name": "Agility Training",
@@ -50,7 +50,7 @@
             "Prerequisites": "Novice Athletics, Untrained Command",
             "Frequency": "At-Will — Special",
             "Effect": "The target becomes Agile until the end of the effect duration. Agile Pokémon gain a +1 bonus to Movement Capabilities and +4 to Initiative.",
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Training and Order"
           },
           {
             "name": "Brutal Training",
@@ -58,7 +58,7 @@
             "Prerequisites": "Novice Intimidate, Untrained Command",
             "Frequency": "At-Will — Special",
             "Effect": "The target becomes Brutal until the end of the effect duration. Brutal Pokémon increase the Critical- Hit and Effect Range of all attacks by +1.",
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Training and Order"
           },
           {
             "name": "Focused Training",
@@ -66,7 +66,7 @@
             "Prerequisites": "Novice Command",
             "Frequency": "At-Will — Special",
             "Effect": "The target becomes Focused until the end of the effect duration. Focused Pokémon gain a +1 bonus to Accuracy Rolls and +2 to Skill Checks.",
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Training and Order"
           },
           {
             "name": "Inspired Training",
@@ -74,14 +74,14 @@
             "Prerequisites": "Novice Charm, Untrained Command",
             "Frequency": "At-Will — Special",
             "Effect": "The target becomes Inspired until the end of the effect duration. Inspired Pokémon gain a +1 bonus to Evasion and +2 to Save Checks.",
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Training and Order"
           },
           {
             "name": "Commander's Voice",
             "Prerequisites": "Two Features with the [Orders] tag",
             "Frequency": "Static",
             "Effect": "You may give two different [Orders] as a single Standard Action, or you may give one set of [Orders] as a Swift Action.\nIf this is used to use Focused Command and another [Order] that has targets, the second Order applies to both Pokémon you are commanding that turn. Commander's Voice doesn't allow you to use Focused Command as a Swift Action.",
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Training and Order"
           },
           {
             "name": "Focused Command",
@@ -89,7 +89,7 @@
             "Prerequisites": "Master Command, one of Focus, Guile, Intimidate, or Pokémon Education at Expert",
             "Frequency": "At-Will — Standard Action + Swift Action",
             "Effect": "You may have a second Pokémon take a turn this round, but both Pokémon can only take At-Will actions that round. Additionally, both Pokémon receive a -5 Penalty on all Damage Rolls. You may pay 1 AP at the beginning of the round to lift the Frequency Restriction OR the Damage Penalty for the remainder of the round, or pay 2 AP to lift both.",
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Training and Order"
           },
           {
             "name": "Ravager Orders",
@@ -110,7 +110,7 @@
               "Effect": "The target may immediately take an additional Standard Action to use an At-Will attack.",
               "Source": "Core"
             },
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Training and Order"
           },
           {
             "name": "Marksman Orders",
@@ -131,7 +131,7 @@
               "Effect": "The target’s damaging ranged attacks have their range doubled until the end of their next turn, and deal X additional damage. X is equal to the distance in meters that the attack traveled. Long Shot does not increase the size of area of effect attacks. If attacks altered by Long Shot are Critical Hits, add the value of the Damage Dice Roll an additional time to the total damage.",
               "Source": "Core"
             },
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Training and Order"
           },
           {
             "name": "Trickster Orders",
@@ -152,7 +152,7 @@
               "Effect": "Until the end of their next turn, the target adds their non-stat Evasion to their Movement Capabilities and whenever they attack a foe or Shift through a square occupied by a foe, that foe suffers a -3 penalty to all rolls until the end of their next turn. This effect may only affect a foe once per round.",
               "Source": "Core"
             },
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Training and Order"
           },
           {
             "name": "Guardian Orders",
@@ -173,7 +173,7 @@
               "Effect": "Until the end of your next turn, the target may attempt to Intercept attacks for allies as a Shift Action. If they do so, they gain 10 Damage Reduction against the attack. If the target is also under the effect of Brace for Impact, they may gain 5 Damage Reduction from it as if they had used a self-targeting Status Move.",
               "Source": "Core"
             },
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Training and Order"
           },
           {
             "name": "Precision Orders",
@@ -194,7 +194,7 @@
               "Effect": "The next damaging attack the target performs before the end of your next turn automatically hits and ignores Defensive Abilities but deals damage as if it were resisted one step further than normal. You may still roll to trigger any Effect Ranges or Critical Hits. All targets of the attack may not activate any Blessings in response, and the attack may not be Intercepted or avoided in any way (ex: with Dodge, Shield Moves, etc).",
               "Source": "Core"
             },
-            "Source": "Core"
+            "Source": "Core","Category":"Pokémon Training and Order"
           },
           {
             "name": "Blur",
@@ -202,7 +202,7 @@
             "Prerequisites": "Expert Acrobatics, Expert Stealth",
             "Frequency": "Static",
             "Effect": "Attacks and Moves targeting you that don't require an Accuracy Check now require one, as though they had Accuracy Check of 2. You may only apply half of your Evasion to these Attacks and Moves.",
-            "Source": "Core"
+            "Source": "Core","Category":"Combat"
           },
           {
             "name": "Defender",
@@ -210,7 +210,7 @@
             "Prerequisites": "Adept Athletics",
             "Frequency": "Static",
             "Effect": "Using the Intercept Maneuvers requires only a Shift Action Interrupt.",
-            "Source": "Core"
+            "Source": "Core","Category":"Combat"
           },
           {
             "name": "Dive",
@@ -219,7 +219,7 @@
             "Frequency": "Scene x2 — Shift Action, Interrupt",
             "Trigger": "You are targeted by a Ranged 1-Target Attack, or are in a Cone, Burst, Blast, or Line.",
             "Effect": "You may immediately Shift 1 Meter, and then become Tripped. This Feature cannot be used if you are Stuck, Grappled, or otherwise impaired from Shifting. This Feature causes you to dodge Ranged attacks aimed at you, and may let you avoid Cones, Bursts, Blasts, or Lines if the shift removes you from the area of effect.",
-            "Source": "Core"
+            "Source": "Core","Category":"Combat"
           },
           {
             "name": "Fighter's Versatility",
@@ -228,7 +228,7 @@
             "Frequency": "Scene — Free Action",
             "Trigger": "You gain Initiative.",
             "Effect": "You may give up use of a Scene or Daily Move to regain use of a Scene or Daily Move which you have already used. You may give up use of a Daily Move to regain use of a Scene Move, but not vice-versa.",
-            "Source": "Core"
+            "Source": "Core","Category":"Combat"
           },
           {
             "name": "Multi-Tasking",
@@ -237,7 +237,7 @@
             "Frequency": "Scene x2 — Swift Action",
             "Trigger": "You gain Initiative.",
             "Effect": "You may take two Standard Actions instead of one this turn, but both actions must have an At-Will Frequency.",
-            "Source": "Core"
+            "Source": "Core","Category":"Combat"
           },
           {
             "name": "Signature Move",
@@ -245,7 +245,7 @@
             "Prerequisites": "Learned four Moves",
             "Frequency": "Static",
             "Effect": "Choose a Move you know. Increase the Move's Frequency one step, as if you had used a PP Up. This choice cannot be changed once made. This Feature may not select Moves known through temporary means, nor can these Moves be used to qualify for this Feature.",
-            "Source": "Core"
+            "Source": "Core","Category":"Combat"
           },
           {
             "name": "Type Expertise",
@@ -254,7 +254,7 @@
             "Rank 2 Prerequisites": "Level 9, 3 Moves of the Chosen Type in your Move List",
             "Frequency": "Static",
             "Effect": "Each Rank, choose a Type of which you know at least 3 Moves. You gain STAB for the chosen Type. STAB is never applied to Struggle Attacks.",
-            "Source": "Core"
+            "Source": "Core","Category":"Combat"
           },
           {
             "name": "Walk It Off",
@@ -262,7 +262,7 @@
             "Prerequisites": "Adept Athletics, Novice Focus",
             "Frequency": "Daily — Extended Action",
             "Effect": "Remove one Injury from yourself and regain 1/4th of your maximum Hit Points. This Injury removal doesn't count against the natural healing limit on Injuries each day.",
-            "Source": "Core"
+            "Source": "Core","Category":"Combat"
           },
           {
             "name": "First Aid Expertise",
@@ -270,21 +270,21 @@
             "Frequency": "Daily x3 — Extended Action",
             "Target": "Pokémon or Trainers",
             "Effect": "The target may remove one Injury, has all Hit Points restored, and is cured of all Status Afflictions. You may use First Aid Expertise only once per day per target. First Aid Expertise requires access to a First Aid Kit.",
-            "Source": "Core"
+            "Source": "Core","Category":"Other"
           },
           {
             "name": "Let Me Help You With That",
             "Frequency": "Daily x3 — Full Action, Interrupt",
             "Trigger": "An allied Trainer fails a Skill Check in a Skill you have Ranked at Novice or higher.",
             "Effect": "The ally may re-roll the Skill Check with a Bonus equal to your Skill Rank.",
-            "Source": "Core"
+            "Source": "Core","Category":"Other"
           },
           {
             "name": "Poké Ball Crafter",
             "Prerequisites": "Basic Balls, Poké Ball Repair, Expert Technology",
             "Frequency": "Static",
             "Effect": "You may craft Dusk, Dive, Heal, Luxury, Net, Nest, Quick, Repeat, or Timer Balls for $700. Requires access to a Poké Ball Tool Box.",
-            "Source": "Core"
+            "Source": "Core","Category":"Other"
           },
           {
             "name": "PokéManiac",
@@ -292,7 +292,7 @@
             "Frequency": "At-Will — Standard Action",
             "Target": "A Pokémon",
             "Effect": "Make a Pokemon Education Check with a DC of 10. If you succeed, you determine the target's Level, Types, Nature, and Abilities.",
-            "Source": "Core"
+            "Source": "Core","Category":"Other"
           },
           {
             "name": "Psionic Sight",
@@ -300,7 +300,7 @@
             "Prerequisites": "Elemental Connection (Psychic)",
             "Frequency": "Static",
             "Effect": "You are able to visibly see any Psychic Residue left on Humans or Pokémon due to the effects of Psionic abilities. Each Human or Pokémon leaves distinct Psychic Residue on their targets; you are easily able to distinguish which targets have been affected by the same Psionic, though to identify that Psionic you need to have a way of knowing their signature (such as simply seeing them do it, and seeing the resulting signature).",
-            "Source": "Core"
+            "Source": "Core","Category":"Other"
           },
           {
             "name": "Skill Monkey",
@@ -308,7 +308,7 @@
             "Frequency": "Daily x3 — Free Action",
             "Trigger": "You make a Skill Check",
             "Effect": "You may re-roll the triggering Skill Check with a +2 Bonus, taking the new result. This Feature may be used to re-roll a specific roll only once.",
-            "Source": "Core"
+            "Source": "Core","Category":"Other"
           },
           {
             "name": "Arcane Training",
@@ -316,7 +316,7 @@
             "Prerequisites": "Novice Occult Education, Elemental Connection or Mystic Senses",
             "Frequency": "Static",
             "Effect": " You may use Arcane Weapons. Attacks made with your Arcane Weapons share the Type of your Elemental Connection. If you have Mystic Senses, these Attacks deal Normal Type Damage. Arcane Weapon users that qualified through Mystic Senses or Elemental Connection (Normal) gain a +5 Bonus to Damage Rolls and a +2 Bonus to Effect Range when using Arcane Weapon Attacks. When wielding an Arcane Weapon, you may resist Disarm Maneuvers with your Occult Education.",
-            "Source": "Game of Throhs"
+            "Source": "Game of Throhs","Category":"Uncategorized"
           },
           {
             "name": "Smith",
@@ -326,7 +326,7 @@
             "Frequency": "Static",
             "Rank 1 Effect": " You may create Simple Weapons for $1000, Light Shields for $1,500, and Light Armor for $4,000.",
             "Rank 2 Effect": " You may create Fine Weapons for $2,000, Helmets for $1,125, Heavy Shields for $2,250 and Heavy Armor for $5,000.",
-            "Source": "Game of Throhs"
+            "Source": "Game of Throhs","Category":"Uncategorized"
           },
           {
             "name": "Type Sync",
@@ -335,7 +335,7 @@
             "Frequency": "Special — Extended Action",
             "Target": "Your Pokémon",
             "Effect": "The Target gains the Type of your Elemental Connection as an additional Type, or has one of their Types replaced by that Type. See the Type Changes section (page 436) for more information and suggestions. A Pokémon may be targeted by Type Sync only once. This Feature may be performed One Time for each Rank above Untrained you have of your highest of Medicine, Occult, or Tech Education, up to a maximum of 4 times at Master Rank.",
-            "Source": "Game of Throhs"
+            "Source": "Game of Throhs","Category":"Uncategorized"
           },
           {
             "name": "Nurse",

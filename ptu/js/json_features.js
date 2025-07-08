@@ -21,7 +21,7 @@
 // ------------------------- VARIABLES GLOBALES ------------------------------
 let classesData = {};
 let activeSources = new Set();
-let currentLink   = null;
+let currentLink = null;
 
 // ------------------------- CHARGEMENT JSON ---------------------------------
 function loadClasses(path) {
@@ -30,8 +30,8 @@ function loadClasses(path) {
     .then(json => {
       classesData = json;
       buildSidebar();
-      const firstCls   = classesData.General ? "General" : Object.keys(classesData)[0];
-      const firstBr    = classesData[firstCls].branches[0].name;
+      const firstCls = classesData.General ? "General" : Object.keys(classesData)[0];
+      const firstBr = classesData[firstCls].branches[0].name;
       renderSection(firstCls, firstBr);
       const l = document.querySelector(`[data-section="${firstCls}"][data-branch="${firstBr}"]`);
       if (l) setActiveLink(l);
@@ -70,7 +70,17 @@ function buildSidebar() {
         <label class="form-check-label" for="${id}">${src}</label>
       </div>`);
   });
-  fWrap.querySelectorAll("input").forEach(cb => cb.addEventListener("change", renderSidebar));
+  fWrap.querySelectorAll("input").forEach(cb =>
+    cb.addEventListener("change", () => {
+      renderSidebar();                                   // ← sidebar mise à jour
+      if (currentLink && currentLink.dataset.section === "General") {
+        // on recharge la section General pour appliquer le nouveau filtre
+        renderSection("General", "Default");
+        // (l’appel conserve scrollTo et la recherche locale déjà en place)
+      }
+    })
+  );
+
 
   sb.insertAdjacentHTML("beforeend", `<div id="sidebar-links"></div>`);
   renderSidebar();
@@ -165,6 +175,11 @@ function setActiveLink(el) {
   currentLink = el;
 }
 
+function featureSource(feat, fallback) {
+  return feat.Source || feat.source || fallback || "Unknown";
+}
+
+
 // ------------------------- SECTION MAIN -----------------------------------
 function renderSection(clsName, branchName = "Default") {
   const pane = document.getElementById("cards-container");
@@ -173,83 +188,183 @@ function renderSection(clsName, branchName = "Default") {
   if (!cls) return;
 
   const branches = cls.branches.filter(b => b.name === branchName);
-  const title = cls.branches.length === 1 && branchName === "Default" ? clsName : `${clsName} – ${branchName}`;
+  const title = (cls.branches.length === 1 && branchName === "Default")
+    ? clsName
+    : `${clsName} – ${branchName}`;
   pane.insertAdjacentHTML("afterbegin", `<h2 class="mt-3 mb-4">${title}</h2>`);
-  pane.insertAdjacentHTML("beforeend", `<div class="mb-3"><input type="text" id="features-search" class="form-control" placeholder="Search features…"></div>`);
+  pane.insertAdjacentHTML("beforeend",
+    `<div class="mb-3"><input type="text" id="features-search" class="form-control" placeholder="Search features…"></div>`);
 
   const row = document.createElement("div");
   row.className = "row g-3";
   pane.appendChild(row);
 
-  // --------- FLATTEN ALL LEAF FEATURES ------------------------------------
-  const leafs = [];
-  branches.forEach(br => br.features.forEach(f => leafs.push(...collectLeafFeatures(f))));
-
-  leafs.forEach((leaf, idx) => row.appendChild(createCard(leaf, cls, idx === 0, clsName === "General")));
+  if (clsName === "General") {
+    // --- FLUX PRINCIPAL ----------------------------------------------------
+    let cardIndex = 0;                                   // pour 1ʳᵉ-carte badge
+    branches.forEach(br => {
+      br.features.forEach(feat => {
+        // → si on est dans General ET la Source de la Feature n’est pas cochée,
+        //   on saute entièrement cette Feature (et donc ses sous-features)
+        if (clsName === "General" &&
+          !activeSources.has(featureSource(feat, cls.source))) {
+          return;                                        // on zappe
+        }
+        row.appendChild(createCard(
+          feat,
+          cls,
+          cardIndex++ === 0,                            // 1ʳᵉ carte ?
+          clsName === "General"
+        ));
+      });
+    });
+  } else {
+    // ---- comportement précédent : flatten complet
+    const leafs = [];
+    branches.forEach(br => br.features.forEach(f => leafs.push(...collectLeafFeatures(f))));
+    leafs.forEach((leaf, idx) =>
+      row.appendChild(createCard(leaf, cls, idx === 0, false, /* embedSubs = */ false))
+    );
+  }
 
   document.getElementById("features-search").addEventListener("input", e => {
     const q = e.target.value.toLowerCase();
-    row.querySelectorAll(".card").forEach(c => c.parentElement.style.display = c.dataset.title.toLowerCase().includes(q) ? "" : "none");
+    row.querySelectorAll(".card").forEach(c =>
+      c.closest(".col-md-12").style.display =
+      c.dataset.title.toLowerCase().includes(q) ? "" : "none"
+    );
   });
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-// --------- Collecte récursive des Features feuilles -----------------------
-const LEAF_KEYS = ["Effect", "Frequency", "Tags", "Trigger", "Target", "effect", "frequency", "tags", "trigger", "target"];
+
+// --------- Collecte récursive des Features (carte-mère + feuilles) --------
+const LEAF_KEYS = ["Effect", "Frequency", "Tags", "Trigger", "Target",
+  "Prerequisites",            // ← utile pour vos données
+  "effect", "frequency", "tags", "trigger", "target"];
+
 function isLeaf(obj) {
   return LEAF_KEYS.some(k => k in obj);
 }
+
+/**
+ * Retourne un tableau plat contenant :
+ *   – la Feature courante si elle porte au moins un des LEAF_KEYS ;
+ *   – toutes les sous-features profondes trouvées dans ses propriétés
+ *     objet ou dans son éventuel tableau `children`.
+ *
+ * @param {Object} featObj    L’objet Feature à explorer
+ * @param {string} [nameOverride] Nom forcé pour la carte (clé-propriété par ex.)
+ * @returns {Object[]}        Tableau de Features prêtes pour `createCard`
+ */
 function collectLeafFeatures(featObj, nameOverride) {
   const list = [];
   const name = nameOverride || featObj.name || "(unnamed)";
 
-  // a) si c'est déjà une feuille, on la prend
+  // 1) Si l’objet possède des champs « leaf », on pousse la carte-mère.
   if (isLeaf(featObj)) {
     list.push({ ...featObj, name });
   }
 
-  // b) puis on creuse pour récupérer d'éventuelles sous-features
+  // 2) Exploration des propriétés qui sont elles-mêmes des objets Feature.
   Object.entries(featObj).forEach(([k, v]) => {
-    if (v && typeof v === "object" && !Array.isArray(v)) {
-      list.push(...collectLeafFeatures(v, k));
+    if (
+      v && typeof v === "object" && !Array.isArray(v) &&
+      // on ignore les simples métadonnées
+      !["Source", "source"].includes(k)
+    ) {
+      list.push(...collectLeafFeatures(v, k));   // nom = clé-propriété
     }
   });
-  // c) children[] éventuel
+
+  // 3) Exploration d’un éventuel tableau children[].
   if (Array.isArray(featObj.children)) {
     featObj.children.forEach(ch => list.push(...collectLeafFeatures(ch)));
   }
+
   return list;
 }
 
-// ------------------------- CARTE -----------------------------------------
-function createCard(feat, clsMeta, firstInBranch, forceBadges) {
+
+
+/* ------------------------------------------------------------------ *
+ * 1. createCard() – rend une carte et, récursivement, ses sous-cartes
+ * ------------------------------------------------------------------ */
+function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
+
+  /* ----- conteneur colonne (pas de colonne Bootstrap quand imbriqué) */
   const col = document.createElement("div");
-  col.className = "col-md-12";
+  if (!nested) col.className = "col-md-12";
+
+  /* ----- carte ------------------------------------------------------ */
   const card = document.createElement("div");
-  card.className = "card h-100 bg-white border shadow-sm";
-  card.dataset.title = feat.name;
+  card.className = `card ${nested ? "mb-2" : "h-100"} bg-white border shadow-sm`;
+  card.dataset.title = feat.name || "(unnamed)";
 
   const body = document.createElement("div");
   body.className = "card-body bg-light";
-  const badgeSrc = feat.Source || feat.source || clsMeta.source;
-  let titleHTML = feat.name;
-  if (forceBadges || firstInBranch) {
-    if (clsMeta.category) titleHTML += ` <span class="badge bg-secondary">${clsMeta.category}</span>`;
-    if (badgeSrc)         titleHTML += ` <span class="badge bg-info">${badgeSrc}</span>`;
-  }
+
+  /* ---------- badges ------------------------------------------------ */
+  const catBadge =
+    // Dans « General », on prend toujours la Category de la Feature
+    isGeneral && feat.Category ? feat.Category :
+      // Pour les autres classes, on l’affiche seulement sur les cartes racines
+      (!nested ? clsMeta.category : null);
+
+  const srcBadge = feat.Source || feat.source || clsMeta.source;
+
+  let titleHTML = feat.name || "(unnamed)";
+  if (catBadge) titleHTML += ` <span class="badge bg-secondary">${catBadge}</span>`;
+  if (srcBadge) titleHTML += ` <span class="badge bg-info">${srcBadge}</span>`;
+
   body.insertAdjacentHTML("afterbegin", `<h5 class="card-title">${titleHTML}</h5>`);
 
+  /* ---------- champs simples --------------------------------------- */
   Object.entries(feat).forEach(([k, v]) => {
-    if (["name", "children", "Source", "source"].includes(k)) return;
-    if (v == null || typeof v === "object") return; // les objets ont été éclatés en cartes
-    body.insertAdjacentHTML("beforeend", `<p><strong>${k}:</strong> ${v.toString().replaceAll("\n", "<br>")}</p>`);
+    if (["name", "Category", "Source", "source"].includes(k)) return;
+    if (v && typeof v === "object") return;                // géré plus bas
+    body.insertAdjacentHTML(
+      "beforeend",
+      `<p><strong>${k}:</strong> ${v.toString().replaceAll("\n", "<br>")}</p>`
+    );
   });
+
+  /* ---------- sous-features imbriquées ----------------------------- */
+  addSubFeatures(feat, clsMeta, body, isGeneral);
 
   card.appendChild(body);
   col.appendChild(card);
   return col;
 }
+
+/* ------------------------------------------------------------------ *
+ * 2. addSubFeatures() – collecte et rend toutes les feuilles enfants
+ * ------------------------------------------------------------------ */
+function addSubFeatures(obj, clsMeta, container, isGeneral) {
+  Object.entries(obj).forEach(([key, val]) => {
+    if (!val || typeof val !== "object") return;
+
+    // a) si c’est déjà une feuille -> carte enfant
+    if (isLeaf(val)) {
+      container.appendChild(
+        createCard({ ...val, name: key }, clsMeta, false, isGeneral, true)
+      );
+      return;
+    }
+
+    // b) si c’est un tableau d’objets -> on descend
+    if (Array.isArray(val)) {
+      val.forEach(el => addSubFeatures(el, clsMeta, container, isGeneral));
+      return;
+    }
+
+    // c) sinon, on continue la récursion (profondément imbriqué)
+    addSubFeatures(val, clsMeta, container, isGeneral);
+  });
+}
+
+
 
 // ------------------------- INIT -------------------------------------------
 loadClasses("/ptu/data/features/features_core.json");
