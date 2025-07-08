@@ -1824,55 +1824,52 @@
         "features": [
           {
             "name": "Style Expert",
-            "Style Expert": {
-              "name": "Style Expert",
-              "Tags": "[Class][Branch]",
-              "Prerequisites": "3 Pokémon with 3d6 in their Beauty Stat from Poffins OR Coordinator, 1 Pokémon with 3d6 in their Beauty Stat from Poffins",
-              "Frequency": "Static",
-              "Effect": "Your Pokémon gain +2d6 to their Beauty Stat. These dice are counted as if coming from Poffins."
-            },
-            "Style Flourish": {
-              "name": "Style Flourish",
-              "Tags": "[Branch]",
-              "Prerequisites": "3 Style Expert (Beauty) Features",
-              "Frequency": "1 AP — Free Action",
-              "Trigger": "Your Pokémon uses a Beauty Move",
-              "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
-              "Battle Effect": "The target gains +1 CS to their Special Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
-            },
-            "Style Entrainment": {
-              "name": "Style Entrainment",
-              "Tags": "[Branch]",
-              "Prerequisites": "4 Style Expert (Beauty) Features",
-              "Frequency": "1 AP — Swift Action, Priority (Limited)",
-              "Target": "Your Pokémon",
-              "Effect": "Your Pokémon gains either Gentle Vibe or Serene Grace for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
-            },
-            "Beautiful Ballet": {
-              "name": "Beautiful Ballet",
-              "Tags": "[Ranked 2]",
-              "Rank 1 Prerequisites": "Style Expert (Beauty), Novice Intuition",
-              "Rank 2 Prerequisites": "Expert Intuition",
-              "Frequency": "1 AP — Special",
-              "Effect": "Your Pokémon with at least 3d6 in their Beauty Stat from Poffins may activate Beautiful Ballet as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
-              "Rank 1": "Captivate, Mist",
-              "Rank 2": "Lovely Kiss, Mean Look"
-            },
-            "Fabulous Max": {
-              "name": "Fabulous Max",
-              "Prerequisites": "Beautiful Ballet Rank 1",
-              "Frequency": "At-Will — Free Action",
-              "Trigger": "Your Pokémon uses a Beauty-Type Move",
-              "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
-              "Battle Effect": "The move gains the keyword Burst 1 if Melee, or Blast 2 if ranged. If the move is already a Burst, Blast, or Cone, increase the size of the Move's Range by 1. This does not cause a target to be hit multiple times. You may activate Fabulous Max only once per Pokémon per Scene."
-            },
-            "Enticing Beauty": {
-              "name": "Enticing Beauty",
-              "Prerequisites": "Beautiful Ballet Rank 1",
-              "Frequency": "Scene — Free Action",
-              "Trigger": "Your Pokémon",
-              "Effect": "The target acts as a Bait item as if it had the Alluring Capability. Add its number of Beauty Dice from Poffins as a Bonus to all d20 lure rolls."
-            }
+            "Tags": "[Class][Branch]",
+            "Prerequisites": "3 Pokémon with 3d6 in their Beauty Stat from Poffins OR Coordinator, 1 Pokémon with 3d6 in their Beauty Stat from Poffins",
+            "Frequency": "Static",
+            "Effect": "Your Pokémon gain +2d6 to their Beauty Stat. These dice are counted as if coming from Poffins."
+          },
+          {
+            "name": "Style Flourish",
+            "Tags": "[Branch]",
+            "Prerequisites": "3 Style Expert (Beauty) Features",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "Your Pokémon uses a Beauty Move",
+            "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
+            "Battle Effect": "The target gains +1 CS to their Special Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
+          },
+          {
+            "name": "Style Entrainment",
+            "Tags": "[Branch]",
+            "Prerequisites": "4 Style Expert (Beauty) Features",
+            "Frequency": "1 AP — Swift Action, Priority (Limited)",
+            "Target": "Your Pokémon",
+            "Effect": "Your Pokémon gains either Gentle Vibe or Serene Grace for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
+          },
+          {
+            "name": "Beautiful Ballet",
+            "Tags": "[Ranked 2]",
+            "Rank 1 Prerequisites": "Style Expert (Beauty), Novice Intuition",
+            "Rank 2 Prerequisites": "Expert Intuition",
+            "Frequency": "1 AP — Special",
+            "Effect": "Your Pokémon with at least 3d6 in their Beauty Stat from Poffins may activate Beautiful Ballet as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
+            "Rank 1": "Captivate, Mist",
+            "Rank 2": "Lovely Kiss, Mean Look"
+          },
+          {
+            "name": "Fabulous Max",
+            "Prerequisites": "Beautiful Ballet Rank 1",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "Your Pokémon uses a Beauty-Type Move",
+            "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
+            "Battle Effect": "The move gains the keyword Burst 1 if Melee, or Blast 2 if ranged. If the move is already a Burst, Blast, or Cone, increase the size of the Move's Range by 1. This does not cause a target to be hit multiple times. You may activate Fabulous Max only once per Pokémon per Scene."
+          },
+          {
+            "name": "Enticing Beauty",
+            "Prerequisites": "Beautiful Ballet Rank 1",
+            "Frequency": "Scene — Free Action",
+            "Trigger": "Your Pokémon",
+            "Effect": "The target acts as a Bait item as if it had the Alluring Capability. Add its number of Beauty Dice from Poffins as a Bonus to all d20 lure rolls."
           }
         ]
       },
@@ -1881,55 +1878,52 @@
         "features": [
           {
             "name": "Style Expert",
-            "Style Expert": {
-              "name": "Style Expert",
-              "Tags": "[Class][Branch]",
-              "Prerequisites": "3 Pokémon with 3d6 in their Cool Stat from Poffins OR Coordinator, 1 Pokémon with 3d6 in their Cool Stat from Poffins",
-              "Frequency": "Static",
-              "Effect": "Your Pokémon gain +2d6 to their Cool Stat. These dice are counted as if coming from Poffins."
-            },
-            "Style Flourish": {
-              "name": "Style Flourish",
-              "Tags": "[Branch]",
-              "Prerequisites": "3 Style Expert (Cool) Features",
-              "Frequency": "1 AP — Free Action",
-              "Trigger": "Your Pokémon uses a Cool Move",
-              "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
-              "Battle Effect": "The target gains +1 CS to their Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
-            },
-            "Style Entrainment": {
-              "name": "Style Entrainment",
-              "Tags": "[Branch]",
-              "Prerequisites": "4 Style Expert (Cool) Features",
-              "Frequency": "1 AP — Swift Action, Priority (Limited)",
-              "Target": "Your Pokémon",
-              "Effect": "Your Pokémon gains either Defiant or Sniper for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
-            },
-            "Cool Conduct": {
-              "name": "Cool Conduct",
-              "Tags": "[Ranked 2]",
-              "Rank 1 Prerequisites": "Style Expert (Cool), Novice Command",
-              "Rank 2 Prerequisites": "Expert Command",
-              "Frequency": "1 AP — Special",
-              "Effect": "Your Pokémon with at least 3d6 in their Cool Stat from Poffins may activate Cool Conduct as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
-              "Rank 1": "Focus Energy, Noble Roar",
-              "Rank 2": "Roar, Double Team"
-            },
-            "Rule of Cool": {
-              "name": "Rule of Cool",
-              "Prerequisites": "Cool Conduct Rank 1",
-              "Frequency": "At-Will — Free Action",
-              "Trigger": "Your Pokémon uses a Cool-Type Move",
-              "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
-              "Battle Effect": "The triggering Move's Crit Range is increased by 3, and the Moves with the Interrupt Keyword may not be activated in reaction to this Move. You may activate Rule of Cool only once per Pokémon per Scene."
-            },
-            "Action Hero Stunt": {
-              "name": "Action Hero Stunt",
-              "Prerequisites": "Cool Conduct Rank 1",
-              "Frequency": "Daily x2 — Free Action",
-              "Trigger": "Your Pokémon makes a Skill Check for a dramatic, high risk action",
-              "Effect": "Instead of using a Skill for this Check, your Pokémon rolls their Cool Dice from Poffins and adds their number of Cool Dice from Stats as a modifier. For example, a Pokémon with 5d6 Cool from Poffins and 2d6 from Attack rolls 5d6+2. Skill Checks invoked by Intercepting attacks, Combat Maneuvers, Moves, and Abilities don't trigger this Feature."
-            }
+            "Tags": "[Class][Branch]",
+            "Prerequisites": "3 Pokémon with 3d6 in their Cool Stat from Poffins OR Coordinator, 1 Pokémon with 3d6 in their Cool Stat from Poffins",
+            "Frequency": "Static",
+            "Effect": "Your Pokémon gain +2d6 to their Cool Stat. These dice are counted as if coming from Poffins."
+          },
+          {
+            "name": "Style Flourish",
+            "Tags": "[Branch]",
+            "Prerequisites": "3 Style Expert (Cool) Features",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "Your Pokémon uses a Cool Move",
+            "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
+            "Battle Effect": "The target gains +1 CS to their Attack, after the Move and all effects have been resolved. This may only affect a target once per Scene."
+          },
+          {
+            "name": "Style Entrainment",
+            "Tags": "[Branch]",
+            "Prerequisites": "4 Style Expert (Cool) Features",
+            "Frequency": "1 AP — Swift Action, Priority (Limited)",
+            "Target": "Your Pokémon",
+            "Effect": "Your Pokémon gains either Defiant or Sniper for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
+          },
+          {
+            "name": "Cool Conduct",
+            "Tags": "[Ranked 2]",
+            "Rank 1 Prerequisites": "Style Expert (Cool), Novice Command",
+            "Rank 2 Prerequisites": "Expert Command",
+            "Frequency": "1 AP — Special",
+            "Effect": "Your Pokémon with at least 3d6 in their Cool Stat from Poffins may activate Cool Conduct as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
+            "Rank 1": "Focus Energy, Noble Roar",
+            "Rank 2": "Roar, Double Team"
+          },
+          {
+            "name": "Rule of Cool",
+            "Prerequisites": "Cool Conduct Rank 1",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "Your Pokémon uses a Cool-Type Move",
+            "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
+            "Battle Effect": "The triggering Move's Crit Range is increased by 3, and the Moves with the Interrupt Keyword may not be activated in reaction to this Move. You may activate Rule of Cool only once per Pokémon per Scene."
+          },
+          {
+            "name": "Action Hero Stunt",
+            "Prerequisites": "Cool Conduct Rank 1",
+            "Frequency": "Daily x2 — Free Action",
+            "Trigger": "Your Pokémon makes a Skill Check for a dramatic, high risk action",
+            "Effect": "Instead of using a Skill for this Check, your Pokémon rolls their Cool Dice from Poffins and adds their number of Cool Dice from Stats as a modifier. For example, a Pokémon with 5d6 Cool from Poffins and 2d6 from Attack rolls 5d6+2. Skill Checks invoked by Intercepting attacks, Combat Maneuvers, Moves, and Abilities don't trigger this Feature."
           }
         ]
       },
@@ -1938,55 +1932,52 @@
         "features": [
           {
             "name": "Style Expert",
-            "Style Expert": {
-              "name": "Style Expert",
-              "Tags": "[Class][Branch]",
-              "Prerequisites": "3 Pokémon with 3d6 in their Cute Stat from Poffins OR Coordinator, 1 Pokémon with 3d6 in their Cute Stat from Poffins",
-              "Frequency": "Static",
-              "Effect": "Your Pokémon gain +2d6 to their Cute Stat. These dice are counted as if coming from Poffins."
-            },
-            "Style Flourish": {
-              "name": "Style Flourish",
-              "Tags": "[Branch]",
-              "Prerequisites": "3 Style Expert (Cute) Features",
-              "Frequency": "1 AP — Free Action",
-              "Trigger": "Your Pokémon uses a Cute Move",
-              "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
-              "Battle Effect": "The target gains +1 CS to their Speed, after the Move and all effects have been resolved. This may only affect a target once per Scene."
-            },
-            "Style Entrainment": {
-              "name": "Style Entrainment",
-              "Tags": "[Branch]",
-              "Prerequisites": "4 Style Expert (Cute) Features",
-              "Frequency": "1 AP — Swift Action, Priority (Limited)",
-              "Target": "Your Pokémon",
-              "Effect": "Your Pokémon gains either Cute Charm or Cute Tears for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
-            },
-            "Cute Cuddle": {
-              "name": "Cute Cuddle",
-              "Tags": "[Ranked 2]",
-              "Rank 1 Prerequisites": "Style Expert (Cute), Novice Charm",
-              "Rank 2 Prerequisites": "Expert Charm",
-              "Frequency": "1 AP — Special",
-              "Effect": "Your Pokémon with at least 3d6 in their Cute Stat from Poffins may activate Cute Cuddle as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
-              "Rank 1": "Charm, Block",
-              "Rank 2": "Teeter Dance, Attract"
-            },
-            "Gleeful Steps": {
-              "name": "Gleeful Steps",
-              "Prerequisites": "Cute Cuddle Rank 1",
-              "Frequency": "At-Will — Free Action",
-              "Trigger": "Your Pokémon uses a Cute-Type Move",
-              "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
-              "Battle Effect": "The triggering Pokémon may immediately shift up to half their Movement speed in meters in any direction after their attack is resolved. You may activate Gleeful Steps only once per Pokémon per Scene."
-            },
-            "Let's Be Friends!": {
-              "name": "Let's Be Friends!",
-              "Prerequisites": "Cute Cuddle Rank 1",
-              "Frequency": "Scene — Free Action",
-              "Target": "Your Pokémon",
-              "Effect": "The target may attempt to improve the disposition of a Wild Pokémon as if making a Charm Check. They roll their Cute Dice from Poffins and add their number of Cute Dice from Stats as a modifier. For example, a Pokémon with 4d6 Cute from Poffins and 3d6 Cute from Speed rolls 4d6+3 in place of a Charm Check."
-            }
+            "Tags": "[Class][Branch]",
+            "Prerequisites": "3 Pokémon with 3d6 in their Cute Stat from Poffins OR Coordinator, 1 Pokémon with 3d6 in their Cute Stat from Poffins",
+            "Frequency": "Static",
+            "Effect": "Your Pokémon gain +2d6 to their Cute Stat. These dice are counted as if coming from Poffins."
+          },
+          {
+            "name": "Style Flourish",
+            "Tags": "[Branch]",
+            "Prerequisites": "3 Style Expert (Cute) Features",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "Your Pokémon uses a Cute Move",
+            "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
+            "Battle Effect": "The target gains +1 CS to their Speed, after the Move and all effects have been resolved. This may only affect a target once per Scene."
+          },
+          {
+            "name": "Style Entrainment",
+            "Tags": "[Branch]",
+            "Prerequisites": "4 Style Expert (Cute) Features",
+            "Frequency": "1 AP — Swift Action, Priority (Limited)",
+            "Target": "Your Pokémon",
+            "Effect": "Your Pokémon gains either Cute Charm or Cute Tears for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
+          },
+          {
+            "name": "Cute Cuddle",
+            "Tags": "[Ranked 2]",
+            "Rank 1 Prerequisites": "Style Expert (Cute), Novice Charm",
+            "Rank 2 Prerequisites": "Expert Charm",
+            "Frequency": "1 AP — Special",
+            "Effect": "Your Pokémon with at least 3d6 in their Cute Stat from Poffins may activate Cute Cuddle as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
+            "Rank 1": "Charm, Block",
+            "Rank 2": "Teeter Dance, Attract"
+          },
+          {
+            "name": "Gleeful Steps",
+            "Prerequisites": "Cute Cuddle Rank 1",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "Your Pokémon uses a Cute-Type Move",
+            "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
+            "Battle Effect": "The triggering Pokémon may immediately shift up to half their Movement speed in meters in any direction after their attack is resolved. You may activate Gleeful Steps only once per Pokémon per Scene."
+          },
+          {
+            "name": "Let's Be Friends!",
+            "Prerequisites": "Cute Cuddle Rank 1",
+            "Frequency": "Scene — Free Action",
+            "Target": "Your Pokémon",
+            "Effect": "The target may attempt to improve the disposition of a Wild Pokémon as if making a Charm Check. They roll their Cute Dice from Poffins and add their number of Cute Dice from Stats as a modifier. For example, a Pokémon with 4d6 Cute from Poffins and 3d6 Cute from Speed rolls 4d6+3 in place of a Charm Check."
           }
         ]
       },
@@ -1995,55 +1986,52 @@
         "features": [
           {
             "name": "Style Expert",
-            "Style Expert": {
-              "name": "Style Expert",
-              "Tags": "[Class][Branch]",
-              "Prerequisites": "3 Pokémon with 3d6 in their Smart Stat from Poffins OR Coordinator, 1 Pokémon with 3d6 in their Smart Stat from Poffins",
-              "Frequency": "Static",
-              "Effect": "Your Pokémon gain +2d6 to their Smart Stat. These dice are counted as if coming from Poffins."
-            },
-            "Style Flourish": {
-              "name": "Style Flourish",
-              "Tags": "[Branch]",
-              "Prerequisites": "3 Style Expert (Smart) Features",
-              "Frequency": "1 AP — Free Action",
-              "Trigger": "Your Pokémon uses a Smart Move",
-              "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
-              "Battle Effect": "The target gains +1 CS to their Special Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
-            },
-            "Style Entrainment": {
-              "name": "Style Entrainment",
-              "Tags": "[Branch]",
-              "Prerequisites": "4 Style Expert (Smart) Features",
-              "Frequency": "1 AP — Swift Action, Priority (Limited)",
-              "Target": "Your Pokémon",
-              "Effect": "Your Pokémon gains either Analytic or Anticipation for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
-            },
-            "Smart Scheme": {
-              "name": "Smart Scheme",
-              "Tags": "[Ranked 2]",
-              "Rank 1 Prerequisites": "Style Expert (Smart), Novice Guile",
-              "Rank 2 Prerequisites": "Expert Guile",
-              "Frequency": "1 AP — Special",
-              "Effect": "Your Pokémon with at least 3d6 in their Smart Stat from Poffins may activate Smart Scheme as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
-              "Rank 1": "Fake Tears, Calm Mind",
-              "Rank 2": "Taunt, Flatter"
-            },
-            "Calculated Assault": {
-              "name": "Calculated Assault",
-              "Prerequisites": "Smart Scheme Rank 1",
-              "Frequency": "At-Will — Free Action",
-              "Trigger": "Your Pokémon uses a Smart-Type Move",
-              "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
-              "Battle Effect": "Choose one: The triggering Pokémon gains a +1 bonus on its Accuracy Roll for each ally that hit a target of its Move this round, or all allies get a +1 bonus to their Accuracy Rolls against targets of the triggering Pokémon's Move until the end of your Pokémon's next turn. You may activate Calculated Assault only once per Pokémon per Scene."
-            },
-            "Learn From Your Mistakes": {
-              "name": "Learn From Your Mistakes",
-              "Prerequisites": "Smart Scheme Rank 1",
-              "Frequency": "Daily x3 — Free Action",
-              "Trigger": "Your Pokémon fails a Skill Check.",
-              "Effect": "Your Pokémon may re-roll the Skill Check with a Bonus equal to its number of Smart Dice from Poffins."
-            }
+            "Tags": "[Class][Branch]",
+            "Prerequisites": "3 Pokémon with 3d6 in their Smart Stat from Poffins OR Coordinator, 1 Pokémon with 3d6 in their Smart Stat from Poffins",
+            "Frequency": "Static",
+            "Effect": "Your Pokémon gain +2d6 to their Smart Stat. These dice are counted as if coming from Poffins."
+          },
+          {
+            "name": "Style Flourish",
+            "Tags": "[Branch]",
+            "Prerequisites": "3 Style Expert (Smart) Features",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "Your Pokémon uses a Smart Move",
+            "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
+            "Battle Effect": "The target gains +1 CS to their Special Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
+          },
+          {
+            "name": "Style Entrainment",
+            "Tags": "[Branch]",
+            "Prerequisites": "4 Style Expert (Smart) Features",
+            "Frequency": "1 AP — Swift Action, Priority (Limited)",
+            "Target": "Your Pokémon",
+            "Effect": "Your Pokémon gains either Analytic or Anticipation for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
+          },
+          {
+            "name": "Smart Scheme",
+            "Tags": "[Ranked 2]",
+            "Rank 1 Prerequisites": "Style Expert (Smart), Novice Guile",
+            "Rank 2 Prerequisites": "Expert Guile",
+            "Frequency": "1 AP — Special",
+            "Effect": "Your Pokémon with at least 3d6 in their Smart Stat from Poffins may activate Smart Scheme as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
+            "Rank 1": "Fake Tears, Calm Mind",
+            "Rank 2": "Taunt, Flatter"
+          },
+          {
+            "name": "Calculated Assault",
+            "Prerequisites": "Smart Scheme Rank 1",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "Your Pokémon uses a Smart-Type Move",
+            "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
+            "Battle Effect": "Choose one: The triggering Pokémon gains a +1 bonus on its Accuracy Roll for each ally that hit a target of its Move this round, or all allies get a +1 bonus to their Accuracy Rolls against targets of the triggering Pokémon's Move until the end of your Pokémon's next turn. You may activate Calculated Assault only once per Pokémon per Scene."
+          },
+          {
+            "name": "Learn From Your Mistakes",
+            "Prerequisites": "Smart Scheme Rank 1",
+            "Frequency": "Daily x3 — Free Action",
+            "Trigger": "Your Pokémon fails a Skill Check.",
+            "Effect": "Your Pokémon may re-roll the Skill Check with a Bonus equal to its number of Smart Dice from Poffins."
           }
         ]
       },
@@ -2052,55 +2040,52 @@
         "features": [
           {
             "name": "Style Expert",
-            "Style Expert": {
-              "name": "Style Expert",
-              "Tags": "[Class][Branch]",
-              "Prerequisites": "3 Pokémon with 3d6 in their Tough Stat from Poffins OR Coordinator, 1 Pokémon with 3d6 in their Tough Stat from Poffins",
-              "Frequency": "Static",
-              "Effect": "Your Pokémon gain +2d6 to their Tough Stat. These dice are counted as if coming from Poffins."
-            },
-            "Style Flourish": {
-              "name": "Style Flourish",
-              "Tags": "[Branch]",
-              "Prerequisites": "3 Style Expert (Tough) Features",
-              "Frequency": "1 AP — Free Action",
-              "Trigger": "Your Pokémon uses a Tough Move",
-              "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
-              "Battle Effect": "The target gains +1 CS to their Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
-            },
-            "Style Entrainment": {
-              "name": "Style Entrainment",
-              "Tags": "[Branch]",
-              "Prerequisites": "4 Style Expert (Tough) Features",
-              "Frequency": "1 AP — Swift Action, Priority (Limited)",
-              "Target": "Your Pokémon",
-              "Effect": "Your Pokémon gains either Sturdy or Intimidate for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
-            },
-            "Tough Tumble": {
-              "name": "Tough Tumble",
-              "Tags": "[Ranked 2]",
-              "Rank 1 Prerequisites": "Style Expert (Tough), Novice Intimidate",
-              "Rank 2 Prerequisites": "Expert Intimidate",
-              "Frequency": "1 AP — Special",
-              "Effect": "Your Pokémon with at least 3d6 in their Tough Stat from Poffins may activate Tough Tumble as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
-              "Rank 1": "Scary Face, Spite",
-              "Rank 2": "Glare, Bide"
-            },
-            "Macho Charge": {
-              "name": "Macho Charge",
-              "Prerequisites": "Tough Tumble Rank 1",
-              "Frequency": "At-Will — Free Action",
-              "Trigger": "Your Pokémon uses a Tough-Type Move",
-              "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
-              "Battle Effect": "All targets hit by the Move are pushed away from the triggering Pokémon by 3 meters. You may activate Macho Charge only once per Pokémon per Scene."
-            },
-            "Endurance": {
-              "name": "Endurance",
-              "Prerequisites": "Tough Tumble Rank 1",
-              "Frequency": "Scene — Free Action",
-              "Trigger": "Your Pokémon takes falling damage, begins to suffocate, or is Heavily Injured.",
-              "Effect": "Your Pokémon can ignore up to X meters of falling when calculating falling damage, act without beginning to suffocate for X additional rounds, or ignore the Hit Point loss effects from acting while Heavily Injured for X rounds. X is equal to half its number of Tough Dice from Poffins."
-            }
+            "Tags": "[Class][Branch]",
+            "Prerequisites": "3 Pokémon with 3d6 in their Tough Stat from Poffins OR Coordinator, 1 Pokémon with 3d6 in their Tough Stat from Poffins",
+            "Frequency": "Static",
+            "Effect": "Your Pokémon gain +2d6 to their Tough Stat. These dice are counted as if coming from Poffins."
+          },
+          {
+            "name": "Style Flourish",
+            "Tags": "[Branch]",
+            "Prerequisites": "3 Style Expert (Tough) Features",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "Your Pokémon uses a Tough Move",
+            "Contest Effect": "Re-Roll all dice that result in 1s. This effect may only be used once per Contest.",
+            "Battle Effect": "The target gains +1 CS to their Defense, after the Move and all effects have been resolved. This may only affect a target once per Scene."
+          },
+          {
+            "name": "Style Entrainment",
+            "Tags": "[Branch]",
+            "Prerequisites": "4 Style Expert (Tough) Features",
+            "Frequency": "1 AP — Swift Action, Priority (Limited)",
+            "Target": "Your Pokémon",
+            "Effect": "Your Pokémon gains either Sturdy or Intimidate for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
+          },
+          {
+            "name": "Tough Tumble",
+            "Tags": "[Ranked 2]",
+            "Rank 1 Prerequisites": "Style Expert (Tough), Novice Intimidate",
+            "Rank 2 Prerequisites": "Expert Intimidate",
+            "Frequency": "1 AP — Special",
+            "Effect": "Your Pokémon with at least 3d6 in their Tough Stat from Poffins may activate Tough Tumble as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
+            "Rank 1": "Scary Face, Spite",
+            "Rank 2": "Glare, Bide"
+          },
+          {
+            "name": "Macho Charge",
+            "Prerequisites": "Tough Tumble Rank 1",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "Your Pokémon uses a Tough-Type Move",
+            "Contest Effect": "Treat the Move as if it were one step more aligned with the Contest Type. If the Move would be opposing the Contest Type, it is instead neutral. If it is neutral, it is instead matching. You may activate this effect only once per Contest.",
+            "Battle Effect": "All targets hit by the Move are pushed away from the triggering Pokémon by 3 meters. You may activate Macho Charge only once per Pokémon per Scene."
+          },
+          {
+            "name": "Endurance",
+            "Prerequisites": "Tough Tumble Rank 1",
+            "Frequency": "Scene — Free Action",
+            "Trigger": "Your Pokémon takes falling damage, begins to suffocate, or is Heavily Injured.",
+            "Effect": "Your Pokémon can ignore up to X meters of falling when calculating falling damage, act without beginning to suffocate for X additional rounds, or ignore the Hit Point loss effects from acting while Heavily Injured for X rounds. X is equal to half its number of Tough Dice from Poffins."
           }
         ]
       }
@@ -3564,13 +3549,10 @@
         "features": [
           {
             "name": "Researcher",
-            "Researcher": {
-              "name": "Researcher",
-              "Tags": "[Class][Branch]",
-              "Prerequisites": "An Education Skill at Novice Rank",
-              "Frequency": "Static",
-              "Effect": "Choose two Researcher Fields of Study. You may take Features from those Fields with this instance of Researcher. Gain one Feature from a chosen Researcher Field for which you qualify."
-            }
+            "Tags": "[Class][Branch]",
+            "Prerequisites": "An Education Skill at Novice Rank",
+            "Frequency": "Static",
+            "Effect": "Choose two Researcher Fields of Study. You may take Features from those Fields with this instance of Researcher. Gain one Feature from a chosen Researcher Field for which you qualify."
           }
         ]
       },
@@ -3578,33 +3560,30 @@
         "name": "General",
         "features": [
           {
-            "name": "Researcher",
-            "Source": "Erratum May 2015",
-            "Breadth of Knowledge": {
-              "name": "Breadth of Knowledge",
-              "Prerequisites": "General Research Field, Novice General Education",
-              "Frequency": "Static",
-              "Effect": "You gain three Skill Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet."
-            },
-            "Bookworm": {
-              "name": "Bookworm",
-              "Prerequisites": "Breadth of Knowledge",
-              "Frequency": "Static",
-              "Effect": "You gain X Study Points, where X is equal to 2 plus one more for every other General Research Feature you have. You may Drain Study Points to benefit from studying Books, instead of Draining your Action Points. Study Points are restored to your maximum after an Extended Rest, just like Action Points."
-            },
-            "Well Read": {
-              "name": "Well Read",
-              "Prerequisites": "Bookworm, Expert General Education",
-              "Frequency": "Static",
-              "Effect": "You may use your General Education Rank to qualify for Books, instead of the Book's usual Skill Prerequisites, provided you have the normal Prerequisite at at least Novice Rank."
-            },
-            "Echoes of the Future": {
-              "name": "Echoes of the Future",
-              "Prerequisites": "Breadth of Knowledge, Master General Education",
-              "Frequency": "Daily x2 — Free Action",
-              "Trigger": "You or your Pokémon make a roll",
-              "Effect": "You may roll twice and keep the best result."
-            }
+            "name": "Breadth of Knowledge",
+            "Prerequisites": "General Research Field, Novice General Education",
+            "Frequency": "Static",
+            "Effect": "You gain three Skill Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet.",
+            "Source": "Erratum May 2015"
+          },
+          {
+            "name": "Bookworm",
+            "Prerequisites": "Breadth of Knowledge",
+            "Frequency": "Static",
+            "Effect": "You gain X Study Points, where X is equal to 2 plus one more for every other General Research Feature you have. You may Drain Study Points to benefit from studying Books, instead of Draining your Action Points. Study Points are restored to your maximum after an Extended Rest, just like Action Points."
+          },
+          {
+            "name": "Well Read",
+            "Prerequisites": "Bookworm, Expert General Education",
+            "Frequency": "Static",
+            "Effect": "You may use your General Education Rank to qualify for Books, instead of the Book's usual Skill Prerequisites, provided you have the normal Prerequisite at at least Novice Rank."
+          },
+          {
+            "name": "Echoes of the Future",
+            "Prerequisites": "Breadth of Knowledge, Master General Education",
+            "Frequency": "Daily x2 — Free Action",
+            "Trigger": "You or your Pokémon make a roll",
+            "Effect": "You may roll twice and keep the best result."
           }
         ]
       },
@@ -3612,34 +3591,31 @@
         "name": "General (old)",
         "features": [
           {
-            "name": "Researcher",
-            "Breadth of Knowledge": {
-              "name": "Breadth of Knowledge",
-              "Prerequisites": "General Research Field, Novice General Education",
-              "Frequency": "Static",
-              "Effect": "You gain three Skill Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet."
-            },
-            "Live and Learn": {
-              "name": "Live and Learn",
-              "Prerequisites": "Adept General Education",
-              "Frequency": "Daily x3 — Free Action",
-              "Trigger": "You or your Pokémon miss with an attack, fail a Skill Check, or fail a Save Check",
-              "Effect": "Add half of your General Education Rank to the next roll of the same type that the triggering user makes."
-            },
-            "Instant Analysis": {
-              "name": "Instant Analysis",
-              "Prerequisites": "Expert General Education",
-              "Frequency": "At-Will — Extended Action",
-              "Target": "Your Pokémon with at least 2 Tutor Points remaining",
-              "Effect": "Your Pokémon loses 2 Tutor Points and gains the Forewarn Ability."
-            },
-            "Echoes of the Future": {
-              "name": "Echoes of the Future",
-              "Prerequisites": "Breadth of Knowledge, Master General Education",
-              "Frequency": "Daily x2 — Free Action",
-              "Trigger": "You or your Pokémon make a roll",
-              "Effect": "You may roll twice and keep the best result."
-            }
+            "name": "Breadth of Knowledge",
+            "Prerequisites": "General Research Field, Novice General Education",
+            "Frequency": "Static",
+            "Effect": "You gain three Skill Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet."
+          },
+          {
+            "name": "Live and Learn",
+            "Prerequisites": "Adept General Education",
+            "Frequency": "Daily x3 — Free Action",
+            "Trigger": "You or your Pokémon miss with an attack, fail a Skill Check, or fail a Save Check",
+            "Effect": "Add half of your General Education Rank to the next roll of the same type that the triggering user makes."
+          },
+          {
+            "name": "Instant Analysis",
+            "Prerequisites": "Expert General Education",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "Your Pokémon with at least 2 Tutor Points remaining",
+            "Effect": "Your Pokémon loses 2 Tutor Points and gains the Forewarn Ability."
+          },
+          {
+            "name": "Echoes of the Future",
+            "Prerequisites": "Breadth of Knowledge, Master General Education",
+            "Frequency": "Daily x2 — Free Action",
+            "Trigger": "You or your Pokémon make a roll",
+            "Effect": "You may roll twice and keep the best result."
           }
         ]
       },
@@ -3647,60 +3623,57 @@
         "name": "Apothecary",
         "features": [
           {
-            "name": "Researcher",
-            "Source": "Erratum September 2015",
-            "Apothecary": {
-              "name": "Apothecary",
-              "Prerequisites": "Apothecary Research Field, Novice Medicine Education",
-              "Frequency": "At-Will — Extended Action",
-              "Effect": "You gain use any Apothecary Recipe for which you qualify."
+            "name": "Apothecary",
+            "Prerequisites": "Apothecary Research Field, Novice Medicine Education",
+            "Frequency": "At-Will — Extended Action",
+            "Effect": "You gain use any Apothecary Recipe for which you qualify.",
+            "Source": "Erratum September 2015"
+          },
+          {
+            "name": "Patch Cure",
+            "Prerequisites": "Apothecary, Adept Medicine Education",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "A Restorative Item",
+            "Effect": "You distill the target, gaining 3 Restorative Patches. Restorative Patches have the same effect as the items from which they were created, but can only be applied as an Extended Action."
+          },
+          {
+            "name": "Affliction Techniques",
+            "Prerequisites": "Patch Cure, Expert Medicine Education",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "You use a Antidote, Burn Heal, Ice Heal, or Paralyze Heal",
+            "Effect": "If the target successfully cures the target of its linked Status Affliction, the item has additional effects.\n» Antidote: The target gains +1 Special Defense Combat Stage.\n» Burn Heal The target gains +1 Defense Combat Stage.\n» Ice Heal: The target gains +1 Attack or Special Attack Combat Stage\n» Paralyze Heal:The target gains +1 Speed Combat Stage."
+          },
+          {
+            "name": "Medicinal Blend",
+            "Prerequisites": "Apothecary, Master Medicine Education",
+            "Frequency": "At-Will — Extended Action",
+            "Trigger": "You or your Pokémon make a roll",
+            "Effect": "Ingredients: Two Restoratives, or a Restorative and an X-Item\nEffect: You fuse the two Ingredients, creating an Item that has the properties of both. If you choose two Restoratives, they cannot be Restoratives with the same effect (you could not for example, mix a Potion and a Super Potion). If a Restorative Patch is used as an Ingredient, the resulting item can only be used as an Extended Action."
+          },
+          {
+            "name": "Apothecary Recipes",
+            "Restorative Science": {
+              "name": "Restorative Science",
+              "Prerequisites": "Apothecary",
+              "Cost": "$100",
+              "Effect": "You create an Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal, or Potion."
             },
-            "Patch Cure": {
-              "name": "Patch Cure",
-              "Prerequisites": "Apothecary, Adept Medicine Education",
-              "Frequency": "At-Will — Extended Action",
-              "Target": "A Restorative Item",
-              "Effect": "You distill the target, gaining 3 Restorative Patches. Restorative Patches have the same effect as the items from which they were created, but can only be applied as an Extended Action."
+            "Super Cures": {
+              "name": "Super Cures",
+              "Prerequisites": "Patch Cure",
+              "Cost": "$200",
+              "Effect": "You can create Revives and Super Potions."
             },
-            "Affliction Techniques": {
-              "name": "Affliction Techniques",
-              "Prerequisites": "Patch Cure, Expert Medicine Education",
-              "Frequency": "1 AP — Free Action",
-              "Trigger": "You use a Antidote, Burn Heal, Ice Heal, or Paralyze Heal",
-              "Effect": "If the target successfully cures the target of its linked Status Affliction, the item has additional effects.\n» Antidote: The target gains +1 Special Defense Combat Stage.\n» Burn Heal The target gains +1 Defense Combat Stage.\n» Ice Heal: The target gains +1 Attack or Special Attack Combat Stage\n» Paralyze Heal:The target gains +1 Speed Combat Stage."
+            "Hyper Cures": {
+              "name": "Hyper Cures",
+              "Prerequisites": "Affliction Techniques",
+              "Effect": "You can create Full Heals for $300, Hyper Potions for $400, and Full Restores for $700."
             },
-            "Medicinal Blend": {
-              "name": "Medicinal Blend",
-              "Prerequisites": "Apothecary, Master Medicine Education",
-              "Frequency": "At-Will — Extended Action",
-              "Trigger": "You or your Pokémon make a roll",
-              "Effect": "Ingredients: Two Restoratives, or a Restorative and an X-Item\nEffect: You fuse the two Ingredients, creating an Item that has the properties of both. If you choose two Restoratives, they cannot be Restoratives with the same effect (you could not for example, mix a Potion and a Super Potion). If a Restorative Patch is used as an Ingredient, the resulting item can only be used as an Extended Action."
-            },
-            "Apothecary Recipes": {
-              "name": "Apothecary Recipes",
-              "Restorative Science": {
-                "name": "Restorative Science",
-                "Prerequisites": "Apothecary",
-                "Cost": "$100",
-                "Effect": "You create an Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal, or Potion."
-              },
-              "Super Cures": {
-                "name": "Super Cures",
-                "Prerequisites": "Patch Cure",
-                "Cost": "$200",
-                "Effect": "You can create Revives and Super Potions."
-              },
-              "Hyper Cures": {
-                "name": "Hyper Cures",
-                "Prerequisites": "Affliction Techniques",
-                "Effect": "You can create Full Heals for $300, Hyper Potions for $400, and Full Restores for $700."
-              },
-              "Performance Enhancers": {
-                "name": "Performance Enhancers",
-                "Prerequisites": "Medicinal Blend",
-                "Cost": "$4900",
-                "Effect": "You create a PP Up or Heart Booster. If you have a Heart Scale, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost."
-              }
+            "Performance Enhancers": {
+              "name": "Performance Enhancers",
+              "Prerequisites": "Medicinal Blend",
+              "Cost": "$4900",
+              "Effect": "You create a PP Up or Heart Booster. If you have a Heart Scale, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost."
             }
           }
         ]
@@ -3709,59 +3682,56 @@
         "name": "Apothecary (old)",
         "features": [
           {
-            "name": "Researcher",
-            "Apothecary": {
-              "name": "Apothecary",
-              "Prerequisites": "Apothecary Research Field, Novice Medicine Education",
-              "Frequency": "At-Will — Extended Action",
-              "Effect": "You gain use any Apothecary Recipe for which you qualify."
+            "name": "Apothecary",
+            "Prerequisites": "Apothecary Research Field, Novice Medicine Education",
+            "Frequency": "At-Will — Extended Action",
+            "Effect": "You gain use any Apothecary Recipe for which you qualify."
+          },
+          {
+            "name": "Patch Cure",
+            "Prerequisites": "Apothecary, Adept Medicine Education",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "A Restorative Item",
+            "Effect": "You distill the target, gaining 3 Restorative Patches. Restorative Patches have the same effect as the items from which they were created, but can only be applied as an Extended Action."
+          },
+          {
+            "name": "Medical Techniques",
+            "Prerequisites": "Medic, Adept Medicine Education",
+            "Frequency": "1 AP — Swift Action",
+            "Trigger": "You apply a Restorative Item",
+            "Effect": "The target gains a Tick of Hit Points, plus an additional amount of Hit Points equal to your Medicine Education Rank."
+          },
+          {
+            "name": "Medicinal Blend",
+            "Prerequisites": "Apothecary, Master Medicine Education",
+            "Frequency": "At-Will — Extended Action",
+            "Trigger": "You or your Pokémon make a roll",
+            "Effect": "Ingredients: Two Restoratives, or a Restorative and an X-Item\nEffect: You fuse the two Ingredients, creating an Item that has the properties of both. If you choose two Restoratives, they cannot be Restoratives with the same effect (you could not for example, mix a Potion and a Super Potion). If a Restorative Patch is used as an Ingredient, the resulting item can only be used as an Extended Action."
+          },
+          {
+            "name": "Apothecary Recipes",
+            "Restorative Science": {
+              "name": "Restorative Science",
+              "Prerequisites": "Apothecary",
+              "Cost": "$100",
+              "Effect": "You create an Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal, or Potion."
             },
-            "Patch Cure": {
-              "name": "Patch Cure",
-              "Prerequisites": "Apothecary, Adept Medicine Education",
-              "Frequency": "At-Will — Extended Action",
-              "Target": "A Restorative Item",
-              "Effect": "You distill the target, gaining 3 Restorative Patches. Restorative Patches have the same effect as the items from which they were created, but can only be applied as an Extended Action."
+            "Super Cures": {
+              "name": "Super Cures",
+              "Prerequisites": "Patch Cure",
+              "Cost": "$200",
+              "Effect": "You can create Revives and Super Potions."
             },
-            "Medical Techniques": {
-              "name": "Medical Techniques",
-              "Prerequisites": "Medic, Adept Medicine Education",
-              "Frequency": "1 AP — Swift Action",
-              "Trigger": "You apply a Restorative Item",
-              "Effect": "The target gains a Tick of Hit Points, plus an additional amount of Hit Points equal to your Medicine Education Rank."
+            "Hyper Cures": {
+              "name": "Hyper Cures",
+              "Prerequisites": "Medical Techniques",
+              "Effect": "You can create Full Heals for $300, Hyper Potions for $400, and Full Restores for $700."
             },
-            "Medicinal Blend": {
-              "name": "Medicinal Blend",
-              "Prerequisites": "Apothecary, Master Medicine Education",
-              "Frequency": "At-Will — Extended Action",
-              "Trigger": "You or your Pokémon make a roll",
-              "Effect": "Ingredients: Two Restoratives, or a Restorative and an X-Item\nEffect: You fuse the two Ingredients, creating an Item that has the properties of both. If you choose two Restoratives, they cannot be Restoratives with the same effect (you could not for example, mix a Potion and a Super Potion). If a Restorative Patch is used as an Ingredient, the resulting item can only be used as an Extended Action."
-            },
-            "Apothecary Recipes": {
-              "name": "Apothecary Recipes",
-              "Restorative Science": {
-                "name": "Restorative Science",
-                "Prerequisites": "Apothecary",
-                "Cost": "$100",
-                "Effect": "You create an Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal, or Potion."
-              },
-              "Super Cures": {
-                "name": "Super Cures",
-                "Prerequisites": "Patch Cure",
-                "Cost": "$200",
-                "Effect": "You can create Revives and Super Potions."
-              },
-              "Hyper Cures": {
-                "name": "Hyper Cures",
-                "Prerequisites": "Medical Techniques",
-                "Effect": "You can create Full Heals for $300, Hyper Potions for $400, and Full Restores for $700."
-              },
-              "Performance Enhancers": {
-                "name": "Performance Enhancers",
-                "Prerequisites": "Medicinal Blend",
-                "Cost": "$4900",
-                "Effect": "You create a PP Up or Heart Booster. If you have a Heart Scale, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost."
-              }
+            "Performance Enhancers": {
+              "name": "Performance Enhancers",
+              "Prerequisites": "Medicinal Blend",
+              "Cost": "$4900",
+              "Effect": "You create a PP Up or Heart Booster. If you have a Heart Scale, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost."
             }
           }
         ]
@@ -3770,71 +3740,68 @@
         "name": "Artificer",
         "features": [
           {
-            "name": "Researcher",
-            "Crystal Artificer": {
-              "name": "Crystal Artificer",
-              "Prerequisites": "Artificer Research Field, Gem Lore",
-              "Frequency": "At-Will — Extended Action",
-              "Effect": "You may use any Crystal Artificer Recipe for which you qualify."
+            "name": "Crystal Artificer",
+            "Prerequisites": "Artificer Research Field, Gem Lore",
+            "Frequency": "At-Will — Extended Action",
+            "Effect": "You may use any Crystal Artificer Recipe for which you qualify."
+          },
+          {
+            "name": "Crystal Resonance",
+            "Prerequisites": "Crystal Artificer, Skill Stunt (Dowsing)",
+            "Frequency": "Static",
+            "Effect": "You roll an additional 3d6 when determining how many Shards you find when Dowsing."
+          },
+          {
+            "name": "Rainbow Light",
+            "Prerequisites": "Crystal Artificer, Expert Occult Education",
+            "Frequency": "2 AP — Standard Action",
+            "Trigger": "You are wearing a Rainbow Gem",
+            "Effect": "You create a Rainbow lasting one full round. While this Rainbow persists, the Effect Range of all Allies is increased by +3."
+          },
+          {
+            "name": "Fistful of Force",
+            "Prerequisites": "Crystal Artificer, Master Occult Education",
+            "Frequency": "Scene — Standard Action",
+            "Trigger": "You must have a Shard in your Main Hand or Off-Hand to use Fistful of Force.",
+            "Effect": "You may destroy the Shard to use the Move Judgment. Judgment's Type must be one of the Types associated with the used Shard. Instead of adding your Special Attack when using this attack, you may choose to add your Occult Education Rank tripled."
+          },
+          {
+            "name": "Artificer Recipes",
+            "Type Booster": {
+              "name": "Type Booster",
+              "Prerequisites": "Crystal Artificer",
+              "Ingredients": "x4 Shards of the same Color",
+              "Effects": "You create a Type Booster. The Type chosen must be one of the Types associated with the color of the shards used."
             },
-            "Crystal Resonance": {
-              "name": "Crystal Resonance",
-              "Prerequisites": "Crystal Artificer, Skill Stunt (Dowsing)",
-              "Frequency": "Static",
-              "Effect": "You roll an additional 3d6 when determining how many Shards you find when Dowsing."
+            "Type Brace": {
+              "name": "Type Brace",
+              "Prerequisites": "Crystal Artificer",
+              "Ingredients": "x4 Shards of the same Color",
+              "Effects": "You create a Type Brace. The Type chosen must be one of the Types associated with the color of the shards used."
             },
-            "Rainbow Light": {
-              "name": "Rainbow Light",
-              "Prerequisites": "Crystal Artificer, Expert Occult Education",
-              "Frequency": "2 AP — Standard Action",
-              "Trigger": "You are wearing a Rainbow Gem",
-              "Effect": "You create a Rainbow lasting one full round. While this Rainbow persists, the Effect Range of all Allies is increased by +3."
+            "Focus Gem": {
+              "name": "Focus Gem",
+              "Prerequisites": "Crystal Resonance",
+              "Ingredients": "Any Six Shards.",
+              "Effect": "You create a Focus that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item."
             },
-            "Fistful of Force": {
-              "name": "Fistful of Force",
-              "Prerequisites": "Crystal Artificer, Master Occult Education",
-              "Frequency": "Scene — Standard Action",
-              "Trigger": "You must have a Shard in your Main Hand or Off-Hand to use Fistful of Force.",
-              "Effect": "You may destroy the Shard to use the Move Judgment. Judgment's Type must be one of the Types associated with the used Shard. Instead of adding your Special Attack when using this attack, you may choose to add your Occult Education Rank tripled."
+            "Chakra Crystal": {
+              "name": "Chakra Crystal",
+              "Prerequisites": "Crystal Resonance",
+              "Ingredients": "Any Six Shards",
+              "Effect": "You create a Stat Booster."
             },
-            "Artificer Recipes": {
-              "name": "Artificer Recipes",
-              "Type Booster": {
-                "name": "Type Booster",
-                "Prerequisites": "Crystal Artificer",
-                "Ingredients": "x4 Shards of the same Color",
-                "Effects": "You create a Type Booster. The Type chosen must be one of the Types associated with the color of the shards used."
-              },
-              "Type Brace": {
-                "name": "Type Brace",
-                "Prerequisites": "Crystal Artificer",
-                "Ingredients": "x4 Shards of the same Color",
-                "Effects": "You create a Type Brace. The Type chosen must be one of the Types associated with the color of the shards used."
-              },
-              "Focus Gem": {
-                "name": "Focus Gem",
-                "Prerequisites": "Crystal Resonance",
-                "Ingredients": "Any Six Shards.",
-                "Effect": "You create a Focus that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item."
-              },
-              "Chakra Crystal": {
-                "name": "Chakra Crystal",
-                "Prerequisites": "Crystal Resonance",
-                "Ingredients": "Any Six Shards",
-                "Effect": "You create a Stat Booster."
-              },
-              "Rainbow Gem": {
-                "name": "Rainbow Gem",
-                "Prerequisites": "Rainbow Light, Expert Occult Education",
-                "Ingredients": "Two Shards of each Color.",
-                "Effect": "You create a Rainbow Gem that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item. This item has the same effect as a Focus, except that as an Extended Action, any Trainer with Expert Occult Education Rank or higher may change which Stat the Rainbow Amulet is attuned to."
-              },
-              "Plate Crafter": {
-                "name": "Plate Crafter",
-                "Prerequisites": "Rainbow Light, Expert Occult Education",
-                "Ingredients": "A Type Booster and a Type Brace of the same Type.",
-                "Effects": "You create a Type Plate matching the Type Booster and Brace used."
-              }
+            "Rainbow Gem": {
+              "name": "Rainbow Gem",
+              "Prerequisites": "Rainbow Light, Expert Occult Education",
+              "Ingredients": "Two Shards of each Color.",
+              "Effect": "You create a Rainbow Gem that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item. This item has the same effect as a Focus, except that as an Extended Action, any Trainer with Expert Occult Education Rank or higher may change which Stat the Rainbow Amulet is attuned to."
+            },
+            "Plate Crafter": {
+              "name": "Plate Crafter",
+              "Prerequisites": "Rainbow Light, Expert Occult Education",
+              "Ingredients": "A Type Booster and a Type Brace of the same Type.",
+              "Effects": "You create a Type Plate matching the Type Booster and Brace used."
             }
           }
         ]
@@ -3843,28 +3810,25 @@
         "name": "Botany",
         "features": [
           {
-            "name": "Researcher",
-            "Seed Bag": {
-              "name": "Seed Bag",
-              "Rank 1 Prerequisites": "Green Thumb, Adept General Education, Adept Survival",
-              "Rank 2 Prerequisites": "Master General Education, Master Survival",
-              "Frequency": "X Daily — Extended Action",
-              "Target": "A Willing Pokémon",
-              "Rank 1 Effect": "You become adept at harvesting Seeds and Spores from Pokémon. You may target a willing Grass-Type Pokémon that knows Sleep Powder, Stun Spore, or Poison Powder. Add this move to your Move list for the remainder of the day. You may not use Seed Bag to have multiple instances of the same move in your Move list. Seed Bag may be used twice per day per Rank.",
-              "Rank 2 Effect": "You may also harvest Cotton Spore, Leech Seed, Spore, or Worry Seed."
-            },
-            "Top Tier Berries": {
-              "name": "Top Tier Berries",
-              "Prerequisites": "Botany Research Field, Green Thumb",
-              "Frequency": "Static",
-              "Effect": "You may grow additional Berries and Herbs, depending on the higher of your General Education or Survival Rank.\n» Novice: You may grow Tier 2 Berries\n» Adept: You may grow Mental Herbs, Power Herbs, White Herbs, and Tiny Mushrooms.\n» Expert: You may grow Revival Herbs, Energy Roots,Big Mushrooms, and Tier 3 Berries\n» Master: Increase the Soil Quality of all your plants by +1."
-            },
-            "Herb Lore": {
-              "name": "Herb Lore",
-              "Prerequisites": "Seed Bag Rank 1",
-              "Frequency": "Static",
-              "Effect": "You may create Energy Powder, Heal Powder, or Poultices from ingredients, as listed below.\nEnergy Powder: A Sitrus Berry or Tiny Mushroom creates x2 Energy Powders. An Energy Root creates x3 Energy Powders.\nHeal Powder: A Lum Berry or Big Mushroom creates x2 Heal Powders. A Revival Herb creates x3 Heal Powders\nPoultice: x1 Energy Powder and x1 Heal Powder create x3 Poultices."
-            }
+            "name": "Seed Bag",
+            "Rank 1 Prerequisites": "Green Thumb, Adept General Education, Adept Survival",
+            "Rank 2 Prerequisites": "Master General Education, Master Survival",
+            "Frequency": "X Daily — Extended Action",
+            "Target": "A Willing Pokémon",
+            "Rank 1 Effect": "You become adept at harvesting Seeds and Spores from Pokémon. You may target a willing Grass-Type Pokémon that knows Sleep Powder, Stun Spore, or Poison Powder. Add this move to your Move list for the remainder of the day. You may not use Seed Bag to have multiple instances of the same move in your Move list. Seed Bag may be used twice per day per Rank.",
+            "Rank 2 Effect": "You may also harvest Cotton Spore, Leech Seed, Spore, or Worry Seed."
+          },
+          {
+            "name": "Top Tier Berries",
+            "Prerequisites": "Botany Research Field, Green Thumb",
+            "Frequency": "Static",
+            "Effect": "You may grow additional Berries and Herbs, depending on the higher of your General Education or Survival Rank.\n» Novice: You may grow Tier 2 Berries\n» Adept: You may grow Mental Herbs, Power Herbs, White Herbs, and Tiny Mushrooms.\n» Expert: You may grow Revival Herbs, Energy Roots,Big Mushrooms, and Tier 3 Berries\n» Master: Increase the Soil Quality of all your plants by +1."
+          },
+          {
+            "name": "Herb Lore",
+            "Prerequisites": "Seed Bag Rank 1",
+            "Frequency": "Static",
+            "Effect": "You may create Energy Powder, Heal Powder, or Poultices from ingredients, as listed below.\nEnergy Powder: A Sitrus Berry or Tiny Mushroom creates x2 Energy Powders. An Energy Root creates x3 Energy Powders.\nHeal Powder: A Lum Berry or Big Mushroom creates x2 Heal Powders. A Revival Herb creates x3 Heal Powders\nPoultice: x1 Energy Powder and x1 Heal Powder create x3 Poultices."
           }
         ]
       },
@@ -3872,59 +3836,56 @@
         "name": "Chemistry",
         "features": [
           {
-            "name": "Researcher",
-            "Chemist": {
-              "name": "Chemist",
-              "Prerequisites": "Chemistry Research Field, Repel Crafter",
-              "Frequency": "At-Will — Extended Action",
-              "Effect": "You may use any Chemistry Recipe for which you qualify using your Chemistry Set."
+            "name": "Chemist",
+            "Prerequisites": "Chemistry Research Field, Repel Crafter",
+            "Frequency": "At-Will — Extended Action",
+            "Effect": "You may use any Chemistry Recipe for which you qualify using your Chemistry Set."
+          },
+          {
+            "name": "Chemical Warfare",
+            "Prerequisites": "Chemist, Adept Technology Education",
+            "Frequency": "Scene x2 — Free Action",
+            "Trigger": "You throw a Pester Ball",
+            "Effect": "The Pester Ball creates a Blast 2, affecting all targets in the area."
+          },
+          {
+            "name": "Caustic Chemistry",
+            "Prerequisites": "Chemist, Expert Technology Education",
+            "Frequency": "1 AP — Swift Action",
+            "Trigger": "You hit with a Pester Ball or apply a Repel to a Pokémon",
+            "Effect": "Make a Technology Education Roll. All targets affected by this Feature's trigger lose Hit Points equal to your roll. This may only affect a target once per Scene."
+          },
+          {
+            "name": "Playing God",
+            "Prerequisites": "Chemist, Expert Technology Education",
+            "Frequency": "At-Will — Extended Action",
+            "Effect": "Cost: $3500\nChoose Castform, Grimer, Koffing, Magnemite, Porygon, Solosis, Trubbish, or Voltorb. Using your chemistry set, you create an artificial Egg of the Chosen Pokémon, that hatches within a day. The resulting Pokémon is born at level 5, with the Nature and Ability of your choice (Abilities chosen from its species' Basic Abilities). Additionally, you may enhance the Pokémon in several ways. Choose a number of upgrades below equal to your Technology Education Rank.\n» The Pokémon is of an unusual coloration, gaining a +2d6 Bonus to the Introduction Stage of a Contest toward a single Contest Stat.\n» The Pokémon adds a Move from its Egg Move or Move Tutor List to its Inheritance List. This may be performed up to 3 times.\n» Increase one of the Pokémon's Base Stats by +1. This counts as use of a Vitamin. This may be performed up to 5 times."
+          },
+          {
+            "name": "Chemistry Recipes",
+            "Enhancers": {
+              "name": "Enhancers",
+              "Prerequisites": "Chemist",
+              "Cost": "$100",
+              "Effect": "You can create any X-Item, Dire Hit, or Guard Spec."
             },
-            "Chemical Warfare": {
-              "name": "Chemical Warfare",
-              "Prerequisites": "Chemist, Adept Technology Education",
-              "Frequency": "Scene x2 — Free Action",
-              "Trigger": "You throw a Pester Ball",
-              "Effect": "The Pester Ball creates a Blast 2, affecting all targets in the area."
+            "Pester Balls: Disorient": {
+              "name": "Pester Balls: Disorient",
+              "Prerequisites": "Chemist",
+              "Cost": "$50",
+              "Effect": "You create Pester Balls that can inflict Rage or Confusion."
             },
-            "Caustic Chemistry": {
-              "name": "Caustic Chemistry",
-              "Prerequisites": "Chemist, Expert Technology Education",
-              "Frequency": "1 AP — Swift Action",
-              "Trigger": "You hit with a Pester Ball or apply a Repel to a Pokémon",
-              "Effect": "Make a Technology Education Roll. All targets affected by this Feature's trigger lose Hit Points equal to your roll. This may only affect a target once per Scene."
+            "Pester Balls: Pain": {
+              "name": "Pester Balls: Pain",
+              "Prerequisites": "Chemical Warfare",
+              "Cost": "$50",
+              "Effect": "You create Pester Balls that can inflict Burn or Poison."
             },
-            "Playing God": {
-              "name": "Playing God",
-              "Prerequisites": "Chemist, Expert Technology Education",
-              "Frequency": "At-Will — Extended Action",
-              "Effect": "Cost: $3500\nChoose Castform, Grimer, Koffing, Magnemite, Porygon, Solosis, Trubbish, or Voltorb. Using your chemistry set, you create an artificial Egg of the Chosen Pokémon, that hatches within a day. The resulting Pokémon is born at level 5, with the Nature and Ability of your choice (Abilities chosen from its species' Basic Abilities). Additionally, you may enhance the Pokémon in several ways. Choose a number of upgrades below equal to your Technology Education Rank.\n» The Pokémon is of an unusual coloration, gaining a +2d6 Bonus to the Introduction Stage of a Contest toward a single Contest Stat.\n» The Pokémon adds a Move from its Egg Move or Move Tutor List to its Inheritance List. This may be performed up to 3 times.\n» Increase one of the Pokémon's Base Stats by +1. This counts as use of a Vitamin. This may be performed up to 5 times."
-            },
-            "Chemistry Recipes": {
-              "name": "Chemistry Recipes",
-              "Enhancers": {
-                "name": "Enhancers",
-                "Prerequisites": "Chemist",
-                "Cost": "$100",
-                "Effect": "You can create any X-Item, Dire Hit, or Guard Spec."
-              },
-              "Pester Balls: Disorient": {
-                "name": "Pester Balls: Disorient",
-                "Prerequisites": "Chemist",
-                "Cost": "$50",
-                "Effect": "You create Pester Balls that can inflict Rage or Confusion."
-              },
-              "Pester Balls: Pain": {
-                "name": "Pester Balls: Pain",
-                "Prerequisites": "Chemical Warfare",
-                "Cost": "$50",
-                "Effect": "You create Pester Balls that can inflict Burn or Poison."
-              },
-              "Pester Balls: Shut Down": {
-                "name": "Pester Balls: Shut Down",
-                "Prerequisites": "Caustic Chemistry",
-                "Cost": "$50",
-                "Effect": "You create Pester Balls that can inflict Paralysis or Sleep."
-              }
+            "Pester Balls: Shut Down": {
+              "name": "Pester Balls: Shut Down",
+              "Prerequisites": "Caustic Chemistry",
+              "Cost": "$50",
+              "Effect": "You create Pester Balls that can inflict Paralysis or Sleep."
             }
           }
         ]
@@ -3933,34 +3894,31 @@
         "name": "Climatology",
         "features": [
           {
-            "name": "Researcher",
-            "Climatology": {
-              "name": "Climatology",
-              "Prerequisites": "Climatology Research Field, Novice Survival",
-              "Frequency": "Static",
-              "Effect": "You gain the Overcoat Ability."
-            },
-            "Weather Control": {
-              "name": "Weather Control",
-              "Prerequisites": "Climatology",
-              "Frequency": "1 AP — Free Action",
-              "Trigger": "A Move or Ability creates a Weather Effect while non-standard Weather is already in effect",
-              "Effect": "The triggering Weather Effect does not replace the already extant Weather in effect; both exist simultaneously on the field. If a new Weather effect is placed on the field after the two that are out, both are replaced by the third, unless you activate this Feature again to replace only one."
-            },
-            "Weather Systems": {
-              "name": "Weather Systems",
-              "Prerequisites": "Climatology, Expert Survival",
-              "Frequency": "At-Will — Extended Action",
-              "Target": "Your Pokémon with at least 2 Tutor Points",
-              "Effect": "Your Pokémon loses 2 Tutor Points, and learns your choice of Hail, Rain Dance, Sandstorm, or Sunny Day. The target must be able to learn the chosen Move through Level-Up, TM, or Tutor Moves. If the target has the chosen Move in their Level-Up List, Weather Systems costs no Tutor Points."
-            },
-            "Extreme Weather": {
-              "name": "Extreme Weather",
-              "Prerequisites": "Climate Control, Master Survival",
-              "Frequency": "Daily x3 — Free Action",
-              "Trigger": "You or your Pokémon create a Weather Condition",
-              "Effect": "The Weather is particularly intense and has additional effects.\n» Hail: All Trainers and Pokémon that take Hail Damage take a -5 Penalty to all Damage Rolls.\n» Rain: All Trainers and Pokémon that are not Water or Grass typed are Slowed.\n» Sandstorm: All Trainers and Pokémon that take Sandstorm damage take a -2 Penalty to Accuracy Rolls.\n» Sun: Trainers and Pokémon that are not Fire or Grass Typed are Suppressed."
-            }
+            "name": "Climatology",
+            "Prerequisites": "Climatology Research Field, Novice Survival",
+            "Frequency": "Static",
+            "Effect": "You gain the Overcoat Ability."
+          },
+          {
+            "name": "Weather Control",
+            "Prerequisites": "Climatology",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "A Move or Ability creates a Weather Effect while non-standard Weather is already in effect",
+            "Effect": "The triggering Weather Effect does not replace the already extant Weather in effect; both exist simultaneously on the field. If a new Weather effect is placed on the field after the two that are out, both are replaced by the third, unless you activate this Feature again to replace only one."
+          },
+          {
+            "name": "Weather Systems",
+            "Prerequisites": "Climatology, Expert Survival",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "Your Pokémon with at least 2 Tutor Points",
+            "Effect": "Your Pokémon loses 2 Tutor Points, and learns your choice of Hail, Rain Dance, Sandstorm, or Sunny Day. The target must be able to learn the chosen Move through Level-Up, TM, or Tutor Moves. If the target has the chosen Move in their Level-Up List, Weather Systems costs no Tutor Points."
+          },
+          {
+            "name": "Extreme Weather",
+            "Prerequisites": "Climate Control, Master Survival",
+            "Frequency": "Daily x3 — Free Action",
+            "Trigger": "You or your Pokémon create a Weather Condition",
+            "Effect": "The Weather is particularly intense and has additional effects.\n» Hail: All Trainers and Pokémon that take Hail Damage take a -5 Penalty to all Damage Rolls.\n» Rain: All Trainers and Pokémon that are not Water or Grass typed are Slowed.\n» Sandstorm: All Trainers and Pokémon that take Sandstorm damage take a -2 Penalty to Accuracy Rolls.\n» Sun: Trainers and Pokémon that are not Fire or Grass Typed are Suppressed."
           }
         ]
       },
@@ -3968,32 +3926,29 @@
         "name": "Occultism",
         "features": [
           {
-            "name": "Researcher",
-            "Witch Hunter": {
-              "name": "Witch Hunter",
-              "Prerequisites": "Occultism Research Field, Novice Occult Education",
-              "Frequency": "Static",
-              "Effect": "You gain the Psionic Sight Feature, even if you do not meet the prerequisites. If you already had the Psionic Sight Feature, you instead gain another Feature for which you qualify."
-            },
-            "Psionic Analysis": {
-              "name": "Psionic Analysis",
-              "Prerequisites": "Witch Hunter, Master Occult Education",
-              "Frequency": "Scene — Extended Action",
-              "Effect": "You are able to analyze Psychic Residue and can determine the following information about the Trainer or Pokémon that left the residue:\n» Whether they are a Human or a Pokémon\n» Which Psychic-Type Moves they know\n» If they're Human, which of the following Class Features they have: Telepath, Telekinetic, Warper"
-            },
-            "Mental Resistance": {
-              "name": "Mental Resistance",
-              "Prerequisites": "Witch Hunter",
-              "Frequency": "Static",
-              "Effect": "You gain the Mindlock Capability and 10 Damage Reduction against Special Psychic, Ghost, and Dark-Type damage."
-            },
-            "Immutable Mind": {
-              "name": "Immutable Mind",
-              "Prerequisites": "Mental Resistance, Expert Occult Education",
-              "Frequency": "Scene — Free Action",
-              "Trigger": "You're hit by a Psychic, Ghost, or Dark-Type Move",
-              "Effect": "If the triggering Move was a Status-Class Move, the Move fails. If the Triggering Move was a Damaging Move with a Secondary Effect that triggers on a certain roll, you are immune to the secondary effect."
-            }
+            "name": "Witch Hunter",
+            "Prerequisites": "Occultism Research Field, Novice Occult Education",
+            "Frequency": "Static",
+            "Effect": "You gain the Psionic Sight Feature, even if you do not meet the prerequisites. If you already had the Psionic Sight Feature, you instead gain another Feature for which you qualify."
+          },
+          {
+            "name": "Psionic Analysis",
+            "Prerequisites": "Witch Hunter, Master Occult Education",
+            "Frequency": "Scene — Extended Action",
+            "Effect": "You are able to analyze Psychic Residue and can determine the following information about the Trainer or Pokémon that left the residue:\n» Whether they are a Human or a Pokémon\n» Which Psychic-Type Moves they know\n» If they're Human, which of the following Class Features they have: Telepath, Telekinetic, Warper"
+          },
+          {
+            "name": "Mental Resistance",
+            "Prerequisites": "Witch Hunter",
+            "Frequency": "Static",
+            "Effect": "You gain the Mindlock Capability and 10 Damage Reduction against Special Psychic, Ghost, and Dark-Type damage."
+          },
+          {
+            "name": "Immutable Mind",
+            "Prerequisites": "Mental Resistance, Expert Occult Education",
+            "Frequency": "Scene — Free Action",
+            "Trigger": "You're hit by a Psychic, Ghost, or Dark-Type Move",
+            "Effect": "If the triggering Move was a Status-Class Move, the Move fails. If the Triggering Move was a Damaging Move with a Secondary Effect that triggers on a certain roll, you are immune to the secondary effect."
           }
         ]
       },
@@ -4001,35 +3956,32 @@
         "name": "Paleontology",
         "features": [
           {
-            "name": "Researcher",
-            "Fossil Restoration": {
-              "name": "Fossil Restoration",
-              "Prerequisites": "Paleontology Research Field, Paleontologist, Novice Pokémon Education",
-              "Frequency": "At-Will — Extended Action",
-              "Target": "A Fossil you are reviving",
-              "Effect": "You may revive a Fossil into a Fossil Pokémon. The resulting Pokémon is born with 2 Tutor Points, and gains its first Basic Ability. If it has only one Basic Ability, it gains one of its Advanced Abilities, chosen by the GM. This Feature does not affect how the Pokémon continues to gain Abilities."
-            },
-            "Ancient Heritage": {
-              "name": "Ancient Heritage",
-              "Prerequisites": "Fossil Restoration",
-              "Frequency": "At-Will — Extended Action",
-              "Target": "Your Fossil Pokémon with at least 2 Tutor Points remaining",
-              "Effect": "The target loses 2 Tutor Points and learns Ancient Power. If the target has Ancient Power in its Level-Up List, Ancient Heritage costs no Tutor Points. As a static effect, whenever your Pokémon use Ancient Power, its activated effect occurs on 18+ and you may always choose whether it deals Physical or Special Damage, using the appropriate attack Stat."
-            },
-            "Genetic Memory": {
-              "name": "Genetic Memory",
-              "Prerequisites": "Ancient Heritage, Expert Pokémon Education",
-              "Frequency": "Daily x2 — Extended Action",
-              "Target": "Your Fossil Pokémon with at least 2 Tutor Points remaining",
-              "Effect": "The target loses 2 Tutor Points and learns any Move from its Egg Move or Tutor Move List. Genetic Memory may target a Pokémon only twice: once with a Tutor Move and once with an Egg Move. Egg Moves tutored this way do not count against the limit of 3 for TM and Tutor Moves."
-            },
-            "Prehistoric Bond": {
-              "name": "Prehistoric Bond",
-              "Prerequisites": "Fossil Restoration, Expert Pokémon Education",
-              "Frequency": "At-Will — Extended Action",
-              "Target": "The remains of a Fossil you revived",
-              "Effect": "You also produce a Held Item from the remnants of the Fossil. The effect of this Held Item is based on the highest Base Stat of the individual Pokémon being Revived, counting the effects of Nature but no other effects that alter Base Stats. If there is a tie, the GM decides which Base Stat is used. This Held Item may only be used by Pokémon revived from Fossils."
-            }
+            "name": "Fossil Restoration",
+            "Prerequisites": "Paleontology Research Field, Paleontologist, Novice Pokémon Education",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "A Fossil you are reviving",
+            "Effect": "You may revive a Fossil into a Fossil Pokémon. The resulting Pokémon is born with 2 Tutor Points, and gains its first Basic Ability. If it has only one Basic Ability, it gains one of its Advanced Abilities, chosen by the GM. This Feature does not affect how the Pokémon continues to gain Abilities."
+          },
+          {
+            "name": "Ancient Heritage",
+            "Prerequisites": "Fossil Restoration",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "Your Fossil Pokémon with at least 2 Tutor Points remaining",
+            "Effect": "The target loses 2 Tutor Points and learns Ancient Power. If the target has Ancient Power in its Level-Up List, Ancient Heritage costs no Tutor Points. As a static effect, whenever your Pokémon use Ancient Power, its activated effect occurs on 18+ and you may always choose whether it deals Physical or Special Damage, using the appropriate attack Stat."
+          },
+          {
+            "name": "Genetic Memory",
+            "Prerequisites": "Ancient Heritage, Expert Pokémon Education",
+            "Frequency": "Daily x2 — Extended Action",
+            "Target": "Your Fossil Pokémon with at least 2 Tutor Points remaining",
+            "Effect": "The target loses 2 Tutor Points and learns any Move from its Egg Move or Tutor Move List. Genetic Memory may target a Pokémon only twice: once with a Tutor Move and once with an Egg Move. Egg Moves tutored this way do not count against the limit of 3 for TM and Tutor Moves."
+          },
+          {
+            "name": "Prehistoric Bond",
+            "Prerequisites": "Fossil Restoration, Expert Pokémon Education",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "The remains of a Fossil you revived",
+            "Effect": "You also produce a Held Item from the remnants of the Fossil. The effect of this Held Item is based on the highest Base Stat of the individual Pokémon being Revived, counting the effects of Nature but no other effects that alter Base Stats. If there is a tie, the GM decides which Base Stat is used. This Held Item may only be used by Pokémon revived from Fossils."
           }
         ]
       },
@@ -4037,34 +3989,31 @@
         "name": "Pokémon Caretaking",
         "features": [
           {
-            "name": "Researcher",
-            "Pusher": {
-              "name": "Pusher",
-              "Prerequisites": "Pokémon Caretaking Research Field, Novice Pokémon Education",
-              "Frequency": "Static",
-              "Effect": "Your Pokémon gain the Basic Ranged Attacks, Aura Pulse, Enticing Bait, Extended Invisibility, Far Reading, Precise Threadings, Seismometer, TK Mastery, and Trail Sniffer Poke Edges automatically if they qualify for them, without having to invest any Tutor Points."
-            },
-            "This One's Special, I Know It": {
-              "name": "This One's Special, I Know It",
-              "Prerequisites": "Pusher",
-              "Frequency": "Special — Free Action",
-              "Target": "A hatching egg.",
-              "Effect": "The Pokémon is born with special qualities, determined by the GM. This Feature may be activated one time per Pokémon Education Rank above Untrained."
-            },
-            "Skill Trainer": {
-              "name": "Skill Trainer",
-              "Prerequisites": "Pusher",
-              "Frequency": "At-Will — Free Action",
-              "Trigger": "You Train your Pokémon",
-              "Effect": "For each of your Pokémon that has been Trained during this time, choose a Skill; that Skill becomes Pushed until an Extended Rest is taken. Pokémon rolls +1d6 with Pushed Skills, unless that would cause you to roll more than 6d6; if so, that Pokémon rolls with a +3 Bonus instead. A Pokémon may have only one Pushed Skill at a time."
-            },
-            "Re-Balancing": {
-              "name": "Re-Balancing",
-              "Prerequisites": "Pusher, Master Pokémon Education",
-              "Frequency": "At-Will — Extended Action",
-              "Target": "A Pokémon with 2 Tutor Points",
-              "Effect": "The target loses 2 Tutor Points, and gains one of the following: +1 to all Base Stats, +2 to two different Base Stats, or +3 to a single Base Stat. The target then redistributes their Stat Points. A Pokémon may be targeted by Re-Balancing only once."
-            }
+            "name": "Pusher",
+            "Prerequisites": "Pokémon Caretaking Research Field, Novice Pokémon Education",
+            "Frequency": "Static",
+            "Effect": "Your Pokémon gain the Basic Ranged Attacks, Aura Pulse, Enticing Bait, Extended Invisibility, Far Reading, Precise Threadings, Seismometer, TK Mastery, and Trail Sniffer Poke Edges automatically if they qualify for them, without having to invest any Tutor Points."
+          },
+          {
+            "name": "This One's Special, I Know It",
+            "Prerequisites": "Pusher",
+            "Frequency": "Special — Free Action",
+            "Target": "A hatching egg.",
+            "Effect": "The Pokémon is born with special qualities, determined by the GM. This Feature may be activated one time per Pokémon Education Rank above Untrained."
+          },
+          {
+            "name": "Skill Trainer",
+            "Prerequisites": "Pusher",
+            "Frequency": "At-Will — Free Action",
+            "Trigger": "You Train your Pokémon",
+            "Effect": "For each of your Pokémon that has been Trained during this time, choose a Skill; that Skill becomes Pushed until an Extended Rest is taken. Pokémon rolls +1d6 with Pushed Skills, unless that would cause you to roll more than 6d6; if so, that Pokémon rolls with a +3 Bonus instead. A Pokémon may have only one Pushed Skill at a time."
+          },
+          {
+            "name": "Re-Balancing",
+            "Prerequisites": "Pusher, Master Pokémon Education",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "A Pokémon with 2 Tutor Points",
+            "Effect": "The target loses 2 Tutor Points, and gains one of the following: +1 to all Base Stats, +2 to two different Base Stats, or +3 to a single Base Stat. The target then redistributes their Stat Points. A Pokémon may be targeted by Re-Balancing only once."
           }
         ]
       },
@@ -4072,34 +4021,31 @@
         "name": "Gadgeteer",
         "features": [
           {
-            "name": "Researcher",
-            "Improvised Gadgets": {
-              "name": "Improvised Gadgets",
-              "Prerequisites": "Gadgeteer Research Field, Novice Technology Education",
-              "Frequency": "Bind 2 AP — Extended Action",
-              "Target": "A willing Pokémon with the Magnetic, Zapper, or Threaded Capability",
-              "Effect": "Choose one of the Capabilities listed in the Target line that the target Pokémon has. You create a Main or Off-Hand Equipment Item usable by Trainers that grants the user the chosen Capability. Whenever a Trainer makes Struggle Attacks using Zapper through this Item, they may choose to use your Technology Education Rank tripled in place of an offensive Stat. When this Feature is Unbound, the Equipment Item breaks and cannot be repaired. You may only have X instances of this Feature Bound at once, where X is equal to half your Technology Education Rank."
-            },
-            "I Meant to Do That": {
-              "name": "I Meant to Do That",
-              "Prerequisites": "Improvised Gadgets, Adept Technology Education",
-              "Frequency": "At-Will — Special",
-              "Trigger": "You must have at least one Equipment Item you created with Improvised Gadgets equipped to use this Feature.",
-              "Effect": "Choose one of your equipped items you created with Improved Gadgets. It is destroyed and cannot be repaired, and that instance of Improvised Gadgets is immediately Unbound. Use the effect below corresponding to the Capability granted by the chosen item.\n» Magnetic: You may activate this effect as a Standard Action Interrupt whenever a Steel or Electric-Type attack or an attack with a metal Weapon would hit a target within 5 meters. The attack instead misses all targets within 5 meters.\n» Threaded: Choose up to 3 targets within 4 meters and perform an AC 4 Status Attack against them as a Standard Action. All hit targets become Stuck and Trapped for one full round.\nZapper: You may activate this effect as a Swift Action upon hitting a foe with a Zapper-modified Struggle Attack. The foe is Paralyzed."
-            },
-            "Capsule Science": {
-              "name": "Capsule Science",
-              "Prerequisites": "Improvised Gadgets, Expert Technology Education",
-              "Frequency": "Static",
-              "Effect": "You learn the Cap Cannon, Cap Ammo, and Wonder Launcher recipes, and you gain the following additional effects when using those items.\n» Bean Caps: You gain a +10 Damage Bonus when using Bean Caps.\n» Glue Caps: Your Effect Range when using Glue Caps is increased by +3.\n» Net Caps: Targets affected by your Net Caps gain a -X penalty to all Damage Rolls, where X is your Technology Education Rank.\n» Wonder Launcher: Whenever you apply an item to a target using the Wonder Launcher, they gain Temporary Hit Points equal to your Technology Education Rank."
-            },
-            "Enhanced Capsules": {
-              "name": "Enhanced Capsules",
-              "Prerequisites": "Capsule Science, Master Technology Education",
-              "Frequency": "Daily x3 — Extended Action",
-              "Target": "A willing Pokémon with one of the Capabilities listed below",
-              "Effect": "Choose one of the Capabilities below which the target Pokémon has. You create a consumable item with the effect below, depending on the chosen Capability. All unused items created with Enhanced Capsules are rendered inert after an Extended Rest (including modifications to other items).\n» Glow: This item may be attached to a Wonder Launcher as a Standard Action to give the following effect for the rest of the Scene: Whenever you apply an Item to a target using this Wonder Launcher, that target gains the Illuminate Ability for one full round.\n» Magnetic: This item may be loaded into a Cap Cannon to provide two Bean Cap Ammo. When fired, these Bean Caps cannot miss.\n» Threaded: This item may be loaded into a Cap Cannon to provide two Glue Cap Ammo. When fired, they affect a Blast 2 instead of a single target.\n» Zapper: This item may be loaded into a Cap Cannon as a single Net Cap Ammo. Targets trapped by this Net Cap are Suppressed while trapped. Targets immune to Electric-Type attacks are immune to this effect."
-            }
+            "name": "Improvised Gadgets",
+            "Prerequisites": "Gadgeteer Research Field, Novice Technology Education",
+            "Frequency": "Bind 2 AP — Extended Action",
+            "Target": "A willing Pokémon with the Magnetic, Zapper, or Threaded Capability",
+            "Effect": "Choose one of the Capabilities listed in the Target line that the target Pokémon has. You create a Main or Off-Hand Equipment Item usable by Trainers that grants the user the chosen Capability. Whenever a Trainer makes Struggle Attacks using Zapper through this Item, they may choose to use your Technology Education Rank tripled in place of an offensive Stat. When this Feature is Unbound, the Equipment Item breaks and cannot be repaired. You may only have X instances of this Feature Bound at once, where X is equal to half your Technology Education Rank."
+          },
+          {
+            "name": "I Meant to Do That",
+            "Prerequisites": "Improvised Gadgets, Adept Technology Education",
+            "Frequency": "At-Will — Special",
+            "Trigger": "You must have at least one Equipment Item you created with Improvised Gadgets equipped to use this Feature.",
+            "Effect": "Choose one of your equipped items you created with Improved Gadgets. It is destroyed and cannot be repaired, and that instance of Improvised Gadgets is immediately Unbound. Use the effect below corresponding to the Capability granted by the chosen item.\n» Magnetic: You may activate this effect as a Standard Action Interrupt whenever a Steel or Electric-Type attack or an attack with a metal Weapon would hit a target within 5 meters. The attack instead misses all targets within 5 meters.\n» Threaded: Choose up to 3 targets within 4 meters and perform an AC 4 Status Attack against them as a Standard Action. All hit targets become Stuck and Trapped for one full round.\nZapper: You may activate this effect as a Swift Action upon hitting a foe with a Zapper-modified Struggle Attack. The foe is Paralyzed."
+          },
+          {
+            "name": "Capsule Science",
+            "Prerequisites": "Improvised Gadgets, Expert Technology Education",
+            "Frequency": "Static",
+            "Effect": "You learn the Cap Cannon, Cap Ammo, and Wonder Launcher recipes, and you gain the following additional effects when using those items.\n» Bean Caps: You gain a +10 Damage Bonus when using Bean Caps.\n» Glue Caps: Your Effect Range when using Glue Caps is increased by +3.\n» Net Caps: Targets affected by your Net Caps gain a -X penalty to all Damage Rolls, where X is your Technology Education Rank.\n» Wonder Launcher: Whenever you apply an item to a target using the Wonder Launcher, they gain Temporary Hit Points equal to your Technology Education Rank."
+          },
+          {
+            "name": "Enhanced Capsules",
+            "Prerequisites": "Capsule Science, Master Technology Education",
+            "Frequency": "Daily x3 — Extended Action",
+            "Target": "A willing Pokémon with one of the Capabilities listed below",
+            "Effect": "Choose one of the Capabilities below which the target Pokémon has. You create a consumable item with the effect below, depending on the chosen Capability. All unused items created with Enhanced Capsules are rendered inert after an Extended Rest (including modifications to other items).\n» Glow: This item may be attached to a Wonder Launcher as a Standard Action to give the following effect for the rest of the Scene: Whenever you apply an Item to a target using this Wonder Launcher, that target gains the Illuminate Ability for one full round.\n» Magnetic: This item may be loaded into a Cap Cannon to provide two Bean Cap Ammo. When fired, these Bean Caps cannot miss.\n» Threaded: This item may be loaded into a Cap Cannon to provide two Glue Cap Ammo. When fired, they affect a Blast 2 instead of a single target.\n» Zapper: This item may be loaded into a Cap Cannon as a single Net Cap Ammo. Targets trapped by this Net Cap are Suppressed while trapped. Targets immune to Electric-Type attacks are immune to this effect."
           }
         ]
       },
@@ -4107,55 +4053,52 @@
         "name": "Engineer",
         "features": [
           {
-            "name": "Researcher",
-            "Source": "Do Porygon Dream of Mareep",
-            "Engineer": {
-              "name": "Engineer",
-              "Prerequisites": "Engineer Research Field, Pokébot Training",
-              "Frequency": "At-Will — Extended Action",
-              "Effect": "You may craft any Engineer Recipe for which you qualify"
+            "name": "Engineer",
+            "Prerequisites": "Engineer Research Field, Pokébot Training",
+            "Frequency": "At-Will — Extended Action",
+            "Effect": "You may craft any Engineer Recipe for which you qualify",
+            "Source": "Do Porygon Dream of Mareep"
+          },
+          {
+            "name": "Robofighter",
+            "Prerequisites": "Engineer, Adept Technology Education",
+            "Frequency": "Bind 2 AP — Standard Action",
+            "Effect": "As long as this Feature is Bound, you can command your Pokébot using a Standard Action rather than a Pokémon turn. Your Pokébots may still only act once a round."
+          },
+          {
+            "name": "Overclock",
+            "Prerequisites": "Engineer, Expert Technology Education",
+            "Frequency": "Scene — Swift Action",
+            "Target": "Your Pokébot",
+            "Effect": "The target is cured of all Persistent Statuses, resets all negative Combat Stages to default, and gains two Ticks of Temporary Hit Points. For the rest of the Scene, it deals and takes additional damage with all attacks equal to your Technology Education Rank."
+          },
+          {
+            "name": "Experimental AI",
+            "Prerequisites": "Engineer, Master Tech Education",
+            "Frequency": "Static",
+            "Effect": "Increase the maximum complexity of all Pokébots you create by 2, and increase the maximum complexity of Pokébots you can control by 2."
+          },
+          {
+            "name": "Engineer Recipes",
+            "Robotics 101": {
+              "name": "Robotics 101",
+              "Prerequisites": "Engineer",
+              "Effect": "You can create a Small Pokébot for $1000, a Medium Pokébot for $2000, or a Large Pokébot for $3000. Pokébots you create begin at Level 5. You can create and install Basic Combat and Basic Utility Parts for Pokébots."
             },
-            "Robofighter": {
-              "name": "Robofighter",
-              "Prerequisites": "Engineer, Adept Technology Education",
-              "Frequency": "Bind 2 AP — Standard Action",
-              "Effect": "As long as this Feature is Bound, you can command your Pokébot using a Standard Action rather than a Pokémon turn. Your Pokébots may still only act once a round."
+            "Firmware Update": {
+              "name": "Firmware Update",
+              "Prerequisites": "Robofighter",
+              "Effect": "You can create and install Advanced Combat and Advanced Utility Parts for Pokébots."
             },
-            "Overclock": {
-              "name": "Overclock",
-              "Prerequisites": "Engineer, Expert Technology Education",
-              "Frequency": "Scene — Swift Action",
-              "Target": "Your Pokébot",
-              "Effect": "The target is cured of all Persistent Statuses, resets all negative Combat Stages to default, and gains two Ticks of Temporary Hit Points. For the rest of the Scene, it deals and takes additional damage with all attacks equal to your Technology Education Rank."
+            "Kitbash King": {
+              "name": "Kitbash King",
+              "Prerequisites": "Overclocked",
+              "Effect": "You can create and install Sympathetic Drives and Repair Nanites for Pokébots."
             },
-            "Experimental AI": {
-              "name": "Experimental AI",
-              "Prerequisites": "Engineer, Master Tech Education",
-              "Frequency": "Static",
-              "Effect": "Increase the maximum complexity of all Pokébots you create by 2, and increase the maximum complexity of Pokébots you can control by 2."
-            },
-            "Engineer Recipes": {
-              "name": "Engineer Recipes",
-              "Robotics 101": {
-                "name": "Robotics 101",
-                "Prerequisites": "Engineer",
-                "Effect": "You can create a Small Pokébot for $1000, a Medium Pokébot for $2000, or a Large Pokébot for $3000. Pokébots you create begin at Level 5. You can create and install Basic Combat and Basic Utility Parts for Pokébots."
-              },
-              "Firmware Update": {
-                "name": "Firmware Update",
-                "Prerequisites": "Robofighter",
-                "Effect": "You can create and install Advanced Combat and Advanced Utility Parts for Pokébots."
-              },
-              "Kitbash King": {
-                "name": "Kitbash King",
-                "Prerequisites": "Overclocked",
-                "Effect": "You can create and install Sympathetic Drives and Repair Nanites for Pokébots."
-              },
-              "Futuretech": {
-                "name": "Futuretech",
-                "Prerequisites": "Experimental AI",
-                "Effect": "You can create and install Wired Compatibility Cores for Pokébots."
-              }
+            "Futuretech": {
+              "name": "Futuretech",
+              "Prerequisites": "Experimental AI",
+              "Effect": "You can create and install Wired Compatibility Cores for Pokébots."
             }
           }
         ]
@@ -4164,50 +4107,47 @@
         "name": "Jailbreaker",
         "features": [
           {
-            "name": "Researcher",
-            "Source": "Do Porygon Dream of Mareep",
-            "Jailbreaker": {
-              "name": "Jailbreaker",
-              "Prerequisites": "Jailbreaker Research Field, Basic Balls",
-              "Frequency": "At-Will — Extended Action",
-              "Effect": "You may craft any Poké Ball Case Recipe for which you qualify."
-            },
-            "Poké Ball Mods": {
-              "name": "Poké Ball Mods",
+            "name": "Jailbreaker",
+            "Prerequisites": "Jailbreaker Research Field, Basic Balls",
+            "Frequency": "At-Will — Extended Action",
+            "Effect": "You may craft any Poké Ball Case Recipe for which you qualify.",
+            "Source": "Do Porygon Dream of Mareep"
+          },
+          {
+            "name": "Poké Ball Mods",
+            "Prerequisites": "Jailbreaker",
+            "Frequency": "Static",
+            "Effect": "You may craft any of the Poké Ball Modifications on the next page."
+          },
+          {
+            "name": "Fusion Cases",
+            "Prerequisites": "Jailbreaker, Master Technology Education",
+            "Frequency": "At-Will — Extended Action",
+            "Effect": "You combine two different Poké Ball Cases into a single Fusion Case with both effects and types. Fusion Cases may not be used as Ingredients for this Feature."
+          },
+          {
+            "name": "Case Specialist",
+            "Prerequisites": "Jailbreaker, Adept Technology Education",
+            "Frequency": "1 AP — Swift Action",
+            "Trigger": "You hit a target with a Poké Ball with a Spray, Flash, Bounce, or Zap Case applied to it.",
+            "Effect": "The Case has additional effects according to its type(s).\n» Spray Case: After resolving the effects of the Case, the target loses a Tick of Health Points for each Persistent or Volatile Status Affliction they have. This may only affect a target once per Scene.\n» Flash Case: The Case uses the Move Flash as a Burst 2 instead of a Cone 2\n» Bounce Case: The Poké Ball bounces an additional time. This may not cause it to hit a target more than once.\n» Zap Case: The target can only use At-Will actions until the end of their next turn. This may only affect a target once per Scene."
+          },
+          {
+            "name": "Jailbreaker Recipes",
+            "Basic Cases": {
+              "name": "Basic Cases",
               "Prerequisites": "Jailbreaker",
-              "Frequency": "Static",
-              "Effect": "You may craft any of the Poké Ball Modifications on the next page."
+              "Effect": "You may create a Contest Case, Lock Case, or Medicine Case for $200."
             },
-            "Fusion Cases": {
-              "name": "Fusion Cases",
-              "Prerequisites": "Jailbreaker, Master Technology Education",
-              "Frequency": "At-Will — Extended Action",
-              "Effect": "You combine two different Poké Ball Cases into a single Fusion Case with both effects and types. Fusion Cases may not be used as Ingredients for this Feature."
+            "Trick Cases": {
+              "name": "Trick Cases",
+              "Prerequisites": "Case Specialist",
+              "Effect": "You may create a Spray Case, Flash Case, or Bounce Case for $400."
             },
-            "Case Specialist": {
-              "name": "Case Specialist",
-              "Prerequisites": "Jailbreaker, Adept Technology Education",
-              "Frequency": "1 AP — Swift Action",
-              "Trigger": "You hit a target with a Poké Ball with a Spray, Flash, Bounce, or Zap Case applied to it.",
-              "Effect": "The Case has additional effects according to its type(s).\n» Spray Case: After resolving the effects of the Case, the target loses a Tick of Health Points for each Persistent or Volatile Status Affliction they have. This may only affect a target once per Scene.\n» Flash Case: The Case uses the Move Flash as a Burst 2 instead of a Cone 2\n» Bounce Case: The Poké Ball bounces an additional time. This may not cause it to hit a target more than once.\n» Zap Case: The target can only use At-Will actions until the end of their next turn. This may only affect a target once per Scene."
-            },
-            "Jailbreaker Recipes": {
-              "name": "Jailbreaker Recipes",
-              "Basic Cases": {
-                "name": "Basic Cases",
-                "Prerequisites": "Jailbreaker",
-                "Effect": "You may create a Contest Case, Lock Case, or Medicine Case for $200."
-              },
-              "Trick Cases": {
-                "name": "Trick Cases",
-                "Prerequisites": "Case Specialist",
-                "Effect": "You may create a Spray Case, Flash Case, or Bounce Case for $400."
-              },
-              "Advanced Cases": {
-                "name": "Advanced Cases",
-                "Prerequisites": "Fusion Cases",
-                "Effect": "You may create a Zap Case for $500, a Devil Case for $1000, or a Storage Case for $5000."
-              }
+            "Advanced Cases": {
+              "name": "Advanced Cases",
+              "Prerequisites": "Fusion Cases",
+              "Effect": "You may create a Zap Case for $500, a Devil Case for $1000, or a Storage Case for $5000."
             }
           }
         ]
@@ -4216,61 +4156,58 @@
         "name": "Upgrader",
         "features": [
           {
-            "name": "Researcher",
-            "Source": "Do Porygon Dream of Mareep",
-            "Upgrader": {
-              "name": "Upgrader",
-              "Prerequisites": "Upgrader Research Field, Novice Medicine Edu, Novice Technology Edu",
-              "Frequency": "At-Will — Extended Action",
-              "Effect": "You may craft any Augmentation Recipe for which you qualify and install them on yourself and willing Pokémon and Trainers."
+            "name": "Upgrader",
+            "Prerequisites": "Upgrader Research Field, Novice Medicine Edu, Novice Technology Edu",
+            "Frequency": "At-Will — Extended Action",
+            "Effect": "You may craft any Augmentation Recipe for which you qualify and install them on yourself and willing Pokémon and Trainers.",
+            "Source": "Do Porygon Dream of Mareep"
+          },
+          {
+            "name": "Emergency Reactivation",
+            "Prerequisites": "Upgrader, Adept Technology Edu",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "You or your Pokémon suffer Augmentation Shock",
+            "Effect": "The triggering user does not suffer Augmentation Shock and their Augmentations are not disabled. This Feature may affect a target only once per Scene."
+          },
+          {
+            "name": "Efficient Installation",
+            "Prerequisites": "Upgrader, Expert Technology Edu",
+            "Frequency": "Static",
+            "Effect": "You and your Pokémon gain a +2 boost to their maximum Augmentation Capacity and count their used Capacity as 2 lower for the purposes of Augmentation Shock. You and your Pokémon can install multiple Augmentations in the same Slot."
+          },
+          {
+            "name": "Experimental Designs",
+            "Prerequisites": "Upgrader, Master Technology Edu",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "You or your Pokémon with Augmentations",
+            "Effect": "Choose an Augmentation the target has and apply the upgrade below. Experimental Designs may affect a target twice.\n» Enhanced Sight: The user gains the X-Ray Vision Capability.\n» Smart Vision: The user learns the Move Feint without taking a Move Slot.\n» Synthetic Muscle: The user recovers from Injuries twice as fast and heals one more Injury per day.\n» Embedded Weaponry: The weapon is Fine and gains Deadly Strike as a Master Move.\n» Wired Reflexes: The user gains one more Reflex Point per Scene and may also spend Reflex Points to gain +2 Critical Hit Range for one full round.\n» Medical Nanobots: Once a Scene, the user may cure themselves of all Persistent Status Afflictions as a Standard Action.\n» Dermal Plating: The user may also activate Dermal Plating to resist Special Damage.\n» Thermal-Optic Camo: While active, the user is invisible to Aura Reading and Thought Detection."
+          },
+          {
+            "name": "Upgrader Recipes",
+            "Datajack": {
+              "name": "Datajack",
+              "Prerequisites": "Upgrader",
+              "Effect": "You may build and install the Datajack Augmentaion for $250."
             },
-            "Emergency Reactivation": {
-              "name": "Emergency Reactivation",
-              "Prerequisites": "Upgrader, Adept Technology Edu",
-              "Frequency": "1 AP — Free Action",
-              "Trigger": "You or your Pokémon suffer Augmentation Shock",
-              "Effect": "The triggering user does not suffer Augmentation Shock and their Augmentations are not disabled. This Feature may affect a target only once per Scene."
+            "Eye Augments": {
+              "name": "Eye Augments",
+              "Prerequisites": "Upgrader",
+              "Effect": "You may build and install the Enhanced Sight Augmentation for $1000 and Smart Vision Augmentation for $1500."
             },
-            "Efficient Installation": {
-              "name": "Efficient Installation",
-              "Prerequisites": "Upgrader, Expert Technology Edu",
-              "Frequency": "Static",
-              "Effect": "You and your Pokémon gain a +2 boost to their maximum Augmentation Capacity and count their used Capacity as 2 lower for the purposes of Augmentation Shock. You and your Pokémon can install multiple Augmentations in the same Slot."
+            "Limb Augments": {
+              "name": "Limb Augments",
+              "Prerequisites": "Emergency Reactivation",
+              "Effect": "You build and install the Synthetic Muscle Augmentation for $1000 and the Embedded Weaponry Augmentation for $2000."
             },
-            "Experimental Designs": {
-              "name": "Experimental Designs",
-              "Prerequisites": "Upgrader, Master Technology Edu",
-              "Frequency": "At-Will — Extended Action",
-              "Target": "You or your Pokémon with Augmentations",
-              "Effect": "Choose an Augmentation the target has and apply the upgrade below. Experimental Designs may affect a target twice.\n» Enhanced Sight: The user gains the X-Ray Vision Capability.\n» Smart Vision: The user learns the Move Feint without taking a Move Slot.\n» Synthetic Muscle: The user recovers from Injuries twice as fast and heals one more Injury per day.\n» Embedded Weaponry: The weapon is Fine and gains Deadly Strike as a Master Move.\n» Wired Reflexes: The user gains one more Reflex Point per Scene and may also spend Reflex Points to gain +2 Critical Hit Range for one full round.\n» Medical Nanobots: Once a Scene, the user may cure themselves of all Persistent Status Afflictions as a Standard Action.\n» Dermal Plating: The user may also activate Dermal Plating to resist Special Damage.\n» Thermal-Optic Camo: While active, the user is invisible to Aura Reading and Thought Detection."
+            "Body Augments": {
+              "name": "Body Augments",
+              "Prerequisites": "Efficient Installation",
+              "Effect": "You may build and install the Medical Nanobots Augmentation for $1000 and the Wired Reflexes Augmentation for $1500."
             },
-            "Upgrader Recipes": {
-              "name": "Upgrader Recipes",
-              "Datajack": {
-                "name": "Datajack",
-                "Prerequisites": "Upgrader",
-                "Effect": "You may build and install the Datajack Augmentaion for $250."
-              },
-              "Eye Augments": {
-                "name": "Eye Augments",
-                "Prerequisites": "Upgrader",
-                "Effect": "You may build and install the Enhanced Sight Augmentation for $1000 and Smart Vision Augmentation for $1500."
-              },
-              "Limb Augments": {
-                "name": "Limb Augments",
-                "Prerequisites": "Emergency Reactivation",
-                "Effect": "You build and install the Synthetic Muscle Augmentation for $1000 and the Embedded Weaponry Augmentation for $2000."
-              },
-              "Body Augments": {
-                "name": "Body Augments",
-                "Prerequisites": "Efficient Installation",
-                "Effect": "You may build and install the Medical Nanobots Augmentation for $1000 and the Wired Reflexes Augmentation for $1500."
-              },
-              "Dermal Augments": {
-                "name": "Dermal Augments",
-                "Prerequisites": "Experimental Designs",
-                "Effect": "You may build and install the Dermal Plating Augmentation for $2000 and the Thermal-Optic Camo Augmentation for $4000."
-              }
+            "Dermal Augments": {
+              "name": "Dermal Augments",
+              "Prerequisites": "Experimental Designs",
+              "Effect": "You may build and install the Dermal Plating Augmentation for $2000 and the Thermal-Optic Camo Augmentation for $4000."
             }
           }
         ]
