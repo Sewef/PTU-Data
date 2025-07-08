@@ -327,13 +327,23 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
 
   /* ---------- champs simples --------------------------------------- */
   Object.entries(feat).forEach(([k, v]) => {
-    if (["name", "Category", "Source", "source"].includes(k)) return;
-    if (v && typeof v === "object") return;                // géré plus bas
-    body.insertAdjacentHTML(
-      "beforeend",
-      `<p><strong>${k}:</strong> ${v.toString().replaceAll("\n", "<br>")}</p>`
-    );
+    if (["name", "children", "Source", "source", "Category"].includes(k)) return;
+    if (v == null || typeof v === "object") return;
+
+    // ────────── si c’est l’Effect et qu’il contient du HTML ──────────
+    if (k === "Effect" && /<\s*table/i.test(v)) {
+      body.insertAdjacentHTML(
+        "beforeend",
+        `<div class="mb-2"><strong>Effect:</strong><br>${v}</div>` // v directement en HTML
+      );
+    } else {
+      body.insertAdjacentHTML(
+        "beforeend",
+        `<p><strong>${k}:</strong> ${v.toString().replaceAll("\n", "<br>")}</p>`
+      );
+    }
   });
+
 
   /* ---------- sous-features imbriquées ----------------------------- */
   addSubFeatures(feat, clsMeta, body, isGeneral);
