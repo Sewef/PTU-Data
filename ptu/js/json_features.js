@@ -368,8 +368,3 @@ function addSubFeatures(obj, clsMeta, container, isGeneral) {
     addSubFeatures(val, clsMeta, container, isGeneral);
   });
 }
-
-
-
-// ------------------------- INIT -------------------------------------------
-loadClasses("/ptu/data/features/features_core.json");
