@@ -5281,39 +5281,39 @@
   "Ninja": {
     "name": "Ninja",
     "category": "Supernatural",
-    "source": "Core",
+    "source": "Homebrew",
     "branches": [
       {
         "name": "Default",
         "features": [
           {
-            "name": "Ninja",
-            "Tags": "[Class][+Speed]",
-            "Prerequisites": "Novice Stealth, Novice Combat",
+            "Tags": "[Class][+Speed][Gift]",
+            "Prerequisites": "Novice Stealth",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Double Team and Poison Powder."
+            "Effect": "You learn the Moves Double Team and Poison Powder.",
+            "Bonus": "You gain the Sneak's Tricks Edge, even if you do not meet the prerequisites."
           },
           {
             "name": "Ninja's Arsenal",
             "Tags": "[+Speed]",
             "Prerequisites": "Ninja",
             "Frequency": "At-Will — Extended Action",
-            "Effect": "You may craft an Antidote, Smoke Ball, Caltrops, or Toxic Caltrops for $100."
+            "Effect": "You may craft an Antidote, Smoke Ball, Caltrops, or Toxic Caltrops for $100. You are treated as if you know the Moves Smokescreen, Spikes, and Toxic Spikes for any Features or Prerequisites."
           },
           {
             "name": "Poison Weapons",
             "Tags": "[+Speed][Weapon]",
             "Prerequisites": "Ninja, Adept Stealth",
-            "Frequency": "1 AP — Free Action",
-            "Trigger": "You make a Weapon Attack.",
-            "Effect": "The attack or Move Poisons its targets on 16+, and you may have it deal Poison-Type Damage if you wish."
+            "Frequency": "Static",
+            "Effect": "You learn the Moves Cross Poison and Poison Fang. You may use these Moves as Weapon Attacks when wielding Melee or Short Range Weapons."
           },
           {
             "name": "Genjutsu",
             "Tags": "[+Speed]",
             "Prerequisites": "Ninja, Adept Stealth",
             "Frequency": "At-Will — Standard Action",
-            "Effect": "You form an Illusion around yourself. This Illusion may be used to hide yourself in a shroud of darkness if in darkness, or to make yourself look like a mundane object (such as a crate, potted plant, or similar). The Illusion can even fool Aura, concealing you from Aura Sight for its duration. However, the Illusion requires complete concentration, and is broken if you take any actions at all. Anyone that interacts with the Illusion directly may make an Occult Education or Intuition Check with a DC equal to 10 plus your Stealth Rank; if they succeed, the Illusion is broken."
+            "Effect": "You form an Illusion around yourself. This Illusion may be used to hide yourself in a shroud of darkness if in darkness, or to make yourself look like a mundane object (such as a crate, potted plant, or similar). The Illusion can even fool Aura, concealing you from Aura Sight for its duration. However, the Illusion requires complete concentration, and is broken if you take any actions at all. Anyone that interacts with the Illusion directly may make an Occult Education or Intuition Check with a DC equal to 10 plus your Stealth Rank; if they succeed, the Illusion is broken.",
+            "Bonus": "You gain the Blender Capability."
           },
           {
             "name": "Utility Drop",
@@ -5321,14 +5321,14 @@
             "Prerequisites": "Ninja’s Arsenal, Expert Stealth",
             "Frequency": "At-Will — Swift Action",
             "Trigger": "You Shift",
-            "Effect": "You may use a Smoke Ball, Caltrops, or Toxic Caltrops as a Free action during your Shift. Instead of the Move's usual area of effect, you leave one square of Smokescreen, Spikes, or Toxic Spikes on each square you leave as you Shift. Once you place 8 meters of Smoke, Spikes, or Toxic Spikes you may not place any more."
+            "Effect": "You may use a Smoke Ball, Caltrops, or Toxic Caltrops as a Free Action during your Shift. Instead of the Move's usual area of effect, you leave one square of Smokescreen, Spikes, or Toxic Spikes on each square you leave as you Shift. Once you have placed 8 meters of Smoke, Spikes, or Toxic Spikes, you may not place any more."
           },
           {
             "name": "Weightless Step",
             "Tags": "[+Speed]",
             "Prerequisites": "Ninja, Expert Stealth",
             "Frequency": "Static",
-            "Effect": "You gain the Infiltrator Ability."
+            "Effect": "Choose Infiltrator or Quick Feet. You gain the chosen Ability."
           },
           {
             "name": "Kinjutsu",
@@ -5344,7 +5344,7 @@
   "Oracle": {
     "name": "Oracle",
     "category": "Supernatural",
-    "source": "Core",
+    "source": "Homebrew",
     "branches": [
       {
         "name": "Default",
@@ -5354,7 +5354,7 @@
             "Tags": "[Class][+Special Defense]",
             "Prerequisites": "Mystic Senses, Novice Perception",
             "Frequency": "Static",
-            "Effect": "You gain the Pickup Ability."
+            "Effect": "You gain the Forewarn Ability."
           },
           {
             "name": "Divination",
@@ -5363,12 +5363,10 @@
             "Frequency": "Daily x3 — Extended Action",
             "Effect": "You may perform an Augury or Scrying.",
             "Augury": {
-              "name": "Augury",
               "Target": "Self",
               "Effect": "The user has a vision, dream, or similar that may depict past, present, or future events. The clarity of the dream may vary, as well as the user’s ability to remember it. See the next page for more details (p.187)."
             },
             "Scrying": {
-              "name": "Scrying",
               "Target": "An item you are touching, or your current location",
               "Effect": "You see visions of what has happened to the target over the last 24 hours. The images may be jumbled or unclear, to the discretion of your GM. See the next page for more details (p.187)."
             }
@@ -5378,7 +5376,7 @@
             "Tags": "[+Special Defense]",
             "Prerequisites": "Oracle",
             "Frequency": "Static",
-            "Effect": "You can see through Illusions. This means you can spot Illusions from the Illusionist capability, Illusion Ability, and Genjutsu Feature as being fake. You are immune to Moves with the Illusion keyword, Double Team cannot be activated against you, and you bypass Substitutes. As a Standard Action, you can create a Burst 4, dispelling all Illusion effects within."
+            "Effect": "You gain the Darkvision capability, and you may see through Invisibility and Illusions. You are Immune to and ignore the effects of foes' Moves with the Illusion keyword, and these Moves may not be activated against you. You may target characters removed from the field due to Ghost Step, Phasing, or any Ghost-Type Move as if they were in the square from which they disappeared, and you ignore the effects of the Blender and Stealth Capabilities. Additionally, when you spend AP to increase an Accuracy roll, you gain a +2 bonus instead of +1(this bonus stacks with Instinctive Aptitude)."
           },
           {
             "name": "Small Prophecies",
@@ -5397,10 +5395,11 @@
           },
           {
             "name": "Two-Second Preview",
-            "Tags": "[+Special Defense]",
-            "Prerequisites": "3 Oracle Features, Expert Perception",
+            "Tags": "[+Special Defense][Gift]",
+            "Rank 1 Prerequisites": "2 Oracle Features, Adept Perception",
+            "Rank 2 Prerequisites": "Prescience",
             "Frequency": "Static",
-            "Effect": "You gain the Instinct Ability."
+            "Effect": "Each Rank, you gain one of Dive or All-Seeing Eyes, and one of Hawkeye or Saw That Coming, even if you do not meet the prerequisites."
           },
           {
             "name": "Prescience",
@@ -5417,7 +5416,7 @@
   "Sage": {
     "name": "Sage",
     "category": "Supernatural",
-    "source": "Core",
+    "source": "Homebrew",
     "branches": [
       {
         "name": "Default",
@@ -5426,9 +5425,10 @@
             "name": "Sage",
             "Tags": "[Class][+HP]",
             "Prerequisites": "Novice Occult Education",
-            "Frequency": "At-Will — Standard Action",
+            "Frequency": "X AP — Standard Action",
             "Target": "An ally within 5 meters",
-            "Effect": "The target gains Damage Reduction equal to your Occult Education Rank doubled or their Tick Value, whichever is higher, for one full round. Multiple uses of Sage from different Trainers do not stack on one target."
+            "Effect": "The target gains Damage Reduction equal to your Occult Education Rank doubled or their Tick Value, whichever is higher, for one full round. If used as a Standard Action on your turn to target one Ally, Sage costs 0 AP. However, you may pay 1 AP to use Sage as an Interrupt, or you may pay 1 AP to use Sage on two different Allies. You may spend 2 AP for both of these effects.",
+            "Note": "Multiple uses of Sage from different Trainers do not stack on the same target."
           },
           {
             "name": "Sacred Shield",
@@ -5450,22 +5450,22 @@
             "Prerequisites": "Sacred Shield or Mystic Defense, Adept Occult Education",
             "Frequency": "1 AP — Free Action",
             "Target": "An ally activates one of your Moves with the Blessing Keyword.",
-            "Effect": "The triggering ally gains an additional benefit as follows, depending on the Move used. The benefit takes effect after the Blessing and the attack that triggered it are resolved.\n» Reflect: +1 Defense Combat Stage\n» Light Screen: +1 Sp. Defense Combat Stage\n» Safeguard: +1 Evasion\n» Lucky Chant: +1 Accuracy"
+            "Effect": "The triggering ally gains an additional benefit as follows, depending on the Move used. The benefit takes effect before the Blessing and the attack that triggered it are resolved.\n» Reflect: +1 Defense Combat Stage\n» Light Screen: +1 Sp. Defense Combat Stage\n» Safeguard: +1 Evasion\n» Lucky Chant: +1 Accuracy"
           },
           {
-            "name": "Lay on Hands",
+            "name": "Mountain Of Faith",
             "Tags": "[+HP]",
             "Prerequisites": "Sage, Expert Occult Education",
             "Frequency": "Static",
-            "Effect": "Choose Blessed Touch or Healer. You gain the Chosen Ability."
+            "Effect": "Choose Wishmaster or Soothing Tone. You gain the Chosen Ability and learn its Connected Move."
           },
           {
             "name": "Highly Responsive to Prayers",
             "Tags": "[+HP]",
-            "Prerequisites": "Lay on Hands",
+            "Prerequisites": "Mountain of Faith",
             "Frequency": "Scene x3 — Free Action",
-            "Trigger": "You use the Blessed Touch or Healer Ability on an ally, or an ally receives an Injury",
-            "Effect": "You may use the Sage Feature as a Free Action targeting the triggering ally. Multiple instances of Sage's effect that you use may stack when used this way."
+            "Trigger": "You use Wish or Heal Bell, or an ally receives an Injury",
+            "Effect": "You may use the Sage Feature as a Free Action targeting one of the triggering allies. Multiple instances of Sage's effect that you use may stack when used this way."
           },
           {
             "name": "Divine Wind",
@@ -5727,7 +5727,7 @@
   "Rune Master": {
     "name": "Rune Master",
     "category": "Game of Throhs",
-    "source": "Game of Throhs",
+    "source": "Homebrew",
     "branches": [
       {
         "name": "Default",
@@ -5735,40 +5735,34 @@
           {
             "name": "Rune Master",
             "Tags": "[Class][+Attack or Special Attack]",
-            "Prerequisites": "Own 2 Unown, Novice Occult Education",
+            "Prerequisites": "Basic Runes",
             "Frequency": "Static",
-            "Effect": "You gain the Gather Unown capability, and your Unown gain the Letter Press Capability. When using Gather Unown, you are treated as a level 20 Pokémon."
-          },
-          {
-            "name": "Hidden Power",
-            "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Rune Master",
-            "Frequency": "Static",
-            "Effect": "You learn the Move Hidden Power. Whenever you use Hidden Power, it may be either Physical or Special, adding the appropriate Attack Stat."
+            "Effect": "You learn the Move Hidden Power. You gain an additional instance of Hidden Power when you have 3 Rune Master Features, and another when you have 5, to a total of 3 instances. Whenever you use Hidden Power, it may be either Physical or Special, adding the appropriate Attack Stat."
           },
           {
             "name": "Rewrite",
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Hidden Power",
+            "Prerequisites": "Rune Master",
             "Frequency": "Daily — Extended Action",
             "Target": "Self or a willing Pokémon with Hidden Power.",
-            "Effect": "Reroll the Type for an instance of Hidden Power the target knows If you target an Unown, you may transform the target into a different letter."
+            "Effect": "Reroll the Type for an instance of Hidden Power that the target knows. If you target an Unown, you may transform it into a different letter."
           },
           {
             "name": "Glyph",
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Rune Master",
-            "Frequency": "At-Will — Extended Action",
-            "Target": "Your Unown that is not part of a Prime Unown",
-            "Effect": "You may set the target Unown against any flat surface, and turn the Unown into a glyph. Glyphs have HP equal to your Level, and no other stats. Glyphs last until they are destroyed or intentionally de-activated, at which time the Unown returns to Unown Space, disappearing forever. You may have a number of active Glyphs equal to your Occult Education Rank. When setting a Glyph, you may have the Glyphs be either visible or invisible, as you prefer. At any time, as a Standard Action, you may Channel any Glyph youhave set down. This causes the Glyph's eye to open and become visible if it was not. While you are channeling a Glyph, you are able to see through the Glyph, listen through it, and project your voice through it."
+            "Prerequisites": "Rune Master, Tag Scribe",
+            "Frequency": "At-Will — Special",
+            "Effect": "As an Extended Action, you may set a Cleanse Tag against any ﬂat surface, turning it into a Glyph. Glyphs have HP equal to your Level, and no other stats. Glyphs last until they are destroyed or intentionally deactivated. You may have a number of active Glyphs equal to your Occult Education Rank. When setting a Glyph, you may have the Glyphs be either visible or invisible, as you prefer. At any time, as a Standard Action, you may Channel any Glyph you have set down. This causes the Glyph to become visible if it was not. While you are channeling a Glyph, you are able to see through the Glyph, listen through it, and project your voice through it. Alternatively, you may pay 1 AP to set a Glyph as a Swift Action.",
+            "Bonus": "Your Unown gain the Letter Press Capability."
           },
           {
             "name": "Words of Power",
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Adept Occult Education, Hidden Power",
-            "Frequency": "Static",
+            "Prerequisites": "Rune Master, Adept Occult Education",
+            "Frequency": "At-Will – Free Action",
             "Trigger": "You or your Pokémon use Hidden Power",
-            "Effect": "Instead of a Burst, you may choose to have Hidden Power be a 1 Target Melee, 1 Target 6m, or Cone 2. Additionally, you and your Prime Unown always have STAB on Hidden Power as if you or they were of the same Type."
+            "Effect": "Instead of a Burst, you may choose to have Hidden Power be a 1 Target Melee, 1 Target 6m, Line 3, or Cone 2.",
+            "Bonus": "You and your Prime Unown always have STAB on Hidden Power as if you were of the same Type."
           },
           {
             "name": "Alarm Runes",
@@ -5776,23 +5770,30 @@
             "Prerequisites": "Glyph",
             "Frequency": "Bind 1 AP — Standard Action",
             "Target": "A Glyph you have put down, regardless of distance",
-            "Effect": "You give the Glyph a Trigger, which may be as vague or as precise as you like (i.e.: \"If anyone enters the room\", \"if James peeks in my diary\", \"If a Torkoal uses Surf while I scream the word 'Gelato'\"). If the trigger is met within the Rune's 30 meters, the Rune will become visible, and will begin screeching loudly, alerting anyone nearby. You are capable of hearing this screeching noise in your head, regardless of your current distance. Glyphs will remember their Triggers as long as the AP spent on the Feature is Bound. If you have the Explosive Runes or Sentry Runes Features, you may instruct this Glyph to automatically use the chosen Feature as a Free Action when it is triggered if you have the AP to spend. You may have only one Glyph use Explosive Runes per round, even if multiple Runes are triggered at the same time."
+            "Effect": "You give the Glyph a Trigger, which may be as vague or as precise as you like. If the trigger is met within 30 meters of the Rune, the Rune will become visible and begin screeching loudly, alerting anyone nearby. You are capable of hearing this screeching noise in your head, regardless of your current distance, and you may deactivate it as a Free Action. Glyphs will remember their Triggers as long as the AP spent on the Feature is Bound. If you have the Explosive Runes Feature, you may instruct this Glyph to automatically use Hidden Power as a Free Action when it is triggered for 1 AP. You may have only one Glyph use Explosive Runes per round, even if multiple Runes are triggered at the same time. Each Alarm Rune may only be triggered once per Scene."
           },
           {
             "name": "Explosive Runes",
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Adept Occult Education, Glyph, Hidden Power",
-            "Frequency": "1 AP — Standard Action",
+            "Prerequisites": "Glyph, Adept Occult Education",
+            "Frequency": "2 AP – Shift Action",
             "Target": "A Glyph you have put down, regardless of distance",
-            "Effect": "You may use Hidden Power, originating the attack from the location of the targeted Glyph. Use your own Stats and Hidden Power values to calculate damage. Using this Feature causes the Glyph to become visible and glow for a minute afterwards."
+            "Effect": "You may use Hidden Power, originating from the location of the targeted Glyph. Use your own Stats and Hidden Power values to calculate damage. Using this Feature causes the Glyph to become visible and glow for a minute afterwards. Additionally, whenever you use Hidden Power, you may have it originate from any Glyph within X meters of you. X is your Occult Education Rank."
           },
           {
-            "name": "Sentry Runes",
+            "name": "Unlocked Potential",
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Expert Occult Education, Explosive Runes, Hidden Power",
-            "Frequency": "1 AP — Standard Action",
-            "Target": "A Glyph you have put down, regardless of distance",
-            "Effect": "The target Glyph becomes an Unown of your Trainer Level, its Stats allocated as you wish. This Unown knows a single instance of Hidden Power, identical to your own. The Glyph can fight on its own without needing you to command it. At the end of the encounter, or after 5 minutes, the Unown returns to Unown Space forever, destroying the Glyph. You may only have one Glyph active in this way at a time; if various Alarm Glyphs are triggered to become Sentries at the same time, only one does so; the others will do so once the previous one has been destroyed if the Trigger condition is still being met."
+            "Prerequisites": "Words of Power, Expert Occult Education",
+            "Frequency": "Scene x2 – Swift Action",
+            "Trigger": "You or your Pokémon use Hidden Power",
+            "Effect": "For this use, Hidden Power gains a bonus to damage equal to your Occult Education Rank, and its Range(including any Area of Effect Ranges) is increased by +1. If you used it as a 1 Target 6m Move, it becomes a Ranged Blast 2. If this Feature is used in combination with Ley Lines, the range is not increased, but all Legal Targets are Vulnerable against the attack and for one Full Round afterward if the attack hits. Unlocked Potential may be used only once per target per Scene."
+          },
+          {
+            "name": "Ley Lines",
+            "Prerequisites": "4 Rune Master Features including Glyph, Master Occult Education",
+            "Frequency": "Scene x2 – Standard Action",
+            "Trigger": "2 or more squares that contain Glyphs within X meters of you",
+            "Effect": "Create a closed polygon by drawing straight lines connecting yourself and the targeted squares, then use the Move Hidden Power. For this use, Hidden Power gains the Friendly Keyword, and affects all Legal Targets within the area of the created polygon. X is equal to your Occult Education Rank doubled."
           }
         ]
       }
@@ -5801,7 +5802,7 @@
   "Arcanist": {
     "name": "Arcanist",
     "category": "Game of Throhs",
-    "source": "Game of Throhs",
+    "source": "Homebrew",
     "branches": [
       {
         "name": "Default",
@@ -5809,10 +5810,10 @@
           {
             "name": "Arcanist",
             "Tags": "[Class][+Special Attack][Weapon]",
-            "Prerequisites": "Arcane Training",
+            "Prerequisites": "Adept Occult Education",
             "Frequency": "At-Will — Extended Action",
             "Target": "An Arcane Weapon",
-            "Effect": "You create a Soul Bond with the target Weapon. You may make a Soul Bond with only one weapon at a time. If you create a new Soul Bond, previously Soul Bound weapons lose the Bond. Soul Bound Weapons gain the following benefits:\n» Increase the Damage Base and Effect Range of Struggle Attacks and Arcane Weapon Moves made with your Soul Bonded Weapon by +1 for each Occult Education Rank you have above Novice, up to a maximum of +3 at Master Rank.\n» As a Shift Action, you may beckon your Soul Bonded Weapon to your hands if it is within 10 meters. If it is being held by someone else who does not want to let go of the weapon, make an Occult vs Athletics Opposed Check. If you win, they their lose grip on your Weapon and it flies to your hand as normal"
+            "Effect": "You create a Soul Bond with the target Weapon. You may make a Soul Bond with only one weapon at a time. If you create a new Soul Bond, previously Soul Bound weapons lose the Bond. Soul Bound Weapons gain the following benefits:\n» Increase the Effect Range of Struggle Attacks and Arcane Weapon Moves made with your Soul Bonded Weapon by +1 for each Occult Education Rank you have above Novice, up to a maximum of +3 at Master Rank. Additionally, you gain a bonus to Damage with these Moves equal to half your Occult Education Rank.\n» As a Shift Action, you may beckon your Soul Bonded Weapon to your hands if it is within 10 meters. If it is being held by someone else who does not want to let go of the weapon, make an Occult vs Athletics Opposed Check. If you win, they their lose grip on your Weapon and it flies to your hand as normal."
           },
           {
             "name": "Metamagic",
@@ -5836,8 +5837,7 @@
             "Rank 1 Prerequisites": "Metamagic",
             "Rank 2 Prerequisites": "Authentic Thaumaturgy",
             "Frequency": "Static",
-            "Rank 1 Effect": "Select a Rank 1 Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate.",
-            "Rank 2 Effect": "Select a Rank 1 Power Manipulation. This Manipulation maybe used twice per Scene without spending AP to activate. OR Select a Rank 2 power Manipulation. This Manipulation may be used once per Scene without activating Authentic Thaumaturgy's Frequency."
+            "Effect": "Each Rank, select a Power Manipulation of the same Signature Manipulation Rank you are taking or lower.\n» For Rank 1 Manipulations, this Manipulation may be used twice per Scene without spending AP to activate.\n» For Rank 2 Manipulations, this Manipulation may be used once per Scene without activating Authentic Thaumaturgy’s Frequency."
           },
           {
             "name": "Recoup Energy",
@@ -5853,48 +5853,38 @@
             "Prerequisites": "Arcanist, Master Occult Education",
             "Frequency": "Bind 2 AP — Extended Action",
             "Target": "Your Soul Bonded Weapon",
-            "Effect": "Choose one Novice and one Expert Arcane Weapon Move. Your Soul Bonded Weapon adds those Moves to your Move List as long as this Feature is Bound. You may only Bind one instance of this Feature at a time, and you may not have multiple instances of the same Move in your Move List."
+            "Effect": "Choose one Adept and one Master Arcane Weapon Move. Your Soul Bonded Weapon adds those Moves to your Move List as long as this Feature is Bound. You may only Bind one instance of this Feature at a time, and you may not have multiple instances of the same Move in your Move List."
           },
           {
             "name": "Power Manipulations",
             "Rank 1 Power Manipulations": {
-              "name": "Rank 1 Power Manipulations",
               "Energy Finesse": {
-                "name": "Energy Finesse",
                 "Condition": "The triggering Move is an Arcane Weapon Move and has an Effect Range",
                 "Effect": "In addition to its existing Effect Range, the Effect triggers on all natural Even-Numbered Rolls."
               },
               "Warp Energy": {
-                "name": "Warp Energy",
                 "Condition": "The triggering Move is a Cone, Line, Burst, or Blast",
                 "Effect": "Instead of its usual range, you may use the Move as if it had a range of Burst 1, Cone 2, Close Blast 2, Line 4, or 2-Target with a range of 4."
               },
               "Directed Barrier": {
-                "name": "Directed Barrier",
                 "Effect": "You gain Damage Reduction equal to your Tick Value against the targets of the triggering Move for one fullround."
               },
               "Power Overdrive": {
-                "name": "Power Overdrive",
                 "Effect": "If the triggering attack hits, you lose a Tick of Hit Points, and the triggering attack deals bonus damage equal to your Tick Value plus your Occult Education Rank. This loss of Hit Points cannot be prevented in any way."
               }
             },
             "Rank 2 Power Manipulations": {
-              "name": "Rank 2 Power Manipulations",
               "Berserk Blow": {
-                "name": "Berserk Blow",
                 "Condition": "The Triggering Move is 1-Target",
                 "Effect": "The Move causes the target to become Vulnerable for 1 full round, and the Move’s Critical Hit Range is increased by +3."
               },
               "Energy Link": {
-                "name": "Energy Link",
                 "Effect": "For one full round, the next Normal-Type attack to hit the target instead deals Damage of the same Type as this Attack. If the Attack Energy Link was applied to was already Normal-Typed, for one full round, the next Normal-Type attack to hit the target instead deals damage as if it was one step more Super-Effective."
               },
               "Enlarged Power": {
-                "name": "Enlarged Power",
                 "Effect": "The Move gains the keyword Burst 1 if Melee 1-Target, or Blast 2 if ranged 1-Target. If the Move is already a Burst, Blast, Cone, or Line, increase the size of the Move’s Range by 1."
               },
               "Lock of Fate": {
-                "name": "Lock of Fate",
                 "Effect": "The Move cannot be Intercepted, and targets may not avoid the attack in any way if hits (such as via Dodge, Parry, Shield Moves, etc). Evasion still applies, and the Move can still Miss."
               }
             }
@@ -5969,7 +5959,7 @@
   "Marksman": {
     "name": "Marksman",
     "category": "Game of Throhs",
-    "source": "Game of Throhs",
+    "source": "Homebrew",
     "branches": [
       {
         "name": "Default",
@@ -5993,7 +5983,7 @@
             "Tags": "[+Attack][Weapon]",
             "Prerequisites": "Marksman, Adept Combat",
             "Frequency": "1 AP — Standard Action",
-            "Effect": "You may make two Struggle Attacks with a -2 penalty to Accuracy, each targeting the same foe. If the first attack gains the benefit of Aiming Down the Sights or Clear Shot, the second attack also gains the same benefits for free."
+            "Effect": "You may make two Struggle Attacks, each targeting the same foe. If the first attack gains the benefit of Aiming Down the Sights or Clear Shot, the second attack also gains the same benefits for free."
           },
           {
             "name": "Overwatch",
@@ -6014,8 +6004,8 @@
             "name": "Crippling Shot",
             "Tags": "[+Attack][Weapon]",
             "Prerequisites": "Marksman, Expert Perception or Combat",
-            "Frequency": "2 AP — Full Action",
-            "Effect": "Make a Ranged Struggle Attack attack with a -2 penalty to Accuracy. If you hit, the attack deals Damage as if it was resisted one step, but the target becomes Slowed, loses 1 Speed Combat Stage, and you initiate a Trip Maneuver against the target. You may use your Perception Skill to resolve the Opposed Check if you wish."
+            "Frequency": "2 AP — Standard Action",
+            "Effect": "Make a Ranged Weapon Attack with a Damage Base of 8 or lower. If you hit, the target is Slowed for 1 Full Round, loses 1 Speed Combat Stage, and you initiate a Trip Maneuver against the target. You must still hit with the Trip Maneuver, and you may use your Perception Skill to resolve the Opposed Check if you wish."
           },
           {
             "name": "Dead-Eye Shot",
@@ -6189,7 +6179,7 @@
   "Shade Caller": {
     "name": "Shade Caller",
     "category": "Game of Throhs",
-    "source": "Game of Throhs",
+    "source": "Homebrew",
     "branches": [
       {
         "name": "Default",
@@ -6206,7 +6196,7 @@
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Shade Caller",
             "Frequency": "Static",
-            "Effect": "You gain the Twisted Power Ability."
+            "Effect": "You gain the Conqueror Ability."
           },
           {
             "name": "Living Shadow",
@@ -6214,6 +6204,13 @@
             "Prerequisites": "Shade Caller",
             "Frequency": "Static",
             "Effect": "Your own Shadow can attack others; you may have your Dark Type Moves originate from any Square adjacent to you. If you are fighting among complete darkness, you may have your Dark Type Moves originate from any square within X meters that is completely dark, where X is the higher of your Guile or Stealth Rank. Attacks originating from Living Shadow do not trigger effects that rely on being hit with a melee attack."
+          },
+          {
+            "name": "World of Darkness",
+            "Tags": "[+Attack or Special Attack]",
+            "Prerequisites": "Shade Caller, Adept Guile or Stealth",
+            "Frequency": "2 AP — Standard Action",
+            "Effect": "You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the encounter. All targets without Darkvision attacking from or into the Shifting Darkness receive a -3 penalty to Accuracy. You may count Shifting Darkness as complete darkness for the purposes of activating your Living Shadow. As a Static effect, you also gain the Darkvision Capability."
           },
           {
             "name": "Sharpen Shadows",
@@ -6228,13 +6225,6 @@
             "Prerequisites": "Sharpen Shadows, Master Guile or Stealth",
             "Frequency": "Static",
             "Effect": "You learn Night Daze and Punishment"
-          },
-          {
-            "name": "World of Darkness",
-            "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Shade Caller, Adept Guile or Stealth",
-            "Frequency": "2 AP — Standard Action",
-            "Effect": "You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the encounter. All targets without Darkvision attacking from or into the Shifting Darkness receive a -3 penalty to Accuracy. You may count Shifting Darkness as complete darkness for the purposes of activating your Living Shadow. As a Static effect, you also gain the Darkvision Capability."
           },
           {
             "name": "Dark Soul",
@@ -6529,7 +6519,7 @@
   "Apparition": {
     "name": "Apparition",
     "category": "Game of Throhs",
-    "source": "Game of Throhs",
+    "source": "Homebrew",
     "branches": [
       {
         "name": "Default",
@@ -6553,14 +6543,15 @@
             "Tags": "[+Attack]",
             "Prerequisites": "Apparition",
             "Frequency": "Static",
-            "Effect": "Choose Pressure or Frighten. You gain the chosen Ability."
+            "Effect": "Choose Pressure, Omen, or Frighten. You gain the chosen Ability"
           },
           {
             "name": "Silent Assassin",
             "Tags": "[+Attack][Weapon]",
             "Prerequisites": "Apparition, Adept Intimidate or Occult Education",
             "Frequency": "Bind 2 AP — Standard Action",
-            "Effect": "While this Feature is Bound, your Struggle Attacks and Weapon Attacks deal Ghost-Type Damage, and you gain the Dead Silent Capability."
+            "Effect": "While this Feature is Bound, your Struggle Attacks and Weapon Attacks Flinch targets on 18+, and may deal Ghost-Type Damage if you wish.",
+            "Bonus": "You gain the Dead Silent Capability, and a bonus to Stealth checks equal to half your Intimidate or Occult Education Rank."
           },
           {
             "name": "Shadow Form",
@@ -6571,7 +6562,6 @@
           },
           {
             "name": "Phantom Menace",
-            "Tags": "[+Attack][Weapon]",
             "Prerequisites": "Shadow Arms, Expert Intimidate or Occult Education",
             "Frequency": "Static",
             "Effect": "You gain the Moves Shadow Claw and Phantom Force. You may use these Moves as Weapon Attacks when wielding Melee Weapons."
@@ -6582,7 +6572,7 @@
             "Prerequisites": "Shadow Arms, Master Intimidate or Occult Education",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "You hit with an Apparition Move or Ghost-Typed Weapon Attack",
-            "Effect": "After one full round, repeat the triggering attack against one target as a Free Action, regardless of range. If this attack hits, it deals damage as if it were resisted one step further. Haunted Wounds may only affect a target once per Scene."
+            "Effect": "After one full round, repeat the triggering attack against one target as a Free Action, regardless of range. If this attack hits, it deals damage as if it were resisted one step further. Haunted Wounds may only aﬀect a target once per Scene."
           }
         ]
       }
@@ -6727,7 +6717,7 @@
   "Earth Shaker": {
     "name": "Earth Shaker",
     "category": "Game of Throhs",
-    "source": "Game of Throhs",
+    "source": "Homebrew",
     "branches": [
       {
         "name": "Default",
@@ -6737,14 +6727,14 @@
             "Tags": "[Class][+Defense]",
             "Prerequisites": "Elemental Connection (Ground), Novice Intuition, Novice Focus",
             "Frequency": "Static",
-            "Effect": "Pick two of Bulldoze, Mud Shot, or Sand-Attack. You learn the chosen Moves."
+            "Effect": "Choose two of Bulldoze, Mud Shot, Mud-Slap, or Sand-Attack. You learn the chosen Moves."
           },
           {
             "name": "Earthen Bond",
             "Tags": "[+Defense]",
             "Prerequisites": "Earth Shaker",
             "Frequency": "Static",
-            "Effect": "You gain the Tremorsense Capability, and you gain Naturewalk for Cave, Mountain and Desert."
+            "Effect": "You gain the Tremorsense and Groundshaper Capabilities, and you gain Naturewalk for Cave, Mountain and Desert."
           },
           {
             "name": "Earth Mother's Blessing",
@@ -6752,29 +6742,36 @@
             "Rank 1 Prerequisites": "Earth Shaker, Adept Focus or Intuition",
             "Rank 2 Prerequisites": "Ground Out, Master Focus or Intuition",
             "Frequency": "Static",
-            "Effect": "Each Rank, choose Arena Trap or Lightning Rod. You gain the chosen Ability."
+            "Effect": "Each Rank, choose Mud Dweller, Arena Trap, or Lightning Rod. You gain the chosen Ability."
+          },
+          {
+            "name":"Wall Of Earth",
+            "Tags": "[+Defense]",
+            "Prerequisites": "Earth Shaker",
+            "Frequency": "X AP – Special",
+            "Effect": "You create up to 4 meters of wall within 8 Meters. All 4 meters must be adjacent with at least one other space of the wall. You may have up to 8 Meters of wall active at any time. You may use this Feature on your own turn as a Standard Action for no AP cost, or, once per Scene, you may activate this Feature as a Standard Action Interrupt for 2 AP. You may only use this Feature in areas with sufficient sources of soil or mud nearby."
+          },
+          {
+            "name": "Ground Out",
+            "Tags": "[+Defense]",
+            "Prerequisites": "Earth Shaker, Expert Focus or Intuition",
+            "Frequency": "Static",
+            "Effect": "Choose two of Drill Run, Spikes, Magnitude, or Mud Bomb. You learn the chosen Moves."
           },
           {
             "name": "Earthshifter",
             "Tags": "[+Defense]",
             "Prerequisites": "Ground Out",
-            "Frequency": "2 AP — Swift Action",
+            "Frequency": "Scene x2 – Swift Action",
             "Trigger": "You hit with a damaging Ground Type Move",
-            "Effect": "You initiate a Trip Maneuver against 1 target of the Move. The Maneuver automatically hits, and you may use your Focus or Intuition for the opposed check"
-          },
-          {
-            "name": "Ground Out",
-            "Tags": "[+Defense]",
-            "Prerequisites": "Earth Shaker, Expert Intuition, Expert Focus",
-            "Frequency": "Static",
-            "Effect": "Pick two of Drill Run, Magnitude, or Mud Bomb. You learn the chosen Moves."
+            "Effect": "You initiate a Trip Maneuver against all targets of the Move. The Maneuver automatically hits, and you may use your Focus or Intuition for the opposed check."
           },
           {
             "name": "Tectonic Shift",
             "Tags": "[+Defense]",
-            "Prerequisites": "Ground Out, Master Intuition, Master Focus",
+            "Prerequisites": "Ground Out, Master Intuition or Master Focus",
             "Frequency": "Static",
-            "Effect": "Pick two of Earthquake, Earth Power, or Sand Tomb. You learn the chosen Moves."
+            "Effect": "Pick two of Earthquake, Shore Up, Earth Power, or Sand Tomb. You learn the chosen Moves."
           }
         ]
       }
@@ -6962,7 +6959,7 @@
   "Stone Warrior": {
     "name": "Stone Warrior",
     "category": "Game of Throhs",
-    "source": "Game of Throhs",
+    "source": "Homebrew",
     "branches": [
       {
         "name": "Default",
@@ -6972,27 +6969,27 @@
             "Tags": "[Class][+Defense]",
             "Prerequisites": "Elemental Connection (Rock), Novice Combat, Novice Survival",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Rock Tomb and Wide Guard."
+            "Effect": "Choose two of Accelerock, Rock Tomb, and Wide Guard. You gain the chosen Moves."
           },
           {
             "name": "Stone Stance",
             "Tags": "[+Defense]",
             "Prerequisites": "Stone Warrior",
             "Frequency": "Bind 2 AP — Standard Action",
-            "Effect": "You adopt one of the stances below, gaining the effects of the stance while this Feature remains bound. You may switch your active Stance as a Standard Action without rebinding your AP. The benefits from this Feature do not apply if you are not standing on a solid surface, such as deep mud or snow, or if you are outright swimming or even flying.\n» Falling Boulder Stance: You gain a +5 bonus to all Damage Rolls, but lose 5 HP from Recoil whenever you hit with an attack.\n» Moon Mountain Stance: Your initiative is lowered by -5, but you gain 5 Damage Reduction and are immune to Push or Pull effects.\n» Roiling Earth Stance: After a successful Intercept action, you may make a Struggle Attack against a foe within range."
+            "Effect": "You adopt one of the stances below, gaining the effects of the stance while this Feature remains bound. You may switch your active Stance as a Standard Action without rebinding your AP. The benefits from this Feature do not apply if you are not standing on a solid surface, such as deep mud or snow, or if you are outright swimming or even ﬂying.\n» Falling Boulder Stance: You gain a +1 bonus to Accuracy with Rock-type attacks and a +5 bonus to all Damage Rolls, but lose 5 HP from Recoil whenever you hit with an attack.\n» Moon Mountain Stance: Your initiative is lowered by -5, but you gain 5 Damage Reduction and are immune to Push or Pull effects.\n» Roiling Earth Stance: After a successful Intercept action, you may make a Struggle Attack or use Accelerock against a foe within range as a Free Action. You must know Accelerock in order to use it."
           },
           {
             "name": "Rock Power",
             "Tags": "[Ranked 2][+Defense]",
-            "Rank 1 Prerequisites": "Stone Warrior, Adept Combat or Survival",
+            "Rank 1 Prerequisites": "Adept Combat or Survival",
             "Rank 2 Prerequisites": "Expert Combat or Survival",
             "Frequency": "Static",
-            "Effect": "Each Rank, choose one of Sturdy, Rock Head, Run Up, or Sand Veil. You gain the chosen Ability. If you choose Sand Veil, you may consider sand a \"solid surface\" for the purposes of Stone Stance."
+            "Effect": "Each Rank, choose one of Cave Crasher, Sturdy, Rock Head, or Sand Veil. You gain the chosen Ability. If you choose Sand Veil, you may consider sand a \"solid surface\" for the purposes of Stone Stance."
           },
           {
             "name": "Shards of Stone",
             "Tags": "[+Defense]",
-            "Prerequisites": "Stone Warrior, Expert Combat or Survival",
+            "Prerequisites": "Expert Combat or Survival",
             "Frequency": "Static",
             "Effect": "You learn the Moves Rock Slide and Stealth Rock"
           },
