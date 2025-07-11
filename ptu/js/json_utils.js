@@ -72,8 +72,19 @@ function renderItemAsCard(item, depth = 0) {
             str += `<h3>${value ?? ""}</h3>`;
         } else {
             const safeValue = (value ?? "").toString().replace(/\n/g, "<br>");
-            str += `<strong>${key}</strong>: ${safeValue}<br>`;
+        
+            // --- CAS SPÉCIAL DAMAGE BASE ---
+            if (key === "Damage Base") {
+                // On met en gras tout ce qui est avant le premier ":"
+                const [beforeColon, ...afterParts] = safeValue.split(':');
+                const afterText = afterParts.length ? afterParts.join(':') : "";
+                str += `<strong>${beforeColon}</strong>: ${afterText}<br>`;
+            } else {
+                // Rendu normal pour tous les autres champs
+                str += `<strong>${key}</strong>: ${safeValue}<br>`;
+            }
         }
+        
     });
 
     return str;
