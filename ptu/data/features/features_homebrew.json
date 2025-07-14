@@ -389,6 +389,55 @@
             "Effect": "During this Extended Rest, Pokémon and Trainers in your care gain the benefits listed below. The AP Drain cost from triggering this Feature is applied after the Extended Rest is completed and AP Drain has otherwise been restored.\n» They heal 1/8th of their Max Hit Points per half hour of rest instead of 1/16th (does not stack with Bandages).\n» If the Extended Rest lasts at least 6 hours, they may remove 1 Injury.",
             "Source": "Erratum September 2015",
             "Category": "Uncategorized"
+          },
+          {
+            "name": "Combat Medic",
+            "Tags": "[+Defense or Special Defense]",
+            "Prerequisites": "Adept Medicine Education, Novice Combat",
+            "Frequency": "1 AP – Free Action",
+            "Trigger": "You apply a Restorative Item",
+            "Effect": "You may make a Struggle Attack against an adjacent foe as a Free Action. This Struggle Attack counts as an Attack of Opportunity for any Features or Edges you may have, but does not count against the number of Attacks of Opportunity you may make per round.",
+            "Source": "Homebrew"
+          },
+          {
+            "name": "Mixed Power",
+            "Tags": "[+Attack or Special Attack]",
+            "Prerequisites": "Level 5, at least 10 Attack and Special Attack",
+            "Frequency": "Static",
+            "Effect": "You gain the Twisted Power Ability.",
+            "Source": "Homebrew"
+          },
+          {
+            "name": "Speed Demon",
+            "Tags": "[+Speed]",
+            "Prerequisites": "Speed's My Game, Expert Acrobatics or Athletics; 20 Speed",
+            "Frequency": "Scene – Swift Action",
+            "Effect": "You gain 3 Speed Tokens. If not spent, these tokens disappear at the end of the Scene. You can spend a Speed Token as a Free Action whenever:\n» You are hit by an attack, to gain DR against that attack equal to your Speed Evasion;\n» You make an Accuracy Check, to add half your Speed Evasion to the result;\n» You hit with a damaging melee attack, to gain a bonus to damage equal to 2 + your Speed Evasion",
+            "Source": "Homebrew"
+          },
+          {
+            "name": "Ow The Edge",
+            "Tags": "[+Any]",
+            "Prerequisites": "None",
+            "Frequency": "Static",
+            "Effect": "You gain two Edges for which you qualify.",
+            "Source": "Homebrew"
+          },
+          {
+            "name": "Natural Selection",
+            "Tags": "[+HP]",
+            "Prerequisites": "Expert Survival; Traveler or Survival Drive",
+            "Frequency": "Static",
+            "Effect": "You learn the Moves Secret Power and Nature Power. When you take this Feature, choose Physical or Special. Whenever you use these moves, they are treated as the chosen Damage Class, adding the appropriate Attack Stat.",
+            "Source": "Homebrew"
+          },
+          {
+            "name": "All-Seeing Eyes",
+            "Tags": "[+Special Defense]",
+            "Prerequisites": "Adept Perception",
+            "Frequency": "Static",
+            "Effect": "You gain the Perception Ability.",
+            "Source": "Homebrew"
           }
         ]
       }
@@ -3506,7 +3555,7 @@
             "Prerequisites": "Artificer Research Field, Gem Lore",
             "Frequency": "At-Will — Extended Action",
             "Effect": "You may use any Crystal Artificer Recipe for which you qualify.",
-            "Source":"Homebrew"
+            "Source": "Homebrew"
           },
           {
             "name": "Crystal Resonance",
@@ -6555,7 +6604,7 @@
             "Effect": "Each Rank, choose Mud Dweller, Arena Trap, or Lightning Rod. You gain the chosen Ability."
           },
           {
-            "name":"Wall Of Earth",
+            "name": "Wall Of Earth",
             "Tags": "[+Defense]",
             "Prerequisites": "Earth Shaker",
             "Frequency": "X AP – Special",
