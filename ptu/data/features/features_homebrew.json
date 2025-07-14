@@ -2161,11 +2161,10 @@
           },
           {
             "name": "Tyrant's Roar",
-            "Prerequisites": "Tyrant's Roar, Adept Command or Intimidate",
-            "Tags": "[Orders][Stratagem]",
-            "Frequency": "Bind 2 AP — Standard Action",
-            "Target": "Your Dragon-Type Pokémon",
-            "Effect": "While this Feature is Bound, the target gains X Damage Reduction against Dragon, Steel, Flying, and Rock-Type attacks, and gains a +X Bonus to Damage Rolls with Dragon-Typed attacks against targets of these Types. X is equal to your Type-Linked Skill Rank. These bonuses are only applied once, even if a target has two or more of these Types."
+            "Prerequisites": "Type Ace (Dragon)",
+            "Frequency": "Scene x2 — Free Action",
+            "Trigger": "Your Pokémon uses a Dragon-Type Move",
+            "Effect": "Your Pokémon creates a Burst 2, Slowing all Foes in the area for 1 Full Round and causing those foes to lose 1 Combat Stage in all Stats in which they have positive Combat Stages."
           },
           {
             "name": "Highlander",
