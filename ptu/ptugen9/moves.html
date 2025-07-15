@@ -8,43 +8,60 @@
   <script src="/ptu/js/jquery-3.7.1.min.js"></script>
   <script src="/ptu/js/popper.min.js"></script>
   <script src="/ptu/js/bootstrap.min.js"></script>
-  <script src="/ptu/js/json_utils.js"></script>
+  <script src="/ptu/js/json_moves.js"></script>
   <script src="/ptu/js/helpers.js"></script>
 
-  <title>PTU Data - Moves Gen 9</title>
+
+  <title>PTU Data - Moves</title>
 </head>
 
 <body>
   <div w3-include-html="header.html"></div>
-  <div class="container py-4">
-
-    <div class="row g-3" id="keywords">
-      <div class="col-12">
-        <h1>Keywords Gen 9 (A-Z)</h1>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#keywords-container"
-          aria-expanded="false" aria-controls="keywords-container">
-          Show / Hide
-        </button>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3">
+        <div id="sidebar" class="list-group">
+          <!-- types dynamiques ici -->
+        </div>
       </div>
 
-      <div id="keywords-container" class="collapse mt-3 row g-3 w-100"></div>
-    </div>
+      <!-- Contenu principal -->
+      <div class="col-md-8">
 
-    <div class="row g-3" id="moves">
-      <div class="col-12">
-        <h1>Moves Gen 9 (A-Z)</h1>
-        <div class="mb-3 w-100">
-          <input type="text" id="card-search" class="form-control" placeholder="Search moves...">
+        <div id="keywords" class="container py-4">
+          <h1>Keywords</h1>
+          <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#keywords-section" aria-expanded="false" aria-controls="keywords-section">
+            Show / Hide
+          </button>
+          <div id="keywords-section" class="collapse">
+            <div class="mb-3">
+              <input type="text" id="keyword-search" class="form-control" placeholder="Search keywords...">
+            </div>
+            <div id="keywords-container" class="row g-3 w-100"></div>
+          </div>
+        </div>
+
+        <div id="cards-container" class="container py-4">
+          <h1>Moves</h1>
+          <div class="mb-3">
+            <input type="text" id="card-search" class="form-control" placeholder="Search moves...">
+          </div>
+          <div id="moves-container" class="row g-3 w-100"></div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div id="moves-container" class="row g-3 w-100"></div>
 
-    <script>
-      loadJsonAsCard("/ptu/data/moves/keywords_9G.json", document.getElementById("keywords-container"), 2);
-      loadJsonAsCard("/ptu/data/moves/moves_9G.json", document.getElementById("moves-container"));
-    </script>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      loadKeywordsAsCard("/ptu/data/moves/keywords_9G.json", document.getElementById("keywords-container"), 2);
+      loadMovesAsCard("/ptu/data/moves/moves_9G.json", document.getElementById("moves-container"));
+    });
+  </script>
   </div>
 
   <script>
@@ -52,6 +69,5 @@
     setActive("Moves");
   </script>
 </body>
-
 
 </html>

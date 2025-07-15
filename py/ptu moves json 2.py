@@ -13,10 +13,10 @@ def extraire_blocs_moves(pdf_path):
             # Extraire les deux colonnes
             gauche = page.within_bbox((0, 0, width / 2, height)).extract_text()
             droite = page.within_bbox((width / 2, 0, width, height)).extract_text()
-            texte = (gauche or "") + "\n" + (droite or "")
+            texte = (gauche or "") + "/n" + (droite or "")
 
             # Regrouper par bloc commençant par "Move:"
-            blocs = re.split(r'\n(?=Move\s*:)', texte)
+            blocs = re.split(r'/n(?=Move/s*:)', texte)
             for bloc in blocs:
                 if "Move:" in bloc:
                     blocs_moves.append(bloc.strip())
@@ -26,20 +26,20 @@ def extraire_blocs_moves(pdf_path):
 def formatter_move_en_json(bloc):
     lines = bloc.splitlines()
     move = {
-        "name": None,
-        "type": None,
-        "frequency": None,
-        "ac": None,
-        "damage_base": None,
-        "class": None,
-        "range": None,
-        "effect": None,
-        "contest_type": None,
-        "contest_effect": None,
-        "trigger": None,
-        "special": None,
-        "set_up_effect": None,
-        "resolution_effect": None
+        "Name": None,
+        "Type": None,
+        "Frequency": None,
+        "AC": None,
+        "Damage Base": None,
+        "Class": None,
+        "Range": None,
+        "Effect": None,
+        "Contest Type": None,
+        "Contest Effect": None,
+        "Trigger": None,
+        "Special": None,
+        "Set-Up Effect": None,
+        "Resolution Effect": None
     }
 
     # Parsing ligne par ligne
@@ -117,22 +117,20 @@ def formatter_move_en_json(bloc):
     if not "Effect" in move:
         print(f"Attention: Move '{move.get('Name', 'Unknown')}' n'a pas d'effet défini.")
         move["Effect"] = "None."
-        return move
-    return None
 
     # Validation minimale
-    if "name" in move and ("effect" in move or "set_up_effect" in move or "resolution_effect" in move):
+    if "Name" in move and ("Effect" in move or "Set-Up Effect" in move or "Resolution Effect" in move):
         return move
     return None
 
 # 🔁 Utilisation
-pdf_path = "py/Arceus References.pdf"
+pdf_path = "Z:/Perso/PTU 1.05/Partage/Pokédex et Références/7G Alola Dex/SuMo References.pdf"
 blocs_moves = extraire_blocs_moves(pdf_path)
 moves_json = [formatter_move_en_json(bloc) for bloc in blocs_moves]
 moves_json = [m for m in moves_json if m]
 
 # 💾 Sauvegarde
-with open("py/0_output g8.json", "w", encoding="utf-8") as f:
+with open("py/out.json", "w", encoding="utf-8") as f:
     json.dump(moves_json, f, indent=2, ensure_ascii=False)
 
 # 🔍 Aperçu

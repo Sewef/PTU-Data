@@ -763,9 +763,11 @@
         "Type": "Dark",
         "Frequency": "EOT",
         "AC": "2",
-        "Damage Base": "Damage Base 6",
+        "Damage Base": "Damage Base 6: 2d6+8 / 15",
         "Range": "Burst 1",
-        "Effect": "None"
+        "Effect": "None",
+        "Contest Type": "Tough",
+        "Contest Effect": "Steady Performance"
     },
     "Bubble": {
         "Type": "Water",
@@ -3760,13 +3762,15 @@
         "Contest Effect": "Good Show!"
     },
     "Leafage": {
-        "Type": "2",
+        "Type": "Grass",
         "Frequency": "At-Will",
         "AC": "2",
-        "Damage Base": "Damage Base 4",
+        "Damage Base": "Damage Base 4: 1d8+6 / 11",
         "Class": "Physical",
         "Range": "6, 1 Target",
-        "Effect": "None"
+        "Effect": "None",
+        "Contest Type": "Beauty",
+        "Contest Effect": "Steady Performance"
     },
     "Leech Life": {
         "Type": "Bug",
@@ -5113,10 +5117,12 @@
         "Type": "Psychic",
         "Frequency": "Daily x2",
         "AC": "4",
-        "Damage Base": "Damage Base 16",
+        "Damage Base": "Damage Base 16: 5d10+20 / 50",
         "Class": "Special",
         "Range": "Line 8, Smite, Exhaust",
-        "Effect": "None"
+        "Effect": "None",
+        "Contest Type": "Cool",
+        "Contest Effect": "Exhausting Act"
     },
     "Protect": {
         "Type": "Normal",

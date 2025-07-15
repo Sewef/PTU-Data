@@ -88,7 +88,7 @@ def formatter_move_en_json(bloc):
     return move if "Name" in move and "Effect" in move else None
 
 # 🔁 Utilisation
-pdf_path = 'py/SuMoBasics.pdf'
+pdf_path = "Z:/Perso/PTU 1.05/Partage/Pokédex et Références/7G Alola Dex/SuMo References.pdf"
 blocs_moves = extraire_blocs_moves(pdf_path)
 moves_json = [formatter_move_en_json(bloc) for bloc in blocs_moves]
 moves_json = [m for m in moves_json if m]
