@@ -759,6 +759,14 @@
         "Contest Type": "Smart",
         "Contest Effect": "Incentives"
     },
+    "Brutal Swing": {
+        "Type": "Dark",
+        "Frequency": "EOT",
+        "AC": "2",
+        "Damage Base": "Damage Base 6",
+        "Range": "Burst 1",
+        "Effect": "None"
+    },
     "Bubble": {
         "Type": "Water",
         "Frequency": "At-Will",
@@ -3751,6 +3759,15 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Good Show!"
     },
+    "Leafage": {
+        "Type": "2",
+        "Frequency": "At-Will",
+        "AC": "2",
+        "Damage Base": "Damage Base 4",
+        "Class": "Physical",
+        "Range": "6, 1 Target",
+        "Effect": "None"
+    },
     "Leech Life": {
         "Type": "Bug",
         "Frequency": "Scene x2",
@@ -3803,16 +3820,6 @@
         "Contest Type": "Beauty",
         "Contest Effect": "Saving Grace"
     },
-    "Light Screen": {
-        "Type": "Psychic",
-        "Frequency": "Scene",
-        "AC": "None",
-        "Class": "Status",
-        "Range": "Blessing",
-        "Effect": "Blessing – Any user affected by Light Screen may activate it when receiving Special Damage to resist the Damage one step. Light Screen may be activated 2 times, and then disappears.",
-        "Contest Type": "Beauty",
-        "Contest Effect": "Sabotage"
-    },
     "Light of Ruin": {
         "Type": "Fairy",
         "Frequency": "Scene",
@@ -3823,6 +3830,16 @@
         "Effect": "None",
         "Contest Type": "Beauty",
         "Contest Effect": "Seen Nothing Yet"
+    },
+    "Light Screen": {
+        "Type": "Psychic",
+        "Frequency": "Scene",
+        "AC": "None",
+        "Class": "Status",
+        "Range": "Blessing",
+        "Effect": "Blessing – Any user affected by Light Screen may activate it when receiving Special Damage to resist the Damage one step. Light Screen may be activated 2 times, and then disappears.",
+        "Contest Type": "Beauty",
+        "Contest Effect": "Sabotage"
     },
     "Liquidation": {
         "Type": "Water",
@@ -5091,6 +5108,15 @@
         "Effect": "Roll 1d6; Present has a Damage Base equal to twice the result. On a result of 1, instead of taking damage, the target gains 20 Hit Points.",
         "Contest Type": "Cute",
         "Contest Effect": "Inversed Appeal"
+    },
+    "Prismatic Laser": {
+        "Type": "Psychic",
+        "Frequency": "Daily x2",
+        "AC": "4",
+        "Damage Base": "Damage Base 16",
+        "Class": "Special",
+        "Range": "Line 8, Smite, Exhaust",
+        "Effect": "None"
     },
     "Protect": {
         "Type": "Normal",

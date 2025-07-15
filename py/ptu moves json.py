@@ -26,18 +26,18 @@ def extraire_blocs_moves(pdf_path):
 def formatter_move_en_json(bloc):
     lines = bloc.splitlines()
     move = {
-        "name": None,
-        "type": None,
-        "frequency": None,
-        "ac": None,
-        "damage_base": None,
-        "class": None,
-        "range": None,
-        "effect": None,
-        "contest_type": None,
-        "contest_effect": None,
-        "trigger": None,
-        "special": None
+        "Name": None,
+        "Type": None,
+        "Frequency": None,
+        "AC": None,
+        "Damage Base": None,
+        "Class": None,
+        "Range": None,
+        "Effect": None,
+        "Contest Type": None,
+        "Contest Effect": None,
+        "Trigger": None,
+        "Special": None
     }
 
     # Parsing ligne par ligne
@@ -51,43 +51,44 @@ def formatter_move_en_json(bloc):
 
         # Champs fixes
         if l.startswith("Move:"):
-            move["name"] = l.split(":", 1)[-1].strip()
+            move["Name"] = l.split(":", 1)[-1].strip()
         elif l.startswith("Type:"):
-            move["type"] = l.split(":", 1)[-1].strip()
+            move["Type"] = l.split(":", 1)[-1].strip()
         elif l.startswith("Frequency:"):
-            move["frequency"] = l.split(":", 1)[-1].strip()
+            move["Frequency"] = l.split(":", 1)[-1].strip()
         elif l.startswith("AC:"):
-            move["ac"] = l.split(":", 1)[-1].strip()
+            move["AC"] = l.split(":", 1)[-1].strip()
         elif l.startswith("Damage Base"):
-            move["damage_base"] = l
+            move["Damage Base"] = l
         elif l.startswith("Class:"):
-            move["class"] = l.split(":", 1)[-1].strip()
+            move["Class"] = l.split(":", 1)[-1].strip()
         elif l.startswith("Range:"):
-            move["range"] = l.split(":", 1)[-1].strip()
+            move["Range"] = l.split(":", 1)[-1].strip()
         elif l.startswith("Trigger:"):
-            move["trigger"] = l.split(":", 1)[-1].strip()
+            move["Trigger"] = l.split(":", 1)[-1].strip()
         elif l.startswith("Special:"):
-            move["special"] = l.split(":", 1)[-1].strip()
+            move["Special"] = l.split(":", 1)[-1].strip()
         elif l.startswith("Effect:"):
             effect_started = True
             effect_lines.append(l.split(":", 1)[-1].strip())
         elif l.startswith("Contest Type:"):
-            move["contest_type"] = l.split(":", 1)[-1].strip()
+            move["Contest Type"] = l.split(":", 1)[-1].strip()
         elif l.startswith("Contest Effect:"):
-            move["contest_effect"] = l.split(":", 1)[-1].strip()
+            move["Contest Effect"] = l.split(":", 1)[-1].strip()
         elif effect_started:
             effect_lines.append(l.strip())
 
     if effect_lines:
-        move["effect"] = " ".join(effect_lines)
+        move["Effect"] = " ".join(effect_lines)
 
     # Nettoyer les champs vides
     move = {k: v for k, v in move.items() if v}
 
-    return move if "name" in move and "effect" in move else None
+    return move if "Name" in move and "Effect" in move and move["Effect"] == "None" else None
+    return move if "Name" in move and "Effect" in move else None
 
 # 🔁 Utilisation
-pdf_path = 'py/Community Gen 9 Homebrew Dex.pdf'
+pdf_path = 'py/SuMoBasics.pdf'
 blocs_moves = extraire_blocs_moves(pdf_path)
 moves_json = [formatter_move_en_json(bloc) for bloc in blocs_moves]
 moves_json = [m for m in moves_json if m]
