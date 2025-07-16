@@ -18,61 +18,105 @@
   <div w3-include-html="header.html"></div>
   <div class="container py-4">
     <div class="row g-3" id="home">
-      <h1>Welcome to the PTU Data Site</h1>
-      <p>This site is dedicated to visualizing data for the Pokémon Tabletop United (PTU) role-playing game.</p>
-      <p>You can explore the different sections to discover moves, abilities, and other useful information.</p>
-      <p>Use the menu at the top to navigate between the different pages.</p>
+      <h1>Welcome to the PTU Data Site for Gen 9!</h1>
+      <button class="btn btn-primary"><a href="../" class="nav-link">Go back to main website</a></button>
+      <div>
+        <p>This site contains the core data for Pokémon Tabletop United (PTU) 1.05, Community Gen 9 Homebrew and Unofficial Balance Patch, including features, edges, capabilities, abilities, moves, and statuses.
+        <p>Classes with Errata only show their latest version in this dataset.</p>
+        <p>List of manuals used:
+          <li>Pokemon Tabletop United 1.05 Core</li>
+          <li>PTU May 2015 Playtest Packet Erratum</li>
+          <li>PTU September 2015 Playtest Packet Erratum</li>
+          <li>February 2016 Playtest Packet Erratum</li>
+          <li>Blessed and the Damned Supplement</li>
+          <li>Do Porygon Dream of Mareep Supplement</li>
+          <li>Game of Throhs Supplement</li>
+          <li>SuMo References (Gen 7)</li>
+          <li>SwSh + Armor_Crown References (Gen 8)</li>
+          <li>Arceus References (Gen 8)</li>
+          <li>Community Gen 9 Homebrew Dex (Gen 9, unofficial)</li>
+          <li>Extremely Unofficial PTU 1.05 'Balance Patch' (unofficial)</li>
+        </p>
 
-      <h2>Abilities Changelog</h2>
-      <ul>
-        <li>
-          <strong>Helper</strong><br>
-          Static<br>
-          <strong>Effect:</strong> Connection - Helping Hand. Whenever the user uses a Move that targets a single ally, that ally gains a +1 Bonus to Accuracy, Evasion, and Skill Checks until the end of the user's next turn.
-        </li>
-        <li>
-          <strong>Pressure</strong><br>
-          Scene - Swift Action<br>
-          <strong>Effect:</strong> All foes within 3 meters become Suppressed.
-        </li>
-        <li>
-          <strong>Life Force</strong><br>
-          Daily x3 – Swift Action<br>
-          <strong>Effect:</strong> The user gains two Ticks of Hit Points.
-        </li>
-        <li>
-          <strong>Absorb Force</strong><br>
-          Scene - Free Action<br>
-          <strong>Effect:</strong> The user takes damage as if the attack was resisted one step further.<br>
-          <strong>Bonus:</strong> The user gains 5 Damage Reduction against Physical Attacks.
-        </li>
-        <li>
-          <strong>Crush Trap</strong><br>
-          Static<br>
-          <strong>Effect:</strong> Connection - Wrap. As long as the user has Dominance in a Grapple, they do not become Vulnerable because of that Grapple. If the user begins their turn as part of a Grapple and has Dominance, they may use the actions listed in the Grapple Maneuver as a Swift Action instead of a Full Action.
-        </li>
-      </ul>
+        <h5>Features Changelog</h5>
+        <p>Features have a "Homebrew" badge when modified, but there is a quick list for clarity</p>
+        <ul>
+          <li><strong>New General Features:</strong> Combat Medic, Mixed Power, Speed Demon, Ow The Edge, Natural
+            Selection, All-Seeing Eyes</li>
+          <li><strong>Changed Classes: </strong> Cheerleader, Enduring Soul, Juggler, Rider, Athlete, Roughneck,
+            Apparition, Arcanist, Earth Shaker, Marksman, Rune Master, Shade Caller, Stone Warrior, Commander,
+            Coordinator, Chronicler, Fashionista, Researcher (Artificer, Occultism, Paleontology, Pokémon Caretaking),
+            Survivalist, Style Expert, Type Ace (Dragon, Fairy, Fighting, Psychic), Ninja, Oracle, Sage</li>
+        </ul>
+        <h5>Abilities Changelog</h5>
+        <p>Abilities have no distinction for Errata or Homebrew</p>
+        <ul>
+          <li>
+            <strong>Helper</strong><br>
+            Static<br>
+            <strong>Effect:</strong> Connection - Helping Hand. Whenever the user uses a Move that targets a single
+            ally, that ally gains a +1 Bonus to Accuracy, Evasion, and Skill Checks until the end of the user's next
+            turn.
+          </li>
+          <li>
+            <strong>Pressure</strong><br>
+            Scene - Swift Action<br>
+            <strong>Effect:</strong> All foes within 3 meters become Suppressed.
+          </li>
+          <li>
+            <strong>Life Force</strong><br>
+            Daily x3 – Swift Action<br>
+            <strong>Effect:</strong> The user gains two Ticks of Hit Points.
+          </li>
+          <li>
+            <strong>Absorb Force</strong><br>
+            Scene - Free Action<br>
+            <strong>Effect:</strong> The user takes damage as if the attack was resisted one step further.<br>
+            <strong>Bonus:</strong> The user gains 5 Damage Reduction against Physical Attacks.
+          </li>
+          <li>
+            <strong>Crush Trap</strong><br>
+            Static<br>
+            <strong>Effect:</strong> Connection - Wrap. As long as the user has Dominance in a Grapple, they do not
+            become Vulnerable because of that Grapple. If the user begins their turn as part of a Grapple and has
+            Dominance, they may use the actions listed in the Grapple Maneuver as a Swift Action instead of a Full
+            Action.
+          </li>
+        </ul>
 
-      <h2>Moves Changelog</h2>
-      <ul>
-        <li><strong>Rage</strong> changed to Damage Base 6: 2d6+8 / 15</li>
-        <li><strong>Astonish</strong> changed to Damage Base 6: 2d6+8 / 15</li>
-        <li><strong>Spark</strong> changed to Damage Base 7: 2d6+10 / 17</li>
-        <li><strong>Mystical Fire</strong> changed to Damage Base 8: 2d8+10 / 19</li>
-        <li><strong>Flying Press</strong> changed to Damage Base 10: 3d8+10 / 24</li>
-        <li><strong>Stored Power, Power Trip, and Spacial Rend</strong> changed to Scene x2 Frequency.</li>
-        <li><strong>Aeroblast and Judgment</strong> changed to Scene Frequency.</li>
-        <li><strong>Shock Wave, Mist Ball, and Luster Purge</strong> changed to EOT Frequency.</li>
-        <li><strong>Seed Flare</strong> gains the Smite and Spirit Surge Keywords.</li>
-        <li><strong>Kinesis</strong> changed to a Swift Action.</li>
-      </ul>
+        <h5>Moves Changelog</h5>
+        <p>Moves have no distinction for Errata or Homebrew</p>
+        <ul>
+          <li><strong>Rage</strong> changed to Damage Base 6: 2d6+8 / 15</li>
+          <li><strong>Astonish</strong> changed to Damage Base 6: 2d6+8 / 15</li>
+          <li><strong>Spark</strong> changed to Damage Base 7: 2d6+10 / 17</li>
+          <li><strong>Mystical Fire</strong> changed to Damage Base 8: 2d8+10 / 19</li>
+          <li><strong>Flying Press</strong> changed to Damage Base 10: 3d8+10 / 24</li>
+          <li><strong>Stored Power, Power Trip, and Spacial Rend</strong> changed to Scene x2 Frequency.</li>
+          <li><strong>Aeroblast and Judgment</strong> changed to Scene Frequency.</li>
+          <li><strong>Shock Wave, Mist Ball, and Luster Purge</strong> changed to EOT Frequency.</li>
+          <li><strong>Seed Flare</strong> gains the Smite and Spirit Surge Keywords.</li>
+          <li><strong>Kinesis</strong> changed to a Swift Action.</li>
+          <li><strong>Steam Eruption</strong> –
+            <strong>Type:</strong> Water –
+            <strong>Frequency:</strong> Scene x2 –
+            <strong>AC:</strong> 3 –
+            <strong>Damage Base 11:</strong> 3d10+10 / 27 –
+            <strong>Class:</strong> Special –
+            <strong>Range:</strong> Burst 1<br>
+            <strong>Effect:</strong> Steam Eruption Burns all Legal Targets on 15+. Steam Eruption may be used even if
+            the user is Frozen, and cures the user and all Legal Targets of the Frozen condition.<br>
+            <strong>Contest Type:</strong> Beauty –
+            <strong>Contest Effect:</strong> Inversed Appeal<br>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <script>
-    includeHTML();
-    setActive("Home");
-  </script>
+    <script>
+      includeHTML();
+      setActive("Home");
+    </script>
 </body>
 
 </html>
