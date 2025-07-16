@@ -35,6 +35,16 @@
     .card-type-Dark     { --type-color: #705746; }
     .card-type-Steel    { --type-color: #B7B7CE; }
     .card-type-Fairy    { --type-color: #D685AD; }
+
+    #sidebar .list-group-item {
+      font-size: 0.9rem;
+      padding: 0.3rem 0.5rem;
+    }
+
+    #sidebar input[type="checkbox"] {
+      transform: scale(0.9);
+      margin-right: 0.4rem;
+    }
   </style>
     
 
@@ -46,17 +56,17 @@
   <div class="container-fluid">
     <div class="row">
       <!-- Sidebar -->
-      <div class="col-md-3">
+      <div class="col-md-2 col-sm-3">
         <div id="sidebar" class="list-group">
           <!-- types dynamiques ici -->
         </div>
       </div>
 
       <!-- Contenu principal -->
-      <div class="col-md-8">
+      <div class="col-md-10">
 
         <div id="keywords" class="container py-4">
-          <h1>Keywords</h1>
+          <h2 class="mt-3 mb-4">Keywords</h2>
           <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse"
             data-bs-target="#keywords-section" aria-expanded="false" aria-controls="keywords-section">
             Show / Hide
@@ -69,16 +79,14 @@
           </div>
         </div>
 
-        <div id="cards-container" class="container py-4">
-          <h1>Moves</h1>
+        <div id="cards-container" class="container">
+          <h2 class="mt-3 mb-4">Moves</h2>
           <div class="mb-3">
             <input type="text" id="card-search" class="form-control" placeholder="Search moves...">
           </div>
           <div id="moves-container" class="row g-3 w-100"></div>
         </div>
-
       </div>
-
     </div>
   </div>
 

@@ -1,4 +1,4 @@
-function buildTypeSidebar(moves) {
+function buildTypeSidebar(moves, container, cols) {
   const sidebar = document.getElementById("sidebar");
   if (!sidebar) return;
 
@@ -21,7 +21,7 @@ function buildTypeSidebar(moves) {
 
   // Listeners
   sidebar.querySelectorAll("input").forEach(input =>
-    input.addEventListener("change", () => filterAndRender(moves))
+    input.addEventListener("change", () => filterAndRender(moves, container, cols))
   );
 
   const sidebarSearch = document.getElementById("sidebar-search");
@@ -54,21 +54,22 @@ function getActiveTypes() {
     .map(el => el.value);
 }
 
-function filterAndRender(allItems) {
-  const query = document.getElementById("card-search")?.value.toLowerCase() || "";
-  const activeTypes = getActiveTypes();
-
-  const filtered = allItems.filter(item => {
-    const matchesQuery = Object.values(item).some(value =>
-      typeof value === "string" && value.toLowerCase().includes(query)
-    );
-
-    const matchesType = activeTypes.length === 0 || activeTypes.includes(item.Type);
-    return matchesQuery && matchesType;
-  });
-
-  renderFilteredCards(filtered, document.getElementById("moves-container"), 3);
-}
+function filterAndRender(allItems, container, cols = 3) {
+    const query = document.getElementById("card-search")?.value.toLowerCase() || "";
+    const activeTypes = getActiveTypes();
+  
+    const filtered = allItems.filter(item => {
+      const matchesQuery = Object.values(item).some(value =>
+        typeof value === "string" && value.toLowerCase().includes(query)
+      );
+  
+      const matchesType = activeTypes.length === 0 || activeTypes.includes(item.Type);
+      return matchesQuery && matchesType;
+    });
+  
+    renderFilteredCards(filtered, container, cols);
+  }
+  
 
 
 function loadMovesAsCard(file, container, cols = 3) {
@@ -86,12 +87,12 @@ function loadMovesAsCard(file, container, cols = 3) {
       }
     });
 
-    buildTypeSidebar(allItems);
-    filterAndRender(allItems);
+    buildTypeSidebar(allItems, container, cols);
+    filterAndRender(allItems, container, cols);
 
     const searchInput = document.getElementById("card-search");
     if (searchInput) {
-      searchInput.oninput = () => filterAndRender(allItems);
+      searchInput.oninput = () => filterAndRender(allItems, container, cols);
     }
   });
 }
@@ -180,7 +181,7 @@ function renderFilteredCards(data, container, cols) {
 
     const type = item.Type || item.type;
     const typeClass = type ? `card-type-${type}` : "";
-    cardDiv.innerHTML = `<div class="card h-100"><div class="card-body ${typeClass}">${cardHTML}</div></div>`;
+    cardDiv.innerHTML = `<div class="card h-100"><div class="card-body ${typeClass} bg-light">${cardHTML}</div></div>`;
 
     container.appendChild(cardDiv);
   });
