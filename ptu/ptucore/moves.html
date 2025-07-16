@@ -11,6 +11,32 @@
   <script src="/ptu/js/json_moves.js"></script>
   <script src="/ptu/js/helpers.js"></script>
 
+  <style>
+    .card-body[class*="card-type-"] {
+      border-left: 6px solid var(--type-color, transparent);
+      border-top-left-radius: var(--bs-border-radius);
+      border-bottom-left-radius: var(--bs-border-radius);
+    }
+    .card-type-Normal   { --type-color: #A8A77A; }
+    .card-type-Fire     { --type-color: #EE8130; }
+    .card-type-Water    { --type-color: #6390F0;}
+    .card-type-Electric { --type-color: #F7D02C; }
+    .card-type-Grass    { --type-color: #7AC74C;  }
+    .card-type-Ice      { --type-color: #96D9D6; }
+    .card-type-Fighting { --type-color: #C22E28; }
+    .card-type-Poison   { --type-color: #A33EA1; }
+    .card-type-Ground   { --type-color: #E2BF65; }
+    .card-type-Flying   { --type-color: #A98FF3; }
+    .card-type-Psychic  { --type-color: #F95587; }
+    .card-type-Bug      { --type-color: #A6B91A; }
+    .card-type-Rock     { --type-color: #B6A136; }
+    .card-type-Ghost    { --type-color: #735797; }
+    .card-type-Dragon   { --type-color: #6F35FC; }
+    .card-type-Dark     { --type-color: #705746; }
+    .card-type-Steel    { --type-color: #B7B7CE; }
+    .card-type-Fairy    { --type-color: #D685AD; }
+  </style>
+    
 
   <title>PTU Data - Moves</title>
 </head>
@@ -59,7 +85,7 @@
   <script>
     window.addEventListener("DOMContentLoaded", function () {
       loadKeywordsAsCard("/ptu/data/moves/keywords_core.json", document.getElementById("keywords-container"), 2);
-      loadMovesAsCard("/ptu/data/moves/moves_core.json", document.getElementById("moves-container"));
+      loadMovesAsCard("/ptu/data/moves/moves_core.json", document.getElementById("moves-container"), 2);
     });
   </script>
   </div>

@@ -177,7 +177,11 @@ function renderFilteredCards(data, container, cols) {
     const cardHTML = renderItemAsCard(item);
     const cardDiv = document.createElement("div");
     cardDiv.className = colClass;
-    cardDiv.innerHTML = `<div class="card h-100"><div class="card-body bg-light">${cardHTML}</div></div>`;
+
+    const type = item.Type || item.type;
+    const typeClass = type ? `card-type-${type}` : "";
+    cardDiv.innerHTML = `<div class="card h-100"><div class="card-body ${typeClass}">${cardHTML}</div></div>`;
+
     container.appendChild(cardDiv);
   });
 }
