@@ -1,58 +1,56 @@
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  document.body.style.display = 'none'; // Hide body initially
-  // Loop through a collection of all HTML elements: 
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    // search for elements with a certain atrribute:
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      // Make an HTTP request using the attribute value as the file name:
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function () {
-        if (this.readyState == 4) {
-          if (this.status == 200) { 
-            elmnt.innerHTML = this.responseText; 
-          }
-          if (this.status == 404) { 
-            elmnt.innerHTML = "Page not found."; 
-          }
-          // Remove the attribute, and call this function once more:
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      // Exit the function: 
+function includeHTML(callback) {
+  const elements = document.querySelectorAll('[w3-include-html]');
+  let total = elements.length;
+  if (total === 0 && callback) callback();
+
+  elements.forEach(el => {
+    const file = el.getAttribute("w3-include-html");
+    if (!file) {
+      total--;
       return;
     }
-  }
-  document.body.style.display = 'block'; // Show body after loading
+
+    fetch(file)
+      .then(resp => {
+        if (!resp.ok) throw new Error("Page not found");
+        return resp.text();
+      })
+      .then(data => {
+        el.innerHTML = data;
+        el.removeAttribute("w3-include-html");
+        total--;
+        if (total === 0 && callback) callback(); // callback après tous les includes
+      })
+      .catch(err => {
+        el.innerHTML = "Include failed.";
+        total--;
+        if (total === 0 && callback) callback();
+      });
+  });
 }
 
-function setActive(content) {
-  // Select all navigation links
+
+function setActive() {
   const navLinks = document.querySelectorAll('.nav-link');
+  const currentPage = window.location.pathname.split("/").pop();
+
   if (navLinks.length === 0) {
-    setTimeout(() => setActive(content), 100); // Retry after 100ms
+    setTimeout(setActive, 100); // Retry after 100ms
     return;
   }
 
-  // Iterate through each link
   navLinks.forEach(link => {
-    // Check if the link's text matches the content
-    if (link.textContent.trim() === content) {
-      // Add the "active" class
-      link.classList.add('active');
-      link.setAttribute('aria-current', 'page');
+    const linkHref = link.getAttribute("href");
+    if (linkHref === currentPage) {
+      link.classList.add("active");
+      link.setAttribute("aria-current", "page");
     } else {
-      // Remove the "active" class from others
-      link.classList.remove('active');
+      link.classList.remove("active");
+      link.removeAttribute("aria-current");
     }
   });
 }
+
 
 function showPageWhenLoaded() {  
   $(function () {

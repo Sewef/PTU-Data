@@ -30,12 +30,12 @@
   <div w3-include-html="header.html"></div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-2 col-sm-3">
         <div id="sidebar" class="list-group">
           <!-- Sidebar dynamique -->
         </div>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-10">
         <div id="cards-container" class="container py-4">
           <!-- Cartes Edges -->
         </div>
@@ -44,9 +44,8 @@
   </div>
 
   <script>
-    includeHTML();
-    setActive("Edges");
-    loadEdges("/ptu/data/edges/edges_core.json");
+    includeHTML(() => setActive());
+    loadEdges("/ptu/data/edges/edges_core.json", document.getElementById("cards-container"), 2);
   </script>
 </body>
 </html>

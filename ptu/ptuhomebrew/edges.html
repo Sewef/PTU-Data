@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,33 +7,45 @@
   <script src="/ptu/js/jquery-3.7.1.min.js"></script>
   <script src="/ptu/js/popper.min.js"></script>
   <script src="/ptu/js/bootstrap.min.js"></script>
-  <script src="/ptu/js/json_utils.js"></script>
+  <script src="/ptu/js/json_edges.js"></script>
   <script src="/ptu/js/helpers.js"></script>
 
   <title>PTU Data - Edges</title>
+  <style>
+    .triangle-toggle::before {
+      content: "";
+      display: inline-block;
+      margin-left: 4px;
+      border-style: solid;
+      border-width: 10px 6px 0 6px;
+      border-color: #666 transparent transparent transparent;
+      transition: transform 0.2s ease-in-out;
+    }
+    .triangle-toggle.open::before {
+      transform: rotate(90deg);
+    }
+  </style>
 </head>
-
 <body>
   <div w3-include-html="header.html"></div>
-  <div class="container py-4">
-    <div class="row g-3" id="edges">
-      <h1>Edges</h1>
-      <div class="mb-3 w-100">
-        <input type="text" id="card-search" class="form-control" placeholder="Search edges...">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2 col-sm-3">
+        <div id="sidebar" class="list-group">
+          <!-- Sidebar dynamique -->
+        </div>
       </div>
-
-      <div id="card-container" class="row g-3 w-100"></div>
-
-      <script>
-        loadJsonAsCard("/ptu/data/edges/edges_homebrew.json", document.getElementById("card-container"));
-      </script>
+      <div class="col-md-10">
+        <div id="cards-container" class="container py-4">
+          <!-- Cartes Edges -->
+        </div>
+      </div>
     </div>
   </div>
 
   <script>
-    includeHTML();
-    setActive("Edges");
+    includeHTML(() => setActive());
+    loadEdges("/ptu/data/edges/edges_homebrew.json", document.getElementById("cards-container"), 2);
   </script>
 </body>
-
 </html>
