@@ -45,7 +45,7 @@ function renderFilteredCards(data, container, cols) {
         const cardHTML = renderItemAsCard(item);
         const cardDiv = document.createElement("div");
         cardDiv.className = colClass;
-        cardDiv.innerHTML = `<div class="card h-100"><div class="card-body">${cardHTML}</div></div>`;
+        cardDiv.innerHTML = `<div class="card h-100"><div class="card-body bg-light">${cardHTML}</div></div>`;
         container.appendChild(cardDiv);
     });
 }
@@ -117,7 +117,7 @@ function loadJsonAsCard_2(file, container, searchInputId) {
                     });
                     const cardDiv = document.createElement("div");
                     cardDiv.className = "col-12 col-md-4";
-                    cardDiv.innerHTML = `<div class="card h-100"><div class="card-body">${cardHTML}</div></div>`;
+                    cardDiv.innerHTML = `<div class="card h-100"><div class="card-body bg-light">${cardHTML}</div></div>`;
                     row.appendChild(cardDiv);
                 });
 
@@ -163,7 +163,7 @@ function renderFilteredCards_2(data, container) {
         const cardHTML = renderItemAsCard(item);
         const cardDiv = document.createElement("div");
         cardDiv.className = "col-12 col-md-4";
-        cardDiv.innerHTML = `<div class="card h-100"><div class="card-body">${cardHTML}</div></div>`;
+        cardDiv.innerHTML = `<div class="card h-100 "><div class="card-body bg-light">${cardHTML}</div></div>`;
         container.appendChild(cardDiv);
     });
 }
