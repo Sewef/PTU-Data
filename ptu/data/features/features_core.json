@@ -553,7 +553,7 @@
             "Tools of the Trade": {
               "name": "Tools of the Trade",
               "Frequency": "Static",
-              "Effect": "Add +2 to all Accuracy Rolls made with Poké Balls, Hand Nets, Lassos, Weighted Nets, and Glue Cannons. Add +2 to Athletics Checks made when reeling in a Pokémon with a Fishing Rod, and add +4 to 1d20 rolls made to see if a Pokémon is attracted by Bait or a Fishing Lure."
+              "Effect": "Add +2 to all Accuracy Rolls made with Poké Balls, Hand Nets, Lassos, Weighted Nets, Glue Cannons and Cap Cannons. Add +2 to Athletics Checks made when reeling in a Pokémon with a Fishing Rod, and add +4 to 1d20 rolls made to see if a Pokémon is attracted by Bait or a Fishing Lure."
             },
             "Catch Combo": {
               "name": "Catch Combo",
@@ -845,6 +845,48 @@
     ]
   },
   "Hobbyist": {
+    "name": "Hobbyist",
+    "category": "Introductory",
+    "source": "Erratum May 2015",
+    "branches": [
+      {
+        "name": "Default",
+        "features": [
+          {
+            "name": "Hobbyist",
+            "Tags": "[Class]",
+            "Prerequisites": "Novice General Education, Novice Perception",
+            "Frequency": "Static",
+            "Effect": "You gain three Skill Edges that Rank Up a Skill for which you qualify."
+          },
+          {
+            "name": "Dilettante",
+            "Tags": "[Ranked 4]",
+            "Rank 1 Prerequisites": "Hobbyist",
+            "Rank 2 Prerequisites": "Hobbyist",
+            "Rank 3 Prerequisites": "Hobbyist",
+            "Rank 4 Prerequisites": "Hobbyist",
+            "Frequency": "Static",
+            "Effect": "Each Rank of Dilettante, you gain both an Edge and a General Feature from the lists below. You may gain the chosen Edge and Feature even if you do not meet the Skill prerequisites. You must meet any other Prerequisites. Whenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead.\n» Edges: Acrobat, Apricorn Balls, Basic Balls, Basic Cooking, Basic Martial Arts, Beast Master, Breeder, Dynamism, Gem Lore, Grace, Green Thumb, Groomer, Instinctive Aptitude, Instruction, Intimidating Presence, Iron Mind, Medic Training, Mounted Prowess, Repel Crafter, Slippery, Swimmer, Train the Reserves.\n» Features: Command Versatility, Commander’s Voice, Defender, Dive, First Aid Expertise, Let Me Help You With That, Poké Ball Crafter, PokéManiac, Press, Quick Switch, Skill Monkey, Species Savant, any [Training] Feature, Tutoring, Walk It Off.\nWhenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead."
+          },
+          {
+            "name": "Dabbler",
+            "Prerequisites": "Hobbyist, Expert General Education or Perception",
+            "Frequency": "Static",
+            "Effect": "At the Level 5, 10, 20, 30, and 40 Character Advancement Level Milestones, if you choose to gain Bonus Stats, you also gain an Edge for which you qualify. If you choose Bonus Edges or Features, you also gain +2 to your choice of Attack or Special Attack. This applies retroactively.",
+            "Note": "It takes a long time for this Feature to bear fruit. Talk to your GM about how long the campaign will last and whether you will reach higher Levels."
+          },
+          {
+            "name": "Look and Learn",
+            "Prerequisites": "Hobbyist, Expert General Education or Perception",
+            "Frequency": "x2 Uses — Extended Action",
+            "Effect": "When you activate Look and Learn, you may gain any of the Features below even though they are Features from other Classes. You do not need to meet their normal prerequisites, but you must meet their Prerequisites listed here. Look and Learn can be used two times; once to learn a Feature from the \"Scene Features\" List, and once to learn a Feature from the \"Action Point Features List\".\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th colspan=\"3\">Scene Features List </th><th colspan=\"3\">Action Point Features List </th></tr></thead><tbody><tr><td>Trainer Class</td><td>Feature</td><td>Prerequisite</td><td>Trainer Class</td><td>Feature</td><td>Prerequisite</td></tr><tr><td>Ace Trainer</td><td>Critical Moment</td><td>Commander's Voice</td><td>Coordinator</td><td>Nuanced Performance</td><td>Grace</td></tr><tr><td>Capture Specialist</td><td>Capture Techniques\n(False Strike and Catch Combo only)</td><td>Poké Ball Crafter</td><td>Juggler</td><td>Round Trip</td><td>Quick Switch</td></tr><tr><td>Enduring</td><td>Staying Power</td><td>Medic Training</td><td>Chef</td><td>Hits the Spot</td><td>Basic Cooking</td></tr><tr><td>Trickster</td><td>Sleight</td><td>Command Versatility</td><td>Fashionista</td><td>Style is Eternal</td><td>Groomer</td></tr><tr><td>Researcher</td><td>Chemical Warfare</td><td>Repel Crafter</td><td>Athlete</td><td>Coaching</td><td>Swimmer</td></tr><tr><td>Roughneck</td><td>Mettle</td><td>Defender</td><td>Tumbler</td><td>Quick Gymnastics</td><td>Acrobat</td></tr></tbody></table></div>"
+          }
+        ]
+      }
+    ]
+  },
+  "Hobbyist (old)": {
     "name": "Hobbyist",
     "category": "Introductory",
     "source": "Core",
@@ -4217,6 +4259,112 @@
   "Survivalist": {
     "name": "Survivalist",
     "category": "Professional",
+    "source": "Erratum May 2015",
+    "branches": [
+      {
+        "name": "Default",
+        "features": [
+          {
+            "name": "Survivalist",
+            "Tags": "[Class][+HP]",
+            "Prerequisites": "Novice Survival",
+            "Frequency": "One Time Use — Extended Action",
+            "Effect": "Choose a Terrain in which you have spent at least three nights. You gain Naturewalk for that terrain and a +2 bonus to Athletics, Acrobatics, Stealth, Perception, and Survival Checks in that terrain. When you have 2 Survivalist Features, you may choose a second Terrain. When you have 4 Survivalist Features, you may choose a third terrain. When you have 6 Survivalist Features, you may choose a fourth terrain."
+          },
+          {
+            "name": "Natural Fighter",
+            "Tags": "[+HP]",
+            "Prerequisites": "Survivalist",
+            "Frequency": "1 AP — Special",
+            "Effect": "You and your Pokémon become adept at using the environment to your advantage in battle. You or your Pokémon may activate Natural Fighter as a Standard Action to use the Move below corresponding to the current terrain. You and your Pokémon must still follow all Frequency limitations for the Move.\nGrassland: Cotton Spore; Forest: Grass Whistle; Wetlands: Mud Slap; Ocean: Aqua Ring; Tundra: Haze; Mountain: Smack Down; Cave: Astonish; Urban: Spikes; Desert: Sand Attack",
+            "Note": "GMs! Don’t be super duper strict about the terrains here. Obviously a beach is analogous enough to a desert to use Sand Attack, and a lake can count as ocean terrain. In urban terrain, there’ll probably at least be trash around to Fling with the standard 6 DB option. On the other hand, most standard arenas for League matches won’t qualify for any of the terrains. However, some arenas may be specifically designed to emulate a terrain type, such as a rocky stadium or a set of floating platforms in a pool."
+          },
+          {
+            "name": "Trapper",
+            "Tags": "[+HP]",
+            "Prerequisites": "Survivalist, Adept Survival",
+            "Frequency": "Daily x2 — Extended Action",
+            "Effect": "You create a consumable item that creates 8 meters of Hazard within 6 meters. All 8 meters must be adjacent with at least one other space of the Hazard. These Hazards cause foes that run into them to become Slowed until the end of their next turn and have an additional effect based on the terrain in which the item was made. When foes run into these Hazards, they are destroyed after their effects resolve. Pokémon and Trainers with Naturewalk for the terrains associated with a Hazard are immune to its effects. These items must be used the same day they are created or they lose all effect.\n» Dust Trap — Grassland or Desert: A foe that runs into this Hazard is Blinded until the end of their next turn.\n» Tangle Trap — Forest or Wetlands: A foe that runs into this Hazard is must immediately stop Shifting, and they are Stuck instead of Slowed until the end of their next turn.\n» Slick Trap — Ocean or Tundra: A foe that runs into this Hazard becomes Vulnerable until the end of their next Turn.\n» Abrasion Trap — Mountain, Cave, or Urban: A foe that runs into this Hazard lowers their Defense and Special Defense by 1 Combat Stage."
+          },
+          {
+            "name": "Wilderness Guide",
+            "Tags": "[+HP][Orders]",
+            "Prerequisites": "Survivalist, Expert Survival",
+            "Frequency": "Scene x3 — Standard Action",
+            "Effect": "Wilderness Guide's effect depends on your current terrain.\n» Grassland or Forest: All allies gain the Stealth Capability and a +2 bonus to their Overland Speed for one full round.\n» Ocean or Wetlands: All allies gain 5 Damage Reduction and a +2 bonus to their Swim Speed for one full round.\n» Desert or Tundra: All allies do not lose Hit Points from Weather and ignore the effects of foes' Sand Veil and Snow Cloak Abilities for one full round.\n» Mountain or Cave: All allies do not trigger Hazards and are not Blinded in Low-Light conditions for one full round.\n» Urban: All allies gain +1 Evasion and a +2 bonus on Accuracy Rolls and Skill Checks to perform the Dirty Trick and Manipulate Combat Maneuvers for one full round."
+          },
+          {
+            "name": "Terrain Talent",
+            "Tags": "[+HP]",
+            "Rank 1 Prerequisites": "Survivalist, 2 Mastered Terrains",
+            "Rank 2 Prerequisites": "Survivalist, 4 Mastered Terrains",
+            "Frequency": "Static",
+            "Effect": "Each Rank, you gain two Terrain Talents, chosen from the Terrains for which you gained Naturewalk from Survivalist.",
+            "Note": "You do not have to be in the corresponding terrain to take advantage of Terrain Talents! They work everywhere."
+          },
+          {
+            "name": "Adaptive Geography",
+            "Tags": "[+HP]",
+            "Prerequisites": "4 Survivalist Features, Master Survival",
+            "Frequency": "Scene x2 — Free Action",
+            "Trigger": "You or your Pokémon gain Initiative",
+            "Effect": "The triggering target takes their turn as if they were in a terrain adjacent to the terrain they are in on the following graphic. For example, if you are standing in Wetlands terrain, you may act as if you are standing in Forest or Ocean Terrain. This affects Survivalist Features, Naturewalk Capabilities Moves with the Environ Keyword, etc.\n<img src=\"/ptu/data/feature_survivalist_adaptive_geography.png\">"
+          },
+          {
+            "name": "Terrain Talents",
+            "Plains Runner – Grassland Terrain": {
+              "name": "Plains Runner – Grassland Terrain",
+              "Frequency": "Static",
+              "Effect": "Your Overland Speed is increased by +2. You gain a +2 bonus to Perception Checks to spot or identify objects in the far distance."
+            },
+            "Forest Ranger – Forest Terrain": {
+              "name": "Forest Ranger – Forest Terrain",
+              "Frequency": "Static",
+              "Effect": "You’re used to navigating the dense plant life of large forests. You gain the Stealth Capability."
+            },
+            "Marsh Stomper – Wetland Terrain": {
+              "name": "Marsh Stomper – Wetland Terrain",
+              "Frequency": "Static",
+              "Effect": "You can handle the toxic fauna and flora of the marshes. You do not lose Hit Points from Poison and lose only 1 instead of 2 Combat Stages from Poison. You still count as Poisoned for the purpose of Moves and effects."
+            },
+            "Deep Diver – Ocean Terrain": {
+              "name": "Deep Diver – Ocean Terrain",
+              "Frequency": "Static",
+              "Effect": "You love nothing better than the smell of the sea. Your Swimming Capability is equal to your Overland Capability instead of half. Additionally, you may hold your breath underwater for a number of minutes equal to your Survival Rank before you start suffocating."
+            },
+            "Arctic Pilgrim – Tundra Terrain": {
+              "name": "Arctic Pilgrim – Tundra Terrain",
+              "Frequency": "Static",
+              "Effect": "Neither deep slow nor slippery ice can deter you. You are immune to the effects of Hail and to the Frozen condition, and gain 5 Damage Reduction against Ice- Type attacks."
+            },
+            "Surefooted – Mountain Terrain": {
+              "name": "Surefooted – Mountain Terrain",
+              "Frequency": "Static",
+              "Effect": "You’re not afraid of precarious ledges and steep hills. You gain a +2 Bonus to Skill Checks made to climb, balance, or maintain footing – including resisting Push and Trip maneuvers. Whenever you take falling damage, ignore one meter and receive one less Injury when determining damage."
+            },
+            "Cave Dweller – Cave Terrain": {
+              "name": "Cave Dweller – Cave Terrain",
+              "Frequency": "Static",
+              "Effect": "Your eyes are used to very low levels of light. You do not suffer Blindness for being in Low-Light conditions. If you would be Totally Blinded by complete darkness, you instead suffer the penalties of Blindness, and may make Survival Checks instead of Acrobatics to avoid becoming Tripped. You are immune to Stealth Rock Hazards."
+            },
+            "Traceur – Urban Terrain": {
+              "name": "Traceur – Urban Terrain",
+              "Frequency": "Static",
+              "Effect": "The city is your jungle. You gain a +1 Bonus to your Jump Capabilities. Add half your Survival Rank to your Evasion against Push, Trip, and Attack of Opportunity Maneuvers."
+            },
+            "Dune Walker – Desert Terrain": {
+              "name": "Dune Walker – Desert Terrain",
+              "Frequency": "Static",
+              "Effect": "Your long hours in the unforgiving desert have made you inured to sand and heat. You’re immune to the effects of Sandstorm, Sand-Attack, and Sand Tomb, and you gain 5 Damage Reduction against Fire-Type attacks."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "Survivalist (old)": {
+    "name": "Survivalist",
+    "category": "Professional",
     "source": "Core",
     "branches": [
       {
@@ -4448,6 +4596,70 @@
     ]
   },
   "Hunter": {
+    "name": "Hunter",
+    "category": "Fighter",
+    "source": "Erratum May 2015",
+    "branches": [
+      {
+        "name": "Default",
+        "features": [
+          {
+            "name": "Hunter",
+            "Tags": "[Class][+Speed]",
+            "Prerequisites": "Novice Survial, Novice Stealth",
+            "Frequency": "Static",
+            "Effect": "Choose Teamwork or Pack Hunt. You gain the Chosen Ability."
+          },
+          {
+            "name": "Pack Tactics",
+            "Tags": "[+Speed]",
+            "Prerequisites": "Hunter",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "Your Pokémon with at least 2 Tutor Points",
+            "Effect": "The target loses 2 Tutor Points, and gains the Pack Hunt or Teamwork Ability. You may target a Pokémon with Pack Tactics only once."
+          },
+          {
+            "name": "Surprise!",
+            "Tags": "[+Speed]",
+            "Prerequisites": "Hunter, Adept Stealth or Survival",
+            "Frequency": "X AP — Swift Action",
+            "Trigger": "You make an attack against a foe that does not anticipate an attack or is adjacent to your Pokémon with Pack Hunt or Teamwork",
+            "Effect": "Make two attack rolls for the triggering action, and use the better result to finalize the attack. If both attacks would hit, the target is Flinched. Surprise! may be used only once per Scene per target. If the triggering attack was a Poké Ball, Hand Net, Weighted Net, Glue Cannon, Cap Cannon or Struggle Attack, Surprise! costs 1 AP to activate; otherwise, it costs 2 AP."
+          },
+          {
+            "name": "Hunter's Reflexes",
+            "Tags": "[+Speed]",
+            "Prerequisites": "Hunter, Adept Stealth or Survival",
+            "Frequency": "Static",
+            "Effect": "You and your Pokémon may make up to three Attacks of Opportunity each round, instead of only one. Additionally, your attacks always consider you to be adjacent to your target for the purposes of benefiting from your Pokémon's Teamwork Ability, and count as Melee attacks for the purposes of triggering their Pack Hunt Ability."
+          },
+          {
+            "name": "Finisher",
+            "Tags": "[+Speed]",
+            "Prerequisites": "Hunter, Adept Stealth, Adept Survival",
+            "Frequency": "Static",
+            "Effect": "You and your Pokémon gain a +5 bonus to Damage Rolls against Fainted, Flinched, Sleeping, Stuck, Slowed, Trapped, or Tripped targets."
+          },
+          {
+            "name": "Don't Look Away",
+            "Tags": "[+Speed]",
+            "Prerequisites": "Pack Tactics, Adept Stealth, Adept Survival",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "You or your Pokémon with Pack Hunt or Teamwork hits with an Attack of Opportunity",
+            "Effect": "The hit foe loses a Tick of Hit Points, and is Slowed for 1 round. Don't Look Away may be triggered once per round."
+          },
+          {
+            "name": "Pack Master",
+            "Tags": "[+Speed]",
+            "Prerequisites": "Pack Tactics, Expert Stealth, Expert Survival",
+            "Frequency": "Static",
+            "Effect": "For you and your Pokémon with Teamwork, Teamwork's effect now reads \"While you are adjacent to an opponent, allies targeting that opponent receive a +2 bonus to Accuracy Checks\". Whenever you or your Pokémon successfully hit a foe with Pack Hunt, they gain a +2 Bonus to Accuracy Rolls and a +5 Bonus to Damage Rolls against that foe until the end of their next turn."
+          }
+        ]
+      }
+    ]
+  },
+  "Hunter (old)": {
     "name": "Hunter",
     "category": "Fighter",
     "source": "Core",
