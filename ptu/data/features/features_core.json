@@ -3713,29 +3713,31 @@
           },
           {
             "name": "Apothecary Recipes",
-            "Restorative Science": {
-              "name": "Restorative Science",
-              "Prerequisites": "Apothecary",
-              "Cost": "$100",
-              "Effect": "You create an Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal, or Potion."
-            },
-            "Super Cures": {
-              "name": "Super Cures",
-              "Prerequisites": "Patch Cure",
-              "Cost": "$200",
-              "Effect": "You can create Revives and Super Potions."
-            },
-            "Hyper Cures": {
-              "name": "Hyper Cures",
-              "Prerequisites": "Affliction Techniques",
-              "Effect": "You can create Full Heals for $300, Hyper Potions for $400, and Full Restores for $700."
-            },
-            "Performance Enhancers": {
-              "name": "Performance Enhancers",
-              "Prerequisites": "Medicinal Blend",
-              "Cost": "$4900",
-              "Effect": "You create a PP Up or Heart Booster. If you have a Heart Scale, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost."
-            }
+            "recipes": [
+              {
+                "name": "Restorative Science",
+                "Prerequisites": "Apothecary",
+                "Cost": "$100",
+                "Effect": "You create an Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal, or Potion."
+              },
+              {
+                "name": "Super Cures",
+                "Prerequisites": "Patch Cure",
+                "Cost": "$200",
+                "Effect": "You can create Revives and Super Potions."
+              },
+              {
+                "name": "Hyper Cures",
+                "Prerequisites": "Affliction Techniques",
+                "Effect": "You can create Full Heals for $300, Hyper Potions for $400, and Full Restores for $700."
+              },
+              {
+                "name": "Performance Enhancers",
+                "Prerequisites": "Medicinal Blend",
+                "Cost": "$4900",
+                "Effect": "You create a PP Up or Heart Booster. If you have a Heart Scale, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost."
+              }
+            ]
           }
         ]
       },
@@ -3771,29 +3773,31 @@
           },
           {
             "name": "Apothecary Recipes",
-            "Restorative Science": {
-              "name": "Restorative Science",
-              "Prerequisites": "Apothecary",
-              "Cost": "$100",
-              "Effect": "You create an Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal, or Potion."
-            },
-            "Super Cures": {
-              "name": "Super Cures",
-              "Prerequisites": "Patch Cure",
-              "Cost": "$200",
-              "Effect": "You can create Revives and Super Potions."
-            },
-            "Hyper Cures": {
-              "name": "Hyper Cures",
-              "Prerequisites": "Medical Techniques",
-              "Effect": "You can create Full Heals for $300, Hyper Potions for $400, and Full Restores for $700."
-            },
-            "Performance Enhancers": {
-              "name": "Performance Enhancers",
-              "Prerequisites": "Medicinal Blend",
-              "Cost": "$4900",
-              "Effect": "You create a PP Up or Heart Booster. If you have a Heart Scale, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost."
-            }
+            "recipes": [
+              {
+                "name": "Restorative Science",
+                "Prerequisites": "Apothecary",
+                "Cost": "$100",
+                "Effect": "You create an Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal, or Potion."
+              },
+              {
+                "name": "Super Cures",
+                "Prerequisites": "Patch Cure",
+                "Cost": "$200",
+                "Effect": "You can create Revives and Super Potions."
+              },
+              {
+                "name": "Hyper Cures",
+                "Prerequisites": "Medical Techniques",
+                "Effect": "You can create Full Heals for $300, Hyper Potions for $400, and Full Restores for $700."
+              },
+              {
+                "name": "Performance Enhancers",
+                "Prerequisites": "Medicinal Blend",
+                "Cost": "$4900",
+                "Effect": "You create a PP Up or Heart Booster. If you have a Heart Scale, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost."
+              }
+            ]
           }
         ]
       },
@@ -3828,42 +3832,44 @@
           },
           {
             "name": "Artificer Recipes",
-            "Type Booster": {
-              "name": "Type Booster",
-              "Prerequisites": "Crystal Artificer",
-              "Ingredients": "x4 Shards of the same Color",
-              "Effects": "You create a Type Booster. The Type chosen must be one of the Types associated with the color of the shards used."
-            },
-            "Type Brace": {
-              "name": "Type Brace",
-              "Prerequisites": "Crystal Artificer",
-              "Ingredients": "x4 Shards of the same Color",
-              "Effects": "You create a Type Brace. The Type chosen must be one of the Types associated with the color of the shards used."
-            },
-            "Focus Gem": {
-              "name": "Focus Gem",
-              "Prerequisites": "Crystal Resonance",
-              "Ingredients": "Any Six Shards.",
-              "Effect": "You create a Focus that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item."
-            },
-            "Chakra Crystal": {
-              "name": "Chakra Crystal",
-              "Prerequisites": "Crystal Resonance",
-              "Ingredients": "Any Six Shards",
-              "Effect": "You create a Stat Booster."
-            },
-            "Rainbow Gem": {
-              "name": "Rainbow Gem",
-              "Prerequisites": "Rainbow Light, Expert Occult Education",
-              "Ingredients": "Two Shards of each Color.",
-              "Effect": "You create a Rainbow Gem that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item. This item has the same effect as a Focus, except that as an Extended Action, any Trainer with Expert Occult Education Rank or higher may change which Stat the Rainbow Amulet is attuned to."
-            },
-            "Plate Crafter": {
-              "name": "Plate Crafter",
-              "Prerequisites": "Rainbow Light, Expert Occult Education",
-              "Ingredients": "A Type Booster and a Type Brace of the same Type.",
-              "Effects": "You create a Type Plate matching the Type Booster and Brace used."
-            }
+            "recipes": [
+              {
+                "name": "Type Booster",
+                "Prerequisites": "Crystal Artificer",
+                "Ingredients": "x4 Shards of the same Color",
+                "Effects": "You create a Type Booster. The Type chosen must be one of the Types associated with the color of the shards used."
+              },
+              {
+                "name": "Type Brace",
+                "Prerequisites": "Crystal Artificer",
+                "Ingredients": "x4 Shards of the same Color",
+                "Effects": "You create a Type Brace. The Type chosen must be one of the Types associated with the color of the shards used."
+              },
+              {
+                "name": "Focus Gem",
+                "Prerequisites": "Crystal Resonance",
+                "Ingredients": "Any Six Shards.",
+                "Effect": "You create a Focus that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item."
+              },
+              {
+                "name": "Chakra Crystal",
+                "Prerequisites": "Crystal Resonance",
+                "Ingredients": "Any Six Shards",
+                "Effect": "You create a Stat Booster."
+              },
+              {
+                "name": "Rainbow Gem",
+                "Prerequisites": "Rainbow Light, Expert Occult Education",
+                "Ingredients": "Two Shards of each Color.",
+                "Effect": "You create a Rainbow Gem that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item. This item has the same effect as a Focus, except that as an Extended Action, any Trainer with Expert Occult Education Rank or higher may change which Stat the Rainbow Amulet is attuned to."
+              },
+              {
+                "name": "Plate Crafter",
+                "Prerequisites": "Rainbow Light, Expert Occult Education",
+                "Ingredients": "A Type Booster and a Type Brace of the same Type.",
+                "Effects": "You create a Type Plate matching the Type Booster and Brace used."
+              }
+            ]
           }
         ]
       },
@@ -3924,30 +3930,32 @@
           },
           {
             "name": "Chemistry Recipes",
-            "Enhancers": {
-              "name": "Enhancers",
-              "Prerequisites": "Chemist",
-              "Cost": "$100",
-              "Effect": "You can create any X-Item, Dire Hit, or Guard Spec."
-            },
-            "Pester Balls: Disorient": {
-              "name": "Pester Balls: Disorient",
-              "Prerequisites": "Chemist",
-              "Cost": "$50",
-              "Effect": "You create Pester Balls that can inflict Rage or Confusion."
-            },
-            "Pester Balls: Pain": {
-              "name": "Pester Balls: Pain",
-              "Prerequisites": "Chemical Warfare",
-              "Cost": "$50",
-              "Effect": "You create Pester Balls that can inflict Burn or Poison."
-            },
-            "Pester Balls: Shut Down": {
-              "name": "Pester Balls: Shut Down",
-              "Prerequisites": "Caustic Chemistry",
-              "Cost": "$50",
-              "Effect": "You create Pester Balls that can inflict Paralysis or Sleep."
-            }
+            "recipes": [
+              {
+                "name": "Enhancers",
+                "Prerequisites": "Chemist",
+                "Cost": "$100",
+                "Effect": "You can create any X-Item, Dire Hit, or Guard Spec."
+              },
+              {
+                "name": "Pester Balls: Disorient",
+                "Prerequisites": "Chemist",
+                "Cost": "$50",
+                "Effect": "You create Pester Balls that can inflict Rage or Confusion."
+              },
+              {
+                "name": "Pester Balls: Pain",
+                "Prerequisites": "Chemical Warfare",
+                "Cost": "$50",
+                "Effect": "You create Pester Balls that can inflict Burn or Poison."
+              },
+              {
+                "name": "Pester Balls: Shut Down",
+                "Prerequisites": "Caustic Chemistry",
+                "Cost": "$50",
+                "Effect": "You create Pester Balls that can inflict Paralysis or Sleep."
+              }
+            ]
           }
         ]
       },
@@ -4141,26 +4149,28 @@
           },
           {
             "name": "Engineer Recipes",
-            "Robotics 101": {
-              "name": "Robotics 101",
-              "Prerequisites": "Engineer",
-              "Effect": "You can create a Small Pokébot for $1000, a Medium Pokébot for $2000, or a Large Pokébot for $3000. Pokébots you create begin at Level 5. You can create and install Basic Combat and Basic Utility Parts for Pokébots."
-            },
-            "Firmware Update": {
-              "name": "Firmware Update",
-              "Prerequisites": "Robofighter",
-              "Effect": "You can create and install Advanced Combat and Advanced Utility Parts for Pokébots."
-            },
-            "Kitbash King": {
-              "name": "Kitbash King",
-              "Prerequisites": "Overclocked",
-              "Effect": "You can create and install Sympathetic Drives and Repair Nanites for Pokébots."
-            },
-            "Futuretech": {
-              "name": "Futuretech",
-              "Prerequisites": "Experimental AI",
-              "Effect": "You can create and install Wired Compatibility Cores for Pokébots."
-            }
+            "recipes": [
+              {
+                "name": "Robotics 101",
+                "Prerequisites": "Engineer",
+                "Effect": "You can create a Small Pokébot for $1000, a Medium Pokébot for $2000, or a Large Pokébot for $3000. Pokébots you create begin at Level 5. You can create and install Basic Combat and Basic Utility Parts for Pokébots."
+              },
+              {
+                "name": "Firmware Update",
+                "Prerequisites": "Robofighter",
+                "Effect": "You can create and install Advanced Combat and Advanced Utility Parts for Pokébots."
+              },
+              {
+                "name": "Kitbash King",
+                "Prerequisites": "Overclocked",
+                "Effect": "You can create and install Sympathetic Drives and Repair Nanites for Pokébots."
+              },
+              {
+                "name": "Futuretech",
+                "Prerequisites": "Experimental AI",
+                "Effect": "You can create and install Wired Compatibility Cores for Pokébots."
+              }
+            ]
           }
         ]
       },
@@ -4195,21 +4205,23 @@
           },
           {
             "name": "Jailbreaker Recipes",
-            "Basic Cases": {
-              "name": "Basic Cases",
-              "Prerequisites": "Jailbreaker",
-              "Effect": "You may create a Contest Case, Lock Case, or Medicine Case for $200."
-            },
-            "Trick Cases": {
-              "name": "Trick Cases",
-              "Prerequisites": "Case Specialist",
-              "Effect": "You may create a Spray Case, Flash Case, or Bounce Case for $400."
-            },
-            "Advanced Cases": {
-              "name": "Advanced Cases",
-              "Prerequisites": "Fusion Cases",
-              "Effect": "You may create a Zap Case for $500, a Devil Case for $1000, or a Storage Case for $5000."
-            }
+            "recipes": [
+              {
+                "name": "Basic Cases",
+                "Prerequisites": "Jailbreaker",
+                "Effect": "You may create a Contest Case, Lock Case, or Medicine Case for $200."
+              },
+              {
+                "name": "Trick Cases",
+                "Prerequisites": "Case Specialist",
+                "Effect": "You may create a Spray Case, Flash Case, or Bounce Case for $400."
+              },
+              {
+                "name": "Advanced Cases",
+                "Prerequisites": "Fusion Cases",
+                "Effect": "You may create a Zap Case for $500, a Devil Case for $1000, or a Storage Case for $5000."
+              }
+            ]
           }
         ]
       },
@@ -4245,31 +4257,33 @@
           },
           {
             "name": "Upgrader Recipes",
-            "Datajack": {
-              "name": "Datajack",
-              "Prerequisites": "Upgrader",
-              "Effect": "You may build and install the Datajack Augmentaion for $250."
-            },
-            "Eye Augments": {
-              "name": "Eye Augments",
-              "Prerequisites": "Upgrader",
-              "Effect": "You may build and install the Enhanced Sight Augmentation for $1000 and Smart Vision Augmentation for $1500."
-            },
-            "Limb Augments": {
-              "name": "Limb Augments",
-              "Prerequisites": "Emergency Reactivation",
-              "Effect": "You build and install the Synthetic Muscle Augmentation for $1000 and the Embedded Weaponry Augmentation for $2000."
-            },
-            "Body Augments": {
-              "name": "Body Augments",
-              "Prerequisites": "Efficient Installation",
-              "Effect": "You may build and install the Medical Nanobots Augmentation for $1000 and the Wired Reflexes Augmentation for $1500."
-            },
-            "Dermal Augments": {
-              "name": "Dermal Augments",
-              "Prerequisites": "Experimental Designs",
-              "Effect": "You may build and install the Dermal Plating Augmentation for $2000 and the Thermal-Optic Camo Augmentation for $4000."
-            }
+            "recipes": [
+              {
+                "name": "Datajack",
+                "Prerequisites": "Upgrader",
+                "Effect": "You may build and install the Datajack Augmentaion for $250."
+              },
+              {
+                "name": "Eye Augments",
+                "Prerequisites": "Upgrader",
+                "Effect": "You may build and install the Enhanced Sight Augmentation for $1000 and Smart Vision Augmentation for $1500."
+              },
+              {
+                "name": "Limb Augments",
+                "Prerequisites": "Emergency Reactivation",
+                "Effect": "You build and install the Synthetic Muscle Augmentation for $1000 and the Embedded Weaponry Augmentation for $2000."
+              },
+              {
+                "name": "Body Augments",
+                "Prerequisites": "Efficient Installation",
+                "Effect": "You may build and install the Medical Nanobots Augmentation for $1000 and the Wired Reflexes Augmentation for $1500."
+              },
+              {
+                "name": "Dermal Augments",
+                "Prerequisites": "Experimental Designs",
+                "Effect": "You may build and install the Dermal Plating Augmentation for $2000 and the Thermal-Optic Camo Augmentation for $4000."
+              }
+            ]
           }
         ]
       }
