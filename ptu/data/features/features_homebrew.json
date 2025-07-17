@@ -575,58 +575,60 @@
           },
           {
             "name": "Capture Techniques",
-            "Capture Skills": {
-              "name": "Capture Skills",
-              "Frequency": "Static",
-              "Effect": "You gain a Skill Edge for which you qualify. It must be applied to Acrobatics, Athletics, Stealth, Survival, Guile, or Perception. You may take Capture Skills up to two times."
-            },
-            "Curve Ball": {
-              "name": "Curve Ball",
-              "Frequency": "Static",
-              "Effect": "Whenever you hit a target with a Poké Ball, you may deal damage as if you had hit them with a Struggle Attack. This damage triggers before any of the Poké Ball’s functions (such as making a Capture Check, releasing a Pokémon, etc.)."
-            },
-            "Devitalizing Throw": {
-              "name": "Devitalizing Throw",
-              "Frequency": "1 AP – Free Action",
-              "Trigger": "A Pokémon escapes from a Poké Ball you threw",
-              "Effect": "Choose One Effect: The triggering target becomes Slowed; the triggering target loses one Combat Stage in a Stat of your choice; or the triggering target suffers a -3 penalty to their next Save Roll."
-            },
-            "Fast Pitch": {
-              "name": "Fast Pitch",
-              "Frequency": "1 AP – Standard Action, Priority (Advanced)",
-              "Effect": "You immediately throw a Poké Ball."
-            },
-            "Snare": {
-              "name": "Snare",
-              "Frequency": "Static",
-              "Effect": "You subtract -10 from Capture Rolls made against Pokémon drawn into an encounter by Bait, that are currently distracted by Bait, or are in a Hand Net, Lasso, Weighted Net, or Stuck because of a Glue Cannon."
-            },
-            "Tools of the Trade": {
-              "name": "Tools of the Trade",
-              "Frequency": "Static",
-              "Effect": "Add +2 to all Accuracy Rolls made with Poké Balls, Hand Nets, Lassos, Weighted Nets, Glue Cannons and Cap Cannons. Add +2 to Athletics Checks made when reeling in a Pokémon with a Fishing Rod, and add +4 to 1d20 rolls made to see if a Pokémon is attracted by Bait or a Fishing Lure."
-            },
-            "Catch Combo": {
-              "name": "Catch Combo",
-              "Prerequisites": "3 of Acrobatics, Athletics, Stealth, Survival, Guile, or Perception Skills at Expert Rank",
-              "Frequency": "Daily – Free Action",
-              "Trigger": "Your Pokémon’s attack faints a Wild Pokémon.",
-              "Effect": "You may immediately throw a Poké Ball against the triggering Wild Pokémon, and it may be Captured even though it is knocked out. Calculate Capture Rate as if the target had 1 HP. If the Capture Attempt fails, the Pokémon is knocked out as normal."
-            },
-            "False Strike": {
-              "name": "False Strike",
-              "Prerequisites": "3 of Acrobatics, Athletics, Stealth, Survival, Guile, or Perception at Expert Rank",
-              "Frequency": "Scene x2 – Free Action",
-              "Trigger": "You or your Pokémon’s attack faints a Wild Pokémon.",
-              "Effect": "The Wild Pokémon is instead lowered to 1 Hit Point."
-            },
-            "Relentless Pursuit": {
-              "name": "Relentless Pursuit",
-              "Prerequisites": "3 of Acrobatics, Athletics, Stealth, Survival, Guile, or Perception Skills at Expert Rank",
-              "Frequency": "2 AP – Free Action, Interrupt",
-              "Trigger": "A foe attempts to run away",
-              "Effect": "Before the target moves from its starting location, one of your Pokémon on the field may immediately Shift and use a Struggle Attack as an Interrupt. If this attack hits, the target is Tripped."
-            }
+            "techniques": [
+              {
+                "name": "Capture Skills",
+                "Frequency": "Static",
+                "Effect": "You gain a Skill Edge for which you qualify. It must be applied to Acrobatics, Athletics, Stealth, Survival, Guile, or Perception. You may take Capture Skills up to two times."
+              },
+              {
+                "name": "Curve Ball",
+                "Frequency": "Static",
+                "Effect": "Whenever you hit a target with a Poké Ball, you may deal damage as if you had hit them with a Struggle Attack. This damage triggers before any of the Poké Ball’s functions (such as making a Capture Check, releasing a Pokémon, etc.)."
+              },
+              {
+                "name": "Devitalizing Throw",
+                "Frequency": "1 AP – Free Action",
+                "Trigger": "A Pokémon escapes from a Poké Ball you threw",
+                "Effect": "Choose One Effect: The triggering target becomes Slowed; the triggering target loses one Combat Stage in a Stat of your choice; or the triggering target suffers a -3 penalty to their next Save Roll."
+              },
+              {
+                "name": "Fast Pitch",
+                "Frequency": "1 AP – Standard Action, Priority (Advanced)",
+                "Effect": "You immediately throw a Poké Ball."
+              },
+              {
+                "name": "Snare",
+                "Frequency": "Static",
+                "Effect": "You subtract -10 from Capture Rolls made against Pokémon drawn into an encounter by Bait, that are currently distracted by Bait, or are in a Hand Net, Lasso, Weighted Net, or Stuck because of a Glue Cannon."
+              },
+              {
+                "name": "Tools of the Trade",
+                "Frequency": "Static",
+                "Effect": "Add +2 to all Accuracy Rolls made with Poké Balls, Hand Nets, Lassos, Weighted Nets, Glue Cannons and Cap Cannons. Add +2 to Athletics Checks made when reeling in a Pokémon with a Fishing Rod, and add +4 to 1d20 rolls made to see if a Pokémon is attracted by Bait or a Fishing Lure."
+              },
+              {
+                "name": "Catch Combo",
+                "Prerequisites": "3 of Acrobatics, Athletics, Stealth, Survival, Guile, or Perception Skills at Expert Rank",
+                "Frequency": "Daily – Free Action",
+                "Trigger": "Your Pokémon’s attack faints a Wild Pokémon.",
+                "Effect": "You may immediately throw a Poké Ball against the triggering Wild Pokémon, and it may be Captured even though it is knocked out. Calculate Capture Rate as if the target had 1 HP. If the Capture Attempt fails, the Pokémon is knocked out as normal."
+              },
+              {
+                "name": "False Strike",
+                "Prerequisites": "3 of Acrobatics, Athletics, Stealth, Survival, Guile, or Perception at Expert Rank",
+                "Frequency": "Scene x2 – Free Action",
+                "Trigger": "You or your Pokémon’s attack faints a Wild Pokémon.",
+                "Effect": "The Wild Pokémon is instead lowered to 1 Hit Point."
+              },
+              {
+                "name": "Relentless Pursuit",
+                "Prerequisites": "3 of Acrobatics, Athletics, Stealth, Survival, Guile, or Perception Skills at Expert Rank",
+                "Frequency": "2 AP – Free Action, Interrupt",
+                "Trigger": "A foe attempts to run away",
+                "Effect": "Before the target moves from its starting location, one of your Pokémon on the field may immediately Shift and use a Struggle Attack as an Interrupt. If this attack hits, the target is Tripped."
+              }
+            ]
           }
         ]
       }
