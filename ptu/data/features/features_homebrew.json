@@ -765,39 +765,45 @@
           {
             "name": "Innovation Moves",
             "Description": "The Coordinator’s “Innovation” Feature lets the Coordinator create new Moves for their Pokémon. These Moves can serve to fill voids in Move Lists for both Battles and Contests and provide utility.\nTo create a Move, first choose a Contest Type. This affects the Move’s effects and of course its role in Contests.\nNext choose a Contest Effect. Look at the “Contest Effects” section (page 266) under “Contests” for the full list. Pick one. That’s right, any of them. This determines what the Move does during a Contest, of course.\nThird, choose one of the four templates below. This determines the Move’s effects in Battle. These are modified by the Contest Type of the Move. Remember, Cool is associated with Attack, Tough with Defense, Beauty with Special Attack, Smart with Special Defense, and Cute with Speed.\nAnd finally, name your Move! This is the best part!",
-            "Template #1": {
-              "Type": "Normal",
-              "Frequency": "Scene",
-              "AC": "None",
-              "Class": "Status",
-              "Range": "Self, Swift Action",
-              "Effect": "The user generates 3 Contest Boons. These may be used as a Swift Action on their turn to gain one of the effects below, based on this Move’s Contest Type.\n» Beauty: Use when declaring an attack (before Accuracy Roll) to gain a +3 bonus to Effect Range for that attack.\n» Cool: Use when declaring an attack (before Accuracy Roll) to gain a +3 bonus to Critical Hit Range for that attack.\n» Cute: Use during your turn to gain +3 Evasion for one full round.\n» Smart: Use when declaring an attack (before Accuracy Roll) to gain a +3 bonus to Accuracy for that attack.\n» Tough: Use at the start of a turn to avoid all loss of Hit Points from Status Afflictions, Weather, and Recoil for that turn."
-            },
-            "Template #2": {
-              "Type": "Normal",
-              "Frequency": "Scene x2",
-              "AC": "None",
-              "Class": "Status",
-              "Range": "6, 1 Target",
-              "Effect": "The target loses a Tick of Hit Points and has the Stat associated with this Move's Contest Type lowered by -2 Combat Stages. This Move cannot miss."
-            },
-            "Template #3": {
-              "Type": "Varies",
-              "Frequency": "EOT",
-              "AC": "Varies",
-              "Class": "Varies",
-              "Range": "Varies, Spirit Surge",
-              "Effect": "Make a Versatile Struggle Attack, increasing the damage roll by +5. Follow all other normal rules for making Struggle attacks, including any modifications from capabilities, weapons, features, or special effects. On 18+, the user's Stat associated with the Contest Type of this Move is raised by +1 Combat Stage. This Move's Effect Range is extended by +1 for every two Contest Dice the user has that matches this Move's Contest Type.",
-              "Note": "Versatile means that the attack can be the user’s choice of Physical or Special."
-            },
-            "Template #4": {
-              "Type": "Normal",
-              "Frequency": "Scene",
-              "AC": "None",
-              "Class": "Status",
-              "Range": "Burst 2",
-              "Effect": "The user and all allies in the Burst gain a Tick of Temporary Hit Points and +1 Combat Stage in the Stat associated with the Contest Type of this Move."
-            }
+            "templates": [
+              {
+                "name": "Template #1",
+                "Type": "Normal",
+                "Frequency": "Scene",
+                "AC": "None",
+                "Class": "Status",
+                "Range": "Self, Swift Action",
+                "Effect": "The user generates 3 Contest Boons. These may be used as a Swift Action on their turn to gain one of the effects below, based on this Move’s Contest Type.\n» Beauty: Use when declaring an attack (before Accuracy Roll) to gain a +3 bonus to Effect Range for that attack.\n» Cool: Use when declaring an attack (before Accuracy Roll) to gain a +3 bonus to Critical Hit Range for that attack.\n» Cute: Use during your turn to gain +3 Evasion for one full round.\n» Smart: Use when declaring an attack (before Accuracy Roll) to gain a +3 bonus to Accuracy for that attack.\n» Tough: Use at the start of a turn to avoid all loss of Hit Points from Status Afflictions, Weather, and Recoil for that turn."
+              },
+              {
+                "name": "Template #2",
+                "Type": "Normal",
+                "Frequency": "Scene x2",
+                "AC": "None",
+                "Class": "Status",
+                "Range": "6, 1 Target",
+                "Effect": "The target loses a Tick of Hit Points and has the Stat associated with this Move's Contest Type lowered by -2 Combat Stages. This Move cannot miss."
+              },
+              {
+                "name": "Template #3",
+                "Type": "Varies",
+                "Frequency": "EOT",
+                "AC": "Varies",
+                "Class": "Varies",
+                "Range": "Varies, Spirit Surge",
+                "Effect": "Make a Versatile Struggle Attack, increasing the damage roll by +5. Follow all other normal rules for making Struggle attacks, including any modifications from capabilities, weapons, features, or special effects. On 18+, the user's Stat associated with the Contest Type of this Move is raised by +1 Combat Stage. This Move's Effect Range is extended by +1 for every two Contest Dice the user has that matches this Move's Contest Type.",
+                "Note": "Versatile means that the attack can be the user’s choice of Physical or Special."
+              },
+              {
+                "name": "Template #4",
+                "Type": "Normal",
+                "Frequency": "Scene",
+                "AC": "None",
+                "Class": "Status",
+                "Range": "Burst 2",
+                "Effect": "The user and all allies in the Burst gain a Tick of Temporary Hit Points and +1 Combat Stage in the Stat associated with the Contest Type of this Move."
+              }
+            ]
           }
         ]
       }
