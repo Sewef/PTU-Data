@@ -107,7 +107,7 @@
             "name": "Ravager Orders",
             "Prerequisites": "Expert Command or Intimidate",
             "Frequency": "Static",
-            "Effect": "You gain the Reckless Advance and Strike Again! Orders.",
+            "Effect": "You gain the Reckless Advance and Strike There! Orders.",
             "Reckless Advance": {
               "name": "Reckless Advance",
               "Tags": "[Orders][Stratagem]",
@@ -116,15 +116,15 @@
               "Effect": "While this Feature is Bound, increase the damage rolls of the target’s damaging melee attacks by +8, and these attacks Trip targets on Accuracy Rolls of 18+. When the target of Reckless Advance hits with a damaging melee attack, they become Vulnerable for one full round.",
               "Source": "Core"
             },
-            "Strike Again!": {
-              "name": "Strike Again!",
+            "Strike There!": {
+              "name": "Strike There!",
               "Tags": "[Orders]",
               "Frequency": "Scene – Standard Action",
               "Target": "Your Pokémon",
-              "Effect": "The target may immediately take an additional Standard Action to use an At-Will attack.",
-              "Source": "Core"
+              "Effect": "The target's next damaging attack leaves all Legal Targets Vulnerable for one Round, and deals damage as if it were one step less Resisted, to a maximum of Neutral damage. If the attack deals Super-Effective Damage to all Legal Targets, one Legal Target of the attack is Flinched.",
+              "Source": "Homebrew"
             },
-            "Source": "Core",
+            "Source": "Homebrew",
             "Category": "Pokémon Training and Order"
           },
           {
