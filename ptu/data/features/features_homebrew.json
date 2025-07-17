@@ -3409,47 +3409,61 @@
             "recipes": [
               {
                 "name": "Fashionista Recipes",
-                "Contest Trends": {
-                  "Prerequisites": "Fashionista",
-                  "Effect": "You can create Contest Accessories for $750, Contest Fashion Items for $500, and Fancy Clothes for $2500."
-                },
-                "Basic Fashion": {
-                  "Prerequisites": "Fashionista",
-                  "Cost": "$500",
-                  "Effect": "ou create one of the Basic Fashion Items below for which you have the chosen Fashionista Skill. These are Accessory Slot Items.",
-                  "Adorable Fashion": {
-                    "Fashionista Skill": "Charm",
-                    "Effect": "The holder may activate this item once a Scene as a Free Action to gain +3 Evasion for one full round."
+                "recipes": [
+                  {
+                    "name": "Contest Trends",
+                    "Prerequisites": "Fashionista",
+                    "Effect": "You can create Contest Accessories for $750, Contest Fashion Items for $500, and Fancy Clothes for $2500."
                   },
-                  "Elegant Fashion": {
-                    "Fashionista Skill": "Intuition",
-                    "Effect": "The holder may activate this item once a Scene as a Free Action when losing Combat Stages from a foe's effect to instead gain a Combat Stage in the Stat that would have been lowered."
+                  {
+                    "name": "Basic Fashion",
+                    "Prerequisites": "Fashionista",
+                    "Cost": "$500",
+                    "Effect": "ou create one of the Basic Fashion Items below for which you have the chosen Fashionista Skill. These are Accessory Slot Items.",
+                    "recipes": [
+                      {
+                        "name": "Adorable Fashion",
+                        "Fashionista Skill": "Charm",
+                        "Effect": "The holder may activate this item once a Scene as a Free Action to gain +3 Evasion for one full round."
+                      },
+                      {
+                        "name": "Elegant Fashion",
+                        "Fashionista Skill": "Intuition",
+                        "Effect": "The holder may activate this item once a Scene as a Free Action when losing Combat Stages from a foe's effect to instead gain a Combat Stage in the Stat that would have been lowered."
+                      },
+                      {
+                        "name": "Rad Fashion",
+                        "Fashionista Skill": "Command",
+                        "Effect": "The holder gains a +1 bonus to Save Checks against Volatile Status Conditions. The holder may activate this item once a Scene as a Free Action to gain a +4 bonus to a single Save Check."
+                      },
+                      {
+                        "name": "Rough Fashion",
+                        "Fashionista Skill": "Intimidate",
+                        "Effect": "The holder may activate this item once a Scene as a Free Action to cause all foes within 5 meters to take a -2 penalty to all rolls for one full round."
+                      },
+                      {
+                        "name": "Slick Fashion",
+                        "Fashionista Skill": "Guile",
+                        "Effect": "The holder gains +1 Evasion against Attacks of Opportunity. The holder may activate this item once a Scene as a Free Action to not provoke Attacks of Opportunities for one full round."
+                      }
+                    ]
                   },
-                  "Rad Fashion": {
-                    "Fashionista Skill": "Command",
-                    "Effect": "The holder gains a +1 bonus to Save Checks against Volatile Status Conditions. The holder may activate this item once a Scene as a Free Action to gain a +4 bonus to a single Save Check."
+                  {
+                    "name": "Practical Fashion",
+                    "Prerequisites": "Dashing Makeover",
+                    "Effect": "You can create Go-Goggles, Safety Goggles, or Winter Cloaks for $750."
                   },
-                  "Rough Fashion": {
-                    "Fashionista Skill": "Intimidate",
-                    "Effect": "The holder may activate this item once a Scene as a Free Action to cause all foes within 5 meters to take a -2 penalty to all rolls for one full round."
+                  {
+                    "name": "Focused Fashion",
+                    "Prerequisites": "Style is Eternal",
+                    "Effect": "You can create Focus Bands and Focus Sashes for $2000."
                   },
-                  "Slick Fashion": {
-                    "Fashionista Skill": "Guile",
-                    "Effect": "The holder gains +1 Evasion against Attacks of Opportunity. The holder may activate this item once a Scene as a Free Action to not provoke Attacks of Opportunities for one full round."
+                  {
+                    "name": "Incense Maker",
+                    "Prerequisites": "Parfumier",
+                    "Effect": "You can create Lax Incense for $1000, Luck Incense for $900, and Full Incense for $450."
                   }
-                },
-                "Practical Fashion": {
-                  "Prerequisites": "Dashing Makeover",
-                  "Effect": "You can create Go-Goggles, Safety Goggles, or Winter Cloaks for $750."
-                },
-                "Focused Fashion": {
-                  "Prerequisites": "Style is Eternal",
-                  "Effect": "You can create Focus Bands and Focus Sashes for $2000."
-                },
-                "Incense Maker": {
-                  "Prerequisites": "Parfumier",
-                  "Effect": "You can create Lax Incense for $1000, Luck Incense for $900, and Full Incense for $450."
-                }
+                ]
               }
             ]
           }
