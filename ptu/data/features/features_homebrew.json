@@ -502,30 +502,32 @@
           },
           {
             "name": "Signature Technique Modifications",
-            "Cone, Line, Burst, and Blast Moves": {
-              "name": "Cone, Line, Burst, and Blast Moves",
-              "Scattershot – Agility Training": "Instead of the Move’s normal range, it has a range of 4m, 3 Targets.",
-              "Shock and Awe – Inspired Training": "Foes targeted by the Move take a -2 penalty to Save Checks and a -1 Penalty to Evasion until the end of the user’s next turn.",
-              "Vicious Storm – Brutal Training": "The Move gains the Smite keyword. Applicable to Damaging Moves only."
-            },
-            "Single Target Moves": {
-              "name": "Single Target Moves",
-              "Guarding Strike – Inspired Training": "If this Move hits, the user gains +5 Damage Reduction against the target of the attack until the end of their next turn.",
-              "Unbalancing Blow – Brutal Training": "Whether the Move hits or misses, the target becomes Vulnerable until the next time they are hit by a Damaging Attack or one full round has passed, whichever comes first.",
-              "Reliable Attack – Focused Training": "If the Move misses its target, its Frequency is not spent and the user may immediately make a Struggle Attack as a Free Action. Cannot be applied to Moves with the Smite keyword."
-            },
-            "Damaging Moves": {
-              "name": "Damaging Moves",
-              "Alternative Energy – Focused Training": "Switch the Class of the Move from Physical to Special or vice versa.",
-              "Bloodied Speed – Agility Training": "This Move may be used as Priority (Advanced) if the user has less than half of their maximum Hit Points.",
-              "Double Down – Brutal Training": "The Move gains the Double Strike keyword. Effects and Effect-Ranges may be triggered only once (but either roll may trigger the effect). This may only be applied to Moves with a Damage Base of 4 or less, and may not be applied to Moves whose Damage Base change upon certain conditions (such as Fury Cutter or Ice Ball) or moves with Special-Case Damage (such as Night Shade)."
-            },
-            "Status Moves": {
-              "name": "Status Moves",
-              "Burst of Motivation – Inspired Training": "After this Move is Resolved, the user may increase any Stats with negative Combat Stages by up to +2 Combat Stages (but this cannot put Combat Stages above +0 CS total).",
-              "Supreme Concentration – Focused Training": "This Move may be used even if the user is Paralyzed, Flinched, Enraged, or has failed their Confusion Save Check.",
-              "Double Curse – Agility Training": "The user may target an additional foe with this Attack. This may be applied only to 1-Target Moves."
-            }
+            "techniques":[
+              {
+                "name": "Cone, Line, Burst, and Blast Moves",
+                "Scattershot – Agility Training": "Instead of the Move’s normal range, it has a range of 4m, 3 Targets.",
+                "Shock and Awe – Inspired Training": "Foes targeted by the Move take a -2 penalty to Save Checks and a -1 Penalty to Evasion until the end of the user’s next turn.",
+                "Vicious Storm – Brutal Training": "The Move gains the Smite keyword. Applicable to Damaging Moves only."
+              },
+              {
+                "name": "Single Target Moves",
+                "Guarding Strike – Inspired Training": "If this Move hits, the user gains +5 Damage Reduction against the target of the attack until the end of their next turn.",
+                "Unbalancing Blow – Brutal Training": "Whether the Move hits or misses, the target becomes Vulnerable until the next time they are hit by a Damaging Attack or one full round has passed, whichever comes first.",
+                "Reliable Attack – Focused Training": "If the Move misses its target, its Frequency is not spent and the user may immediately make a Struggle Attack as a Free Action. Cannot be applied to Moves with the Smite keyword."
+              },
+              {
+                "name": "Damaging Moves",
+                "Alternative Energy – Focused Training": "Switch the Class of the Move from Physical to Special or vice versa.",
+                "Bloodied Speed – Agility Training": "This Move may be used as Priority (Advanced) if the user has less than half of their maximum Hit Points.",
+                "Double Down – Brutal Training": "The Move gains the Double Strike keyword. Effects and Effect-Ranges may be triggered only once (but either roll may trigger the effect). This may only be applied to Moves with a Damage Base of 4 or less, and may not be applied to Moves whose Damage Base change upon certain conditions (such as Fury Cutter or Ice Ball) or moves with Special-Case Damage (such as Night Shade)."
+              },
+              {
+                "name": "Status Moves",
+                "Burst of Motivation – Inspired Training": "After this Move is Resolved, the user may increase any Stats with negative Combat Stages by up to +2 Combat Stages (but this cannot put Combat Stages above +0 CS total).",
+                "Supreme Concentration – Focused Training": "This Move may be used even if the user is Paralyzed, Flinched, Enraged, or has failed their Confusion Save Check.",
+                "Double Curse – Agility Training": "The user may target an additional foe with this Attack. This may be applied only to 1-Target Moves."
+              }
+            ]
           }
         ]
       }
@@ -3394,47 +3396,52 @@
           },
           {
             "name": "Fashionista Recipes",
-            "Contest Trends": {
-              "Prerequisites": "Fashionista",
-              "Effect": "You can create Contest Accessories for $750, Contest Fashion Items for $500, and Fancy Clothes for $2500."
-            },
-            "Basic Fashion": {
-              "Prerequisites": "Fashionista",
-              "Cost": "$500",
-              "Effect": "ou create one of the Basic Fashion Items below for which you have the chosen Fashionista Skill. These are Accessory Slot Items.",
-              "Adorable Fashion": {
-                "Fashionista Skill": "Charm",
-                "Effect": "The holder may activate this item once a Scene as a Free Action to gain +3 Evasion for one full round."
-              },
-              "Elegant Fashion": {
-                "Fashionista Skill": "Intuition",
-                "Effect": "The holder may activate this item once a Scene as a Free Action when losing Combat Stages from a foe's effect to instead gain a Combat Stage in the Stat that would have been lowered."
-              },
-              "Rad Fashion": {
-                "Fashionista Skill": "Command",
-                "Effect": "The holder gains a +1 bonus to Save Checks against Volatile Status Conditions. The holder may activate this item once a Scene as a Free Action to gain a +4 bonus to a single Save Check."
-              },
-              "Rough Fashion": {
-                "Fashionista Skill": "Intimidate",
-                "Effect": "The holder may activate this item once a Scene as a Free Action to cause all foes within 5 meters to take a -2 penalty to all rolls for one full round."
-              },
-              "Slick Fashion": {
-                "Fashionista Skill": "Guile",
-                "Effect": "The holder gains +1 Evasion against Attacks of Opportunity. The holder may activate this item once a Scene as a Free Action to not provoke Attacks of Opportunities for one full round."
+            "recipes": [
+              {
+                "name": "Fashionista Recipes",
+                "Contest Trends": {
+                  "Prerequisites": "Fashionista",
+                  "Effect": "You can create Contest Accessories for $750, Contest Fashion Items for $500, and Fancy Clothes for $2500."
+                },
+                "Basic Fashion": {
+                  "Prerequisites": "Fashionista",
+                  "Cost": "$500",
+                  "Effect": "ou create one of the Basic Fashion Items below for which you have the chosen Fashionista Skill. These are Accessory Slot Items.",
+                  "Adorable Fashion": {
+                    "Fashionista Skill": "Charm",
+                    "Effect": "The holder may activate this item once a Scene as a Free Action to gain +3 Evasion for one full round."
+                  },
+                  "Elegant Fashion": {
+                    "Fashionista Skill": "Intuition",
+                    "Effect": "The holder may activate this item once a Scene as a Free Action when losing Combat Stages from a foe's effect to instead gain a Combat Stage in the Stat that would have been lowered."
+                  },
+                  "Rad Fashion": {
+                    "Fashionista Skill": "Command",
+                    "Effect": "The holder gains a +1 bonus to Save Checks against Volatile Status Conditions. The holder may activate this item once a Scene as a Free Action to gain a +4 bonus to a single Save Check."
+                  },
+                  "Rough Fashion": {
+                    "Fashionista Skill": "Intimidate",
+                    "Effect": "The holder may activate this item once a Scene as a Free Action to cause all foes within 5 meters to take a -2 penalty to all rolls for one full round."
+                  },
+                  "Slick Fashion": {
+                    "Fashionista Skill": "Guile",
+                    "Effect": "The holder gains +1 Evasion against Attacks of Opportunity. The holder may activate this item once a Scene as a Free Action to not provoke Attacks of Opportunities for one full round."
+                  }
+                },
+                "Practical Fashion": {
+                  "Prerequisites": "Dashing Makeover",
+                  "Effect": "You can create Go-Goggles, Safety Goggles, or Winter Cloaks for $750."
+                },
+                "Focused Fashion": {
+                  "Prerequisites": "Style is Eternal",
+                  "Effect": "You can create Focus Bands and Focus Sashes for $2000."
+                },
+                "Incense Maker": {
+                  "Prerequisites": "Parfumier",
+                  "Effect": "You can create Lax Incense for $1000, Luck Incense for $900, and Full Incense for $450."
+                }
               }
-            },
-            "Practical Fashion": {
-              "Prerequisites": "Dashing Makeover",
-              "Effect": "You can create Go-Goggles, Safety Goggles, or Winter Cloaks for $750."
-            },
-            "Focused Fashion": {
-              "Prerequisites": "Style is Eternal",
-              "Effect": "You can create Focus Bands and Focus Sashes for $2000."
-            },
-            "Incense Maker": {
-              "Prerequisites": "Parfumier",
-              "Effect": "You can create Lax Incense for $1000, Luck Incense for $900, and Full Incense for $450."
-            }
+            ]
           }
         ]
       }

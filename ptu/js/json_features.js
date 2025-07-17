@@ -274,6 +274,28 @@ function collectLeafFeatures(featObj, nameOverride, embedOnly = false) {
 
   const subCards = [];
 
+  // 📦 Annexes automatiques : tout tableau d’objets avec name ou Effect
+  Object.entries(featObj).forEach(([key, val]) => {
+    if (
+      Array.isArray(val) &&
+      val.every(
+        v =>
+          typeof v === "object" &&
+          (typeof v.name === "string" || typeof v.Effect === "string")
+      )
+    ) {
+      val.forEach(entry => {
+        subCards.push({
+          ...entry,
+          name: entry.name || `(${key} Entry)`
+        });
+      });
+    }
+  });
+
+
+
+
   Object.entries(featObj).forEach(([k, v]) => {
     if (isSimpleTextMap(v)) {
       subCards.push({
@@ -283,8 +305,19 @@ function collectLeafFeatures(featObj, nameOverride, embedOnly = false) {
           .join("<br>")
       });
     } else if (v && typeof v === "object" && !Array.isArray(v)) {
-      subCards.push(...collectLeafFeatures(v, k, true));
+      if (k === "recipes" && Array.isArray(v)) {
+        // Cas spécial : tableau de recettes
+        v.forEach(r => {
+          subCards.push({
+            ...r,
+            name: r.name || "(Recipe)"
+          });
+        });
+      } else {
+        subCards.push(...collectLeafFeatures(v, k, true));
+      }
     }
+
   });
 
   if ((featObj.name || nameOverride) && hasAnyContent(featObj)) {
@@ -363,14 +396,14 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
   card.appendChild(body);
   col.appendChild(card);
 
-    // ⬇️ Ajoute ceci juste avant return col;
-    if (feat.__children && Array.isArray(feat.__children)) {
-      feat.__children.forEach(child =>
-        body.appendChild(createCard(child, clsMeta, false, isGeneral, true))
-      );
-    }
+  // ⬇️ Ajoute ceci juste avant return col;
+  if (feat.__children && Array.isArray(feat.__children)) {
+    feat.__children.forEach(child =>
+      body.appendChild(createCard(child, clsMeta, false, isGeneral, true))
+    );
+  }
 
-    
+
   return col;
 }
 
