@@ -5262,14 +5262,18 @@
             "Prerequisites": "Oracle",
             "Frequency": "Daily x3 — Extended Action",
             "Effect": "You may perform an Augury or Scrying.",
-            "Augury": {
-              "Target": "Self",
-              "Effect": "The user has a vision, dream, or similar that may depict past, present, or future events. The clarity of the dream may vary, as well as the user’s ability to remember it. See the next page for more details (p.187)."
-            },
-            "Scrying": {
-              "Target": "An item you are touching, or your current location",
-              "Effect": "You see visions of what has happened to the target over the last 24 hours. The images may be jumbled or unclear, to the discretion of your GM. See the next page for more details (p.187)."
-            }
+            "techniques": [
+              {
+                "name": "Augury",
+                "Target": "Self",
+                "Effect": "The user has a vision, dream, or similar that may depict past, present, or future events. The clarity of the dream may vary, as well as the user’s ability to remember it. See the next page for more details (p.187)."
+              },
+              {
+                "name": "Scrying",
+                "Target": "An item you are touching, or your current location",
+                "Effect": "You see visions of what has happened to the target over the last 24 hours. The images may be jumbled or unclear, to the discretion of your GM. See the next page for more details (p.187)."
+              }
+            ]
           },
           {
             "name": "Unveiled Sight",
