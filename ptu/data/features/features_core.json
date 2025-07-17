@@ -4345,51 +4345,53 @@
           },
           {
             "name": "Terrain Talents",
-            "Plains Runner – Grassland Terrain": {
-              "name": "Plains Runner – Grassland Terrain",
-              "Frequency": "Static",
-              "Effect": "Your Overland Speed is increased by +2. You gain a +2 bonus to Perception Checks to spot or identify objects in the far distance."
-            },
-            "Forest Ranger – Forest Terrain": {
-              "name": "Forest Ranger – Forest Terrain",
-              "Frequency": "Static",
-              "Effect": "You’re used to navigating the dense plant life of large forests. You gain the Stealth Capability."
-            },
-            "Marsh Stomper – Wetland Terrain": {
-              "name": "Marsh Stomper – Wetland Terrain",
-              "Frequency": "Static",
-              "Effect": "You can handle the toxic fauna and flora of the marshes. You do not lose Hit Points from Poison and lose only 1 instead of 2 Combat Stages from Poison. You still count as Poisoned for the purpose of Moves and effects."
-            },
-            "Deep Diver – Ocean Terrain": {
-              "name": "Deep Diver – Ocean Terrain",
-              "Frequency": "Static",
-              "Effect": "You love nothing better than the smell of the sea. Your Swimming Capability is equal to your Overland Capability instead of half. Additionally, you may hold your breath underwater for a number of minutes equal to your Survival Rank before you start suffocating."
-            },
-            "Arctic Pilgrim – Tundra Terrain": {
-              "name": "Arctic Pilgrim – Tundra Terrain",
-              "Frequency": "Static",
-              "Effect": "Neither deep slow nor slippery ice can deter you. You are immune to the effects of Hail and to the Frozen condition, and gain 5 Damage Reduction against Ice- Type attacks."
-            },
-            "Surefooted – Mountain Terrain": {
-              "name": "Surefooted – Mountain Terrain",
-              "Frequency": "Static",
-              "Effect": "You’re not afraid of precarious ledges and steep hills. You gain a +2 Bonus to Skill Checks made to climb, balance, or maintain footing – including resisting Push and Trip maneuvers. Whenever you take falling damage, ignore one meter and receive one less Injury when determining damage."
-            },
-            "Cave Dweller – Cave Terrain": {
-              "name": "Cave Dweller – Cave Terrain",
-              "Frequency": "Static",
-              "Effect": "Your eyes are used to very low levels of light. You do not suffer Blindness for being in Low-Light conditions. If you would be Totally Blinded by complete darkness, you instead suffer the penalties of Blindness, and may make Survival Checks instead of Acrobatics to avoid becoming Tripped. You are immune to Stealth Rock Hazards."
-            },
-            "Traceur – Urban Terrain": {
-              "name": "Traceur – Urban Terrain",
-              "Frequency": "Static",
-              "Effect": "The city is your jungle. You gain a +1 Bonus to your Jump Capabilities. Add half your Survival Rank to your Evasion against Push, Trip, and Attack of Opportunity Maneuvers."
-            },
-            "Dune Walker – Desert Terrain": {
-              "name": "Dune Walker – Desert Terrain",
-              "Frequency": "Static",
-              "Effect": "Your long hours in the unforgiving desert have made you inured to sand and heat. You’re immune to the effects of Sandstorm, Sand-Attack, and Sand Tomb, and you gain 5 Damage Reduction against Fire-Type attacks."
-            }
+            "talents": [
+              {
+                "name": "Plains Runner – Grassland Terrain",
+                "Frequency": "Static",
+                "Effect": "Your Overland Speed is increased by +2. You gain a +2 bonus to Perception Checks to spot or identify objects in the far distance."
+              },
+              {
+                "name": "Forest Ranger – Forest Terrain",
+                "Frequency": "Static",
+                "Effect": "You’re used to navigating the dense plant life of large forests. You gain the Stealth Capability."
+              },
+              {
+                "name": "Marsh Stomper – Wetland Terrain",
+                "Frequency": "Static",
+                "Effect": "You can handle the toxic fauna and flora of the marshes. You do not lose Hit Points from Poison and lose only 1 instead of 2 Combat Stages from Poison. You still count as Poisoned for the purpose of Moves and effects."
+              },
+              {
+                "name": "Deep Diver – Ocean Terrain",
+                "Frequency": "Static",
+                "Effect": "You love nothing better than the smell of the sea. Your Swimming Capability is equal to your Overland Capability instead of half. Additionally, you may hold your breath underwater for a number of minutes equal to your Survival Rank before you start suffocating."
+              },
+              {
+                "name": "Arctic Pilgrim – Tundra Terrain",
+                "Frequency": "Static",
+                "Effect": "Neither deep slow nor slippery ice can deter you. You are immune to the effects of Hail and to the Frozen condition, and gain 5 Damage Reduction against Ice- Type attacks."
+              },
+              {
+                "name": "Surefooted – Mountain Terrain",
+                "Frequency": "Static",
+                "Effect": "You’re not afraid of precarious ledges and steep hills. You gain a +2 Bonus to Skill Checks made to climb, balance, or maintain footing – including resisting Push and Trip maneuvers. Whenever you take falling damage, ignore one meter and receive one less Injury when determining damage."
+              },
+              {
+                "name": "Cave Dweller – Cave Terrain",
+                "Frequency": "Static",
+                "Effect": "Your eyes are used to very low levels of light. You do not suffer Blindness for being in Low-Light conditions. If you would be Totally Blinded by complete darkness, you instead suffer the penalties of Blindness, and may make Survival Checks instead of Acrobatics to avoid becoming Tripped. You are immune to Stealth Rock Hazards."
+              },
+              {
+                "name": "Traceur – Urban Terrain",
+                "Frequency": "Static",
+                "Effect": "The city is your jungle. You gain a +1 Bonus to your Jump Capabilities. Add half your Survival Rank to your Evasion against Push, Trip, and Attack of Opportunity Maneuvers."
+              },
+              {
+                "name": "Dune Walker – Desert Terrain",
+                "Frequency": "Static",
+                "Effect": "Your long hours in the unforgiving desert have made you inured to sand and heat. You’re immune to the effects of Sandstorm, Sand-Attack, and Sand Tomb, and you gain 5 Damage Reduction against Fire-Type attacks."
+              }
+            ]
           }
         ]
       }
@@ -4451,51 +4453,53 @@
           },
           {
             "name": "Terrain Talents",
-            "Plains Runner – Grassland Terrain": {
-              "name": "Plains Runner – Grassland Terrain",
-              "Frequency": "Static",
-              "Effect": "Your Overland Speed is increased by +2. You gain a +2 bonus to Perception Checks to spot or identify objects in the far distance."
-            },
-            "Forest Ranger – Forest Terrain": {
-              "name": "Forest Ranger – Forest Terrain",
-              "Frequency": "Static",
-              "Effect": "You’re used to navigating the dense plant life of large forests. You gain the Stealth Capability."
-            },
-            "Marsh Stomper – Wetland Terrain": {
-              "name": "Marsh Stomper – Wetland Terrain",
-              "Frequency": "Static",
-              "Effect": "You can handle the toxic fauna and flora of the marshes. You do not lose Hit Points from Poison and lose only 1 instead of 2 Combat Stages from Poison. You still count as Poisoned for the purpose of Moves and effects."
-            },
-            "Deep Diver – Ocean Terrain": {
-              "name": "Deep Diver – Ocean Terrain",
-              "Frequency": "Static",
-              "Effect": "You love nothing better than the smell of the sea. Your Swimming Capability is equal to your Overland Capability instead of half. Additionally, you may hold your breath underwater for a number of minutes equal to your Survival Rank before you start suffocating."
-            },
-            "Arctic Pilgrim – Tundra Terrain": {
-              "name": "Arctic Pilgrim – Tundra Terrain",
-              "Frequency": "Static",
-              "Effect": "Neither deep slow nor slippery ice can deter you. You are immune to the effects of Hail and to the Frozen condition, and gain 5 Damage Reduction against Ice- Type attacks."
-            },
-            "Surefooted – Mountain Terrain": {
-              "name": "Surefooted – Mountain Terrain",
-              "Frequency": "Static",
-              "Effect": "You’re not afraid of precarious ledges and steep hills. You gain a +2 Bonus to Skill Checks made to climb, balance, or maintain footing – including resisting Push and Trip maneuvers. Whenever you take falling damage, ignore one meter and receive one less Injury when determining damage."
-            },
-            "Cave Dweller – Cave Terrain": {
-              "name": "Cave Dweller – Cave Terrain",
-              "Frequency": "Static",
-              "Effect": "Your eyes are used to very low levels of light. You do not suffer Blindness for being in Low-Light conditions. If you would be Totally Blinded by complete darkness, you instead suffer the penalties of Blindness, and may make Survival Checks instead of Acrobatics to avoid becoming Tripped. You are immune to Stealth Rock Hazards."
-            },
-            "Traceur – Urban Terrain": {
-              "name": "Traceur – Urban Terrain",
-              "Frequency": "Static",
-              "Effect": "The city is your jungle. You gain a +1 Bonus to your Jump Capabilities. Add half your Survival Rank to your Evasion against Push, Trip, and Attack of Opportunity Maneuvers."
-            },
-            "Dune Walker – Desert Terrain": {
-              "name": "Dune Walker – Desert Terrain",
-              "Frequency": "Static",
-              "Effect": "Your long hours in the unforgiving desert have made you inured to sand and heat. You’re immune to the effects of Sandstorm, Sand-Attack, and Sand Tomb, and you gain 5 Damage Reduction against Fire-Type attacks."
-            }
+            "talents": [
+              {
+                "name": "Plains Runner – Grassland Terrain",
+                "Frequency": "Static",
+                "Effect": "Your Overland Speed is increased by +2. You gain a +2 bonus to Perception Checks to spot or identify objects in the far distance."
+              },
+              {
+                "name": "Forest Ranger – Forest Terrain",
+                "Frequency": "Static",
+                "Effect": "You’re used to navigating the dense plant life of large forests. You gain the Stealth Capability."
+              },
+              {
+                "name": "Marsh Stomper – Wetland Terrain",
+                "Frequency": "Static",
+                "Effect": "You can handle the toxic fauna and flora of the marshes. You do not lose Hit Points from Poison and lose only 1 instead of 2 Combat Stages from Poison. You still count as Poisoned for the purpose of Moves and effects."
+              },
+              {
+                "name": "Deep Diver – Ocean Terrain",
+                "Frequency": "Static",
+                "Effect": "You love nothing better than the smell of the sea. Your Swimming Capability is equal to your Overland Capability instead of half. Additionally, you may hold your breath underwater for a number of minutes equal to your Survival Rank before you start suffocating."
+              },
+              {
+                "name": "Arctic Pilgrim – Tundra Terrain",
+                "Frequency": "Static",
+                "Effect": "Neither deep slow nor slippery ice can deter you. You are immune to the effects of Hail and to the Frozen condition, and gain 5 Damage Reduction against Ice- Type attacks."
+              },
+              {
+                "name": "Surefooted – Mountain Terrain",
+                "Frequency": "Static",
+                "Effect": "You’re not afraid of precarious ledges and steep hills. You gain a +2 Bonus to Skill Checks made to climb, balance, or maintain footing – including resisting Push and Trip maneuvers. Whenever you take falling damage, ignore one meter and receive one less Injury when determining damage."
+              },
+              {
+                "name": "Cave Dweller – Cave Terrain",
+                "Frequency": "Static",
+                "Effect": "Your eyes are used to very low levels of light. You do not suffer Blindness for being in Low-Light conditions. If you would be Totally Blinded by complete darkness, you instead suffer the penalties of Blindness, and may make Survival Checks instead of Acrobatics to avoid becoming Tripped. You are immune to Stealth Rock Hazards."
+              },
+              {
+                "name": "Traceur – Urban Terrain",
+                "Frequency": "Static",
+                "Effect": "The city is your jungle. You gain a +1 Bonus to your Jump Capabilities. Add half your Survival Rank to your Evasion against Push, Trip, and Attack of Opportunity Maneuvers."
+              },
+              {
+                "name": "Dune Walker – Desert Terrain",
+                "Frequency": "Static",
+                "Effect": "Your long hours in the unforgiving desert have made you inured to sand and heat. You’re immune to the effects of Sandstorm, Sand-Attack, and Sand Tomb, and you gain 5 Damage Reduction against Fire-Type attacks."
+              }
+            ]
           }
         ]
       }
