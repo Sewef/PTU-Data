@@ -229,8 +229,9 @@ function renderSection(clsName, branchName = "Default") {
 
   document.getElementById("features-search").addEventListener("input", e => {
     const q = e.target.value.toLowerCase();
-    row.querySelectorAll(".col-md-12").forEach(c =>
-      c.style.display = c.dataset.title.toLowerCase().includes(q) ? "" : "none"
+    row.querySelectorAll(".card").forEach(c =>
+      c.closest(".col-md-12").style.display =
+      c.dataset.title.toLowerCase().includes(q) ? "" : "none"
     );
   });
 
@@ -299,7 +300,7 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
   /* ----- carte ------------------------------------------------------ */
   const card = document.createElement("div");
   card.className = `card ${nested ? "mb-2" : "h-100"} bg-white border shadow-sm`;
-  col.dataset.title = feat.name || "(unnamed)";
+  card.dataset.title = feat.name || "(unnamed)";
 
   const body = document.createElement("div");
   body.className = "card-body bg-light";
