@@ -7464,47 +7464,49 @@
           },
           {
             "name": "Backpacker Talents",
-            "Call to Adventure": {
-              "name": "Call to Adventure",
-              "Frequency": "Static",
-              "Effect": "You gain the Instinctive Aptitude Edge, even if you do not meet its prerequisites. If you already have this Edge, gain another Edge for which you qualify. During Combat or tense situations (never Extended Actions), if you spend AP to add a bonus to a Skill Check, you may add +1d6 instead of +2."
-            },
-            "Frisk": {
-              "name": "Frisk",
-              "Frequency": "Static",
-              "Effect": "You gain the Frisk Ability."
-            },
-            "Handyman": {
-              "name": "Handyman",
-              "Frequency": "Static",
-              "Effect": "Whenever you use an item or a non-Weapon piece of equipment which calls for a Skill Check or has an effect or prerequisite based on a Skill Rank, you may substitute Survival for the used Skill. This does not affect prerequisites for Books."
-            },
-            "Hat Trick": {
-              "name": "Hat Trick",
-              "Frequency": "Static",
-              "Effect": "While wearing Head Equipment worth at least $1000, you gain 15 Damage Reduction against Critical Hits. This does not stack with any Damage Reduction granted by any Head Equipment."
-            },
-            "Movement Mastery": {
-              "name": "Movement Mastery",
-              "Frequency": "Static",
-              "Effect": "Choose one of Art of Stealth, Athletic Initiative, Mounted Prowess, Nimble Movement, Slippery, Stamina, Swimmer, or Wallrunner. You gain the chosen Edge, even if you do not meet the prerequisites. Additionally, you may take any of these Edges in the future as if you did meet the prerequisites."
-            },
-            "Sole Power": {
-              "name": "Sole Power",
-              "Frequency": "Static",
-              "Effect": "While wearing Feet Equipment worth at least $1000, you do not trigger Hazards while Shifting. However, you still trigger any Hazards that you are standing on at the start or end of your turn. Reactive Hazards such as Stealth Rock cannot be triggered against you."
-            },
-            "Wayfarer": {
-              "name": "Wayfarer",
-              "Frequency": "Static",
-              "Effect": "You may use your Survival Skill when making Opposed Rolls when defending against Disarm, Grapple, Push, and Trip Maneuvers. When wielding a Weapon, you may use Survival instead of Combat to determine the Damage Base of your Struggle Attacks and to qualify for a Weapon’s Moves."
-            },
-            "Wear it Better": {
-              "name": "Wear it Better",
-              "Prerequisites": "Expert Survival",
-              "Frequency": "Static",
-              "Effect": "While wearing Body Equipment worth at least $1000, you gain +5 Damage Reduction. This does not stack with any Damage Reduction granted by any Body Equipment."
-            }
+            "talents": [
+              {
+                "name": "Call to Adventure",
+                "Frequency": "Static",
+                "Effect": "You gain the Instinctive Aptitude Edge, even if you do not meet its prerequisites. If you already have this Edge, gain another Edge for which you qualify. During Combat or tense situations (never Extended Actions), if you spend AP to add a bonus to a Skill Check, you may add +1d6 instead of +2."
+              },
+              {
+                "name": "Frisk",
+                "Frequency": "Static",
+                "Effect": "You gain the Frisk Ability."
+              },
+              {
+                "name": "Handyman",
+                "Frequency": "Static",
+                "Effect": "Whenever you use an item or a non-Weapon piece of equipment which calls for a Skill Check or has an effect or prerequisite based on a Skill Rank, you may substitute Survival for the used Skill. This does not affect prerequisites for Books."
+              },
+              {
+                "name": "Hat Trick",
+                "Frequency": "Static",
+                "Effect": "While wearing Head Equipment worth at least $1000, you gain 15 Damage Reduction against Critical Hits. This does not stack with any Damage Reduction granted by any Head Equipment."
+              },
+              {
+                "name": "Movement Mastery",
+                "Frequency": "Static",
+                "Effect": "Choose one of Art of Stealth, Athletic Initiative, Mounted Prowess, Nimble Movement, Slippery, Stamina, Swimmer, or Wallrunner. You gain the chosen Edge, even if you do not meet the prerequisites. Additionally, you may take any of these Edges in the future as if you did meet the prerequisites."
+              },
+              {
+                "name": "Sole Power",
+                "Frequency": "Static",
+                "Effect": "While wearing Feet Equipment worth at least $1000, you do not trigger Hazards while Shifting. However, you still trigger any Hazards that you are standing on at the start or end of your turn. Reactive Hazards such as Stealth Rock cannot be triggered against you."
+              },
+              {
+                "name": "Wayfarer",
+                "Frequency": "Static",
+                "Effect": "You may use your Survival Skill when making Opposed Rolls when defending against Disarm, Grapple, Push, and Trip Maneuvers. When wielding a Weapon, you may use Survival instead of Combat to determine the Damage Base of your Struggle Attacks and to qualify for a Weapon’s Moves."
+              },
+              {
+                "name": "Wear it Better",
+                "Prerequisites": "Expert Survival",
+                "Frequency": "Static",
+                "Effect": "While wearing Body Equipment worth at least $1000, you gain +5 Damage Reduction. This does not stack with any Damage Reduction granted by any Body Equipment."
+              }
+            ]
           }
         ]
       }
