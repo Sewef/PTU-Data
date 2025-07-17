@@ -502,7 +502,7 @@
           },
           {
             "name": "Signature Technique Modifications",
-            "techniques":[
+            "techniques": [
               {
                 "name": "Cone, Line, Burst, and Blast Moves",
                 "Scattershot – Agility Training": "Instead of the Move’s normal range, it has a range of 4m, 3 Targets.",
@@ -1381,30 +1381,32 @@
           },
           {
             "name": "Trickster Techniques",
-            "Mind Games": {
-              "name": "Mind Games",
-              "Frequency": "Scene x2 — Free Action",
-              "Trigger": "Your Pokémon hits a foe with a Move with the Social keyword",
-              "Effect": "The foe becomes Vulnerable for one full round. If the foe is afflicted with Rage, Suppression, Infatuation, or Confusion you may change one of the listed Volatile Status to another listed Volatile Status. Mind Games may only be activated once per Scene per foe. When inflicting Infatuation this way, the object of Infatuation is your Pokémon, regardless of gender."
-            },
-            "Escape Artist": {
-              "name": "Escape Artist",
-              "Frequency": "1 AP – Free Action",
-              "Trigger": "Your Pokémon targets an adjacent foe with a Status-Class Move",
-              "Effect": "The triggering Move cannot provoke an Attack of Opportunity, and your Pokémon may immediately perform a Disengage Maneuver as a Free Action. Escape Artist may only be activated once per Scene per Pokémon."
-            },
-            "Shell Game": {
-              "name": "Shell Game",
-              "Frequency": "Scene x2 – Special",
-              "Target": "Allied Hazards",
-              "Effect": "Your Pokémon may activate Shell Game when placing Hazards as as Free Action or otherwise as a Standard Action. Choose one type of Hazard and move all allied instances of that Hazard up to X meters, where X is equal to half your Guile Rank; they do not have to remain contiguous. You may use Shell Game to place Hazards of different types on the same square or create layers of Toxic Spikes."
-            },
-            "Impromptu Trick": {
-              "name": "Impromptu Trick",
-              "Frequency": "1 AP – Free Action",
-              "Trigger": "A foe triggers an Attack of Opportunity from your Pokémon",
-              "Effect": "Your Pokémon may use a Move with the Hazard Keyword or an At-Will or EOT Frequency Status-Class Move targeting that foe instead of a Struggle Attack."
-            }
+            "techniques": [
+              {
+                "name": "Mind Games",
+                "Frequency": "Scene x2 — Free Action",
+                "Trigger": "Your Pokémon hits a foe with a Move with the Social keyword",
+                "Effect": "The foe becomes Vulnerable for one full round. If the foe is afflicted with Rage, Suppression, Infatuation, or Confusion you may change one of the listed Volatile Status to another listed Volatile Status. Mind Games may only be activated once per Scene per foe. When inflicting Infatuation this way, the object of Infatuation is your Pokémon, regardless of gender."
+              },
+              {
+                "name": "Escape Artist",
+                "Frequency": "1 AP – Free Action",
+                "Trigger": "Your Pokémon targets an adjacent foe with a Status-Class Move",
+                "Effect": "The triggering Move cannot provoke an Attack of Opportunity, and your Pokémon may immediately perform a Disengage Maneuver as a Free Action. Escape Artist may only be activated once per Scene per Pokémon."
+              },
+              {
+                "name": "Shell Game",
+                "Frequency": "Scene x2 – Special",
+                "Target": "Allied Hazards",
+                "Effect": "Your Pokémon may activate Shell Game when placing Hazards as as Free Action or otherwise as a Standard Action. Choose one type of Hazard and move all allied instances of that Hazard up to X meters, where X is equal to half your Guile Rank; they do not have to remain contiguous. You may use Shell Game to place Hazards of different types on the same square or create layers of Toxic Spikes."
+              },
+              {
+                "name": "Impromptu Trick",
+                "Frequency": "1 AP – Free Action",
+                "Trigger": "A foe triggers an Attack of Opportunity from your Pokémon",
+                "Effect": "Your Pokémon may use a Move with the Hazard Keyword or an At-Will or EOT Frequency Status-Class Move targeting that foe instead of a Struggle Attack."
+              }
+            ]
           }
         ]
       }
@@ -3191,74 +3193,74 @@
           },
           {
             "name": "Chef Recipes",
-            "Tasty Snacks": {
-              "name": "Tasty Snacks",
-              "Prerequisites": "Chef",
-              "Cost": "$100",
-              "Effect": "You create a Salty Surprise, Spicy Wrap, Sour Candy, Dry Wafer, Bitter Treat, or Sweet Confection."
-            },
-            "Salty Surprise": {
-              "name": "Salty Surprise",
-              "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by an attack to gain 5 Temporary Hit Points. If the user likes Salty Flavors, they gain 10 Temporary Hit Points Instead. If the user dislikes Salty Food, they become Enraged."
-            },
-            "Spicy Wrap": {
-              "name": "Spicy Wrap",
-              "Effect": "The user may trade in this Snack’s Digestion Buff when making a Physical attack to deal +5 additional Damage. If the user prefers Spicy Food, it deals +10 additional Damage instead. If the user dislikes Spicy Food, they become Enraged."
-            },
-            "Sour Candy": {
-              "name": "Sour Candy",
-              "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by a Physical Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Sour Food, they gain +10 Damage Reduction instead. If the user dislikes Sour Food, they become Enraged."
-            },
-            "Dry Wafer": {
-              "name": "Dry Wafer",
-              "Effect": "The user may trade in this Snack’s Digestion Buff when making a Special attack to deal +5 additional Damage. If the user prefers Dry Food, it deals +10 additional Damage instead. If the user dislikes Dry Food, they become Enraged."
-            },
-            "Bitter Treat": {
-              "name": "Bitter Treat",
-              "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by a Special Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Bitter Food, they gain +10 Damage Reduction instead. If the user dislikes Bitter Food, they become Enraged."
-            },
-            "Sweet Confection": {
-              "name": "Sweet Confection",
-              "Effect": "The user may trade in this Snack’s Digestion Buff to gain +4 Evasion until the end of their next turn. If the user prefers Sweet Food, they gain +4 Accuracy as well. If the user dislikes Sweet Food, they become Enraged."
-            },
-            "Meal Planner": {
-              "name": "Meal Planner",
-              "Prerequisites": "Chef",
-              "Effect": "You may create the following items, based on your Intuition Rank",
-              "\n» Novice": "“Enriched Water” for $40",
-              "\n» Adept": "“Super Soda Pop” for $65",
-              "\n» Expert": "“Sparkling Lemonade” for $125",
-              "\n» Master": "“MooMoo Milk” for $250"
-            },
-            "Hearty Meal": {
-              "name": "Hearty Meal",
-              "Prerequisites": "Hits the Spot",
-              "Ingredients": "x2 Tiny Mushrooms; or x1 Big Mushroom; or x1 Balm Mushroom, or x2 Power Herbs, White Herbs, or Mental Herbs",
-              "Effect": "You create up to five Hearty Meals, which may be consumed by Trainers as an Extended Action. When consumed, that Trainer gains +2 to their Max AP until the end of their next extended rest. A Trainer may only be under the effect of one Hearty Meal at a time. Hearty Meals not consumed within 20 minutes of being created lose all flavor and all effect."
-            },
-            "Bait Mixer": {
-              "name": "Bait Mixer",
-              "Prerequisites": "Culinary Appreciation",
-              "Cost": "$150 or Honey.",
-              "Effect": "You may create Bait. For $50 more, you may create Bait as Super Bait or Vile Bait instead. Super Bait works like regular Bait, but you may add your Intuition Rank to 1d20 Rolls made to attract Pokémon. Vile Bait works like regular Bait, but Pokémon that eat it are Poisoned."
-            },
-            "Preserves": {
-              "name": "Preserves",
-              "Prerequisites": "Accentuated Taste",
-              "Ingredients": "$50, any Berry, Herb, or Mushroom",
-              "Effect": "The user creates x2 Units of Preserves from the Berry, Herb, or Mushroom. Preserves have the same effect as the consumable from which they were made."
-            },
-            "Leftovers": {
-              "name": "Leftovers",
-              "Prerequisites": "Complex Aftertaste",
-              "Cost": "$100",
-              "Effect": "You create Leftovers."
-            },
-            "Vitamins": {
-              "name": "Vitamins",
-              "Prerequisites": "Dietician",
-              "Effect": "You create an HP Up, Protein, Iron, Calcium, Zinc, or Carbos for $2450, or Stat Suppressants for $200."
-            }
+            "recipes": [
+              {
+                "name": "Tasty Snacks",
+                "Prerequisites": "Chef",
+                "Cost": "$100",
+                "Effect": "You create a Salty Surprise, Spicy Wrap, Sour Candy, Dry Wafer, Bitter Treat, or Sweet Confection.",
+                "recipes": [
+                  {
+                    "name": "Salty Surprise",
+                    "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by an attack to gain 5 Temporary Hit Points. If the user likes Salty Flavors, they gain 10 Temporary Hit Points Instead. If the user dislikes Salty Food, they become Enraged."
+                  },
+                  {
+                    "name": "Spicy Wrap",
+                    "Effect": "The user may trade in this Snack’s Digestion Buff when making a Physical attack to deal +5 additional Damage. If the user prefers Spicy Food, it deals +10 additional Damage instead. If the user dislikes Spicy Food, they become Enraged."
+                  },
+                  {
+                    "name": "Sour Candy",
+                    "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by a Physical Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Sour Food, they gain +10 Damage Reduction instead. If the user dislikes Sour Food, they become Enraged."
+                  },
+                  {
+                    "name": "Dry Wafer",
+                    "Effect": "The user may trade in this Snack’s Digestion Buff when making a Special attack to deal +5 additional Damage. If the user prefers Dry Food, it deals +10 additional Damage instead. If the user dislikes Dry Food, they become Enraged."
+                  },
+                  {
+                    "name": "Bitter Treat",
+                    "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by a Special Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Bitter Food, they gain +10 Damage Reduction instead. If the user dislikes Bitter Food, they become Enraged."
+                  },
+                  {
+                    "name": "Sweet Confection",
+                    "Effect": "The user may trade in this Snack’s Digestion Buff to gain +4 Evasion until the end of their next turn. If the user prefers Sweet Food, they gain +4 Accuracy as well. If the user dislikes Sweet Food, they become Enraged."
+                  }
+                ]
+              },
+              {
+                "name": "Meal Planner",
+                "Prerequisites": "Chef",
+                "Effect": "You may create the following items, based on your Intuition Rank\n» Novice: “Enriched Water” for $40\n» Adept: “Super Soda Pop” for $65\n» Expert: “Sparkling Lemonade” for $125\n» Master: “MooMoo Milk” for $250"
+              },
+              {
+                "name": "Hearty Meal",
+                "Prerequisites": "Hits the Spot",
+                "Ingredients": "x2 Tiny Mushrooms; or x1 Big Mushroom; or x1 Balm Mushroom, or x2 Power Herbs, White Herbs, or Mental Herbs",
+                "Effect": "You create up to five Hearty Meals, which may be consumed by Trainers as an Extended Action. When consumed, that Trainer gains +2 to their Max AP until the end of their next extended rest. A Trainer may only be under the effect of one Hearty Meal at a time. Hearty Meals not consumed within 20 minutes of being created lose all flavor and all effect."
+              },
+              {
+                "name": "Bait Mixer",
+                "Prerequisites": "Culinary Appreciation",
+                "Cost": "$150 or Honey.",
+                "Effect": "You may create Bait. For $50 more, you may create Bait as Super Bait or Vile Bait instead. Super Bait works like regular Bait, but you may add your Intuition Rank to 1d20 Rolls made to attract Pokémon. Vile Bait works like regular Bait, but Pokémon that eat it are Poisoned."
+              },
+              {
+                "name": "Preserves",
+                "Prerequisites": "Accentuated Taste",
+                "Ingredients": "$50, any Berry, Herb, or Mushroom",
+                "Effect": "The user creates x2 Units of Preserves from the Berry, Herb, or Mushroom. Preserves have the same effect as the consumable from which they were made."
+              },
+              {
+                "name": "Leftovers",
+                "Prerequisites": "Complex Aftertaste",
+                "Cost": "$100",
+                "Effect": "You create Leftovers."
+              },
+              {
+                "name": "Vitamins",
+                "Prerequisites": "Dietician",
+                "Effect": "You create an HP Up, Protein, Iron, Calcium, Zinc, or Carbos for $2450, or Stat Suppressants for $200."
+              }
+            ]
           }
         ]
       }
@@ -4201,16 +4203,18 @@
             "Frequency": "Static",
             "Effect": "Choose Spinning Dance or Own Tempo. You gain the chosen Ability.",
             "Mechanic – Dance Moves": "Dance Moves you create with the Dance Form Feature look like the Move on the right. First, name the Dance Move whatever you like. Secondly, choose two Combat Stage gains for the effect. This may either be +2 Combat Stages to a single Stat, like Swords Dance, or +1 Combat Stage to two different Stats, like Dragon Dance. Once chosen, this cannot be changed. Dragon Dance, Quiver Dance, and Swords Dance count as Dance Moves for the purposes of Dancer Features as well. A Dance Move’s Contest Type must be chosen from a Contest Type associated with a Stat that the Dance Move affects. Cool is associated with Attack, Tough is associated with Defense, Beauty is associated with Special Attack, Smart is associated with Special Defense, and Cute is associated with Speed.",
-            "Template": {
-              "name": "Dance Move",
-              "Type": "Normal",
-              "Frequency": "EOT",
-              "AC": "None",
-              "Range": "Self",
-              "Effect": "",
-              "Contest Type": "",
-              "Contest Effect": "Get Ready!"
-            }
+            "Template": [
+              {
+                "name": "Dance Move",
+                "Type": "Normal",
+                "Frequency": "EOT",
+                "AC": "None",
+                "Range": "Self",
+                "Effect": "",
+                "Contest Type": "",
+                "Contest Effect": "Get Ready!"
+              }
+            ]
           },
           {
             "name": "Dance Form",
@@ -5723,37 +5727,53 @@
           },
           {
             "name": "Power Manipulations",
-            "Rank 1 Power Manipulations": {
-              "Energy Finesse": {
-                "Condition": "The triggering Move is an Arcane Weapon Move and has an Effect Range",
-                "Effect": "In addition to its existing Effect Range, the Effect triggers on all natural Even-Numbered Rolls."
+            "techniques": [
+              {
+                "name": "Rank 1 Power Manipulations",
+                "techniques": [
+                  {
+                    "name": "Energy Finesse",
+                    "Condition": "The triggering Move is an Arcane Weapon Move and has an Effect Range",
+                    "Effect": "In addition to its existing Effect Range, the Effect triggers on all natural Even-Numbered Rolls."
+                  },
+                  {
+                    "name": "Warp Energy",
+                    "Condition": "The triggering Move is a Cone, Line, Burst, or Blast",
+                    "Effect": "Instead of its usual range, you may use the Move as if it had a range of Burst 1, Cone 2, Close Blast 2, Line 4, or 2-Target with a range of 4."
+                  },
+                  {
+                    "name": "Directed Barrier",
+                    "Effect": "You gain Damage Reduction equal to your Tick Value against the targets of the triggering Move for one fullround."
+                  },
+                  {
+                    "name": "Power Overdrive",
+                    "Effect": "If the triggering attack hits, you lose a Tick of Hit Points, and the triggering attack deals bonus damage equal to your Tick Value plus your Occult Education Rank. This loss of Hit Points cannot be prevented in any way."
+                  }
+                ]
               },
-              "Warp Energy": {
-                "Condition": "The triggering Move is a Cone, Line, Burst, or Blast",
-                "Effect": "Instead of its usual range, you may use the Move as if it had a range of Burst 1, Cone 2, Close Blast 2, Line 4, or 2-Target with a range of 4."
-              },
-              "Directed Barrier": {
-                "Effect": "You gain Damage Reduction equal to your Tick Value against the targets of the triggering Move for one fullround."
-              },
-              "Power Overdrive": {
-                "Effect": "If the triggering attack hits, you lose a Tick of Hit Points, and the triggering attack deals bonus damage equal to your Tick Value plus your Occult Education Rank. This loss of Hit Points cannot be prevented in any way."
+              {
+                "name": "Rank 2 Power Manipulations",
+                "techniques": [
+                  {
+                    "name": "Berserk Blow",
+                    "Condition": "The Triggering Move is 1-Target",
+                    "Effect": "The Move causes the target to become Vulnerable for 1 full round, and the Move’s Critical Hit Range is increased by +3."
+                  },
+                  {
+                    "name": "Energy Link",
+                    "Effect": "For one full round, the next Normal-Type attack to hit the target instead deals Damage of the same Type as this Attack. If the Attack Energy Link was applied to was already Normal-Typed, for one full round, the next Normal-Type attack to hit the target instead deals damage as if it was one step more Super-Effective."
+                  },
+                  {
+                    "name": "Enlarged Power",
+                    "Effect": "The Move gains the keyword Burst 1 if Melee 1-Target, or Blast 2 if ranged 1-Target. If the Move is already a Burst, Blast, Cone, or Line, increase the size of the Move’s Range by 1."
+                  },
+                  {
+                    "name": "Lock of Fate",
+                    "Effect": "The Move cannot be Intercepted, and targets may not avoid the attack in any way if hits (such as via Dodge, Parry, Shield Moves, etc). Evasion still applies, and the Move can still Miss."
+                  }
+                ]
               }
-            },
-            "Rank 2 Power Manipulations": {
-              "Berserk Blow": {
-                "Condition": "The Triggering Move is 1-Target",
-                "Effect": "The Move causes the target to become Vulnerable for 1 full round, and the Move’s Critical Hit Range is increased by +3."
-              },
-              "Energy Link": {
-                "Effect": "For one full round, the next Normal-Type attack to hit the target instead deals Damage of the same Type as this Attack. If the Attack Energy Link was applied to was already Normal-Typed, for one full round, the next Normal-Type attack to hit the target instead deals damage as if it was one step more Super-Effective."
-              },
-              "Enlarged Power": {
-                "Effect": "The Move gains the keyword Burst 1 if Melee 1-Target, or Blast 2 if ranged 1-Target. If the Move is already a Burst, Blast, Cone, or Line, increase the size of the Move’s Range by 1."
-              },
-              "Lock of Fate": {
-                "Effect": "The Move cannot be Intercepted, and targets may not avoid the attack in any way if hits (such as via Dodge, Parry, Shield Moves, etc). Evasion still applies, and the Move can still Miss."
-              }
-            }
+            ]
           }
         ]
       }

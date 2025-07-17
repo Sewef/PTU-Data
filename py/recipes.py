@@ -32,30 +32,74 @@ def extract_recipes(data, parent=None):
 if __name__ == "__main__":
     # Remplace cette ligne par ton JSON réel
     json_input = '''{
-            "name": "Signature Technique Modifications",
-            "Cone, Line, Burst, and Blast Moves": {
-              "name": "Cone, Line, Burst, and Blast Moves",
-              "Scattershot – Agility Training": "Instead of the Move’s normal range, it has a range of 4m, 3 Targets.",
-              "Shock and Awe – Inspired Training": "Foes targeted by the Move take a -2 penalty to Save Checks and a -1 Penalty to Evasion until the end of the user’s next turn.",
-              "Vicious Storm – Brutal Training": "The Move gains the Smite keyword. Applicable to Damaging Moves only."
+            "name": "Chef Recipes",
+            "Tasty Snacks": {
+              "name": "Tasty Snacks",
+              "Prerequisites": "Chef",
+              "Cost": "$100",
+              "Effect": "You create a Salty Surprise, Spicy Wrap, Sour Candy, Dry Wafer, Bitter Treat, or Sweet Confection."
             },
-            "Single Target Moves": {
-              "name": "Single Target Moves",
-              "Guarding Strike – Inspired Training": "If this Move hits, the user gains +5 Damage Reduction against the target of the attack until the end of their next turn.",
-              "Unbalancing Blow – Brutal Training": "Whether the Move hits or misses, the target becomes Vulnerable until the next time they are hit by a Damaging Attack or one full round has passed, whichever comes first.",
-              "Reliable Attack – Focused Training": "If the Move misses its target, its Frequency is not spent and the user may immediately make a Struggle Attack as a Free Action. Cannot be applied to Moves with the Smite keyword."
+            "Salty Surprise": {
+              "name": "Salty Surprise",
+              "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by an attack to gain 5 Temporary Hit Points. If the user likes Salty Flavors, they gain 10 Temporary Hit Points Instead. If the user dislikes Salty Food, they become Enraged."
             },
-            "Damaging Moves": {
-              "name": "Damaging Moves",
-              "Alternative Energy – Focused Training": "Switch the Class of the Move from Physical to Special or vice versa.",
-              "Bloodied Speed – Agility Training": "This Move may be used as Priority (Advanced) if the user has less than half of their maximum Hit Points.",
-              "Double Down – Brutal Training": "The Move gains the Double Strike keyword. Effects and Effect-Ranges may be triggered only once (but either roll may trigger the effect). This may only be applied to Moves with a Damage Base of 4 or less, and may not be applied to Moves whose Damage Base change upon certain conditions (such as Fury Cutter or Ice Ball) or moves with Special-Case Damage (such as Night Shade)."
+            "Spicy Wrap": {
+              "name": "Spicy Wrap",
+              "Effect": "The user may trade in this Snack’s Digestion Buff when making a Physical attack to deal +5 additional Damage. If the user prefers Spicy Food, it deals +10 additional Damage instead. If the user dislikes Spicy Food, they become Enraged."
             },
-            "Status Moves": {
-              "name": "Status Moves",
-              "Burst of Motivation – Inspired Training": "After this Move is Resolved, the user may increase any Stats with negative Combat Stages by up to +2 Combat Stages (but this cannot put Combat Stages above +0 CS total).",
-              "Supreme Concentration – Focused Training": "This Move may be used even if the user is Paralyzed, Flinched, Enraged, or has failed their Confusion Save Check.",
-              "Double Curse – Agility Training": "The user may target an additional foe with this Attack. This may be applied only to 1-Target Moves."
+            "Sour Candy": {
+              "name": "Sour Candy",
+              "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by a Physical Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Sour Food, they gain +10 Damage Reduction instead. If the user dislikes Sour Food, they become Enraged."
+            },
+            "Dry Wafer": {
+              "name": "Dry Wafer",
+              "Effect": "The user may trade in this Snack’s Digestion Buff when making a Special attack to deal +5 additional Damage. If the user prefers Dry Food, it deals +10 additional Damage instead. If the user dislikes Dry Food, they become Enraged."
+            },
+            "Bitter Treat": {
+              "name": "Bitter Treat",
+              "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by a Special Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Bitter Food, they gain +10 Damage Reduction instead. If the user dislikes Bitter Food, they become Enraged."
+            },
+            "Sweet Confection": {
+              "name": "Sweet Confection",
+              "Effect": "The user may trade in this Snack’s Digestion Buff to gain +4 Evasion until the end of their next turn. If the user prefers Sweet Food, they gain +4 Accuracy as well. If the user dislikes Sweet Food, they become Enraged."
+            },
+            "Meal Planner": {
+              "name": "Meal Planner",
+              "Prerequisites": "Chef",
+              "Effect": "You may create the following items, based on your Intuition Rank",
+              "\n» Novice": "“Enriched Water” for $40",
+              "\n» Adept": "“Super Soda Pop” for $65",
+              "\n» Expert": "“Sparkling Lemonade” for $125",
+              "\n» Master": "“MooMoo Milk” for $250"
+            },
+            "Hearty Meal": {
+              "name": "Hearty Meal",
+              "Prerequisites": "Hits the Spot",
+              "Ingredients": "x2 Tiny Mushrooms; or x1 Big Mushroom; or x1 Balm Mushroom, or x2 Power Herbs, White Herbs, or Mental Herbs",
+              "Effect": "You create up to five Hearty Meals, which may be consumed by Trainers as an Extended Action. When consumed, that Trainer gains +2 to their Max AP until the end of their next extended rest. A Trainer may only be under the effect of one Hearty Meal at a time. Hearty Meals not consumed within 20 minutes of being created lose all flavor and all effect."
+            },
+            "Bait Mixer": {
+              "name": "Bait Mixer",
+              "Prerequisites": "Culinary Appreciation",
+              "Cost": "$150 or Honey.",
+              "Effect": "You may create Bait. For $50 more, you may create Bait as Super Bait or Vile Bait instead. Super Bait works like regular Bait, but you may add your Intuition Rank to 1d20 Rolls made to attract Pokémon. Vile Bait works like regular Bait, but Pokémon that eat it are Poisoned."
+            },
+            "Preserves": {
+              "name": "Preserves",
+              "Prerequisites": "Accentuated Taste",
+              "Ingredients": "$50, any Berry, Herb, or Mushroom",
+              "Effect": "The user creates x2 Units of Preserves from the Berry, Herb, or Mushroom. Preserves have the same effect as the consumable from which they were made."
+            },
+            "Leftovers": {
+              "name": "Leftovers",
+              "Prerequisites": "Complex Aftertaste",
+              "Cost": "$100",
+              "Effect": "You create Leftovers."
+            },
+            "Vitamins": {
+              "name": "Vitamins",
+              "Prerequisites": "Dietician",
+              "Effect": "You create an HP Up, Protein, Iron, Calcium, Zinc, or Carbos for $2450, or Stat Suppressants for $200."
             }
           }'''
 
