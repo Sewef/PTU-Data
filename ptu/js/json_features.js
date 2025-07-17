@@ -258,29 +258,41 @@ function isLeaf(obj) {
  * @param {string} [nameOverride] Nom forcé pour la carte (clé-propriété par ex.)
  * @returns {Object[]}        Tableau de Features prêtes pour `createCard`
  */
-function collectLeafFeatures(featObj, nameOverride) {
+function collectLeafFeatures(featObj, nameOverride, embedOnly = false) {
   const list = [];
   const name = nameOverride || featObj.name || "(unnamed)";
 
-  // 1) Si l’objet possède des champs « leaf », on pousse la carte-mère.
-  if (isLeaf(featObj)) {
-    list.push({ ...featObj, name });
-  }
+  const isSimpleTextMap = obj =>
+    obj && typeof obj === "object" &&
+    !Array.isArray(obj) &&
+    Object.values(obj).every(v => typeof v === "string");
 
-  // 2) Exploration des propriétés qui sont elles-mêmes des objets Feature.
+  const hasAnyContent = obj =>
+    Object.entries(obj).some(([k, v]) =>
+      typeof v === "string" || isSimpleTextMap(v)
+    );
+
+  const subCards = [];
+
   Object.entries(featObj).forEach(([k, v]) => {
-    if (
-      v && typeof v === "object" && !Array.isArray(v) &&
-      // on ignore les simples métadonnées
-      !["Source", "source"].includes(k)
-    ) {
-      list.push(...collectLeafFeatures(v, k));   // nom = clé-propriété
+    if (isSimpleTextMap(v)) {
+      subCards.push({
+        name: k,
+        Effect: Object.entries(v)
+          .map(([key, val]) => `<b>${key}</b> : ${val}`)
+          .join("<br>")
+      });
+    } else if (v && typeof v === "object" && !Array.isArray(v)) {
+      subCards.push(...collectLeafFeatures(v, k, true));
     }
   });
 
-  // 3) Exploration d’un éventuel tableau children[].
-  if (Array.isArray(featObj.children)) {
-    featObj.children.forEach(ch => list.push(...collectLeafFeatures(ch)));
+  if ((featObj.name || nameOverride) && hasAnyContent(featObj)) {
+    const cleaned = { ...featObj, name };
+    list.push(cleaned);
+    cleaned.__children = subCards;  // marquage interne, non visible dans le JSON
+  } else if (embedOnly) {
+    list.push(...subCards);
   }
 
   return list;
@@ -350,6 +362,15 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
 
   card.appendChild(body);
   col.appendChild(card);
+
+    // ⬇️ Ajoute ceci juste avant return col;
+    if (feat.__children && Array.isArray(feat.__children)) {
+      feat.__children.forEach(child =>
+        body.appendChild(createCard(child, clsMeta, false, isGeneral, true))
+      );
+    }
+
+    
   return col;
 }
 
@@ -358,12 +379,26 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
  * ------------------------------------------------------------------ */
 function addSubFeatures(obj, clsMeta, container, isGeneral) {
   Object.entries(obj).forEach(([key, val]) => {
+    if (key === "__children") return; // on ignore les enfants internes  
     if (!val || typeof val !== "object") return;
 
     // a) si c’est déjà une feuille -> carte enfant
     if (isLeaf(val)) {
       container.appendChild(
         createCard({ ...val, name: key }, clsMeta, false, isGeneral, true)
+      );
+      return;
+    }
+
+    // 🔥 Cas spécial : si val est un objet simple { k: string, … }
+    const entries = Object.entries(val);
+    if (entries.every(([_, v]) => typeof v === "string")) {
+      const subBody = {
+        name: key,
+        Effect: entries.map(([k, v]) => `<b>${k}</b> : ${v}`).join("<br>")
+      };
+      container.appendChild(
+        createCard(subBody, clsMeta, false, isGeneral, true)
       );
       return;
     }
@@ -378,3 +413,4 @@ function addSubFeatures(obj, clsMeta, container, isGeneral) {
     addSubFeatures(val, clsMeta, container, isGeneral);
   });
 }
+
