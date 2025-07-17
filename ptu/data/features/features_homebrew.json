@@ -1430,59 +1430,56 @@
         "features": [
           {
             "name": "Stat Ace",
-            "Stat Ace": {
-              "name": "Stat Ace",
-              "Tags": "[Class][Branch]",
-              "Prerequisites": "Ace Trainer or Style Expert (Cool), 1 Pokémon with the Attack stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Attack stat of 20 or higher, Novice Command or Focus",
-              "Frequency": "Static",
-              "Effect": "Your Pokémon have their Base Attack increased by +1, and by +1 more for every 10 Levels they have. Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Attack."
-            },
-            "Stat Link": {
-              "name": "Stat Link",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Ace (Attack)",
-              "Frequency": "1 AP — Free Action",
-              "Trigger": "At the end of your Pokémon's turn, their Attack Stat is at its default number of Combat Stages or less.",
-              "Effect": "The triggering Pokémon gains +1 Combat Stage to Attack."
-            },
-            "Stat Training": {
-              "name": "Stat Training",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Ace (Attack)",
-              "Frequency": "At-Will — Extended Action",
-              "Target": "Your Pokémon with at least 1 Tutor Point",
-              "Effect": "Your Pokémon loses 1 Tutor Point and learns Swords Dance or Rage."
-            },
-            "Stat Maneuver": {
-              "name": "Stat Maneuver",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Ace (Attack), Adept Command or Focus",
-              "Frequency": "Scene — Free Action",
-              "Effect": "Your Pokémon may use a Physical 'Melee, 1-Target' Move as if its range was 'Melee, Pass' or 'Melee, 3-Targets'."
-            },
-            "Stat Mastery": {
-              "name": "Stat Mastery",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Maneuver (Attack)",
-              "Frequency": "Static",
-              "Effect": "When your Pokémon uses a Push, Disarm, or Dirty Trick Maneuver successfully, the target loses a Tick of Hit Points."
-            },
-            "Stat Embodiment": {
-              "name": "Stat Embodiment",
-              "Tags": "[Branch]",
-              "Prerequisites": "4 Stat Ace (Attack) Features, Expert Command or Focus",
-              "Frequency": "1 AP — Swift Action, Priority (Limited)",
-              "Target": "Your Pokémon",
-              "Effect": "Your Pokémon gains either Sheer Force or Defiant for the Scene. Switching does not end this effect."
-            },
-            "Stat Stratagem": {
-              "name": "Stat Stratagem",
-              "Tags": "[Branch][Order][Strategem]",
-              "Prerequisites": "Stat Link (Attack), Stat Training (Attack), Master Focus or Command",
-              "Frequency": "2 AP — Standard Action",
-              "Target": "Your Pokémon",
-              "Effect": "While Bound, the target’s damaging Melee Attacks have +1 Critical Hit Range per positive Combat Stage in Attack (max +3)."
-            }
+            "Tags": "[Class][Branch]",
+            "Prerequisites": "Ace Trainer or Style Expert (Cool), 1 Pokémon with the Attack stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Attack stat of 20 or higher, Novice Command or Focus",
+            "Frequency": "Static",
+            "Effect": "Your Pokémon have their Base Attack increased by +1, and by +1 more for every 10 Levels they have. Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Attack."
+          },
+          {
+            "name": "Stat Link",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Ace (Attack)",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "At the end of your Pokémon's turn, their Attack Stat is at its default number of Combat Stages or less.",
+            "Effect": "The triggering Pokémon gains +1 Combat Stage to Attack."
+          },
+          {
+            "name": "Stat Training",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Ace (Attack)",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "Your Pokémon with at least 1 Tutor Point",
+            "Effect": "Your Pokémon loses 1 Tutor Point and learns Swords Dance or Rage."
+          },
+          {
+            "name": "Stat Maneuver",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Ace (Attack), Adept Command or Focus",
+            "Frequency": "Scene — Free Action",
+            "Effect": "Your Pokémon may use a Physical 'Melee, 1-Target' Move as if its range was 'Melee, Pass' or 'Melee, 3-Targets'."
+          },
+          {
+            "name": "Stat Mastery",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Maneuver (Attack)",
+            "Frequency": "Static",
+            "Effect": "When your Pokémon uses a Push, Disarm, or Dirty Trick Maneuver successfully, the target loses a Tick of Hit Points."
+          },
+          {
+            "name": "Stat Embodiment",
+            "Tags": "[Branch]",
+            "Prerequisites": "4 Stat Ace (Attack) Features, Expert Command or Focus",
+            "Frequency": "1 AP — Swift Action, Priority (Limited)",
+            "Target": "Your Pokémon",
+            "Effect": "Your Pokémon gains either Sheer Force or Defiant for the Scene. Switching does not end this effect."
+          },
+          {
+            "name": "Stat Stratagem",
+            "Tags": "[Branch][Order][Strategem]",
+            "Prerequisites": "Stat Link (Attack), Stat Training (Attack), Master Focus or Command",
+            "Frequency": "2 AP — Standard Action",
+            "Target": "Your Pokémon",
+            "Effect": "While Bound, the target’s damaging Melee Attacks have +1 Critical Hit Range per positive Combat Stage in Attack (max +3)."
           }
         ]
       },
@@ -1491,59 +1488,56 @@
         "features": [
           {
             "name": "Stat Ace",
-            "Stat Ace": {
-              "name": "Stat Ace",
-              "Tags": "[Class][Branch]",
-              "Prerequisites": "Ace Trainer or Style Expert (Tough), 1 Pokémon with the Defense stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Defense stat of 20 or higher, Novice Command or Focus",
-              "Frequency": "Static",
-              "Effect": "Your Pokémon have their Base Defense increased by +1, and by +1 more for every 10 Levels they have. Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Defense."
-            },
-            "Stat Link": {
-              "name": "Stat Link",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Ace (Defense)",
-              "Frequency": "1 AP — Free Action",
-              "Trigger": "At the end of your Pokémon's turn, their Defense Stat is at its default number of Combat Stages or less.",
-              "Effect": "The triggering Pokémon gains +1 Combat Stage to Defense."
-            },
-            "Stat Training": {
-              "name": "Stat Training",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Ace (Defense)",
-              "Frequency": "At-Will — Extended Action",
-              "Target": "Your Pokémon with at least 1 Tutor Point",
-              "Effect": "Your Pokémon loses 1 Tutor Point and learns Iron Defense or Reflect."
-            },
-            "Stat Maneuver": {
-              "name": "Stat Maneuver",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Ace (Defense), Adept Command or Focus",
-              "Frequency": "Scene — Free Action",
-              "Effect": "When hit by a Physical Attack, your Pokémon defends as if its Defense Combat Stages were at +6."
-            },
-            "Stat Mastery": {
-              "name": "Stat Mastery",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Maneuver (Defense)",
-              "Frequency": "Static",
-              "Effect": "If your Pokémon does not Shift during its turn, it gains +5 Damage Reduction for one round."
-            },
-            "Stat Embodiment": {
-              "name": "Stat Embodiment",
-              "Tags": "[Branch]",
-              "Prerequisites": "4 Stat Ace (Defense) Features, Expert Command or Focus",
-              "Frequency": "1 AP — Swift Action, Priority (Limited)",
-              "Target": "Your Pokémon",
-              "Effect": "Your Pokémon gains either Filter or Battle Armor for the Scene. Switching does not end this effect."
-            },
-            "Stat Stratagem": {
-              "name": "Stat Stratagem",
-              "Tags": "[Branch][Order][Strategem]",
-              "Prerequisites": "Stat Link (Defense), Stat Training (Defense), Master Focus or Command",
-              "Frequency": "2 AP — Standard Action",
-              "Target": "Your Pokémon",
-              "Effect": "While Bound, the target gains +2 Save Checks vs. Paralysis, Sleep, and Freeze per Combat Stage in Defense (max +6)."
-            }
+            "Tags": "[Class][Branch]",
+            "Prerequisites": "Ace Trainer or Style Expert (Tough), 1 Pokémon with the Defense stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Defense stat of 20 or higher, Novice Command or Focus",
+            "Frequency": "Static",
+            "Effect": "Your Pokémon have their Base Defense increased by +1, and by +1 more for every 10 Levels they have. Additionally, your Pokémon may ignore Base Relations, as long as they are adding to Defense."
+          },
+          {
+            "name": "Stat Link",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Ace (Defense)",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "At the end of your Pokémon's turn, their Defense Stat is at its default number of Combat Stages or less.",
+            "Effect": "The triggering Pokémon gains +1 Combat Stage to Defense."
+          },
+          {
+            "name": "Stat Training",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Ace (Defense)",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "Your Pokémon with at least 1 Tutor Point",
+            "Effect": "Your Pokémon loses 1 Tutor Point and learns Iron Defense or Reflect."
+          },
+          {
+            "name": "Stat Maneuver",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Ace (Defense), Adept Command or Focus",
+            "Frequency": "Scene — Free Action",
+            "Effect": "When hit by a Physical Attack, your Pokémon defends as if its Defense Combat Stages were at +6."
+          },
+          {
+            "name": "Stat Mastery",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Maneuver (Defense)",
+            "Frequency": "Static",
+            "Effect": "If your Pokémon does not Shift during its turn, it gains +5 Damage Reduction for one round."
+          },
+          {
+            "name": "Stat Embodiment",
+            "Tags": "[Branch]",
+            "Prerequisites": "4 Stat Ace (Defense) Features, Expert Command or Focus",
+            "Frequency": "1 AP — Swift Action, Priority (Limited)",
+            "Target": "Your Pokémon",
+            "Effect": "Your Pokémon gains either Filter or Battle Armor for the Scene. Switching does not end this effect."
+          },
+          {
+            "name": "Stat Stratagem",
+            "Tags": "[Branch][Order][Strategem]",
+            "Prerequisites": "Stat Link (Defense), Stat Training (Defense), Master Focus or Command",
+            "Frequency": "2 AP — Standard Action",
+            "Target": "Your Pokémon",
+            "Effect": "While Bound, the target gains +2 Save Checks vs. Paralysis, Sleep, and Freeze per Combat Stage in Defense (max +6)."
           }
         ]
       },
@@ -1552,59 +1546,56 @@
         "features": [
           {
             "name": "Stat Ace",
-            "Stat Ace": {
-              "name": "Stat Ace",
-              "Tags": "[Class][Branch]",
-              "Prerequisites": "Ace Trainer or Style Expert (Beauty), 1 Pokémon with the Special Attack stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Special Attack stat of 20 or higher, Novice Command or Focus",
-              "Frequency": "Static",
-              "Effect": "Your Pokémon have their Base Special Attack increased by +1, and by +1 more for every 10 Levels they have. Additionally, they may ignore Base Relations when adding to Special Attack."
-            },
-            "Stat Link": {
-              "name": "Stat Link",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Ace (Special Attack)",
-              "Frequency": "1 AP — Free Action",
-              "Trigger": "At the end of your Pokémon's turn, their Special Attack Stat is at its default number of Combat Stages or less.",
-              "Effect": "The triggering Pokémon gains +1 Combat Stage to Special Attack."
-            },
-            "Stat Training": {
-              "name": "Stat Training",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Ace (Special Attack)",
-              "Frequency": "At-Will — Extended Action",
-              "Target": "Your Pokémon with at least 1 Tutor Point",
-              "Effect": "Your Pokémon loses 1 Tutor Point and learns Nasty Plot or Hidden Power."
-            },
-            "Stat Maneuver": {
-              "name": "Stat Maneuver",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Ace (Special Attack), Adept Command or Focus",
-              "Frequency": "Scene — Free Action",
-              "Effect": "Your Pokémon may reduce the Area of Effect of a Special Move to gain increased range options."
-            },
-            "Stat Mastery": {
-              "name": "Stat Mastery",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Maneuver (Special Attack)",
-              "Frequency": "Static",
-              "Effect": "The Range of your Pokémon's Special Non-Melee Moves is increased by +2."
-            },
-            "Stat Embodiment": {
-              "name": "Stat Embodiment",
-              "Tags": "[Branch]",
-              "Prerequisites": "4 Stat Ace (Special Attack) Features, Expert Command or Focus",
-              "Frequency": "1 AP — Swift Action, Priority (Limited)",
-              "Target": "Your Pokémon",
-              "Effect": "Your Pokémon gains either Tinted Lens or Competitive for the Scene. Switching does not end this effect."
-            },
-            "Stat Stratagem": {
-              "name": "Stat Stratagem",
-              "Tags": "[Branch][Order][Strategem]",
-              "Prerequisites": "Stat Link (Special Attack), Stat Training (Special Attack), Master Focus or Command",
-              "Frequency": "2 AP — Standard Action",
-              "Target": "Your Pokémon",
-              "Effect": "While Bound, your Pokémon's Ranged Attacks have +1 Effect Range per positive Combat Stage in Special Attack (max +3)."
-            }
+            "Tags": "[Class][Branch]",
+            "Prerequisites": "Ace Trainer or Style Expert (Beauty), 1 Pokémon with the Special Attack stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Special Attack stat of 20 or higher, Novice Command or Focus",
+            "Frequency": "Static",
+            "Effect": "Your Pokémon have their Base Special Attack increased by +1, and by +1 more for every 10 Levels they have. Additionally, they may ignore Base Relations when adding to Special Attack."
+          },
+          {
+            "name": "Stat Link",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Ace (Special Attack)",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "At the end of your Pokémon's turn, their Special Attack Stat is at its default number of Combat Stages or less.",
+            "Effect": "The triggering Pokémon gains +1 Combat Stage to Special Attack."
+          },
+          {
+            "name": "Stat Training",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Ace (Special Attack)",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "Your Pokémon with at least 1 Tutor Point",
+            "Effect": "Your Pokémon loses 1 Tutor Point and learns Nasty Plot or Hidden Power."
+          },
+          {
+            "name": "Stat Maneuver",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Ace (Special Attack), Adept Command or Focus",
+            "Frequency": "Scene — Free Action",
+            "Effect": "Your Pokémon may reduce the Area of Effect of a Special Move to gain increased range options."
+          },
+          {
+            "name": "Stat Mastery",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Maneuver (Special Attack)",
+            "Frequency": "Static",
+            "Effect": "The Range of your Pokémon's Special Non-Melee Moves is increased by +2."
+          },
+          {
+            "name": "Stat Embodiment",
+            "Tags": "[Branch]",
+            "Prerequisites": "4 Stat Ace (Special Attack) Features, Expert Command or Focus",
+            "Frequency": "1 AP — Swift Action, Priority (Limited)",
+            "Target": "Your Pokémon",
+            "Effect": "Your Pokémon gains either Tinted Lens or Competitive for the Scene. Switching does not end this effect."
+          },
+          {
+            "name": "Stat Stratagem",
+            "Tags": "[Branch][Order][Strategem]",
+            "Prerequisites": "Stat Link (Special Attack), Stat Training (Special Attack), Master Focus or Command",
+            "Frequency": "2 AP — Standard Action",
+            "Target": "Your Pokémon",
+            "Effect": "While Bound, your Pokémon's Ranged Attacks have +1 Effect Range per positive Combat Stage in Special Attack (max +3)."
           }
         ]
       },
@@ -1613,59 +1604,56 @@
         "features": [
           {
             "name": "Stat Ace",
-            "Stat Ace": {
-              "name": "Stat Ace",
-              "Tags": "[Class][Branch]",
-              "Prerequisites": "Ace Trainer or Style Expert (Smart), 1 Pokémon with the Special Defense stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Special Defense stat of 20 or higher, Novice Command or Focus",
-              "Frequency": "Static",
-              "Effect": "Your Pokémon have their Base Special Defense increased by +1, and by +1 more for every 10 Levels. They may ignore Base Relations when adding to Special Defense."
-            },
-            "Stat Link": {
-              "name": "Stat Link",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Ace (Special Defense)",
-              "Frequency": "1 AP — Free Action",
-              "Trigger": "At the end of your Pokémon's turn, their Special Defense Stat is at its default number of Combat Stages or less.",
-              "Effect": "The triggering Pokémon gains +1 Combat Stage to Special Defense."
-            },
-            "Stat Training": {
-              "name": "Stat Training",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Ace (Special Defense)",
-              "Frequency": "At-Will — Extended Action",
-              "Target": "Your Pokémon with at least 1 Tutor Point",
-              "Effect": "Your Pokémon loses 1 Tutor Point and learns Amnesia or Light Screen."
-            },
-            "Stat Maneuver": {
-              "name": "Stat Maneuver",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Ace (Special Defense), Adept Command or Focus",
-              "Frequency": "Scene — Free Action",
-              "Effect": "When hit by a Special Attack, your Pokémon defends as if its Special Defense Combat Stages were at +6."
-            },
-            "Stat Mastery": {
-              "name": "Stat Mastery",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Maneuver (Special Defense)",
-              "Frequency": "Static",
-              "Effect": "Your Pokémon loses 5 fewer HP from passive effects (min 1)."
-            },
-            "Stat Embodiment": {
-              "name": "Stat Embodiment",
-              "Tags": "[Branch]",
-              "Prerequisites": "4 Stat Ace (Special Defense) Features, Expert Command or Focus",
-              "Frequency": "1 AP — Swift Action, Priority (Limited)",
-              "Target": "Your Pokémon",
-              "Effect": "Your Pokémon gains either Multiscale or Tolerance for the Scene. Switching does not end this effect."
-            },
-            "Stat Stratagem": {
-              "name": "Stat Stratagem",
-              "Tags": "[Branch][Order][Strategem]",
-              "Prerequisites": "Stat Link (Special Defense), Stat Training (Special Defense), Master Focus or Command",
-              "Frequency": "2 AP — Standard Action",
-              "Target": "Your Pokémon",
-              "Effect": "While Bound, your Pokémon gains +2 Save Checks vs. Confusion, Rage, and Infatuation per Special Defense Stage (max +6)."
-            }
+            "Tags": "[Class][Branch]",
+            "Prerequisites": "Ace Trainer or Style Expert (Smart), 1 Pokémon with the Special Defense stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Special Defense stat of 20 or higher, Novice Command or Focus",
+            "Frequency": "Static",
+            "Effect": "Your Pokémon have their Base Special Defense increased by +1, and by +1 more for every 10 Levels. They may ignore Base Relations when adding to Special Defense."
+          },
+          {
+            "name": "Stat Link",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Ace (Special Defense)",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "At the end of your Pokémon's turn, their Special Defense Stat is at its default number of Combat Stages or less.",
+            "Effect": "The triggering Pokémon gains +1 Combat Stage to Special Defense."
+          },
+          {
+            "name": "Stat Training",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Ace (Special Defense)",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "Your Pokémon with at least 1 Tutor Point",
+            "Effect": "Your Pokémon loses 1 Tutor Point and learns Amnesia or Light Screen."
+          },
+          {
+            "name": "Stat Maneuver",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Ace (Special Defense), Adept Command or Focus",
+            "Frequency": "Scene — Free Action",
+            "Effect": "When hit by a Special Attack, your Pokémon defends as if its Special Defense Combat Stages were at +6."
+          },
+          {
+            "name": "Stat Mastery",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Maneuver (Special Defense)",
+            "Frequency": "Static",
+            "Effect": "Your Pokémon loses 5 fewer HP from passive effects (min 1)."
+          },
+          {
+            "name": "Stat Embodiment",
+            "Tags": "[Branch]",
+            "Prerequisites": "4 Stat Ace (Special Defense) Features, Expert Command or Focus",
+            "Frequency": "1 AP — Swift Action, Priority (Limited)",
+            "Target": "Your Pokémon",
+            "Effect": "Your Pokémon gains either Multiscale or Tolerance for the Scene. Switching does not end this effect."
+          },
+          {
+            "name": "Stat Stratagem",
+            "Tags": "[Branch][Order][Strategem]",
+            "Prerequisites": "Stat Link (Special Defense), Stat Training (Special Defense), Master Focus or Command",
+            "Frequency": "2 AP — Standard Action",
+            "Target": "Your Pokémon",
+            "Effect": "While Bound, your Pokémon gains +2 Save Checks vs. Confusion, Rage, and Infatuation per Special Defense Stage (max +6)."
           }
         ]
       },
@@ -1674,59 +1662,56 @@
         "features": [
           {
             "name": "Stat Ace",
-            "Stat Ace": {
-              "name": "Stat Ace",
-              "Tags": "[Class][Branch]",
-              "Prerequisites": "Ace Trainer or Style Expert (Cute), 1 Pokémon with the Speed stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Speed stat of 20 or higher, Novice Command or Focus",
-              "Frequency": "Static",
-              "Effect": "Your Pokémon have their Base Speed increased by +1, and by +1 more for every 10 Levels. They may ignore Base Relations when adding to Speed."
-            },
-            "Stat Link": {
-              "name": "Stat Link",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Ace (Speed)",
-              "Frequency": "1 AP — Free Action",
-              "Trigger": "At the end of your Pokémon's turn, their Speed Stat is at its default number of Combat Stages or less.",
-              "Effect": "The triggering Pokémon gains +1 Combat Stage to Speed."
-            },
-            "Stat Training": {
-              "name": "Stat Training",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Ace (Speed)",
-              "Frequency": "At-Will — Extended Action",
-              "Target": "Your Pokémon with at least 1 Tutor Point",
-              "Effect": "Your Pokémon loses 1 Tutor Point and learns Agility or After You."
-            },
-            "Stat Maneuver": {
-              "name": "Stat Maneuver",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Ace (Speed), Adept Command or Focus",
-              "Frequency": "Scene — Free Action",
-              "Effect": "Your Pokémon may use a Move as Priority, or a Priority Move as Priority (Advanced)."
-            },
-            "Stat Mastery": {
-              "name": "Stat Mastery",
-              "Tags": "[Branch]",
-              "Prerequisites": "Stat Maneuver (Speed)",
-              "Frequency": "Static",
-              "Effect": "Your Pokémon may take Disengage Maneuvers as Swift Actions."
-            },
-            "Stat Embodiment": {
-              "name": "Stat Embodiment",
-              "Tags": "[Branch]",
-              "Prerequisites": "4 Stat Ace (Speed) Features, Expert Command or Focus",
-              "Frequency": "1 AP — Swift Action, Priority (Limited)",
-              "Target": "Your Pokémon",
-              "Effect": "Your Pokémon gains either Speed Boost or Vanguard for the Scene. Switching does not end this effect."
-            },
-            "Stat Stratagem": {
-              "name": "Stat Stratagem",
-              "Tags": "[Branch][Order][Strategem]",
-              "Prerequisites": "Stat Link (Speed), Stat Training (Speed), Master Focus or Command",
-              "Frequency": "2 AP — Standard Action",
-              "Target": "Your Pokémon",
-              "Effect": "While Bound, your Pokémon’s Movement Capabilities are increased by +1 per positive Speed Stage (max +3)."
-            }
+            "Tags": "[Class][Branch]",
+            "Prerequisites": "Ace Trainer or Style Expert (Cute), 1 Pokémon with the Speed stat of 15 or more, Novice Command or Focus OR 3 Pokémon with the Speed stat of 20 or higher, Novice Command or Focus",
+            "Frequency": "Static",
+            "Effect": "Your Pokémon have their Base Speed increased by +1, and by +1 more for every 10 Levels. They may ignore Base Relations when adding to Speed."
+          },
+          {
+            "name": "Stat Link",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Ace (Speed)",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "At the end of your Pokémon's turn, their Speed Stat is at its default number of Combat Stages or less.",
+            "Effect": "The triggering Pokémon gains +1 Combat Stage to Speed."
+          },
+          {
+            "name": "Stat Training",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Ace (Speed)",
+            "Frequency": "At-Will — Extended Action",
+            "Target": "Your Pokémon with at least 1 Tutor Point",
+            "Effect": "Your Pokémon loses 1 Tutor Point and learns Agility or After You."
+          },
+          {
+            "name": "Stat Maneuver",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Ace (Speed), Adept Command or Focus",
+            "Frequency": "Scene — Free Action",
+            "Effect": "Your Pokémon may use a Move as Priority, or a Priority Move as Priority (Advanced)."
+          },
+          {
+            "name": "Stat Mastery",
+            "Tags": "[Branch]",
+            "Prerequisites": "Stat Maneuver (Speed)",
+            "Frequency": "Static",
+            "Effect": "Your Pokémon may take Disengage Maneuvers as Swift Actions."
+          },
+          {
+            "name": "Stat Embodiment",
+            "Tags": "[Branch]",
+            "Prerequisites": "4 Stat Ace (Speed) Features, Expert Command or Focus",
+            "Frequency": "1 AP — Swift Action, Priority (Limited)",
+            "Target": "Your Pokémon",
+            "Effect": "Your Pokémon gains either Speed Boost or Vanguard for the Scene. Switching does not end this effect."
+          },
+          {
+            "name": "Stat Stratagem",
+            "Tags": "[Branch][Order][Strategem]",
+            "Prerequisites": "Stat Link (Speed), Stat Training (Speed), Master Focus or Command",
+            "Frequency": "2 AP — Standard Action",
+            "Target": "Your Pokémon",
+            "Effect": "While Bound, your Pokémon’s Movement Capabilities are increased by +1 per positive Speed Stage (max +3)."
           }
         ]
       }
