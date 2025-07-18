@@ -1,0 +1,425 @@
+{
+    "Poké Ball": {
+        "items": [
+            {
+                "Ball Name": "Basic Ball",
+                "Modifier": "0",
+                "Special": "Basic Poké Ball; often called just a \"Poké Ball\"."
+            },
+            {
+                "Ball Name": "Great Ball",
+                "Modifier": "-10",
+                "Special": "A better Poké Ball with no special Effect."
+            },
+            {
+                "Ball Name": "Ultra Ball",
+                "Modifier": "-15",
+                "Special": "The best generic Poké Ball."
+            },
+            {
+                "Ball Name": "Master Ball",
+                "Modifier": "-100",
+                "Special": "Incredibly Rare. Worth at least ₣ 300,000. Sold nowhere."
+            },
+            {
+                "Ball Name": "Safari Ball",
+                "Modifier": "0",
+                "Special": "Used during Safari hunts."
+            },
+            {
+                "Ball Name": "Level Ball",
+                "Modifier": "0",
+                "Special": "-20 Modifier if the target is under half the level your active Pokémon is."
+            },
+            {
+                "Ball Name": "Lure Ball",
+                "Modifier": "0",
+                "Special": "-20 Modifier if the target was baited into the encounter with food."
+            },
+            {
+                "Ball Name": "Moon Ball",
+                "Modifier": "0",
+                "Special": "-20 Modifier if the target evolves with an Evolution Stone."
+            },
+            {
+                "Ball Name": "Friend Ball",
+                "Modifier": "-5",
+                "Special": "A caught Pokémon will start with +1 Loyalty."
+            },
+            {
+                "Ball Name": "Love Ball",
+                "Modifier": "0",
+                "Special": "-30 Modifier if the user has an active Pokemon that is of the same evolutionary line as the target, and the opposite gender. Does not work with genderless Pokémon."
+            },
+            {
+                "Ball Name": "Heavy Ball",
+                "Modifier": "0",
+                "Special": "-5 Modifier for each Weight Class the target is above 1."
+            },
+            {
+                "Ball Name": "Fast Ball",
+                "Modifier": "0",
+                "Special": "-20 Modifier if the target has a Movement Capability above 7."
+            },
+            {
+                "Ball Name": "Sport Ball",
+                "Modifier": "0",
+                "Special": "Used during Safari hunts."
+            },
+            {
+                "Ball Name": "Premier Ball",
+                "Modifier": "0",
+                "Special": "Given as promotional balls during sales."
+            },
+            {
+                "Ball Name": "Repeat Ball",
+                "Modifier": "0",
+                "Special": "-20 Modifier if you already own a Pokémon of the target&apos;s species."
+            },
+            {
+                "Ball Name": "Timer Ball",
+                "Modifier": "5",
+                "Special": "-5 to the Modifier after every round since the beginning of the encounter, until the Modifier is -20."
+            },
+            {
+                "Ball Name": "Nest Ball",
+                "Modifier": "0",
+                "Special": "-20 Modifier if the target is under level 10."
+            },
+            {
+                "Ball Name": "Net Ball",
+                "Modifier": "0",
+                "Special": "-20 Modifier, if the target is Water or Bug type."
+            },
+            {
+                "Ball Name": "Dive Ball",
+                "Modifier": "0",
+                "Special": "-20 Modifier, if the target was found underwater or underground."
+            },
+            {
+                "Ball Name": "Luxury Ball",
+                "Modifier": "-5",
+                "Special": "A caught Pokémon is easily pleased and starts with a raised happiness."
+            },
+            {
+                "Ball Name": "Heal Ball",
+                "Modifier": "-5",
+                "Special": "A caught Pokemon will heal to Max HP immediately upon capture."
+            },
+            {
+                "Ball Name": "Quick Ball",
+                "Modifier": "-20",
+                "Special": "+5 to Modifier after 1 round of the encounter, +10 to Modifier after round 2, +20 to modifier after round 3."
+            },
+            {
+                "Ball Name": "Dusk Ball",
+                "Modifier": "0",
+                "Special": "-20 Modifier if it is dark, or if there is very little light out, when used."
+            },
+            {
+                "Ball Name": "Cherish Ball",
+                "Modifier": "-5",
+                "Special": "A decorative Poké Ball often given out during special events."
+            },
+            {
+                "Ball Name": "Park Ball",
+                "Modifier": "-15",
+                "Special": "Used during Safari hunts."
+            }
+        ]
+    },
+    "Medicines": {
+        "Basic Restoratives": [
+            {
+                "Item": "Potion",
+                "Effect": "Heals 20 Hit Points",
+                "Cost": "₽200"
+            },
+            {
+                "Item": "Super Potion",
+                "Effect": "Heals 35 Hit Points",
+                "Cost": "₽380"
+            },
+            {
+                "Item": "Hyper Potion",
+                "Effect": "Heals 70 Hit Points",
+                "Cost": "₽800"
+            },
+            {
+                "Item": "Antidote",
+                "Effect": "Cures Poison",
+                "Cost": "₽ 200"
+            },
+            {
+                "Item": "Paralyze Heal",
+                "Effect": "Cures Paralysis",
+                "Cost": "₽ 200"
+            },
+            {
+                "Item": "Burn Heal",
+                "Effect": "Cures Burns",
+                "Cost": "₽200"
+            },
+            {
+                "Item": "Ice Heal",
+                "Effect": "Cures Freezing",
+                "Cost": "₽ 200"
+            },
+            {
+                "Item": "Full Heal",
+                "Effect": "Cures all Persistent Status Afflictions",
+                "Cost": "₽450"
+            },
+            {
+                "Item": "Full Restore",
+                "Effect": "Heals a Pokemon for 80 Hit Points",
+                "Cost": "₽1450 and cures any Status Afflictions"
+            },
+            {
+                "Item": "Revive",
+                "Effect": "Revives fainted Pokémon and sets to",
+                "Cost": "₽300 20 Hit Points"
+            },
+            {
+                "Item": "Energy Powder",
+                "Effect": "Heals 25 Hit Points – Repulsive",
+                "Cost": "₽150"
+            },
+            {
+                "Item": "Energy Root",
+                "Effect": "Heals 70 Hit Points – Repulsive",
+                "Cost": "₽500"
+            },
+            {
+                "Item": "Heal Powder",
+                "Effect": "Cure all Persistent Status Afflictions",
+                "Cost": "₽350 – Repulsive"
+            },
+            {
+                "Item": "Revival Herb",
+                "Effect": "Revives Pokemon and sets to 50%",
+                "Cost": "₽350 Hit Points – Repulsive"
+            }
+        ],
+        "X-Items": [
+            {
+                "Item": "X Attack",
+                "Effect": "Increases the Pokemon’s Attack by two Combat Stages",
+                "Cost": "₽350"
+            },
+            {
+                "Item": "X Defend",
+                "Effect": "Increases the Pokemon’s Defense by two Combat Stages",
+                "Cost": "₽350"
+            },
+            {
+                "Item": "X Special",
+                "Effect": "Increases the Pokemon’s Special Attack by two Combat Stages",
+                "Cost": "₽350"
+            },
+            {
+                "Item": "X Sp. Def",
+                "Effect": "Increases the Pokemon’s Special Defense by two Combat Stages",
+                "Cost": "₽350"
+            },
+            {
+                "Item": "X Speed",
+                "Effect": "Increases the Pokemon’s Speed by two Combat Stages",
+                "Cost": "₽350"
+            },
+            {
+                "Item": "Dire Hit",
+                "Effect": "Increases Critical Hit Range of all moves by +2.",
+                "Cost": "₽600"
+            },
+            {
+                "Item": "X Accuracy",
+                "Effect": "Increases Accuracy by +2",
+                "Cost": "₽600"
+            },
+            {
+                "Item": "Guard Spec",
+                "Effect": "Prevents reduction of Combat Stages or Accuracy on the Pokemon for 5 Turns",
+                "Cost": "₽700"
+            }
+        ],
+        "Bandages and Poultices": [
+            {
+                "Item": "Bandages",
+                "Effect": "See attached Section",
+                "Cost": "₽300"
+            },
+            {
+                "Item": "Poultices",
+                "Effect": "See attached Section – Repulsive",
+                "Cost": "₽225"
+            }
+        ]
+    },
+    "Food Items": {
+        "Snacks": [
+            {
+                "Item": "Candy Bar",
+                "Effect": "Snack. Grants a Digestion Buff that heals 5 Hit Points.",
+                "Cost": "₽75"
+            },
+            {
+                "Item": "Honey Snack.",
+                "Effect": "Grants a Digestion Buff that heals 5 Hit Points. May be used as Bait",
+                "Cost": "₽100"
+            },
+            {
+                "Item": "Leftovers",
+                "Effect": "Snack.",
+                "Cost": "When their Digestion Buff is traded in, the user recovers 1/16th of their max Hit Points at the beginning of each turn for the rest of the encounter."
+            },
+            {
+                "Item": "Black Sludge",
+                "Effect": "Poison-Type Pokémon may consume the Black Sludge as a Snack Item; when the Digestion Buff is traded in, they recover 1/8th of their Max Hit Points at the beginning of each turn for the rest of the encounter.",
+                "Cost": "₽500"
+            }
+        ],
+        "Refreshment Items": [
+            {
+                "Item": "Enriched Water",
+                "Effect": "Heals 20 Hit Points.",
+                "Cost": "₽75"
+            },
+            {
+                "Item": "Shuckle’s Berry Juice",
+                "Effect": "Heals 30 Hit Points.",
+                "Cost": "---"
+            },
+            {
+                "Item": "Super Soda Pop",
+                "Effect": "Heals 30 Hit Points.",
+                "Cost": "₽125"
+            },
+            {
+                "Item": "Sparkling Lemonade",
+                "Effect": "Heals 50 Hit Points.",
+                "Cost": "₽250"
+            },
+            {
+                "Item": "MooMoo Milk",
+                "Effect": "Heals 80 Hit Points.",
+                "Cost": "₽500"
+            }
+        ],
+        "Miscellaneous Food": [
+            {
+                "Item": "Baby Food",
+                "Effect": "A nutritious food that causes young Pokémon to grow quickly. When consumed, increases Experience Gain of Pokémon at level 15 or lower by 20% for the rest of the day."
+            }
+        ]
+    },
+    "Apricorns, Berries, and Herbs": {
+        "Tiers": [
+            {
+                "Tier": "1",
+                "Berry List": "Cheri Berry, Chesto Berry, Pecha Berry, Rawst Berry, Aspear Berry, Oran Berry, Persim Berry, Razz Berry (and similar).",
+                "Cost": "₽150"
+            },
+            {
+                "Tier": "2",
+                "Berry List": "Lum Berry, Sitrus Berry, Figy Berry (And similar), Liechi Berry (and similar), Pamtre Berry (and similar), Enigma Berry, Lansat Berry, Micle Berry, Cornn Berry, Magost Berry, Rabuta Berry, Nomel Berry, Spelon Berry, Jaboca Berry, Rowap Berry, Starf Berry",
+                "Cost": "₽250"
+            },
+            {
+                "Tier": "3",
+                "Berry List": "Leppa Berry, Pomeg Berry (and similar), Occa Berry (and similar), Custap Berry, Kee Berry, Maranga Berry",
+                "Cost": "₽500"
+            }
+        ],
+        "Yields": [
+            {
+                "Plant Type": "Tier 1 Berries",
+                "Yield Roll": "1d3-1"
+            },
+            {
+                "Plant Type": "Apricorns",
+                "Yield Roll": "1d2-2"
+            },
+            {
+                "Plant Type": "Mental Herbs, White Herbs, Power Herbs, Tiny Mushrooms & Tier 2 Berries",
+                "Yield Roll": "1d3-2"
+            },
+            {
+                "Plant Type": "Revival Herbs, Energy Roots, Big Mushrooms, Balm Mushrooms & Tier 3 Berries",
+                "Yield Roll": "1d4-3"
+            }
+        ],
+        "Apricorns": [
+            {
+                "Apricorn Type": "Red Apricorns",
+                "Poké Ball": "Level Ball"
+            },
+            {
+                "Apricorn Type": "Yellow Apricorns",
+                "Poké Ball": "Moon Ball"
+            },
+            {
+                "Apricorn Type": "Blue Apricorns",
+                "Poké Ball": "Lure Ball"
+            },
+            {
+                "Apricorn Type": "Green Apricorns",
+                "Poké Ball": "Friend Ball"
+            },
+            {
+                "Apricorn Type": "Pink Apricorns",
+                "Poké Ball": "Love Ball"
+            },
+            {
+                "Apricorn Type": "White Apricorns",
+                "Poké Ball": "Fast Ball"
+            },
+            {
+                "Apricorn Type": "Black Apricorns",
+                "Poké Ball": "Heavy Ball"
+            }
+        ],
+        "Herbs":[
+            {
+              "Herb Type": "Energy Root*",
+              "Effect": "Heals 70 Hit Points – Repulsive",
+              "Price": "₽500"
+            },
+            {
+              "Herb Type": "Revival Herb",
+              "Effect": "Revives Pokémon and sets to 50% Hit Points – Repulsive",
+              "Price": "₽350"
+            },
+            {
+              "Herb Type": "Mental Herb",
+              "Effect": "Cures all Volatile Status Effects.",
+              "Price": "₽300"
+            },
+            {
+              "Herb Type": "Power Herb",
+              "Effect": "Eliminates the Set-Up turn of Moves with the Set-Up Keyword.",
+              "Price": "₽300"
+            },
+            {
+              "Herb Type": "White Herb",
+              "Effect": "Any negative Combat Stages are set to 0.",
+              "Price": "₽300"
+            },
+            {
+              "Herb Type": "Tiny Mushroom",
+              "Effect": "The user loses 5 HP, and gains +1 Combat Stage in a random Stat.",
+              "Price": "---"
+            },
+            {
+              "Herb Type": "Big Mushroom",
+              "Effect": "The Poisoned; if they do, they gain +1 Combat Stage in two random Stats.",
+              "Price": "---"
+            },
+            {
+              "Herb Type": "Balm Mushroom",
+              "Effect": "The user is cured of Burn, Paralysis, or Poison. If they are, they lose 1 Combat Stage in a random Stat.",
+              "Price": "---"
+            }
+          ]
+    }
+}
