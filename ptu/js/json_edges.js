@@ -105,7 +105,12 @@ function renderCategory(cat) {
     Object.entries(edgesData).forEach(([name, e]) => {
       if (e.Category !== cat) return;
       if (!selectedSources.has(e.Source)) return;
-      if (q && !name.toLowerCase().includes(q) && !e.Description.toLowerCase().includes(q)) return;
+      if (
+        q &&
+        !name.toLowerCase().includes(q) &&
+        !(e.Description && e.Description.toLowerCase().includes(q)) &&
+        !(e.Effect && e.Effect.toLowerCase().includes(q))
+      ) return;
 
       const col = document.createElement("div");
       col.className = `col-12 col-md-${edgeColSize}`;
