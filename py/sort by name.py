@@ -1,7 +1,7 @@
 import json
 
 # Replace with your JSON filename
-input_file = 'py/outputedge.json'
+input_file = 'ptu/data/abilities/abilities_homebrew.json'
 #output_file = 'work files/8_moves FULL swsh.json'
 output_file = input_file
 
