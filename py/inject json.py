@@ -33,9 +33,9 @@ def replace_nodes(original_nodes, new_nodes):
     return result_nodes
 
 # File paths
-json_file_1 = 'moves_8G.json'  # Replace with your first JSON file path
-json_file_2 = '10_moves INC 9g.json'  # Replace with your second JSON file path
-output_file = '10_moves FULL 9G.json'  # Replace with desired output file path
+json_file_1 = 'ptu/data/abilities/abilities_homebrew.json'  # Replace with your first JSON file path
+json_file_2 = 'work files/10_abilities INC 9g.json'  # Replace with your second JSON file path
+output_file = 'ptu/data/abilities/abilities_homebrew.json'  # Replace with desired output file path
 
 # Load JSON data
 original_data = load_json(json_file_1)
