@@ -170,19 +170,9 @@
     },
     {
         "Name": "Blessed Touch",
-        "Frequency": "Daily x2 – Standard Action",
-        "Effect": "An adjacent Pokémon or Trainer gains Hit Points equal to 1/4th of its maximum Hit Points."
-    },
-    {
-        "Name": "Blessed Touch",
         "Frequency": "Scene – Standard Action",
         "Target": "An adjacent ally below 50% of their maximum Hit Points",
         "Effect": "The target gains three Ticks of temporary Hit Points, and their next Move cannot miss."
-    },
-    {
-        "Name": "Blow Away",
-        "Frequency": "Static",
-        "Effect": "Connection - Whirlwind. When the user uses Whirlwind, all targets hit are pushed an additional 2 meters and lose a Tick of Hit Points."
     },
     {
         "Name": "Blow Away",
@@ -410,12 +400,6 @@
         "Frequency": "Scene – Free Action",
         "Trigger": "The user is hit by a Damaging Move.",
         "Effect": "The Move becomes Disabled."
-    },
-    {
-        "Name": "Cute Charm",
-        "Frequency": "Scene – Free Action",
-        "Trigger": "A foe of the opposite gender attacks the user",
-        "Effect": "The foe becomes Infatuated."
     },
     {
         "Name": "Cute Charm",
@@ -762,11 +746,6 @@
     {
         "Name": "Forest Lord",
         "Frequency": "Scene x2 – Shift Action",
-        "Effect": "This turn, the user may originate a Grass or Ghost-Typed Move from any fully grown tree within 10 meters. Moves performed this way gain a +2 Bonus on their Accuracy Roll."
-    },
-    {
-        "Name": "Forest Lord",
-        "Frequency": "Scene x2 – Shift Action",
         "Effect": "This turn, the user may originate a Move they gain STAB on from any fully grown tree within 10 meters. Moves performed this way gain a +2 Bonus on their Accuracy Roll."
     },
     {
@@ -789,11 +768,6 @@
         "Frequency": "Scene – Free Action",
         "Trigger": "An adjacent Ally takes Damage",
         "Effect": "The damage is resisted one step further. Defensive."
-    },
-    {
-        "Name": "Frighten",
-        "Frequency": "Scene – Swift Action",
-        "Effect": "Lower the target’s Speed 2 Combat Stages."
     },
     {
         "Name": "Frighten",
@@ -1120,11 +1094,6 @@
     },
     {
         "Name": "Intimidate",
-        "Frequency": "At-Will – Swift Action",
-        "Effect": "Lower the target’s Attack 1 Combat Stage. You may target a specific foe only once per Scene with Intimidate."
-    },
-    {
-        "Name": "Intimidate",
         "Frequency": "Scene x2 – Swift Action",
         "Target": "A Pokémon or Trainer within 5m",
         "Effect": "The target is Flinched and loses 1 Combat Stage in your choice of Attack or Special Attack. You may target a specific foe only once per Scene with Intimidate."
@@ -1150,13 +1119,6 @@
         "Frequency": "Daily – Free Action",
         "Trigger": "The user trades in a Berry Juice Food Buff",
         "Effect": "Instead of gaining 30 Hit Points, the user gains Hit Points equal to their Level"
-    },
-    {
-        "Name": "Justified",
-        "Frequency": "At-Will – Free Action",
-        "Trigger": "The user is hit by a damaging Dark Type Move",
-        "Effect": "The user may raise its Attack by +1 Combat Stage.",
-        "Bonus": " The user always gains a +4 bonus to Skill Checks made to Intercept."
     },
     {
         "Name": "Justified",
@@ -1621,11 +1583,6 @@
     },
     {
         "Name": "Pickup",
-        "Frequency": "Daily – Extended Action",
-        "Effect": "You may use Pickup as an Extended Action that requires at least 5 minutes. Roll 1d20, consult the Pickup keyword to figure out what you find!"
-    },
-    {
-        "Name": "Pickup",
         "Frequency": "Scene – Swift Action",
         "Target": "A combatant within 5 meters that is holding an Item.",
         "Effect": "Choose an Item the target is holding. The user gains a faux copy of the Item. This copy has the same effects as the Item copied, but disappears at the end of the Encounter. If the Item was a consumable, the original is also destroyed at the same time if it wasn't consumed by then.",
@@ -1691,11 +1648,6 @@
         "Name": "Power of Alchemy",
         "Frequency": "Scene – Free Action",
         "Effect": "The Pokémon gains an Ability known by the Target for the remainder of the encounter, or until it is Fainted."
-    },
-    {
-        "Name": "Prankster",
-        "Frequency": "Static",
-        "Effect": "The user may use Status Moves as Priority (Advanced)."
     },
     {
         "Name": "Prankster",
@@ -2670,11 +2622,6 @@
         "Name": "Unburden",
         "Frequency": "Static",
         "Effect": "The default state of the user’s Speed is +2 Combat Stages. While holding a Held Item, the user’s Speed is lowered by 2 Combat Stages."
-    },
-    {
-        "Name": "Unnerve",
-        "Frequency": "At-Will – Swift Action",
-        "Effect": "The target cannot gain positive Combat Stages or trade in Digestion Buffs for 1 full round."
     },
     {
         "Name": "Unnerve",
