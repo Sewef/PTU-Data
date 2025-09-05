@@ -108,22 +108,24 @@
             "Prerequisites": "Expert Command or Intimidate",
             "Frequency": "Static",
             "Effect": "You gain the Reckless Advance and Strike There! Orders.",
-            "Reckless Advance": {
-              "name": "Reckless Advance",
-              "Tags": "[Orders][Stratagem]",
-              "Frequency": "Bind 2 AP – Standard Action",
-              "Target": "Your Pokémon",
-              "Effect": "While this Feature is Bound, increase the damage rolls of the target’s damaging melee attacks by +8, and these attacks Trip targets on Accuracy Rolls of 18+. When the target of Reckless Advance hits with a damaging melee attack, they become Vulnerable for one full round.",
-              "Source": "Core"
-            },
-            "Strike There!": {
-              "name": "Strike There!",
-              "Tags": "[Orders]",
-              "Frequency": "Scene – Standard Action",
-              "Target": "Your Pokémon",
-              "Effect": "The target's next damaging attack leaves all Legal Targets Vulnerable for one Round, and deals damage as if it were one step less Resisted, to a maximum of Neutral damage. If the attack deals Super-Effective Damage to all Legal Targets, one Legal Target of the attack is Flinched.",
-              "Source": "Homebrew"
-            },
+            "orders": [
+              {
+                "name": "Reckless Advance",
+                "Tags": "[Orders][Stratagem]",
+                "Frequency": "Bind 2 AP – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "While this Feature is Bound, increase the damage rolls of the target’s damaging melee attacks by +8, and these attacks Trip targets on Accuracy Rolls of 18+. When the target of Reckless Advance hits with a damaging melee attack, they become Vulnerable for one full round.",
+                "Source": "Core"
+              },
+              {
+                "name": "Strike There!",
+                "Tags": "[Orders]",
+                "Frequency": "Scene – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "The target's next damaging attack leaves all Legal Targets Vulnerable for one Round, and deals damage as if it were one step less Resisted, to a maximum of Neutral damage. If the attack deals Super-Effective Damage to all Legal Targets, one Legal Target of the attack is Flinched.",
+                "Source": "Homebrew"
+              }
+            ],
             "Source": "Homebrew",
             "Category": "Pokémon Training and Order"
           },
@@ -132,22 +134,24 @@
             "Prerequisites": "Expert Perception or Guile",
             "Frequency": "Static",
             "Effect": "You gain the Trick Shot and Long Shot Orders.",
-            "Trick Shot": {
-              "name": "Trick Shot",
-              "Tags": "[Orders][Stratagem]",
-              "Frequency": "Bind 2 AP – Standard Action",
-              "Target": "Your Pokémon",
-              "Effect": "While this Feature is Bound, decrease the Accuracy Roll of the target’s damaging ranged attacks by -2. The Critical Hit range of those attacks is increased by +3. This Feature does not affect Moves without an AC value.",
-              "Source": "Core"
-            },
-            "Long Shot": {
-              "name": "Long Shot",
-              "Tags": "[Orders]",
-              "Frequency": "Scene x2 – Standard Action",
-              "Target": "Your Pokémon",
-              "Effect": "The target’s damaging ranged attacks have their range doubled until the end of their next turn, and deal X additional damage. X is equal to the distance in meters that the attack traveled. Long Shot does not increase the size of area of effect attacks. If attacks altered by Long Shot are Critical Hits, add the value of the Damage Dice Roll an additional time to the total damage.",
-              "Source": "Core"
-            },
+            "orders": [
+              {
+                "name": "Trick Shot",
+                "Tags": "[Orders][Stratagem]",
+                "Frequency": "Bind 2 AP – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "While this Feature is Bound, decrease the Accuracy Roll of the target’s damaging ranged attacks by -2. The Critical Hit range of those attacks is increased by +3. This Feature does not affect Moves without an AC value.",
+                "Source": "Core"
+              },
+              {
+                "name": "Long Shot",
+                "Tags": "[Orders]",
+                "Frequency": "Scene x2 – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "The target’s damaging ranged attacks have their range doubled until the end of their next turn, and deal X additional damage. X is equal to the distance in meters that the attack traveled. Long Shot does not increase the size of area of effect attacks. If attacks altered by Long Shot are Critical Hits, add the value of the Damage Dice Roll an additional time to the total damage.",
+                "Source": "Core"
+              }
+            ],
             "Source": "Core",
             "Category": "Pokémon Training and Order"
           },
@@ -156,22 +160,24 @@
             "Prerequisites": "Expert Charm or Guile",
             "Frequency": "Static",
             "Effect": "You gain the Capricious Whirl and Dazzling Dervish Orders.",
-            "Capricious Whirl": {
-              "name": "Capricious Whirl",
-              "Tags": "[Orders][Stratagem]",
-              "Frequency": "Bind 2 AP – Standard Action",
-              "Target": "Your Pokémon",
-              "Effect": "While this Feature is Bound, the target has a +3 bonus to its Evasion but deals 5 less damage with all damaging attacks.",
-              "Source": "Core"
-            },
-            "Dazzling Dervish": {
-              "name": "Dazzling Dervish",
-              "Tags": "[Orders]",
-              "Frequency": "Scene x2 – Standard Action",
-              "Target": "Your Pokémon",
-              "Effect": "Until the end of their next turn, the target adds their non-stat Evasion to their Movement Capabilities and whenever they attack a foe or Shift through a square occupied by a foe, that foe suffers a -3 penalty to all rolls until the end of their next turn. This effect may only affect a foe once per round.",
-              "Source": "Core"
-            },
+            "orders": [
+              {
+                "name": "Capricious Whirl",
+                "Tags": "[Orders][Stratagem]",
+                "Frequency": "Bind 2 AP – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "While this Feature is Bound, the target has a +3 bonus to its Evasion but deals 5 less damage with all damaging attacks.",
+                "Source": "Core"
+              },
+              {
+                "name": "Dazzling Dervish",
+                "Tags": "[Orders]",
+                "Frequency": "Scene x2 – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "Until the end of their next turn, the target adds their non-stat Evasion to their Movement Capabilities and whenever they attack a foe or Shift through a square occupied by a foe, that foe suffers a -3 penalty to all rolls until the end of their next turn. This effect may only affect a foe once per round.",
+                "Source": "Core"
+              }
+            ],
             "Source": "Core",
             "Category": "Pokémon Training and Order"
           },
@@ -180,22 +186,24 @@
             "Prerequisites": "Expert Charm or Intimidate",
             "Frequency": "Static",
             "Effect": "You gain the Brace for Impact and Sentinel Stance Orders.",
-            "Brace for Impact": {
-              "name": "Brace for Impact",
-              "Tags": "[Orders][Stratagem]",
-              "Frequency": "Bind 2 AP – Standard Action",
-              "Target": "Your Pokémon",
-              "Effect": "While this Feature is Bound, once a round, when the target uses a self-targeting Status Move, they may gain 5 Damage Reduction until the end of their next turn. They may also activate this effect as a Standard Action.",
-              "Source": "Core"
-            },
-            "Sentinel Stance": {
-              "name": "Sentinel Stance",
-              "Tags": "[Orders]",
-              "Frequency": "Scene x2 – Standard Action",
-              "Target": "Your Pokémon",
-              "Effect": "Until the end of your next turn, the target may attempt to Intercept attacks for allies as a Shift Action. If they do so, they gain 10 Damage Reduction against the attack. If the target is also under the effect of Brace for Impact, they may gain 5 Damage Reduction from it as if they had used a self-targeting Status Move.",
-              "Source": "Core"
-            },
+            "orders": [
+              {
+                "name": "Brace for Impact",
+                "Tags": "[Orders][Stratagem]",
+                "Frequency": "Bind 2 AP – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "While this Feature is Bound, once a round, when the target uses a self-targeting Status Move, they may gain 5 Damage Reduction until the end of their next turn. They may also activate this effect as a Standard Action.",
+                "Source": "Core"
+              },
+              {
+                "name": "Sentinel Stance",
+                "Tags": "[Orders]",
+                "Frequency": "Scene x2 – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "Until the end of your next turn, the target may attempt to Intercept attacks for allies as a Shift Action. If they do so, they gain 10 Damage Reduction against the attack. If the target is also under the effect of Brace for Impact, they may gain 5 Damage Reduction from it as if they had used a self-targeting Status Move.",
+                "Source": "Core"
+              }
+            ],
             "Source": "Core",
             "Category": "Pokémon Training and Order"
           },
@@ -204,22 +212,24 @@
             "Prerequisites": "Expert Command or Perception",
             "Frequency": "Static",
             "Effect": "You gain the Pinpoint Strike and Perfect Aim Orders.",
-            "Pinpoint Strike": {
-              "name": "Pinpoint Strike",
-              "Tags": "[Orders][Stratagem]",
-              "Frequency": "Bind 2 AP – Standard Action",
-              "Target": "Your Pokémon",
-              "Effect": "Increase the Accuracy and Effect Range of the target’s damaging attacks by +2. These attacks deal 5 less damage, before applying weakness and resistance.",
-              "Source": "Core"
-            },
-            "Perfect Aim": {
-              "name": "Perfect Aim",
-              "Tags": "[Orders]",
-              "Frequency": "Scene x2 – Standard Action",
-              "Target": "Your Pokémon",
-              "Effect": "The next damaging attack the target performs before the end of your next turn automatically hits and ignores Defensive Abilities but deals damage as if it were resisted one step further than normal. You may still roll to trigger any Effect Ranges or Critical Hits. All targets of the attack may not activate any Blessings in response, and the attack may not be Intercepted or avoided in any way (ex: with Dodge, Shield Moves, etc).",
-              "Source": "Core"
-            },
+            "orders": [
+              {
+                "name": "Pinpoint Strike",
+                "Tags": "[Orders][Stratagem]",
+                "Frequency": "Bind 2 AP – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "Increase the Accuracy and Effect Range of the target’s damaging attacks by +2. These attacks deal 5 less damage, before applying weakness and resistance.",
+                "Source": "Core"
+              },
+              {
+                "name": "Perfect Aim",
+                "Tags": "[Orders]",
+                "Frequency": "Scene x2 – Standard Action",
+                "Target": "Your Pokémon",
+                "Effect": "The next damaging attack the target performs before the end of your next turn automatically hits and ignores Defensive Abilities but deals damage as if it were resisted one step further than normal. You may still roll to trigger any Effect Ranges or Critical Hits. All targets of the attack may not activate any Blessings in response, and the attack may not be Intercepted or avoided in any way (ex: with Dodge, Shield Moves, etc).",
+                "Source": "Core"
+              }
+            ],
             "Source": "Core",
             "Category": "Pokémon Training and Order"
           },

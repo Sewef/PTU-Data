@@ -210,12 +210,10 @@ function renderSection(clsName, branchName = "Default") {
           !activeSources.has(featureSource(feat, cls.source))) {
           return;                                        // on zappe
         }
-        row.appendChild(createCard(
-          feat,
-          cls,
-          cardIndex++ === 0,                            // 1ʳᵉ carte ?
-          clsName === "General"
-        ));
+        const leafs = collectLeafFeatures(feat);
+        leafs.forEach((leaf, idx) =>
+          row.appendChild(createCard(leaf, cls, cardIndex++ === 0, true))
+        );
       });
     });
   } else {
