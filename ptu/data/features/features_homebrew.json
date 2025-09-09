@@ -918,31 +918,33 @@
           },
           {
             "name": "Mentor Lessons",
-            "Changing Viewpoints": {
-              "name": "Changing Viewpoints",
-              "Prerequisites": "Mentor, Intuition as a Mentor Skill",
-              "Target": "A Pokémon with at least 1 Tutor Point.",
-              "Effect": "The target loses a Tutor Point, and you may change the target’s Nature to any other Nature which either raises the same Stat as its current nature, or lowers the same Stat as its current Nature."
-            },
-            "Empowered Development": {
-              "name": "Empowered Development",
-              "Prerequisites": "Mentor, Charm as a Mentor Skill",
-              "Target": "A Pokémon with at least 1 Tutor Point",
-              "Effect": "The target loses 1 Tutor Point, and gains any three of the following Poké Edges: Skill Improvement, Advanced Mobility, or Capability Training. A Pokémon may be targeted only once by Empowered Development. The target may gain Poké Edges this way even if they do not meet the \"Prerequisites\", however, they must still follow other limitations; Advanced Mobility can only improve a Movement Capability once, for example."
-            },
-            "Corrective Learning": {
-              "name": "Corrective Learning",
-              "Prerequisites": "Mentor, Intimidate as a Mentor Skill",
-              "Target": "A Pokémon that has spent Tutor Points on a Poké Edge or a Feature’s effect",
-              "Effect": "The target loses one \"Effect\" gained from a Poké Edge or Feature and refunds all Tutor Points spent on it."
-            },
-            "Versatile Teachings": {
-              "name": "Versatile Teachings",
-              "Prerequisites": "Mentor, Pokémon Education as a Mentor Skill",
-              "Target": "A Pokémon with at least 1 Tutor Point",
-              "Effect": "The target loses 1 Tutor Point and may exchange one of its Basic Abilities for any other of its species’ Basic Abilities or one of its Advanced Abilities for any of its species’ Basic or Advanced Abilities.",
-              "Note": "You may NOT activate Versatile Teachings to reroll Abilities that require a roll to determine characteristics, such as Serpent’s Mark and Color Theory."
-            }
+            "lessons": [
+              {
+                "name": "Changing Viewpoints",
+                "Prerequisites": "Mentor, Intuition as a Mentor Skill",
+                "Target": "A Pokémon with at least 1 Tutor Point.",
+                "Effect": "The target loses a Tutor Point, and you may change the target’s Nature to any other Nature which either raises the same Stat as its current nature, or lowers the same Stat as its current Nature."
+              },
+              {
+                "name": "Empowered Development",
+                "Prerequisites": "Mentor, Charm as a Mentor Skill",
+                "Target": "A Pokémon with at least 1 Tutor Point",
+                "Effect": "The target loses 1 Tutor Point, and gains any three of the following Poké Edges: Skill Improvement, Advanced Mobility, or Capability Training. A Pokémon may be targeted only once by Empowered Development. The target may gain Poké Edges this way even if they do not meet the \"Prerequisites\", however, they must still follow other limitations; Advanced Mobility can only improve a Movement Capability once, for example."
+              },
+              {
+                "name": "Corrective Learning",
+                "Prerequisites": "Mentor, Intimidate as a Mentor Skill",
+                "Target": "A Pokémon that has spent Tutor Points on a Poké Edge or a Feature’s effect",
+                "Effect": "The target loses one \"Effect\" gained from a Poké Edge or Feature and refunds all Tutor Points spent on it."
+              },
+              {
+                "name": "Versatile Teachings",
+                "Prerequisites": "Mentor, Pokémon Education as a Mentor Skill",
+                "Target": "A Pokémon with at least 1 Tutor Point",
+                "Effect": "The target loses 1 Tutor Point and may exchange one of its Basic Abilities for any other of its species’ Basic Abilities or one of its Advanced Abilities for any of its species’ Basic or Advanced Abilities.",
+                "Note": "You may NOT activate Versatile Teachings to reroll Abilities that require a roll to determine characteristics, such as Serpent’s Mark and Color Theory."
+              }
+            ]
           }
         ]
       }
