@@ -5575,6 +5575,150 @@
       }
     ]
   },
+  "Backpacker": {
+    "Name": "Backpacker",
+    "category": "Uncategorized",
+    "source": "Erratum May 2015",
+    "branches": [
+      {
+        "Name": "Default",
+        "features": [
+          {
+            "Name": "Backpacker",
+            "Tags": "[Class][+Speed]",
+            "Prerequisites": "Traveler",
+            "Frequency": "Static",
+            "Effect": "You gain the Skill Enhancement Edge. You then gain an instance of the Skill Stunt Edge for each of the two Skills you chose with Skill Enhancement."
+          },
+          {
+            "Name": "Item Mastery",
+            "Tags": "[+Speed]",
+            "Prerequisites": "Backpacker",
+            "Frequency": "Static",
+            "Effect": "You learn the Moves Fling and Recycle."
+          },
+          {
+            "Name": "Equipment Savant",
+            "Tags": "[+Speed]",
+            "Prerequisites": "Backpacker, Expert Survival",
+            "Frequency": "2 AP — Swift Action",
+            "Effect": "Use or Equip an Item or piece of Equipment which would normally require a Standard Action to use or equip. You may not make an Attack with a Weapon this way  - using other Items or Equipment that requires \"Attacks\" (such as Cap Cannons or Poké Balls) is acceptable."
+          },
+          {
+            "Name": "Hero's Journey",
+            "Tags": "[Ranked 3][+Speed]",
+            "Rank 1 Prerequisites": "Backpacker",
+            "Rank 2 Prerequisites": "Backpacker, Adept Survival",
+            "Rank 3 Prerequisites": "Backpacker, Expert Survival",
+            "Rank 4 Prerequisites": "Backpacker, Expert Survival",
+            "Frequency": "Static",
+            "Effect": "Each Rank, you may gain two Backpacker Talents for which you qualify."
+          },
+          {
+            "Name": "Backpacker Talents",
+            "talents": [
+              {
+                "Name": "Call to Adventure",
+                "Frequency": "Static",
+                "Effect": "You gain the Instinctive Aptitude Edge, even if you do not meet its prerequisites. If you already have this Edge, gain another Edge for which you qualify. During Combat or tense situations (never Extended Actions), if you spend AP to add a bonus to a Skill Check, you may add +1d6 instead of +2."
+              },
+              {
+                "Name": "Frisk",
+                "Frequency": "Static",
+                "Effect": "You gain the Frisk Ability."
+              },
+              {
+                "Name": "Handyman",
+                "Frequency": "Static",
+                "Effect": "Whenever you use an item or a non-Weapon piece of equipment which calls for a Skill Check or has an effect or prerequisite based on a Skill Rank, you may substitute Survival for the used Skill. This does not affect prerequisites for Books."
+              },
+              {
+                "Name": "Hat Trick",
+                "Frequency": "Static",
+                "Effect": "While wearing Head Equipment worth at least $1000, you gain 15 Damage Reduction against Critical Hits. This does not stack with any Damage Reduction granted by any Head Equipment."
+              },
+              {
+                "Name": "Movement Mastery",
+                "Frequency": "Static",
+                "Effect": "Choose one of Art of Stealth, Athletic Initiative, Mounted Prowess, Nimble Movement, Slippery, Stamina, Swimmer, or Wallrunner. You gain the chosen Edge, even if you do not meet the prerequisites. Additionally, you may take any of these Edges in the future as if you did meet the prerequisites."
+              },
+              {
+                "Name": "Sole Power",
+                "Frequency": "Static",
+                "Effect": "While wearing Feet Equipment worth at least $1000, you do not trigger Hazards while Shifting. However, you still trigger any Hazards that you are standing on at the start or end of your turn. Reactive Hazards such as Stealth Rock cannot be triggered against you."
+              },
+              {
+                "Name": "Wayfarer",
+                "Frequency": "Static",
+                "Effect": "You may use your Survival Skill when making Opposed Rolls when defending against Disarm, Grapple, Push, and Trip Maneuvers. When wielding a Weapon, you may use Survival instead of Combat to determine the Damage Base of your Struggle Attacks and to qualify for a Weapon’s Moves."
+              },
+              {
+                "Name": "Wear it Better",
+                "Prerequisites": "Expert Survival",
+                "Frequency": "Static",
+                "Effect": "While wearing Body Equipment worth at least $1000, you gain +5 Damage Reduction. This does not stack with any Damage Reduction granted by any Body Equipment."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Medic": {
+    "Name": "Medic",
+    "category": "Uncategorized",
+    "source": "Erratum September 2015",
+    "branches": [
+      {
+        "Name": "Default",
+        "features": [
+          {
+            "Name": "Medic",
+            "Tags": "[Class]",
+            "Prerequisites": "Medic Training",
+            "Frequency": "Static",
+            "Effect": "You are always considered to have access to a First Aid Manual and a Combat Medic's Primer, and are always considered to be Binding their Rank 1 Effects without actually using any AP."
+          },
+          {
+            "Name": "Front Line Healer",
+            "Tags": "[Class]",
+            "Prerequisites": "Medic",
+            "Frequency": "Static",
+            "Effect": "When you apply a Restorative, you gain +5 Damage Reduction for 1 full round. Whenever you use Combat Medic's Primer's Rank 2 effect, you may apply the same effect on yourself. Damage Reduction from this Feature does not stack with itself."
+          },
+          {
+            "Name": "Medical Techniques",
+            "Tags": "[Class]",
+            "Prerequisites": "Medic, Adept Medicine Education",
+            "Frequency": "1 AP — Free Action",
+            "Trigger": "You apply a Restorative Item",
+            "Effect": "The target of the triggering action gains a Tick of Hit Points, plus an additional amount of Hit Points equal to your Medicine Education Rank."
+          },
+          {
+            "Name": "I'm a Doctor",
+            "Tags": "[Ranked 2][Gift]",
+            "Rank 1 Prerequisites": "Medic",
+            "Rank 2 Prerequisites": "Medic, Adept Medicine Education",
+            "Frequency": "Static",
+            "Effect": "Each Rank, you gain one of Field Clinic or Medic Training and one of Nurse or First Aid Expertise."
+          },
+          {
+            "Name": "Proper Care",
+            "Prerequisites": "I'm a Doctor, Field Clinic, Expert Medicine Education",
+            "Frequency": "Static",
+            "Effect": "You gain additional bonuses to using Restoratives and Features while in a Field Clinic, Poke Center, Hospital, or other dedicated healing space that lets you access supplies.\n» When you trigger First Aid Expertise here, the injury that is Removed does not count towards the total number of Injuries that may be removed each day.\n» When you trigger Nurse here, Bandages cure 1 Injury after three hours, in addition the injury healed after 6 hours.\n» All Restoratives heal an additional 5 Hit Points. This stacks with the bonus granted by Field Clinic."
+          },
+          {
+            "Name": "Stay With Us!",
+            "Prerequisites": "Front Line Healer, Master Medicine Education",
+            "Frequency": "Daily x3 — Full Action, Reaction",
+            "Trigger": "An Ally is hit by an attack",
+            "Effect": "You must be able to Shift to your target to use this Feature. If you can, you immediately do so, and may apply a Potion, Super Potion, Hyper Potion, Energy Powder, or Energy Root. Though damage, injuries, and all other effects of the triggering attack are finalized before this Feature is applied, do not determine if the target has been Fainted, Killed, or gained Injuries from Hit Point Markers until after the effects of the action chosen through use of this Feature has been resolved."
+          }
+        ]
+      }
+    ]
+  },
   "Berserker": {
     "Name": "Berserker",
     "category": "Game of Throhs",
@@ -7051,150 +7195,6 @@
             "Rank 3 Prerequisites": "Expert Athletics or Acrobatics",
             "Frequency": "Static",
             "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th>Rank 1 Moves</th><th>Rank 2 Moves</th><th>Rank 3 Moves</th></tr></thead><tbody><tr><td>Aqua Jet</td><td>Bubblebeam</td><td>Aqua Tail</td></tr><tr><td>Aqua Ring</td><td>Waterfall</td><td>Rain Dance</td></tr><tr><td>Water Pulse</td><td>Whirlpool</td><td>Surf</td></tr></tbody></table></div>"
-          }
-        ]
-      }
-    ]
-  },
-  "Backpacker": {
-    "Name": "Backpacker",
-    "category": "Uncategorized",
-    "source": "Erratum May 2015",
-    "branches": [
-      {
-        "Name": "Default",
-        "features": [
-          {
-            "Name": "Backpacker",
-            "Tags": "[Class][+Speed]",
-            "Prerequisites": "Traveler",
-            "Frequency": "Static",
-            "Effect": "You gain the Skill Enhancement Edge. You then gain an instance of the Skill Stunt Edge for each of the two Skills you chose with Skill Enhancement."
-          },
-          {
-            "Name": "Item Mastery",
-            "Tags": "[+Speed]",
-            "Prerequisites": "Backpacker",
-            "Frequency": "Static",
-            "Effect": "You learn the Moves Fling and Recycle."
-          },
-          {
-            "Name": "Equipment Savant",
-            "Tags": "[+Speed]",
-            "Prerequisites": "Backpacker, Expert Survival",
-            "Frequency": "2 AP — Swift Action",
-            "Effect": "Use or Equip an Item or piece of Equipment which would normally require a Standard Action to use or equip. You may not make an Attack with a Weapon this way  - using other Items or Equipment that requires \"Attacks\" (such as Cap Cannons or Poké Balls) is acceptable."
-          },
-          {
-            "Name": "Hero's Journey",
-            "Tags": "[Ranked 3][+Speed]",
-            "Rank 1 Prerequisites": "Backpacker",
-            "Rank 2 Prerequisites": "Backpacker, Adept Survival",
-            "Rank 3 Prerequisites": "Backpacker, Expert Survival",
-            "Rank 4 Prerequisites": "Backpacker, Expert Survival",
-            "Frequency": "Static",
-            "Effect": "Each Rank, you may gain two Backpacker Talents for which you qualify."
-          },
-          {
-            "Name": "Backpacker Talents",
-            "talents": [
-              {
-                "Name": "Call to Adventure",
-                "Frequency": "Static",
-                "Effect": "You gain the Instinctive Aptitude Edge, even if you do not meet its prerequisites. If you already have this Edge, gain another Edge for which you qualify. During Combat or tense situations (never Extended Actions), if you spend AP to add a bonus to a Skill Check, you may add +1d6 instead of +2."
-              },
-              {
-                "Name": "Frisk",
-                "Frequency": "Static",
-                "Effect": "You gain the Frisk Ability."
-              },
-              {
-                "Name": "Handyman",
-                "Frequency": "Static",
-                "Effect": "Whenever you use an item or a non-Weapon piece of equipment which calls for a Skill Check or has an effect or prerequisite based on a Skill Rank, you may substitute Survival for the used Skill. This does not affect prerequisites for Books."
-              },
-              {
-                "Name": "Hat Trick",
-                "Frequency": "Static",
-                "Effect": "While wearing Head Equipment worth at least $1000, you gain 15 Damage Reduction against Critical Hits. This does not stack with any Damage Reduction granted by any Head Equipment."
-              },
-              {
-                "Name": "Movement Mastery",
-                "Frequency": "Static",
-                "Effect": "Choose one of Art of Stealth, Athletic Initiative, Mounted Prowess, Nimble Movement, Slippery, Stamina, Swimmer, or Wallrunner. You gain the chosen Edge, even if you do not meet the prerequisites. Additionally, you may take any of these Edges in the future as if you did meet the prerequisites."
-              },
-              {
-                "Name": "Sole Power",
-                "Frequency": "Static",
-                "Effect": "While wearing Feet Equipment worth at least $1000, you do not trigger Hazards while Shifting. However, you still trigger any Hazards that you are standing on at the start or end of your turn. Reactive Hazards such as Stealth Rock cannot be triggered against you."
-              },
-              {
-                "Name": "Wayfarer",
-                "Frequency": "Static",
-                "Effect": "You may use your Survival Skill when making Opposed Rolls when defending against Disarm, Grapple, Push, and Trip Maneuvers. When wielding a Weapon, you may use Survival instead of Combat to determine the Damage Base of your Struggle Attacks and to qualify for a Weapon’s Moves."
-              },
-              {
-                "Name": "Wear it Better",
-                "Prerequisites": "Expert Survival",
-                "Frequency": "Static",
-                "Effect": "While wearing Body Equipment worth at least $1000, you gain +5 Damage Reduction. This does not stack with any Damage Reduction granted by any Body Equipment."
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "Medic": {
-    "Name": "Medic",
-    "category": "Uncategorized",
-    "source": "Erratum September 2015",
-    "branches": [
-      {
-        "Name": "Default",
-        "features": [
-          {
-            "Name": "Medic",
-            "Tags": "[Class]",
-            "Prerequisites": "Medic Training",
-            "Frequency": "Static",
-            "Effect": "You are always considered to have access to a First Aid Manual and a Combat Medic's Primer, and are always considered to be Binding their Rank 1 Effects without actually using any AP."
-          },
-          {
-            "Name": "Front Line Healer",
-            "Tags": "[Class]",
-            "Prerequisites": "Medic",
-            "Frequency": "Static",
-            "Effect": "When you apply a Restorative, you gain +5 Damage Reduction for 1 full round. Whenever you use Combat Medic's Primer's Rank 2 effect, you may apply the same effect on yourself. Damage Reduction from this Feature does not stack with itself."
-          },
-          {
-            "Name": "Medical Techniques",
-            "Tags": "[Class]",
-            "Prerequisites": "Medic, Adept Medicine Education",
-            "Frequency": "1 AP — Free Action",
-            "Trigger": "You apply a Restorative Item",
-            "Effect": "The target of the triggering action gains a Tick of Hit Points, plus an additional amount of Hit Points equal to your Medicine Education Rank."
-          },
-          {
-            "Name": "I'm a Doctor",
-            "Tags": "[Ranked 2][Gift]",
-            "Rank 1 Prerequisites": "Medic",
-            "Rank 2 Prerequisites": "Medic, Adept Medicine Education",
-            "Frequency": "Static",
-            "Effect": "Each Rank, you gain one of Field Clinic or Medic Training and one of Nurse or First Aid Expertise."
-          },
-          {
-            "Name": "Proper Care",
-            "Prerequisites": "I'm a Doctor, Field Clinic, Expert Medicine Education",
-            "Frequency": "Static",
-            "Effect": "You gain additional bonuses to using Restoratives and Features while in a Field Clinic, Poke Center, Hospital, or other dedicated healing space that lets you access supplies.\n» When you trigger First Aid Expertise here, the injury that is Removed does not count towards the total number of Injuries that may be removed each day.\n» When you trigger Nurse here, Bandages cure 1 Injury after three hours, in addition the injury healed after 6 hours.\n» All Restoratives heal an additional 5 Hit Points. This stacks with the bonus granted by Field Clinic."
-          },
-          {
-            "Name": "Stay With Us!",
-            "Prerequisites": "Front Line Healer, Master Medicine Education",
-            "Frequency": "Daily x3 — Full Action, Reaction",
-            "Trigger": "An Ally is hit by an attack",
-            "Effect": "You must be able to Shift to your target to use this Feature. If you can, you immediately do so, and may apply a Potion, Super Potion, Hyper Potion, Energy Powder, or Energy Root. Though damage, injuries, and all other effects of the triggering attack are finalized before this Feature is applied, do not determine if the target has been Fainted, Killed, or gained Injuries from Hit Point Markers until after the effects of the action chosen through use of this Feature has been resolved."
           }
         ]
       }

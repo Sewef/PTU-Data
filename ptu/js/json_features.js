@@ -122,7 +122,9 @@ function renderSidebar() {
     (cats[cls.category || "Other"] ??= []).push([clsName, cls, visibleBranches]);
   });
 
-  Object.keys(cats).sort().forEach(cat => {
+  const orderedCats = Object.keys(cats);
+
+  orderedCats.forEach(cat => {
     const catId = `collapse-cat-${cat.replace(/\s+/g, "-")}`;
     box.insertAdjacentHTML("beforeend", `
       <button class="btn btn-sm btn-light w-100 text-start collapse-toggle mb-1" data-bs-toggle="collapse" data-bs-target="#${catId}">📁 ${cat}</button>`);
@@ -239,8 +241,7 @@ function renderSection(clsName, branchName = "Default") {
 
 // --------- Collecte récursive des Features (carte-mère + feuilles) --------
 const LEAF_KEYS = ["Effect", "Frequency", "Tags", "Trigger", "Target",
-  "Prerequisites",            // ← utile pour vos données
-  "effect", "frequency", "tags", "trigger", "target"];
+  "Prerequisites"];
 
 function isLeaf(obj) {
   return LEAF_KEYS.some(k => k in obj);
