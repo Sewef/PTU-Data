@@ -106,8 +106,23 @@ function branchSource(branch, fallback) {
   const featWithSrc = branch.features.find(f => f.Source || f.source);
   return featWithSrc ? (featWithSrc.Source || featWithSrc.source) : fallback || "Unknown";
 }
+// ------------- Icones Catégories ------------------------------------------
+const categoryIcons = {
+  "Introductory": "🌱",
+  "Battling": "⚔️",
+  "Specialist Team": "🛡️",
+  "Professional": "💼",
+  "Fighter": "👊",
+  "Supernatural": "👻",
+  "Uncategorized": "❓",
+  "Game of Throhs": "👑",
+  "Do Porygon Dream of Mareep": "🐑",
+};
 
 // ------------- Rendu Sidebar ----------------------------------------------
+function getCategoryIcon(category) {
+  return categoryIcons[category] || "📁";
+}
 function renderSidebar() {
   const box = document.getElementById("sidebar-links");
   box.innerHTML = "";
@@ -142,7 +157,8 @@ function renderSidebar() {
   orderedCats.forEach(cat => {
     const catId = `collapse-cat-${cat.replace(/\s+/g, "-")}`;
     box.insertAdjacentHTML("beforeend", `
-      <button class="btn btn-sm btn-light w-100 text-start collapse-toggle mb-1" data-bs-toggle="collapse" data-bs-target="#${catId}">📁 ${cat}</button>`);
+      <button class="btn btn-sm btn-light w-100 text-start collapse-toggle mb-1" data-bs-toggle="collapse" data-bs-target="#${catId}">${getCategoryIcon(cat)} ${cat}</button>`);
+
     const catCol = document.createElement("div");
     catCol.className = "collapse mb-2";
     catCol.id = catId;
@@ -169,6 +185,7 @@ function renderSidebar() {
     });
   });
 }
+
 
 // ------------- Helper : Création de lien ----------------------------------
 function makeLink(label, src, data = {}, pad = 3) {
