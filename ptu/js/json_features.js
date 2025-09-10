@@ -155,7 +155,7 @@ function renderSidebar() {
       } else {
         const clsId = `collapse-cls-${clsName.replace(/\s+/g, "-")}`;
         catCol.insertAdjacentHTML("beforeend", `
-          <a href="#" class="list-group-item list-group-item-action ps-3 d-flex justify-content-between align-items-center collapse-toggle" data-bs-toggle="collapse" data-bs-target="#${clsId}">
+          <a href="#" class="list-group-item list-group-item-action ps-4 d-flex justify-content-between align-items-center collapse-toggle" data-bs-toggle="collapse" data-bs-target="#${clsId}">
             <span>${clsName}</span>
             <span class="badge bg-light text-muted ms-auto text-truncate" style="max-width:10rem" title="${cls.source}">${cls.source}</span>
             <span class="triangle-toggle ms-2"></span>
