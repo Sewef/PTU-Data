@@ -72,7 +72,22 @@ function buildSidebar() {
   });
   fWrap.querySelectorAll("input").forEach(cb =>
     cb.addEventListener("change", () => {
+      // Store the state of the collapsible elements
+      const expandedCategories = new Set();
+      document.querySelectorAll('.collapse.show').forEach(el => {
+        expandedCategories.add(el.id);
+      });
+
       renderSidebar();                                   // ← sidebar mise à jour
+
+      // Restore the state of the collapsible elements
+      expandedCategories.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          new bootstrap.Collapse(el, { toggle: true }); // Manually show the collapsed element
+        }
+      });
+
       if (currentLink && currentLink.dataset.section === "General") {
         // on recharge la section General pour appliquer le nouveau filtre
         renderSection("General", "Default");
