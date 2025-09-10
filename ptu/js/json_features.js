@@ -1,23 +1,3 @@
-// === Citronnades – Unified Classes Viewer =============================
-// Affichage dynamique du JSON unifié :
-//   Classe → { category, source, branches:[ { name, features:[…] } ] }
-// ---------------------------------------------------------------------------
-// EXIGENCES PARTICULIÈRES
-//   • « General » : toujours lien direct en tête de sidebar. Chaque Feature
-//     arbore un badge Source.
-//   • Sidebar : Catégorie ▼ Classe ▼ Branche sauf si la classe n'a qu'une
-//     unique branche nommée « Default » (dans ce cas, lien direct).
-//   • Filtre Source appliqué AU NIVEAU DES BRANCHES (une classe reste visible
-//     si ≥1 branche correspond). Le badge de chaque lien reprend la source de
-//     la branche.
-//   • **NOUVEAU** : dans le panneau central, **une carte = une Feature**.
-//     Quand un objet contient des sous‑features, on ne rend PAS une « carte
-//     mère » englobante. Toutes les leaves (features feuilles) sont rendues
-//     au même niveau.
-// ---------------------------------------------------------------------------
-// Dépendances : Bootstrap 5 (collapse). Facultatif : CSS pour .triangle-toggle.
-// ---------------------------------------------------------------------------
-
 // ------------------------- VARIABLES GLOBALES ------------------------------
 let classesData = {};
 let activeSources = new Set();
@@ -30,10 +10,17 @@ function loadClasses(path) {
     .then(json => {
       classesData = json;
       buildSidebar();
-      const firstCls = classesData.General ? "General" : Object.keys(classesData)[0];
-      const firstBr = classesData[firstCls].branches[0].Name;
-      renderSection(firstCls, firstBr);
-      const l = document.querySelector(`[data-section="${firstCls}"][data-branch="${firstBr}"]`);
+
+      const params = new URLSearchParams(window.location.search);
+      const section = params.get("section");
+      const branch = params.get("branch");
+
+      let clsName = section && classesData[section] ? section : (classesData.General ? "General" : Object.keys(classesData)[0]);
+      let brName = branch || classesData[clsName].branches[0].Name;
+
+      renderSection(clsName, brName);
+
+      const l = document.querySelector(`[data-section="${clsName}"][data-branch="${brName}"]`);
       if (l) setActiveLink(l);
     })
     .catch(err => console.error("JSON load error:", err));
@@ -207,6 +194,13 @@ function setActiveLink(el) {
   if (currentLink) currentLink.classList.remove("active");
   el.classList.add("active");
   currentLink = el;
+  
+  const section = el.dataset.section;
+  const branch = el.dataset.branch;
+  const url = new URL(window.location);
+  url.searchParams.set("section", section);
+  url.searchParams.set("branch", branch);
+  window.history.pushState({}, "", url);
 }
 
 function featureSource(feat, fallback) {
