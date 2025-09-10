@@ -113,7 +113,7 @@ const categoryIcons = {
   "Supernatural": "👻",
   "Uncategorized": "❓",
   "Game of Throhs": "👑",
-  "Do Porygon Dream of Mareep": "🐑",
+  "Do Porygon Dream of Mareep": "🤖",
 };
 
 // ------------- Rendu Sidebar ----------------------------------------------

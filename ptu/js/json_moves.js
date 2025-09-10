@@ -1,3 +1,11 @@
+function debounce(fn, delay = 150) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), delay); } }
+
+function jsonToItems(obj){
+  return Object.entries(obj).map(([name, value]) =>
+    typeof value === "string" ? { Name: name, Description: value } : { Name: name, ...value }
+  );
+}
+
 function buildTypeSidebar(moves, container, cols) {
   const sidebar = document.getElementById("sidebar");
   if (!sidebar) return;
@@ -20,19 +28,19 @@ function buildTypeSidebar(moves, container, cols) {
 
 
   // Listeners
-  sidebar.querySelectorAll("input").forEach(input =>
-    input.addEventListener("change", () => filterAndRender(moves, container, cols))
-  );
+  sidebar.querySelectorAll("#type-filters input[type='checkbox']").forEach(input => {
+    input.addEventListener("change", () => filterAndRender(moves, container, cols));
+  });
 
   const sidebarSearch = document.getElementById("sidebar-search");
   if (sidebarSearch) {
-    sidebarSearch.addEventListener("input", () => {
+    sidebarSearch.addEventListener("input", debounce(() => {
       const q = sidebarSearch.value.toLowerCase();
       document.querySelectorAll("#type-filters label").forEach(label => {
         const text = label.textContent.toLowerCase();
         label.style.display = text.includes(q) ? "" : "none";
       });
-    });
+    }), 150);
   }
 
 
@@ -40,10 +48,11 @@ function buildTypeSidebar(moves, container, cols) {
   const toggleBtn = document.getElementById("toggle-all-types");
   if (toggleBtn) {
     toggleBtn.addEventListener("click", () => {
-      const checkboxes = document.querySelectorAll("#type-filters input[type='checkbox']");
+      const typeFilters = document.getElementById("type-filters");
+      const checkboxes = typeFilters.querySelectorAll('input[type="checkbox"]');
       const allChecked = Array.from(checkboxes).every(cb => cb.checked);
       checkboxes.forEach(cb => cb.checked = !allChecked);
-      filterAndRender(moves);
+      filterAndRender(moves, container, cols);
     });
   }
 
@@ -79,12 +88,10 @@ function filterAndRender(allItems, container, cols = 3) {
   });
 
   filtered.sort((a, b) => {
-    const aNameMatches = a.Name?.toLowerCase().includes(query);
-    const bNameMatches = b.Name?.toLowerCase().includes(query);
-
-    if (aNameMatches && !bNameMatches) return -1;
-    if (!aNameMatches && bNameMatches) return 1;
-    return 0;
+    const qa = query, an = a.Name?.toLowerCase() || "", bn = b.Name?.toLowerCase() || "";
+    const aHit = an.includes(qa), bHit = bn.includes(qa);
+    if (aHit !== bHit) return aHit ? -1 : 1;
+    return an.localeCompare(bn);
   });
 
   renderFilteredCards(filtered, container, cols);
@@ -98,20 +105,14 @@ function loadMovesAsCard(file, container, cols = 3) {
       return;
     }
 
-    const allItems = Object.entries(data).map(([name, value]) => {
-      if (typeof value === "string") {
-        return { Name: name, Description: value };
-      } else {
-        return { Name: name, ...value };
-      }
-    });
+    const allItems = jsonToItems(data);
 
     buildTypeSidebar(allItems, container, cols);
     filterAndRender(allItems, container, cols);
 
     const searchInput = document.getElementById("card-search");
     if (searchInput) {
-      searchInput.oninput = () => filterAndRender(allItems, container, cols);
+      searchInput.oninput = debounce(() => filterAndRender(allItems, container, cols), 150);
     }
   });
 }
@@ -123,13 +124,7 @@ function loadKeywordsAsCard(file, container, cols = 3) {
       return;
     }
 
-    const allItems = Object.entries(data).map(([name, value]) => {
-      if (typeof value === "string") {
-        return { Name: name, Description: value };
-      } else {
-        return { Name: name, ...value };
-      }
-    });
+    const allItems = jsonToItems(data);
 
     renderFilteredCards(allItems, container, cols);
 
@@ -140,9 +135,7 @@ function loadKeywordsAsCard(file, container, cols = 3) {
         const q = this.value.toLowerCase();
         container.querySelectorAll(".card").forEach(card => {
           const content = card.textContent.toLowerCase();
-          card.closest(".col-12, .col-md-6, .col-md-4")?.style.setProperty("display",
-            content.includes(q) ? "" : "none"
-          );
+          card.closest('[class*="col-"]')?.style.setProperty("display", content.includes(q) ? "" : "none");
         });
       });
     }
@@ -158,13 +151,7 @@ function loadJsonAsCard(file, container, cols = 3) {
     }
 
     // Déclare allItems localement
-    const allItems = Object.entries(data).map(([name, value]) => {
-      if (typeof value === "string") {
-        return { Name: name, Description: value };
-      } else {
-        return { Name: name, ...value };
-      }
-    });
+    const allItems = jsonToItems(data);
 
     renderFilteredCards(allItems, container, cols);
 
@@ -184,26 +171,29 @@ function loadJsonAsCard(file, container, cols = 3) {
   });
 }
 
-
-function renderFilteredCards(data, container, cols) {
+function renderFilteredCards(data, container, cols){
   container.innerHTML = "";
-
-  // Calcule la classe bootstrap en fonction du nombre de colonnes
-  // Exemple : cols=3 → col-md-4 (12/3=4), cols=2 → col-md-6, cols=4 → col-md-3
-  const colSize = Math.floor(12 / cols);
+  const colSize = Math.floor(12/cols);
   const colClass = `col-12 col-md-${colSize}`;
+  const frag = document.createDocumentFragment();
 
-  data.forEach(item => {
-    const cardHTML = renderItemAsCard(item);
-    const cardDiv = document.createElement("div");
-    cardDiv.className = colClass;
+  data.forEach(item=>{
+    const wrapper = document.createElement("div");
+    wrapper.className = colClass;
 
-    const type = item.Type || item.type;
-    const typeClass = type ? `card-type-${type}` : "";
-    cardDiv.innerHTML = `<div class="card h-100"><div class="card-body ${typeClass} bg-light">${cardHTML}</div></div>`;
+    const typeClass = item.Type ? `card-type-${item.Type}` : "";
+    const card = document.createElement("div");
+    card.className = "card h-100";
+    const body = document.createElement("div");
+    body.className = `card-body ${typeClass} bg-light`;
+    body.innerHTML = renderItemAsCard(item);
 
-    container.appendChild(cardDiv);
+    card.appendChild(body);
+    wrapper.appendChild(card);
+    frag.appendChild(wrapper);
   });
+
+  container.appendChild(frag);
 }
 
 function renderItemAsCard(item, depth = 0) {
