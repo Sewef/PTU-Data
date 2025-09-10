@@ -64,21 +64,31 @@ function getActiveTypes() {
 }
 
 function filterAndRender(allItems, container, cols = 3) {
-    const query = document.getElementById("card-search")?.value.toLowerCase() || "";
-    const activeTypes = getActiveTypes();
-  
-    const filtered = allItems.filter(item => {
-      const matchesQuery = Object.values(item).some(value =>
-        typeof value === "string" && value.toLowerCase().includes(query)
-      );
-  
-      const matchesType = activeTypes.length === 0 || activeTypes.includes(item.Type);
-      return matchesQuery && matchesType;
-    });
-  
-    renderFilteredCards(filtered, container, cols);
-  }
-  
+  const query = document.getElementById("card-search")?.value.toLowerCase() || "";
+  const activeTypes = getActiveTypes();
+
+  const filtered = allItems.filter(item => {
+    const nameMatches = item.Name?.toLowerCase().includes(query);
+    const otherMatches = Object.entries(item)
+      .filter(([key]) => key !== 'Name')
+      .some(([key, value]) => typeof value === "string" && value.toLowerCase().includes(query));
+
+    const matchesType = activeTypes.length === 0 || activeTypes.includes(item.Type);
+
+    return (nameMatches || otherMatches) && matchesType;
+  });
+
+  filtered.sort((a, b) => {
+    const aNameMatches = a.Name?.toLowerCase().includes(query);
+    const bNameMatches = b.Name?.toLowerCase().includes(query);
+
+    if (aNameMatches && !bNameMatches) return -1;
+    if (!aNameMatches && bNameMatches) return 1;
+    return 0;
+  });
+
+  renderFilteredCards(filtered, container, cols);
+}
 
 
 function loadMovesAsCard(file, container, cols = 3) {
