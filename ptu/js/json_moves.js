@@ -6,7 +6,7 @@ function buildTypeSidebar(moves, container, cols) {
   sidebar.innerHTML = `
   <div class="mb-3">
     <input type="text" id="sidebar-search" class="form-control mb-2" placeholder="Filter types...">
-    <button id="toggle-all-types" class="btn btn-sm btn-secondary w-100 mb-2">Select/Deselect all</button>
+    <button id="toggle-all-types" class="btn btn-sm btn-primary w-100 mb-2">Select/Deselect all</button>
   </div>
   <div id="type-filters" class="list-group">
     ${types.map(type => `
@@ -46,6 +46,15 @@ function buildTypeSidebar(moves, container, cols) {
       filterAndRender(moves);
     });
   }
+
+  // Apply type colors to sidebar labels
+  document.querySelectorAll("#type-filters label").forEach(label => {
+    const type = label.textContent.trim();
+    label.classList.add(`card-type-${type}`);
+    label.style.borderLeft = '6px solid var(--type-color, transparent)';
+    label.style.borderTopLeftRadius = 'var(--bs-border-radius)';
+    label.style.borderBottomLeftRadius = 'var(--bs-border-radius)';
+  });
 }
 
 
