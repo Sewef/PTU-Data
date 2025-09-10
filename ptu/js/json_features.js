@@ -31,7 +31,7 @@ function loadClasses(path) {
       classesData = json;
       buildSidebar();
       const firstCls = classesData.General ? "General" : Object.keys(classesData)[0];
-      const firstBr = classesData[firstCls].branches[0].name;
+      const firstBr = classesData[firstCls].branches[0].Name;
       renderSection(firstCls, firstBr);
       const l = document.querySelector(`[data-section="${firstCls}"][data-branch="${firstBr}"]`);
       if (l) setActiveLink(l);
@@ -132,7 +132,7 @@ function renderSidebar() {
     box.appendChild(catCol);
 
     cats[cat].sort(([a], [b]) => a.localeCompare(b)).forEach(([clsName, cls, branches]) => {
-      const singleDefault = branches.length === 1 && branches[0].name === "Default";
+      const singleDefault = branches.length === 1 && branches[0].Name === "Default";
       if (singleDefault) {
         catCol.appendChild(makeLink(clsName, branchSource(branches[0], cls.source), { section: clsName, branch: "Default" }, 4));
       } else {
@@ -147,7 +147,7 @@ function renderSidebar() {
         brWrap.className = "collapse";
         brWrap.id = clsId;
         catCol.appendChild(brWrap);
-        branches.forEach(br => brWrap.appendChild(makeLink(br.name, branchSource(br, cls.source), { section: clsName, branch: br.name }, 5)));
+        branches.forEach(br => brWrap.appendChild(makeLink(br.Name, branchSource(br, cls.source), { section: clsName, branch: br.Name }, 5)));
       }
     });
   });
@@ -187,7 +187,7 @@ function renderSection(clsName, branchName = "Default") {
   const cls = classesData[clsName];
   if (!cls) return;
 
-  const branches = cls.branches.filter(b => b.name === branchName);
+  const branches = cls.branches.filter(b => b.Name === branchName);
   const title = (cls.branches.length === 1 && branchName === "Default")
     ? clsName
     : `${clsName} – ${branchName}`;
@@ -260,29 +260,29 @@ function isLeaf(obj) {
  */
 function collectLeafFeatures(featObj, nameOverride = null, embedOnly = false) {
   const list = [];
-  const name = nameOverride || featObj.name || "(unnamed)";
+  const name = nameOverride || featObj.Name || "(unnamed)";
   const isSimpleTextMap = obj =>
     obj && typeof obj === "object" &&
     !Array.isArray(obj) &&
     Object.values(obj).every(v => typeof v === "string");
 
   const hasAnyContent = obj =>
-    Object.entries(obj).some(([k, v]) =>
+    Object.entries(obj).some(([, v]) =>
       typeof v === "string" || isSimpleTextMap(v)
     );
 
-  const cleaned = { ...featObj, name };
+  const cleaned = { ...featObj, Name: featObj.Name || nameOverride || "(unnamed)" };
   const subCards = [];
 
   // Recherche de tableaux de sous-features
   for (const [key, val] of Object.entries(featObj)) {
     if (
       Array.isArray(val) &&
-      val.every(v => typeof v === "object" && (v.name || v.Effect))
+      val.every(v => typeof v === "object" && (v.Name || v.Effect))
     ) {
       val.forEach(sub => {
-        const child = { ...sub, name: sub.name || `(${key})` };
-        subCards.push(...collectLeafFeatures(child, child.name, true));
+        const child = { ...sub, Name: sub.Name || `(${key})` };
+        subCards.push(...collectLeafFeatures(child, child.Name, true));
       });
     }
   }
@@ -313,7 +313,7 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
   // ----- carte principale
   const card = document.createElement("div");
   card.className = `card ${nested ? "mb-2" : "h-100"} bg-white border shadow-sm`;
-  card.dataset.title = feat.name || "(unnamed)";
+  card.dataset.title = feat.Name || "(unnamed)";
 
   const body = document.createElement("div");
   body.className = "card-body bg-light";
@@ -329,7 +329,7 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
     ? (feat.Source || feat.source || clsMeta.source)
     : null;
 
-  let titleHTML = feat.name || "(unnamed)";
+  let titleHTML = feat.Name || "(unnamed)";
   if (catBadge) titleHTML += ` <span class="badge bg-secondary">${catBadge}</span>`;
   if (srcBadge) titleHTML += ` <span class="badge bg-info">${srcBadge}</span>`;
 
@@ -337,7 +337,7 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
 
   // ----- champs simples
   Object.entries(feat).forEach(([k, v]) => {
-    if (["name", "children", "Source", "source", "Category", "__children"].includes(k)) return;
+    if (["Name", "children", "Source", "source", "Category", "__children"].includes(k)) return;
     if (v == null || typeof v === "object") return;
 
     if (k === "Effect" && /<\s*table/i.test(v)) {
@@ -377,7 +377,7 @@ function addSubFeatures(obj, clsMeta, container, isGeneral) {
     // a) si c’est déjà une feuille -> carte enfant
     if (isLeaf(val)) {
       container.appendChild(
-        createCard({ ...val, name: key }, clsMeta, false, isGeneral, true)
+        createCard({ ...val, Name: key }, clsMeta, false, isGeneral, true)
       );
       return;
     }
@@ -386,7 +386,7 @@ function addSubFeatures(obj, clsMeta, container, isGeneral) {
     const entries = Object.entries(val);
     if (entries.every(([_, v]) => typeof v === "string")) {
       const subBody = {
-        name: key,
+        Name: key,
         Effect: entries.map(([k, v]) => `<b>${k}</b> : ${v}`).join("<br>")
       };
       container.appendChild(
