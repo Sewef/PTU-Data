@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="/ptu/js/jquery-3.7.1.min.js"></script>
+  <script src="/ptu/js/popper.min.js"></script>
+  <script src="/ptu/js/bootstrap.min.js"></script>
+  <script src="/ptu/js/json_items.js"></script>
+  <script src="/ptu/js/helpers.js"></script>
+
+  <title>PTU Data - Items</title>
+  <style>
+    /* largeur stable + retours à la ligne dans les cellules */
+    .items-table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    .items-table th,
+    .items-table td {
+      white-space: normal;
+      /* pas de nowrap */
+      word-break: break-word;
+      /* casse les mots très longs */
+      overflow-wrap: anywhere;
+      /* casse même sans espace */
+      hyphens: auto;
+      /* laisse le navigateur hyphéner si possible */
+      vertical-align: middle;
+      /* alignement propre */
+    }
+
+    /* un peu de respiration pour l'entête */
+    .items-table thead th {
+      vertical-align: bottom;
+    }
+
+    /* colonne "étiquettes de lignes" du mode transposé un peu plus large */
+    .items-table--transposed thead th:first-child,
+    .items-table--transposed tbody th:first-child {
+      width: 18ch;
+    }
+  </style>
+</head>
+
+<body>
+  <div w3-include-html="header.html"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2 col-sm-3">
+        <div id="sidebar" class="list-group">
+          <!-- Sidebar dynamique -->
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div id="cards-container" class="container py-4">
+          <!-- Cartes Items -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    includeHTML(() => setActive());
+    loadItems("/ptu/data/items/items_core.json", document.getElementById("cards-container"), 2);
+  </script>
+</body>
+
+</html>

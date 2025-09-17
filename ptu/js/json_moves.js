@@ -183,7 +183,7 @@ function renderFilteredCards(data, container, cols){
 
     const typeClass = item.Type ? `card-type-${item.Type}` : "";
     const card = document.createElement("div");
-    card.className = "card h-100";
+    card.className = "card h-100 overflow-hidden rounded-3";
     const body = document.createElement("div");
     body.className = `card-body ${typeClass} bg-light`;
     body.innerHTML = renderItemAsCard(item);
