@@ -1,6 +1,6 @@
 {
     "Poké Ball": {
-        "items": [
+        "Balls": [
             {
                 "Ball Name": "Basic Ball",
                 "Modifier": "0",
@@ -19,7 +19,7 @@
             {
                 "Ball Name": "Master Ball",
                 "Modifier": "-100",
-                "Special": "Incredibly Rare. Worth at least ₣ 300,000. Sold nowhere."
+                "Special": "Incredibly Rare. Worth at least ₽300,000. Sold nowhere."
             },
             {
                 "Ball Name": "Safari Ball",
@@ -74,7 +74,7 @@
             {
                 "Ball Name": "Repeat Ball",
                 "Modifier": "0",
-                "Special": "-20 Modifier if you already own a Pokémon of the target&apos;s species."
+                "Special": "-20 Modifier if you already own a Pokémon of the target’s species."
             },
             {
                 "Ball Name": "Timer Ball",
@@ -148,12 +148,12 @@
             {
                 "Item": "Antidote",
                 "Effect": "Cures Poison",
-                "Cost": "₽ 200"
+                "Cost": "₽200"
             },
             {
                 "Item": "Paralyze Heal",
                 "Effect": "Cures Paralysis",
-                "Cost": "₽ 200"
+                "Cost": "₽200"
             },
             {
                 "Item": "Burn Heal",
@@ -163,7 +163,7 @@
             {
                 "Item": "Ice Heal",
                 "Effect": "Cures Freezing",
-                "Cost": "₽ 200"
+                "Cost": "₽200"
             },
             {
                 "Item": "Full Heal",
@@ -172,13 +172,13 @@
             },
             {
                 "Item": "Full Restore",
-                "Effect": "Heals a Pokemon for 80 Hit Points",
-                "Cost": "₽1450 and cures any Status Afflictions"
+                "Effect": "Heals a Pokemon for 80 Hit Points and cures any Status Afflictions",
+                "Cost": "₽1450"
             },
             {
                 "Item": "Revive",
-                "Effect": "Revives fainted Pokémon and sets to",
-                "Cost": "₽300 20 Hit Points"
+                "Effect": "Revives fainted Pokémon and sets to 20 Hit Points",
+                "Cost": "₽300"
             },
             {
                 "Item": "Energy Powder",
@@ -192,13 +192,13 @@
             },
             {
                 "Item": "Heal Powder",
-                "Effect": "Cure all Persistent Status Afflictions",
-                "Cost": "₽350 – Repulsive"
+                "Effect": "Cure all Persistent Status Afflictions – Repulsive",
+                "Cost": "₽350"
             },
             {
                 "Item": "Revival Herb",
-                "Effect": "Revives Pokemon and sets to 50%",
-                "Cost": "₽350 Hit Points – Repulsive"
+                "Effect": "Revives Pokemon and sets to 50% Hit Points – Repulsive",
+                "Cost": "₽350"
             }
         ],
         "X-Items": [
@@ -270,8 +270,8 @@
             },
             {
                 "Item": "Leftovers",
-                "Effect": "Snack.",
-                "Cost": "When their Digestion Buff is traded in, the user recovers 1/16th of their max Hit Points at the beginning of each turn for the rest of the encounter."
+                "Effect": "Snack. When their Digestion Buff is traded in, the user recovers 1/16th of their max Hit Points at the beginning of each turn for the rest of the encounter.",
+                "Cost": "₽350"
             },
             {
                 "Item": "Black Sludge",
@@ -314,6 +314,22 @@
         ]
     },
     "Apricorns, Berries, and Herbs": {
+        "_display": {
+            "Tiers": {
+                "type": "table",
+                "rowPerField": false,
+                "columns": [
+                    "Tier",
+                    "Berry List",
+                    "Cost"
+                ]
+            },
+            "Yields": {
+                "type": "table",
+                "rowPerField": false,
+                "idField": "Plant Type"
+            }
+        },
         "Tiers": [
             {
                 "Tier": "1",
@@ -379,47 +395,47 @@
                 "Poké Ball": "Heavy Ball"
             }
         ],
-        "Herbs":[
+        "Herbs": [
             {
-              "Herb Type": "Energy Root*",
-              "Effect": "Heals 70 Hit Points – Repulsive",
-              "Price": "₽500"
+                "Herb Type": "Energy Root*",
+                "Effect": "Heals 70 Hit Points – Repulsive",
+                "Price": "₽500"
             },
             {
-              "Herb Type": "Revival Herb",
-              "Effect": "Revives Pokémon and sets to 50% Hit Points – Repulsive",
-              "Price": "₽350"
+                "Herb Type": "Revival Herb",
+                "Effect": "Revives Pokémon and sets to 50% Hit Points – Repulsive",
+                "Price": "₽350"
             },
             {
-              "Herb Type": "Mental Herb",
-              "Effect": "Cures all Volatile Status Effects.",
-              "Price": "₽300"
+                "Herb Type": "Mental Herb",
+                "Effect": "Cures all Volatile Status Effects.",
+                "Price": "₽300"
             },
             {
-              "Herb Type": "Power Herb",
-              "Effect": "Eliminates the Set-Up turn of Moves with the Set-Up Keyword.",
-              "Price": "₽300"
+                "Herb Type": "Power Herb",
+                "Effect": "Eliminates the Set-Up turn of Moves with the Set-Up Keyword.",
+                "Price": "₽300"
             },
             {
-              "Herb Type": "White Herb",
-              "Effect": "Any negative Combat Stages are set to 0.",
-              "Price": "₽300"
+                "Herb Type": "White Herb",
+                "Effect": "Any negative Combat Stages are set to 0.",
+                "Price": "₽300"
             },
             {
-              "Herb Type": "Tiny Mushroom",
-              "Effect": "The user loses 5 HP, and gains +1 Combat Stage in a random Stat.",
-              "Price": "---"
+                "Herb Type": "Tiny Mushroom",
+                "Effect": "The user loses 5 HP, and gains +1 Combat Stage in a random Stat.",
+                "Price": "---"
             },
             {
-              "Herb Type": "Big Mushroom",
-              "Effect": "The Poisoned; if they do, they gain +1 Combat Stage in two random Stats.",
-              "Price": "---"
+                "Herb Type": "Big Mushroom",
+                "Effect": "The Poisoned; if they do, they gain +1 Combat Stage in two random Stats.",
+                "Price": "---"
             },
             {
-              "Herb Type": "Balm Mushroom",
-              "Effect": "The user is cured of Burn, Paralysis, or Poison. If they are, they lose 1 Combat Stage in a random Stat.",
-              "Price": "---"
+                "Herb Type": "Balm Mushroom",
+                "Effect": "The user is cured of Burn, Paralysis, or Poison. If they are, they lose 1 Combat Stage in a random Stat.",
+                "Price": "---"
             }
-          ]
+        ]
     }
 }
