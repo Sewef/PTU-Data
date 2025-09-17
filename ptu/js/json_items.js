@@ -34,7 +34,7 @@ function buildCategoryMenu() {
   const sb = document.getElementById("sidebar");
   sb.innerHTML = "";
 
-  sb.insertAdjacentHTML("beforeend", `<label class="form-label">Catégories :</label>`);
+  sb.insertAdjacentHTML("beforeend", `<label class="form-label">Categories :</label>`);
   const catList = document.createElement("div");
   catList.className = "list-group";
 
@@ -132,7 +132,7 @@ function renderAsCards(entries, subcat, q, rowEl) {
     col.className = `col-12 col-md-${edgeColSize}`;
 
     const card = document.createElement("div");
-    card.className = "card h-100 bg-white border shadow-sm";
+    card.className = "card h-100 bg-white border shadow-sm overflow-hidden rounded-3";
 
     const body = document.createElement("div");
     body.className = "card-body bg-light";
@@ -165,14 +165,10 @@ function renderAsTable(entries, subcat, meta, q, rowEl) {
   col.className = "col-12";
 
   const card = document.createElement("div");
-  card.className = "card h-100 bg-white border shadow-sm";
+  card.className = "card h-100 bg-white border shadow-sm overflow-hidden rounded-3";
 
   const body = document.createElement("div");
   body.className = "card-body bg-light";
-  body.insertAdjacentHTML(
-    "afterbegin",
-    `<h5 class="card-title">${escapeHTML(subcat)} <span class="badge bg-info">Table</span></h5>`
-  );
 
   /* --- wrapper responsive pour scroll horizontal si nécessaire --- */
   const wrap = document.createElement("div");

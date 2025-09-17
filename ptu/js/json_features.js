@@ -351,7 +351,7 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
 
   // ----- carte principale
   const card = document.createElement("div");
-  card.className = `card ${nested ? "mb-2" : ""} bg-white border shadow-sm`;
+  card.className = `card ${nested ? "mb-2" : ""} bg-white border shadow-sm overflow-hidden rounded-3`;
   card.dataset.title = feat.Name || "(unnamed)";
 
   const body = document.createElement("div");
@@ -525,7 +525,7 @@ function renderAsTable(entries, title, meta, q, parentEl) {
 
   // Carte + body
   const card = document.createElement("div");
-  card.className = "card h-100 bg-white border shadow-sm mb-2";
+  card.className = "card h-100 bg-white border shadow-sm mb-2 overflow-hidden rounded-3";
   const body = document.createElement("div");
   body.className = "card-body bg-light";
 
