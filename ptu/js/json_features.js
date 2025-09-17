@@ -528,10 +528,6 @@ function renderAsTable(entries, title, meta, q, parentEl) {
   card.className = "card h-100 bg-white border shadow-sm mb-2";
   const body = document.createElement("div");
   body.className = "card-body bg-light";
-  body.insertAdjacentHTML(
-    "afterbegin",
-    `<h6 class="card-title mb-3">${escapeHTML(title)} <span class="badge bg-info">Table</span></h6>`
-  );
 
   // Wrapper responsive
   const wrap = document.createElement("div");
