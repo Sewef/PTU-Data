@@ -351,7 +351,7 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
 
   // ----- carte principale
   const card = document.createElement("div");
-  card.className = `card ${nested ? "mb-2" : "h-100"} bg-white border shadow-sm`;
+  card.className = `card ${nested ? "mb-2" : ""} bg-white border shadow-sm`;
   card.dataset.title = feat.Name || "(unnamed)";
 
   const body = document.createElement("div");
@@ -438,8 +438,9 @@ function resolveIdField(preferred, entries) {
   return best;
 }
 
+// ajoute juste ce flag dans ton normalize
 function normalizeDisplayMeta(raw) {
-  if (raw === "table") return { type: "table", rowPerField: true };
+  if (raw === "table") return { type: "table", rowPerField: true, noheader: false };
   if (raw && typeof raw === "object") {
     return {
       type: raw.type === "table" ? "table" : "cards",
@@ -447,11 +448,18 @@ function normalizeDisplayMeta(raw) {
       idField: raw.idField,
       columns: Array.isArray(raw.columns) ? raw.columns : undefined,
       columnLabels: (raw.columnLabels && typeof raw.columnLabels === "object") ? raw.columnLabels : undefined,
-      columnWidths: Array.isArray(raw.columnWidths) ? raw.columnWidths : undefined
+      columnWidths: Array.isArray(raw.columnWidths) ? raw.columnWidths : undefined,
+      mergeColumns: raw.mergeColumns === true,
+      columnGroupRegex: raw.columnGroupRegex || "^(.*?)(?:_(\\d+))$",
+      groupLabels: (raw.groupLabels && typeof raw.groupLabels === "object") ? raw.groupLabels : undefined,
+      subHeaders: raw.subHeaders === true,
+      noheader: raw.noheader === true            // <--- NOUVEAU
     };
   }
   return { type: "cards" };
 }
+
+
 
 // petit utilitaire d’échappement (mêmes règles que ton code existant)
 function escapeHTML(str) {
@@ -463,37 +471,84 @@ function escapeHTML(str) {
     .replaceAll("'", "&#039;");
 }
 
-/* Rendu tableau (2 modes) + largeurs stables et wrap */
+function computeColumnGroups(cols, meta) {
+  const rx = new RegExp(meta.columnGroupRegex || "^(.*?)(?:_(\\d+))$");
+  const groups = [];
+  let i = 0;
+  while (i < cols.length) {
+    const m = String(cols[i]).match(rx);
+    const base = (m ? m[1] : cols[i]).trim();
+    let span = 1, j = i + 1;
+    while (j < cols.length) {
+      const m2 = String(cols[j]).match(rx);
+      const base2 = (m2 ? m2[1] : cols[j]).trim();
+      if (base2 !== base) break;
+      span++; j++;
+    }
+    const label = (meta.groupLabels && meta.groupLabels[base]) || base;
+    groups.push({ label, span });
+    i = j;
+  }
+  return groups;
+}
+
 function renderAsTable(entries, title, meta, q, parentEl) {
+  // --- helper interne pour fusionner les colonnes "Bloc_1/2/3" → colspan
+  function computeColumnGroups(cols, meta) {
+    const rx = new RegExp(meta.columnGroupRegex || "^(.*?)(?:_(\\d+))$");
+    const groups = [];
+    let i = 0;
+    while (i < cols.length) {
+      const m = String(cols[i]).match(rx);
+      const base = (m ? m[1] : cols[i]).trim();
+      let span = 1, j = i + 1;
+      while (j < cols.length) {
+        const m2 = String(cols[j]).match(rx);
+        const base2 = (m2 ? m2[1] : cols[j]).trim();
+        if (base2 !== base) break;
+        span++; j++;
+      }
+      const label = (meta.groupLabels && meta.groupLabels[base]) || base;
+      groups.push({ label, span });
+      i = j;
+    }
+    return groups;
+  }
+
+  // Filtrage texte
   const filtered = entries.filter(obj => {
     if (!q) return true;
     const hay = Object.values(obj || {}).map(v => (v == null ? "" : String(v).toLowerCase())).join(" ");
-    return hay.includes(q);
+    return hay.includes(String(q).toLowerCase());
   });
   if (filtered.length === 0) return;
 
+  // Carte + body
   const card = document.createElement("div");
-  card.className = "card bg-white border shadow-sm mb-2";
+  card.className = "card h-100 bg-white border shadow-sm mb-2";
   const body = document.createElement("div");
   body.className = "card-body bg-light";
+  body.insertAdjacentHTML(
+    "afterbegin",
+    `<h6 class="card-title mb-3">${escapeHTML(title)} <span class="badge bg-info">Table</span></h6>`
+  );
 
-  body.insertAdjacentHTML("afterbegin",
-    `<h6 class="card-title mb-3">${escapeHTML(title)} <span class="badge bg-info">Table</span></h6>`);
-
+  // Wrapper responsive
   const wrap = document.createElement("div");
   wrap.className = "table-responsive";
 
+  // Table
   const table = document.createElement("table");
   table.className = "table table-sm table-striped mb-0 items-table";
   if (meta.rowPerField) table.classList.add("items-table--transposed");
 
-  const qLower = (q || "").toLowerCase();
-
+  // ======================= MODE COLONNES (lignes = items) ===================
   if (!meta.rowPerField) {
-    // ----- MODE COLONNES (lignes = items) -----
+    // Déterminer les colonnes
     let cols;
-    if (meta.columns) {
+    if (Array.isArray(meta.columns)) {
       cols = meta.columns.filter(k => filtered.some(e => Object.prototype.hasOwnProperty.call(e, k)));
+      // compléter avec les clés manquantes en fin
       const union = new Set();
       filtered.forEach(e => Object.keys(e).forEach(k => union.add(k)));
       [...union].forEach(k => { if (!cols.includes(k)) cols.push(k); });
@@ -503,28 +558,62 @@ function renderAsTable(entries, title, meta, q, parentEl) {
       cols = [...union];
     }
 
-    // colgroup optionnel
+    // Colgroup (largeurs optionnelles)
     if (Array.isArray(meta.columnWidths) && meta.columnWidths.length) {
       const cg = document.createElement("colgroup");
       cols.forEach((_, i) => {
         const c = document.createElement("col");
-        const w = meta.columnWidths[i] || meta.columnWidths.at(-1);
-        if (w) c.style.width = w;
+        const w = meta.columnWidths[i] || meta.columnWidths[meta.columnWidths.length - 1];
+        if (w) c.style.width = w; // ex. '8ch', '120px', '20%'
         cg.appendChild(c);
       });
       table.appendChild(cg);
     }
 
-    const thead = document.createElement("thead");
-    const headRow = document.createElement("tr");
-    cols.forEach(k => {
-      const th = document.createElement("th");
-      th.textContent = (meta.columnLabels && meta.columnLabels[k]) || k;
-      headRow.appendChild(th);
-    });
-    thead.appendChild(headRow);
-    table.appendChild(thead);
+    // En-têtes (si pas noheader)
+    if (!meta.noheader) {
+      const thead = document.createElement("thead");
 
+      // Fusion d’en-têtes si demandé
+      if (meta.mergeColumns) {
+        // Rangée 1 : groupes fusionnés
+        const top = document.createElement("tr");
+        computeColumnGroups(cols, meta).forEach(g => {
+          const th = document.createElement("th");
+          th.textContent = g.label;
+          if (g.span > 1) th.colSpan = g.span;
+          th.className = "text-center";
+          top.appendChild(th);
+        });
+        thead.appendChild(top);
+
+        // Rangée 2 : sous-entêtes (facultatif)
+        if (meta.subHeaders) {
+          const rx = new RegExp(meta.columnGroupRegex || "^(.*?)(?:_(\\d+))$");
+          const sub = document.createElement("tr");
+          cols.forEach(k => {
+            const th = document.createElement("th");
+            const m = String(k).match(rx);
+            const label = (meta.columnLabels && meta.columnLabels[k]) || (m && m[2] ? m[2] : k);
+            th.textContent = label;
+            sub.appendChild(th);
+          });
+          thead.appendChild(sub);
+        }
+      } else {
+        // En-tête simple
+        const headRow = document.createElement("tr");
+        cols.forEach(k => {
+          const th = document.createElement("th");
+          th.textContent = (meta.columnLabels && meta.columnLabels[k]) || k;
+          headRow.appendChild(th);
+        });
+        thead.appendChild(headRow);
+      }
+      table.appendChild(thead);
+    }
+
+    // Corps
     const tbody = document.createElement("tbody");
     filtered.forEach(obj => {
       const tr = document.createElement("tr");
@@ -538,56 +627,73 @@ function renderAsTable(entries, title, meta, q, parentEl) {
     });
     table.appendChild(tbody);
 
-  } else {
-    // ----- MODE TRANSPOSE (lignes = champs, colonnes = items) -----
-    const idField = resolveIdField(meta.idField, filtered);
+    wrap.appendChild(table);
+    body.appendChild(wrap);
+    card.appendChild(body);
+    parentEl.appendChild(card);
+    return;
+  }
 
-    const rowKeys = [];
-    const seen = new Set();
-    filtered.forEach(e => {
-      Object.keys(e).forEach(k => {
-        if (k === idField) return;
-        if (!seen.has(k)) { seen.add(k); rowKeys.push(k); }
-      });
+  // ================== MODE TRANSPOSE (lignes = champs, colonnes = items) ====
+  const idField = resolveIdField(meta.idField, filtered);
+
+  // Lignes = union des clés (sauf idField)
+  const rowKeys = [];
+  const seen = new Set();
+  filtered.forEach(e => {
+    Object.keys(e).forEach(k => {
+      if (k === idField) return;
+      if (!seen.has(k)) { seen.add(k); rowKeys.push(k); }
     });
+  });
 
-    // colgroup : première colonne (étiquettes) un peu plus large
-    const cg = document.createElement("colgroup");
-    const c0 = document.createElement("col"); c0.style.width = "18ch"; cg.appendChild(c0);
-    filtered.forEach(() => cg.appendChild(document.createElement("col")));
-    table.appendChild(cg);
+  // Colgroup : première colonne (étiquettes) un peu plus large
+  const cg = document.createElement("colgroup");
+  const c0 = document.createElement("col"); c0.style.width = "18ch"; cg.appendChild(c0);
+  filtered.forEach(() => cg.appendChild(document.createElement("col")));
+  table.appendChild(cg);
 
+  // En-tête (si pas noheader)
+  if (!meta.noheader) {
     const thead = document.createElement("thead");
     const headRow = document.createElement("tr");
-    headRow.appendChild(document.createElement("th"));
+    headRow.appendChild(document.createElement("th")); // coin vide
     filtered.forEach((obj, idx) => {
       const th = document.createElement("th");
-      th.textContent = idField && obj[idField] != null ? String(obj[idField]) : `#${idx + 1}`;
+      const label = idField && obj[idField] != null ? String(obj[idField]) : `#${idx + 1}`;
+      th.textContent = label;
       headRow.appendChild(th);
     });
     thead.appendChild(headRow);
     table.appendChild(thead);
-
-    const tbody = document.createElement("tbody");
-    rowKeys.forEach(k => {
-      const tr = document.createElement("tr");
-      const th = document.createElement("th"); th.textContent = k; tr.appendChild(th);
-      filtered.forEach(obj => {
-        const td = document.createElement("td");
-        const v = obj[k];
-        td.innerHTML = v == null ? "—" : escapeHTML(String(v));
-        tr.appendChild(td);
-      });
-      tbody.appendChild(tr);
-    });
-    table.appendChild(tbody);
   }
+
+  // Corps
+  const tbody = document.createElement("tbody");
+  rowKeys.forEach(k => {
+    const tr = document.createElement("tr");
+    const th = document.createElement("th");
+    th.textContent = k;
+    tr.appendChild(th);
+
+    filtered.forEach(obj => {
+      const td = document.createElement("td");
+      const v = obj[k];
+      td.innerHTML = v == null ? "—" : escapeHTML(String(v));
+      tr.appendChild(td);
+    });
+
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
 
   wrap.appendChild(table);
   body.appendChild(wrap);
   card.appendChild(body);
   parentEl.appendChild(card);
 }
+
+
 
 // Styles minimes pour colonnes homogènes + wrap (à mettre dans ton CSS global)
 (function ensureTableCSS() {
