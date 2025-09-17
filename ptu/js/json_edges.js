@@ -91,7 +91,7 @@ function renderCategory(cat) {
 
   const searchBox = document.createElement("div");
   searchBox.className = "mb-3";
-  searchBox.innerHTML = `<input type="text" id="filter-search" class="form-control" placeholder="Search…">`;
+  searchBox.innerHTML = `<input type="text" id="filter-search" class="form-control" placeholder="Search...">`;
   pane.appendChild(searchBox);
 
   const row = document.createElement("div");

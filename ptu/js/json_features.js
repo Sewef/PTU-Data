@@ -39,7 +39,7 @@ function buildSidebar() {
   const sb = document.getElementById("sidebar");
   sb.innerHTML = `
     <div class="mb-3">
-      <input type="text" id="sidebar-search" class="form-control" placeholder="Rechercher…">
+      <input type="text" id="sidebar-search" class="form-control" placeholder="Search classes...">
     </div>`;
   document.getElementById("sidebar-search").addEventListener("input", renderSidebar);
 
@@ -247,7 +247,7 @@ function renderSection(clsName, branchName = "Default") {
     : `${clsName} – ${branchName}`;
   pane.insertAdjacentHTML("afterbegin", `<h2 class="mt-3 mb-4">${title}</h2>`);
   pane.insertAdjacentHTML("beforeend",
-    `<div class="mb-3"><input type="text" id="features-search" class="form-control" placeholder="Search features…"></div>`);
+    `<div class="mb-3"><input type="text" id="features-search" class="form-control" placeholder="Search features..."></div>`);
 
   const row = document.createElement("div");
   row.className = "row g-3";

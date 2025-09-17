@@ -69,7 +69,7 @@ def convert_class(class_dict: dict) -> dict:
 
     features_root = class_dict.get("Features", {})
 
-    # Déterminer si le 1er niveau est déjà une branche (Beauty, Bug, …)
+    # Déterminer si le 1er niveau est déjà une branche (Beauty, Bug, ...)
     # Heuristique : un nœud est une branche si **tous** ses enfants
     # contiennent une clé 'Features'. Sinon, on est déjà au niveau features.
     sample = next(iter(features_root.values()), None)

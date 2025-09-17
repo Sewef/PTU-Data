@@ -5,7 +5,7 @@ Usage :
     python fix_tags.py  input.json  output.json
 
 Règles appliquées :
-  • Un champ Tags valide doit être une chaîne du type "[Tag1][Tag2]…"
+  • Un champ Tags valide doit être une chaîne du type "[Tag1][Tag2]..."
     (pas d’espace entre les blocs, chaque tag entouré de crochets).
   • Les anomalies courantes sont réparées :
         - Espaces entre blocs : "[Orders] [Stratagem]"  ➜  "[Orders][Stratagem]"
@@ -43,7 +43,7 @@ def normalize_tags(value: str) -> str:
         tokens = [b.strip() for b in brackets]
     else:
         # 3) Sinon, détection par virgule éventuelle ; si pas de virgule on
-        #    conserve la chaîne entière comme token (Ranked 2, +HP, …)
+        #    conserve la chaîne entière comme token (Ranked 2, +HP, ...)
         if "," in value:
             tokens = [t.strip() for t in value.split(",") if t.strip()]
         else:
