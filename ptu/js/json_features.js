@@ -309,11 +309,16 @@ function collectLeafFeatures(featObj, nameOverride = null, embedOnly = false) {
   const subCards = [];
 
   // Recherche de tableaux de sous-features
+  const displayMeta = featObj._display || {};
   for (const [key, val] of Object.entries(featObj)) {
-    if (
-      Array.isArray(val) &&
-      val.every(v => typeof v === "object" && (v.Name || v.Effect))
-    ) {
+    if (!Array.isArray(val)) continue;
+
+    // Si _display dit "table" pour cette clé, on la laisse sur l'objet (elle sera
+    // rendue en tableau dans createCard) au lieu de la convertir en sous-cartes.
+    const meta = normalizeDisplayMeta(displayMeta[key]);
+    if (meta.type === "table") continue;
+
+    if (val.every(v => typeof v === "object" && (v.Name || v.Effect))) {
       val.forEach(sub => {
         const child = { ...sub, Name: sub.Name || `(${key})` };
         subCards.push(...collectLeafFeatures(child, child.Name, true));
@@ -387,6 +392,21 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
     }
   });
 
+    // ----- tableaux déclarés en "table" via _display -----
+  const disp = feat._display || {};
+  Object.entries(feat).forEach(([k, v]) => {
+    if (!Array.isArray(v)) return;
+    const meta = normalizeDisplayMeta(disp[k]);
+    if (meta.type !== "table") return;
+
+    // recherche locale appliquée (même input Search que pour les cartes)
+    const rootRow = body.closest(".row");
+    const searchInput = document.getElementById("features-search");
+    const q = searchInput ? (searchInput.value || "") : "";
+
+    renderAsTable(v, k, meta, q, body);
+  });
+
   // ----- enfants imbriqués uniquement ici
   if (feat.__children && Array.isArray(feat.__children)) {
     feat.__children.forEach(child => {
@@ -398,3 +418,186 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
   col.appendChild(card);
   return col;
 }
+
+/* ========== TABLE RENDERING HELPERS ===================================== */
+
+// détection générique du meilleur idField si non fourni (clé la plus "distinctive")
+function resolveIdField(preferred, entries) {
+  if (preferred && entries.some(e => e && (preferred in e))) return preferred;
+  const keyCounts = {};
+  entries.forEach(e => {
+    if (!e || typeof e !== "object") return;
+    Object.keys(e).forEach(k => {
+      (keyCounts[k] ??= new Set()).add(e[k]);
+    });
+  });
+  let best = null, maxDistinct = 0;
+  Object.entries(keyCounts).forEach(([k, set]) => {
+    if (set.size > maxDistinct) { best = k; maxDistinct = set.size; }
+  });
+  return best;
+}
+
+function normalizeDisplayMeta(raw) {
+  if (raw === "table") return { type: "table", rowPerField: true };
+  if (raw && typeof raw === "object") {
+    return {
+      type: raw.type === "table" ? "table" : "cards",
+      rowPerField: raw.rowPerField === true,
+      idField: raw.idField,
+      columns: Array.isArray(raw.columns) ? raw.columns : undefined,
+      columnLabels: (raw.columnLabels && typeof raw.columnLabels === "object") ? raw.columnLabels : undefined,
+      columnWidths: Array.isArray(raw.columnWidths) ? raw.columnWidths : undefined
+    };
+  }
+  return { type: "cards" };
+}
+
+// petit utilitaire d’échappement (mêmes règles que ton code existant)
+function escapeHTML(str) {
+  return String(str)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+/* Rendu tableau (2 modes) + largeurs stables et wrap */
+function renderAsTable(entries, title, meta, q, parentEl) {
+  const filtered = entries.filter(obj => {
+    if (!q) return true;
+    const hay = Object.values(obj || {}).map(v => (v == null ? "" : String(v).toLowerCase())).join(" ");
+    return hay.includes(q);
+  });
+  if (filtered.length === 0) return;
+
+  const card = document.createElement("div");
+  card.className = "card bg-white border shadow-sm mb-2";
+  const body = document.createElement("div");
+  body.className = "card-body bg-light";
+
+  body.insertAdjacentHTML("afterbegin",
+    `<h6 class="card-title mb-3">${escapeHTML(title)} <span class="badge bg-info">Table</span></h6>`);
+
+  const wrap = document.createElement("div");
+  wrap.className = "table-responsive";
+
+  const table = document.createElement("table");
+  table.className = "table table-sm table-striped mb-0 items-table";
+  if (meta.rowPerField) table.classList.add("items-table--transposed");
+
+  const qLower = (q || "").toLowerCase();
+
+  if (!meta.rowPerField) {
+    // ----- MODE COLONNES (lignes = items) -----
+    let cols;
+    if (meta.columns) {
+      cols = meta.columns.filter(k => filtered.some(e => Object.prototype.hasOwnProperty.call(e, k)));
+      const union = new Set();
+      filtered.forEach(e => Object.keys(e).forEach(k => union.add(k)));
+      [...union].forEach(k => { if (!cols.includes(k)) cols.push(k); });
+    } else {
+      const union = new Set();
+      filtered.forEach(e => Object.keys(e).forEach(k => union.add(k)));
+      cols = [...union];
+    }
+
+    // colgroup optionnel
+    if (Array.isArray(meta.columnWidths) && meta.columnWidths.length) {
+      const cg = document.createElement("colgroup");
+      cols.forEach((_, i) => {
+        const c = document.createElement("col");
+        const w = meta.columnWidths[i] || meta.columnWidths.at(-1);
+        if (w) c.style.width = w;
+        cg.appendChild(c);
+      });
+      table.appendChild(cg);
+    }
+
+    const thead = document.createElement("thead");
+    const headRow = document.createElement("tr");
+    cols.forEach(k => {
+      const th = document.createElement("th");
+      th.textContent = (meta.columnLabels && meta.columnLabels[k]) || k;
+      headRow.appendChild(th);
+    });
+    thead.appendChild(headRow);
+    table.appendChild(thead);
+
+    const tbody = document.createElement("tbody");
+    filtered.forEach(obj => {
+      const tr = document.createElement("tr");
+      cols.forEach(k => {
+        const td = document.createElement("td");
+        const v = obj[k];
+        td.innerHTML = v == null ? "—" : escapeHTML(String(v));
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+
+  } else {
+    // ----- MODE TRANSPOSE (lignes = champs, colonnes = items) -----
+    const idField = resolveIdField(meta.idField, filtered);
+
+    const rowKeys = [];
+    const seen = new Set();
+    filtered.forEach(e => {
+      Object.keys(e).forEach(k => {
+        if (k === idField) return;
+        if (!seen.has(k)) { seen.add(k); rowKeys.push(k); }
+      });
+    });
+
+    // colgroup : première colonne (étiquettes) un peu plus large
+    const cg = document.createElement("colgroup");
+    const c0 = document.createElement("col"); c0.style.width = "18ch"; cg.appendChild(c0);
+    filtered.forEach(() => cg.appendChild(document.createElement("col")));
+    table.appendChild(cg);
+
+    const thead = document.createElement("thead");
+    const headRow = document.createElement("tr");
+    headRow.appendChild(document.createElement("th"));
+    filtered.forEach((obj, idx) => {
+      const th = document.createElement("th");
+      th.textContent = idField && obj[idField] != null ? String(obj[idField]) : `#${idx + 1}`;
+      headRow.appendChild(th);
+    });
+    thead.appendChild(headRow);
+    table.appendChild(thead);
+
+    const tbody = document.createElement("tbody");
+    rowKeys.forEach(k => {
+      const tr = document.createElement("tr");
+      const th = document.createElement("th"); th.textContent = k; tr.appendChild(th);
+      filtered.forEach(obj => {
+        const td = document.createElement("td");
+        const v = obj[k];
+        td.innerHTML = v == null ? "—" : escapeHTML(String(v));
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+  }
+
+  wrap.appendChild(table);
+  body.appendChild(wrap);
+  card.appendChild(body);
+  parentEl.appendChild(card);
+}
+
+// Styles minimes pour colonnes homogènes + wrap (à mettre dans ton CSS global)
+(function ensureTableCSS() {
+  if (document.getElementById("items-table-css")) return;
+  const css = `
+  .items-table{table-layout:fixed;width:100%}
+  .items-table th,.items-table td{white-space:normal;word-break:break-word;overflow-wrap:anywhere;hyphens:auto;vertical-align:middle}
+  .items-table--transposed thead th:first-child,.items-table--transposed tbody th:first-child{width:18ch}`;
+  const style = document.createElement("style");
+  style.id = "items-table-css";
+  style.textContent = css;
+  document.head.appendChild(style);
+})();

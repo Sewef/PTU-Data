@@ -1002,8 +1002,7 @@
           },
           {
             "Name": "Mentor Lessons",
-            "Mentor Lessons":
-            [
+            "Mentor Lessons": [
               {
                 "Name": "Changing Viewpoints",
                 "Prerequisites": "Mentor, Intuition as a Mentor Skill",
@@ -7573,7 +7572,40 @@
             "Rank 2 Prerequisites": "Adept Athletics or Acrobatics",
             "Rank 3 Prerequisites": "Expert Athletics or Acrobatics",
             "Frequency": "Static",
-            "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.\n<div class=\"table-responsive\"><table class=\"table table-bordered\"><thead class=\"thead-dark\"><tr><th>Rank 1 Moves</th><th>Rank 2 Moves</th><th>Rank 3 Moves</th></tr></thead><tbody><tr><td>Aqua Jet</td><td>Bubblebeam</td><td>Aqua Tail</td></tr><tr><td>Aqua Ring</td><td>Waterfall</td><td>Rain Dance</td></tr><tr><td>Water Pulse</td><td>Whirlpool</td><td>Surf</td></tr></tbody></table></div>"
+            "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.",
+            "_display": {
+              "Moves by Rank": {
+                "type": "table",
+                "rowPerField": false,
+                "columns": [
+                  "Rank 1 Moves",
+                  "Rank 2 Moves",
+                  "Rank 3 Moves"
+                ],
+                "columnWidths": [
+                  "16ch",
+                  "16ch",
+                  "16ch"
+                ]
+              }
+            },
+            "Moves by Rank": [
+              {
+                "Rank 1 Moves": "Aqua Jet",
+                "Rank 2 Moves": "Bubblebeam",
+                "Rank 3 Moves": "Aqua Tail"
+              },
+              {
+                "Rank 1 Moves": "Aqua Ring",
+                "Rank 2 Moves": "Waterfall",
+                "Rank 3 Moves": "Rain Dance"
+              },
+              {
+                "Rank 1 Moves": "Water Pulse",
+                "Rank 2 Moves": "Whirlpool",
+                "Rank 3 Moves": "Surf"
+              }
+            ]
           }
         ]
       }
