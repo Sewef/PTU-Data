@@ -419,7 +419,7 @@
           {
             "Name": "Speed Demon",
             "Tags": "[+Speed]",
-            "Prerequisites": "Speed's My Game, Expert Acrobatics or Athletics; 20 Speed",
+            "Prerequisites": "Up to Speed, Expert Acrobatics or Athletics; 20 Speed",
             "Frequency": "Scene – Swift Action",
             "Effect": "You gain 3 Speed Tokens. If not spent, these tokens disappear at the end of the Scene. You can spend a Speed Token as a Free Action whenever:\n» You are hit by an attack, to gain DR against that attack equal to your Speed Evasion;\n» You make an Accuracy Check, to add half your Speed Evasion to the result;\n» You hit with a damaging melee attack, to gain a bonus to damage equal to 2 + your Speed Evasion",
             "Source": "Homebrew"
@@ -726,7 +726,8 @@
             "Prerequisites": "Coordinator",
             "Frequency": "At-Will — Standard Action",
             "Target": "A Pokémon",
-            "Effect": "Add or subtract X from the target's Initiative until the end of your next turn. X is equal to your highest Coordinator Skill Rank doubled."
+            "Effect": "Add or subtract X from the target's Initiative until the end of your next turn. X is equal to your highest Coordinator Skill Rank doubled.",
+            "Bonus": "Whenever you issue [Orders] to your Pokemon, they may Disengage 1 as a Free Action immediately after the effects of the [Orders] have been resolved."
           },
           {
             "Name": "Innovation",
@@ -754,14 +755,13 @@
             "Effect": "All Pokemon you Train during this time may reallocate up to 2d6 of Poffin Derived Contest Stats from one Contest Stat to another. They may also reallocate up to 10 Stat Points between their Stats and trade one Naturally Learned Move in their movepool for any other move on their Level-Up list that they could learn at their current level or lower. The Pokemon must still adhere to Base Stat Relation. These effects last until the end of the day."
           },
           {
-            "Name": "Adaptable Performance",
-            "Tags": "[+Any]",
-            "Prerequisites": "Flexible Preparations, one Coordinator Skill at Expert",
-            "Frequency": "Scene — Free Action",
+            "Name": "Peerless Elegance",
+            "Tags": "[+Any][Gift]",
+            "Prerequisites": "Decisive Director, one Coordinator Skill at Expert",
+            "Frequency": "Static",
             "Trigger": "Your Pokémon's Turn to use a Move in a Contest, or your Pokémon gains Initiative",
-            "Contest Effect": "Choose two of your Pokémon's Moves. Your Pokémon may perform their Contest Move as if had the Contest Typing of one of the chosen Moves, and had the effects of the other. The Pokémon may not use either Move on the next round of the contest. This effect may be used once per Contest.",
-            "Battle Effect": "Choose two of your Pokémon's Moves with a Damage Base. This turn, your Pokémon may perform their attack as if it had the Damage Base and Range of one of the chosen Moves, and had the Accuracy and Effects of the other. If the chosen Moves are of different Types or Classes, the resulting attack may be either Type or Class. This consumes the Frequency of both of the chosen Moves.",
-            "Note": "Adaptable Performance may not be used with the Moves Explosion or Self-Destruct."
+            "Effect": "You gain the Trickster Orders Feature and the Leader Edge, even if you do not meet the prerequisites.",
+            "Bonus": "You may roll an additional 2d6 during the Introduction Stage of a Contest"
           },
           {
             "Name": "Reliable Performance",
@@ -1869,7 +1869,7 @@
             "Rank 1 Prerequisites": "Style Expert (Beauty), Novice Intuition",
             "Rank 2 Prerequisites": "Expert Intuition",
             "Frequency": "1 AP — Special",
-            "Effect": "Your Pokémon with at least 3d6 in their Beauty Stat from Poffins may activate Beautiful Ballet as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.",
+            "Effect": "Your Pokémon with at least 3d6 in their Beauty Stat from Poffins may activate Beautiful Ballet to perform one of the following Moves, using the same action type as the chosen Move. They must still follow frequency limits as usual for these Moves.",
             "Rank 1": "Captivate, Mist",
             "Rank 2": "Lovely Kiss, Mean Look"
           },
@@ -2462,7 +2462,7 @@
             "Tags": "[Orders][Stratagem]",
             "Frequency": "Bind 2 AP — Standard Action",
             "Target": "Your Pokémon",
-            "Effect": "While this Feature is Bound, your Pokémon's Fighting-Type Moves cause foes to become Marked for 1 full round. Your Fighting-Type Pokémon may also Mark Foes for one full round when hitting with a Grapple, Trip, or Push Maneuver.\nMarked foes take a -X penalty to Accuracy Rolls and a -10 penalty to Damage Rolls on attacks that do not target the Pokemon that Marked them. X is equal to half your Type-Linked Skill Rank. Additionally, Marked Foes provoke an attack of Opportunity from the Pokémon that marked them if they Shift out of an adjacent square into a square that is not adjacent, even if they use a Disengage Maneuver. Targets cannot be Marked by more than one Pokémon at a time."
+            "Effect": "While this Feature is Bound, your Pokémon's Fighting-Type Moves cause foes to become Marked for 1 full round. Your Fighting-Type Pokémon may also Mark Foes for one full round when hitting with a Grapple, Trip, or Push Maneuver.\nMarked foes take a -X penalty to Accuracy Rolls and a -10 penalty to Damage Rolls on attacks that do not target the Pokemon that Marked them. X is equal to half your Type-Linked Skill Rank. Additionally, Marked Foes provoke an Attack of Opportunity from the Pokémon that Marked them if they Shift out of an adjacent square into a square that is not adjacent, even if they use a Disengage Maneuver. Targets cannot be Marked by more than one Pokémon at a time."
           },
           {
             "Name": "Brawler",
