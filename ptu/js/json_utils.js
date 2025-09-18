@@ -45,7 +45,7 @@ function renderFilteredCards(data, container, cols) {
         const cardHTML = renderItemAsCard(item);
         const cardDiv = document.createElement("div");
         cardDiv.className = colClass;
-        cardDiv.innerHTML = `<div class="card h-100"><div class="card-body bg-light">${cardHTML}</div></div>`;
+        cardDiv.innerHTML = `<div class="card h-100"><div class="card-body bg-light overflow-hidden rounded-3">${cardHTML}</div></div>`;
         container.appendChild(cardDiv);
     });
 }
@@ -162,7 +162,7 @@ function renderFilteredCards_2(data, container) {
     data.forEach(item => {
         const cardHTML = renderItemAsCard(item);
         const cardDiv = document.createElement("div");
-        cardDiv.className = "col-12 col-md-4";
+        cardDiv.className = "col-12 col-md-4 overflow-hidden rounded-3";
         cardDiv.innerHTML = `<div class="card h-100 "><div class="card-body bg-light">${cardHTML}</div></div>`;
         container.appendChild(cardDiv);
     });
