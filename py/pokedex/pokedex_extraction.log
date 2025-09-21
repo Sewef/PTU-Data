@@ -17,5 +17,6 @@ WARNING:[p557 558PUMPKABOO] 'Base Stats' section found but no stats parsed.
 WARNING:[p558 559GOURGEIST] 'Base Stats' section found but no stats parsed.
 WARNING:[p681] Skipped: no Species title detected.
 WARNING:[p747 Credits] Skipped: no parsable sections found.
+ERROR:ROTOM detected in PDF text on pages [3, 606, 607] but no record parsed. Check headers on those pages.
 INFO:Parsed 737 records from 747 non-empty pages.
 INFO:Wrote pokedex_1942.json and pokedex.ndjson. Log: pokedex_extraction.log

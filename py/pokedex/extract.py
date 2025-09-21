@@ -45,14 +45,14 @@ def fallback_title(lines):
         if m:
             token = m.group(1).strip()
             if token and token not in {"BASE STATS", "BASIC INFORMATION"}:
-                return token
+                return l  # Return the whole line instead of just the token
         # Case 2: Find the longest ALL-CAPS token in the line
         caps = re.findall(r'([A-Z]{3,}(?:[ \-][A-Z]{3,})*)', l)
         if caps:
             caps.sort(key=len, reverse=True)
             token = caps[0].strip()
             if token and token not in {"BASE STATS", "BASIC INFORMATION"}:
-                return token
+                return l  # Return the whole line instead of just the token
         # Case 3: Capitalized species name alone
         if re.match(r'^[A-Z][a-z]+(?:[ \-][A-Za-z]+){0,3}$', l):
             return l
@@ -153,7 +153,7 @@ def extract_page(page_text: str, page_index: int):
         for l in lines[idx_base+1 : idx_base+25]:
             m = re.match(r'(?i)^(HP|Attack|Defense|Special Attack|Special Defense|Speed)\s*:\s*([0-9]+)', l)
             if m:
-                stats[m.group(1).lower().replace(' ', '_')] = int(m.group(2))
+                stats[m.group(1)] = int(m.group(2))
         if not stats:
             logger.warning(f"[p{page_index} {species}] 'Base Stats' section found but no stats parsed.")
         record["Base Stats"] = stats
