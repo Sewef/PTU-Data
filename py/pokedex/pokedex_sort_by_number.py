@@ -1,9 +1,9 @@
 import json
 
 # Replace with your JSON filename
-input_file = 'ptu/data/abilities/abilities_homebrew.json'
+input_file = 'pokedex_numbered.json'
 #output_file = 'work files/8_moves FULL swsh.json'
-output_file = input_file
+output_file = 'pokedex_orderbynumber.json'
 
 # Read the JSON data
 with open(input_file, 'r', encoding='utf-8') as f:
@@ -11,8 +11,8 @@ with open(input_file, 'r', encoding='utf-8') as f:
 
 # Ensure the data is a list of dictionaries
 if isinstance(data, list):
-    # Sort by 'name' key, considering UTF-8 order
-    data_sorted = sorted(data, key=lambda x: x.get('Name', ''))
+    # Sort by 'Number' key as integer, handling None or missing values
+    data_sorted = sorted(data, key=lambda x: int(x.get('Number') or 0))
 else:
     raise ValueError("JSON data is not a list of objects.")
 
