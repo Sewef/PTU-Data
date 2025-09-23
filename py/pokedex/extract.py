@@ -125,6 +125,21 @@ def parse_moves_list(lines, start_idx):
 
 def extract_page(page_text: str, page_index: int):
     lines = [clean_line(l) for l in (page_text or "").splitlines()]
+
+    # --- Dirty fix: some Capability List are wrongly formatted ---
+    fixed_lines = []
+    for l in lines:
+        if "Capability List" in l and l.strip().startswith("Habitat"):
+            # Exemple: "Habitat : Grassland Capability List Overland 7, Swim 3"
+            before, after = l.split("Capability List", 1)
+            fixed_lines.append(before.strip())        # "Habitat : Grassland"
+            fixed_lines.append("Capability List")     # en-tête tout seul
+            if after.strip():
+                fixed_lines.append(after.strip())     # "Overland 7, Swim 3..."
+        else:
+            fixed_lines.append(l)
+    lines = fixed_lines
+
     record = {"_page_index": page_index, "_raw_text": page_text}
 
     # Species title
@@ -156,7 +171,7 @@ def extract_page(page_text: str, page_index: int):
     idx_breed = find_line(r'^Breeding Information')
     idx_diet  = find_line(r'^Diet')
     idx_hab   = find_line(r'^Habitat')
-    idx_cap   = find_line(r'^Capability List')
+    idx_cap   = find_line(r'^.*Capability.*List.*')
     idx_skill = find_line(r'^Skill List')
     idx_move  = find_line(r'^Move List')
     idx_mega  = find_line(r'^Mega Evolution')
@@ -184,7 +199,8 @@ def extract_page(page_text: str, page_index: int):
     basic_block = collect_between(idx_basic, next_all)
     if basic_block:
         bi = parse_key_value_block(basic_block, 0, len(basic_block))
-        bi["Type"] = bi["Type"].split(" / ")
+        if bi["Type"]:
+           bi["Type"] = bi["Type"].split(" / ")
         if not bi:
             logger.warning(f"[p{page_index} {species}] 'Basic Information' section empty after parse.")
         record["Basic Information"] = bi
@@ -224,6 +240,8 @@ def extract_page(page_text: str, page_index: int):
     if cap_block:
         caps = [clean_line(x) for x in re.split(r'\s*,\s*', ' '.join(cap_block)) if clean_line(x)]
         record["Capabilities"] = caps
+    else:
+        logger.warning(f"[p{page_index} {species}] No 'Capability List' section found.")
 
     # Skills (broadened and normalized)
     skill_block = collect_between(idx_skill, next_all)
@@ -310,17 +328,6 @@ def main():
             logger.warning(f"[p{i} {rec.get('Species')}] Skipped: no parsable sections found.")
             continue
         records.append(rec)
-
-    # Post-run sanity: look for "Rotom" occurrences if species not included
-    all_text = []
-    for i in range(len(reader.pages)):
-        try:
-            t = reader.pages[i].extract_text() or ""
-            all_text.append(t)
-        except:
-            all_text.append("")
-    if not rec.get("Species") and re.search(r'(?i)\brotom\b', page_text):
-        logger.warning(f"[p{i}] ROTOM detected but not parsed. Check formatting.")
 
     Path(OUT_JSON).write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding='utf-8')
     with open(OUT_NDJSON, 'w', encoding='utf-8') as f:
