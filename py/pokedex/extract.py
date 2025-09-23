@@ -4,8 +4,8 @@ from pathlib import Path
 import PyPDF2
 
 PDF_PATH = "1-6G Pokedex_Playtest105Plus.pdf"   # ← adapte si besoin
-OUT_JSON = "pokedex_1942.json"
-OUT_NDJSON = "pokedex.ndjson"
+OUT_JSON = "pokedex_core.json"
+OUT_NDJSON = "pokedex_core.ndjson"
 OUT_LOG = "pokedex_extraction.log"
 
 # --- Logging setup ---
@@ -96,7 +96,7 @@ def parse_moves_list(lines, start_idx):
     def parse_levelup(block_lines):
         entries = []
         for ln in block_lines:
-            m = re.match(r'^\s*(\d+)\s+([^-]+?)\s*-\s*(.+?)\s*$', ln)
+            m = re.match(r'^\s*(\d+)\s+(.+)\s*-\s*([A-Za-z]+)\s*$', ln)
             if m:
                 entries.append({"Level": int(m.group(1)),
                                 "Move": clean_line(m.group(2)),
@@ -104,8 +104,16 @@ def parse_moves_list(lines, start_idx):
         return entries
 
     def parse_comma_or_list(block_lines):
-        text = re.sub(r'\s+', ' ', ' '.join(block_lines))
-        return [clean_line(p) for p in re.split(r'\s*,\s*', text) if clean_line(p)]
+        # Joindre les lignes
+        text = ' '.join(block_lines)
+        # Corriger les césures "So - lar" -> "Solar"
+        text = re.sub(r'(\w)\s*-\s+(\w)', r'\1\2', text)
+        # Nettoyer les espaces multiples
+        text = re.sub(r'\s+', ' ', text).strip()
+        # Split sur virgule
+        parts = [clean_line(p) for p in text.split(',')]
+        # Filtrer les vides
+        return [p for p in parts if p]
 
     return {
         "Level Up Move List": parse_levelup(sections["Level Up Move List"]),
@@ -123,11 +131,17 @@ def extract_page(page_text: str, page_index: int):
     species = None
     for l in lines[:40]:
         if is_all_caps_title(l):
-            species = l; break
+            species = l
+            break
     if not species:
         species = fallback_title(lines)
         if species:
             logger.debug(f"[p{page_index}] Fallback title used: {species}")
+
+    # Remove leading numbers and normalize capitalization
+    if species:
+        species = re.sub(r'^\s*\d+\s*', '', species)  # Remove leading numbers
+        species = species.title()  # Normalize capitalization (e.g., "Bulbasaur")
     record["Species"] = species
 
     def find_line(pat):
@@ -170,6 +184,7 @@ def extract_page(page_text: str, page_index: int):
     basic_block = collect_between(idx_basic, next_all)
     if basic_block:
         bi = parse_key_value_block(basic_block, 0, len(basic_block))
+        bi["Type"] = bi["Type"].split(" / ")
         if not bi:
             logger.warning(f"[p{page_index} {species}] 'Basic Information' section empty after parse.")
         record["Basic Information"] = bi
@@ -220,15 +235,18 @@ def extract_page(page_text: str, page_index: int):
             dice = m.group(2)
             if len(name) > 32:
                 continue
-            edu_map = {
+            name_map = {
                 "Edu: Tech": "Tech Edu",
                 "Edu: Pokémon": "Pokémon Edu",
                 "Edu: Pokemon": "Pokémon Edu",
                 "Edu: Occult": "Occult Edu",
                 "Edu: General": "General Edu",
                 "Edu: Medicine": "Medicine Edu",
+                "Athl": "Athletics",
+                "Acro": "Acrobatics",
+                "Percep": "Perception",
             }
-            name = edu_map.get(name, name)
+            name = name_map.get(name, name)
             skills[name] = dice
         if not skills:
             logger.info(f"[p{page_index} {species}] 'Skill List' present but no skills parsed.")
@@ -242,11 +260,27 @@ def extract_page(page_text: str, page_index: int):
     if idx_mega != -1:
         mega_block = collect_between(idx_mega, [])
         mega = {}
+        stats_lines = []
         for l in mega_block:
-            if re.search(r'(?i)^Type', l):    mega['Type'] = l.split(':',1)[1].strip() if ':' in l else l
-            elif re.search(r'(?i)^Ability', l): mega['Ability'] = l.split(':',1)[1].strip() if ':' in l else l
-            elif re.search(r'(?i)^Stats', l):   mega['Stats Delta'] = l.split(':',1)[1].strip() if ':' in l else l
-        if mega: record["Mega Evolution"] = mega
+            if re.search(r'(?i)^Type', l):
+                mega['Type'] = l.split(':', 1)[1].strip() if ':' in l else l
+            elif re.search(r'(?i)^Ability', l):
+                mega['Ability'] = l.split(':', 1)[1].strip() if ':' in l else l
+            elif re.search(r'(?i)^Stats', l):
+                # première ligne de stats
+                first_stats = l.split(':', 1)[1].strip() if ':' in l else l
+                stats_lines.append(first_stats)
+            elif stats_lines:
+                # toutes les lignes suivantes après Stats
+                stats_lines.append(l.strip())
+        
+        if stats_lines:
+            # concaténer ou garder en string séparé par une virgule
+            mega['Stats'] = ', '.join(stats_lines)
+            mega['Stats'] = mega['Stats'].replace(',,', ',')  # Nettoyer les doubles virgules
+
+        if mega:
+            record["Mega Evolution"] = mega
         record["mega_evolution_raw"] = mega_block
 
     return record
@@ -255,7 +289,7 @@ def main():
     reader = PyPDF2.PdfReader(PDF_PATH)
     records = []
     pages_with_text = 0
-    for i in range(len(reader.pages)):
+    for i in range(11, len(reader.pages)):
         try:
             page_text = reader.pages[i].extract_text() or ""
         except Exception as e:
@@ -285,10 +319,8 @@ def main():
             all_text.append(t)
         except:
             all_text.append("")
-    if not any((r.get("Species") or "").upper().startswith("ROTOM") for r in records):
-        rotom_pages = [i for i,pg in enumerate(all_text) if re.search(r'(?i)\brotom\b', pg)]
-        if rotom_pages:
-            logger.error(f"ROTOM detected in PDF text on pages {rotom_pages} but no record parsed. Check headers on those pages.")
+    if not rec.get("Species") and re.search(r'(?i)\brotom\b', page_text):
+        logger.warning(f"[p{i}] ROTOM detected but not parsed. Check formatting.")
 
     Path(OUT_JSON).write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding='utf-8')
     with open(OUT_NDJSON, 'w', encoding='utf-8') as f:
