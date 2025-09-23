@@ -35,6 +35,11 @@ def is_all_caps_title(line: str) -> bool:
     letters = re.sub(r'[^A-Za-z]', '', l)
     return len(letters) >= 3 and letters.isupper()
 
+def fix_species_spacing(name: str) -> str:
+    # Exemple: "HOOP A Confined" -> "HOOPA Confined"
+    # On corrige uniquement les majuscules séparées par un espace
+    return re.sub(r'\b([A-Z]{2,})\s+([A-Z]{1,})(\b| )', lambda m: m.group(1) + m.group(2) + m.group(3), name)
+
 def fallback_title(lines):
     # Try to pull an UPPERCASE species token even if the line contains "Normal Form", numbers, etc.
     for l in lines[:40]:
@@ -45,17 +50,17 @@ def fallback_title(lines):
         if m:
             token = m.group(1).strip()
             if token and token not in {"BASE STATS", "BASIC INFORMATION"}:
-                return l  # Return the whole line instead of just the token
+                return fix_species_spacing(l)  # Return the whole line instead of just the token
         # Case 2: Find the longest ALL-CAPS token in the line
         caps = re.findall(r'([A-Z]{3,}(?:[ \-][A-Z]{3,})*)', l)
         if caps:
             caps.sort(key=len, reverse=True)
             token = caps[0].strip()
             if token and token not in {"BASE STATS", "BASIC INFORMATION"}:
-                return l  # Return the whole line instead of just the token
+                return fix_species_spacing(l)  # Return the whole line instead of just the token
         # Case 3: Capitalized species name alone
         if re.match(r'^[A-Z][a-z]+(?:[ \-][A-Za-z]+){0,3}$', l):
-            return l
+            return fix_species_spacing(l)
     return None
 
 def parse_key_value_block(lines, start_idx, end_idx=None):
@@ -127,18 +132,38 @@ def extract_page(page_text: str, page_index: int):
     lines = [clean_line(l) for l in (page_text or "").splitlines()]
 
     # --- Dirty fix: some Capability List are wrongly formatted ---
+    # Liste des en-têtes que l’on veut isoler
+    KNOWN_HEADERS = [
+        "Base Stats", "Basic Information", "Evolution", "Size Information",
+        "Breeding Information", "Diet", "Habitat", "Capability List", "Skill List",
+        "Move List", "Level Up Move List", "TM/HM Move List",
+        "Egg Move List", "Tutor Move List", "Mega Evolution"
+    ]
+
     fixed_lines = []
     for l in lines:
-        if "Capability List" in l and l.strip().startswith("Habitat"):
-            # Exemple: "Habitat : Grassland Capability List Overland 7, Swim 3"
-            before, after = l.split("Capability List", 1)
-            fixed_lines.append(before.strip())        # "Habitat : Grassland"
-            fixed_lines.append("Capability List")     # en-tête tout seul
-            if after.strip():
-                fixed_lines.append(after.strip())     # "Overland 7, Swim 3..."
+        # On cherche si un header apparaît en plein milieu de ligne
+        found = []
+        for h in KNOWN_HEADERS:
+            pos = l.find(h)
+            if pos > 0:   # header trouvé, mais pas en début de ligne
+                found.append((pos, h))
+        if found:
+            found.sort()  # trier par position
+            start = 0
+            for pos, h in found:
+                before = l[start:pos].strip()
+                if before:
+                    fixed_lines.append(before)
+                fixed_lines.append(h)  # insérer le header comme ligne à part
+                start = pos + len(h)
+            rest = l[start:].strip()
+            if rest:
+                fixed_lines.append(rest)
         else:
             fixed_lines.append(l)
     lines = fixed_lines
+
 
     record = {"_page_index": page_index, "_raw_text": page_text}
 
@@ -155,8 +180,9 @@ def extract_page(page_text: str, page_index: int):
 
     # Remove leading numbers and normalize capitalization
     if species:
-        species = re.sub(r'^\s*\d+\s*', '', species)  # Remove leading numbers
-        species = species.title()  # Normalize capitalization (e.g., "Bulbasaur")
+        species = re.sub(r'^\s*\d+\s*', '', species)  # remove leading number
+        species = fix_species_spacing(species)        # <<<< ajout
+        species = species.title()
     record["Species"] = species
 
     def find_line(pat):
@@ -199,7 +225,7 @@ def extract_page(page_text: str, page_index: int):
     basic_block = collect_between(idx_basic, next_all)
     if basic_block:
         bi = parse_key_value_block(basic_block, 0, len(basic_block))
-        if bi["Type"]:
+        if "Type" in bi and bi["Type"]:
            bi["Type"] = bi["Type"].split(" / ")
         if not bi:
             logger.warning(f"[p{page_index} {species}] 'Basic Information' section empty after parse.")
@@ -224,11 +250,22 @@ def extract_page(page_text: str, page_index: int):
         record["Breeding Information"] = br
 
     # Diet / Habitat
+    # Diet
     if idx_diet != -1:
-        if ':' in lines[idx_diet]:
-            record["Diet"] = clean_line(lines[idx_diet].split(':',1)[1])
+        line = lines[idx_diet]
+        if ':' in line:
+            record["Diet"] = clean_line(line.split(':',1)[1])
         else:
-            logger.warning(f"[p{page_index} {species}] 'Diet' header found but no ':' value.")
+            # Cas où la valeur est sur la ligne suivante
+            if idx_diet + 1 < len(lines):
+                nxt = lines[idx_diet + 1].strip()
+                if nxt.startswith(':'):
+                    nxt = nxt[1:]  # enlever le ':' en début
+                if nxt and ':' not in nxt:   # éviter de prendre un autre champ
+                    record["Diet"] = clean_line(nxt)
+    if "Diet" not in record:
+        logger.warning(f"[p{page_index}] 'Diet' not found in these lines: {lines[idx_diet:idx_diet+3]}")
+
     if idx_hab != -1:
         if ':' in lines[idx_hab]:
             record["Habitat"] = clean_line(lines[idx_hab].split(':',1)[1])
