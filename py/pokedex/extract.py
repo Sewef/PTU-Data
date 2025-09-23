@@ -141,8 +141,20 @@ def extract_page(page_text: str, page_index: int):
     ]
 
     fixed_lines = []
-    for l in lines:
-        # On cherche si un header apparaît en plein milieu de ligne
+    skip_next = False
+    for i, l in enumerate(lines):
+        if skip_next:
+            skip_next = False
+            continue
+
+        # --- Corriger les mots coupés en fin de ligne ---
+        if l.endswith('-') and i + 1 < len(lines):
+            merged = l[:-1].rstrip() + lines[i + 1].lstrip()
+            logger.debug(f"[Page {page_index}] Recollé '{l}' + '{lines[i+1]}' -> '{merged}'")
+            l = merged
+            skip_next = True
+
+        # --- Découper les headers collés sur la même ligne ---
         found = []
         for h in KNOWN_HEADERS:
             pos = l.find(h)
@@ -162,6 +174,17 @@ def extract_page(page_text: str, page_index: int):
                 fixed_lines.append(rest)
         else:
             fixed_lines.append(l)
+
+    lines = fixed_lines
+    fixed_lines = []
+    for l in lines:
+        # Cas spécial : "Capability List" + contenu collés
+        if l.startswith("Capability List "):
+            fixed_lines.append("Capability List")
+            fixed_lines.append(l[len("Capability List "):].strip())
+        else:
+            fixed_lines.append(l)
+
     lines = fixed_lines
 
 
