@@ -113,7 +113,7 @@ function renderGrid(rows) {
     const iconWrap = document.createElement('div');
     iconWrap.className = 'icon';
     const img = document.createElement('img');
-    setupIcon(img, p.Number, name);
+    setupIcon(img, p.Icon||p.Number, name);
     iconWrap.appendChild(img);
     li.appendChild(iconWrap);
 

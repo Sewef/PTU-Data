@@ -73953,6 +73953,7 @@
   {
     "Species": "Deoxys Attack Forme",
     "Number": 386,
+    "Icon": "386-attack",
     "Base Stats": {
       "HP": 5,
       "Attack": 18,
@@ -74151,6 +74152,7 @@
   {
     "Species": "Deoxys Defense Forme",
     "Number": 386,
+    "Icon": "386-defense",
     "Base Stats": {
       "HP": 5,
       "Attack": 7,
@@ -74355,6 +74357,7 @@
   {
     "Species": "Deoxys Speed Forme",
     "Number": 386,
+    "Icon": "386-speed",
     "Base Stats": {
       "HP": 5,
       "Attack": 10,
@@ -78985,6 +78988,7 @@
   {
     "Species": "Wormadam Plant Cloak Form",
     "Number": 413,
+    "Icon": "413-plant",
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -79154,6 +79158,7 @@
   {
     "Species": "Wormadam Sandy Cloak Form",
     "Number": 413,
+    "Icon": "413-sandy",
     "Base Stats": {
       "HP": 7,
       "Attack": 8,
@@ -79320,6 +79325,7 @@
   {
     "Species": "Wormadam Trash Cloak Form",
     "Number": 413,
+    "Icon": "413-trash",
     "Base Stats": {
       "HP": 6,
       "Attack": 7,
@@ -91950,6 +91956,7 @@
   {
     "Species": "Rotom Appliance Forms",
     "Number": 479,
+    "Icon": "479-fan",
     "Base Stats": {
       "HP": 5,
       "Attack": 7,
@@ -93489,6 +93496,7 @@
   {
     "Species": "Giratina Origin Forme",
     "Number": 487,
+    "Icon": "487-origin",
     "Base Stats": {
       "HP": 15,
       "Attack": 12,
@@ -94573,7 +94581,7 @@
     }
   },
   {
-    "Species": "Shaymin Land Forme",
+    "Species": "Shaymin",
     "Number": 492,
     "Base Stats": {
       "HP": 10,
@@ -94746,6 +94754,7 @@
   {
     "Species": "Shaymin Sky Forme",
     "Number": 492,
+    "Icon": "492-sky",
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -122678,6 +122687,7 @@
   {
     "Species": "Tornadus Therian Forme",
     "Number": 641,
+    "Icon": "641-therian",
     "Base Stats": {
       "HP": 8,
       "Attack": 10,
@@ -123069,6 +123079,7 @@
   {
     "Species": "Thundurus Therian Forme",
     "Number": 642,
+    "Icon": "642-therian",
     "Base Stats": {
       "HP": 8,
       "Attack": 11,
@@ -123833,6 +123844,7 @@
   {
     "Species": "Landorus Therian Forme",
     "Number": 645,
+    "Icon": "645-therian",
     "Base Stats": {
       "HP": 9,
       "Attack": 15,
@@ -124023,364 +124035,6 @@
     }
   },
   {
-    "Species": "Kyurem Zekrom Fusion Forme",
-    "Number": 646,
-    "Base Stats": {
-      "HP": 13,
-      "Attack": 17,
-      "Defense": 10,
-      "Special Attack": 12,
-      "Special Defense": 9,
-      "Speed": 10
-    },
-    "Basic Information": {
-      "Type": [
-        "Dragon",
-        "Ice"
-      ],
-      "Basic Ability 1": "Teravolt",
-      "Adv Ability 1": "Motor Drive",
-      "Adv Ability 2": "Hydration",
-      "Adv Ability 3": "Discipline",
-      "High Ability": "Inner Focus"
-    },
-    "Evolution": [
-      "1 - Kyurem"
-    ],
-    "Size Information": {
-      "Height": "9’ 10” / 3m (Gigantic)",
-      "Weight": "716.5 lbs. / 325kg (6)"
-    },
-    "Breeding Information": {
-      "Gender Ratio": "No Gender",
-      "Egg Group": "None"
-    },
-    "Diet": "Omnivore",
-    "Habitat": "Non Space",
-    "Capabilities": [
-      "Overland 6",
-      "Swim 6",
-      "Sky 6",
-      "Jump 2/2",
-      "Power 10",
-      "Aura Reader",
-      "Chilled",
-      "Freezer",
-      "Telepath",
-      "Mountable 1"
-    ],
-    "Skills": {
-      "Athletics": "6d6",
-      "Acrobatics": "3d6",
-      "Combat": "4d6+4",
-      "Stealth": "3d6",
-      "Perception": "4d6",
-      "Focus": "4d6"
-    },
-    "Moves": {
-      "Level Up Move List": [
-        {
-          "Level": 1,
-          "Move": "Dragon Rage",
-          "Type": "Dragon"
-        },
-        {
-          "Level": 1,
-          "Move": "Icy Wind",
-          "Type": "Ice"
-        },
-        {
-          "Level": 8,
-          "Move": "Imprison",
-          "Type": "Psychic"
-        },
-        {
-          "Level": 15,
-          "Move": "Ancient Power",
-          "Type": "Rock"
-        },
-        {
-          "Level": 22,
-          "Move": "Ice Beam",
-          "Type": "Ice"
-        },
-        {
-          "Level": 29,
-          "Move": "Dragon Breath",
-          "Type": "Dragon"
-        },
-        {
-          "Level": 36,
-          "Move": "Slash",
-          "Type": "Normal"
-        },
-        {
-          "Level": 57,
-          "Move": "Dragon Pulse",
-          "Type": "Dragon"
-        },
-        {
-          "Level": 64,
-          "Move": "Imprison",
-          "Type": "Psychic"
-        },
-        {
-          "Level": 71,
-          "Move": "Endeavor",
-          "Type": "Normal"
-        },
-        {
-          "Level": 85,
-          "Move": "Outrage",
-          "Type": "Dragon"
-        },
-        {
-          "Level": 92,
-          "Move": "Hyper Voice",
-          "Type": "Normal"
-        }
-      ],
-      "TM/HM Move List": [
-        "A1 Cut",
-        "A2 Fly",
-        "A4 Strength",
-        "01 Hone Claws",
-        "02 Dragon Claw",
-        "06 Toxic",
-        "07 Hail",
-        "10 Hidden Power",
-        "11 Sunny Day",
-        "13 Ice Beam",
-        "14 Blizzard",
-        "15 Hyper Beam",
-        "16 Light Screen",
-        "17 Protect",
-        "18 Rain Dance",
-        "20 Safeguard",
-        "21 Frustration",
-        "27 Return",
-        "29 Psychic",
-        "30 Shadow Ball",
-        "32 Double Team",
-        "33 Reflect",
-        "39 Rock Tomb",
-        "42 Facade",
-        "44 Rest",
-        "48 Round",
-        "49 Echoed Voice",
-        "51 Steel Wing",
-        "52 Focus Blast",
-        "56 Fling",
-        "65 Shadow Claw",
-        "66 Payback",
-        "68 Giga Impact",
-        "71 Stone Edge",
-        "80 Rock Slide",
-        "82 Dragon Tail",
-        "87 Swagger",
-        "88 Sleep Talk",
-        "90 Substitute",
-        "91 Flash Cannon",
-        "94 Rock Smash"
-      ],
-      "Egg Move List": [],
-      "Tutor Move List": [
-        "Draco Meteor",
-        "Dragon Pulse",
-        "Earth Power",
-        "Endeavor",
-        "Hyper Voice",
-        "Icy Wind",
-        "Iron Head",
-        "Outrage",
-        "Roost",
-        "Signal Beam",
-        "Sleep Talk",
-        "Snore",
-        "Zen Headbutt"
-      ]
-    }
-  },
-  {
-    "Species": "Kyurem Reshiram Fusion Forme",
-    "Number": 646,
-    "Base Stats": {
-      "HP": 13,
-      "Attack": 12,
-      "Defense": 9,
-      "Special Attack": 17,
-      "Special Defense": 10,
-      "Speed": 10
-    },
-    "Basic Information": {
-      "Type": [
-        "Dragon",
-        "Ice"
-      ],
-      "Basic Ability 1": "Turboblaze",
-      "Adv Ability 1": "Flash Fire",
-      "Adv Ability 2": "Sun Blanket",
-      "Adv Ability 3": "Discipline",
-      "High Ability": "Inner Focus"
-    },
-    "Evolution": [
-      "1 - Kyurem"
-    ],
-    "Size Information": {
-      "Height": "9’ 10” / 3m (Gigantic)",
-      "Weight": "716.5 lbs. / 325kg (6)"
-    },
-    "Breeding Information": {
-      "Gender Ratio": "No Gender",
-      "Egg Group": "None"
-    },
-    "Diet": "Omnivore",
-    "Habitat": "Non Space",
-    "Capabilities": [
-      "Overland 6",
-      "Swim 6",
-      "Sky 6",
-      "Jump 2/2",
-      "Power 10",
-      "Aura Reader",
-      "Chilled",
-      "Freezer",
-      "Telepath",
-      "Mountable 1"
-    ],
-    "Skills": {
-      "Athletics": "6d6",
-      "Acrobatics": "3d6",
-      "Combat": "4d6+4",
-      "Stealth": "3d6",
-      "Perception": "4d6",
-      "Focus": "4d6"
-    },
-    "Moves": {
-      "Level Up Move List": [
-        {
-          "Level": 1,
-          "Move": "Dragon Rage",
-          "Type": "Dragon"
-        },
-        {
-          "Level": 1,
-          "Move": "Icy Wind",
-          "Type": "Ice"
-        },
-        {
-          "Level": 8,
-          "Move": "Imprison",
-          "Type": "Psychic"
-        },
-        {
-          "Level": 15,
-          "Move": "Ancient Power",
-          "Type": "Rock"
-        },
-        {
-          "Level": 22,
-          "Move": "Ice Beam",
-          "Type": "Ice"
-        },
-        {
-          "Level": 29,
-          "Move": "Dragon Breath",
-          "Type": "Dragon"
-        },
-        {
-          "Level": 36,
-          "Move": "Slash",
-          "Type": "Normal"
-        },
-        {
-          "Level": 57,
-          "Move": "Dragon Pulse",
-          "Type": "Dragon"
-        },
-        {
-          "Level": 64,
-          "Move": "Imprison",
-          "Type": "Psychic"
-        },
-        {
-          "Level": 71,
-          "Move": "Endeavor",
-          "Type": "Normal"
-        },
-        {
-          "Level": 85,
-          "Move": "Outrage",
-          "Type": "Dragon"
-        },
-        {
-          "Level": 92,
-          "Move": "Hyper Voice",
-          "Type": "Normal"
-        }
-      ],
-      "TM/HM Move List": [
-        "A1 Cut",
-        "A2 Fly",
-        "A4 Strength",
-        "01 Hone Claws",
-        "02 Dragon Claw",
-        "06 Toxic",
-        "07 Hail",
-        "10 Hidden Power",
-        "11 Sunny Day",
-        "13 Ice Beam",
-        "14 Blizzard",
-        "15 Hyper Beam",
-        "16 Light Screen",
-        "17 Protect",
-        "18 Rain Dance",
-        "20 Safeguard",
-        "21 Frustration",
-        "27 Return",
-        "29 Psychic",
-        "30 Shadow Ball",
-        "32 Double Team",
-        "33 Reflect",
-        "39 Rock Tomb",
-        "42 Facade",
-        "44 Rest",
-        "48 Round",
-        "49 Echoed Voice",
-        "51 Steel Wing",
-        "52 Focus Blast",
-        "56 Fling",
-        "65 Shadow Claw",
-        "66 Payback",
-        "68 Giga Impact",
-        "71 Stone Edge",
-        "80 Rock Slide",
-        "82 Dragon Tail",
-        "87 Swagger",
-        "88 Sleep Talk",
-        "90 Substitute",
-        "91 Flash Cannon",
-        "94 Rock Smash"
-      ],
-      "Egg Move List": [],
-      "Tutor Move List": [
-        "Draco Meteor",
-        "Dragon Pulse",
-        "Earth Power",
-        "Endeavor",
-        "Hyper Voice",
-        "Icy Wind",
-        "Iron Head",
-        "Outrage",
-        "Roost",
-        "Signal Beam",
-        "Sleep Talk",
-        "Snore",
-        "Zen Headbutt"
-      ]
-    }
-  },
-  {
     "Species": "Kyurem",
     "Number": 646,
     "Base Stats": {
@@ -124566,6 +124220,366 @@
         "Zen Headbutt Dragon Fusion: The user can merge with a willing Zekrom as an Extended Action to turn into the Zekrom Fusion Forme",
         "and with a willing Reshiram to turn into its Reshiram Fusion Forme. The respective Zekrom and Reshiram are absorbed and disappear while Fused. The user may unmerge as an Extended Action",
         "and its partner then reappears. All XP earned while Fused is split evenly between Kyurem and its partner."
+      ]
+    }
+  },
+  {
+    "Species": "Kyurem Zekrom Fusion Forme",
+    "Icon": "646-black",
+    "Number": 646,
+    "Base Stats": {
+      "HP": 13,
+      "Attack": 17,
+      "Defense": 10,
+      "Special Attack": 12,
+      "Special Defense": 9,
+      "Speed": 10
+    },
+    "Basic Information": {
+      "Type": [
+        "Dragon",
+        "Ice"
+      ],
+      "Basic Ability 1": "Teravolt",
+      "Adv Ability 1": "Motor Drive",
+      "Adv Ability 2": "Hydration",
+      "Adv Ability 3": "Discipline",
+      "High Ability": "Inner Focus"
+    },
+    "Evolution": [
+      "1 - Kyurem"
+    ],
+    "Size Information": {
+      "Height": "9’ 10” / 3m (Gigantic)",
+      "Weight": "716.5 lbs. / 325kg (6)"
+    },
+    "Breeding Information": {
+      "Gender Ratio": "No Gender",
+      "Egg Group": "None"
+    },
+    "Diet": "Omnivore",
+    "Habitat": "Non Space",
+    "Capabilities": [
+      "Overland 6",
+      "Swim 6",
+      "Sky 6",
+      "Jump 2/2",
+      "Power 10",
+      "Aura Reader",
+      "Chilled",
+      "Freezer",
+      "Telepath",
+      "Mountable 1"
+    ],
+    "Skills": {
+      "Athletics": "6d6",
+      "Acrobatics": "3d6",
+      "Combat": "4d6+4",
+      "Stealth": "3d6",
+      "Perception": "4d6",
+      "Focus": "4d6"
+    },
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 1,
+          "Move": "Dragon Rage",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 1,
+          "Move": "Icy Wind",
+          "Type": "Ice"
+        },
+        {
+          "Level": 8,
+          "Move": "Imprison",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 15,
+          "Move": "Ancient Power",
+          "Type": "Rock"
+        },
+        {
+          "Level": 22,
+          "Move": "Ice Beam",
+          "Type": "Ice"
+        },
+        {
+          "Level": 29,
+          "Move": "Dragon Breath",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 36,
+          "Move": "Slash",
+          "Type": "Normal"
+        },
+        {
+          "Level": 57,
+          "Move": "Dragon Pulse",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 64,
+          "Move": "Imprison",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 71,
+          "Move": "Endeavor",
+          "Type": "Normal"
+        },
+        {
+          "Level": 85,
+          "Move": "Outrage",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 92,
+          "Move": "Hyper Voice",
+          "Type": "Normal"
+        }
+      ],
+      "TM/HM Move List": [
+        "A1 Cut",
+        "A2 Fly",
+        "A4 Strength",
+        "01 Hone Claws",
+        "02 Dragon Claw",
+        "06 Toxic",
+        "07 Hail",
+        "10 Hidden Power",
+        "11 Sunny Day",
+        "13 Ice Beam",
+        "14 Blizzard",
+        "15 Hyper Beam",
+        "16 Light Screen",
+        "17 Protect",
+        "18 Rain Dance",
+        "20 Safeguard",
+        "21 Frustration",
+        "27 Return",
+        "29 Psychic",
+        "30 Shadow Ball",
+        "32 Double Team",
+        "33 Reflect",
+        "39 Rock Tomb",
+        "42 Facade",
+        "44 Rest",
+        "48 Round",
+        "49 Echoed Voice",
+        "51 Steel Wing",
+        "52 Focus Blast",
+        "56 Fling",
+        "65 Shadow Claw",
+        "66 Payback",
+        "68 Giga Impact",
+        "71 Stone Edge",
+        "80 Rock Slide",
+        "82 Dragon Tail",
+        "87 Swagger",
+        "88 Sleep Talk",
+        "90 Substitute",
+        "91 Flash Cannon",
+        "94 Rock Smash"
+      ],
+      "Egg Move List": [],
+      "Tutor Move List": [
+        "Draco Meteor",
+        "Dragon Pulse",
+        "Earth Power",
+        "Endeavor",
+        "Hyper Voice",
+        "Icy Wind",
+        "Iron Head",
+        "Outrage",
+        "Roost",
+        "Signal Beam",
+        "Sleep Talk",
+        "Snore",
+        "Zen Headbutt"
+      ]
+    }
+  },
+  {
+    "Species": "Kyurem Reshiram Fusion Forme",
+    "Number": 646,
+    "Icon": "646-white",
+    "Base Stats": {
+      "HP": 13,
+      "Attack": 12,
+      "Defense": 9,
+      "Special Attack": 17,
+      "Special Defense": 10,
+      "Speed": 10
+    },
+    "Basic Information": {
+      "Type": [
+        "Dragon",
+        "Ice"
+      ],
+      "Basic Ability 1": "Turboblaze",
+      "Adv Ability 1": "Flash Fire",
+      "Adv Ability 2": "Sun Blanket",
+      "Adv Ability 3": "Discipline",
+      "High Ability": "Inner Focus"
+    },
+    "Evolution": [
+      "1 - Kyurem"
+    ],
+    "Size Information": {
+      "Height": "9’ 10” / 3m (Gigantic)",
+      "Weight": "716.5 lbs. / 325kg (6)"
+    },
+    "Breeding Information": {
+      "Gender Ratio": "No Gender",
+      "Egg Group": "None"
+    },
+    "Diet": "Omnivore",
+    "Habitat": "Non Space",
+    "Capabilities": [
+      "Overland 6",
+      "Swim 6",
+      "Sky 6",
+      "Jump 2/2",
+      "Power 10",
+      "Aura Reader",
+      "Chilled",
+      "Freezer",
+      "Telepath",
+      "Mountable 1"
+    ],
+    "Skills": {
+      "Athletics": "6d6",
+      "Acrobatics": "3d6",
+      "Combat": "4d6+4",
+      "Stealth": "3d6",
+      "Perception": "4d6",
+      "Focus": "4d6"
+    },
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 1,
+          "Move": "Dragon Rage",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 1,
+          "Move": "Icy Wind",
+          "Type": "Ice"
+        },
+        {
+          "Level": 8,
+          "Move": "Imprison",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 15,
+          "Move": "Ancient Power",
+          "Type": "Rock"
+        },
+        {
+          "Level": 22,
+          "Move": "Ice Beam",
+          "Type": "Ice"
+        },
+        {
+          "Level": 29,
+          "Move": "Dragon Breath",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 36,
+          "Move": "Slash",
+          "Type": "Normal"
+        },
+        {
+          "Level": 57,
+          "Move": "Dragon Pulse",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 64,
+          "Move": "Imprison",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 71,
+          "Move": "Endeavor",
+          "Type": "Normal"
+        },
+        {
+          "Level": 85,
+          "Move": "Outrage",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 92,
+          "Move": "Hyper Voice",
+          "Type": "Normal"
+        }
+      ],
+      "TM/HM Move List": [
+        "A1 Cut",
+        "A2 Fly",
+        "A4 Strength",
+        "01 Hone Claws",
+        "02 Dragon Claw",
+        "06 Toxic",
+        "07 Hail",
+        "10 Hidden Power",
+        "11 Sunny Day",
+        "13 Ice Beam",
+        "14 Blizzard",
+        "15 Hyper Beam",
+        "16 Light Screen",
+        "17 Protect",
+        "18 Rain Dance",
+        "20 Safeguard",
+        "21 Frustration",
+        "27 Return",
+        "29 Psychic",
+        "30 Shadow Ball",
+        "32 Double Team",
+        "33 Reflect",
+        "39 Rock Tomb",
+        "42 Facade",
+        "44 Rest",
+        "48 Round",
+        "49 Echoed Voice",
+        "51 Steel Wing",
+        "52 Focus Blast",
+        "56 Fling",
+        "65 Shadow Claw",
+        "66 Payback",
+        "68 Giga Impact",
+        "71 Stone Edge",
+        "80 Rock Slide",
+        "82 Dragon Tail",
+        "87 Swagger",
+        "88 Sleep Talk",
+        "90 Substitute",
+        "91 Flash Cannon",
+        "94 Rock Smash"
+      ],
+      "Egg Move List": [],
+      "Tutor Move List": [
+        "Draco Meteor",
+        "Dragon Pulse",
+        "Earth Power",
+        "Endeavor",
+        "Hyper Voice",
+        "Icy Wind",
+        "Iron Head",
+        "Outrage",
+        "Roost",
+        "Signal Beam",
+        "Sleep Talk",
+        "Snore",
+        "Zen Headbutt"
       ]
     }
   },
@@ -124946,6 +124960,7 @@
   {
     "Species": "Meloetta Step Form",
     "Number": 648,
+    "Icon": "648-pirouette",
     "Base Stats": {
       "HP": 10,
       "Attack": 13,
@@ -138707,6 +138722,7 @@
   {
     "Species": "Hoopa Unbound",
     "Number": 720,
+    "Icon": "720-unbound",
     "Base Stats": {
       "HP": 8,
       "Attack": 16,
