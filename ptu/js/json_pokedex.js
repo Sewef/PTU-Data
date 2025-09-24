@@ -95,52 +95,52 @@
   }
 
   // Build the grid of small badges
-function renderGrid(rows) {
-  const grid = document.getElementById('dex-grid');
-  grid.innerHTML = '';
-  const frag = document.createDocumentFragment();
+  function renderGrid(rows) {
+    const grid = document.getElementById('dex-grid');
+    grid.innerHTML = '';
+    const frag = document.createDocumentFragment();
 
-  rows.forEach(p => {
-    const name = p.Species || 'Unknown';
-    const num = pad3(p.Number ?? '0');
-    const types = extractTypes(p);
+    rows.forEach(p => {
+      const name = p.Species || 'Unknown';
+      const num = pad3(p.Number ?? '0');
+      const types = extractTypes(p);
 
-    const li = document.createElement('div');
-    li.className = 'dex-badge';
-    li.dataset.types = types.join(','); // ← on garde les types pour plus tard
+      const li = document.createElement('div');
+      li.className = 'dex-badge';
+      li.dataset.types = types.join(','); // ← on garde les types pour plus tard
 
-    // icône
-    const iconWrap = document.createElement('div');
-    iconWrap.className = 'icon';
-    const img = document.createElement('img');
-    setupIcon(img, p.Icon||p.Number, name);
-    iconWrap.appendChild(img);
-    li.appendChild(iconWrap);
+      // icône
+      const iconWrap = document.createElement('div');
+      iconWrap.className = 'icon';
+      const img = document.createElement('img');
+      setupIcon(img, p.Icon || p.Number, name);
+      iconWrap.appendChild(img);
+      li.appendChild(iconWrap);
 
-    const numBadge = document.createElement('div');
-    numBadge.className = 'dex-num-badge';
-    numBadge.textContent = `#${num}`;
-    li.appendChild(numBadge);
+      const numBadge = document.createElement('div');
+      numBadge.className = 'dex-num-badge';
+      numBadge.textContent = `#${num}`;
+      li.appendChild(numBadge);
 
-    const label = document.createElement('div');
-    label.className = 'dex-label';
-    label.textContent = name;
-    li.appendChild(label);
+      const label = document.createElement('div');
+      label.className = 'dex-label';
+      label.textContent = name;
+      li.appendChild(label);
 
-    li.addEventListener('click', () => openDetail(p));
-    frag.appendChild(li);
-  });
-
-  grid.appendChild(frag);
-
-  // Laisse le browser attacher/calculer, puis applique les styles
-  requestAnimationFrame(() => {
-    grid.querySelectorAll('.dex-badge').forEach(el => {
-      const types = el.dataset.types ? el.dataset.types.split(',') : [];
-      applyBadgeBackground(el, types);
+      li.addEventListener('click', () => openDetail(p));
+      frag.appendChild(li);
     });
-  });
-}
+
+    grid.appendChild(frag);
+
+    // Laisse le browser attacher/calculer, puis applique les styles
+    requestAnimationFrame(() => {
+      grid.querySelectorAll('.dex-badge').forEach(el => {
+        const types = el.dataset.types ? el.dataset.types.split(',') : [];
+        applyBadgeBackground(el, types);
+      });
+    });
+  }
 
 
   // Background mono or bi-color based on types
@@ -166,8 +166,6 @@ function renderGrid(rows) {
       const c2 = getComputedStyle(el).getPropertyValue('--type-color')?.trim() || '#444';
       el.classList.remove(`card-type-${types[1]}`);
 
-
-      console.log({ c1, c2 });
       // Deux moitiés nettes, pas de mélange
       el.style.background = `linear-gradient(90deg, ${c1} 50%, ${c2} 50%)`;
       el.style.borderColor = 'rgba(255,255,255,.15)';
@@ -201,36 +199,139 @@ function renderGrid(rows) {
     const body = document.getElementById('dexModalBody');
     const title = document.getElementById('dexModalLabel');
     const num = pad3(p.Number ?? '0');
-    title.textContent = `#${num} — ${p.Species || 'Unknown'}`;
 
     const header = (() => {
       const types = extractTypes(p);
       const wraps = types.map(t => `<span class=\"type-pill card-type-${t}\">${t}</span>`).join('');
-      return `<div class=\"mb-3\"><strong>Types:</strong> ${wraps || '<em>—</em>'}</div>`;
+      return `<div class=\"mb-3\">${wraps || '<em>—</em>'}</div>`;
     })();
 
-    body.innerHTML = header + renderObject(p);
+    title.innerHTML = `#${num} — ${p.Species || 'Unknown'}` + header;
+
+    body.innerHTML = renderObject(p);
     const modal = new bootstrap.Modal(document.getElementById('dexModal'));
     modal.show();
   }
 
   function renderObject(obj, depth = 0) {
+    // null/undefined → nothing
     if (obj == null) return '';
+
+    // Arrays
     if (Array.isArray(obj)) {
-      return `<ul>${obj.map(v => `<li>${(typeof v === 'object') ? renderObject(v, depth + 1) : escapeHtml(String(v))}</li>`).join('')}</ul>`;
+      if (obj.length === 0) return ''; // skip empty array
+      // Render each item; keep only non-empty items
+      const items = obj.map(v => {
+        if (typeof v === 'object') {
+          const inner = renderObject(v, depth + 1);
+          return inner.trim() ? `<li>${inner}</li>` : '';
+        }
+        return `<li>${escapeHtml(String(v))}</li>`;
+      }).filter(Boolean);
+      if (items.length === 0) return ''; // all items were empty
+      return `<ul>${items.join('')}</ul>`;
     }
-    let html = '';
-    for (const [k, v] of Object.entries(obj)) {
-      if (typeof v === 'object' && v !== null) {
-        const h = Math.min(4 + depth, 6);
-        html += `<div class=\"mt-3\"><h${h} class=\"text-muted\">${escapeHtml(k)}</h${h}><div class=\"card accent\" style=\"--accent-color: rgba(255,255,255,.08);\"><div class=\"card-body\">${renderObject(v, depth + 1)}</div></div></div>`;
-      } else {
-        const safe = escapeHtml(String(v ?? ''));
-        html += `<div><strong>${escapeHtml(k)}</strong>: ${safe}</div>`;
+
+    // Objects
+    if (typeof obj === 'object') {
+      // ROOT: build two columns
+      if (depth === 0) {
+        let col1 = '';
+        let col2 = '';
+        for (const [k, v] of Object.entries(obj)) {
+          if (["Species", "Number", "Icon"].includes(k)) continue; // already shown elsewhere
+
+          // --- special cases / skips you control ---
+          //if (k === 'Basic Information' && v?.Type && Array.isArray(v.Type)) continue; // types are shown in header
+          // Add more hand-written exclusions here as needed
+          // ----------------------------------------
+
+          console.log({ k, v });
+          // Build block
+          let block = '';
+          if (typeof v === 'object' && v !== null) {
+            const inner = renderObject(v, depth + 1);
+            if (!inner.trim()) continue; // child had nothing → skip whole section
+            const h = Math.min(4 + depth, 6);
+            block = `
+            <div class="mt-3">
+              <h${h} class="text-muted">${escapeHtml(k)}</h${h}>
+              <div class="card accent" style="--accent-color: rgba(255,255,255,.08);">
+                <div class="card-body">
+                  ${inner}
+                </div>
+              </div>
+            </div>`;
+          } else {
+            // scalar
+            const safe = escapeHtml(String(v ?? ''));
+            if (!safe) continue; // empty string → skip
+            block = `
+            <div class="row border-bottom py-1">
+              <div class="col-4 fw-bold">${escapeHtml(k)}</div>
+              <div class="col-8">${safe}</div>
+            </div>`;
+          }
+
+          // Dispatch: left column for “main” sections
+          const leftSections = new Set([
+            "Base Stats", "Basic Information", "Evolution",
+            "Size Information", "Breeding Information", "Diet", "Habitat"
+          ]);
+          (leftSections.has(k) ? (col1 += block) : (col2 += block));
+        }
+
+        // If both columns empty, return empty (lets parent skip the wrapper)
+        const hasAny = (col1.trim() || col2.trim());
+        if (!hasAny) return '';
+
+        return `
+        <div class="row">
+          <div class="col-md-6">${col1}</div>
+          <div class="col-md-6">${col2}</div>
+        </div>`;
       }
+
+      // NESTED (depth > 0): render as a single column, skipping empties
+      let html = '';
+      for (const [k, v] of Object.entries(obj)) {
+        // generic skip of empty arrays/objects
+        if (Array.isArray(v) && v.length === 0) continue;
+        if (v && typeof v === 'object' && !Array.isArray(v) && Object.keys(v).length === 0) continue;
+
+        if (typeof v === 'object' && v !== null) {
+          const inner = renderObject(v, depth + 1);
+          if (!inner.trim()) continue; // child had nothing
+          const h = Math.min(4 + depth, 6);
+          html += `
+          <div class="mt-3">
+            <h${h} class="text-muted">${escapeHtml(k)}</h${h}>
+            <div class="card accent" style="--accent-color: rgba(255,255,255,.08);">
+              <div class="card-body">
+                ${inner}
+              </div>
+            </div>
+          </div>`;
+        } else {
+          const safe = escapeHtml(String(v ?? ''));
+          if (!safe) continue;
+          html += `
+          <div class="row border-bottom py-1">
+            <div class="col-4 fw-bold">${escapeHtml(k)}</div>
+            <div class="col-8">${safe}</div>
+          </div>`;
+        }
+      }
+      return html;
     }
-    return html;
+
+    // Fallback for primitives (shouldn’t really hit here)
+    return escapeHtml(String(obj));
   }
+
+
+
+
 
   function escapeHtml(s) {
     const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
