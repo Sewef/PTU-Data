@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PTU Data – Pokédex</title>
+
+  <!-- Vendor libs (adjust paths to your setup) -->
+  <script src="/ptu/js/jquery-3.7.1.min.js"></script>
+  <script src="/ptu/js/popper.min.js"></script>
+  <script src="/ptu/js/bootstrap.min.js"></script>
+  <script src="/ptu/js/helpers.js"></script>
+  <script src="/ptu/js/json_pokedex.js"></script>
+
+  <style>
+    :root { --badge-radius: 12px; }
+    body { background: #0f1115; color: #eaeef5; }
+
+    /* Type color system (same palette as your Moves page) */
+    .type-Normal   { --type-color: #A8A77A; }
+    .type-Fire     { --type-color: #EE8130; }
+    .type-Water    { --type-color: #6390F0; }
+    .type-Electric { --type-color: #F7D02C; }
+    .type-Grass    { --type-color: #7AC74C; }
+    .type-Ice      { --type-color: #96D9D6; }
+    .type-Fighting { --type-color: #C22E28; }
+    .type-Poison   { --type-color: #A33EA1; }
+    .type-Ground   { --type-color: #E2BF65; }
+    .type-Flying   { --type-color: #A98FF3; }
+    .type-Psychic  { --type-color: #F95587; }
+    .type-Bug      { --type-color: #A6B91A; }
+    .type-Rock     { --type-color: #B6A136; }
+    .type-Ghost    { --type-color: #735797; }
+    .type-Dragon   { --type-color: #6F35FC; }
+    .type-Dark     { --type-color: #705746; }
+    .type-Steel    { --type-color: #B7B7CE; }
+    .type-Fairy    { --type-color: #D685AD; }
+
+    .sidebar .list-group-item { font-size: .9rem; padding: .35rem .5rem; background: #151922; color: #eaeef5; border: 1px solid #22293a; }
+    .sidebar .list-group-item input { transform: scale(.9); margin-right: .4rem; }
+
+    .search-wrap { position: sticky; top: 0; background: linear-gradient(#0f1115, rgba(15,17,21,0.6)); padding-top: 1rem; z-index: 5; }
+
+    /* Badge grid */
+    .dex-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+    .dex-badge { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: var(--badge-radius); cursor: pointer; border: 1px solid #22293a; background: #151922; transition: transform .08s ease, box-shadow .08s ease; }
+    .dex-badge:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+    .dex-badge .icon { width: 42px; height: 42px; border-radius: 10px; background: #0b0d12; display: grid; place-items: center; overflow: hidden; flex: none; border: 1px solid rgba(255,255,255,0.06); }
+    .dex-badge img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 1px 0 rgba(0,0,0,.25)); }
+    .dex-title { display: flex; flex-direction: column; line-height: 1.1; }
+    .dex-title .name { font-weight: 700; letter-spacing: .2px; }
+    .dex-title .meta { font-size: .8rem; opacity: .8; }
+
+    /* Card accents using type color(s) */
+    .accent { border-left: 6px solid var(--accent-color, transparent); border-radius: 10px; }
+
+    /* Modal pretties */
+    .modal-content { background: #11141b; color: #eaeef5; border: 1px solid #22293a; }
+    .modal-header { border-bottom-color: #22293a; }
+    .modal-footer { border-top-color: #22293a; }
+
+    /* Tiny pill types */
+    .type-pill { display: inline-block; padding: .15rem .45rem; font-size: .75rem; border-radius: 999px; color: #0f1115; background: var(--type-color); font-weight: 700; margin-right: .25rem; }
+  </style>
+</head>
+<body>
+  <div w3-include-html="header.html"></div>
+  <div class="container-fluid py-3">
+    <div class="row">
+      <!-- Sidebar: Types -->
+      <aside class="col-lg-2 col-md-3 sidebar">
+        <div id="sidebar" class="list-group"></div>
+      </aside>
+
+      <!-- Main -->
+      <main class="col-lg-10 col-md-9">
+        <div class="search-wrap mb-3">
+          <div class="row g-2 align-items-center">
+            <div class="col-sm-6">
+              <input id="dex-search" class="form-control" placeholder="Search species or #..." />
+            </div>
+            <div class="col-sm-6 text-sm-end mt-2 mt-sm-0">
+              <button id="clear-filters" class="btn btn-sm btn-outline-light">Clear filters</button>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="h4 mb-3">Pokédex</h2>
+        <div id="dex-grid" class="dex-grid"></div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Detail modal -->
+  <div class="modal fade" id="dexModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dexModalLabel">Pokémon</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="dexModalBody"></div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Optional: keep your global nav active states working (if you use includeHTML/helpers)
+    if (typeof includeHTML === 'function') {
+      includeHTML(() => (typeof setActive === 'function' ? setActive() : null));
+    }
+  </script>
+</body>
+</html>
