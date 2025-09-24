@@ -116,11 +116,9 @@ def parse_moves_list(lines, start_idx):
     while i < len(lines):
         line = lines[i]
         nxt = lines[i+1] if i+1 < len(lines) else ""
-        # Break if the line contains 'Mega Evolution' even mid-line
-        if re.search(r'(?i)\\bMega\\s+Evolution\\b', line) or (line == "Mega" and nxt == "Evolution"):
-            logger.debug(f"[Moves] Stopped at Mega Evolution (inline or split): {line} | {nxt}")
+        # Stop if we reach Mega Evolution header (on one line or split across two)
+        if re.search(r'(?i)^Mega Evolution$', line) or (line == "Mega" and nxt == "Evolution"):
             break
-
         if re.search(r'(?i)^Move List$', line):
             i += 1
             continue
@@ -301,11 +299,6 @@ def extract_page(page_text: str, page_index: int):
     idx_skill = find_line(r'^Skill List')
     idx_move  = find_line(r'^Move List')
     idx_mega  = find_line(r'\bMega Evolution\b')
-    if idx_mega == -1:
-        for k in range(len(lines)-1):
-            if lines[k] == 'Mega' and lines[k+1] == 'Evolution':
-                idx_mega = k+1
-                break
 
     # Base Stats
     if idx_base != -1:
@@ -445,47 +438,50 @@ def extract_page(page_text: str, page_index: int):
     # Mega Evolution
     if idx_mega != -1:
         mega_block = collect_between(idx_mega, next_all)
-
-        # Join everything; handle cases where the header was mid-line with a move
-        joined = ' '.join([clean_line(x) for x in mega_block])
-        joined = re.sub(r'\s+', ' ', joined).strip()
-
         mega = {}
-
-        # Type (stop before Ability/Stats)
-        m = re.search(r'(?i)\bType\s*:\s*(.+?)(?=\s+(Ability|Stats)\b|$)', joined)
-        if m:
-            mega['Type'] = clean_line(m.group(1))
-
-        # Ability (stop before Stats)
-        m = re.search(r'(?i)\bAbility\s*:\s*(.+?)(?=\s+Stats\b|$)', joined)
-        if m:
-            mega['Ability'] = clean_line(m.group(1))
-
-        # Stats (rest of line)
-        stats_text = None
-        m = re.search(r'(?i)\bStats\s*:\s*(.+)$', joined)
-        if m:
-            stats_text = clean_line(m.group(1))
-
-        if stats_text:
+        stats_lines = []
+        for l in mega_block:
+            if re.search(r'(?i)^Type', l):
+                mega['Type'] = l.split(':', 1)[1].strip() if ':' in l else l
+            elif re.search(r'(?i)^Ability', l):
+                mega['Ability'] = l.split(':', 1)[1].strip() if ':' in l else l
+            elif re.search(r'(?i)^Stats', l):
+                # première ligne de stats
+                first_stats = l.split(':', 1)[1].strip() if ':' in l else l
+                stats_lines.append(first_stats)
+            elif stats_lines:
+                # toutes les lignes suivantes après Stats
+                stats_lines.append(l.strip())
+        
+        if stats_lines:
+            # Build one string and parse deltas like "+2 Atk", "+4 Def", "+2 Sp. Atk", etc.
+            stats_text = ', '.join(stats_lines).replace(',,', ',')
             delta = {}
-            for pat, key in [(r'Atk','Attack'), (r'Def','Defense'),
-                             (r'Sp\.?\s*Atk','Special Attack'), (r'Sp\.?\s*Def','Special Defense'),
-                             (r'Speed','Speed'), (r'HP','HP')]:
+            mapping = [
+                (r'Atk', 'Attack'),
+                (r'Def', 'Defense'),
+                (r'Sp\.?\s*Atk', 'Special Attack'),
+                (r'Sp\.?\s*Def', 'Special Defense'),
+                (r'Speed', 'Speed'),
+                (r'HP', 'HP'),
+            ]
+            for pat, key in mapping:
                 m2 = re.search(rf'([+-]?\d+)\s*{pat}', stats_text, flags=re.IGNORECASE)
                 if m2:
                     try:
                         delta[key] = int(m2.group(1))
                     except Exception:
                         pass
-            mega['Stats'] = delta if delta else stats_text
+            if delta:
+                mega['Stats'] = delta
+            else:
+                mega['Stats'] = stats_text
+
+
 
         if mega:
             record["Mega Evolution"] = mega
-
         record["mega_evolution_raw"] = mega_block
-
 
     return record
 
@@ -525,4 +521,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    logger.info("DO ROTOM, PUMKABOO, GOURGEIST AND HOOPA MANUALLY")
