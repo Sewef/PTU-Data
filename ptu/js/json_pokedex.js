@@ -1,4 +1,4 @@
-(function(){
+(function () {
   const CFG = {
     // Primary JSON location (mirror your moves.html convention)
     jsonUrls: [
@@ -16,59 +16,44 @@
 
   // Utilities
   const pad3 = n => String(n).padStart(3, '0');
-  const slugify = s => (s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  const slugify = s => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   const $ = (sel) => document.querySelector(sel);
 
   // ===== Types helpers (handle array OR per-form object) =====
-  function extractTypes(p){
-    const t = p?.['Basic Information']?.Type;
-    if (Array.isArray(t)) return t;
-    if (t && typeof t === 'object'){
-      const vals = Object.values(t).flatMap(v => Array.isArray(v) ? v : []);
-      return Array.from(new Set(vals));
-    }
-    return [];
-  }
-  function collectTypes(rows){
-    const set = new Set();
-    rows.forEach(r => extractTypes(r).forEach(t => set.add(t)));
-    return Array.from(set).sort();
-  }
-
   function debounce(fn, delay = 150) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), delay); } }
 
   // Load JSON with graceful fallbacks
-  async function loadPokedex(){
-    for (const url of CFG.jsonUrls){
-      try{
+  async function loadPokedex() {
+    for (const url of CFG.jsonUrls) {
+      try {
         const res = await fetch(url, { cache: 'no-store' });
-        if(res.ok){ return res.json(); }
-      }catch(e){ /* continue */ }
+        if (res.ok) { return res.json(); }
+      } catch (e) { /* continue */ }
     }
     throw new Error('Unable to load pokedex_core.json from configured locations');
   }
 
   // Derive flat list of distinct types present + robust form handling
-  function extractTypes(p){
+  function extractTypes(p) {
     const t = p?.['Basic Information']?.Type;
     if (Array.isArray(t)) return t;
-    if (t && typeof t === 'object'){
+    if (t && typeof t === 'object') {
       const vals = Object.values(t).flatMap(v => Array.isArray(v) ? v : []);
       return Array.from(new Set(vals));
     }
     return [];
   }
 
-  function collectTypes(rows){
+  function collectTypes(rows) {
     const set = new Set();
     rows.forEach(r => extractTypes(r).forEach(t => set.add(t)));
     return Array.from(set).sort();
   }
 
   // Sidebar builder (mirrors your moves sidebar UX)
-  function buildTypeSidebar(all, onChange){
+  function buildTypeSidebar(all, onChange) {
     const sidebar = document.getElementById('sidebar');
-    if(!sidebar) return;
+    if (!sidebar) return;
     const types = collectTypes(all);
     sidebar.innerHTML = `
       <div class="mb-3">
@@ -77,7 +62,7 @@
       </div>
       <div id="type-filters" class="list-group">
         ${types.map(type => `
-          <label class="list-group-item type-${type}">
+          <label class="list-group-item card-type-${type}">
             <input class="form-check-input me-1" type="checkbox" value="${type}">
             ${type}
           </label>
@@ -89,7 +74,7 @@
     });
 
     const sb = document.getElementById('sidebar-search');
-    if(sb) sb.addEventListener('input', debounce(() => {
+    if (sb) sb.addEventListener('input', debounce(() => {
       const q = sb.value.toLowerCase();
       sidebar.querySelectorAll('#type-filters label').forEach(label => {
         label.style.display = label.textContent.toLowerCase().includes(q) ? '' : 'none';
@@ -97,7 +82,7 @@
     }, 150));
 
     const toggle = document.getElementById('toggle-all-types');
-    if(toggle) toggle.addEventListener('click', () => {
+    if (toggle) toggle.addEventListener('click', () => {
       const boxes = sidebar.querySelectorAll("#type-filters input[type='checkbox']");
       const allChecked = Array.from(boxes).every(cb => cb.checked);
       boxes.forEach(cb => cb.checked = !allChecked);
@@ -105,19 +90,19 @@
     });
   }
 
-  function activeTypes(){
+  function activeTypes() {
     return Array.from(document.querySelectorAll('#type-filters input:checked')).map(el => el.value);
   }
 
   // Build the grid of small badges
-  function renderGrid(rows){
+  function renderGrid(rows) {
     const grid = document.getElementById('dex-grid');
     grid.innerHTML = '';
     const frag = document.createDocumentFragment();
 
     rows.forEach(p => {
       const name = p.Species || 'Unknown';
-      const num  = pad3(p.Number ?? '0');
+      const num = pad3(p.Number ?? '0');
       const types = extractTypes(p);
 
       const li = document.createElement('div');
@@ -128,7 +113,7 @@
       const iconWrap = document.createElement('div');
       iconWrap.className = 'icon';
       const img = document.createElement('img');
-      setupIcon(img, num, name);
+      setupIcon(img, p.Number, name);
       iconWrap.appendChild(img);
 
       // text
@@ -147,48 +132,48 @@
   }
 
   // Background mono or bi-color based on types
-  function applyBadgeBackground(el, types){
-    if(!types || types.length === 0){ el.style.background = '#151922'; return; }
-    if(types.length === 1){
-      el.classList.add(`type-${types[0]}`);
+  function applyBadgeBackground(el, types) {
+    if (!types || types.length === 0) { el.style.background = '#151922'; return; }
+    if (types.length === 1) {
+      el.classList.add(`card-type-${types[0]}`);
       el.style.background = `linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02)), var(--type-color)`;
       el.style.color = '#0f1115';
       el.style.borderColor = 'rgba(255,255,255,.15)';
     } else {
-      el.classList.add(`type-${types[0]}`);
+      el.classList.add(`card-type-${types[0]}`);
       const c1 = getComputedStyle(el).getPropertyValue('--type-color')?.trim() || '#333';
-      el.classList.remove(`type-${types[0]}`);
-      el.classList.add(`type-${types[1]}`);
+      el.classList.remove(`card-type-${types[0]}`);
+      el.classList.add(`card-type-${types[1]}`);
       const c2 = getComputedStyle(el).getPropertyValue('--type-color')?.trim() || '#444';
-      el.classList.remove(`type-${types[1]}`);
+      el.classList.remove(`card-type-${types[1]}`);
       el.style.background = `linear-gradient(90deg, ${c1}, ${c2})`;
       el.style.borderColor = 'rgba(255,255,255,.15)';
     }
   }
 
   // Try multiple icon patterns, fall back to generated SVG initials
-  function setupIcon(img, num, name){
+  function setupIcon(img, num, name) {
     const tryUrls = CFG.iconPatterns.map(fn => {
       try { return fn(num, name); } catch { return null; }
     }).filter(Boolean);
 
     let idx = 0;
     const fallback = () => {
-      const initials = name.replace(/[^A-Z0-9]/gi,' ').trim().split(/\s+/).slice(0,2).map(s=>s[0]).join('').toUpperCase() || '?';
+      const initials = name.replace(/[^A-Z0-9]/gi, ' ').trim().split(/\s+/).slice(0, 2).map(s => s[0]).join('').toUpperCase() || '?';
       const svg = encodeURIComponent(`<?xml version='1.0' encoding='UTF-8'?>\n<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'>\n  <rect width='100%' height='100%' fill='#0b0d12'/>\n  <text x='50%' y='56%' text-anchor='middle' font-family='Inter,Arial,Helvetica,sans-serif' font-size='34' fill='#eaeef5' opacity='0.8'>${initials}</text>\n</svg>`);
       img.src = `data:image/svg+xml;charset=UTF-8,${svg}`;
     };
 
     img.addEventListener('error', () => {
-      if(idx < tryUrls.length){ img.src = tryUrls[idx++]; } else fallback();
-    }, { once:false });
+      if (idx < tryUrls.length) { img.src = tryUrls[idx++]; } else fallback();
+    }, { once: false });
 
     // kick off
-    if(tryUrls.length){ img.src = tryUrls[idx++]; } else { fallback(); }
+    if (tryUrls.length) { img.src = tryUrls[idx++]; } else { fallback(); }
   }
 
   // Detail renderer (generic recursive pretty-printer + a nicer header)
-  function openDetail(p){
+  function openDetail(p) {
     const body = document.getElementById('dexModalBody');
     const title = document.getElementById('dexModalLabel');
     const num = pad3(p.Number ?? '0');
@@ -205,16 +190,16 @@
     modal.show();
   }
 
-  function renderObject(obj, depth=0){
-    if(obj == null) return '';
-    if(Array.isArray(obj)){
-      return `<ul>${obj.map(v => `<li>${(typeof v === 'object') ? renderObject(v, depth+1) : escapeHtml(String(v))}</li>`).join('')}</ul>`;
+  function renderObject(obj, depth = 0) {
+    if (obj == null) return '';
+    if (Array.isArray(obj)) {
+      return `<ul>${obj.map(v => `<li>${(typeof v === 'object') ? renderObject(v, depth + 1) : escapeHtml(String(v))}</li>`).join('')}</ul>`;
     }
     let html = '';
-    for(const [k,v] of Object.entries(obj)){
-      if(typeof v === 'object' && v !== null){
-        const h = Math.min(4+depth, 6);
-        html += `<div class=\"mt-3\"><h${h} class=\"text-muted\">${escapeHtml(k)}</h${h}><div class=\"card accent\" style=\"--accent-color: rgba(255,255,255,.08);\"><div class=\"card-body\">${renderObject(v, depth+1)}</div></div></div>`;
+    for (const [k, v] of Object.entries(obj)) {
+      if (typeof v === 'object' && v !== null) {
+        const h = Math.min(4 + depth, 6);
+        html += `<div class=\"mt-3\"><h${h} class=\"text-muted\">${escapeHtml(k)}</h${h}><div class=\"card accent\" style=\"--accent-color: rgba(255,255,255,.08);\"><div class=\"card-body\">${renderObject(v, depth + 1)}</div></div></div>`;
       } else {
         const safe = escapeHtml(String(v ?? ''));
         html += `<div><strong>${escapeHtml(k)}</strong>: ${safe}</div>`;
@@ -223,28 +208,28 @@
     return html;
   }
 
-  function escapeHtml(s){
-    const map = { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' };
+  function escapeHtml(s) {
+    const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
     return s.replace(/[&<>"']/g, c => map[c]);
   }
 
   // Filter logic (text + type chips)
-  function filterRows(rows){
+  function filterRows(rows) {
     const q = (document.getElementById('dex-search')?.value || '').trim().toLowerCase();
     const types = activeTypes();
     return rows.filter(p => {
-      const name = (p.Species||'').toLowerCase();
-      const num  = String(p.Number||'');
+      const name = (p.Species || '').toLowerCase();
+      const num = String(p.Number || '');
       const hasQ = !q || name.includes(q) || num.includes(q);
       const pTypes = extractTypes(p);
       const typeOk = types.length === 0 || pTypes.some(t => types.includes(t));
       return hasQ && typeOk;
-    }).sort((a,b) => (a.Number||0) - (b.Number||0));
+    }).sort((a, b) => (a.Number || 0) - (b.Number || 0));
   }
 
-  function wireSearch(all){
+  function wireSearch(all) {
     const inp = document.getElementById('dex-search');
-    if(inp) inp.addEventListener('input', debounce(() => renderGrid(filterRows(all)), 120));
+    if (inp) inp.addEventListener('input', debounce(() => renderGrid(filterRows(all)), 120));
 
     document.getElementById('clear-filters')?.addEventListener('click', () => {
       inp.value = '';
@@ -255,14 +240,14 @@
 
   // Boot
   document.addEventListener('DOMContentLoaded', async () => {
-    try{
+    try {
       const data = await loadPokedex(); // Expecting an array of objects
-      if(!Array.isArray(data) || !data.length) throw new Error('pokedex_core.json is empty or not an array.');
+      if (!Array.isArray(data) || !data.length) throw new Error('pokedex_core.json is empty or not an array.');
 
       buildTypeSidebar(data, () => renderGrid(filterRows(data)));
       wireSearch(data);
       renderGrid(filterRows(data));
-    }catch(err){
+    } catch (err) {
       console.error(err);
       const grid = document.getElementById('dex-grid');
       grid.innerHTML = `<div class=\"alert alert-danger\">${escapeHtml(err.message)}</div>`;

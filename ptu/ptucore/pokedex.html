@@ -6,6 +6,7 @@
   <title>PTU Data – Pokédex</title>
 
   <!-- Vendor libs (adjust paths to your setup) -->
+  <link rel="stylesheet" href="/ptu/css/style.css">
   <script src="/ptu/js/jquery-3.7.1.min.js"></script>
   <script src="/ptu/js/popper.min.js"></script>
   <script src="/ptu/js/bootstrap.min.js"></script>
@@ -14,32 +15,10 @@
 
   <style>
     :root { --badge-radius: 12px; }
-    body { background: #0f1115; color: #eaeef5; }
 
     /* Type color system (same palette as your Moves page) */
-    .type-Normal   { --type-color: #A8A77A; }
-    .type-Fire     { --type-color: #EE8130; }
-    .type-Water    { --type-color: #6390F0; }
-    .type-Electric { --type-color: #F7D02C; }
-    .type-Grass    { --type-color: #7AC74C; }
-    .type-Ice      { --type-color: #96D9D6; }
-    .type-Fighting { --type-color: #C22E28; }
-    .type-Poison   { --type-color: #A33EA1; }
-    .type-Ground   { --type-color: #E2BF65; }
-    .type-Flying   { --type-color: #A98FF3; }
-    .type-Psychic  { --type-color: #F95587; }
-    .type-Bug      { --type-color: #A6B91A; }
-    .type-Rock     { --type-color: #B6A136; }
-    .type-Ghost    { --type-color: #735797; }
-    .type-Dragon   { --type-color: #6F35FC; }
-    .type-Dark     { --type-color: #705746; }
-    .type-Steel    { --type-color: #B7B7CE; }
-    .type-Fairy    { --type-color: #D685AD; }
-
-    .sidebar .list-group-item { font-size: .9rem; padding: .35rem .5rem; background: #151922; color: #eaeef5; border: 1px solid #22293a; }
-    .sidebar .list-group-item input { transform: scale(.9); margin-right: .4rem; }
-
-    .search-wrap { position: sticky; top: 0; background: linear-gradient(#0f1115, rgba(15,17,21,0.6)); padding-top: 1rem; z-index: 5; }
+    
+    .search-wrap { position: sticky; top: 0;}
 
     /* Badge grid */
     .dex-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
@@ -78,9 +57,6 @@
           <div class="row g-2 align-items-center">
             <div class="col-sm-6">
               <input id="dex-search" class="form-control" placeholder="Search species or #..." />
-            </div>
-            <div class="col-sm-6 text-sm-end mt-2 mt-sm-0">
-              <button id="clear-filters" class="btn btn-sm btn-outline-light">Clear filters</button>
             </div>
           </div>
         </div>
