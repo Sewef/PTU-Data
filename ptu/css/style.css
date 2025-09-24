@@ -1,9 +1,18 @@
 html {
   overflow-y: scroll;
 }
+
 /* Empêche le décalage à l'ouverture du modal */
-html { scrollbar-gutter: stable; }            /* Réserve la gouttière de scroll (navigateurs récents) */
-body.modal-open { padding-right: 0 !important; }  /* Annule la compensation Bootstrap */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Réserve la gouttière de scroll (navigateurs récents) */
+body.modal-open {
+  padding-right: 0 !important;
+}
+
+/* Annule la compensation Bootstrap */
 
 
 /* Pour tous les badges dans la sidebar */
@@ -190,17 +199,26 @@ aside .list-group#sidebar {
   display: inline-block;
   margin-left: 4px;
   border-style: solid;
-  border-width: 10px 6px 0 6px;
-  border-color: #666 transparent transparent transparent;
+  border-width: 6px 0 6px 10px;   /* triangle orienté vers la droite */
+  border-color: transparent transparent transparent #666;
   transition: transform 0.2s ease-in-out;
 }
 
-.triangle-toggle.open::before {
-  transform: rotate(90deg);
+/* Quand le déclencheur n'a pas .collapsed (donc la section est ouverte) */
+.collapse-toggle:not(.collapsed) .triangle-toggle::before {
+  transform: rotate(90deg);  /* flèche vers le bas */
 }
 
 .search-wrap {
   position: sticky;
   top: 0;
   z-index: 10;
+}
+
+.collapse-toggle .caret {
+  transition: transform 0.2s;
+}
+
+.collapse-toggle:not(.collapsed) .caret {
+  transform: rotate(90deg);
 }

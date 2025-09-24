@@ -154,10 +154,29 @@ function renderSidebar() {
 
   const orderedCats = Object.keys(cats);
 
-  orderedCats.forEach(cat => {
-    const catId = `collapse-cat-${cat.replace(/\s+/g, "-")}`;
-    box.insertAdjacentHTML("beforeend", `
-      <button class="btn btn-sm btn-light w-100 text-start collapse-toggle mb-1" data-bs-toggle="collapse" data-bs-target="#${catId}">${getCategoryIcon(cat)} ${cat}</button>`);
+  orderedCats.forEach((cat, index) => {
+    const catId = "cat_" + cat.replace(/\s+/g, "_");
+
+    const catTgl = document.createElement("a");
+    catTgl.href = "#";
+    catTgl.className =
+      "list-group-item list-group-item-action d-flex align-items-center collapse-toggle collapsed mb-1 ps-3";
+
+    // si c’est la première catégorie, on ajoute un espace au-dessus
+    if (index === 0) {
+      const sep = document.createElement("div");
+      sep.className = "border-top my-2"; // ligne grise + marge
+      box.appendChild(sep);
+    }
+
+    catTgl.dataset.bsToggle = "collapse";
+    catTgl.dataset.bsTarget = `#${catId}`;
+    catTgl.innerHTML = `
+    <span class="me-2">${getCategoryIcon(cat)}</span>
+    <span class="flex-grow-1">${cat}</span>
+    <span class="triangle-toggle ms-2"></span>`;
+    catTgl.addEventListener("click", e => e.preventDefault());
+    box.appendChild(catTgl);
 
     const catCol = document.createElement("div");
     catCol.className = "collapse mb-2";
@@ -171,7 +190,7 @@ function renderSidebar() {
       } else {
         const clsId = `collapse-cls-${clsName.replace(/\s+/g, "-")}`;
         catCol.insertAdjacentHTML("beforeend", `
-          <a href="#" class="list-group-item list-group-item-action ps-4 d-flex justify-content-between align-items-center collapse-toggle" data-bs-toggle="collapse" data-bs-target="#${clsId}">
+          <a href="#" class="list-group-item list-group-item-action ps-4 d-flex justify-content-between align-items-center collapse-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#${clsId}">
             <span>${clsName}</span>
             <span class="badge bg-light text-muted ms-auto text-truncate" style="max-width:10rem" title="${cls.source}">${cls.source}</span>
             <span class="triangle-toggle ms-2"></span>
@@ -390,7 +409,7 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
     }
   });
 
-    // ----- tableaux déclarés en "table" via _display -----
+  // ----- tableaux déclarés en "table" via _display -----
   const disp = feat._display || {};
   Object.entries(feat).forEach(([k, v]) => {
     if (!Array.isArray(v)) return;
