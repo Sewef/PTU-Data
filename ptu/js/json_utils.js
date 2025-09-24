@@ -17,7 +17,7 @@ function loadJsonAsCard(file, container, cols = 3) {
         renderFilteredCards(allItems, container, cols);
 
         // Supprime ancien listener s'il existe (évite multi écouteurs)
-        const searchInput = document.getElementById("card-search");
+        const searchInput = document.getElementById("dex-search");
         if (searchInput) {
             searchInput.oninput = function () {
                 const query = this.value.toLowerCase();

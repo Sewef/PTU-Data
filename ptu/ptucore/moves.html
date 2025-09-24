@@ -1,70 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PTU Data – Moves</title>
 
   <link rel="stylesheet" href="/ptu/css/style.css">
   <script src="/ptu/js/jquery-3.7.1.min.js"></script>
   <script src="/ptu/js/popper.min.js"></script>
   <script src="/ptu/js/bootstrap.min.js"></script>
+  <script src="/ptu/js/helpers.js"></script>
   <script src="/ptu/js/json_moves.js"></script>
-  <script src="/ptu/js/helpers.js"></script>    
-
-  <title>PTU Data - Moves</title>
 </head>
-
 <body>
   <div w3-include-html="header.html"></div>
-  <div class="container-fluid">
+  <div class="container-fluid py-3">
     <div class="row">
-      <!-- Sidebar -->
-      <div class="col-md-2 col-sm-3">
-        <div id="sidebar" class="list-group">
-          <!-- types dynamiques ici -->
-        </div>
-      </div>
+      <!-- Sidebar identical to Pokédex -->
+      <aside class="col-md-2 col-sm-3">
+        <div id="sidebar" class="list-group"></div>
+      </aside>
 
-      <!-- Contenu principal -->
-      <div class="col-md-10">
+      <!-- Main content -->
+      <main class="col-md-10">
+        <h1 class="h4 mb-3">Moves</h1>
 
-        <div id="keywords" class="container py-4">
-          <h2 class="mt-3 mb-4">Keywords</h2>
-          <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse"
-            data-bs-target="#keywords-section" aria-expanded="false" aria-controls="keywords-section">
-            Show / Hide
-          </button>
+        <!-- Keywords block (collapsible) -->
+        <section id="keywords" class="mb-3">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <h2 class="h5 m-0">Keywords</h2>
+            <button class="btn btn-sm btn-primary" type="button" data-bs-toggle="collapse"
+              data-bs-target="#keywords-section" aria-expanded="false" aria-controls="keywords-section">
+              Show / Hide
+            </button>
+          </div>
           <div id="keywords-section" class="collapse">
             <div class="mb-3">
               <input type="text" id="keyword-search" class="form-control" placeholder="Search keywords...">
             </div>
             <div id="keywords-container" class="row g-3 w-100"></div>
           </div>
-        </div>
+        </section>
 
-        <div id="cards-container" class="container">
-          <h2 class="mt-3 mb-4">Moves</h2>
-          <div class="mb-3">
+        <!-- Moves list -->
+        <section id="moves">
+          <div class="search-wrap mb-3">
             <input type="text" id="card-search" class="form-control" placeholder="Search moves...">
           </div>
           <div id="moves-container" class="row g-3 w-100"></div>
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   </div>
 
   <script>
+    includeHTML(() => setActive());
     window.addEventListener("DOMContentLoaded", function () {
       loadKeywordsAsCard("/ptu/data/moves/keywords_core.json", document.getElementById("keywords-container"), 2);
       loadMovesAsCard("/ptu/data/moves/moves_core.json", document.getElementById("moves-container"), 2);
     });
   </script>
-  </div>
-
-  <script>
-    includeHTML(() => setActive());
-  </script>
 </body>
-
 </html>

@@ -3,47 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PTU Data – Edges</title>
 
   <link rel="stylesheet" href="/ptu/css/style.css">
   <script src="/ptu/js/jquery-3.7.1.min.js"></script>
   <script src="/ptu/js/popper.min.js"></script>
   <script src="/ptu/js/bootstrap.min.js"></script>
-  <script src="/ptu/js/json_edges.js"></script>
   <script src="/ptu/js/helpers.js"></script>
-
-  <title>PTU Data - Edges</title>
-  <style>
-    .triangle-toggle::before {
-      content: "";
-      display: inline-block;
-      margin-left: 4px;
-      border-style: solid;
-      border-width: 10px 6px 0 6px;
-      border-color: #666 transparent transparent transparent;
-      transition: transform 0.2s ease-in-out;
-    }
-    .triangle-toggle.open::before {
-      transform: rotate(90deg);
-    }
-  </style>
+  <script src="/ptu/js/json_edges.js"></script>
 </head>
 <body>
   <div w3-include-html="header.html"></div>
-  <div class="container-fluid">
+  <div class="container-fluid py-3">
     <div class="row">
-      <div class="col-md-2 col-sm-3">
-        <div id="sidebar" class="list-group">
-          <!-- Sidebar dynamique -->
-        </div>
-      </div>
-      <div class="col-md-10">
-        <div id="cards-container" class="container py-4">
-          <!-- Cartes Edges -->
-        </div>
-      </div>
+      <aside class="col-md-2 col-sm-3">
+        <div id="sidebar" class="list-group"></div>
+      </aside>
+      <main class="col-md-10">
+        <h1 class="h4 mb-3">Edges</h1>
+        <div id="cards-container" class="container py-2"></div>
+      </main>
     </div>
   </div>
-
   <script>
     includeHTML(() => setActive());
     loadEdges("/ptu/data/edges/edges_core.json", document.getElementById("cards-container"), 2);

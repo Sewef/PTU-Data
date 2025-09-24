@@ -13,12 +13,12 @@ function buildTypeSidebar(moves, container, cols) {
   const types = [...new Set(moves.map(m => m.Type).filter(Boolean))].sort();
   sidebar.innerHTML = `
   <div class="mb-3">
-    <input type="text" id="sidebar-search" class="form-control mb-2" placeholder="Filter types...">
+    <input type="text" id="sidebar-search" class="form-control form-control-sm mb-2" placeholder="Filter types...">
     <button id="toggle-all-types" class="btn btn-sm btn-primary w-100 mb-2">Select/Deselect all</button>
   </div>
   <div id="type-filters" class="list-group">
     ${types.map(type => `
-      <label class="list-group-item">
+      <label class="list-group-item card-type-${type}">
         <input class="form-check-input me-1" type="checkbox" value="${type}">
         ${type}
       </label>
@@ -55,15 +55,6 @@ function buildTypeSidebar(moves, container, cols) {
       filterAndRender(moves, container, cols);
     });
   }
-
-  // Apply type colors to sidebar labels
-  document.querySelectorAll("#type-filters label").forEach(label => {
-    const type = label.textContent.trim();
-    label.classList.add(`card-type-${type}`);
-    label.style.borderLeft = '6px solid var(--type-color, transparent)';
-    label.style.borderTopLeftRadius = 'var(--bs-border-radius)';
-    label.style.borderBottomLeftRadius = 'var(--bs-border-radius)';
-  });
 }
 
 

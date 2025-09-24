@@ -60,29 +60,32 @@ function buildCategoryMenu() {
   );
 
   sb.insertAdjacentHTML("beforeend", `<label class="form-label">Categories:</label>`);
-  const catList = document.createElement("div");
-  catList.className = "list-group";
-  [...categories].sort((a, b) => {
-    const order = ["Skill", "Crafting", "Pokémon Training", "Combat", "Other"];
-    const ai = order.indexOf(a);
-    const bi = order.indexOf(b);
-    if (ai !== -1 && bi !== -1) return ai - bi;
-    if (ai !== -1) return -1;
-    if (bi !== -1) return 1;
-    return a.localeCompare(b);
-  }).forEach(cat => {
-    const btn = document.createElement("button");
-    btn.className = "list-group-item list-group-item-action";
-    btn.textContent = cat;
-    btn.addEventListener("click", () => {
-      activeCategory = cat;
-      document.querySelectorAll("#sidebar .list-group-item").forEach(e => e.classList.remove("active"));
-      btn.classList.add("active");
-      renderCategory(cat);
-    });
-    catList.appendChild(btn);
+const catWrap = document.createElement("div");
+catWrap.className = "sidebar-cats";
+sb.appendChild(catWrap);
+
+[...categories].sort((a, b) => {
+  const order = ["Skill", "Crafting", "Pokémon Training", "Combat", "Other"];
+  const ai = order.indexOf(a), bi = order.indexOf(b);
+  if (ai !== -1 && bi !== -1) return ai - bi;
+  if (ai !== -1) return -1;
+  if (bi !== -1) return 1;
+  return a.localeCompare(b);
+}).forEach(cat => {
+  const btn = document.createElement("button");
+  btn.className = "list-group-item list-group-item-action";
+  btn.textContent = cat;
+  btn.addEventListener("click", () => {
+    activeCategory = cat;
+    document.querySelectorAll("#sidebar .sidebar-cats .list-group-item").forEach(e => e.classList.remove("active"));
+    btn.classList.add("active");
+    renderCategory(cat);
   });
-  sb.appendChild(catList);
+  catWrap.appendChild(btn);
+});
+
+// ⚠️ Surtout pas: sb.appendChild(catList);
+
 }
 
 function renderCategory(cat) {

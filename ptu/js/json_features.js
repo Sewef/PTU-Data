@@ -287,8 +287,6 @@ function renderSection(clsName, branchName = "Default") {
       card.parentElement.style.display = match ? "" : "none";
     });
   });
-
-  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 

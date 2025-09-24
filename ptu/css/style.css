@@ -1,44 +1,206 @@
 html {
-    overflow-y: scroll;
+  overflow-y: scroll;
 }
+/* Empêche le décalage à l'ouverture du modal */
+html { scrollbar-gutter: stable; }            /* Réserve la gouttière de scroll (navigateurs récents) */
+body.modal-open { padding-right: 0 !important; }  /* Annule la compensation Bootstrap */
+
 
 /* Pour tous les badges dans la sidebar */
 #sidebar .badge {
-    max-width: 6rem;           /* ajustez selon l’espace disponible */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  /* Si vous voulez cibler uniquement les badges de source : */
-  #sidebar .list-group-item .badge.bg-light {
-    max-width: 6rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
+  max-width: 6rem;
+  /* ajustez selon l’espace disponible */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Si vous voulez cibler uniquement les badges de source : */
+#sidebar .list-group-item .badge.bg-light {
+  max-width: 6rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .card-body[class*="card-type-"] {
   border-left: 6px solid var(--type-color, transparent);
   border-top-left-radius: var(--bs-border-radius);
   border-bottom-left-radius: var(--bs-border-radius);
 }
 
-.card-type-Normal   { --type-color: #A8A77A; }
-.card-type-Fire     { --type-color: #EE8130; }
-.card-type-Water    { --type-color: #6390F0; }
-.card-type-Electric { --type-color: #F7D02C; }
-.card-type-Grass    { --type-color: #7AC74C; }
-.card-type-Ice      { --type-color: #96D9D6; }
-.card-type-Fighting { --type-color: #C22E28; }
-.card-type-Poison   { --type-color: #A33EA1; }
-.card-type-Ground   { --type-color: #E2BF65; }
-.card-type-Flying   { --type-color: #A98FF3; }
-.card-type-Psychic  { --type-color: #F95587; }
-.card-type-Bug      { --type-color: #A6B91A; }
-.card-type-Rock     { --type-color: #B6A136; }
-.card-type-Ghost    { --type-color: #735797; }
-.card-type-Dragon   { --type-color: #6F35FC; }
-.card-type-Dark     { --type-color: #705746; }
-.card-type-Steel    { --type-color: #B7B7CE; }
-.card-type-Fairy    { --type-color: #D685AD; }
+.card-type-Normal {
+  --type-color: #A8A77A;
+}
+
+.card-type-Fire {
+  --type-color: #EE8130;
+}
+
+.card-type-Water {
+  --type-color: #6390F0;
+}
+
+.card-type-Electric {
+  --type-color: #F7D02C;
+}
+
+.card-type-Grass {
+  --type-color: #7AC74C;
+}
+
+.card-type-Ice {
+  --type-color: #96D9D6;
+}
+
+.card-type-Fighting {
+  --type-color: #C22E28;
+}
+
+.card-type-Poison {
+  --type-color: #A33EA1;
+}
+
+.card-type-Ground {
+  --type-color: #E2BF65;
+}
+
+.card-type-Flying {
+  --type-color: #A98FF3;
+}
+
+.card-type-Psychic {
+  --type-color: #F95587;
+}
+
+.card-type-Bug {
+  --type-color: #A6B91A;
+}
+
+.card-type-Rock {
+  --type-color: #B6A136;
+}
+
+.card-type-Ghost {
+  --type-color: #735797;
+}
+
+.card-type-Dragon {
+  --type-color: #6F35FC;
+}
+
+.card-type-Dark {
+  --type-color: #705746;
+}
+
+.card-type-Steel {
+  --type-color: #B7B7CE;
+}
+
+.card-type-Fairy {
+  --type-color: #D685AD;
+}
+
+
+/* ============ Unified Sidebar (Pokédex-style) ============ */
+/* Container spacing */
+aside .list-group#sidebar {
+  display: block;
+  gap: 0;
+  padding: 0;
+}
+
+/* Search block or any direct .mb-3 inside sidebar */
+#sidebar>.mb-3 {
+  margin-bottom: 0.75rem !important;
+}
+
+
+/* Active highlight (same on all sidebars) */
+#sidebar .list-group-item.active {
+  background: rgba(255, 255, 255, .08);
+  border-color: rgba(255, 255, 255, .12);
+  color: inherit;
+}
+
+/* Compact checkboxes in filters */
+#sidebar .form-check {
+  margin-bottom: .25rem;
+}
+
+#sidebar .form-check-input {
+  margin-top: 0;
+}
+
+/* Source/type labels as list-group items */
+#sidebar label.list-group-item {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Truncate trailing badges uniformly */
+#sidebar .badge {
+  max-width: 10rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Cartes (corps) — remplace la barre gauche par un inset shadow */
+.card-body[class*="card-type-"] {
+  /* border-left: 6px solid var(--type-color, transparent);  <-- à enlever */
+  box-shadow: inset 6px 0 0 0 var(--type-color, transparent);
+  border-top-left-radius: var(--bs-border-radius);
+  border-bottom-left-radius: var(--bs-border-radius);
+}
+
+/* Sidebar — items colorés par type, sans border-left */
+#sidebar .list-group-item[class*="card-type-"],
+#sidebar label.list-group-item[class*="card-type-"] {
+  /* border-left: 6px solid var(--type-color, transparent);  <-- à enlever */
+  box-shadow: inset 6px 0 0 0 var(--type-color, transparent);
+}
+
+/* Small helper for tiny muted notes inside sidebar */
+#sidebar .text-muted {
+  opacity: .8;
+}
+
+/* Buttons in sidebar (e.g., Select/Deselect all) */
+#sidebar .btn {
+  width: 100%;
+}
+
+
+#sidebar .list-group-item.list-group-item-action:not(.active):hover {
+  background: rgba(255, 255, 255, .06);
+}
+
+#sidebar .list-group-item.list-group-item-action.active {
+  background-color: var(--bs-list-group-active-bg) !important;
+  color: var(--bs-list-group-active-color) !important;
+  border-color: var(--bs-list-group-active-border-color) !important;
+  font-weight: 400 !important;
+  box-shadow: none !important;
+}
+
+
+.triangle-toggle::before {
+  content: "";
+  display: inline-block;
+  margin-left: 4px;
+  border-style: solid;
+  border-width: 10px 6px 0 6px;
+  border-color: #666 transparent transparent transparent;
+  transition: transform 0.2s ease-in-out;
+}
+
+.triangle-toggle.open::before {
+  transform: rotate(90deg);
+}
+
+.search-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
