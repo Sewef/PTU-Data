@@ -95,61 +95,85 @@
   }
 
   // Build the grid of small badges
-  function renderGrid(rows) {
-    const grid = document.getElementById('dex-grid');
-    grid.innerHTML = '';
-    const frag = document.createDocumentFragment();
+function renderGrid(rows) {
+  const grid = document.getElementById('dex-grid');
+  grid.innerHTML = '';
+  const frag = document.createDocumentFragment();
 
-    rows.forEach(p => {
-      const name = p.Species || 'Unknown';
-      const num = pad3(p.Number ?? '0');
-      const types = extractTypes(p);
+  rows.forEach(p => {
+    const name = p.Species || 'Unknown';
+    const num = pad3(p.Number ?? '0');
+    const types = extractTypes(p);
 
-      const li = document.createElement('div');
-      li.className = 'dex-badge';
-      applyBadgeBackground(li, types);
+    const li = document.createElement('div');
+    li.className = 'dex-badge';
+    li.dataset.types = types.join(','); // ← on garde les types pour plus tard
 
-      // icon
-      const iconWrap = document.createElement('div');
-      iconWrap.className = 'icon';
-      const img = document.createElement('img');
-      setupIcon(img, p.Number, name);
-      iconWrap.appendChild(img);
+    // icône
+    const iconWrap = document.createElement('div');
+    iconWrap.className = 'icon';
+    const img = document.createElement('img');
+    setupIcon(img, p.Number, name);
+    iconWrap.appendChild(img);
+    li.appendChild(iconWrap);
 
-      // text
-      const title = document.createElement('div');
-      title.className = 'dex-title';
-      title.innerHTML = `<span class="meta">#${num}</span><span class="name">${name}</span>`;
+    const numBadge = document.createElement('div');
+    numBadge.className = 'dex-num-badge';
+    numBadge.textContent = `#${num}`;
+    li.appendChild(numBadge);
 
-      li.appendChild(iconWrap);
-      li.appendChild(title);
+    const label = document.createElement('div');
+    label.className = 'dex-label';
+    label.textContent = name;
+    li.appendChild(label);
 
-      li.addEventListener('click', () => openDetail(p));
-      frag.appendChild(li);
+    li.addEventListener('click', () => openDetail(p));
+    frag.appendChild(li);
+  });
+
+  grid.appendChild(frag);
+
+  // Laisse le browser attacher/calculer, puis applique les styles
+  requestAnimationFrame(() => {
+    grid.querySelectorAll('.dex-badge').forEach(el => {
+      const types = el.dataset.types ? el.dataset.types.split(',') : [];
+      applyBadgeBackground(el, types);
     });
+  });
+}
 
-    grid.appendChild(frag);
-  }
 
   // Background mono or bi-color based on types
   function applyBadgeBackground(el, types) {
-    if (!types || types.length === 0) { el.style.background = '#151922'; return; }
+    if (!types || types.length === 0) {
+      el.style.background = '#151922';
+      return;
+    }
+
     if (types.length === 1) {
       el.classList.add(`card-type-${types[0]}`);
-      el.style.background = `linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02)), var(--type-color)`;
+      el.style.background = `var(--type-color)`;
       el.style.color = '#0f1115';
       el.style.borderColor = 'rgba(255,255,255,.15)';
     } else {
+      // Couleur 1
       el.classList.add(`card-type-${types[0]}`);
       const c1 = getComputedStyle(el).getPropertyValue('--type-color')?.trim() || '#333';
       el.classList.remove(`card-type-${types[0]}`);
+
+      // Couleur 2
       el.classList.add(`card-type-${types[1]}`);
       const c2 = getComputedStyle(el).getPropertyValue('--type-color')?.trim() || '#444';
       el.classList.remove(`card-type-${types[1]}`);
-      el.style.background = `linear-gradient(90deg, ${c1}, ${c2})`;
+
+
+      console.log({ c1, c2 });
+      // Deux moitiés nettes, pas de mélange
+      el.style.background = `linear-gradient(90deg, ${c1} 50%, ${c2} 50%)`;
       el.style.borderColor = 'rgba(255,255,255,.15)';
     }
   }
+
 
   // Try multiple icon patterns, fall back to generated SVG initials
   function setupIcon(img, num, name) {
@@ -181,7 +205,7 @@
 
     const header = (() => {
       const types = extractTypes(p);
-      const wraps = types.map(t => `<span class=\"type-pill type-${t}\">${t}</span>`).join('');
+      const wraps = types.map(t => `<span class=\"type-pill card-type-${t}\">${t}</span>`).join('');
       return `<div class=\"mb-3\"><strong>Types:</strong> ${wraps || '<em>—</em>'}</div>`;
     })();
 
