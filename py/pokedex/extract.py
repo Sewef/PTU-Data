@@ -32,8 +32,8 @@ def split_commas_outside_parens(text: str):
 
 
 PDF_PATH = "1-6G Pokedex_Playtest105Plus.pdf"   # ← adapte si besoin
-OUT_JSON = "pokedex_core.json"
-OUT_NDJSON = "pokedex_core.ndjson"
+OUT_JSON = "../../ptu/data/pokedex/pokedex_core.json"
+OUT_NDJSON = "../../ptu/data/pokedex/pokedex_core.ndjson"
 OUT_LOG = "pokedex_extraction.log"
 
 # --- Logging setup ---
@@ -296,6 +296,7 @@ def extract_page(page_text: str, page_index: int):
     if species:
         species = re.sub(r'^\s*\d+\s*', '', species)  # remove leading number
         species = fix_species_spacing(species)        # <<<< ajout
+        species = re.sub(r'(^[A-Z])\s([A-Z])(.*)$', lambda m: m[1] + m[2].lower() + m[3], species)
         species = species.title()
     record["Species"] = species
 
@@ -531,12 +532,12 @@ def main():
         records.append(rec)
 
     Path(OUT_JSON).write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding='utf-8')
-    with open(OUT_NDJSON, 'w', encoding='utf-8') as f:
-        for r in records:
-            f.write(json.dumps(r, ensure_ascii=False) + "\\n")
+    #with open(OUT_NDJSON, 'w', encoding='utf-8') as f:
+    #    for r in records:
+    #        f.write(json.dumps(r, ensure_ascii=False) + "\\n")
 
     logger.info(f"Parsed {len(records)} records from {pages_with_text} non-empty pages.")
-    logger.info(f"Wrote {OUT_JSON} and {OUT_NDJSON}. Log: {OUT_LOG}")
+    #logger.info(f"Wrote {OUT_JSON} and {OUT_NDJSON}. Log: {OUT_LOG}")
 
 if __name__ == "__main__":
     main()

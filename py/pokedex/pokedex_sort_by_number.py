@@ -1,23 +1,79 @@
-import json
+#!/usr/bin/env python3
+import json, csv, re, argparse, pathlib
+from collections import OrderedDict
 
-# Replace with your JSON filename
-input_file = 'pokedex_numbered.json'
-#output_file = 'work files/8_moves FULL swsh.json'
-output_file = 'pokedex_orderbynumber.json'
+def normalize(s):
+    return re.sub(r"\s+", " ", s.strip().lower())
 
-# Read the JSON data
-with open(input_file, 'r', encoding='utf-8') as f:
-    data = json.load(f)
+def load_ref(path):
+    ref = {}
+    with open(path, encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            num = int(row["number"])
+            name = row["name"]
+            aliases = [a.strip() for a in row.get("aliases","").split(";") if a.strip()]
+            for key in [name] + aliases:
+                ref[normalize(key)] = num
+    return ref
 
-# Ensure the data is a list of dictionaries
-if isinstance(data, list):
-    # Sort by 'Number' key as integer, handling None or missing values
-    data_sorted = sorted(data, key=lambda x: int(x.get('Number') or 0))
-else:
-    raise ValueError("JSON data is not a list of objects.")
+def insert_after_species(e: OrderedDict, key: str, number_val):
+    """
+    e: entrée (OrderedDict)
+    key: "Species" ou "Specie"
+    number_val: valeur à mettre dans Number
+    Retourne un OrderedDict avec Number juste après la clé 'key'
+    """
+    # enlever Number s'il existe déjà
+    e.pop("Number", None)
 
-# Write the sorted data back to a new JSON file
-with open(output_file, 'w', encoding='utf-8') as f:
-    json.dump(data_sorted, f, ensure_ascii=False, indent=4)
+    new_e = OrderedDict()
+    inserted = False
+    for k, v in e.items():
+        new_e[k] = v
+        if not inserted and k == key:
+            new_e["Number"] = number_val
+            inserted = True
+    if not inserted:  # fallback si pas de clé espèce
+        new_e["Number"] = number_val
+    return new_e
 
-print(f"Sorted data written to {output_file}")
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-i","--input", required=True, help="JSON d’entrée (parser)")
+    ap.add_argument("-r","--ref", required=True, help="CSV référence Pokédex")
+    ap.add_argument("-o","--output", required=True, help="JSON de sortie")
+    args = ap.parse_args()
+
+    # Charger le JSON en préservant l'ordre des paires
+    raw = pathlib.Path(args.input).read_text(encoding="utf-8")
+    data = json.loads(raw, object_pairs_hook=OrderedDict)
+
+    ref = load_ref(args.ref)
+
+    # Traiter chaque entrée
+    out = []
+    for e in data:
+        # clé espèce tolérante
+        species_key = "Species" if "Species" in e else ("Specie" if "Specie" in e else None)
+
+        nm = normalize(e.get("Species", e.get("Specie", "")))
+        number = ref.get(nm, None)  # None si non trouvé
+
+        if species_key:
+            e = insert_after_species(e, species_key, number)
+        else:
+            # pas de clé espèce -> juste assurer Number présent (fin de dict)
+            e.pop("Number", None)
+            e["Number"] = number
+
+        out.append(e)
+
+    # Écrire sans trier les clés (ordre préservé tel qu’inséré)
+    pathlib.Path(args.output).write_text(
+        json.dumps(out, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+    print(f"Écrit {args.output} avec {len(out)} fiches")
+
+if __name__ == "__main__":
+    main()
