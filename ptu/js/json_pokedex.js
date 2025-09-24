@@ -44,6 +44,25 @@
     return [];
   }
 
+  function wrapTypes(t) {
+    if (!t) return '';
+    if (typeof t === 'string') return t;    // déjà formaté → renvoyer tel quel
+    if (!Array.isArray(t)) t = [t];         // sécurise si jamais
+    return t.map(x => `<span class="type-pill card-type-${x}">${x}</span>`).join('');
+  }
+
+  function renderFormType(val) {
+    if (!val) return '';
+    if (typeof val === 'string') return val;   // déjà formaté
+    if (Array.isArray(val)) return wrapTypes(val);
+    if (typeof val === 'object') {
+      return Object.entries(val).map(([form, types]) =>
+        `<div class="mb-1"><span class="fw-semibold">${form}</span> : ${wrapTypes(types)}</div>`
+      ).join('');
+    }
+    return String(val ?? '');
+  }
+
   function collectTypes(rows) {
     const set = new Set();
     rows.forEach(r => extractTypes(r).forEach(t => set.add(t)));
@@ -201,9 +220,8 @@
     const num = pad3(p.Number ?? '0');
 
     const header = (() => {
-      const types = extractTypes(p);
-      const wraps = types.map(t => `<span class=\"type-pill card-type-${t}\">${t}</span>`).join('');
-      return `<div class=\"mb-3\">${wraps || '<em>—</em>'}</div>`;
+      const types = wrapTypes(extractTypes(p));
+      return `<div class=\"mb-3\">${types || '<em>—</em>'}</div>`;
     })();
 
     title.innerHTML = `#${num} — ${p.Species || 'Unknown'}` + header;
@@ -242,11 +260,16 @@
           if (["Species", "Number", "Icon"].includes(k)) continue; // already shown elsewhere
 
           // --- special cases / skips you control ---
-          //if (k === 'Basic Information' && v?.Type && Array.isArray(v.Type)) continue; // types are shown in header
+          if (k === 'Basic Information' && v?.Type && Array.isArray(v.Type)) { // Generic case
+            v.Type = wrapTypes(v.Type);
+          }
+          else if (k === 'Basic Information' && v?.Type) { // Rotom forms
+            v.Type = renderFormType(v.Type);
+          }
           // Add more hand-written exclusions here as needed
           // ----------------------------------------
 
-          console.log({ k, v });
+          //console.log({ k, v });
           // Build block
           let block = '';
           if (typeof v === 'object' && v !== null) {
@@ -255,7 +278,7 @@
             const h = Math.min(4 + depth, 6);
             block = `
             <div class="mt-3">
-              <h${h} class="text-muted">${escapeHtml(k)}</h${h}>
+              <h${h} class="text-muted">${k}</h${h}>
               <div class="card accent" style="--accent-color: rgba(255,255,255,.08);">
                 <div class="card-body">
                   ${inner}
@@ -264,12 +287,10 @@
             </div>`;
           } else {
             // scalar
-            const safe = escapeHtml(String(v ?? ''));
-            if (!safe) continue; // empty string → skip
             block = `
             <div class="row border-bottom py-1">
-              <div class="col-4 fw-bold">${escapeHtml(k)}</div>
-              <div class="col-8">${safe}</div>
+              <div class="col-4 fw-bold">${k}</div>
+              <div class="col-8">${v}</div>
             </div>`;
           }
 
@@ -305,7 +326,7 @@
           const h = Math.min(4 + depth, 6);
           html += `
           <div class="mt-3">
-            <h${h} class="text-muted">${escapeHtml(k)}</h${h}>
+            <h${h} class="text-muted">${k}</h${h}>
             <div class="card accent" style="--accent-color: rgba(255,255,255,.08);">
               <div class="card-body">
                 ${inner}
@@ -313,12 +334,10 @@
             </div>
           </div>`;
         } else {
-          const safe = escapeHtml(String(v ?? ''));
-          if (!safe) continue;
           html += `
           <div class="row border-bottom py-1">
-            <div class="col-4 fw-bold">${escapeHtml(k)}</div>
-            <div class="col-8">${safe}</div>
+            <div class="col-4 fw-bold">${k}</div>
+            <div class="col-8">${v}</div>
           </div>`;
         }
       }
@@ -328,10 +347,6 @@
     // Fallback for primitives (shouldn’t really hit here)
     return escapeHtml(String(obj));
   }
-
-
-
-
 
   function escapeHtml(s) {
     const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
