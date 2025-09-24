@@ -3,6 +3,8 @@ import json, re, logging
 from pathlib import Path
 import PyPDF2
 
+DEBUG_KEEP_RAW = False
+
 def split_commas_outside_parens(text: str):
     """Split a string on commas, but ignore commas inside parentheses.
     Returns a list of trimmed parts."""
@@ -165,13 +167,22 @@ def parse_moves_list(lines, start_idx):
         parts = [clean_line(p) for p in text.split(',')]
         return [p for p in parts if p]
 
+
+    if DEBUG_KEEP_RAW:
+        return {
+            "Level Up Move List": parse_levelup(sections["Level Up Move List"]),
+            "TM/HM Move List": parse_comma_or_list(sections["TM/HM Move List"]),
+            "Egg Move List": parse_comma_or_list(sections["Egg Move List"]),
+            "Tutor Move List": parse_comma_or_list(sections["Tutor Move List"]),
+            "_raw": sections
+        }
     return {
         "Level Up Move List": parse_levelup(sections["Level Up Move List"]),
         "TM/HM Move List": parse_comma_or_list(sections["TM/HM Move List"]),
         "Egg Move List": parse_comma_or_list(sections["Egg Move List"]),
-        "Tutor Move List": parse_comma_or_list(sections["Tutor Move List"]),
-        "_raw": sections
+        "Tutor Move List": parse_comma_or_list(sections["Tutor Move List"])
     }
+
 
 
 def extract_page(page_text: str, page_index: int):
@@ -265,7 +276,10 @@ def extract_page(page_text: str, page_index: int):
     lines = fixed_lines
 
 
-    record = {"_page_index": page_index, "_raw_text": page_text}
+    if DEBUG_KEEP_RAW:
+        record = {"_page_index": page_index, "_raw_text": page_text}
+    else:
+        record = {}
 
     # Species title
     species = None
@@ -484,7 +498,8 @@ def extract_page(page_text: str, page_index: int):
         if mega:
             record["Mega Evolution"] = mega
 
-        record["mega_evolution_raw"] = mega_block
+        if DEBUG_KEEP_RAW:
+            record["mega_evolution_raw"] = mega_block
 
 
     return record
