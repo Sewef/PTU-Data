@@ -130429,8 +130429,9 @@
     }
   },
   {
-    "Species": "Meowstic",
+    "Species": "Meowstic (Male)",
     "Number": 678,
+    "Icon": "678-male",
     "Base Stats": {
       "HP": 7,
       "Attack": 5,
@@ -130445,11 +130446,9 @@
       ],
       "Basic Ability 1": "Keen Eye",
       "Basic Ability 2": "Infiltrator",
-      "Adv Ability 1 (F)": "Sorcery",
-      "Adv Ability 1 (M)": "Prankster",
+      "Adv Ability 1": "Prankster",
       "Adv Ability 2": "Own Tempo",
-      "High Ability (F)": "Competitive",
-      "High Ability (M)": "Magic Guard"
+      "High Ability": "Magic Guard"
     },
     "Evolution": [
       "1 - Espurr",
@@ -130525,6 +130524,21 @@
           "Type": "Psychic"
         },
         {
+          "Level": 28,
+          "Move": "Charm",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 31,
+          "Move": "Miracle Eye",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 35,
+          "Move": "Reflect",
+          "Type": "Fairy"
+        },
+        {
           "Level": 40,
           "Move": "Psychic",
           "Type": "Psychic"
@@ -130535,9 +130549,24 @@
           "Type": "Psychic"
         },
         {
+          "Level": 45,
+          "Move": "Imprison",
+          "Type": "Psychic"
+        },
+        {
           "Level": 48,
           "Move": "Sucker Punch",
           "Type": "Dark"
+        },
+        {
+          "Level": 50,
+          "Move": "Misty Terrain",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 55,
+          "Move": "Quick Guard",
+          "Type": "Fighting"
         }
       ],
       "TM/HM Move List": [
@@ -130596,12 +130625,213 @@
         "Snore",
         "Trick",
         "Wonder Room",
-        "Zen Headbutt (M) Helping Hand (N)",
-        "(M) Mean Look (N)",
-        "(M) Quick Guard (N)",
-        "(F) Magical Leaf (N)",
-        "(F) Me First (N)",
-        "(F) Stored Power (N)"
+        "Zen Headbutt",
+        "Helping Hand (N)",
+        "Mean Look (N)",
+        "Quick Guard (N)"
+      ]
+    }
+  },
+  {
+    "Species": "Meowstic (Female)",
+    "Number": 678,
+    "Base Stats": {
+      "HP": 7,
+      "Attack": 5,
+      "Defense": 8,
+      "Special Attack": 8,
+      "Special Defense": 8,
+      "Speed": 10
+    },
+    "Basic Information": {
+      "Type": [
+        "Psychic"
+      ],
+      "Basic Ability 1": "Keen Eye",
+      "Basic Ability 2": "Infiltrator",
+      "Adv Ability 1": "Sorcery",
+      "Adv Ability 2": "Own Tempo",
+      "High Ability": "Competitive"
+    },
+    "Evolution": [
+      "1 - Espurr",
+      "2 - Meowstic Minimum 25"
+    ],
+    "Size Information": {
+      "Height": "2’ 00” / 0.6m (Small)",
+      "Weight": "18.7 lbs. / 8.5 kg (1)"
+    },
+    "Breeding Information": {
+      "Gender Ratio": "50% M / 50% F",
+      "Egg Group": "Field"
+    },
+    "Diet": "Herbivore",
+    "Habitat": "Grassland, Urban",
+    "Capabilities": [
+      "Overland 7",
+      "Swim 4",
+      "Jump 1/2",
+      "Power 2",
+      "Telekinesis",
+      "Telepath",
+      "Naturewalk (Grassland)"
+    ],
+    "Skills": {
+      "Athletics": "3d6",
+      "Acrobatics": "3d6+1",
+      "Combat": "3d6",
+      "Stealth": "4d6",
+      "Perception": "5d6",
+      "Focus": "4d6+2"
+    },
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 1,
+          "Move": "Scratch",
+          "Type": "Normal"
+        },
+        {
+          "Level": 1,
+          "Move": "Leer",
+          "Type": "Normal"
+        },
+        {
+          "Level": 5,
+          "Move": "Covet",
+          "Type": "Normal"
+        },
+        {
+          "Level": 9,
+          "Move": "Confusion",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 13,
+          "Move": "Light Screen",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 17,
+          "Move": "Psybeam",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 19,
+          "Move": "Fake Out",
+          "Type": "Normal"
+        },
+        {
+          "Level": 25,
+          "Move": "Psyshock",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 28,
+          "Move": "Charge Beam",
+          "Type": "Electric"
+        },
+        {
+          "Level": 31,
+          "Move": "Shadow Ball",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 35,
+          "Move": "Extrasensory",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 40,
+          "Move": "Psychic",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 43,
+          "Move": "Role Play",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 45,
+          "Move": "Signal Beam",
+          "Type": "Bug"
+        },
+        {
+          "Level": 48,
+          "Move": "Sucker Punch",
+          "Type": "Dark"
+        },
+        {
+          "Level": 50,
+          "Move": "Misty Terrain",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 55,
+          "Move": "Stored Power",
+          "Type": "Psychic"
+        }
+      ],
+      "TM/HM Move List": [
+        "A1 Cut",
+        "03 Psyshock",
+        "04 Calm Mind",
+        "06 Toxic",
+        "10 Hidden Power",
+        "11 Sunny Day",
+        "15 Hyper Beam",
+        "16 Light Screen",
+        "17 Protect",
+        "18 Rain Dance",
+        "20 Safeguard",
+        "21 Frustration",
+        "24 Thunderbolt",
+        "27 Return",
+        "29 Psychic",
+        "32 Double Team",
+        "33 Reflect",
+        "41 Torment",
+        "42 Facade",
+        "44 Rest",
+        "45 Attract",
+        "48 Round",
+        "49 Echoed Voice",
+        "53 Energy Ball",
+        "57 Charge Beam",
+        "66 Payback",
+        "68 Giga Impact",
+        "70 Flash",
+        "73 Thunder Wave",
+        "77 Psych Up",
+        "85 Dream Eater",
+        "87 Swagger",
+        "88 Sleep Talk",
+        "90 Substitute",
+        "92 Trick Room",
+        "97 Dark Pulse",
+        "100 Confide"
+      ],
+      "Egg Move List": [],
+      "Tutor Move List": [
+        "Covet",
+        "Gravity",
+        "Heal Bell",
+        "Helping Hand",
+        "Iron Tail",
+        "Magic Coat",
+        "Magic Room",
+        "Recycle",
+        "Role Play",
+        "Shock Wave",
+        "Signal Beam",
+        "Snatch",
+        "Snore",
+        "Trick",
+        "Wonder Room",
+        "Zen Headbutt",
+        "Magical Leaf (N)",
+        "Me First (N)",
+        "Stored Power (N)"
       ]
     }
   },
