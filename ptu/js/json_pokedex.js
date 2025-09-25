@@ -239,24 +239,25 @@
 
   // Try multiple icon patterns, fall back to generated SVG initials
   function setupIcon(img, num, name) {
-    const tryUrls = CFG.iconPatterns.map(fn => {
-      try { return fn(num, name); } catch { return null; }
-    }).filter(Boolean);
+  const tryUrls = CFG.iconPatterns.map(fn => { try { return fn(num, name); } catch { return null; } }).filter(Boolean);
+  let idx = 0;
 
-    let idx = 0;
-    const fallback = () => {
-      const initials = name.replace(/[^A-Z0-9]/gi, ' ').trim().split(/\s+/).slice(0, 2).map(s => s[0]).join('').toUpperCase() || '?';
-      const svg = encodeURIComponent(`<?xml version='1.0' encoding='UTF-8'?>\n<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'>\n  <rect width='100%' height='100%' fill='#0b0d12'/>\n  <text x='50%' y='56%' text-anchor='middle' font-family='Inter,Arial,Helvetica,sans-serif' font-size='34' fill='#eaeef5' opacity='0.8'>${initials}</text>\n</svg>`);
-      img.src = `data:image/svg+xml;charset=UTF-8,${svg}`;
-    };
+  const fallback = () => {
+    const initials = name.replace(/[^A-Z0-9]/gi, ' ').trim().split(/\s+/).slice(0,2).map(s => s[0]).join('').toUpperCase() || '?';
+    const svg = encodeURIComponent(`<?xml version='1.0' encoding='UTF-8'?>\n<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'>\n  <rect width='100%' height='100%' fill='#0b0d12'/>\n  <text x='50%' y='56%' text-anchor='middle' font-family='Inter,Arial,Helvetica,sans-serif' font-size='34' fill='#eaeef5' opacity='0.8'>${initials}</text>\n</svg>`);
+    img.src = `data:image/svg+xml;charset=UTF-8,${svg}`;
+  };
 
-    img.addEventListener('error', () => {
-      if (idx < tryUrls.length) { img.src = tryUrls[idx++]; } else fallback();
-    }, { once: false });
+  img.addEventListener('error', () => { if (idx < tryUrls.length) img.src = tryUrls[idx++]; else fallback(); });
 
-    // kick off
-    if (tryUrls.length) { img.src = tryUrls[idx++]; } else { fallback(); }
-  }
+  img.addEventListener('load', () => {
+    const n = Math.max(img.naturalWidth || 0, img.naturalHeight || 0);
+    if (n > 64) img.classList.add('is-oversize'); // seulement les 96x96 (ou +) seront réduites
+  });
+
+  if (tryUrls.length) img.src = tryUrls[idx++]; else fallback();
+}
+
 
   // Detail renderer (generic recursive pretty-printer + a nicer header)
   function openDetail(p) {
