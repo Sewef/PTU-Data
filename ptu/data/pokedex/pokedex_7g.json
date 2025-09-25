@@ -1,5 +1,1436 @@
 [
   {
+    "Species": "Rowlet",
+    "Number": 722,
+    "Base Stats": {
+      "HP": 7,
+      "Attack": 6,
+      "Defense": 6,
+      "Special Attack": 5,
+      "Special Defense": 5,
+      "Speed": 4
+    },
+    "Basic Information": {
+      "Type": [
+        "Grass",
+        "Flying"
+      ],
+      "Basic Ability 1": "Keen Eye",
+      "Basic Ability 2": "Overgrow",
+      "Adv Ability 1": "Long Reach",
+      "Adv Ability 2": "Perception",
+      "High Ability": "Sniper"
+    },
+    "Evolution": [
+      "1 - Rowlet",
+      "2 - Dartrix Minimum 15",
+      "3 - Decidueye Minimum 30"
+    ],
+    "Size Information": {
+      "Height": "1 ’ 0” / 0.3 m (Small)",
+      "Weight": "3.3 lbs / 1.5 kg (1)"
+    },
+    "Breeding Information": {
+      "Gender Ratio": "87.5% M / 12.5 % F",
+      "Egg Group": "Flying",
+      "Average Hatch Rate": "10 Days"
+    },
+    "Diet": "Carnivore",
+    "Habitat": "Forest",
+    "Capabilities": [
+      "Overland 2",
+      "Swim 2",
+      "Sky 4",
+      "Jump 1/1",
+      "Power 1",
+      "Darkvision",
+      "Stealth",
+      "Underdog"
+    ],
+    "Skills": {
+      "Athletics": "2d6",
+      "Combat": "3d6",
+      "Perception": "3d6"
+    },
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 1,
+          "Move": "Tackle",
+          "Type": "Normal"
+        },
+        {
+          "Level": 1,
+          "Move": "Leafage",
+          "Type": "Grass"
+        },
+        {
+          "Level": 4,
+          "Move": "Growl",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Peck",
+          "Type": "Flying"
+        },
+        {
+          "Level": 11,
+          "Move": "Astonish",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 14,
+          "Move": "Razor Leaf",
+          "Type": "Grass"
+        },
+        {
+          "Level": 16,
+          "Move": "Ominous Wind",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 18,
+          "Move": "Foresight",
+          "Type": "Normal"
+        },
+        {
+          "Level": 22,
+          "Move": "Pluck",
+          "Type": "Flying"
+        },
+        {
+          "Level": 25,
+          "Move": "Synthesis",
+          "Type": "Grass"
+        },
+        {
+          "Level": 29,
+          "Move": "Fury Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 32,
+          "Move": "Sucker Punch",
+          "Type": "Dark"
+        },
+        {
+          "Level": 36,
+          "Move": "Leaf Blade",
+          "Type": "Grass"
+        },
+        {
+          "Level": 39,
+          "Move": "Feather Dance",
+          "Type": "Flying"
+        },
+        {
+          "Level": 43,
+          "Move": "Brave Bird",
+          "Type": "Flying"
+        },
+        {
+          "Level": 46,
+          "Move": "Nasty Plot",
+          "Type": "Dark"
+        }
+      ],
+      "TM/HM Move List": [
+        "06 Toxic",
+        "10 Hidden Power",
+        "11 Sunny Day",
+        "16 Light Screen",
+        "17 Protect",
+        "19 Roost",
+        "20 Safeguard",
+        "21 Frustration",
+        "22 Solar Beam",
+        "27 Return",
+        "32 Double Team",
+        "42 Facade",
+        "44 Rest",
+        "45 Attract",
+        "48 Round",
+        "49 Echoed Voice",
+        "51 Steel Wing",
+        "53 Energy Ball",
+        "54 False Swipe",
+        "65 Shadow Claw",
+        "75 Swords Dance",
+        "86 Grass Knot",
+        "87 Swagger",
+        "88 Sleep Talk",
+        "90 Substitute",
+        "96 Nature Power",
+        "100 Confide"
+      ],
+      "Egg Move List": [
+        "Baton Pass",
+        "Confuse Ray",
+        "Curse",
+        "Defog",
+        "Haze",
+        "Ominous Wind"
+      ],
+      "Tutor Move List": [
+        "Covet",
+        "Defog",
+        "Giga Drain",
+        "Grass Pledge",
+        "Seed Bomb",
+        "Sky Attack",
+        "Snore",
+        "Synthesis",
+        "Worry Seed"
+      ]
+    }
+  },
+  {
+    "Species": "Dartrix",
+    "Number": 723,
+    "Base Stats": {
+      "HP": 8,
+      "Attack": 8,
+      "Defense": 8,
+      "Special Attack": 7,
+      "Special Defense": 7,
+      "Speed": 5
+    },
+    "Basic Information": {
+      "Type": [
+        "Grass",
+        "Flying"
+      ],
+      "Basic Ability 1": "Keen Eye",
+      "Basic Ability 2": "Overgrow",
+      "Adv Ability 1": "Long Reach",
+      "Adv Ability 2": "Perception",
+      "High Ability": "Sniper"
+    },
+    "Evolution": [
+      "1 - Rowlet",
+      "2 - Dartrix Minimum 15",
+      "3 - Decidueye Minimum 30"
+    ],
+    "Size Information": {
+      "Height": "2 ’ 4” / 0.7 m (Small)",
+      "Weight": "35.3 lbs / 16 kg (2)"
+    },
+    "Breeding Information": {
+      "Gender Ratio": "87.5% M / 12.5% F",
+      "Egg Group": "Flying"
+    },
+    "Diet": "Carnivore",
+    "Habitat": "Forest",
+    "Capabilities": [
+      "Overland 4",
+      "Swim 2",
+      "Sky 6",
+      "Jump 2/2",
+      "Power 2",
+      "Darkvision",
+      "Stealth",
+      "Underdog"
+    ],
+    "Skills": {
+      "Athletics": "2d6",
+      "Acrobatics": "3d6",
+      "Stealth": "4d6+1",
+      "Perception": "4d6+2",
+      "Focus": "3d6"
+    },
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 4,
+          "Move": "Growl",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Peck",
+          "Type": "Flying"
+        },
+        {
+          "Level": 11,
+          "Move": "Astonish",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 14,
+          "Move": "Razor Leaf",
+          "Type": "Grass"
+        },
+        {
+          "Level": 16,
+          "Move": "Ominous Wind",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 19,
+          "Move": "Foresight",
+          "Type": "Normal"
+        },
+        {
+          "Level": 24,
+          "Move": "Pluck",
+          "Type": "Flying"
+        },
+        {
+          "Level": 28,
+          "Move": "Synthesis",
+          "Type": "Grass"
+        },
+        {
+          "Level": 33,
+          "Move": "Fury Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 37,
+          "Move": "Sucker Punch",
+          "Type": "Dark"
+        },
+        {
+          "Level": 42,
+          "Move": "Leaf Blade",
+          "Type": "Grass"
+        },
+        {
+          "Level": 46,
+          "Move": "Feather Dance",
+          "Type": "Flying"
+        },
+        {
+          "Level": 51,
+          "Move": "Brave Bird",
+          "Type": "Flying"
+        },
+        {
+          "Level": 55,
+          "Move": "Nasty Plot",
+          "Type": "Dark"
+        }
+      ],
+      "TM/HM Move List": [
+        "06 Toxic",
+        "10 Hidden Power",
+        "11 Sunny Day",
+        "16 Light Screen",
+        "17 Protect",
+        "19 Roost",
+        "20 Safeguard",
+        "21 Frustration",
+        "22 Solar Beam",
+        "27 Return",
+        "32 Double Team",
+        "42 Facade",
+        "44 Rest",
+        "45 Attract",
+        "48 Round",
+        "49 Echoed Voice",
+        "51 Steel Wing",
+        "53 Energy Ball",
+        "54 False Swipe",
+        "65 Shadow Claw",
+        "75 Swords Dance",
+        "86 Grass Knot",
+        "87 Swagger",
+        "88 Sleep Talk",
+        "90 Substitute",
+        "96 Nature Power",
+        "100 Confide"
+      ],
+      "Egg Move List": [],
+      "Tutor Move List": [
+        "Covet",
+        "Defog",
+        "Giga Drain",
+        "Grass Pledge",
+        "Seed Bomb",
+        "Sky Attack",
+        "Snore",
+        "Synthesis",
+        "Worry Seed"
+      ]
+    }
+  },
+  {
+    "Species": "Decidueye",
+    "Number": 724,
+    "Base Stats": {
+      "HP": 8,
+      "Attack": 11,
+      "Defense": 8,
+      "Special Attack": 10,
+      "Special Defense": 10,
+      "Speed": 7
+    },
+    "Basic Information": {
+      "Type": [
+        "Grass",
+        "Ghost"
+      ],
+      "Basic Ability 1": "Keen Eye",
+      "Basic Ability 2": "Overgrow",
+      "Adv Ability 1": "Long Reach",
+      "Adv Ability 2": "Perception",
+      "High Ability": "Sniper"
+    },
+    "Evolution": [
+      "1 - Rowlet",
+      "2 - Dartrix Minimum 15",
+      "3 - Decidueye Minimum 30"
+    ],
+    "Size Information": {
+      "Height": "5 ’ 3” / 1.6 m (Medium)",
+      "Weight": "80.7 lbs / 36.6 kg (3)"
+    },
+    "Breeding Information": {
+      "Gender Ratio": "87.5% M / 12.5% F",
+      "Egg Group": "Flying"
+    },
+    "Diet": "Carnivore",
+    "Habitat": "Forest",
+    "Capabilities": [
+      "Overland 6",
+      "Swim 3",
+      "Sky 8",
+      "Jump 3/3",
+      "Power 4",
+      "Darkvision",
+      "Dead Silent",
+      "Stealth"
+    ],
+    "Skills": {
+      "Athletics": "3d6",
+      "Acrobatics": "4d6",
+      "Combat": "3d6",
+      "Stealth": "5d6+1",
+      "Perception": "5d6+2",
+      "Focus": "4d6"
+    },
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 4,
+          "Move": "Growl",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Peck",
+          "Type": "Flying"
+        },
+        {
+          "Level": 11,
+          "Move": "Astonish",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 14,
+          "Move": "Razor Leaf",
+          "Type": "Grass"
+        },
+        {
+          "Level": 16,
+          "Move": "Ominous Wind",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 19,
+          "Move": "Foresight",
+          "Type": "Normal"
+        },
+        {
+          "Level": 24,
+          "Move": "Pluck",
+          "Type": "Flying"
+        },
+        {
+          "Level": 28,
+          "Move": "Synthesis",
+          "Type": "Grass"
+        },
+        {
+          "Level": 33,
+          "Move": "Fury Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 38,
+          "Move": "Sucker Punch",
+          "Type": "Dark"
+        },
+        {
+          "Level": 44,
+          "Move": "Leaf Blade",
+          "Type": "Grass"
+        },
+        {
+          "Level": 49,
+          "Move": "Feather Dance",
+          "Type": "Flying"
+        },
+        {
+          "Level": 55,
+          "Move": "Brave Bird",
+          "Type": "Flying"
+        },
+        {
+          "Level": 60,
+          "Move": "Nasty Plot",
+          "Type": "Dark"
+        }
+      ],
+      "TM/HM Move List": [
+        "06 Toxic",
+        "10 Hidden Power",
+        "11 Sunny Day",
+        "16 Light Screen",
+        "17 Protect",
+        "19 Roost",
+        "20 Safeguard",
+        "21 Frustration",
+        "22 Solar Beam",
+        "23 Smack Down",
+        "27 Return",
+        "30 Shadow Ball",
+        "32 Double Team",
+        "42 Facade",
+        "44 Rest",
+        "45 Attract",
+        "47 Low Sweep",
+        "48 Round",
+        "49 Echoed Voice",
+        "51 Steel Wing",
+        "53 Energy B all",
+        "54 False Swipe",
+        "62 Acrobatics",
+        "65 Shadow Claw",
+        "68 Giga Impact",
+        "75 Swords Dance",
+        "86 Grass Knot",
+        "87 Swagger",
+        "88 Sleep Talk",
+        "89 U -Turn",
+        "90 Substitute",
+        "96 Nature Power",
+        "100 Confide"
+      ],
+      "Egg Move List": [],
+      "Tutor Move List": [
+        "Covet",
+        "Defog",
+        "Frenzy Plant",
+        "Giga Drain",
+        "Grass Pledge",
+        "Laser Focus",
+        "Leaf Storm (N)",
+        "Phantom Force (N)",
+        "Seed Bomb",
+        "Shadow Sneak (N)",
+        "Sky Attack",
+        "Snore",
+        "Spite",
+        "Synthesis",
+        "Tailwind",
+        "U-Turn (N)",
+        "Worry Seed"
+      ]
+    }
+  },
+  {
+    "Species": "Litten",
+    "Number": 725,
+    "Base Stats": {
+      "HP": 5,
+      "Attack": 7,
+      "Defense": 4,
+      "Special Attack": 6,
+      "Special Defense": 4,
+      "Speed": 7
+    },
+    "Basic Information": {
+      "Type": [
+        "Fire"
+      ],
+      "Basic Ability 1": "Intimidate",
+      "Basic Ability 2": "Blaze",
+      "Adv Ability 1": "Defiant",
+      "Adv Ability 2": "Truant",
+      "High Ability": "Bully"
+    },
+    "Evolution": [
+      "1 - Litten",
+      "2 - Torracat Minimum 15",
+      "3 - Incineroar Minimum 30"
+    ],
+    "Size Information": {
+      "Height": "1 ’ 4” / 0.4 m (Small)",
+      "Weight": "9.5 lbs / 4.3 kg (1)"
+    },
+    "Breeding Information": {
+      "Gender Ratio": "87.5% M / 12.5% F",
+      "Egg Group": "Field",
+      "Average Hatch Rate": "10 Days"
+    },
+    "Diet": "Carnivore",
+    "Habitat": "Forest, Grassland, Urban",
+    "Capabilities": [
+      "Overland 5",
+      "Swim 2",
+      "Jump 2/2",
+      "Power 2",
+      "Firestarter",
+      "Tracker",
+      "Underdog"
+    ],
+    "Skills": {
+      "Athletics": "2d6",
+      "Acrobatics": "3d6",
+      "Combat": "3d6",
+      "Stealth": "2d6",
+      "Perception": "3d6",
+      "Focus": "2d6"
+    },
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 1,
+          "Move": "Scratch",
+          "Type": "Normal"
+        },
+        {
+          "Level": 1,
+          "Move": "Ember",
+          "Type": "Fire"
+        },
+        {
+          "Level": 4,
+          "Move": "Growl",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Lick",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 11,
+          "Move": "Leer",
+          "Type": "Normal"
+        },
+        {
+          "Level": 14,
+          "Move": "Fire Fang",
+          "Type": "Fire"
+        },
+        {
+          "Level": 16,
+          "Move": "Double Kick",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 18,
+          "Move": "Roar",
+          "Type": "Normal"
+        },
+        {
+          "Level": 22,
+          "Move": "Bite",
+          "Type": "Dark"
+        },
+        {
+          "Level": 25,
+          "Move": "Swagger",
+          "Type": "Normal"
+        },
+        {
+          "Level": 29,
+          "Move": "Fury Swipes",
+          "Type": "Normal"
+        },
+        {
+          "Level": 32,
+          "Move": "Thrash",
+          "Type": "Normal"
+        },
+        {
+          "Level": 36,
+          "Move": "Flamethrower",
+          "Type": "Fire"
+        },
+        {
+          "Level": 39,
+          "Move": "Scary Face",
+          "Type": "Normal"
+        },
+        {
+          "Level": 43,
+          "Move": "Flare Blitz",
+          "Type": "Fire"
+        },
+        {
+          "Level": 46,
+          "Move": "Outrage",
+          "Type": "Dragon"
+        }
+      ],
+      "TM/HM Move List": [
+        "05 Roar",
+        "06 Toxic",
+        "08 Bulk Up",
+        "10 Hidden Power",
+        "11 Sunny Day",
+        "12 Taunt",
+        "17 Protect",
+        "21 Frustration",
+        "27 Return",
+        "32 Double Team",
+        "35 Flamethrower",
+        "38 Fire Blast",
+        "41 Torment",
+        "42 Facade",
+        "43 Flame Charge",
+        "44 Rest",
+        "45 Attract",
+        "48 Round",
+        "50 Overheat",
+        "61 Will-OWisp",
+        "62 Acrobatics",
+        "65 Shadow Claw",
+        "75 Swords Dance",
+        "87 Swagger",
+        "88 Sleep Talk",
+        "89 U -Turn",
+        "90 Substitute",
+        "100 Confide"
+      ],
+      "Egg Move List": [
+        "Body Slam",
+        "Crunch",
+        "Fake Out",
+        "Heat Wave",
+        "Nasty Plot",
+        "Power Trip",
+        "Revenge"
+      ],
+      "Tutor Move List": [
+        "Covet",
+        "Endeavor",
+        "Fire Pledge",
+        "Heat Wave",
+        "Outrage",
+        "Snore"
+      ]
+    }
+  },
+  {
+    "Species": "Torracat",
+    "Number": 726,
+    "Base Stats": {
+      "HP": 7,
+      "Attack": 9,
+      "Defense": 5,
+      "Special Attack": 8,
+      "Special Defense": 5,
+      "Speed": 9
+    },
+    "Basic Information": {
+      "Type": [
+        "Fire"
+      ],
+      "Basic Ability 1": "Intimidate",
+      "Basic Ability 2": "Blaze",
+      "Adv Ability 1": "Defiant",
+      "Adv Ability 2": "Truant",
+      "High Ability": "Bully"
+    },
+    "Evolution": [
+      "1 - Litten",
+      "2 - Torracat Minimum 15",
+      "3 - Incineroar Minimum 30"
+    ],
+    "Size Information": {
+      "Height": "2 ’ 4” / 0.7 m (Small)",
+      "Weight": "55.1 lbs / 25 kg (3)"
+    },
+    "Breeding Information": {
+      "Gender Ratio": "87.5% M / 12.5% F",
+      "Egg Group": "Field"
+    },
+    "Diet": "Carnivore",
+    "Habitat": "Forest, Grassland, Urban",
+    "Capabilities": [
+      "Overland 7",
+      "Swim 4",
+      "Jump 2/2",
+      "Power 6",
+      "Firestarter",
+      "Tracker",
+      "Underdog"
+    ],
+    "Skills": {
+      "Athletics": "3d6",
+      "Acrobatics": "4d6",
+      "Combat": "4d6",
+      "Stealth": "3d6",
+      "Perception": "3d6",
+      "Focus": "3d6"
+    },
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 4,
+          "Move": "Growl",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Lick",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 11,
+          "Move": "Leer",
+          "Type": "Normal"
+        },
+        {
+          "Level": 14,
+          "Move": "Fire Fang",
+          "Type": "Fire"
+        },
+        {
+          "Level": 16,
+          "Move": "Double Kick",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 19,
+          "Move": "Roar",
+          "Type": "Normal"
+        },
+        {
+          "Level": 24,
+          "Move": "Bite",
+          "Type": "Dark"
+        },
+        {
+          "Level": 28,
+          "Move": "Swagger",
+          "Type": "Normal"
+        },
+        {
+          "Level": 33,
+          "Move": "Fury Swipes",
+          "Type": "Normal"
+        },
+        {
+          "Level": 37,
+          "Move": "Thrash",
+          "Type": "Normal"
+        },
+        {
+          "Level": 42,
+          "Move": "Flamethrower",
+          "Type": "Fire"
+        },
+        {
+          "Level": 46,
+          "Move": "Scary Face",
+          "Type": "Normal"
+        },
+        {
+          "Level": 51,
+          "Move": "Flare Blitz",
+          "Type": "Fire"
+        },
+        {
+          "Level": 55,
+          "Move": "Outrage",
+          "Type": "Dragon"
+        }
+      ],
+      "TM/HM Move List": [
+        "05 Roar",
+        "06 Toxic",
+        "08 Bulk Up",
+        "10 Hidden Power",
+        "11 Sunny Day",
+        "12 Taunt",
+        "17 Protect",
+        "21 Frustration",
+        "27 Return",
+        "32 Double Team",
+        "35 Flamethrower",
+        "38 Fire Blast",
+        "41 Torment",
+        "42 Facade",
+        "43 Flame Charge",
+        "44 Rest",
+        "45 Attract",
+        "48 Round",
+        "50 Overheat",
+        "61 Will -OWisp",
+        "62 Acrobatics",
+        "65 Shadow Claw",
+        "75 Swords Dance",
+        "87 Swagger",
+        "88 Sleep Talk",
+        "89 U -Turn",
+        "90 Substitute",
+        "100 Confide"
+      ],
+      "Egg Move List": [],
+      "Tutor Move List": [
+        "Covet",
+        "Dual Chop",
+        "Endeavor",
+        "Fire Pledge",
+        "Heat Wave",
+        "Outrage",
+        "Snore"
+      ]
+    }
+  },
+  {
+    "Species": "Incineroar",
+    "Number": 727,
+    "Base Stats": {
+      "HP": 10,
+      "Attack": 12,
+      "Defense": 9,
+      "Special Attack": 8,
+      "Special Defense": 9,
+      "Speed": 6
+    },
+    "Basic Information": {
+      "Type": [
+        "Fire",
+        "Dark"
+      ],
+      "Basic Ability 1": "Intimidate",
+      "Basic Ability 2": "Blaze",
+      "Adv Ability 1": "Defiant",
+      "Adv Ability 2": "Truant",
+      "High Ability": "Bully"
+    },
+    "Evolution": [
+      "1 - Litten",
+      "2 - Torracat Minimum 15",
+      "3 - Incineroar Minimum 30"
+    ],
+    "Size Information": {
+      "Height": "5 ’ 11” / 1.8 m (Medium)",
+      "Weight": "183 lbs / 83 kg (4)"
+    },
+    "Breeding Information": {
+      "Gender Ratio": "87.5% M / 12.5% F",
+      "Egg Group": "Field"
+    },
+    "Diet": "Carnivore",
+    "Habitat": "Forest, Grassland, Urban",
+    "Capabilities": [
+      "Overland 8",
+      "Swim 4",
+      "Jump 3/2",
+      "Power 10",
+      "Darkvision",
+      "Firestarter",
+      "Tracker"
+    ],
+    "Skills": {
+      "Combat": "5d6",
+      "Stealth": "3d6",
+      "Focus": "3d6"
+    },
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 4,
+          "Move": "Growl",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Lick",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 11,
+          "Move": "Leer",
+          "Type": "Normal"
+        },
+        {
+          "Level": 14,
+          "Move": "Fire Fang",
+          "Type": "Fire"
+        },
+        {
+          "Level": 16,
+          "Move": "Double Kick",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 19,
+          "Move": "Roar",
+          "Type": "Normal"
+        },
+        {
+          "Level": 24,
+          "Move": "Bite",
+          "Type": "Dark"
+        },
+        {
+          "Level": 28,
+          "Move": "Swagger",
+          "Type": "Normal"
+        },
+        {
+          "Level": 33,
+          "Move": "Fury Swipes",
+          "Type": "Normal"
+        },
+        {
+          "Level": 38,
+          "Move": "Thrash",
+          "Type": "Normal"
+        },
+        {
+          "Level": 44,
+          "Move": "Flamethrower",
+          "Type": "Fire"
+        },
+        {
+          "Level": 49,
+          "Move": "Scary Face",
+          "Type": "Normal"
+        },
+        {
+          "Level": 55,
+          "Move": "Flare Blitz",
+          "Type": "Fire"
+        },
+        {
+          "Level": 60,
+          "Move": "Outrage",
+          "Type": "Dragon"
+        }
+      ],
+      "TM/HM Move List": [
+        "05 Roar",
+        "06 Toxic",
+        "08 Bulk Up",
+        "10 Hidden Power",
+        "11 Sunny Day",
+        "12 Taunt",
+        "15 Hyper Beam",
+        "17 Protect",
+        "21 Frustration",
+        "26 Earthquake",
+        "27 Return",
+        "31 Brick Break",
+        "32 Double Team",
+        "35 Flamethrower",
+        "38 Fire Blast",
+        "41 Torment",
+        "42 Facade",
+        "43 Flame Charge",
+        "44 Rest",
+        "45 Attract",
+        "47 Low Sweep",
+        "48 Round",
+        "50 Overheat",
+        "52 Focus Blast",
+        "56 Fling",
+        "60 Quash",
+        "61 Will-O-Wisp",
+        "62 Acrobatics",
+        "65 Shadow Claw",
+        "68 Giga Impact",
+        "75 Swords Dance",
+        "78 Bulldoze",
+        "87 Swagger",
+        "88 Sleep Talk",
+        "89 U -Turn",
+        "90 Substitute",
+        "95 Snarl",
+        "97 Dark Pulse",
+        "100 Confide"
+      ],
+      "Egg Move List": [],
+      "Tutor Move List": [
+        "Bind",
+        "Blast Burn",
+        "Bulk Up (N)",
+        "Covet",
+        "Drain Punch",
+        "Dual Chop",
+        "Endeavor",
+        "Fire Pledge",
+        "Fire Punch",
+        "Focus Punch",
+        "Heat Wave",
+        "Iron Head",
+        "Knock Off",
+        "Low Kick",
+        "Outrage",
+        "Snatch",
+        "Snore",
+        "Stomping Tantrum",
+        "Superpower",
+        "Throat Chop (N)",
+        "Thunder Punch"
+      ]
+    }
+  },
+  {
+    "Species": "Popplio",
+    "Number": 728,
+    "Base Stats": {
+      "HP": 5,
+      "Attack": 5,
+      "Special Attack": 7,
+      "Special Defense": 6,
+      "Speed": 4
+    },
+    "Basic Information": {
+      "Type": [
+        "Water"
+      ],
+      "Basic Ability 1": "Swift Swim",
+      "Basic Ability 2": "Torrent",
+      "Adv Ability 1": "Liquid Voice",
+      "Adv Ability 2": "Drown Out",
+      "High Ability": "Wash Away"
+    },
+    "Evolution": [
+      "1 - Popplio",
+      "2 - Brionne Minimum 15",
+      "3 - Primarina Minimum 30"
+    ],
+    "Size Information": {
+      "Height": "1 ’ 4” / 0.4 m (Small)",
+      "Weight": "16.5 lbs / 7 .5kg (1)"
+    },
+    "Breeding Information": {
+      "Gender Ratio": "87.5% M / 12.5% F",
+      "Egg Group": "Water 1 / Field",
+      "Average Hatch Rate": "10 Days"
+    },
+    "Diet": "Herbivore",
+    "Habitat": "Beach, Ocean",
+    "Capabilities": [
+      "Overland 3",
+      "Swim 4",
+      "Jump 2/2",
+      "Power 1",
+      "Fountain",
+      "Underdog"
+    ],
+    "Skills": {
+      "Athletics": "2d6",
+      "Acrobatics": "3d6",
+      "Combat": "2d6",
+      "Stealth": "2d6",
+      "Perception": "2d6"
+    },
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 1,
+          "Move": "Pound",
+          "Type": "Normal"
+        },
+        {
+          "Level": 1,
+          "Move": "Water Gun",
+          "Type": "Water"
+        },
+        {
+          "Level": 4,
+          "Move": "Growl",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Disarming Voice",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 11,
+          "Move": "Baby -Doll Eyes",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 14,
+          "Move": "Aqua Jet",
+          "Type": "Water"
+        },
+        {
+          "Level": 16,
+          "Move": "Icy Wind",
+          "Type": "Ice"
+        },
+        {
+          "Level": 18,
+          "Move": "Encore",
+          "Type": "Normal"
+        },
+        {
+          "Level": 22,
+          "Move": "Bubblebeam",
+          "Type": "Water"
+        },
+        {
+          "Level": 25,
+          "Move": "Sing",
+          "Type": "Normal"
+        },
+        {
+          "Level": 29,
+          "Move": "Double Slap",
+          "Type": "Normal"
+        },
+        {
+          "Level": 32,
+          "Move": "Hyper Voice",
+          "Type": "Normal"
+        },
+        {
+          "Level": 36,
+          "Move": "Moonblast",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 39,
+          "Move": "Captivate",
+          "Type": "Normal"
+        },
+        {
+          "Level": 43,
+          "Move": "Hydro Pump",
+          "Type": "Water"
+        },
+        {
+          "Level": 46,
+          "Move": "Misty Terrain",
+          "Type": "Fairy"
+        }
+      ],
+      "TM/HM Move List": [
+        "A3 Surf",
+        "A5 Waterfall",
+        "06 Toxic",
+        "07 Hail",
+        "10 Hidden Power",
+        "13 Ice Beam",
+        "14 Blizzard",
+        "17 Protect",
+        "18 Rain Dance",
+        "21 Frustration",
+        "27 Return",
+        "32 Double Team",
+        "42 Facade",
+        "44 Rest",
+        "45 Attract",
+        "48 Round",
+        "49 Echoed Voice",
+        "55 Scald",
+        "62 Acrobatics",
+        "87 Swagger",
+        "88 Sleep Talk",
+        "90 Substitute",
+        "100 Confide"
+      ],
+      "Egg Move List": [
+        "Amnesia",
+        "Aqua Ring",
+        "Aromatic Mist",
+        "Charm",
+        "Perish Song",
+        "Wonder Room"
+      ],
+      "Tutor Move List": [
+        "Aqua Tail",
+        "Covet",
+        "Helping Hand",
+        "Hyper Voice",
+        "Icy Wind",
+        "Iron Tail",
+        "Snore",
+        "Uproar",
+        "Water Pledge",
+        "Water Pulse",
+        "Wonder Room"
+      ]
+    }
+  },
+  {
+    "Species": "Brionne",
+    "Number": 729,
+    "Base Stats": {
+      "HP": 6,
+      "Attack": 7,
+      "Defense": 7,
+      "Special Attack": 9,
+      "Special Defense": 8,
+      "Speed": 5
+    },
+    "Basic Information": {
+      "Type": [
+        "Water"
+      ],
+      "Basic Ability 1": "Swift Swim",
+      "Basic Ability 2": "Torrent",
+      "Adv Ability 1": "Liquid Voice",
+      "Adv Ability 2": "Drown Out",
+      "High Ability": "Wash Away"
+    },
+    "Evolution": [
+      "1 - Popplio",
+      "2 - Brionne Minimum 15",
+      "3 - Primarina Minimum 30"
+    ],
+    "Size Information": {
+      "Height": "2 ’ 0” / 0.6 m (Small)",
+      "Weight": "38.6 lbs / 17.5 kg (2)"
+    },
+    "Breeding Information": {
+      "Gender Ratio": "87.5% M / 12.5% F",
+      "Egg Group": "Water 1 / Field"
+    },
+    "Diet": "Herbivore",
+    "Habitat": "Beach, Ocean",
+    "Capabilities": [
+      "Overland 4",
+      "Swim 5",
+      "Jump 2/2",
+      "Power 3",
+      "Fountain",
+      "Underdog"
+    ],
+    "Skills": {
+      "Athletics": "3d6",
+      "Acrobatics": "4d6+2",
+      "Perception": "2d6"
+    },
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 4,
+          "Move": "Growl",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Disarming Voice",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 11,
+          "Move": "Baby -Doll Eyes",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 14,
+          "Move": "Aqua Jet",
+          "Type": "Water"
+        },
+        {
+          "Level": 16,
+          "Move": "Icy Wind",
+          "Type": "Ice"
+        },
+        {
+          "Level": 19,
+          "Move": "Encore",
+          "Type": "Normal"
+        },
+        {
+          "Level": 24,
+          "Move": "Bubblebeam",
+          "Type": "Water"
+        },
+        {
+          "Level": 28,
+          "Move": "Sing",
+          "Type": "Normal"
+        },
+        {
+          "Level": 33,
+          "Move": "Double Slap",
+          "Type": "Normal"
+        },
+        {
+          "Level": 37,
+          "Move": "Hyper Voice",
+          "Type": "Normal"
+        },
+        {
+          "Level": 42,
+          "Move": "Moonblast",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 46,
+          "Move": "Captivate",
+          "Type": "Normal"
+        },
+        {
+          "Level": 51,
+          "Move": "Hydro Pump",
+          "Type": "Water"
+        },
+        {
+          "Level": 55,
+          "Move": "Misty Terrain",
+          "Type": "Fairy"
+        }
+      ],
+      "TM/HM Move List": [
+        "A3 Surf",
+        "A5 Waterfall",
+        "06 Toxic",
+        "07 Hail",
+        "10 Hidden Power",
+        "13 Ice Beam",
+        "14 Blizzard",
+        "17 Protect",
+        "18 Rain Dance",
+        "21 Frustration",
+        "27 Return",
+        "32 Double Team",
+        "42 Facade",
+        "44 Rest",
+        "45 Attract",
+        "48 Round",
+        "49 Echoed Voice",
+        "55 Scald",
+        "62 Acrobatics",
+        "87 Swagger",
+        "88 Sleep Talk",
+        "90 Substitute",
+        "100 Confide"
+      ],
+      "Egg Move List": [],
+      "Tutor Move List": [
+        "Aqua Tail",
+        "Covet",
+        "Helping Hand",
+        "Hyper Voice",
+        "Icy Wind",
+        "Iron Tail",
+        "Snore",
+        "Uproar",
+        "Water Pledge",
+        "Water Pulse",
+        "Wonder Room"
+      ]
+    }
+  },
+  {
     "Species": "Primarina",
     "Number": 730,
     "Base Stats": {
@@ -24,8 +1455,9 @@
     "Evolution": [
       "1 - Popplio",
       "2 - Brionne Minimum 15",
-      "3 - Primarina Minimum 30"],
-      "Size Information":[
+      "3 - Primarina Minimum 30"
+    ],
+    "Size Information": [
       "Height: 5 ’ 11” / 1.8 m (Medium)",
       "Weight: 97 lbs / 44 kg (3)"
     ],

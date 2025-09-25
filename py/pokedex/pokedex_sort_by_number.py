@@ -41,8 +41,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("-i","--input", required=True, help="JSON d’entrée (parser)")
     ap.add_argument("-r","--ref", required=True, help="CSV référence Pokédex")
-    ap.add_argument("-o","--output", required=True, help="JSON de sortie")
+    ap.add_argument("-o","--output", required=False, help="JSON de sortie")
     args = ap.parse_args()
+
+    if not args.output:
+        args.output = args.input
 
     # Charger le JSON en préservant l'ordre des paires
     raw = pathlib.Path(args.input).read_text(encoding="utf-8")
