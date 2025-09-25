@@ -263,14 +263,19 @@
     const title = document.getElementById('dexModalLabel');
     const num = pad3(p.Number ?? '0');
 
+    // header types (reste identique)
     const header = (() => {
       const types = wrapTypes(extractTypes(p));
-      return `<div class=\"mb-3\">${types || '<em>—</em>'}</div>`;
+      return `<div class="mb-3">${types || '<em>—</em>'}</div>`;
     })();
-
     title.innerHTML = `#${num} — ${p.Species || 'Unknown'}` + header;
 
-    body.innerHTML = renderObject(p);
+    // ⬇️ clone profond pour éviter toute mutation du dataset
+    const safe = (typeof structuredClone === 'function')
+      ? structuredClone(p)
+      : JSON.parse(JSON.stringify(p));
+
+    body.innerHTML = renderObject(safe); // ← on rend le clone
     const modal = new bootstrap.Modal(document.getElementById('dexModal'));
     modal.show();
   }
