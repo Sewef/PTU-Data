@@ -31,9 +31,8 @@ def split_commas_outside_parens(text: str):
     return parts
 
 
-PDF_PATH = "7G AlolaDex.pdf"   # ← adapte si besoin
-OUT_JSON = "../../ptu/data/pokedex/pokedex7g_temp.json"
-OUT_NDJSON = "../../ptu/data/pokedex/pokedex_8g_hisui.ndjson"
+PDF_PATH = "8G GalarDex + Armor_Crown.pdf"
+OUT_JSON = "../../ptu/data/pokedex/pokedex8g_temp.json"
 OUT_LOG = "pokedex_extraction.log"
 
 # --- Logging setup ---
@@ -563,7 +562,7 @@ def main():
     records = []
     pages_with_text = 0
     #for i in range(len(reader.pages)):
-    for i in range(0,10):
+    for i in range(0,11):
         try:
             page_text = reader.pages[i].extract_text() or ""
         except Exception as e:
