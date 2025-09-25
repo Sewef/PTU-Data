@@ -3,7 +3,7 @@
     // Primary JSON location (mirror your moves.html convention)
     jsonUrls: [
       '/ptu/data/pokedex/pokedex_core.json', // expected in your project
-      './pokedex_core.json',                 // fallback next to page
+      '/ptu/data/pokedex/pokedex_7g.json',                 // fallback next to page
     ],
     // Try a few sprite/icon path patterns. Override easily.
     iconPatterns: [

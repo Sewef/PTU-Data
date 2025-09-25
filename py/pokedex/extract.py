@@ -31,9 +31,9 @@ def split_commas_outside_parens(text: str):
     return parts
 
 
-PDF_PATH = "1-6G Pokedex_Playtest105Plus.pdf"   # ← adapte si besoin
-OUT_JSON = "../../ptu/data/pokedex/pokedex_core.json"
-OUT_NDJSON = "../../ptu/data/pokedex/pokedex_core.ndjson"
+PDF_PATH = "AlolaDex.pdf"   # ← adapte si besoin
+OUT_JSON = "../../ptu/data/pokedex/pokedex_7g.json"
+OUT_NDJSON = "../../ptu/data/pokedex/pokedex_7g.ndjson"
 OUT_LOG = "pokedex_extraction.log"
 
 # --- Logging setup ---
@@ -51,7 +51,7 @@ fh.setFormatter(logging.Formatter("%(levelname)s:%(message)s"))
 logger.addHandler(fh)
 
 def clean_line(s: str) -> str:
-    s = s.replace('\xa0', ' ').replace('‒', '-').replace('–', '-').replace('—', '-')
+    s = s.replace('\xa0', ' ').replace('‒', '-').replace('–', '-').replace('—', '-').replace(' )', ')')
     s = re.sub(r'[ \t]+', ' ', s)
     return s.strip()
 
@@ -67,6 +67,9 @@ def fix_species_spacing(name: str) -> str:
     # Exemple: "HOOP A Confined" -> "HOOPA Confined"
     # On corrige uniquement les majuscules séparées par un espace
     return re.sub(r'\b([A-Z]{2,})\s+([A-Z]{1,})(\b| )', lambda m: m.group(1) + m.group(2) + m.group(3), name)
+
+def compare_string_with_spaces(s: str, c: str):
+    return (s.replace(' ', '')).startswith(c.replace(' ', ''))
 
 def fallback_title(lines):
     # Try to pull an UPPERCASE species token even if the line contains "Normal Form", numbers, etc.
@@ -267,7 +270,7 @@ def extract_page(page_text: str, page_index: int):
     fixed_lines = []
     for l in lines:
         # Cas spécial : "Capability List" + contenu collés
-        if l.startswith("Capability List "):
+        if compare_string_with_spaces(l, "Capability List "):
             fixed_lines.append("Capability List")
             fixed_lines.append(l[len("Capability List "):].strip())
         else:
