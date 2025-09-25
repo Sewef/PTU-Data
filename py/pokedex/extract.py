@@ -31,9 +31,9 @@ def split_commas_outside_parens(text: str):
     return parts
 
 
-PDF_PATH = "8G GalarDex + Armor_Crown.pdf"   # ← adapte si besoin
-OUT_JSON = "../../ptu/data/pokedex/pokedex_8g.json"
-OUT_NDJSON = "../../ptu/data/pokedex/pokedex_8g.ndjson"
+PDF_PATH = "8G HisuiDex.pdf"   # ← adapte si besoin
+OUT_JSON = "../../ptu/data/pokedex/pokedex_8g_hisui.json"
+OUT_NDJSON = "../../ptu/data/pokedex/pokedex_8g_hisui.ndjson"
 OUT_LOG = "pokedex_extraction.log"
 
 # --- Logging setup ---
