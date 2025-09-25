@@ -5,7 +5,7 @@
       //'/ptu/data/pokedex/pokedex_core.json',
       //'/ptu/data/pokedex/pokedex_7g.json',
       '/ptu/data/pokedex/pokedex_8g.json',
-      //'/ptu/data/pokedex/pokedex_8g_hisui.json',
+      '/ptu/data/pokedex/pokedex_8g_hisui.json',
     ],
     // Try a few sprite/icon path patterns. Override easily.
     iconPatterns: [
