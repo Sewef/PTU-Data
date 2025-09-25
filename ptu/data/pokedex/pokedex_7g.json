@@ -1,6 +1,7 @@
 [
   {
     "Species": "Primarina",
+    "Number": 730,
     "Base Stats": {
       "HP": 8,
       "Attack": 7,
@@ -175,6 +176,7 @@
   },
   {
     "Species": "Pikipek",
+    "Number": 731,
     "Base Stats": {
       "HP": 4,
       "Attack": 8,
@@ -344,6 +346,7 @@
   },
   {
     "Species": "Trumbeak",
+    "Number": 732,
     "Base Stats": {
       "HP": 6,
       "Attack": 9,
@@ -501,6 +504,7 @@
   },
   {
     "Species": "Toucannon",
+    "Number": 733,
     "Base Stats": {
       "HP": 8,
       "Attack": 12,
@@ -660,6 +664,7 @@
   },
   {
     "Species": "Yungoos",
+    "Number": 734,
     "Base Stats": {
       "HP": 5,
       "Attack": 7,
@@ -837,6 +842,7 @@
   },
   {
     "Species": "Gumshoos",
+    "Number": 735,
     "Base Stats": {
       "HP": 9,
       "Attack": 11,
@@ -1012,6 +1018,7 @@
   },
   {
     "Species": "Grubbin",
+    "Number": 736,
     "Base Stats": {
       "HP": 5,
       "Attack": 6,
@@ -1160,6 +1167,7 @@
   },
   {
     "Species": "Charjabug",
+    "Number": 737,
     "Base Stats": {
       "HP": 6,
       "Attack": 8,
@@ -1309,6 +1317,7 @@
   },
   {
     "Species": "Vikavolt",
+    "Number": 738,
     "Base Stats": {
       "HP": 8,
       "Attack": 7,
@@ -1469,6 +1478,7 @@
   },
   {
     "Species": "Crabrawler",
+    "Number": 739,
     "Base Stats": {
       "HP": 5,
       "Attack": 8,
@@ -1639,6 +1649,7 @@
   },
   {
     "Species": "Crabominable",
+    "Number": 740,
     "Base Stats": {
       "HP": 10,
       "Attack": 13,
@@ -1805,6 +1816,7 @@
   },
   {
     "Species": "Oricorio",
+    "Number": 741,
     "Base Stats": {
       "HP": 8,
       "Attack": 7,
@@ -1814,16 +1826,30 @@
       "Speed": 9
     },
     "Basic Information": {
-      "Type": [
-        "Special",
-        "Flying (see Forme Change)"
-      ],
+      "Type": {
+        "Baille": [
+          "Fire",
+          "Flying"
+        ],
+        "Pom Pom": [
+          "Electric",
+          "Flying"
+        ],
+        "Pa'u": [
+          "Psychic",
+          "Flying"
+        ],
+        "Sensu": [
+          "Ghost",
+          "Flying"
+        ]
+      },
       "Basic Ability 1": "Dancer",
       "Adv Ability 1": "Adaptability",
       "Adv Ability 2": "Spinning Dance",
       "Adv Ability 3": "Revelation",
       "High Ability": "Competitive",
-      "Evoluti on": ""
+      "Evolution": ""
     },
     "Size Information": {
       "Height": "2’ 0” / 0.6 m (Small)",
@@ -1976,14 +2002,14 @@
         "Role Play",
         "Sky Attack",
         "Snore",
-        "Tailwind Forme Change: When an Oricor io hatches",
-        "it takes the form of its mother",
-        "or father if the other parent was a Ditto. Oricor io may change forms by consuming Nectar as an Extended Action. Th is determines Oricor io's primary type: Red Nectar: Baille (Fire) Yellow Nectar: Pom Pom (Electric) Pink Nectar: Pa’u (Psychic) Purple Nectar: Sensu (Ghost)"
+        "Tailwind"
       ]
-    }
+    },
+    "Forme Change": "When an Oricorio hatches it takes the form of its mother or father if the other parent was a Ditto. Oricor io may change forms by consuming Nectar as an Extended Action. Th is determines Oricor io's primary type: \n»Red Nectar: Baille (Fire)\n»Yellow Nectar: Pom Pom (Electric)\n»Pink Nectar: Pa’u (Psychic) \n»Purple Nectar: Sensu (Ghost)"
   },
   {
     "Species": "Cutiefly",
+    "Number": 742,
     "Base Stats": {
       "HP": 4,
       "Attack": 5,
@@ -2156,6 +2182,7 @@
   },
   {
     "Species": "Ribombee",
+    "Number": 743,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -2302,7 +2329,7 @@
         "Defog",
         "Helping Hand",
         "Last Resort",
-        "Mag ic Room",
+        "Magic Room",
         "Signal Beam",
         "Skill Swap",
         "Snore",
@@ -2315,6 +2342,7 @@
   },
   {
     "Species": "Rockruff",
+    "Number": 744,
     "Base Stats": {
       "HP": 5,
       "Attack": 7,
@@ -2348,7 +2376,7 @@
       "Egg Group": "Field",
       "Average Hatch Rate": "7 Days"
     },
-    "Diet": "Omn ivore",
+    "Diet": "Omnivore",
     "Habitat": "Grassland , Mountain",
     "Capabilities": [
       "Overland 5",
@@ -2356,7 +2384,7 @@
       "Jump 2/2",
       "Power 2",
       "Naturewalk (Mountain)",
-      "Tracke r",
+      "Tracker",
       "Underdog"
     ],
     "Skills": {
@@ -2477,7 +2505,7 @@
         "Covet",
         "Earth Power",
         "Endeavor",
-        "Hyper Vo ice",
+        "Hyper Voice",
         "Iron Defense",
         "Iron Head",
         "Iron Tail",
@@ -2491,6 +2519,7 @@
   },
   {
     "Species": "Lycanroc Midday",
+    "Number": 745,
     "Base Stats": {
       "HP": 8,
       "Attack": 12,
@@ -2627,7 +2656,7 @@
         "80 Rock Slide",
         "87 Swagger",
         "88 Sleep Talk",
-        "90 Substitut e",
+        "90 Substitute",
         "95 Snarl",
         "100 Confide"
       ],
@@ -2653,6 +2682,7 @@
   },
   {
     "Species": "Lycanroc Midnight",
+    "Number": 745,
     "Base Stats": {
       "HP": 9,
       "Attack": 12,
@@ -2826,6 +2856,7 @@
   },
   {
     "Species": "Lycanroc Dusk",
+    "Number": 745,
     "Base Stats": {
       "HP": 8,
       "Attack": 12,
@@ -2991,6 +3022,7 @@
   },
   {
     "Species": "Wishiwashi Solo",
+    "Number": 746,
     "Base Stats": {
       "HP": 5,
       "Attack": 2,
@@ -3162,6 +3194,7 @@
   },
   {
     "Species": "Wishiwashi Schooling",
+    "Number": 746,
     "Base Stats": {
       "HP": 5,
       "Attack": 14,
@@ -3336,6 +3369,7 @@
   },
   {
     "Species": "Mareanie",
+    "Number": 747,
     "Base Stats": {
       "HP": 5,
       "Attack": 5,
@@ -3496,7 +3530,7 @@
         "Gunk Shot",
         "Iron Defense",
         "Icy Wind",
-        "Knock Of f",
+        "Knock Off",
         "Liquidation",
         "Magic Coat",
         "Pain Split",
@@ -3509,6 +3543,7 @@
   },
   {
     "Species": "Toxapex",
+    "Number": 748,
     "Base Stats": {
       "HP": 5,
       "Attack": 6,
@@ -3673,6 +3708,7 @@
   },
   {
     "Species": "Mudbray",
+    "Number": 749,
     "Base Stats": {
       "HP": 7,
       "Attack": 10,
@@ -3840,6 +3876,7 @@
   },
   {
     "Species": "Mudsdale",
+    "Number": 750,
     "Base Stats": {
       "HP": 10,
       "Defense": 10,
@@ -3996,6 +4033,7 @@
   },
   {
     "Species": "Dewpider",
+    "Number": 751,
     "Base Stats": {
       "HP": 4,
       "Attack": 4,
@@ -4166,6 +4204,7 @@
   },
   {
     "Species": "Araquanid",
+    "Number": 752,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -4326,6 +4365,7 @@
   },
   {
     "Species": "Fomantis",
+    "Number": 753,
     "Base Stats": {
       "HP": 4,
       "Attack": 6,
@@ -4483,6 +4523,7 @@
   },
   {
     "Species": "Lurantis",
+    "Number": 754,
     "Base Stats": {
       "HP": 7,
       "Attack": 11,
@@ -4636,6 +4677,7 @@
   },
   {
     "Species": "Morelull",
+    "Number": 755,
     "Base Stats": {
       "HP": 4,
       "Attack": 4,
@@ -4812,6 +4854,7 @@
   },
   {
     "Species": "Shiinotic",
+    "Number": 756,
     "Base Stats": {
       "HP": 6,
       "Attack": 5,
@@ -4978,6 +5021,7 @@
   },
   {
     "Species": "Salandit",
+    "Number": 757,
     "Base Stats": {
       "HP": 5,
       "Attack": 4,
@@ -5144,7 +5188,7 @@
       "Tutor Move List": [
         "Covet",
         "Dragon Pulse",
-        "Foul Pla y",
+        "Foul Play",
         "Gunk Shot",
         "Heat Wave",
         "Helping Hand",
@@ -5157,6 +5201,7 @@
   },
   {
     "Species": "Salazzle",
+    "Number": 758,
     "Base Stats": {
       "HP": 7,
       "Attack": 6,
@@ -5325,6 +5370,7 @@
   },
   {
     "Species": "Stufful",
+    "Number": 759,
     "Base Stats": {
       "HP": 7,
       "Attack": 8,
@@ -5497,6 +5543,7 @@
   },
   {
     "Species": "Bewear",
+    "Number": 760,
     "Base Stats": {
       "HP": 12,
       "Attack": 13,
@@ -5657,6 +5704,7 @@
   },
   {
     "Species": "Bounsweet",
+    "Number": 761,
     "Base Stats": {
       "HP": 4,
       "Attack": 3,
@@ -5669,7 +5717,7 @@
       "Type": [
         "Grass"
       ],
-      "Basic Ability 1": "Obliviou s",
+      "Basic Ability 1": "Oblivious",
       "Adv Ability 1": "Sweet Veil",
       "Adv Ability 2": "Leaf Guard",
       "Adv Ability 3": "Run Away",
@@ -5805,6 +5853,7 @@
   },
   {
     "Species": "Steenee",
+    "Number": 762,
     "Base Stats": {
       "HP": 5,
       "Attack": 4,
@@ -5959,6 +6008,7 @@
   },
   {
     "Species": "Tsareena",
+    "Number": 763,
     "Base Stats": {
       "HP": 7,
       "Attack": 12,
@@ -6129,6 +6179,7 @@
   },
   {
     "Species": "Comfey",
+    "Number": 764,
     "Base Stats": {
       "HP": 5,
       "Attack": 5,
@@ -6339,6 +6390,7 @@
   },
   {
     "Species": "Oranguru",
+    "Number": 765,
     "Base Stats": {
       "HP": 9,
       "Attack": 6,
@@ -6537,6 +6589,7 @@
   },
   {
     "Species": "Passimian",
+    "Number": 766,
     "Base Stats": {
       "HP": 10,
       "Attack": 12,
@@ -6732,6 +6785,7 @@
   },
   {
     "Species": "Wimpod",
+    "Number": 767,
     "Base Stats": {
       "HP": 3,
       "Attack": 4,
@@ -6831,6 +6885,7 @@
   },
   {
     "Species": "Golisopod",
+    "Number": 768,
     "Base Stats": {
       "HP": 8,
       "Attack": 13,
@@ -7005,6 +7060,7 @@
   },
   {
     "Species": "Sandygast",
+    "Number": 769,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -7187,6 +7243,7 @@
   },
   {
     "Species": "Palossand",
+    "Number": 770,
     "Base Stats": {
       "HP": 9,
       "Attack": 8,
@@ -7323,7 +7380,7 @@
         "53 En ergy Ball",
         "56 Fling",
         "60 Quash",
-        "63 Embarg o",
+        "63 Embargo",
         "68 Giga Impact",
         "69 Rock Polish",
         "71 Stone Edge",
@@ -7356,6 +7413,7 @@
   },
   {
     "Species": "Pyukumuku",
+    "Number": 771,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -7524,6 +7582,7 @@
   },
   {
     "Species": "Type: Null",
+    "Number": 772,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -7711,6 +7770,7 @@
   },
   {
     "Species": "Silvally",
+    "Number": 773,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -7919,6 +7979,7 @@
   },
   {
     "Species": "Minior Meteor",
+    "Number": 774,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -8101,6 +8162,7 @@
   },
   {
     "Species": "Minior Core",
+    "Number": 774,
     "Base Stats": {
       "HP": 6,
       "Attack": 10,
@@ -8282,6 +8344,7 @@
   },
   {
     "Species": "Komala",
+    "Number": 775,
     "Base Stats": {
       "HP": 7,
       "Attack": 12,
@@ -8447,6 +8510,7 @@
   },
   {
     "Species": "Turtonator",
+    "Number": 776,
     "Base Stats": {
       "HP": 6,
       "Attack": 8,
@@ -8589,7 +8653,7 @@
         "22 Solarbeam",
         "23 Smack Down",
         "26 Earthquake",
-        "27 Retur n",
+        "27 Return",
         "32 Double Team",
         "35 Flamethrower",
         "38 Fire Blast",
@@ -8641,6 +8705,7 @@
   },
   {
     "Species": "Togedemaru",
+    "Number": 777,
     "Base Stats": {
       "HP": 7,
       "Attack": 10,
@@ -8833,6 +8898,7 @@
   },
   {
     "Species": "Mimikyu",
+    "Number": 778,
     "Base Stats": {
       "HP": 6,
       "Attack": 9,
@@ -9027,6 +9093,7 @@
   },
   {
     "Species": "Bruxish",
+    "Number": 779,
     "Base Stats": {
       "HP": 7,
       "Attack": 11,
@@ -9206,6 +9273,7 @@
   },
   {
     "Species": "Drampa",
+    "Number": 780,
     "Base Stats": {
       "HP": 8,
       "Attack": 6,
@@ -9415,6 +9483,7 @@
   },
   {
     "Species": "Dhelmise",
+    "Number": 781,
     "Base Stats": {
       "HP": 7,
       "Attack": 13,
@@ -9610,7 +9679,8 @@
     }
   },
   {
-    "Species": "Jangmo -O",
+    "Species": "Jangmo-O",
+    "Number": 782,
     "Base Stats": {
       "HP": 5,
       "Attack": 6,
@@ -9790,7 +9860,8 @@
     }
   },
   {
-    "Species": "Hakamo -O",
+    "Species": "Hakamo-O",
+    "Number": 783,
     "Base Stats": {
       "HP": 6,
       "Attack": 8,
@@ -9967,7 +10038,8 @@
     }
   },
   {
-    "Species": "Kommo -O",
+    "Species": "Kommo-O",
+    "Number": 784,
     "Base Stats": {
       "HP": 8,
       "Attack": 11,
@@ -10161,6 +10233,7 @@
   },
   {
     "Species": "Rattata Alola",
+    "Number": 19,
     "Base Stats": {
       "HP": 3,
       "Attack": 6,
@@ -10344,6 +10417,7 @@
   },
   {
     "Species": "Raticate Alola",
+    "Number": 20,
     "Base Stats": {
       "HP": 6,
       "Attack": 8,
@@ -10514,6 +10588,7 @@
   },
   {
     "Species": "Raichu Alola",
+    "Number": 26,
     "Base Stats": {
       "HP": 6,
       "Attack": 9,
@@ -10708,7 +10783,8 @@
     }
   },
   {
-    "Species": "Sandshrew Alol A",
+    "Species": "Sandshrew Alola",
+    "Number": 27,
     "Base Stats": {
       "HP": 5,
       "Attack": 8,
@@ -10916,6 +10992,7 @@
   },
   {
     "Species": "Sandslash Alola",
+    "Number": 28,
     "Base Stats": {
       "HP": 8,
       "Attack": 10,
@@ -11105,6 +11182,7 @@
   },
   {
     "Species": "Vulpix Alola",
+    "Number": 37,
     "Base Stats": {
       "HP": 4,
       "Attack": 4,
@@ -11317,6 +11395,7 @@
   },
   {
     "Species": "Ninetales Alola",
+    "Number": 38,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -11521,6 +11600,7 @@
   },
   {
     "Species": "Diglett Alola",
+    "Number": 50,
     "Base Stats": {
       "HP": 1,
       "Attack": 6,
@@ -11699,6 +11779,7 @@
   },
   {
     "Species": "Dugtrio Alola",
+    "Number": 51,
     "Base Stats": {
       "HP": 4,
       "Attack": 10,
@@ -11861,6 +11942,7 @@
   },
   {
     "Species": "Meowth Alola",
+    "Number": 52,
     "Base Stats": {
       "HP": 4,
       "Defense": 4,
@@ -12067,6 +12149,7 @@
   },
   {
     "Species": "Persian Alola",
+    "Number": 53,
     "Base Stats": {
       "HP": 7,
       "Attack": 6,
@@ -12253,6 +12336,7 @@
   },
   {
     "Species": "Geodude Alola",
+    "Number": 74,
     "Base Stats": {
       "HP": 4,
       "Attack": 8,
@@ -12455,6 +12539,7 @@
   },
   {
     "Species": "Graveler Alola",
+    "Number": 75,
     "Base Stats": {
       "HP": 6,
       "Attack": 10,
@@ -12502,7 +12587,12 @@
       "Zapper"
     ],
     "Skills": {
-      "Acr o": "2d6"
+      "Athletics": "4d6+2",
+      "Acrobatics": "2d6",
+      "Combat": "3d6+2",
+      "Stealth": "4d6",
+      "Perception": "3d6",
+      "Focus": "4d6+1"
     },
     "Moves": {
       "Level Up Move List": [
@@ -12633,6 +12723,7 @@
   },
   {
     "Species": "Golem Alola",
+    "Number": 76,
     "Base Stats": {
       "HP": 8,
       "Attack": 12,
@@ -12827,6 +12918,7 @@
   },
   {
     "Species": "Grimer Alola",
+    "Number": 88,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -12991,7 +13083,7 @@
         "60 Quash",
         "63 Embargo",
         "64 Explosion",
-        "66 Paybac k",
+        "66 Payback",
         "69 Rock Polish",
         "71 Stone Edge",
         "80 Rock Slide",
@@ -13036,6 +13128,7 @@
   },
   {
     "Species": "Muk Alola",
+    "Number": 89,
     "Base Stats": {
       "HP": 11,
       "Attack": 11,
@@ -13185,7 +13278,7 @@
         "60 Quash",
         "63 Embargo",
         "64 Explosion",
-        "66 Paybac k",
+        "66 Payback",
         "68 Giga Impact",
         "69 Rock Polish",
         "71 Stone Edge",
@@ -13221,6 +13314,7 @@
   },
   {
     "Species": "Exeggutor Alola",
+    "Number": 103,
     "Base Stats": {
       "HP": 10,
       "Attack": 11,
@@ -13433,6 +13527,7 @@
   },
   {
     "Species": "Marowak Alola",
+    "Number": 105,
     "Base Stats": {
       "HP": 6,
       "Attack": 8,
@@ -13637,7 +13732,8 @@
     }
   },
   {
-    "Species": "Tapukoko",
+    "Species": "Tapu Koko",
+    "Number": 785,
     "Base Stats": {
       "HP": 7,
       "Attack": 12,
@@ -13767,7 +13863,7 @@
         "05 Roar",
         "06 Toxic",
         "10 Hidden Power",
-        "12 Taun t",
+        "12 Taunt",
         "15 Hyper Beam",
         "16 Light Screen",
         "17 Protect",
@@ -13786,7 +13882,7 @@
         "46 Thief",
         "48 Round",
         "49 Echoed Voice",
-        "51 Steel Win g",
+        "51 Steel Wing",
         "54 False Swipe",
         "58 Sky Drop",
         "62 Acrobatics",
@@ -13824,7 +13920,8 @@
     }
   },
   {
-    "Species": "Tapulele",
+    "Species": "Tapu Lele",
+    "Number": 786,
     "Base Stats": {
       "HP": 7,
       "Attack": 9,
@@ -14005,7 +14102,8 @@
     }
   },
   {
-    "Species": "Tapubulu",
+    "Species": "Tapu Bulu",
+    "Number": 787,
     "Base Stats": {
       "HP": 7,
       "Attack": 13,
@@ -14188,7 +14286,8 @@
     }
   },
   {
-    "Species": "Tapufini",
+    "Species": "Tapu Fini",
+    "Number": 788,
     "Base Stats": {
       "HP": 7,
       "Attack": 8,
@@ -14371,6 +14470,7 @@
   },
   {
     "Species": "Cosmog",
+    "Number": 789,
     "Base Stats": {
       "HP": 4,
       "Attack": 3,
@@ -14442,6 +14542,7 @@
   },
   {
     "Species": "Cosmoem",
+    "Number": 790,
     "Base Stats": {
       "HP": 4,
       "Attack": 3,
@@ -14507,6 +14608,7 @@
   },
   {
     "Species": "Solgaleo",
+    "Number": 791,
     "Base Stats": {
       "HP": 14,
       "Attack": 14,
@@ -14692,6 +14794,7 @@
   },
   {
     "Species": "Lunala",
+    "Number": 792,
     "Base Stats": {
       "HP": 14,
       "Attack": 12,
@@ -14880,6 +14983,7 @@
   },
   {
     "Species": "Necrozma",
+    "Number": 800,
     "Base Stats": {
       "HP": 10,
       "Attack": 11,
@@ -15080,6 +15184,7 @@
   },
   {
     "Species": "Necrozma Dusk Mane",
+    "Number": 800,
     "Base Stats": {
       "HP": 10,
       "Attack": 16,
@@ -15283,6 +15388,7 @@
   },
   {
     "Species": "Necrozma Dawn Wings",
+    "Number": 800,
     "Base Stats": {
       "HP": 10,
       "Attack": 11,
@@ -15468,7 +15574,7 @@
         "Iron Defense",
         "Iron Head",
         "Knock Off",
-        "Magnet Ris e",
+        "Magnet Rise",
         "Mirror Shot (N)",
         "Moonlight (N)",
         "Morning Sun (N)",
@@ -15488,6 +15594,7 @@
   },
   {
     "Species": "Zygarde 10% Forme",
+    "Number": 718,
     "Base Stats": {
       "HP": 5,
       "Attack": 10,
@@ -15652,7 +15759,7 @@
         "88 Sleep Talk",
         "90 Substitute",
         "94 Rock Smash",
-        "100 Confid e"
+        "100 Confide"
       ],
       "Egg Move List": [],
       "Tutor Move List": [
@@ -15680,6 +15787,7 @@
   },
   {
     "Species": "Zygarde 50% Forme",
+    "Number": 718,
     "Base Stats": {
       "HP": 11,
       "Attack": 10,
@@ -15842,7 +15950,7 @@
         "88 Sleep Talk",
         "90 Substitute",
         "94 Rock Smash",
-        "100 Confid e"
+        "100 Confide"
       ],
       "Egg Move List": [],
       "Tutor Move List": [
@@ -15870,6 +15978,7 @@
   },
   {
     "Species": "Zygarde Complete Forme",
+    "Number": 718,
     "Base Stats": {
       "HP": 22,
       "Attack": 10,
@@ -16035,7 +16144,7 @@
         "88 Sleep Talk",
         "90 Substitute",
         "94 Rock Smash",
-        "100 Confid e"
+        "100 Confide"
       ],
       "Egg Move List": [],
       "Tutor Move List": [
@@ -16063,6 +16172,7 @@
   },
   {
     "Species": "Volcanion",
+    "Number": 721,
     "Base Stats": {
       "HP": 8,
       "Attack": 11,
@@ -16244,6 +16354,7 @@
   },
   {
     "Species": "Nihilego",
+    "Number": 793,
     "Base Stats": {
       "HP": 11,
       "Attack": 5,
@@ -16439,6 +16550,7 @@
   },
   {
     "Species": "Buzzwole",
+    "Number": 794,
     "Base Stats": {
       "HP": 11,
       "Attack": 14,
@@ -16624,6 +16736,7 @@
   },
   {
     "Species": "Pheromosa",
+    "Number": 795,
     "Base Stats": {
       "HP": 7,
       "Attack": 14,
@@ -16808,6 +16921,7 @@
   },
   {
     "Species": "Xurkitree",
+    "Number": 796,
     "Base Stats": {
       "HP": 8,
       "Attack": 9,
@@ -16987,7 +17101,7 @@
         "Magnet Rise",
         "Shock Wave",
         "Signal Beam",
-        "Snor e",
+        "Snore",
         "Tail Glow (N)",
         "Thunder Punch"
       ]
@@ -16995,6 +17109,7 @@
   },
   {
     "Species": "Celesteela",
+    "Number": 797,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -17099,6 +17214,7 @@
   },
   {
     "Species": "Kartana",
+    "Number": 798,
     "Base Stats": {
       "HP": 6,
       "Attack": 18,
@@ -17275,6 +17391,7 @@
   },
   {
     "Species": "Guzzlord",
+    "Number": 799,
     "Base Stats": {
       "HP": 22,
       "Attack": 10,
@@ -17475,6 +17592,7 @@
   },
   {
     "Species": "Poipole",
+    "Number": 803,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -17621,6 +17739,7 @@
   },
   {
     "Species": "Naganadel",
+    "Number": 804,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -17782,6 +17901,7 @@
   },
   {
     "Species": "Stakataka",
+    "Number": 805,
     "Base Stats": {
       "HP": 6,
       "Attack": 13,
@@ -17952,6 +18072,7 @@
   },
   {
     "Species": "Blacephalon",
+    "Number": 806,
     "Base Stats": {
       "HP": 5,
       "Attack": 13,
@@ -17995,9 +18116,12 @@
       "Volatile Bomb"
     ],
     "Skills": {
-      "Acr o": "4d6",
+      "Athletics": "3d6",
+      "Acrobatics": "4d6",
       "Combat": "3d6",
-      "Stealth": "5d6+3"
+      "Stealth": "5d6+3",
+      "Perception": "4d6",
+      "Focus": "3d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -18117,6 +18241,7 @@
   },
   {
     "Species": "Magearna",
+    "Number": 801,
     "Base Stats": {
       "HP": 8,
       "Attack": 10,
@@ -18270,7 +18395,7 @@
         "52 Focus Blast",
         "53 Energy Ball",
         "54 False Swipe",
-        "57 Charge Bea m",
+        "57 Charge Beam",
         "63 Embargo",
         "64 Explosion",
         "68 Giga Impact",
@@ -18308,6 +18433,7 @@
   },
   {
     "Species": "Marshadow",
+    "Number": 802,
     "Base Stats": {
       "HP": 9,
       "Attack": 13,
@@ -18444,7 +18570,7 @@
         "30 Shadow Ball",
         "31 Brick Break",
         "32 Double Team",
-        "39 Rock Tom b",
+        "39 Rock Tomb",
         "42 Facade",
         "44 Rest",
         "46 Thief",
@@ -18484,7 +18610,7 @@
         "Ice Punch (N)",
         "Iron Head",
         "Knock Off",
-        "Low Kic k",
+        "Low Kick",
         "Outrage",
         "Role Play",
         "Snatch",
@@ -18498,6 +18624,7 @@
   },
   {
     "Species": "Zeraora",
+    "Number": 807,
     "Base Stats": {
       "HP": 9,
       "Attack": 11,

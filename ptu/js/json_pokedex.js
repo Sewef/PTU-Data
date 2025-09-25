@@ -2,8 +2,8 @@
   const CFG = {
     // Primary JSON location (mirror your moves.html convention)
     jsonUrls: [
-      '/ptu/data/pokedex/pokedex_core.json', // expected in your project
-      '/ptu/data/pokedex/pokedex_7g.json',                 // fallback next to page
+      //'/ptu/data/pokedex/pokedex_core.json', // expected in your project
+      '/ptu/data/pokedex/pokedex_7g.json',   // fallback next to page
     ],
     // Try a few sprite/icon path patterns. Override easily.
     iconPatterns: [
@@ -24,15 +24,58 @@
 
   // Load JSON with graceful fallbacks
   async function loadPokedex() {
-    for (const url of CFG.jsonUrls) {
-      try {
-        const res = await fetch(url, { cache: 'no-store' });
-        if (res.ok) { return res.json(); }
-      } catch (e) { /* continue */ }
-    }
-    throw new Error('Unable to load pokedex_core.json from configured locations');
-  }
+    // 1) Tenter de charger toutes les URLs en parallèle
+    const results = await Promise.allSettled(
+      CFG.jsonUrls.map(u =>
+        fetch(u, { cache: 'no-store' }).then(r => {
+          if (!r.ok) throw new Error(`${u}: HTTP ${r.status}`);
+          return r.json();
+        })
+      )
+    );
 
+    // 2) Récupérer toutes les arrays trouvées, garder les erreurs pour debug
+    const arrays = [];
+    const errors = [];
+    results.forEach((res, i) => {
+      if (res.status === 'fulfilled') {
+        const data = res.value;
+        if (Array.isArray(data)) {
+          arrays.push(data);
+        } else if (data && Array.isArray(data.Pokedex)) {
+          // au cas où la structure serait { Pokedex: [...] }
+          arrays.push(data.Pokedex);
+        } else {
+          console.warn(`JSON pas au format array pour ${CFG.jsonUrls[i]}`, data);
+        }
+      } else {
+        errors.push(`${CFG.jsonUrls[i]} → ${res.reason}`);
+      }
+    });
+
+    // 3) Fusion + dédoublonnage (par Number + Species insensible à la casse)
+    const merged = arrays.flat();
+    const byKey = new Map();
+    for (const p of merged) {
+      const key = `${p.Number ?? ''}::${String(p.Species ?? '').toLowerCase()}`;
+      if (!byKey.has(key)) {
+        byKey.set(key, p);
+      } else {
+        // merge superficiel : les champs du dernier JSON écrasent les précédents
+        byKey.set(key, { ...byKey.get(key), ...p });
+      }
+    }
+
+    const out = Array.from(byKey.values());
+    if (out.length === 0) {
+      throw new Error(
+        'Impossible de charger le Pokédex depuis les URLs configurées.\n' +
+        (errors.length ? `Détails:\n- ${errors.join('\n- ')}` : '')
+      );
+    }
+
+    return out;
+  }
   // Derive flat list of distinct types present + robust form handling
   function extractTypes(p) {
     const t = p?.['Basic Information']?.Type;
