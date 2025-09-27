@@ -243,35 +243,13 @@
     }
   }
 
-  // Try multiple icon patterns, fall back to generated SVG initials
   function setupIcon(img, num, name, mode = "icon") {
-  const slug = slugify(name || '');
-  const base = mode === "full" ? "/ptu/img/pokemon/full" : "/ptu/img/pokemon/icons";
+    // mode = "icon" ou "full"
+    const slug = slugify(name || '');
+    const base = mode === "full" ? "/ptu/img/pokemon/full" : "/ptu/img/pokemon/icons";
 
-  const candidates = CFG.iconPatterns.map(fn => fn(base, num, slug)).filter(Boolean);
-  let set = false;
-
-  const tryNext = () => {
-    if (!candidates.length) {
-      // fallback: simple SVG initials
-      const initials = (String(name || '?').match(/[A-Z]/g) || ['?']).slice(0,2).join('');
-      const svg = encodeURIComponent(
-        `<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96">
-          <rect width="100%" height="100%" fill="#0b0d12"/>
-          <text x="50%" y="55%" font-family="system-ui,Arial" font-size="36" text-anchor="middle" fill="#fff">${initials}</text>
-        </svg>`
-      );
-      img.src = `data:image/svg+xml;charset=utf-8,${svg}`;
-      return;
-    }
-    const url = candidates.shift();
-    const probe = new Image();
-    probe.onload = () => { img.src = url; };
-    probe.onerror = () => tryNext();
-    probe.src = url + (url.includes('?') ? '&' : '?') + 'v=' + Date.now();
-  };
-  tryNext();
-}
+    img.src = CFG.iconPatterns.map(fn => fn(base, num, slug));
+  }
 
 
 
@@ -440,7 +418,6 @@ function renderBaseStats(stats, depth = 0) {
   return `
     <div class="mt-3">
       <h${h} class="text-muted">Base Stats</h${h}>
-      <!-- on réutilise les classes Skills pour une uniformité totale -->
       <div class="card accent skills-card bs-card">
         <ul class="list-group list-group-flush skills-list">
           ${rows}
@@ -448,6 +425,30 @@ function renderBaseStats(stats, depth = 0) {
             <span class="bs-key">Total</span>
             <span class="bs-val fw-semibold">${total}</span>
           </li>
+        </ul>
+      </div>
+    </div>
+  `;
+}
+
+function renderSkills(skills, depth = 0) {
+  // skills est supposé être un objet { "Acrobatics": 2, "Combat": 3, ... }
+
+  const entries = Object.entries(skills || {});
+  const rows = entries.map(([k, v]) => `
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span class="skill-key">${k}</span>
+      <span class="skill-val">${v}</span>
+    </li>
+  `).join("");
+
+  const h = Math.min(4 + depth, 6);
+  return `
+    <div class="mt-3">
+      <h${h} class="text-muted">Skills</h${h}>
+      <div class="card accent skills-card">
+        <ul class="list-group list-group-flush skills-list">
+          ${rows}
         </ul>
       </div>
     </div>
@@ -462,9 +463,11 @@ function renderBaseStats(stats, depth = 0) {
     return Object.entries(forms).map(([label, f]) => {
       const src = (() => {
         const t = document.createElement("img");
+        console.log(f);
         setupIcon(t, f?.Icon ?? pNum, `${pName} — ${label}`, "full");
         return t.src;
       })();
+
 
       const types = wrapTypes(f?.Type || []);
       const line = k => f?.[k] ? `<div class="small text-muted">${k}: <span class="text-body">${Array.isArray(f[k]) ? f[k].join(", ")
@@ -480,7 +483,7 @@ function renderBaseStats(stats, depth = 0) {
       <div class="card accent w-100 mb-2"><div class="card-body">
         <div class="d-flex align-items-start gap-3">
           <div class="rounded dark-background p-1">
-            <img class="dex-title-icon" alt="${pName} — ${label}" src="${src}">
+            <img class="dex-title-icon" src="${src}">
           </div>
           <div class="flex-grow-1">
             <div class="d-flex flex-wrap align-items-baseline gap-2">
@@ -560,6 +563,14 @@ function renderBaseStats(stats, depth = 0) {
             }
             continue;
           }
+
+          // --- Skills ---
+          if (k === "Skills" && v && typeof v === "object") {
+            const block = renderSkills(v, depth);
+            (leftSections.has(k) ? (col1 += block) : (col2 += block));
+            continue;
+          }
+
 
           // Render Level Up Move List
           if (k === "Moves" && v) {

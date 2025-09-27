@@ -1,20 +1,10 @@
-/* == Base document & scroll handling =============================== */
+/* ===== Core document =================================================== */
 html { overflow-y: scroll; scrollbar-gutter: stable; }
-/* Prevent Bootstrap's modal from shifting content horizontally */
+/* Prevent Bootstrap modal horizontal shift */
 body.modal-open { padding-right: 0 !important; }
 
 
-/* == Sidebar badges (truncate long labels) ============================= */
-#sidebar .badge,
-#sidebar .list-group-item .badge.bg-light {
-  max-width: 10rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-
-/* == Type color tokens ================================================== */
+/* ===== Type color tokens =============================================== */
 .card-type-Normal  { --type-color:#A8A77A; }
 .card-type-Fire    { --type-color:#EE8130; }
 .card-type-Water   { --type-color:#6390F0; }
@@ -34,14 +24,16 @@ body.modal-open { padding-right: 0 !important; }
 .card-type-Steel   { --type-color:#B7B7CE; }
 .card-type-Fairy   { --type-color:#D685AD; }
 
-/* Cards with type accent (left inset bar) */
-.card-body[class*="card-type-"] {
+/* Cards & sidebar items accented by type (inset bar on the left) */
+.card-body[class*="card-type-"],
+#sidebar .list-group-item[class*="card-type-"],
+#sidebar label.list-group-item[class*="card-type-"] {
   box-shadow: inset 6px 0 0 0 var(--type-color, transparent);
   border-top-left-radius: var(--bs-border-radius);
   border-bottom-left-radius: var(--bs-border-radius);
 }
 
-/* Type pill utility */
+/* Type pill */
 .type-pill {
   display: inline-block;
   padding: .15rem .45rem;
@@ -54,25 +46,21 @@ body.modal-open { padding-right: 0 !important; }
 }
 
 
-/* == Unified Sidebar ==================================================== */
+/* ===== Unified Sidebar ================================================== */
 aside .list-group#sidebar { display:block; gap:0; padding:0; }
 
-/* Small search block spacing at top of sidebar */
 #sidebar > .mb-3 { margin-bottom: .75rem !important; }
 
-/* Active item highlight */
 #sidebar .list-group-item.active {
   background: rgba(255,255,255,.08);
   border-color: rgba(255,255,255,.12);
   color: inherit;
 }
 
-/* Hover for actionable items */
 #sidebar .list-group-item.list-group-item-action:not(.active):hover {
   background: rgba(255,255,255,.06);
 }
 
-/* Keep Bootstrap’s active colors for .list-group-item-action.active */
 #sidebar .list-group-item.list-group-item-action.active {
   background-color: var(--bs-list-group-active-bg) !important;
   color: var(--bs-list-group-active-color) !important;
@@ -81,47 +69,41 @@ aside .list-group#sidebar { display:block; gap:0; padding:0; }
   box-shadow: none !important;
 }
 
-/* Compact checkboxes in filters */
-#sidebar .form-check { margin-bottom: .25rem; }
-#sidebar .form-check-input { margin-top: 0; }
-
-/* Make labels clickable and non-selectable */
-#sidebar label.list-group-item { cursor: pointer; user-select: none; }
-
-/* Sidebar items tinted by type (same left inset as cards) */
-#sidebar .list-group-item[class*="card-type-"],
-#sidebar label.list-group-item[class*="card-type-"] {
-  box-shadow: inset 6px 0 0 0 var(--type-color, transparent);
+/* Badges truncate */
+#sidebar .badge,
+#sidebar .list-group-item .badge.bg-light {
+  max-width: 10rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Muted notes */
+/* Sidebar form tweaks */
+#sidebar .form-check { margin-bottom: .25rem; }
+#sidebar .form-check-input { margin-top: 0; }
+#sidebar label.list-group-item { cursor: pointer; user-select: none; }
 #sidebar .text-muted { opacity: .8; }
-
-/* Full-width buttons in sidebar */
 #sidebar .btn { width: 100%; }
 
-
-/* == Collapsible toggles ================================================= */
+/* Collapsibles */
 .triangle-toggle::before {
   content: "";
   display: inline-block;
   margin-left: 4px;
   border-style: solid;
-  border-width: 6px 0 6px 10px; /* right-pointing triangle */
+  border-width: 6px 0 6px 10px;
   border-color: transparent transparent transparent #666;
   transition: transform .2s ease-in-out;
 }
 .collapse-toggle .caret { transition: transform .2s; }
 .collapse-toggle:not(.collapsed) .caret,
-.collapse-toggle:not(.collapsed) .triangle-toggle::before {
-  transform: rotate(90deg); /* points down when open */
-}
+.collapse-toggle:not(.collapsed) .triangle-toggle::before { transform: rotate(90deg); }
 
-/* Keep search sticky at top of sidebar */
+/* Sticky search */
 .search-wrap { position: sticky; top: 0; z-index: 10; }
 
 
-/* == Pokédex grid (badges) ============================================== */
+/* ===== Pokédex grid & badges ========================================== */
 .dex-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -141,10 +123,7 @@ aside .list-group#sidebar { display:block; gap:0; padding:0; }
   background: #151922;
   transition: transform .08s ease, box-shadow .08s ease;
 }
-.dex-badge:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(0,0,0,.25);
-}
+.dex-badge:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
 
 .dex-badge .icon {
   grid-column: 1;
@@ -157,17 +136,8 @@ aside .list-group#sidebar { display:block; gap:0; padding:0; }
   flex: none;
   border: 1px solid rgba(255,255,255,.06);
 }
-.dark-background { background: #0b0d12; }
-
-.dex-badge img {
-  width: 100%;
-  height: 100%;
-  object-fit: none;
-  image-rendering: pixelated;
-  filter: drop-shadow(0 1px 0 rgba(0,0,0,.25));
-}
-.dex-badge img.is-oversize { object-fit: none; object-position: center; }
-
+.dex-badge img { width: 100%; height: 100%; object-fit: none; image-rendering: pixelated; filter: drop-shadow(0 1px 0 rgba(0,0,0,.25)); }
+.dex-badge img.is-oversize { object-position: center; }
 .dex-num-badge {
   grid-column: 3;
   justify-self: start;
@@ -183,7 +153,6 @@ aside .list-group#sidebar { display:block; gap:0; padding:0; }
   line-height: 1;
   box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
-
 .dex-label {
   grid-column: 5;
   justify-self: stretch;
@@ -200,238 +169,59 @@ aside .list-group#sidebar { display:block; gap:0; padding:0; }
   text-wrap: auto;
   box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
+.dark-background { background:#0b0d12; }
 
 
-/* == Modal detail view =================================================== */
+/* ===== Modal detail view =============================================== */
 #dexModal .modal-body { padding: 1rem 1.25rem; }
 
 .dex-detail-head img { display: block; }
 .dex-detail-head img.is-oversize { width: 96px; height: 96px; object-fit: contain; }
 
-#dexModal .card.accent {
-  background: rgba(255,255,255,.03);
-  border-color: rgba(255,255,255,.08);
-}
+#dexModal .card.accent { background: rgba(255,255,255,.03); border-color: rgba(255,255,255,.08); }
 #dexModal .card.accent .card-body { padding: .75rem 1rem; }
 
 #dexModal h5.text-muted,
-#dexModal h6.text-muted {
-  text-transform: uppercase;
-  letter-spacing: .03em;
-  font-size: .82rem;
-  margin-bottom: .35rem;
-}
+#dexModal h6.text-muted { text-transform: uppercase; letter-spacing: .03em; font-size: .82rem; margin-bottom: .35rem; }
 
-/* Type line under the name */
-#dexModal .dex-title-types { display: flex; flex-wrap: wrap; gap: .375rem; }
+#dexModal .dex-title-icon { display:block; width:96px; height:96px; object-fit:none; }
+#dexModal .dex-title-types { display:flex; flex-wrap:wrap; gap:.375rem; }
 
-/* Title icon in header */
-#dexModal .dex-title-icon {
-  display: block;
-  width: 96px;
-  height: 96px;
-  object-fit: none;
-}
+/* Key/Value rows inside modal */
+#dexModal .border-bottom.py-1 { border-color: rgba(255,255,255,.08) !important; }
+#dexModal .border-bottom.py-1 .fw-bold { opacity:.85; }
 
 
-/* == Base Stats grid (FIXED) ============================================ */
-/* Two columns for the 6 stats (2x3), with Total spanning full width under */
-.bs-grid {
-  display: block;
-  gap: .5rem .75rem;
-}
-.bs-item {
-  grid-template-columns: auto max-content;
-  column-gap: .35rem;
-  align-items: center;
-  padding: .5rem .625rem;
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: .5rem;
-  background: rgba(255,255,255,.03);
-}
-.bs-item > span:last-child {
-  justify-self: end;
-  font-variant-numeric: tabular-nums;
-  font-weight: 700;
-}
-.bs-key { font-weight: 600; opacity: .9; }
-/* Total spans full width below */
-.bs-item.bs-total {
-  grid-column: 1 / -1;
-  background: rgba(255,255,255,.08);
-}
-
-
-/* == Capabilities (FIXED) =============================================== */
-/* Responsive columns that don't collapse weirdly */
+/* ===== Capabilities (numeric & chips) ================================== */
 .cap-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, minmax(0,1fr));
   gap: .5rem .75rem;
-  margin-bottom: .5rem;
-}
-.cap-item {
-  display: grid;
-  grid-template-columns: auto max-content;
-  align-items: center;
-  gap: .4rem;
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: .5rem;
-  background: rgba(255,255,255,.03);
-  padding: .5rem .625rem;
-}
-.cap-head { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; }
-.cap-ic   { width: 1.15em; display:inline-flex; justify-content:center; }
-.cap-key  { opacity: .9; }
-.cap-val  { font-variant-numeric: tabular-nums; font-weight: 700; }
-
-/* Chip-style simple capabilities */
-.cap-chips { display:flex; flex-wrap:wrap; gap:.375rem .5rem; }
-.cap-chip  {
-  display: inline-flex;
-  align-items: center;
-  gap: .35rem;
-  padding: .25rem .5rem;
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 999px;
-  background: rgba(255,255,255,.04);
-}
-.cap-chip .cap-ic { width: 1em; }
-.cap-chip span:last-child { opacity: .95; }
-
-
-/* == Utility ============================================================= */
-.dark-background { background:#0b0d12; }
-.border-muted { border-color: rgba(255,255,255,.08) !important; }
-
-
-
-/* ===== HOTFIX: Restore bs-grid & cap-grid exactly ====================== */
-
-/* Base Stats en 3 colonnes (2x3 stats + 1 colonne Total)
-   -> 2 colonnes de stats, Total en dessous sur toute la largeur */
-.bs-grid {
-  display: block;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: .25rem .5rem;
-  max-width: 80%;
-}
-.bs-item {
-  display: grid !important;              /* écrase tout flex "between" éventuel */
-  grid-template-columns: auto max-content;
-  column-gap: .25rem;                    /* espace très serré */
-  align-items: center;
-  padding: .5rem .625rem;
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: .5rem;
-  background: rgba(255,255,255,.03);
-}
-.bs-item > span:last-child {
-  justify-self: end;                     /* valeur collée à droite du bloc */
-  font-variant-numeric: tabular-nums;    /* alignement propre des chiffres */
-  font-weight: 700;
-}
-.bs-key { font-weight: 600; opacity: .9; }
-.bs-val { font-variant-numeric: tabular-nums; font-weight: 700; }
-/* Total en dessous, sur toute la largeur */
-.bs-item.bs-total {
-  grid-column: 1 / -1;
-  background: rgba(255,255,255,.08);
-}
-
-/* Capabilities numériques : même logique de grille que les Base Stats */
-.cap-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: .25rem .5rem;
   margin-bottom: .5rem;
 }
 @media (min-width: 992px) {
-  .cap-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+  .cap-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
 }
 .cap-item {
-  display: grid;
-  grid-template-columns: auto max-content;
-  column-gap: .25rem;
-  align-items: center;
-  padding: .5rem .625rem;
   border: 1px solid rgba(255,255,255,.08);
   border-radius: .5rem;
   background: rgba(255,255,255,.03);
+  padding: .5rem .625rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.cap-head { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; }
-.cap-ic   { width: 1.15em; display:inline-flex; justify-content:center; }
-.cap-key  { opacity: .9; }
-.cap-val  { font-variant-numeric: tabular-nums; font-weight: 700; }
+.cap-head { display:inline-flex; align-items:center; gap:.4rem; font-weight:600; }
+.cap-ic { width:1.15em; display:inline-flex; justify-content:center; }
+.cap-key { opacity:.9; }
+.cap-val { font-variant-numeric: tabular-nums; font-weight:700; }
 
-
-
-/* ===== COMPACT OVERRIDES: bs-grid & cap-grid =========================== */
-/* Goal: denser spacing, smaller text, same key/value alignment */
-
-/* Base Stats (compact) */
-.bs-grid {
-  gap: .2rem .4rem;
+.cap-chips { display:flex; flex-wrap:wrap; gap:.375rem .5rem; }
+.cap-chip  {
+  display:inline-flex; align-items:center; 
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:999px;
+  background:rgba(255,255,255,.04);
 }
-.bs-item {
-  padding: .35rem .5rem;
-  border-radius: .375rem;
-  /* keep grid key/value from v3 */
-}
-.bs-item > span,
-.bs-key,
-.bs-val {
-  font-size: .875rem;            /* ~14px */
-  line-height: 1.15;
-}
-.bs-item.bs-total {
-  padding-top: .4rem;
-  padding-bottom: .4rem;
-  font-weight: 700;
-}
-
-/* Capabilities (compact) */
-.cap-grid {
-  gap: .2rem .4rem;
-  margin-bottom: .25rem;
-}
-.cap-item {
-  grid-template-columns: auto max-content; /* ensure key/value layout */
-  column-gap: .35rem;
-  padding: .35rem .5rem;
-  border-radius: .375rem;
-}
-.cap-head { gap: .3rem; }
-.cap-ic   { width: 1em; }
-.cap-key,
-.cap-val  { font-size: .875rem; line-height: 1.15; }
-
-/* === UNIFORM COMPACT HOTFIX ============================================ */
-.bs-grid{gap:.2rem .4rem}
-.bs-item{padding:.35rem .5rem;border-radius:.375rem}
-.bs-item .bs-key,.bs-item .bs-val{font-size:.875rem;line-height:1.15}
-.bs-item.bs-total{padding-top:.4rem;padding-bottom:.4rem}
-
-.cap-chip{font-size:.875rem;line-height:1.15}
-.cap-grid{gap:.2rem .4rem;margin-bottom:.25rem}
-.cap-item{column-gap:.35rem;padding:.35rem .5rem;border-radius:.375rem}
-.cap-key,.cap-val{font-size:.875rem;line-height:1.15}
-/* même largeur compacte que Skills */
-.bs-card {
-  max-width: 280px;       /* ajuste selon ton rendu, 260–300px */
-  margin: 0;              /* colle à la grille */
-}
-
-.bs-list .list-group-item {
-  padding: .35rem .5rem;
-  font-size: .875rem;
-  line-height: 1.15;
-  border-color: rgba(255,255,255,.12);
-}
-
-.bs-list .bs-total {
-  background: rgba(255,255,255,.03);
-  font-weight: 600;
-}
+.cap-chip .cap-ic { width:1em; }
+.cap-chip span:last-child { opacity:.95; }
