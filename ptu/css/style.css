@@ -1,308 +1,47 @@
-html {
-  overflow-y: scroll;
-  scrollbar-gutter: stable;
-}
+/* == Base document & scroll handling =============================== */
+html { overflow-y: scroll; scrollbar-gutter: stable; }
+/* Prevent Bootstrap's modal from shifting content horizontally */
+body.modal-open { padding-right: 0 !important; }
 
-/* Réserve la gouttière de scroll (navigateurs récents) */
-body.modal-open {
-  padding-right: 0 !important;
-}
 
-/* Si vous voulez cibler uniquement les badges de source : */
+/* == Sidebar badges (truncate long labels) ============================= */
+#sidebar .badge,
 #sidebar .list-group-item .badge.bg-light {
-  max-width: 6rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.card-type-Normal {
-  --type-color: #A8A77A;
-}
-
-.card-type-Fire {
-  --type-color: #EE8130;
-}
-
-.card-type-Water {
-  --type-color: #6390F0;
-}
-
-.card-type-Electric {
-  --type-color: #F7D02C;
-}
-
-.card-type-Grass {
-  --type-color: #7AC74C;
-}
-
-.card-type-Ice {
-  --type-color: #96D9D6;
-}
-
-.card-type-Fighting {
-  --type-color: #C22E28;
-}
-
-.card-type-Poison {
-  --type-color: #A33EA1;
-}
-
-.card-type-Ground {
-  --type-color: #E2BF65;
-}
-
-.card-type-Flying {
-  --type-color: #A98FF3;
-}
-
-.card-type-Psychic {
-  --type-color: #F95587;
-}
-
-.card-type-Bug {
-  --type-color: #A6B91A;
-}
-
-.card-type-Rock {
-  --type-color: #B6A136;
-}
-
-.card-type-Ghost {
-  --type-color: #735797;
-}
-
-.card-type-Dragon {
-  --type-color: #6F35FC;
-}
-
-.card-type-Dark {
-  --type-color: #705746;
-}
-
-.card-type-Steel {
-  --type-color: #B7B7CE;
-}
-
-.card-type-Fairy {
-  --type-color: #D685AD;
-}
-
-
-/* ============ Unified Sidebar (Pokédex-style) ============ */
-/* Container spacing */
-aside .list-group#sidebar {
-  display: block;
-  gap: 0;
-  padding: 0;
-}
-
-/* Search block or any direct .mb-3 inside sidebar */
-#sidebar>.mb-3 {
-  margin-bottom: 0.75rem !important;
-}
-
-
-/* Active highlight (same on all sidebars) */
-#sidebar .list-group-item.active {
-  background: rgba(255, 255, 255, .08);
-  border-color: rgba(255, 255, 255, .12);
-  color: inherit;
-}
-
-/* Compact checkboxes in filters */
-#sidebar .form-check {
-  margin-bottom: .25rem;
-}
-
-#sidebar .form-check-input {
-  margin-top: 0;
-}
-
-/* Source/type labels as list-group items */
-#sidebar label.list-group-item {
-  cursor: pointer;
-  user-select: none;
-}
-
-/* Truncate trailing badges uniformly */
-#sidebar .badge {
   max-width: 10rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* Cartes (corps) — remplace la barre gauche par un inset shadow */
+
+/* == Type color tokens ================================================== */
+.card-type-Normal  { --type-color:#A8A77A; }
+.card-type-Fire    { --type-color:#EE8130; }
+.card-type-Water   { --type-color:#6390F0; }
+.card-type-Electric{ --type-color:#F7D02C; }
+.card-type-Grass   { --type-color:#7AC74C; }
+.card-type-Ice     { --type-color:#96D9D6; }
+.card-type-Fighting{ --type-color:#C22E28; }
+.card-type-Poison  { --type-color:#A33EA1; }
+.card-type-Ground  { --type-color:#E2BF65; }
+.card-type-Flying  { --type-color:#A98FF3; }
+.card-type-Psychic { --type-color:#F95587; }
+.card-type-Bug     { --type-color:#A6B91A; }
+.card-type-Rock    { --type-color:#B6A136; }
+.card-type-Ghost   { --type-color:#735797; }
+.card-type-Dragon  { --type-color:#6F35FC; }
+.card-type-Dark    { --type-color:#705746; }
+.card-type-Steel   { --type-color:#B7B7CE; }
+.card-type-Fairy   { --type-color:#D685AD; }
+
+/* Cards with type accent (left inset bar) */
 .card-body[class*="card-type-"] {
-  /* border-left: 6px solid var(--type-color, transparent);  <-- à enlever */
   box-shadow: inset 6px 0 0 0 var(--type-color, transparent);
   border-top-left-radius: var(--bs-border-radius);
   border-bottom-left-radius: var(--bs-border-radius);
 }
 
-/* Sidebar — items colorés par type, sans border-left */
-#sidebar .list-group-item[class*="card-type-"],
-#sidebar label.list-group-item[class*="card-type-"] {
-  /* border-left: 6px solid var(--type-color, transparent);  <-- à enlever */
-  box-shadow: inset 6px 0 0 0 var(--type-color, transparent);
-}
-
-/* Small helper for tiny muted notes inside sidebar */
-#sidebar .text-muted {
-  opacity: .8;
-}
-
-/* Buttons in sidebar (e.g., Select/Deselect all) */
-#sidebar .btn {
-  width: 100%;
-}
-
-
-#sidebar .list-group-item.list-group-item-action:not(.active):hover {
-  background: rgba(255, 255, 255, .06);
-}
-
-#sidebar .list-group-item.list-group-item-action.active {
-  background-color: var(--bs-list-group-active-bg) !important;
-  color: var(--bs-list-group-active-color) !important;
-  border-color: var(--bs-list-group-active-border-color) !important;
-  font-weight: 400 !important;
-  box-shadow: none !important;
-}
-
-
-.triangle-toggle::before {
-  content: "";
-  display: inline-block;
-  margin-left: 4px;
-  border-style: solid;
-  border-width: 6px 0 6px 10px;
-  /* triangle orienté vers la droite */
-  border-color: transparent transparent transparent #666;
-  transition: transform 0.2s ease-in-out;
-}
-
-/* Quand le déclencheur n'a pas .collapsed (donc la section est ouverte) */
-.collapse-toggle:not(.collapsed) .triangle-toggle::before {
-  transform: rotate(90deg);
-  /* flèche vers le bas */
-}
-
-.search-wrap {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.collapse-toggle .caret {
-  transition: transform 0.2s;
-}
-
-.collapse-toggle:not(.collapsed) .caret {
-  transform: rotate(90deg);
-}
-
-
-/* ============== POKÉDEX STYLE ============== */
-.dex-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 12px;
-}
-
-.dex-badge {
-  /* dimensions des zones (tu peux ajuster les variables) */
-  --icon-size: 42px;
-  --gap-mid: 12px;
-  --num-width: 34px;
-
-  display: grid;
-  grid-template-columns:
-    var(--icon-size)
-    /* icône */
-    var(--gap-mid)
-    /* espace */
-    var(--num-width)
-    /* #001 */
-    var(--gap-mid)
-    /* espace */
-    1fr;
-  /* nom (prend le reste) */
-  align-items: center;
-  padding: 10px 12px;
-  border-radius: 12px;
-  background: #151922;
-  transition: transform .08s ease, box-shadow .08s ease;
-}
-
-.dex-badge:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
-}
-
-.dex-badge .icon {
-  grid-column: 1;
-  width: var(--icon-size);
-  height: var(--icon-size);
-  border-radius: 10px;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  flex: none;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.dark-background {
-  background: #0b0d12;
-}
-
-.dex-badge img {
-  width: 100%;
-  height: 100%;
-  object-fit: none;
-  image-rendering: pixelated;
-  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, .25));
-}
-
-.dex-badge img.is-oversize {
-  object-fit: none;
-  object-position: center;
-}
-
-.dex-label {
-  grid-column: 5;
-  justify-self: stretch;
-  text-align: center;
-  background: rgba(255, 255, 255, .85);
-  color: #111;
-  padding: 4px 6px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.85rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-wrap: auto;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.dex-num-badge {
-  grid-column: 3;
-  justify-self: start;
-  width: var(--num-width);
-  text-align: center;
-  display: inline-block;
-  background: rgba(255, 255, 255, .85);
-  color: #333;
-  font-size: 0.7rem;
-  font-weight: 600;
-  border-radius: 4px;
-  padding: 4px 7px;
-  line-height: 1;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
+/* Type pill utility */
 .type-pill {
   display: inline-block;
   padding: .15rem .45rem;
@@ -314,29 +53,166 @@ aside .list-group#sidebar {
   margin-right: .25rem;
 }
 
-/* Modal — micro-ajustements */
-#dexModal .modal-body {
-  padding: 1rem 1.25rem;
+
+/* == Unified Sidebar ==================================================== */
+aside .list-group#sidebar { display:block; gap:0; padding:0; }
+
+/* Small search block spacing at top of sidebar */
+#sidebar > .mb-3 { margin-bottom: .75rem !important; }
+
+/* Active item highlight */
+#sidebar .list-group-item.active {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.12);
+  color: inherit;
 }
 
-.dex-detail-head img {
-  display: block;
+/* Hover for actionable items */
+#sidebar .list-group-item.list-group-item-action:not(.active):hover {
+  background: rgba(255,255,255,.06);
 }
 
-.dex-detail-head img.is-oversize {
-  width: 96px;
-  height: 96px;
-  object-fit: contain;
+/* Keep Bootstrap’s active colors for .list-group-item-action.active */
+#sidebar .list-group-item.list-group-item-action.active {
+  background-color: var(--bs-list-group-active-bg) !important;
+  color: var(--bs-list-group-active-color) !important;
+  border-color: var(--bs-list-group-active-border-color) !important;
+  font-weight: 400 !important;
+  box-shadow: none !important;
 }
+
+/* Compact checkboxes in filters */
+#sidebar .form-check { margin-bottom: .25rem; }
+#sidebar .form-check-input { margin-top: 0; }
+
+/* Make labels clickable and non-selectable */
+#sidebar label.list-group-item { cursor: pointer; user-select: none; }
+
+/* Sidebar items tinted by type (same left inset as cards) */
+#sidebar .list-group-item[class*="card-type-"],
+#sidebar label.list-group-item[class*="card-type-"] {
+  box-shadow: inset 6px 0 0 0 var(--type-color, transparent);
+}
+
+/* Muted notes */
+#sidebar .text-muted { opacity: .8; }
+
+/* Full-width buttons in sidebar */
+#sidebar .btn { width: 100%; }
+
+
+/* == Collapsible toggles ================================================= */
+.triangle-toggle::before {
+  content: "";
+  display: inline-block;
+  margin-left: 4px;
+  border-style: solid;
+  border-width: 6px 0 6px 10px; /* right-pointing triangle */
+  border-color: transparent transparent transparent #666;
+  transition: transform .2s ease-in-out;
+}
+.collapse-toggle .caret { transition: transform .2s; }
+.collapse-toggle:not(.collapsed) .caret,
+.collapse-toggle:not(.collapsed) .triangle-toggle::before {
+  transform: rotate(90deg); /* points down when open */
+}
+
+/* Keep search sticky at top of sidebar */
+.search-wrap { position: sticky; top: 0; z-index: 10; }
+
+
+/* == Pokédex grid (badges) ============================================== */
+.dex-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.dex-badge {
+  --icon-size: 42px;
+  --gap-mid: 12px;
+  --num-width: 34px;
+
+  display: grid;
+  grid-template-columns: var(--icon-size) var(--gap-mid) var(--num-width) var(--gap-mid) 1fr;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #151922;
+  transition: transform .08s ease, box-shadow .08s ease;
+}
+.dex-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+
+.dex-badge .icon {
+  grid-column: 1;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  flex: none;
+  border: 1px solid rgba(255,255,255,.06);
+}
+.dark-background { background: #0b0d12; }
+
+.dex-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,.25));
+}
+.dex-badge img.is-oversize { object-fit: none; object-position: center; }
+
+.dex-num-badge {
+  grid-column: 3;
+  justify-self: start;
+  width: var(--num-width);
+  text-align: center;
+  display: inline-block;
+  background: rgba(255,255,255,.85);
+  color: #333;
+  font-size: .7rem;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 4px 7px;
+  line-height: 1;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+.dex-label {
+  grid-column: 5;
+  justify-self: stretch;
+  text-align: center;
+  background: rgba(255,255,255,.85);
+  color: #111;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: .85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: auto;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+
+/* == Modal detail view =================================================== */
+#dexModal .modal-body { padding: 1rem 1.25rem; }
+
+.dex-detail-head img { display: block; }
+.dex-detail-head img.is-oversize { width: 96px; height: 96px; object-fit: contain; }
 
 #dexModal .card.accent {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,.03);
+  border-color: rgba(255,255,255,.08);
 }
-
-#dexModal .card.accent .card-body {
-  padding: .0rem;
-}
+#dexModal .card.accent .card-body { padding: .75rem 1rem; }
 
 #dexModal h5.text-muted,
 #dexModal h6.text-muted {
@@ -346,16 +222,10 @@ aside .list-group#sidebar {
   margin-bottom: .35rem;
 }
 
-/* Tableaux “clé / valeur” plus nets dans le détail */
-#dexModal .border-bottom.py-1 .fw-bold {
-  opacity: .85;
-}
+/* Type line under the name */
+#dexModal .dex-title-types { display: flex; flex-wrap: wrap; gap: .375rem; }
 
-#dexModal .border-bottom.py-1 {
-  border-color: rgba(255, 255, 255, .08) !important;
-}
-
-/* Icone dans le header du modal */
+/* Title icon in header */
 #dexModal .dex-title-icon {
   display: block;
   width: 96px;
@@ -363,314 +233,137 @@ aside .list-group#sidebar {
   object-fit: none;
 }
 
-/* Ligne des types sous le nom (wrap propre) */
-#dexModal .dex-title-types {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .375rem;
-}
 
-/* Base Stats en 2 colonnes (2x3 stats) + Total en pleine largeur en dessous */
+/* == Base Stats grid (FIXED) ============================================ */
+/* Two columns for the 6 stats (2x3), with Total spanning full width under */
 .bs-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: .25rem .5rem; /* lignes serrées / colonnes respirent un peu */
-  max-width: 80%
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: .5rem .75rem;
 }
-
-/* Chaque ligne (clé / valeur) : espace minimal entre libellé et valeur */
 .bs-item {
-  display: grid !important;                  /* écrase le flex "between" s'il existe */
-  grid-template-columns: auto max-content;   /* libellé auto, valeur compacte */
-  column-gap: .25rem;
+  display: grid !important;
+  grid-template-columns: auto max-content;
+  column-gap: .35rem;
   align-items: center;
+  padding: .5rem .625rem;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: .5rem;
+  background: rgba(255,255,255,.03);
 }
-
-/* Valeur alignée proprement à droite du bloc */
 .bs-item > span:last-child {
   justify-self: end;
-  font-variant-numeric: tabular-nums;        /* chiffres alignés */
-}
-
-/* Variantes optionnelles si tu ajoutes ces classes dans le HTML */
-.bs-key {
-  font-weight: 600;
-  opacity: .9;
-}
-.bs-val {
   font-variant-numeric: tabular-nums;
   font-weight: 700;
 }
-
-/* Total en dessous sur toute la largeur + petite séparation visuelle */
+.bs-key { font-weight: 600; opacity: .9; }
+/* Total spans full width below */
 .bs-item.bs-total {
-  grid-column: 1;                       /* prend toutes les colonnes */
-  background: rgba(255, 255, 255, .08);
-  margin-top: .25rem;
-  padding-top: .25rem;
-  border-top: 1px solid var(--bs-border-color-translucent, rgba(255,255,255,.12));
+  grid-column: 1 / -1;
+  background: rgba(255,255,255,.08);
 }
 
-/* Grille des capacités chiffrées */
+
+/* == Capabilities (FIXED) =============================================== */
+/* Responsive columns that don't collapse weirdly */
 .cap-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: .25rem .5rem; /* lignes serrées / colonnes respirent un peu */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: .5rem .75rem;
   margin-bottom: .5rem;
-  max-width: 80%;
 }
-
-@media (min-width: 992px) {
-  .cap-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 .cap-item {
-  border: 1px solid rgba(255, 255, 255, .08);
-  border-radius: .5rem;
-  background: rgba(255, 255, 255, .03);
-  gap: .25rem .5rem; /* lignes serrées / colonnes respirent un peu */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.cap-head {
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: auto max-content;
   align-items: center;
   gap: .4rem;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: .5rem;
+  background: rgba(255,255,255,.03);
+  padding: .5rem .625rem;
 }
+.cap-head { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; }
+.cap-ic   { width: 1.15em; display:inline-flex; justify-content:center; }
+.cap-key  { opacity: .9; }
+.cap-val  { font-variant-numeric: tabular-nums; font-weight: 700; }
 
-.cap-ic {
-  width: 1.15em;
-  display: inline-flex;
-  justify-content: center;
-}
-
-.cap-val {
-  font-variant-numeric: tabular-nums;
-}
-
-/* Chips des capacités simples */
-.cap-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0rem .5rem; /* lignes serrées / colonnes respirent un peu */
-}
-
-.cap-chip {
+/* Chip-style simple capabilities */
+.cap-chips { display:flex; flex-wrap:wrap; gap:.375rem .5rem; }
+.cap-chip  {
   display: inline-flex;
   align-items: center;
   gap: .35rem;
   padding: .25rem .5rem;
-  border: 1px solid rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255,255,255,.12);
   border-radius: 999px;
-  background: rgba(255, 255, 255, .04);
+  background: rgba(255,255,255,.04);
+  font-weight: 500;
 }
+.cap-chip .cap-ic { width: 1em; }
+.cap-chip span:last-child { opacity: .95; }
 
-.cap-chip .cap-ic {
-  width: 1em;
-}
 
-.cap-chip span:last-child {
-  opacity: .95;
-}
-
+/* == Utility ============================================================= */
+.dark-background { background:#0b0d12; }
+.border-muted { border-color: rgba(255,255,255,.08) !important; }
 
 
 
+/* ===== HOTFIX: Restore bs-grid & cap-grid exactly ====================== */
 
-
-
-/* === MODAL — UNIFORM LOOK & FEEL === */
-#dexModal { --dm-gap:.5rem; --dm-pad:.75rem; --dm-border:rgba(255,255,255,.12); }
-
-#dexModal .modal-body { padding: var(--dm-pad) calc(var(--dm-pad) + .5rem); }
-
-#dexModal h4, #dexModal h5, #dexModal h6 {
-  text-transform: uppercase;
-  letter-spacing: .03em;
-  margin: .25rem 0 .4rem;
-  font-weight: 600; opacity: .9;
-}
-
-#dexModal .card.accent { background: rgba(255,255,255,.03); border-color: var(--dm-border); }
-#dexModal .card.accent .card-body { padding: var(--dm-pad); }
-
-/* Lignes clé/valeur */
-#dexModal .row.border-bottom.py-1 {
-  padding: .35rem 0 !important;
-  border-color: var(--dm-border) !important;
-}
-#dexModal .row.border-bottom.py-1 .col-4 { opacity: .85; font-weight: 600; }
-#dexModal .row.border-bottom.py-1 .col-8 { opacity: .98; }
-
-/* Types, icônes, chips */
-#dexModal .type-pill { margin-right: .25rem; margin-bottom: .25rem; }
-#dexModal .dex-title-icon { width: 72px; height: 72px; object-fit: none; }
-#dexModal .small.text-muted { opacity: .9; }
-
-/* Base Stats (dense et aligné) */
-#dexModal .bs-grid { gap: .25rem .5rem; }
-#dexModal .bs-item {
-  display: grid !important;
-  grid-template-columns: auto max-content;
-  column-gap: .25rem; align-items: center;
-  padding: 0; background: transparent; border: none;
-}
-#dexModal .bs-item .bs-val { font-variant-numeric: tabular-nums; font-weight: 700; }
-#dexModal .bs-item.bs-total {
-  grid-column: 1 / -1;
-  margin-top: .25rem; padding-top: .25rem;
-  border-top: 1px solid var(--dm-border);
-  background: transparent;
-}
-
-/* Capabilities (grille + chips) */
-#dexModal .cap-grid { gap: .5rem .75rem; }
-#dexModal .cap-item { padding: .35rem .5rem; border-color: var(--dm-border); background: rgba(255,255,255,.03); }
-#dexModal .cap-chip { padding: .2rem .5rem; border-color: var(--dm-border); }
-
-/* Battle-Only mini cards */
-#dexModal .battle-mini .card-body { padding: .5rem; }
-#dexModal .battle-mini .dex-title-icon { width: 72px; height: 72px; }
-#dexModal .battle-mini .small.border-bottom { padding: .15rem 0; border-color: var(--dm-border) !important; }
-
-/* Espacement homogène entre cartes imbriquées */
-#dexModal .card.accent .card-body > .card.accent { margin-top: .5rem; }
-
-/* === Uniformisation Base Stats & Capabilities dans le modal === */
-#dexModal { --dm-gap:.5rem; --dm-pad:.75rem; --dm-border:rgba(255,255,255,.12); }
-
-/* 1) Même densité / même grille "lignes" */
-#dexModal .bs-grid,
-#dexModal .cap-grid {
+/* Base Stats en 3 colonnes (2x3 stats + 1 colonne Total)
+   -> 2 colonnes de stats, Total en dessous sur toute la largeur */
+.bs-grid {
   display: grid;
-  grid-template-columns: 1fr;        /* une colonne = des lignes empilées */
-  gap: 0;                            /* pas de gap : le séparateur fait le rythme */
-  margin: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .25rem .5rem;
 }
-
-/* 2) Même ligne clé/valeur (bs-item et cap-item se comportent pareil) */
-#dexModal .bs-item,
-#dexModal .cap-item {
-  display: grid !important;
-  grid-template-columns: auto max-content; /* libellé + valeur à droite (si présente) */
-  column-gap: .25rem;
+.bs-item {
+  display: grid !important;              /* écrase tout flex "between" éventuel */
+  grid-template-columns: auto max-content;
+  column-gap: .25rem;                    /* espace très serré */
   align-items: center;
-  padding: .15rem 0;                 /* même padding vertical */
-  border-bottom: 1px solid var(--dm-border);
-  background: transparent;
-  font-size: .95rem;                 /* même taille de police */
-  line-height: 1.2;                  /* même hauteur de ligne */
+  padding: .5rem .625rem;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: .5rem;
+  background: rgba(255,255,255,.03);
 }
-
-/* Libellé + valeur homogènes */
-#dexModal .bs-item > span:first-child,
-#dexModal .cap-item > span:first-child { 
-  font-weight: 600; 
-  opacity: .9;
-}
-#dexModal .bs-item > span:last-child,
-#dexModal .cap-item > span:last-child {
-  justify-self: end;
-  font-variant-numeric: tabular-nums;
+.bs-item > span:last-child {
+  justify-self: end;                     /* valeur collée à droite du bloc */
+  font-variant-numeric: tabular-nums;    /* alignement propre des chiffres */
   font-weight: 700;
 }
-
-/* 3) Total : pleine largeur + séparation douce, sans doubler la bordure */
-#dexModal .bs-item.bs-total {
+.bs-key { font-weight: 600; opacity: .9; }
+.bs-val { font-variant-numeric: tabular-nums; font-weight: 700; }
+/* Total en dessous, sur toute la largeur */
+.bs-item.bs-total {
   grid-column: 1 / -1;
-  margin-top: .25rem;
-  padding-top: .25rem;
-  border-top: 1px solid var(--dm-border);
-  border-bottom: 0;
-  background: transparent;
+  background: rgba(255,255,255,.08);
 }
 
-/* 4) Nettoyage des anciens styles "chips" Capabilities (si présents) */
-#dexModal .cap-item.bg-light,
-#dexModal .cap-item.border,
-#dexModal .cap-chip {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  padding: .15rem 0 !important;
-  margin: 0 !important;
-}
-
-/* 5) Micro-cartes Battle-Only : lignes internes matchées aux stats */
-#dexModal .battle-mini .small.border-bottom {
-  padding: .15rem 0 !important;
-  border-color: var(--dm-border) !important;
-}
-
-/* === MODAL — Uniformisation SKILLS avec Stats/Capabilities === */
-#dexModal { --dm-border: rgba(255,255,255,.12); }
-
-/* 1) Conteneurs possibles (grid ou listes/tables) → densité homogène */
-#dexModal .skills-grid,
-#dexModal .skills-list,
-#dexModal .skills { /* fallback générique si tu utilises .skills */
+/* Capabilities numériques : même logique de grille que les Base Stats */
+.cap-grid {
   display: grid;
-  grid-template-columns: 1fr;     /* lignes empilées, comme Stats/Capabilities */
-  gap: 0;
-  margin: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .25rem .5rem;
+  margin-bottom: .5rem;
 }
-
-/* 2) Ligne skill (clé/valeur) — même modèle que .bs-item / .cap-item */
-#dexModal .skill-item,
-#dexModal .skills .row,                 /* si rendu en .row */
-#dexModal .skills-list .list-group-item /* si rendu en list-group */
-{
-  display: grid !important;
+@media (min-width: 992px) {
+  .cap-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.cap-item {
+  display: grid;
   grid-template-columns: auto max-content;
   column-gap: .25rem;
   align-items: center;
-  padding: .15rem 0 !important;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid var(--dm-border) !important;
-  font-size: .95rem;
-  line-height: 1.2;
+  padding: .5rem .625rem;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: .5rem;
+  background: rgba(255,255,255,.03);
 }
-
-/* 3) Clé / Valeur — styles identiques aux Stats/Capabilities */
-#dexModal .skill-item > *:first-child,
-#dexModal .skills .row > *:first-child,
-#dexModal .skills-list .list-group-item > *:first-child {
-  font-weight: 600;
-  opacity: .9;
-}
-
-#dexModal .skill-item > *:last-child,
-#dexModal .skills .row > *:last-child,
-#dexModal .skills-list .list-group-item > *:last-child {
-  justify-self: end;
-  font-variant-numeric: tabular-nums;
-  font-weight: 700;
-}
-
-/* 4) Version table (si tes skills sortent en <table>) */
-#dexModal .skills-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-#dexModal .skills-table th,
-#dexModal .skills-table td {
-  padding: .15rem 0;
-  border-bottom: 1px solid var(--dm-border);
-  background: transparent;
-}
-#dexModal .skills-table th { font-weight: 600; opacity: .9; }
-#dexModal .skills-table td:last-child { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
-
-/* 5) En-tête "Total" éventuel (si tu en affiches un pour Skills) */
-#dexModal .skill-item.skill-total {
-  grid-column: 1 / -1;
-  margin-top: .25rem;
-  padding-top: .25rem !important;
-  border-top: 1px solid var(--dm-border) !important;
-  border-bottom: 0 !important;
-}
+.cap-head { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; }
+.cap-ic   { width: 1.15em; display:inline-flex; justify-content:center; }
+.cap-key  { opacity: .9; }
+.cap-val  { font-variant-numeric: tabular-nums; font-weight: 700; }
