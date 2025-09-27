@@ -1164,9 +1164,20 @@
       ]
     },
     "Battle-only Form": {
-      "Mega Evolution": {
+      "Mega Evolution X": {
         "Type": [
-          "Unchanged"
+          "Fire", "Dragon"
+        ],
+        "Ability": "Tough Claws",
+        "Stats": {
+          "Attack": 5,
+          "Defense": 3,
+          "Special Attack": 2
+        }
+      },
+      "Mega Evolution Y": {
+        "Type": [
+          "Unchanged "
         ],
         "Ability": "Drought",
         "Stats": {
