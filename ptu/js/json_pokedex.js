@@ -363,8 +363,8 @@
     const pushPair = (k, v) => {
       const key = String(k).trim();
       const val = Number(v);
-      if (key && Number.isFinite(val)) rated.push({ key: keyCase(key), value: val });
-      else if (key) simple.push(keyCase(key));
+      if (key && Number.isFinite(val)) rated.push({ key: key, value: val });
+      else if (key) simple.push(key);
     };
 
     const fromString = (s) => {
@@ -373,7 +373,7 @@
       // "Overland 5" / "Sky 2" / "Long Jump 2" / "Swim 3" …
       const m = str.match(/^(.+?)\s+(-?\d+(?:\.\d+)?)\s*$/);
       if (m) pushPair(m[1], m[2]);
-      else simple.push(keyCase(str));
+      else simple.push(str);
     };
 
     if (Array.isArray(raw)) {
@@ -404,12 +404,6 @@
 
     return { rated: ratedMerged, simple: simpleClean };
   }
-
-  function keyCase(s) {
-    // Capitalise joliment : "long jump" → "Long Jump"
-    return s.replace(/\s+/g, ' ').trim().replace(/(^|\s|-)\S/g, t => t.toUpperCase());
-  }
-
 
   function renderBaseStats(stats, depth = 0) {
     const order = ["HP", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"];
@@ -444,11 +438,50 @@
   `;
   }
 
+  function renderBattleOnlyForms(forms, base) {
+    if (!forms || typeof forms !== "object") return "";
+    const pNum = base?.Number ?? "", pName = base?.Species ?? "Unknown";
+
+    return Object.entries(forms).map(([label, f]) => {
+      const src = (() => {
+        const t = document.createElement("img");
+        setupIcon(t, f?.Icon ?? pNum, `${pName} — ${label}`, "full");
+        return t.src;
+      })();
+
+      const types = wrapTypes(f?.Type || []);
+      const line = k => f?.[k] ? `<div class="small text-muted">${k}: <span class="text-body">${Array.isArray(f[k]) ? f[k].join(", ")
+          : (typeof f[k] === "object" ? Object.keys(f[k]).join(", ") : String(f[k]))
+        }</span></div>` : "";
+
+      const stats = f?.Stats ? Object.entries(f.Stats)
+        .map(([k, v]) => `<div class="d-flex justify-content-between small border-bottom">
+        <span class="text-muted">${k}</span><span class="fw-semibold">${v}</span>
+      </div>`).join("") : "";
+
+      return `
+      <div class="card accent w-100 mb-2"><div class="card-body">
+        <div class="d-flex align-items-start gap-3">
+          <div class="rounded dark-background p-1">
+            <img class="dex-title-icon" alt="${pName} — ${label}" src="${src}">
+          </div>
+          <div class="flex-grow-1">
+            <div class="d-flex flex-wrap align-items-baseline gap-2">
+              <span class="fw-semibold">${label}</span><span class="ms-1">${types}</span>
+            </div>
+            ${line("Ability")}${line("Adv Ability 1")}${line("Adv Ability 2")}${line("Capabilities")}
+            ${stats ? `<div class="mt-2">${stats}</div>` : ""}
+          </div>
+        </div>
+      </div></div>`;
+    }).join("");
+  }
+
 
   function renderObject(obj, depth = 0) {
     // Dispatch: left column for “main” sections
     const leftSections = new Set([
-      "Base Stats", "Basic Information", "Evolution", "Other Information"
+      "Base Stats", "Basic Information", "Evolution", "Other Information", "Battle-Only Forms"
     ]);
 
     // null/undefined → nothing
@@ -538,6 +571,24 @@
             continue;
           }
 
+          // --- Battle-Only Forms : micro-fiches pleine largeur ---
+          if (k === "Battle-Only Forms" && v && typeof v === "object") {
+            const html = renderBattleOnlyForms(v, obj);
+            if (html.trim()) {
+              const h = Math.min(4 + depth, 6);
+              const card = `
+              <div class="mt-3">
+                <h${h} class="text-muted">Battle-Only Forms</h${h}>
+                <div class="card accent" style="--accent-color: rgba(255,255,255,.08);">
+                  <div class="card-body">
+                    ${html}
+                  </div>
+                </div>
+              </div>`;
+              (leftSections.has(k) ? (col1 += card) : (col2 += card));
+            }
+            continue;
+          }
           // Add more hand-written exclusions here as needed
           // ----------------------------------------
 
