@@ -12,17 +12,22 @@
       "Speed": 5
     },
     "Basic Information": {
-      "Type": "Grass",
+      "Type": [
+        "Grass"
+      ],
       "Basic Ability 1": "Overgrow",
       "Basic Ability 2": "Pickpocket",
       "Adv Ability 1": "Chlorophyll",
       "Adv Ability 2": "Protean",
       "High Ability": "Aroma Veil",
-      "Size": "1’04” / 0.4m",
-      "Genders": "87.5% Male 12.5% Female"
+      "Genders": "87.5% Male 12.5% Female",
+      "Size Information": {
+        "Height": "1’04” / 0.4m (Small)",
+        "Weight": "9.0 lbs / 4.1 kg (Weight Class 1)"
+      }
     },
     "Diet": "Omnivore, Phototroph",
-    "Habitat": "Forest, Grasslands Capabilities",
+    "Habitat": "Forest, Grasslands",
     "Capabilities": [
       "Overland 6",
       "Swim 2",
@@ -232,17 +237,22 @@
       "Speed": 6
     },
     "Basic Information": {
-      "Type": "Grass",
+      "Type": [
+        "Grass"
+      ],
       "Basic Ability 1": "Overgrow",
       "Basic Ability 2": "Pickpocket",
       "Adv Ability 1": "Sleight of Hand",
       "Adv Ability 2": "Protean",
       "High Ability": "Long Reach",
-      "Size": "2’11” / 0.9m",
-      "Genders": "87.5% Male 12.5% Female"
+      "Genders": "87.5% Male 12.5% Female",
+      "Size Information": {
+        "Height": "2’11” / 0.9m (Small)",
+        "Weight": "26.9 lbs / 12.2 kg (Weight Class 2)"
+      }
     },
     "Diet": "Omnivore, Phototroph",
-    "Habitat": "Forest, Grasslands Capabilities",
+    "Habitat": "Forest, Grasslands",
     "Capabilities": [
       "Overland 7",
       "Swim 3",
@@ -462,17 +472,22 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Grass /Dark",
+      "Type": [
+        "Grass /Dark"
+      ],
       "Basic Ability 1": "Overgrow",
       "Basic Ability 2": "Magician",
       "Adv Ability 1": "Sleight of Hand",
       "Adv Ability 2": "Protean",
       "High Ability": "Long Reach",
-      "Size": "4’11” / 1.5m",
-      "Genders": "87.5% Male 12.5% Female"
+      "Genders": "87.5% Male 12.5% Female",
+      "Size Information": {
+        "Height": "4’11” / 1.5m (Medium)",
+        "Weight": "68.8 lbs / 31.2 kg (Weight Class 3)"
+      }
     },
     "Diet": "Omnivore, Phototroph",
-    "Habitat": "Forest, Grasslands Capabilities",
+    "Habitat": "Forest, Grasslands",
     "Capabilities": [
       "Overland 8",
       "Swim 3",
@@ -720,17 +735,22 @@
       "Speed": 6
     },
     "Basic Information": {
-      "Type": "Fire",
+      "Type": [
+        "Fire"
+      ],
       "Basic Ability 1": "Blaze",
       "Basic Ability 2": "Lunchbox",
       "Adv Ability 1": "Gluttony",
       "Adv Ability 2": "Stamina",
       "High Ability": "Unaware",
-      "Size": "1’4” / 0.4m",
-      "Genders": "87.5% Male 12.5% Female"
+      "Genders": "87.5% Male 12.5% Female",
+      "Size Information": {
+        "Height": "1’4” / 0.4m (Small)",
+        "Weight": "21.6 lbs / 9.8 kg (Weight Class 1)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Marsh, Cave Capabilities",
+    "Habitat": "Marsh, Cave",
     "Capabilities": [
       "Overland 4",
       "Swim 2",
@@ -971,17 +991,22 @@
       "Speed": 8
     },
     "Basic Information": {
-      "Type": "Fire",
+      "Type": [
+        "Fire"
+      ],
       "Basic Ability 1": "Blaze",
       "Basic Ability 2": "Lunchbox",
       "Adv Ability 1": "Gluttony",
       "Adv Ability 2": "Stamina",
       "High Ability": "Unaware",
-      "Size": "3’03” / 1.0m",
-      "Genders": "87.5% Male 12.5% Female"
+      "Genders": "87.5% Male 12.5% Female",
+      "Size Information": {
+        "Height": "3’03” / 1.0m (Medium)",
+        "Weight": "67.7 lbs / 30.7 kg (Weight Class 3)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Marsh, Cave Capabilities",
+    "Habitat": "Marsh, Cave",
     "Capabilities": [
       "Overland 5",
       "Swim 3",
@@ -1223,17 +1248,23 @@
       "Speed": 10
     },
     "Basic Information": {
-      "Type": "Fire / Ghost",
+      "Type": [
+        "Fire",
+        "Ghost"
+      ],
       "Basic Ability 1": "Blaze",
       "Basic Ability 2": "Lunchbox",
       "Adv Ability 1": "Haunting Elegy",
       "Adv Ability 2": "Stamina",
       "High Ability": "Unaware",
-      "Size": "5’03” / 1.6m",
-      "Genders": "87.5% Male 12.5% Female"
+      "Genders": "87.5% Male 12.5% Female",
+      "Size Information": {
+        "Height": "5’03” / 1.6m (Large)",
+        "Weight": "719.8 lbs / 326.5 kg (Weight Class 6)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Marsh, Cave Capabilities",
+    "Habitat": "Marsh, Cave",
     "Capabilities": [
       "Overland 8",
       "Swim 3",
@@ -1490,17 +1521,22 @@
       "Speed": 5
     },
     "Basic Information": {
-      "Type": "Water",
+      "Type": [
+        "Water"
+      ],
       "Basic Ability 1": "Torrent",
       "Basic Ability 2": "Dancer",
       "Adv Ability 1": "Moxie",
       "Adv Ability 2": "Swift Swim",
       "High Ability": "Dazzling",
-      "Size": "1’08” / 0.5m",
-      "Genders": "87.5% Male 12.5% Female"
+      "Genders": "87.5% Male 12.5% Female",
+      "Size Information": {
+        "Height": "1’08” / 0.5m (Small)",
+        "Weight": "13.4 lbs / 6.1 kg (Weight Class 1)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Beach, Freshwater Capabilities",
+    "Habitat": "Beach, Freshwater",
     "Capabilities": [
       "Overland 4",
       "Swim 3",
@@ -1716,17 +1752,22 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Water",
+      "Type": [
+        "Water"
+      ],
       "Basic Ability 1": "Torrent",
       "Basic Ability 2": "Dancer",
       "Adv Ability 1": "Moxie",
       "Adv Ability 2": "Box Step",
       "High Ability": "Dazzling",
-      "Size": "3’11” / 1.2m",
-      "Genders": "87.5% Male 12.5% Female"
+      "Genders": "87.5% Male 12.5% Female",
+      "Size Information": {
+        "Height": "3’11” / 1.2m (Medium)",
+        "Weight": "47.4 lbs / 21.5 kg (Weight Class 2)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Beach, Freshwater Capabilities",
+    "Habitat": "Beach, Freshwater",
     "Capabilities": [
       "Overland 6",
       "Swim 5",
@@ -1944,17 +1985,23 @@
       "Speed": 8
     },
     "Basic Information": {
-      "Type": "Water / Fighting",
+      "Type": [
+        "Water",
+        "Fighting"
+      ],
       "Basic Ability 1": "Torrent",
       "Basic Ability 2": "Dancer",
       "Adv Ability 1": "Moxie",
       "Adv Ability 2": "Box Step",
       "High Ability": "Dazzling",
-      "Size": "5’11” / 1.8m",
-      "Genders": "87.5% Male 12.5% Female"
+      "Genders": "87.5% Male 12.5% Female",
+      "Size Information": {
+        "Height": "5’11” / 1.8m (Medium)",
+        "Weight": "136.5 lbs / 61.9 kg (Weight Class 4)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Beach, Freshwater Capabilities",
+    "Habitat": "Beach, Freshwater",
     "Capabilities": [
       "Overland 8",
       "Swim 7",
@@ -2196,17 +2243,22 @@
       "Speed": 4
     },
     "Basic Information": {
-      "Type": "Normal",
+      "Type": [
+        "Normal"
+      ],
       "Basic Ability 1": "Aroma Veil",
       "Basic Ability 2": "Gluttony",
       "Adv Ability 1": "Weird Power",
       "Adv Ability 2": "Thick Fat",
       "High Ability": "Cud Chew",
-      "Size": "1’8” / 0.5m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’8” / 0.5m (Small)",
+        "Weight": "22.5 lbs / 10.2 kg (Weight Class 1)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Grassland, Forest Capabilities",
+    "Habitat": "Grassland, Forest",
     "Capabilities": [
       "Overland 4",
       "Swim 2",
@@ -2409,14 +2461,19 @@
       "Speed": 8
     },
     "Basic Information": {
-      "Type": "Normal",
+      "Type": [
+        "Normal"
+      ],
       "Basic Ability 1": "Lingering Aroma",
       "Basic Ability 2": "Gluttony",
       "Adv Ability 1": "Weird Power",
       "Adv Ability 2": "Thick Fat",
       "High Ability": "Cud Chew",
-      "Size": "3’3” / 1.0m",
-      "Genders": "100.0% Male 00.0% Female"
+      "Genders": "100.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "3’3” / 1.0m (Medium)",
+        "Weight": "264.6 lbs / 120.0 kg (Weight Class 5)"
+      }
     },
     "Diet": "Omnivore",
     "Habitat": "Grassland, Forest",
@@ -2631,14 +2688,19 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Normal",
+      "Type": [
+        "Normal"
+      ],
       "Basic Ability 1": "Lingering Aroma",
       "Basic Ability 2": "Gluttony",
       "Adv Ability 1": "Weird Power",
       "Adv Ability 2": "Thick Fat",
       "High Ability": "Cud Chew",
-      "Size": "3’3” / 1.0m",
-      "Genders": "00.0% Male 100.0% Female"
+      "Genders": "00.0% Male 100.0% Female",
+      "Size Information": {
+        "Height": "3’3” / 1.0m (Medium)",
+        "Weight": "264.6 lbs / 120.0 kg (Weight Class 5)"
+      }
     },
     "Diet": "Omnivore",
     "Habitat": "Grassland, Forest",
@@ -2853,17 +2915,22 @@
       "Speed": 5
     },
     "Basic Information": {
-      "Type": "Bug",
+      "Type": [
+        "Bug"
+      ],
       "Basic Ability 1": "Compound Eyes",
       "Basic Ability 2": "Overcoat",
       "Adv Ability 1": "Silk Threads",
       "Adv Ability 2": "Stakeout",
       "High Ability": "Sturdy",
-      "Size": "1’0” / 0.3m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’0” / 0.3m (Small)",
+        "Weight": "8.8 lbs / 4.0 kg (Weight Class 1)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Forest Capabilities",
+    "Habitat": "Forest",
     "Capabilities": [
       "Overland 4",
       "Swim 2",
@@ -3085,17 +3152,22 @@
       "Speed": 9
     },
     "Basic Information": {
-      "Type": "Bug",
+      "Type": [
+        "Bug"
+      ],
       "Basic Ability 1": "Compound Eyes",
       "Basic Ability 2": "Infiltrator",
       "Adv Ability 1": "Silk Threads",
       "Adv Ability 2": "Stakeout",
       "High Ability": "Ambush",
-      "Size": "3’3” / 1.0m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "3’3” / 1.0m (Mediuml)",
+        "Weight": "36.4 lbs / 16.5 kg (Weight Class 2)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Forest Capabilities",
+    "Habitat": "Forest",
     "Capabilities": [
       "Overland 6",
       "Swim 3",
@@ -3335,17 +3407,22 @@
       "Speed": 4
     },
     "Basic Information": {
-      "Type": "Bug",
+      "Type": [
+        "Bug"
+      ],
       "Basic Ability 1": "Swarm",
       "Adv Ability 1": "Tinted Lens",
       "Adv Ability 2": "Run Away",
       "Adv Ability 3": "Unburden",
       "High Ability": "Flutter",
-      "Size": "0’8” / 0.2m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "0’8” / 0.2m (Small)",
+        "Weight": "2.2 lbs / 1.0 kg (Weight Class 1)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Grassland, Forest Capabilities",
+    "Habitat": "Grassland, Forest",
     "Capabilities": [
       "Overland 4",
       "Swim 2",
@@ -3565,14 +3642,20 @@
       "Speed": 8
     },
     "Basic Information": {
-      "Type": "Bug / Dark",
+      "Type": [
+        "Bug",
+        "Dark"
+      ],
       "Basic Ability 1": "Kampfgeist",
       "Adv Ability 1": "Tinted Lens",
       "Adv Ability 2": "Technician",
       "Adv Ability 3": "Showdown Mode",
       "High Ability": "Lightning Kicks",
-      "Size": "3’3” / 1.0m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "3’3” / 1.0m (Medium)",
+        "Weight": "38.6 lbs / 17.5 kg (Weight Class 2)"
+      }
     },
     "Diet": "Herbivore",
     "Habitat": "Forest, Grassland",
@@ -3829,14 +3912,19 @@
       "Speed": 2
     },
     "Basic Information": {
-      "Type": "Electric",
+      "Type": [
+        "Electric"
+      ],
       "Basic Ability 1": "Static",
       "Basic Ability 2": "Run Away",
       "Adv Ability 1": "Blessed Touch",
       "Adv Ability 2": "Iron Fist",
       "High Ability": "Accelerate",
-      "Size": "1’0” / 0.3m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’0” / 0.3m (Small)",
+        "Weight": "5.5 lbs / 2.5 kg (Weight Class 1)"
+      }
     },
     "Diet": "Herbivore",
     "Habitat": "Forest, Grassland, Mountain",
@@ -4071,17 +4159,23 @@
       "Speed": 4
     },
     "Basic Information": {
-      "Type": "Electric / Fighting",
+      "Type": [
+        "Electric",
+        "Fighting"
+      ],
       "Basic Ability 1": "Static",
       "Basic Ability 2": "Run Away",
       "Adv Ability 1": "Blessed Touch",
       "Adv Ability 2": "Iron Fist",
       "High Ability": "Accelerate",
-      "Size": "1’4” / 0.4m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’4” / 0.4m (Small)",
+        "Weight": "14.3 lbs / 6.5 kg (Weight Class 1)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Forest, Grassland, Mountain Capabilities",
+    "Habitat": "Forest, Grassland, Mountain",
     "Capabilities": [
       "Overland 5",
       "Swim 2",
@@ -4321,17 +4415,23 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Electric / Fighting",
+      "Type": [
+        "Electric",
+        "Fighting"
+      ],
       "Basic Ability 1": "Static",
       "Basic Ability 2": "Teamwork",
       "Adv Ability 1": "Blessed Touch",
       "Adv Ability 2": "Iron Fist",
       "High Ability": "Accelerate",
-      "Size": "2’11” / 0.9m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "2’11” / 0.9m (Small)",
+        "Weight": "90.4 lbs / 41.0 kg (Weight Class 3)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Forest, Grassland, Mountain Capabilities",
+    "Habitat": "Forest, Grassland, Mountain",
     "Capabilities": [
       "Overland 7",
       "Swim 3",
@@ -4590,17 +4690,22 @@
       "Speed": 5
     },
     "Basic Information": {
-      "Type": "Normal",
+      "Type": [
+        "Normal"
+      ],
       "Basic Ability 1": "Pickup",
       "Adv Ability 1": "Run Away",
       "Adv Ability 2": "Own Tempo",
       "Adv Ability 3": "Teamwork",
       "High Ability": "Fluffy",
-      "Size": "1’0” / 0.3m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "1’0” / 0.3m (Small)",
+        "Weight": "4.0 lbs / 1.8 kg (Weight Class 1)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Forest, Grassland, Urban Capabilities",
+    "Habitat": "Forest, Grassland, Urban",
     "Capabilities": [
       "Overland 6",
       "Swim 3",
@@ -4827,17 +4932,22 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Normal",
+      "Type": [
+        "Normal"
+      ],
       "Basic Ability 1": "Family Unit",
       "Adv Ability 1": "Lunchbox",
       "Adv Ability 2": "Technician",
       "Adv Ability 3": "Friend Guard",
       "High Ability": "Polycephaly",
-      "Size": "1’0” / 0.3m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "1’0” / 0.3m (Small)",
+        "Weight": "5.1 lbs / 2.3 kg (Weight Class 1)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Forest, Grassland, Urban Capabilities",
+    "Habitat": "Forest, Grassland, Urban",
     "Capabilities": [
       "Overland 6",
       "Swim 3",
@@ -5067,17 +5177,22 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Fairy",
+      "Type": [
+        "Fairy"
+      ],
       "Basic Ability 1": "Own Tempo",
       "Basic Ability 2": "Klutz",
       "Adv Ability 1": "Sweet Veil",
       "Adv Ability 2": "Ball Fetch",
       "High Ability": "Danger Syrup",
-      "Size": "1’0” / 0.3m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’0” / 0.3m (Small)",
+        "Weight": "24.0 lbs / 10.9 kg (Weight Class 1)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Urban, Forest, Grassland Capabilities",
+    "Habitat": "Urban, Forest, Grassland",
     "Capabilities": [
       "Overland 5",
       "Swim 4",
@@ -5299,14 +5414,19 @@
       "Speed": 12
     },
     "Basic Information": {
-      "Type": "Fairy",
+      "Type": [
+        "Fairy"
+      ],
       "Basic Ability 1": "Aroma Veil",
       "Basic Ability 2": "Pickup",
       "Adv Ability 1": "Well -Baked Body",
       "Adv Ability 2": "Ball Fetch",
       "High Ability": "Type Aura (Fairy)",
-      "Size": "1’8” / 0.5m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’8” / 0.5m (Small)",
+        "Weight": "32.8 lbs / 14.9 kg (Weight Class 2)"
+      }
     },
     "Diet": "Omnivore",
     "Habitat": "Urban, Forest, Grassland",
@@ -5532,17 +5652,23 @@
       "Speed": 5
     },
     "Basic Information": {
-      "Type": "Grass / Normal",
+      "Type": [
+        "Grass",
+        "Normal"
+      ],
       "Basic Ability 1": "Early Bird",
       "Basic Ability 2": "Harvest",
       "Adv Ability 1": "Seed Sower",
       "Adv Ability 2": "Stench",
       "High Ability": "Grassy Surge",
-      "Size": "1’0” / 0.3m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’0” / 0.3m (Small)",
+        "Weight": "14.3 lbs / 6.5 kg (Weight Class 1)"
+      }
     },
     "Diet": "Phototroph",
-    "Habitat": "Forest, Grassland Capabilities",
+    "Habitat": "Forest, Grassland",
     "Capabilities": [
       "Overland 3",
       "Swim 1",
@@ -5766,17 +5892,23 @@
       "Speed": 6
     },
     "Basic Information": {
-      "Type": "Grass / Normal",
+      "Type": [
+        "Grass",
+        "Normal"
+      ],
       "Basic Ability 1": "Early Bird",
       "Basic Ability 2": "Harvest",
       "Adv Ability 1": "Seed Sower",
       "Adv Ability 2": "Healer",
       "High Ability": "Grassy Surge",
-      "Size": "2’0” / 0.6m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "2’0” / 0.6m (Small)",
+        "Weight": "26.2 lbs / 11.9 kg (Weight Class 2)"
+      }
     },
     "Diet": "Phototroph",
-    "Habitat": "Forest, Grassland Capabilities",
+    "Habitat": "Forest, Grassland",
     "Capabilities": [
       "Overland 4",
       "Swim 2",
@@ -6010,17 +6142,23 @@
       "Speed": 9
     },
     "Basic Information": {
-      "Type": "Grass / Normal",
+      "Type": [
+        "Grass",
+        "Normal"
+      ],
       "Basic Ability 1": "Early Bird",
       "Basic Ability 2": "Harvest",
       "Adv Ability 1": "Seed Sower",
       "Adv Ability 2": "Forest Lord",
       "High Ability": "Grassy Surge",
-      "Size": "4’7” / 1.4m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "4’7” / 1.4m (Medium)",
+        "Weight": "106.3 lbs / 48.2 kg (Weight Class 3)"
+      }
     },
     "Diet": "Phototroph",
-    "Habitat": "Forest, Grassland Capabilities",
+    "Habitat": "Forest, Grassland",
     "Capabilities": [
       "Overland 5",
       "Swim 3",
@@ -6268,16 +6406,22 @@
       "Speed": 5
     },
     "Basic Information": {
-      "Type": "Normal / Flying",
+      "Type": [
+        "Normal",
+        "Flying"
+      ],
       "Basic Ability 1": "Keen Eye",
       "Basic Ability 2": "Hustle",
       "Adv Ability 1": "Quill & Rock*",
       "High Ability": "Quill & Rock*",
-      "Size": "2’0” / 0.6m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "2’0” / 0.6m (Small)",
+        "Weight": "5.3 lbs / 2.4 kg (Weight Class 1)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Forest, Rainforest, Urban Capabilities",
+    "Habitat": "Forest, Rainforest, Urban",
     "Capabilities": [
       "Overland 2",
       "Swim 1",
@@ -6534,17 +6678,22 @@
       "Speed": 8
     },
     "Basic Information": {
-      "Type": "Rock",
+      "Type": [
+        "Rock"
+      ],
       "Basic Ability 1": "Purifying Salt",
       "Basic Ability 2": "Sturdy",
       "Adv Ability 1": "Clear Body",
       "Adv Ability 2": "Blessed Touch",
       "High Ability": "Solid Rock",
-      "Size": "1’04” / 0.4m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’04” / 0.4m (Small)",
+        "Weight": "35.3 lbs / 16.0 kg (Weight Class 2)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Cave, Desert, Mountain Capabilities",
+    "Habitat": "Cave, Desert, Mountain",
     "Capabilities": [
       "Overland 4",
       "Swim 1",
@@ -6749,17 +6898,22 @@
       "Speed": 10
     },
     "Basic Information": {
-      "Type": "Rock",
+      "Type": [
+        "Rock"
+      ],
       "Basic Ability 1": "Purifying Salt",
       "Basic Ability 2": "Sturdy",
       "Adv Ability 1": "Clear Body",
       "Adv Ability 2": "Blessed Touch",
       "High Ability": "Solid Rock",
-      "Size": "2’0” / 0.6m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "2’0” / 0.6m (Small)",
+        "Weight": "231.5 lbs / 105.0 kg (Weight Class 5)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Cave, Desert, Mountain Capabilities",
+    "Habitat": "Cave, Desert, Mountain",
     "Capabilities": [
       "Overland 6",
       "Swim 3",
@@ -6971,17 +7125,22 @@
       "Speed": 13
     },
     "Basic Information": {
-      "Type": "Rock",
+      "Type": [
+        "Rock"
+      ],
       "Basic Ability 1": "Purifying Salt",
       "Basic Ability 2": "Sturdy",
       "Adv Ability 1": "Clear Body",
       "Adv Ability 2": "Blessed Touch",
       "High Ability": "Solid Rock",
-      "Size": "7’07” /2.3m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "7’07” /2.3m (Large)",
+        "Weight": "529.1 lbs / 240.0 kg (Weight Class 6)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Cave, Desert, Mountain Capabilities",
+    "Habitat": "Cave, Desert, Mountain",
     "Capabilities": [
       "Overland 6",
       "Swim 3",
@@ -7213,14 +7372,19 @@
       "Speed": 4
     },
     "Basic Information": {
-      "Type": "Fire",
+      "Type": [
+        "Fire"
+      ],
       "Basic Ability 1": "Flash Fire",
       "Basic Ability 2": "Inner Focus",
       "Adv Ability 1": "Flame Body",
       "Adv Ability 2": "Weird Power",
       "High Ability": "Heat Mirage",
-      "Size": "2’0” / 0.6m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "2’0” / 0.6m (Small)",
+        "Weight": "23.1lbs / 10.5 kg (Weight Class 1)"
+      }
     },
     "Diet": "Nullivore",
     "Habitat": "Forest, Desert, Mountain",
@@ -7436,17 +7600,23 @@
       "Speed": 10
     },
     "Basic Information": {
-      "Type": "Fire / Psychic",
+      "Type": [
+        "Fire",
+        "Psychic"
+      ],
       "Basic Ability 1": "Flash Fire",
       "Basic Ability 2": "Weak Armor",
       "Adv Ability 1": "Full Guard",
       "Adv Ability 2": "Mega Launcher",
       "High Ability": "Battle Armor",
-      "Size": "4’11” /1.5m",
-      "Genders": "50% Male 50% Female"
+      "Genders": "50% Male 50% Female",
+      "Size Information": {
+        "Height": "4’11” /1.5m (Medium)",
+        "Weight": "187.4 lbs / 85.0 kg (Weight Class 4)"
+      }
     },
     "Diet": "Nullivore",
-    "Habitat": "Forest, Desert, Mountain Capabilities",
+    "Habitat": "Forest, Desert, Mountain",
     "Capabilities": [
       "Overland 7",
       "Swim 3",
@@ -7701,17 +7871,23 @@
       "Speed": 8
     },
     "Basic Information": {
-      "Type": "Fire / Ghost",
+      "Type": [
+        "Fire",
+        "Ghost"
+      ],
       "Basic Ability 1": "Flash Fire",
       "Basic Ability 2": "Weak Armor",
       "Adv Ability 1": "Mold Breaker",
       "Adv Ability 2": "Sharpness",
       "High Ability": "Soulstealer",
-      "Size": "5’3” / 1.6m",
-      "Genders": "50% Male 50% Female"
+      "Genders": "50% Male 50% Female",
+      "Size Information": {
+        "Height": "5’3” / 1.6m (Medium)",
+        "Weight": "136.7 lbs /62.0 kg (Weight Class 4)"
+      }
     },
     "Diet": "Nullivore",
-    "Habitat": "Forest, Desert, Mountain Capabilities",
+    "Habitat": "Forest, Desert, Mountain",
     "Capabilities": [
       "Overland 7",
       "Swim 3",
@@ -7962,17 +8138,22 @@
       "Speed": 4
     },
     "Basic Information": {
-      "Type": "Electric",
+      "Type": [
+        "Electric"
+      ],
       "Basic Ability 1": "Own Tempo",
       "Basic Ability 2": "Static",
       "Adv Ability 1": "Damp",
       "Adv Ability 2": "Illuminate",
       "High Ability": "Levitate",
-      "Size": "1’0” / 0.3m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’0” / 0.3m (Small)",
+        "Weight": "0.9 lbs / 0.4 kg (Weight Class 1)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Freshwater, Marsh Capabilities",
+    "Habitat": "Freshwater, Marsh",
     "Capabilities": [
       "Overland 3",
       "Swim 3",
@@ -8195,17 +8376,22 @@
       "Speed": 9
     },
     "Basic Information": {
-      "Type": "Electric",
+      "Type": [
+        "Electric"
+      ],
       "Basic Ability 1": "Electromorphosis",
       "Basic Ability 2": "Static",
       "Adv Ability 1": "Damp",
       "Adv Ability 2": "Sequence",
       "High Ability": "Electric Surge",
-      "Size": "3’11” / 1.2m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "3’11” / 1.2m (Medium)",
+        "Weight": "249.1 lbs / 113.0 kg (Weight Class 5)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Freshwater, Marsh Capabilities",
+    "Habitat": "Freshwater, Marsh",
     "Capabilities": [
       "Overland 5",
       "Swim 4",
@@ -8435,17 +8621,23 @@
       "Speed": 4
     },
     "Basic Information": {
-      "Type": "Flying / Electric",
+      "Type": [
+        "Flying",
+        "Electric"
+      ],
       "Basic Ability 1": "Wind Power",
       "Basic Ability 2": "Volt Absorb",
       "Adv Ability 1": "Competitive",
       "Adv Ability 2": "Perception",
       "High Ability": "Accelerate",
-      "Size": "1’04” / 0.4m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’04” / 0.4m (Small)",
+        "Weight": "7.9 lbs /3.6 kg (Weight Class 1)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Ocean, Beach Capabilities",
+    "Habitat": "Ocean, Beach",
     "Capabilities": [
       "Overland 3",
       "Swim 2",
@@ -8659,17 +8851,23 @@
       "Speed": 6
     },
     "Basic Information": {
-      "Type": "Flying / Electric",
+      "Type": [
+        "Flying",
+        "Electric"
+      ],
       "Basic Ability 1": "Wind Power",
       "Basic Ability 2": "Volt Absorb",
       "Adv Ability 1": "Competitive",
       "Adv Ability 2": "Perception",
       "High Ability": "Accelerate",
-      "Size": "4’07” / 1.4m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "4’07” / 1.4m (Medium)",
+        "Weight": "85.2 lbs /38.6kg (Weight Class 3)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Ocean, Beach Capabilities",
+    "Habitat": "Ocean, Beach",
     "Capabilities": [
       "Overland 4",
       "Swim 2",
@@ -8884,14 +9082,19 @@
       "Speed": 6
     },
     "Basic Information": {
-      "Type": "Dark",
+      "Type": [
+        "Dark"
+      ],
       "Basic Ability 1": "Intimidate",
       "Basic Ability 2": "Run Away",
       "Adv Ability 1": "Stakeout",
       "Adv Ability 2": "Ball Fetch",
       "High Ability": "Strong Jaw",
-      "Size": "1’8” / 0.5m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’8” / 0.5m (Small)",
+        "Weight": "35.3 lbs / 16.0 kg (Weight Class 2)"
+      }
     },
     "Diet": "Carnivore",
     "Habitat": "Urban, Mountain, Desert, Forest,",
@@ -9101,14 +9304,19 @@
       "Speed": 9
     },
     "Basic Information": {
-      "Type": "Dark",
+      "Type": [
+        "Dark"
+      ],
       "Basic Ability 1": "Intimidate",
       "Basic Ability 2": "Guard Dog",
       "Adv Ability 1": "Stakeout",
       "Adv Ability 2": "Bodyguard",
       "High Ability": "Strong Jaw",
-      "Size": "3’7” / 1.1m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "3’7” / 1.1m (Medium)",
+        "Weight": "134.5 lbs / 61.0 kg (Weight Class 4)"
+      }
     },
     "Diet": "Carnivore",
     "Habitat": "Urban, Mountain, Desert, Forest,",
@@ -9329,17 +9537,23 @@
       "Speed": 4
     },
     "Basic Information": {
-      "Type": "Poison / Normal",
+      "Type": [
+        "Poison",
+        "Normal"
+      ],
       "Basic Ability 1": "Unburden",
       "Basic Ability 2": "Pickpocket",
       "Adv Ability 1": "Stench",
       "Adv Ability 2": "Neurotoxin",
       "High Ability": "Prankster",
-      "Size": "0’08” / 0.2m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "0’08” / 0.2m (Small)",
+        "Weight": "1.5 lbs / 0.7 kg (Weight Class 1)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Forest, Rainforest Capabilities",
+    "Habitat": "Forest, Rainforest",
     "Capabilities": [
       "Overland 4",
       "Swim 1",
@@ -9579,14 +9793,20 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Poison / Normal",
+      "Type": [
+        "Poison",
+        "Normal"
+      ],
       "Basic Ability 1": "Unburden",
       "Basic Ability 2": "Poison Touch",
       "Adv Ability 1": "Danger Syrup",
       "Adv Ability 2": "Neurotoxin",
       "High Ability": "Prankster",
-      "Size": "2’04” / 0.7m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "2’04” / 0.7m (Small)",
+        "Weight": "60.0 lbs / 27.2 kg (Weight Class 3)"
+      }
     },
     "Diet": "Herbivore",
     "Habitat": "Forest, Rainforest",
@@ -9832,17 +10052,23 @@
       "Speed": 3
     },
     "Basic Information": {
-      "Type": "Grass / Ghost",
+      "Type": [
+        "Grass",
+        "Ghost"
+      ],
       "Basic Ability 1": "Weird Power",
       "Basic Ability 2": "Wind Rider",
       "Adv Ability 1": "Sand Veil",
       "Adv Ability 2": "Iron Barbs",
       "High Ability": "Infiltrator",
-      "Size": "2’0” / 0.6m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "2’0” / 0.6m (Small)",
+        "Weight": "1.3 lbs / 0.6 kg (Weight Class 1)"
+      }
     },
     "Diet": "Nullivore",
-    "Habitat": "Desert Capabilities",
+    "Habitat": "Desert",
     "Capabilities": [
       "Overland 2",
       "Swim 2",
@@ -10077,17 +10303,23 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Grass / Ghost",
+      "Type": [
+        "Grass",
+        "Ghost"
+      ],
       "Basic Ability 1": "Weird Power",
       "Basic Ability 2": "Wind Rider",
       "Adv Ability 1": "Sand Veil",
       "Adv Ability 2": "Iron Barbs",
       "High Ability": "Infiltrator",
-      "Size": "3’11” / 1.2m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "3’11” / 1.2m (Small)",
+        "Weight": "13.2 lbs / 6 kg (Weight Class 1)"
+      }
     },
     "Diet": "Nullivore",
-    "Habitat": "Desert Capabilities",
+    "Habitat": "Desert",
     "Capabilities": [
       "Overland 4",
       "Swim 2",
@@ -10332,17 +10564,23 @@
       "Speed": 4
     },
     "Basic Information": {
-      "Type": "Grass / Ground",
+      "Type": [
+        "Grass",
+        "Ground"
+      ],
       "Basic Ability 1": "Mycelium Might",
       "Basic Ability 2": "Sprint",
       "Adv Ability 1": "Fungus Lord",
       "Adv Ability 2": "Tochukaso",
       "High Ability": "Effect Spore",
-      "Size": "2’11” / 0.9m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "2’11” / 0.9m (Small)",
+        "Weight": "72.8 lbs / 33.0 kg (Weight Class 3)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Forest, Grassland, Rainforest Capabilities",
+    "Habitat": "Forest, Grassland, Rainforest",
     "Capabilities": [
       "Overland 6",
       "Swim 2",
@@ -10456,17 +10694,23 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Grass / Ground",
+      "Type": [
+        "Grass",
+        "Ground"
+      ],
       "Basic Ability 1": "Mycelium Might",
       "Basic Ability 2": "Sprint",
       "Adv Ability 1": "Fungus Lord",
       "Adv Ability 2": "Tochukaso",
       "High Ability": "Effect Spore",
-      "Size": "6’3” / 1.9m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "6’3” / 1.9m (Medium)",
+        "Weight": "127.9 lbs / 58.0 kg (Weight Class 4)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Forest, Grassland, Rainforest Capabilities",
+    "Habitat": "Forest, Grassland, Rainforest",
     "Capabilities": [
       "Overland 8",
       "Swim 4",
@@ -10723,17 +10967,22 @@
       "Speed": 12
     },
     "Basic Information": {
-      "Type": "Rock",
+      "Type": [
+        "Rock"
+      ],
       "Basic Ability 1": "Anger Shell",
       "Basic Ability 2": "Shell Armor",
       "Adv Ability 1": "Sand Force",
       "Adv Ability 2": "Ambush",
       "High Ability": "Regenerator",
-      "Size": "4’03” / 1.3m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "4’03” / 1.3m (Medium)",
+        "Weight": "174.2 lbs / 79.0 kg (Weight Class 4)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Desert, Mountain Capabilities",
+    "Habitat": "Desert, Mountain",
     "Capabilities": [
       "Overland 5",
       "Swim 1",
@@ -10969,17 +11218,22 @@
       "Speed": 4
     },
     "Basic Information": {
-      "Type": "Grass",
+      "Type": [
+        "Grass"
+      ],
       "Basic Ability 1": "Insomnia",
       "Basic Ability 2": "Chlorophyll",
       "Adv Ability 1": "Klutz",
       "Adv Ability 2": "Desert Weather",
       "High Ability": "Sun Blanket",
-      "Size": "1’0” / 0.3m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’0” / 0.3m (Small)",
+        "Weight": "6.6 lbs / 4.0 kg (Weight Class 1)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Desert, Grassland Capabilities",
+    "Habitat": "Desert, Grassland",
     "Capabilities": [
       "Overland 4",
       "Swim 2",
@@ -11178,17 +11432,23 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Grass / Fire",
+      "Type": [
+        "Grass",
+        "Fire"
+      ],
       "Basic Ability 1": "Insomnia",
       "Basic Ability 2": "Chlorophyll",
       "Adv Ability 1": "Weird Power",
       "Adv Ability 2": "Cluster Mind",
       "High Ability": "Moody",
-      "Size": "2’11” / 0.9m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "2’11” / 0.9m (Small)",
+        "Weight": "33.1 lbs / 15.0 kg (Weight Class 2)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Desert, Grassland Capabilities",
+    "Habitat": "Desert, Grassland",
     "Capabilities": [
       "Overland 6",
       "Swim 3",
@@ -11402,17 +11662,22 @@
       "Speed": 6
     },
     "Basic Information": {
-      "Type": "Bug",
+      "Type": [
+        "Bug"
+      ],
       "Basic Ability 1": "Frisk",
       "Basic Ability 2": "Compound Eyes",
       "Adv Ability 1": "Shed Skin",
       "Adv Ability 2": "Ballistic",
       "High Ability": "Stench",
-      "Size": "0’08” / 0.2m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "0’08” / 0.2m (Small)",
+        "Weight": "2.2 lbs / 1.0 kg (Weight Class 1)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Desert Capabilities",
+    "Habitat": "Desert",
     "Capabilities": [
       "Overland 6",
       "Swim 1",
@@ -11617,17 +11882,23 @@
       "Speed": 9
     },
     "Basic Information": {
-      "Type": "Bug / Psychic",
+      "Type": [
+        "Bug",
+        "Psychic"
+      ],
       "Basic Ability 1": "Synchronize",
       "Basic Ability 2": "Compound Eyes",
       "Adv Ability 1": "Telepathy",
       "Adv Ability 2": "Ballistic",
       "High Ability": "Decoy",
-      "Size": "1’0” / 0.3m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’0” / 0.3m (Small)",
+        "Weight": "7.7 lbs / 3.5 kg (Weight Class 1)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Desert Capabilities",
+    "Habitat": "Desert",
     "Capabilities": [
       "Overland 1",
       "Swim 1",
@@ -11883,17 +12154,22 @@
       "Speed": 3
     },
     "Basic Information": {
-      "Type": "Psychic",
+      "Type": [
+        "Psychic"
+      ],
       "Basic Ability 1": "Anticipation",
       "Basic Ability 2": "Frisk",
       "Adv Ability 1": "Speed Boost",
       "Adv Ability 2": "Desert Weather",
       "High Ability": "Cute Charm",
-      "Size": "0’08” / 0.2m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "0’08” / 0.2m (Small)",
+        "Weight": "3.3 lbs / 1.5 kg (Weight Class 1)"
+      }
     },
     "Diet": "Insectivore",
-    "Habitat": "Desert, Grassland Capabilities",
+    "Habitat": "Desert, Grassland",
     "Capabilities": [
       "Overland 3",
       "Swim 3",
@@ -12116,17 +12392,22 @@
       "Speed": 6
     },
     "Basic Information": {
-      "Type": "Psychic",
+      "Type": [
+        "Psychic"
+      ],
       "Basic Ability 1": "Opportunist",
       "Basic Ability 2": "Frisk",
       "Adv Ability 1": "Speed Boost",
       "Adv Ability 2": "Desert Weather",
       "High Ability": "Cruelty",
-      "Size": "6’03” / 1.9m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "6’03” / 1.9m (Medium)",
+        "Weight": "198.4 lbs / 90.0 kg (Weight Class 4)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Desert, Grassland Capabilities",
+    "Habitat": "Desert, Grassland",
     "Capabilities": [
       "Overland 8",
       "Swim 3",
@@ -12367,17 +12648,23 @@
       "Speed": 5
     },
     "Basic Information": {
-      "Type": "Fairy / Steel",
+      "Type": [
+        "Fairy",
+        "Steel"
+      ],
       "Basic Ability 1": "Mold Breaker",
       "Basic Ability 2": "Own Tempo",
       "Adv Ability 1": "Pickpocket",
       "Adv Ability 2": "No Guard",
       "High Ability": "Huge Power",
-      "Size": "1’4” / 0.4m",
-      "Genders": "00.0% Male 100.0% Female"
+      "Genders": "00.0% Male 100.0% Female",
+      "Size Information": {
+        "Height": "1’4” / 0.4m (Small)",
+        "Weight": "19.6 lbs / 8.9 kg (Weight Class 1)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Grassland, Urban Capabilities",
+    "Habitat": "Grassland, Urban",
     "Capabilities": [
       "Overland 4",
       "Swim 2",
@@ -12594,17 +12881,23 @@
       "Speed": 6
     },
     "Basic Information": {
-      "Type": "Fairy / Steel",
+      "Type": [
+        "Fairy",
+        "Steel"
+      ],
       "Basic Ability 1": "Mold Breaker",
       "Basic Ability 2": "Own Tempo",
       "Adv Ability 1": "Pickpocket",
       "Adv Ability 2": "No Guard",
       "High Ability": "Huge Power",
-      "Size": "2’4” / 0.7m",
-      "Genders": "00.0% Male 100.0% Female"
+      "Genders": "00.0% Male 100.0% Female",
+      "Size Information": {
+        "Height": "2’4” / 0.7m (Small)",
+        "Weight": "130.3 lbs / 59.1 kg (Weight Class 4)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Grassland, Urban Capabilities",
+    "Habitat": "Grassland, Urban",
     "Capabilities": [
       "Overland 5",
       "Swim 2",
@@ -12826,17 +13119,23 @@
       "Speed": 8
     },
     "Basic Information": {
-      "Type": "Fairy / Steel",
+      "Type": [
+        "Fairy",
+        "Steel"
+      ],
       "Basic Ability 1": "Mold Breaker",
       "Basic Ability 2": "Own Tempo",
       "Adv Ability 1": "Pickpocket",
       "Adv Ability 2": "No Guard",
       "High Ability": "Huge Power",
-      "Size": "2’4” / 0.7m",
-      "Genders": "00.0% Male 100.0% Female"
+      "Genders": "00.0% Male 100.0% Female",
+      "Size Information": {
+        "Height": "2’4” / 0.7m (Small)",
+        "Weight": "248.7 lbs / 112.8 kg (Weight Class 5)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Grassland, Urban Capabilities",
+    "Habitat": "Grassland, Urban",
     "Capabilities": [
       "Overland 6",
       "Swim 3",
@@ -13061,17 +13360,22 @@
       "Speed": 3
     },
     "Basic Information": {
-      "Type": "Water",
+      "Type": [
+        "Water"
+      ],
       "Basic Ability 1": "Gooey",
       "Basic Ability 2": "Rattled",
       "Adv Ability 1": "Water Absorb",
       "Adv Ability 2": "Sand Veil",
       "High Ability": "Damp",
-      "Size": "3’11” / 1.2m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "3’11” / 1.2m (Small)",
+        "Weight": "4.0 lbs / 1.8 kg (Weight Class 1)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Beach, Ocean Capabilities",
+    "Habitat": "Beach, Ocean",
     "Capabilities": [
       "Overland 1",
       "Swim 3",
@@ -13312,17 +13616,22 @@
       "Speed": 5
     },
     "Basic Information": {
-      "Type": "Water",
+      "Type": [
+        "Water"
+      ],
       "Basic Ability 1": "Gooey",
       "Basic Ability 2": "Rattled",
       "Adv Ability 1": "Water Absorb",
       "Adv Ability 2": "Sand Veil",
       "High Ability": "Polycephaly",
-      "Size": "3’11” / 1.2m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "3’11” / 1.2m (Small)",
+        "Weight": "11.9 lbs / 5.4 kg (Weight Class 1)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Beach, Ocean Capabilities",
+    "Habitat": "Beach, Ocean",
     "Capabilities": [
       "Overland 3",
       "Swim 5",
@@ -13567,17 +13876,23 @@
       "Speed": 9
     },
     "Basic Information": {
-      "Type": "Flying / Dark",
+      "Type": [
+        "Flying",
+        "Dark"
+      ],
       "Basic Ability 1": "Keen Eye",
       "Basic Ability 2": "Pickpocket",
       "Adv Ability 1": "Rocky Payload",
       "Adv Ability 2": "Handyman",
       "High Ability": "Cruelty",
-      "Size": "4’11” / 1.5m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "4’11” / 1.5m (Medium)",
+        "Weight": "94.6 lbs / 42.9 kg (Weight Class 3)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Beach, Mountain, Ocean, River Capabilities",
+    "Habitat": "Beach, Mountain, Ocean, River",
     "Capabilities": [
       "Overland 5",
       "Swim 3",
@@ -13819,17 +14134,22 @@
       "Speed": 4
     },
     "Basic Information": {
-      "Type": "Water",
+      "Type": [
+        "Water"
+      ],
       "Basic Ability 1": "Water Veil",
       "Adv Ability 1": "Run Away",
       "Adv Ability 2": "Beautiful",
       "Adv Ability 3": "Damp",
       "High Ability": "Hydration",
-      "Size": "4’03” / 1.3m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "4’03” / 1.3m (Medium)",
+        "Weight": "132.7 lbs /60.2 kg (Weight Class 4)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Oceans Capabilities",
+    "Habitat": "Oceans",
     "Capabilities": [
       "Overland 4",
       "Swim 7",
@@ -14042,17 +14362,22 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Water",
+      "Type": [
+        "Water"
+      ],
       "Basic Ability 1": "Zero to Hero",
       "Adv Ability 1": "Run Away",
       "Adv Ability 2": "Interference",
       "Adv Ability 3": "Damp",
       "High Ability": "Blessed Touch",
-      "Size": "4’03” / 1.3m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "4’03” / 1.3m (Medium)",
+        "Weight": "132.7 lbs /60.2 kg (Weight Class 4)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Ocean Capabilities",
+    "Habitat": "Ocean",
     "Capabilities": [
       "Overland 4",
       "Swim 7",
@@ -14307,17 +14632,22 @@
       "Speed": 10
     },
     "Basic Information": {
-      "Type": "Water",
+      "Type": [
+        "Water"
+      ],
       "Basic Ability 1": "Zero to Hero",
       "Adv Ability 1": "Justified",
       "Adv Ability 2": "Bodyguard",
       "Adv Ability 3": "Damp",
       "High Ability": "Defy Death",
-      "Size": "5’11” / 1.8m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "5’11” / 1.8m (Medium)",
+        "Weight": "214.7 lbs /97.4 kg (Weight Class 4)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Ocean Capabilities",
+    "Habitat": "Ocean",
     "Capabilities": [
       "Overland 6",
       "Swim 10",
@@ -14572,17 +14902,23 @@
       "Speed": 6
     },
     "Basic Information": {
-      "Type": "Poison / Steel",
+      "Type": [
+        "Poison",
+        "Steel"
+      ],
       "Basic Ability 1": "Sprint",
       "Basic Ability 2": "Overcoat",
       "Adv Ability 1": "Slow Start",
       "Adv Ability 2": "Slick Trail",
       "High Ability": "Filter",
-      "Size": "3’03” /1.0m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "3’03” /1.0m (Small)",
+        "Weight": "77.2 lbs / 35.0 kg (Weight Class 3)"
+      }
     },
     "Diet": "Terravore",
-    "Habitat": "Desert, Mountain, Urban Capabilities",
+    "Habitat": "Desert, Mountain, Urban",
     "Capabilities": [
       "Overland 7",
       "Swim 2",
@@ -14798,17 +15134,23 @@
       "Speed": 9
     },
     "Basic Information": {
-      "Type": "Poison / Steel",
+      "Type": [
+        "Poison",
+        "Steel"
+      ],
       "Basic Ability 1": "Sprint",
       "Basic Ability 2": "Overcoat",
       "Adv Ability 1": "Variable Transmission",
       "Adv Ability 2": "Slick Trail",
       "High Ability": "Filter",
-      "Size": "5’11” /1.8m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "5’11” /1.8m (Large)",
+        "Weight": "264.6 lbs / 120.0 kg (Weight Class 5)"
+      }
     },
     "Diet": "Terravore",
-    "Habitat": "Desert, Mountain, Urban Capabilities",
+    "Habitat": "Desert, Mountain, Urban",
     "Capabilities": [
       "Overland 10",
       "Swim 4",
@@ -15042,17 +15384,23 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Dragon / Normal",
+      "Type": [
+        "Dragon",
+        "Normal"
+      ],
       "Basic Ability 1": "Shed Skin",
       "Basic Ability 2": "Run Away",
       "Adv Ability 1": "Speed Boost",
       "Adv Ability 2": "Regenerator",
       "High Ability": "Noble Steed",
-      "Size": "5’03” / 1.6m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "5’03” / 1.6m (Medium)",
+        "Weight": "138.9 lbs / 63.0 kg (Weight Class 4)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Grassland, Mountain, Forest Capabilities",
+    "Habitat": "Grassland, Mountain, Forest",
     "Capabilities": [
       "Overland 9",
       "Swim 5",
@@ -15302,17 +15650,22 @@
       "Speed": 15
     },
     "Basic Information": {
-      "Type": "Steel",
+      "Type": [
+        "Steel"
+      ],
       "Basic Ability 1": "Earth Eater",
       "Basic Ability 2": "Arena Trap",
       "Adv Ability 1": "Bulletproof",
       "Adv Ability 2": "Sand Force",
       "High Ability": "Dig Away",
-      "Size": "8’02” / 2.5m",
-      "Genders": "00.0% Male 00.0% Female"
+      "Genders": "00.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "8’02” / 2.5m (Large)",
+        "Weight": "683.4 lbs / 310.0 kg (Weight Class 6)"
+      }
     },
     "Diet": "Terravore",
-    "Habitat": "Mountain, Desert Capabilities",
+    "Habitat": "Mountain, Desert",
     "Capabilities": [
       "Overland 7",
       "Swim 4",
@@ -15541,17 +15894,23 @@
       "Speed": 4
     },
     "Basic Information": {
-      "Type": "Poison / Rock",
+      "Type": [
+        "Poison",
+        "Rock"
+      ],
       "Basic Ability 1": "Toxic Debris",
       "Adv Ability 1": "Corrosion",
       "Adv Ability 2": "Suction Cups",
       "Adv Ability 3": "Poison Point",
       "High Ability": "Levitate",
-      "Size": "2’4” / 0.7m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "2’4” / 0.7m (Small)",
+        "Weight": "17.6 lbs / 8.0 kg (Weight Class 1)"
+      }
     },
     "Diet": "Terravore",
-    "Habitat": "Cave Capabilities",
+    "Habitat": "Cave",
     "Capabilities": [
       "Overland 2",
       "Swim 2",
@@ -15770,17 +16129,23 @@
       "Speed": 9
     },
     "Basic Information": {
-      "Type": "Poison / Rock",
+      "Type": [
+        "Poison",
+        "Rock"
+      ],
       "Basic Ability 1": "Toxic Debris",
       "Adv Ability 1": "Corrosion",
       "Adv Ability 2": "Suction Cups",
       "Adv Ability 3": "Poison Point",
       "High Ability": "Levitate",
-      "Size": "4’11” / 1.5m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "4’11” / 1.5m (Medium)",
+        "Weight": "99.2 lbs / 45.0 kg (Weight Class 3)"
+      }
     },
     "Diet": "Terravore",
-    "Habitat": "Cave Capabilities",
+    "Habitat": "Cave",
     "Capabilities": [
       "Overland 3",
       "Swim 3",
@@ -16009,17 +16374,22 @@
       "Speed": 6
     },
     "Basic Information": {
-      "Type": "Ghost",
+      "Type": [
+        "Ghost"
+      ],
       "Basic Ability 1": "Pickup",
       "Basic Ability 2": "Sprint",
       "Adv Ability 1": "Friend Guard",
       "Adv Ability 2": "Fluffy",
       "High Ability": "Soulstealer",
-      "Size": "2’00” / 0.6m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "2’00” / 0.6m (Small)",
+        "Weight": "77.2 lbs / 35.0 kg (Weight Class 3)"
+      }
     },
     "Diet": "Nullivore",
-    "Habitat": "Forest, Mountain, Tundra, Desert Capabilities",
+    "Habitat": "Forest, Mountain, Tundra, Desert",
     "Capabilities": [
       "Overland 5",
       "Swim 2",
@@ -16258,17 +16628,22 @@
       "Speed": 10
     },
     "Basic Information": {
-      "Type": "Ghost",
+      "Type": [
+        "Ghost"
+      ],
       "Basic Ability 1": "Sand Rush",
       "Basic Ability 2": "Cursed Body",
       "Adv Ability 1": "Friend Guard",
       "Adv Ability 2": "Fluffy",
       "High Ability": "Soulstealer",
-      "Size": "6’07” / 2.0m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "6’07” / 2.0m (Large)",
+        "Weight": "33.1 lbs / 15.0 kg (Weight Class 2)"
+      }
     },
     "Diet": "Nullivore",
-    "Habitat": "Forest, Mountain, Tundra, Desert Capabilities",
+    "Habitat": "Forest, Mountain, Tundra, Desert",
     "Capabilities": [
       "Overland 7",
       "Swim 3",
@@ -16511,17 +16886,23 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Flying / Fighting",
+      "Type": [
+        "Flying",
+        "Fighting"
+      ],
       "Basic Ability 1": "Scrappy",
       "Basic Ability 2": "Tangled Feet",
       "Adv Ability 1": "Teamwork",
       "Adv Ability 2": "Costar",
       "High Ability": "Lightning Kicks",
-      "Size": "5’3” / 1.6m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "5’3” / 1.6m (Medium)",
+        "Weight": "81.6 lbs / 37.0 kg (Weight Class 3)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Beach, Marsh Capabilities",
+    "Habitat": "Beach, Marsh",
     "Capabilities": [
       "Overland 5",
       "Swim 5",
@@ -16751,17 +17132,22 @@
       "Speed": 5
     },
     "Basic Information": {
-      "Type": "Ice",
+      "Type": [
+        "Ice"
+      ],
       "Basic Ability 1": "Thick Fat",
       "Basic Ability 2": "Ice Body",
       "Adv Ability 1": "Oblivious",
       "Adv Ability 2": "Snow Cloak",
       "High Ability": "Frostbite",
-      "Size": "3’11” / 1.2m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "3’11” / 1.2m (Medium)",
+        "Weight": "99.2 lbs / 45.0 kg (Weight Class 3)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Tundra, Mountain Capabilities",
+    "Habitat": "Tundra, Mountain",
     "Capabilities": [
       "Overland 6",
       "Swim 2",
@@ -16983,17 +17369,22 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Ice",
+      "Type": [
+        "Ice"
+      ],
       "Basic Ability 1": "Thick Fat",
       "Basic Ability 2": "Ice Body",
       "Adv Ability 1": "Sheer Force",
       "Adv Ability 2": "Slush Rush",
       "High Ability": "Frostbite",
-      "Size": "14’09” / 4.5m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "14’09” / 4.5m (Gigantic)",
+        "Weight": "1543.2 lbs / 700.0 kg (Weight Class 7)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Tundra, Mountain Capabilities",
+    "Habitat": "Tundra, Mountain",
     "Capabilities": [
       "Overland 5",
       "Swim 2",
@@ -17220,17 +17611,23 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Water / Psychic",
+      "Type": [
+        "Water",
+        "Psychic"
+      ],
       "Basic Ability 1": "Mold Breaker",
       "Basic Ability 2": "Shed Skin",
       "Adv Ability 1": "Sharpness",
       "Adv Ability 2": "Regenerator",
       "High Ability": "Defy Death",
-      "Size": "8’02” / 2.5m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "8’02” / 2.5m (Large)",
+        "Weight": "198.4 lbs / 90.0 kg (Weight Class 4)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Freshwater, Ocean Capabilities",
+    "Habitat": "Freshwater, Ocean",
     "Capabilities": [
       "Overland 2",
       "Swim 7",
@@ -17475,17 +17872,22 @@
       "Speed": 12
     },
     "Basic Information": {
-      "Type": "Water",
+      "Type": [
+        "Water"
+      ],
       "Basic Ability 1": "Unaware",
       "Basic Ability 2": "Oblivious",
       "Adv Ability 1": "Lunchbox",
       "Adv Ability 2": "Big Swallow",
       "High Ability": "Mouthful",
-      "Size": "39’04” /12.0m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "39’04” /12.0m (Gigantic)",
+        "Weight": "485.0 lbs / 220.0 kg (Weight Class 6)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Freshwater Capabilities",
+    "Habitat": "Freshwater",
     "Capabilities": [
       "Overland 5",
       "Swim 8",
@@ -17741,17 +18143,23 @@
       "Speed": 6
     },
     "Basic Information": {
-      "Type": "Dragon / Water",
+      "Type": [
+        "Dragon",
+        "Water"
+      ],
       "Basic Ability 1": "Commander",
       "Adv Ability 1": "Storm Drain",
       "Adv Ability 2": "Decoy",
       "Adv Ability 3": "Teamwork",
       "High Ability": "Pack Hunt",
-      "Size": "1’0” / 0.3m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’0” / 0.3m (Small)",
+        "Weight": "17.6 lbs / 8.0 kg (Weight Class 1)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Freshwater Capabilities",
+    "Habitat": "Freshwater",
     "Capabilities": [
       "Overland 4",
       "Swim 5",
@@ -17977,17 +18385,22 @@
       "Speed": 11
     },
     "Basic Information": {
-      "Type": "Fighting",
+      "Type": [
+        "Fighting"
+      ],
       "Basic Ability 1": "Intimidate",
       "Basic Ability 2": "Anger Point",
       "Adv Ability 1": "Bully",
       "Adv Ability 2": "Cud Chew",
       "High Ability": "Gore",
-      "Size": "4’7” / 1.4m",
-      "Genders": "100.0% Male 00.0% Female"
+      "Genders": "100.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "4’7” / 1.4m (Medium)",
+        "Weight": "253.5 lbs / 115.0 kg (Weight Class 5)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Grassland Capabilities",
+    "Habitat": "Grassland",
     "Capabilities": [
       "Overland 8",
       "Swim 4",
@@ -18211,17 +18624,23 @@
       "Speed": 11
     },
     "Basic Information": {
-      "Type": "Fighting / Fire",
+      "Type": [
+        "Fighting",
+        "Fire"
+      ],
       "Basic Ability 1": "Intimidate",
       "Basic Ability 2": "Anger Point",
       "Adv Ability 1": "Fiery Crash",
       "Adv Ability 2": "Cud Chew",
       "High Ability": "Gore",
-      "Size": "4’7” / 1.4m",
-      "Genders": "100.0% Male 00.0% Female"
+      "Genders": "100.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "4’7” / 1.4m (Medium)",
+        "Weight": "187.4 lbs / 85.0 kg (Weight Class 5)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Grassland Capabilities",
+    "Habitat": "Grassland",
     "Capabilities": [
       "Overland 8",
       "Swim 4",
@@ -18452,17 +18871,23 @@
       "Speed": 11
     },
     "Basic Information": {
-      "Type": "Fighting / Water",
+      "Type": [
+        "Fighting",
+        "Water"
+      ],
       "Basic Ability 1": "Intimidate",
       "Basic Ability 2": "Anger Point",
       "Adv Ability 1": "Aqua Bullet",
       "Adv Ability 2": "Cud Chew",
       "High Ability": "Gore",
-      "Size": "4’7” / 1.4m",
-      "Genders": "100.0% Male 00.0% Female"
+      "Genders": "100.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "4’7” / 1.4m (Medium)",
+        "Weight": "242.5 lbs /110.0 kg (Weight Class 5)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Grassland Capabilities",
+    "Habitat": "Grassland",
     "Capabilities": [
       "Overland 8",
       "Swim 6",
@@ -18692,14 +19117,20 @@
       "Speed": 8
     },
     "Basic Information": {
-      "Type": "Fighting / Ghost",
+      "Type": [
+        "Fighting",
+        "Ghost"
+      ],
       "Basic Ability 1": "Vital Spirit",
       "Basic Ability 2": "Defiant",
       "Adv Ability 1": "Anger Point",
       "Adv Ability 2": "Prime Fury",
       "High Ability": "Enduring Rage",
-      "Size": "3’11” / 1.2m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "3’11” / 1.2m (Medium)",
+        "Weight": "123.5 lbs / 56.0 kg (Weight Class 4)"
+      }
     },
     "Diet": "Omnivore",
     "Habitat": "Forest, Grassland, Mountain,",
@@ -18842,17 +19273,23 @@
       "Speed": 5
     },
     "Basic Information": {
-      "Type": "Poison / Ground",
+      "Type": [
+        "Poison",
+        "Ground"
+      ],
       "Basic Ability 1": "Poison Point",
       "Basic Ability 2": "Water Absorb",
       "Adv Ability 1": "Unaware",
       "Adv Ability 2": "Mud Dweller",
       "High Ability": "Damp",
-      "Size": "1’4” / 0.4m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’4” / 0.4m (Small)",
+        "Weight": "24.3 lbs / 11.0 kg (Weight Class 1)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Marsh Capabilities",
+    "Habitat": "Marsh",
     "Capabilities": [
       "Overland 5",
       "Swim 4",
@@ -19068,17 +19505,23 @@
       "Speed": 6
     },
     "Basic Information": {
-      "Type": "Poison / Ground",
+      "Type": [
+        "Poison",
+        "Ground"
+      ],
       "Basic Ability 1": "Poison Point",
       "Basic Ability 2": "Water Absorb",
       "Adv Ability 1": "Unaware",
       "Adv Ability 2": "Mud Dweller",
       "High Ability": "Damp",
-      "Size": "5’11” / 1.8m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "5’11” / 1.8m (Medium)",
+        "Weight": "491.6 lbs / 223.0 kg (Weight Class 6)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Marsh Capabilities",
+    "Habitat": "Marsh",
     "Capabilities": [
       "Overland 6",
       "Swim 5",
@@ -19313,17 +19756,23 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Normal / Psychic",
+      "Type": [
+        "Normal",
+        "Psychic"
+      ],
       "Basic Ability 1": "Cud Chew",
       "Basic Ability 2": "Armor Tail",
       "Adv Ability 1": "Sap Sipper",
       "Adv Ability 2": "Probability Control",
       "High Ability": "Magic Bounce",
-      "Size": "10’06” / 3.2m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "10’06” / 3.2m (Large)",
+        "Weight": "352.7 lbs / 160.0 kg (Weight Class 5)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Grassland, Forest Capabilities",
+    "Habitat": "Grassland, Forest",
     "Capabilities": [
       "Overland 5",
       "Swim 4",
@@ -19472,17 +19921,22 @@
       "Speed": 8
     },
     "Basic Information": {
-      "Type": "Normal",
+      "Type": [
+        "Normal"
+      ],
       "Basic Ability 1": "Serene Grace",
       "Basic Ability 2": "Run Away",
       "Adv Ability 1": "Rattled",
       "Adv Ability 2": "Thick Fat",
       "High Ability": "Dig Away",
-      "Size": "11’10” /3.6m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "11’10” /3.6m (Huge)",
+        "Weight": "86.4 lbs / 39.2 kg (Weight Class 3)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Cave, Desert, Forest, Grassland Capabilities",
+    "Habitat": "Cave, Desert, Forest, Grassland",
     "Capabilities": [
       "Overland 6",
       "Swim 6",
@@ -19522,17 +19976,23 @@
       "Speed": 12
     },
     "Basic Information": {
-      "Type": "Dark / Steel",
+      "Type": [
+        "Dark",
+        "Steel"
+      ],
       "Basic Ability 1": "Defiant",
       "Basic Ability 2": "Pressure",
       "Adv Ability 1": "Sharpness",
       "Adv Ability 2": "Supreme Overlord",
       "High Ability": "Parry",
-      "Size": "6’7’’ / 2.0m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "6’7’’ / 2.0m (Large)",
+        "Weight": "264.6 lbs. / 120.0kg (Weight Class 4)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Cave, Mountain Capabilities",
+    "Habitat": "Cave, Mountain",
     "Capabilities": [
       "Overland 5",
       "Swim 2",
@@ -19573,17 +20033,23 @@
       "Speed": 13
     },
     "Basic Information": {
-      "Type": "Ground / Fighting",
+      "Type": [
+        "Ground",
+        "Fighting"
+      ],
       "Basic Ability 1": "Protosynthesis",
       "Adv Ability 1": "Sumo Stance",
       "Adv Ability 2": "Gore",
       "Adv Ability 3": "Sand Rush",
       "High Ability": "Reckless",
-      "Size": "7’3” / 2.2m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "7’3” / 2.2m (Large)",
+        "Weight": "705.5 lbs / 320.0 kg (Weight Class 6)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Desert, Mountain Capabilities",
+    "Habitat": "Desert, Mountain",
     "Capabilities": [
       "Overland 7",
       "Swim 4",
@@ -19808,17 +20274,23 @@
       "Speed": 10
     },
     "Basic Information": {
-      "Type": "Fairy / Psychic",
+      "Type": [
+        "Fairy",
+        "Psychic"
+      ],
       "Basic Ability 1": "Protosynthesis",
       "Adv Ability 1": "Cute Charm",
       "Adv Ability 2": "Weird Power",
       "Adv Ability 3": "Sound Lance",
       "High Ability": "Punk Rock",
-      "Size": "3’11” / 1.2m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "3’11” / 1.2m (Medium)",
+        "Weight": "17.6 lbs / 8.0 kg (Weight Class 1)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Cave, Grassland Capabilities",
+    "Habitat": "Cave, Grassland",
     "Capabilities": [
       "Overland 6",
       "Swim 3",
@@ -20094,17 +20566,23 @@
       "Speed": 10
     },
     "Basic Information": {
-      "Type": "Grass / Dark",
+      "Type": [
+        "Grass",
+        "Dark"
+      ],
       "Basic Ability 1": "Protosynthesis",
       "Adv Ability 1": "Effect Spore",
       "Adv Ability 2": "Bully",
       "Adv Ability 3": "Rough Skin",
       "High Ability": "Fungus Lord",
-      "Size": "3’11” / 1.2m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "3’11” / 1.2m (Medium)",
+        "Weight": "46.3 lbs / 21.0 kg (Weight Class 2)"
+      }
     },
     "Diet": "Phototroph",
-    "Habitat": "Cave, Forest, Grassland Capabilities",
+    "Habitat": "Cave, Forest, Grassland",
     "Capabilities": [
       "Overland 5",
       "Swim 1",
@@ -20314,17 +20792,23 @@
       "Speed": 6
     },
     "Basic Information": {
-      "Type": "Ghost / Fairy",
+      "Type": [
+        "Ghost",
+        "Fairy"
+      ],
       "Basic Ability 1": "Protosynthesis",
       "Adv Ability 1": "Levitate",
       "Adv Ability 2": "Omen",
       "Adv Ability 3": "Flutter",
       "High Ability": "Fur Coat",
-      "Size": "4’7” / 1.4m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "4’7” / 1.4m (Medium)",
+        "Weight": "8.8 lbs / 4.0 kg (Weight Class 1)"
+      }
     },
     "Diet": "Nullivore",
-    "Habitat": "Cave, Forest Capabilities",
+    "Habitat": "Cave, Forest",
     "Capabilities": [
       "Overland 1",
       "Swim 3",
@@ -20530,17 +21014,23 @@
       "Speed": 8
     },
     "Basic Information": {
-      "Type": "Bug / Fighting",
+      "Type": [
+        "Bug",
+        "Fighting"
+      ],
       "Basic Ability 1": "Protosynthesis",
       "Adv Ability 1": "Fiery Crash",
       "Adv Ability 2": "Fur Coat",
       "Adv Ability 3": "Tinted Lens",
       "High Ability": "Reckless",
-      "Size": "10’6” / 3.2m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "10’6” / 3.2m (Huge)",
+        "Weight": "202.0 lbs / 92.0 kg (Weight Class 4)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Cave, Mountain, Rainforest Capabilities",
+    "Habitat": "Cave, Mountain, Rainforest",
     "Capabilities": [
       "Overland 7",
       "Swim 3",
@@ -20780,17 +21270,23 @@
       "Speed": 10
     },
     "Basic Information": {
-      "Type": "Electric / Ground",
+      "Type": [
+        "Electric",
+        "Ground"
+      ],
       "Basic Ability 1": "Protosynthesis",
       "Adv Ability 1": "Magnet Pull",
       "Adv Ability 2": "Sturdy",
       "Adv Ability 3": "Sand Force",
       "High Ability": "Targeting System",
-      "Size": "7’7” / 2.3m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "7’7” / 2.3m (Large)",
+        "Weight": "132.3 lbs / 60.0 kg (Weight Class 4)"
+      }
     },
     "Diet": "Ergovore",
-    "Habitat": "Desert, Mountain, Urban Capabilities",
+    "Habitat": "Desert, Mountain, Urban",
     "Capabilities": [
       "Overland 3",
       "Swim 4",
@@ -21016,17 +21512,23 @@
       "Speed": 12
     },
     "Basic Information": {
-      "Type": "Ground / Steel",
+      "Type": [
+        "Ground",
+        "Steel"
+      ],
       "Basic Ability 1": "Quark Drive",
       "Adv Ability 1": "Sturdy",
       "Adv Ability 2": "Battle Armor",
       "Adv Ability 3": "Sand Rush",
       "High Ability": "Ballistic",
-      "Size": "2’11” / 0.9m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "2’11” / 0.9m (Small)",
+        "Weight": "529.1 lbs / 240.0 kg (Weight Class 6)"
+      }
     },
     "Diet": "Ergovore",
-    "Habitat": "Desert, Mountain Capabilities",
+    "Habitat": "Desert, Mountain",
     "Capabilities": [
       "Overland 7",
       "Swim 4",
@@ -21253,17 +21755,23 @@
       "Speed": 11
     },
     "Basic Information": {
-      "Type": "Ice / Water",
+      "Type": [
+        "Ice",
+        "Water"
+      ],
       "Basic Ability 1": "Quark Drive",
       "Adv Ability 1": "Hustle",
       "Adv Ability 2": "Snow Cloak",
       "Adv Ability 3": "Ice Jet",
       "High Ability": "Beam Cannon",
-      "Size": "2’0” / 0.6m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "2’0” / 0.6m (Small)",
+        "Weight": "24.3 lbs / 11.0 kg (Weight Class 2)"
+      }
     },
     "Diet": "Ergovore",
-    "Habitat": "Mountain, Taiga, Tundra Capabilities",
+    "Habitat": "Mountain, Taiga, Tundra",
     "Capabilities": [
       "Overland 4",
       "Swim 6",
@@ -21471,17 +21979,23 @@
       "Speed": 11
     },
     "Basic Information": {
-      "Type": "Fighting / Electric",
+      "Type": [
+        "Fighting",
+        "Electric"
+      ],
       "Basic Ability 1": "Quark Drive",
       "Adv Ability 1": "Sumo Stance",
       "Adv Ability 2": "Guts",
       "Adv Ability 3": "Galvanize",
       "High Ability": "Iron Fist",
-      "Size": "5’11” / 1.8m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "5’11” / 1.8m (Medium)",
+        "Weight": "839.3 lbs / 380.7 kg (Weight Class 6)"
+      }
     },
     "Diet": "Ergovore",
-    "Habitat": "Cave, Mountain Capabilities",
+    "Habitat": "Cave, Mountain",
     "Capabilities": [
       "Overland 6",
       "Swim 3",
@@ -21720,17 +22234,23 @@
       "Speed": 9
     },
     "Basic Information": {
-      "Type": "Dark / Flying",
+      "Type": [
+        "Dark",
+        "Flying"
+      ],
       "Basic Ability 1": "Quark Drive",
       "Adv Ability 1": "Bully",
       "Adv Ability 2": "Pride",
       "Adv Ability 3": "Cluster Mind",
       "High Ability": "Polycephaly",
-      "Size": "4’3” / 1.3m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "4’3” / 1.3m (Medium)",
+        "Weight": "244.0 lbs / 111.0 kg (Weight Class 4)"
+      }
     },
     "Diet": "Ergovore",
-    "Habitat": "Cave, Mountain Capabilities",
+    "Habitat": "Cave, Mountain",
     "Capabilities": [
       "Overland 1",
       "Swim 4",
@@ -21979,17 +22499,23 @@
       "Speed": 6
     },
     "Basic Information": {
-      "Type": "Fire / Poison",
+      "Type": [
+        "Fire",
+        "Poison"
+      ],
       "Basic Ability 1": "Quark Drive",
       "Adv Ability 1": "Levitate",
       "Adv Ability 2": "Heat Mirage",
       "Adv Ability 3": "Brimstone",
       "High Ability": "Solar Power",
-      "Size": "3’11” / 1.2m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "3’11” / 1.2m (Medium)",
+        "Weight": "79.4 lbs / 36.0 kg (Weight Class 3)"
+      }
     },
     "Diet": "Ergovore, Phototroph",
-    "Habitat": "Cave, Mountain Capabilities",
+    "Habitat": "Cave, Mountain",
     "Capabilities": [
       "Overland 2",
       "Swim 3",
@@ -22221,17 +22747,23 @@
       "Speed": 11
     },
     "Basic Information": {
-      "Type": "Rock / Electric",
+      "Type": [
+        "Rock",
+        "Electric"
+      ],
       "Basic Ability 1": "Quark Drive",
       "Adv Ability 1": "Stalwart",
       "Adv Ability 2": "Battle Armor",
       "Adv Ability 3": "Sand Stream",
       "High Ability": "Iron Barbs",
-      "Size": "5’3” / 1.6m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "5’3” / 1.6m (Large)",
+        "Weight": "668.0 lbs / 303.0 kg (Weight Class 6)"
+      }
     },
     "Diet": "Ergovore",
-    "Habitat": "Cave, Mountain Capabilities",
+    "Habitat": "Cave, Mountain",
     "Capabilities": [
       "Overland 6",
       "Swim 3",
@@ -22490,17 +23022,23 @@
       "Speed": 5
     },
     "Basic Information": {
-      "Type": "Dragon / Ice",
+      "Type": [
+        "Dragon",
+        "Ice"
+      ],
       "Basic Ability 1": "Thermal Exchange",
       "Basic Ability 2": "Ice Body",
       "Adv Ability 1": "Ice Jet",
       "Adv Ability 2": "Slush Rush",
       "High Ability": "Frostbite",
-      "Size": "1’8” / 0.5m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’8” / 0.5m (Small)",
+        "Weight": "37.5 lbs / 17 kg (Weight Class 2)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Mountain, Tundra Capabilities",
+    "Habitat": "Mountain, Tundra",
     "Capabilities": [
       "Overland 5",
       "Swim 3",
@@ -22727,17 +23265,23 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Dragon / Ice",
+      "Type": [
+        "Dragon",
+        "Ice"
+      ],
       "Basic Ability 1": "Thermal Exchange",
       "Basic Ability 2": "Ice Body",
       "Adv Ability 1": "Ice Jet",
       "Adv Ability 2": "Slush Rush",
       "High Ability": "Frostbite",
-      "Size": "2’7” / 0.8m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "2’7” / 0.8m (Small)",
+        "Weight": "66.1 lbs / 30.0 kg (Weight Class 3)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Mountain, Tundra Capabilities",
+    "Habitat": "Mountain, Tundra",
     "Capabilities": [
       "Overland 7",
       "Swim 4",
@@ -22964,17 +23508,23 @@
       "Speed": 9
     },
     "Basic Information": {
-      "Type": "Dragon / Ice",
+      "Type": [
+        "Dragon",
+        "Ice"
+      ],
       "Basic Ability 1": "Thermal Exchange",
       "Basic Ability 2": "Ice Body",
       "Adv Ability 1": "Ice Jet",
       "Adv Ability 2": "Slush Rush",
       "High Ability": "Frostbite",
-      "Size": "6’11” / 2.1m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "6’11” / 2.1m (Large)",
+        "Weight": "463.0 lbs / 210.0 kg (Weight Class 5)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Mountain, Tundra Capabilities",
+    "Habitat": "Mountain, Tundra",
     "Capabilities": [
       "Overland 10",
       "Swim 5",
@@ -23215,17 +23765,22 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Ghost",
+      "Type": [
+        "Ghost"
+      ],
       "Basic Ability 1": "Treasure Hoard",
       "Adv Ability 1": "Pickup",
       "Adv Ability 2": "Battle Armor",
       "Adv Ability 3": "Overcoat",
       "High Ability": "Bulletproof",
-      "Size": "1’0” / 0.3m",
-      "Genders": "00.0% Male 00.0% Female"
+      "Genders": "00.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "1’0” / 0.3m (Small)",
+        "Weight": "11.0 lbs / 5.0 kg (Weight Class 1)"
+      }
     },
     "Diet": "Nullivore",
-    "Habitat": "Ruins, Urban Capabilities",
+    "Habitat": "Ruins, Urban",
     "Capabilities": [
       "Overland 5",
       "Swim 3",
@@ -23427,17 +23982,23 @@
       "Speed": 10
     },
     "Basic Information": {
-      "Type": "Ghost / Steel",
+      "Type": [
+        "Ghost",
+        "Steel"
+      ],
       "Basic Ability 1": "Good as Gold",
       "Adv Ability 1": "Clear Body",
       "Adv Ability 2": "Confidence",
       "Adv Ability 3": "Friend Guard",
       "High Ability": "Dazzling",
-      "Size": "3’11” / 1.2m",
-      "Genders": "00.0% Male 00.0% Female"
+      "Genders": "00.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "3’11” / 1.2m (Medium)",
+        "Weight": "66.1 lbs / 30.0 kg (Weight Class 3)"
+      }
     },
     "Diet": "Nullivore",
-    "Habitat": "Underground, Urban, Ruins Capabilities",
+    "Habitat": "Underground, Urban, Ruins",
     "Capabilities": [
       "Overland 5",
       "Swim 7",
@@ -23642,17 +24203,23 @@
       "Speed": 10
     },
     "Basic Information": {
-      "Type": "Dark / Grass",
+      "Type": [
+        "Dark",
+        "Grass"
+      ],
       "Basic Ability 1": "Cursed Body",
       "Basic Ability 2": "Tangling Hair",
       "Adv Ability 1": "Grass Pelt",
       "Adv Ability 2": "Forest Lord",
       "High Ability": "Tablets of Ruin",
-      "Size": "4’11” / 1.5m",
-      "Genders": "00.0% Male 00.0% Female"
+      "Genders": "00.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "4’11” / 1.5m (Medium)",
+        "Weight": "163.6 lbs / 74.2 kg (Weight Class 4)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Forest, Marsh Capabilities",
+    "Habitat": "Forest, Marsh",
     "Capabilities": [
       "Overland 8",
       "Swim 3",
@@ -23907,17 +24474,23 @@
       "Speed": 8
     },
     "Basic Information": {
-      "Type": "Dark / Ice",
+      "Type": [
+        "Dark",
+        "Ice"
+      ],
       "Basic Ability 1": "Cruelty",
       "Basic Ability 2": "Moxie",
       "Adv Ability 1": "Tough Claws",
       "Adv Ability 2": "Super Luck",
       "High Ability": "Sword of Ruin",
-      "Size": "6’3” / 1.9m",
-      "Genders": "00.0% Male 00.0% Female"
+      "Genders": "00.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "6’3” / 1.9m (Large)",
+        "Weight": "335.5 lbs / 152.2 kg (Weight Class 5)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Mountain, Tundra Capabilities",
+    "Habitat": "Mountain, Tundra",
     "Capabilities": [
       "Overland 8",
       "Swim 3",
@@ -24174,17 +24747,23 @@
       "Speed": 13
     },
     "Basic Information": {
-      "Type": "Dark / Ground",
+      "Type": [
+        "Dark",
+        "Ground"
+      ],
       "Basic Ability 1": "Intimidate",
       "Basic Ability 2": "Frighten",
       "Adv Ability 1": "Rock Head",
       "Adv Ability 2": "Solid Rock",
       "High Ability": "Vessel of Ruin",
-      "Size": "8’10” / 2.7m",
-      "Genders": "00.0% Male 00.0% Female"
+      "Genders": "00.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "8’10” / 2.7m (Large)",
+        "Weight": "1542.6 lbs/699.7 kg (Weight Class 7)"
+      }
     },
     "Diet": "Terravore",
-    "Habitat": "Cave, Mountain Capabilities",
+    "Habitat": "Cave, Mountain",
     "Capabilities": [
       "Overland 8",
       "Swim 3",
@@ -24440,17 +25019,23 @@
       "Speed": 8
     },
     "Basic Information": {
-      "Type": "Dark / Fire",
+      "Type": [
+        "Dark",
+        "Fire"
+      ],
       "Basic Ability 1": "Magma Armor",
       "Basic Ability 2": "Opportunist",
       "Adv Ability 1": "Sniper",
       "Adv Ability 2": "Heat Mirage",
       "High Ability": "Beads of Ruin",
-      "Size": "1’4” / 0.4m",
-      "Genders": "00.0% Male 00.0% Female"
+      "Genders": "00.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "1’4” / 0.4m (Small)",
+        "Weight": "10.8 lbs /4.9 kg (Weight Class 1)"
+      }
     },
     "Diet": "Terravore",
-    "Habitat": "Cave, Mountain Capabilities",
+    "Habitat": "Cave, Mountain",
     "Capabilities": [
       "Overland 7",
       "Swim 4",
@@ -24702,17 +25287,23 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Dragon / Dark",
+      "Type": [
+        "Dragon",
+        "Dark"
+      ],
       "Basic Ability 1": "Protosynthesis",
       "Adv Ability 1": "Rock Head",
       "Adv Ability 2": "Cruelty",
       "Adv Ability 3": "Aerilate",
       "High Ability": "Rocket",
-      "Size": "6’7” / 2.0m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "6’7” / 2.0m (Large)",
+        "Weight": "837.7 lbs / 380.0 kg (Weight Class 6)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Cave, Mountain Capabilities",
+    "Habitat": "Cave, Mountain",
     "Capabilities": [
       "Overland 6",
       "Swim 4",
@@ -24954,17 +25545,23 @@
       "Speed": 9
     },
     "Basic Information": {
-      "Type": "Fighting / Fairy",
+      "Type": [
+        "Fighting",
+        "Fairy"
+      ],
       "Basic Ability 1": "Quark Drive",
       "Adv Ability 1": "Download",
       "Adv Ability 2": "Cruelty",
       "Adv Ability 3": "Sharpness",
       "High Ability": "Trace",
-      "Size": "4’7” / 1.4m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "4’7” / 1.4m (Medium)",
+        "Weight": "77.2 lbs / 35.0 kg (Weight Class 3)"
+      }
     },
     "Diet": "Ergovore",
-    "Habitat": "Forest, Urban Capabilities",
+    "Habitat": "Forest, Urban",
     "Capabilities": [
       "Overland 7",
       "Swim 4",
@@ -25245,17 +25842,23 @@
       "Speed": 12
     },
     "Basic Information": {
-      "Type": "Fighting / Dragon",
+      "Type": [
+        "Fighting",
+        "Dragon"
+      ],
       "Basic Ability 1": "Mold Breaker",
       "Basic Ability 2": "Sprint",
       "Adv Ability 1": "Regal Challenge",
       "Adv Ability 2": "Noble Steed",
       "High Ability": "Orichalcum Pulse",
-      "Size": "8’2” / 2.5m",
-      "Genders": "00.0% Male 00.0% Female"
+      "Genders": "00.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "8’2” / 2.5m (Large)",
+        "Weight": "668.0 lbs /303.0 kg (Weight Class 6)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Mountain, Cave, Grassland Capabilities",
+    "Habitat": "Mountain, Cave, Grassland",
     "Capabilities": [
       "Overland 10",
       "Swim 7",
@@ -25499,17 +26102,23 @@
       "Speed": 10
     },
     "Basic Information": {
-      "Type": "Electric / Dragon",
+      "Type": [
+        "Electric",
+        "Dragon"
+      ],
       "Basic Ability 1": "Surge Surfer",
       "Basic Ability 2": "Electrodash",
       "Adv Ability 1": "Accelerate",
       "Adv Ability 2": "Noble Steed",
       "High Ability": "Hadron Engine",
-      "Size": "11’6” / 3.5m",
-      "Genders": "00.0% Male 00.0% Female"
+      "Genders": "00.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "11’6” / 3.5m (Large)",
+        "Weight": "529.1 lbs / 240.0 kg (Weight Class 6)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Mountain, Cave, Urban Capabilities",
+    "Habitat": "Mountain, Cave, Urban",
     "Capabilities": [
       "Overland 10",
       "Swim 7",
@@ -25753,17 +26362,23 @@
       "Speed": 9
     },
     "Basic Information": {
-      "Type": "Water / Dragon",
+      "Type": [
+        "Water",
+        "Dragon"
+      ],
       "Basic Ability 1": "Protosynthesis",
       "Adv Ability 1": "Pressure",
       "Adv Ability 2": "Pride",
       "Adv Ability 3": "Empower",
       "High Ability": "Vanguard",
-      "Size": "11’06” / 3.5m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "11’06” / 3.5m (Huge)",
+        "Weight": "617.3lbs / 280kg (Weight Class 6)"
+      }
     },
     "Diet": "Carnivore",
-    "Habitat": "Beach, Grassland, Mountain Capabilities",
+    "Habitat": "Beach, Grassland, Mountain",
     "Capabilities": [
       "Overland 9",
       "Swim 8",
@@ -26005,17 +26620,23 @@
       "Speed": 12
     },
     "Basic Information": {
-      "Type": "Fire / Dragon",
+      "Type": [
+        "Fire",
+        "Dragon"
+      ],
       "Basic Ability": "Protosynthesis",
       "Adv Ability 1": "Pressure",
       "Adv Ability 2": "Weird Power",
       "Adv Ability 3": "Tower Shield",
       "High Ability": "Absorb Force",
-      "Size": "11’06’’ /",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "11’06’’ / 3.5m (Huge)",
+        "Weight": "1300.7 lbs / 590.0 kg (Weight Class 6)"
+      }
     },
     "Diet": "Herbivore, Carnivore",
-    "Habitat": "Grassland, Forest, Mountain Capabilities",
+    "Habitat": "Grassland, Forest, Mountain",
     "Capabilities": [
       "Overland 7",
       "Swim 5",
@@ -26255,17 +26876,23 @@
       "Speed": 9
     },
     "Basic Information": {
-      "Type": "Electric / Dragon",
+      "Type": [
+        "Electric",
+        "Dragon"
+      ],
       "Basic Ability": "Protosynthesis",
       "Adv Ability 1": "Pressure",
       "Adv Ability 2": "Burning Blaze",
       "Adv Ability 3": "Lightning Rod",
       "High Ability": "Blow Away",
-      "Size": "17’01’’ /",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "17’01’’ / 5.2m (Huge)",
+        "Weight": "1058.2 lbs / 480.0 kg (Weight Class 6)"
+      }
     },
     "Diet": "Herbivore, Carnivore",
-    "Habitat": "Grassland, Mountain, Rainforest Capabilities",
+    "Habitat": "Grassland, Mountain, Rainforest",
     "Capabilities": [
       "Overland 6",
       "Swim 6",
@@ -26506,17 +27133,23 @@
       "Speed": 9
     },
     "Basic Information": {
-      "Type": "Grass / Psychic",
+      "Type": [
+        "Grass",
+        "Psychic"
+      ],
       "Basic Ability 1": "Quark Drive",
       "Adv Ability 1": "Radiant Beam",
       "Adv Ability 2": "Inner Focus",
       "Adv Ability 3": "Justified",
       "High Ability": "Sharpness",
-      "Size": "4’11” / 1.5m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "4’11” / 1.5m (Medium)",
+        "Weight": "275.6lbs / 125kg (Weight Class 5)"
+      }
     },
     "Diet": "Ergovore, Phototroph",
-    "Habitat": "Forest, Grassland, Urban Capabilities",
+    "Habitat": "Forest, Grassland, Urban",
     "Capabilities": [
       "Overland 8",
       "Swim 4",
@@ -26760,17 +27393,23 @@
       "Speed": 8
     },
     "Basic Information": {
-      "Type": "Rock / Psychic",
+      "Type": [
+        "Rock",
+        "Psychic"
+      ],
       "Basic Ability": "Quark Drive",
       "Adv Ability 1": "Thrust",
       "Adv Ability 2": "Tower Shield",
       "Adv Ability 3": "Justified",
       "High Ability": "Sharpness",
-      "Size": "4’11’’ /",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "4’11’’ / 1.5m (Large)",
+        "Weight": "358.2 lbs / 162.5 kg (Weight Class 5)"
+      }
     },
     "Diet": "Ergovore",
-    "Habitat": "Cave, Mountain, Urban Capabilities",
+    "Habitat": "Cave, Mountain, Urban",
     "Capabilities": [
       "Overland 6",
       "Swim 2",
@@ -26992,17 +27631,23 @@
       "Speed": 10
     },
     "Basic Information": {
-      "Type": "Steel / Psychic",
+      "Type": [
+        "Steel",
+        "Psychic"
+      ],
       "Basic Ability": "Quark Drive",
       "Adv Ability 1": "Intimidate",
       "Adv Ability 2": "Inner Focus",
       "Adv Ability 3": "Justified",
       "High Ability": "Supremacy",
-      "Size": "5’03’’ /",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "5’03’’ / 1.6m (Medium)",
+        "Weight": "343.9 lbs / 156.0 kg (Weight Class 5)"
+      }
     },
     "Diet": "Ergovore",
-    "Habitat": "Mountain, Urban Capabilities",
+    "Habitat": "Mountain, Urban",
     "Capabilities": [
       "Overland 7",
       "Swim 5",
@@ -27226,17 +27871,23 @@
       "Speed": 11
     },
     "Basic Information": {
-      "Type": "Grass / Dragon",
+      "Type": [
+        "Grass",
+        "Dragon"
+      ],
       "Basic Ability 1": "Gluttony",
       "Basic Ability 2": "Super Sweet Syrup",
       "Adv Ability 1": "Ripen",
       "Adv Ability 2": "Ballistic",
       "High Ability": "Polycephaly",
-      "Size": "1’04’ / 0.4m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’04’ / 0.4m (Small)",
+        "Weight": "9.7 lbs / 4.4 kg (Weight Class 1)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Forest, Grassland Capabilities",
+    "Habitat": "Forest, Grassland",
     "Capabilities": [
       "Overland 5",
       "Swim 2",
@@ -27464,17 +28115,23 @@
       "Speed": 11
     },
     "Basic Information": {
-      "Type": "Grass / Dragon",
+      "Type": [
+        "Grass",
+        "Dragon"
+      ],
       "Basic Ability 1": "Gluttony",
       "Basic Ability 2": "Super Sweet Syrup",
       "Adv Ability 1": "Ripen",
       "Adv Ability 2": "Regenerator",
       "High Ability": "Polycephaly",
-      "Size": "5’11’’ / 1.8m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "5’11’’ / 1.8m (Medium)",
+        "Weight": "205.0 lbs / 93.0 kg (Weight Class 4)"
+      }
     },
     "Diet": "Herbivore",
-    "Habitat": "Forest, Grassland Capabilities",
+    "Habitat": "Forest, Grassland",
     "Capabilities": [
       "Overland 5",
       "Swim 3",
@@ -27723,17 +28380,23 @@
       "Speed": 5
     },
     "Basic Information": {
-      "Type": "Grass / Ghost",
+      "Type": [
+        "Grass",
+        "Ghost"
+      ],
       "Basic Ability 1": "Hospitality",
       "Basic Ability 2": "Pastel Veil",
       "Adv Ability 1": "Water Absorb",
       "Adv Ability 2": "Soulstealer",
       "High Ability": "Heatproof",
-      "Size": "0’04’ / 0.1m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "0’04’ / 0.1m (Small)",
+        "Weight": "2.4 lbs / 1.1 kg (Weight Class 1)"
+      }
     },
     "Diet": "Nullivore",
-    "Habitat": "Forest, Grassland, Urban Capabilities",
+    "Habitat": "Forest, Grassland, Urban",
     "Capabilities": [
       "Overland 2",
       "Swim 1",
@@ -27962,17 +28625,23 @@
       "Speed": 11
     },
     "Basic Information": {
-      "Type": "Grass / Ghost",
+      "Type": [
+        "Grass",
+        "Ghost"
+      ],
       "Basic Ability 1": "Hospitality",
       "Basic Ability 2": "Pastel Veil",
       "Adv Ability 1": "Water Absorb",
       "Adv Ability 2": "Soulstealer",
       "High Ability": "Heatproof",
-      "Size": "0’08’ / 0.2m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "0’08’ / 0.2m (Small)",
+        "Weight": "4.9 lbs / 2.2 kg (Weight Class 1)"
+      }
     },
     "Diet": "Nullivore",
-    "Habitat": "Forest, Grassland, Urban Capabilities",
+    "Habitat": "Forest, Grassland, Urban",
     "Capabilities": [
       "Overland 2",
       "Swim 1",
@@ -28201,14 +28870,20 @@
       "Speed": 12
     },
     "Basic Information": {
-      "Type": "Poison / Fighting",
+      "Type": [
+        "Poison",
+        "Fighting"
+      ],
       "Basic Ability 1": "Poison Touch",
       "Adv Ability 1": "Guard Dog",
       "Adv Ability 2": "Bully",
       "Adv Ability 3": "Cruelty",
       "High Ability": "Toxic Chain",
-      "Size": "5’11’ / 1.8m",
-      "Genders": "100.0% Male 00.0% Female"
+      "Genders": "100.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "5’11’ / 1.8m (Medium)",
+        "Weight": "203.3 lbs / 92.2 kg (Weight Class 4)"
+      }
     },
     "Diet": "Omnivore",
     "Habitat": "Mountain, Urban",
@@ -28450,14 +29125,20 @@
       "Speed": 7
     },
     "Basic Information": {
-      "Type": "Poison / Psychic",
+      "Type": [
+        "Poison",
+        "Psychic"
+      ],
       "Basic Ability 1": "Poison Touch",
       "Adv Ability 1": "Frisk",
       "Adv Ability 2": "Prankster",
       "Adv Ability 3": "Cruelty",
       "High Ability": "Toxic Chain",
-      "Size": "3’03’ / 1.0m",
-      "Genders": "100.0% Male 00.0% Female"
+      "Genders": "100.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "3’03’ / 1.0m (Small)",
+        "Weight": "26,9 lbs / 12.2 kg (Weight Class 2)"
+      }
     },
     "Diet": "Omnivore",
     "Habitat": "Forest, Mountain, Urban",
@@ -28697,14 +29378,20 @@
       "Speed": 8
     },
     "Basic Information": {
-      "Type": "Poison / Fairy",
+      "Type": [
+        "Poison",
+        "Fairy"
+      ],
       "Basic Ability 1": "Poison Touch",
       "Adv Ability 1": "Technician",
       "Adv Ability 2": "Dazzling",
       "Adv Ability 3": "Cruelty",
       "High Ability": "Toxic Chain",
-      "Size": "4’07’ / 1.4m",
-      "Genders": "100.0% Male 00.0% Female"
+      "Genders": "100.0% Male 00.0% Female",
+      "Size Information": {
+        "Height": "4’07’ / 1.4m (Medium)",
+        "Weight": "66,4 lbs / 30.1 kg (Weight Class 3)"
+      }
     },
     "Diet": "Omnivore",
     "Habitat": "Mountain, Urban",
@@ -28947,14 +29634,19 @@
       "Speed": 8
     },
     "Basic Information": {
-      "Type": "Grass",
+      "Type": [
+        "Grass"
+      ],
       "Basic Ability": "Embody Aspect",
       "Adv Ability 1": "Sturdy",
       "Adv Ability 2": "Needles",
       "Adv Ability 3": "Accelerate",
       "High Ability": "Tera Cudgel",
-      "Size": "3’11’ / 1.2m",
-      "Genders": "00.0% Male 100.0% Female"
+      "Genders": "00.0% Male 100.0% Female",
+      "Size Information": {
+        "Height": "3’11’ / 1.2m (Small)",
+        "Weight": "87.7 lbs / 39.8 kg (Weight Class 3)"
+      }
     },
     "Diet": "Omnivore",
     "Habitat": "Cave, Mountain, Urban",
@@ -29200,17 +29892,23 @@
       "Speed": 12
     },
     "Basic Information": {
-      "Type": "Normal / Ground",
+      "Type": [
+        "Normal",
+        "Ground"
+      ],
       "Basic Ability 1": "Guts",
       "Basic Ability 2": "Bulletproof",
       "Adv Ability 1": "Mud Dweller",
       "Adv Ability 2": "Frighten",
       "High Ability": "Mind’s Eye",
-      "Size": "8’10’ / 2.7m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "8’10’ / 2.7m (Large)",
+        "Weight": "727.5 lbs / 333 kg (Weight Class 6)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Cave, Mountain, Wetlands Capabilities",
+    "Habitat": "Cave, Mountain, Wetlands",
     "Capabilities": [
       "Overland 7",
       "Swim 4",
@@ -29469,17 +30167,23 @@
       "Speed": 13
     },
     "Basic Information": {
-      "Type": "Steel / Dragon",
+      "Type": [
+        "Steel",
+        "Dragon"
+      ],
       "Basic Ability 1": "Sumo Stance",
       "Adv Ability 1": "Stamina",
       "Adv Ability 2": "Stalwart",
       "Adv Ability 3": "Sturdy",
       "High Ability": "Clear Body",
-      "Size": "6’0’ / 2.0m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "6’0’ / 2.0m (Large)",
+        "Weight": "123.3 lbs / 60 kg (Weight Class 4)"
+      }
     },
     "Diet": "Ergovore",
-    "Habitat": "Mountain Capabilities",
+    "Habitat": "Mountain",
     "Capabilities": [
       "Overland 8",
       "Swim 3",
@@ -29588,17 +30292,22 @@
       "Speed": 11
     },
     "Basic Information": {
-      "Type": "Normal",
+      "Type": [
+        "Normal"
+      ],
       "Basic Ability 1": "Tera Shell",
       "Adv Ability 1": "Stellar Blast",
       "Adv Ability 2": "Weird Power",
       "Adv Ability 3": "Shell Armor",
       "High Ability": "Teraform Zero",
-      "Size": "1’0’’ / 0.3m",
-      "Genders": "50.0% Male 50.0% Female"
+      "Genders": "50.0% Male 50.0% Female",
+      "Size Information": {
+        "Height": "1’0’’ / 0.3m (Small)",
+        "Weight": "35.3 lbs / 16.0 kg (Weight Class 2)"
+      }
     },
     "Diet": "Omnivore",
-    "Habitat": "Cave Capabilities",
+    "Habitat": "Cave",
     "Capabilities": [
       "Overland 6",
       "Swim 4",
@@ -29819,17 +30528,23 @@
       "Speed": 16
     },
     "Basic Information": {
-      "Type": "Poison / Ghost",
+      "Type": [
+        "Poison",
+        "Ghost"
+      ],
       "Basic Ability 1": "Poison Puppeteer",
       "Adv Ability 1": "Levitate",
       "Adv Ability 2": "Prankster",
       "Adv Ability 3": "Shell Armor",
       "High Ability": "Corrosion",
-      "Size": "1’0’ / 0.3m",
-      "Genders": "Unknown"
+      "Genders": "Unknown",
+      "Size Information": {
+        "Height": "1’0’ / 0.3m (Small)",
+        "Weight": "0.7 lbs / 0.3 kg (Weight Class 1)"
+      }
     },
     "Diet": "Unknown",
-    "Habitat": "Unknown Capabilities",
+    "Habitat": "Unknown",
     "Capabilities": [
       "Overland 4",
       "Swim 3",

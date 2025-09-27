@@ -195,7 +195,6 @@ def extract_page(page_text: str, page_index: int):
     if not species:
         logger.warning(f"[p{page_index}] Species title not detected.")
 
-
     def find_line(pat):
         for i,l in enumerate(lines):
             if re.search(pat, l, flags=re.IGNORECASE): return i
@@ -220,6 +219,19 @@ def extract_page(page_text: str, page_index: int):
         if idx_base != -1 and not stats:
             logger.warning(f"[p{page_index} {species}] Base Stats header found but no stats parsed.")
 
+    def insert_after(d: dict, key_after: str, new_key: str, new_val):
+        out = {}
+        inserted = False
+        for k, v in d.items():
+            out[k] = v
+            if k == key_after:
+                out[new_key] = new_val
+                inserted = True
+        if not inserted:
+            out[new_key] = new_val
+        d.clear()
+        d.update(out)
+
     def collect_between(start_idx, next_indices):
         if start_idx == -1: return []
         following = [i for i in next_indices if i != -1 and i > start_idx]
@@ -230,8 +242,53 @@ def extract_page(page_text: str, page_index: int):
 
     # Basic Info
     basic_block = collect_between(idx_basic, next_all)
+    size_info = None
     if basic_block:
-        record["Basic Information"] = parse_key_value_block(basic_block, 0, len(basic_block))
+        bi = parse_key_value_block(basic_block, 0, len(basic_block))
+
+        # Type -> liste
+        if "Type" in bi and bi["Type"]:
+            bi["Type"] = [t.strip() for t in bi["Type"].split(" / ") if t.strip()]
+
+        # Détection "Size:" réparti sur plusieurs lignes
+        # --- Size (hauteur/poids) robustifié : concatène plusieurs lignes ---
+        for i in range(len(basic_block)):
+            if basic_block[i].startswith("Size:"):
+                # On agrège jusqu'à rencontrer le prochain champ/section
+                stop_pat = re.compile(r'(?i)^(Genders?:|Diet:|Habitat:|Capabilities\b|Skill List\b|Move List\b|Evolution:|Other Information\b)')
+                parts = []
+                k = i
+                while k < len(basic_block) and len(parts) < 6:
+                    ln = basic_block[k].strip()
+                    if k > i and stop_pat.match(ln):
+                        break
+                    parts.append(ln)
+                    k += 1
+
+                item = ' '.join(parts)
+                item = re.sub(r'\s+', ' ', item).strip()
+
+                # Exemples :
+                # "Size: 1’0’’ / 0.3m (Small) 35.3 lbs / 16.0 kg (Weight Class 2)"
+                # "Size: 5’03’’ / 1.6m (Medium) 343.9 lbs / 156.0 kg (Weight Class 6)"
+                m = re.search(r'(?i)Size:\s*(.*?\))\s+(.+?)(?:\s+(?:Genders?:|Diet:|Habitat:|Capabilities\b|Skill List\b|Move List\b|Evolution:|Other Information\b)|$)', item)
+                if m:
+                    height = m.group(1).strip()
+                    weight = m.group(2).strip()
+                    # Nettoie l’ancienne clé plate et stocke proprement
+                    bi.pop("Size", None)
+                    bi.setdefault("Size Information", {})
+                    bi["Size Information"]["Height"] = height
+                    bi["Size Information"]["Weight"] = weight
+                else:
+                    logger.warning(f"[p{page_index} {species}] Size line found but regex failed: {item}")
+                break
+
+
+        if not bi:
+            logger.warning(f"[p{page_index} {species}] 'Basic Information' section empty after parse.")
+        record["Basic Information"] = bi
+
 
     # Evolution
     evo_block = collect_between(idx_evo, next_all)
@@ -258,9 +315,9 @@ def extract_page(page_text: str, page_index: int):
     if idx_diet != -1 and ':' in lines[idx_diet]:
         record["Diet"] = clean_line(lines[idx_diet].split(':',1)[1])
     if idx_hab != -1 and ':' in lines[idx_hab]:
-        record["Habitat"] = clean_line(lines[idx_hab].split(':',1)[1])
+        record["Habitat"] = clean_line(lines[idx_hab].split(':',1)[1].replace('Capabilities', '').strip())
 
-    # Capabilities (détection robuste)
+    # Capabilities
     idx_cap = -1
     for i, l in enumerate(lines):
         if re.search(r'\bCapabilities\b', l, flags=re.I):
@@ -277,9 +334,6 @@ def extract_page(page_text: str, page_index: int):
         text = ' '.join(cap_block).replace('Capabilities ', '')
         caps = [clean_line(x) for x in split_capabilities(text) if clean_line(x)]
         record["Capabilities"] = caps
-
-
-
 
     # Skills
     skill_block = collect_between(idx_skill, next_all)
