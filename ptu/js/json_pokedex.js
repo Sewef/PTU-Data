@@ -3,9 +3,9 @@
     // Primary JSON location (mirror your moves.html convention)
     jsonUrls: [
       '/ptu/data/pokedex/pokedex_core.json',
-      // '/ptu/data/pokedex/pokedex_7g.json',
-      // '/ptu/data/pokedex/pokedex_8g.json',
-      // '/ptu/data/pokedex/pokedex_8g_hisui.json',
+      '/ptu/data/pokedex/pokedex_7g.json',
+      '/ptu/data/pokedex/pokedex_8g.json',
+      '/ptu/data/pokedex/pokedex_8g_hisui.json',
       '/ptu/data/pokedex/pokedex_9g.json',
     ],
     // Try a few sprite/icon path patterns. Override easily.
@@ -245,26 +245,26 @@
   }
 
   // Try multiple icon patterns, fall back to generated SVG initials
-function setupIcon(img, num, name, mode = "icon") {
-  // mode = "icon" ou "full"
-  const slug = slugify(name || '');
-  const base = mode === "full" ? "/ptu/img/pokemon/full" : "/ptu/img/pokemon/icons";
+  function setupIcon(img, num, name, mode = "icon") {
+    // mode = "icon" ou "full"
+    const slug = slugify(name || '');
+    const base = mode === "full" ? "/ptu/img/pokemon/full" : "/ptu/img/pokemon/icons";
 
-  img.src = CFG.iconPatterns.map(fn => fn(base, num, slug));
-}
+    img.src = CFG.iconPatterns.map(fn => fn(base, num, slug));
+  }
 
 
 
-function openDetail(p) {
-  const body  = document.getElementById('dexModalBody');
-  const title = document.getElementById('dexModalLabel');
-  const num     = pad3(p.Number ?? '0');
-  const species = p.Species || 'Unknown';
+  function openDetail(p) {
+    const body = document.getElementById('dexModalBody');
+    const title = document.getElementById('dexModalLabel');
+    const num = pad3(p.Number ?? '0');
+    const species = p.Species || 'Unknown';
 
-  // Contenu du titre : image + nom/# (ligne 1) + types (ligne 2)
-  const typesHTML = wrapTypes(extractTypes(p)) || '';
+    // Contenu du titre : image + nom/# (ligne 1) + types (ligne 2)
+    const typesHTML = wrapTypes(extractTypes(p)) || '';
 
-  title.innerHTML = `
+    title.innerHTML = `
     <div class="d-flex align-items-start gap-3 w-100">
       <img id="dexModalIcon" class="dex-title-icon rounded dark-background p-1" width="64" height="64" alt="${species}">
       <div class="flex-grow-1">
@@ -276,20 +276,20 @@ function openDetail(p) {
     </div>
   `;
 
-  // Corps : uniquement le détail (plus de header doublon)
-  const safe = (typeof structuredClone === 'function')
-    ? structuredClone(p)
-    : JSON.parse(JSON.stringify(p));
-  body.innerHTML = renderObject(safe);
+    // Corps : uniquement le détail (plus de header doublon)
+    const safe = (typeof structuredClone === 'function')
+      ? structuredClone(p)
+      : JSON.parse(JSON.stringify(p));
+    body.innerHTML = renderObject(safe);
 
-  // Sprite dans le titre
-  const img = document.getElementById('dexModalIcon');
-  if (img) setupIcon(img, p.Icon || p.Number, species, "full");
+    // Sprite dans le titre
+    const img = document.getElementById('dexModalIcon');
+    if (img) setupIcon(img, p.Icon || p.Number, species, "full");
 
-  // Affiche le modal
-  const modal = new bootstrap.Modal(document.getElementById('dexModal'));
-  modal.show();
-}
+    // Affiche le modal
+    const modal = new bootstrap.Modal(document.getElementById('dexModal'));
+    modal.show();
+  }
 
 
 
@@ -316,6 +316,39 @@ function openDetail(p) {
         ${arr.join(', ')}
       </ul>
     </div>`;
+  }
+
+  function renderBaseStats(stats, depth = 0) {
+    const order = ["HP", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"];
+    const total = order.reduce((s, k) => s + (stats?.[k] ?? 0), 0);
+
+    // Ordre voulu en grille 2 colonnes : 1|4, 2|5, 3|6
+    const seq = [order[0], order[3], order[1], order[4], order[2], order[5]];
+
+    const items = seq.map(k => `
+    <div class="bs-item d-flex align-items-center justify-content-between">
+      <span class="bs-key">${k}</span>
+      <span class="bs-val">${stats?.[k] ?? 0}</span>
+    </div>
+  `).join("");
+
+    const h = Math.min(4 + depth, 6);
+    return `
+    <div class="mt-3">
+      <h${h} class="text-muted">Base Stats</h${h}>
+      <div class="card accent" style="--accent-color: rgba(255,255,255,.08);">
+        <div class="card-body">
+          <div class="bs-grid">
+            ${items}
+            <div class="bs-item d-flex align-items-center justify-content-between bs-total">
+              <span class="bs-key">Total</span>
+              <span class="bs-val">${total}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
   }
 
 
@@ -367,6 +400,13 @@ function openDetail(p) {
             } else {
               v.Type = renderFormType(t); // compat: objet simple { Form: [...] }
             }
+          }
+
+          // --- Base Stats en grille 2x3 ---
+          if (k === "Base Stats" && v && typeof v === "object") {
+            const block = renderBaseStats(v, depth);
+            (leftSections.has(k) ? (col1 += block) : (col2 += block));
+            continue;
           }
 
           // Render Level Up Move List

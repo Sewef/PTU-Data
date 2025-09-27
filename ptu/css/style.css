@@ -337,18 +337,30 @@ aside .list-group#sidebar {
 }
 
 /* Modal — micro-ajustements */
-#dexModal .modal-body { padding: 1rem 1.25rem; }
+#dexModal .modal-body {
+  padding: 1rem 1.25rem;
+}
 
-.dex-detail-head img { display: block; }
-.dex-detail-head img.is-oversize { width: 96px; height: 96px; object-fit: contain; }
+.dex-detail-head img {
+  display: block;
+}
+
+.dex-detail-head img.is-oversize {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
 
 #dexModal .card.accent {
-  background: rgba(255,255,255,0.03);
-  border-color: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
 }
-#dexModal .card.accent .card-body { padding: .75rem 1rem; }
 
-#dexModal h5.text-muted, 
+#dexModal .card.accent .card-body {
+  padding: .75rem 1rem;
+}
+
+#dexModal h5.text-muted,
 #dexModal h6.text-muted {
   text-transform: uppercase;
   letter-spacing: .03em;
@@ -357,19 +369,60 @@ aside .list-group#sidebar {
 }
 
 /* Tableaux “clé / valeur” plus nets dans le détail */
-#dexModal .border-bottom.py-1 .fw-bold { opacity: .85; }
-#dexModal .border-bottom.py-1 { border-color: rgba(255,255,255,.08) !important; }
+#dexModal .border-bottom.py-1 .fw-bold {
+  opacity: .85;
+}
+
+#dexModal .border-bottom.py-1 {
+  border-color: rgba(255, 255, 255, .08) !important;
+}
 
 /* Icone dans le header du modal */
 #dexModal .dex-title-icon {
-  display:block;
-  width:96px; height:96px; object-fit:none;
+  display: block;
+  width: 96px;
+  height: 96px;
+  object-fit: none;
 }
 
 /* Ligne des types sous le nom (wrap propre) */
 #dexModal .dex-title-types {
-  display:flex; flex-wrap:wrap; gap:.375rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .375rem;
 }
 
 /* Un peu d'air dans le body */
-#dexModal .modal-body { padding: 1rem 1.25rem; }
+#dexModal .modal-body {
+  padding: 1rem 1.25rem;
+}
+
+/* Base Stats en 3 colonnes (2x3 stats + 1 colonne Total) */
+.bs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .5rem .75rem;
+}
+
+.bs-item {
+  padding: .5rem .625rem;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: .5rem;
+  background: rgba(255, 255, 255, .03);
+}
+
+.bs-key {
+  font-weight: 600;
+  opacity: .9;
+}
+
+.bs-val {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+/* Total en dessous, sur toute la largeur */
+.bs-item.bs-total {
+  grid-column: 1;
+  background: rgba(255, 255, 255, .08);
+}
