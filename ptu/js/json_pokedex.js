@@ -17,7 +17,6 @@
   // Utilities
   const pad3 = n => String(n).padStart(3, '0');
   const slugify = s => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-  const $ = (sel) => document.querySelector(sel);
 
   // ===== Types helpers (handle array OR per-form object) =====
   function debounce(fn, delay = 150) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), delay); } }
@@ -245,12 +244,22 @@
 
   // Try multiple icon patterns, fall back to generated SVG initials
   function setupIcon(img, num, name, mode = "icon") {
-    // mode = "icon" ou "full"
-    const slug = slugify(name || '');
-    const base = mode === "full" ? "/ptu/img/pokemon/full" : "/ptu/img/pokemon/icons";
+  const slug = slugify(name || "");
+  const base = mode === "full" ? "/ptu/img/pokemon/full" : "/ptu/img/pokemon/icons";
+  const urls = CFG.iconPatterns.map(fn => fn(base, num, slug)).filter(Boolean);
 
-    img.src = CFG.iconPatterns.map(fn => fn(base, num, slug));
+  let i = 0;
+  function tryNext() {
+    if (i >= urls.length) {
+      img.removeAttribute("src");
+      img.alt = `${name} (no icon)`;
+      return;
+    }
+    img.onerror = () => tryNext(i++);
+    img.src = urls[i++];
   }
+  tryNext();
+}
 
 
 
@@ -306,6 +315,7 @@
       `).join('')}
     </ul>`;
   }
+  
   function renderStringList(title, arr) {
     if (!Array.isArray(arr) || !arr.length) return '';
     return `
