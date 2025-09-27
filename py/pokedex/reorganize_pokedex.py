@@ -34,20 +34,32 @@ def normalize_type(t):
 
 def make_other_info(record):
     other = OrderedDict()
-    sz = record.get("Size Information") or {}
-    if isinstance(sz, dict) and (sz.get("Height") or sz.get("Weight")):
-        other["Size Information"] = {k:v for k,v in sz.items() if v}
+    # Look for Size Information either at top-level or inside Basic Information
+    sz = record.get("Size Information") or (record.get("Basic Information", {}) or {}).get("Size Information") or {}
+    if isinstance(sz, dict) and any(v for v in [sz.get("Height"), sz.get("Weight")]):
+        other["Size Information"] = {k: v for k, v in sz.items() if v}
+
+    # Genders: look at Breeding Information OR Basic Information
+    bi = record.get("Basic Information") or {}
+    br = record.get("Breeding Information") or {}
+
     genders = None
-    br = record.get("Breeding Information")
     if isinstance(br, dict):
-        genders = br.get("Genders") or br.get("Gender") or None
+        genders = br.get("Genders") or br.get("Gender")
+    if not genders and isinstance(bi, dict):
+        genders = bi.get("Genders") or bi.get("Gender")
+
     if genders:
+        genders = genders.replace('Male', 'Male /')
         other["Genders"] = f"{genders}".strip()
+
+    # Diet / Habitat
     if record.get("Diet"):
         other["Diet"] = f'{record.get("Diet")}'.strip()
     if record.get("Habitat"):
         other["Habitat"] = f'{record.get("Habitat")}'.strip()
     return other
+
 
 def reorganize_entry(rec):
     out = OrderedDict()
@@ -62,7 +74,7 @@ def reorganize_entry(rec):
             basic["Type"] = as_list(bi_src["Type"])
         for k, v in bi_src.items():
             if re.search(r'ability', k, flags=re.I):
-                basic[k] = as_list(v) if isinstance(v, str) or not isinstance(v, list) else v
+                basic[k] = v if isinstance(v, str) or not isinstance(v, list) else v
     out["Basic Information"] = basic
 
     # Evolution
