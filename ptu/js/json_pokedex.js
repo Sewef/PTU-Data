@@ -105,7 +105,6 @@
   }
 
   function renderFormType(val) {
-    console.log(val);
     if (!val) return '';
     if (typeof val === 'string') return val;   // déjà formaté
     if (Array.isArray(val)) return wrapTypes(val);
@@ -612,7 +611,7 @@
             // scalar
             block = `
             <div class="row border-bottom py-1">
-              <div class="col-4 fw-bold">${k}</div>
+              <div class="col-4 fw-semibold">${k}</div>
               <div class="col-8">${v}</div>
             </div>`;
           }
@@ -654,7 +653,7 @@
         } else {
           html += `
           <div class="row border-bottom py-1">
-            <div class="col-4 fw-bold">${k}</div>
+            <div class="col-4 fw-semibold">${k}</div>
             <div class="col-8">${v}</div>
           </div>`;
         }
