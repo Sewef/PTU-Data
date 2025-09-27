@@ -419,7 +419,7 @@ function renderBaseStats(stats, depth = 0) {
   const total = order.reduce((s, k) => s + (stats?.[k] ?? 0), 0);
   const seq = [order[0], order[3], order[1], order[4], order[2], order[5]];
 
-  const items = seq.map(k => `
+  const items = order.map(k => `
     <div class="bs-item d-flex align-items-center justify-content-between">
       <span class="fw-semibold">${k}</span>
       <span class="fw-semibold">${stats?.[k] ?? 0}</span>
@@ -468,7 +468,7 @@ function renderBaseStats(stats, depth = 0) {
       </div>`).join("") : "";
 
       return `
-      <div class="card accent w-100 mb-2"><div class="card-body">
+      <div class="card accent battle-mini w-100 mb-2"><div class="card-body">
         <div class="d-flex align-items-start gap-3">
           <div class="rounded dark-background p-1">
             <img class="dex-title-icon" alt="${pName} — ${label}" src="${src}">

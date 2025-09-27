@@ -476,3 +476,201 @@ aside .list-group#sidebar {
 .cap-chip span:last-child {
   opacity: .95;
 }
+
+
+
+
+
+
+
+/* === MODAL — UNIFORM LOOK & FEEL === */
+#dexModal { --dm-gap:.5rem; --dm-pad:.75rem; --dm-border:rgba(255,255,255,.12); }
+
+#dexModal .modal-body { padding: var(--dm-pad) calc(var(--dm-pad) + .5rem); }
+
+#dexModal h4, #dexModal h5, #dexModal h6 {
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  margin: .25rem 0 .4rem;
+  font-weight: 600; opacity: .9;
+}
+
+#dexModal .card.accent { background: rgba(255,255,255,.03); border-color: var(--dm-border); }
+#dexModal .card.accent .card-body { padding: var(--dm-pad); }
+
+/* Lignes clé/valeur */
+#dexModal .row.border-bottom.py-1 {
+  padding: .35rem 0 !important;
+  border-color: var(--dm-border) !important;
+}
+#dexModal .row.border-bottom.py-1 .col-4 { opacity: .85; font-weight: 600; }
+#dexModal .row.border-bottom.py-1 .col-8 { opacity: .98; }
+
+/* Types, icônes, chips */
+#dexModal .type-pill { margin-right: .25rem; margin-bottom: .25rem; }
+#dexModal .dex-title-icon { width: 72px; height: 72px; object-fit: none; }
+#dexModal .small.text-muted { opacity: .9; }
+
+/* Base Stats (dense et aligné) */
+#dexModal .bs-grid { gap: .25rem .5rem; }
+#dexModal .bs-item {
+  display: grid !important;
+  grid-template-columns: auto max-content;
+  column-gap: .25rem; align-items: center;
+  padding: 0; background: transparent; border: none;
+}
+#dexModal .bs-item .bs-val { font-variant-numeric: tabular-nums; font-weight: 700; }
+#dexModal .bs-item.bs-total {
+  grid-column: 1 / -1;
+  margin-top: .25rem; padding-top: .25rem;
+  border-top: 1px solid var(--dm-border);
+  background: transparent;
+}
+
+/* Capabilities (grille + chips) */
+#dexModal .cap-grid { gap: .5rem .75rem; }
+#dexModal .cap-item { padding: .35rem .5rem; border-color: var(--dm-border); background: rgba(255,255,255,.03); }
+#dexModal .cap-chip { padding: .2rem .5rem; border-color: var(--dm-border); }
+
+/* Battle-Only mini cards */
+#dexModal .battle-mini .card-body { padding: .5rem; }
+#dexModal .battle-mini .dex-title-icon { width: 72px; height: 72px; }
+#dexModal .battle-mini .small.border-bottom { padding: .15rem 0; border-color: var(--dm-border) !important; }
+
+/* Espacement homogène entre cartes imbriquées */
+#dexModal .card.accent .card-body > .card.accent { margin-top: .5rem; }
+
+/* === Uniformisation Base Stats & Capabilities dans le modal === */
+#dexModal { --dm-gap:.5rem; --dm-pad:.75rem; --dm-border:rgba(255,255,255,.12); }
+
+/* 1) Même densité / même grille "lignes" */
+#dexModal .bs-grid,
+#dexModal .cap-grid {
+  display: grid;
+  grid-template-columns: 1fr;        /* une colonne = des lignes empilées */
+  gap: 0;                            /* pas de gap : le séparateur fait le rythme */
+  margin: 0;
+}
+
+/* 2) Même ligne clé/valeur (bs-item et cap-item se comportent pareil) */
+#dexModal .bs-item,
+#dexModal .cap-item {
+  display: grid !important;
+  grid-template-columns: auto max-content; /* libellé + valeur à droite (si présente) */
+  column-gap: .25rem;
+  align-items: center;
+  padding: .15rem 0;                 /* même padding vertical */
+  border-bottom: 1px solid var(--dm-border);
+  background: transparent;
+  font-size: .95rem;                 /* même taille de police */
+  line-height: 1.2;                  /* même hauteur de ligne */
+}
+
+/* Libellé + valeur homogènes */
+#dexModal .bs-item > span:first-child,
+#dexModal .cap-item > span:first-child { 
+  font-weight: 600; 
+  opacity: .9;
+}
+#dexModal .bs-item > span:last-child,
+#dexModal .cap-item > span:last-child {
+  justify-self: end;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+/* 3) Total : pleine largeur + séparation douce, sans doubler la bordure */
+#dexModal .bs-item.bs-total {
+  grid-column: 1 / -1;
+  margin-top: .25rem;
+  padding-top: .25rem;
+  border-top: 1px solid var(--dm-border);
+  border-bottom: 0;
+  background: transparent;
+}
+
+/* 4) Nettoyage des anciens styles "chips" Capabilities (si présents) */
+#dexModal .cap-item.bg-light,
+#dexModal .cap-item.border,
+#dexModal .cap-chip {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: .15rem 0 !important;
+  margin: 0 !important;
+}
+
+/* 5) Micro-cartes Battle-Only : lignes internes matchées aux stats */
+#dexModal .battle-mini .small.border-bottom {
+  padding: .15rem 0 !important;
+  border-color: var(--dm-border) !important;
+}
+
+/* === MODAL — Uniformisation SKILLS avec Stats/Capabilities === */
+#dexModal { --dm-border: rgba(255,255,255,.12); }
+
+/* 1) Conteneurs possibles (grid ou listes/tables) → densité homogène */
+#dexModal .skills-grid,
+#dexModal .skills-list,
+#dexModal .skills { /* fallback générique si tu utilises .skills */
+  display: grid;
+  grid-template-columns: 1fr;     /* lignes empilées, comme Stats/Capabilities */
+  gap: 0;
+  margin: 0;
+}
+
+/* 2) Ligne skill (clé/valeur) — même modèle que .bs-item / .cap-item */
+#dexModal .skill-item,
+#dexModal .skills .row,                 /* si rendu en .row */
+#dexModal .skills-list .list-group-item /* si rendu en list-group */
+{
+  display: grid !important;
+  grid-template-columns: auto max-content;
+  column-gap: .25rem;
+  align-items: center;
+  padding: .15rem 0 !important;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--dm-border) !important;
+  font-size: .95rem;
+  line-height: 1.2;
+}
+
+/* 3) Clé / Valeur — styles identiques aux Stats/Capabilities */
+#dexModal .skill-item > *:first-child,
+#dexModal .skills .row > *:first-child,
+#dexModal .skills-list .list-group-item > *:first-child {
+  font-weight: 600;
+  opacity: .9;
+}
+
+#dexModal .skill-item > *:last-child,
+#dexModal .skills .row > *:last-child,
+#dexModal .skills-list .list-group-item > *:last-child {
+  justify-self: end;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+/* 4) Version table (si tes skills sortent en <table>) */
+#dexModal .skills-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#dexModal .skills-table th,
+#dexModal .skills-table td {
+  padding: .15rem 0;
+  border-bottom: 1px solid var(--dm-border);
+  background: transparent;
+}
+#dexModal .skills-table th { font-weight: 600; opacity: .9; }
+#dexModal .skills-table td:last-child { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+
+/* 5) En-tête "Total" éventuel (si tu en affiches un pour Skills) */
+#dexModal .skill-item.skill-total {
+  grid-column: 1 / -1;
+  margin-top: .25rem;
+  padding-top: .25rem !important;
+  border-top: 1px solid var(--dm-border) !important;
+  border-bottom: 0 !important;
+}
