@@ -292,17 +292,32 @@ def extract_page(page_text: str, page_index: int):
         record["Basic Information"] = bi
 
 
-    # Evolution
-    evo_block = collect_between(idx_evo, next_all)
+    # ---- Evolution (format brut conservé, sans avaler les sections suivantes) ----
+# ---- Evolution (format brut conservé) ----
+
+    evo_block = []
+
+    if idx_evo != -1:
+        # Cas normal : il y a un vrai header "Evolution"
+        for ln in lines[idx_evo+1:]:
+            if re.match(r'(?i)^(Other Information|Size:|Genders?:|Diet:|Habitat:|Capabilities\b|Skill List\b|Move List\b|TM/HM Move List|TM/Tutor Moves|Egg Move List|Tutor Move List|Mega Evolution|Base Stats|Basic Information)\b', ln):
+                break
+            if ln.strip():
+                evo_block.append(clean_line(ln))
+    else:
+        # Fallback : pas de header explicite → on scanne les lignes
+        for ln in lines:
+            if re.match(r'^\s*\d+\s*-\s*\S', ln):
+                evo_block.append(clean_line(ln))
+            # On arrête si on tombe sur une nouvelle section
+            elif evo_block and re.match(r'(?i)^(Other Information|Size:|Genders?:|Diet:|Habitat:|Capabilities\b|Skill List\b|Move List\b|TM/HM Move List|TM/Tutor Moves|Egg Move List|Tutor Move List|Mega Evolution|Base Stats|Basic Information)\b', ln):
+                break
+
     if evo_block:
-        evo_lines = [l for l in evo_block if l]
-        #record["evolution_raw"] = evo_lines
-        evo = []
-        for l in evo_lines:
-            m = re.match(r'^\s*(\d+)\s*-\s*([A-Za-z\'\-(). ]+?)(?:\s{2,}|\s+)(.*)$', l)
-            if m:
-                evo.append({"stage": int(m.group(1)), "species": clean_line(m.group(2)), "requirement": clean_line(m.group(3))})
-        if evo: record["Evolution"] = evo
+        record["Evolution"] = evo_block
+    else:
+        logger.info(f"[p{page_index} {species}] Evolution header not found or empty.")
+
 
     # Size
     size_block = collect_between(idx_size, next_all)
