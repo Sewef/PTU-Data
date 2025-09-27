@@ -208,6 +208,7 @@ def extract_page(page_text: str, page_index: int):
     idx_breed = find_line(r'^Breeding Information')
     idx_diet  = find_line(r'^Diet')
     idx_hab   = find_line(r'^Habitat')
+    idx_group = find_line(r'^Egg Groups')
     idx_cap   = find_line(r'^Capability List|^Capabilities')
     idx_skill = find_line(r'^Skill List')
     idx_move  = find_line(r'^Move List')
@@ -317,6 +318,39 @@ def extract_page(page_text: str, page_index: int):
         record["Diet"] = clean_line(lines[idx_diet].split(':',1)[1])
     if idx_hab != -1 and ':' in lines[idx_hab]:
         record["Habitat"] = clean_line(lines[idx_hab].split(':',1)[1].replace('Capabilities', '').strip())
+
+   # --- Egg Groups (souvent collé après Habitat ou sur la/les lignes suivantes) ---
+    egg_groups_val = None
+
+    # Cas 1 : sur la même ligne que Habitat
+    hline = lines[idx_hab] if idx_hab != -1 and idx_hab < len(lines) else ""
+    m = re.search(r'(?i)\bEgg\s+Groups?\s*:\s*(.+)$', hline)
+    if m:
+        egg_groups_val = m.group(1).strip()
+
+    # Cas 2 : sur les lignes suivantes (jusqu'au prochain header)
+    if not egg_groups_val and idx_hab != -1:
+        # on concatène quelques lignes pour couvrir les retours à la ligne
+        look = ' '.join(lines[idx_hab+1 : min(len(lines), idx_hab+6)])
+        look = re.sub(r'\s+', ' ', look).strip()
+        mm = re.search(
+            r'(?i)\bEgg\s+Groups?\s*:\s*(.+?)(?=\s+(Capabilities|Skill List|Move List|Evolution:|Other Information|Basic Information|Size Information|Breeding Information)\b|$)',
+            look
+        )
+        if mm:
+            egg_groups_val = mm.group(1).strip()
+
+    if egg_groups_val:
+        # coupe si un header a été collé après
+        egg_groups_val = re.sub(
+            r'(?i)\b(Capabilities|Skill List|Move List|Evolution:|Other Information|Basic Information|Size Information|Breeding Information)\b.*$',
+            '',
+            egg_groups_val
+        ).strip()
+        groups = [clean_line(x) for x in re.split(r'\s*,\s*', egg_groups_val) if clean_line(x)]
+        record.setdefault("Breeding Information", {})
+        record["Breeding Information"]["Egg Groups"] = groups
+
 
     # Capabilities
     idx_cap = -1
