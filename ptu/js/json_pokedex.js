@@ -17,6 +17,7 @@
   // Utilities
   const pad3 = n => String(n).padStart(3, '0');
   const slugify = s => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const $ = (sel) => document.querySelector(sel);
 
   // ===== Types helpers (handle array OR per-form object) =====
   function debounce(fn, delay = 150) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), delay); } }
@@ -244,20 +245,31 @@
 
   // Try multiple icon patterns, fall back to generated SVG initials
   function setupIcon(img, num, name, mode = "icon") {
-  const slug = slugify(name || "");
+  const slug = slugify(name || '');
   const base = mode === "full" ? "/ptu/img/pokemon/full" : "/ptu/img/pokemon/icons";
-  const urls = CFG.iconPatterns.map(fn => fn(base, num, slug)).filter(Boolean);
 
-  let i = 0;
-  function tryNext() {
-    if (i >= urls.length) {
-      img.removeAttribute("src");
-      img.alt = `${name} (no icon)`;
+  const candidates = CFG.iconPatterns.map(fn => fn(base, num, slug)).filter(Boolean);
+  let set = false;
+
+  const tryNext = () => {
+    if (!candidates.length) {
+      // fallback: simple SVG initials
+      const initials = (String(name || '?').match(/[A-Z]/g) || ['?']).slice(0,2).join('');
+      const svg = encodeURIComponent(
+        `<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96">
+          <rect width="100%" height="100%" fill="#0b0d12"/>
+          <text x="50%" y="55%" font-family="system-ui,Arial" font-size="36" text-anchor="middle" fill="#fff">${initials}</text>
+        </svg>`
+      );
+      img.src = `data:image/svg+xml;charset=utf-8,${svg}`;
       return;
     }
-    img.onerror = () => tryNext(i++);
-    img.src = urls[i++];
-  }
+    const url = candidates.shift();
+    const probe = new Image();
+    probe.onload = () => { img.src = url; };
+    probe.onerror = () => tryNext();
+    probe.src = url + (url.includes('?') ? '&' : '?') + 'v=' + Date.now();
+  };
   tryNext();
 }
 
@@ -315,7 +327,6 @@
       `).join('')}
     </ul>`;
   }
-
   function renderStringList(title, arr) {
     if (!Array.isArray(arr) || !arr.length) return '';
     return `
@@ -339,7 +350,7 @@
       return `
       <div class="cap-item">
         <div class="cap-head">
-          <span class="fw-semibold">${key}</span>
+          <span class="cap-key">${key}</span>
         </div>
         <div class="cap-val">${value}</div>
       </div>
@@ -417,29 +428,27 @@
 function renderBaseStats(stats, depth = 0) {
   const order = ["HP", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"];
   const total = order.reduce((s, k) => s + (stats?.[k] ?? 0), 0);
-  const seq = [order[0], order[3], order[1], order[4], order[2], order[5]];
 
-  const items = order.map(k => `
-    <div class="bs-item d-flex align-items-center justify-content-between">
-      <span class="fw-semibold">${k}</span>
-      <span class="fw-semibold">${stats?.[k] ?? 0}</span>
-    </div>
+  const rows = order.map(k => `
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span class="bs-key">${k}</span>
+      <span class="bs-val">${stats?.[k] ?? 0}</span>
+    </li>
   `).join("");
 
   const h = Math.min(4 + depth, 6);
   return `
     <div class="mt-3">
       <h${h} class="text-muted">Base Stats</h${h}>
-      <div class="card accent compact">
-        <div class="card-body">
-          <div class="bs-grid">
-            ${items}
-            <div class="bs-item d-flex align-items-center justify-content-between bs-total">
-              <span class="fw-semibold">Total</span>
-              <span class="fw-semibold">${total}</span>
-            </div>
-          </div>
-        </div>
+      <!-- on réutilise les classes Skills pour une uniformité totale -->
+      <div class="card accent skills-card bs-card">
+        <ul class="list-group list-group-flush skills-list">
+          ${rows}
+          <li class="list-group-item d-flex justify-content-between align-items-center bs-total">
+            <span class="bs-key">Total</span>
+            <span class="bs-val fw-semibold">${total}</span>
+          </li>
+        </ul>
       </div>
     </div>
   `;
@@ -468,7 +477,7 @@ function renderBaseStats(stats, depth = 0) {
       </div>`).join("") : "";
 
       return `
-      <div class="card accent battle-mini w-100 mb-2"><div class="card-body">
+      <div class="card accent w-100 mb-2"><div class="card-body">
         <div class="d-flex align-items-start gap-3">
           <div class="rounded dark-background p-1">
             <img class="dex-title-icon" alt="${pName} — ${label}" src="${src}">

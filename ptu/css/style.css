@@ -237,12 +237,10 @@ aside .list-group#sidebar { display:block; gap:0; padding:0; }
 /* == Base Stats grid (FIXED) ============================================ */
 /* Two columns for the 6 stats (2x3), with Total spanning full width under */
 .bs-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
+  display: block;
   gap: .5rem .75rem;
 }
 .bs-item {
-  display: grid !important;
   grid-template-columns: auto max-content;
   column-gap: .35rem;
   align-items: center;
@@ -297,7 +295,6 @@ aside .list-group#sidebar { display:block; gap:0; padding:0; }
   border: 1px solid rgba(255,255,255,.12);
   border-radius: 999px;
   background: rgba(255,255,255,.04);
-  font-weight: 500;
 }
 .cap-chip .cap-ic { width: 1em; }
 .cap-chip span:last-child { opacity: .95; }
@@ -314,9 +311,10 @@ aside .list-group#sidebar { display:block; gap:0; padding:0; }
 /* Base Stats en 3 colonnes (2x3 stats + 1 colonne Total)
    -> 2 colonnes de stats, Total en dessous sur toute la largeur */
 .bs-grid {
-  display: grid;
+  display: block;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: .25rem .5rem;
+  max-width: 80%;
 }
 .bs-item {
   display: grid !important;              /* écrase tout flex "between" éventuel */
@@ -367,3 +365,73 @@ aside .list-group#sidebar { display:block; gap:0; padding:0; }
 .cap-ic   { width: 1.15em; display:inline-flex; justify-content:center; }
 .cap-key  { opacity: .9; }
 .cap-val  { font-variant-numeric: tabular-nums; font-weight: 700; }
+
+
+
+/* ===== COMPACT OVERRIDES: bs-grid & cap-grid =========================== */
+/* Goal: denser spacing, smaller text, same key/value alignment */
+
+/* Base Stats (compact) */
+.bs-grid {
+  gap: .2rem .4rem;
+}
+.bs-item {
+  padding: .35rem .5rem;
+  border-radius: .375rem;
+  /* keep grid key/value from v3 */
+}
+.bs-item > span,
+.bs-key,
+.bs-val {
+  font-size: .875rem;            /* ~14px */
+  line-height: 1.15;
+}
+.bs-item.bs-total {
+  padding-top: .4rem;
+  padding-bottom: .4rem;
+  font-weight: 700;
+}
+
+/* Capabilities (compact) */
+.cap-grid {
+  gap: .2rem .4rem;
+  margin-bottom: .25rem;
+}
+.cap-item {
+  grid-template-columns: auto max-content; /* ensure key/value layout */
+  column-gap: .35rem;
+  padding: .35rem .5rem;
+  border-radius: .375rem;
+}
+.cap-head { gap: .3rem; }
+.cap-ic   { width: 1em; }
+.cap-key,
+.cap-val  { font-size: .875rem; line-height: 1.15; }
+
+/* === UNIFORM COMPACT HOTFIX ============================================ */
+.bs-grid{gap:.2rem .4rem}
+.bs-item{padding:.35rem .5rem;border-radius:.375rem}
+.bs-item .bs-key,.bs-item .bs-val{font-size:.875rem;line-height:1.15}
+.bs-item.bs-total{padding-top:.4rem;padding-bottom:.4rem}
+
+.cap-chip{font-size:.875rem;line-height:1.15}
+.cap-grid{gap:.2rem .4rem;margin-bottom:.25rem}
+.cap-item{column-gap:.35rem;padding:.35rem .5rem;border-radius:.375rem}
+.cap-key,.cap-val{font-size:.875rem;line-height:1.15}
+/* même largeur compacte que Skills */
+.bs-card {
+  max-width: 280px;       /* ajuste selon ton rendu, 260–300px */
+  margin: 0;              /* colle à la grille */
+}
+
+.bs-list .list-group-item {
+  padding: .35rem .5rem;
+  font-size: .875rem;
+  line-height: 1.15;
+  border-color: rgba(255,255,255,.12);
+}
+
+.bs-list .bs-total {
+  background: rgba(255,255,255,.03);
+  font-weight: 600;
+}
