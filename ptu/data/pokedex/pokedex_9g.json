@@ -1,6 +1,7 @@
 [
   {
     "Species": "Sprigatito",
+    "Number": 906,
     "Base Stats": {
       "HP": 4,
       "Attack": 4,
@@ -162,7 +163,7 @@
         "Leaf Storm",
         "Leech Seed",
         "Magical Leaf (N)",
-        "Mud - Slap",
+        "Mud- Slap",
         "Nasty Plot",
         "Petal Blizzard",
         "Pounce",
@@ -188,6 +189,7 @@
   },
   {
     "Species": "Floragato",
+    "Number": 907,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -354,7 +356,7 @@
         "Low Kick",
         "Low Sweep",
         "Magical Leaf (N)",
-        "Mud -Slap",
+        "Mud-Slap",
         "Nasty Plot",
         "Petal Blizzard",
         "Pounce",
@@ -381,6 +383,7 @@
   },
   {
     "Species": "Meowscarada",
+    "Number": 908,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -391,7 +394,8 @@
     },
     "Basic Information": {
       "Type": [
-        "Grass /Dark"
+        "Grass",
+        "Dark"
       ],
       "Basic Ability 1": "Overgrow",
       "Basic Ability 2": "Magician",
@@ -558,7 +562,7 @@
         "Low Kick",
         "Low Sweep",
         "Magical Leaf (N)",
-        "Mud -Slap",
+        "Mud-Slap",
         "Nasty Plot",
         "Petal Blizzard",
         "Pollen Puff",
@@ -591,12 +595,13 @@
         "Trick (N)",
         "Trick Room",
         "Triple Axel",
-        "U -Turn (N)"
+        "U-Turn (N)"
       ]
     }
   },
   {
     "Species": "Fuecoco",
+    "Number": 909,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -664,7 +669,7 @@
         },
         {
           "Level": 7,
-          "Move": "Spook* [Ember, -1SpD]",
+          "Move": "Spook* [Ember,-1SpD]",
           "Type": "Ghost"
         },
         {
@@ -776,7 +781,7 @@
         "Hidden Power",
         "Lash Out",
         "Magical Leaf",
-        "Mud -Slap",
+        "Mud-Slap",
         "Mystical Fire",
         "Nasty Plot",
         "Outrage",
@@ -808,6 +813,7 @@
   },
   {
     "Species": "Crocalor",
+    "Number": 910,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -875,7 +881,7 @@
         },
         {
           "Level": 7,
-          "Move": "Spook* [Ember, -1SpD]",
+          "Move": "Spook* [Ember,-1SpD]",
           "Type": "Ghost"
         },
         {
@@ -987,7 +993,7 @@
         "Hidden Power",
         "Lash Out",
         "Magical Leaf",
-        "Mud -Slap",
+        "Mud-Slap",
         "Mystical Fire",
         "Nasty Plot",
         "Outrage",
@@ -1019,6 +1025,7 @@
   },
   {
     "Species": "Skeledirge",
+    "Number": 911,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -1088,7 +1095,7 @@
         },
         {
           "Level": 7,
-          "Move": "Spook* [Ember, -1SpD]",
+          "Move": "Spook* [Ember,-1SpD]",
           "Type": "Ghost"
         },
         {
@@ -1207,7 +1214,7 @@
         "Hyper Beam",
         "Imprison",
         "Magical Leaf",
-        "Mud -Slap",
+        "Mud-Slap",
         "Mystical Fire",
         "Nasty Plot",
         "Night Shade",
@@ -1246,6 +1253,7 @@
   },
   {
     "Species": "Quaxly",
+    "Number": 912,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -1437,6 +1445,7 @@
   },
   {
     "Species": "Quaxwell",
+    "Number": 913,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -1629,6 +1638,7 @@
   },
   {
     "Species": "Quaquaval",
+    "Number": 914,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -1841,6 +1851,7 @@
   },
   {
     "Species": "Lechonk",
+    "Number": 915,
     "Base Stats": {
       "HP": 5,
       "Attack": 5,
@@ -1957,7 +1968,7 @@
         },
         {
           "Level": 39,
-          "Move": "Double -Edge",
+          "Move": "Double-Edge",
           "Type": "Normal"
         },
         {
@@ -1994,7 +2005,7 @@
         "Hidden Power",
         "Hyper Voice",
         "Iron Head",
-        "Mud -Slap",
+        "Mud-Slap",
         "Protect",
         "Rain Dance",
         "Rest",
@@ -2021,6 +2032,7 @@
   },
   {
     "Species": "Oinkologne Male",
+    "Number": 916,
     "Base Stats": {
       "HP": 11,
       "Attack": 11,
@@ -2141,7 +2153,7 @@
         },
         {
           "Level": 39,
-          "Move": "Double -Edge",
+          "Move": "Double-Edge",
           "Type": "Normal"
         },
         {
@@ -2184,7 +2196,7 @@
         "Hyper Voice",
         "Iron Head",
         "Lash Out",
-        "Mud -Slap",
+        "Mud-Slap",
         "Protect",
         "Rain Dance",
         "Rest",
@@ -2211,6 +2223,7 @@
   },
   {
     "Species": "Oinkologne Female",
+    "Number": 916,
     "Base Stats": {
       "HP": 12,
       "Attack": 12,
@@ -2331,7 +2344,7 @@
         },
         {
           "Level": 39,
-          "Move": "Double -Edge",
+          "Move": "Double-Edge",
           "Type": "Normal"
         },
         {
@@ -2374,7 +2387,7 @@
         "Hyper Voice",
         "Iron Head",
         "Lash Out",
-        "Mud -Slap",
+        "Mud-Slap",
         "Protect",
         "Rain Dance",
         "Rest",
@@ -2401,6 +2414,7 @@
   },
   {
     "Species": "Tarountula",
+    "Number": 917,
     "Base Stats": {
       "HP": 4,
       "Attack": 4,
@@ -2453,7 +2467,7 @@
         },
         {
           "Level": 1,
-          "Move": "String -Shot",
+          "Move": "String-Shot",
           "Type": "Bug"
         },
         {
@@ -2597,6 +2611,7 @@
   },
   {
     "Species": "Spidops",
+    "Number": 918,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -2650,7 +2665,7 @@
         },
         {
           "Level": 1,
-          "Move": "String -Shot",
+          "Move": "String-Shot",
           "Type": "Bug"
         },
         {
@@ -2807,6 +2822,7 @@
   },
   {
     "Species": "Nymble",
+    "Number": 919,
     "Base Stats": {
       "HP": 3,
       "Attack": 3,
@@ -3002,6 +3018,7 @@
   },
   {
     "Species": "Lokix",
+    "Number": 920,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -3182,7 +3199,7 @@
         "Counter",
         "Dark Pulse",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Dual Chop",
         "Facade",
         "Fling",
@@ -3230,6 +3247,7 @@
   },
   {
     "Species": "Pawmi",
+    "Number": 921,
     "Base Stats": {
       "HP": 5,
       "Attack": 5,
@@ -3434,6 +3452,7 @@
   },
   {
     "Species": "Pawmo",
+    "Number": 922,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -3646,6 +3665,7 @@
   },
   {
     "Species": "Pawmot",
+    "Number": 923,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -3814,7 +3834,7 @@
         "Confide",
         "Crunch (N)",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Drain Punch (N)",
         "Eerie Impulse",
         "Electric Terrain",
@@ -3872,6 +3892,7 @@
   },
   {
     "Species": "Tandemaus",
+    "Number": 924,
     "Base Stats": {
       "HP": 5,
       "Attack": 5,
@@ -3923,7 +3944,7 @@
         },
         {
           "Level": 1,
-          "Move": "Baby -doll Eyes",
+          "Move": "Baby-doll Eyes",
           "Type": "Fairy"
         },
         {
@@ -4028,7 +4049,7 @@
         "Dig",
         "Disarming Voice (N)",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Endure",
         "Facade",
         "Fake Tears",
@@ -4042,7 +4063,7 @@
         "Low Kick",
         "Low Sweep",
         "Mud Shot",
-        "Mud -Slap",
+        "Mud-Slap",
         "Pounce",
         "Protect",
         "Rain Dance",
@@ -4065,13 +4086,14 @@
         "Tickle",
         "Toxic",
         "Trailblaze",
-        "U -Turn",
+        "U-Turn",
         "Wate r Pulse"
       ]
     }
   },
   {
     "Species": "Maushold",
+    "Number": 925,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -4122,7 +4144,7 @@
         },
         {
           "Level": 1,
-          "Move": "Baby -doll Eyes",
+          "Move": "Baby-doll Eyes",
           "Type": "Fairy"
         },
         {
@@ -4227,7 +4249,7 @@
         "Dig",
         "Disarming Voice (N)",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Endure",
         "Facade",
         "Fake Tears",
@@ -4243,7 +4265,7 @@
         "Low Kick",
         "Low Sweep",
         "Mud Shot",
-        "Mud -Slap",
+        "Mud-Slap",
         "Pounce",
         "Protect",
         "Rain Dance",
@@ -4266,13 +4288,14 @@
         "Tickle",
         "Toxic",
         "Trailblaze",
-        "U -Turn",
+        "U-Turn",
         "Water Pulse"
       ]
     }
   },
   {
     "Species": "Fidough",
+    "Number": 926,
     "Base Stats": {
       "HP": 4,
       "Attack": 4,
@@ -4356,7 +4379,7 @@
         },
         {
           "Level": 15,
-          "Move": "Baby -Doll Eyes",
+          "Move": "Baby-Doll Eyes",
           "Type": "Fairy"
         },
         {
@@ -4401,7 +4424,7 @@
         },
         {
           "Level": 40,
-          "Move": "Double -Edge",
+          "Move": "Double-Edge",
           "Type": "Normal"
         },
         {
@@ -4442,7 +4465,7 @@
         "Misty Explosion",
         "Misty Terrain",
         "Mud Shot",
-        "Mud -Slap",
+        "Mud-Slap",
         "Protect",
         "Psych Up",
         "Psychic Fangs",
@@ -4469,6 +4492,7 @@
   },
   {
     "Species": "Dachsbun",
+    "Number": 927,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -4483,7 +4507,7 @@
       ],
       "Basic Ability 1": "Aroma Veil",
       "Basic Ability 2": "Pickup",
-      "Adv Ability 1": "Well -Baked Body",
+      "Adv Ability 1": "Well-Baked Body",
       "Adv Ability 2": "Ball Fetch",
       "High Ability": "Type Aura (Fairy)",
       "Genders": "50.0% Male 50.0% Female",
@@ -4551,7 +4575,7 @@
         },
         {
           "Level": 15,
-          "Move": "Baby -Doll Eyes",
+          "Move": "Baby-Doll Eyes",
           "Type": "Fairy"
         },
         {
@@ -4596,7 +4620,7 @@
         },
         {
           "Level": 40,
-          "Move": "Double -Edge",
+          "Move": "Double-Edge",
           "Type": "Normal"
         },
         {
@@ -4638,7 +4662,7 @@
         "Misty Explosion",
         "Misty Terrain",
         "Mud Shot",
-        "Mud - Slap",
+        "Mud- Slap",
         "Protect",
         "Psychic Fangs",
         "Rain Dance",
@@ -4665,6 +4689,7 @@
   },
   {
     "Species": "Smoliv",
+    "Number": 928,
     "Base Stats": {
       "HP": 4,
       "Attack": 4,
@@ -4863,6 +4888,7 @@
   },
   {
     "Species": "Dolliv",
+    "Number": 929,
     "Base Stats": {
       "HP": 5,
       "Attack": 5,
@@ -5068,6 +5094,7 @@
   },
   {
     "Species": "Arboliva",
+    "Number": 930,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -5287,6 +5314,7 @@
   },
   {
     "Species": "Squawkabilly",
+    "Number": 931,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -5448,7 +5476,7 @@
         },
         {
           "Level": 49,
-          "Move": "Double -Edge",
+          "Move": "Double-Edge",
           "Type": "Normal"
         },
         {
@@ -5490,7 +5518,7 @@
         "Mirror Move",
         "Parting Shot",
         "Pounce",
-        "Power -Up Punch",
+        "Power-Up Punch",
         "Protect",
         "Rest",
         "Return (N)",
@@ -5514,6 +5542,7 @@
   },
   {
     "Species": "Nacli",
+    "Number": 932,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -5696,6 +5725,7 @@
   },
   {
     "Species": "Naclstack",
+    "Number": 933,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -5843,7 +5873,7 @@
         "Confide",
         "Curse",
         "Dig",
-        "Double -Edge",
+        "Double-Edge",
         "Double Team",
         "Earth Power",
         "Endure",
@@ -5883,6 +5913,7 @@
   },
   {
     "Species": "Garganacl",
+    "Number": 934,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -6037,7 +6068,7 @@
         "Curse",
         "Dig",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Dynamic Punch",
         "Earth Power",
         "Endure",
@@ -6085,6 +6116,7 @@
   },
   {
     "Species": "Charcadet",
+    "Number": 935,
     "Base Stats": {
       "HP": 4,
       "Attack": 4,
@@ -6274,6 +6306,7 @@
   },
   {
     "Species": "Armarouge",
+    "Number": 936,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -6499,6 +6532,7 @@
   },
   {
     "Species": "Ceruledge",
+    "Number": 937,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -6715,12 +6749,13 @@
         "Throat Chop",
         "Toxic",
         "Vacuum Wave",
-        "X -Scissor"
+        "X-Scissor"
       ]
     }
   },
   {
     "Species": "Tadbulb",
+    "Number": 938,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -6783,7 +6818,7 @@
         },
         {
           "Level": 4,
-          "Move": "Mud -Slap",
+          "Move": "Mud-Slap",
           "Type": "Ground"
         },
         {
@@ -6917,6 +6952,7 @@
   },
   {
     "Species": "Bellibolt",
+    "Number": 939,
     "Base Stats": {
       "HP": 11,
       "Attack": 11,
@@ -6977,7 +7013,7 @@
         },
         {
           "Level": 4,
-          "Move": "Mud -Slap",
+          "Move": "Mud-Slap",
           "Type": "Ground"
         },
         {
@@ -7118,6 +7154,7 @@
   },
   {
     "Species": "Wattrel",
+    "Number": 940,
     "Base Stats": {
       "HP": 4,
       "Attack": 4,
@@ -7307,6 +7344,7 @@
   },
   {
     "Species": "Kilowattrel",
+    "Number": 941,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -7487,7 +7525,7 @@
         "Thunder Wave",
         "Thunderbolt (N)",
         "Toxic",
-        "U -Turn",
+        "U-Turn",
         "Vacuum Wave",
         "Weather Ball (N)",
         "Wild Charge"
@@ -7496,6 +7534,7 @@
   },
   {
     "Species": "Maschiff",
+    "Number": 942,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -7680,6 +7719,7 @@
   },
   {
     "Species": "Mabosstiff",
+    "Number": 943,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -7832,7 +7872,7 @@
         "Destiny Bond",
         "Dig",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Endeavor",
         "Endure",
         "Facade",
@@ -7872,6 +7912,7 @@
   },
   {
     "Species": "Shroodle",
+    "Number": 944,
     "Base Stats": {
       "HP": 4,
       "Attack": 4,
@@ -8035,7 +8076,7 @@
         "Cut",
         "Dig",
         "Double Team",
-        "Double - Edge",
+        "Double- Edge",
         "Encore",
         "Endeavor",
         "Endure",
@@ -8050,7 +8091,7 @@
         "Low Sweep",
         "Metronome",
         "Mud Shot",
-        "Mud -Slap",
+        "Mud-Slap",
         "Nasty Plot",
         "Parting Shot (N)",
         "Poison Tail (N)",
@@ -8084,6 +8125,7 @@
   },
   {
     "Species": "Grafaiai",
+    "Number": 945,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -8246,7 +8288,7 @@
         "Cut",
         "Dig",
         "Double Team",
-        "Double - Edge",
+        "Double- Edge",
         "Encore",
         "Endeavor",
         "Endure",
@@ -8262,7 +8304,7 @@
         "Metronome",
         "Mud Bomb",
         "Mud Shot",
-        "Mud -Slap",
+        "Mud-Slap",
         "Nasty Plot",
         "Parting Shot (N)",
         "Poison Tail (N)",
@@ -8290,13 +8332,14 @@
         "Toxic",
         "Trailblaze",
         "Venoshock (N)",
-        "Wake -Up Slap",
-        "X -Scissor"
+        "Wake-Up Slap",
+        "X-Scissor"
       ]
     }
   },
   {
     "Species": "Bramblin",
+    "Number": 946,
     "Base Stats": {
       "HP": 4,
       "Attack": 4,
@@ -8504,6 +8547,7 @@
   },
   {
     "Species": "Brambleghast",
+    "Number": 947,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -8719,6 +8763,7 @@
   },
   {
     "Species": "Toedscool",
+    "Number": 948,
     "Base Stats": {
       "HP": 4,
       "Attack": 4,
@@ -8826,6 +8871,7 @@
   },
   {
     "Species": "Toedscruel",
+    "Number": 949,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -8890,7 +8936,7 @@
         },
         {
           "Level": 1,
-          "Move": "Mud -Slap",
+          "Move": "Mud-Slap",
           "Type": "Ground"
         },
         {
@@ -9053,6 +9099,7 @@
   },
   {
     "Species": "Klawf",
+    "Number": 950,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -9225,7 +9272,7 @@
         "Knock Off",
         "Meteor Beam",
         "Mud Shot",
-        "Mud -Slap",
+        "Mud-Slap",
         "Power Gem (N)",
         "Psycho Cut",
         "Rain Dance",
@@ -9259,6 +9306,7 @@
   },
   {
     "Species": "Capsakid",
+    "Number": 951,
     "Base Stats": {
       "HP": 5,
       "Attack": 5,
@@ -9436,6 +9484,7 @@
   },
   {
     "Species": "Scovillain",
+    "Number": 952,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -9617,12 +9666,13 @@
         "Thief",
         "Toxic",
         "Trailblaze",
-        "Will -O-Wisp"
+        "Will-O-Wisp"
       ]
     }
   },
   {
     "Species": "Rellor",
+    "Number": 953,
     "Base Stats": {
       "HP": 4,
       "Attack": 4,
@@ -9781,7 +9831,7 @@
         "Leech Life (N)",
         "Lunge (N)",
         "Memento",
-        "Mud -Slap",
+        "Mud-Slap",
         "Protect",
         "Recover",
         "Rest",
@@ -9805,6 +9855,7 @@
   },
   {
     "Species": "Rabsca",
+    "Number": 954,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -9989,7 +10040,7 @@
         "Light Screen",
         "Lunge (N)",
         "Memento",
-        "Mud -Slap",
+        "Mud-Slap",
         "Poltergeist",
         "Pounce (N)",
         "Power Gem",
@@ -10029,6 +10080,7 @@
   },
   {
     "Species": "Flittle",
+    "Number": 955,
     "Base Stats": {
       "HP": 3,
       "Attack": 3,
@@ -10094,7 +10146,7 @@
         },
         {
           "Level": 8,
-          "Move": "Baby -Doll Eyes",
+          "Move": "Baby-Doll Eyes",
           "Type": "Fairy"
         },
         {
@@ -10190,7 +10242,7 @@
         "Hidden Power",
         "Hypnosis",
         "Light Screen",
-        "Mud -Slap",
+        "Mud-Slap",
         "Mud Shot",
         "Pluck (N)",
         "Pounce",
@@ -10219,13 +10271,14 @@
         "Toxic",
         "Trick",
         "Trick Room",
-        "U -Turn",
+        "U-Turn",
         "Zen Headbutt"
       ]
     }
   },
   {
     "Species": "Espathra",
+    "Number": 956,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -10292,7 +10345,7 @@
         },
         {
           "Level": 8,
-          "Move": "Baby -Doll Eyes",
+          "Move": "Baby-Doll Eyes",
           "Type": "Fairy"
         },
         {
@@ -10382,7 +10435,7 @@
         "Confide",
         "Confuse Ray",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Drill Peck (N)",
         "Endure",
         "Energy Ball",
@@ -10399,7 +10452,7 @@
         "Hyper Beam",
         "Light Screen",
         "Low Kick",
-        "Mud -Slap",
+        "Mud-Slap",
         "Mud Shot",
         "Night Shade",
         "Pluck (N)",
@@ -10431,13 +10484,14 @@
         "Toxic",
         "Trick",
         "Trick Room",
-        "U -Turn",
+        "U-Turn",
         "Zen Headbutt"
       ]
     }
   },
   {
     "Species": "Tinkatink",
+    "Number": 957,
     "Base Stats": {
       "HP": 5,
       "Attack": 5,
@@ -10501,7 +10555,7 @@
         },
         {
           "Level": 5,
-          "Move": "Baby -Doll Eyes",
+          "Move": "Baby-Doll Eyes",
           "Type": "Fairy"
         },
         {
@@ -10630,6 +10684,7 @@
   },
   {
     "Species": "Tinkatuff",
+    "Number": 958,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -10693,7 +10748,7 @@
         },
         {
           "Level": 5,
-          "Move": "Baby -Doll Eyes",
+          "Move": "Baby-Doll Eyes",
           "Type": "Fairy"
         },
         {
@@ -10826,6 +10881,7 @@
   },
   {
     "Species": "Tinkaton",
+    "Number": 959,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -10889,7 +10945,7 @@
         },
         {
           "Level": 5,
-          "Move": "Baby -Doll Eyes",
+          "Move": "Baby-Doll Eyes",
           "Type": "Fairy"
         },
         {
@@ -11024,6 +11080,7 @@
   },
   {
     "Species": "Wiglett",
+    "Number": 960,
     "Base Stats": {
       "HP": 1,
       "Attack": 1,
@@ -11205,7 +11262,7 @@
         "Memento",
         "Mud Bomb",
         "Mud Shot",
-        "Mud -Slap (N)",
+        "Mud-Slap (N)",
         "Muddy Water (N)",
         "Pin Missile",
         "Protect",
@@ -11235,6 +11292,7 @@
   },
   {
     "Species": "Wugtrio",
+    "Number": 961,
     "Base Stats": {
       "HP": 4,
       "Attack": 4,
@@ -11418,7 +11476,7 @@
         "Memento",
         "Mud Bomb",
         "Mud Shot",
-        "Mud - Slap (N)",
+        "Mud- Slap (N)",
         "Muddy Water (N)",
         "Outrage",
         "Pain Split",
@@ -11451,6 +11509,7 @@
   },
   {
     "Species": "Bombirdier",
+    "Number": 962,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -11657,12 +11716,13 @@
         "Taunt",
         "Tera Blast",
         "Toxic",
-        "U -Turn"
+        "U-Turn"
       ]
     }
   },
   {
     "Species": "Finizen",
+    "Number": 963,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -11852,6 +11912,7 @@
   },
   {
     "Species": "Palafin Zero Form",
+    "Number": 964,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -12074,6 +12135,7 @@
   },
   {
     "Species": "Palafin Hero Form",
+    "Number": 964,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -12297,6 +12359,7 @@
   },
   {
     "Species": "Varoom",
+    "Number": 965,
     "Base Stats": {
       "HP": 5,
       "Attack": 5,
@@ -12447,7 +12510,7 @@
         "Confide",
         "Curse",
         "Double Team",
-        "Double - Edge",
+        "Double- Edge",
         "Endure",
         "Facade",
         "Flash Cannon (N)",
@@ -12465,7 +12528,7 @@
         "Round",
         "Sandstorm",
         "Scary Face",
-        "Self -Destruct",
+        "Self-Destruct",
         "Sleep Talk",
         "Sludge (N)",
         "Sludge Bomb",
@@ -12488,6 +12551,7 @@
   },
   {
     "Species": "Revavroom",
+    "Number": 966,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -12643,7 +12707,7 @@
         "Confide",
         "Curse",
         "Double Team",
-        "Double - Edge",
+        "Double- Edge",
         "Endeavor",
         "Endure",
         "Facade",
@@ -12669,7 +12733,7 @@
         "Round",
         "Sandstorm",
         "Scary Face",
-        "Self - Destruct",
+        "Self- Destruct",
         "Sleep Talk",
         "Sludge (N)",
         "Sludge Bomb",
@@ -12692,6 +12756,7 @@
   },
   {
     "Species": "Cyclizar",
+    "Number": 967,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -12837,7 +12902,7 @@
         },
         {
           "Level": 43,
-          "Move": "Double -Edge",
+          "Move": "Double-Edge",
           "Type": "Normal"
         },
         {
@@ -12879,7 +12944,7 @@
         "Knock Off",
         "Lunge (N)",
         "Mud Shot",
-        "Mud -Slap",
+        "Mud-Slap",
         "Outrage",
         "Overheat",
         "Power Trip",
@@ -12910,6 +12975,7 @@
   },
   {
     "Species": "Orthworm",
+    "Number": 968,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -12973,7 +13039,7 @@
         },
         {
           "Level": 1,
-          "Move": "Mud -Slap",
+          "Move": "Mud-Slap",
           "Type": "Ground"
         },
         {
@@ -13065,7 +13131,7 @@
         "Curse",
         "Dive (N)",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Earth Power",
         "Endure",
         "Extreme Speed (N)",
@@ -13111,6 +13177,7 @@
   },
   {
     "Species": "Glimmet",
+    "Number": 969,
     "Base Stats": {
       "HP": 5,
       "Attack": 5,
@@ -13306,6 +13373,7 @@
   },
   {
     "Species": "Glimmora",
+    "Number": 970,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -13508,6 +13576,7 @@
   },
   {
     "Species": "Greavard",
+    "Number": 971,
     "Base Stats": {
       "HP": 5,
       "Attack": 5,
@@ -13655,7 +13724,7 @@
         },
         {
           "Level": 49,
-          "Move": "Double -Edge",
+          "Move": "Double-Edge",
           "Type": "Normal"
         },
         {
@@ -13685,7 +13754,7 @@
         "Ice Fang",
         "Memento",
         "Mud Shot",
-        "Mud -Slap",
+        "Mud-Slap",
         "Night Shade",
         "Pain Split",
         "Phantom Force (N)",
@@ -13719,6 +13788,7 @@
   },
   {
     "Species": "Houndstone",
+    "Number": 972,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -13864,7 +13934,7 @@
         },
         {
           "Level": 49,
-          "Move": "Double -Edge",
+          "Move": "Double-Edge",
           "Type": "Normal"
         },
         {
@@ -13897,7 +13967,7 @@
         "Ice Fang",
         "Memento",
         "Mud Shot",
-        "Mud -Slap",
+        "Mud-Slap",
         "Night Shade",
         "Pain Split",
         "Phantom Force (N)",
@@ -13925,13 +13995,14 @@
         "Toxic",
         "Trick",
         "Uproar",
-        "Will -O-Wisp",
+        "Will-O-Wisp",
         "Yawn"
       ]
     }
   },
   {
     "Species": "Flamigo",
+    "Number": 973,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -14136,6 +14207,7 @@
   },
   {
     "Species": "Cetoddle",
+    "Number": 974,
     "Base Stats": {
       "HP": 11,
       "Attack": 11,
@@ -14263,7 +14335,7 @@
         },
         {
           "Level": 47,
-          "Move": "Double -Edge",
+          "Move": "Double-Edge",
           "Type": "Normal"
         },
         {
@@ -14331,6 +14403,7 @@
   },
   {
     "Species": "Cetitan",
+    "Number": 975,
     "Base Stats": {
       "HP": 17,
       "Attack": 17,
@@ -14457,7 +14530,7 @@
         },
         {
           "Level": 47,
-          "Move": "Double -Edge",
+          "Move": "Double-Edge",
           "Type": "Normal"
         },
         {
@@ -14530,6 +14603,7 @@
   },
   {
     "Species": "Veluza",
+    "Number": 976,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -14696,7 +14770,7 @@
         "Cross Poison",
         "Cut (N)",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Drill Run",
         "Endeavor",
         "Endure",
@@ -14746,6 +14820,7 @@
   },
   {
     "Species": "Dondozo",
+    "Number": 977,
     "Base Stats": {
       "HP": 15,
       "Attack": 15,
@@ -14936,7 +15011,7 @@
         "Crunch (N)",
         "Curse",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Endure",
         "Facade",
         "Fissure",
@@ -14971,6 +15046,7 @@
   },
   {
     "Species": "Tatsugiri",
+    "Number": 978,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -15170,6 +15246,7 @@
   },
   {
     "Species": "Paldean Tauros Combat Breed",
+    "Number": 128,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -15328,7 +15405,7 @@
         "Curse",
         "Dig",
         "Double Team",
-        "Double -Edge (N)",
+        "Double-Edge (N)",
         "Drill Run",
         "Endeavor",
         "Endure",
@@ -15367,6 +15444,7 @@
   },
   {
     "Species": "Paldean Tauros Blaze Breed",
+    "Number": 128,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -15528,7 +15606,7 @@
         "Curse",
         "Dig",
         "Double Team",
-        "Double -Edge (N)",
+        "Double-Edge (N)",
         "Drill Run",
         "Endeavor",
         "Endure",
@@ -15571,6 +15649,7 @@
   },
   {
     "Species": "Paldean Tauros Aqua Breed",
+    "Number": 128,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -15733,7 +15812,7 @@
         "Dig",
         "Dive",
         "Double Team",
-        "Double -Edge (N)",
+        "Double-Edge (N)",
         "Drill Run",
         "Endeavor",
         "Endure",
@@ -15774,6 +15853,7 @@
   },
   {
     "Species": "Annihilape",
+    "Number": 979,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -15832,7 +15912,7 @@
         "Curse",
         "Dig",
         "Double Team",
-        "Double - Edge",
+        "Double- Edge",
         "Drain Punch",
         "Dual Chop",
         "Dynamic Punch",
@@ -15900,7 +15980,7 @@
         "Thunder Punch",
         "Thunderbolt",
         "Toxic",
-        "U -Turn",
+        "U-Turn",
         "Uproar",
         "Vacuum Wave"
       ]
@@ -15908,6 +15988,7 @@
   },
   {
     "Species": "Paldean Wooper",
+    "Number": 194,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -16053,7 +16134,7 @@
         "Dig",
         "Double Kick",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Earth Power",
         "Endure",
         "Facade",
@@ -16066,7 +16147,7 @@
         "Low Kick",
         "Mist",
         "Mud Shot (N)",
-        "Mud -Slap (N)",
+        "Mud-Slap (N)",
         "Protect",
         "Rain Dance",
         "Recover",
@@ -16099,6 +16180,7 @@
   },
   {
     "Species": "Clodsire",
+    "Number": 980,
     "Base Stats": {
       "HP": 13,
       "Attack": 13,
@@ -16253,7 +16335,7 @@
         "Dig",
         "Double Kick",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Earth Power",
         "Endure",
         "Facade",
@@ -16270,7 +16352,7 @@
         "Low Kick",
         "Mist",
         "Mud Shot (N)",
-        "Mud -Slap (N)",
+        "Mud-Slap (N)",
         "Muddy Water",
         "Protect",
         "Rain Dance",
@@ -16305,6 +16387,7 @@
   },
   {
     "Species": "Farigiraf",
+    "Number": 981,
     "Base Stats": {
       "HP": 12,
       "Attack": 12,
@@ -16365,7 +16448,7 @@
         "Dazzling Gleam",
         "Double Kick (N)",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Dream Eater",
         "Earthquake",
         "Echoed Voice",
@@ -16394,7 +16477,7 @@
         "Magic Coat",
         "Mean Look (N)",
         "Mirror Coat",
-        "Mud - Slap",
+        "Mud- Slap",
         "Night Shade",
         "Protect",
         "Psych Up",
@@ -16446,6 +16529,7 @@
   },
   {
     "Species": "Dudunsparce",
+    "Number": 982,
     "Base Stats": {
       "HP": 13,
       "Attack": 13,
@@ -16495,6 +16579,7 @@
   },
   {
     "Species": "Kingambit",
+    "Number": 983,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -16546,6 +16631,7 @@
   },
   {
     "Species": "Great Tusk",
+    "Number": 984,
     "Base Stats": {
       "HP": 12,
       "Attack": 12,
@@ -16695,7 +16781,7 @@
         "Confide",
         "Dig",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Earth Power",
         "Endure",
         "Facade",
@@ -16710,7 +16796,7 @@
         "Ice Spinner",
         "Iron Head",
         "Mud Shot",
-        "Mud -Slap",
+        "Mud-Slap",
         "Play Rough",
         "Protect",
         "Psyshock",
@@ -16744,6 +16830,7 @@
   },
   {
     "Species": "Scream Tail",
+    "Number": 985,
     "Base Stats": {
       "HP": 12,
       "Attack": 12,
@@ -16920,7 +17007,7 @@
         "Confide",
         "Dig",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Drain Punch",
         "Encore",
         "Endure",
@@ -16987,6 +17074,7 @@
   },
   {
     "Species": "Brute Bonnet",
+    "Number": 986,
     "Base Stats": {
       "HP": 11,
       "Attack": 11,
@@ -17129,7 +17217,7 @@
         "Crunch",
         "Dark Pulse (N)",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Drain Punch",
         "Earth Power",
         "Endure",
@@ -17173,6 +17261,7 @@
   },
   {
     "Species": "Flutter Mane",
+    "Number": 987,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -17232,7 +17321,7 @@
         },
         {
           "Level": 1,
-          "Move": "Spook* [Ember, -1SpD]",
+          "Move": "Spook* [Ember,-1SpD]",
           "Type": "Ghost"
         },
         {
@@ -17356,6 +17445,7 @@
   },
   {
     "Species": "Slither Wing",
+    "Number": 988,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -17526,7 +17616,7 @@
         "Confide",
         "Curse",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Earthquake",
         "Endure",
         "Facade",
@@ -17560,13 +17650,14 @@
         "Trailblaze (N)",
         "U-Turn (N)",
         "Wil d Charge",
-        "Will -O- Wisp",
+        "Will-O- Wisp",
         "Zen Headbutt (N)"
       ]
     }
   },
   {
     "Species": "Sandy Shocks",
+    "Number": 989,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -17635,7 +17726,7 @@
         },
         {
           "Level": 4,
-          "Move": "Mud -Slap",
+          "Move": "Mud-Slap",
           "Type": "Ground"
         },
         {
@@ -17766,6 +17857,7 @@
   },
   {
     "Species": "Iron Treads",
+    "Number": 990,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -17846,7 +17938,7 @@
         },
         {
           "Level": 8,
-          "Move": "Lock -On",
+          "Move": "Lock-On",
           "Type": "Normal"
         },
         {
@@ -17921,7 +18013,7 @@
         "Body Slam",
         "Confide",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Earth Power",
         "Electric Terrain (N)",
         "Electro Ball (N)",
@@ -17939,7 +18031,7 @@
         "Iron Tail",
         "Metal Sound",
         "Mud Shot",
-        "Mud -Slap",
+        "Mud-Slap",
         "Protect",
         "Rest",
         "Return",
@@ -17967,6 +18059,7 @@
   },
   {
     "Species": "Iron Bundle",
+    "Number": 991,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -18146,13 +18239,14 @@
         "Tera Blast",
         "Thief",
         "Toxic",
-        "U -Turn",
+        "U-Turn",
         "Water Pulse"
       ]
     }
   },
   {
     "Species": "Iron Hands",
+    "Number": 992,
     "Base Stats": {
       "HP": 15,
       "Attack": 15,
@@ -18317,7 +18411,7 @@
         "Bulldoze",
         "Confide",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Drain Punch",
         "Earthquake",
         "Electric Terrain (N)",
@@ -18363,6 +18457,7 @@
   },
   {
     "Species": "Iron Jugulis",
+    "Number": 993,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -18535,7 +18630,7 @@
         "Confide",
         "Crunch (N)",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Dragon Cheer",
         "Dragon Tail",
         "Dual Wingbeat",
@@ -18575,13 +18670,14 @@
         "Tera Blast",
         "Throat Chop",
         "Toxic",
-        "U - Turn",
+        "U- Turn",
         "Zen Headbutt (N)"
       ]
     }
   },
   {
     "Species": "Iron Moth",
+    "Number": 994,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -18780,13 +18876,14 @@
         "Tera Blast",
         "Toxic",
         "Toxic Spikes",
-        "U - Turn",
+        "U- Turn",
         "Venoshock"
       ]
     }
   },
   {
     "Species": "Iron Thorns",
+    "Number": 995,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -18959,7 +19056,7 @@
         "Curse",
         "Dig",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Dragon Claw",
         "Dragon Dance",
         "Dragon Tail",
@@ -19017,6 +19114,7 @@
   },
   {
     "Species": "Frigibax",
+    "Number": 996,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -19189,7 +19287,7 @@
         "Endure",
         "Facade",
         "False Swipe",
-        "Freeze -Dry",
+        "Freeze-Dry",
         "Frost Breath",
         "Frustration",
         "Helping Hand",
@@ -19218,6 +19316,7 @@
   },
   {
     "Species": "Arctibax",
+    "Number": 997,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -19390,7 +19489,7 @@
         "Endure",
         "Facade",
         "False Swipe",
-        "Freeze -Dry",
+        "Freeze-Dry",
         "Frost Breath",
         "Frustration",
         "Helping Hand",
@@ -19419,6 +19518,7 @@
   },
   {
     "Species": "Baxcalibur",
+    "Number": 998,
     "Base Stats": {
       "HP": 12,
       "Attack": 12,
@@ -19584,7 +19684,7 @@
         "Confide",
         "Dig",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Draco Meteor",
         "Dragon Breath (N)",
         "Dragon Cheer",
@@ -19596,7 +19696,7 @@
         "Endure",
         "Facade",
         "False Swipe",
-        "Freeze -Dry",
+        "Freeze-Dry",
         "Frost Breath",
         "Frustration",
         "Giga Impact",
@@ -19630,6 +19730,7 @@
   },
   {
     "Species": "Gimmighoul",
+    "Number": 999,
     "Base Stats": {
       "HP": 5,
       "Attack": 5,
@@ -19685,7 +19786,7 @@
         },
         {
           "Level": 1,
-          "Move": "Spook* [Ember, -1SpD]",
+          "Move": "Spook* [Ember,-1SpD]",
           "Type": "Ghost"
         },
         {
@@ -19810,6 +19911,7 @@
   },
   {
     "Species": "Gholdengo",
+    "Number": 1000,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -19862,7 +19964,7 @@
         },
         {
           "Level": 1,
-          "Move": "Spook* [Ember, -1SpD]",
+          "Move": "Spook* [Ember,-1SpD]",
           "Type": "Ghost"
         },
         {
@@ -19992,6 +20094,7 @@
   },
   {
     "Species": "Wo-Chien",
+    "Number": 1001,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -20188,7 +20291,7 @@
         "Magical Leaf",
         "Memento (N)",
         "Mud Shot (N)",
-        "Mud -Slap",
+        "Mud-Slap",
         "Payback (N)",
         "Pollen Puff",
         "Power Whip (N)",
@@ -20217,7 +20320,8 @@
     }
   },
   {
-    "Species": "Chien -Pao",
+    "Species": "Chien-Pao",
+    "Number": 1002,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -20408,7 +20512,7 @@
         "Facade",
         "False Swipe",
         "Feint Attack",
-        "Freeze -Dry",
+        "Freeze-Dry",
         "Frustration",
         "Fury Cutter",
         "Giga Impact",
@@ -20439,13 +20543,14 @@
         "Taunt",
         "Tera Blast",
         "Toxic",
-        "X -Scissor",
+        "X-Scissor",
         "Zantetsuken* (N)"
       ]
     }
   },
   {
-    "Species": "Ting -Lu",
+    "Species": "Ting-Lu",
+    "Number": 1003,
     "Base Stats": {
       "HP": 16,
       "Attack": 16,
@@ -20629,7 +20734,7 @@
         "Counter",
         "Dark Pulse (N)",
         "Dig",
-        "Double -Edge",
+        "Double-Edge",
         "Earth Power",
         "Endure",
         "Facade",
@@ -20647,7 +20752,7 @@
         "Liquidation",
         "Memento (N)",
         "Mud Shot",
-        "Mud -Slap",
+        "Mud-Slap",
         "Protect",
         "Rock Smash",
         "Rock Tomb",
@@ -20663,7 +20768,7 @@
         "Tri Attack",
         "Water Pulse",
         "Wild Charge",
-        "Will -O-Wisp",
+        "Will-O-Wisp",
         "Wish",
         "Zen Headbutt"
       ]
@@ -20671,6 +20776,7 @@
   },
   {
     "Species": "Chi-Yu",
+    "Number": 1004,
     "Base Stats": {
       "HP": 6,
       "Attack": 6,
@@ -20894,6 +21000,7 @@
   },
   {
     "Species": "Roaring Moon",
+    "Number": 1005,
     "Base Stats": {
       "HP": 11,
       "Attack": 11,
@@ -21035,7 +21142,7 @@
         },
         {
           "Level": 52,
-          "Move": "Double -Edge",
+          "Move": "Double-Edge",
           "Type": "Normal"
         }
       ],
@@ -21099,13 +21206,14 @@
         "Tera Blast",
         "Thunder Fang",
         "Toxic",
-        "U -Turn",
-        "X -Scissor"
+        "U-Turn",
+        "X-Scissor"
       ]
     }
   },
   {
     "Species": "Iron Valiant",
+    "Number": 1006,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -21348,13 +21456,14 @@
         "Toxic",
         "Trick",
         "Trick Room",
-        "X -Scissor",
+        "X-Scissor",
         "Zen Headbutt"
       ]
     }
   },
   {
     "Species": "Koraidon",
+    "Number": 1007,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -21516,7 +21625,7 @@
         "Bulldoze",
         "Crunch",
         "Dig",
-        "Double -Edge",
+        "Double-Edge",
         "Draco Meteor",
         "Dragon Cheer",
         "Dragon Dance",
@@ -21542,7 +21651,7 @@
         "Low Sweep",
         "Meteor Beam",
         "Mud Shot",
-        "Mud -Slap",
+        "Mud-Slap",
         "Overheat",
         "Protect",
         "Rest",
@@ -21563,7 +21672,7 @@
         "Temper Flare",
         "Tera Blast",
         "Thunder Fang",
-        "U -Turn",
+        "U-Turn",
         "Uproar",
         "Wild Charge",
         "Zen Head butt"
@@ -21572,6 +21681,7 @@
   },
   {
     "Species": "Miraidon",
+    "Number": 1008,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -21779,7 +21889,7 @@
         "Thunder Wave",
         "Thunderbolt",
         "Toxic",
-        "U -Turn",
+        "U-Turn",
         "Volt Switch",
         "Wild Charge",
         "Zen Headbutt"
@@ -21788,6 +21898,7 @@
   },
   {
     "Species": "Walking Wake",
+    "Number": 1009,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -21956,7 +22067,7 @@
         "Confide",
         "Crunch",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Dragon Cheer",
         "Dragon Claw",
         "Dragon Dance",
@@ -22001,6 +22112,7 @@
   },
   {
     "Species": "Gouging Fire",
+    "Number": 1020,
     "Base Stats": {
       "HP": 11,
       "Attack": 11,
@@ -22162,7 +22274,7 @@
         "Confide",
         "Double Kick (N)",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Draco Meteor (N)",
         "Dragon Cheer",
         "Dragon Dance",
@@ -22212,6 +22324,7 @@
   },
   {
     "Species": "Raging Bolt",
+    "Number": 1021,
     "Base Stats": {
       "HP": 13,
       "Attack": 13,
@@ -22375,7 +22488,7 @@
         "Confide",
         "Crunch",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Dragon Cheer",
         "Earth Power",
         "Earthquake (N)",
@@ -22423,6 +22536,7 @@
   },
   {
     "Species": "Iron Leaves",
+    "Number": 1010,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -22593,7 +22707,7 @@
         "Coaching",
         "Confide",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Electric Terrain (N)",
         "Endure",
         "Energy Ball",
@@ -22632,12 +22746,13 @@
         "Throat Chop",
         "Toxic",
         "Wild Charge",
-        "X -Scissor"
+        "X-Scissor"
       ]
     }
   },
   {
     "Species": "Iron Boulder",
+    "Number": 1022,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -22796,7 +22911,7 @@
         "Bulldoze",
         "Confide",
         "Double Team",
-        "Double - Edge",
+        "Double- Edge",
         "Earthquake",
         "Electric Terrain (N)",
         "Endure",
@@ -22835,6 +22950,7 @@
   },
   {
     "Species": "Iron Crown",
+    "Number": 1023,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -22989,7 +23105,7 @@
         "Confide",
         "Dazzling Gleam",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Dragon Pulse",
         "Electric Terrain (N)",
         "Endure",
@@ -23025,13 +23141,14 @@
         "Take Down",
         "Tera Blast",
         "Toxic",
-        "X -Scissor",
+        "X-Scissor",
         "Zen Headbutt"
       ]
     }
   },
   {
     "Species": "Dipplin",
+    "Number": 1011,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -23233,6 +23350,7 @@
   },
   {
     "Species": "Hydrapple",
+    "Number": 1019,
     "Base Stats": {
       "HP": 11,
       "Attack": 11,
@@ -23451,6 +23569,7 @@
   },
   {
     "Species": "Poltchageist",
+    "Number": 1012,
     "Base Stats": {
       "HP": 4,
       "Attack": 4,
@@ -23653,6 +23772,7 @@
   },
   {
     "Species": "Sinistcha",
+    "Number": 1013,
     "Base Stats": {
       "HP": 7,
       "Attack": 7,
@@ -23854,6 +23974,7 @@
   },
   {
     "Species": "Okidogi",
+    "Number": 1014,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -24013,7 +24134,7 @@
         "Curse",
         "Dig",
         "Double Team",
-        "Double -Edge",
+        "Double-Edge",
         "Drain Punch (N)",
         "Endure",
         "Facade",
@@ -24069,6 +24190,7 @@
   },
   {
     "Species": "Munkidori",
+    "Number": 1015,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -24246,7 +24368,7 @@
         "Light Screen",
         "Metronome",
         "Mud Bomb",
-        "Mud -Slap",
+        "Mud-Slap",
         "Night Shade",
         "Poison Jab",
         "Poltergeist",
@@ -24273,7 +24395,7 @@
         "Toxic",
         "Trailblaze",
         "Trick",
-        "U -Turn",
+        "U-Turn",
         "Uproar",
         "Vacuum Wave",
         "Venoshock (N)",
@@ -24283,6 +24405,7 @@
   },
   {
     "Species": "Fezandipiti",
+    "Number": 1016,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -24490,7 +24613,7 @@
         "Taunt",
         "Tera Blast",
         "Toxic",
-        "U -Turn",
+        "U-Turn",
         "Uproar",
         "Venoshock"
       ]
@@ -24498,6 +24621,7 @@
   },
   {
     "Species": "Ogerpon",
+    "Number": 1017,
     "Base Stats": {
       "HP": 8,
       "Attack": 8,
@@ -24715,6 +24839,7 @@
   },
   {
     "Species": "Ursaluna (Bloodmoon)",
+    "Number": 901,
     "Base Stats": {
       "HP": 11,
       "Attack": 11,
@@ -24885,7 +25010,7 @@
         "Counter",
         "Crunch",
         "Dig",
-        "Double - Edge",
+        "Double- Edge",
         "Double Team",
         "Earthquake",
         "Endure",
@@ -24943,6 +25068,7 @@
   },
   {
     "Species": "Archaludon",
+    "Number": 1018,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
@@ -25045,6 +25171,7 @@
   },
   {
     "Species": "Terapagos",
+    "Number": 1024,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -25151,7 +25278,7 @@
         },
         {
           "Level": 32,
-          "Move": "Double -Edge",
+          "Move": "Double-Edge",
           "Type": "Normal"
         },
         {
@@ -25238,6 +25365,7 @@
   },
   {
     "Species": "Pecharunt",
+    "Number": 1025,
     "Base Stats": {
       "HP": 9,
       "Attack": 9,
