@@ -2,11 +2,11 @@
   const CFG = {
     // Primary JSON location (mirror your moves.html convention)
     jsonUrls: [
-      // '/ptu/data/pokedex/pokedex_core.json',
-      '/ptu/data/pokedex/pokedex_7g.json',
+      '/ptu/data/pokedex/pokedex_core.json',
+      // '/ptu/data/pokedex/pokedex_7g.json',
       // '/ptu/data/pokedex/pokedex_8g.json',
       // '/ptu/data/pokedex/pokedex_8g_hisui.json',
-      // '/ptu/data/pokedex/pokedex_9g.json',
+      '/ptu/data/pokedex/pokedex_9g.json',
     ],
     // Try a few sprite/icon path patterns. Override easily.
     iconPatterns: [
@@ -218,7 +218,6 @@
     });
   }
 
-
   // Background mono or bi-color based on types
   function applyBadgeBackground(el, types) {
     if (!types || types.length === 0) {
@@ -247,7 +246,6 @@
       el.style.borderColor = 'rgba(255,255,255,.15)';
     }
   }
-
 
   // Try multiple icon patterns, fall back to generated SVG initials
   function setupIcon(img, num, name) {
@@ -294,7 +292,38 @@
     modal.show();
   }
 
+  // --- helpers ---
+  function renderLevelUpMoves(moves) {
+    if (!Array.isArray(moves) || !moves.length) return '';
+    return `
+    <ul class="list-unstyled mb-0">
+      ${moves.map(m => `
+        <li class="d-flex align-items-center mb-1">
+          <span class="text-muted" style="width:50px;">Lv.${m.Level}</span>
+          <span class="fw-semibold flex-grow-1">${m.Move}</span>
+          ${wrapTypes([m.Type])}
+        </li>
+      `).join('')}
+    </ul>`;
+  }
+  function renderStringList(title, arr) {
+    if (!Array.isArray(arr) || !arr.length) return '';
+    return `
+    <div class="mt-3">
+      <h5 class="text-muted">${title}</h5>
+      <ul class="list-unstyled mb-0">
+        ${arr.join(', ')}
+      </ul>
+    </div>`;
+  }
+
+
   function renderObject(obj, depth = 0) {
+    // Dispatch: left column for “main” sections
+    const leftSections = new Set([
+      "Base Stats", "Basic Information", "Evolution", "Other Information"
+    ]);
+
     // null/undefined → nothing
     if (obj == null) return '';
 
@@ -323,6 +352,7 @@
           if (["Species", "Number", "Icon"].includes(k)) continue; // already shown elsewhere
 
           // --- special cases / skips you control ---
+          // Render Type
           if (k === 'Basic Information' && v?.Type) {
             const t = v.Type;
             if (Array.isArray(t)) {
@@ -337,6 +367,34 @@
               v.Type = renderFormType(t); // compat: objet simple { Form: [...] }
             }
           }
+
+          // Render Level Up Move List
+          if (k === "Moves" && v) {
+            let blocks = '';
+            blocks += v["Level Up Move List"] ? `
+            <div class="mt-3">
+              <h5 class="text-muted">Level-Up Moves</h5>
+              ${renderLevelUpMoves(v["Level Up Move List"])}
+            </div>` : '';
+            blocks += renderStringList('TM/HM Moves', v["TM/HM Move List"]);
+            blocks += renderStringList('Egg Moves', v["Egg Move List"]);
+            blocks += renderStringList('Tutor Moves', v["Tutor Move List"]);
+            blocks += renderStringList('TM/Tutor Moves', v["TM/Tutor Moves List"]);
+
+            if (blocks.trim()) {
+              const h = Math.min(4 + depth, 6);
+              const card = `
+              <div class="mt-3">
+                <h${h} class="text-muted">Moves</h${h}>
+                <div class="card accent" style="--accent-color: rgba(255,255,255,.08);">
+                  <div class="card-body">${blocks}</div>
+                </div>
+              </div>`;
+              (leftSections.has(k) ? (col1 += card) : (col2 += card));
+            }
+            continue;
+          }
+
           // Add more hand-written exclusions here as needed
           // ----------------------------------------
 
@@ -365,10 +423,6 @@
             </div>`;
           }
 
-          // Dispatch: left column for “main” sections
-          const leftSections = new Set([
-            "Base Stats", "Basic Information", "Evolution", "Other Information"
-          ]);
           (leftSections.has(k) ? (col1 += block) : (col2 += block));
         }
 

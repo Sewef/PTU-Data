@@ -68,7 +68,10 @@ def fix_species_spacing(name: str) -> str:
     return re.sub(r'\b([A-Z]{2,})\s+([A-Z]{1,})(\b| )', lambda m: m.group(1) + m.group(2) + m.group(3), name)
 
 def compare_string_with_spaces(s: str, c: str):
-    return (s.replace(' ', '')).startswith(c.replace(' ', ''))
+    # Tolère espaces, deux-points, casse
+    import re
+    norm = lambda x: re.sub(r'[\s:]+', '', (x or '')).lower()
+    return norm(s).startswith(norm(c))
 
 def fallback_title(lines):
     # Try to pull an UPPERCASE species token even if the line contains "Normal Form", numbers, etc.
@@ -170,11 +173,14 @@ def parse_moves_list(lines, start_idx):
     def parse_levelup(block_lines):
         entries = []
         for ln in block_lines:
-            m = re.match(r'^\s*(\d+)\s+(.+?)\s*-\s*([A-Za-z]+)\s*$', ln)
+            m = re.match(r'^\s*(\d+|Evo\.?)\s+(.+?)\s*-\s*([A-Za-z]+)\s*$', ln, flags=re.IGNORECASE)
             if m:
-                entries.append({"Level": int(m.group(1)),
-                                "Move": clean_line(m.group(2)),
-                                "Type": clean_line(m.group(3))})
+                lvl = m.group(1)
+                entries.append({
+                    "Level": "Evo" if lvl.lower().startswith('evo') else int(lvl),
+                    "Move": clean_line(m.group(2)),
+                    "Type": clean_line(m.group(3))
+                })
         return entries
 
     def parse_comma_or_list(block_lines):
