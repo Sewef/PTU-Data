@@ -315,7 +315,7 @@
       `).join('')}
     </ul>`;
   }
-  
+
   function renderStringList(title, arr) {
     if (!Array.isArray(arr) || !arr.length) return '';
     return `
@@ -339,7 +339,7 @@
       return `
       <div class="cap-item">
         <div class="cap-head">
-          <span class="cap-key">${key}</span>
+          <span class="fw-semibold">${key}</span>
         </div>
         <div class="cap-val">${value}</div>
       </div>
@@ -414,38 +414,37 @@
     return { rated: ratedMerged, simple: simpleClean };
   }
 
-  function renderBaseStats(stats, depth = 0) {
-    const order = ["HP", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"];
-    const total = order.reduce((s, k) => s + (stats?.[k] ?? 0), 0);
+function renderBaseStats(stats, depth = 0) {
+  const order = ["HP", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"];
+  const total = order.reduce((s, k) => s + (stats?.[k] ?? 0), 0);
+  const seq = [order[0], order[3], order[1], order[4], order[2], order[5]];
 
-    // Ordre voulu en grille 2 colonnes : 1|4, 2|5, 3|6
-    const seq = [order[0], order[3], order[1], order[4], order[2], order[5]];
-
-    const items = seq.map(k => `
+  const items = seq.map(k => `
     <div class="bs-item d-flex align-items-center justify-content-between">
-      <span class="bs-key">${k}</span>
-      <span class="bs-val">${stats?.[k] ?? 0}</span>
+      <span class="fw-semibold">${k}</span>
+      <span class="fw-semibold">${stats?.[k] ?? 0}</span>
     </div>
   `).join("");
 
-    const h = Math.min(4 + depth, 6);
-    return `
+  const h = Math.min(4 + depth, 6);
+  return `
     <div class="mt-3">
       <h${h} class="text-muted">Base Stats</h${h}>
-      <div class="card accent" style="--accent-color: rgba(255,255,255,.08);">
+      <div class="card accent compact">
         <div class="card-body">
           <div class="bs-grid">
             ${items}
             <div class="bs-item d-flex align-items-center justify-content-between bs-total">
-              <span class="bs-key">Total</span>
-              <span class="bs-val">${total}</span>
+              <span class="fw-semibold">Total</span>
+              <span class="fw-semibold">${total}</span>
             </div>
           </div>
         </div>
       </div>
     </div>
   `;
-  }
+}
+
 
   function renderBattleOnlyForms(forms, base) {
     if (!forms || typeof forms !== "object") return "";
