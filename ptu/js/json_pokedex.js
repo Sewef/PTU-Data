@@ -3,10 +3,10 @@
     // Primary JSON location (mirror your moves.html convention)
     jsonUrls: [
       // '/ptu/data/pokedex/pokedex_core.json',
-      // '/ptu/data/pokedex/pokedex_7g.json',
+      '/ptu/data/pokedex/pokedex_7g.json',
       // '/ptu/data/pokedex/pokedex_8g.json',
       // '/ptu/data/pokedex/pokedex_8g_hisui.json',
-      '/ptu/data/pokedex/pokedex_9g.json',
+      // '/ptu/data/pokedex/pokedex_9g.json',
     ],
     // Try a few sprite/icon path patterns. Override easily.
     iconPatterns: [
@@ -82,13 +82,23 @@
   // Derive flat list of distinct types present + robust form handling
   function extractTypes(p) {
     const t = p?.['Basic Information']?.Type;
-    if (Array.isArray(t)) return t;
+    if (Array.isArray(t)) {
+      // cas 1: ["Electric", "Fire"]
+      if (t.length && typeof t[0] === 'string') return t;
+      // cas 2: [ { "Heat Rotom": ["Electric","Fire"], ... } ]
+      if (t.length && typeof t[0] === 'object') {
+        const vals = Object.values(t[0]).flatMap(v => Array.isArray(v) ? v : []);
+        return Array.from(new Set(vals));
+      }
+      return [];
+    }
     if (t && typeof t === 'object') {
       const vals = Object.values(t).flatMap(v => Array.isArray(v) ? v : []);
       return Array.from(new Set(vals));
     }
     return [];
   }
+
 
   function wrapTypes(t) {
     if (!t) return '';
@@ -98,6 +108,7 @@
   }
 
   function renderFormType(val) {
+    console.log(val);
     if (!val) return '';
     if (typeof val === 'string') return val;   // déjà formaté
     if (Array.isArray(val)) return wrapTypes(val);
@@ -240,24 +251,24 @@
 
   // Try multiple icon patterns, fall back to generated SVG initials
   function setupIcon(img, num, name) {
-  const tryUrls = CFG.iconPatterns.map(fn => { try { return fn(num, name); } catch { return null; } }).filter(Boolean);
-  let idx = 0;
+    const tryUrls = CFG.iconPatterns.map(fn => { try { return fn(num, name); } catch { return null; } }).filter(Boolean);
+    let idx = 0;
 
-  const fallback = () => {
-    const initials = name.replace(/[^A-Z0-9]/gi, ' ').trim().split(/\s+/).slice(0,2).map(s => s[0]).join('').toUpperCase() || '?';
-    const svg = encodeURIComponent(`<?xml version='1.0' encoding='UTF-8'?>\n<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'>\n  <rect width='100%' height='100%' fill='#0b0d12'/>\n  <text x='50%' y='56%' text-anchor='middle' font-family='Inter,Arial,Helvetica,sans-serif' font-size='34' fill='#eaeef5' opacity='0.8'>${initials}</text>\n</svg>`);
-    img.src = `data:image/svg+xml;charset=UTF-8,${svg}`;
-  };
+    const fallback = () => {
+      const initials = name.replace(/[^A-Z0-9]/gi, ' ').trim().split(/\s+/).slice(0, 2).map(s => s[0]).join('').toUpperCase() || '?';
+      const svg = encodeURIComponent(`<?xml version='1.0' encoding='UTF-8'?>\n<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'>\n  <rect width='100%' height='100%' fill='#0b0d12'/>\n  <text x='50%' y='56%' text-anchor='middle' font-family='Inter,Arial,Helvetica,sans-serif' font-size='34' fill='#eaeef5' opacity='0.8'>${initials}</text>\n</svg>`);
+      img.src = `data:image/svg+xml;charset=UTF-8,${svg}`;
+    };
 
-  img.addEventListener('error', () => { if (idx < tryUrls.length) img.src = tryUrls[idx++]; else fallback(); });
+    img.addEventListener('error', () => { if (idx < tryUrls.length) img.src = tryUrls[idx++]; else fallback(); });
 
-  img.addEventListener('load', () => {
-    const n = Math.max(img.naturalWidth || 0, img.naturalHeight || 0);
-    if (n > 64) img.classList.add('is-oversize'); // seulement les 96x96 (ou +) seront réduites
-  });
+    img.addEventListener('load', () => {
+      const n = Math.max(img.naturalWidth || 0, img.naturalHeight || 0);
+      if (n > 64) img.classList.add('is-oversize'); // seulement les 96x96 (ou +) seront réduites
+    });
 
-  if (tryUrls.length) img.src = tryUrls[idx++]; else fallback();
-}
+    if (tryUrls.length) img.src = tryUrls[idx++]; else fallback();
+  }
 
 
   // Detail renderer (generic recursive pretty-printer + a nicer header)
@@ -312,11 +323,19 @@
           if (["Species", "Number", "Icon"].includes(k)) continue; // already shown elsewhere
 
           // --- special cases / skips you control ---
-          if (k === 'Basic Information' && v?.Type && Array.isArray(v.Type)) { // Generic case
-            v.Type = wrapTypes(v.Type);
-          }
-          else if (k === 'Basic Information' && v?.Type) { // Rotom forms
-            v.Type = renderFormType(v.Type);
+          if (k === 'Basic Information' && v?.Type) {
+            const t = v.Type;
+            if (Array.isArray(t)) {
+              if (t.length && typeof t[0] === 'string') {
+                v.Type = wrapTypes(t); // ex: ["Electric","Fire"]
+              } else if (t.length && typeof t[0] === 'object') {
+                v.Type = renderFormType(t[0]); // ex: [ { Form: [types], ... } ]
+              } else {
+                v.Type = '';
+              }
+            } else {
+              v.Type = renderFormType(t); // compat: objet simple { Form: [...] }
+            }
           }
           // Add more hand-written exclusions here as needed
           // ----------------------------------------
@@ -348,8 +367,7 @@
 
           // Dispatch: left column for “main” sections
           const leftSections = new Set([
-            "Base Stats", "Basic Information", "Evolution",
-            "Size Information", "Breeding Information", "Diet", "Habitat"
+            "Base Stats", "Basic Information", "Evolution", "Other Information"
           ]);
           (leftSections.has(k) ? (col1 += block) : (col2 += block));
         }

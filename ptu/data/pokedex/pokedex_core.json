@@ -91448,16 +91448,28 @@
     },
     "Basic Information": {
       "Type": [
-        "{'Heat Rotom': ['Electric'",
-        "'Fire']",
-        "'Wash Rotom': ['Electric'",
-        "'Water']",
-        "'Frost Rotom': ['Electric'",
-        "'Ice']",
-        "'Fan Rotom': ['Electric'",
-        "'Flying']",
-        "'Mow Rotom': ['Electric'",
-        "'Grass']}"
+        {
+          "Heat Rotom": [
+            "Electric",
+            "Fire"
+          ],
+          "Wash Rotom": [
+            "Electric",
+            "Water"
+          ],
+          "Frost Rotom": [
+            "Electric",
+            "Ice"
+          ],
+          "Fan Rotom": [
+            "Electric",
+            "Flying"
+          ],
+          "Mow Rotom": [
+            "Electric",
+            "Grass"
+          ]
+        }
       ],
       "Basic Ability 1": "Poltergeist",
       "Adv Ability 1": "Static",
