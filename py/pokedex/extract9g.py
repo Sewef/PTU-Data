@@ -170,7 +170,7 @@ def parse_moves_list(lines, start_idx):
     return {
         "Level Up Move List": parse_levelup(sections["Level Up Move List"]),
         "TM/Tutor Moves List": parse_comma_or_list(sections["TM/Tutor Moves List"]),
-        "_raw": sections
+        #"_raw": sections
     }
 
 def extract_page(page_text: str, page_index: int):
@@ -179,7 +179,8 @@ def extract_page(page_text: str, page_index: int):
 
     lines[0] = re.sub(r'^\d+ Unofficial Homebrew\s(.*)', r'\1', lines[0], flags=re.IGNORECASE).strip()
 
-    record = {"_page_index": page_index, "_raw_text": page_text}
+    #record = {"_page_index": page_index, "_raw_text": page_text}
+    record = {}
     # Titre d’espèce
     species = lines[0]
 
@@ -294,7 +295,7 @@ def extract_page(page_text: str, page_index: int):
     evo_block = collect_between(idx_evo, next_all)
     if evo_block:
         evo_lines = [l for l in evo_block if l]
-        record["evolution_raw"] = evo_lines
+        #record["evolution_raw"] = evo_lines
         evo = []
         for l in evo_lines:
             m = re.match(r'^\s*(\d+)\s*-\s*([A-Za-z\'\-(). ]+?)(?:\s{2,}|\s+)(.*)$', l)
@@ -357,7 +358,7 @@ def extract_page(page_text: str, page_index: int):
             elif re.search(r'(?i)^Ability', l): mega['Ability'] = l.split(':',1)[1].strip() if ':' in l else l
             elif re.search(r'(?i)^Stats', l):   mega['Stats Delta'] = l.split(':',1)[1].strip() if ':' in l else l
         if mega: record["Mega Evolution"] = mega
-        record["mega_evolution_raw"] = mega_block
+        #record["mega_evolution_raw"] = mega_block
 
     return record
 
