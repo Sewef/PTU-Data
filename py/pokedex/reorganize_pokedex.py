@@ -34,30 +34,46 @@ def normalize_type(t):
 
 def make_other_info(record):
     other = OrderedDict()
-    # Look for Size Information either at top-level or inside Basic Information
+    # Size Information (top-level ou Basic Information)
     sz = record.get("Size Information") or (record.get("Basic Information", {}) or {}).get("Size Information") or {}
     if isinstance(sz, dict) and any(v for v in [sz.get("Height"), sz.get("Weight")]):
         other["Size Information"] = {k: v for k, v in sz.items() if v}
 
-    # Genders: look at Breeding Information OR Basic Information
-    bi = record.get("Basic Information") or {}
+    # Genders (cherche directement dans Breeding ou Basic Information)
     br = record.get("Breeding Information") or {}
-
-    genders = None
-    if isinstance(br, dict):
-        genders = br.get("Genders") or br.get("Gender")
-    if not genders and isinstance(bi, dict):
-        genders = bi.get("Genders") or bi.get("Gender")
-
+    bi = record.get("Basic Information") or {}
+    genders = br.get("Genders") or br.get("Gender") or bi.get("Genders") or bi.get("Gender") or record.get("Genders") or bi.get("Gender Ratio") or record.get("Gender Ratio")
     if genders:
-        genders = genders.replace('Male', 'Male /')
-        other["Genders"] = f"{genders}".strip()
+        genders = str(genders).strip()
+        # Corrige le format "M / F"
+        genders = re.sub(
+            r'^(.*)\s*(?:M|Male)\s*/\s*(.*)\s*(?:F|Female)$',
+            r'\1 Male / \2 Female',
+            genders
+        )
+        # Corrige le format collé "Male Female" → "Male / Female"
+        genders = re.sub(
+            r'(\d+\.?\d*%?\s*Male)\s+(\d+\.?\d*%?\s*Female)',
+            r'\1 / \2',
+            genders
+        )
+        other["Genders"] = genders
 
     # Diet / Habitat
     if record.get("Diet"):
         other["Diet"] = f'{record.get("Diet")}'.strip()
     if record.get("Habitat"):
         other["Habitat"] = f'{record.get("Habitat")}'.strip()
+
+    # Egg Groups
+    egg = br.get("Egg Groups") or br.get("Egg Group")
+    if egg:
+        if isinstance(egg, list):
+            egg_text = ", ".join(f"{e}".strip() for e in egg if e)
+        else:
+            egg_text = f"{egg}".strip()
+        other["Egg Groups"] = egg_text
+
     return other
 
 
@@ -65,6 +81,12 @@ def reorganize_entry(rec):
     out = OrderedDict()
     if rec.get("Species"):
         out["Species"] = rec["Species"]
+
+    if rec.get("Number"):
+        out["Number"] = rec["Number"]
+        
+    if rec.get("Base Stats"):
+        out["Base Stats"] = rec["Base Stats"]
 
     # Basic Information: Type + tous les champs Ability
     bi_src = rec.get("Basic Information") or {}
@@ -86,7 +108,7 @@ def reorganize_entry(rec):
     out["Other Information"] = other
 
     # Ajouter les champs restants
-    consumed = set(["Species", "Basic Information", "Evolution", "Other Information",
+    consumed = set(["Species", "Number", "Basic Information", "Evolution", "Other Information",
                     "Size Information", "Breeding Information", "Diet", "Habitat"])
     for k, v in rec.items():
         if k in consumed:
@@ -106,6 +128,6 @@ def main(inp, outp):
         json.dump(reorganized, f, ensure_ascii=False, indent=2)
 
 if __name__ == "__main__":
-    inp = sys.argv[1] if len(sys.argv) > 1 else "pokedex_1942.json"
-    outp = sys.argv[2] if len(sys.argv) > 2 else "pokedex_reorganized.json"
+    inp = sys.argv[1]
+    outp = sys.argv[1]
     main(inp, outp)
