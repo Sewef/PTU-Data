@@ -85,6 +85,9 @@ def reorganize_entry(rec):
     if rec.get("Number"):
         out["Number"] = rec["Number"]
         
+    if rec.get("Icon"):
+        out["Icon"] = rec["Icon"]
+        
     if rec.get("Base Stats"):
         out["Base Stats"] = rec["Base Stats"]
 
