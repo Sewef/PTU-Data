@@ -16836,12 +16836,26 @@
         "Signal Beam",
         "Snore",
         "Stealth Rock",
-        "Telekinesis Ultra Burst Type: Psychic / Dragon Ability: Neuroforce Adv Ability 1 becomes Illuminate; Gains Glow. Stats: +1 Atk",
-        "-3 Def",
-        "+6 Sp. Atk",
-        "-1 Sp. Def",
-        "+5 Speed"
+        "Telekinesis"
       ]
+    },
+    "Battle-only Form": {
+      "Ultra Burst": {
+        "Type": [
+          "Psychic",
+          "Dragon"
+        ],
+        "Ability": "Neuroforce",
+        "Adv Ability 1": "Becomes Illuminate",
+        "Capabilities": "Gains Glow",
+        "Stats": {
+          "Attack": 1,
+          "Defense": -3,
+          "Special Attack": 6,
+          "Special Defense": -1,
+          "Speed": 5
+        }
+      }
     }
   },
   {
@@ -17043,12 +17057,26 @@
         "Signal Beam",
         "Snore",
         "Stealth Rock",
-        "Telekinesis Ultra Burst Type: Psychic / Dragon Ability: Neuroforce Adv Ability 1 becomes Illuminate; Gains Glow. Stats: +6 Atk",
-        "-1 Def",
-        "+1 Sp. Atk",
-        "-3 Sp. Def",
-        "+5 Speed"
+        "Telekinesis"
       ]
+    },
+    "Battle-only Form": {
+      "Ultra Burst": {
+        "Type": [
+          "Psychic",
+          "Dragon"
+        ],
+        "Ability": "Neuroforce",
+        "Adv Ability 1": "Becomes Illuminate",
+        "Capabilities": "Gains Glow",
+        "Stats": {
+          "Attack": 6,
+          "Defense": -1,
+          "Special Attack": 1,
+          "Special Defense": -3,
+          "Speed": 5
+        }
+      }
     }
   },
   {
@@ -17237,7 +17265,9 @@
         "Spite",
         "Stomping Tantrum",
         "Superpower",
-        "Zen Headbutt Zygarde Cube Core Enforcer",
+        "Zen Headbutt"
+      ],
+      "Zygarde Cube Core Enforcer Move List": [
         "Dragon Dance",
         "Extreme Speed",
         "Thousand Arrows",
@@ -17429,7 +17459,9 @@
         "Spite",
         "Stomping Tantrum",
         "Superpower",
-        "Zen Headbutt Zygarde Cube Core Enforcer",
+        "Zen Headbutt"
+      ],
+      "Zygarde Cube Core Enforcer Move List": [
         "Dragon Dance",
         "Extreme Speed",
         "Thousand Arrows",
@@ -17623,7 +17655,9 @@
         "Spite",
         "Stomping Tantrum",
         "Superpower",
-        "Zen Headbutt Zygarde Cube Core Enforcer",
+        "Zen Headbutt"
+      ],
+      "Zygarde Cube Core Enforcer Move List": [
         "Dragon Dance",
         "Extreme Speed",
         "Thousand Arrows",
