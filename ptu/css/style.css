@@ -268,12 +268,15 @@ aside .list-group#sidebar {
   width: var(--icon-size);
   height: var(--icon-size);
   border-radius: 10px;
-  background: #0b0d12;
   display: grid;
   place-items: center;
   overflow: hidden;
   flex: none;
   border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dark-background {
+  background: #0b0d12;
 }
 
 .dex-badge img {
@@ -332,3 +335,41 @@ aside .list-group#sidebar {
   font-weight: 700;
   margin-right: .25rem;
 }
+
+/* Modal — micro-ajustements */
+#dexModal .modal-body { padding: 1rem 1.25rem; }
+
+.dex-detail-head img { display: block; }
+.dex-detail-head img.is-oversize { width: 96px; height: 96px; object-fit: contain; }
+
+#dexModal .card.accent {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.08);
+}
+#dexModal .card.accent .card-body { padding: .75rem 1rem; }
+
+#dexModal h5.text-muted, 
+#dexModal h6.text-muted {
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  font-size: .82rem;
+  margin-bottom: .35rem;
+}
+
+/* Tableaux “clé / valeur” plus nets dans le détail */
+#dexModal .border-bottom.py-1 .fw-bold { opacity: .85; }
+#dexModal .border-bottom.py-1 { border-color: rgba(255,255,255,.08) !important; }
+
+/* Icone dans le header du modal */
+#dexModal .dex-title-icon {
+  display:block;
+  width:96px; height:96px; object-fit:none;
+}
+
+/* Ligne des types sous le nom (wrap propre) */
+#dexModal .dex-title-types {
+  display:flex; flex-wrap:wrap; gap:.375rem;
+}
+
+/* Un peu d'air dans le body */
+#dexModal .modal-body { padding: 1rem 1.25rem; }

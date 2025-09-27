@@ -10,11 +10,8 @@
     ],
     // Try a few sprite/icon path patterns. Override easily.
     iconPatterns: [
-      num => `/ptu/img/pokemon/icons/${num}.png`,              // e.g. 001.png
-      num => `/ptu/img/pokemon/icons/${num}.webp`,
-      (num, name) => `/ptu/img/pokemon/icons/${slugify(name)}.png`,
-      (num, name) => `/ptu/img/pokemon/icons/${slugify(name)}.webp`,
-    ],
+      (base, num) => `${base}/${num}.png`
+    ]
   };
 
   // Utilities
@@ -187,9 +184,9 @@
 
       // icône
       const iconWrap = document.createElement('div');
-      iconWrap.className = 'icon';
+      iconWrap.className = 'icon dark-background';
       const img = document.createElement('img');
-      setupIcon(img, p.Icon || p.Number, name);
+      setupIcon(img, p.Icon || p.Number, name, "icon");
       iconWrap.appendChild(img);
       li.appendChild(iconWrap);
 
@@ -248,49 +245,53 @@
   }
 
   // Try multiple icon patterns, fall back to generated SVG initials
-  function setupIcon(img, num, name) {
-    const tryUrls = CFG.iconPatterns.map(fn => { try { return fn(num, name); } catch { return null; } }).filter(Boolean);
-    let idx = 0;
+function setupIcon(img, num, name, mode = "icon") {
+  // mode = "icon" ou "full"
+  const slug = slugify(name || '');
+  const base = mode === "full" ? "/ptu/img/pokemon/full" : "/ptu/img/pokemon/icons";
 
-    const fallback = () => {
-      const initials = name.replace(/[^A-Z0-9]/gi, ' ').trim().split(/\s+/).slice(0, 2).map(s => s[0]).join('').toUpperCase() || '?';
-      const svg = encodeURIComponent(`<?xml version='1.0' encoding='UTF-8'?>\n<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'>\n  <rect width='100%' height='100%' fill='#0b0d12'/>\n  <text x='50%' y='56%' text-anchor='middle' font-family='Inter,Arial,Helvetica,sans-serif' font-size='34' fill='#eaeef5' opacity='0.8'>${initials}</text>\n</svg>`);
-      img.src = `data:image/svg+xml;charset=UTF-8,${svg}`;
-    };
-
-    img.addEventListener('error', () => { if (idx < tryUrls.length) img.src = tryUrls[idx++]; else fallback(); });
-
-    img.addEventListener('load', () => {
-      const n = Math.max(img.naturalWidth || 0, img.naturalHeight || 0);
-      if (n > 64) img.classList.add('is-oversize'); // seulement les 96x96 (ou +) seront réduites
-    });
-
-    if (tryUrls.length) img.src = tryUrls[idx++]; else fallback();
-  }
+  img.src = CFG.iconPatterns.map(fn => fn(base, num, slug));
+}
 
 
-  // Detail renderer (generic recursive pretty-printer + a nicer header)
-  function openDetail(p) {
-    const body = document.getElementById('dexModalBody');
-    const title = document.getElementById('dexModalLabel');
-    const num = pad3(p.Number ?? '0');
 
-    // header types (reste identique)
-    const header = (() => {
-      const types = wrapTypes(extractTypes(p));
-      return `<div class="mb-3">${types || '<em>—</em>'}</div>`;
-    })();
-    title.innerHTML = `#${num} — ${p.Species || 'Unknown'}` + header;
+function openDetail(p) {
+  const body  = document.getElementById('dexModalBody');
+  const title = document.getElementById('dexModalLabel');
+  const num     = pad3(p.Number ?? '0');
+  const species = p.Species || 'Unknown';
 
-    // ⬇️ clone profond pour éviter toute mutation du dataset
-    const safe = (typeof structuredClone === 'function')
-      ? structuredClone(p)
-      : JSON.parse(JSON.stringify(p));
+  // Contenu du titre : image + nom/# (ligne 1) + types (ligne 2)
+  const typesHTML = wrapTypes(extractTypes(p)) || '';
 
-    body.innerHTML = renderObject(safe); // ← on rend le clone
-    const modal = new bootstrap.Modal(document.getElementById('dexModal'));
-    modal.show();
-  }
+  title.innerHTML = `
+    <div class="d-flex align-items-start gap-3 w-100">
+      <img id="dexModalIcon" class="dex-title-icon rounded dark-background p-1" width="64" height="64" alt="${species}">
+      <div class="flex-grow-1">
+        <div class="d-flex flex-wrap align-items-baseline gap-2">
+          <span class="h5 mb-0">#${num} — ${species}</span>
+        </div>
+        <div class="dex-title-types mt-1">${typesHTML}</div>
+      </div>
+    </div>
+  `;
+
+  // Corps : uniquement le détail (plus de header doublon)
+  const safe = (typeof structuredClone === 'function')
+    ? structuredClone(p)
+    : JSON.parse(JSON.stringify(p));
+  body.innerHTML = renderObject(safe);
+
+  // Sprite dans le titre
+  const img = document.getElementById('dexModalIcon');
+  if (img) setupIcon(img, p.Icon || p.Number, species, "full");
+
+  // Affiche le modal
+  const modal = new bootstrap.Modal(document.getElementById('dexModal'));
+  modal.show();
+}
+
+
 
   // --- helpers ---
   function renderLevelUpMoves(moves) {
