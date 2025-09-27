@@ -426,3 +426,53 @@ aside .list-group#sidebar {
   grid-column: 1;
   background: rgba(255, 255, 255, .08);
 }
+
+/* Grille des capacités chiffrées */
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: .5rem .75rem;
+  margin-bottom: .5rem;
+}
+@media (min-width: 992px) {
+  .cap-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+}
+
+.cap-item {
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: .5rem;
+  background: rgba(255,255,255,.03);
+  padding: .5rem .625rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cap-head {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-weight: 600;
+}
+.cap-ic { width: 1.15em; display:inline-flex; justify-content:center; }
+.cap-key { opacity: .9; }
+.cap-val { font-variant-numeric: tabular-nums; font-weight: 700; }
+
+/* Chips des capacités simples */
+.cap-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .375rem .5rem;
+}
+.cap-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .25rem .5rem;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 999px;
+  background: rgba(255,255,255,.04);
+  font-weight: 500;
+}
+.cap-chip .cap-ic { width: 1em; }
+.cap-chip span:last-child { opacity: .95; }
+

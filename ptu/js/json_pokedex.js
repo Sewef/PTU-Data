@@ -318,6 +318,99 @@
     </div>`;
   }
 
+  function renderCapabilities(raw, depth = 0) {
+    // Normalise toute source vers { rated:[{key,value}], simple:[string] }
+    const parsed = parseCapabilities(raw);
+    if (!parsed.rated.length && !parsed.simple.length) return '';
+
+    const h = Math.min(4 + depth, 6);
+
+    // Cartes "numériques"
+    const rated = parsed.rated.map(({ key, value }) => {
+      return `
+      <div class="cap-item">
+        <div class="cap-head">
+          <span class="cap-key">${key}</span>
+        </div>
+        <div class="cap-val">${value}</div>
+      </div>
+    `;
+    }).join('');
+
+    // Chips "simples"
+    const simple = parsed.simple.map(k => {
+      return `<span class="cap-chip"><span>${k}</span></span>`;
+    }).join('');
+
+    return `
+    <div class="mt-3">
+      <h${h} class="text-muted">Capabilities</h${h}>
+      <div class="card accent">
+        <div class="card-body">
+          ${parsed.rated.length ? `<div class="cap-grid">${rated}</div>` : ''}
+          ${parsed.simple.length ? `<div class="cap-chips">${simple}</div>` : ''}
+        </div>
+      </div>
+    </div>
+  `;
+  }
+
+  // Supporte Array<string> | Object | mix de "Overland 5" et "Darkvision"
+  function parseCapabilities(raw) {
+    const rated = [];
+    const simple = [];
+
+    const pushPair = (k, v) => {
+      const key = String(k).trim();
+      const val = Number(v);
+      if (key && Number.isFinite(val)) rated.push({ key: keyCase(key), value: val });
+      else if (key) simple.push(keyCase(key));
+    };
+
+    const fromString = (s) => {
+      const str = String(s).trim();
+      if (!str) return;
+      // "Overland 5" / "Sky 2" / "Long Jump 2" / "Swim 3" …
+      const m = str.match(/^(.+?)\s+(-?\d+(?:\.\d+)?)\s*$/);
+      if (m) pushPair(m[1], m[2]);
+      else simple.push(keyCase(str));
+    };
+
+    if (Array.isArray(raw)) {
+      raw.forEach(item => {
+        if (item == null) return;
+        if (typeof item === 'string') fromString(item);
+        else if (typeof item === 'object') {
+          Object.entries(item).forEach(([k, v]) => pushPair(k, v));
+        } else fromString(item);
+      });
+    } else if (typeof raw === 'object' && raw) {
+      Object.entries(raw).forEach(([k, v]) => {
+        if (Array.isArray(v)) v.forEach(x => (typeof x === 'string' ? fromString(`${k} ${x}`) : pushPair(k, x)));
+        else if (typeof v === 'string') fromString(`${k} ${v}`);
+        else pushPair(k, v);
+      });
+    } else if (raw != null) {
+      fromString(raw);
+    }
+
+    // Regrouper les doublons (somme si mêmes clés numériques)
+    const acc = new Map();
+    rated.forEach(({ key, value }) => acc.set(key, (acc.get(key) ?? 0) + value));
+    const ratedMerged = [...acc.entries()].map(([key, value]) => ({ key, value }));
+
+    // Nettoyage chips
+    const simpleClean = [...new Set(simple.filter(Boolean))];
+
+    return { rated: ratedMerged, simple: simpleClean };
+  }
+
+  function keyCase(s) {
+    // Capitalise joliment : "long jump" → "Long Jump"
+    return s.replace(/\s+/g, ' ').trim().replace(/(^|\s|-)\S/g, t => t.toUpperCase());
+  }
+
+
   function renderBaseStats(stats, depth = 0) {
     const order = ["HP", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"];
     const total = order.reduce((s, k) => s + (stats?.[k] ?? 0), 0);
@@ -406,6 +499,15 @@
           if (k === "Base Stats" && v && typeof v === "object") {
             const block = renderBaseStats(v, depth);
             (leftSections.has(k) ? (col1 += block) : (col2 += block));
+            continue;
+          }
+
+          // --- Capabilities (layout spécial) ---
+          if (k === "Capabilities" && v) {
+            const block = renderCapabilities(v, depth);
+            if (block.trim()) {
+              (leftSections.has(k) ? (col1 += block) : (col2 += block));
+            }
             continue;
           }
 
