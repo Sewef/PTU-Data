@@ -152,9 +152,14 @@ def parse_moves_list(lines, start_idx):
     def parse_levelup(block_lines):
         entries = []
         for ln in block_lines:
-            m = re.match(r'^\s*(\d+)\s*-\s*(.*?)\s*-\s*([A-Za-z]+)(?:\s*(\[[^\]]+\]))?\s*$', ln)
+            m = re.match(
+                r'^\s*(\d+|Evo)\s*-\s*(.*?)\s*-\s*([A-Za-z]+)(?:\s*(\[[^\]]+\]))?\s*$',
+                ln,
+                flags=re.IGNORECASE
+            )
             if m:
-                level = int(m.group(1))
+                lvl_raw = m.group(1)
+                level = int(lvl_raw) if lvl_raw.isdigit() else "Evo"
                 move = clean_line(m.group(2))
                 typ  = clean_line(m.group(3))
                 tag  = m.group(4)
