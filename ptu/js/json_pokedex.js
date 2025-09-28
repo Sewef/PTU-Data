@@ -6,7 +6,7 @@
       "AlolaDex (Gen 7)":  "/ptu/data/pokedex/pokedex_7g.json",
       "GalarDex (Gen 8)":  "/ptu/data/pokedex/pokedex_8g.json",
       "HisuiDex (Gen 8.5)":  "/ptu/data/pokedex/pokedex_8g_hisui.json",
-      "PaldeaDex (Gen 9)": "/ptu/data/pokedex/pokedex_9g.json",
+      "PaldeaDex (Gen 9, Homebrew)": "/ptu/data/pokedex/pokedex_9g.json",
     },
     // NEW — patterns d’icônes inchangés
     iconPatterns: [
