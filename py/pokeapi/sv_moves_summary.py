@@ -36,6 +36,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import csv
 import os
 import sys
 import time
@@ -234,7 +235,8 @@ def save_move_cache(path: Optional[str], cache: Dict[str, Optional[str]]) -> Non
 
 
 async def process_species_list(species_list: List[str], include_types: bool, cfg: FetcherConfig,
-                               move_cache: Dict[str, Optional[str]]) -> List[Dict[str, Any]]:
+                               move_cache: Dict[str, Optional[str]],
+                               aliases: Optional[List[Optional[str]]] = None):
     """Pipeline principal pour espèces en réseau."""
     results: List[Dict[str, Any]] = []
     async with aiohttp.ClientSession(headers={"User-Agent": cfg.user_agent}) as session:
@@ -248,11 +250,14 @@ async def process_species_list(species_list: List[str], include_types: bool, cfg
         # 2) Parse, collect move URLs à typer
         needed_urls: Dict[str, Optional[str]] = {}
         summaries: List[Dict[str, Any]] = []
-        for sp, data in zip(species_list, pokemons):
+        for idx, (sp, data) in enumerate(zip(species_list, pokemons)):
             if isinstance(data, Exception):
                 print(f"[warn] Échec /pokemon/{sp}: {data}", file=sys.stderr)
                 continue
             summary, need_types = summarize_sv_moves_from_pokemon_json(data, include_types)
+                        # Si un alias (nom d’espèce à afficher) est fourni, on remplace le champ 'species'
+            if aliases and idx < len(aliases) and aliases[idx]:
+                summary["species"] = aliases[idx]
             summaries.append(summary)
             for url in need_types.keys():
                 needed_urls[url] = None
@@ -301,6 +306,7 @@ def parse_args() -> argparse.Namespace:
     src.add_argument("--species", nargs="+", help="Liste d'espèces (noms ou ids).")
     src.add_argument("--species-file", help="Fichier texte (une espèce par ligne).")
     src.add_argument("--from-dir", help="Dossier contenant des JSON /pokemon/ au format PokeAPI.")
+    src.add_argument("--mapping-csv", help="CSV ';' avec colonnes Species;othername (PokeAPI sera appelée avec othername).")
 
     p.add_argument("--no-types", action="store_true", help="Ne pas récupérer le type des moves.")
     p.add_argument("--move-cache", help="Fichier JSON cache des types de moves (lecture/écriture).")
@@ -317,6 +323,35 @@ def read_species_file(path: str) -> List[str]:
     with open(path, "r", encoding="utf-8") as f:
         return [line.strip() for line in f if line.strip() and not line.strip().startswith("#")]
 
+def read_mapping_csv(path: str) -> Tuple[List[str], List[str]]:
+    """
+    Lit un CSV séparé par ';' avec colonnes 'Species' et 'othername'.
+    Retourne (api_names, display_names) où:
+      - api_names = valeurs de othername (utilisées pour l'appel /pokemon/{name})
+      - display_names = valeurs de Species (injectées dans le JSON final)
+    """
+    api_names: List[str] = []
+    display_names: List[str] = []
+    with open(path, "r", encoding="utf-8-sig", errors="replace") as f:
+        reader = csv.DictReader(f, delimiter=';')
+        # normaliser en insensible à la casse
+        # on accepte 'Species'/'species' et 'othername'/'OtherName', etc.
+        # DictReader gère déjà les en-têtes -> on lower les clés par ligne si besoin
+        # mais plus simple: mappe via get avec variantes
+        for row in reader:
+            if not row:
+                continue
+            species_val = row.get("Species") or row.get("species") or row.get("SPECIES")
+            other_val = row.get("othername") or row.get("OtherName") or row.get("OTHERNAME")
+            if species_val and other_val:
+                species_val = species_val.strip()
+                other_val = other_val.strip()
+                if species_val and other_val:
+                    api_names.append(other_val)
+                    display_names.append(species_val)
+    if not api_names:
+        raise ValueError("mapping.csv vide ou colonnes manquantes (attendues: 'Species;othername').")
+    return api_names, display_names
 
 def main() -> None:
     args = parse_args()
@@ -381,13 +416,17 @@ def main() -> None:
 
     else:
         # Mode réseau complet : espèces en arguments ou via fichier
-        if args.species:
+        if args.mapping_csv:
+            api_names, display_names = read_mapping_csv(args.mapping_csv)
+            results = asyncio.run(process_species_list(api_names, include_types, cfg, move_cache, aliases=display_names))
+        elif args.species:
             species_list = args.species
         else:
             species_list = read_species_file(args.species_file)
 
-        # pipeline async
-        results = asyncio.run(process_species_list(species_list, include_types, cfg, move_cache))
+        # pipeline async (si non mapping déjà traité)
+        if not args.mapping_csv:
+            results = asyncio.run(process_species_list(species_list, include_types, cfg, move_cache))
 
     # Sauvegardes
     save_move_cache(args.move_cache, move_cache)
