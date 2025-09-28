@@ -1,449 +1,408 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-"""
-sv_moves_summary_async.py
--------------------------
-Résumé ultra-rapide des moves appris dans 'scarlet-violet' pour un grand nombre d'espèces.
-- Récupère /pokemon/{species} en parallèle
-- Filtre moves par version_group == 'scarlet-violet'
-- Résout le type de chaque move via /move/{id} avec cache global (pour éviter les doublons inter-espèces)
-- Sort tout dans un SEUL document JSON (ou JSONL) : species, version_group, moves[{name, method, level?, type?}]
-
-Usage minimal :
-    pip install aiohttp
-    python sv_moves_summary_async.py --species-file species.txt --out sv_all.json
-
-Autres exemples :
-    # Depuis une liste d'espèces (une par ligne)
-    python sv_moves_summary_async.py --species-file species.txt --out sv_all.json --concurrency 48
-
-    # Depuis des JSON locaux au format PokeAPI (/pokemon/...)
-    python sv_moves_summary_async.py --from-dir ./pokemon_json --out sv_all.json
-
-    # Sans récupérer les types (pas d'appels /move/)
-    python sv_moves_summary_async.py --species pikachu bulbasaur --no-types
-
-    # En JSON Lines (une ligne par espèce)
-    python sv_moves_summary_async.py --species-file species.txt --jsonl --out sv_all.jsonl
-
-    # Avec un cache disque des types de moves (optimise les run répétés)
-    python sv_moves_summary_async.py --species-file species.txt --move-cache move_types_cache.json --out sv_all.json
-"""
-
-from __future__ import annotations
-
 import argparse
 import asyncio
+import aiohttp
 import json
 import csv
-import os
 import sys
-import time
+import os
+from typing import Any, Dict, List, Optional, Tuple, Iterable, Set
 from dataclasses import dataclass
-from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
 
-try:
-    import aiohttp
-except ImportError:
-    print("Ce script requiert le paquet 'aiohttp' (pip install aiohttp).", file=sys.stderr)
-    sys.exit(1)
+POKEAPI_BASE = "https://pokeapi.co/api/v2"
 
-POKEAPI = "https://pokeapi.co/api/v2"
-SV_GROUP_NAME = "scarlet-violet"
+# ------------------------------
+# Outils asynchrones / limites
+# ------------------------------
+
+class RateLimiter:
+    """Limiteur simple via Semaphore pour contrôler la concurrence."""
+    def __init__(self, concurrency: int):
+        self._sem = asyncio.Semaphore(max(1, concurrency))
+
+    async def __aenter__(self):
+        await self._sem.acquire()
+        return self
+
+    async def __aexit__(self, exc_type, exc, tb):
+        self._sem.release()
 
 
 @dataclass
 class FetcherConfig:
-    base_url: str = POKEAPI
-    timeout: int = 20
-    concurrency: int = 32
-    retries: int = 4
-    retry_backoff: float = 0.8  # secondes, exponentiel
-    user_agent: str = "sv-moves-summary/1.0 (+https://pokeapi.co)"
+    timeout: int = 30
+    retries: int = 2
+    user_agent: str = "sv_moves_summary/1.0 (+https://pokeapi.co)"
+    concurrency: int = 8
 
 
-class RateLimiter:
-    """Sémaphore de concurrence + délai minimal entre requêtes (si nécessaire)."""
-    def __init__(self, concurrency: int):
-        self.sem = asyncio.Semaphore(concurrency)
+# ------------------------------
+# HTTP helpers
+# ------------------------------
 
-    async def __aenter__(self):
-        await self.sem.acquire()
-        return self
-
-    async def __aexit__(self, exc_type, exc, tb):
-        self.sem.release()
-
-
-async def fetch_json(session: aiohttp.ClientSession, url: str, cfg: FetcherConfig) -> Any:
-    """GET JSON avec retries + backoff basique (gère 429/5xx)."""
-    last_exc = None
+async def http_get_json(session: aiohttp.ClientSession, url: str, cfg: FetcherConfig, limiter: RateLimiter) -> Any:
+    last_exc: Optional[Exception] = None
     for attempt in range(cfg.retries + 1):
         try:
-            async with session.get(url, timeout=cfg.timeout) as resp:
-                if resp.status == 200:
+            async with limiter:
+                async with session.get(url, timeout=cfg.timeout) as resp:
+                    if resp.status != 200:
+                        text = await resp.text()
+                        raise RuntimeError(f"GET {url} -> {resp.status}: {text[:200]}")
                     return await resp.json()
-                # En cas de rate-limit, on respecte le Retry-After si présent
-                if resp.status in (429, 500, 502, 503, 504):
-                    retry_after = resp.headers.get("Retry-After")
-                    if retry_after is not None:
-                        try:
-                            delay = float(retry_after)
-                        except ValueError:
-                            delay = cfg.retry_backoff * (2 ** attempt)
-                    else:
-                        delay = cfg.retry_backoff * (2 ** attempt)
-                    await asyncio.sleep(delay)
-                    continue
-                # autre code -> erreur directe
-                text = await resp.text()
-                raise aiohttp.ClientResponseError(
-                    status=resp.status,
-                    history=resp.history,
-                    request_info=resp.request_info,
-                    message=f"GET {url} -> {resp.status}: {text[:200]}"
-                )
-        except (aiohttp.ClientError, asyncio.TimeoutError) as e:
+        except Exception as e:
             last_exc = e
-            delay = cfg.retry_backoff * (2 ** attempt)
-            await asyncio.sleep(delay)
-    # si on sort de la boucle : échec
-    raise RuntimeError(f"Échec après retries pour URL: {url} (dernier: {last_exc})")
+            await asyncio.sleep(0.5 * (attempt + 1))
+    raise last_exc if last_exc else RuntimeError(f"GET {url} failed")
 
 
-def normalize_species_name(s: str) -> str:
-    return s.strip().lower().replace(" ", "-")
+async def fetch_pokemon_json(session: aiohttp.ClientSession, species: str, cfg: FetcherConfig, limiter: RateLimiter) -> Any:
+    # /pokemon/{id or name}
+    url = f"{POKEAPI_BASE}/pokemon/{species.lower().strip()}/"
+    return await http_get_json(session, url, cfg, limiter)
 
 
-def summarize_sv_moves_from_pokemon_json(pokemon_json: Dict[str, Any], include_types: bool) -> Tuple[Dict[str, Any], Dict[str, Optional[str]]]:
+async def fetch_move_detail(session: aiohttp.ClientSession, move_url: str, cfg: FetcherConfig, limiter: RateLimiter) -> Any:
+    # move_url est déjà absolue depuis PokeAPI
+    return await http_get_json(session, move_url, cfg, limiter)
+
+
+# ------------------------------
+# Parsing helpers
+# ------------------------------
+
+def _find_vg_entries(move_block: Dict[str, Any], vg_name: str) -> List[Dict[str, Any]]:
+    """Extrait les version_group_details pour une version group donnée."""
+    vgd = move_block.get("version_group_details") or []
+    return [d for d in vgd if (d.get("version_group") or {}).get("name") == vg_name]
+
+
+def _best_entry_for_move(vg_entries: List[Dict[str, Any]]) -> Dict[str, Any]:
     """
-    Prépare le résumé pour UNE espèce + liste des move_urls à typer.
-    Retourne (summary_without_types, move_urls_map) où move_urls_map = {url: None} à résoudre.
+    Heuristique simple: on privilégie un entry avec un level_learned_at le plus élevé,
+    sinon le premier.
     """
-    species_name = pokemon_json.get("name") or (pokemon_json.get("species") or {}).get("name")
-    moves = pokemon_json.get("moves", []) or []
+    if not vg_entries:
+        return {}
+    return sorted(vg_entries, key=lambda d: d.get("level_learned_at", 0), reverse=True)[0]
 
-    bucket: Dict[Tuple[str, str], Dict[str, Any]] = {}
 
-    for m in moves:
-        move_name = m.get("move", {}).get("name")
-        move_url = m.get("move", {}).get("url")
+def summarize_sv_moves_from_pokemon_json(poke: Dict[str, Any], vg_name: str = "scarlet-violet") -> Tuple[Dict[str, Any], Dict[str, None]]:
+    """
+    Extrait la liste des moves pertinents pour Scarlet/Violet
+    Retourne:
+      - summary: {"species": <name>, "moves": [ {name, url, method, level} ]}
+      - needed_move_urls: {url: None} (pour ensuite récupérer noms anglais/types)
+    """
+    species_name = (poke.get("species") or {}).get("name") or poke.get("name") or "unknown"
+    moves_block = poke.get("moves") or []
+
+    result_moves: List[Dict[str, Any]] = []
+    need_urls: Dict[str, None] = {}
+
+    for m in moves_block:
+        move_info = m.get("move") or {}
+        move_name = move_info.get("name")
+        move_url = move_info.get("url")
         if not move_name or not move_url:
             continue
-        for det in m.get("version_group_details", []):
-            vg = det.get("version_group", {}) or {}
-            if vg.get("name") != SV_GROUP_NAME:
-                continue
-            method = (det.get("move_learn_method") or {}).get("name")
-            level = det.get("level_learned_at") or 0
-            key = (move_name, method or "")
-            if key not in bucket:
-                bucket[key] = {
-                    "name": move_name,
-                    "method": method,
-                    "level": int(level) if (isinstance(level, int) and level > 0) else None,
-                    "move_url": move_url,
-                }
-            else:
-                prev = bucket[key].get("level")
-                if (prev is None and level and level > 0) or (prev is not None and level and level > 0 and level < prev):
-                    bucket[key]["level"] = int(level)
 
-    items = list(bucket.values())
+        vg_entries = _find_vg_entries(m, vg_name)
+        if not vg_entries:
+            continue  # move non présent pour ce version group
 
-    def sort_key(item: Dict[str, Any]):
-        method = item.get("method") or ""
-        level = item.get("level")
-        if method == "level-up":
-            return (0, level if level is not None else 9999, item["name"])
-        return (1, 0, item["name"])
+        best = _best_entry_for_move(vg_entries)
+        method = (best.get("move_learn_method") or {}).get("name")
+        level = best.get("level_learned_at")
 
-    items.sort(key=sort_key)
+        result_moves.append({
+            "name": move_name,
+            "url": move_url,
+            "method": method,
+            "level": level,
+        })
+        need_urls[move_url] = None
 
-    # Prépare la structure résultat (type à ajouter plus tard)
-    result = {
+    summary = {
         "species": species_name,
-        "version_group": SV_GROUP_NAME,
-        "moves": [
-            {k: v for k, v in item.items() if k in ("name", "method", "level", "move_url") and v is not None}
-            for item in items
-        ],
+        "moves": result_moves
     }
-
-    # Collecte des URL à résoudre
-    need_types = {}
-    if include_types:
-        for item in items:
-            url = item.get("move_url")
-            if url:
-                need_types[url] = None
-
-    return result, need_types
+    return summary, need_urls
 
 
-async def resolve_move_types(session: aiohttp.ClientSession, move_urls: List[str], cfg: FetcherConfig,
-                             cache: Dict[str, Optional[str]], limiter: RateLimiter) -> None:
-    """Remplit le cache {move_url -> type_name} en parallèle, en évitant les re-requests."""
-    async def worker(url: str):
-        if url in cache:
-            return
-        async with limiter:
-            try:
-                data = await fetch_json(session, url, cfg)
-                t = (data.get("type") or {}).get("name")
-            except Exception:
-                t = None
-            cache[url] = t
+# ------------------------------
+# Move cache helpers (JSON)
+# ------------------------------
 
-    tasks = [asyncio.create_task(worker(url)) for url in move_urls if url not in cache]
-    if tasks:
-        await asyncio.gather(*tasks)
-
-
-async def fetch_pokemon_json(session: aiohttp.ClientSession, species: str, cfg: FetcherConfig, limiter: RateLimiter) -> Dict[str, Any]:
-    url = f"{cfg.base_url}/pokemon/{normalize_species_name(species)}/"
-    async with limiter:
-        return await fetch_json(session, url, cfg)
-
-
-def load_move_cache(path: Optional[str]) -> Dict[str, Optional[str]]:
-    if not path:
-        return {}
-    p = Path(path)
-    if not p.exists():
+def load_move_cache(path: Optional[str]) -> Dict[str, Dict[str, Any]]:
+    if not path or not os.path.exists(path):
         return {}
     try:
-        with p.open("r", encoding="utf-8") as f:
+        with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
             if isinstance(data, dict):
-                return {str(k): (v if isinstance(v, (str, type(None))) else None) for k, v in data.items()}
+                return data
     except Exception:
         pass
     return {}
 
 
-def save_move_cache(path: Optional[str], cache: Dict[str, Optional[str]]) -> None:
+def save_move_cache(path: Optional[str], cache: Dict[str, Dict[str, Any]]) -> None:
     if not path:
         return
     try:
         with open(path, "w", encoding="utf-8") as f:
             json.dump(cache, f, ensure_ascii=False, indent=2)
     except Exception as e:
-        print(f"[warn] Impossible d'écrire le move-cache: {e}", file=sys.stderr)
+        print(f"[warn] Échec d'écriture cache moves: {e}", file=sys.stderr)
 
 
-async def process_species_list(species_list: List[str], include_types: bool, cfg: FetcherConfig,
-                               move_cache: Dict[str, Optional[str]],
-                               aliases: Optional[List[Optional[str]]] = None):
-    """Pipeline principal pour espèces en réseau."""
-    results: List[Dict[str, Any]] = []
-    async with aiohttp.ClientSession(headers={"User-Agent": cfg.user_agent}) as session:
-        limiter = RateLimiter(cfg.concurrency)
-
-        # 1) Fetch tous les /pokemon/{species}
-        pokemons = await asyncio.gather(*[
-            fetch_pokemon_json(session, sp, cfg, limiter) for sp in species_list
-        ], return_exceptions=True)
-
-        # 2) Parse, collect move URLs à typer
-        needed_urls: Dict[str, Optional[str]] = {}
-        summaries: List[Dict[str, Any]] = []
-        for idx, (sp, data) in enumerate(zip(species_list, pokemons)):
-            if isinstance(data, Exception):
-                print(f"[warn] Échec /pokemon/{sp}: {data}", file=sys.stderr)
-                continue
-            summary, need_types = summarize_sv_moves_from_pokemon_json(data, include_types)
-                        # Si un alias (nom d’espèce à afficher) est fourni, on remplace le champ 'species'
-            if aliases and idx < len(aliases) and aliases[idx]:
-                summary["species"] = aliases[idx]
-            summaries.append(summary)
-            for url in need_types.keys():
-                needed_urls[url] = None
-
-        # 3) Resolve move types (via cache + réseau)
-        if include_types and summaries:
-            to_resolve = [u for u in needed_urls.keys() if u not in move_cache]
-            if to_resolve:
-                await resolve_move_types(session, to_resolve, cfg, move_cache, limiter)
-
-            # 4) Inject types
-            for s in summaries:
-                for m in s["moves"]:
-                    url = m.pop("move_url", None)
-                    if include_types:
-                        m["type"] = move_cache.get(url) if url else None
-
-        results.extend(summaries)
-
-    return results
+def english_name_from_move_detail(detail: Dict[str, Any]) -> Optional[str]:
+    names = detail.get("names") or []
+    for n in names:
+        lang = (n.get("language") or {}).get("name")
+        if lang == "en":
+            return n.get("name")
+    # fallback: english absent -> None
+    return None
 
 
-def load_pokemon_jsons_from_dir(dir_path: str) -> List[Dict[str, Any]]:
-    out = []
-    for p in sorted(Path(dir_path).glob("*.json")):
-        try:
-            with p.open("r", encoding="utf-8") as f:
-                out.append(json.load(f))
-        except Exception as e:
-            print(f"[warn] Échec lecture {p}: {e}", file=sys.stderr)
-    return out
+def type_from_move_detail(detail: Dict[str, Any]) -> Optional[str]:
+    t = detail.get("type") or {}
+    return t.get("name")
 
 
-def build_document(results: List[Dict[str, Any]]) -> Dict[str, Any]:
-    return {
-        "version_group": SV_GROUP_NAME,
-        "generated_at": int(time.time()),
-        "species_count": len(results),
-        "results": results,
-    }
-
-
-def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Résumé des moves 'scarlet-violet' pour beaucoup d'espèces (asynchrone).")
-    src = p.add_mutually_exclusive_group(required=True)
-    src.add_argument("--species", nargs="+", help="Liste d'espèces (noms ou ids).")
-    src.add_argument("--species-file", help="Fichier texte (une espèce par ligne).")
-    src.add_argument("--from-dir", help="Dossier contenant des JSON /pokemon/ au format PokeAPI.")
-    src.add_argument("--mapping-csv", help="CSV ';' avec colonnes Species;othername (PokeAPI sera appelée avec othername).")
-
-    p.add_argument("--no-types", action="store_true", help="Ne pas récupérer le type des moves.")
-    p.add_argument("--move-cache", help="Fichier JSON cache des types de moves (lecture/écriture).")
-    p.add_argument("--concurrency", type=int, default=32, help="Niveau de parallélisme (défaut: 32).")
-    p.add_argument("--base-url", default=POKEAPI, help="Base URL PokeAPI (défaut: officiel).")
-    p.add_argument("--timeout", type=int, default=20, help="Timeout HTTP en secondes (défaut: 20).")
-    p.add_argument("--out", required=True, help="Chemin de sortie du JSON (ou JSONL si --jsonl).")
-    p.add_argument("--jsonl", action="store_true", help="Émettre en JSON Lines (une ligne par espèce).")
-
-    return p.parse_args()
-
+# ------------------------------
+# Lecture des entrées
+# ------------------------------
 
 def read_species_file(path: str) -> List[str]:
-    with open(path, "r", encoding="utf-8") as f:
+    # supporte BOM
+    with open(path, "r", encoding="utf-8-sig") as f:
         return [line.strip() for line in f if line.strip() and not line.strip().startswith("#")]
+
 
 def read_mapping_csv(path: str) -> Tuple[List[str], List[str]]:
     """
     Lit un CSV séparé par ';' avec colonnes 'Species' et 'othername'.
-    Retourne (api_names, display_names) où:
-      - api_names = valeurs de othername (utilisées pour l'appel /pokemon/{name})
-      - display_names = valeurs de Species (injectées dans le JSON final)
+    Supporte UTF-8 (avec ou sans BOM) et latin-1/cp1252.
+    Retourne (api_names, display_names).
     """
-    api_names: List[str] = []
-    display_names: List[str] = []
-    with open(path, "r", encoding="utf-8-sig", errors="replace") as f:
-        reader = csv.DictReader(f, delimiter=';')
-        # normaliser en insensible à la casse
-        # on accepte 'Species'/'species' et 'othername'/'OtherName', etc.
-        # DictReader gère déjà les en-têtes -> on lower les clés par ligne si besoin
-        # mais plus simple: mappe via get avec variantes
-        for row in reader:
-            if not row:
+    encodings_to_try = ["utf-8-sig", "utf-8", "latin-1", "cp1252"]
+    last_err: Exception | None = None
+    for enc in encodings_to_try:
+        try:
+            with open(path, "r", encoding=enc, newline="") as f:
+                reader = csv.DictReader(f, delimiter=";")
+                api_names: List[str] = []
+                display_names: List[str] = []
+                for row in reader:
+                    if not row:
+                        continue
+                    species_val = row.get("Species") or row.get("species") or row.get("SPECIES")
+                    other_val = row.get("othername") or row.get("OtherName") or row.get("OTHERNAME")
+                    if species_val and other_val:
+                        display_names.append(species_val.strip())
+                        api_names.append(other_val.strip())
+                if api_names:
+                    return api_names, display_names
+        except UnicodeDecodeError as e:
+            last_err = e
+            continue
+    raise RuntimeError(
+        f"Impossible de décoder {path} avec encodages {encodings_to_try}: {last_err}"
+    )
+
+
+# ------------------------------
+# Pipeline principal
+# ------------------------------
+
+async def process_species_list(
+    species_list: List[str],
+    include_types: bool,
+    cfg: FetcherConfig,
+    move_cache: Dict[str, Dict[str, Any]],
+    aliases: Optional[List[Optional[str]]] = None,
+    vg_name: str = "scarlet-violet",
+) -> List[Dict[str, Any]]:
+    """
+    Pipeline complet:
+      1. Fetch /pokemon/{species} pour chaque espèce
+      2. Parse moves pour le version group 'scarlet-violet'
+      3. Collecter toutes les URLs de moves à compléter (nom anglais, type)
+      4. Fetch en parallèle les détails des moves (en utilisant cache quand possible)
+      5. Remplir moves avec 'name_en' (et 'type' si include_types)
+    """
+    results: List[Dict[str, Any]] = []
+    async with aiohttp.ClientSession(headers={"User-Agent": cfg.user_agent}) as session:
+        limiter = RateLimiter(cfg.concurrency)
+
+        # 1) Fetch pokémon JSON
+        pokemons = await asyncio.gather(*[
+            fetch_pokemon_json(session, sp, cfg, limiter) for sp in species_list
+        ], return_exceptions=True)
+
+        needed_urls: Dict[str, None] = {}
+        summaries: List[Dict[str, Any]] = []
+
+        # 2) Parse per pokemon
+        for idx, (sp, data) in enumerate(zip(species_list, pokemons)):
+            if isinstance(data, Exception):
+                print(f"[warn] Échec /pokemon/{sp}: {data}", file=sys.stderr)
                 continue
-            species_val = row.get("Species") or row.get("species") or row.get("SPECIES")
-            other_val = row.get("othername") or row.get("OtherName") or row.get("OTHERNAME")
-            if species_val and other_val:
-                species_val = species_val.strip()
-                other_val = other_val.strip()
-                if species_val and other_val:
-                    api_names.append(other_val)
-                    display_names.append(species_val)
-    if not api_names:
-        raise ValueError("mapping.csv vide ou colonnes manquantes (attendues: 'Species;othername').")
-    return api_names, display_names
+            summary, need_urls = summarize_sv_moves_from_pokemon_json(data, vg_name=vg_name)
+            # alias d'affichage si fourni
+            if aliases and idx < len(aliases) and aliases[idx]:
+                summary["species"] = aliases[idx]
+            summaries.append(summary)
+            for url in need_urls.keys():
+                needed_urls[url] = None
+
+        # 3) Fetch move details (nom anglais + type), avec cache
+        to_fetch: List[str] = [u for u in needed_urls.keys() if u not in move_cache]
+        fetched: List[Any] = []
+        if to_fetch:
+            fetched = await asyncio.gather(*[
+                fetch_move_detail(session, u, cfg, limiter) for u in to_fetch
+            ], return_exceptions=True)
+        # Enregistrer dans cache
+        for url, data in zip(to_fetch, fetched):
+            if isinstance(data, Exception):
+                print(f"[warn] Échec fetch move {url}: {data}", file=sys.stderr)
+                continue
+            move_cache[url] = {
+                "name_en": english_name_from_move_detail(data),
+                "type": type_from_move_detail(data),
+            }
+
+    # 4) Injecter name_en (et type si demandé) dans chacune des listes de moves
+    for summary in summaries:
+        for m in summary["moves"]:
+            url = m.get("url")
+            if not url:
+                continue
+            cache_entry = move_cache.get(url) or {}
+            m["name_en"] = cache_entry.get("name_en")
+            if include_types:
+                m["type"] = cache_entry.get("type")
+        # Ordonner par nom anglais si dispo, sinon par nom brut
+        summary["moves"].sort(key=lambda x: (x.get("name_en") or x.get("name") or ""))
+
+    results = summaries
+    return results
+
+
+# ------------------------------
+# Entrée/Sortie
+# ------------------------------
+
+def write_output(data: Any, path: Optional[str]) -> None:
+    text = json.dumps(data, ensure_ascii=False, indent=2)
+    if path:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(text)
+    else:
+        print(text)
+
+
+# ------------------------------
+# CLI
+# ------------------------------
+
+def parse_args() -> argparse.Namespace:
+    p = argparse.ArgumentParser(description="Résumé des moves 'scarlet-violet' pour une ou plusieurs espèces (asynchrone).")
+    src = p.add_mutually_exclusive_group(required=True)
+    src.add_argument("--species", nargs="+", help="Liste d'espèces (noms ou ids).")
+    src.add_argument("--species-file", help="Fichier texte (une espèce par ligne).")
+    src.add_argument("--from-dir", help="Dossier contenant des JSON /pokemon/ au format PokeAPI (mode offline).")
+    src.add_argument("--mapping-csv", help="CSV ';' avec colonnes Species;othername (PokeAPI sera appelée avec othername).")
+
+    p.add_argument("--out", help="Fichier de sortie JSON (stdout si absent).")
+    p.add_argument("--include-types", action="store_true", help="Inclure aussi le type du move (via détail du move).")
+    p.add_argument("--move-cache", help="Fichier JSON cache pour détails de moves.")
+    p.add_argument("--concurrency", type=int, default=8, help="Nombre de requêtes concurrentes (défaut: 8).")
+    p.add_argument("--timeout", type=int, default=30, help="Timeout HTTP en secondes (défaut: 30).")
+    p.add_argument("--retries", type=int, default=2, help="Nombre de retries HTTP (défaut: 2).")
+    return p.parse_args()
+
+
+# ------------------------------
+# Mode offline (from-dir)
+# ------------------------------
+
+import glob
+
+def read_pokemon_json_from_dir(d: str) -> List[Dict[str, Any]]:
+    files = sorted(glob.glob(os.path.join(d, "*.json")))
+    res: List[Dict[str, Any]] = []
+    for fp in files:
+        try:
+            with open(fp, "r", encoding="utf-8") as f:
+                res.append(json.load(f))
+        except Exception as e:
+            print(f"[warn] Échec lecture {fp}: {e}", file=sys.stderr)
+    return res
+
+
+def process_from_dir(d: str, include_types: bool, move_cache: Dict[str, Dict[str, Any]], vg_name: str = "scarlet-violet") -> List[Dict[str, Any]]:
+    pokemons = read_pokemon_json_from_dir(d)
+    summaries: List[Dict[str, Any]] = []
+    needed_urls: Dict[str, None] = {}
+    for poke in pokemons:
+        summary, need_urls = summarize_sv_moves_from_pokemon_json(poke, vg_name=vg_name)
+        summaries.append(summary)
+        for url in need_urls.keys():
+            needed_urls[url] = None
+
+    # Offline: si include_types, on ne peut pas fetch, donc on remplit avec ce que le cache possède déjà
+    for url in list(needed_urls.keys()):
+        if url not in move_cache:
+            print(f"[warn] Move {url} absent du cache en mode offline. Le nom anglais/type ne seront pas renseignés.", file=sys.stderr)
+
+    for summary in summaries:
+        for m in summary["moves"]:
+            url = m.get("url")
+            cache_entry = move_cache.get(url) or {}
+            m["name_en"] = cache_entry.get("name_en")
+            if include_types:
+                m["type"] = cache_entry.get("type")
+        summary["moves"].sort(key=lambda x: (x.get("name_en") or x.get("name") or ""))
+    return summaries
+
+
+# ------------------------------
+# Main
+# ------------------------------
 
 def main() -> None:
     args = parse_args()
-
-    include_types = not args.no_types
     cfg = FetcherConfig(
-        base_url=args.base_url,
         timeout=args.timeout,
-        concurrency=max(1, int(args.concurrency)),
+        retries=args.retries,
+        concurrency=args.concurrency
     )
 
     move_cache = load_move_cache(args.move_cache)
 
-    results: List[Dict[str, Any]] = []
-
     if args.from_dir:
-        # Mode offline local : on lit les JSON /pokemon/ depuis un dossier
-        pokes = load_pokemon_jsons_from_dir(args.from_dir)
-        summaries: List[Dict[str, Any]] = []
-        needed_urls: Dict[str, Optional[str]] = {}
-        for pj in pokes:
-            summary, need_types = summarize_sv_moves_from_pokemon_json(pj, include_types)
-            summaries.append(summary)
-            for url in need_types.keys():
-                needed_urls[url] = None
+        results = process_from_dir(args.from_dir, args.include_types, move_cache)
+        write_output(results, args.out)
+        save_move_cache(args.move_cache, move_cache)
+        return
 
-        # Si on veut quand même typer et que les URL sont valides, on peut tenter réseau
-        if include_types and summaries and needed_urls:
-            # réseau pour typer (si accessible)
-            try:
-                results_async = asyncio.run(process_species_list(
-                    [], include_types=True, cfg=cfg, move_cache=move_cache
-                ))
-            except Exception:
-                # on ignore, on n'a pas de species à traiter ici, donc rien
-                pass
-
-            # Comme on n'a pas téléchargé ici, on tente de résoudre via réseau uniquement les types manquants
-            async def resolve_only():
-                async with aiohttp.ClientSession(headers={"User-Agent": cfg.user_agent}) as session:
-                    limiter = RateLimiter(cfg.concurrency)
-                    to_resolve = [u for u in needed_urls.keys() if u not in move_cache]
-                    if to_resolve:
-                        await resolve_move_types(session, to_resolve, cfg, move_cache, limiter)
-            try:
-                asyncio.run(resolve_only())
-            except Exception as e:
-                print(f"[warn] Impossible de résoudre les types via réseau en mode --from-dir : {e}", file=sys.stderr)
-
-        # injecter types si on les a
-        if include_types:
-            for s in summaries:
-                for m in s["moves"]:
-                    url = m.pop("move_url", None)
-                    m["type"] = move_cache.get(url) if url else None
-        else:
-            for s in summaries:
-                for m in s["moves"]:
-                    m.pop("move_url", None)
-
-        results = summaries
-
+    # Mode réseau complet : via mapping, liste, ou fichier
+    if args.mapping_csv:
+        api_names, display_names = read_mapping_csv(args.mapping_csv)
+        results = asyncio.run(process_species_list(api_names, args.include_types, cfg, move_cache, aliases=display_names))
     else:
-        # Mode réseau complet : espèces en arguments ou via fichier
-        if args.mapping_csv:
-            api_names, display_names = read_mapping_csv(args.mapping_csv)
-            results = asyncio.run(process_species_list(api_names, include_types, cfg, move_cache, aliases=display_names))
-        elif args.species:
+        if args.species:
             species_list = args.species
         else:
             species_list = read_species_file(args.species_file)
+        results = asyncio.run(process_species_list(species_list, args.include_types, cfg, move_cache))
 
-        # pipeline async (si non mapping déjà traité)
-        if not args.mapping_csv:
-            results = asyncio.run(process_species_list(species_list, include_types, cfg, move_cache))
-
-    # Sauvegardes
+    write_output(results, args.out)
     save_move_cache(args.move_cache, move_cache)
-
-    # Sortie
-    out_path = Path(args.out)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-
-    if args.jsonl:
-        with out_path.open("w", encoding="utf-8") as f:
-            for s in results:
-                f.write(json.dumps(s, ensure_ascii=False) + "\n")
-    else:
-        doc = build_document(results)
-        with out_path.open("w", encoding="utf-8") as f:
-            json.dump(doc, f, ensure_ascii=False, indent=2)
-    print(f"[ok] Écrit: {out_path}", file=sys.stderr)
 
 
 if __name__ == "__main__":
