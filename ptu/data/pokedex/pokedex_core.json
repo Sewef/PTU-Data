@@ -91493,9 +91493,9 @@
     }
   },
   {
-    "Species": "Rotom Appliance Forms",
+    "Species": "Rotom Heat Form",
     "Number": 479,
-    "Icon": "10011",
+    "Icon": "10008",
     "Base Stats": {
       "HP": 5,
       "Attack": 7,
@@ -91506,28 +91506,8 @@
     },
     "Basic Information": {
       "Type": [
-        {
-          "Heat Rotom": [
-            "Electric",
-            "Fire"
-          ],
-          "Wash Rotom": [
-            "Electric",
-            "Water"
-          ],
-          "Frost Rotom": [
-            "Electric",
-            "Ice"
-          ],
-          "Fan Rotom": [
-            "Electric",
-            "Flying"
-          ],
-          "Mow Rotom": [
-            "Electric",
-            "Grass"
-          ]
-        }
+        "Electric",
+        "Fire"
       ],
       "Basic Ability 1": "Poltergeist",
       "Adv Ability 1": "Static",
@@ -91547,118 +91527,734 @@
       "Habitat": "Urban",
       "Egg Groups": "Indeterminate"
     },
-    "Capabilities": {
-      "Heat Rotom": [
-        "Overland 2",
-        "Levitate 4",
-        "Jump 1/2",
-        "Power 3",
-        "Glow",
-        "Invisibility",
-        "Phasing",
-        "Wired",
-        "Zapper",
-        "Firestarter"
-      ],
-      "Wash Rotom": [
-        "Overland 1",
-        "Levitate 4",
-        "Swim 6",
-        "Jump 1/1",
-        "Power 3",
-        "Glow",
-        "Invisibility",
-        "Phasing",
-        "Wired",
-        "Zapper",
-        "Fountain"
-      ],
-      "Frost Rotom": [
-        "Overland 2",
-        "Levitate 4",
-        "Jump 1/1",
-        "Power 3",
-        "Glow",
-        "Invisibility",
-        "Phasing",
-        "Wired",
-        "Zapper",
-        "Freezer",
-        "Naturewalk (Tundra)"
-      ],
-      "Fan Rotom": [
-        "Overland 2",
-        "Levitate 4",
-        "Sky 6",
-        "Jump 1/1",
-        "Power 2",
-        "Glow",
-        "Invisibility",
-        "Phasing",
-        "Wired",
-        "Zapper",
-        "Guster"
-      ],
-      "Mow Rotom": [
-        "Overland 7",
-        "Levitate 4",
-        "Jump 1/1",
-        "Power 2",
-        "Glow",
-        "Invisibility",
-        "Phasing",
-        "Wired",
-        "Zapper",
-        "Naturewalk (Grassland",
-        "Forest)"
-      ]
-    },
+    "Capabilities": [
+      "Overland 2",
+      "Levitate 4",
+      "Jump 1/2",
+      "Power 3",
+      "Glow",
+      "Invisibility",
+      "Phasing",
+      "Wired",
+      "Zapper",
+      "Firestarter"
+    ],
     "Skills": {
-      "Heat Rotom": {
-        "Athletics": "4d6",
-        "Acrobatics": "2d6",
-        "Combat": "3d6",
-        "Stealth": "2d6",
-        "Perception": "2d6+2",
-        "Focus": "2d6",
-        "Tech Edu": "4d6+4"
+      "Athletics": "4d6",
+      "Acrobatics": "2d6",
+      "Combat": "3d6",
+      "Stealth": "2d6",
+      "Perception": "2d6+2",
+      "Focus": "2d6",
+      "Tech Edu": "4d6+4"
+    },
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 1,
+          "Move": "Astonish",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 1,
+          "Move": "Confuse Ray",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 1,
+          "Move": "Thunder Wave",
+          "Type": "Electric"
+        },
+        {
+          "Level": 1,
+          "Move": "Thunder Shock",
+          "Type": "Electric"
+        },
+        {
+          "Level": 8,
+          "Move": "Uproar",
+          "Type": "Normal"
+        },
+        {
+          "Level": 15,
+          "Move": "Double Team",
+          "Type": "Normal"
+        },
+        {
+          "Level": 22,
+          "Move": "Shock Wave",
+          "Type": "Electric"
+        },
+        {
+          "Level": 29,
+          "Move": "Ominous Wind",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 36,
+          "Move": "Substitute",
+          "Type": "Normal"
+        },
+        {
+          "Level": 43,
+          "Move": "Electro Ball",
+          "Type": "Electric"
+        },
+        {
+          "Level": 50,
+          "Move": "Hex",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 57,
+          "Move": "Charge",
+          "Type": "Electric"
+        },
+        {
+          "Level": 64,
+          "Move": "Discharge",
+          "Type": "Electric"
+        }
+      ],
+      "TM/HM Move List": [
+        "06 Toxic",
+        "10 Hidden Power",
+        "11 Sunny Day",
+        "16 Light Screen",
+        "17 Protect",
+        "18 Rain Dance",
+        "21 Frustration",
+        "24 Thunderbolt",
+        "25 Thunder",
+        "27 Return",
+        "30 Shadow Ball",
+        "32 Double Team",
+        "33 Reflect",
+        "42 Facade",
+        "44 Rest",
+        "46 Thief",
+        "48 Round",
+        "57 Charge Beam",
+        "61 Will-O-Wisp",
+        "70 Flash",
+        "72 Volt Switch",
+        "73 Thunder Wave",
+        "77 Psych Up",
+        "85 Dream Eater",
+        "87 Swagger",
+        "88 Sleep Talk",
+        "90 Substitute",
+        "97 Dark Pulse"
+      ],
+      "Egg Move List": [],
+      "Tutor Move List": [
+        "Charge (N)",
+        "Dark Pulse",
+        "Discharge (N)",
+        "Electroweb",
+        "Mud-Slap",
+        "Ominous Wind",
+        "Pain Split",
+        "Signal Beam",
+        "Sleep Talk",
+        "Snatch",
+        "Snore",
+        "Spite",
+        "Sucker Punch",
+        "Swift",
+        "Telekinesis",
+        "Trick (N)",
+        "Uproar"
+      ]
+    }
+  },
+  {
+    "Species": "Rotom Wash Form",
+    "Number": 479,
+    "Icon": "10012",
+    "Base Stats": {
+      "HP": 5,
+      "Attack": 7,
+      "Defense": 11,
+      "Special Attack": 11,
+      "Special Defense": 11,
+      "Speed": 9
+    },
+    "Basic Information": {
+      "Type": [
+        "Electric",
+        "Water"
+      ],
+      "Basic Ability 1": "Poltergeist",
+      "Adv Ability 1": "Static",
+      "Adv Ability 2": "Motor Drive",
+      "Adv Ability 3": "Volt Absorb",
+      "High Ability": "Sequence"
+    },
+    "Evolution": [
+      "1 - Rotom"
+    ],
+    "Other Information": {
+      "Size Information": {
+        "Height": "? / ? (Medium)",
+        "Weight": "? / ? (Weight Class 3)"
       },
-      "Wash Rotom": {
-        "Athletics": "4d6",
-        "Acrobatics": "2d6",
-        "Combat": "3d6",
-        "Stealth": "1d6",
-        "Perception": "2d6+2",
-        "Focus": "2d6",
-        "Tech Edu": "4d6+4"
+      "Diet": "Ergovore",
+      "Habitat": "Urban",
+      "Egg Groups": "Indeterminate"
+    },
+    "Capabilities": [
+      "Overland 1",
+      "Levitate 4",
+      "Swim 6",
+      "Jump 1/1",
+      "Power 3",
+      "Glow",
+      "Invisibility",
+      "Phasing",
+      "Wired",
+      "Zapper",
+      "Fountain"
+    ],
+    "Skills": {
+      "Athletics": "4d6",
+      "Acrobatics": "2d6",
+      "Combat": "3d6",
+      "Stealth": "1d6",
+      "Perception": "2d6+2",
+      "Focus": "2d6",
+      "Tech Edu": "4d6+4"
+    },
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 1,
+          "Move": "Astonish",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 1,
+          "Move": "Confuse Ray",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 1,
+          "Move": "Thunder Wave",
+          "Type": "Electric"
+        },
+        {
+          "Level": 1,
+          "Move": "Thunder Shock",
+          "Type": "Electric"
+        },
+        {
+          "Level": 8,
+          "Move": "Uproar",
+          "Type": "Normal"
+        },
+        {
+          "Level": 15,
+          "Move": "Double Team",
+          "Type": "Normal"
+        },
+        {
+          "Level": 22,
+          "Move": "Shock Wave",
+          "Type": "Electric"
+        },
+        {
+          "Level": 29,
+          "Move": "Ominous Wind",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 36,
+          "Move": "Substitute",
+          "Type": "Normal"
+        },
+        {
+          "Level": 43,
+          "Move": "Electro Ball",
+          "Type": "Electric"
+        },
+        {
+          "Level": 50,
+          "Move": "Hex",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 57,
+          "Move": "Charge",
+          "Type": "Electric"
+        },
+        {
+          "Level": 64,
+          "Move": "Discharge",
+          "Type": "Electric"
+        }
+      ],
+      "TM/HM Move List": [
+        "06 Toxic",
+        "10 Hidden Power",
+        "11 Sunny Day",
+        "16 Light Screen",
+        "17 Protect",
+        "18 Rain Dance",
+        "21 Frustration",
+        "24 Thunderbolt",
+        "25 Thunder",
+        "27 Return",
+        "30 Shadow Ball",
+        "32 Double Team",
+        "33 Reflect",
+        "42 Facade",
+        "44 Rest",
+        "46 Thief",
+        "48 Round",
+        "57 Charge Beam",
+        "61 Will-O-Wisp",
+        "70 Flash",
+        "72 Volt Switch",
+        "73 Thunder Wave",
+        "77 Psych Up",
+        "85 Dream Eater",
+        "87 Swagger",
+        "88 Sleep Talk",
+        "90 Substitute",
+        "97 Dark Pulse"
+      ],
+      "Egg Move List": [],
+      "Tutor Move List": [
+        "Charge (N)",
+        "Dark Pulse",
+        "Discharge (N)",
+        "Electroweb",
+        "Mud-Slap",
+        "Ominous Wind",
+        "Pain Split",
+        "Signal Beam",
+        "Sleep Talk",
+        "Snatch",
+        "Snore",
+        "Spite",
+        "Sucker Punch",
+        "Swift",
+        "Telekinesis",
+        "Trick (N)",
+        "Uproar"
+      ]
+    }
+  },
+  {
+    "Species": "Rotom Frost Form",
+    "Number": 479,
+    "Icon": "10010",
+    "Base Stats": {
+      "HP": 5,
+      "Attack": 7,
+      "Defense": 11,
+      "Special Attack": 11,
+      "Special Defense": 11,
+      "Speed": 9
+    },
+    "Basic Information": {
+      "Type": [
+        "Electric",
+        "Ice"
+      ],
+      "Basic Ability 1": "Poltergeist",
+      "Adv Ability 1": "Static",
+      "Adv Ability 2": "Motor Drive",
+      "Adv Ability 3": "Volt Absorb",
+      "High Ability": "Sequence"
+    },
+    "Evolution": [
+      "1 - Rotom"
+    ],
+    "Other Information": {
+      "Size Information": {
+        "Height": "? / ? (Medium)",
+        "Weight": "? / ? (Weight Class 3)"
       },
-      "Frost Rotom": {
-        "Athletics": "4d6",
-        "Acrobatics": "2d6",
-        "Combat": "3d6",
-        "Stealth": "1d6",
-        "Perception": "2d6+2",
-        "Focus": "2d6",
-        "Tech Edu": "4d6+4"
+      "Diet": "Ergovore",
+      "Habitat": "Urban",
+      "Egg Groups": "Indeterminate"
+    },
+    "Capabilities": [
+      "Overland 2",
+      "Levitate 4",
+      "Jump 1/1",
+      "Power 3",
+      "Glow",
+      "Invisibility",
+      "Phasing",
+      "Wired",
+      "Zapper",
+      "Freezer",
+      "Naturewalk (Tundra)"
+    ],
+    "Skills": {
+      "Athletics": "4d6",
+      "Acrobatics": "2d6",
+      "Combat": "3d6",
+      "Stealth": "1d6",
+      "Perception": "2d6+2",
+      "Focus": "2d6",
+      "Tech Edu": "4d6+4"
+    },
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 1,
+          "Move": "Astonish",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 1,
+          "Move": "Confuse Ray",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 1,
+          "Move": "Thunder Wave",
+          "Type": "Electric"
+        },
+        {
+          "Level": 1,
+          "Move": "Thunder Shock",
+          "Type": "Electric"
+        },
+        {
+          "Level": 8,
+          "Move": "Uproar",
+          "Type": "Normal"
+        },
+        {
+          "Level": 15,
+          "Move": "Double Team",
+          "Type": "Normal"
+        },
+        {
+          "Level": 22,
+          "Move": "Shock Wave",
+          "Type": "Electric"
+        },
+        {
+          "Level": 29,
+          "Move": "Ominous Wind",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 36,
+          "Move": "Substitute",
+          "Type": "Normal"
+        },
+        {
+          "Level": 43,
+          "Move": "Electro Ball",
+          "Type": "Electric"
+        },
+        {
+          "Level": 50,
+          "Move": "Hex",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 57,
+          "Move": "Charge",
+          "Type": "Electric"
+        },
+        {
+          "Level": 64,
+          "Move": "Discharge",
+          "Type": "Electric"
+        }
+      ],
+      "TM/HM Move List": [
+        "06 Toxic",
+        "10 Hidden Power",
+        "11 Sunny Day",
+        "16 Light Screen",
+        "17 Protect",
+        "18 Rain Dance",
+        "21 Frustration",
+        "24 Thunderbolt",
+        "25 Thunder",
+        "27 Return",
+        "30 Shadow Ball",
+        "32 Double Team",
+        "33 Reflect",
+        "42 Facade",
+        "44 Rest",
+        "46 Thief",
+        "48 Round",
+        "57 Charge Beam",
+        "61 Will-O-Wisp",
+        "70 Flash",
+        "72 Volt Switch",
+        "73 Thunder Wave",
+        "77 Psych Up",
+        "85 Dream Eater",
+        "87 Swagger",
+        "88 Sleep Talk",
+        "90 Substitute",
+        "97 Dark Pulse"
+      ],
+      "Egg Move List": [],
+      "Tutor Move List": [
+        "Charge (N)",
+        "Dark Pulse",
+        "Discharge (N)",
+        "Electroweb",
+        "Mud-Slap",
+        "Ominous Wind",
+        "Pain Split",
+        "Signal Beam",
+        "Sleep Talk",
+        "Snatch",
+        "Snore",
+        "Spite",
+        "Sucker Punch",
+        "Swift",
+        "Telekinesis",
+        "Trick (N)",
+        "Uproar"
+      ]
+    }
+  },
+  {
+    "Species": "Rotom Fan Form",
+    "Number": 479,
+    "Icon": "10012",
+    "Base Stats": {
+      "HP": 5,
+      "Attack": 7,
+      "Defense": 11,
+      "Special Attack": 11,
+      "Special Defense": 11,
+      "Speed": 9
+    },
+    "Basic Information": {
+      "Type": [
+        "Electric",
+        "Flying"
+      ],
+      "Basic Ability 1": "Poltergeist",
+      "Adv Ability 1": "Static",
+      "Adv Ability 2": "Motor Drive",
+      "Adv Ability 3": "Volt Absorb",
+      "High Ability": "Sequence"
+    },
+    "Evolution": [
+      "1 - Rotom"
+    ],
+    "Other Information": {
+      "Size Information": {
+        "Height": "? / ? (Medium)",
+        "Weight": "? / ? (Weight Class 3)"
       },
-      "Fan Rotom": {
-        "Athletics": "2d6",
-        "Acrobatics": "5d6",
-        "Combat": "3d6",
-        "Stealth": "1d6",
-        "Perception": "2d6+2",
-        "Focus": "2d6",
-        "Tech Edu": "4d6+4"
+      "Diet": "Ergovore",
+      "Habitat": "Urban",
+      "Egg Groups": "Indeterminate"
+    },
+    "Capabilities": [
+      "Overland 2",
+      "Levitate 4",
+      "Sky 6",
+      "Jump 1/1",
+      "Power 2",
+      "Glow",
+      "Invisibility",
+      "Phasing",
+      "Wired",
+      "Zapper",
+      "Guster"
+    ],
+    "Skills": {
+      "Athletics": "2d6",
+      "Acrobatics": "5d6",
+      "Combat": "3d6",
+      "Stealth": "1d6",
+      "Perception": "2d6+2",
+      "Focus": "2d6",
+      "Tech Edu": "4d6+4"
+    },
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 1,
+          "Move": "Astonish",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 1,
+          "Move": "Confuse Ray",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 1,
+          "Move": "Thunder Wave",
+          "Type": "Electric"
+        },
+        {
+          "Level": 1,
+          "Move": "Thunder Shock",
+          "Type": "Electric"
+        },
+        {
+          "Level": 8,
+          "Move": "Uproar",
+          "Type": "Normal"
+        },
+        {
+          "Level": 15,
+          "Move": "Double Team",
+          "Type": "Normal"
+        },
+        {
+          "Level": 22,
+          "Move": "Shock Wave",
+          "Type": "Electric"
+        },
+        {
+          "Level": 29,
+          "Move": "Ominous Wind",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 36,
+          "Move": "Substitute",
+          "Type": "Normal"
+        },
+        {
+          "Level": 43,
+          "Move": "Electro Ball",
+          "Type": "Electric"
+        },
+        {
+          "Level": 50,
+          "Move": "Hex",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 57,
+          "Move": "Charge",
+          "Type": "Electric"
+        },
+        {
+          "Level": 64,
+          "Move": "Discharge",
+          "Type": "Electric"
+        }
+      ],
+      "TM/HM Move List": [
+        "06 Toxic",
+        "10 Hidden Power",
+        "11 Sunny Day",
+        "16 Light Screen",
+        "17 Protect",
+        "18 Rain Dance",
+        "21 Frustration",
+        "24 Thunderbolt",
+        "25 Thunder",
+        "27 Return",
+        "30 Shadow Ball",
+        "32 Double Team",
+        "33 Reflect",
+        "42 Facade",
+        "44 Rest",
+        "46 Thief",
+        "48 Round",
+        "57 Charge Beam",
+        "61 Will-O-Wisp",
+        "70 Flash",
+        "72 Volt Switch",
+        "73 Thunder Wave",
+        "77 Psych Up",
+        "85 Dream Eater",
+        "87 Swagger",
+        "88 Sleep Talk",
+        "90 Substitute",
+        "97 Dark Pulse"
+      ],
+      "Egg Move List": [],
+      "Tutor Move List": [
+        "Charge (N)",
+        "Dark Pulse",
+        "Discharge (N)",
+        "Electroweb",
+        "Mud-Slap",
+        "Ominous Wind",
+        "Pain Split",
+        "Signal Beam",
+        "Sleep Talk",
+        "Snatch",
+        "Snore",
+        "Spite",
+        "Sucker Punch",
+        "Swift",
+        "Telekinesis",
+        "Trick (N)",
+        "Uproar"
+      ]
+    }
+  },
+  {
+    "Species": "Rotom Mow Form",
+    "Number": 479,
+    "Icon": "10012",
+    "Base Stats": {
+      "HP": 5,
+      "Attack": 7,
+      "Defense": 11,
+      "Special Attack": 11,
+      "Special Defense": 11,
+      "Speed": 9
+    },
+    "Basic Information": {
+      "Type": [
+        "Electric",
+        "Grass"
+      ],
+      "Basic Ability 1": "Poltergeist",
+      "Adv Ability 1": "Static",
+      "Adv Ability 2": "Motor Drive",
+      "Adv Ability 3": "Volt Absorb",
+      "High Ability": "Sequence"
+    },
+    "Evolution": [
+      "1 - Rotom"
+    ],
+    "Other Information": {
+      "Size Information": {
+        "Height": "? / ? (Medium)",
+        "Weight": "? / ? (Weight Class 3)"
       },
-      "Mow Rotom": {
-        "Athletics": "4d6",
-        "Acrobatics": "3d6",
-        "Combat": "3d6",
-        "Stealth": "1d6+2",
-        "Perception": "2d6+2",
-        "Focus": "2d6",
-        "Tech Edu": "4d6+4"
-      }
+      "Diet": "Ergovore",
+      "Habitat": "Urban",
+      "Egg Groups": "Indeterminate"
+    },
+    "Capabilities": [
+      "Overland 7",
+      "Levitate 4",
+      "Jump 1/1",
+      "Power 2",
+      "Glow",
+      "Invisibility",
+      "Phasing",
+      "Wired",
+      "Zapper",
+      "Naturewalk (Grassland",
+      "Forest)"
+    ],
+    "Skills": {
+      "Athletics": "4d6",
+      "Acrobatics": "3d6",
+      "Combat": "3d6",
+      "Stealth": "1d6+2",
+      "Perception": "2d6+2",
+      "Focus": "2d6",
+      "Tech Edu": "4d6+4"
     },
     "Moves": {
       "Level Up Move List": [
