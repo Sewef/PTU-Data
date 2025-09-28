@@ -1,18 +1,23 @@
 (function () {
   const CFG = {
-    // Primary JSON location (mirror your moves.html convention)
-    jsonUrls: [
-      '/ptu/data/pokedex/pokedex_core.json',
-      '/ptu/data/pokedex/pokedex_7g.json',
-      '/ptu/data/pokedex/pokedex_8g.json',
-      '/ptu/data/pokedex/pokedex_8g_hisui.json',
-      '/ptu/data/pokedex/pokedex_9g.json',
-    ],
-    // Try a few sprite/icon path patterns. Override easily.
+    // NEW — libellés → URL (tu peux en ajouter/retirer)
+    sources: {
+      "Core (Gen 1-6)":      "/ptu/data/pokedex/pokedex_core.json",
+      "AlolaDex (Gen 7)":  "/ptu/data/pokedex/pokedex_7g.json",
+      "GalarDex (Gen 8)":  "/ptu/data/pokedex/pokedex_8g.json",
+      "HisuiDex (Gen 8.5)":  "/ptu/data/pokedex/pokedex_8g_hisui.json",
+      "PaldeaDex (Gen 9)": "/ptu/data/pokedex/pokedex_9g.json",
+    },
+    // NEW — patterns d’icônes inchangés
     iconPatterns: [
       (base, num) => `${base}/${num}.png`
     ]
   };
+
+    // NEW — état UI/cache
+  const selectedSources = new Set(Object.keys(CFG.sources));   // par défaut: tout coché
+  const _jsonCache = new Map(); // url -> Promise(data[])
+
   let dexModalInstance = null;
 
   function getDexModalInstance() {
@@ -43,61 +48,83 @@
   function debounce(fn, delay = 150) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), delay); } }
   const jsStr = s => JSON.stringify(String(s ?? ''));
 
+    // NEW — charge 1 source avec cache
+  async function fetchSource(url) {
+    if (_jsonCache.has(url)) return _jsonCache.get(url);
+    const prom = fetch(url, { cache: "no-store" })
+      .then(r => { if (!r.ok) throw new Error(`${url}: HTTP ${r.status}`); return r.json(); })
+      .then(data => Array.isArray(data) ? data : (Array.isArray(data?.Pokedex) ? data.Pokedex : []))
+      .catch(e => { console.warn("Load error", url, e); return []; });
+    _jsonCache.set(url, prom);
+    return prom;
+  }
 
 
   // Load JSON with graceful fallbacks
   async function loadPokedex() {
-    // 1) Tenter de charger toutes les URLs en parallèle
-    const results = await Promise.allSettled(
-      CFG.jsonUrls.map(u =>
-        fetch(u, { cache: 'no-store' }).then(r => {
-          if (!r.ok) throw new Error(`${u}: HTTP ${r.status}`);
-          return r.json();
-        })
-      )
-    );
+    const urls = [...selectedSources].map(lbl => CFG.sources[lbl]).filter(Boolean);
+    const arrays = await Promise.all(urls.map(fetchSource));
 
-    // 2) Récupérer toutes les arrays trouvées, garder les erreurs pour debug
-    const arrays = [];
-    const errors = [];
-    results.forEach((res, i) => {
-      if (res.status === 'fulfilled') {
-        const data = res.value;
-        if (Array.isArray(data)) {
-          arrays.push(data);
-        } else if (data && Array.isArray(data.Pokedex)) {
-          // au cas où la structure serait { Pokedex: [...] }
-          arrays.push(data.Pokedex);
-        } else {
-          console.warn(`JSON pas au format array pour ${CFG.jsonUrls[i]}`, data);
-        }
-      } else {
-        errors.push(`${CFG.jsonUrls[i]} → ${res.reason}`);
-      }
-    });
-
-    // 3) Fusion + dédoublonnage (par Number + Species insensible à la casse)
     const merged = arrays.flat();
     const byKey = new Map();
     for (const p of merged) {
       const key = `${p.Number ?? ''}::${String(p.Species ?? '').toLowerCase()}`;
-      if (!byKey.has(key)) {
-        byKey.set(key, p);
-      } else {
-        // merge superficiel : les champs du dernier JSON écrasent les précédents
-        byKey.set(key, { ...byKey.get(key), ...p });
-      }
+      byKey.set(key, { ...(byKey.get(key) || {}), ...p });
     }
-
     const out = Array.from(byKey.values());
-    if (out.length === 0) {
-      throw new Error(
-        'Impossible de charger le Pokédex depuis les URLs configurées.\n' +
-        (errors.length ? `Détails:\n- ${errors.join('\n- ')}` : '')
-      );
-    }
-
+    if (!out.length) throw new Error("Aucune entrée trouvée pour les sources sélectionnées.");
     return out;
+  }
+
+  
+  // NEW — bloc “Sources” au-dessus des filtres (même esprit que Edges)
+  function buildSourceMenu(onChange) {
+    const sb = document.getElementById('sidebar');
+    if (!sb) return;
+    // Conteneur dédié (on le régénère, puis on laissera buildTypeSidebar ajouter ses filtres en dessous)
+    const wrap = document.createElement('div');
+    wrap.className = 'mb-3';
+    wrap.innerHTML = `<label class="form-label">Sources :</label>`;
+    Object.keys(CFG.sources).forEach(label => {
+      const id = `src-${label}`;
+      const checked = selectedSources.has(label) ? 'checked' : '';
+      wrap.insertAdjacentHTML('beforeend', `
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="${id}" ${checked}>
+          <label class="form-check-label" for="${id}">${label}</label>
+        </div>`);
+    });
+
+    // Si un bloc “sources” existe déjà, remplace-le ; sinon, insère en haut
+    const existing = sb.querySelector('[data-role="source-menu"]');
+    if (existing) existing.remove();
+    wrap.setAttribute('data-role', 'source-menu');
+    sb.prepend(wrap);
+
+    wrap.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', async () => {
+        // maj état
+        selectedSources.clear();
+        wrap.querySelectorAll('input:checked').forEach(x => {
+          const lbl = x.nextElementSibling?.innerText?.trim();
+          if (lbl) selectedSources.add(lbl);
+        });
+
+        // recharge les données puis reconstruit filtres + grid
+        try {
+          const data = await loadPokedex();
+          window.__POKEDEX = data;
+          // reconstruit les filtres de types en dessous (en gardant layout)
+          buildTypeSidebar(data, () => renderGrid(filterRows(data)));
+          renderGrid(filterRows(data));
+        } catch (e) {
+          console.error(e);
+          document.getElementById('dex-grid').innerHTML =
+            `<div class="alert alert-warning">Aucune donnée pour les sources sélectionnées.</div>`;
+        }
+        if (typeof onChange === 'function') onChange();
+      });
+    });
   }
 
   // Cherche un Pokémon par son nom complet et ouvre la modale
@@ -166,12 +193,22 @@
   }
 
   // Sidebar builder (mirrors your moves sidebar UX)
+  // Seule petite adaptation: buildTypeSidebar ne doit plus effacer tout le #sidebar
+  // mais compléter sous le bloc “Sources”. On remplace son début :
   function buildTypeSidebar(all, onChange) {
     const sidebar = document.getElementById('sidebar');
     if (!sidebar) return;
+
+    // NEW — supprime juste l’ancien bloc types s’il existe
+    const oldTypes = sidebar.querySelector('[data-role="type-filters"]');
+    if (oldTypes) oldTypes.remove();
+
+    const typesBox = document.createElement('div');
+    typesBox.setAttribute('data-role', 'type-filters');
     const types = collectTypes(all);
-    sidebar.innerHTML = `
-      <div class="mb-3">
+    typesBox.innerHTML = `
+      <label class="form-label mt-2">Types :</label>
+      <div class="mb-2">
         <input id="sidebar-search" class="form-control form-control-sm mb-2" placeholder="Filter types..."/>
         <button id="toggle-all-types" class="btn btn-sm btn-primary w-100 mb-2">Select/Deselect all</button>
       </div>
@@ -184,21 +221,27 @@
         `).join('')}
       </div>`;
 
-    sidebar.querySelectorAll("#type-filters input[type='checkbox']").forEach(input => {
+    // NEW — insère sous le menu des sources
+    const srcMenu = sidebar.querySelector('[data-role="source-menu"]');
+    if (srcMenu) srcMenu.insertAdjacentElement('afterend', typesBox);
+    else sidebar.prepend(typesBox);
+
+    // (le reste de la fonction inchangé)
+    typesBox.querySelectorAll("#type-filters input[type='checkbox']").forEach(input => {
       input.addEventListener('change', onChange);
     });
 
     const sb = document.getElementById('sidebar-search');
     if (sb) sb.addEventListener('input', debounce(() => {
       const q = sb.value.toLowerCase();
-      sidebar.querySelectorAll('#type-filters label').forEach(label => {
+      typesBox.querySelectorAll('#type-filters label').forEach(label => {
         label.style.display = label.textContent.toLowerCase().includes(q) ? '' : 'none';
       });
     }, 150));
 
     const toggle = document.getElementById('toggle-all-types');
     if (toggle) toggle.addEventListener('click', () => {
-      const boxes = sidebar.querySelectorAll("#type-filters input[type='checkbox']");
+      const boxes = typesBox.querySelectorAll("#type-filters input[type='checkbox']");
       const allChecked = Array.from(boxes).every(cb => cb.checked);
       boxes.forEach(cb => cb.checked = !allChecked);
       onChange();
@@ -844,29 +887,24 @@
 
   // Boot
 
-  document.addEventListener("DOMContentLoaded", async () => {
-    // Charger le Pokédex en cache global
+    document.addEventListener("DOMContentLoaded", async () => {
+    // NEW — construit le menu des sources *avant* de charger
+    buildSourceMenu();
+
     const data = await loadPokedex();
     window.__POKEDEX = data;
 
-    // Expose la fonction globale utilisée par les liens et par l’URL
     window.openModalBySpecies = (speciesName) => {
       const found = (window.__POKEDEX || []).find(
         p => String(p.Species || '').toLowerCase() === String(speciesName || '').toLowerCase()
       );
-      if (found) {
-        openDetail(found);
-      }
+      if (found) { openDetail(found); }
     };
 
-    // --- Ton code préféré : ouvre la modale si ?species=... est dans l’URL ---
     const params = new URLSearchParams(window.location.search);
     const s = params.get("species");
-    if (s) {
-      openModalBySpecies(s);
-    }
+    if (s) openModalBySpecies(s);
 
-    // Le reste de l’initialisation
     buildTypeSidebar(data, () => renderGrid(filterRows(data)));
     wireSearch(data);
     renderGrid(filterRows(data));
