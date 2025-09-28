@@ -447,4 +447,4 @@ def normalize_evolutions_in_file(filename_str: str):
 
 if __name__ == "__main__":
     # Mets ici le nom de ton JSON source
-    normalize_evolutions_in_file("../../ptu/data/pokedex/pokedex_9g.json")
+    normalize_evolutions_in_file("../../ptu/data/pokedex/pokedex_8g_hisui.json")
