@@ -47,8 +47,11 @@
     ],
     "Skills": {
       "Athletics": "2d6",
+      "Acrobatics": "3d6",
       "Combat": "3d6",
-      "Perception": "3d6"
+      "Stealth": "4d6+1",
+      "Perception": "4d6+2",
+      "Focus": "3d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -232,6 +235,7 @@
     "Skills": {
       "Athletics": "2d6",
       "Acrobatics": "3d6",
+      "Combat": "3d6",
       "Stealth": "4d6+1",
       "Perception": "4d6+2",
       "Focus": "3d6"
@@ -938,8 +942,11 @@
       "Tracker"
     ],
     "Skills": {
-      "Combat": "5d6",
+      "Athletics": "5d6+3",
+      "Acrobatics": "4d6",
+      "Combat": "5d6+2",
       "Stealth": "3d6",
+      "Perception": "4d6",
       "Focus": "3d6"
     },
     "Moves": {
@@ -1131,10 +1138,11 @@
     ],
     "Skills": {
       "Athletics": "2d6",
-      "Acrobatics": "3d6",
+      "Acrobatics": "3d6+2",
       "Combat": "2d6",
       "Stealth": "2d6",
-      "Perception": "2d6"
+      "Perception": "2d6",
+      "Focus": "3d6+2"
     },
     "Moves": {
       "Level Up Move List": [
@@ -1313,7 +1321,10 @@
     "Skills": {
       "Athletics": "3d6",
       "Acrobatics": "4d6+2",
-      "Perception": "2d6"
+      "Combat": "2d6",
+      "Stealth": "3d6",
+      "Perception": "2d6",
+      "Focus": "4d6+2"
     },
     "Moves": {
       "Level Up Move List": [
@@ -1472,8 +1483,9 @@
       "Athletics": "3d6",
       "Acrobatics": "5d6+2",
       "Combat": "4d6",
+      "Stealth": "3d6",
       "Perception": "3d6",
-      "Focus": "5d6"
+      "Focus": "5d6+2"
     },
     "Moves": {
       "Level Up Move List": [
@@ -1819,11 +1831,12 @@
       "Underdog"
     ],
     "Skills": {
+      "Athletics": "3d6+2",
       "Acrobatics": "4d6",
       "Combat": "3d6",
       "Stealth": "2d6",
-      "Perception": "4d6",
-      "Focus": "3d6"
+      "Perception": "4d6+2",
+      "Focus": "3d6+1"
     },
     "Moves": {
       "Level Up Move List": [
@@ -1975,11 +1988,12 @@
       "Guster"
     ],
     "Skills": {
-      "Athletics": "3d6",
+      "Athletics": "3d6+2",
       "Acrobatics": "5d6",
+      "Combat": "4d6",
       "Stealth": "2d6",
-      "Perception": "4d6",
-      "Focus": "3d6"
+      "Perception": "4d6+2",
+      "Focus": "3d6+1"
     },
     "Moves": {
       "Level Up Move List": [
@@ -2315,10 +2329,11 @@
     ],
     "Skills": {
       "Athletics": "4d6",
+      "Acrobatics": "3d6",
       "Combat": "3d6",
-      "Stealth": "3d6",
+      "Stealth": "3d6+2",
       "Perception": "5d6",
-      "Focus": "3d6"
+      "Focus": "3d6+2"
     },
     "Moves": {
       "Level Up Move List": [
@@ -2494,8 +2509,10 @@
     "Skills": {
       "Athletics": "2d6",
       "Acrobatics": "1d6",
+      "Combat": "2d6",
       "Stealth": "2d6",
-      "Perception": "2d6"
+      "Perception": "2d6",
+      "Focus": "3d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -2640,10 +2657,12 @@
       "Wallclimber"
     ],
     "Skills": {
+      "Athletics": "3d6",
       "Acrobatics": "1d6",
       "Combat": "2d6",
+      "Stealth": "3d6",
       "Perception": "3d6",
-      "Focus": "3d6"
+      "Focus": "3d6+2"
     },
     "Moves": {
       "Level Up Move List": [
@@ -2956,6 +2975,7 @@
     "Skills": {
       "Athletics": "3d6+1",
       "Acrobatics": "2d6",
+      "Combat": "3d6+2",
       "Stealth": "3d6",
       "Perception": "2d6",
       "Focus": "3d6"
@@ -3124,10 +3144,12 @@
       "Naturewalk (Tundra)"
     ],
     "Skills": {
+      "Athletics": "5d6+3",
       "Acrobatics": "2d6",
-      "Combat": "5d6",
+      "Combat": "5d6+2",
       "Stealth": "2d6",
-      "Perception": "3d6"
+      "Perception": "3d6",
+      "Focus": "4d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -3310,8 +3332,9 @@
       "Athletics": "3d6",
       "Acrobatics": "4d6+1",
       "Combat": "3d6",
+      "Stealth": "3d6",
       "Perception": "4d6",
-      "Focus": "4d6"
+      "Focus": "4d6+2"
     },
     "Moves": {
       "Level Up Move List": [
@@ -3827,7 +3850,10 @@
     "Skills": {
       "Athletics": "3d6+1",
       "Acrobatics": "3d6",
-      "Stealth": "2d6"
+      "Combat": "2d6+2",
+      "Stealth": "2d6",
+      "Perception": "4d6",
+      "Focus": "2d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -3997,8 +4023,11 @@
       "Tracker"
     ],
     "Skills": {
-      "Combat": "3d6",
+      "Athletics": "5d6+2",
+      "Acrobatics": "4d6",
+      "Combat": "3d6+2",
       "Stealth": "4d6",
+      "Perception": "4d6",
       "Focus": "3d6"
     },
     "Moves": {
@@ -4166,8 +4195,9 @@
       "Tracker"
     ],
     "Skills": {
+      "Athletics": "4d6+2",
       "Acrobatics": "4d6",
-      "Combat": "5d6",
+      "Combat": "5d6+2",
       "Stealth": "3d6",
       "Perception": "3d6",
       "Focus": "3d6"
@@ -4346,8 +4376,9 @@
     "Skills": {
       "Athletics": "4d6+2",
       "Acrobatics": "4d6",
-      "C ombat": "5d6+2",
+      "Combat": "5d6+2",
       "Stealth": "3d6",
+      "Perception": "4d6",
       "Focus": "3d6"
     },
     "Moves": {
@@ -4517,7 +4548,10 @@
     "Skills": {
       "Athletics": "1d6",
       "Acrobatics": "3d6",
-      "Perception": "4d6"
+      "Combat": "1d6",
+      "Stealth": "3d6+1",
+      "Perception": "4d6",
+      "Focus": "2d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -4687,10 +4721,11 @@
       "Naturewalk (Fresh, Water)"
     ],
     "Skills": {
-      "Athletics": "5d6",
+      "Athletics": "5d6+3",
       "Acrobatics": "1d6",
+      "Combat": "4d6",
       "Stealth": "1d6",
-      "Perception": "5d6",
+      "Perception": "5d6+3",
       "Focus": "4d6"
     },
     "Moves": {
@@ -4859,10 +4894,11 @@
       "Underdog"
     ],
     "Skills": {
-      "Athletics": "3d6",
+      "Athletics": "3d6+2",
       "Acrobatics": "1d6",
-      "C ombat": "3d6+1",
+      "Combat": "3d6+1",
       "Stealth": "4d6",
+      "Perception": "3d6",
       "Focus": "3d6"
     },
     "Moves": {
@@ -5030,10 +5066,11 @@
       "Gilled"
     ],
     "Skills": {
-      "Athletics": "4d6",
+      "Athletics": "4d6+2",
       "Acrobatics": "2d6",
-      "C ombat": "3d6+2",
+      "Combat": "3d6+2",
       "Stealth": "5d6",
+      "Perception": "4d6",
       "Focus": "4d6"
     },
     "Moves": {
@@ -5200,10 +5237,12 @@
       "Underdog"
     ],
     "Skills": {
+      "Athletics": "4d6+2",
       "Acrobatics": "1d6",
       "Combat": "3d6",
       "Stealth": "1d6",
-      "Focus": "3d6"
+      "Perception": "3d6",
+      "Focus": "3d6+1"
     },
     "Moves": {
       "Level Up Move List": [
@@ -5365,10 +5404,12 @@
       "Naturewalk (Cave, Mountain)"
     ],
     "Skills": {
+      "Athletics": "6d6+3",
       "Acrobatics": "1d6",
       "Combat": "4d6",
       "Stealth": "2d6",
-      "Perception": "4d6"
+      "Perception": "4d6",
+      "Focus": "5d6+1"
     },
     "Moves": {
       "Level Up Move List": [
@@ -5851,10 +5892,11 @@
     ],
     "Skills": {
       "Athletics": "2d6",
-      "Acrobatics": "3d6",
+      "Acrobatics": "3d6+1",
       "Combat": "3d6",
-      "Stealth": "4d6",
-      "Perception": "2d6"
+      "Stealth": "4d6+2",
+      "Perception": "2d6",
+      "Focus": "2d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -6005,9 +6047,10 @@
     ],
     "Skills": {
       "Athletics": "2d6",
-      "Acrobatics": "4d6",
+      "Acrobatics": "4d6+2",
       "Combat": "4d6+2",
       "Stealth": "5d6",
+      "Perception": "4d6",
       "Focus": "3d6"
     },
     "Moves": {
@@ -6686,8 +6729,10 @@
     "Skills": {
       "Athletics": "3d6+1",
       "Acrobatics": "3d6",
+      "Combat": "4d6+1",
       "Stealth": "4d6",
-      "Perception": "3d6"
+      "Perception": "3d6",
+      "Focus": "4d6+2"
     },
     "Moves": {
       "Level Up Move List": [
@@ -6857,6 +6902,7 @@
       "Athletics": "4d6+2",
       "Acrobatics": "2d6",
       "Combat": "3d6+1",
+      "Stealth": "3d6",
       "Perception": "2d6",
       "Focus": "2d6"
     },
@@ -7675,7 +7721,9 @@
       "Athletics": "2d6",
       "Acrobatics": "3d6+2",
       "Combat": "1d6",
-      "Stealth": "4d6"
+      "Stealth": "4d6",
+      "Perception": "3d6+1",
+      "Focus": "4d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -8557,6 +8605,7 @@
       "Acrobatics": "1d6",
       "Combat": "2d6",
       "Stealth": "3d6+2",
+      "Perception": "3d6",
       "Focus": "3d6"
     },
     "Moves": {
@@ -8902,7 +8951,8 @@
       "Acrobatics": "1d6+1",
       "Combat": "1d6",
       "Stealth": "3d6",
-      "Perception": "3d6+1"
+      "Perception": "3d6+1",
+      "Focus": "4d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -9260,6 +9310,7 @@
       "Acrobatics": "3d6",
       "Combat": "5d6+1",
       "Stealth": "2d6",
+      "Perception": "5d6+1",
       "Focus": "4d6"
     },
     "Moves": {
@@ -10959,7 +11010,8 @@
       "Acrobatics": "3d6",
       "Combat": "3d6",
       "Stealth": "3d6+1",
-      "Focus": "4d6"
+      "Perception": "5d6",
+      "Focus": "4d6+2"
     },
     "Moves": {
       "Level Up Move List": [
@@ -11152,6 +11204,7 @@
       "Athletics": "3d6",
       "Acrobatics": "2d6",
       "Combat": "3d6+1",
+      "Stealth": "3d6",
       "Perception": "3d6",
       "Focus": "3d6+1"
     },
@@ -11330,6 +11383,8 @@
     ],
     "Skills": {
       "Athletics": "4d6+1",
+      "Acrobatics": "3d6",
+      "Combat": "4d6+2",
       "Stealth": "2d6",
       "Perception": "3d6",
       "Focus": "3d6+1"
@@ -12674,11 +12729,12 @@
       "Underdog"
     ],
     "Skills": {
-      "Athletics": "3d6",
+      "Athletics": "3d6+2",
       "Acrobatics": "2d6",
       "Combat": "2d6",
-      "Stealth": "3d6",
-      "Perception": "2d6+1"
+      "Stealth": "3d6+2",
+      "Perception": "2d6+1",
+      "Focus": "3d6+1"
     },
     "Moves": {
       "Level Up Move List": [
@@ -14825,7 +14881,8 @@
       "Acrobatics": "1d6",
       "Combat": "3d6",
       "Stealth": "3d6+3",
-      "Perception": "5d6+2"
+      "Perception": "5d6+2",
+      "Focus": "5d6+2"
     },
     "Moves": {
       "Level Up Move List": [
@@ -15611,8 +15668,12 @@
       "Sprouter"
     ],
     "Skills": {
+      "Athletics": "5d6+2",
       "Acrobatics": "2d6",
-      "Perception": "4d6+2"
+      "Combat": "5d6",
+      "Stealth": "3d6+1",
+      "Perception": "4d6+2",
+      "Focus": "4d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -16309,7 +16370,9 @@
     ],
     "Skills": {
       "Athletics": "3d6",
+      "Acrobatics": "5d6+2",
       "Combat": "4d6",
+      "Stealth": "5d6+4",
       "Perception": "4d6+3",
       "Focus": "5d6"
     },
@@ -17140,7 +17203,9 @@
       "Athletics": "4d6+2",
       "Acrobatics": "4d6",
       "Combat": "3d6",
-      "Stealth": "5d6+2"
+      "Stealth": "5d6+2",
+      "Perception": "4d6+2",
+      "Focus": "3d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -17524,8 +17589,10 @@
       "Zygarde Cells"
     ],
     "Skills": {
+      "Athletics": "6d6+2",
       "Acrobatics": "3d6",
       "Combat": "6d6",
+      "Stealth": "3d6+2",
       "Perception": "6d6+2",
       "Focus": "5d6"
     },
@@ -17716,7 +17783,12 @@
       "Egg Warmer"
     ],
     "Skills": {
-      "Combat": "5d6+2"
+      "Athletics": "4d6+2",
+      "Acrobatics": "3d6",
+      "Combat": "5d6+2",
+      "Stealth": "3d6+2",
+      "Perception": "4d6",
+      "Focus": "5d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -17898,7 +17970,8 @@
       "Acrobatics": "4d6",
       "Combat": "2d6",
       "Stealth": "5d6+1",
-      "Perception": "3d6"
+      "Perception": "3d6",
+      "Focus": "4d6+2"
     },
     "Moves": {
       "Level Up Move List": [
@@ -18090,7 +18163,8 @@
       "Acrobatics": "3d6",
       "Combat": "5d6+2",
       "Stealth": "2d6",
-      "Perception": "3d6"
+      "Perception": "3d6",
+      "Focus": "4d6+2"
     },
     "Moves": {
       "Level Up Move List": [
@@ -18274,7 +18348,8 @@
       "Acrobatics": "6d6+1",
       "Combat": "5d6+2",
       "Stealth": "4d6+2",
-      "Perception": "3d6"
+      "Perception": "3d6",
+      "Focus": "3d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -18458,7 +18533,8 @@
       "Acrobatics": "4d6",
       "Combat": "4d6",
       "Stealth": "3d6",
-      "Perception": "4d6"
+      "Perception": "4d6",
+      "Focus": "5d6+2"
     },
     "Moves": {
       "Level Up Move List": [
@@ -18644,7 +18720,8 @@
       "Acrobatics": "4d6+2",
       "Combat": "3d6+3",
       "Stealth": "2d6",
-      "Perception": "4d6"
+      "Perception": "4d6",
+      "Focus": "4d6"
     },
     "Moves": {
       "Level Up Move List": [],
@@ -18746,7 +18823,8 @@
       "Acrobatics": "5d6+2",
       "Combat": "5d6",
       "Stealth": "4d6+1",
-      "Perception": "3d6"
+      "Perception": "3d6",
+      "Focus": "3d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -18924,7 +19002,8 @@
       "Acrobatics": "2d6",
       "Combat": "5d6+1",
       "Stealth": "3d6",
-      "Perception": "3d6"
+      "Perception": "3d6",
+      "Focus": "3d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -19119,8 +19198,10 @@
     "Skills": {
       "Athletics": "3d6",
       "Acrobatics": "4d6",
-      "Stealth": "3d6",
-      "Perception": "3d6"
+      "Combat": "3d6+1",
+      "Stealth": "3d6+1",
+      "Perception": "3d6",
+      "Focus": "3d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -19266,7 +19347,8 @@
       "Acrobatics": "5d6+2",
       "Combat": "4d6+1",
       "Stealth": "4d6",
-      "Perception": "4d6"
+      "Perception": "4d6",
+      "Focus": "3d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -19432,7 +19514,8 @@
       "Acrobatics": "2d6",
       "Combat": "3d6",
       "Stealth": "3d6",
-      "Perception": "6d6+3"
+      "Perception": "6d6+3",
+      "Focus": "4d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -19958,7 +20041,8 @@
       "Acrobatics": "3d6",
       "Combat": "5d6",
       "Stealth": "5d6+3",
-      "Perception": "3d6"
+      "Perception": "3d6",
+      "Focus": "4d6"
     },
     "Moves": {
       "Level Up Move List": [
@@ -20142,7 +20226,9 @@
       "Athletics": "4d6+1",
       "Acrobatics": "5d6",
       "Combat": "4d6+2",
-      "Stealth": "3d6"
+      "Stealth": "3d6",
+      "Perception": "4d6",
+      "Focus": "4d6+1"
     },
     "Moves": {
       "Level Up Move List": [
