@@ -13,6 +13,26 @@
       (base, num) => `${base}/${num}.png`
     ]
   };
+  let dexModalInstance = null;
+
+  function getDexModalInstance() {
+    const el = document.getElementById('dexModal');
+    if (!el) return null;
+    // Réutilise l’instance existante si présente
+    dexModalInstance = bootstrap.Modal.getOrCreateInstance(el, {
+      backdrop: true,
+      focus: true,
+      keyboard: true
+    });
+    return dexModalInstance;
+  }
+
+
+  function isDexModalShown() {
+    const el = document.getElementById('dexModal');
+    return !!el && el.classList.contains('show');
+  }
+
 
   // Utilities
   const pad3 = n => String(n).padStart(3, '0');
@@ -21,6 +41,9 @@
 
   // ===== Types helpers (handle array OR per-form object) =====
   function debounce(fn, delay = 150) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), delay); } }
+  const jsStr = s => JSON.stringify(String(s ?? ''));
+
+
 
   // Load JSON with graceful fallbacks
   async function loadPokedex() {
@@ -276,10 +299,9 @@
   function openDetail(p) {
     const body = document.getElementById('dexModalBody');
     const title = document.getElementById('dexModalLabel');
-    const num = pad3(p.Number ?? '0');
+    const num = String(p.Number ?? '0').padStart(3, '0');
     const species = p.Species || 'Unknown';
 
-    // Contenu du titre : image + nom/# (ligne 1) + types (ligne 2)
     const typesHTML = wrapTypes(extractTypes(p)) || '';
 
     title.innerHTML = `
@@ -294,20 +316,23 @@
     </div>
   `;
 
-    // Corps : uniquement le détail (plus de header doublon)
     const safe = (typeof structuredClone === 'function')
       ? structuredClone(p)
       : JSON.parse(JSON.stringify(p));
     body.innerHTML = renderObject(safe);
 
-    // Sprite dans le titre
     const img = document.getElementById('dexModalIcon');
     if (img) setupIcon(img, p.Icon || p.Number, species, "full");
 
-    // Affiche le modal
-    const modal = new bootstrap.Modal(document.getElementById('dexModal'));
-    modal.show();
+    // 👉 Réutiliser l’instance, et ne montrer que si fermée
+    const inst = getDexModalInstance();
+    if (inst && !isDexModalShown()) {
+      inst.show();
+    } else if (inst) {
+      inst.handleUpdate(); // ajuste le scroll/position, sans recréer de backdrop
+    }
   }
+
 
 
 
@@ -373,7 +398,6 @@
   `;
   }
 
-  // Supporte Array<string> | Object | mix de "Overland 5" et "Darkvision"
   function parseCapabilities(raw) {
     const rated = [];
     const simple = [];
@@ -515,6 +539,32 @@
     </div>
   `;
   }
+  function renderEvolutionList(evos, depth = 0) {
+    // evos attendu: [{ Stade, Species, Condition }]
+    if (!Array.isArray(evos) || evos.length === 0) return '';
+
+    const items = evos.map(e => {
+      const stade = e?.Stade ?? '';
+      const species = e?.Species ?? '';
+      const cond = (e?.Condition ?? '').trim();
+      const label = `${stade} - <a href="#" onclick='openModalBySpecies(${jsStr(species)}); return false;'>${escapeHtml(species)}</a>${cond ? ` (${escapeHtml(cond)})` : ''}`;
+      return `
+      <li class="list-group-item d-flex align-items-center">
+        <span class="flex-grow-1">${label}</span>
+      </li>`;
+    }).join('');
+
+    const h = Math.min(4 + depth, 6);
+    return `
+    <div class="mt-3">
+      <h${h} class="text-muted">Evolution</h${h}>
+      <div class="card accent skills-card">
+        <ul class="list-group list-group-flush skills-list">
+          ${items}
+        </ul>
+      </div>
+    </div>`;
+  }
 
 
   function renderBattleOnlyForms(forms, base) {
@@ -612,6 +662,13 @@
           // --- Base Stats en grille 2x3 ---
           if (k === "Base Stats" && v && typeof v === "object") {
             const block = renderBaseStats(v, depth);
+            (leftSections.has(k) ? (col1 += block) : (col2 += block));
+            continue;
+          }
+
+          // --- Evolution -> liste cliquable ---
+          if (k === "Evolution" && Array.isArray(v)) {
+            const block = renderEvolutionList(v, depth);
             (leftSections.has(k) ? (col1 += block) : (col2 += block));
             continue;
           }
@@ -786,26 +843,60 @@
   }
 
   // Boot
-  document.addEventListener('DOMContentLoaded', async () => {
-    try {
-      const data = await loadPokedex(); // Expecting an array of objects
-      if (!Array.isArray(data) || !data.length) throw new Error('pokedex_core.json is empty or not an array.');
-
-      buildTypeSidebar(data, () => renderGrid(filterRows(data)));
-      wireSearch(data);
-      renderGrid(filterRows(data));
-    } catch (err) {
-      console.error(err);
-      const grid = document.getElementById('dex-grid');
-      grid.innerHTML = `<div class=\"alert alert-danger\">${escapeHtml(err.message)}</div>`;
-    }
-  });
 
   document.addEventListener("DOMContentLoaded", async () => {
+    // Charger le Pokédex en cache global
+    const data = await loadPokedex();
+    window.__POKEDEX = data;
+
+    // Expose la fonction globale utilisée par les liens et par l’URL
+    window.openModalBySpecies = (speciesName) => {
+      const found = (window.__POKEDEX || []).find(
+        p => String(p.Species || '').toLowerCase() === String(speciesName || '').toLowerCase()
+      );
+      if (found) {
+        openDetail(found);
+      }
+    };
+
+    // --- Ton code préféré : ouvre la modale si ?species=... est dans l’URL ---
     const params = new URLSearchParams(window.location.search);
     const s = params.get("species");
     if (s) {
       openModalBySpecies(s);
     }
+
+    // Le reste de l’initialisation
+    buildTypeSidebar(data, () => renderGrid(filterRows(data)));
+    wireSearch(data);
+    renderGrid(filterRows(data));
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+    const modalEl = document.getElementById('dexModal');
+    if (modalEl) {
+      modalEl.addEventListener('hidden.bs.modal', () => {
+        // Si jamais Bootstrap ne l’a pas retiré (plugins, CSS custom, etc.)
+        document.querySelectorAll('.modal-backdrop').forEach(b => b.remove());
+        document.body.classList.remove('modal-open');
+        document.body.style.removeProperty('paddingRight');
+      });
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[data-dex-number], a[data-dex-species]');
+    if (!a) return;
+
+    e.preventDefault();
+    const number = a.getAttribute('data-dex-number');
+    const species = a.getAttribute('data-dex-species');
+
+    // Récupère ton Pokémon dans tes données (à adapter selon où tu stockes 'data')
+    // Exemple si tu as gardé 'data' dans une variable globale/module :
+    const target = window.__pokedexData?.find(p =>
+      (number && String(p.Number) === String(number)) ||
+      (species && String(p.Species).toLowerCase() === String(species).toLowerCase())
+    );
+    if (target) openDetail(target); // ← met à jour la modale sans réempiler de backdrop
   });
 })();
