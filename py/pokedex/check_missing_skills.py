@@ -28,4 +28,4 @@ def check_skills(json_file):
             print(f"❌ {name} - Compétences manquantes : {missing_skills}")
 
 # Exemple d’utilisation
-check_skills("../../ptu/data/pokedex/pokedex_7g.json")
+check_skills("../../ptu/data/pokedex/pokedex_9g.json")
