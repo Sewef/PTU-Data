@@ -76,6 +76,26 @@
 
     return out;
   }
+
+  // Cherche un Pokémon par son nom complet et ouvre la modale
+  async function openModalBySpecies(speciesName) {
+    // Charger le Pokédex si ce n’est pas déjà fait
+    const data = await loadPokedex();
+
+    // Trouver l’objet correspondant
+    const found = data.find(p =>
+      (p.Species || '').toLowerCase() === speciesName.toLowerCase()
+    );
+
+    if (found) {
+      openDetail(found);
+    } else {
+      alert(`Aucun Pokémon trouvé avec le nom "${speciesName}"`);
+    }
+  }
+
+
+
   // Derive flat list of distinct types present + robust form handling
   function extractTypes(p) {
     const t = p?.['Basic Information']?.Type;
@@ -402,48 +422,89 @@
 
     return { rated: ratedMerged, simple: simpleClean };
   }
+  function renderBaseStats(stats, depth = 0) {
+    const order = ["HP", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"];
 
-function renderBaseStats(stats, depth = 0) {
-  const order = ["HP", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"];
-  const total = order.reduce((s, k) => s + (stats?.[k] ?? 0), 0);
+    // Cas simple
+    if (!("Small" in stats)) {
+      const total = order.reduce((s, k) => s + (stats?.[k] ?? 0), 0);
+      const rows = order.map(k => `
+      <tr>
+        <td class="text-start">${k}</td>
+        <td class="text-end">${stats?.[k] ?? 0}</td>
+      </tr>
+    `).join("");
+      return `
+      <div class="mt-3">
+        <h${Math.min(4 + depth, 6)} class="text-muted">Base Stats</h${Math.min(4 + depth, 6)}>
+        <table class="table table-sm align-middle">
+          <tbody>
+            ${rows}
+            <tr class="fw-semibold">
+              <td class="text-start">Total</td>
+              <td class="text-end">${total}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    `;
+    }
 
-  const rows = order.map(k => `
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      <span class="bs-key">${k}</span>
-      <span class="bs-val">${stats?.[k] ?? 0}</span>
-    </li>
+    // Cas multi-tailles
+    const forms = {
+      "Small": "S",
+      "Average": "M",
+      "Large": "L",
+      "Super Size": "XL"
+    };
+    const totals = {};
+    Object.keys(forms).forEach(f => {
+      totals[f] = order.reduce((s, k) => s + (stats[f]?.[k] ?? 0), 0);
+    });
+
+    const rows = order.map(k => `
+    <tr>
+      <td class="text-start">${k}</td>
+      ${Object.keys(forms).map(f => `<td class="text-center">${stats[f]?.[k] ?? 0}</td>`).join("")}
+    </tr>
   `).join("");
 
-  const h = Math.min(4 + depth, 6);
-  return `
+    return `
     <div class="mt-3">
-      <h${h} class="text-muted">Base Stats</h${h}>
-      <div class="card accent skills-card bs-card">
-        <ul class="list-group list-group-flush skills-list">
+      <h${Math.min(4 + depth, 6)} class="text-muted">Base Stats</h${Math.min(4 + depth, 6)}>
+      <table class="table table-sm align-middle">
+        <thead>
+          <tr>
+            <th class="text-start"></th>
+            ${Object.values(forms).map(lbl => `<th class="text-center">${lbl}</th>`).join("")}
+          </tr>
+        </thead>
+        <tbody>
           ${rows}
-          <li class="list-group-item d-flex justify-content-between align-items-center bs-total">
-            <span class="bs-key">Total</span>
-            <span class="bs-val fw-semibold">${total}</span>
-          </li>
-        </ul>
-      </div>
+          <tr class="fw-semibold">
+            <td class="text-start">Total</td>
+            ${Object.keys(forms).map(f => `<td class="text-center">${totals[f]}</td>`).join("")}
+          </tr>
+        </tbody>
+      </table>
     </div>
   `;
-}
+  }
 
-function renderSkills(skills, depth = 0) {
-  // skills est supposé être un objet { "Acrobatics": 2, "Combat": 3, ... }
 
-  const entries = Object.entries(skills || {});
-  const rows = entries.map(([k, v]) => `
+  function renderSkills(skills, depth = 0) {
+    // skills est supposé être un objet { "Acrobatics": 2, "Combat": 3, ... }
+
+    const entries = Object.entries(skills || {});
+    const rows = entries.map(([k, v]) => `
     <li class="list-group-item d-flex justify-content-between align-items-center">
       <span class="skill-key">${k}</span>
       <span class="skill-val">${v}</span>
     </li>
   `).join("");
 
-  const h = Math.min(4 + depth, 6);
-  return `
+    const h = Math.min(4 + depth, 6);
+    return `
     <div class="mt-3">
       <h${h} class="text-muted">Skills</h${h}>
       <div class="card accent skills-card">
@@ -453,7 +514,7 @@ function renderSkills(skills, depth = 0) {
       </div>
     </div>
   `;
-}
+  }
 
 
   function renderBattleOnlyForms(forms, base) {
@@ -471,7 +532,7 @@ function renderSkills(skills, depth = 0) {
 
       const types = wrapTypes(f?.Type || []);
       const line = k => f?.[k] ? `<div class="small text-muted">${k}: <span class="text-body">${Array.isArray(f[k]) ? f[k].join(", ")
-          : (typeof f[k] === "object" ? Object.keys(f[k]).join(", ") : String(f[k]))
+        : (typeof f[k] === "object" ? Object.keys(f[k]).join(", ") : String(f[k]))
         }</span></div>` : "";
 
       const stats = f?.Stats ? Object.entries(f.Stats)
@@ -737,6 +798,14 @@ function renderSkills(skills, depth = 0) {
       console.error(err);
       const grid = document.getElementById('dex-grid');
       grid.innerHTML = `<div class=\"alert alert-danger\">${escapeHtml(err.message)}</div>`;
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const params = new URLSearchParams(window.location.search);
+    const s = params.get("species");
+    if (s) {
+      openModalBySpecies(s);
     }
   });
 })();
