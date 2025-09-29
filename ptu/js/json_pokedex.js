@@ -2,11 +2,11 @@
   const CFG = {
     // NEW — libellés → URL (tu peux en ajouter/retirer)
     sources: {
-      "Core Updated (Gen 1-6)":      "/ptu/data/pokedex/updated/pokedex_core.json",
+      "Core Updated (Gen 1-6)": "/ptu/data/pokedex/updated/pokedex_core.json",
       // "Core (Gen 1-6)":      "/ptu/data/pokedex/pokedex_core.json",
-      "AlolaDex (Gen 7)":  "/ptu/data/pokedex/pokedex_7g.json",
-      "GalarDex (Gen 8)":  "/ptu/data/pokedex/pokedex_8g.json",
-      "HisuiDex (Gen 8.5)":  "/ptu/data/pokedex/pokedex_8g_hisui.json",
+      "AlolaDex (Gen 7)": "/ptu/data/pokedex/pokedex_7g.json",
+      "GalarDex (Gen 8)": "/ptu/data/pokedex/pokedex_8g.json",
+      "HisuiDex (Gen 8.5)": "/ptu/data/pokedex/pokedex_8g_hisui.json",
       "PaldeaDex (Gen 9, Homebrew)": "/ptu/data/pokedex/pokedex_9g.json",
     },
     // NEW — patterns d’icônes inchangés
@@ -15,7 +15,7 @@
     ]
   };
 
-    // NEW — état UI/cache
+  // NEW — état UI/cache
   const selectedSources = new Set(Object.keys(CFG.sources));   // par défaut: tout coché
   // const selectedSources = new Set();   // par défaut: tout coché
   const _jsonCache = new Map(); // url -> Promise(data[])
@@ -50,7 +50,7 @@
   function debounce(fn, delay = 150) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), delay); } }
   const jsStr = s => JSON.stringify(String(s ?? ''));
 
-    // NEW — charge 1 source avec cache
+  // NEW — charge 1 source avec cache
   async function fetchSource(url) {
     if (_jsonCache.has(url)) return _jsonCache.get(url);
     const prom = fetch(url, { cache: "no-store" })
@@ -78,7 +78,7 @@
     return out;
   }
 
-  
+
   // NEW — bloc “Sources” au-dessus des filtres (même esprit que Edges)
   function buildSourceMenu(onChange) {
     const sb = document.getElementById('sidebar');
@@ -591,13 +591,20 @@
     const items = evos.map(e => {
       const stade = e?.Stade ?? '';
       const species = e?.Species ?? '';
+      const level = (e?.["Minimum Level"] ?? '').trim();
       const cond = (e?.Condition ?? '').trim();
-      const label = `${stade} - <a href="#" onclick='openModalBySpecies(${jsStr(species)}); return false;'>${escapeHtml(species)}</a>${cond ? ` (${escapeHtml(cond)})` : ''}`;
+
+      const label = `${stade} - <a href="#" onclick='openModalBySpecies(${jsStr(species)}); return false;'>${escapeHtml(species)}</a>` +
+        `${level ? ` [${escapeHtml(level)}]` : ''}` +
+        `${cond ? ` (${escapeHtml(cond)})` : ''}`;
+
       return `
       <li class="list-group-item d-flex align-items-center">
         <span class="flex-grow-1">${label}</span>
       </li>`;
     }).join('');
+
+
 
     const h = Math.min(4 + depth, 6);
     return `
@@ -889,7 +896,7 @@
 
   // Boot
 
-    document.addEventListener("DOMContentLoaded", async () => {
+  document.addEventListener("DOMContentLoaded", async () => {
     // NEW — construit le menu des sources *avant* de charger
     buildSourceMenu();
 

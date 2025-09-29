@@ -6,33 +6,6 @@ merge_sv_into_core_stone_rules.py
 ---------------------------------
 Fusionne sv_ptu (sortie de transform_sv_to_destination.py) dans pokedex_core
 ET applique des règles spéciales pour les évolutions par *Stone*.
-
-Règles Stone (pour une espèce donnée dans le core) :
-1) Si l'espèce est une évolution par Pierre (Condition contient "Stone", insensible à la casse) :
-   a) Si sa "Level Up Move List" (dans sv_ptu) contient < 10 moves :
-      → on **ajoute** à la Level Up Move List de l'espèce la **Level Up Move List du stade inférieur** (celui avec "Stade" - 1).
-      → On le **notifie** sur stdout (espèce, nb moves ajoutés).
-   b) Ensuite, **tous les moves (sauf 'Evo')** dont le niveau est **strictement inférieur** au
-      **"Minimum Level"** de l'espèce (dans le core) sont **déplacés** de "Level Up Move List" vers
-      "TM/Tutor Moves List", en **ajoutant ' (N)'** au nom.
-      → On le **notifie** sur stdout (espèce, niveau min, nb moves déplacés).
-
-Autres comportements (comme merge_sv_into_core.py) :
-- Correspondance par "Species" (insensible à la casse/espaces/traits).
-- Remplace entièrement **Base Stats**.
-- Remplace **Moves** par un objet ne contenant QUE :
-  "Level Up Move List" et "TM/Tutor Moves List".
-- Préserve les autres champs du core (Basic Information, Evolution, etc.).
-- Format du core accepté : liste d'objets (préféré) ou dict {Species: obj}.
-
-Tri :
-- Après ajouts/déplacements, on trie "Level Up Move List" : "Evo" d'abord, puis niveau croissant.
-- "TM/Tutor Moves List" : tri alphabétique simple.
-
-Utilisation :
-    python merge_sv_into_core_stone_rules.py --sv sv_ptu.json --core pokedex_core.json --out merged.json
-    # Optionnel: échouer si une espèce du core n’est pas dans sv_ptu
-    python merge_sv_into_core_stone_rules.py --sv sv_ptu.json --core pokedex_core.json --out merged.json --strict
 """
 
 import argparse
@@ -41,7 +14,6 @@ import re
 from copy import deepcopy
 from pathlib import Path
 from typing import Any, Dict, List, Tuple, Union
-
 
 def normalize_species(s: str) -> str:
     if not isinstance(s, str):
@@ -52,7 +24,6 @@ def normalize_species(s: str) -> str:
     rep = rep.replace(" ", "-")
     return rep
 
-
 def index_sv(sv_data: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
     idx: Dict[str, Dict[str, Any]] = {}
     for o in sv_data:
@@ -62,7 +33,6 @@ def index_sv(sv_data: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
         idx[normalize_species(sp)] = o
     return idx
 
-
 def load_sv(path: Path) -> List[Dict[str, Any]]:
     data = json.loads(path.read_text(encoding="utf-8"))
     if isinstance(data, dict) and isinstance(data.get("results"), list):
@@ -70,7 +40,6 @@ def load_sv(path: Path) -> List[Dict[str, Any]]:
     if isinstance(data, list):
         return data
     raise ValueError("sv input must be a list or an object with 'results' list")
-
 
 def load_core(path: Path) -> Tuple[List[Dict[str, Any]], bool]:
     data = json.loads(path.read_text(encoding="utf-8"))
@@ -89,13 +58,7 @@ def load_core(path: Path) -> Tuple[List[Dict[str, Any]], bool]:
     else:
         raise ValueError("Unsupported core JSON type.")
 
-
 def parse_min_level(evo_entry: Dict[str, Any]) -> int | None:
-    """
-    evo_entry example:
-      {"Stade": 3, "Species": "Poliwrath", "Condition": "Water Stone", "Minimum Level": "Lv 30 Minimum"}
-    Return int level if found, else None.
-    """
     txt = evo_entry.get("Minimum Level") or evo_entry.get("MinimumLevel") or evo_entry.get("Minimum") or ""
     if not isinstance(txt, str):
         return None
@@ -104,30 +67,48 @@ def parse_min_level(evo_entry: Dict[str, Any]) -> int | None:
         return int(m.group(1))
     return None
 
-
-def is_stone_evolution(evo_entry: Dict[str, Any]) -> bool:
+def is_stone_eolution(evo_entry: Dict[str, Any]) -> bool:
     cond = evo_entry.get("Condition") or ""
     if not isinstance(cond, str):
         return False
     return "stone" in cond.lower()
 
-
 def sort_level_up_list(lst: List[Dict[str, Any]]) -> None:
     lst.sort(key=lambda e: (0 if e.get("Level") == "Evo" else 1, e.get("Level") if isinstance(e.get("Level"), int) else 9999))
 
+def dedupe_tm_tutor_list(names: list[str]) -> list[str]:
+    """
+    Remove duplicates from TM/Tutor list.
+    If both "Move" and "Move (N)" exist, keep only "Move (N)".
+    Case-insensitive on the base move name.
+    Returns an alphabetically sorted list.
+    """
+    keep = {}
+    for raw in names or []:
+        n = str(raw).strip()
+        is_n = False
+        base = n
+        if n.endswith(" (N)"):
+            is_n = True
+            base = n[:-4].strip()
+        key = base.lower()
+        prev = keep.get(key)
+        if prev is None:
+            keep[key] = (base, is_n)
+        else:
+            b, had_n = prev
+            if is_n and not had_n:
+                keep[key] = (base, True)
+    deduped = [ (b + (" (N)" if has_n else "")) for b, has_n in keep.values() ]
+    deduped.sort()
+    return deduped
 
 def merge_and_apply_stone_rules(core_obj: Dict[str, Any], sv_obj: Dict[str, Any], sv_index: Dict[str, Dict[str, Any]]) -> Tuple[int, int]:
-    """
-    Merge Base Stats + Moves, then if Stone evo and conditions met, enrich from parent and move low-level moves.
-    Returns (added_from_parent_count, moved_below_min_count).
-    """
-    # Replace Base Stats
     sv_stats = deepcopy(sv_obj.get("Base Stats") or {})
     if not isinstance(sv_stats, dict):
         sv_stats = {}
     core_obj["Base Stats"] = sv_stats
 
-    # Replace Moves with only the two lists
     sv_moves = sv_obj.get("Moves") or {}
     lvl = deepcopy(sv_moves.get("Level Up Move List") or [])
     tm  = deepcopy(sv_moves.get("TM/Tutor Moves List") or [])
@@ -136,27 +117,26 @@ def merge_and_apply_stone_rules(core_obj: Dict[str, Any], sv_obj: Dict[str, Any]
         "TM/Tutor Moves List": tm,
     }
 
-    # Prepare evolution info from core
     evolution = core_obj.get("Evolution") or []
     if not isinstance(evolution, list) or not evolution:
+        # still dedupe TM
+        core_obj["Moves"]["TM/Tutor Moves List"] = dedupe_tm_tutor_list(core_obj["Moves"]["TM/Tutor Moves List"])
         return (0, 0)
 
-    # Find this species entry in Evolution
     this_sp = core_obj.get("Species") or core_obj.get("species") or ""
-    # Try to locate row for this species (case-insensitive compare)
     this_row = None
     for row in evolution:
         if isinstance(row, dict) and normalize_species(row.get("Species", "")) == normalize_species(this_sp):
             this_row = row
             break
     if not this_row:
+        core_obj["Moves"]["TM/Tutor Moves List"] = dedupe_tm_tutor_list(core_obj["Moves"]["TM/Tutor Moves List"])
         return (0, 0)
 
     added_from_parent = 0
     moved_below_min = 0
 
-    if is_stone_evolution(this_row):
-        # Determine previous stage species (Stade - 1)
+    if is_stone_eolution(this_row):
         try:
             stade = int(this_row.get("Stade"))
         except Exception:
@@ -171,7 +151,6 @@ def merge_and_apply_stone_rules(core_obj: Dict[str, Any], sv_obj: Dict[str, Any]
                 except Exception:
                     continue
 
-        # 1) If < 10 moves in Level Up, append parent's Level Up list
         if parent_species and len(core_obj["Moves"]["Level Up Move List"]) < 10:
             parent_key = normalize_species(parent_species)
             parent_sv = sv_index.get(parent_key)
@@ -183,20 +162,18 @@ def merge_and_apply_stone_rules(core_obj: Dict[str, Any], sv_obj: Dict[str, Any]
             else:
                 print(f"[stone] {this_sp}: parent stage '{parent_species}' not found in sv_ptu, cannot append.", flush=True)
 
-        # 2) Move moves below Minimum Level to TM/Tutor with (N)
         min_level = parse_min_level(this_row)
         if min_level is not None:
             new_level_up: List[Dict[str, Any]] = []
             moved_names: List[str] = []
             for m in core_obj["Moves"]["Level Up Move List"]:
                 lvl_val = m.get("Level")
-                if isinstance(lvl_val, int) and lvl_val < min_level:
+                if isinstance(lvl_val, int) and lvl_val < min_level and lvl_val != "Evo":
                     name = m.get("Move")
                     if isinstance(name, str):
                         core_obj["Moves"]["TM/Tutor Moves List"].append(f"{name} (N)")
                         moved_names.append(name)
                     moved_below_min += 1
-                    # exclude from level-up list
                 else:
                     new_level_up.append(m)
             if moved_below_min:
@@ -205,12 +182,12 @@ def merge_and_apply_stone_rules(core_obj: Dict[str, Any], sv_obj: Dict[str, Any]
         else:
             print(f"[stone] {this_sp}: no parsable 'Minimum Level' found; skip move relocation.", flush=True)
 
-        # Finally: sort lists as per rules
         sort_level_up_list(core_obj["Moves"]["Level Up Move List"])
-        core_obj["Moves"]["TM/Tutor Moves List"] = sorted(core_obj["Moves"]["TM/Tutor Moves List"])
+
+    # Dedupe TM/Tutor after all operations (global)
+    core_obj["Moves"]["TM/Tutor Moves List"] = dedupe_tm_tutor_list(core_obj["Moves"]["TM/Tutor Moves List"])
 
     return (added_from_parent, moved_below_min)
-
 
 def merge_all(sv_list: List[Dict[str, Any]], core_list: List[Dict[str, Any]], strict: bool = False) -> Dict[str, Any]:
     sv_index = index_sv(sv_list)
@@ -245,7 +222,6 @@ def merge_all(sv_list: List[Dict[str, Any]], core_list: List[Dict[str, Any]], st
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return report
 
-
 def restore_shape(core_list: List[Dict[str, Any]], was_dict: bool) -> Union[List[Dict[str, Any]], Dict[str, Any]]:
     if not was_dict:
         return core_list
@@ -255,9 +231,8 @@ def restore_shape(core_list: List[Dict[str, Any]], was_dict: bool) -> Union[List
         out[sp] = obj
     return out
 
-
 def main():
-    ap = argparse.ArgumentParser(description="Merge sv_ptu into core with Stone-evolution rules.")
+    ap = argparse.ArgumentParser(description="Merge sv_ptu into core with Stone-evolution rules + TM/Tutor dedupe (prefer (N)).")
     ap.add_argument("--sv", required=True, help="Path to sv_ptu.json (list or obj with results[])")
     ap.add_argument("--core", required=True, help="Path to pokedex_core.json (list or {Species: obj})")
     ap.add_argument("--out", required=True, help="Output JSON path")
