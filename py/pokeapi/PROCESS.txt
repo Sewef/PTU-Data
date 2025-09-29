@@ -62,9 +62,10 @@ Method level-up with NO LEVEL is EVO
 Base stats are basestat/10 rounded to closest (6.1 → 6 ; 6.5 → 7)
 
 --
-py merge_sv_into_core.py --sv sv_ptu.json --core ../../ptu/data/pokedex/pokedex_core.json --out ../../ptu/data/pokedex/updated/pokedex_core.json
+py merge_sv_into_core.py --sv sv_ptu.json --core ../../ptu/data/pokedex/pokedex_core.json --out ../../ptu/data/pokedex/updated/pokedex_core.json --strict
 
 Will merge sv_ptu.json into selected json and output in the updated folder
+Newer: Will apply the "stone-evolved stade n will learn n-1 learnset if has too few moves" (following ptu logic)
 
 --
 py find_species_with_few_levelups.py  --in ../../ptu/data/pokedex/updated/pokedex_core.json  --only-stones --min 10
