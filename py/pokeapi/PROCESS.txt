@@ -1,0 +1,61 @@
+Notes for later usage (maybe)
+
+TOOLS
+--
+py extract_species.py ../../ptu/data/pokedex
+
+Will extract all Species from all json files of the input folder (putting _core first)
+Default output: species.csv
+Example:
+species
+Bulbasaur
+
+--
+py generate_species_mapping_csv.py --header species --out mapping.csv species.csv
+
+Will take species.csv and ask PokeAPI for their internal name. Output in mapping.csv
+Example:
+species;othername
+Bulbasaur;bulbasaur
+
+--
+py list_all_pokemon_and_varieties.py --out-all all_pokemon.txt
+
+Will ask PokeAPI for all species and varieties names, output in a txt file
+
+--
+MANUAL PROCESSING
+
+Take Mapping.csv and all_pokemon.txt, open in Excel
+Find all gaps in othername column
+Take the name in all_pokemon.txt and copy it
+Mapping should have no gap
+
+--
+py sv_moves_summary.py --mapping-csv mapping.csv --out sv_all.json --concurrency 64
+
+Take the mapping and get all move list from all species
+Will output a json, with:
+- species (from mapping.csv)
+- evolutionary stage
+- moves: internal name, english name, method, level
+- base stats
+
+
+Next step will be PTU parsing:
+- Take all level-up moves
+- Detect level 1 moves for (N) → use evo stade
+- Save as wanted the level-up learnset
+- Get all non-level-up moves and put them in the TM/Tutor list
+- Remove duplicated from TM/Tutor List
+
+NOTE
+        {
+          "name": "petal-dance",
+          "method": "level-up",
+          "type": "grass",
+          "name_en": "Petal Dance"
+        },
+Method level-up with NO LEVEL is EVO 
+
+Base stats are basestat/10 rounded to closer (6.1 → 6 ; 6.5 → 7)

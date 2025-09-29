@@ -11,6 +11,8 @@ Spécificités :
 - Support d'un fichier de mapping CSV `species;othername` :
   * on télécharge via /pokemon/{othername}
   * on stocke 'species' tel qu'indiqué dans la colonne `species`
+- Ajout du champ 'stage' (0 = base, 1, 2, ...) calculé depuis l'evolution-chain.
+- Duplique le nom affiché en 'Species' (majuscule), en plus de 'species' (historique).
 
 Sources possibles (mutuellement exclusives) :
   --mapping-csv mapping.csv          # récup via 'othername', stocke via 'species'
@@ -56,7 +58,7 @@ class FetcherConfig:
     concurrency: int = 32
     retries: int = 4
     retry_backoff: float = 0.8  # secondes, exponentiel
-    user_agent: str = "sv-moves-summary/1.2 (+https://pokeapi.co)"
+    user_agent: str = "sv-moves-summary/1.3 (+https://pokeapi.co)"
 
 
 class RateLimiter:
@@ -112,14 +114,6 @@ def summarize_sv_moves_from_pokemon_json(
     include_types: bool,
     override_species_name: Optional[str] = None,
 ) -> Tuple[Dict[str, Any], Dict[str, Optional[str]]]:
-    """
-    Version SANS DÉDUPLICATION.
-    - Chaque entrée de version_group_details correspondant à 'scarlet-violet' devient UNE ligne.
-    - On conserve les doublons potentiels (même move/méthode/niveau répétés).
-    - On inclut "level" uniquement si > 0.
-    - On récupère le type ensuite via move_url (si demandé).
-    override_species_name: si fourni, remplace le champ "species" de sortie.
-    """
     species_name = (
         override_species_name
         or pokemon_json.get("name")
@@ -156,7 +150,6 @@ def summarize_sv_moves_from_pokemon_json(
             if include_types:
                 need_types[move_url] = None
 
-
     result = {
         "species": species_name,
         "version_group": SV_GROUP_NAME,
@@ -178,7 +171,6 @@ async def resolve_move_types(session: aiohttp.ClientSession, move_urls: List[str
             try:
                 data = await fetch_json(session, url, cfg)
                 t = (data.get("type") or {}).get("name")
-                # Extract English display name from move names
                 name_en = None
                 for nm in (data.get("names") or []):
                     lang = (nm.get("language") or {}).get("name")
@@ -200,79 +192,109 @@ async def fetch_pokemon_json(session: aiohttp.ClientSession, fetch_key: str, cfg
     async with limiter:
         return await fetch_json(session, url, cfg)
 
+async def fetch_species_json(session: aiohttp.ClientSession, species_url: str, cfg: FetcherConfig, limiter: RateLimiter) -> Dict[str, Any]:
+    async with limiter:
+        return await fetch_json(session, species_url, cfg)
 
-def load_move_cache(path: Optional[str]) -> Dict[str, Optional[str]]:
-    if not path:
-        return {}
-    p = Path(path)
-    if not p.exists():
-        return {}
-    try:
-        with p.open("r", encoding="utf-8") as f:
-            data = json.load(f)
-            if isinstance(data, dict):
-                # accept both legacy string cache and new dict cache
-                fixed = {}
-                for k, v in data.items():
-                    if isinstance(v, dict):
-                        fixed[str(k)] = {"type": v.get("type"), "name_en": v.get("name_en")}
-                    elif isinstance(v, (str, type(None))):
-                        fixed[str(k)] = {"type": v, "name_en": None}
-                    else:
-                        fixed[str(k)] = {"type": None, "name_en": None}
-                return fixed
-    except Exception:
-        pass
-    return {}
+async def fetch_evolution_chain_json(session: aiohttp.ClientSession, evo_url: str, cfg: FetcherConfig, limiter: RateLimiter) -> Dict[str, Any]:
+    async with limiter:
+        return await fetch_json(session, evo_url, cfg)
 
+def compute_stage_from_chain(chain: Dict[str, Any], target_species: str) -> int:
+    target = target_species.strip().lower()
 
-def save_move_cache(path: Optional[str], cache: Dict[str, Optional[str]]) -> None:
-    if not path:
-        return
-    try:
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(cache, f, ensure_ascii=False, indent=2)
-    except Exception as e:
-        print(f"[warn] Impossible d'écrire le move-cache: {e}", file=sys.stderr)
+    def dfs(node: Dict[str, Any], depth: int) -> int:
+        sp = (node.get("species") or {}).get("name", "").strip().lower()
+        if sp == target:
+            return depth
+        for nxt in (node.get("evolves_to") or []):
+            d = dfs(nxt, depth + 1)
+            if d != -1:
+                return d
+        return -1
+
+    return dfs(chain or {}, 0)
 
 
 async def process_pairs(pairs: List[Tuple[str, str]], include_types: bool, cfg: FetcherConfig,
                         move_cache: Dict[str, Optional[str]]) -> List[Dict[str, Any]]:
-    """
-    Pipeline principal lorsque nous avons des paires (fetch_key, display_species).
-    fetch_key = ce qu'on passe à /pokemon/{...}
-    display_species = ce qu'on met dans le champ "species" de sortie
-    """
     results: List[Dict[str, Any]] = []
     async with aiohttp.ClientSession(headers={"User-Agent": cfg.user_agent}) as session:
         limiter = RateLimiter(cfg.concurrency)
 
-        # 1) Fetch tous les /pokemon/{fetch_key}
         pokemons = await asyncio.gather(*[
             fetch_pokemon_json(session, fetch_key, cfg, limiter) for fetch_key, _ in pairs
         ], return_exceptions=True)
 
-        # 2) Parse et collect des URLs de move à typer
+        species_json_cache: Dict[str, Dict[str, Any]] = {}
+        evo_json_cache: Dict[str, Dict[str, Any]] = {}
+
+        async def get_stage_for_pokemon(poke_json: Dict[str, Any]) -> int:
+            try:
+                sp_url = (poke_json.get("species") or {}).get("url")
+                if not sp_url:
+                    return -1
+                if sp_url not in species_json_cache:
+                    species_json_cache[sp_url] = await fetch_species_json(session, sp_url, cfg, limiter)
+                spj = species_json_cache[sp_url]
+                evo = (spj.get("evolution_chain") or {}).get("url")
+                if not evo:
+                    return -1
+                if evo not in evo_json_cache:
+                    evo_json_cache[evo] = await fetch_evolution_chain_json(session, evo, cfg, limiter)
+                evj = evo_json_cache[evo]
+                chain = evj.get("chain") or {}
+                target = (poke_json.get("species") or {}).get("name") or poke_json.get("name")
+                if not target:
+                    return -1
+                return compute_stage_from_chain(chain, target)
+            except Exception:
+                return -1
+
         needed_urls: Dict[str, Optional[str]] = {}
         summaries: List[Dict[str, Any]] = []
-        for (fetch_key, display_species), data in zip(pairs, pokemons):
+
+        stage_tasks = []
+        for data in pokemons:
+            if isinstance(data, Exception):
+                stage_tasks.append(asyncio.create_task(asyncio.sleep(0, result=-1)))
+            else:
+                stage_tasks.append(asyncio.create_task(get_stage_for_pokemon(data)))
+
+        for (fetch_key, display_species), data, st_fut in zip(pairs, pokemons, stage_tasks):
             if isinstance(data, Exception):
                 print(f"[warn] Échec /pokemon/{fetch_key}: {data}", file=sys.stderr)
                 continue
-            summary, need_types = summarize_sv_moves_from_pokemon_json(
+            
+            # 1) Stage
+            stage_val = await st_fut
+
+            # 2) Stats
+            stats_map = {s["stat"]["name"]: s["base_stat"] for s in data.get("stats", []) if s.get("stat")}
+
+            # 3) Résumé des moves
+            moves_summary, need_types = summarize_sv_moves_from_pokemon_json(
                 data, include_types, override_species_name=display_species
             )
+
+            # 4) Reconstruire l'objet dans l'ordre voulu
+            summary = {
+                "species": moves_summary.get("species"),
+                "stage": stage_val,
+                "stats": stats_map,
+                "version_group": moves_summary.get("version_group"),
+                "moves": moves_summary.get("moves"),
+            }
+
             summaries.append(summary)
             for url in need_types.keys():
                 needed_urls[url] = None
 
-        # 3) Resolve move types
         if include_types and summaries:
             to_resolve = [u for u in needed_urls.keys() if u not in move_cache]
             if to_resolve:
                 await resolve_move_types(session, to_resolve, cfg, move_cache, limiter)
 
-            # 4) Inject types
             for s in summaries:
                 for m in s["moves"]:
                     url = m.pop("move_url", None)
@@ -283,7 +305,6 @@ async def process_pairs(pairs: List[Tuple[str, str]], include_types: bool, cfg: 
                             if info.get("name_en") is not None:
                                 m["name_en"] = info.get("name_en")
                         else:
-                            # legacy cache (string)
                             m["type"] = info
 
         results.extend(summaries)
@@ -292,9 +313,6 @@ async def process_pairs(pairs: List[Tuple[str, str]], include_types: bool, cfg: 
 
 
 def load_pokemon_jsons_from_dir_with_names(dir_path: str) -> List[Tuple[Dict[str, Any], str]]:
-    """
-    Charge des JSONs locaux et associe le nom d'espèce affiché à partir du JSON lui-même.
-    """
     out = []
     for p in sorted(Path(dir_path).glob("*.json")):
         try:
@@ -317,20 +335,20 @@ def build_document(results: List[Dict[str, Any]]) -> Dict[str, Any]:
 
 
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Résumé des moves 'scarlet-violet' (asynchrone) sans déduplication + support mapping CSV.")
+    p = argparse.ArgumentParser(description="Résumé des moves 'scarlet-violet' (asynchrone) sans déduplication + mapping CSV + stage d'évolution.")
     src = p.add_mutually_exclusive_group(required=True)
     src.add_argument("--mapping-csv", help="CSV avec en-têtes 'species;othername' (séparateur ';').")
-    src.add_argument("--species", nargs="+", help="Liste d'espèces (noms ou ids).")
+    src.add_argument("--species", nargs="+", help="Liste d'espèces (noms ou ids)." )
     src.add_argument("--species-file", help="Fichier texte (une espèce par ligne).")
     src.add_argument("--from-dir", help="Dossier de JSON /pokemon/ au format PokeAPI.")
 
     p.add_argument("--no-types", action="store_true", help="Ne pas récupérer le type des moves.")
     p.add_argument("--move-cache", help="Fichier JSON cache des types de moves (lecture/écriture).")
-    p.add_argument("--concurrency", type=int, default=32, help="Niveau de parallélisme (défaut: 32).")
-    p.add_argument("--base-url", default=POKEAPI, help="Base URL PokeAPI (défaut: officiel).")
-    p.add_argument("--timeout", type=int, default=20, help="Timeout HTTP en secondes (défaut: 20).")
-    p.add_argument("--out", required=True, help="Chemin de sortie du JSON (ou JSONL si --jsonl).")
-    p.add_argument("--jsonl", action="store_true", help="Émettre en JSON Lines (une ligne par espèce).")
+    p.add_argument("--concurrency", type=int, default=32, help="Niveau de parallélisme (défaut: 32)." )
+    p.add_argument("--base-url", default=POKEAPI, help="Base URL PokeAPI (défaut: officiel)." )
+    p.add_argument("--timeout", type=int, default=20, help="Timeout HTTP en secondes (défaut: 20)." )
+    p.add_argument("--out", required=True, help="Chemin de sortie du JSON (ou JSONL si --jsonl)." )
+    p.add_argument("--jsonl", action="store_true", help="Émettre en JSON Lines (une ligne par espèce)." )
 
     return p.parse_args()
 
@@ -341,11 +359,6 @@ def read_species_file(path: str) -> List[str]:
 
 
 def read_mapping_csv(path: str) -> List[Tuple[str, str]]:
-    """
-    Lit un CSV ; séparateur ';' ; en-têtes attendues: 'species;othername'
-    Retourne une liste de paires (fetch_key=othername, display_species=species).
-    Ignore les lignes incomplètes.
-    """
     pairs: List[Tuple[str, str]] = []
     with open(path, "r", encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f, delimiter=';')
@@ -373,7 +386,22 @@ def main() -> None:
         concurrency=max(1, int(args.concurrency)),
     )
 
-    move_cache = load_move_cache(args.move_cache)
+    move_cache: Dict[str, Optional[str]] = {}
+    if args.move_cache:
+        p = Path(args.move_cache)
+        if p.exists():
+            try:
+                data = json.loads(p.read_text(encoding="utf-8"))
+                if isinstance(data, dict):
+                    for k, v in data.items():
+                        if isinstance(v, dict):
+                            move_cache[str(k)] = {"type": v.get("type"), "name_en": v.get("name_en")}
+                        elif isinstance(v, (str, type(None))):
+                            move_cache[str(k)] = {"type": v, "name_en": None}
+                        else:
+                            move_cache[str(k)] = {"type": None, "name_en": None}
+            except Exception:
+                move_cache = {}
 
     results: List[Dict[str, Any]] = []
 
@@ -387,39 +415,63 @@ def main() -> None:
         pokes = load_pokemon_jsons_from_dir_with_names(args.from_dir)
         summaries: List[Dict[str, Any]] = []
         needed_urls: Dict[str, Optional[str]] = {}
-        for pj, disp in pokes:
-            summary, need_types = summarize_sv_moves_from_pokemon_json(pj, include_types, override_species_name=disp)
-            summaries.append(summary)
-            for url in need_types.keys():
-                needed_urls[url] = None
 
-        if include_types and summaries and needed_urls:
-            async def resolve_only():
-                async with aiohttp.ClientSession(headers={"User-Agent": cfg.user_agent}) as session:
-                    limiter = RateLimiter(cfg.concurrency)
-                    to_resolve = [u for u in needed_urls.keys() if u not in move_cache]
-                    if to_resolve:
-                        await resolve_move_types(session, to_resolve, cfg, move_cache, limiter)
-            try:
-                asyncio.run(resolve_only())
-            except Exception as e:
-                print(f"[warn] Impossible de résoudre les types via réseau en mode --from-dir : {e}", file=sys.stderr)
+        async def enrich_and_collect():
+            async with aiohttp.ClientSession(headers={"User-Agent": cfg.user_agent}) as session:
+                limiter = RateLimiter(cfg.concurrency)
+                species_json_cache: Dict[str, Dict[str, Any]] = {}
+                evo_json_cache: Dict[str, Dict[str, Any]] = {}
 
-        if include_types:
-            for s in summaries:
-                for m in s["moves"]:
-                    url = m.pop("move_url", None)
-                    info = move_cache.get(url) if url else None
-                    if isinstance(info, dict):
-                        m["type"] = info.get("type")
-                        if info.get("name_en") is not None:
-                            m["name_en"] = info.get("name_en")
-                    else:
-                        m["type"] = info
-        else:
-            for s in summaries:
-                for m in s["moves"]:
-                    m.pop("move_url", None)
+                async def get_stage_for_pokemon(poke_json: Dict[str, Any]) -> int:
+                    try:
+                        sp_url = (poke_json.get("species") or {}).get("url")
+                        if not sp_url:
+                            return -1
+                        if sp_url not in species_json_cache:
+                            species_json_cache[sp_url] = await fetch_species_json(session, sp_url, cfg, limiter)
+                        spj = species_json_cache[sp_url]
+                        evo = (spj.get("evolution_chain") or {}).get("url")
+                        if not evo:
+                            return -1
+                        if evo not in evo_json_cache:
+                            evo_json_cache[evo] = await fetch_evolution_chain_json(session, evo, cfg, limiter)
+                        evj = evo_json_cache[evo]
+                        chain = evj.get("chain") or {}
+                        target = (poke_json.get("species") or {}).get("name") or poke_json.get("name")
+                        if not target:
+                            return -1
+                        return compute_stage_from_chain(chain, target)
+                    except Exception:
+                        return -1
+
+                stage_tasks = [asyncio.create_task(get_stage_for_pokemon(pj)) for pj, _ in pokes]
+
+                for (pj, disp), st_fut in zip(pokes, stage_tasks):
+                    summary, need_types = summarize_sv_moves_from_pokemon_json(pj, include_types, override_species_name=disp)
+                    summaries.append(summary)
+                    for url in need_types.keys():
+                        needed_urls[url] = None
+
+                if include_types and summaries and needed_urls:
+                    to_resolve = list(needed_urls.keys())
+                    await resolve_move_types(session, to_resolve, cfg, move_cache, limiter)
+
+                if include_types:
+                    for s in summaries:
+                        for m in s["moves"]:
+                            url = m.pop("move_url", None)
+                            info = move_cache.get(url) if url else None
+                            if isinstance(info, dict):
+                                m["type"] = info.get("type")
+                                if info.get("name_en") is not None:
+                                    m["name_en"] = info.get("name_en")
+                            else:
+                                m["type"] = info
+
+        try:
+            asyncio.run(enrich_and_collect())
+        except Exception as e:
+            print(f"[warn] Enrichissement stages/types en mode --from-dir: {e}", file=sys.stderr)
 
         results = summaries
 
@@ -432,7 +484,11 @@ def main() -> None:
         pairs = [(sp, sp) for sp in species_list]
         results = asyncio.run(process_pairs(pairs, include_types, cfg, move_cache))
 
-    save_move_cache(args.move_cache, move_cache)
+    if args.move_cache:
+        try:
+            Path(args.move_cache).write_text(json.dumps(move_cache, ensure_ascii=False, indent=2), encoding="utf-8")
+        except Exception as e:
+            print(f"[warn] Impossible d'écrire le move-cache: {e}", file=sys.stderr)
 
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -440,7 +496,7 @@ def main() -> None:
     if args.jsonl:
         with out_path.open("w", encoding="utf-8") as f:
             for s in results:
-                f.write(json.dumps(s, ensure_ascii=False) + "\n")
+                f.write(json.dumps(s, ensure_ascii=False) + "")
     else:
         doc = build_document(results)
         with out_path.open("w", encoding="utf-8") as f:
