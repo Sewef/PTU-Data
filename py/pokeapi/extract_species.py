@@ -81,7 +81,7 @@ def main():
     out_path = Path(args.output)
     with out_path.open("w", encoding="utf-8", newline="") as f:
         writer = csv.writer(f)
-        #writer.writerow(["Species"])
+        writer.writerow(["species"])
         for s in all_species:
             writer.writerow([s])
 
