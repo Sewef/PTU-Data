@@ -40,9 +40,11 @@ Will output a json, with:
 - evolutionary stage
 - moves: internal name, english name, method, level
 - base stats
-
-
 Next step will be PTU parsing:
+
+--
+python transform_sv_to_destination.py --in sv_all.json --out sv_ptu.json
+
 - Take all level-up moves
 - Detect level 1 moves for (N) → use evo stade
 - Save as wanted the level-up learnset
@@ -57,5 +59,9 @@ NOTE
           "name_en": "Petal Dance"
         },
 Method level-up with NO LEVEL is EVO 
+Base stats are basestat/10 rounded to closest (6.1 → 6 ; 6.5 → 7)
 
-Base stats are basestat/10 rounded to closer (6.1 → 6 ; 6.5 → 7)
+--
+py merge_sv_into_core.py --sv sv_ptu.json --core ../../ptu/data/pokedex/pokedex_core.json --out ../../ptu/data/pokedex/updated/pokedex_core.json
+
+Will merde sv_ptu.json into selected json and output in the updated folder
