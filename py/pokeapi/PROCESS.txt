@@ -24,6 +24,11 @@ py list_all_pokemon_and_varieties.py --out-all all_pokemon.txt
 Will ask PokeAPI for all species and varieties names, output in a txt file
 
 --
+py ../pokedex/extract_min_level_from_evolutions.py --in ../../ptu/data/pokedex/pokedex_core.json --out ../../ptu/data/pokedex/pokedex_core.json 
+
+Reorg evolutions
+
+--
 MANUAL PROCESSING
 
 Take Mapping.csv and all_pokemon.txt, open in Excel
@@ -62,7 +67,7 @@ Method level-up with NO LEVEL is EVO
 Base stats are basestat/10 rounded to closest (6.1 → 6 ; 6.5 → 7)
 
 --
-py merge_sv_into_core.py --sv sv_ptu.json --core ../../ptu/data/pokedex/pokedex_core.json --out ../../ptu/data/pokedex/updated/pokedex_core.json --strict
+py merge_sv_into_core.py --sv sv_ptu.json --core ../../ptu/data/pokedex/pokedex_core.json --out ../../ptu/data/pokedex/updated/pokedex_core.json --log-tm-pruned --strict >> out.log
 
 Will merge sv_ptu.json into selected json and output in the updated folder
 Newer: Will apply the "stone-evolved stade n will learn n-1 learnset if has too few moves" (following ptu logic)

@@ -1,16 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
-merge_sv_into_core_stone_rules.py
----------------------------------
-Fusionne sv_ptu (sortie de transform_sv_to_destination.py) dans pokedex_core
-ET applique des règles spéciales pour les évolutions par *Stone*.
-"""
-
-import argparse
-import json
-import re
+import argparse, json, re
 from copy import deepcopy
 from pathlib import Path
 from typing import Any, Dict, List, Tuple, Union
@@ -67,7 +58,7 @@ def parse_min_level(evo_entry: Dict[str, Any]) -> int | None:
         return int(m.group(1))
     return None
 
-def is_stone_eolution(evo_entry: Dict[str, Any]) -> bool:
+def is_stone_evolution(evo_entry: Dict[str, Any]) -> bool:
     cond = evo_entry.get("Condition") or ""
     if not isinstance(cond, str):
         return False
@@ -77,12 +68,6 @@ def sort_level_up_list(lst: List[Dict[str, Any]]) -> None:
     lst.sort(key=lambda e: (0 if e.get("Level") == "Evo" else 1, e.get("Level") if isinstance(e.get("Level"), int) else 9999))
 
 def dedupe_tm_tutor_list(names: list[str]) -> list[str]:
-    """
-    Remove duplicates from TM/Tutor list.
-    If both "Move" and "Move (N)" exist, keep only "Move (N)".
-    Case-insensitive on the base move name.
-    Returns an alphabetically sorted list.
-    """
     keep = {}
     for raw in names or []:
         n = str(raw).strip()
@@ -103,7 +88,28 @@ def dedupe_tm_tutor_list(names: list[str]) -> list[str]:
     deduped.sort()
     return deduped
 
-def merge_and_apply_stone_rules(core_obj: Dict[str, Any], sv_obj: Dict[str, Any], sv_index: Dict[str, Dict[str, Any]]) -> Tuple[int, int]:
+def filter_tm_remove_levelup(tm_list: list[str], level_up_list: list[dict]) -> tuple[list[str], list[str]]:
+    """
+    Remove any TM/Tutor entries whose base name exists in Level Up Move List.
+    Level Up base name is m["Move"]. TM base may have " (N)" suffix.
+    """
+    level_bases = set()
+    for m in level_up_list or []:
+        mv = m.get("Move")
+        if isinstance(mv, str):
+            level_bases.add(mv.strip())
+    out = []
+    removed = []
+    for raw in tm_list or []:
+        n = str(raw).strip()
+        base = n[:-4].strip() if n.endswith(" (N)") else n
+        if base not in level_bases:
+            out.append(n)
+        else:
+            removed.append(n)
+    return out, removed
+
+def merge_and_apply_stone_rules(core_obj: Dict[str, Any], sv_obj: Dict[str, Any], sv_index: Dict[str, Dict[str, Any]], log_tm_pruned: bool = False) -> Tuple[int, int]:
     sv_stats = deepcopy(sv_obj.get("Base Stats") or {})
     if not isinstance(sv_stats, dict):
         sv_stats = {}
@@ -119,8 +125,13 @@ def merge_and_apply_stone_rules(core_obj: Dict[str, Any], sv_obj: Dict[str, Any]
 
     evolution = core_obj.get("Evolution") or []
     if not isinstance(evolution, list) or not evolution:
-        # still dedupe TM
-        core_obj["Moves"]["TM/Tutor Moves List"] = dedupe_tm_tutor_list(core_obj["Moves"]["TM/Tutor Moves List"])
+        # Remove TM entries that are also in Level Up, then dedupe
+        _filtered, _removed = filter_tm_remove_levelup(core_obj["Moves"]["TM/Tutor Moves List"],
+                                                                            core_obj["Moves"]["Level Up Move List"])
+        if log_tm_pruned and _removed:
+            spn = core_obj.get("Species") or core_obj.get("species") or "Unknown"
+            print(f"[tm-pruned] {spn}: removed from TM/Tutor because in Level Up -> " + ", ".join(_removed))
+        core_obj["Moves"]["TM/Tutor Moves List"] = dedupe_tm_tutor_list(_filtered)
         return (0, 0)
 
     this_sp = core_obj.get("Species") or core_obj.get("species") or ""
@@ -130,13 +141,18 @@ def merge_and_apply_stone_rules(core_obj: Dict[str, Any], sv_obj: Dict[str, Any]
             this_row = row
             break
     if not this_row:
-        core_obj["Moves"]["TM/Tutor Moves List"] = dedupe_tm_tutor_list(core_obj["Moves"]["TM/Tutor Moves List"])
+        _filtered, _removed = filter_tm_remove_levelup(core_obj["Moves"]["TM/Tutor Moves List"],
+                                                                            core_obj["Moves"]["Level Up Move List"])
+        if log_tm_pruned and _removed:
+            spn = core_obj.get("Species") or core_obj.get("species") or "Unknown"
+            print(f"[tm-pruned] {spn}: removed from TM/Tutor because in Level Up -> " + ", ".join(_removed))
+        core_obj["Moves"]["TM/Tutor Moves List"] = dedupe_tm_tutor_list(_filtered)
         return (0, 0)
 
     added_from_parent = 0
     moved_below_min = 0
 
-    if is_stone_eolution(this_row):
+    if is_stone_evolution(this_row):
         try:
             stade = int(this_row.get("Stade"))
         except Exception:
@@ -168,7 +184,7 @@ def merge_and_apply_stone_rules(core_obj: Dict[str, Any], sv_obj: Dict[str, Any]
             moved_names: List[str] = []
             for m in core_obj["Moves"]["Level Up Move List"]:
                 lvl_val = m.get("Level")
-                if isinstance(lvl_val, int) and lvl_val < min_level and lvl_val != "Evo":
+                if isinstance(lvl_val, int) and lvl_val < min_level:
                     name = m.get("Move")
                     if isinstance(name, str):
                         core_obj["Moves"]["TM/Tutor Moves List"].append(f"{name} (N)")
@@ -184,18 +200,20 @@ def merge_and_apply_stone_rules(core_obj: Dict[str, Any], sv_obj: Dict[str, Any]
 
         sort_level_up_list(core_obj["Moves"]["Level Up Move List"])
 
-    # Dedupe TM/Tutor after all operations (global)
-    core_obj["Moves"]["TM/Tutor Moves List"] = dedupe_tm_tutor_list(core_obj["Moves"]["TM/Tutor Moves List"])
+    # Always: remove TM entries present in Level Up, then dedupe and sort
+    _filtered, _removed = filter_tm_remove_levelup(core_obj["Moves"]["TM/Tutor Moves List"],
+                                                                        core_obj["Moves"]["Level Up Move List"])
+    if log_tm_pruned and _removed:
+        spn = core_obj.get("Species") or core_obj.get("species") or "Unknown"
+        print(f"[tm-pruned] {spn}: removed from TM/Tutor because in Level Up -> " + ", ".join(_removed))
+    core_obj["Moves"]["TM/Tutor Moves List"] = dedupe_tm_tutor_list(_filtered)
 
     return (added_from_parent, moved_below_min)
 
-def merge_all(sv_list: List[Dict[str, Any]], core_list: List[Dict[str, Any]], strict: bool = False) -> Dict[str, Any]:
+def merge_all(sv_list: List[Dict[str, Any]], core_list: List[Dict[str, Any]], strict: bool = False, log_tm_pruned: bool = False) -> Dict[str, Any]:
     sv_index = index_sv(sv_list)
-
     matched = 0
     missing_in_sv: List[str] = []
-    stone_reports: List[Dict[str, Any]] = []
-
     for entry in core_list:
         sp = entry.get("Species") or entry.get("species")
         key = normalize_species(sp) if sp else None
@@ -203,26 +221,16 @@ def merge_all(sv_list: List[Dict[str, Any]], core_list: List[Dict[str, Any]], st
             missing_in_sv.append(sp or "<unknown>")
             continue
         sv_obj = sv_index[key]
-        added, moved = merge_and_apply_stone_rules(entry, sv_obj, sv_index)
+        merge_and_apply_stone_rules(entry, sv_obj, sv_index, log_tm_pruned=log_tm_pruned)
         matched += 1
-        if added or moved:
-            stone_reports.append({"Species": sp, "appended_from_parent": added, "moved_below_min": moved})
-
     if strict and missing_in_sv:
         missing_str = ", ".join(missing_in_sv[:10])
         raise RuntimeError(f"{len(missing_in_sv)} Species from core not found in sv: {missing_str}{' ...' if len(missing_in_sv) > 10 else ''}")
-
-    report = {
-        "core_count": len(core_list),
-        "sv_count": len(sv_list),
-        "matched": matched,
-        "missing_in_sv": missing_in_sv,
-        "stone_reports": stone_reports,
-    }
+    report = {"core_count": len(core_list), "sv_count": len(sv_list), "matched": matched, "missing_in_sv": missing_in_sv}
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return report
 
-def restore_shape(core_list: List[Dict[str, Any]], was_dict: bool) -> Union[List[Dict[str, Any]], Dict[str, Any]]:
+def restore_shape(core_list: List[Dict[str, Any]], was_dict: bool):
     if not was_dict:
         return core_list
     out: Dict[str, Any] = {}
@@ -232,20 +240,18 @@ def restore_shape(core_list: List[Dict[str, Any]], was_dict: bool) -> Union[List
     return out
 
 def main():
-    ap = argparse.ArgumentParser(description="Merge sv_ptu into core with Stone-evolution rules + TM/Tutor dedupe (prefer (N)).")
+    ap = argparse.ArgumentParser(description="Merge sv_ptu into core with Stone-evolution rules and list hygiene.")
     ap.add_argument("--sv", required=True, help="Path to sv_ptu.json (list or obj with results[])")
     ap.add_argument("--core", required=True, help="Path to pokedex_core.json (list or {Species: obj})")
     ap.add_argument("--out", required=True, help="Output JSON path")
     ap.add_argument("--strict", action="store_true", help="Fail if some core Species are not present in sv")
+    ap.add_argument("--log-tm-pruned", action="store_true", help="Log names removed from TM/Tutor because present in Level Up")
     args = ap.parse_args()
 
     sv_path = Path(args.sv); core_path = Path(args.core); out_path = Path(args.out)
-
     sv_list = load_sv(sv_path)
     core_list, was_dict = load_core(core_path)
-
-    merge_all(sv_list, core_list, strict=args.strict)
-
+    merge_all(sv_list, core_list, strict=args.strict, log_tm_pruned=args.log_tm_pruned)
     out_data = restore_shape(core_list, was_dict)
     out_path.write_text(json.dumps(out_data, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[ok] wrote {out_path}")
