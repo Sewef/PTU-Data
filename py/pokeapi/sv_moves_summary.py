@@ -1,34 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
-sv_moves_summary_async.py
--------------------------
-Résumé ultra-rapide des moves appris dans 'scarlet-violet' pour un grand nombre d'espèces.
-Spécificités :
-- AUCUNE DÉDUPLICATION : chaque entrée de `version_group_details` pour la VG 'scarlet-violet'
-  devient une ligne dans la sortie (même move/méthode/niveau répétés => conservés).
-- Support d'un fichier de mapping CSV `species;othername` :
-  * on télécharge via /pokemon/{othername}
-  * on stocke 'species' tel qu'indiqué dans la colonne `species`
-- Ajout du champ 'stage' (0 = base, 1, 2, ...) calculé depuis l'evolution-chain.
-- Duplique le nom affiché en 'Species' (majuscule), en plus de 'species' (historique).
-
-Sources possibles (mutuellement exclusives) :
-  --mapping-csv mapping.csv          # récup via 'othername', stocke via 'species'
-  --species pikachu bulbasaur ...
-  --species-file species.txt
-  --from-dir ./pokemon_json
-
-Sorties :
-  - JSON unique (par défaut)
-  - JSONL une ligne par espèce (--jsonl)
-
-Exemples :
-  python sv_moves_summary_async.py --mapping-csv mapping.csv --out sv_all.json --move-cache move_types.json
-  python sv_moves_summary_async.py --species-file species.txt --out sv_all.json
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -49,6 +21,29 @@ except ImportError:
 
 POKEAPI = "https://pokeapi.co/api/v2"
 SV_GROUP_NAME = "scarlet-violet"
+FALLBACK_VGS = [
+    "sword-shield",
+    "isle-of-armor",
+    "crown-tundra",
+    "brilliant-diamond-and-shining-pearl",
+    "legends-arceus",
+    "ultra-sun-ultra-moon",
+    "sun-moon",
+    "omega-ruby-alpha-sapphire",
+    "x-y",
+    "black-2-white-2",
+    "black-white",
+    "heartgold-soulsilver",
+    "platinum",
+    "diamond-pearl",
+    "emerald",
+    "firered-leafgreen",
+    "ruby-sapphire",
+    "crystal",
+    "gold-silver",
+    "yellow",
+    "red-blue",
+]  # ordre décroissant des générations
 
 
 @dataclass
@@ -57,8 +52,8 @@ class FetcherConfig:
     timeout: int = 20
     concurrency: int = 32
     retries: int = 4
-    retry_backoff: float = 0.8  # secondes, exponentiel
-    user_agent: str = "sv-moves-summary/1.3 (+https://pokeapi.co)"
+    retry_backoff: float = 0.8
+    user_agent: str = "sv-moves-summary/1.5 (+https://pokeapi.co)"
 
 
 class RateLimiter:
@@ -114,6 +109,10 @@ def summarize_sv_moves_from_pokemon_json(
     include_types: bool,
     override_species_name: Optional[str] = None,
 ) -> Tuple[Dict[str, Any], Dict[str, Optional[str]]]:
+    """
+    Sans déduplication + multi-fallback de générations si SV est vide.
+    Conserve l'ordre PokeAPI.
+    """
     species_name = (
         override_species_name
         or pokemon_json.get("name")
@@ -121,44 +120,51 @@ def summarize_sv_moves_from_pokemon_json(
     )
     moves = pokemon_json.get("moves", []) or []
 
-    items: List[Dict[str, Any]] = []
-    need_types: Dict[str, Optional[str]] = {}
-
-    for m in moves:
-        move_name = (m.get("move") or {}).get("name")
-        move_url = (m.get("move") or {}).get("url")
-        if not move_name or not move_url:
-            continue
-
-        for det in (m.get("version_group_details") or []):
-            vg = (det.get("version_group") or {})
-            if vg.get("name") != SV_GROUP_NAME:
+    def collect_for_vg(vg_name: str) -> Tuple[List[Dict[str, Any]], Dict[str, Optional[str]]]:
+        items: List[Dict[str, Any]] = []
+        need_types: Dict[str, Optional[str]] = {}
+        for m in moves:
+            move_name = (m.get("move") or {}).get("name")
+            move_url = (m.get("move") or {}).get("url")
+            if not move_name or not move_url:
                 continue
+            for det in (m.get("version_group_details") or []):
+                vg = (det.get("version_group") or {})
+                if vg.get("name") != vg_name:
+                    continue
+                method = (det.get("move_learn_method") or {}).get("name")
+                level = det.get("level_learned_at") or 0
+                row: Dict[str, Any] = {"name": move_name, "method": method, "move_url": move_url}
+                if isinstance(level, int) and level > 0:
+                    row["level"] = level
+                items.append(row)
+                if include_types:
+                    need_types[move_url] = None
+        return items, need_types
 
-            method = (det.get("move_learn_method") or {}).get("name")
-            level = det.get("level_learned_at") or 0
+    # 1) Essayer la version cible (SV)
+    items, need_types = collect_for_vg(SV_GROUP_NAME)
+    used_vg = SV_GROUP_NAME
 
-            row: Dict[str, Any] = {
-                "name": move_name,
-                "method": method,
-                "move_url": move_url,
-            }
-            if isinstance(level, int) and level > 0:
-                row["level"] = level
+    # 2) Si vide, parcourir la liste de fallback (défaut ou override CLI)
+    try:
+        fb_list = fallback_list if isinstance(fallback_list, list) else FALLBACK_VGS
+    except NameError:
+        fb_list = FALLBACK_VGS
 
-            items.append(row)
-            if include_types:
-                need_types[move_url] = None
+    if not items:
+        for vg in fb_list:
+            cand_items, cand_need = collect_for_vg(vg)
+            if cand_items:
+                items, need_types = cand_items, cand_need
+                used_vg = vg
+                break
 
     result = {
         "species": species_name,
-        "version_group": SV_GROUP_NAME,
-        "moves": [
-            {k: v for k, v in item.items() if k in ("name", "method", "level", "move_url")}
-            for item in items
-        ],
+        "version_group": used_vg,
+        "moves": [{k: v for k, v in item.items() if k in ("name", "method", "level", "move_url")} for item in items],
     }
-
     return result, need_types
 
 
@@ -192,13 +198,16 @@ async def fetch_pokemon_json(session: aiohttp.ClientSession, fetch_key: str, cfg
     async with limiter:
         return await fetch_json(session, url, cfg)
 
+
 async def fetch_species_json(session: aiohttp.ClientSession, species_url: str, cfg: FetcherConfig, limiter: RateLimiter) -> Dict[str, Any]:
     async with limiter:
         return await fetch_json(session, species_url, cfg)
 
+
 async def fetch_evolution_chain_json(session: aiohttp.ClientSession, evo_url: str, cfg: FetcherConfig, limiter: RateLimiter) -> Dict[str, Any]:
     async with limiter:
         return await fetch_json(session, evo_url, cfg)
+
 
 def compute_stage_from_chain(chain: Dict[str, Any], target_species: str) -> int:
     target = target_species.strip().lower()
@@ -265,25 +274,20 @@ async def process_pairs(pairs: List[Tuple[str, str]], include_types: bool, cfg: 
             if isinstance(data, Exception):
                 print(f"[warn] Échec /pokemon/{fetch_key}: {data}", file=sys.stderr)
                 continue
-            
-            # 1) Stage
-            stage_val = await st_fut
 
-            # 2) Stats
+            stage_val = await st_fut
             stats_map = {s["stat"]["name"]: s["base_stat"] for s in data.get("stats", []) if s.get("stat")}
 
-            # 3) Résumé des moves
-            moves_summary, need_types = summarize_sv_moves_from_pokemon_json(
+            ms, need_types = summarize_sv_moves_from_pokemon_json(
                 data, include_types, override_species_name=display_species
             )
-
-            # 4) Reconstruire l'objet dans l'ordre voulu
             summary = {
-                "species": moves_summary.get("species"),
+                "Species": display_species,
+                "species": ms.get("species"),
                 "stage": stage_val,
                 "stats": stats_map,
-                "version_group": moves_summary.get("version_group"),
-                "moves": moves_summary.get("moves"),
+                "version_group": ms.get("version_group"),
+                "moves": ms.get("moves"),
             }
 
             summaries.append(summary)
@@ -298,14 +302,13 @@ async def process_pairs(pairs: List[Tuple[str, str]], include_types: bool, cfg: 
             for s in summaries:
                 for m in s["moves"]:
                     url = m.pop("move_url", None)
-                    if include_types:
-                        info = move_cache.get(url) if url else None
-                        if isinstance(info, dict):
-                            m["type"] = info.get("type")
-                            if info.get("name_en") is not None:
-                                m["name_en"] = info.get("name_en")
-                        else:
-                            m["type"] = info
+                    info = move_cache.get(url) if url else None
+                    if isinstance(info, dict):
+                        m["type"] = info.get("type")
+                        if info.get("name_en") is not None:
+                            m["name_en"] = info.get("name_en")
+                    else:
+                        m["type"] = info
 
         results.extend(summaries)
 
@@ -335,20 +338,21 @@ def build_document(results: List[Dict[str, Any]]) -> Dict[str, Any]:
 
 
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Résumé des moves 'scarlet-violet' (asynchrone) sans déduplication + mapping CSV + stage d'évolution.")
+    p = argparse.ArgumentParser(description="Résumé moves SV (async) + mapping CSV + stage + fallbacks multi-générations.")
     src = p.add_mutually_exclusive_group(required=True)
     src.add_argument("--mapping-csv", help="CSV avec en-têtes 'species;othername' (séparateur ';').")
-    src.add_argument("--species", nargs="+", help="Liste d'espèces (noms ou ids)." )
+    src.add_argument("--species", nargs="+", help="Liste d'espèces (noms ou ids).")
     src.add_argument("--species-file", help="Fichier texte (une espèce par ligne).")
     src.add_argument("--from-dir", help="Dossier de JSON /pokemon/ au format PokeAPI.")
 
     p.add_argument("--no-types", action="store_true", help="Ne pas récupérer le type des moves.")
     p.add_argument("--move-cache", help="Fichier JSON cache des types de moves (lecture/écriture).")
-    p.add_argument("--concurrency", type=int, default=32, help="Niveau de parallélisme (défaut: 32)." )
-    p.add_argument("--base-url", default=POKEAPI, help="Base URL PokeAPI (défaut: officiel)." )
-    p.add_argument("--timeout", type=int, default=20, help="Timeout HTTP en secondes (défaut: 20)." )
-    p.add_argument("--out", required=True, help="Chemin de sortie du JSON (ou JSONL si --jsonl)." )
-    p.add_argument("--jsonl", action="store_true", help="Émettre en JSON Lines (une ligne par espèce)." )
+    p.add_argument("--concurrency", type=int, default=32, help="Niveau de parallélisme (défaut: 32).")
+    p.add_argument("--base-url", default=POKEAPI, help="Base URL PokeAPI (défaut: officiel).")
+    p.add_argument("--timeout", type=int, default=20, help="Timeout HTTP en secondes (défaut: 20).")
+    p.add_argument("--out", required=True, help="Chemin de sortie du JSON (ou JSONL si --jsonl).")
+    p.add_argument("--jsonl", action="store_true", help="Émettre en JSON Lines (une ligne par espèce).")
+    p.add_argument("--fallback-vgs", help="Liste de version_groups de fallback séparés par des virgules (par défaut: ordre décroissant des générations).")
 
     return p.parse_args()
 
@@ -385,6 +389,12 @@ def main() -> None:
         timeout=args.timeout,
         concurrency=max(1, int(args.concurrency)),
     )
+
+    # CLI override for fallback list
+    global fallback_list
+    fallback_list = None
+    if args.fallback_vgs:
+        fallback_list = [s.strip() for s in args.fallback_vgs.split(",") if s.strip()]
 
     move_cache: Dict[str, Optional[str]] = {}
     if args.move_cache:
@@ -447,7 +457,18 @@ def main() -> None:
                 stage_tasks = [asyncio.create_task(get_stage_for_pokemon(pj)) for pj, _ in pokes]
 
                 for (pj, disp), st_fut in zip(pokes, stage_tasks):
-                    summary, need_types = summarize_sv_moves_from_pokemon_json(pj, include_types, override_species_name=disp)
+                    stage_val = await st_fut
+                    stats_map = {s["stat"]["name"]: s["base_stat"] for s in pj.get("stats", []) if s.get("stat")}
+
+                    ms, need_types = summarize_sv_moves_from_pokemon_json(pj, include_types, override_species_name=disp)
+                    summary = {
+                        "Species": disp,
+                        "species": ms.get("species"),
+                        "stage": stage_val,
+                        "stats": stats_map,
+                        "version_group": ms.get("version_group"),
+                        "moves": ms.get("moves"),
+                    }
                     summaries.append(summary)
                     for url in need_types.keys():
                         needed_urls[url] = None
@@ -496,7 +517,7 @@ def main() -> None:
     if args.jsonl:
         with out_path.open("w", encoding="utf-8") as f:
             for s in results:
-                f.write(json.dumps(s, ensure_ascii=False) + "")
+                f.write(json.dumps(s, ensure_ascii=False) + "\n")
     else:
         doc = build_document(results)
         with out_path.open("w", encoding="utf-8") as f:
