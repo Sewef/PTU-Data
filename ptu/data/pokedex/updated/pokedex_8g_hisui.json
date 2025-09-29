@@ -71,78 +71,121 @@
       "Level Up Move List": [
         {
           "Level": "Evo",
-          "Move": "Rock Smash",
-          "Type": "Fighting"
-        },
-        {
-          "Level": 6,
-          "Move": "Leafage",
-          "Type": "Grass"
-        },
-        {
-          "Level": 11,
-          "Move": "Roost",
-          "Type": "Flying"
-        },
-        {
-          "Level": 18,
-          "Move": "Aerial Ace",
-          "Type": "Flying"
-        },
-        {
-          "Level": 21,
-          "Move": "Magical Leaf",
-          "Type": "Grass"
-        },
-        {
-          "Level": 25,
-          "Move": "Air Slash",
-          "Type": "Flying"
-        },
-        {
-          "Level": 30,
-          "Move": "Aura Sphere",
-          "Type": "Fighting"
-        },
-        {
-          "Level": 34,
-          "Move": "Leaf Blade",
-          "Type": "Grass"
-        },
-        {
-          "Level": 34,
           "Move": "Triple Arrows",
           "Type": "Fighting"
         },
         {
-          "Level": 40,
-          "Move": "Brave Bird",
+          "Level": 9,
+          "Move": "Peck",
           "Type": "Flying"
         },
         {
-          "Level": 43,
-          "Move": "Leaf Storm",
+          "Level": 12,
+          "Move": "Shadow Sneak",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 15,
+          "Move": "Razor Leaf",
           "Type": "Grass"
+        },
+        {
+          "Level": 20,
+          "Move": "Synthesis",
+          "Type": "Grass"
+        },
+        {
+          "Level": 25,
+          "Move": "Pluck",
+          "Type": "Flying"
+        },
+        {
+          "Level": 30,
+          "Move": "Bulk Up",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 37,
+          "Move": "Sucker Punch",
+          "Type": "Dark"
+        },
+        {
+          "Level": 44,
+          "Move": "Leaf Blade",
+          "Type": "Grass"
+        },
+        {
+          "Level": 51,
+          "Move": "Feather Dance",
+          "Type": "Flying"
+        },
+        {
+          "Level": 58,
+          "Move": "Brave Bird",
+          "Type": "Flying"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
         "Aerial Ace",
+        "Air Cutter",
+        "Air Slash",
+        "Aura Sphere",
+        "Baton Pass",
+        "Brave Bird",
+        "Brick Break",
         "Bulk Up",
+        "Bullet Seed",
+        "Close Combat",
+        "Coaching",
+        "Dual Wingbeat",
+        "Endure",
         "Energy Ball",
+        "Facade",
         "False Swipe",
-        "Focus Energy",
+        "Feather Dance",
+        "Focus Blast",
+        "Focus Punch",
+        "Frenzy Plant",
+        "Giga Drain",
         "Giga Impact",
-        "Gust (N)",
+        "Grass Knot",
+        "Grass Pledge",
+        "Grassy Glide",
+        "Grassy Terrain",
+        "Growl (N)",
+        "Haze",
+        "Helping Hand",
         "Hyper Beam",
+        "Knock Off",
+        "Leaf Storm (N)",
+        "Leafage (N)",
+        "Low Kick",
+        "Low Sweep",
         "Magical Leaf",
-        "Psycho Cut",
+        "Nasty Plot",
+        "Protect",
+        "Rain Dance",
         "Rest",
-        "Rock Smash",
+        "Reversal",
+        "Rock Tomb",
+        "Scary Face",
+        "Seed Bomb",
         "Shadow Claw",
-        "Spikes",
-        "Swift"
+        "Sleep Talk",
+        "Smack Down",
+        "Solar Beam",
+        "Substitute",
+        "Sunny Day",
+        "Swift",
+        "Swords Dance",
+        "Tackle (N)",
+        "Tailwind",
+        "Take Down",
+        "Taunt",
+        "Tera Blast",
+        "Trailblaze",
+        "U-turn (N)",
+        "Upper Hand"
       ]
     }
   },
@@ -220,73 +263,123 @@
       "Level Up Move List": [
         {
           "Level": "Evo",
-          "Move": "Hex",
-          "Type": "Ghost"
-        },
-        {
-          "Level": 6,
-          "Move": "Ember",
-          "Type": "Fire"
-        },
-        {
-          "Level": 11,
-          "Move": "Rollout",
-          "Type": "Rock"
-        },
-        {
-          "Level": 18,
-          "Move": "Flame Wheel",
-          "Type": "Fire"
-        },
-        {
-          "Level": 25,
-          "Move": "Swift",
-          "Type": "Normal"
-        },
-        {
-          "Level": 34,
-          "Move": "Flamethrower",
-          "Type": "Fire"
-        },
-        {
-          "Level": 40,
           "Move": "Infernal Parade",
           "Type": "Ghost"
         },
         {
-          "Level": 43,
-          "Move": "Shadow Ball",
-          "Type": "Ghost"
+          "Level": 13,
+          "Move": "Quick Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 20,
+          "Move": "Flame Wheel",
+          "Type": "Fire"
+        },
+        {
+          "Level": 24,
+          "Move": "Defense Curl",
+          "Type": "Normal"
+        },
+        {
+          "Level": 31,
+          "Move": "Swift",
+          "Type": "Normal"
+        },
+        {
+          "Level": 35,
+          "Move": "Flame Charge",
+          "Type": "Fire"
         },
         {
           "Level": 43,
+          "Move": "Lava Plume",
+          "Type": "Fire"
+        },
+        {
+          "Level": 48,
+          "Move": "Flamethrower",
+          "Type": "Fire"
+        },
+        {
+          "Level": 56,
+          "Move": "Inferno",
+          "Type": "Fire"
+        },
+        {
+          "Level": 61,
+          "Move": "Rollout",
+          "Type": "Rock"
+        },
+        {
+          "Level": 74,
           "Move": "Overheat",
           "Type": "Fire"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
         "Aerial Ace",
+        "Blast Burn",
+        "Body Slam",
+        "Brick Break",
         "Bulldoze",
+        "Burning Jealousy",
         "Calm Mind",
-        "Drain Punch",
+        "Confuse Ray",
+        "Curse",
+        "Dig",
+        "Double-Edge (N)",
+        "Earthquake",
+        "Ember (N)",
+        "Endeavor",
+        "Endure",
+        "Eruption (N)",
+        "Facade",
+        "Fire Blast",
+        "Fire Fang",
+        "Fire Pledge",
         "Fire Punch",
+        "Fire Spin",
+        "Flame Charge",
         "Flamethrower",
+        "Flare Blitz",
+        "Focus Blast",
+        "Focus Punch",
         "Giga Impact",
+        "Gyro Ball (N)",
+        "Heat Wave",
+        "Hex",
         "Hyper Beam",
-        "Iron Tail",
-        "Mystical Fire",
-        "Ominous Wind",
-        "Quick Attack (N)",
+        "Iron Head",
+        "Leer (N)",
+        "Low Kick",
+        "Night Shade",
+        "Overheat",
+        "Play Rough",
+        "Poltergeist",
+        "Protect",
         "Rest",
+        "Reversal",
+        "Roar",
         "Rock Slide",
-        "Rock Smash",
         "Shadow Ball",
         "Shadow Claw",
+        "Sleep Talk",
+        "Smokescreen (N)",
+        "Solar Beam",
+        "Spite",
+        "Stomping Tantrum",
+        "Substitute",
+        "Sunny Day",
         "Swift",
+        "Tackle (N)",
+        "Take Down",
+        "Temper Flare",
+        "Tera Blast",
         "Thunder Punch",
-        "Wild Charge"
+        "Wild Charge",
+        "Will-O-Wisp",
+        "Zen Headbutt"
       ]
     }
   },
@@ -295,12 +388,12 @@
     "Number": 503,
     "Icon": 10236,
     "Base Stats": {
-      "HP": 10,
-      "Attack": 10,
-      "Defense": 9,
-      "Special Attack": 11,
+      "HP": 9,
+      "Attack": 11,
+      "Defense": 8,
+      "Special Attack": 10,
       "Special Defense": 7,
-      "Speed": 7
+      "Speed": 9
     },
     "Basic Information": {
       "Type": [
@@ -364,70 +457,123 @@
       "Level Up Move List": [
         {
           "Level": "Evo",
-          "Move": "Night Slash",
-          "Type": "Dark"
-        },
-        {
-          "Level": 6,
-          "Move": "Aqua Jet",
-          "Type": "Water"
-        },
-        {
-          "Level": 11,
-          "Move": "Swords Dance",
-          "Type": "Normal"
-        },
-        {
-          "Level": 18,
-          "Move": "Water Pulse",
-          "Type": "Water"
-        },
-        {
-          "Level": 21,
           "Move": "Ceaseless Edge",
           "Type": "Dark"
         },
         {
-          "Level": 25,
-          "Move": "Slash",
+          "Level": 13,
+          "Move": "Focus Energy",
           "Type": "Normal"
         },
         {
+          "Level": 18,
+          "Move": "Razor Shell",
+          "Type": "Water"
+        },
+        {
+          "Level": 21,
+          "Move": "Fury Cutter",
+          "Type": "Bug"
+        },
+        {
+          "Level": 25,
+          "Move": "Water Pulse",
+          "Type": "Water"
+        },
+        {
+          "Level": 29,
+          "Move": "Aerial Ace",
+          "Type": "Flying"
+        },
+        {
           "Level": 34,
+          "Move": "Aqua Jet",
+          "Type": "Water"
+        },
+        {
+          "Level": 39,
+          "Move": "Encore",
+          "Type": "Normal"
+        },
+        {
+          "Level": 46,
           "Move": "Aqua Tail",
           "Type": "Water"
         },
         {
-          "Level": 40,
-          "Move": "Dark Pulse",
-          "Type": "Dark"
+          "Level": 51,
+          "Move": "Retaliate",
+          "Type": "Normal"
         },
         {
-          "Level": 43,
+          "Level": 58,
+          "Move": "Swords Dance",
+          "Type": "Normal"
+        },
+        {
+          "Level": 63,
           "Move": "Hydro Pump",
           "Type": "Water"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
         "Aerial Ace",
-        "Aqua Tail",
+        "Air Slash",
+        "Avalanche",
+        "Blizzard",
+        "Body Slam",
+        "Brick Break",
+        "Bulldoze",
+        "Chilling Water",
         "Dark Pulse",
+        "Dig",
+        "Drill Run",
+        "Encore",
+        "Endure",
+        "Facade",
         "False Swipe",
-        "Focus Energy",
+        "Fling",
+        "Flip Turn",
         "Giga Impact",
+        "Grass Knot",
+        "Helping Hand",
+        "Hydro Cannon",
+        "Hydro Pump",
         "Hyper Beam",
         "Ice Beam",
         "Icy Wind",
-        "Iron Tail",
-        "Megahorn",
+        "Knock Off",
+        "Lash Out",
+        "Liquidation",
+        "Megahorn (N)",
+        "Protect",
+        "Rain Dance",
         "Rest",
-        "Rock Smash",
-        "Poison Jab",
-        "Psycho Cut",
+        "Scary Face",
+        "Slash (N)",
+        "Sleep Talk",
+        "Smart Strike",
+        "Snarl",
+        "Snowscape",
+        "Substitute",
+        "Sucker Punch (N)",
+        "Surf",
+        "Swift",
+        "Swords Dance",
         "Tackle (N)",
+        "Tail Whip (N)",
+        "Take Down",
+        "Taunt",
+        "Tera Blast",
+        "Thief",
+        "Throat Chop",
+        "Upper Hand",
+        "Vacuum Wave",
+        "Water Gun (N)",
+        "Water Pledge",
         "Water Pulse",
+        "Waterfall",
+        "Whirlpool",
         "X-Scissor"
       ]
     }
@@ -498,60 +644,128 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Tackle",
+          "Move": "Leer",
           "Type": "Normal"
         },
         {
-          "Level": 5,
+          "Level": 1,
           "Move": "Ember",
           "Type": "Fire"
         },
         {
-          "Level": 9,
+          "Level": 4,
+          "Move": "Howl",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
           "Move": "Bite",
           "Type": "Dark"
         },
         {
-          "Level": 15,
+          "Level": 12,
+          "Move": "Flame Wheel",
+          "Type": "Fire"
+        },
+        {
+          "Level": 16,
+          "Move": "Helping Hand",
+          "Type": "Normal"
+        },
+        {
+          "Level": 24,
           "Move": "Fire Fang",
           "Type": "Fire"
         },
         {
-          "Level": 21,
-          "Move": "Rock Slide",
-          "Type": "Rock"
+          "Level": 28,
+          "Move": "Retaliate",
+          "Type": "Normal"
         },
         {
-          "Level": 29,
+          "Level": 32,
           "Move": "Crunch",
           "Type": "Dark"
         },
         {
-          "Level": 37,
-          "Move": "Double -Edge",
+          "Level": 36,
+          "Move": "Take Down",
           "Type": "Normal"
         },
         {
-          "Level": 47,
+          "Level": 40,
+          "Move": "Flamethrower",
+          "Type": "Fire"
+        },
+        {
+          "Level": 44,
+          "Move": "Roar",
+          "Type": "Normal"
+        },
+        {
+          "Level": 48,
+          "Move": "Rock Slide",
+          "Type": "Rock"
+        },
+        {
+          "Level": 52,
+          "Move": "Reversal",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 56,
           "Move": "Flare Blitz",
           "Type": "Fire"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
-        "Aerial Ace",
+      "TM/Tutor Moves List": [
+        "Agility",
+        "Body Slam",
+        "Close Combat",
+        "Covet",
+        "Crunch",
+        "Dig",
+        "Double Kick",
+        "Double-Edge",
+        "Endure",
+        "Facade",
+        "Fire Blast",
         "Fire Fang",
+        "Fire Spin",
+        "Flame Charge",
         "Flamethrower",
-        "Iron Tail",
+        "Flare Blitz",
+        "Head Smash",
+        "Heat Wave",
+        "Helping Hand",
+        "Morning Sun",
         "Outrage",
-        "Play Rough",
+        "Overheat",
+        "Power Gem",
+        "Protect",
+        "Psychic Fangs",
         "Rest",
+        "Reversal",
+        "Roar",
+        "Rock Blast",
         "Rock Slide",
-        "Rock Smash",
-        "Snarl",
-        "Swift",
-        "Wild Charge"
+        "Rock Tomb",
+        "Sandstorm",
+        "Scary Face",
+        "Scorching Sands",
+        "Sleep Talk",
+        "Smack Down",
+        "Smart Strike",
+        "Stealth Rock",
+        "Stone Edge",
+        "Substitute",
+        "Sunny Day",
+        "Take Down",
+        "Temper Flare",
+        "Tera Blast",
+        "Thrash",
+        "Thunder Fang",
+        "Will-O-Wisp"
       ]
     }
   },
@@ -621,67 +835,83 @@
     "Moves": {
       "Level Up Move List": [
         {
-          "Level": 5,
-          "Move": "Ember",
-          "Type": "Fire"
-        },
-        {
-          "Level": 9,
-          "Move": "Bite",
-          "Type": "Dark"
-        },
-        {
-          "Level": 15,
-          "Move": "Fire Fang",
-          "Type": "Fire"
-        },
-        {
-          "Level": 21,
-          "Move": "Rock Slide",
-          "Type": "Rock"
-        },
-        {
-          "Level": 29,
-          "Move": "Raging Fury",
-          "Type": "Fire"
-        },
-        {
-          "Level": 29,
-          "Move": "Crunch",
-          "Type": "Dark"
-        },
-        {
-          "Level": 37,
-          "Move": "Double -Edge",
+          "Level": "Evo",
+          "Move": "Extreme Speed",
           "Type": "Normal"
         },
         {
-          "Level": 47,
-          "Move": "Flare Blitz",
+          "Level": 5,
+          "Move": "Flamethrower",
+          "Type": "Fire"
+        },
+        {
+          "Level": 64,
+          "Move": "Raging Fury",
           "Type": "Fire"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
         "Aerial Ace",
+        "Agility (N)",
+        "Bite (N)",
+        "Body Slam",
         "Bulldoze",
-        "Fire Fang",
+        "Close Combat",
+        "Crunch (N)",
+        "Dig",
+        "Double-Edge",
+        "Dragon Pulse",
+        "Ember (N)",
+        "Endure",
+        "Facade",
+        "Fire Blast",
+        "Fire Fang (N)",
+        "Fire Spin",
+        "Flame Charge",
+        "Flame Wheel (N)",
         "Flamethrower",
+        "Flare Blitz (N)",
         "Giga Impact",
+        "Heat Crash",
+        "Heat Wave",
+        "Helping Hand (N)",
+        "Howl (N)",
         "Hyper Beam",
+        "Hyper Voice",
         "Iron Head",
-        "Iron Tail",
+        "Leer (N)",
         "Outrage",
-        "Play Rough",
+        "Overheat",
+        "Power Gem",
+        "Protect",
+        "Psychic Fangs",
         "Rest",
-        "Rock Slide",
-        "Rock Smash",
+        "Retaliate (N)",
+        "Reversal (N)",
+        "Roar (N)",
+        "Rock Blast",
+        "Rock Slide (N)",
+        "Rock Throw (N)",
+        "Rock Tomb",
+        "Sandstorm",
+        "Scary Face",
+        "Scorching Sands",
+        "Sleep Talk",
+        "Smack Down",
+        "Smart Strike",
         "Snarl",
+        "Solar Beam",
+        "Stealth Rock",
         "Stone Edge",
-        "Swift",
+        "Substitute",
+        "Sunny Day",
+        "Take Down (N)",
+        "Temper Flare",
+        "Tera Blast",
+        "Thief",
         "Thunder Fang",
-        "Wild Charge"
+        "Wild Charge",
+        "Will-O-Wisp"
       ]
     }
   },
@@ -752,56 +982,130 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Thunder Shock",
-          "Type": "Electric"
-        },
-        {
-          "Level": 5,
           "Move": "Tackle",
           "Type": "Normal"
         },
         {
+          "Level": 1,
+          "Move": "Charge",
+          "Type": "Electric"
+        },
+        {
+          "Level": 4,
+          "Move": "Thunder Shock",
+          "Type": "Electric"
+        },
+        {
+          "Level": 6,
+          "Move": "Stun Spore",
+          "Type": "Grass"
+        },
+        {
           "Level": 9,
-          "Move": "Thunder Wave",
+          "Move": "Bullet Seed",
+          "Type": "Grass"
+        },
+        {
+          "Level": 11,
+          "Move": "Rollout",
+          "Type": "Rock"
+        },
+        {
+          "Level": 13,
+          "Move": "Screech",
+          "Type": "Normal"
+        },
+        {
+          "Level": 16,
+          "Move": "Charge Beam",
           "Type": "Electric"
         },
         {
-          "Level": 15,
-          "Move": "Spark",
+          "Level": 20,
+          "Move": "Swift",
+          "Type": "Normal"
+        },
+        {
+          "Level": 22,
+          "Move": "Electro Ball",
           "Type": "Electric"
         },
         {
-          "Level": 21,
+          "Level": 26,
+          "Move": "Self-Destruct",
+          "Type": "Normal"
+        },
+        {
+          "Level": 29,
           "Move": "Energy Ball",
           "Type": "Grass"
         },
         {
-          "Level": 29,
-          "Move": "Thunderbolt",
+          "Level": 34,
+          "Move": "Seed Bomb",
+          "Type": "Grass"
+        },
+        {
+          "Level": 34,
+          "Move": "Discharge",
           "Type": "Electric"
         },
         {
-          "Level": 37,
-          "Move": "Thunder",
-          "Type": "Electric"
-        },
-        {
-          "Level": 47,
-          "Move": "Self-Destruct",
+          "Level": 41,
+          "Move": "Explosion",
           "Type": "Normal"
+        },
+        {
+          "Level": 46,
+          "Move": "Gyro Ball",
+          "Type": "Steel"
+        },
+        {
+          "Level": 50,
+          "Move": "Grassy Terrain",
+          "Type": "Grass"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
+        "Agility",
+        "Bullet Seed",
+        "Charge",
         "Charge Beam",
+        "Double-Edge",
+        "Electric Terrain",
+        "Electro Ball",
+        "Electroweb",
+        "Endure",
         "Energy Ball",
-        "Ice Ball",
-        "Magical Leaf",
+        "Facade",
+        "Foul Play",
+        "Giga Drain",
+        "Grass Knot",
+        "Grassy Glide",
+        "Grassy Terrain",
+        "Gyro Ball",
+        "Leaf Storm",
+        "Leech Seed",
+        "Protect",
+        "Rain Dance",
+        "Recycle",
+        "Reflect",
         "Rest",
+        "Seed Bomb",
+        "Sleep Talk",
+        "Solar Beam",
+        "Substitute",
         "Swift",
+        "Take Down",
+        "Taunt",
+        "Tera Blast",
+        "Thief",
+        "Thunder",
+        "Thunder Wave",
         "Thunderbolt",
-        "Wild Charge"
+        "Volt Switch",
+        "Wild Charge",
+        "Worry Seed"
       ]
     }
   },
@@ -869,58 +1173,128 @@
     "Moves": {
       "Level Up Move List": [
         {
-          "Level": 5,
-          "Move": "Tackle",
-          "Type": "Normal"
-        },
-        {
-          "Level": 9,
-          "Move": "Thunder Wave",
-          "Type": "Electric"
-        },
-        {
-          "Level": 15,
-          "Move": "Spark",
-          "Type": "Electric"
-        },
-        {
-          "Level": 21,
-          "Move": "Energy Ball",
-          "Type": "Grass"
-        },
-        {
-          "Level": 29,
-          "Move": "Thunderbolt",
-          "Type": "Electric"
-        },
-        {
-          "Level": 37,
-          "Move": "Thunder",
-          "Type": "Electric"
-        },
-        {
-          "Level": 47,
+          "Level": "Evo",
           "Move": "Chloroblast",
           "Type": "Grass"
         },
         {
-          "Level": 47,
+          "Level": 4,
+          "Move": "Thunder Shock",
+          "Type": "Electric"
+        },
+        {
+          "Level": 6,
+          "Move": "Stun Spore",
+          "Type": "Grass"
+        },
+        {
+          "Level": 9,
+          "Move": "Bullet Seed",
+          "Type": "Grass"
+        },
+        {
+          "Level": 11,
+          "Move": "Rollout",
+          "Type": "Rock"
+        },
+        {
+          "Level": 13,
+          "Move": "Screech",
+          "Type": "Normal"
+        },
+        {
+          "Level": 16,
+          "Move": "Charge Beam",
+          "Type": "Electric"
+        },
+        {
+          "Level": 20,
+          "Move": "Swift",
+          "Type": "Normal"
+        },
+        {
+          "Level": 22,
+          "Move": "Electro Ball",
+          "Type": "Electric"
+        },
+        {
+          "Level": 26,
           "Move": "Self-Destruct",
           "Type": "Normal"
+        },
+        {
+          "Level": 29,
+          "Move": "Energy Ball",
+          "Type": "Grass"
+        },
+        {
+          "Level": 34,
+          "Move": "Seed Bomb",
+          "Type": "Grass"
+        },
+        {
+          "Level": 34,
+          "Move": "Discharge",
+          "Type": "Electric"
+        },
+        {
+          "Level": 41,
+          "Move": "Explosion",
+          "Type": "Normal"
+        },
+        {
+          "Level": 46,
+          "Move": "Gyro Ball",
+          "Type": "Steel"
+        },
+        {
+          "Level": 50,
+          "Move": "Grassy Terrain",
+          "Type": "Grass"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
+        "Agility",
+        "Bullet Seed",
+        "Charge (N)",
         "Charge Beam",
+        "Curse",
+        "Double-Edge",
+        "Electric Terrain",
+        "Electro Ball",
+        "Electroweb",
+        "Endure",
         "Energy Ball",
+        "Facade",
+        "Foul Play",
+        "Giga Drain",
         "Giga Impact",
+        "Grass Knot",
+        "Grassy Glide",
+        "Grassy Terrain",
+        "Gyro Ball",
         "Hyper Beam",
-        "Ice Ball",
-        "Magical Leaf",
+        "Leaf Storm",
+        "Protect",
+        "Rain Dance",
+        "Reflect",
         "Rest",
+        "Scary Face",
+        "Seed Bomb",
+        "Sleep Talk",
+        "Solar Beam",
+        "Substitute",
+        "Supercell Slam",
         "Swift",
+        "Tackle (N)",
+        "Take Down",
+        "Taunt",
+        "Tera Blast",
+        "Thief",
+        "Thunder",
+        "Thunder Wave",
         "Thunderbolt",
+        "Volt Switch",
         "Wild Charge"
       ]
     }
@@ -992,70 +1366,146 @@
       "Level Up Move List": [
         {
           "Level": 1,
+          "Move": "Tackle",
+          "Type": "Normal"
+        },
+        {
+          "Level": 1,
           "Move": "Poison Sting",
           "Type": "Poison"
         },
         {
-          "Level": 5,
+          "Level": 4,
+          "Move": "Harden",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Bite",
+          "Type": "Dark"
+        },
+        {
+          "Level": 12,
+          "Move": "Fell Stinger",
+          "Type": "Bug"
+        },
+        {
+          "Level": 16,
+          "Move": "Minimize",
+          "Type": "Normal"
+        },
+        {
+          "Level": 20,
           "Move": "Spikes",
           "Type": "Ground"
         },
         {
-          "Level": 9,
-          "Move": "Pin Missile",
-          "Type": "Bug"
+          "Level": 24,
+          "Move": "Brine",
+          "Type": "Water"
         },
         {
-          "Level": 15,
+          "Level": 28,
           "Move": "Barb Barrage",
           "Type": "Poison"
         },
         {
-          "Level": 21,
-          "Move": "Water Pulse",
-          "Type": "Water"
+          "Level": 32,
+          "Move": "Pin Missile",
+          "Type": "Bug"
         },
         {
-          "Level": 26,
-          "Move": "Dark Pulse",
-          "Type": "Dark"
-        },
-        {
-          "Level": 29,
-          "Move": "Poison Jab",
+          "Level": 36,
+          "Move": "Toxic Spikes",
           "Type": "Poison"
         },
         {
-          "Level": 37,
-          "Move": "Aqua Tail",
-          "Type": "Water"
-        },
-        {
-          "Level": 47,
-          "Move": "Double -Edge",
+          "Level": 40,
+          "Move": "Stockpile",
           "Type": "Normal"
         },
         {
-          "Level": 57,
-          "Move": "Self-Destruct",
+          "Level": 40,
+          "Move": "Spit Up",
           "Type": "Normal"
+        },
+        {
+          "Level": 44,
+          "Move": "Toxic",
+          "Type": "Poison"
+        },
+        {
+          "Level": 48,
+          "Move": "Crunch",
+          "Type": "Dark"
+        },
+        {
+          "Level": 52,
+          "Move": "Acupressure",
+          "Type": "Normal"
+        },
+        {
+          "Level": 56,
+          "Move": "Destiny Bond",
+          "Type": "Ghost"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
+        "Acid Spray",
+        "Agility",
+        "Aqua Jet",
         "Aqua Tail",
+        "Astonish",
+        "Blizzard",
+        "Bubble Beam",
+        "Chilling Water",
+        "Crunch",
+        "Curse",
         "Dark Pulse",
-        "Ice Ball",
+        "Double-Edge",
+        "Endure",
+        "Facade",
+        "Flail",
+        "Giga Impact",
+        "Gunk Shot",
+        "Gyro Ball",
+        "Haze",
+        "Hex",
+        "Hydro Pump",
         "Ice Beam",
         "Icy Wind",
+        "Lash Out",
+        "Liquidation",
+        "Mud Shot",
+        "Pain Split",
         "Poison Jab",
+        "Poison Tail",
+        "Protect",
+        "Rain Dance",
         "Rest",
+        "Reversal",
+        "Scale Shot",
+        "Scary Face",
+        "Self-Destruct",
         "Shadow Ball",
+        "Sleep Talk",
         "Sludge Bomb",
         "Spikes",
+        "Spite",
+        "Substitute",
+        "Supersonic",
+        "Surf",
         "Swift",
-        "Water Pulse"
+        "Swords Dance",
+        "Take Down",
+        "Taunt",
+        "Tera Blast",
+        "Throat Chop",
+        "Toxic",
+        "Toxic Spikes",
+        "Venoshock",
+        "Water Pulse",
+        "Waterfall"
       ]
     }
   },
@@ -1125,68 +1575,131 @@
     "Moves": {
       "Level Up Move List": [
         {
-          "Level": 5,
+          "Level": 4,
+          "Move": "Harden",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Bite",
+          "Type": "Dark"
+        },
+        {
+          "Level": 12,
+          "Move": "Fell Stinger",
+          "Type": "Bug"
+        },
+        {
+          "Level": 16,
+          "Move": "Minimize",
+          "Type": "Normal"
+        },
+        {
+          "Level": 20,
           "Move": "Spikes",
           "Type": "Ground"
         },
         {
-          "Level": 9,
-          "Move": "Pin Missile",
-          "Type": "Bug"
+          "Level": 24,
+          "Move": "Brine",
+          "Type": "Water"
         },
         {
-          "Level": 15,
+          "Level": 28,
           "Move": "Barb Barrage",
           "Type": "Poison"
         },
         {
-          "Level": 21,
-          "Move": "Water Pulse",
-          "Type": "Water"
+          "Level": 32,
+          "Move": "Pin Missile",
+          "Type": "Bug"
         },
         {
-          "Level": 26,
-          "Move": "Dark Pulse",
-          "Type": "Dark"
-        },
-        {
-          "Level": 29,
-          "Move": "Poison Jab",
+          "Level": 36,
+          "Move": "Toxic Spikes",
           "Type": "Poison"
         },
         {
-          "Level": 37,
-          "Move": "Aqua Tail",
-          "Type": "Water"
-        },
-        {
-          "Level": 47,
-          "Move": "Double -Edge",
+          "Level": 40,
+          "Move": "Stockpile",
           "Type": "Normal"
         },
         {
-          "Level": 57,
-          "Move": "Self-Destruct",
+          "Level": 40,
+          "Move": "Spit Up",
           "Type": "Normal"
+        },
+        {
+          "Level": 44,
+          "Move": "Toxic",
+          "Type": "Poison"
+        },
+        {
+          "Level": 48,
+          "Move": "Crunch",
+          "Type": "Dark"
+        },
+        {
+          "Level": 52,
+          "Move": "Acupressure",
+          "Type": "Normal"
+        },
+        {
+          "Level": 56,
+          "Move": "Destiny Bond",
+          "Type": "Ghost"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
-        "Aqua Tail",
+      "TM/Tutor Moves List": [
+        "Agility",
+        "Blizzard",
+        "Chilling Water",
+        "Crunch",
+        "Curse",
         "Dark Pulse",
+        "Double-Edge",
+        "Endure",
+        "Facade",
         "Giga Impact",
+        "Gunk Shot",
+        "Gyro Ball",
+        "Haze",
+        "Hydro Pump",
         "Hyper Beam",
-        "Ice Ball",
         "Ice Beam",
         "Icy Wind",
+        "Lash Out",
+        "Liquidation",
+        "Mud Shot",
+        "Pain Split",
         "Poison Jab",
+        "Poison Sting (N)",
+        "Poison Tail",
+        "Protect",
+        "Rain Dance",
         "Rest",
+        "Reversal",
+        "Scale Shot",
+        "Scary Face",
         "Shadow Ball",
+        "Sleep Talk",
         "Sludge Bomb",
+        "Sludge Wave",
+        "Smart Strike",
         "Spikes",
-        "Swift",
-        "Water Pulse"
+        "Spite",
+        "Substitute",
+        "Surf",
+        "Swords Dance",
+        "Tackle (N)",
+        "Take Down",
+        "Taunt",
+        "Tera Blast",
+        "Throat Chop",
+        "Toxic",
+        "Toxic Spikes",
+        "Venoshock",
+        "Waterfall"
       ]
     }
   },
@@ -1255,58 +1768,128 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Quick Attack",
+          "Move": "Scratch",
           "Type": "Normal"
         },
         {
-          "Level": 5,
+          "Level": 1,
+          "Move": "Leer",
+          "Type": "Normal"
+        },
+        {
+          "Level": 1,
           "Move": "Rock Smash",
           "Type": "Fighting"
         },
         {
-          "Level": 11,
-          "Move": "Swift",
+          "Level": 6,
+          "Move": "Taunt",
+          "Type": "Dark"
+        },
+        {
+          "Level": 12,
+          "Move": "Quick Attack",
           "Type": "Normal"
         },
         {
           "Level": 18,
-          "Move": "Slash",
-          "Type": "Normal"
+          "Move": "Metal Claw",
+          "Type": "Steel"
         },
         {
-          "Level": 25,
+          "Level": 24,
           "Move": "Poison Jab",
           "Type": "Poison"
         },
         {
-          "Level": 34,
-          "Move": "Swords Dance",
+          "Level": 30,
+          "Move": "Brick Break",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 36,
+          "Move": "Hone Claws",
+          "Type": "Dark"
+        },
+        {
+          "Level": 42,
+          "Move": "Slash",
           "Type": "Normal"
         },
         {
-          "Level": 43,
+          "Level": 48,
+          "Move": "Agility",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 54,
+          "Move": "Screech",
+          "Type": "Normal"
+        },
+        {
+          "Level": 60,
           "Move": "Close Combat",
           "Type": "Fighting"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
+        "Acid Spray",
         "Aerial Ace",
+        "Agility",
+        "Brick Break",
         "Bulk Up",
         "Calm Mind",
-        "Drain Punch",
+        "Close Combat",
+        "Coaching",
+        "Counter",
+        "Dig",
+        "Double Hit",
+        "Endure",
+        "Facade",
+        "Fake Out",
         "False Swipe",
-        "Focus Energy",
-        "Iron Tail",
+        "Feint",
+        "Fling",
+        "Focus Blast",
+        "Focus Punch",
+        "Giga Impact",
+        "Grass Knot",
+        "Gunk Shot",
+        "Lash Out",
+        "Low Kick",
+        "Low Sweep",
+        "Metal Claw",
+        "Nasty Plot",
+        "Night Slash",
         "Poison Jab",
+        "Poison Tail",
+        "Protect",
+        "Quick Guard",
+        "Rain Dance",
         "Rest",
-        "Rock Smash",
+        "Reversal",
         "Shadow Ball",
         "Shadow Claw",
-        "Snarl",
+        "Sleep Talk",
+        "Sludge Bomb",
+        "Sludge Wave",
+        "Spite",
+        "Substitute",
+        "Sunny Day",
         "Swift",
-        "XScissor"
+        "Switcheroo",
+        "Swords Dance",
+        "Take Down",
+        "Taunt",
+        "Tera Blast",
+        "Thief",
+        "Throat Chop",
+        "Toxic",
+        "Toxic Spikes",
+        "Trailblaze",
+        "Vacuum Wave",
+        "Venoshock",
+        "X-Scissor"
       ]
     }
   },
@@ -1316,6 +1899,7 @@
     "Base Stats": {
       "HP": 8,
       "Attack": 13,
+      "Defense": 6,
       "Special Attack": 4,
       "Special Defense": 8,
       "Speed": 12
@@ -1372,62 +1956,122 @@
     "Moves": {
       "Level Up Move List": [
         {
-          "Level": 5,
-          "Move": "Rock Smash",
-          "Type": "Fighting"
-        },
-        {
-          "Level": 11,
-          "Move": "Swift",
-          "Type": "Normal"
-        },
-        {
-          "Level": 11,
+          "Level": "Evo",
           "Move": "Dire Claw",
           "Type": "Poison"
         },
         {
-          "Level": 18,
-          "Move": "Slash",
+          "Level": 6,
+          "Move": "Taunt",
+          "Type": "Dark"
+        },
+        {
+          "Level": 12,
+          "Move": "Quick Attack",
           "Type": "Normal"
         },
         {
-          "Level": 25,
+          "Level": 18,
+          "Move": "Metal Claw",
+          "Type": "Steel"
+        },
+        {
+          "Level": 24,
           "Move": "Poison Jab",
           "Type": "Poison"
         },
         {
-          "Level": 34,
-          "Move": "Swords Dance",
+          "Level": 30,
+          "Move": "Brick Break",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 36,
+          "Move": "Hone Claws",
+          "Type": "Dark"
+        },
+        {
+          "Level": 42,
+          "Move": "Slash",
           "Type": "Normal"
         },
         {
-          "Level": 43,
+          "Level": 48,
+          "Move": "Agility",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 54,
+          "Move": "Screech",
+          "Type": "Normal"
+        },
+        {
+          "Level": 60,
           "Move": "Close Combat",
           "Type": "Fighting"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
+        "Acid Spray",
+        "Acrobatics",
         "Aerial Ace",
+        "Agility",
+        "Brick Break",
         "Bulk Up",
         "Calm Mind",
-        "Drain Punch",
+        "Close Combat",
+        "Coaching",
+        "Dig",
+        "Endure",
+        "Facade",
         "False Swipe",
-        "Focus Energy",
+        "Fire Punch",
+        "Fling (N)",
+        "Focus Blast",
+        "Focus Punch",
         "Giga Impact",
+        "Grass Knot",
+        "Gunk Shot",
         "Hyper Beam",
-        "Iron Tail",
+        "Lash Out",
+        "Leer (N)",
+        "Low Kick",
+        "Low Sweep",
+        "Metal Claw",
+        "Nasty Plot",
         "Poison Jab",
-        "Power Shift",
+        "Poison Tail",
+        "Protect",
+        "Rain Dance",
         "Rest",
-        "Rock Smash",
+        "Reversal",
+        "Rock Slide",
+        "Rock Smash (N)",
+        "Rock Tomb",
+        "Scratch (N)",
         "Shadow Ball",
         "Shadow Claw",
-        "Snarl",
+        "Sleep Talk",
+        "Sludge Bomb",
+        "Sludge Wave",
+        "Spite",
+        "Substitute",
+        "Sunny Day",
         "Swift",
-        "X -Scissor"
+        "Swords Dance",
+        "Take Down",
+        "Taunt",
+        "Tera Blast",
+        "Thief",
+        "Throat Chop",
+        "Toxic",
+        "Toxic Spikes",
+        "Trailblaze",
+        "U-turn",
+        "Upper Hand",
+        "Vacuum Wave",
+        "Venoshock",
+        "X-Scissor"
       ]
     }
   },
@@ -1496,85 +2140,76 @@
       "Level Up Move List": [
         {
           "Level": "Evo",
-          "Move": "Rock Smash",
-          "Type": "Normal"
-        },
-        {
-          "Level": 5,
-          "Move": "Leafage",
-          "Type": "Grass"
-        },
-        {
-          "Level": 9,
-          "Move": "Stun Spore",
-          "Type": "Grass"
-        },
-        {
-          "Level": 15,
-          "Move": "Poison Powder",
-          "Type": "Poison"
-        },
-        {
-          "Level": 21,
-          "Move": "Energy Ball",
-          "Type": "Grass"
-        },
-        {
-          "Level": 29,
-          "Move": "Sleep Powder",
-          "Type": "Grass"
-        },
-        {
-          "Level": 34,
-          "Move": "Drain Punch",
-          "Type": "Fighting"
-        },
-        {
-          "Level": 37,
-          "Move": "Recover",
-          "Type": "Normal"
-        },
-        {
-          "Level": 37,
-          "Move": "Leaf Blade",
-          "Type": "Grass"
-        },
-        {
-          "Level": 42,
           "Move": "Victory Dance",
           "Type": "Fighting"
         },
         {
-          "Level": 47,
-          "Move": "Leaf Storm",
-          "Type": "Grass"
-        },
-        {
-          "Level": 53,
-          "Move": "Petal Dance",
-          "Type": "Grass"
-        },
-        {
-          "Level": 57,
-          "Move": "Close Combat",
+          "Level": 5,
+          "Move": "Axe Kick",
           "Type": "Fighting"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
         "Absorb (N)",
+        "Acrobatics",
         "Aerial Ace",
-        "Baby -Doll Eyes",
-        "Drain Punch",
-        "Energy Ball",
-        "Focus Energy",
+        "After You (N)",
+        "Air Slash",
+        "Brick Break",
+        "Bullet Seed",
+        "Charm",
+        "Close Combat",
+        "Coaching",
+        "Defog (N)",
+        "Encore",
+        "Endure",
+        "Energy Ball (N)",
+        "Entrainment (N)",
+        "Facade",
+        "Giga Drain (N)",
         "Giga Impact",
+        "Grass Knot",
+        "Grassy Glide",
+        "Grassy Terrain",
+        "Growth (N)",
+        "Helping Hand (N)",
+        "Hurricane",
         "Hyper Beam",
-        "Magical Leaf",
+        "Ice Spinner",
+        "Leaf Blade (N)",
+        "Leaf Storm (N)",
+        "Leech Seed (N)",
+        "Low Kick",
+        "Low Sweep",
+        "Magical Leaf (N)",
+        "Mega Drain (N)",
+        "Mega Kick (N)",
+        "Metronome",
+        "Petal Blizzard (N)",
         "Poison Jab",
+        "Pollen Puff",
+        "Protect",
+        "Psych Up",
+        "Rain Dance",
         "Rest",
-        "Rock Smash"
+        "Seed Bomb",
+        "Sleep Powder (N)",
+        "Sleep Talk",
+        "Solar Beam",
+        "Solar Blade (N)",
+        "Stun Spore (N)",
+        "Substitute",
+        "Sunny Day (N)",
+        "Swords Dance",
+        "Synthesis (N)",
+        "Take Down",
+        "Teeter Dance (N)",
+        "Tera Blast",
+        "Trailblaze",
+        "Triple Axel",
+        "Upper Hand",
+        "Vacuum Wave",
+        "Weather Ball"
       ]
     }
   },
@@ -1648,51 +2283,126 @@
       "Level Up Move List": [
         {
           "Level": 1,
+          "Move": "Scratch",
+          "Type": "Normal"
+        },
+        {
+          "Level": 1,
+          "Move": "Leer",
+          "Type": "Normal"
+        },
+        {
+          "Level": 4,
+          "Move": "Torment",
+          "Type": "Dark"
+        },
+        {
+          "Level": 8,
+          "Move": "Hone Claws",
+          "Type": "Dark"
+        },
+        {
+          "Level": 12,
           "Move": "Shadow Sneak",
           "Type": "Ghost"
         },
         {
-          "Level": 6,
-          "Move": "Snarl",
+          "Level": 16,
+          "Move": "Curse",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 20,
+          "Move": "Taunt",
           "Type": "Dark"
         },
         {
-          "Level": 11,
-          "Move": "Swift",
-          "Type": "Normal"
+          "Level": 24,
+          "Move": "Knock Off",
+          "Type": "Dark"
         },
         {
-          "Level": 18,
+          "Level": 28,
+          "Move": "Spite",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 32,
+          "Move": "Agility",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 36,
+          "Move": "Shadow Ball",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 40,
           "Move": "Bitter Malice",
           "Type": "Ghost"
         },
         {
-          "Level": 25,
-          "Move": "Slash",
-          "Type": "Normal"
-        },
-        {
-          "Level": 34,
-          "Move": "Shadow Claw",
-          "Type": "Ghost"
-        },
-        {
-          "Level": 43,
+          "Level": 44,
           "Move": "Nasty Plot",
+          "Type": "Dark"
+        },
+        {
+          "Level": 48,
+          "Move": "Foul Play",
           "Type": "Dark"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
-        "Aerial Ace",
+      "TM/Tutor Moves List": [
+        "Agility",
+        "Burning Jealousy",
         "Calm Mind",
+        "Comeuppance",
+        "Confuse Ray",
+        "Curse",
         "Dark Pulse",
+        "Detect",
+        "Dig",
+        "Endure",
+        "Extrasensory",
+        "Facade",
+        "Fake Tears",
+        "Fling",
+        "Focus Punch",
+        "Foul Play",
+        "Giga Impact",
+        "Hex",
+        "Hyper Beam",
+        "Icy Wind",
+        "Imprison",
+        "Knock Off",
+        "Lash Out",
+        "Memento",
+        "Nasty Plot",
+        "Night Shade",
+        "Pain Split",
+        "Phantom Force",
+        "Protect",
+        "Psych Up",
+        "Rain Dance",
         "Rest",
+        "Roar",
         "Shadow Ball",
+        "Shadow Claw",
+        "Skitter Smack",
+        "Sleep Talk",
         "Sludge Bomb",
         "Snarl",
-        "Swift"
+        "Snowscape",
+        "Spite",
+        "Substitute",
+        "Swift",
+        "Take Down",
+        "Taunt",
+        "Tera Blast",
+        "Thief",
+        "Trick",
+        "U-turn",
+        "Will-O-Wisp"
       ]
     }
   },
@@ -1764,29 +2474,39 @@
     "Moves": {
       "Level Up Move List": [
         {
-          "Level": 6,
-          "Move": "Snarl",
+          "Level": "Evo",
+          "Move": "Shadow Claw",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 12,
+          "Move": "Shadow Sneak",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 16,
+          "Move": "Curse",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 20,
+          "Move": "Taunt",
           "Type": "Dark"
         },
         {
-          "Level": 11,
-          "Move": "Swift",
-          "Type": "Normal"
+          "Level": 24,
+          "Move": "Knock Off",
+          "Type": "Dark"
         },
         {
-          "Level": 18,
-          "Move": "Bitter Malice",
+          "Level": 28,
+          "Move": "Spite",
           "Type": "Ghost"
-        },
-        {
-          "Level": 25,
-          "Move": "Slash",
-          "Type": "Normal"
         },
         {
           "Level": 34,
-          "Move": "Shadow Claw",
-          "Type": "Ghost"
+          "Move": "Agility",
+          "Type": "Psychic"
         },
         {
           "Level": 40,
@@ -1794,31 +2514,88 @@
           "Type": "Ghost"
         },
         {
-          "Level": 43,
+          "Level": 46,
+          "Move": "Bitter Malice",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 52,
           "Move": "Nasty Plot",
           "Type": "Dark"
         },
         {
-          "Level": 52,
-          "Move": "Extrasensory",
-          "Type": "Psychic"
+          "Level": 58,
+          "Move": "Foul Play",
+          "Type": "Dark"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
         "Aerial Ace",
+        "Agility",
+        "Body Slam",
+        "Brick Break",
+        "Burning Jealousy",
         "Calm Mind",
+        "Confuse Ray",
+        "Crunch",
+        "Curse",
         "Dark Pulse",
+        "Dig",
+        "Endure",
+        "Facade",
+        "Fake Tears",
         "Flamethrower",
+        "Fling",
+        "Focus Blast",
+        "Focus Punch",
+        "Foul Play",
         "Giga Impact",
+        "Grass Knot",
+        "Helping Hand",
+        "Hex",
+        "Hone Claws (N)",
         "Hyper Beam",
-        "Ominous Wind",
+        "Hyper Voice",
+        "Icy Wind",
+        "Imprison",
+        "Knock Off",
+        "Lash Out",
+        "Leer (N)",
+        "Low Kick",
+        "Low Sweep",
+        "Nasty Plot",
+        "Night Shade",
+        "Pain Split",
+        "Phantom Force",
+        "Poltergeist",
+        "Protect",
+        "Psych Up",
+        "Psychic",
+        "Rain Dance",
         "Rest",
+        "Roar",
+        "Scary Face",
+        "Scratch (N)",
         "Shadow Ball",
+        "Shadow Claw",
+        "Skitter Smack",
+        "Sleep Talk",
         "Sludge Bomb",
         "Snarl",
-        "Swift"
+        "Snowscape",
+        "Spite",
+        "Substitute",
+        "Swift",
+        "Swords Dance",
+        "Take Down",
+        "Taunt",
+        "Tera Blast",
+        "Thief",
+        "Throat Chop",
+        "Torment (N)",
+        "Trick",
+        "U-turn (N)",
+        "Will-O-Wisp"
       ]
     }
   },
@@ -1886,69 +2663,123 @@
     "Moves": {
       "Level Up Move List": [
         {
-          "Level": 6,
-          "Move": "Aerial Ace",
-          "Type": "Flying"
-        },
-        {
-          "Level": 11,
-          "Move": "Twister",
-          "Type": "Dragon"
-        },
-        {
-          "Level": 18,
-          "Move": "Slash",
-          "Type": "Normal"
-        },
-        {
-          "Level": 20,
-          "Move": "Air Slash",
-          "Type": "Flying"
-        },
-        {
-          "Level": 25,
+          "Level": "Evo",
           "Move": "Esper Wing",
           "Type": "Psychic"
         },
         {
-          "Level": 25,
-          "Move": "Roost",
+          "Level": 18,
+          "Move": "Tailwind",
           "Type": "Flying"
         },
         {
-          "Level": 34,
-          "Move": "Double -Edge",
+          "Level": 24,
+          "Move": "Scary Face",
           "Type": "Normal"
         },
         {
-          "Level": 43,
-          "Move": "Brave Bird",
+          "Level": 30,
+          "Move": "Aerial Ace",
           "Type": "Flying"
         },
         {
-          "Level": 52,
+          "Level": 36,
+          "Move": "Slash",
+          "Type": "Normal"
+        },
+        {
+          "Level": 42,
+          "Move": "Whirlwind",
+          "Type": "Normal"
+        },
+        {
+          "Level": 48,
+          "Move": "Crush Claw",
+          "Type": "Normal"
+        },
+        {
+          "Level": 57,
+          "Move": "Air Slash",
+          "Type": "Flying"
+        },
+        {
+          "Level": 64,
+          "Move": "Defog",
+          "Type": "Flying"
+        },
+        {
+          "Level": 72,
+          "Move": "Thrash",
+          "Type": "Normal"
+        },
+        {
+          "Level": 80,
           "Move": "Hurricane",
           "Type": "Flying"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
+        "Acrobatics",
         "Aerial Ace",
+        "Agility",
+        "Air Cutter",
+        "Air Slash",
+        "Body Slam",
+        "Brave Bird",
         "Bulk Up",
+        "Calm Mind",
+        "Close Combat",
+        "Confuse Ray",
         "Dazzling Gleam",
+        "Double-Edge",
+        "Dual Wingbeat",
+        "Endure",
+        "Expanding Force",
+        "Facade",
+        "Feather Dance",
+        "Fly",
+        "Future Sight",
         "Giga Impact",
+        "Heat Wave",
+        "Helping Hand",
+        "Hone Claws (N)",
+        "Hurricane",
         "Hyper Beam",
-        "Mystical Fire",
-        "Ominous Wind",
-        "Power Shift",
+        "Hyper Voice",
+        "Icy Wind",
+        "Leer (N)",
+        "Metal Claw",
+        "Night Shade",
+        "Peck (N)",
+        "Protect",
+        "Psybeam",
+        "Psych Up",
         "Psychic",
-        "Quick Attack (N)",
+        "Psychic Noise",
+        "Psychic Terrain",
+        "Psyshock",
+        "Rain Dance",
         "Rest",
+        "Reversal",
         "Rock Slide",
-        "Rock Smash",
+        "Rock Tomb",
+        "Scary Face",
         "Shadow Ball",
+        "Shadow Claw",
+        "Sky Attack (N)",
+        "Sleep Talk",
+        "Snarl",
+        "Stored Power",
+        "Substitute",
+        "Sunny Day",
+        "Superpower (N)",
         "Swift",
+        "Tailwind",
+        "Take Down",
+        "Tera Blast",
+        "U-turn",
+        "Vacuum Wave",
+        "Wing Attack (N)",
         "Zen Headbutt"
       ]
     }
@@ -2026,55 +2857,93 @@
     "Moves": {
       "Level Up Move List": [
         {
-          "Level": 6,
-          "Move": "Acid Spray",
-          "Type": "Poison"
+          "Level": "Evo",
+          "Move": "Shelter",
+          "Type": "Steel"
         },
         {
-          "Level": 11,
-          "Move": "Acid Armor",
-          "Type": "Poison"
+          "Level": 15,
+          "Move": "Protect",
+          "Type": "Normal"
         },
         {
-          "Level": 18,
+          "Level": 20,
+          "Move": "Flail",
+          "Type": "Normal"
+        },
+        {
+          "Level": 25,
           "Move": "Water Pulse",
           "Type": "Water"
         },
         {
-          "Level": 25,
-          "Move": "Iron Head",
-          "Type": "Steel"
+          "Level": 30,
+          "Move": "Rain Dance",
+          "Type": "Water"
         },
         {
-          "Level": 25,
+          "Level": 35,
           "Move": "Dragon Pulse",
           "Type": "Dragon"
         },
         {
-          "Level": 34,
-          "Move": "Shelter",
-          "Type": "Normal"
+          "Level": 43,
+          "Move": "Curse",
+          "Type": "Ghost"
         },
         {
-          "Level": 43,
-          "Move": "Hydro Pump",
+          "Level": 49,
+          "Move": "Iron Head",
+          "Type": "Steel"
+        },
+        {
+          "Level": 56,
+          "Move": "Muddy Water",
           "Type": "Water"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
-        "Bubble (N)",
+      "TM/Tutor Moves List": [
+        "Absorb (N)",
+        "Acid Armor (N)",
+        "Acid Spray",
+        "Blizzard",
+        "Body Slam",
+        "Charm",
+        "Chilling Water",
+        "Curse",
         "Draco Meteor",
+        "Dragon Breath (N)",
+        "Dragon Pulse",
+        "Endure",
+        "Facade",
+        "Flash Cannon",
+        "Gyro Ball",
+        "Heavy Slam",
         "Ice Beam",
+        "Ice Spinner",
         "Iron Head",
-        "Iron Tail",
+        "Mud Shot",
+        "Muddy Water",
         "Outrage",
+        "Protect",
+        "Rain Dance",
         "Rest",
         "Rock Slide",
+        "Rock Tomb",
+        "Sandstorm",
+        "Skitter Smack",
+        "Sleep Talk",
         "Sludge Bomb",
+        "Sludge Wave",
         "Steel Beam",
+        "Substitute",
+        "Sunny Day",
+        "Tackle (N)",
+        "Take Down",
+        "Tera Blast",
+        "Thunder",
         "Thunderbolt",
+        "Water Gun (N)",
         "Water Pulse"
       ]
     }
@@ -2149,63 +3018,126 @@
     "Moves": {
       "Level Up Move List": [
         {
-          "Level": 6,
-          "Move": "Acid Spray",
-          "Type": "Poison"
+          "Level": "Evo",
+          "Move": "Iron Tail",
+          "Type": "Steel"
         },
         {
-          "Level": 11,
-          "Move": "Acid Armor",
-          "Type": "Poison"
+          "Level": 15,
+          "Move": "Protect",
+          "Type": "Normal"
         },
         {
-          "Level": 18,
+          "Level": 20,
+          "Move": "Flail",
+          "Type": "Normal"
+        },
+        {
+          "Level": 25,
           "Move": "Water Pulse",
           "Type": "Water"
         },
         {
-          "Level": 25,
-          "Move": "Iron Head",
-          "Type": "Steel"
+          "Level": 30,
+          "Move": "Rain Dance",
+          "Type": "Water"
         },
         {
-          "Level": 25,
+          "Level": 35,
           "Move": "Dragon Pulse",
           "Type": "Dragon"
         },
         {
-          "Level": 34,
-          "Move": "Shelter",
+          "Level": 43,
+          "Move": "Curse",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 49,
+          "Move": "Body Slam",
           "Type": "Normal"
         },
         {
-          "Level": 43,
-          "Move": "Hydro Pump",
+          "Level": 49,
+          "Move": "Iron Head",
+          "Type": "Steel"
+        },
+        {
+          "Level": 58,
+          "Move": "Muddy Water",
           "Type": "Water"
+        },
+        {
+          "Level": 67,
+          "Move": "Heavy Slam",
+          "Type": "Steel"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
-        "Bubble (N)",
+      "TM/Tutor Moves List": [
+        "Absorb (N)",
+        "Acid Spray (N)",
+        "Blizzard",
+        "Body Press",
+        "Body Slam",
+        "Breaking Swipe",
         "Bulldoze",
+        "Charm",
+        "Chilling Water",
+        "Curse",
         "Draco Meteor",
+        "Dragon Breath (N)",
+        "Dragon Cheer",
+        "Dragon Claw",
+        "Dragon Pulse",
+        "Dragon Tail",
+        "Earthquake",
+        "Endure",
+        "Facade",
+        "Feint (N)",
+        "Fire Blast",
         "Fire Punch",
         "Flamethrower",
+        "Flash Cannon",
         "Giga Impact",
+        "Gyro Ball",
+        "Heavy Slam",
+        "Hydro Pump",
         "Hyper Beam",
         "Ice Beam",
+        "Ice Spinner",
         "Iron Head",
-        "Iron Tail",
+        "Knock Off",
+        "Lash Out",
+        "Mud Shot",
+        "Muddy Water",
         "Outrage",
+        "Protect",
+        "Rain Dance",
         "Rest",
         "Rock Slide",
-        "Rock Smash",
+        "Rock Tomb",
+        "Sandstorm",
+        "Scary Face",
+        "Shelter (N)",
+        "Skitter Smack",
+        "Sleep Talk",
         "Sludge Bomb",
+        "Sludge Wave",
         "Steel Beam",
-        "Thunderbolt",
+        "Stomping Tantrum",
+        "Substitute",
+        "Sunny Day",
+        "Surf",
+        "Tackle (N)",
+        "Take Down",
+        "Tearful Look (N)",
+        "Tera Blast",
+        "Thunder",
         "Thunder Punch",
-        "Water Pulse"
+        "Thunderbolt",
+        "Water Gun (N)",
+        "Water Pulse",
+        "Weather Ball"
       ]
     }
   },
@@ -2280,73 +3212,125 @@
           "Type": "Rock"
         },
         {
-          "Level": 5,
-          "Move": "Powder Snow",
-          "Type": "Ice"
+          "Level": 9,
+          "Move": "Curse",
+          "Type": "Ghost"
         },
         {
-          "Level": 9,
-          "Move": "Ice Shard",
+          "Level": 12,
+          "Move": "Icy Wind",
           "Type": "Ice"
         },
         {
           "Level": 15,
+          "Move": "Protect",
+          "Type": "Normal"
+        },
+        {
+          "Level": 18,
+          "Move": "Avalanche",
+          "Type": "Ice"
+        },
+        {
+          "Level": 21,
           "Move": "Bite",
           "Type": "Dark"
         },
         {
-          "Level": 21,
+          "Level": 24,
+          "Move": "Ice Fang",
+          "Type": "Ice"
+        },
+        {
+          "Level": 27,
           "Move": "Iron Defense",
           "Type": "Steel"
         },
         {
-          "Level": 29,
+          "Level": 30,
+          "Move": "Recover",
+          "Type": "Normal"
+        },
+        {
+          "Level": 33,
           "Move": "Crunch",
           "Type": "Dark"
         },
         {
-          "Level": 29,
-          "Move": "Earth Power",
-          "Type": "Ground"
+          "Level": 36,
+          "Move": "Take Down",
+          "Type": "Normal"
         },
         {
-          "Level": 37,
-          "Move": "Mountain Gale",
-          "Type": "Ice"
-        },
-        {
-          "Level": 37,
+          "Level": 41,
           "Move": "Blizzard",
           "Type": "Ice"
         },
         {
-          "Level": 47,
-          "Move": "Double -Edge",
+          "Level": 46,
+          "Move": "Double-Edge",
           "Type": "Normal"
+        },
+        {
+          "Level": 51,
+          "Move": "Stone Edge",
+          "Type": "Rock"
+        },
+        {
+          "Level": 61,
+          "Move": "Mountain Gale",
+          "Type": "Ice"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
+        "Avalanche",
+        "Blizzard",
+        "Body Press",
+        "Body Slam",
         "Bulldoze",
-        "Earth Power",
-        "Flash Cannon",
+        "Chilling Water",
+        "Crunch",
+        "Curse",
+        "Dig",
+        "Double-Edge",
+        "Earthquake",
+        "Endure",
+        "Facade",
         "Giga Impact",
+        "Gyro Ball",
+        "Hard Press",
+        "Harden (N)",
+        "Heavy Slam",
         "High Horsepower",
         "Hyper Beam",
-        "Ice Ball",
         "Ice Beam",
         "Ice Fang",
+        "Ice Spinner",
+        "Icicle Spear",
         "Icy Wind",
+        "Iron Defense",
         "Iron Head",
-        "Power Shift",
+        "Meteor Beam",
+        "Powder Snow (N)",
+        "Protect",
+        "Rain Dance",
+        "Rapid Spin (N)",
         "Rest",
+        "Rock Blast",
         "Rock Slide",
-        "Rock Smash",
+        "Rock Tomb",
+        "Sandstorm",
+        "Scary Face",
+        "Sleep Talk",
+        "Snowscape",
         "Stealth Rock",
+        "Stomping Tantrum",
         "Stone Edge",
+        "Substitute",
         "Tackle (N)",
-        "Water Pulse"
+        "Take Down",
+        "Tera Blast",
+        "Wide Guard (N)"
       ]
     }
   },
@@ -2355,9 +3339,9 @@
     "Number": 899,
     "Base Stats": {
       "HP": 10,
-      "Attack": 10,
+      "Attack": 11,
       "Defense": 7,
-      "Special Attack": 10,
+      "Special Attack": 11,
       "Special Defense": 8,
       "Speed": 7
     },
@@ -2414,28 +3398,53 @@
     "Moves": {
       "Level Up Move List": [
         {
-          "Level": 5,
-          "Move": "Confusion",
-          "Type": "Psychic"
-        },
-        {
-          "Level": 9,
-          "Move": "Hypnosis",
-          "Type": "Psychic"
-        },
-        {
-          "Level": 15,
-          "Move": "Calm Mind",
-          "Type": "Psychic"
-        },
-        {
-          "Level": 21,
+          "Level": "Evo",
           "Move": "Psyshield Bash",
           "Type": "Psychic"
         },
         {
-          "Level": 29,
-          "Move": "Extrasensory",
+          "Level": 3,
+          "Move": "Leer",
+          "Type": "Normal"
+        },
+        {
+          "Level": 7,
+          "Move": "Astonish",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 10,
+          "Move": "Hypnosis",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 13,
+          "Move": "Stomp",
+          "Type": "Normal"
+        },
+        {
+          "Level": 16,
+          "Move": "Sand Attack",
+          "Type": "Ground"
+        },
+        {
+          "Level": 21,
+          "Move": "Take Down",
+          "Type": "Normal"
+        },
+        {
+          "Level": 23,
+          "Move": "Confuse Ray",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 27,
+          "Move": "Calm Mind",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 32,
+          "Move": "Role Play",
           "Type": "Psychic"
         },
         {
@@ -2444,28 +3453,78 @@
           "Type": "Psychic"
         },
         {
-          "Level": 47,
-          "Move": "Double -Edge",
+          "Level": 49,
+          "Move": "Imprison",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 55,
+          "Move": "Double-Edge",
           "Type": "Normal"
+        },
+        {
+          "Level": 62,
+          "Move": "Megahorn",
+          "Type": "Bug"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
+        "Agility",
+        "Body Slam",
         "Bulldoze",
         "Calm Mind",
         "Charge Beam",
+        "Confuse Ray",
+        "Curse",
+        "Dig",
+        "Double-Edge",
+        "Earth Power",
+        "Earthquake",
+        "Endure",
         "Energy Ball",
+        "Expanding Force",
+        "Facade",
+        "Future Sight",
         "Giga Impact",
+        "Gravity",
+        "Helping Hand",
         "High Horsepower",
         "Hyper Beam",
-        "Iron Tail",
-        "Megahorn",
+        "Imprison",
+        "Light Screen",
+        "Lunge",
+        "Protect",
+        "Psybeam",
+        "Psych Up",
         "Psychic",
+        "Psychic Noise",
+        "Psyshock",
+        "Rain Dance",
+        "Reflect",
         "Rest",
+        "Roar",
+        "Scary Face",
         "Shadow Ball",
+        "Skill Swap",
+        "Sleep Talk",
+        "Solar Beam",
+        "Spite",
+        "Stored Power",
+        "Substitute",
+        "Sunny Day",
         "Swift",
+        "Tackle (N)",
+        "Take Down",
+        "Tera Blast",
+        "Thief",
+        "Throat Chop",
+        "Thunder",
+        "Thunder Wave",
         "Thunderbolt",
+        "Trailblaze",
+        "Trick",
+        "Trick Room",
+        "Uproar",
         "Wild Charge",
         "Zen Headbutt"
       ]
@@ -2534,68 +3593,115 @@
     "Moves": {
       "Level Up Move List": [
         {
-          "Level": 6,
-          "Move": "Silver Wind",
-          "Type": "Bug"
-        },
-        {
-          "Level": 11,
-          "Move": "Aerial Ace",
-          "Type": "Flying"
-        },
-        {
-          "Level": 14,
-          "Move": "Double Hit",
-          "Type": "Normal"
-        },
-        {
-          "Level": 14,
-          "Move": "Stealth Rock",
-          "Type": "Rock"
-        },
-        {
-          "Level": 18,
-          "Move": "Air Slash",
-          "Type": "Flying"
-        },
-        {
-          "Level": 25,
-          "Move": "Swords Dance",
-          "Type": "Normal"
-        },
-        {
-          "Level": 29,
+          "Level": "Evo",
           "Move": "Stone Axe",
           "Type": "Rock"
         },
         {
-          "Level": 34,
+          "Level": 4,
+          "Move": "Fury Cutter",
+          "Type": "Bug"
+        },
+        {
+          "Level": 8,
+          "Move": "False Swipe",
+          "Type": "Normal"
+        },
+        {
+          "Level": 12,
+          "Move": "Smack Down",
+          "Type": "Rock"
+        },
+        {
+          "Level": 16,
+          "Move": "Double Team",
+          "Type": "Normal"
+        },
+        {
+          "Level": 20,
+          "Move": "Double Hit",
+          "Type": "Normal"
+        },
+        {
+          "Level": 24,
+          "Move": "Slash",
+          "Type": "Normal"
+        },
+        {
+          "Level": 28,
+          "Move": "Focus Energy",
+          "Type": "Normal"
+        },
+        {
+          "Level": 32,
+          "Move": "Agility",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 36,
+          "Move": "Rock Slide",
+          "Type": "Rock"
+        },
+        {
+          "Level": 40,
           "Move": "X-Scissor",
           "Type": "Bug"
         },
         {
-          "Level": 43,
-          "Move": "Close Combat",
-          "Type": "Fighting"
+          "Level": 44,
+          "Move": "Swords Dance",
+          "Type": "Normal"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
+        "Acrobatics",
         "Aerial Ace",
-        "Calm Mind",
+        "Agility",
+        "Air Cutter",
+        "Air Slash",
+        "Baton Pass",
+        "Brick Break",
+        "Bug Bite",
+        "Bug Buzz",
+        "Close Combat",
+        "Double-Edge",
+        "Dual Wingbeat",
+        "Endure",
+        "Facade",
         "False Swipe",
-        "Focus Energy",
         "Giga Impact",
+        "Helping Hand",
         "Hyper Beam",
-        "Ominous Wind",
-        "Psycho Cut",
+        "Leer (N)",
+        "Light Screen",
+        "Lunge",
+        "Pounce",
+        "Protect",
+        "Quick Attack (N)",
         "Rest",
+        "Reversal",
+        "Rock Blast",
         "Rock Slide",
-        "Rock Smash",
+        "Rock Tomb",
+        "Sandstorm",
+        "Scary Face",
+        "Skitter Smack",
+        "Sleep Talk",
+        "Smack Down",
         "Stealth Rock",
         "Stone Edge",
+        "Struggle Bug",
+        "Substitute",
+        "Sunny Day",
         "Swift",
+        "Swords Dance",
+        "Tailwind",
+        "Take Down",
+        "Tera Blast",
+        "Thief",
+        "Trailblaze",
+        "U-turn",
+        "Vacuum Wave",
         "X-Scissor"
       ]
     }
@@ -2671,64 +3777,138 @@
     "Moves": {
       "Level Up Move List": [
         {
-          "Level": 6,
-          "Move": "Baby -Doll Eyes",
-          "Type": "Fairy"
-        },
-        {
-          "Level": 11,
-          "Move": "Bulldoze",
+          "Level": "Evo",
+          "Move": "Headlong Rush",
           "Type": "Ground"
         },
         {
-          "Level": 18,
+          "Level": 8,
+          "Move": "Fury Swipes",
+          "Type": "Normal"
+        },
+        {
+          "Level": 13,
+          "Move": "Payback",
+          "Type": "Dark"
+        },
+        {
+          "Level": 17,
+          "Move": "Sweet Scent",
+          "Type": "Normal"
+        },
+        {
+          "Level": 22,
           "Move": "Slash",
           "Type": "Normal"
         },
         {
           "Level": 25,
+          "Move": "Play Nice",
+          "Type": "Normal"
+        },
+        {
+          "Level": 29,
           "Move": "Play Rough",
           "Type": "Fairy"
         },
         {
-          "Level": 34,
+          "Level": 35,
+          "Move": "Scary Face",
+          "Type": "Normal"
+        },
+        {
+          "Level": 41,
+          "Move": "Rest",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 41,
+          "Move": "Snore",
+          "Type": "Normal"
+        },
+        {
+          "Level": 48,
           "Move": "High Horsepower",
           "Type": "Ground"
         },
         {
-          "Level": 43,
-          "Move": "Double -Edge",
+          "Level": 56,
+          "Move": "Thrash",
           "Type": "Normal"
         },
         {
-          "Level": 43,
-          "Move": "Headlong Rush",
-          "Type": "Ground"
+          "Level": 64,
+          "Move": "Hammer Arm",
+          "Type": "Fighting"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
         "Aerial Ace",
-        "Baby -Doll Eyes",
+        "Avalanche",
+        "Body Press",
+        "Body Slam",
+        "Brick Break",
         "Bulk Up",
         "Bulldoze",
+        "Charm",
+        "Close Combat",
+        "Covet (N)",
+        "Crunch",
+        "Curse",
+        "Dig",
+        "Double-Edge",
+        "Drain Punch",
         "Earth Power",
+        "Earthquake",
+        "Endure",
+        "Facade",
+        "Fake Tears (N)",
         "Fire Punch",
-        "Focus Energy",
+        "Fling",
+        "Focus Punch",
         "Giga Impact",
+        "Gunk Shot",
+        "Hard Press",
+        "Heavy Slam",
+        "Helping Hand",
         "High Horsepower",
         "Hyper Beam",
+        "Hyper Voice",
         "Ice Punch",
+        "Leer (N)",
+        "Lick (N)",
+        "Low Kick",
+        "Metal Claw",
+        "Metronome",
         "Play Rough",
+        "Protect",
+        "Rain Dance",
         "Rest",
+        "Roar",
         "Rock Slide",
-        "Rock Smash",
+        "Rock Tomb",
+        "Scary Face",
+        "Scratch (N)",
+        "Seed Bomb",
         "Shadow Claw",
+        "Sleep Talk",
+        "Smack Down",
+        "Stomping Tantrum",
         "Stone Edge",
+        "Substitute",
+        "Sunny Day",
+        "Supercell Slam",
         "Swift",
-        "Tackle (N)",
-        "Thunder Punch"
+        "Swords Dance",
+        "Take Down",
+        "Taunt",
+        "Tera Blast",
+        "Thief",
+        "Throat Chop",
+        "Thunder Punch",
+        "Trailblaze",
+        "Uproar",
+        "Vacuum Wave"
       ]
     }
   },
@@ -2801,63 +3981,121 @@
     "Moves": {
       "Level Up Move List": [
         {
-          "Level": 6,
+          "Level": 4,
+          "Move": "Tackle",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Flail",
+          "Type": "Normal"
+        },
+        {
+          "Level": 12,
           "Move": "Aqua Jet",
           "Type": "Water"
         },
         {
-          "Level": 11,
+          "Level": 16,
           "Move": "Bite",
           "Type": "Dark"
         },
         {
-          "Level": 11,
-          "Move": "Hex",
-          "Type": "Ghost"
+          "Level": 20,
+          "Move": "Scary Face",
+          "Type": "Normal"
         },
         {
-          "Level": 18,
-          "Move": "Zen Headbutt",
-          "Type": "Psychic"
+          "Level": 24,
+          "Move": "Headbutt",
+          "Type": "Normal"
         },
         {
-          "Level": 25,
+          "Level": 28,
+          "Move": "Soak",
+          "Type": "Water"
+        },
+        {
+          "Level": 32,
           "Move": "Crunch",
           "Type": "Dark"
         },
         {
-          "Level": 25,
-          "Move": "Shadow Ball",
-          "Type": "Ghost"
+          "Level": 36,
+          "Move": "Take Down",
+          "Type": "Normal"
         },
         {
-          "Level": 34,
+          "Level": 40,
+          "Move": "Uproar",
+          "Type": "Normal"
+        },
+        {
+          "Level": 44,
           "Move": "Wave Crash",
           "Type": "Water"
         },
         {
-          "Level": 43,
-          "Move": "Double -Edge",
+          "Level": 48,
+          "Move": "Thrash",
           "Type": "Normal"
+        },
+        {
+          "Level": 52,
+          "Move": "Double-Edge",
+          "Type": "Normal"
+        },
+        {
+          "Level": 56,
+          "Move": "Head Smash",
+          "Type": "Rock"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
-        "Aqua Tail",
-        "Calm Mind",
+      "TM/Tutor Moves List": [
+        "Agility",
+        "Blizzard",
+        "Chilling Water",
+        "Confuse Ray",
+        "Crunch",
+        "Double-Edge",
+        "Endeavor",
+        "Facade",
+        "Flip Turn",
         "Giga Impact",
+        "Hex",
+        "Hydro Pump",
         "Hyper Beam",
         "Ice Beam",
         "Ice Fang",
         "Icy Wind",
-        "Ominous Wind",
-        "Psychic",
+        "Last Respects",
+        "Liquidation",
+        "Mud Shot",
+        "Muddy Water",
+        "Night Shade",
+        "Outrage",
+        "Pain Split",
+        "Phantom Force (N)",
+        "Protect",
+        "Psychic Fangs",
+        "Rain Dance",
         "Rest",
-        "Shadow Ball",
-        "Swift",
+        "Scale Shot",
+        "Scary Face",
+        "Shadow Ball (N)",
+        "Sleep Talk",
+        "Snowscape",
+        "Spite",
+        "Substitute",
+        "Surf",
+        "Tail Whip (N)",
+        "Take Down",
+        "Tera Blast",
+        "Uproar",
+        "Water Gun (N)",
         "Water Pulse",
-        "Zen Headbutt"
+        "Waterfall",
+        "Whirlpool"
       ]
     },
     "Note": "Basculegion’s 2nd Advanced Ability depends on the colour of the Basculin it evolves from. In addition Basculin now has a White colouration that grants it  as its 2nd Advanced Ability in addition to the existing Red and Blue options."
@@ -2932,63 +4170,121 @@
     "Moves": {
       "Level Up Move List": [
         {
-          "Level": 6,
+          "Level": 4,
+          "Move": "Tackle",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Flail",
+          "Type": "Normal"
+        },
+        {
+          "Level": 12,
           "Move": "Aqua Jet",
           "Type": "Water"
         },
         {
-          "Level": 11,
+          "Level": 16,
           "Move": "Bite",
           "Type": "Dark"
         },
         {
-          "Level": 11,
-          "Move": "Hex",
-          "Type": "Ghost"
+          "Level": 20,
+          "Move": "Scary Face",
+          "Type": "Normal"
         },
         {
-          "Level": 18,
-          "Move": "Zen Headbutt",
-          "Type": "Psychic"
+          "Level": 24,
+          "Move": "Headbutt",
+          "Type": "Normal"
         },
         {
-          "Level": 25,
+          "Level": 28,
+          "Move": "Soak",
+          "Type": "Water"
+        },
+        {
+          "Level": 32,
           "Move": "Crunch",
           "Type": "Dark"
         },
         {
-          "Level": 25,
-          "Move": "Shadow Ball",
-          "Type": "Ghost"
+          "Level": 36,
+          "Move": "Take Down",
+          "Type": "Normal"
         },
         {
-          "Level": 34,
+          "Level": 40,
+          "Move": "Uproar",
+          "Type": "Normal"
+        },
+        {
+          "Level": 44,
           "Move": "Wave Crash",
           "Type": "Water"
         },
         {
-          "Level": 43,
-          "Move": "Double -Edge",
+          "Level": 48,
+          "Move": "Thrash",
           "Type": "Normal"
+        },
+        {
+          "Level": 52,
+          "Move": "Double-Edge",
+          "Type": "Normal"
+        },
+        {
+          "Level": 56,
+          "Move": "Head Smash",
+          "Type": "Rock"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
-        "Aqua Tail",
-        "Calm Mind",
+      "TM/Tutor Moves List": [
+        "Agility",
+        "Blizzard",
+        "Chilling Water",
+        "Confuse Ray",
+        "Crunch",
+        "Double-Edge",
+        "Endeavor",
+        "Facade",
+        "Flip Turn",
         "Giga Impact",
+        "Hex",
+        "Hydro Pump",
         "Hyper Beam",
         "Ice Beam",
         "Ice Fang",
         "Icy Wind",
-        "Ominous Wind",
-        "Psychic",
+        "Last Respects",
+        "Liquidation",
+        "Mud Shot",
+        "Muddy Water",
+        "Night Shade",
+        "Outrage",
+        "Pain Split",
+        "Phantom Force (N)",
+        "Protect",
+        "Psychic Fangs",
+        "Rain Dance",
         "Rest",
-        "Shadow Ball",
-        "Swift",
+        "Scale Shot",
+        "Scary Face",
+        "Shadow Ball (N)",
+        "Sleep Talk",
+        "Snowscape",
+        "Spite",
+        "Substitute",
+        "Surf",
+        "Tail Whip (N)",
+        "Take Down",
+        "Tera Blast",
+        "Uproar",
+        "Water Gun (N)",
         "Water Pulse",
-        "Zen Headbutt"
+        "Waterfall",
+        "Whirlpool"
       ]
     },
     "Note": "Basculegion’s 2nd Advanced Ability depends on the colour of the Basculin it evolves from. In addition Basculin now has a White colouration that grants it  as its 2nd Advanced Ability in addition to the existing Red and Blue options."
@@ -3056,135 +4352,124 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Dragon Breath",
-          "Type": "Dragon"
-        },
-        {
-          "Level": 1,
           "Move": "Scary Face",
           "Type": "Normal"
         },
         {
-          "Level": 6,
+          "Level": 1,
           "Move": "Metal Claw",
           "Type": "Steel"
         },
         {
-          "Level": 10,
+          "Level": 8,
+          "Move": "Dragon Breath",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 16,
           "Move": "Ancient Power",
           "Type": "Rock"
         },
         {
-          "Level": 15,
+          "Level": 24,
           "Move": "Slash",
           "Type": "Normal"
         },
         {
-          "Level": 19,
-          "Move": "Power Gem",
-          "Type": "Rock"
-        },
-        {
-          "Level": 24,
-          "Move": "Metal Burst",
-          "Type": "Steel"
-        },
-        {
-          "Level": 28,
-          "Move": "Dragon Claw",
-          "Type": "Dragon"
-        },
-        {
-          "Level": 33,
-          "Move": "Earth Power",
-          "Type": "Ground"
-        },
-        {
-          "Level": 42,
-          "Move": "Iron Tail",
-          "Type": "Steel"
-        },
-        {
-          "Level": 50,
+          "Level": 32,
           "Move": "Flash Cannon",
           "Type": "Steel"
         },
         {
-          "Level": 55,
-          "Move": "Heal Block",
-          "Type": "Psychic"
+          "Level": 40,
+          "Move": "Dragon Claw",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 48,
+          "Move": "Aura Sphere",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 56,
+          "Move": "Power Gem",
+          "Type": "Rock"
+        },
+        {
+          "Level": 64,
+          "Move": "Metal Burst",
+          "Type": "Steel"
+        },
+        {
+          "Level": 72,
+          "Move": "Earth Power",
+          "Type": "Ground"
+        },
+        {
+          "Level": 80,
+          "Move": "Iron Tail",
+          "Type": "Steel"
+        },
+        {
+          "Level": 88,
+          "Move": "Roar of Time",
+          "Type": "Dragon"
         }
       ],
-      "TM/HM Move List": [
-        "A1 Cut",
-        "A4 Strength",
-        "01 Hone Claws",
-        "02 Dragon Claw",
-        "05 Roar",
-        "06 Toxic",
-        "08 Bulk Up",
-        "10 Hidden Power",
-        "11 Sunny Day",
-        "13 Ice Beam",
-        "14 Blizzard",
-        "15 Hyper Beam",
-        "17 Protect",
-        "18 Rain Dance",
-        "20 Safeguard",
-        "21 Frustration",
-        "24 Thunderbolt",
-        "25 Thunder",
-        "26 Earthquake",
-        "27 Return",
-        "31 Brick Break",
-        "32 Double Team",
-        "35 Flamethrower",
-        "37 Sandstorm",
-        "38 Fire Blast",
-        "39 Rock Tomb",
-        "40 Aerial Ace",
-        "42 Facade",
-        "44 Rest",
-        "48 Round",
-        "49 Echoed Voice",
-        "50 Overheat",
-        "59 Incinerate",
-        "65 Shadow Claw",
-        "68 Giga Impact",
-        "70 Flash",
-        "71 Stone Edge",
-        "73 Thunder Wave",
-        "77 Psych Up",
-        "78 Bulldoze",
-        "80 Rock Slide",
-        "82 Dragon Tail",
-        "87 Swagger",
-        "88 Sleep Talk",
-        "90 Substitute",
-        "91 Flash Cannon",
-        "92 Trick Room",
-        "94 Rock Smash"
-      ],
-      "Egg Move List": [],
-      "Tutor Move List": [
-        "Ancient Power",
+      "TM/Tutor Moves List": [
+        "Aura Sphere",
+        "Blizzard",
+        "Body Press",
+        "Body Slam",
+        "Brick Break",
+        "Bulk Up",
+        "Bulldoze",
         "Draco Meteor",
+        "Dragon Claw",
         "Dragon Pulse",
+        "Dragon Tail",
         "Earth Power",
-        "Fury Cutter",
-        "Gravity",
+        "Earthquake",
+        "Endure",
+        "Facade",
+        "Fire Blast",
+        "Flamethrower",
+        "Flash Cannon",
+        "Focus Blast",
+        "Giga Impact",
+        "Heavy Slam",
+        "Hyper Beam",
         "Hyper Voice",
+        "Ice Beam",
         "Iron Defense",
         "Iron Head",
-        "Iron Tail",
-        "Magnet Rise",
-        "Mud -Slap",
+        "Metal Claw",
         "Outrage",
+        "Overheat",
+        "Power Gem",
+        "Protect",
+        "Rain Dance",
+        "Rest",
+        "Rock Slide",
+        "Rock Tomb",
+        "Sandstorm",
+        "Scary Face",
+        "Shadow Claw",
         "Sleep Talk",
-        "Snore",
         "Stealth Rock",
+        "Steel Beam",
+        "Stomping Tantrum",
+        "Stone Edge",
+        "Substitute",
+        "Sunny Day",
         "Swift",
-        "Twister"
+        "Take Down",
+        "Tera Blast",
+        "Thunder",
+        "Thunder Wave",
+        "Thunderbolt",
+        "Trick",
+        "Trick Room"
       ]
     },
     "Origin Forme": "Dialga is in its Origin Forme when exposed to an Adamant Crystal as an Ext ended Action. Exposing it in Origin Forme reverts it to its Altered Forme (found in the Main PokéDex)."
@@ -3253,134 +4538,123 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Dragon Breath",
-          "Type": "Dragon"
-        },
-        {
-          "Level": 1,
           "Move": "Scary Face",
           "Type": "Normal"
         },
         {
-          "Level": 6,
+          "Level": 1,
           "Move": "Water Pulse",
           "Type": "Water"
         },
         {
-          "Level": 10,
+          "Level": 8,
+          "Move": "Dragon Breath",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 16,
           "Move": "Ancient Power",
           "Type": "Rock"
         },
         {
-          "Level": 15,
+          "Level": 24,
           "Move": "Slash",
           "Type": "Normal"
         },
         {
-          "Level": 19,
-          "Move": "Power Gem",
-          "Type": "Rock"
-        },
-        {
-          "Level": 24,
+          "Level": 32,
           "Move": "Aqua Ring",
           "Type": "Water"
         },
         {
-          "Level": 28,
-          "Move": "Dragon Claw",
-          "Type": "Dragon"
+          "Level": 48,
+          "Move": "Aura Sphere",
+          "Type": "Fighting"
         },
         {
-          "Level": 33,
-          "Move": "Earth Power",
-          "Type": "Ground"
+          "Level": 56,
+          "Move": "Power Gem",
+          "Type": "Rock"
         },
         {
-          "Level": 42,
+          "Level": 64,
           "Move": "Aqua Tail",
           "Type": "Water"
         },
         {
-          "Level": 50,
-          "Move": "Hydro Pump",
-          "Type": "Water"
+          "Level": 72,
+          "Move": "Earth Power",
+          "Type": "Ground"
         },
         {
-          "Level": 55,
-          "Move": "Heal Block",
-          "Type": "Psychic"
+          "Level": 80,
+          "Move": "Spacial Rend",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 88,
+          "Move": "Hydro Pump",
+          "Type": "Water"
         }
       ],
-      "TM/HM Move List": [
-        "A1 Cut",
-        "A3 Surf",
-        "A4 Strength",
-        "A6 Dive",
-        "01 Hone Claws",
-        "02 Dragon Claw",
-        "05 Roar",
-        "06 Toxic",
-        "07 Hail",
-        "08 Bulk Up",
-        "10 Hidden Power",
-        "11 Sunny Day",
-        "13 Ice Beam",
-        "14 Blizzard",
-        "15 Hyper Beam",
-        "17 Protect",
-        "18 Rain Dance",
-        "20 Safeguard",
-        "21 Frustration",
-        "24 Thunderbolt",
-        "25 Thunder",
-        "26 Earthquake",
-        "27 Return",
-        "31 Brick Break",
-        "32 Double Team",
-        "35 Flamethrower",
-        "37 Sandstorm",
-        "38 Fire Blast",
-        "39 Rock Tomb",
-        "40 Aerial Ace",
-        "42 Facade",
-        "44 Rest",
-        "48 Round",
-        "49 Echoed Voice",
-        "52 Focus Blast",
-        "56 Fling",
-        "59 Incinerate",
-        "65 Shadow Claw",
-        "68 Giga Impact",
-        "71 Stone Edge",
-        "73 Thunder Wave",
-        "77 Psych Up",
-        "78 Bulldoze",
-        "80 Rock Slide",
-        "82 Dragon Tail",
-        "87 Swagger",
-        "88 S leep Talk",
-        "90 Substitute",
-        "92 Trick Room",
-        "94 Rock Smash"
-      ],
-      "Egg Move List": [],
-      "Tutor Move List": [
-        "Ancient Power",
-        "Aqua Tail",
-        "Dive",
+      "TM/Tutor Moves List": [
+        "Aerial Ace",
+        "Aura Sphere",
+        "Avalanche",
+        "Blizzard",
+        "Body Press",
+        "Body Slam",
+        "Brick Break",
+        "Bulk Up",
+        "Bulldoze",
+        "Chilling Water",
         "Draco Meteor",
+        "Dragon Claw",
         "Dragon Pulse",
+        "Dragon Tail",
         "Earth Power",
-        "Fury Cutter",
-        "Gravity",
+        "Earthquake",
+        "Endure",
+        "Facade",
+        "Fire Blast",
+        "Flamethrower",
+        "Fling",
+        "Focus Blast",
+        "Giga Impact",
+        "Heavy Slam",
+        "Hydro Pump",
+        "Hyper Beam",
         "Hyper Voice",
-        "Mud -Slap",
+        "Ice Beam",
+        "Icy Wind",
+        "Liquidation",
         "Outrage",
+        "Power Gem",
+        "Protect",
+        "Rain Dance",
+        "Rest",
+        "Rock Slide",
+        "Rock Tomb",
+        "Sandstorm",
+        "Scary Face",
+        "Shadow Claw",
         "Sleep Talk",
-        "Snore",
+        "Snowscape",
+        "Stomping Tantrum",
+        "Stone Edge",
+        "Substitute",
+        "Sunny Day",
+        "Surf",
         "Swift",
-        "Twister"
+        "Take Down",
+        "Tera Blast",
+        "Thunder",
+        "Thunder Wave",
+        "Thunderbolt",
+        "Trick",
+        "Trick Room",
+        "Water Pulse",
+        "Waterfall"
       ]
     },
     "Origin Forme": "Palkia is in its Origin Forme when exposed to a Lustrous Globe as an Extended Action. Exposing it in Origin Forme reverts it to its Altered Forme (found in the Main PokéDex)."
@@ -3446,53 +4720,130 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Tackle",
-          "Type": "Normal"
+          "Move": "Astonish",
+          "Type": "Ghost"
         },
         {
-          "Level": 7,
-          "Move": "Bite",
+          "Level": 1,
+          "Move": "Fairy Wind",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 5,
+          "Move": "Torment",
           "Type": "Dark"
         },
         {
-          "Level": 11,
+          "Level": 10,
+          "Move": "Flatter",
+          "Type": "Dark"
+        },
+        {
+          "Level": 15,
           "Move": "Twister",
           "Type": "Dragon"
         },
         {
-          "Level": 14,
+          "Level": 20,
           "Move": "Draining Kiss",
           "Type": "Fairy"
         },
         {
-          "Level": 22,
+          "Level": 25,
           "Move": "Iron Defense",
           "Type": "Steel"
         },
         {
-          "Level": 31,
+          "Level": 30,
+          "Move": "Imprison",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 35,
+          "Move": "Mystical Fire",
+          "Type": "Fire"
+        },
+        {
+          "Level": 40,
+          "Move": "Dazzling Gleam",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 45,
           "Move": "Extrasensory",
           "Type": "Psychic"
         },
         {
-          "Level": 41,
-          "Move": "Crunch",
-          "Type": "Dark"
+          "Level": 50,
+          "Move": "Uproar",
+          "Type": "Normal"
+        },
+        {
+          "Level": 55,
+          "Move": "Superpower",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 60,
+          "Move": "Healing Wish",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 65,
+          "Move": "Moonblast",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 70,
+          "Move": "Outrage",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 75,
+          "Move": "Springtide Storm",
+          "Type": "Fairy"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
+        "Agility",
+        "Alluring Voice",
+        "Body Slam",
         "Calm Mind",
         "Dazzling Gleam",
+        "Disarming Voice",
+        "Draining Kiss",
         "Earth Power",
+        "Endure",
+        "Facade",
+        "Fly",
+        "Focus Blast",
         "Giga Impact",
+        "Grass Knot",
+        "Grassy Terrain",
         "Hyper Beam",
-        "Mystical Fire",
-        "Power Shift",
+        "Imprison",
+        "Iron Defense",
+        "Iron Head",
+        "Misty Explosion",
+        "Misty Terrain",
+        "Outrage",
+        "Play Rough",
+        "Protect",
+        "Psych Up",
+        "Psychic",
+        "Rain Dance",
         "Rest",
-        "Rock Smash",
+        "Scary Face",
+        "Sleep Talk",
         "Sludge Bomb",
+        "Substitute",
+        "Sunny Day",
+        "Tailwind",
+        "Take Down",
+        "Taunt",
+        "Tera Blast",
+        "Uproar",
+        "Weather Ball",
         "Zen Headbutt"
       ]
     },
@@ -3560,53 +4911,130 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Tackle",
-          "Type": "Normal"
+          "Move": "Astonish",
+          "Type": "Ghost"
         },
         {
-          "Level": 7,
-          "Move": "Bite",
+          "Level": 1,
+          "Move": "Fairy Wind",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 5,
+          "Move": "Torment",
           "Type": "Dark"
         },
         {
-          "Level": 11,
+          "Level": 10,
+          "Move": "Flatter",
+          "Type": "Dark"
+        },
+        {
+          "Level": 15,
           "Move": "Twister",
           "Type": "Dragon"
         },
         {
-          "Level": 14,
+          "Level": 20,
           "Move": "Draining Kiss",
           "Type": "Fairy"
         },
         {
-          "Level": 22,
+          "Level": 25,
           "Move": "Iron Defense",
           "Type": "Steel"
         },
         {
-          "Level": 31,
+          "Level": 30,
+          "Move": "Imprison",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 35,
+          "Move": "Mystical Fire",
+          "Type": "Fire"
+        },
+        {
+          "Level": 40,
+          "Move": "Dazzling Gleam",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 45,
           "Move": "Extrasensory",
           "Type": "Psychic"
         },
         {
-          "Level": 41,
-          "Move": "Crunch",
-          "Type": "Dark"
+          "Level": 50,
+          "Move": "Uproar",
+          "Type": "Normal"
+        },
+        {
+          "Level": 55,
+          "Move": "Superpower",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 60,
+          "Move": "Healing Wish",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 65,
+          "Move": "Moonblast",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 70,
+          "Move": "Outrage",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 75,
+          "Move": "Springtide Storm",
+          "Type": "Fairy"
         }
       ],
-      "TM/HM Move List": [],
-      "Egg Move List": [],
-      "Tutor Move List": [
+      "TM/Tutor Moves List": [
+        "Agility",
+        "Alluring Voice",
+        "Body Slam",
         "Calm Mind",
         "Dazzling Gleam",
+        "Disarming Voice",
+        "Draining Kiss",
         "Earth Power",
+        "Endure",
+        "Facade",
+        "Fly",
+        "Focus Blast",
         "Giga Impact",
+        "Grass Knot",
+        "Grassy Terrain",
         "Hyper Beam",
-        "Mystical Fire",
-        "Power Shift",
+        "Imprison",
+        "Iron Defense",
+        "Iron Head",
+        "Misty Explosion",
+        "Misty Terrain",
+        "Outrage",
+        "Play Rough",
+        "Protect",
+        "Psych Up",
+        "Psychic",
+        "Rain Dance",
         "Rest",
-        "Rock Smash",
+        "Scary Face",
+        "Sleep Talk",
         "Sludge Bomb",
+        "Substitute",
+        "Sunny Day",
+        "Tailwind",
+        "Take Down",
+        "Taunt",
+        "Tera Blast",
+        "Uproar",
+        "Weather Ball",
         "Zen Headbutt"
       ]
     }
