@@ -2,18 +2,61 @@
   const CFG = {
     // NEW — libellés → URL (tu peux en ajouter/retirer)
     sources: {
-      "Core Updated (Gen 1-6)": "/ptu/data/pokedex/updated/pokedex_core.json",
-      // "Core (Gen 1-6)":      "/ptu/data/pokedex/pokedex_core.json",
-      "AlolaDex (Gen 7)": "/ptu/data/pokedex/pokedex_7g.json",
-      "GalarDex (Gen 8)": "/ptu/data/pokedex/pokedex_8g.json",
-      "HisuiDex (Gen 8.5)": "/ptu/data/pokedex/pokedex_8g_hisui.json",
-      "PaldeaDex (Gen 9, Homebrew)": "/ptu/data/pokedex/pokedex_9g.json",
+      "Core (Gen 1-6)": "/ptu/data/pokedex/core/pokedex_core.json",
+      "AlolaDex (Gen 7)": "/ptu/data/pokedex/core/pokedex_7g.json",
+      "GalarDex (Gen 8)": "/ptu/data/pokedex/core/pokedex_8g.json",
+      "HisuiDex (Gen 8.5)": "/ptu/data/pokedex/core/pokedex_8g_hisui.json",
     },
     // NEW — patterns d’icônes inchangés
     iconPatterns: [
       (base, num) => `${base}/${num}.png`
     ]
   };
+
+  // Où se trouvent les dossiers core/community/homebrew (relatif au HTML)
+  const DATASET_BASE = "/ptu/data/pokedex"; // ex: "./data" si tes dossiers sont dans /data
+
+  // Dossiers par preset
+  const PRESET_DIRS = {
+    Core: "core",
+    Community: "community",
+    Homebrew: "homebrew",
+  };
+
+  // Fichiers à charger par label (les libellés sont pour affichage / debug)
+  const FILES_BY_LABEL = {
+    "Core Updated (Gen 1-6)": "pokedex_core.json",
+    "AlolaDex (Gen 7)": "pokedex_7g.json",
+    "GalarDex (Gen 8)": "pokedex_8g.json",
+    "HisuiDex (Gen 8.5)": "pokedex_8g_hisui.json",
+    "PaldeaDex (Gen 9, Homebrew)": "pokedex_9g.json",
+  };
+
+  // Composition par preset (exclusif)
+  const PRESETS = {
+    Core: [
+      "Core (Gen 1-6)",
+      "AlolaDex (Gen 7)",
+      "GalarDex (Gen 8)",
+      "HisuiDex (Gen 8.5)",
+    ],
+    Community: [
+      "Core (Gen 1-6)",
+      "AlolaDex (Gen 7)",
+      "GalarDex (Gen 8)",
+      "HisuiDex (Gen 8.5)",
+      "PaldeaDex (Gen 9, Homebrew)",
+    ],
+    Homebrew: [
+      "Core Updated (Gen 1-6)",
+      "AlolaDex (Gen 7)",
+      "GalarDex (Gen 8)",
+      "HisuiDex (Gen 8.5)",
+      "PaldeaDex (Gen 9, Homebrew)",
+    ],
+  };
+
+  let selectedPreset = "Core";
 
   // NEW — état UI/cache
   const selectedSources = new Set(Object.keys(CFG.sources));   // par défaut: tout coché
@@ -62,72 +105,161 @@
   }
 
 
-  // Load JSON with graceful fallbacks
-  async function loadPokedex() {
-    const urls = [...selectedSources].map(lbl => CFG.sources[lbl]).filter(Boolean);
-    const arrays = await Promise.all(urls.map(fetchSource));
+  function urlsForPreset(presetName) {
+    const dir = PRESET_DIRS[presetName];
+    const labels = PRESETS[presetName] || [];
+    return labels.map(lbl => ({
+      label: lbl,
+      url: `${DATASET_BASE}${DATASET_BASE.endsWith("/") ? "" : "/"}${dir}/${FILES_BY_LABEL[lbl]}`
+    }));
+  }
 
-    const merged = arrays.flat();
-    const byKey = new Map();
-    for (const p of merged) {
-      const key = `${p.Number ?? ''}::${String(p.Species ?? '').toLowerCase()}`;
-      byKey.set(key, { ...(byKey.get(key) || {}), ...p });
+  const _fetchCache = new Map();
+  async function fetchJsonCached(url) {
+    if (_fetchCache.has(url)) return _fetchCache.get(url);
+    const p = fetch(url, { cache: "no-store" }).then(r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status} for ${url}`);
+      return r.json();
+    });
+    _fetchCache.set(url, p);
+    return p;
+  }
+
+  // Remplace ton loadPokedex existant par celui-ci si besoin
+  async function loadPokedex() {
+    const sources = urlsForPreset(selectedPreset);
+    if (!sources.length) throw new Error(`No sources for preset ${selectedPreset}`);
+
+    // charge tout en parallèle; ignore les 404 pour les fichiers absents (ex. 9g en Core)
+    const results = await Promise.all(
+      sources.map(async s => {
+        try {
+          const data = await fetchJsonCached(s.url);
+          return Array.isArray(data) ? data : Object.values(data); // support liste ou dict {Species: obj}
+        } catch (e) {
+          console.warn(`[loadPokedex] skip ${s.url}: ${e.message}`);
+          return [];
+        }
+      })
+    );
+
+    // fusion simple: concat + dédoublonnage par (Number, Species) si besoin
+    const merged = [];
+    const seen = new Set();
+    for (const arr of results) {
+      for (const row of arr) {
+        const num = row.Number ?? row.number ?? "";
+        const sp = row.Species ?? row.species ?? "";
+        const key = `${num}::${sp}`; // si tu préfères seulement Species, remplace la clé
+        if (!seen.has(key)) {
+          seen.add(key);
+          merged.push(row);
+        } else {
+          // si tu veux une fusion plus intelligente, c’est ici (merge deep)
+        }
+      }
     }
-    const out = Array.from(byKey.values());
-    if (!out.length) throw new Error("Aucune entrée trouvée pour les sources sélectionnées.");
-    return out;
+    return merged;
   }
 
 
-  // NEW — bloc “Sources” au-dessus des filtres (même esprit que Edges)
+
+  function buildReadmeModalIfMissing() {
+    if (document.getElementById("readmeModal")) return;
+    const el = document.createElement("div");
+    el.className = "modal fade";
+    el.id = "readmeModal";
+    el.tabIndex = -1;
+    el.setAttribute("aria-hidden", "true");
+    el.innerHTML = `
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Datasets — Readme</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Core</strong> → pokedex_core, pokedex_7g, pokedex_8g, pokedex_8g_hisui</p>
+        <p><strong>Community</strong> → Core + pokedex_9g</p>
+        <p><strong>Homebrew</strong> → idem Community</p>
+        <hr/>
+        <p>Les presets sont exclusifs : sélectionner un preset remplace entièrement les sources chargées.</p>
+        <p>Les fichiers sont chargés depuis le dossier du preset (<code>/core</code>, <code>/community</code>, <code>/homebrew</code>), selon cette page.</p>
+        <p>Astuce: ajuste <code>DATASET_BASE</code> si tes dossiers ne sont pas à la racine.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>`;
+    document.body.appendChild(el);
+  }
+
   function buildSourceMenu(onChange) {
     const sb = document.getElementById('sidebar');
     if (!sb) return;
-    // Conteneur dédié (on le régénère, puis on laissera buildTypeSidebar ajouter ses filtres en dessous)
-    const wrap = document.createElement('div');
-    wrap.className = 'mb-3';
-    wrap.innerHTML = `<label class="form-label">Sources :</label>`;
-    Object.keys(CFG.sources).forEach(label => {
-      const id = `src-${label}`;
-      const checked = selectedSources.has(label) ? 'checked' : '';
-      wrap.insertAdjacentHTML('beforeend', `
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="${id}" ${checked}>
-          <label class="form-check-label" for="${id}">${label}</label>
-        </div>`);
-    });
+    buildReadmeModalIfMissing();
 
-    // Si un bloc “sources” existe déjà, remplace-le ; sinon, insère en haut
+    const wrap = document.createElement('div');
+    wrap.className = 'mb-3 d-flex flex-column gap-2';
+    wrap.setAttribute('data-role', 'source-menu');
+    wrap.innerHTML = `
+    <div class="d-flex align-items-center justify-content-between">
+      <label class="form-label mb-0">Dataset</label>
+      <button type="button" class="btn btn-sm btn-outline-secondary" id="btn-readme">Readme</button>
+    </div>
+    <div class="btn-group w-100" role="group" aria-label="Dataset presets">
+      <input type="radio" class="btn-check" name="preset" id="preset-core" ${selectedPreset === 'Core' ? 'checked' : ''}>
+      <label class="btn btn-outline-primary" for="preset-core">Core</label>
+
+      <input type="radio" class="btn-check" name="preset" id="preset-community" ${selectedPreset === 'Community' ? 'checked' : ''}>
+      <label class="btn btn-outline-primary" for="preset-community">Community</label>
+
+      <input type="radio" class="btn-check" name="preset" id="preset-homebrew" ${selectedPreset === 'Homebrew' ? 'checked' : ''}>
+      <label class="btn btn-outline-primary" for="preset-homebrew">Homebrew</label>
+    </div>
+  `;
+
     const existing = sb.querySelector('[data-role="source-menu"]');
     if (existing) existing.remove();
-    wrap.setAttribute('data-role', 'source-menu');
     sb.prepend(wrap);
 
-    wrap.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-      cb.addEventListener('change', async () => {
-        // maj état
-        selectedSources.clear();
-        wrap.querySelectorAll('input:checked').forEach(x => {
-          const lbl = x.nextElementSibling?.innerText?.trim();
-          if (lbl) selectedSources.add(lbl);
-        });
+    wrap.querySelector('#btn-readme')?.addEventListener('click', () => {
+      bootstrap.Modal.getOrCreateInstance(document.getElementById('readmeModal')).show();
+    });
 
-        // recharge les données puis reconstruit filtres + grid
-        try {
-          const data = await loadPokedex();
-          window.__POKEDEX = data;
-          // reconstruit les filtres de types en dessous (en gardant layout)
-          buildTypeSidebar(data, () => renderGrid(filterRows(data)));
-          renderGrid(filterRows(data));
-        } catch (e) {
-          console.error(e);
-          document.getElementById('dex-grid').innerHTML =
-            `<div class="alert alert-warning">Aucune donnée pour les sources sélectionnées.</div>`;
-        }
-        if (typeof onChange === 'function') onChange();
-      });
+    const reload = async () => {
+      try {
+        const data = await loadPokedex();
+        window.__POKEDEX = data;
+        // reconstruit les filtres/affichage selon ta logique existante :
+        buildTypeSidebar(data, () => renderGrid(filterRows(data)));
+        renderGrid(filterRows(data));
+      } catch (e) {
+        console.error(e);
+        document.getElementById('dex-grid').innerHTML =
+          `<div class="alert alert-warning">Aucune donnée pour le preset « ${selectedPreset} ».</div>`;
+      }
+      onChange?.();
+    };
+
+    wrap.querySelector('#preset-core')?.addEventListener('change', (ev) => {
+      if (!ev.target.checked) return;
+      selectedPreset = 'Core';
+      reload();
+    });
+    wrap.querySelector('#preset-community')?.addEventListener('change', (ev) => {
+      if (!ev.target.checked) return;
+      selectedPreset = 'Community';
+      reload();
+    });
+    wrap.querySelector('#preset-homebrew')?.addEventListener('change', (ev) => {
+      if (!ev.target.checked) return;
+      selectedPreset = 'Homebrew';
+      reload();
     });
   }
+
 
   // Cherche un Pokémon par son nom complet et ouvre la modale
   async function openModalBySpecies(speciesName) {
