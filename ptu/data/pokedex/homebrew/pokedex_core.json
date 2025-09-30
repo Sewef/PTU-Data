@@ -4118,6 +4118,31 @@
           "Type": "Electric"
         },
         {
+          "Level": 4,
+          "Move": "Thunder Wave",
+          "Type": "Electric"
+        },
+        {
+          "Level": 5,
+          "Move": "Thunderbolt",
+          "Type": "Electric"
+        },
+        {
+          "Level": 8,
+          "Move": "Double Team",
+          "Type": "Normal"
+        },
+        {
+          "Level": 12,
+          "Move": "Electro Ball",
+          "Type": "Electric"
+        },
+        {
+          "Level": 16,
+          "Move": "Feint",
+          "Type": "Normal"
+        },
+        {
           "Level": 20,
           "Move": "Spark",
           "Type": "Electric"
@@ -4162,17 +4187,14 @@
         "Charm (N)",
         "Dig",
         "Disarming Voice",
-        "Double Team (N)",
         "Draining Kiss",
         "Eerie Impulse",
         "Electric Terrain",
-        "Electro Ball (N)",
         "Electroweb",
         "Encore",
         "Endeavor",
         "Endure",
         "Facade",
-        "Feint (N)",
         "Fling",
         "Focus Blast",
         "Focus Punch",
@@ -4202,7 +4224,6 @@
         "Tera Blast",
         "Thief",
         "Thunder Shock (N)",
-        "Thunder Wave (N)",
         "Trailblaze",
         "Upper Hand",
         "Volt Switch",
@@ -4997,6 +5018,16 @@
           "Type": "Fighting"
         },
         {
+          "Level": 15,
+          "Move": "Fury Swipes",
+          "Type": "Normal"
+        },
+        {
+          "Level": 22,
+          "Move": "Toxic Spikes",
+          "Type": "Poison"
+        },
+        {
           "Level": 29,
           "Move": "Double Kick",
           "Type": "Fighting"
@@ -5054,7 +5085,6 @@
         "Fling",
         "Focus Blast",
         "Focus Energy",
-        "Fury Swipes (N)",
         "Giga Impact",
         "Growl (N)",
         "Hex",
@@ -5101,7 +5131,6 @@
         "Thunder",
         "Thunder Punch",
         "Thunderbolt",
-        "Toxic Spikes (N)",
         "Uproar",
         "Venom Drench",
         "Venoshock",
@@ -5511,6 +5540,16 @@
           "Type": "Bug"
         },
         {
+          "Level": 15,
+          "Move": "Fury Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 22,
+          "Move": "Toxic Spikes",
+          "Type": "Poison"
+        },
+        {
           "Level": 29,
           "Move": "Double Kick",
           "Type": "Fighting"
@@ -5568,7 +5607,6 @@
         "Fling",
         "Focus Blast",
         "Focus Energy (N)",
-        "Fury Attack (N)",
         "Giga Impact",
         "Hex",
         "High Horsepower",
@@ -5615,7 +5653,6 @@
         "Thunder",
         "Thunder Punch",
         "Thunderbolt",
-        "Toxic Spikes (N)",
         "Uproar",
         "Venom Drench",
         "Venoshock",
@@ -5901,6 +5938,36 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 4,
+          "Move": "Stored Power",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 8,
+          "Move": "Encore",
+          "Type": "Normal"
+        },
+        {
+          "Level": 12,
+          "Move": "After You",
+          "Type": "Normal"
+        },
+        {
+          "Level": 16,
+          "Move": "Life Dew",
+          "Type": "Water"
+        },
+        {
+          "Level": 20,
+          "Move": "Metronome",
+          "Type": "Normal"
+        },
+        {
+          "Level": 24,
+          "Move": "Moonlight",
+          "Type": "Fairy"
+        },
+        {
           "Level": 28,
           "Move": "Gravity",
           "Type": "Psychic"
@@ -5932,7 +5999,6 @@
         }
       ],
       "TM/Tutor Moves List": [
-        "After You (N)",
         "Alluring Voice",
         "Amnesia",
         "Baton Pass",
@@ -5952,7 +6018,6 @@
         "Drain Punch",
         "Draining Kiss",
         "Dual Wingbeat",
-        "Encore (N)",
         "Endeavor",
         "Endure",
         "Facade",
@@ -5976,14 +6041,11 @@
         "Icy Wind",
         "Imprison",
         "Knock Off",
-        "Life Dew (N)",
         "Light Screen",
         "Magical Leaf",
         "Meteor Beam",
-        "Metronome (N)",
         "Misty Explosion",
         "Misty Terrain",
-        "Moonlight (N)",
         "Night Shade",
         "Play Rough",
         "Pound",
@@ -6003,7 +6065,6 @@
         "Solar Beam",
         "Splash",
         "Stealth Rock",
-        "Stored Power (N)",
         "Substitute",
         "Sunny Day",
         "Sweet Kiss",
@@ -6267,6 +6328,26 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 4,
+          "Move": "Disable",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Quick Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 12,
+          "Move": "Spite",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 16,
+          "Move": "Incinerate",
+          "Type": "Fire"
+        },
+        {
           "Level": 20,
           "Move": "Confuse Ray",
           "Type": "Ghost"
@@ -6322,7 +6403,6 @@
         "Charm",
         "Dark Pulse",
         "Dig",
-        "Disable (N)",
         "Double-Edge",
         "Ember (N)",
         "Encore",
@@ -6342,7 +6422,6 @@
         "Howl",
         "Hyper Beam",
         "Hypnosis",
-        "Incinerate (N)",
         "Memento",
         "Nasty Plot",
         "Night Shade",
@@ -6351,7 +6430,6 @@
         "Protect",
         "Psych Up",
         "Psyshock",
-        "Quick Attack (N)",
         "Rest",
         "Roar",
         "Scorching Sands",
@@ -6359,7 +6437,6 @@
         "Sleep Talk",
         "Snarl",
         "Solar Beam",
-        "Spite (N)",
         "Stored Power",
         "Substitute",
         "Sunny Day",
@@ -6654,6 +6731,41 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 4,
+          "Move": "Echoed Voice",
+          "Type": "Normal"
+        },
+        {
+          "Level": 5,
+          "Move": "Play Rough",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 8,
+          "Move": "Covet",
+          "Type": "Normal"
+        },
+        {
+          "Level": 12,
+          "Move": "Stockpile",
+          "Type": "Normal"
+        },
+        {
+          "Level": 12,
+          "Move": "Spit Up",
+          "Type": "Normal"
+        },
+        {
+          "Level": 12,
+          "Move": "Swallow",
+          "Type": "Normal"
+        },
+        {
+          "Level": 16,
+          "Move": "Round",
+          "Type": "Normal"
+        },
+        {
           "Level": 20,
           "Move": "Rest",
           "Type": "Psychic"
@@ -6695,7 +6807,6 @@
         "Charm (N)",
         "Chilling Water",
         "Copycat (N)",
-        "Covet (N)",
         "Dark Pulse",
         "Dazzling Gleam",
         "Defense Curl (N)",
@@ -6704,7 +6815,6 @@
         "Disarming Voice (N)",
         "Drain Punch",
         "Draining Kiss",
-        "Echoed Voice (N)",
         "Encore",
         "Endeavor",
         "Endure",
@@ -6735,7 +6845,6 @@
         "Misty Terrain",
         "Nasty Plot",
         "Pain Split",
-        "Play Rough (N)",
         "Pound (N)",
         "Protect",
         "Psych Up",
@@ -6744,20 +6853,16 @@
         "Psyshock",
         "Rain Dance",
         "Reflect",
-        "Round (N)",
         "Sandstorm",
         "Shadow Ball",
         "Sing (N)",
         "Skill Swap",
         "Sleep Talk",
         "Solar Beam",
-        "Spit Up (N)",
         "Stealth Rock",
-        "Stockpile (N)",
         "Stored Power",
         "Substitute",
         "Sunny Day",
-        "Swallow (N)",
         "Sweet Kiss (N)",
         "Swift",
         "Take Down",
@@ -7535,6 +7640,36 @@
           "Type": "Grass"
         },
         {
+          "Level": 12,
+          "Move": "Mega Drain",
+          "Type": "Grass"
+        },
+        {
+          "Level": 14,
+          "Move": "Poison Powder",
+          "Type": "Poison"
+        },
+        {
+          "Level": 16,
+          "Move": "Stun Spore",
+          "Type": "Grass"
+        },
+        {
+          "Level": 18,
+          "Move": "Sleep Powder",
+          "Type": "Grass"
+        },
+        {
+          "Level": 20,
+          "Move": "Giga Drain",
+          "Type": "Grass"
+        },
+        {
+          "Level": 26,
+          "Move": "Toxic",
+          "Type": "Poison"
+        },
+        {
           "Level": 32,
           "Move": "Moonblast",
           "Type": "Fairy"
@@ -7569,7 +7704,6 @@
         "Facade",
         "Flail",
         "Fling",
-        "Giga Drain (N)",
         "Giga Impact",
         "Grass Knot",
         "Grassy Glide",
@@ -7580,21 +7714,17 @@
         "Leaf Storm",
         "Leech Seed",
         "Magical Leaf",
-        "Mega Drain (N)",
-        "Poison Powder (N)",
         "Pollen Puff",
         "Protect",
         "Razor Leaf",
         "Rest",
         "Seed Bomb",
-        "Sleep Powder (N)",
         "Sleep Talk",
         "Sludge Bomb",
         "Sludge Wave",
         "Solar Beam",
         "Solar Blade",
         "Strength Sap",
-        "Stun Spore (N)",
         "Substitute",
         "Sunny Day",
         "Sweet Scent (N)",
@@ -7603,7 +7733,6 @@
         "Teeter Dance",
         "Tera Blast",
         "Tickle",
-        "Toxic (N)",
         "Trailblaze",
         "Venoshock",
         "Weather Ball"
@@ -9958,6 +10087,31 @@
           "Type": "Normal"
         },
         {
+          "Level": 4,
+          "Move": "Howl",
+          "Type": "Normal"
+        },
+        {
+          "Level": 5,
+          "Move": "Flamethrower",
+          "Type": "Fire"
+        },
+        {
+          "Level": 8,
+          "Move": "Bite",
+          "Type": "Dark"
+        },
+        {
+          "Level": 12,
+          "Move": "Flame Wheel",
+          "Type": "Fire"
+        },
+        {
+          "Level": 16,
+          "Move": "Helping Hand",
+          "Type": "Normal"
+        },
+        {
           "Level": 20,
           "Move": "Agility",
           "Type": "Psychic"
@@ -10010,7 +10164,6 @@
       ],
       "TM/Tutor Moves List": [
         "Aerial Ace",
-        "Bite (N)",
         "Body Slam",
         "Bulldoze",
         "Charm",
@@ -10025,12 +10178,9 @@
         "Fire Blast",
         "Fire Spin",
         "Flame Charge",
-        "Flame Wheel (N)",
         "Giga Impact",
         "Heat Crash",
         "Heat Wave",
-        "Helping Hand (N)",
-        "Howl (N)",
         "Hyper Beam",
         "Hyper Voice",
         "Iron Head",
@@ -10461,6 +10611,16 @@
           "Type": "Fighting"
         },
         {
+          "Level": 18,
+          "Move": "Bubble Beam",
+          "Type": "Water"
+        },
+        {
+          "Level": 24,
+          "Move": "Rain Dance",
+          "Type": "Water"
+        },
+        {
           "Level": 32,
           "Move": "Body Slam",
           "Type": "Normal"
@@ -10491,7 +10651,6 @@
         "Baton Pass",
         "Blizzard",
         "Brick Break",
-        "Bubble Beam (N)",
         "Bulk Up",
         "Bulldoze",
         "Chilling Water",
@@ -10531,7 +10690,6 @@
         "Protect",
         "Psych Up",
         "Psychic",
-        "Rain Dance (N)",
         "Rest",
         "Reversal",
         "Rock Slide",
@@ -12037,6 +12195,31 @@
           "Type": "Grass"
         },
         {
+          "Level": 13,
+          "Move": "Sleep Powder",
+          "Type": "Grass"
+        },
+        {
+          "Level": 15,
+          "Move": "Poison Powder",
+          "Type": "Poison"
+        },
+        {
+          "Level": 17,
+          "Move": "Stun Spore",
+          "Type": "Grass"
+        },
+        {
+          "Level": 24,
+          "Move": "Acid",
+          "Type": "Poison"
+        },
+        {
+          "Level": 29,
+          "Move": "Knock Off",
+          "Type": "Dark"
+        },
+        {
           "Level": 32,
           "Move": "Sweet Scent",
           "Type": "Normal"
@@ -12073,7 +12256,6 @@
         }
       ],
       "TM/Tutor Moves List": [
-        "Acid (N)",
         "Acid Spray",
         "Body Slam",
         "Bug Bite",
@@ -12090,18 +12272,15 @@
         "Grassy Terrain",
         "Hyper Beam",
         "Ingrain",
-        "Knock Off (N)",
         "Leech Life",
         "Lunge",
         "Magical Leaf",
-        "Poison Powder (N)",
         "Pounce",
         "Protect",
         "Reflect",
         "Rest",
         "Scary Face",
         "Seed Bomb",
-        "Sleep Powder (N)",
         "Sleep Talk",
         "Sludge Bomb",
         "Sludge Wave",
@@ -12109,7 +12288,6 @@
         "Spit Up",
         "Stockpile",
         "Strength Sap",
-        "Stun Spore (N)",
         "Substitute",
         "Sucker Punch",
         "Sunny Day",
@@ -15606,6 +15784,31 @@
           "Type": "Ice"
         },
         {
+          "Level": 4,
+          "Move": "Withdraw",
+          "Type": "Water"
+        },
+        {
+          "Level": 5,
+          "Move": "Razor Shell",
+          "Type": "Water"
+        },
+        {
+          "Level": 8,
+          "Move": "Ice Shard",
+          "Type": "Ice"
+        },
+        {
+          "Level": 12,
+          "Move": "Leer",
+          "Type": "Normal"
+        },
+        {
+          "Level": 16,
+          "Move": "Whirlpool",
+          "Type": "Water"
+        },
+        {
           "Level": 20,
           "Move": "Supersonic",
           "Type": "Normal"
@@ -15657,11 +15860,9 @@
         "Giga Impact",
         "Helping Hand",
         "Hyper Beam",
-        "Ice Shard (N)",
         "Ice Spinner",
         "Icicle Crash (N)",
         "Icy Wind",
-        "Leer (N)",
         "Light Screen",
         "Liquidation",
         "Mud Shot",
@@ -15684,9 +15885,7 @@
         "Water Gun (N)",
         "Water Pulse",
         "Waterfall",
-        "Weather Ball",
-        "Whirlpool (N)",
-        "Withdraw (N)"
+        "Weather Ball"
       ]
     }
   },
@@ -17764,6 +17963,21 @@
           "Type": "Normal"
         },
         {
+          "Level": 5,
+          "Move": "Reflect",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 10,
+          "Move": "Leech Seed",
+          "Type": "Grass"
+        },
+        {
+          "Level": 15,
+          "Move": "Mega Drain",
+          "Type": "Grass"
+        },
+        {
           "Level": 20,
           "Move": "Confusion",
           "Type": "Psychic"
@@ -17827,11 +18041,9 @@
         "Hypnosis (N)",
         "Imprison",
         "Leaf Storm (N)",
-        "Leech Seed (N)",
         "Light Screen",
         "Low Kick",
         "Magical Leaf",
-        "Mega Drain (N)",
         "Protect",
         "Psybeam",
         "Psych Up",
@@ -17839,7 +18051,6 @@
         "Psychic Noise",
         "Psychic Terrain",
         "Psyshock (N)",
-        "Reflect (N)",
         "Rest",
         "Seed Bomb (N)",
         "Skill Swap",
@@ -19565,6 +19776,16 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 4,
+          "Move": "Tail Whip",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Echoed Voice",
+          "Type": "Normal"
+        },
+        {
           "Level": 12,
           "Move": "Life Dew",
           "Type": "Water"
@@ -19635,7 +19856,6 @@
         "Disarming Voice (N)",
         "Drain Punch",
         "Earthquake",
-        "Echoed Voice (N)",
         "Electric Terrain",
         "Endeavor",
         "Endure",
@@ -19676,7 +19896,6 @@
         "Sunny Day",
         "Sweet Kiss (N)",
         "Swift",
-        "Tail Whip (N)",
         "Tera Blast",
         "Thief",
         "Thunder",
@@ -20943,6 +21162,26 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 4,
+          "Move": "Water Gun",
+          "Type": "Water"
+        },
+        {
+          "Level": 8,
+          "Move": "Confuse Ray",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 12,
+          "Move": "Rapid Spin",
+          "Type": "Normal"
+        },
+        {
+          "Level": 16,
+          "Move": "Minimize",
+          "Type": "Normal"
+        },
+        {
           "Level": 20,
           "Move": "Swift",
           "Type": "Normal"
@@ -20998,7 +21237,6 @@
         "Ally Switch",
         "Avalanche",
         "Blizzard",
-        "Confuse Ray (N)",
         "Dazzling Gleam",
         "Dive",
         "Endure",
@@ -21015,12 +21253,10 @@
         "Ice Beam",
         "Icy Wind",
         "Meteor Beam",
-        "Minimize (N)",
         "Protect",
         "Psycho Cut",
         "Psyshock",
         "Rain Dance",
-        "Rapid Spin (N)",
         "Reflect",
         "Rest",
         "Round",
@@ -21036,7 +21272,6 @@
         "Tri Attack",
         "Trick",
         "Trick Room",
-        "Water Gun (N)",
         "Waterfall",
         "Whirlpool",
         "Wonder Room"
@@ -23129,6 +23364,21 @@
           "Type": "Water"
         },
         {
+          "Level": 5,
+          "Move": "Sand Attack",
+          "Type": "Ground"
+        },
+        {
+          "Level": 10,
+          "Move": "Quick Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 15,
+          "Move": "Baby-Doll Eyes",
+          "Type": "Fairy"
+        },
+        {
           "Level": 20,
           "Move": "Haze",
           "Type": "Ice"
@@ -23171,7 +23421,6 @@
       ],
       "TM/Tutor Moves List": [
         "Alluring Voice",
-        "Baby-Doll Eyes (N)",
         "Baton Pass (N)",
         "Bite (N)",
         "Blizzard",
@@ -23198,11 +23447,9 @@
         "Liquidation",
         "Mud-Slap",
         "Protect",
-        "Quick Attack (N)",
         "Rain Dance",
         "Rest",
         "Roar",
-        "Sand Attack (N)",
         "Scald",
         "Shadow Ball",
         "Sleep Talk",
@@ -23289,6 +23536,21 @@
           "Type": "Electric"
         },
         {
+          "Level": 5,
+          "Move": "Sand Attack",
+          "Type": "Ground"
+        },
+        {
+          "Level": 10,
+          "Move": "Quick Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 15,
+          "Move": "Baby-Doll Eyes",
+          "Type": "Fairy"
+        },
+        {
           "Level": 20,
           "Move": "Thunder Wave",
           "Type": "Electric"
@@ -23331,7 +23593,6 @@
       ],
       "TM/Tutor Moves List": [
         "Alluring Voice",
-        "Baby-Doll Eyes (N)",
         "Baton Pass (N)",
         "Bite (N)",
         "Body Slam",
@@ -23360,11 +23621,9 @@
         "Metal Sound",
         "Mud-Slap",
         "Protect",
-        "Quick Attack (N)",
         "Rain Dance",
         "Rest",
         "Roar",
-        "Sand Attack (N)",
         "Shadow Ball",
         "Sleep Talk",
         "Stored Power",
@@ -23451,6 +23710,21 @@
           "Type": "Fire"
         },
         {
+          "Level": 5,
+          "Move": "Sand Attack",
+          "Type": "Ground"
+        },
+        {
+          "Level": 10,
+          "Move": "Quick Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 15,
+          "Move": "Baby-Doll Eyes",
+          "Type": "Fairy"
+        },
+        {
           "Level": 20,
           "Move": "Smog",
           "Type": "Poison"
@@ -23493,7 +23767,6 @@
       ],
       "TM/Tutor Moves List": [
         "Alluring Voice",
-        "Baby-Doll Eyes (N)",
         "Baton Pass (N)",
         "Body Slam",
         "Burning Jealousy",
@@ -23519,11 +23792,9 @@
         "Mud-Slap",
         "Overheat",
         "Protect",
-        "Quick Attack (N)",
         "Rain Dance",
         "Rest",
         "Roar",
-        "Sand Attack (N)",
         "Scorching Sands",
         "Shadow Ball",
         "Sleep Talk",
@@ -31857,6 +32128,36 @@
           "Type": "Grass"
         },
         {
+          "Level": 12,
+          "Move": "Mega Drain",
+          "Type": "Grass"
+        },
+        {
+          "Level": 14,
+          "Move": "Poison Powder",
+          "Type": "Poison"
+        },
+        {
+          "Level": 16,
+          "Move": "Stun Spore",
+          "Type": "Grass"
+        },
+        {
+          "Level": 18,
+          "Move": "Sleep Powder",
+          "Type": "Grass"
+        },
+        {
+          "Level": 20,
+          "Move": "Giga Drain",
+          "Type": "Grass"
+        },
+        {
+          "Level": 26,
+          "Move": "Toxic",
+          "Type": "Poison"
+        },
+        {
           "Level": 32,
           "Move": "Moonblast",
           "Type": "Fairy"
@@ -31894,7 +32195,6 @@
         "Facade",
         "Flail",
         "Fling",
-        "Giga Drain (N)",
         "Giga Impact",
         "Grass Knot",
         "Grassy Glide",
@@ -31905,22 +32205,18 @@
         "Leaf Storm",
         "Leech Seed",
         "Magical Leaf",
-        "Mega Drain (N)",
         "Play Rough",
-        "Poison Powder (N)",
         "Pollen Puff",
         "Protect",
         "Quiver Dance (N)",
         "Razor Leaf",
         "Rest",
         "Seed Bomb",
-        "Sleep Powder (N)",
         "Sleep Talk",
         "Sludge Bomb",
         "Solar Beam",
         "Solar Blade",
         "Strength Sap",
-        "Stun Spore (N)",
         "Substitute",
         "Sunny Day",
         "Sweet Scent (N)",
@@ -31929,7 +32225,6 @@
         "Teeter Dance",
         "Tera Blast",
         "Tickle",
-        "Toxic (N)",
         "Trailblaze",
         "Triple Axel",
         "Uproar",
@@ -33588,6 +33883,36 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 4,
+          "Move": "Ingrain",
+          "Type": "Grass"
+        },
+        {
+          "Level": 7,
+          "Move": "Absorb",
+          "Type": "Grass"
+        },
+        {
+          "Level": 10,
+          "Move": "Mega Drain",
+          "Type": "Grass"
+        },
+        {
+          "Level": 13,
+          "Move": "Leech Seed",
+          "Type": "Grass"
+        },
+        {
+          "Level": 16,
+          "Move": "Razor Leaf",
+          "Type": "Grass"
+        },
+        {
+          "Level": 19,
+          "Move": "Worry Seed",
+          "Type": "Grass"
+        },
+        {
           "Level": 22,
           "Move": "Giga Drain",
           "Type": "Grass"
@@ -33629,7 +33954,6 @@
         }
       ],
       "TM/Tutor Moves List": [
-        "Absorb (N)",
         "Curse",
         "Dazzling Gleam",
         "Earth Power",
@@ -33645,15 +33969,11 @@
         "Growth (N)",
         "Helping Hand",
         "Hyper Beam",
-        "Ingrain (N)",
-        "Leech Seed (N)",
         "Light Screen",
         "Magical Leaf",
-        "Mega Drain (N)",
         "Pound (N)",
         "Protect",
         "Rain Dance",
-        "Razor Leaf (N)",
         "Rest",
         "Seed Bomb",
         "Sleep Talk",
@@ -33664,8 +33984,7 @@
         "Take Down",
         "Tera Blast",
         "Trailblaze",
-        "Weather Ball",
-        "Worry Seed (N)"
+        "Weather Ball"
       ]
     }
   },
@@ -34260,6 +34579,21 @@
           "Type": "Psychic"
         },
         {
+          "Level": 5,
+          "Move": "Sand Attack",
+          "Type": "Ground"
+        },
+        {
+          "Level": 10,
+          "Move": "Quick Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 15,
+          "Move": "Baby-Doll Eyes",
+          "Type": "Fairy"
+        },
+        {
           "Level": 20,
           "Move": "Swift",
           "Type": "Normal"
@@ -34302,7 +34636,6 @@
       ],
       "TM/Tutor Moves List": [
         "Alluring Voice",
-        "Baby-Doll Eyes (N)",
         "Baton Pass (N)",
         "Bite (N)",
         "Body Slam",
@@ -34337,12 +34670,10 @@
         "Psychic Noise",
         "Psychic Terrain",
         "Psyshock",
-        "Quick Attack (N)",
         "Rain Dance",
         "Reflect",
         "Rest",
         "Roar",
-        "Sand Attack (N)",
         "Shadow Ball",
         "Skill Swap",
         "Sleep Talk",
@@ -34430,6 +34761,21 @@
           "Type": "Dark"
         },
         {
+          "Level": 5,
+          "Move": "Sand Attack",
+          "Type": "Ground"
+        },
+        {
+          "Level": 10,
+          "Move": "Quick Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 15,
+          "Move": "Baby-Doll Eyes",
+          "Type": "Fairy"
+        },
+        {
           "Level": 20,
           "Move": "Confuse Ray",
           "Type": "Ghost"
@@ -34472,7 +34818,6 @@
       ],
       "TM/Tutor Moves List": [
         "Alluring Voice",
-        "Baby-Doll Eyes (N)",
         "Baton Pass (N)",
         "Bite (N)",
         "Body Slam",
@@ -34498,12 +34843,10 @@
         "Protect",
         "Psych Up",
         "Psychic",
-        "Quick Attack (N)",
         "Rain Dance",
         "Reflect",
         "Rest",
         "Roar",
-        "Sand Attack (N)",
         "Scary Face",
         "Shadow Ball",
         "Skill Swap",
@@ -47574,6 +47917,26 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 9,
+          "Move": "Mist",
+          "Type": "Ice"
+        },
+        {
+          "Level": 12,
+          "Move": "Mega Drain",
+          "Type": "Grass"
+        },
+        {
+          "Level": 18,
+          "Move": "Fury Swipes",
+          "Type": "Normal"
+        },
+        {
+          "Level": 24,
+          "Move": "Bubble Beam",
+          "Type": "Water"
+        },
+        {
           "Level": 30,
           "Move": "Leech Seed",
           "Type": "Grass"
@@ -47606,7 +47969,6 @@
         "Blizzard",
         "Body Slam",
         "Brick Break",
-        "Bubble Beam (N)",
         "Bullet Seed",
         "Chilling Water",
         "Counter",
@@ -47622,7 +47984,6 @@
         "Fling",
         "Focus Blast",
         "Focus Punch",
-        "Fury Swipes (N)",
         "Giga Impact",
         "Grass Knot",
         "Grassy Glide",
@@ -47637,9 +47998,7 @@
         "Knock Off",
         "Leaf Storm",
         "Magical Leaf",
-        "Mega Drain (N)",
         "Metronome",
-        "Mist (N)",
         "Mud Shot",
         "Muddy Water",
         "Protect",
@@ -48112,6 +48471,26 @@
           "Type": "Grass"
         },
         {
+          "Level": 9,
+          "Move": "Growth",
+          "Type": "Normal"
+        },
+        {
+          "Level": 12,
+          "Move": "Rollout",
+          "Type": "Rock"
+        },
+        {
+          "Level": 18,
+          "Move": "Mega Drain",
+          "Type": "Grass"
+        },
+        {
+          "Level": 24,
+          "Move": "Payback",
+          "Type": "Dark"
+        },
+        {
           "Level": 30,
           "Move": "Synthesis",
           "Type": "Grass"
@@ -48170,7 +48549,6 @@
         "Grass Knot",
         "Grassy Glide",
         "Grassy Terrain",
-        "Growth (N)",
         "Harden",
         "Heat Wave",
         "Hex",
@@ -48185,10 +48563,8 @@
         "Low Kick",
         "Low Sweep",
         "Magical Leaf",
-        "Mega Drain (N)",
         "Nasty Plot",
         "Night Slash",
-        "Payback (N)",
         "Petal Blizzard",
         "Protect",
         "Psych Up",
@@ -48198,7 +48574,6 @@
         "Reversal",
         "Rock Slide",
         "Rock Tomb",
-        "Rollout (N)",
         "Scary Face",
         "Seed Bomb",
         "Shadow Ball",
@@ -52594,6 +52969,36 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 4,
+          "Move": "Tackle",
+          "Type": "Normal"
+        },
+        {
+          "Level": 7,
+          "Move": "Sing",
+          "Type": "Normal"
+        },
+        {
+          "Level": 10,
+          "Move": "Attract",
+          "Type": "Normal"
+        },
+        {
+          "Level": 13,
+          "Move": "Disarming Voice",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 16,
+          "Move": "Fury Swipes",
+          "Type": "Normal"
+        },
+        {
+          "Level": 19,
+          "Move": "Copycat",
+          "Type": "Normal"
+        },
+        {
           "Level": 22,
           "Move": "Payback",
           "Type": "Dark"
@@ -52635,19 +53040,15 @@
         }
       ],
       "TM/Tutor Moves List": [
-        "Attract (N)",
         "Blizzard",
         "Calm Mind",
         "Charge Beam",
-        "Copycat (N)",
         "Dig",
-        "Disarming Voice (N)",
         "Double Team",
         "Dream Eater",
         "Endure",
         "Fake Out (N)",
         "Flash",
-        "Fury Swipes (N)",
         "Giga Impact",
         "Grass Knot",
         "Growl (N)",
@@ -52663,14 +53064,12 @@
         "Safeguard",
         "Shadow Ball",
         "Shock Wave",
-        "Sing (N)",
         "Sleep Talk",
         "Solar Beam",
         "Strength",
         "Substitute",
         "Sunny Day",
         "Swagger",
-        "Tackle (N)",
         "Tail Whip (N)",
         "Thunder",
         "Thunder Wave",
@@ -72019,6 +72418,31 @@
           "Type": "Poison"
         },
         {
+          "Level": 5,
+          "Move": "Mega Drain",
+          "Type": "Grass"
+        },
+        {
+          "Level": 10,
+          "Move": "Leech Seed",
+          "Type": "Grass"
+        },
+        {
+          "Level": 15,
+          "Move": "Magical Leaf",
+          "Type": "Grass"
+        },
+        {
+          "Level": 20,
+          "Move": "Toxic Spikes",
+          "Type": "Poison"
+        },
+        {
+          "Level": 25,
+          "Move": "Sweet Scent",
+          "Type": "Normal"
+        },
+        {
           "Level": 30,
           "Move": "Giga Drain",
           "Type": "Grass"
@@ -72070,9 +72494,6 @@
         "Growth (N)",
         "Hyper Beam",
         "Leaf Storm",
-        "Leech Seed (N)",
-        "Magical Leaf (N)",
-        "Mega Drain (N)",
         "Pin Missile",
         "Poison Jab",
         "Power Whip",
@@ -72090,10 +72511,8 @@
         "Stun Spore (N)",
         "Substitute",
         "Sunny Day",
-        "Sweet Scent (N)",
         "Swift",
         "Swords Dance",
-        "Toxic Spikes (N)",
         "Uproar",
         "Venom Drench (N)",
         "Venoshock",
@@ -75961,6 +76380,21 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 10,
+          "Move": "Astonish",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 14,
+          "Move": "Confuse Ray",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 19,
+          "Move": "Mean Look",
+          "Type": "Normal"
+        },
+        {
           "Level": 23,
           "Move": "Hex",
           "Type": "Ghost"
@@ -75997,12 +76431,10 @@
         }
       ],
       "TM/Tutor Moves List": [
-        "Astonish (N)",
         "Burning Jealousy",
         "Calm Mind",
         "Charge Beam",
         "Charm",
-        "Confuse Ray (N)",
         "Confusion (N)",
         "Curse",
         "Dark Pulse",
@@ -76024,7 +76456,6 @@
         "Imprison",
         "Lash Out",
         "Magical Leaf (N)",
-        "Mean Look (N)",
         "Mystical Fire (N)",
         "Nasty Plot",
         "Night Shade",
@@ -76123,6 +76554,21 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 5,
+          "Move": "Gust",
+          "Type": "Flying"
+        },
+        {
+          "Level": 11,
+          "Move": "Haze",
+          "Type": "Ice"
+        },
+        {
+          "Level": 15,
+          "Move": "Wing Attack",
+          "Type": "Flying"
+        },
+        {
           "Level": 21,
           "Move": "Night Shade",
           "Type": "Ghost"
@@ -76206,8 +76652,6 @@
         "Feather Dance",
         "Fly",
         "Giga Impact",
-        "Gust (N)",
-        "Haze (N)",
         "Heat Wave",
         "Helping Hand",
         "Hex",
@@ -76237,8 +76681,7 @@
         "Thief",
         "Thunder Wave",
         "U-turn",
-        "Uproar",
-        "Wing Attack (N)"
+        "Uproar"
       ]
     }
   },
@@ -82846,6 +83289,31 @@
           "Type": "Fairy"
         },
         {
+          "Level": 12,
+          "Move": "Charm",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 16,
+          "Move": "Ancient Power",
+          "Type": "Rock"
+        },
+        {
+          "Level": 20,
+          "Move": "Yawn",
+          "Type": "Normal"
+        },
+        {
+          "Level": 24,
+          "Move": "Metronome",
+          "Type": "Normal"
+        },
+        {
+          "Level": 28,
+          "Move": "After You",
+          "Type": "Normal"
+        },
+        {
           "Level": 32,
           "Move": "Double-Edge",
           "Type": "Normal"
@@ -82877,15 +83345,12 @@
         }
       ],
       "TM/Tutor Moves List": [
-        "After You (N)",
         "Ally Switch",
         "Amnesia",
-        "Ancient Power (N)",
         "Attract",
         "Aura Sphere (N)",
         "Body Slam",
         "Brick Break",
-        "Charm (N)",
         "Dazzling Gleam",
         "Drain Punch",
         "Draining Kiss",
@@ -82912,7 +83377,6 @@
         "Magical Leaf",
         "Mega Kick",
         "Mega Punch",
-        "Metronome (N)",
         "Mystical Fire",
         "Nasty Plot",
         "Play Rough",
@@ -82942,7 +83406,6 @@
         "Trick",
         "Uproar",
         "Work Up",
-        "Yawn (N)",
         "Zen Headbutt"
       ]
     }
@@ -83169,6 +83632,21 @@
           "Type": "Grass"
         },
         {
+          "Level": 5,
+          "Move": "Sand Attack",
+          "Type": "Ground"
+        },
+        {
+          "Level": 10,
+          "Move": "Quick Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 15,
+          "Move": "Baby-Doll Eyes",
+          "Type": "Fairy"
+        },
+        {
           "Level": 20,
           "Move": "Leech Seed",
           "Type": "Grass"
@@ -83212,7 +83690,6 @@
       "TM/Tutor Moves List": [
         "Aerial Ace",
         "Alluring Voice",
-        "Baby-Doll Eyes (N)",
         "Baton Pass (N)",
         "Bite (N)",
         "Body Slam",
@@ -83240,11 +83717,9 @@
         "Mud Shot",
         "Mud-Slap",
         "Protect",
-        "Quick Attack (N)",
         "Rain Dance",
         "Rest",
         "Roar",
-        "Sand Attack (N)",
         "Seed Bomb",
         "Shadow Ball",
         "Sleep Talk",
@@ -83331,6 +83806,21 @@
           "Type": "Ice"
         },
         {
+          "Level": 5,
+          "Move": "Sand Attack",
+          "Type": "Ground"
+        },
+        {
+          "Level": 10,
+          "Move": "Quick Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 15,
+          "Move": "Baby-Doll Eyes",
+          "Type": "Fairy"
+        },
+        {
           "Level": 20,
           "Move": "Ice Shard",
           "Type": "Ice"
@@ -83374,7 +83864,6 @@
       "TM/Tutor Moves List": [
         "Alluring Voice",
         "Avalanche",
-        "Baby-Doll Eyes (N)",
         "Baton Pass (N)",
         "Body Slam",
         "Calm Mind",
@@ -83400,11 +83889,9 @@
         "Mud Shot",
         "Mud-Slap",
         "Protect",
-        "Quick Attack (N)",
         "Rain Dance",
         "Rest",
         "Roar",
-        "Sand Attack (N)",
         "Shadow Ball",
         "Sleep Talk",
         "Stored Power",
@@ -84028,6 +84515,36 @@
           "Type": "Normal"
         },
         {
+          "Level": 9,
+          "Move": "Helping Hand",
+          "Type": "Normal"
+        },
+        {
+          "Level": 12,
+          "Move": "Feint",
+          "Type": "Normal"
+        },
+        {
+          "Level": 15,
+          "Move": "Teleport",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 18,
+          "Move": "Aerial Ace",
+          "Type": "Flying"
+        },
+        {
+          "Level": 23,
+          "Move": "False Swipe",
+          "Type": "Normal"
+        },
+        {
+          "Level": 28,
+          "Move": "Protect",
+          "Type": "Normal"
+        },
+        {
           "Level": 35,
           "Move": "Swords Dance",
           "Type": "Normal"
@@ -84059,7 +84576,6 @@
         }
       ],
       "TM/Tutor Moves List": [
-        "Aerial Ace (N)",
         "Agility",
         "Air Slash",
         "Alluring Voice",
@@ -84087,8 +84603,6 @@
         "Energy Ball",
         "Expanding Force",
         "Facade",
-        "False Swipe (N)",
-        "Feint (N)",
         "Fire Punch",
         "Fling",
         "Focus Blast",
@@ -84098,7 +84612,6 @@
         "Giga Impact",
         "Grass Knot",
         "Growl (N)",
-        "Helping Hand (N)",
         "Hex",
         "Hyper Beam",
         "Hyper Voice",
@@ -84119,7 +84632,6 @@
         "Night Slash (N)",
         "Pain Split",
         "Poison Jab",
-        "Protect (N)",
         "Psybeam (N)",
         "Psych Up",
         "Psychic (N)",
@@ -84144,7 +84656,6 @@
         "Swift",
         "Take Down",
         "Taunt",
-        "Teleport (N)",
         "Tera Blast",
         "Thief",
         "Throat Chop",
@@ -84609,6 +85120,31 @@
           "Type": "Ghost"
         },
         {
+          "Level": 15,
+          "Move": "Ice Shard",
+          "Type": "Ice"
+        },
+        {
+          "Level": 20,
+          "Move": "Draining Kiss",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 25,
+          "Move": "Icy Wind",
+          "Type": "Ice"
+        },
+        {
+          "Level": 30,
+          "Move": "Frost Breath",
+          "Type": "Ice"
+        },
+        {
+          "Level": 35,
+          "Move": "Confuse Ray",
+          "Type": "Ghost"
+        },
+        {
           "Level": 40,
           "Move": "Snowscape",
           "Type": "Ice"
@@ -84641,17 +85177,14 @@
         "Body Slam",
         "Charm",
         "Chilling Water",
-        "Confuse Ray (N)",
         "Crunch (N)",
         "Curse",
         "Destiny Bond (N)",
         "Double Team (N)",
-        "Draining Kiss (N)",
         "Endure",
         "Facade",
         "Fake Tears",
         "Fling",
-        "Frost Breath (N)",
         "Giga Impact",
         "Haze",
         "Headbutt (N)",
@@ -84660,10 +85193,8 @@
         "Ice Beam",
         "Ice Fang (N)",
         "Ice Punch",
-        "Ice Shard (N)",
         "Ice Spinner",
         "Icicle Spear",
-        "Icy Wind (N)",
         "Imprison",
         "Leer (N)",
         "Light Screen",
@@ -91845,6 +92376,36 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 4,
+          "Move": "Leer",
+          "Type": "Normal"
+        },
+        {
+          "Level": 7,
+          "Move": "Lick",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 10,
+          "Move": "Vine Whip",
+          "Type": "Grass"
+        },
+        {
+          "Level": 13,
+          "Move": "Fury Swipes",
+          "Type": "Normal"
+        },
+        {
+          "Level": 16,
+          "Move": "Leech Seed",
+          "Type": "Grass"
+        },
+        {
+          "Level": 19,
+          "Move": "Bite",
+          "Type": "Dark"
+        },
+        {
           "Level": 22,
           "Move": "Seed Bomb",
           "Type": "Grass"
@@ -91887,7 +92448,6 @@
       ],
       "TM/Tutor Moves List": [
         "Attract",
-        "Bite (N)",
         "Brick Break",
         "Confide",
         "Covet",
@@ -91898,7 +92458,6 @@
         "Focus Blast",
         "Focus Punch",
         "Frustration",
-        "Fury Swipes (N)",
         "Gastro Acid",
         "Giga Drain",
         "Giga Impact",
@@ -91909,9 +92468,6 @@
         "Hyper Beam",
         "Iron Tail",
         "Knock Off",
-        "Leech Seed (N)",
-        "Leer (N)",
-        "Lick (N)",
         "Low Kick",
         "Low Sweep",
         "Nature Power",
@@ -91939,7 +92495,6 @@
         "Throat Chop",
         "Toxic",
         "Uproar",
-        "Vine Whip (N)",
         "Work Up",
         "Worry Seed"
       ]
@@ -92204,6 +92759,36 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 4,
+          "Move": "Leer",
+          "Type": "Normal"
+        },
+        {
+          "Level": 7,
+          "Move": "Lick",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 10,
+          "Move": "Incinerate",
+          "Type": "Fire"
+        },
+        {
+          "Level": 13,
+          "Move": "Fury Swipes",
+          "Type": "Normal"
+        },
+        {
+          "Level": 16,
+          "Move": "Yawn",
+          "Type": "Normal"
+        },
+        {
+          "Level": 19,
+          "Move": "Bite",
+          "Type": "Dark"
+        },
+        {
           "Level": 22,
           "Move": "Flame Burst",
           "Type": "Fire"
@@ -92246,7 +92831,6 @@
       ],
       "TM/Tutor Moves List": [
         "Attract",
-        "Bite (N)",
         "Brick Break",
         "Confide",
         "Covet",
@@ -92260,7 +92844,6 @@
         "Focus Blast",
         "Focus Punch",
         "Frustration",
-        "Fury Swipes (N)",
         "Gastro Acid",
         "Giga Impact",
         "Grass Knot",
@@ -92269,11 +92852,8 @@
         "Helping Hand",
         "Hidden Power",
         "Hyper Beam",
-        "Incinerate (N)",
         "Iron Tail",
         "Knock Off",
-        "Leer (N)",
-        "Lick (N)",
         "Low Kick",
         "Low Sweep",
         "Overheat",
@@ -92302,8 +92882,7 @@
         "Toxic",
         "Uproar",
         "Will-O-Wisp",
-        "Work Up",
-        "Yawn (N)"
+        "Work Up"
       ]
     }
   },
@@ -92567,6 +93146,36 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 4,
+          "Move": "Leer",
+          "Type": "Normal"
+        },
+        {
+          "Level": 7,
+          "Move": "Lick",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 10,
+          "Move": "Water Gun",
+          "Type": "Water"
+        },
+        {
+          "Level": 13,
+          "Move": "Fury Swipes",
+          "Type": "Normal"
+        },
+        {
+          "Level": 16,
+          "Move": "Water Sport",
+          "Type": "Water"
+        },
+        {
+          "Level": 19,
+          "Move": "Bite",
+          "Type": "Dark"
+        },
+        {
           "Level": 22,
           "Move": "Scald",
           "Type": "Water"
@@ -92610,7 +93219,6 @@
       "TM/Tutor Moves List": [
         "Aqua Tail",
         "Attract",
-        "Bite (N)",
         "Blizzard",
         "Brick Break",
         "Confide",
@@ -92621,7 +93229,6 @@
         "Focus Blast",
         "Focus Punch",
         "Frustration",
-        "Fury Swipes (N)",
         "Gastro Acid",
         "Giga Impact",
         "Grass Knot",
@@ -92635,8 +93242,6 @@
         "Icy Wind",
         "Iron Tail",
         "Knock Off",
-        "Leer (N)",
-        "Lick (N)",
         "Low Kick",
         "Low Sweep",
         "Payback",
@@ -92662,10 +93267,8 @@
         "Torment",
         "Toxic",
         "Uproar",
-        "Water Gun (N)",
         "Water Pledge",
         "Water Pulse",
-        "Water Sport (N)",
         "Waterfall",
         "Work Up"
       ]
@@ -92912,6 +93515,26 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 4,
+          "Move": "Hypnosis",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 8,
+          "Move": "Psybeam",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 12,
+          "Move": "Imprison",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 16,
+          "Move": "Moonlight",
+          "Type": "Fairy"
+        },
+        {
           "Level": 20,
           "Move": "Magic Coat",
           "Type": "Psychic"
@@ -92972,14 +93595,10 @@
         "Gyro Ball",
         "Helping Hand",
         "Hyper Beam",
-        "Hypnosis (N)",
-        "Imprison (N)",
         "Light Screen",
         "Misty Explosion",
-        "Moonlight (N)",
         "Power Swap",
         "Protect",
-        "Psybeam (N)",
         "Psychic Terrain (N)",
         "Psyshock",
         "Rain Dance",
@@ -97636,6 +98255,31 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 3,
+          "Move": "Fairy Wind",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 6,
+          "Move": "Stun Spore",
+          "Type": "Grass"
+        },
+        {
+          "Level": 12,
+          "Move": "Mega Drain",
+          "Type": "Grass"
+        },
+        {
+          "Level": 15,
+          "Move": "Razor Leaf",
+          "Type": "Grass"
+        },
+        {
+          "Level": 18,
+          "Move": "Growth",
+          "Type": "Normal"
+        },
+        {
           "Level": 21,
           "Move": "Poison Powder",
           "Type": "Poison"
@@ -97693,32 +98337,27 @@
         "Encore",
         "Endure",
         "Facade",
-        "Fairy Wind (N)",
         "Fake Tears",
         "Fling",
         "Giga Impact",
         "Grass Knot",
         "Grassy Glide",
         "Grassy Terrain",
-        "Growth (N)",
         "Gust (N)",
         "Helping Hand (N)",
         "Hurricane (N)",
         "Hyper Beam",
         "Light Screen",
-        "Mega Drain (N)",
         "Memento (N)",
         "Misty Terrain",
         "Moonblast (N)",
         "Play Rough",
         "Protect",
         "Psychic",
-        "Razor Leaf (N)",
         "Rest",
         "Seed Bomb",
         "Shadow Ball",
         "Sleep Talk",
-        "Stun Spore (N)",
         "Substitute",
         "Swift",
         "Switcheroo",
@@ -97966,6 +98605,41 @@
           "Type": "Grass"
         },
         {
+          "Level": 3,
+          "Move": "Helping Hand",
+          "Type": "Normal"
+        },
+        {
+          "Level": 5,
+          "Move": "Magical Leaf",
+          "Type": "Grass"
+        },
+        {
+          "Level": 6,
+          "Move": "Stun Spore",
+          "Type": "Grass"
+        },
+        {
+          "Level": 9,
+          "Move": "Mega Drain",
+          "Type": "Grass"
+        },
+        {
+          "Level": 12,
+          "Move": "Charm",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 15,
+          "Move": "Magical Leaf",
+          "Type": "Grass"
+        },
+        {
+          "Level": 18,
+          "Move": "Sleep Powder",
+          "Type": "Grass"
+        },
+        {
           "Level": 21,
           "Move": "Giga Drain",
           "Type": "Grass"
@@ -98010,7 +98684,6 @@
         "Absorb (N)",
         "Alluring Voice",
         "Bullet Seed",
-        "Charm (N)",
         "Encore",
         "Endure",
         "Facade",
@@ -98019,11 +98692,8 @@
         "Grassy Glide",
         "Grassy Terrain",
         "Growth (N)",
-        "Helping Hand (N)",
         "Hyper Beam",
         "Light Screen",
-        "Magical Leaf (N)",
-        "Mega Drain (N)",
         "Petal Blizzard (N)",
         "Pollen Puff",
         "Protect",
@@ -98031,11 +98701,9 @@
         "Quiver Dance (N)",
         "Rest",
         "Seed Bomb",
-        "Sleep Powder (N)",
         "Sleep Talk",
         "Solar Beam",
         "Solar Blade",
-        "Stun Spore (N)",
         "Substitute",
         "Swords Dance",
         "Teeter Dance (N)",
@@ -102464,6 +103132,26 @@
           "Type": "Normal"
         },
         {
+          "Level": 4,
+          "Move": "Helping Hand",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Echoed Voice",
+          "Type": "Normal"
+        },
+        {
+          "Level": 12,
+          "Move": "Sing",
+          "Type": "Normal"
+        },
+        {
+          "Level": 16,
+          "Move": "Charm",
+          "Type": "Fairy"
+        },
+        {
           "Level": 20,
           "Move": "Swift",
           "Type": "Normal"
@@ -102511,12 +103199,10 @@
         "Baton Pass",
         "Bullet Seed (N)",
         "Calm Mind",
-        "Charm (N)",
         "Chilling Water",
         "Dazzling Gleam",
         "Dig",
         "Double-Edge",
-        "Echoed Voice (N)",
         "Endeavor",
         "Endure",
         "Facade",
@@ -102527,7 +103213,6 @@
         "Giga Impact",
         "Grass Knot",
         "Gunk Shot",
-        "Helping Hand (N)",
         "Hyper Beam",
         "Ice Spinner",
         "Knock Off",
@@ -102540,7 +103225,6 @@
         "Rest",
         "Rock Blast",
         "Seed Bomb",
-        "Sing (N)",
         "Sleep Talk",
         "Substitute",
         "Sunny Day",
@@ -107466,6 +108150,26 @@
           "Type": "Dark"
         },
         {
+          "Level": 5,
+          "Move": "Wild Charge",
+          "Type": "Electric"
+        },
+        {
+          "Level": 9,
+          "Move": "Bind",
+          "Type": "Normal"
+        },
+        {
+          "Level": 19,
+          "Move": "Acid",
+          "Type": "Poison"
+        },
+        {
+          "Level": 29,
+          "Move": "Discharge",
+          "Type": "Electric"
+        },
+        {
           "Level": 44,
           "Move": "Thunderbolt",
           "Type": "Electric"
@@ -107502,9 +108206,7 @@
         }
       ],
       "TM/Tutor Moves List": [
-        "Acid (N)",
         "Acrobatics",
-        "Bind (N)",
         "Body Press",
         "Body Slam",
         "Brick Break",
@@ -107515,7 +108217,6 @@
         "Close Combat",
         "Confuse Ray",
         "Crush Claw (N)",
-        "Discharge (N)",
         "Dragon Claw",
         "Dragon Pulse",
         "Dragon Tail",
@@ -108346,6 +109047,46 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 4,
+          "Move": "Ember",
+          "Type": "Fire"
+        },
+        {
+          "Level": 8,
+          "Move": "Minimize",
+          "Type": "Normal"
+        },
+        {
+          "Level": 12,
+          "Move": "Confuse Ray",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 16,
+          "Move": "Hex",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 20,
+          "Move": "Will-O-Wisp",
+          "Type": "Fire"
+        },
+        {
+          "Level": 24,
+          "Move": "Fire Spin",
+          "Type": "Fire"
+        },
+        {
+          "Level": 28,
+          "Move": "Night Shade",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 32,
+          "Move": "Curse",
+          "Type": "Ghost"
+        },
+        {
           "Level": 36,
           "Move": "Shadow Ball",
           "Type": "Ghost"
@@ -108382,26 +109123,19 @@
         "Burning Jealousy",
         "Calm Mind",
         "Clear Smog",
-        "Confuse Ray (N)",
-        "Curse (N)",
         "Dark Pulse",
-        "Ember (N)",
         "Endure",
         "Energy Ball",
         "Facade",
         "Fire Blast",
-        "Fire Spin (N)",
         "Flame Charge",
         "Flamethrower",
         "Flare Blitz",
         "Giga Impact",
         "Haze",
         "Heat Wave",
-        "Hex (N)",
         "Hyper Beam",
         "Lash Out",
-        "Minimize (N)",
-        "Night Shade (N)",
         "Poltergeist",
         "Power Split",
         "Protect",
@@ -108421,8 +109155,7 @@
         "Thief",
         "Trailblaze",
         "Trick",
-        "Trick Room",
-        "Will-O-Wisp (N)"
+        "Trick Room"
       ]
     }
   },
@@ -120344,6 +121077,36 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 5,
+          "Move": "Moonblast",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 10,
+          "Move": "Safeguard",
+          "Type": "Normal"
+        },
+        {
+          "Level": 15,
+          "Move": "Razor Leaf",
+          "Type": "Grass"
+        },
+        {
+          "Level": 20,
+          "Move": "Wish",
+          "Type": "Normal"
+        },
+        {
+          "Level": 25,
+          "Move": "Magical Leaf",
+          "Type": "Grass"
+        },
+        {
+          "Level": 27,
+          "Move": "Grassy Terrain",
+          "Type": "Grass"
+        },
+        {
           "Level": 33,
           "Move": "Petal Blizzard",
           "Type": "Grass"
@@ -120390,11 +121153,9 @@
         "Giga Drain",
         "Giga Impact",
         "Grass Knot (N)",
-        "Grassy Terrain (N)",
         "Helping Hand",
         "Hyper Beam",
         "Light Screen",
-        "Magical Leaf (N)",
         "Metronome",
         "Misty Explosion",
         "Pollen Puff",
@@ -120402,9 +121163,7 @@
         "Psychic",
         "Psychic Noise",
         "Rain Dance",
-        "Razor Leaf (N)",
         "Rest",
-        "Safeguard (N)",
         "Seed Bomb",
         "Skill Swap",
         "Sleep Talk",
@@ -120414,8 +121173,7 @@
         "Swift",
         "Tera Blast",
         "Trailblaze",
-        "Trick",
-        "Wish (N)"
+        "Trick"
       ]
     }
   },
@@ -122219,6 +122977,41 @@
           "Type": "Steel"
         },
         {
+          "Level": 12,
+          "Move": "Aerial Ace",
+          "Type": "Flying"
+        },
+        {
+          "Level": 16,
+          "Move": "Metal Sound",
+          "Type": "Steel"
+        },
+        {
+          "Level": 20,
+          "Move": "Slash",
+          "Type": "Normal"
+        },
+        {
+          "Level": 24,
+          "Move": "Night Slash",
+          "Type": "Dark"
+        },
+        {
+          "Level": 28,
+          "Move": "Retaliate",
+          "Type": "Normal"
+        },
+        {
+          "Level": 32,
+          "Move": "Iron Defense",
+          "Type": "Steel"
+        },
+        {
+          "Level": 38,
+          "Move": "Iron Head",
+          "Type": "Steel"
+        },
+        {
           "Level": 44,
           "Move": "Power Trick",
           "Type": "Psychic"
@@ -122235,7 +123028,6 @@
         }
       ],
       "TM/Tutor Moves List": [
-        "Aerial Ace (N)",
         "Air Slash",
         "Attract",
         "Autotomize (N)",
@@ -122251,16 +123043,11 @@
         "Gyro Ball",
         "Head Smash (N)",
         "Hyper Beam",
-        "Iron Defense (N)",
-        "Iron Head (N)",
-        "Metal Sound (N)",
-        "Night Slash (N)",
         "Protect",
         "Psycho Cut",
         "Rain Dance",
         "Reflect",
         "Rest",
-        "Retaliate (N)",
         "Reversal",
         "Rock Slide",
         "Round",
@@ -122268,7 +123055,6 @@
         "Shadow Ball",
         "Shadow Claw",
         "Shadow Sneak (N)",
-        "Slash (N)",
         "Sleep Talk",
         "Snore",
         "Solar Blade",
@@ -124547,6 +125333,26 @@
     "Moves": {
       "Level Up Move List": [
         {
+          "Level": 4,
+          "Move": "Pound",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
+          "Move": "Thunder Shock",
+          "Type": "Electric"
+        },
+        {
+          "Level": 12,
+          "Move": "Quick Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 16,
+          "Move": "Charge",
+          "Type": "Electric"
+        },
+        {
           "Level": 20,
           "Move": "Bulldoze",
           "Type": "Ground"
@@ -124588,7 +125394,6 @@
         "Attract",
         "Breaking Swipe",
         "Brutal Swing",
-        "Charge (N)",
         "Dark Pulse",
         "Dig",
         "Discharge (N)",
@@ -124612,9 +125417,7 @@
         "Mega Kick",
         "Mega Punch",
         "Mud-Slap (N)",
-        "Pound (N)",
         "Protect",
-        "Quick Attack (N)",
         "Rain Dance",
         "Rest",
         "Rising Voltage",
@@ -124632,7 +125435,6 @@
         "Swift",
         "Tail Whip (N)",
         "Thunder Punch",
-        "Thunder Shock (N)",
         "U-turn",
         "Weather Ball",
         "Wild Charge"
@@ -125427,6 +126229,21 @@
           "Type": "Fairy"
         },
         {
+          "Level": 5,
+          "Move": "Sand Attack",
+          "Type": "Ground"
+        },
+        {
+          "Level": 10,
+          "Move": "Quick Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 15,
+          "Move": "Baby-Doll Eyes",
+          "Type": "Fairy"
+        },
+        {
           "Level": 20,
           "Move": "Swift",
           "Type": "Normal"
@@ -125469,7 +126286,6 @@
       ],
       "TM/Tutor Moves List": [
         "Alluring Voice",
-        "Baby-Doll Eyes (N)",
         "Baton Pass (N)",
         "Bite (N)",
         "Body Slam",
@@ -125495,12 +126311,10 @@
         "Protect",
         "Psychic",
         "Psyshock",
-        "Quick Attack (N)",
         "Rain Dance",
         "Reflect",
         "Rest",
         "Roar",
-        "Sand Attack (N)",
         "Shadow Ball",
         "Sleep Talk",
         "Stored Power",

@@ -178,25 +178,20 @@ def merge_and_apply_stone_rules(core_obj: Dict[str, Any], sv_obj: Dict[str, Any]
             else:
                 print(f"[stone] {this_sp}: parent stage '{parent_species}' not found in sv_ptu, cannot append.", flush=True)
 
-        min_level = parse_min_level(this_row)
-        if min_level is not None:
-            new_level_up: List[Dict[str, Any]] = []
-            moved_names: List[str] = []
-            for m in core_obj["Moves"]["Level Up Move List"]:
-                lvl_val = m.get("Level")
-                if isinstance(lvl_val, int) and lvl_val < min_level:
-                    name = m.get("Move")
-                    if isinstance(name, str):
-                        core_obj["Moves"]["TM/Tutor Moves List"].append(f"{name} (N)")
-                        moved_names.append(name)
-                    moved_below_min += 1
-                else:
-                    new_level_up.append(m)
-            if moved_below_min:
-                core_obj["Moves"]["Level Up Move List"] = new_level_up
-                print(f"[stone] {this_sp}: moved {moved_below_min} moves below min level {min_level} -> TM/Tutor (N).")
-        else:
-            print(f"[stone] {this_sp}: no parsable 'Minimum Level' found; skip move relocation.", flush=True)
+        # 2) KEEP moves below Minimum Level in Level Up (no relocation).
+        #    BUT always move Level 1 moves to TM/Tutor (N)
+        new_level_up: List[Dict[str, Any]] = []
+        for m in core_obj["Moves"]["Level Up Move List"]:
+            lvl_val = m.get("Level")
+            if lvl_val == 1:
+                name = m.get("Move")
+                if isinstance(name, str):
+                    core_obj["Moves"]["TM/Tutor Moves List"].append(f"{name} (N)")
+                # drop from Level-Up
+            else:
+                new_level_up.append(m)
+        core_obj["Moves"]["Level Up Move List"] = new_level_up
+
 
         sort_level_up_list(core_obj["Moves"]["Level Up Move List"])
 
