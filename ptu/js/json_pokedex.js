@@ -34,7 +34,7 @@
     "AlolaDex (Updated)": "pokedex_7g.json",
     "GalarDex (Updated)": "pokedex_8g.json",
     "HisuiDex (Updated)": "pokedex_8g_hisui.json",
-    
+
     "Core (Community Homebrew)": "pokedex_core.json",
     "AlolaDex (Community Homebrew)": "pokedex_7g.json",
     "GalarDex (Community Homebrew)": "pokedex_8g.json",
@@ -186,26 +186,60 @@
     el.tabIndex = -1;
     el.setAttribute("aria-hidden", "true");
     el.innerHTML = `
-  <div class="modal-dialog modal-lg modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Datasets — Readme</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Datasets — Readme</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Core</strong> — What are in the officials Dexes. Very small changes for a reliable base, see changelog.</p>
+          <p><strong>Community</strong> — Based on Core dataset, some abilities pools are updated according to the Gen 9 Dex.</p>
+          <p><strong>Homebrew</strong>  — Based on Community dataset, updated all mons stats and movepools from Gen 1 to 8.5.</p>
+          <hr/>
+
+          <h5>Changelog</h5>
+          <h6>Core</h6>
+          <ul>
+            <li>Following Pokémons have now a minimum evolution level of 20: Shellder, Exeggcute, Eevee.<br>
+            Other Gen-1 Pokémons with Stone Evolution have this condition. Probable oversight.</li>
+            <li>Rotom have now one entry per form.</li>
+            <li>According to the Gen 8 References document, Koffing and Weezing have their new Abilities set.</li>
+            <li>Additional Note: The dex formatting follows the Gen 9 Community Homebrew Dex guidelines, but (hopefully) no data has been scrapped.</li>
+          </ul>
+
+          <h6>Community</h6>
+          <p>According to the document, some Pokémon have their Abilities set updated: Gastly, Haunter, Gengar, Lapras, Spinarak, Ariados, Phanpy, Donphan, Spheal, Shiftry, Piplup, Prinplup, Gallade, Gible, Gabite, Whirlipede, Pawniard, Bisharp, Cobalion, Terrakion, Virizion, Keldeo, Skiddo, Gogoat, Honedge, Doublade, Aegislash, Kartana, Samurott Hisuian, Kleavor</p>
+
+          <h6>Homebrew</h6>
+          <p>
+            All Pokémons from Gen 1 to 8.5 has been updated using the newest game generation available and following PTU standard, using Gen 9 Community Homebrew guidelines. Here is the process:<br>
+            <ul>
+            <li>Extract Base Stats, Moves, Evolutionary Stage from PokeAPI</li>
+            <li>Transform stats for PTU format: base_stat / 10, rounded up from .5.</li>
+            <li>Split moves into categories:
+              <ul>
+                <li>"Level Up Move List": sorted by level (with "Evo" first).</li>
+                <li>"TM/Tutor Move List": names only, sorted alphabetically.</li>
+                <li>If stage > 0: all level:1 moves → moved into TM/Tutor (with (N) suffix).</li>
+              </ul>
+            <li>Special stone-evolution logic:
+              <ul>
+                <li>If evolved by stone and has <10 level-up moves → inherit level-up moves from previous stage.</li>
+                <li>Moves below minimum evolution level → shifted to TM/Tutor list with (N).</li>
+              </ul>
+            <li>Deduplication rules:
+              <ul>
+                <li>No duplicates in TM/Tutor list; if both normal and (N) exist, keep only (N).</li>
+                <li>If a move also exists in Level-Up, remove it from TM/Tutor.</li>
+              </ul>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+        </div>
       </div>
-      <div class="modal-body">
-        <p><strong>Core</strong> → pokedex_core, pokedex_7g, pokedex_8g, pokedex_8g_hisui</p>
-        <p><strong>Community</strong> → Core + pokedex_9g</p>
-        <p><strong>Homebrew</strong> → idem Community</p>
-        <hr/>
-        <p>Les presets sont exclusifs : sélectionner un preset remplace entièrement les sources chargées.</p>
-        <p>Les fichiers sont chargés depuis le dossier du preset (<code>/core</code>, <code>/community</code>, <code>/homebrew</code>), selon cette page.</p>
-        <p>Astuce: ajuste <code>DATASET_BASE</code> si tes dossiers ne sont pas à la racine.</p>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
-      </div>
-    </div>
-  </div>`;
+    </div>`;
     document.body.appendChild(el);
   }
 
@@ -220,18 +254,29 @@
     wrap.innerHTML = `
     <div class="d-flex align-items-center justify-content-between">
       <label class="form-label mb-0">Dataset</label>
-      <button type="button" class="btn btn-sm btn-outline-secondary" id="btn-readme">Readme</button>
+      <button type="button"
+              class="btn btn-primary"
+              style="font-size:.75rem; padding:.1rem .25rem; min-width:unset; width:auto;"
+              id="btn-readme">Readme</button>
     </div>
-    <div class="btn-group w-100 mb-2" role="group" aria-label="Dataset presets">
+
+    <div class="d-flex flex-wrap gap-1 w-100 mb-2" role="group" aria-label="Dataset presets">
       <input type="radio" class="btn-check" name="preset" id="preset-core" ${selectedPreset === 'Core' ? 'checked' : ''}>
-      <label class="btn btn-outline-primary" for="preset-core">Core</label>
+      <label class="btn btn-outline-primary d-flex justify-content-center align-items-center flex-grow-1"
+            style="flex-basis:0; min-width:90px;"
+            for="preset-core">Core</label>
 
       <input type="radio" class="btn-check" name="preset" id="preset-community" ${selectedPreset === 'Community' ? 'checked' : ''}>
-      <label class="btn btn-outline-primary" for="preset-community">Community</label>
+      <label class="btn btn-outline-primary d-flex justify-content-center align-items-center flex-grow-1"
+            style="flex-basis:0; min-width:90px;"
+            for="preset-community">Community</label>
 
       <input type="radio" class="btn-check" name="preset" id="preset-homebrew" ${selectedPreset === 'Homebrew' ? 'checked' : ''}>
-      <label class="btn btn-outline-primary" for="preset-homebrew">Homebrew</label>
+      <label class="btn btn-outline-primary d-flex justify-content-center align-items-center flex-grow-1"
+            style="flex-basis:0; min-width:90px;"
+            for="preset-homebrew">Homebrew</label>
     </div>
+
     <div id="preset-files-box" class="border rounded p-2 small">
       <div class="fw-semibold mb-1">Included Pokédex</div>
       <div id="preset-files-list"></div>
@@ -247,7 +292,7 @@
       const lbls = PRESETS[selectedPreset] || [];
       const html = lbls.map(lbl => {
         const fn = FILES_BY_LABEL[lbl];
-        const id = `pdx-file-${lbl.replace(/[^a-z0-9]+/gi,'-')}`;
+        const id = `pdx-file-${lbl.replace(/[^a-z0-9]+/gi, '-')}`;
         const checked = (selectedLabels.size === 0 || selectedLabels.has(lbl)) ? 'checked' : '';
         return `<div class="form-check">
           <input class="form-check-input" type="checkbox" id="${id}" data-label="${lbl}" ${checked}>
