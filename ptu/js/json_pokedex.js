@@ -1,12 +1,5 @@
 (function () {
   const CFG = {
-    // NEW — libellés → URL (tu peux en ajouter/retirer)
-    sources: {
-      "Core (Gen 1-6)": "/ptu/data/pokedex/core/pokedex_core.json",
-      "AlolaDex (Gen 7)": "/ptu/data/pokedex/core/pokedex_7g.json",
-      "GalarDex (Gen 8)": "/ptu/data/pokedex/core/pokedex_8g.json",
-      "HisuiDex (Gen 8.5)": "/ptu/data/pokedex/core/pokedex_8g_hisui.json",
-    },
     // NEW — patterns d’icônes inchangés
     iconPatterns: [
       (base, num) => `${base}/${num}.png`
@@ -66,15 +59,11 @@
     ],
   };
 
-  let selectedPreset = "Core";
+  let selectedPreset = window.selectedPreset || "Core";
 
   // Per-preset file selection (labels from PRESETS)
   let selectedLabels = new Set(PRESETS[selectedPreset] || []);
 
-
-  // NEW — état UI/cache
-  const selectedSources = new Set(Object.keys(CFG.sources));   // par défaut: tout coché
-  // const selectedSources = new Set();   // par défaut: tout coché
   const _jsonCache = new Map(); // url -> Promise(data[])
 
   let dexModalInstance = null;

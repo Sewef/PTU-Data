@@ -7,6 +7,20 @@
             "label": "http.server",
             "type": "shell",
             "command": "python -m http.server"
-        }
+        },
+        {
+      "label": "deploy",
+      "type": "shell",
+      "windows": {
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-ExecutionPolicy", "Bypass",
+          "-Command",
+          "robocopy \"D:\\GitHub\\PTU-Data\\ptu\" D:\\GitHub\\sewef.github.io\\ptu\" /MIR /R:0 /W:0; if ($LASTEXITCODE -lt 8) { exit 0 } else { exit $LASTEXITCODE }"
+        ]
+      },
+      "problemMatcher": []
+    }
     ]
 }
