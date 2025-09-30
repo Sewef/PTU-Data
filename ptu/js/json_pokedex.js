@@ -25,38 +25,52 @@
 
   // Fichiers à charger par label (les libellés sont pour affichage / debug)
   const FILES_BY_LABEL = {
-    "Core Updated (Gen 1-6)": "pokedex_core.json",
-    "AlolaDex (Gen 7)": "pokedex_7g.json",
-    "GalarDex (Gen 8)": "pokedex_8g.json",
-    "HisuiDex (Gen 8.5)": "pokedex_8g_hisui.json",
-    "PaldeaDex (Gen 9, Homebrew)": "pokedex_9g.json",
+    "Core": "pokedex_core.json",
+    "AlolaDex": "pokedex_7g.json",
+    "GalarDex": "pokedex_8g.json",
+    "HisuiDex": "pokedex_8g_hisui.json",
+
+    "Core (Updated)": "pokedex_core.json",
+    "AlolaDex (Updated)": "pokedex_7g.json",
+    "GalarDex (Updated)": "pokedex_8g.json",
+    "HisuiDex (Updated)": "pokedex_8g_hisui.json",
+    
+    "Core (Community Homebrew)": "pokedex_core.json",
+    "AlolaDex (Community Homebrew)": "pokedex_7g.json",
+    "GalarDex (Community Homebrew)": "pokedex_8g.json",
+    "HisuiDex (Community Homebrew)": "pokedex_8g_hisui.json",
+    "PaldeaDex (Community Homebrew)": "pokedex_9g.json",
   };
 
   // Composition par preset (exclusif)
   const PRESETS = {
     Core: [
-      "Core (Gen 1-6)",
-      "AlolaDex (Gen 7)",
-      "GalarDex (Gen 8)",
-      "HisuiDex (Gen 8.5)",
+      "Core",
+      "AlolaDex",
+      "GalarDex",
+      "HisuiDex",
     ],
     Community: [
-      "Core (Gen 1-6)",
-      "AlolaDex (Gen 7)",
-      "GalarDex (Gen 8)",
-      "HisuiDex (Gen 8.5)",
-      "PaldeaDex (Gen 9, Homebrew)",
+      "Core (Community Homebrew)",
+      "AlolaDex (Community Homebrew)",
+      "GalarDex (Community Homebrew)",
+      "HisuiDex (Community Homebrew)",
+      "PaldeaDex (Community Homebrew)",
     ],
     Homebrew: [
-      "Core Updated (Gen 1-6)",
-      "AlolaDex (Gen 7)",
-      "GalarDex (Gen 8)",
-      "HisuiDex (Gen 8.5)",
-      "PaldeaDex (Gen 9, Homebrew)",
+      "Core (Updated)",
+      "AlolaDex (Updated)",
+      "GalarDex (Updated)",
+      "HisuiDex (Updated)",
+      "PaldeaDex (Community Homebrew)",
     ],
   };
 
   let selectedPreset = "Core";
+
+  // Per-preset file selection (labels from PRESETS)
+  let selectedLabels = new Set(PRESETS[selectedPreset] || []);
+
 
   // NEW — état UI/cache
   const selectedSources = new Set(Object.keys(CFG.sources));   // par défaut: tout coché
@@ -105,9 +119,9 @@
   }
 
 
-  function urlsForPreset(presetName) {
+  function urlsForPreset(presetName, onlyLabels) {
     const dir = PRESET_DIRS[presetName];
-    const labels = PRESETS[presetName] || [];
+    const labels = (onlyLabels && onlyLabels.length ? onlyLabels : (PRESETS[presetName] || []));
     return labels.map(lbl => ({
       label: lbl,
       url: `${DATASET_BASE}${DATASET_BASE.endsWith("/") ? "" : "/"}${dir}/${FILES_BY_LABEL[lbl]}`
@@ -127,7 +141,7 @@
 
   // Remplace ton loadPokedex existant par celui-ci si besoin
   async function loadPokedex() {
-    const sources = urlsForPreset(selectedPreset);
+    const sources = urlsForPreset(selectedPreset, Array.from(selectedLabels || []));
     if (!sources.length) throw new Error(`No sources for preset ${selectedPreset}`);
 
     // charge tout en parallèle; ignore les 404 pour les fichiers absents (ex. 9g en Core)
@@ -208,7 +222,7 @@
       <label class="form-label mb-0">Dataset</label>
       <button type="button" class="btn btn-sm btn-outline-secondary" id="btn-readme">Readme</button>
     </div>
-    <div class="btn-group w-100" role="group" aria-label="Dataset presets">
+    <div class="btn-group w-100 mb-2" role="group" aria-label="Dataset presets">
       <input type="radio" class="btn-check" name="preset" id="preset-core" ${selectedPreset === 'Core' ? 'checked' : ''}>
       <label class="btn btn-outline-primary" for="preset-core">Core</label>
 
@@ -218,11 +232,43 @@
       <input type="radio" class="btn-check" name="preset" id="preset-homebrew" ${selectedPreset === 'Homebrew' ? 'checked' : ''}>
       <label class="btn btn-outline-primary" for="preset-homebrew">Homebrew</label>
     </div>
+    <div id="preset-files-box" class="border rounded p-2 small">
+      <div class="fw-semibold mb-1">Included Pokédex</div>
+      <div id="preset-files-list"></div>
+    </div>
   `;
 
     const existing = sb.querySelector('[data-role="source-menu"]');
     if (existing) existing.remove();
     sb.prepend(wrap);
+    // Render file checkboxes for current preset
+    function renderPresetFiles() {
+      const box = wrap.querySelector('#preset-files-list');
+      const lbls = PRESETS[selectedPreset] || [];
+      const html = lbls.map(lbl => {
+        const fn = FILES_BY_LABEL[lbl];
+        const id = `pdx-file-${lbl.replace(/[^a-z0-9]+/gi,'-')}`;
+        const checked = (selectedLabels.size === 0 || selectedLabels.has(lbl)) ? 'checked' : '';
+        return `<div class="form-check">
+          <input class="form-check-input" type="checkbox" id="${id}" data-label="${lbl}" ${checked}>
+          <label class="form-check-label" for="${id}">${lbl}</label>
+        </div>`;
+        // return `<div class="form-check">
+        //   <input class="form-check-input" type="checkbox" id="${id}" data-label="${lbl}" ${checked}>
+        //   <label class="form-check-label" for="${id}">${lbl} <span class="text-muted">(${fn||'?'})</span></label>
+        // </div>`;
+      }).join('');
+      box.innerHTML = html;
+      box.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener('change', () => {
+          selectedLabels.clear();
+          box.querySelectorAll('input[type="checkbox"]:checked').forEach(c => selectedLabels.add(c.getAttribute('data-label')));
+          reload();
+        });
+      });
+    }
+    renderPresetFiles();
+
 
     wrap.querySelector('#btn-readme')?.addEventListener('click', () => {
       bootstrap.Modal.getOrCreateInstance(document.getElementById('readmeModal')).show();
@@ -246,16 +292,22 @@
     wrap.querySelector('#preset-core')?.addEventListener('change', (ev) => {
       if (!ev.target.checked) return;
       selectedPreset = 'Core';
+      selectedLabels = new Set(PRESETS[selectedPreset] || []);
+      renderPresetFiles();
       reload();
     });
     wrap.querySelector('#preset-community')?.addEventListener('change', (ev) => {
       if (!ev.target.checked) return;
       selectedPreset = 'Community';
+      selectedLabels = new Set(PRESETS[selectedPreset] || []);
+      renderPresetFiles();
       reload();
     });
     wrap.querySelector('#preset-homebrew')?.addEventListener('change', (ev) => {
       if (!ev.target.checked) return;
       selectedPreset = 'Homebrew';
+      selectedLabels = new Set(PRESETS[selectedPreset] || []);
+      renderPresetFiles();
       reload();
     });
   }
@@ -1029,6 +1081,7 @@
   // Boot
 
   document.addEventListener("DOMContentLoaded", async () => {
+    selectedLabels = new Set(PRESETS[selectedPreset] || []);
     // NEW — construit le menu des sources *avant* de charger
     buildSourceMenu();
 
