@@ -1,0 +1,246 @@
+TODO Separation Jumps
+TODO Separation Genres 
+
+Skill manquant : 1d6+0 (ignoré sur la page)
+Capabilities : chelou. Les non communues sont un string niveau -1, puis dans un champ otherCapabilities
+
+Il faut ajouter un détrompeur dans le nom de la Species car l'entrée est ajoutée
+
+
+
+{
+    "pokedexEntryDocumentId": null,
+    "pokedexDocumentId": null,
+    "species": "Sprigatito",
+    "form": null,
+    "types": [
+        "Grass"
+    ],
+    "legendary": false,
+    "nationalDexNumber": "906",
+    "regionOfOrigin": "Paldea",
+    "entryText": null,
+    "pokeApiId": "906",
+    "imageFileUrl": "gen9/Sprigatito.png",
+    "cryFileUrl": null,
+    "baseStats": {
+        "hp": 4,
+        "atk": 6,
+        "def": 5,
+        "spatk": 5,
+        "spdef": 5,
+        "spd": 7
+    },
+    "size": "Small",
+    "weight": "1",
+    "genderless": false,
+    "malePercent": 87.5,
+    "femalePercent": 12.5,
+    "eggGroups": [
+        "Field",
+        "Plant"
+    ],
+    "hatchRate": null,
+    "habitats": [
+        "Forest",
+        "Grasslands"
+    ],
+    "diets": [],
+    "moveLearnset": {
+        "levelUpMoves": [
+            {
+                "moveName": "Scratch",
+                "learnedLevel": 1
+            },
+            {
+                "moveName": "Tail Whip",
+                "learnedLevel": 1
+            },
+            {
+                "moveName": "Bite",
+                "learnedLevel": 7
+            },
+            {
+                "moveName": "Quick Attack",
+                "learnedLevel": 15
+            },
+            {
+                "moveName": "Slash",
+                "learnedLevel": 28
+            },
+            {
+                "moveName": "Magical Leaf",
+                "learnedLevel": 13
+            },
+            {
+                "moveName": "U-Turn",
+                "learnedLevel": 21
+            },
+            {
+                "moveName": "Worry Seed",
+                "learnedLevel": 25
+            },
+            {
+                "moveName": "Seed Bomb",
+                "learnedLevel": 17
+            },
+            {
+                "moveName": "Energy Ball",
+                "learnedLevel": 32
+            },
+            {
+                "moveName": "Hone Claws",
+                "learnedLevel": 10
+            },
+            {
+                "moveName": "Play Rough",
+                "learnedLevel": 36
+            },
+            {
+                "moveName": "Leafage",
+                "learnedLevel": 1
+            }
+        ],
+        "machineMoves": [
+            "Take Down",
+            "Solar Beam",
+            "Agility",
+            "Swift",
+            "Rest",
+            "Substitute",
+            "Protect",
+            "Mud-Slap",
+            "Giga Drain",
+            "Endure",
+            "Charm",
+            "Sleep Talk",
+            "Facade",
+            "Taunt",
+            "Helping Hand",
+            "Fake Tears",
+            "Bullet Seed",
+            "Magical Leaf",
+            "U-Turn",
+            "Seed Bomb",
+            "Energy Ball",
+            "Nasty Plot",
+            "Shadow Claw",
+            "Leaf Storm",
+            "Grass Knot",
+            "Acrobatics",
+            "Grass Pledge",
+            "Petal Blizzard",
+            "Disarming Voice",
+            "Grassy Terrain",
+            "Play Rough",
+            "Grassy Glide",
+            "Tera Blast",
+            "Trailblaze"
+        ],
+        "eggMoves": [
+            "Leech Seed",
+            "Copycat",
+            "Sucker Punch",
+            "Ally Switch",
+            "Petal Blizzard"
+        ],
+        "tutorMoves": []
+    },
+    "abilityLearnset": {
+        "basicAbilities": [
+            {
+                "name": "Overgrow",
+                "effect": "The user gains Last Chance with Grass.",
+                "trigger": null,
+                "target": null,
+                "frequency": "Static"
+            },
+            {
+                "name": "Pickpocket",
+                "effect": "If the opponent has a Held Item and the user does not, the user takes the Held Item the opponent is holding.",
+                "trigger": "The user is hit by an opponent with a Melee Move",
+                "target": null,
+                "frequency": "Scene — Free Action"
+            }
+        ],
+        "advancedAbilities": [
+            {
+                "name": "Chlorophyll",
+                "effect": "While in Sunny Weather or under 50% Max Hit Points, the user's Initiative is doubled.",
+                "trigger": null,
+                "target": null,
+                "frequency": "Static"
+            },
+            {
+                "name": "Protean",
+                "effect": "The user's Type changes to match the Type of the triggering Move. This Ability resolves before the Move is resolved (And thus you may apply STAB, and trigger other Features and Abilities appropriately).",
+                "trigger": "The user uses a Move",
+                "target": null,
+                "frequency": "At-Will — Swift Action"
+            }
+        ],
+        "highAbilities": [
+            {
+                "name": "Aroma Veil",
+                "effect": "The user and all adjacent Pokémon and Trainers cannot become Confused, Enraged, or Suppressed. Defensive.",
+                "trigger": null,
+                "target": null,
+                "frequency": "Static"
+            }
+        ]
+    },
+    "skills": {
+        "athletics": "2d6+0",
+        "acrobatics": "3d6+3",
+        "combat": "2d6+0",
+        "stealth": "3d6+2",
+        "perception": "3d6+0",
+        "focus": "3d6+1",
+        "charm": "2d6+0",
+        "command": "2d6+0",
+        "guile": "2d6+0",
+        "intimidate": "2d6+0",
+        "intuition": "2d6+0",
+        "survival": "2d6+0",
+        "generalEdu": "1d6+0",
+        "medicineEdu": "1d6+0",
+        "occultEdu": "1d6+0",
+        "pokemonEdu": "1d6+0",
+        "techEdu": "1d6+0"
+    },
+    "evolutionFamily": {
+        "familyName": null,
+        "entries": []
+    },
+    "evolutionStage": 1,
+    "evolutionsRemainingMale": null,
+    "evolutionsRemainingFemale": null,
+    "evolutionsRemainingGenderless": 2,
+    "evolutionMinLevel": 1,
+    "evolutionAtLevel": 16,
+    "megaEvolution": null,
+    "levelUpMoves": {},
+    "basicAbilities": [
+        "Overgrow",
+        "Pickpocket"
+    ],
+    "advancedAbilities": [
+        "Chlorophyll",
+        "Protean"
+    ],
+    "highAbilities": [
+        "Aroma Veil"
+    ],
+    "capabilities": {
+        "Overland": 6,
+        "Sky": 0,
+        "Swim": 2,
+        "Levitate": 0,
+        "Burrow": 0,
+        "High Jump": 1,
+        "Long Jump": 1,
+        "Power": 1,
+        "Naturewalk (Forest, Grassland),Underdog,Alluring": -1
+    },
+    "otherCapabilities": "Naturewalk (Forest, Grassland),Underdog,Alluring"
+}
