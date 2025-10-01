@@ -607,26 +607,26 @@
 
 
   // --- helpers ---
-function renderLevelUpMoves(moves) {
-  if (!Array.isArray(moves) || !moves.length) return '';
-  return `
+  function renderLevelUpMoves(moves) {
+    if (!Array.isArray(moves) || !moves.length) return '';
+    return `
     <ul class="list-unstyled mb-0">
       ${moves.map(m => {
-        // Tags en exposant (si présents)
-        const tagsSup = Array.isArray(m.Tags) && m.Tags.length
-          ? `<sup class="smaller text-uppercase text-muted ms-1">${escapeHtml(m.Tags.join(' '))}</sup>`
-          : '';
-        return `
+      // Tags en exposant (si présents)
+      const tagsSup = Array.isArray(m.Tags) && m.Tags.length
+        ? `<sup class="smaller text-uppercase text-muted ms-1">${escapeHtml(m.Tags.join(' '))}</sup>`
+        : '';
+      return `
         <li class="d-flex align-items-center mb-1">
           <span class="text-muted" style="width:50px;">Lv.${m.Level}</span>
           <span class="fw-semibold flex-grow-1">${escapeHtml(m.Move)}${tagsSup}</span>
           ${wrapTypes([m.Type])}
         </li>`;
-      }).join('')}
+    }).join('')}
     </ul>`;
-}
+  }
 
-  
+
   function renderStringList(title, arr) {
     if (!Array.isArray(arr) || !arr.length) return '';
     return `
@@ -682,7 +682,8 @@ function renderLevelUpMoves(moves) {
     const pushPair = (k, v) => {
       const key = String(k).trim();
       const val = Number(v);
-      if (key && Number.isFinite(val)) rated.push({ key: key, value: val });
+      if (key && Number.isFinite(Number(val))) rated.push({ key: key, value: val });
+      else if (key.startsWith("Jump")) rated.push({ key: key, value: v })
       else if (key) simple.push(key);
     };
 
@@ -690,7 +691,7 @@ function renderLevelUpMoves(moves) {
       const str = String(s).trim();
       if (!str) return;
       // "Overland 5" / "Sky 2" / "Long Jump 2" / "Swim 3" …
-      const m = str.match(/^(.+?)\s+(-?\d+(?:\.\d+)?)\s*$/);
+      const m = str.match(/^(.+?)\s+(-?\d+(?:\.\d+)?(?:\/\d+(?:\.\d+)?)?)\s*$/);
       if (m) pushPair(m[1], m[2]);
       else simple.push(str);
     };
@@ -714,15 +715,31 @@ function renderLevelUpMoves(moves) {
     }
 
     // Regrouper les doublons (somme si mêmes clés numériques)
+    // Regrouper les doublons (somme si valeurs numériques, sinon garde la dernière valeur telle quelle)
     const acc = new Map();
-    rated.forEach(({ key, value }) => acc.set(key, (acc.get(key) ?? 0) + value));
+    rated.forEach(({ key, value }) => {
+      const prev = acc.get(key);
+      if (typeof value === 'number' && typeof prev === 'number') {
+        acc.set(key, prev + value);
+      } else if (typeof value === 'number' && (prev === undefined)) {
+        acc.set(key, value);
+      } else if (typeof value === 'string') {
+        // valeur non numérique (ex: "1/1" pour Jump) → garde telle quelle
+        acc.set(key, value);
+      } else {
+        // fallback: remplace
+        acc.set(key, value);
+      }
+    });
     const ratedMerged = [...acc.entries()].map(([key, value]) => ({ key, value }));
+
 
     // Nettoyage chips
     const simpleClean = [...new Set(simple.filter(Boolean))];
 
     return { rated: ratedMerged, simple: simpleClean };
   }
+
   function renderBaseStats(stats, depth = 0) {
     const order = ["HP", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"];
 
