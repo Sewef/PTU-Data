@@ -67,10 +67,10 @@ if __name__ == "__main__":
               "name": "Meal Planner",
               "Prerequisites": "Chef",
               "Effect": "You may create the following items, based on your Intuition Rank",
-              "\n» Novice": "“Enriched Water” for $40",
-              "\n» Adept": "“Super Soda Pop” for $65",
-              "\n» Expert": "“Sparkling Lemonade” for $125",
-              "\n» Master": "“MooMoo Milk” for $250"
+              "\n» Novice": "\"Enriched Water\" for $40",
+              "\n» Adept": "\"Super Soda Pop\" for $65",
+              "\n» Expert": "\"Sparkling Lemonade\" for $125",
+              "\n» Master": "\"MooMoo Milk\" for $250"
             },
             "Hearty Meal": {
               "name": "Hearty Meal",

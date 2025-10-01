@@ -56,7 +56,7 @@ def simple_slug(s: str) -> str:
     s = "".join(ch for ch in s if not unicodedata.combining(ch))
     for ch in [" ", "_"]:
         s = s.replace(ch, "-")
-    for ch in ["'", "'", '"', "“", "”", "´", "`"]:
+    for ch in ["'", "'", '"', "\"", "\"", "´", "`"]:
         s = s.replace(ch, "")
     allowed = "abcdefghijklmnopqrstuvwxyz0123456789-."
     s = "".join(ch for ch in s if ch in allowed)

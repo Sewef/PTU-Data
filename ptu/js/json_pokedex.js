@@ -421,7 +421,7 @@
 
   // Sidebar builder (mirrors your moves sidebar UX)
   // Seule petite adaptation: buildTypeSidebar ne doit plus effacer tout le #sidebar
-  // mais compléter sous le bloc “Sources”. On remplace son début :
+  // mais compléter sous le bloc \"Sources\". On remplace son début :
   function buildTypeSidebar(all, onChange) {
     const sidebar = document.getElementById('sidebar');
     if (!sidebar) return;
@@ -961,7 +961,7 @@ function renderLevelUpMoves(moves) {
 
 
   function renderObject(obj, depth = 0) {
-    // Dispatch: left column for “main” sections
+    // Dispatch: left column for \"main\" sections
     const leftSections = new Set([
       "Base Stats", "Basic Information", "Evolution", "Other Information", "Battle-Only Forms"
     ]);

@@ -539,7 +539,7 @@
             "Effect": "For appeal rolls, instead of making the Appeal Roll, you gain 1 Appeal Point for each Die you would have rolled. For Accuracy Checks, act as if you had rolled an 11. For Skill Checks, multiply 3.5 by the Skill Rank in question, and use the resulting number as the result of the roll, rounded down. For all rolls, add or subtract any modifiers as normal."
         },
         "Innovation Moves": {
-            "Description": "The Coordinator's “Innovation\" Feature lets the Coordinator create new Moves for their Pokémon. These Moves can serve to fill voids in Move Lists for both Battles and Contests and provide utility.\nTo create a Move, first choose a Contest Type. This affects the Move's effects and of course its role in Contests.\nNext choose a Contest Effect. Look at the “Contest Effects\" section (page 266) under “Contests\" for the full list. Pick one. That's right, any of them. This determines what the Move does during a Contest, of course.\nThird, choose one of the four templates below. This determines the Move's effects in Battle. These are modified by the Contest Type of the Move. Remember, Cool is associated with Attack, Tough with Defense, Beauty with Special Attack, Smart with Special Defense, and Cute with Speed.\nAnd finally, name your Move! This is the best part!",
+            "Description": "The Coordinator's \"Innovation\" Feature lets the Coordinator create new Moves for their Pokémon. These Moves can serve to fill voids in Move Lists for both Battles and Contests and provide utility.\nTo create a Move, first choose a Contest Type. This affects the Move's effects and of course its role in Contests.\nNext choose a Contest Effect. Look at the \"Contest Effects\" section (page 266) under \"Contests\" for the full list. Pick one. That's right, any of them. This determines what the Move does during a Contest, of course.\nThird, choose one of the four templates below. This determines the Move's effects in Battle. These are modified by the Contest Type of the Move. Remember, Cool is associated with Attack, Tough with Defense, Beauty with Special Attack, Smart with Special Defense, and Cute with Speed.\nAnd finally, name your Move! This is the best part!",
             "Template #1": {
                 "Type": "Normal",
                 "Frequency": "Scene",
@@ -2414,10 +2414,10 @@
             "Meal Planner": {
                 "Prerequisites": "Chef",
                 "Effect": "You may create the following items, based on your Intuition Rank",
-                "\n» Novice": "“Enriched Water\" for $40",
-                "\n» Adept": "“Super Soda Pop\" for $65",
-                "\n» Expert": "“Sparkling Lemonade\" for $125",
-                "\n» Master": "“MooMoo Milk\" for $250"
+                "\n» Novice": "\"Enriched Water\" for $40",
+                "\n» Adept": "\"Super Soda Pop\" for $65",
+                "\n» Expert": "\"Sparkling Lemonade\" for $125",
+                "\n» Master": "\"MooMoo Milk\" for $250"
             },
             "Hearty Meal": {
                 "Prerequisites": "Hits the Spot",
@@ -3701,7 +3701,7 @@
             "Prerequisites": "Two of Acrobatics, Athletics, and Stealth at Novice Rank",
             "Frequency": "Static",
             "Effect": "You learn the Moves Feint Attack and Thief.",
-            "Note": "Acrobatics, Athletics, and Stealth are referred to as “Rogue Skills\" as short-hand."
+            "Note": "Acrobatics, Athletics, and Stealth are referred to as \"Rogue Skills\" as short-hand."
         },
         "Cutthroat": {
             "Tags": "[+Attack][Weapon]",
