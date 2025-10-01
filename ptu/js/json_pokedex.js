@@ -1,6 +1,6 @@
 (function () {
   const CFG = {
-    // NEW — patterns d’icônes inchangés
+    // NEW — patterns d'icônes inchangés
     iconPatterns: [
       (base, num) => `${base}/${num}.png`
     ],
@@ -73,7 +73,7 @@
   function getDexModalInstance() {
     const el = document.getElementById('dexModal');
     if (!el) return null;
-    // Réutilise l’instance existante si présente
+    // Réutilise l'instance existante si présente
     dexModalInstance = bootstrap.Modal.getOrCreateInstance(el, {
       backdrop: true,
       focus: true,
@@ -160,7 +160,7 @@
           seen.add(key);
           merged.push(row);
         } else {
-          // si tu veux une fusion plus intelligente, c’est ici (merge deep)
+          // si tu veux une fusion plus intelligente, c'est ici (merge deep)
         }
       }
     }
@@ -356,10 +356,10 @@
 
   // Cherche un Pokémon par son nom complet et ouvre la modale
   async function openModalBySpecies(speciesName) {
-    // Charger le Pokédex si ce n’est pas déjà fait
+    // Charger le Pokédex si ce n'est pas déjà fait
     const data = await loadPokedex();
 
-    // Trouver l’objet correspondant
+    // Trouver l'objet correspondant
     const found = data.find(p =>
       (p.Species || '').toLowerCase() === speciesName.toLowerCase()
     );
@@ -426,7 +426,7 @@
     const sidebar = document.getElementById('sidebar');
     if (!sidebar) return;
 
-    // NEW — supprime juste l’ancien bloc types s’il existe
+    // NEW — supprime juste l'ancien bloc types s'il existe
     const oldTypes = sidebar.querySelector('[data-role="type-filters"]');
     if (oldTypes) oldTypes.remove();
 
@@ -594,7 +594,7 @@
     const img = document.getElementById('dexModalIcon');
     if (img) setupIcon(img, p.Icon || p.Number, species, "full");
 
-    // 👉 Réutiliser l’instance, et ne montrer que si fermée
+    // 👉 Réutiliser l'instance, et ne montrer que si fermée
     const inst = getDexModalInstance();
     if (inst && !isDexModalShown()) {
       inst.show();
@@ -1159,7 +1159,7 @@ function renderLevelUpMoves(moves) {
       return html;
     }
 
-    // Fallback for primitives (shouldn’t really hit here)
+    // Fallback for primitives (shouldn't really hit here)
     return escapeHtml(String(obj));
   }
 
@@ -1222,7 +1222,7 @@ function renderLevelUpMoves(moves) {
     const modalEl = document.getElementById('dexModal');
     if (modalEl) {
       modalEl.addEventListener('hidden.bs.modal', () => {
-        // Si jamais Bootstrap ne l’a pas retiré (plugins, CSS custom, etc.)
+        // Si jamais Bootstrap ne l'a pas retiré (plugins, CSS custom, etc.)
         document.querySelectorAll('.modal-backdrop').forEach(b => b.remove());
         document.body.classList.remove('modal-open');
         document.body.style.removeProperty('paddingRight');

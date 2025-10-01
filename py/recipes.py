@@ -15,7 +15,7 @@ def extract_recipes(data, parent=None):
             if isinstance(v, dict) and 'name' in v:
                 recipes.extend(extract_recipes(v, parent=name_value))
 
-        # Puis créer l’objet courant, avec "name" en premier
+        # Puis créer l'objet courant, avec "name" en premier
         entry = {'name': name_value}
         for k, v in other_fields.items():
             if not (isinstance(v, dict) and 'name' in v):
@@ -41,27 +41,27 @@ if __name__ == "__main__":
             },
             "Salty Surprise": {
               "name": "Salty Surprise",
-              "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by an attack to gain 5 Temporary Hit Points. If the user likes Salty Flavors, they gain 10 Temporary Hit Points Instead. If the user dislikes Salty Food, they become Enraged."
+              "Effect": "The user may trade in this Snack's Digestion Buff when being hit by an attack to gain 5 Temporary Hit Points. If the user likes Salty Flavors, they gain 10 Temporary Hit Points Instead. If the user dislikes Salty Food, they become Enraged."
             },
             "Spicy Wrap": {
               "name": "Spicy Wrap",
-              "Effect": "The user may trade in this Snack’s Digestion Buff when making a Physical attack to deal +5 additional Damage. If the user prefers Spicy Food, it deals +10 additional Damage instead. If the user dislikes Spicy Food, they become Enraged."
+              "Effect": "The user may trade in this Snack's Digestion Buff when making a Physical attack to deal +5 additional Damage. If the user prefers Spicy Food, it deals +10 additional Damage instead. If the user dislikes Spicy Food, they become Enraged."
             },
             "Sour Candy": {
               "name": "Sour Candy",
-              "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by a Physical Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Sour Food, they gain +10 Damage Reduction instead. If the user dislikes Sour Food, they become Enraged."
+              "Effect": "The user may trade in this Snack's Digestion Buff when being hit by a Physical Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Sour Food, they gain +10 Damage Reduction instead. If the user dislikes Sour Food, they become Enraged."
             },
             "Dry Wafer": {
               "name": "Dry Wafer",
-              "Effect": "The user may trade in this Snack’s Digestion Buff when making a Special attack to deal +5 additional Damage. If the user prefers Dry Food, it deals +10 additional Damage instead. If the user dislikes Dry Food, they become Enraged."
+              "Effect": "The user may trade in this Snack's Digestion Buff when making a Special attack to deal +5 additional Damage. If the user prefers Dry Food, it deals +10 additional Damage instead. If the user dislikes Dry Food, they become Enraged."
             },
             "Bitter Treat": {
               "name": "Bitter Treat",
-              "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by a Special Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Bitter Food, they gain +10 Damage Reduction instead. If the user dislikes Bitter Food, they become Enraged."
+              "Effect": "The user may trade in this Snack's Digestion Buff when being hit by a Special Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Bitter Food, they gain +10 Damage Reduction instead. If the user dislikes Bitter Food, they become Enraged."
             },
             "Sweet Confection": {
               "name": "Sweet Confection",
-              "Effect": "The user may trade in this Snack’s Digestion Buff to gain +4 Evasion until the end of their next turn. If the user prefers Sweet Food, they gain +4 Accuracy as well. If the user dislikes Sweet Food, they become Enraged."
+              "Effect": "The user may trade in this Snack's Digestion Buff to gain +4 Evasion until the end of their next turn. If the user prefers Sweet Food, they gain +4 Accuracy as well. If the user dislikes Sweet Food, they become Enraged."
             },
             "Meal Planner": {
               "name": "Meal Planner",

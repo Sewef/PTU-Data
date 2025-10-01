@@ -186,13 +186,13 @@ def extract_page(page_text: str, page_index: int):
 
     #record = {"_page_index": page_index, "_raw_text": page_text}
     record = {}
-    # Titre d’espèce
+    # Titre d'espèce
     species = lines[0]
 
     if not species:
         # Fallback 2 : section Evolution "1 - <Species>"
         for l in lines:
-            m = re.match(r'^\s*1\s*-\s*([A-Za-z’\'\- ]+?)\s*(?:$|\s{2,}|Lv|Minimum|\()', l)
+            m = re.match(r'^\s*1\s*-\s*([A-Za-z'\'\- ]+?)\s*(?:$|\s{2,}|Lv|Minimum|\()', l)
             if m:
                 species = m.group(1).strip()
                 break
@@ -276,13 +276,13 @@ def extract_page(page_text: str, page_index: int):
                 item = re.sub(r'\s+', ' ', item).strip()
 
                 # Exemples :
-                # "Size: 1’0’’ / 0.3m (Small) 35.3 lbs / 16.0 kg (Weight Class 2)"
-                # "Size: 5’03’’ / 1.6m (Medium) 343.9 lbs / 156.0 kg (Weight Class 6)"
+                # "Size: 1'0'' / 0.3m (Small) 35.3 lbs / 16.0 kg (Weight Class 2)"
+                # "Size: 5'03'' / 1.6m (Medium) 343.9 lbs / 156.0 kg (Weight Class 6)"
                 m = re.search(r'(?i)Size:\s*(.*?\))\s+(.+?)(?:\s+(?:Genders?:|Diet:|Habitat:|Capabilities\b|Skill List\b|Move List\b|Evolution:|Other Information\b)|$)', item)
                 if m:
                     height = m.group(1).strip()
                     weight = m.group(2).strip()
-                    # Nettoie l’ancienne clé plate et stocke proprement
+                    # Nettoie l'ancienne clé plate et stocke proprement
                     bi.pop("Size", None)
                     bi.setdefault("Size Information", {})
                     bi["Size Information"]["Height"] = height

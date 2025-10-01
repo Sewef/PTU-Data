@@ -92,8 +92,8 @@
     {
         "name": "Guard Dog",
         "frequency": "Scene – Free Action, Reaction",
-        "trigger": "A foe directly lowers the user’s CS (including Accuracy and Effect Range, but not including things like Status Afflictions).",
-        "effect": "The user’s CS are instead raised by the same amount they would have been lowered.",
+        "trigger": "A foe directly lowers the user's CS (including Accuracy and Effect Range, but not including things like Status Afflictions).",
+        "effect": "The user's CS are instead raised by the same amount they would have been lowered.",
         "bonus": "The user is immune to Push effects, and the effects of Roar. Defensive."
     },
     {
@@ -125,13 +125,13 @@
         "name": "Lingering Aroma",
         "frequency": "Scene – Swift Action",
         "target": "All foes and allies within 2 meters",
-        "effect": "Foes within range are pushed 1 meter towards the user. Allies within Range gain Lingering Aroma until the end of the Scene or until they are switched out, if they don’t already have it."
+        "effect": "Foes within range are pushed 1 meter towards the user. Allies within Range gain Lingering Aroma until the end of the Scene or until they are switched out, if they don't already have it."
     },
     {
-        "name": "Mind’s Eye",
+        "name": "Mind's Eye",
         "frequency": "Static",
         "effect": "Connection – Blood Moon. Blood Moon deals damage one step more Effectively against the target in the end square of the Line, if that target has no cardinally adjacent allies.",
-        "bonus": "The user’s Accuracy cannot be lowered, their attacks cannot have Accuracy Penalties (such as from Illuminate), and the user is immune to the Blind condition (but not Total Blindness). Ghost-Types are not immune to the user’s Normal-Type Moves."
+        "bonus": "The user's Accuracy cannot be lowered, their attacks cannot have Accuracy Penalties (such as from Illuminate), and the user is immune to the Blind condition (but not Total Blindness). Ghost-Types are not immune to the user's Normal-Type Moves."
     },
     {
         "name": "Mouthful",
@@ -194,14 +194,14 @@
     {
         "name": "Quill & Rock",
         "frequency": "Static",
-        "effect": "Squawkabilly’s Advanced and High Abilities depend on their plumage color (decided upon generation). Innate.",
+        "effect": "Squawkabilly's Advanced and High Abilities depend on their plumage color (decided upon generation). Innate.",
         "plumage": "\n- Color: Green, Advanced: Rockabilly, High: Intimidate,\n- Color: Blue, Advanced: Pack Hunt, High: Defiant,\n- Color: Yellow, Advanced: Vicious, High: Reckless,\n- Color: White, Advanced: Teamwork, High: Ambush"
         
     },
     {
         "name": "Rockabilly",
         "frequency": "Static",
-        "effect": "The user’s Sonic Moves gain the Versatile Keyword."
+        "effect": "The user's Sonic Moves gain the Versatile Keyword."
     },
     {
         "name": "Rocky Payload",
@@ -227,7 +227,7 @@
     {
         "name": "Showdown Mode",
         "frequency": "Scene – Swift Action, Priority (Limited)",
-        "effect": "The user enters Showdown Mode. While in Showdown Mode, the user’s Melee Moves gain a +2 bonus to Critical Hit Range, deal bonus damage equal to the user’s Tick Value, and after dealing damage with them, the user loses a Tick of Hit Points. The user may exit Showdown Mode as a Free Action."
+        "effect": "The user enters Showdown Mode. While in Showdown Mode, the user's Melee Moves gain a +2 bonus to Critical Hit Range, deal bonus damage equal to the user's Tick Value, and after dealing damage with them, the user loses a Tick of Hit Points. The user may exit Showdown Mode as a Free Action."
     },
     {
         "name": "Sleight of Hand",
@@ -282,9 +282,9 @@
         "name": "Tera Cudgel",
         "frequency": "At-Will – Free Action",
         "trigger": "The user hits a target with Ivy Cudgel.",
-        "effect": "Connection – Ivy Cudgel. Tera Cudgel’s Effect depends on the user’s current Embody Aspect Forme. Innate.",
+        "effect": "Connection – Ivy Cudgel. Tera Cudgel's Effect depends on the user's current Embody Aspect Forme. Innate.",
         "formeEffects": 
-            "\n- Teal Mask: The user may choose to have the attack deal damage as though it were one step less Effective; if they do so, they may then Disengage 3m and attack a different target with Ivy Cudgel as a Free Action, ignoring Frequency, dealing damage as though it were one step less Effective.\n- Wellspring Mask: The triggering target becomes Thornbound by the user until the end of the user’s next turn. Thornbound characters suffer a -2 Accuracy and -10 damage penalty when targeting characters other than the user, and are treated as Slowed when Shifting away from the user.\n- Hearthflame Mask: The triggering target is Slowed for one full Round and all foes cardinally adjacent to it become Burned. If the user has not used their Shift Action this turn, they may expend it to additionally have the target become Stuck and all foes adjacent to them Slowed for one full Round.\n- Cornerstone Mask: The user may create 5 squares of Rocks. Each square must be cardinally adjacent to another square, and at least one must be adjacent to the user. Rocks count as Blocking Terrain against foes’ Ranged Attacks, and deal a Tick of Hit Point Loss to grounded foes who step onto them. This Hit Point Loss applies only once per turn. Rocks disappear at the start of the user’s next turn."
+            "\n- Teal Mask: The user may choose to have the attack deal damage as though it were one step less Effective; if they do so, they may then Disengage 3m and attack a different target with Ivy Cudgel as a Free Action, ignoring Frequency, dealing damage as though it were one step less Effective.\n- Wellspring Mask: The triggering target becomes Thornbound by the user until the end of the user's next turn. Thornbound characters suffer a -2 Accuracy and -10 damage penalty when targeting characters other than the user, and are treated as Slowed when Shifting away from the user.\n- Hearthflame Mask: The triggering target is Slowed for one full Round and all foes cardinally adjacent to it become Burned. If the user has not used their Shift Action this turn, they may expend it to additionally have the target become Stuck and all foes adjacent to them Slowed for one full Round.\n- Cornerstone Mask: The user may create 5 squares of Rocks. Each square must be cardinally adjacent to another square, and at least one must be adjacent to the user. Rocks count as Blocking Terrain against foes' Ranged Attacks, and deal a Tick of Hit Point Loss to grounded foes who step onto them. This Hit Point Loss applies only once per turn. Rocks disappear at the start of the user's next turn."
         
     },
     {
@@ -311,7 +311,7 @@
     {
         "name": "Tower Shield",
         "frequency": "Static",
-        "effect": "The user counts as Blocking Terrain for the purposes of foes’ Ranged attacks against allies."
+        "effect": "The user counts as Blocking Terrain for the purposes of foes' Ranged attacks against allies."
     },
     {
         "name": "Toxic Chain",

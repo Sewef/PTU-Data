@@ -57,7 +57,7 @@
     {
         "name": "Emergency Exit",
          "frequency": "Scene – Free Action",
-        "effect": "When the user’s Hit Points drop below half their maximum, their trainer may immediately recall the user and send out another Pokemon as a Free Action. If the user hasn’t taken their turn yet, their replacement may act this round. [Defensive]",
+        "effect": "When the user's Hit Points drop below half their maximum, their trainer may immediately recall the user and send out another Pokemon as a Free Action. If the user hasn't taken their turn yet, their replacement may act this round. [Defensive]",
         "bonus": " The user is immune to Trapped."
     },
     {
@@ -68,7 +68,7 @@
     {
         "name": "Full Metal Body",
         "frequency": "Static",
-        "effect": "The user’s Combat Stages may not be lowered by the effect of foes’ Feautres, Abilities, or Moves. Status Affictions may still alter their Combat Stages. Defensive."
+        "effect": "The user's Combat Stages may not be lowered by the effect of foes' Feautres, Abilities, or Moves. Status Affictions may still alter their Combat Stages. Defensive."
     },
     {
         "name": "Galvanize",
@@ -143,7 +143,7 @@
         "name": "Queenly Majesty",
          "frequency": "Scene x2 – Free Action",
         "effect": "Connection - Stomp - if an adjacent target uses a Priority Move or an Interrupt action, the user may attack that target with Stomp as a Free Action Interrupt.",
-        "bonus": " The user cannot be targeted by Interrupt Moves and enemies may not activate Interrupts in response to the user’s actions."
+        "bonus": " The user cannot be targeted by Interrupt Moves and enemies may not activate Interrupts in response to the user's actions."
     },
     {
         "name": "Revelation",
@@ -166,7 +166,7 @@
         "name": "RKS System",
          "frequency": "Scene – Free Action",
         "effect": "If the user is hit by a damaging attack, they may calculate damage as if they were Normal-frequency instead. If they were already Normal-frequency, they resist all damage one step further.",
-        "bonus": " The user’s frequency changes to match the frequency of their held Memory Disc."
+        "bonus": " The user's frequency changes to match the frequency of their held Memory Disc."
     },
     {
         "name": "Schooling",
@@ -187,7 +187,7 @@
     {
         "name": "Slush Rush",
         "frequency": "Static",
-        "effect": "While in Hailing Weather or under half maximum Hit Points, the user’s Initiative is doubled."
+        "effect": "While in Hailing Weather or under half maximum Hit Points, the user's Initiative is doubled."
     },
     {
         "name": "Soul Heart",
@@ -197,7 +197,7 @@
     {
         "name": "Stamina",
          "frequency": "At-Will – Free Action",
-        "effect": "On Electric Terrain or while under half maximum Hit Points, the user’s Initiative is doubled."
+        "effect": "On Electric Terrain or while under half maximum Hit Points, the user's Initiative is doubled."
     },
     {
         "name": "Steelworker",
@@ -214,13 +214,13 @@
     {
         "name": "Triage",
         "frequency": "Static",
-        "effect": "The user’s [Healing] keyword Moves gain the [Priority] keyword. Note: Floral Healing, Pollen Puff, Purify, and Strength Sap are new Moves with the [Healing] tag. Aromatherapy, Heal Bell, Heal Pulse, Healing Wish, Moonlight, Recover, Slack Off, Rest, Synthesis, and Wish should all have the [Healing] keyword and are affected by Triage."
+        "effect": "The user's [Healing] keyword Moves gain the [Priority] keyword. Note: Floral Healing, Pollen Puff, Purify, and Strength Sap are new Moves with the [Healing] tag. Aromatherapy, Heal Bell, Heal Pulse, Healing Wish, Moonlight, Recover, Slack Off, Rest, Synthesis, and Wish should all have the [Healing] keyword and are affected by Triage."
     },
     {
         "name": "Water Bubble",
         "frequency": "Static",
         "effect": "The user resists Fire-frequency attacks one step further, is immune to being Burned, and may always act as though in Rainy Weather. [Defensive]",
-        "bonus": " The user may attack with Water-frequency Moves as if they had a range of “Melee, 1 target”. If they do, that Move's Class is changed to Physical and it deals +1d6+2 damage."
+        "bonus": " The user may attack with Water-frequency Moves as if they had a range of “Melee, 1 target\". If they do, that Move's Class is changed to Physical and it deals +1d6+2 damage."
     },
     {
         "name": "Water Compaction",
@@ -250,6 +250,6 @@
     {
         "name": "Unaware",
         "frequency": "Static",
-        "effect": "Whenever the user attacks, they ignore all positive Combat Stages to the target’s Defense, Special Defense, and Speed."
+        "effect": "Whenever the user attacks, they ignore all positive Combat Stages to the target's Defense, Special Defense, and Speed."
     }
 ]

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-convert_classes.py – transforme l’ancien JSON de Classes/Fonctions
+convert_classes.py – transforme l'ancien JSON de Classes/Fonctions
 vers le nouveau schéma unifié et plus simple à parcourir côté front.
 
 Usage :
@@ -13,18 +13,18 @@ from pathlib import Path
 
 
 # ---------------------------------------------------------------------------
-# 1) Détection d’une Feature « feuille »
+# 1) Détection d'une Feature « feuille »
 # ---------------------------------------------------------------------------
 LEAF_KEYS = {"effect", "frequency", "tags", "trigger", "target",
              "Effect", "Frequency", "Tags", "Trigger", "Target"}
 
 def is_leaf_feature(obj: dict) -> bool:
-    """True si l’objet ressemble à une Feature terminale."""
+    """True si l'objet ressemble à une Feature terminale."""
     return any(k in obj for k in LEAF_KEYS)
 
 
 # ---------------------------------------------------------------------------
-# 2) Conversion récursive d’un bloc { FeatureName: {...}, ... } en liste
+# 2) Conversion récursive d'un bloc { FeatureName: {...}, ... } en liste
 # ---------------------------------------------------------------------------
 def flatten_features(dico: dict) -> list[dict]:
     """
@@ -35,7 +35,7 @@ def flatten_features(dico: dict) -> list[dict]:
     feats = []
     for name, data in dico.items():
 
-        # Copie défensive pour ne pas modifier l’original
+        # Copie défensive pour ne pas modifier l'original
         data = dict(data)
 
         # Sépare un éventuel sous-ensemble « Features »
@@ -51,7 +51,7 @@ def flatten_features(dico: dict) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
-# 3) Conversion d’une classe complète
+# 3) Conversion d'une classe complète
 # ---------------------------------------------------------------------------
 def convert_class(class_dict: dict) -> dict:
     """

@@ -13,13 +13,13 @@
     {
         "name": "Beast Boost",
         "frequency": "At-Will – Free Action",
-        "trigger": "The user’s Damaging Attack causes an opponent to Faint",
+        "trigger": "The user's Damaging Attack causes an opponent to Faint",
         "effect": "The user receives +1 Combat Stage in their highest non-HP stat."
     },
     {
         "name": "Berserk",
         "frequency": "At-Will – Free Action",
-        "trigger": "The user’s drops to half HP or below for the first time in an encounter, or becomes Enraged",
+        "trigger": "The user's drops to half HP or below for the first time in an encounter, or becomes Enraged",
         "effect": "The user receives +1 Special Attack Combat Stage."
     },
     {
@@ -64,7 +64,7 @@
     {
         "name": "Emergency Exit",
         "frequency": "Scene – Free Action",
-        "effect": "When the user’s Hit Points drop below half their maximum, their trainer may immediately recall the user and send out another Pokémon as a Free Action. If the user hasn’t taken their turn yet, their replacement may act this round. Defensive.",
+        "effect": "When the user's Hit Points drop below half their maximum, their trainer may immediately recall the user and send out another Pokémon as a Free Action. If the user hasn't taken their turn yet, their replacement may act this round. Defensive.",
         "bonus": " The user is immune to being Trapped."
     },
     {
@@ -75,7 +75,7 @@
     {
         "name": "Full Metal Body",
         "frequency": "Static",
-        "effect": "The user’s Combat Stages may not be lowered by the effect of foes’ Features, Abilities, or Moves. Status Afflictions may still alter their Combat Stages. Defensive."
+        "effect": "The user's Combat Stages may not be lowered by the effect of foes' Features, Abilities, or Moves. Status Afflictions may still alter their Combat Stages. Defensive."
     },
     {
         "name": "Galvanize",
@@ -97,7 +97,7 @@
     {
         "name": "Handyman",
         "frequency": "Static",
-        "effect": "The user may hold two Held Items at once. Whenever an Ability or Move affects the user’s Held Items, you may choose which one is affected."
+        "effect": "The user may hold two Held Items at once. Whenever an Ability or Move affects the user's Held Items, you may choose which one is affected."
     },
     {
         "name": "Horde Break",
@@ -192,7 +192,7 @@
         "name": "RKS System",
         "frequency": "Scene – Free Action",
         "effect": "If the user is hit by a damaging attack, they may calculate damage as if they were Normal-Type instead. If they were already Normal-Type, they instead resist the damage one step further.",
-        "bonus": " The user’s Type changes to match the Type of their held Memory Disc."
+        "bonus": " The user's Type changes to match the Type of their held Memory Disc."
     },
     {
         "name": "Schooling",
@@ -213,7 +213,7 @@
     {
         "name": "Slush Rush",
         "frequency": "Static",
-        "effect": "While in Hailing Weather or under half maximum Hit Points, the user’s Initiative is doubled."
+        "effect": "While in Hailing Weather or under half maximum Hit Points, the user's Initiative is doubled."
     },
     {
         "name": "Soul Heart",
@@ -242,7 +242,7 @@
     {
         "name": "Surge Surfer",
         "frequency": "Static",
-        "effect": "On Electric Terrain or while under half maximum Hit Points, the user’s Initiative is doubled."
+        "effect": "On Electric Terrain or while under half maximum Hit Points, the user's Initiative is doubled."
     },
     {
         "name": "Tangling Hair",
@@ -253,13 +253,13 @@
     {
         "name": "Triage",
         "frequency": "Static",
-        "effect": "The user’s moves with the Healing keyword may be used as Priority moves."
+        "effect": "The user's moves with the Healing keyword may be used as Priority moves."
     },
     {
         "name": "Water Bubble",
         "frequency": "Static",
         "effect": "The user resists Fire-Type attacks one step further, is immune to being Burned, and may always act as though in Rainy Weather. Defensive.",
-        "bonus": " The user may attack with Water-Type Moves as if they had a range of “Melee, 1 target”. If they do, that Move's Class is changed to Physical and it deals +1d6+2 damage."
+        "bonus": " The user may attack with Water-Type Moves as if they had a range of “Melee, 1 target\". If they do, that Move's Class is changed to Physical and it deals +1d6+2 damage."
     },
     {
         "name": "Water Compaction",
@@ -290,6 +290,6 @@
     {
         "name": "Unaware",
         "frequency": "Static",
-        "effect": "Whenever the user attacks, they ignore all positive Combat Stages to the target’s Defense, Special Defense, and Speed."
+        "effect": "Whenever the user attacks, they ignore all positive Combat Stages to the target's Defense, Special Defense, and Speed."
     }
 ]

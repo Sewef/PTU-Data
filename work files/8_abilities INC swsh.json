@@ -9,7 +9,7 @@
         "name": "Chilling Neigh",
         "frequency": "At-Will – Free Action",
         "trigger": "The user causes a foe to Faint with a damaging attack",
-        "effect": "The user’s Attack is raised by 1 Combat Stage. In addition, all foes within 3m of the user take a -2 penalty to evasion for one full round."
+        "effect": "The user's Attack is raised by 1 Combat Stage. In addition, all foes within 3m of the user take a -2 penalty to evasion for one full round."
     },
     {
         "name": "Cotton Down",
@@ -26,10 +26,10 @@
     {
         "name": "Dauntless Shield",
         "frequency": "Static",
-        "effect": "The user’s default Defense Combat Stages are increased by +1."
+        "effect": "The user's default Defense Combat Stages are increased by +1."
     },
     {
-        "name": "Dragon’s Maw",
+        "name": "Dragon's Maw",
         "frequency": "Scene x2 – Free Action",
         "trigger": "The user hits with a damaging Dragon-Type Move",
         "effect": "One target hit by the attack becomes one stage more vulnerable to the attack (applied after all other modifiers). Immune targets are treated as initially double-resistant for the purposes of this Ability, and may be damaged normally."
@@ -50,7 +50,7 @@
         "name": "Grim Neigh",
         "frequency": "At-Will – Free Action",
         "trigger": "The user causes a foe to Faint with a damaging attack",
-        "effect": "The user’s Special Attack is raised by 1 Combat Stage. In addition, all foes within 3m of the user take a -2 penalty to Accuracy for one full round."
+        "effect": "The user's Special Attack is raised by 1 Combat Stage. In addition, all foes within 3m of the user take a -2 penalty to Accuracy for one full round."
     },
     {
         "name": "Gulp Missile",
@@ -61,7 +61,7 @@
     {
         "name": "Hunger Switch",
         "frequency": "Static",
-        "effect": "At the beginning of each of the user’s turns, the user must choose whether it’s in Full Belly Mode or Hangry Mode until the beginning of its next turn. In Full Belly Mode, it gains a +2 bonus to Accuracy. In Hangry Mode, it gains a +5 Bonus to Damage Rolls."
+        "effect": "At the beginning of each of the user's turns, the user must choose whether it's in Full Belly Mode or Hangry Mode until the beginning of its next turn. In Full Belly Mode, it gains a +2 bonus to Accuracy. In Hangry Mode, it gains a +5 Bonus to Damage Rolls."
     },
     {
         "name": "Ice Face",
@@ -76,7 +76,7 @@
     {
         "name": "Intrepid Sword",
         "frequency": "Static",
-        "effect": "The user’s default Attack Combat Stages are increased by +1."
+        "effect": "The user's default Attack Combat Stages are increased by +1."
     },
     {
         "name": "Mimicry",
@@ -86,13 +86,13 @@
     {
         "name": "Mirror Armor",
         "frequency": "At-Will – Free Action, Reaction",
-        "trigger": "A foe’s Move or Ability directly lowers the user’s CS (including Effect Ranges, but not including things like Status)",
-        "effect": "The user’s CS are instead not lowered, and the triggering foe’s CS in the affected stats are instead lowered the same amount the user’s would have been."
+        "trigger": "A foe's Move or Ability directly lowers the user's CS (including Effect Ranges, but not including things like Status)",
+        "effect": "The user's CS are instead not lowered, and the triggering foe's CS in the affected stats are instead lowered the same amount the user's would have been."
     },
     {
         "name": "Missile Launch",
         "frequency": "Scene x2 – Standard Action",
-        "effect": "Connection – Dragon Darts. The user places two Dreepy Tokens within 6m. The user may move all Dreepy Tokens it controls 4m as a Swift Action. A Dreepy Token can freely enter other creatures’ squares as part of this movement, which destroys the token, and causes the creature to suffer an AC2 DB 5 Physical Dragon-Type attack as if from the user of Missile Launch. Dreepy Tokens may be targeted. They have the same evasions as the user, and any damage destroys them (including from Smite damage)."
+        "effect": "Connection – Dragon Darts. The user places two Dreepy Tokens within 6m. The user may move all Dreepy Tokens it controls 4m as a Swift Action. A Dreepy Token can freely enter other creatures' squares as part of this movement, which destroys the token, and causes the creature to suffer an AC2 DB 5 Physical Dragon-Type attack as if from the user of Missile Launch. Dreepy Tokens may be targeted. They have the same evasions as the user, and any damage destroys them (including from Smite damage)."
     },
     {
         "name": "Neutralizing Gas",
@@ -108,7 +108,7 @@
         "name": "Perish Body",
         "frequency": "Daily – Standard Action, Reaction",
         "trigger": "The user is hit with a Melee attack",
-        "effect": "The triggering creature and the user each receive a Perish Count of 3. At the beginning of each of the target’s turns, their Perish count is lowered by 1. Once a Perish Count reaches 0, set the Pokémon’s Hit Points to 0. A Perish Count disappears if a target returns to their Poké Ball, Takes a Breather, or is knocked out. Perish Body never causes Massive Damage. Defensive."
+        "effect": "The triggering creature and the user each receive a Perish Count of 3. At the beginning of each of the target's turns, their Perish count is lowered by 1. Once a Perish Count reaches 0, set the Pokémon's Hit Points to 0. A Perish Count disappears if a target returns to their Poké Ball, Takes a Breather, or is knocked out. Perish Body never causes Massive Damage. Defensive."
     },
     {
         "name": "Power Spot",
@@ -119,7 +119,7 @@
         "name": "Propeller Tail",
         "frequency": "Scene – Swift Action",
         "effect": "The user may make a Sprint Maneuver as a Free Action.",
-        "bonus": " The user may not be Intercepted, nor may any Abilities, Moves, or Features be activated to change the user’s target. Any of those existing effects (such as Follow Me) fail."
+        "bonus": " The user may not be Intercepted, nor may any Abilities, Moves, or Features be activated to change the user's target. Any of those existing effects (such as Follow Me) fail."
     },
     {
         "name": "Punk Rock",
@@ -154,14 +154,14 @@
     {
         "name": "Splendorous Rider",
         "frequency": "Scene x2 – Swift Action",
-        "effect": "The user may pick a Move from their Mount’s known Moves that they do not already know. For the rest of the user’s Turn, they may use that Move as though it was one of their own Moves. Note that this does not remove any frequency limitations – a Daily Move that the Mount knows may not be used more than once. This Ability may not be copied or transferred."
+        "effect": "The user may pick a Move from their Mount's known Moves that they do not already know. For the rest of the user's Turn, they may use that Move as though it was one of their own Moves. Note that this does not remove any frequency limitations – a Daily Move that the Mount knows may not be used more than once. This Ability may not be copied or transferred."
     },
     {
         "name": "Stalwart",
         "frequency": "Scene – Free Action, Reaction",
         "trigger": "The user receives Massive Damage",
-        "effect": "The user’s Attack, Special Attack, Defense, and Special Defense all increase by 1 CS.",
-        "bonus": " The user may not be Intercepted, nor may any Abilities, Moves, or Features be activated to change the user’s target. Any of those existing effects (such as Follow Me) fail."
+        "effect": "The user's Attack, Special Attack, Defense, and Special Defense all increase by 1 CS.",
+        "bonus": " The user may not be Intercepted, nor may any Abilities, Moves, or Features be activated to change the user's target. Any of those existing effects (such as Follow Me) fail."
     },
     {
         "name": "Steam Engine",
@@ -178,7 +178,7 @@
     {
         "name": "Unseen Fist",
         "frequency": "Static",
-        "effect": "Reactions, Interrupts, and Blessings may not be activated in response to the user’s Melee Attacks."
+        "effect": "Reactions, Interrupts, and Blessings may not be activated in response to the user's Melee Attacks."
     },
     {
         "name": "Wandering Spirit",
@@ -189,13 +189,13 @@
     {
         "name": "Zen Snowed",
         "frequency": "Scene – Swift Action",
-        "effect": "The user changes into Zen Mode forme for the rest of the Scene, and may use the Moves “Ice Punch” and “Fire Punch” as if they were on its Move List."
+        "effect": "The user changes into Zen Mode forme for the rest of the Scene, and may use the Moves “Ice Punch\" and “Fire Punch\" as if they were on its Move List."
     },
     {
         "name": "Klutz",
         "frequency": "Scene – Free Action",
         "trigger": "The user hits with a Melee Attack",
-        "effect": "Choose one of the target’s Held Items or Accessory Slot Items. It is knocked to the ground.",
+        "effect": "Choose one of the target's Held Items or Accessory Slot Items. It is knocked to the ground.",
         "bonus": " The Pokémon ignores the effects of all held Items in its possession. The user may drop Held Items At-Will as a Free Action during their turn, even if they have Status Afflictions that prevent them from taking actions."
     },
     {

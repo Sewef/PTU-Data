@@ -19,7 +19,7 @@
     "Damage Base": "Damage Base 8: 2d8+10 / 19",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "The target falls Asleep. Once per Scene, Dark Void may be used as if its range were “Burst 5, Friendly” instead. This Move ignores the target’s positive Defense Combat Stages and all Damage Reduction. Interrupts may not be triggered against Hyperspace Fury. The user’s Defense is lowered by -1 Combat Stage. This Move gains +2 to its Damage Base for every positive Combat Stage held by the user, to a maximum of DB 20. If an adjacent foe targets the user with a Damaging Attack, Sucker Punch may be used as an Interrupt Move against the triggering foe. The target cannot use Moves with the Sonic keyword for the next two turns.",
+    "Effect": "The target falls Asleep. Once per Scene, Dark Void may be used as if its range were “Burst 5, Friendly\" instead. This Move ignores the target's positive Defense Combat Stages and all Damage Reduction. Interrupts may not be triggered against Hyperspace Fury. The user's Defense is lowered by -1 Combat Stage. This Move gains +2 to its Damage Base for every positive Combat Stage held by the user, to a maximum of DB 20. If an adjacent foe targets the user with a Damaging Attack, Sucker Punch may be used as an Interrupt Move against the triggering foe. The target cannot use Moves with the Sonic keyword for the next two turns.",
     "Contest Type": "Tough",
     "Contest Effect": "Unsettling"
   },
@@ -43,19 +43,19 @@
     "Damage Base": "Damage Base 8: 2d8+10 / 19",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "All targets with the Plus or Minus Abilities receive +1 Defense and Special Defense Combat Stages. After the targets take damage, the user gains Hit Points equal to half of the total damage they dealt to all targets. The target’s next damaging Normal Type Move instead becomes Electric Type. Thunder Wave Paralyzes the target. Targets immune to Electric Attacks are immune to Thunder Wave’s effects. Zing Zap Flinches the target on 15+.",
+    "Effect": "All targets with the Plus or Minus Abilities receive +1 Defense and Special Defense Combat Stages. After the targets take damage, the user gains Hit Points equal to half of the total damage they dealt to all targets. The target's next damaging Normal Type Move instead becomes Electric Type. Thunder Wave Paralyzes the target. Targets immune to Electric Attacks are immune to Thunder Wave's effects. Zing Zap Flinches the target on 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Tease"
   },
   {
-    "Name": "Nature’s Madness",
+    "Name": "Nature's Madness",
     "Type": "Fairy",
     "Frequency": "Scene",
     "AC": "4",
     "Damage Base": "Damage Base 13: 4d10+10 / 35",
     "Class": "Special",
     "Range": "4, 1 Target",
-    "Effect": "Lower the user’s Special Attack 2 Combat Stages after damage. The target regains Hit Points equal to half of its full Hit Point value. If the field is Grassy Terrain, the target gains 2/3 of its full Hit Point value instead. The target loses 1/2 of their current Hit Points.",
+    "Effect": "Lower the user's Special Attack 2 Combat Stages after damage. The target regains Hit Points equal to half of its full Hit Point value. If the field is Grassy Terrain, the target gains 2/3 of its full Hit Point value instead. The target loses 1/2 of their current Hit Points.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance/n"
   },
@@ -79,7 +79,7 @@
     "Damage Base": "Damage Base 15: 4d10+20 / 45",
     "Class": "Special",
     "Range": "Melee, 1 Target, Interrupt, Trigger",
-    "Effect": "Until the end of the encounter, the user loses its Fire-Type. Pure Fire-Types instead become Normal-Type. The target’s Defense is lowered by 1 Combat Stage. The user’s Hit Points are reduced by 50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way. If the user is hit by a Melee attack, they may use Shell Trap as an Interrupt.",
+    "Effect": "Until the end of the encounter, the user loses its Fire-Type. Pure Fire-Types instead become Normal-Type. The target's Defense is lowered by 1 Combat Stage. The user's Hit Points are reduced by 50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way. If the user is hit by a Melee attack, they may use Shell Trap as an Interrupt.",
     "Contest Type": "Tough",
     "Contest Effect": "Desperation"
   },
@@ -103,7 +103,7 @@
     "Damage Base": "Damage Base 8: 2d8+10 / 19",
     "Class": "Physical",
     "Range": "8, 1 Target",
-    "Effect": "This Move ignores any Abilities that would cause it to fail or miss, such as Dodge or Wonder Guard; those Abilities cannot be activated in response to Moongeist Beam. The target’s Defense is lowered by 1 Combat Stage on a 17+. Before rolling damage, transfer all Combat Stages on the target to the user. The Target is Trapped for 2 rounds.",
+    "Effect": "This Move ignores any Abilities that would cause it to fail or miss, such as Dodge or Wonder Guard; those Abilities cannot be activated in response to Moongeist Beam. The target's Defense is lowered by 1 Combat Stage on a 17+. Before rolling damage, transfer all Combat Stages on the target to the user. The Target is Trapped for 2 rounds.",
     "Contest Type": "Smart",
     "Contest Effect": "Sabotage"
   },
@@ -117,7 +117,7 @@
     "Range": "Melee, 1 Target",
     "Contest Type": "Tough",
     "Contest Effect": "Double Time",
-    "Set-Up Effect": "If the weather is not Sunny, the user gains +1 Combat Stage in Attack and Special Defense, and the user’s turn ends. If the weather is Sunny, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword.",
+    "Set-Up Effect": "If the weather is not Sunny, the user gains +1 Combat Stage in Attack and Special Defense, and the user's turn ends. If the weather is Sunny, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword.",
     "Effect": "None."
   },
   {
@@ -128,7 +128,7 @@
     "Damage Base": "Damage Base 9: 2d10+10 / 21",
     "Class": "Physical",
     "Range": "Burst 1, Groundsource",
-    "Effect": "High Horsepower may be used as a Free Action at the end of a Sprint Maneuver taken as a Standard Action, as long as the user Shifted at least 3 meters in a straight line towards the target. When used this way, High Horsepower gains Smite. The user regains Hit Points equal to half of its full Hit Point value. If it is Sand Storming, the user gains 2/3 of its full Hit Point value instead. If it is Sunny, Rainy or Hailing the user gains 1/4 of their full Hit Point value instead. If the user’s last attack failed or missed, Stomping Tantrum is DB 15 (4d10+10 / 45) instead. When calculating Weakness and Resistance for Thousand Arrows, Flying-Typed targets calculate damage as if Flying was neutral to Ground. Thousand Arrows ignores the Levitate ability. The target is knocked down to ground level, and loses all Sky or Levitate Speeds for 3 turns. During this time, they may be hit by Ground-Type Moves even if normally immune. Legal Targets are Trapped for 2 rounds.",
+    "Effect": "High Horsepower may be used as a Free Action at the end of a Sprint Maneuver taken as a Standard Action, as long as the user Shifted at least 3 meters in a straight line towards the target. When used this way, High Horsepower gains Smite. The user regains Hit Points equal to half of its full Hit Point value. If it is Sand Storming, the user gains 2/3 of its full Hit Point value instead. If it is Sunny, Rainy or Hailing the user gains 1/4 of their full Hit Point value instead. If the user's last attack failed or missed, Stomping Tantrum is DB 15 (4d10+10 / 45) instead. When calculating Weakness and Resistance for Thousand Arrows, Flying-Typed targets calculate damage as if Flying was neutral to Ground. Thousand Arrows ignores the Levitate ability. The target is knocked down to ground level, and loses all Sky or Levitate Speeds for 3 turns. During this time, they may be hit by Ground-Type Moves even if normally immune. Legal Targets are Trapped for 2 rounds.",
     "Contest Type": "Tough",
     "Contest Effect": "Tease"
   },
@@ -140,7 +140,7 @@
     "Damage Base": "Damage Base 10: 3d8+10 / 24",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Blessing – Any user affected by Aurora Veil may activate it when receiving Damage to resist the Damage one step. Aurora Veil may be activated 2 times, and then disappears. The user’s Speed is lowered by 1 Combat Stage.",
+    "Effect": "Blessing – Any user affected by Aurora Veil may activate it when receiving Damage to resist the Damage one step. Aurora Veil may be activated 2 times, and then disappears. The user's Speed is lowered by 1 Combat Stage.",
     "Contest Type": "Cool",
     "Contest Effect": "Good Show/n",
     "Special": "Aurora Veil can only be used when the user"
@@ -153,7 +153,7 @@
     "Damage Base": "Damage Base 4: 1d8+6 / 11",
     "Class": "Status",
     "Range": "Burst 1, Social, Friendly",
-    "Effect": "The next successful damaging attack made by the user is automatically a Critical Hit. Multi-Attack is the same Type as the Memory Disc, Plate, or Drive Item held. Revelation Dance is the same Type as the user’s primary Type (the first one listed in the Pokédex). Revelation Dance deals +5 Bonus Damage for every other Dance Move used by the user this round, to a maximum of +15. Until the end of the user’s next turn, the target is Blinded and Vulnerable. The target’s Attack is raised 2 Combat Stages. Swagger Confuses the target. The target is pushed 2 Meters. Tearful Look lowers all Legal Targets’ Attack and Special Attack 1 Combat Stage.",
+    "Effect": "The next successful damaging attack made by the user is automatically a Critical Hit. Multi-Attack is the same Type as the Memory Disc, Plate, or Drive Item held. Revelation Dance is the same Type as the user's primary Type (the first one listed in the Pokédex). Revelation Dance deals +5 Bonus Damage for every other Dance Move used by the user this round, to a maximum of +15. Until the end of the user's next turn, the target is Blinded and Vulnerable. The target's Attack is raised 2 Combat Stages. Swagger Confuses the target. The target is pushed 2 Meters. Tearful Look lowers all Legal Targets' Attack and Special Attack 1 Combat Stage.",
     "Contest Type": "Cute",
     "Contest Effect": "Sabotage"
   },
@@ -164,7 +164,7 @@
     "AC": "2",
     "Class": "Status",
     "Range": "6, 1 Target",
-    "Effect": "If the user is hit by an attack, the user may use Baneful Bunker. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move’s effects. In addition, if the triggering attack was Melee ranged, the attacker is Poisoned. The target is cured of all Permanent and Volatile Statuses. For every status removed, the user recovers a Tick of Hit Points. The target is Poisoned and has their Speed lowered by 1 Combat Stage. If the target is already Poisoned, they instead lose a Tick of Hit Points and has their Speed lowered by 2 Combat Stages.",
+    "Effect": "If the user is hit by an attack, the user may use Baneful Bunker. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move's effects. In addition, if the triggering attack was Melee ranged, the attacker is Poisoned. The target is cured of all Permanent and Volatile Statuses. For every status removed, the user recovers a Tick of Hit Points. The target is Poisoned and has their Speed lowered by 1 Combat Stage. If the target is already Poisoned, they instead lose a Tick of Hit Points and has their Speed lowered by 2 Combat Stages.",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement/n"
   },
@@ -176,7 +176,7 @@
     "Damage Base": "Damage Base 9: 2d10+10 / 21",
     "Class": "Status",
     "Range": "Melee, 1 Target",
-    "Effect": "The target immediately reuses the attack it performed last, ignoring frequency, as a Free Action. They may choose new targets for the copied attack. Instruct may not be used if the Target’s last Move was a Set-Up Move, a Trigger Move, or Instruct, or if the Target is currently affected by Exhaust. Make and resolve of Hyperspace Hole’s attacks separately. In between each attack, the user may Shift using their Teleporter capability, ending the Shift next to a legal target. Interrupts may not be triggered against Hyperspace Hole. This attack uses the highest of the user’s Attack or Special Attack Stat, though it remains a Special Move. This Move ignores any Abilities that would cause it to fail or miss, such as Dodge or Wonder Guard; those Abilities cannot be activated in response to Photon Geyser. Light Screen, Reflect and Aurora Veil cannot be declared in response to Psychic Fangs. The Field becomes Weird for five rounds. While the Field is Weird, non-Flying and non- Levitating Pokémon cannot declare Priority or Interrupt Moves outside their own Initiatives. Damaging Psychic-Type attacks deal an additional 10 damage The user and the target trade Initiative values.",
+    "Effect": "The target immediately reuses the attack it performed last, ignoring frequency, as a Free Action. They may choose new targets for the copied attack. Instruct may not be used if the Target's last Move was a Set-Up Move, a Trigger Move, or Instruct, or if the Target is currently affected by Exhaust. Make and resolve of Hyperspace Hole's attacks separately. In between each attack, the user may Shift using their Teleporter capability, ending the Shift next to a legal target. Interrupts may not be triggered against Hyperspace Hole. This attack uses the highest of the user's Attack or Special Attack Stat, though it remains a Special Move. This Move ignores any Abilities that would cause it to fail or miss, such as Dodge or Wonder Guard; those Abilities cannot be activated in response to Photon Geyser. Light Screen, Reflect and Aurora Veil cannot be declared in response to Psychic Fangs. The Field becomes Weird for five rounds. While the Field is Weird, non-Flying and non- Levitating Pokémon cannot declare Priority or Interrupt Moves outside their own Initiatives. Damaging Psychic-Type attacks deal an additional 10 damage The user and the target trade Initiative values.",
     "Contest Type": "Cute",
     "Contest Effect": "Inversed Appeal"
   },
@@ -212,7 +212,7 @@
     "Damage Base": "Damage Base 2: 1d6+3 / 7",
     "Class": "Special",
     "Range": "6, 1 Target, Five Strike, Priority",
-    "Effect": "The target’s Defense is lowered by 1 Combat Stage on a 17+. When you hit a target with Sparkling Aria, the user may choose to deal no damage and instead cure that target of Burn, Confusion, Infatuation, or Rage. Steam Eruption burns all legal targets on a 15+.",
+    "Effect": "The target's Defense is lowered by 1 Combat Stage on a 17+. When you hit a target with Sparkling Aria, the user may choose to deal no damage and instead cure that target of Burn, Confusion, Infatuation, or Rage. Steam Eruption burns all legal targets on a 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Reliable/n"
   }

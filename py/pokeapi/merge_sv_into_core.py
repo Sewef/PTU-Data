@@ -10,7 +10,7 @@ def normalize_species(s: str) -> str:
     if not isinstance(s, str):
         s = str(s or "")
     s = s.strip().lower()
-    rep = s.replace("_", " ").replace("’", "'").replace("–", "-").replace("—", "-")
+    rep = s.replace("_", " ").replace("'", "'").replace("–", "-").replace("—", "-")
     rep = " ".join(rep.split())
     rep = rep.replace(" ", "-")
     return rep

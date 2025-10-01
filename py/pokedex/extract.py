@@ -330,7 +330,7 @@ def extract_page(page_text: str, page_index: int):
     def contains_token(i: int, token: str) -> bool:
         return token.replace(' ', '').lower() in lines[i].replace(' ', '').lower()
 
-    # Indices des sections (d’abord via compare_string_with_spaces, avec fallback regex si besoin)
+    # Indices des sections (d'abord via compare_string_with_spaces, avec fallback regex si besoin)
     idx_base  = index_of("Base Stats")
     if idx_base == -1:
         idx_base = next((i for i,l in enumerate(lines) if re.search(r'(?i)^Base Stats:?', l)), -1)

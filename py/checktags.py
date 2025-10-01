@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""fix_tags.py — corrige automatiquement les champs « Tags » d’un JSON PTU
+"""fix_tags.py — corrige automatiquement les champs « Tags » d'un JSON PTU
 
 Usage :
     python fix_tags.py  input.json  output.json
 
 Règles appliquées :
   • Un champ Tags valide doit être une chaîne du type "[Tag1][Tag2]..."
-    (pas d’espace entre les blocs, chaque tag entouré de crochets).
+    (pas d'espace entre les blocs, chaque tag entouré de crochets).
   • Les anomalies courantes sont réparées :
         - Espaces entre blocs : "[Orders] [Stratagem]"  ➜  "[Orders][Stratagem]"
         - Tags sans crochets : "Ranked 2"               ➜  "[Ranked 2]"
@@ -25,7 +25,7 @@ from pathlib import Path
 TAG_REGEX = re.compile(r"\[([^\[\]]+)\]")  # contenu entre crochets
 
 # ---------------------------------------------------------------------------
-# Normalisation d’une valeur Tags
+# Normalisation d'une valeur Tags
 # ---------------------------------------------------------------------------
 
 def normalize_tags(value: str) -> str:
@@ -37,8 +37,8 @@ def normalize_tags(value: str) -> str:
     # 1) Extraire toutes les occurrences déjà entre crochets
     brackets = TAG_REGEX.findall(value)
 
-    # 2) S’il y a déjà ≥1 bloc entre crochets, on les utilise comme tokens.
-    #    On élimine les doublons d’espaces internes au bloc.
+    # 2) S'il y a déjà ≥1 bloc entre crochets, on les utilise comme tokens.
+    #    On élimine les doublons d'espaces internes au bloc.
     if brackets:
         tokens = [b.strip() for b in brackets]
     else:

@@ -252,8 +252,8 @@
         },
         "Signature Technique Modifications": {
             "Cone, Line, Burst, and Blast Moves": {
-                "Scattershot – Agility Training": "Instead of the Move’s normal range, it has a range of 4m, 3 Targets.",
-                "Shock and Awe – Inspired Training": "Foes targeted by the Move take a -2 penalty to Save Checks and a -1 Penalty to Evasion until the end of the user’s next turn.",
+                "Scattershot – Agility Training": "Instead of the Move's normal range, it has a range of 4m, 3 Targets.",
+                "Shock and Awe – Inspired Training": "Foes targeted by the Move take a -2 penalty to Save Checks and a -1 Penalty to Evasion until the end of the user's next turn.",
                 "Vicious Storm – Brutal Training": "The Move gains the Smite keyword. Applicable to Damaging Moves only."
             },
             "Single Target Moves": {
@@ -310,7 +310,7 @@
             },
             "Curve Ball": {
                 "Frequency": "Static",
-                "Effect": "Whenever you hit a target with a Poké Ball, you may deal damage as if you had hit them with a Struggle Attack. This damage triggers before any of the Poké Ball’s functions (such as making a Capture Check, releasing a Pokémon, etc.)."
+                "Effect": "Whenever you hit a target with a Poké Ball, you may deal damage as if you had hit them with a Struggle Attack. This damage triggers before any of the Poké Ball's functions (such as making a Capture Check, releasing a Pokémon, etc.)."
             },
             "Devitalizing Throw": {
                 "Frequency": "1 AP – Free Action",
@@ -332,13 +332,13 @@
             "Catch Combo": {
                 "Prerequisites": "3 of Acrobatics, Athletics, Stealth, Survival, Guile, or Perception Skills at Expert Rank",
                 "Frequency": "Daily – Free Action",
-                "Trigger": "Your Pokémon’s attack faints a Wild Pokémon.",
+                "Trigger": "Your Pokémon's attack faints a Wild Pokémon.",
                 "Effect": "You may immediately throw a Poké Ball against the triggering Wild Pokémon, and it may be Captured even though it is knocked out. Calculate Capture Rate as if the target had 1 HP. If the Capture Attempt fails, the Pokémon is knocked out as normal."
             },
             "False Strike": {
                 "Prerequisites": "3 of Acrobatics, Athletics, Stealth, Survival, Guile, or Perception at Expert Rank",
                 "Frequency": "Scene x2 – Free Action",
-                "Trigger": "You or your Pokémon’s attack faints a Wild Pokémon.",
+                "Trigger": "You or your Pokémon's attack faints a Wild Pokémon.",
                 "Effect": "The Wild Pokémon is instead lowered to 1 Hit Point."
             },
             "Relentless Pursuit": {
@@ -438,14 +438,14 @@
             "Effect": "For appeal rolls, instead of making the Appeal Roll, you gain 1 Appeal Point for each Dice you would have rolled. For Accuracy Checks, act as if you had rolled a 10. For Skill Checks, multiply 3.5 by your Pokémon's Skill Rank, and use the resulting number as the result of your roll, rounded down. For all rolls, add or subtract any modifiers as normal."
         },
         "Innovation Moves": {
-            "Description": "The Coordinator’s “Innovation” Feature lets the Coordinator create new Moves for their Pokémon. These Moves can serve to fill voids in Move Lists for both Battles and Contests and provide utility.\nTo create a Move, first choose a Contest Type. This affects the Move’s effects and of course its role in Contests.\nNext choose a Contest Effect. Look at the “Contest Effects” section (page 266) under “Contests” for the full list. Pick one. That’s right, any of them. This determines what the Move does during a Contest, of course.\nThird, choose one of the four templates below. This determines the Move’s effects in Battle. These are modified by the Contest Type of the Move. Remember, Cool is associated with Attack, Tough with Defense, Beauty with Special Attack, Smart with Special Defense, and Cute with Speed.\nAnd finally, name your Move! This is the best part!",
+            "Description": "The Coordinator's “Innovation\" Feature lets the Coordinator create new Moves for their Pokémon. These Moves can serve to fill voids in Move Lists for both Battles and Contests and provide utility.\nTo create a Move, first choose a Contest Type. This affects the Move's effects and of course its role in Contests.\nNext choose a Contest Effect. Look at the “Contest Effects\" section (page 266) under “Contests\" for the full list. Pick one. That's right, any of them. This determines what the Move does during a Contest, of course.\nThird, choose one of the four templates below. This determines the Move's effects in Battle. These are modified by the Contest Type of the Move. Remember, Cool is associated with Attack, Tough with Defense, Beauty with Special Attack, Smart with Special Defense, and Cute with Speed.\nAnd finally, name your Move! This is the best part!",
             "Template #1": {
                 "Type": "Normal",
                 "Frequency": "Scene",
                 "AC": "None",
                 "Class": "Status",
                 "Range": "Self",
-                "Effect": "The user generates 3 Contest Boons. These may be used as a Swift Action on their turn to gain one of the effects below, based on this Move’s Contest Type.\n» Beauty: Use when declaring an attack (before Accuracy Roll) to gain a +3 bonus to Effect Range for that attack.\n» Cool: Use when declaring an attack (before Accuracy Roll) to gain a +3 bonus to Critical Hit Range for that attack.\n» Cute: Use during your turn to gain +3 Evasion for one full round.\n» Smart: Use when declaring an attack (before Accuracy Roll) to gain a +3 bonus to Accuracy for that attack.\n» Tough: Use at the start of a turn to avoid all loss of Hit Points from Status Afflictions, Weather, and Recoil for that turn."
+                "Effect": "The user generates 3 Contest Boons. These may be used as a Swift Action on their turn to gain one of the effects below, based on this Move's Contest Type.\n» Beauty: Use when declaring an attack (before Accuracy Roll) to gain a +3 bonus to Effect Range for that attack.\n» Cool: Use when declaring an attack (before Accuracy Roll) to gain a +3 bonus to Critical Hit Range for that attack.\n» Cute: Use during your turn to gain +3 Evasion for one full round.\n» Smart: Use when declaring an attack (before Accuracy Roll) to gain a +3 bonus to Accuracy for that attack.\n» Tough: Use at the start of a turn to avoid all loss of Hit Points from Status Afflictions, Weather, and Recoil for that turn."
             },
             "Template #2": {
                 "Type": "Normal",
@@ -453,7 +453,7 @@
                 "AC": "None",
                 "Class": "Status",
                 "Range": "6, 1 Target",
-                "Effect": "The target has the Stat associated with this Move’s Contest Type lowered by -2 Combat Stages. This Move cannot miss."
+                "Effect": "The target has the Stat associated with this Move's Contest Type lowered by -2 Combat Stages. This Move cannot miss."
             },
             "Template #3": {
                 "Type": "Varies",
@@ -461,7 +461,7 @@
                 "AC": "Varies",
                 "Class": "Varies",
                 "Range": "Varies, Spirit Surge",
-                "Effect": "Make a Struggle Attack, increasing the damage roll by +5. Follow all other normal rules for making Struggle attacks, including any modifications from capabilities, features, or special effects. On 18+, the user’s Stat associated with the Contest Type of this Move is raised by +1 Combat Stage. This Move’s Effect Range is extended by +1 for every two Contest Dice the user has that matches this Move’s Contest Type."
+                "Effect": "Make a Struggle Attack, increasing the damage roll by +5. Follow all other normal rules for making Struggle attacks, including any modifications from capabilities, features, or special effects. On 18+, the user's Stat associated with the Contest Type of this Move is raised by +1 Combat Stage. This Move's Effect Range is extended by +1 for every two Contest Dice the user has that matches this Move's Contest Type."
             },
             "Template #4": {
                 "Type": "Normal",
@@ -545,7 +545,7 @@
             "Changing Viewpoints": {
                 "Prerequisites": "Mentor, Intuition as a Mentor Skill",
                 "Target": "A Pokémon with at least 1 Tutor Point.",
-                "Effect": "The \"Target\" loses a Tutor Point, and you may change the \"Target\"’s Nature to any other Nature which either raises the same Stat as its current nature, or lowers the same Stat as its current Nature."
+                "Effect": "The \"Target\" loses a Tutor Point, and you may change the \"Target\"'s Nature to any other Nature which either raises the same Stat as its current nature, or lowers the same Stat as its current Nature."
             },
             "Empowered Development": {
                 "Prerequisites": "Mentor, Charm as a Mentor Skill",
@@ -554,14 +554,14 @@
             },
             "Corrective Learning": {
                 "Prerequisites": "Mentor, Intimidate as a Mentor Skill",
-                "Target": "A Pokémon that has spent Tutor Points on a Poké Edge or a Feature’s effect",
+                "Target": "A Pokémon that has spent Tutor Points on a Poké Edge or a Feature's effect",
                 "Effect": "The \"Target\" loses one \"Effect\" gained from a Poké Edge or Feature and refunds all Tutor Points spent on it."
             },
             "Versatile Teachings": {
                 "Prerequisites": "Mentor, Pokémon Education as a Mentor Skill",
                 "Target": "A Pokémon with at least 1 Tutor Point",
-                "Effect": "The \"Target\" loses 1 Tutor Point and may exchange one of its Basic Abilities for any other of its species’ Basic Abilities or one of its Advanced Abilities for any of its species’ Basic or Advanced Abilities.",
-                "Note": "You may NOT activate Versatile Teachings to reroll Abilities that require a roll to determine characteristics, such as Serpent’s Mark and Color Theory."
+                "Effect": "The \"Target\" loses 1 Tutor Point and may exchange one of its Basic Abilities for any other of its species' Basic Abilities or one of its Advanced Abilities for any of its species' Basic or Advanced Abilities.",
+                "Note": "You may NOT activate Versatile Teachings to reroll Abilities that require a roll to determine characteristics, such as Serpent's Mark and Color Theory."
             }
         }
     },
@@ -791,7 +791,7 @@
         },
         "Overrun": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Conqueror’s March, Expert Acrobatics or Athletics",
+            "Prerequisites": "Conqueror's March, Expert Acrobatics or Athletics",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "Your Mount with Run Up makes a Damage Roll for a Dash or Pass Move",
             "Effect": "Your Pokémon adds their Speed Stat in addition to their normal attacking Stat to their Damage Roll. The target gains Damage Reduction against this attack equal to their own Speed Stat."
@@ -2101,20 +2101,20 @@
                 "Effect": "Your Pokémon creates a Burst 2, Slowing all Foes in the area and causing those foes to lose 1 Combat Stage in any Stat in which they have positive Combat Stages"
             },
             "Highlander": {
-                "Prerequisites": "Tyrant’s Roar, Type-Linked Skill at Adept",
+                "Prerequisites": "Tyrant's Roar, Type-Linked Skill at Adept",
                 "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP — Standard Action",
                 "Target": "Your Dragon-Type Pokémon",
                 "Effect": "While this Feature is Bound, the target gains X Damage Reduction against Dragon-Type attacks, and gain a +X Bonus to Damage Rolls with Dragon-Typed attacks against other Dragon-Typed targets. X is equal to your Type-Linked Skill Rank."
             },
             "Unconquerable": {
-                "Prerequisites": "Tyrant’s Roar, Type-Linked Skill at Expert",
+                "Prerequisites": "Tyrant's Roar, Type-Linked Skill at Expert",
                 "Frequency": "Daily x3 — Free Action",
                 "Trigger": "Your Pokémon uses a Dragon-Type Move while they have 3 or more Status Afflictions",
                 "Effect": "Your Pokémon is cured of up to three Status Afflictions."
             },
             "This Will Not Stand": {
-                "Prerequisites": "Tyrant’s Roar, Type-Linked Skill at Master",
+                "Prerequisites": "Tyrant's Roar, Type-Linked Skill at Master",
                 "Frequency": "At-Will — Free Action",
                 "Trigger": "Your Dragon-Type Pokémon takes a Critical Hit or Massive Damage",
                 "Effect": "Your Pokémon gains +1 Combat Stage in each of Attack, Special Attack, and Speed. This Will Not Stand may trigger only once per Scene per Pokémon."
@@ -2263,30 +2263,30 @@
                 "Effect": "You create a Salty Surprise, Spicy Wrap, Sour Candy, Dry Wafer, Bitter Treat, or Sweet Confection."
             },
             "Salty Surprise": {
-                "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by an attack to gain 5 Temporary Hit Points. If the user likes Salty Flavors, they gain 10 Temporary Hit Points Instead. If the user dislikes Salty Food, they become Enraged."
+                "Effect": "The user may trade in this Snack's Digestion Buff when being hit by an attack to gain 5 Temporary Hit Points. If the user likes Salty Flavors, they gain 10 Temporary Hit Points Instead. If the user dislikes Salty Food, they become Enraged."
             },
             "Spicy Wrap": {
-                "Effect": "The user may trade in this Snack’s Digestion Buff when making a Physical attack to deal +5 additional Damage. If the user prefers Spicy Food, it deals +10 additional Damage instead. If the user dislikes Spicy Food, they become Enraged."
+                "Effect": "The user may trade in this Snack's Digestion Buff when making a Physical attack to deal +5 additional Damage. If the user prefers Spicy Food, it deals +10 additional Damage instead. If the user dislikes Spicy Food, they become Enraged."
             },
             "Sour Candy": {
-                "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by a Physical Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Sour Food, they gain +10 Damage Reduction instead. If the user dislikes Sour Food, they become Enraged."
+                "Effect": "The user may trade in this Snack's Digestion Buff when being hit by a Physical Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Sour Food, they gain +10 Damage Reduction instead. If the user dislikes Sour Food, they become Enraged."
             },
             "Dry Wafer": {
-                "Effect": "The user may trade in this Snack’s Digestion Buff when making a Special attack to deal +5 additional Damage. If the user prefers Dry Food, it deals +10 additional Damage instead. If the user dislikes Dry Food, they become Enraged."
+                "Effect": "The user may trade in this Snack's Digestion Buff when making a Special attack to deal +5 additional Damage. If the user prefers Dry Food, it deals +10 additional Damage instead. If the user dislikes Dry Food, they become Enraged."
             },
             "Bitter Treat": {
-                "Effect": "The user may trade in this Snack’s Digestion Buff when being hit by a Special Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Bitter Food, they gain +10 Damage Reduction instead. If the user dislikes Bitter Food, they become Enraged."
+                "Effect": "The user may trade in this Snack's Digestion Buff when being hit by a Special Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Bitter Food, they gain +10 Damage Reduction instead. If the user dislikes Bitter Food, they become Enraged."
             },
             "Sweet Confection": {
-                "Effect": "The user may trade in this Snack’s Digestion Buff to gain +4 Evasion until the end of their next turn. If the user prefers Sweet Food, they gain +4 Accuracy as well. If the user dislikes Sweet Food, they become Enraged."
+                "Effect": "The user may trade in this Snack's Digestion Buff to gain +4 Evasion until the end of their next turn. If the user prefers Sweet Food, they gain +4 Accuracy as well. If the user dislikes Sweet Food, they become Enraged."
             },
             "Meal Planner": {
                 "Prerequisites": "Chef",
                 "Effect": "You may create the following items, based on your Intuition Rank",
-                "\n» Novice": "“Enriched Water” for $40",
-                "\n» Adept": "“Super Soda Pop” for $65",
-                "\n» Expert": "“Sparkling Lemonade” for $125",
-                "\n» Master": "“MooMoo Milk” for $250"
+                "\n» Novice": "“Enriched Water\" for $40",
+                "\n» Adept": "“Super Soda Pop\" for $65",
+                "\n» Expert": "“Sparkling Lemonade\" for $125",
+                "\n» Master": "“MooMoo Milk\" for $250"
             },
             "Hearty Meal": {
                 "Prerequisites": "Hits the Spot",
@@ -2416,7 +2416,7 @@
                 },
                 "Elegant Fashion": {
                     "Fashionista Skill": "Intuition",
-                    "Effect": "The holder may activate this item once a Scene as a Free Action when losing Combat Stages from a foe’s effect to instead not lose those Combat Stages."
+                    "Effect": "The holder may activate this item once a Scene as a Free Action when losing Combat Stages from a foe's effect to instead not lose those Combat Stages."
                 },
                 "Rad Fashion": {
                     "Fashionista Skill": "Command",
@@ -2921,7 +2921,7 @@
             "Prerequisites": "Survivalist",
             "Frequency": "1 AP — Special",
             "Effect": "You and your Pokémon become adept at using the environment to your advantage in battle. You or your Pokémon may activate Natural Fighter as a Standard Action to use the Move below corresponding to the current terrain. You and your Pokémon must still follow all Frequency limitations for the Move.\nGrassland: Cotton Spore; Forest: Grass Whistle; Wetlands: Mud Slap; Ocean: Aqua Ring; Tundra: Haze; Mountain: Smack Down; Cave: Astonish; Urban: Fling; Desert: Sand Attack",
-            "Note": "GMs! Don’t be super duper strict about the terrains here. Obviously a beach is analogous enough to a desert to use Sand Attack, and a lake can count as ocean terrain. In urban terrain, there’ll probably at least be trash around to Fling with the standard 6 DB option. On the other hand, most standard arenas for League matches won’t qualify for any of the terrains. However, some arenas may be specifically designed to emulate a terrain type, such as a rocky stadium or a set of floating platforms in a pool."
+            "Note": "GMs! Don't be super duper strict about the terrains here. Obviously a beach is analogous enough to a desert to use Sand Attack, and a lake can count as ocean terrain. In urban terrain, there'll probably at least be trash around to Fling with the standard 6 DB option. On the other hand, most standard arenas for League matches won't qualify for any of the terrains. However, some arenas may be specifically designed to emulate a terrain type, such as a rocky stadium or a set of floating platforms in a pool."
         },
         "Trapper": {
             "Tags": "[+HP]",
@@ -2957,7 +2957,7 @@
             },
             "Forest Ranger – Forest Terrain": {
                 "Frequency": "Static",
-                "Effect": "You’re used to navigating the dense plant life of large forests. You gain the Stealth Capability."
+                "Effect": "You're used to navigating the dense plant life of large forests. You gain the Stealth Capability."
             },
             "Marsh Stomper – Wetland Terrain": {
                 "Frequency": "Static",
@@ -2973,7 +2973,7 @@
             },
             "Surefooted – Mountain Terrain": {
                 "Frequency": "Static",
-                "Effect": "You’re not afraid of precarious ledges and steep hills. You gain a +2 Bonus to Skill Checks made to climb, balance, or maintain footing – including resisting Push and Trip maneuvers. Whenever you take falling damage, ignore one meter and receive one less Injury when determining damage."
+                "Effect": "You're not afraid of precarious ledges and steep hills. You gain a +2 Bonus to Skill Checks made to climb, balance, or maintain footing – including resisting Push and Trip maneuvers. Whenever you take falling damage, ignore one meter and receive one less Injury when determining damage."
             },
             "Cave Dweller – Cave Terrain": {
                 "Frequency": "Static",
@@ -2985,7 +2985,7 @@
             },
             "Dune Walker – Desert Terrain": {
                 "Frequency": "Static",
-                "Effect": "Your long hours in the unforgiving desert have made you inured to sand and heat. You’re immune to the effects of Sandstorm, Sand-Attack, and Sand Tomb, and you gain 5 Damage Reduction against Fire-Type attacks."
+                "Effect": "Your long hours in the unforgiving desert have made you inured to sand and heat. You're immune to the effects of Sandstorm, Sand-Attack, and Sand Tomb, and you gain 5 Damage Reduction against Fire-Type attacks."
             }
         }
     },
@@ -3031,7 +3031,7 @@
             "Prerequisites": "Novice Acrobatics, Novice Athletics, Novice Charm",
             "Frequency": "Static",
             "Effect": "Choose Spinning Dance or Own Tempo. You gain the chosen Ability.",
-            "Mechanic – Dance Moves": "Dance Moves you create with the Dance Form Feature look like the Move on the right. First, name the Dance Move whatever you like. Secondly, choose two Combat Stage gains for the effect. This may either be +2 Combat Stages to a single Stat, like Swords Dance, or +1 Combat Stage to two different Stats, like Dragon Dance. Once chosen, this cannot be changed. Dragon Dance, Quiver Dance, and Swords Dance count as Dance Moves for the purposes of Dancer Features as well. A Dance Move’s Contest Type must be chosen from a Contest Type associated with a Stat that the Dance Move affects. Cool is associated with Attack, Tough is associated with Defense, Beauty is associated with Special Attack, Smart is associated with Special Defense, and Cute is associated with Speed.",
+            "Mechanic – Dance Moves": "Dance Moves you create with the Dance Form Feature look like the Move on the right. First, name the Dance Move whatever you like. Secondly, choose two Combat Stage gains for the effect. This may either be +2 Combat Stages to a single Stat, like Swords Dance, or +1 Combat Stage to two different Stats, like Dragon Dance. Once chosen, this cannot be changed. Dragon Dance, Quiver Dance, and Swords Dance count as Dance Moves for the purposes of Dancer Features as well. A Dance Move's Contest Type must be chosen from a Contest Type associated with a Stat that the Dance Move affects. Cool is associated with Attack, Tough is associated with Defense, Beauty is associated with Special Attack, Smart is associated with Special Defense, and Cute is associated with Speed.",
             "Template": {
                 "Name": "Dance Move",
                 "Type": "Normal",
@@ -3389,7 +3389,7 @@
             "Prerequisites": "Novice Charm, Novice Focus",
             "Frequency": "Static",
             "Effect": "You may use Musician Songs.",
-            "Mechanic: Songs": "Musician Songs can be triggered one of four ways. Regardless of the Area of Effect, Songs always affect the user.\n» When using a Move with the Sonic keyword, Songs may be triggered as a Swift Action, and the Song’s Area of Effect is the same as the triggering Move’s.\n» When using a Dance Move, Songs may be triggered as a Shift Action with an Area of Effect of Burst 2.\n» As a Standard Action, you may trigger one Song, with an Area of Effect of Burst 4.\n» As a Full Action, you may trigger two Songs, each with an Area of Effect of Burst 4.",
+            "Mechanic: Songs": "Musician Songs can be triggered one of four ways. Regardless of the Area of Effect, Songs always affect the user.\n» When using a Move with the Sonic keyword, Songs may be triggered as a Swift Action, and the Song's Area of Effect is the same as the triggering Move's.\n» When using a Dance Move, Songs may be triggered as a Shift Action with an Area of Effect of Burst 2.\n» As a Standard Action, you may trigger one Song, with an Area of Effect of Burst 4.\n» As a Full Action, you may trigger two Songs, each with an Area of Effect of Burst 4.",
             "Song of Courage": {
                 "Frequency": "1 AP – Special",
                 "Trigger": "Song",
@@ -3496,7 +3496,7 @@
             "Prerequisites": "Two of Acrobatics, Athletics, and Stealth at Novice Rank",
             "Frequency": "Static",
             "Effect": "You learn the Moves Feint Attack and Thief.",
-            "Note": "Acrobatics, Athletics, and Stealth are referred to as “Rogue Skills” as short-hand."
+            "Note": "Acrobatics, Athletics, and Stealth are referred to as “Rogue Skills\" as short-hand."
         },
         "Cutthroat": {
             "Tags": "[+Attack][Weapon]",
@@ -3782,7 +3782,7 @@
         },
         "Utility Drop": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Ninja’s Arsenal, Expert Stealth",
+            "Prerequisites": "Ninja's Arsenal, Expert Stealth",
             "Frequency": "At-Will — Swift Action",
             "Trigger": "You Shift",
             "Effect": "You may use a Smoke Ball, Caltrops, or Toxic Caltrops as a Free action during your Shift. Instead of the Move's usual area of effect, you leave one square of Smokescreen, Spikes, or Toxic Spikes on each square you leave as you Shift. Once you place 8 meters of Smoke, Spikes, or Toxic Spikes you may not place any more."
@@ -3888,7 +3888,7 @@
         },
         "Divine Wind": {
             "Tags": "[Class][+HP]",
-            "Prerequisites": "Sage’s Benediction, Master Occult Education",
+            "Prerequisites": "Sage's Benediction, Master Occult Education",
             "Frequency": "2 AP — Free Action, Interrupt",
             "Target": "Blessings you generated with a Sage Move",
             "Effect": "Choose a type of Blessing you can generate with a Sage Move. All Blessings you generated of another type become Blessings of the chosen type. This may not be used to generate more uses of a Blessing than the original Move creates. For example, three Lucky Chant Blessings would become two Reflect or Light Screen Blessings, not three. You may only choose a Blessing type once per Scene."
@@ -4456,7 +4456,7 @@
         },
         "Call the Dragon's Rage": {
             "Tags": "[+Attack][Weapon]",
-            "Prerequisites": "Bare the Dragon’s Claws, Master Com- mand or Intimidate",
+            "Prerequisites": "Bare the Dragon's Claws, Master Com- mand or Intimidate",
             "Frequency": "Static",
             "Effect": "Your learn the Moves Dragon Claw and Dragon Tail. You may use these Moves as Weapon Attacks when wielding Melee Weapons."
         },
@@ -4936,13 +4936,13 @@
         },
         "Miasma Unleashed": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Miasma’s Call, Master Stealth or Guile",
+            "Prerequisites": "Miasma's Call, Master Stealth or Guile",
             "Frequency": "Static",
             "Effect": "You learn the moves Sludge Wave and Toxic."
         },
         "Miasmic Spray": {
             "Tags": "[+Defense]",
-            "Prerequisites": "Miasma’s Call, Master Stealth or Guile",
+            "Prerequisites": "Miasma's Call, Master Stealth or Guile",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You hit with Acid, Clear Smog, Sludge Bomb, Sludge Wave, or Toxic; or use Acid Armor.",
             "Effect": "The Effect of this feature depends on the triggering move.\n» Acid: Instead of its usual effect, Acid lowers the Spe- cial Defense of all targets hit by -2 Combat Stages.\n» Clear Smog: Clear Smog's target loses 5 HP for each combat stage lost.\n» Sludge Bomb: The Target receives a -3 penalty to Accuracy Rolls until the end of your next turn.\n» Sludge Wave: All targets in Sludge Wave's Burst are Slowed until the end of their next turn.\n» Toxic: The target's Badly Poison Hit Point Loss be- gins at 10 instead of 5.\n» Acid Armor: You are not slowed while liquefied and resist all special damage one step."
@@ -5055,7 +5055,7 @@
         },
         "Oceanic Feeling": {
             "Tags": "[+Speed]",
-            "Prerequisites": "Water’s Shroud, Master Athletics or Acrobatics",
+            "Prerequisites": "Water's Shroud, Master Athletics or Acrobatics",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "See Text",
             "Effect": "You may activate Oceanic Feeling when either Wash Away or Storm Drain would be triggered to gain that Ability for 1 full round, if you do not already have it, and immediately Trigger it. Activating an Ability this way ignores its usual Frequency. You may use each Ability once per Scene this way."

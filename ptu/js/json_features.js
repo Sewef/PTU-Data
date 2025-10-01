@@ -86,7 +86,7 @@ function buildSidebar() {
       if (currentLink && currentLink.dataset.section === "General") {
         // on recharge la section General pour appliquer le nouveau filtre
         renderSection("General", "Default");
-        // (l’appel conserve scrollTo et la recherche locale déjà en place)
+        // (l'appel conserve scrollTo et la recherche locale déjà en place)
       }
     })
   );
@@ -162,7 +162,7 @@ function renderSidebar() {
     catTgl.className =
       "list-group-item list-group-item-action d-flex align-items-center collapse-toggle collapsed mb-1 ps-3";
 
-    // si c’est la première catégorie, on ajoute un espace au-dessus
+    // si c'est la première catégorie, on ajoute un espace au-dessus
     if (index === 0) {
       const sep = document.createElement("div");
       sep.className = "border-top my-2"; // ligne grise + marge
@@ -277,7 +277,7 @@ function renderSection(clsName, branchName = "Default") {
     let cardIndex = 0;                                   // pour 1ʳᵉ-carte badge
     branches.forEach(br => {
       br.features.forEach(feat => {
-        // → si on est dans General ET la Source de la Feature n’est pas cochée,
+        // → si on est dans General ET la Source de la Feature n'est pas cochée,
         //   on saute entièrement cette Feature (et donc ses sous-features)
         if (clsName === "General" &&
           !activeSources.has(featureSource(feat, cls.source))) {
@@ -343,7 +343,7 @@ function collectLeafFeatures(featObj, nameOverride = null, embedOnly = false) {
     }
   }
 
-  // Si l’objet principal contient du contenu, on le garde
+  // Si l'objet principal contient du contenu, on le garde
   if (hasAnyContent(cleaned)) {
     if (subCards.length > 0) {
       cleaned.__children = subCards;
@@ -478,7 +478,7 @@ function normalizeDisplayMeta(raw) {
 
 
 
-// petit utilitaire d’échappement (mêmes règles que ton code existant)
+// petit utilitaire d'échappement (mêmes règles que ton code existant)
 function escapeHTML(str) {
   return String(str)
     .replaceAll("&", "&amp;")
@@ -587,7 +587,7 @@ function renderAsTable(entries, title, meta, q, parentEl) {
     if (!meta.noheader) {
       const thead = document.createElement("thead");
 
-      // Fusion d’en-têtes si demandé
+      // Fusion d'en-têtes si demandé
       if (meta.mergeColumns) {
         // Rangée 1 : groupes fusionnés
         const top = document.createElement("tr");

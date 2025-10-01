@@ -7,7 +7,7 @@
         "damage_base": "Damage Base 7: 2d6+10 / 17",
         "class": "Physical",
         "range": "Melee, 1 Target, Dash, Full Action",
-        "effect": "The user Shifts up to its Overland Capability, ignoring Attacks of Opportunity, before attacking with Skitter Smack. On a hit, the target’s Special Attack is lowered 1 CS.",
+        "effect": "The user Shifts up to its Overland Capability, ignoring Attacks of Opportunity, before attacking with Skitter Smack. On a hit, the target's Special Attack is lowered 1 CS.",
         "contest_type": "Smart",
         "contest_effect": "Reliable"
     },
@@ -66,7 +66,7 @@
         "ac": "None",
         "class": "Status",
         "range": "Self, Interrupt, Shield, Trigger",
-        "effect": "If the user is hit by a Move, the user may use Obstruct. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move’s effects. In addition, if the triggering attack was Melee ranged, the attacker’s Defense is lowered by 2 Combat Stages.",
+        "effect": "If the user is hit by a Move, the user may use Obstruct. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move's effects. In addition, if the triggering attack was Melee ranged, the attacker's Defense is lowered by 2 Combat Stages.",
         "contest_type": "Smart",
         "contest_effect": "Inversed Appeal"
     },
@@ -90,7 +90,7 @@
         "damage_base": "Damage Base 6: 2d6+8 / 15",
         "class": "Physical",
         "range": "Close Blast 2",
-        "effect": "The target’s Attack is lowered 1 CS.",
+        "effect": "The target's Attack is lowered 1 CS.",
         "contest_type": "Tough",
         "contest_effect": "Desperation"
     },
@@ -124,7 +124,7 @@
         "damage_base": "Damage Base 15: 4d10+20 / 45",
         "class": "Special",
         "range": "Cone 3 or Line 8",
-        "effect": "For each 10% of HP the user is missing, Dragon Energy’s Damage Base is reduced by 1.",
+        "effect": "For each 10% of HP the user is missing, Dragon Energy's Damage Base is reduced by 1.",
         "contest_type": "Cool",
         "contest_effect": "Seen Nothing Yet"
     },
@@ -148,7 +148,7 @@
         "damage_base": "Damage Base 3: 1d6+5 / 9",
         "class": "Physical",
         "range": "6, 1 Target, Five Strike",
-        "effect": "The user’s Speed is raised 1 CS, and the user’s Defense is lowered 1 CS.",
+        "effect": "The user's Speed is raised 1 CS, and the user's Defense is lowered 1 CS.",
         "contest_type": "Tough",
         "contest_effect": "Desperation"
     },
@@ -160,7 +160,7 @@
         "damage_base": "Damage Base 11: 3d10+10 / 27",
         "class": "Physical",
         "range": "Melee, 1 Target",
-        "effect": "The user’s Speed is increased 1 CS.",
+        "effect": "The user's Speed is increased 1 CS.",
         "contest_type": "Cool",
         "contest_effect": "Special Attention",
         "Special": "If the user is in Hangry Mode, Aura Wheel is Dark-Types."
@@ -232,7 +232,7 @@
         "damage_base": "Damage Base 10: 3d8+10 / 24",
         "class": "Special",
         "range": "Burst 3, Friendly, Smite",
-        "effect": "The user’s Hit Points are set to -50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way. After Misty Explosion is resolved, create Misty Terrain in a Blast 7, centered on the user, that lasts for 5 turns. Any creatures in those spaces are affected as if by the Field Move Misty Terrain, rather than any other Field Move.",
+        "effect": "The user's Hit Points are set to -50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way. After Misty Explosion is resolved, create Misty Terrain in a Blast 7, centered on the user, that lasts for 5 turns. Any creatures in those spaces are affected as if by the Field Move Misty Terrain, rather than any other Field Move.",
         "contest_type": "Cute",
         "contest_effect": "Sabotage"
     },
@@ -244,7 +244,7 @@
         "damage_base": "Damage Base 8: 2d8+10 / 19",
         "class": "Physical",
         "range": "Melee, 1 Target",
-        "effect": "The target’s Special Attack stat is lowered 1 CS.",
+        "effect": "The target's Special Attack stat is lowered 1 CS.",
         "contest_type": "Tough",
         "contest_effect": "Sabotage"
     },
@@ -268,7 +268,7 @@
         "damage_base": "Damage Base 8: 2d8+10 / 19",
         "class": "Physical",
         "range": "Melee, 1 Target",
-        "effect": "The user’s Defense Stat is added to the damage roll instead of the Attack Stat.",
+        "effect": "The user's Defense Stat is added to the damage roll instead of the Attack Stat.",
         "contest_type": "Tough",
         "contest_effect": "Gamble"
     },
@@ -325,7 +325,7 @@
         "damage_base": "Damage Base 7: 2d6+10 / 17",
         "class": "Special",
         "range": "Burst 1, Spirit Surge",
-        "effect": "After Burning Jealousy has resolved, the user may choose to Burn foes within 5m that have had any CS raised since the beginning of that foe’s last turn. This Effect may trigger only once per Scene.",
+        "effect": "After Burning Jealousy has resolved, the user may choose to Burn foes within 5m that have had any CS raised since the beginning of that foe's last turn. This Effect may trigger only once per Scene.",
         "contest_type": "Smart",
         "contest_effect": "Sabotage"
     },
@@ -361,7 +361,7 @@
         "damage_base": "Damage Base 11: 2d6+10 / 17",
         "class": "Physical",
         "range": "8, Ranged Blast 3, Smite",
-        "effect": "If a target is holding a Held Item or Main or Off- Hand item, they must either drop it immediately or lose a Tick of Hit Points. This may only cause a target to lose at most one Tick of Hit Points, no matter how many items they were holding. On each of the target’s subsequent turns, if it is still holding the item(s) in question it loses a Tick of Hit Points.",
+        "effect": "If a target is holding a Held Item or Main or Off- Hand item, they must either drop it immediately or lose a Tick of Hit Points. This may only cause a target to lose at most one Tick of Hit Points, no matter how many items they were holding. On each of the target's subsequent turns, if it is still holding the item(s) in question it loses a Tick of Hit Points.",
         "contest_type": "Smart",
         "contest_effect": "Unsettling"
     },
@@ -373,7 +373,7 @@
         "damage_base": "Damage Base 8: 2d8+10 / 19",
         "class": "Special",
         "range": "Cone 2",
-        "effect": "The target’s Special Defense is lowered by 1 CS.",
+        "effect": "The target's Special Defense is lowered by 1 CS.",
         "contest_type": "Smart",
         "contest_effect": "Unsettling"
     },
@@ -385,7 +385,7 @@
         "damage_base": "Damage Base 8: 2d8+10 / 19",
         "class": "Physical",
         "range": "4, 1 Target",
-        "effect": "The target’s Speed is lowered by 1 CS.",
+        "effect": "The target's Speed is lowered by 1 CS.",
         "contest_type": "Smart",
         "contest_effect": "Big Show"
     },
@@ -409,7 +409,7 @@
         "damage_base": "Damage Base 8: 2d8+10 / 19",
         "class": "Physical",
         "range": "6, 1 Target",
-        "effect": "The target’s Defense is lowered by 1 CS.",
+        "effect": "The target's Defense is lowered by 1 CS.",
         "contest_type": "Smart",
         "contest_effect": "Excitement"
     },
@@ -514,7 +514,7 @@
         "damage_base": "Damage Base 5: 1d8+8 / 13",
         "class": "Physical",
         "range": "Melee, 1 Target, Spirit Surge",
-        "effect": "Rapid Spin destroys all Hazards within 5 meters, removes Leech Seeds, and removes the user’s Trapped or Stuck status. If Rapid Spin hits, the user’s speed raises 1 CS.",
+        "effect": "Rapid Spin destroys all Hazards within 5 meters, removes Leech Seeds, and removes the user's Trapped or Stuck status. If Rapid Spin hits, the user's speed raises 1 CS.",
         "contest_type": "Cool",
         "contest_effect": "Exhausting Act"
     },
@@ -525,7 +525,7 @@
         "ac": "None",
         "class": "Status",
         "range": "Self",
-        "effect": "The user immediately consumes one of its Food Buffs, regardless of any conditions that need to be met, gaining its benefit if applicable. If a Buff is consumed, the user’s Defense CS is raised by 2.",
+        "effect": "The user immediately consumes one of its Food Buffs, regardless of any conditions that need to be met, gaining its benefit if applicable. If a Buff is consumed, the user's Defense CS is raised by 2.",
         "contest_type": "Cute",
         "contest_effect": "Get Ready"
     },
@@ -571,7 +571,7 @@
         "damage_base": "Damage Base 9: 2d10+10 / 21",
         "class": "Special",
         "range": "6, 1 Target",
-        "effect": "This attack uses the highest of the user’s Attack or Special Attack Stat, though this does not change the Class of the Move. In addition, if the target’s Defense is lower than its Special Defense, this attack targets Defense, becoming a Physical Move. The target is poisoned on a 17+.",
+        "effect": "This attack uses the highest of the user's Attack or Special Attack Stat, though this does not change the Class of the Move. In addition, if the target's Defense is lower than its Special Defense, this attack targets Defense, becoming a Physical Move. The target is poisoned on a 17+.",
         "contest_type": "Smart",
         "contest_effect": "Seen Nothing Yet"
     },
@@ -583,7 +583,7 @@
         "damage_base": "Damage Base 8: 2d8+10 / 19",
         "class": "Special",
         "range": "6, 1 Target",
-        "effect": "The user may choose to Disable the target’s last Move used. This effect may only be activated once per Scene.",
+        "effect": "The user may choose to Disable the target's last Move used. This effect may only be activated once per Scene.",
         "contest_type": "Smart",
         "contest_effect": "Sabotage"
     },
@@ -632,7 +632,7 @@
         "range": "Cone 3, Set-Up",
         "contest_type": "Tough",
         "contest_effect": "Special Attention",
-        "set_up_effect": "The user’s Special Attack is raised by +1 Combat Stage.",
+        "set_up_effect": "The user's Special Attack is raised by +1 Combat Stage.",
         "resolution_effect": "The user attacks with Meteor Beam."
     },
     {
@@ -642,7 +642,7 @@
         "ac": "2",
         "class": "Status",
         "range": "Cone 2",
-        "effect": "The target gains a Coat that is automatically expended upon being hit with a Fire Type attack in order to make them one step more vulnerable to that attack. In addition, the target’s Speed is lowered by 1 CS.",
+        "effect": "The target gains a Coat that is automatically expended upon being hit with a Fire Type attack in order to make them one step more vulnerable to that attack. In addition, the target's Speed is lowered by 1 CS.",
         "contest_type": "Tough",
         "contest_effect": "Sabotage"
     },
@@ -700,7 +700,7 @@
         "damage_base": "Damage Base 14: 4d10+15 / 40",
         "class": "Special",
         "range": "Cone 3, Smite",
-        "effect": "The user’s Hit Points are reduced by 50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way.",
+        "effect": "The user's Hit Points are reduced by 50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way.",
         "contest_type": "Smart",
         "contest_effect": "Big Show"
     },
@@ -759,7 +759,7 @@
         "damage_base": "Damage Base 8: 2d8+10 / 19",
         "class": "Special",
         "range": "8, 1 Target",
-        "effect": "Snipe Shot is a Critical Hit on 18+. This Move may not be Intercepted, nor may any Abilities, Moves, or Features be activated to change this Move’s target. Any of those existing effects (such as Follow Me) fail.",
+        "effect": "Snipe Shot is a Critical Hit on 18+. This Move may not be Intercepted, nor may any Abilities, Moves, or Features be activated to change this Move's target. Any of those existing effects (such as Follow Me) fail.",
         "contest_type": "Beauty",
         "contest_effect": "Reliable"
     },
@@ -857,7 +857,7 @@
         "Range": "Cone 3, Set-Up",
         "Contest Type": "Tough",
         "Contest Effect": "Special Attention",
-        "Set-Up Effect": "The user’s Special Attack is raised by +1 Combat Stage.",
+        "Set-Up Effect": "The user's Special Attack is raised by +1 Combat Stage.",
         "Resolution Effect": "The user attacks with Meteor Beam.",
         "Effect": "None."
     }

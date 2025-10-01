@@ -43,7 +43,7 @@
         "damage_base": "Damage Base 5: 1d8+8 / 13",
         "class": "Physical",
         "range": "4, 1 Target",
-        "effect": "Targets hit by Triple Arrows lose 1 CS in both Defense and Special Defense. After attacking with Triple Arrows, hit or miss, the user may Disengage 2m and attack a different target with Triple Arrows. This effect may be repeated a second time, targeting a creature that has not been targeted by either prior attack. Before making each attack roll, the user can elect to give up triggering all remaining additional shifts and attacks. Triple Arrows gains +1 Accuracy and +1 DB for each attack that is given up. Triple Arrows always benefits from the Technician Ability. Once Daily, after all attacks with Triple Arrows have been resolved, the user becomes Pumped. While Pumped, the user’s Critical Range is extended by 2, or 18+ if the Critical Range is not otherwise extended. Being switched will cause this effect to end.",
+        "effect": "Targets hit by Triple Arrows lose 1 CS in both Defense and Special Defense. After attacking with Triple Arrows, hit or miss, the user may Disengage 2m and attack a different target with Triple Arrows. This effect may be repeated a second time, targeting a creature that has not been targeted by either prior attack. Before making each attack roll, the user can elect to give up triggering all remaining additional shifts and attacks. Triple Arrows gains +1 Accuracy and +1 DB for each attack that is given up. Triple Arrows always benefits from the Technician Ability. Once Daily, after all attacks with Triple Arrows have been resolved, the user becomes Pumped. While Pumped, the user's Critical Range is extended by 2, or 18+ if the Critical Range is not otherwise extended. Being switched will cause this effect to end.",
         "contest_type": "Cool",
         "contest_effect": "Special Attention"
     },
@@ -66,7 +66,7 @@
         "ac": "None",
         "class": "Status",
         "range": "Self",
-        "effect": "If the user performs a Fighting Move on their next turn that deals damage, add its Damage Dice Roll an extra time to the damage. Raise the user’s Defense 1 Combat Stage.",
+        "effect": "If the user performs a Fighting Move on their next turn that deals damage, add its Damage Dice Roll an extra time to the damage. Raise the user's Defense 1 Combat Stage.",
         "contest_type": "Cool",
         "contest_effect": "Get Ready"
     },
@@ -102,7 +102,7 @@
         "damage_base": "Damage Base 6: 2d6+8 / 15",
         "class": "Special",
         "range": "6, 1 Target",
-        "effect": "Legal targets hit by Bitter Malice are Stuck and Trapped until the end of their next turn on a 19+. Once a Scene, if Bitter Malice’s target has a Status Condition, you may have Bitter Malice’s Damage Base be 12 instead (3d12+10 / 30).",
+        "effect": "Legal targets hit by Bitter Malice are Stuck and Trapped until the end of their next turn on a 19+. Once a Scene, if Bitter Malice's target has a Status Condition, you may have Bitter Malice's Damage Base be 12 instead (3d12+10 / 30).",
         "contest_type": "Smart",
         "contest_effect": "Unsettling"
     },
@@ -114,7 +114,7 @@
         "damage_base": "Damage Base 6: 2d6+8 / 15",
         "class": "Special",
         "range": "8, Ranged Blast 2",
-        "effect": "Legal targets hit by Infernal Parade are Burned on a 17+. Once a Scene, if at least one of Infernal Parade’s targets has a Status Condition, you may have Infernal Parade’s Damage Base be 12 instead (3d12+10 / 30).",
+        "effect": "Legal targets hit by Infernal Parade are Burned on a 17+. Once a Scene, if at least one of Infernal Parade's targets has a Status Condition, you may have Infernal Parade's Damage Base be 12 instead (3d12+10 / 30).",
         "contest_type": "Beauty",
         "contest_effect": "Sabotage"
     },
@@ -126,7 +126,7 @@
         "damage_base": "Damage Base 12: 3d12+10 / 30",
         "class": "Special",
         "range": "Line 8, Smite, Spirit Surge",
-        "effect": "The user’s Hit Points are reduced by 50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way.",
+        "effect": "The user's Hit Points are reduced by 50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way.",
         "contest_type": "Beauty",
         "contest_effect": "Big Show"
     },
@@ -138,7 +138,7 @@
         "damage_base": "Damage Base 10: 3d8+10 / 24",
         "class": "Physical",
         "range": "Melee, 1 Target, Smite, Reckless",
-        "effect": "The user’s Defense and Special Defense are each lowered by -1 Combat Stage. Headlong Rush may be used as a Free Action at the end of a Sprint Maneuver taken as a Standard Action, as long as the user Shifted at least 3 meters in a straight line towards the target. When used this way, Headlong Rush Trips the target on a hit.",
+        "effect": "The user's Defense and Special Defense are each lowered by -1 Combat Stage. Headlong Rush may be used as a Free Action at the end of a Sprint Maneuver taken as a Standard Action, as long as the user Shifted at least 3 meters in a straight line towards the target. When used this way, Headlong Rush Trips the target on a hit.",
         "contest_type": "Tough",
         "contest_effect": "Big Show"
     },
@@ -173,7 +173,7 @@
         "ac": "None",
         "class": "Status",
         "range": "Self",
-        "effect": "The user’s Attack stat and Defense stat are switched and the user’s Special Attack stat and Special Defense stat are switched. These changes last for the remainder of the scene, or until the user is switched out or Fainted.",
+        "effect": "The user's Attack stat and Defense stat are switched and the user's Special Attack stat and Special Defense stat are switched. These changes last for the remainder of the scene, or until the user is switched out or Fainted.",
         "contest_type": "Cool",
         "contest_effect": "Inversed Appeal"
     },
@@ -185,7 +185,7 @@
         "damage_base": "Damage Base 2: 1d6+3 / 7",
         "class": "Physical",
         "range": "6, 1 Target, Five Strike",
-        "effect": "The target is Poisoned on a 17+. Once a Scene, if Barb Barrage’s target has a Status Condition, you may choose to not roll for Five Strike. Instead, treat Barb Barrage as though it automatically rolled an 8 for Five Strike.",
+        "effect": "The target is Poisoned on a 17+. Once a Scene, if Barb Barrage's target has a Status Condition, you may choose to not roll for Five Strike. Instead, treat Barb Barrage as though it automatically rolled an 8 for Five Strike.",
         "contest_type": "Smart",
         "contest_effect": "Reliable"
     },

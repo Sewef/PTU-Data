@@ -15,7 +15,7 @@ def check_skills(json_file):
     with open(json_file, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    # Vérifier si c’est une liste (plusieurs Pokémon) ou un seul dict
+    # Vérifier si c'est une liste (plusieurs Pokémon) ou un seul dict
     if isinstance(data, dict):
         data = [data]
 
@@ -27,5 +27,5 @@ def check_skills(json_file):
         if missing_skills:
             print(f"❌ {name} - Compétences manquantes : {missing_skills}")
 
-# Exemple d’utilisation
+# Exemple d'utilisation
 check_skills("../../ptu/data/pokedex/pokedex_9g.json")

@@ -108,7 +108,7 @@ Critical Moment
 Prerequisites: Elite Trainer, Adept Command
 Scene x2 – Standard Action
 Target: Your Pokemon with [Training] Features applied
-Effect: The bonuses from your Pokemon’s [Training]
+Effect: The bonuses from your Pokemon's [Training]
 are tripled until the end of your next turn.
 Top Percentage
 Prerequisites: Ace Trainer, Expert Command
@@ -118,7 +118,7 @@ divisible by 5
 Effect: Your Pokémon gains an extra Tutor Point.
 Top Percentage may be used on a single Pokémon a
 maximum of 4 times. Once a Pokémon has gained 4
-Tutor Points in this way, increase each of that Pokémon’s
+Tutor Points in this way, increase each of that Pokémon's
 Base Stats by +1.
 Signature Technique
 Prerequisites: Elite Trainer, Expert Command
@@ -126,8 +126,8 @@ At-Will – Extended Action
 Target: Your Pokémon with at least 2 Tutor Points
 remaining
 Effect: The target loses 2 Tutor Points. Choose one
-Move on the Target’s Move List. That Move becomes
-the target’s Signature Technique, and you may apply
+Move on the Target's Move List. That Move becomes
+the target's Signature Technique, and you may apply
 one of the modifications on the next page to the Move.
 The Move being modified must fit the category of the
 modification, and you must have the associated Training
@@ -137,7 +137,7 @@ to teach a Pokémon a different Signature Technique, the
 old one is lost, and 1 Tutor Point is refunded. 1 Tutor
 Point is also refunded if the Pokémon ever forgets a
 Signature Technique Move.
-Note: Be sure to give a cool name to your Pokémon’s
+Note: Be sure to give a cool name to your Pokémon's
 Signature Technique!
 Champ in the Making
 Prerequisites: 4 Ace Trainer Features, Master Command

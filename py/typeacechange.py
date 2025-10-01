@@ -33,7 +33,7 @@ def normalize(node, parent_key=None):
         if name_val is not None:
             out["name"] = name_val
 
-        # 3) Recopier les autres clés dans l’ordre d’origine -----------------
+        # 3) Recopier les autres clés dans l'ordre d'origine -----------------
         for k, v in node.items():
             if k in ("name", "Name"):          # déjà géré
                 continue

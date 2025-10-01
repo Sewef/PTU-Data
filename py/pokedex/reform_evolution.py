@@ -30,7 +30,7 @@ def token_spans(s: str) -> List[Tuple[str, Tuple[int, int]]]:
     [(mot_normalise, (start,end)), ...] sur la chaîne ORIGINALE.
     """
     out = []
-    for m in re.finditer(r"[A-Za-z0-9]+(?:['’\-:][A-Za-z0-9]+)*|[A-Za-z0-9]+", s):
+    for m in re.finditer(r"[A-Za-z0-9]+(?:[''\-:][A-Za-z0-9]+)*|[A-Za-z0-9]+", s):
         frag = m.group(0)
         out.append((soft_norm(frag), m.span()))
     return out

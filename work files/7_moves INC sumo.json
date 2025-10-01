@@ -66,7 +66,7 @@
         "ac": "10",
         "class": "Status",
         "range": "Melee 1",
-        "effect": "The target falls Asleep. Once per Scene, Dark Void may be used as if its range were “Burst 5, Friendly” instead.",
+        "effect": "The target falls Asleep. Once per Scene, Dark Void may be used as if its range were “Burst 5, Friendly\" instead.",
         "contest_type": "Smart",
         "contest_effect": "Excitement"
     },
@@ -78,7 +78,7 @@
         "damage_base": "Damage Base 9: 2d10+10 / 21",
         "class": "Physical",
         "range": "Melee, 1 Target",
-        "effect": "This Move ignores the target’s positive Defense Combat Stages and all Damage Reduction.",
+        "effect": "This Move ignores the target's positive Defense Combat Stages and all Damage Reduction.",
         "contest_type": "Tough",
         "contest_effect": "Inversed Appeal"
     },
@@ -90,7 +90,7 @@
         "damage_base": "Damage Base 10: 3d8+10 / 24",
         "class": "Physical",
         "range": "Burst 2",
-        "effect": "Interrupts may not be triggered against Hyperspace Fury. The user’s Defense is lowered by -1 Combat Stage.",
+        "effect": "Interrupts may not be triggered against Hyperspace Fury. The user's Defense is lowered by -1 Combat Stage.",
         "contest_type": "Tough",
         "contest_effect": "Double Time"
     },
@@ -185,7 +185,7 @@
         "damage_base": "Damage Base 10: 3d8+10 / 24",
         "class": "Physical",
         "range": "Melee, 1 Target, Smite",
-        "effect": "The target’s next damaging Normal Type Move instead becomes Electric Type.",
+        "effect": "The target's next damaging Normal Type Move instead becomes Electric Type.",
         "contest_type": "Cool",
         "contest_effect": "Special Attention"
     },
@@ -196,7 +196,7 @@
         "ac": "4",
         "class": "Status",
         "range": "6, 1 Target",
-        "effect": "Thunder Wave Paralyzes the target. Targets immune to Electric Attacks are immune to Thunder Wave’s effects.",
+        "effect": "Thunder Wave Paralyzes the target. Targets immune to Electric Attacks are immune to Thunder Wave's effects.",
         "contest_type": "Cool",
         "contest_effect": "Excitement"
     },
@@ -220,7 +220,7 @@
         "damage_base": "Damage Base 13: 4d10+10 / 35",
         "class": "Special",
         "range": "Line 9, Smite",
-        "effect": "Lower the user’s Special Attack 2 Combat Stages after damage.",
+        "effect": "Lower the user's Special Attack 2 Combat Stages after damage.",
         "contest_type": "Beauty",
         "contest_effect": "Seen Nothing Yet"
     },
@@ -236,7 +236,7 @@
         "contest_effect": "Reflective Appeal"
     },
     {
-        "name": "Nature’s Madness",
+        "name": "Nature's Madness",
         "type": "Fairy",
         "frequency": "Scene",
         "ac": "4",
@@ -278,7 +278,7 @@
         "damage_base": "Damage Base 8: 2d8+10 / 19",
         "class": "Physical",
         "range": "2, 1 Target",
-        "effect": "The target’s Defense is lowered by 1 Combat Stage.",
+        "effect": "The target's Defense is lowered by 1 Combat Stage.",
         "contest_type": "Cool",
         "contest_effect": "Safe Option"
     },
@@ -290,7 +290,7 @@
         "damage_base": "Damage Base 15: 4d10+10 / 45",
         "class": "Special",
         "range": "6, Ranged Blast 3, Smite",
-        "effect": "The user’s Hit Points are reduced by 50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way.",
+        "effect": "The user's Hit Points are reduced by 50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way.",
         "contest_type": "Beauty",
         "contest_effect": "Big Show"
     },
@@ -338,7 +338,7 @@
         "damage_base": "Damage Base 9: 2d10+10 / 21",
         "class": "Physical",
         "range": "Melee, 1 Target",
-        "effect": "The target’s Defense is lowered by 1 Combat Stage on a 17+.",
+        "effect": "The target's Defense is lowered by 1 Combat Stage on a 17+.",
         "contest_type": "Tough",
         "contest_effect": "Steady Performance"
     },
@@ -376,7 +376,7 @@
         "range": "Melee, 1 Target, Set Up",
         "contest_type": "Cool",
         "contest_effect": "Special Attention",
-        "set_up_effect": "If the weather is not Sunny, the user gains +1 Combat Stage in Attack and Special Defense, and the user’s turn ends. If the weather is Sunny, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword."
+        "set_up_effect": "If the weather is not Sunny, the user gains +1 Combat Stage in Attack and Special Defense, and the user's turn ends. If the weather is Sunny, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword."
     },
     {
         "name": "Strength Sap",
@@ -431,7 +431,7 @@
         "damage_base": "Damage Base 8: 2d8+10 / 19",
         "class": "Physical",
         "range": "Melee, 1 Target",
-        "effect": "If the user’s last attack failed or missed, Stomping Tantrum is DB 15 (4d10+10 / 45) instead.",
+        "effect": "If the user's last attack failed or missed, Stomping Tantrum is DB 15 (4d10+10 / 45) instead.",
         "contest_type": "Tough",
         "contest_effect": "Unsettling"
     },
@@ -479,7 +479,7 @@
         "damage_base": "Damage Base 10: 3d8+10 / 24",
         "class": "Physical",
         "range": "Melee, 1 Target",
-        "effect": "The user’s Speed is lowered by 1 Combat Stage.",
+        "effect": "The user's Speed is lowered by 1 Combat Stage.",
         "contest_type": "Cool",
         "contest_effect": "Good Show"
     },
@@ -514,7 +514,7 @@
         "damage_base": "Damage Base 9: 2d10+10 / 21",
         "class": "Special",
         "range": "6, 1 Target",
-        "effect": "Revelation Dance is the same Type as the user’s primary Type (the first one listed in the Pokédex). Revelation Dance deals +5 Bonus Damage for every other Dance Move used by the user this round, to a maximum of +15.",
+        "effect": "Revelation Dance is the same Type as the user's primary Type (the first one listed in the Pokédex). Revelation Dance deals +5 Bonus Damage for every other Dance Move used by the user this round, to a maximum of +15.",
         "contest_type": "Beauty",
         "contest_effect": "Reliable"
     },
@@ -525,7 +525,7 @@
         "ac": "None",
         "class": "Status",
         "range": "6, 1 Target, Priority",
-        "effect": "Until the end of the user’s next turn, the target is Blinded and Vulnerable.",
+        "effect": "Until the end of the user's next turn, the target is Blinded and Vulnerable.",
         "contest_type": "Smart",
         "contest_effect": "Attention Grabber"
     },
@@ -536,7 +536,7 @@
         "ac": "5",
         "class": "Status",
         "range": "6, 1 Target, Social",
-        "effect": "The target’s Attack is raised 2 Combat Stages. Swagger Confuses the target.",
+        "effect": "The target's Attack is raised 2 Combat Stages. Swagger Confuses the target.",
         "contest_type": "Cute",
         "contest_effect": "Excitement"
     },
@@ -559,7 +559,7 @@
         "ac": "2",
         "class": "Status",
         "range": "Burst 1, Social, Friendly",
-        "effect": "Tearful Look lowers all Legal Targets’ Attack and Special Attack 1 Combat Stage.",
+        "effect": "Tearful Look lowers all Legal Targets' Attack and Special Attack 1 Combat Stage.",
         "contest_type": "Cute",
         "contest_effect": "Sabotage"
     },
@@ -570,7 +570,7 @@
         "ac": "None",
         "class": "Status",
         "range": "Self, Interrupt, Shield, Trigger",
-        "effect": "If the user is hit by an attack, the user may use Baneful Bunker. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move’s effects. In addition, if the triggering attack was Melee ranged, the attacker is Poisoned.",
+        "effect": "If the user is hit by an attack, the user may use Baneful Bunker. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move's effects. In addition, if the triggering attack was Melee ranged, the attacker is Poisoned.",
         "contest_type": "Smart",
         "contest_effect": "Inversed Appeal"
     },
@@ -603,7 +603,7 @@
         "ac": "None",
         "class": "Status",
         "range": "Melee, 1 Target",
-        "effect": "The target immediately reuses the attack it performed last, ignoring frequency, as a Free Action. They may choose new targets for the copied attack. Instruct may not be used if the Target’s last Move was a Set-Up Move, a Trigger Move, or Instruct, or if the Target is currently affected by Exhaust.",
+        "effect": "The target immediately reuses the attack it performed last, ignoring frequency, as a Free Action. They may choose new targets for the copied attack. Instruct may not be used if the Target's last Move was a Set-Up Move, a Trigger Move, or Instruct, or if the Target is currently affected by Exhaust.",
         "contest_type": "Smart",
         "contest_effect": "Catching Up"
     },
@@ -615,7 +615,7 @@
         "damage_base": "Damage Base 8: 2d8+10 / 19",
         "class": "Special",
         "range": "Melee, 3 Targets",
-        "effect": "Make and resolve of Hyperspace Hole’s attacks separately. In between each attack, the user may Shift using their Teleporter capability, ending the Shift next to a legal target. Interrupts may not be triggered against Hyperspace Hole.",
+        "effect": "Make and resolve of Hyperspace Hole's attacks separately. In between each attack, the user may Shift using their Teleporter capability, ending the Shift next to a legal target. Interrupts may not be triggered against Hyperspace Hole.",
         "contest_type": "Smart",
         "contest_effect": "Gamble"
     },
@@ -627,7 +627,7 @@
         "damage_base": "Damage Base 10: 3d8+10 / 24",
         "class": "Special",
         "range": "Burst 2",
-        "effect": "This attack uses the highest of the user’s Attack or Special Attack Stat, though it remains a Special Move. This Move ignores any Abilities that would cause it to fail or miss, such as Dodge or Wonder Guard; those Abilities cannot be activated in response to Photon Geyser.",
+        "effect": "This attack uses the highest of the user's Attack or Special Attack Stat, though it remains a Special Move. This Move ignores any Abilities that would cause it to fail or miss, such as Dodge or Wonder Guard; those Abilities cannot be activated in response to Photon Geyser.",
         "contest_type": "Smart",
         "contest_effect": "Seen Nothing Yet"
     },
@@ -719,7 +719,7 @@
         "damage_base": "Damage Base 9: 2d10+10 / 21",
         "class": "Physical",
         "range": "Melee, 1 Target",
-        "effect": "The target’s Defense is lowered by 1 Combat Stage on a 17+.",
+        "effect": "The target's Defense is lowered by 1 Combat Stage on a 17+.",
         "contest_type": "Beauty",
         "contest_effect": "Steady Performance"
     },

@@ -17,7 +17,7 @@
     "ac": "None",
     "class": "Status",
     "range": "Self, Interrupt, Shield, Trigger",
-    "effect": "If the user is hit by a Move, the user may use this Move. The user is instead not hit by the triggering Move. You do not take any damage nor are you affected by any of the Move’s effects. In addition, if the triggering Move was Melee ranged, the attacker's Speed is lowered by -2 Combat Stages and they are Slowed until the end of the user's next turn. If the target already has negative Speed Combat Stages, the target is Stuck and Trapped instead of Slowed.",
+    "effect": "If the user is hit by a Move, the user may use this Move. The user is instead not hit by the triggering Move. You do not take any damage nor are you affected by any of the Move's effects. In addition, if the triggering Move was Melee ranged, the attacker's Speed is lowered by -2 Combat Stages and they are Slowed until the end of the user's next turn. If the target already has negative Speed Combat Stages, the target is Stuck and Trapped instead of Slowed.",
     "contest_type": "Smart",
     "contest_effect": "Inversed Appeal",
     "special": "Grants Threaded"
@@ -30,7 +30,7 @@
     "damage_base": "Damage Base 12: 3d12+10 / 30",
     "class": "Physical",
     "range": "Melee, 1 Target, Dash, Reckless",
-    "effect": "The user’s Defense and Special Defense are each lowered by -1 Combat Stage."
+    "effect": "The user's Defense and Special Defense are each lowered by -1 Combat Stage."
   },
   {
     "name": "Comeuppance",
@@ -235,7 +235,7 @@
     "damage_base": "Damage Base 8: 2d8+10 / 19",
     "class": "Special",
     "range": "Burst 1, Sonic, Spirit Surge",
-    "effect": "After this Move has resolved, the user may choose to Confuse foes within 5m that have had any CS raised since the beginning of that foe’s last turn. This Effect may trigger only once per Scene."
+    "effect": "After this Move has resolved, the user may choose to Confuse foes within 5m that have had any CS raised since the beginning of that foe's last turn. This Effect may trigger only once per Scene."
   },
   {
     "name": "Butterfly Knife* [Fury Cutter]",
@@ -267,7 +267,7 @@
     "damage_base": "Damage Base 12: 3d12+10 / 30",
     "class": "Physical",
     "range": "Melee, 1 Target, Dash, Reckless",
-    "effect": "The user’s Defense and Special Defense are each lowered by -1 Combat Stage."
+    "effect": "The user's Defense and Special Defense are each lowered by -1 Combat Stage."
   },
   {
     "name": "Sugar Rush* [Trailblaze]",
@@ -277,7 +277,7 @@
     "damage_base": "Damage Base 5: 1d8+8 / 13",
     "class": "Physical",
     "range": "Melee, 1 Target, Dash, Full Action",
-    "effect": "The user Shifts before or after attacking, ignoring Slow Terrain. If the user did not move through Slow Terrain during this Shift, raise the user’s Speed 1 Combat Stage."
+    "effect": "The user Shifts before or after attacking, ignoring Slow Terrain. If the user did not move through Slow Terrain during this Shift, raise the user's Speed 1 Combat Stage."
   },
   {
     "name": "Magical Torque",
@@ -343,7 +343,7 @@
     "damage_base": "Damage Base 7: 2d6+10 / 17",
     "class": "Physical",
     "range": "Melee, 1 Target",
-    "effect": "If an adjacent foe declares Priority or an Interrupt, this Move may be used as an Interrupt against the triggering foe. If used this way, this Move Flinches the target. If the triggering Interrupt was itself triggered by the user’s Standard Action, that Action is relinquished, in favor of giving up the Action on the following round, to use this Move.",
+    "effect": "If an adjacent foe declares Priority or an Interrupt, this Move may be used as an Interrupt against the triggering foe. If used this way, this Move Flinches the target. If the triggering Interrupt was itself triggered by the user's Standard Action, that Action is relinquished, in favor of giving up the Action on the following round, to use this Move.",
     "contest_type": "Smart",
     "contest_effect": "Saving Grace"
   },
@@ -355,7 +355,7 @@
     "damage_base": "Damage Base 12: 3d12+10 / 30",
     "class": "Special",
     "range": "Line 4, Reckless",
-    "effect": "The user’s Defense and Special Defense are each lowered by -1 Combat Stage.",
+    "effect": "The user's Defense and Special Defense are each lowered by -1 Combat Stage.",
     "contest_type": "Smart",
     "contest_effect": "Seen Nothing Yet"
   },
@@ -390,7 +390,7 @@
     "ac": "None",
     "class": "Status",
     "range": "Self, Interrupt, Shield, Trigger",
-    "effect": "If the user is hit by an attack, the user may use this Move. The user is instead not hit by the attack. You do not take any damage nor are you affected by any of the attack’s effects. In addition, if the triggering attack was Melee ranged, the attacker is Burned."
+    "effect": "If the user is hit by an attack, the user may use this Move. The user is instead not hit by the attack. You do not take any damage nor are you affected by any of the attack's effects. In addition, if the triggering attack was Melee ranged, the attacker is Burned."
   },
   {
     "name": "Temper Flare",
@@ -400,7 +400,7 @@
     "damage_base": "Damage Base 8: 2d8+10 / 19",
     "class": "Physical",
     "range": "Melee, 1 Target",
-    "effect": "If the user’s last attack failed or missed, this Move is DB 15 (4d10+10 / 45) instead.",
+    "effect": "If the user's last attack failed or missed, this Move is DB 15 (4d10+10 / 45) instead.",
     "contest_type": "Cool",
     "contest_effect": "Seen Nothing Yet"
   },
@@ -454,7 +454,7 @@
     "damage_base": "Damage Base 4: 1d8+6 / 11",
     "class": "Special",
     "range": "4, 1 Target",
-    "effect": "Lower the target’s Special Defense by -1 Combat Stage on 18+."
+    "effect": "Lower the target's Special Defense by -1 Combat Stage on 18+."
   },
   {
     "name": "Artillerolives* [New]",
@@ -507,7 +507,7 @@
     "damage_base": "Damage Base be 13 instead (4d10+10 /",
     "class": "Special",
     "range": "6, 1 Target",
-    "effect": "Once a Scene, if the target has a Status Affliction, you may have this Move’s Move’s Damage Base be 13 instead (4d10+10 / 35).",
+    "effect": "Once a Scene, if the target has a Status Affliction, you may have this Move's Move's Damage Base be 13 instead (4d10+10 / 35).",
     "contest_type": "Smart",
     "contest_effect": "Incentives"
   },
@@ -538,7 +538,7 @@
     "damage_base": "Damage Base 5: 1d8+8 / 13",
     "class": "Physical",
     "range": "Melee, 1 Target, Dash, Full Action",
-    "effect": "The user Shifts before or after attacking, ignoring Slow Terrain. If the user did not move through Slow Terrain during this Shift, raise the user’s Speed 1 Combat Stage.",
+    "effect": "The user Shifts before or after attacking, ignoring Slow Terrain. If the user did not move through Slow Terrain during this Shift, raise the user's Speed 1 Combat Stage.",
     "contest_type": "Tough",
     "contest_effect": "Excitement"
   },
@@ -569,7 +569,7 @@
     "ac": "None",
     "class": "Status",
     "range": "Field",
-    "effect": "The weather changes to Snowy for 5 rounds and the user may immediately be recalled in the same turn. A new Pokémon may immediately be sent out. Using this Move lets a Trapped user be recalled. If the user is not recalled, their movement this turn does not provoke Attacks of Opportunity instead. NOTE: If you are using the Weathers from Domovoi’s Rework, the user’s side also gains 2 charges of the [Hailing] Blessing, as if they used Hail or Snowscape.",
+    "effect": "The weather changes to Snowy for 5 rounds and the user may immediately be recalled in the same turn. A new Pokémon may immediately be sent out. Using this Move lets a Trapped user be recalled. If the user is not recalled, their movement this turn does not provoke Attacks of Opportunity instead. NOTE: If you are using the Weathers from Domovoi's Rework, the user's side also gains 2 charges of the [Hailing] Blessing, as if they used Hail or Snowscape.",
     "contest_type": "Beauty",
     "contest_effect": "Catching Up"
   },
@@ -602,7 +602,7 @@
     "ac": "None",
     "class": "Status",
     "range": "Field, Weather",
-    "effect": "The weather changes to Snowy for 5 rounds. While it is Snowing, all Ice-Type Pokémon gain 5 Damage Reduction, or +2 to any existing Damage Reduction. NOTE: For all intents and purposes, Snowscape retroactively replaces Hail in all contexts, including Movepools and Ability effects. If you are using the Weathers from Domovoi’s Rework however, Snowscape should be replaced again with Hail from that Homebrew in anything but Name.",
+    "effect": "The weather changes to Snowy for 5 rounds. While it is Snowing, all Ice-Type Pokémon gain 5 Damage Reduction, or +2 to any existing Damage Reduction. NOTE: For all intents and purposes, Snowscape retroactively replaces Hail in all contexts, including Movepools and Ability effects. If you are using the Weathers from Domovoi's Rework however, Snowscape should be replaced again with Hail from that Homebrew in anything but Name.",
     "contest_type": "Beauty",
     "contest_effect": "Sabotage"
   },
@@ -670,7 +670,7 @@
     "ac": "None",
     "class": "Status",
     "range": "Self, Coat, Illusion, Interrupt, Shield,",
-    "effect": "If the user is hit by a Move while above 1/4th Hit Points, after being told how much damage it would deal, they may use this Move. The user is instead not hit by the triggering Move, and does not take any damage, nor are they affected by any of the Move’s effects. Instead, they lose 1/4th of their maximum Hit Points. This Hit Point loss cannot be prevented in any way. The user may then Disengage up to their full Movement as a Free Action, or be switched out, even if they are Trapped. They leave behind a Tail Token on any one square they occupied. The Tail Token counts as Rough Terrain for foes, and if an ally Shifts over it, they may remove it from the field to gain the same amount of Temporary Hit Points as the user lost when activating this Move. This Move may not be activated against Moves with the Sonic keyword."
+    "effect": "If the user is hit by a Move while above 1/4th Hit Points, after being told how much damage it would deal, they may use this Move. The user is instead not hit by the triggering Move, and does not take any damage, nor are they affected by any of the Move's effects. Instead, they lose 1/4th of their maximum Hit Points. This Hit Point loss cannot be prevented in any way. The user may then Disengage up to their full Movement as a Free Action, or be switched out, even if they are Trapped. They leave behind a Tail Token on any one square they occupied. The Tail Token counts as Rough Terrain for foes, and if an ally Shifts over it, they may remove it from the field to gain the same amount of Temporary Hit Points as the user lost when activating this Move. This Move may not be activated against Moves with the Sonic keyword."
   },
   {
     "name": "Tera Blast",
@@ -680,7 +680,7 @@
     "damage_base": "Damage Base 8: 2d8+10 / 19",
     "class": "Versatile",
     "range": "8, 1 Target, Versatile",
-    "effect": "If the user is Terastalized, this move’s Type becomes the user’s Tera Type."
+    "effect": "If the user is Terastalized, this move's Type becomes the user's Tera Type."
   },
   {
     "name": "Tera Starstorm",
@@ -719,7 +719,7 @@
     "damage_base": "Damage Base 5: 1d8+8 / 13",
     "class": "Special",
     "range": "Burst 1, Spirit Surge",
-    "effect": "This Move destroys all Hazards within a Burst 5 that were placed by foes, removes Leech Seeds, and removes the user’s Trapped or Stuck conditions. All targets that are hit are Poisoned."
+    "effect": "This Move destroys all Hazards within a Burst 5 that were placed by foes, removes Leech Seeds, and removes the user's Trapped or Stuck conditions. All targets that are hit are Poisoned."
   },
   {
     "name": "Noxious Torque",
@@ -751,7 +751,7 @@
     "damage_base": "Damage Base 8: 2d8+10 / 19",
     "class": "Special",
     "range": "6, 1 Target",
-    "effect": "The target’s Special Defense is lowered by -2 Combat Stages."
+    "effect": "The target's Special Defense is lowered by -2 Combat Stages."
   },
   {
     "name": "Occult Razor* [New]",
@@ -855,7 +855,7 @@
     "damage_base": "Damage Base 6: 2d6+8 / 15",
     "class": "Physical",
     "range": "Melee, 1 Target",
-    "effect": "If the target’s Hit Points are above 50%, this Move’s Damage Base is doubled to Damage Base 12 (3d12+10 / 30).",
+    "effect": "If the target's Hit Points are above 50%, this Move's Damage Base is doubled to Damage Base 12 (3d12+10 / 30).",
     "contest_type": "Tough",
     "contest_effect": "Seen Nothing Yet"
   },
@@ -867,7 +867,7 @@
     "damage_base": "Damage Base 12: 3d12+10 / 30",
     "class": "Special",
     "range": "Cone 3",
-    "effect": "The user’s Special Attack is lowered by -1 Combat Stage. Once per Day, this Move scatters metal coins equal in value to 1d8 times the user’s Level. If it is a trainer battle, the winner gets to pick up the coins."
+    "effect": "The user's Special Attack is lowered by -1 Combat Stage. Once per Day, this Move scatters metal coins equal in value to 1d8 times the user's Level. If it is a trainer battle, the winner gets to pick up the coins."
   },
   {
     "name": "Spin Out",
@@ -917,7 +917,7 @@
     "damage_base": "Damage Base 8: 2d8+10 / 19",
     "class": "Physical",
     "range": "Melee, 1 Target, Spirit Surge",
-    "effect": "Raise the user’s Speed 1 Combat Stage."
+    "effect": "Raise the user's Speed 1 Combat Stage."
   },
   {
     "name": "Chilling Water",
@@ -937,7 +937,7 @@
     "damage_base": "Damage Base 8: 2d8+10 / 19",
     "class": "Special",
     "range": "6, 1 Target",
-    "effect": "This Move does not deal reduced damage in Sunny Weather. It instead deals +10 damage in Sunny Weather. NOTE: If you are using the Weathers from Domovoi’s Rework, the [Sun Shining] Blessing may not be activated against this Move."
+    "effect": "This Move does not deal reduced damage in Sunny Weather. It instead deals +10 damage in Sunny Weather. NOTE: If you are using the Weathers from Domovoi's Rework, the [Sun Shining] Blessing may not be activated against this Move."
   },
   {
     "name": "Jet Punch",

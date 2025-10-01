@@ -39,7 +39,7 @@ def insert_after_species(e: OrderedDict, key: str, number_val):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("-i","--input", required=True, help="JSON d’entrée (parser)")
+    ap.add_argument("-i","--input", required=True, help="JSON d'entrée (parser)")
     ap.add_argument("-r","--ref", required=True, help="CSV référence Pokédex")
     ap.add_argument("-o","--output", required=False, help="JSON de sortie")
     args = ap.parse_args()
@@ -71,7 +71,7 @@ def main():
 
         out.append(e)
 
-    # Écrire sans trier les clés (ordre préservé tel qu’inséré)
+    # Écrire sans trier les clés (ordre préservé tel qu'inséré)
     pathlib.Path(args.output).write_text(
         json.dumps(out, ensure_ascii=False, indent=2),
         encoding="utf-8"
