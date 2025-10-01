@@ -5,7 +5,7 @@
       (base, num) => `${base}/${num}.png`
     ],
 
-    showMethodLabel: true
+    showMethodLabel: false
   };
 
   // Où se trouvent les dossiers core/community/homebrew (relatif au HTML)
@@ -189,6 +189,11 @@
           <p><strong>Homebrew</strong>  — Based on Community dataset, updated all mons stats and movepools from Gen 1 to 8.5.</p>
           <hr/>
 
+          <h5>Q&A</h5>
+          <h6>Homebrew: what are "Deleted" moves?</h6>
+          <p>Those are moves that have been removed in Gen 8. When updating, those have been reinjected from the Core Dex. Feel free to keep them or not.</p>
+
+          <hr/>
           <h5>Changelog</h5>
           <h6>Core</h6>
           <ul>
@@ -602,19 +607,26 @@
 
 
   // --- helpers ---
-  function renderLevelUpMoves(moves) {
-    if (!Array.isArray(moves) || !moves.length) return '';
-    return `
+function renderLevelUpMoves(moves) {
+  if (!Array.isArray(moves) || !moves.length) return '';
+  return `
     <ul class="list-unstyled mb-0">
-      ${moves.map(m => `
+      ${moves.map(m => {
+        // Tags en exposant (si présents)
+        const tagsSup = Array.isArray(m.Tags) && m.Tags.length
+          ? `<sup class="smaller text-uppercase text-muted ms-1">${escapeHtml(m.Tags.join(' '))}</sup>`
+          : '';
+        return `
         <li class="d-flex align-items-center mb-1">
           <span class="text-muted" style="width:50px;">Lv.${m.Level}</span>
-          <span class="fw-semibold flex-grow-1">${m.Move}</span>
+          <span class="fw-semibold flex-grow-1">${escapeHtml(m.Move)}${tagsSup}</span>
           ${wrapTypes([m.Type])}
-        </li>
-      `).join('')}
+        </li>`;
+      }).join('')}
     </ul>`;
-  }
+}
+
+  
   function renderStringList(title, arr) {
     if (!Array.isArray(arr) || !arr.length) return '';
     return `

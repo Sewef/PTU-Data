@@ -303,7 +303,7 @@ def merge_and_apply_rules(core_obj: Dict[str, Any], sv_obj: Dict[str, Any], sv_i
         if key not in existing_lv_keys:
             km = dict(km)
             km["Tags"] = list(km.get("Tags") or [])
-            add_tag(km["Tags"], "Kept")
+            add_tag(km["Tags"], "Deleted")
             core_obj["Moves"]["Level Up Move List"].append(km)
     sort_level_up_list(core_obj["Moves"]["Level Up Move List"])
 
@@ -325,7 +325,7 @@ def merge_and_apply_rules(core_obj: Dict[str, Any], sv_obj: Dict[str, Any], sv_i
         tm_objs.append({
             "Move": normalize_move_name(kt.get("Move")),
             "Type": kt.get("Type"),
-            "Tags": list(kt.get("Tags") or []) + ["Kept"],
+            "Tags": list(kt.get("Tags") or []) + ["Deleted"],
             "Method": normal_case_method(kt.get("Method") or kt.get("method")),
         })
 
