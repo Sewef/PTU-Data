@@ -17,7 +17,7 @@
           "-NoProfile",
           "-ExecutionPolicy", "Bypass",
           "-Command",
-          "robocopy \"D:\\GitHub\\PTU-Data\\ptu\" D:\\GitHub\\sewef.github.io\\ptu\" /MIR /R:0 /W:0; if ($LASTEXITCODE -lt 8) { exit 0 } else { exit $LASTEXITCODE }"
+          "robocopy \"D:\\GitHub\\PTU-Data\\ptu\" \"D:\\GitHub\\sewef.github.io\\ptu\" /MIR /R:0 /W:0; if ($LASTEXITCODE -lt 8) { cd \"D:\\GitHub\\sewef.github.io\"; git add .; git commit -m \"Auto deploy\"; git push origin main; exit 0 } else { exit $LASTEXITCODE }"
         ]
       },
       "problemMatcher": []
