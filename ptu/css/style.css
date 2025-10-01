@@ -3,6 +3,11 @@ html { overflow-y: scroll; scrollbar-gutter: stable; }
 /* Prevent Bootstrap modal horizontal shift */
 body.modal-open { padding-right: 0 !important; }
 
+/* ===== Custom Boostrap   =============================================== */
+smaller, .smaller {
+  font-size: 0.6em;
+}
+
 
 /* ===== Type color tokens =============================================== */
 .card-type-Normal  { --type-color:#A8A77A; }

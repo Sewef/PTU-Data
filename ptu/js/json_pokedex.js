@@ -3,7 +3,9 @@
     // NEW — patterns d’icônes inchangés
     iconPatterns: [
       (base, num) => `${base}/${num}.png`
-    ]
+    ],
+
+    showMethodLabel: true
   };
 
   // Où se trouvent les dossiers core/community/homebrew (relatif au HTML)
@@ -844,7 +846,6 @@
     return Object.entries(forms).map(([label, f]) => {
       const src = (() => {
         const t = document.createElement("img");
-        console.log(f);
         setupIcon(t, f?.Icon ?? pNum, `${pName} — ${label}`, "full");
         return t.src;
       })();
@@ -877,6 +878,74 @@
       </div></div>`;
     }).join("");
   }
+
+  function renderTmTutorMoves(arr) {
+    if (!Array.isArray(arr) || !arr.length) return '';
+
+    const items = arr.map(it => {
+      // Compatibilité : anciens dex pouvaient avoir des strings
+      if (typeof it === 'string') {
+        return `
+        <li class="d-flex align-items-center mb-1">
+          <span class="fw-semibold flex-grow-1">${escapeHtml(it)}</span>
+        </li>`;
+      }
+
+      const move = escapeHtml(it?.Move ?? '');
+      const type = it?.Type ? wrapTypes([it.Type]) : '';
+      const tags = Array.isArray(it?.Tags) && it.Tags.length
+        ? `<sup class="text-uppercase text-muted small ms-1">${escapeHtml(it.Tags.join(' '))}</sup>`
+        : '';
+
+      return `
+      <li class="d-flex align-items-center mb-1">
+        <span class="fw-semibold flex-grow-1">${move}${tags}</span>
+        ${type}
+      </li>`;
+    }).join('');
+
+    return `
+    <div class="mt-3">
+      <h5 class="text-muted">TM/Tutor Moves</h5>
+      <ul class="list-unstyled mb-0">
+        ${items}
+      </ul>
+    </div>`;
+  }
+
+  function renderTmTutorMovesComma(arr, title = 'TM/Tutor Moves') {
+    if (!Array.isArray(arr) || arr.length === 0) return '';
+
+    const parts = arr.map(it => {
+      if (typeof it === 'string') {
+        return `<span class="small text-muted">${escapeHtml(it)}</span>`;
+      }
+
+      const move = escapeHtml(it?.Move ?? '');
+
+      // Tags (toujours en exposant, petit + uppercase)
+      const tagsSup = Array.isArray(it?.Tags) && it.Tags.length
+        ? `<sup class="smaller text-uppercase text-muted">${escapeHtml(it.Tags.join(' '))}</sup>`
+        : '';
+
+      // Method (pas affichée si Level-Up, traduit Machine → TM)
+      let method = it?.Method || '';
+      if (method === 'Machine') method = 'TM';
+      const methodSup = method && method !== 'Level-Up'
+        ? `<sup class="smaller text-uppercase text-muted">${escapeHtml(method)}</sup>`
+        : '';
+
+      return `<span class="">${move}${tagsSup}${CFG.showMethodLabel ? methodSup : ""}</span>`;
+    });
+
+    return `
+    <div class="mt-3">
+      <h6 class="text-muted">${title}</h6>
+      <p class="mb-0">${parts.join(', ')}</p>
+    </div>
+  `;
+  }
+
 
 
   function renderObject(obj, depth = 0) {
@@ -968,10 +1037,10 @@
               <h5 class="text-muted">Level-Up Moves</h5>
               ${renderLevelUpMoves(v["Level Up Move List"])}
             </div>` : '';
-            blocks += renderStringList('TM/HM Moves', v["TM/HM Move List"]);
-            blocks += renderStringList('Egg Moves', v["Egg Move List"]);
-            blocks += renderStringList('Tutor Moves', v["Tutor Move List"]);
-            blocks += renderStringList('TM/Tutor Moves', v["TM/Tutor Moves List"]);
+            blocks += renderTmTutorMovesComma(v["TM/HM Move List"], 'TM/HM Moves');
+            blocks += renderTmTutorMovesComma(v["Egg Move List"], 'Egg Moves');
+            blocks += renderTmTutorMovesComma(v["Tutor Move List"], 'Tutor Moves');
+            blocks += renderTmTutorMovesComma(v["TM/Tutor Moves List"]);
 
             if (blocks.trim()) {
               const h = Math.min(4 + depth, 6);
