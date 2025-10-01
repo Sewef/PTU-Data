@@ -681,16 +681,34 @@
 
     const pushPair = (k, v) => {
       const key = String(k).trim();
-      const val = Number(v);
-      if (key && Number.isFinite(Number(val))) rated.push({ key: key, value: val });
-      else if (key.startsWith("Jump")) rated.push({ key: key, value: v })
-      else if (key) simple.push(key);
+      if (!key) return;
+
+      let value = v;
+      // Convertir en nombre seulement si clairement numérique
+      if (typeof value === 'string') {
+        const s = value.trim();
+        if (s.includes('/')) {
+          // fraction (ex: "1/1") -> garder tel quel (string)
+          value = s;
+        } else {
+          const n = Number(s);
+          value = Number.isNaN(n) ? s : n;
+        }
+      }
+
+      // Si c'est une valeur "numérique" ou fraction, on considère rated
+      // (on veut afficher "Jump 1/1" en rated avec "1/1")
+      if (typeof value === 'number' || (typeof value === 'string' && value)) {
+        rated.push({ key, value });
+      } else {
+        simple.push(key);
+      }
     };
 
     const fromString = (s) => {
       const str = String(s).trim();
       if (!str) return;
-      // "Overland 5" / "Sky 2" / "Long Jump 2" / "Swim 3" …
+      // "Overland 5", "Jump 1/1", "Swim 3", etc.
       const m = str.match(/^(.+?)\s+(-?\d+(?:\.\d+)?(?:\/\d+(?:\.\d+)?)?)\s*$/);
       if (m) pushPair(m[1], m[2]);
       else simple.push(str);
@@ -714,31 +732,9 @@
       fromString(raw);
     }
 
-    // Regrouper les doublons (somme si mêmes clés numériques)
-    // Regrouper les doublons (somme si valeurs numériques, sinon garde la dernière valeur telle quelle)
-    const acc = new Map();
-    rated.forEach(({ key, value }) => {
-      const prev = acc.get(key);
-      if (typeof value === 'number' && typeof prev === 'number') {
-        acc.set(key, prev + value);
-      } else if (typeof value === 'number' && (prev === undefined)) {
-        acc.set(key, value);
-      } else if (typeof value === 'string') {
-        // valeur non numérique (ex: "1/1" pour Jump) → garde telle quelle
-        acc.set(key, value);
-      } else {
-        // fallback: remplace
-        acc.set(key, value);
-      }
-    });
-    const ratedMerged = [...acc.entries()].map(([key, value]) => ({ key, value }));
-
-
-    // Nettoyage chips
-    const simpleClean = [...new Set(simple.filter(Boolean))];
-
-    return { rated: ratedMerged, simple: simpleClean };
+    return { rated, simple };
   }
+
 
   function renderBaseStats(stats, depth = 0) {
     const order = ["HP", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"];
