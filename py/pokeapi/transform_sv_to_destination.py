@@ -59,7 +59,7 @@ def transform_species(obj: Dict[str, Any]) -> Dict[str, Any]:
 
     # Moves transform
     level_up_list: List[Dict[str, Any]] = []
-    tm_tutor_list: List[str] = []
+    tm_tutor_list: List[Dict[str, Any]] = []
 
     for m in obj.get("moves", []):
         method = m.get("method")
@@ -69,7 +69,12 @@ def transform_species(obj: Dict[str, Any]) -> Dict[str, Any]:
 
         if method == "level-up":
             if stage and level == 1:
-                tm_tutor_list.append(f"{move_name_en} (N)")
+                tm_tutor_list.append({
+                "Move": move_name_en,
+                "Type": move_type,
+                "Method": "Level-Up",
+                "Tags": ["N"]
+            })
                 continue
 
             entry: Dict[str, Any] = {
@@ -80,7 +85,12 @@ def transform_species(obj: Dict[str, Any]) -> Dict[str, Any]:
                 entry["Type"] = move_type
             level_up_list.append(entry)
         else:
-            tm_tutor_list.append(move_name_en)
+            tm_tutor_list.append({
+            "Move": move_name_en,
+            "Type": move_type,
+            "Method": (method.capitalize() if method and method != "level-up" else "Level-Up"),
+            "Tags": []
+        })
 
         # Sort level-up moves (Evo first, then by level ascending)
     level_up_list.sort(
@@ -90,8 +100,11 @@ def transform_species(obj: Dict[str, Any]) -> Dict[str, Any]:
         )
     )
 
+    # Sort TM/Tutor alphabetically by Move
+    tm_tutor_list.sort(key=lambda e: e["Move"].lower())
+
     # Sort TM/Tutor list alphabetically
-    tm_tutor_list = sorted(tm_tutor_list)
+    tm_tutor_list = sorted(tm_tutor_list, key=lambda e: (e["Move"].lower() if isinstance(e, dict) else str(e).lower()))
 
     dest = {
         "Species": species_name[:1].upper() + species_name[1:],
