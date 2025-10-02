@@ -47,6 +47,11 @@
       ],
       "dependsOrder": "sequence",
       "problemMatcher": []
+    },
+    {
+      "label": "Pokesheets Homebrew",
+      "type": "shell",
+      "command": "py py/pokesheets/pokesheets_export.py --in-dir ptu/data/pokedex/homebrew/ --out ptu/data/pokedex/pokesheets_homebrew.json --abilities ptu/data/abilities/abilities_homebrew.json"
     }
   ]
 }
