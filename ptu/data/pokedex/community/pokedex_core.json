@@ -41158,7 +41158,7 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Rage",
+          "Move": "Flail",
           "Type": "Normal"
         },
         {
@@ -41168,73 +41168,88 @@
         },
         {
           "Level": 4,
+          "Move": "Mud-Slap",
+          "Type": "Ground"
+        },
+        {
+          "Level": 7,
           "Move": "Rollout",
           "Type": "Rock"
         },
         {
-          "Level": 7,
+          "Level": 10,
           "Move": "Spite",
           "Type": "Ghost"
         },
         {
-          "Level": 10,
-          "Move": "Pursuit",
-          "Type": "Dark"
-        },
-        {
-          "Level": 13,
-          "Move": "Screech",
-          "Type": "Normal"
-        },
-        {
-          "Level": 16,
-          "Move": "Y awn",
-          "Type": "Normal"
-        },
-        {
-          "Level": 19,
-          "Move": "Ancient Power",
-          "Type": "Rock"
-        },
-        {
-          "Level": 22,
-          "Move": "Take Down",
-          "Type": "Normal"
-        },
-        {
-          "Level": 25,
-          "Move": "Roost",
-          "Type": "Flying"
-        },
-        {
-          "Level": 28,
+          "Level": 12,
           "Move": "Glare",
           "Type": "Normal"
         },
         {
-          "Level": 31,
-          "Move": "Dig",
-          "Type": "Ground"
-        },
-        {
-          "Level": 34,
-          "Move": "Double-Edge",
+          "Level": 14,
+          "Move": "Screech",
           "Type": "Normal"
         },
         {
-          "Level": 37,
+          "Level": 17,
+          "Move": "Swift",
+          "Type": "Normal"
+        },
+        {
+          "Level": 20,
+          "Move": "Ancient Power",
+          "Type": "Rock"
+        },
+        {
+          "Level": 23,
+          "Move": "Aerial Ace",
+          "Type": "Flying"
+        },
+        {
+          "Level": 25,
+          "Move": "Yawn",
+          "Type": "Normal"
+        },
+        {
+          "Level": 27,
+          "Move": "Drill Run",
+          "Type": "Ground"
+        },
+        {
+          "Level": 30,
+          "Move": "Hyper Drill",
+          "Type": "Normal"
+        },
+        {
+          "Level": 32,
           "Move": "Coil",
           "Type": "Poison"
         },
         {
+          "Level": 33,
+          "Move": "Dig",
+          "Type": "Ground"
+        },
+        {
+          "Level": 36,
+          "Move": "Air Slash",
+          "Type": "Flying"
+        },
+        {
+          "Level": 38,
+          "Move": "Roost",
+          "Type": "Flying"
+        },
+        {
           "Level": 40,
-          "Move": "Endure",
-          "Type": "Normal"
+          "Move": "Dragon Rush",
+          "Type": "Dragon"
         },
         {
           "Level": 43,
-          "Move": "Drill Run",
-          "Type": "Ground"
+          "Move": "Double-Edge",
+          "Type": "Normal"
         },
         {
           "Level": 46,
@@ -41243,93 +41258,112 @@
         },
         {
           "Level": 49,
-          "Move": "Flail",
+          "Move": "Hurricane",
+          "Type": "Flying"
+        },
+        {
+          "Level": 52,
+          "Move": "Boomburst",
           "Type": "Normal"
         }
       ],
       "TM/HM Move List": [
-        "A4 Strength",
-        "04 Calm Mind",
-        "06 Toxic",
-        "10 Hidden Power",
-        "11 Sunny Day",
-        "13 Ice Beam",
-        "14 Blizzard",
-        "17 Protect",
-        "18 Rain Dance",
-        "19 Roost",
-        "21 Frustration",
-        "22 Solar Beam",
-        "24 Thunderbolt",
-        "25 Thunder",
-        "26 Earthquake",
-        "27 Return",
-        "28 Dig",
-        "30 Shadow Ball",
-        "32 Double Team",
-        "35 Flamethrower",
-        "38 Fire Blast",
-        "39 Rock Tomb",
-        "42 Facade",
-        "44 Rest",
-        "45 Attract",
-        "46 Thief",
-        "48 Round",
-        "57 Charge Beam",
-        "59 Incinerate",
-        "67 Retaliate",
-        "73 Thunder Wave",
-        "74 Gyro Ball",
-        "77 Psych Up",
-        "78 Bulldoze",
-        "80 Rock Slide",
-        "84 Poison Jab",
-        "85 Dream Eater",
-        "87 Swagger",
-        "88 Sleep Talk",
-        "90 Substitute",
-        "93 Wild Charge",
-        "94 Rock Smash"
-      ],
-      "Egg Move List": [
         "Agility",
-        "Ancient Power",
-        "Astonish",
-        "Bide",
-        "Bite",
-        "Curse",
-        "Headbutt",
-        "Hex",
-        "Magic Coat",
-        "Rock Slide",
-        "Secret Power",
-        "Sleep Talk",
-        "Snore",
-        "Trump Card"
-      ],
-      "Tutor Move List": [
-        "Ancient Power",
+        "Amnesia",
         "Aqua Tail",
+        "Astonish",
+        "Attract",
+        "Baton Pass",
+        "Bide",
         "Bind",
+        "Bite",
+        "Blizzard",
+        "Body Press",
         "Body Slam",
+        "Breaking Swipe",
+        "Bulldoze,",
+        "Calm Mind",
+        "Charge Beam",
+        "Chilling Water (N)",
+        "Confide",
         "Counter",
-        "Double-Edge",
-        "Drill Run",
-        "Endeavor",
+        "Curse,",
+        "Double Team",
+        "Dragon Tail",
+        "Dream Eater",
+        "Dual Wingbeat,",
+        "Earth Power (N)",
+        "Earthquake",
+        "Endure",
+        "Facade",
+        "Fire Blast,",
+        "Flamethrower",
+        "Frustration",
+        "Giga Impact",
+        "Gyro Ball",
+        "Headbutt,",
+        "Heavy Slam",
+        "Helping Hand",
+        "Hex",
+        "Hidden Power",
+        "Hyper Beam,",
+        "Hyper Voice",
+        "Ice Beam",
+        "Ice Spinner",
+        "Incinerate",
         "Iron Tail",
-        "Last Resort",
+        "Last Resort,",
+        "Lunge",
         "Magic Coat",
-        "Mud-Slap",
+        "Mud Shot",
+        "Outrage",
         "Pain Split",
+        "Poison Jab,",
+        "Poison Tail",
+        "Pounce",
+        "Protect",
+        "Psych Up",
+        "Rain Dance",
+        "Rest",
+        "Retaliate,",
+        "Return",
+        "Rock Slide",
+        "Rock Smash",
+        "Rock Tomb",
         "Role Play",
-        "Rollout",
-        "Roost",
+        "Round,",
+        "Sandstorm",
+        "Scale Shot",
+        "Scary Face",
+        "Secret Power",
+        "Shadow Ball,",
         "Shock Wave",
+        "Skitter Smack",
         "Sleep Talk",
-        "Snore",
-        "Spite",
+        "Smart Strike",
+        "Snore,",
+        "Solar Beam",
         "Stealth Rock",
-        "Water Pulse",
+        "Stomping Tantrum",
+        "Stone Edge,",
+        "Stored Power",
+        "Strength",
+        "Substitute",
+        "Sunny Day",
+        "Swagger",
+        "Tailwind,",
+        "Take Down",
+        "Tera Blast",
+        "Thief",
+        "Throat Chop",
+        "Thunder (N),",
+        "Thunder Wave",
+        "Thunderbolt",
+        "Toxic",
+        "Trump Card",
+        "Uproar",
+        "Water Pulse,",
+        "Wild Charge",
         "Zen Headbutt"
       ]
     }
