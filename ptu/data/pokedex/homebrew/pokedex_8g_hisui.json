@@ -72,7 +72,10 @@
         {
           "Level": "Evo",
           "Move": "Triple Arrows",
-          "Type": "Fighting"
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 9,
@@ -87,7 +90,10 @@
         {
           "Level": 15,
           "Move": "Razor Leaf",
-          "Type": "Grass"
+          "Type": "Grass",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 20,
@@ -112,7 +118,10 @@
         {
           "Level": 44,
           "Move": "Leaf Blade",
-          "Type": "Grass"
+          "Type": "Grass",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 51,
@@ -598,7 +607,10 @@
         {
           "Level": "Evo",
           "Move": "Infernal Parade",
-          "Type": "Ghost"
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 13,
@@ -608,7 +620,10 @@
         {
           "Level": 20,
           "Move": "Flame Wheel",
-          "Type": "Fire"
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 24,
@@ -623,22 +638,34 @@
         {
           "Level": 35,
           "Move": "Flame Charge",
-          "Type": "Fire"
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 43,
           "Move": "Lava Plume",
-          "Type": "Fire"
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 48,
           "Move": "Flamethrower",
-          "Type": "Fire"
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 56,
           "Move": "Inferno",
-          "Type": "Fire"
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 61,
@@ -648,7 +675,10 @@
         {
           "Level": 74,
           "Move": "Overheat",
-          "Type": "Fire"
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -1124,7 +1154,10 @@
         {
           "Level": "Evo",
           "Move": "Ceaseless Edge",
-          "Type": "Dark"
+          "Type": "Dark",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 13,
@@ -1134,7 +1167,10 @@
         {
           "Level": 18,
           "Move": "Razor Shell",
-          "Type": "Water"
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 21,
@@ -1144,7 +1180,10 @@
         {
           "Level": 25,
           "Move": "Water Pulse",
-          "Type": "Water"
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 29,
@@ -1154,7 +1193,10 @@
         {
           "Level": 34,
           "Move": "Aqua Jet",
-          "Type": "Water"
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 39,
@@ -1164,7 +1206,10 @@
         {
           "Level": 46,
           "Move": "Aqua Tail",
-          "Type": "Water"
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 51,
@@ -1179,7 +1224,10 @@
         {
           "Level": 63,
           "Move": "Hydro Pump",
-          "Type": "Water"
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -1620,7 +1668,10 @@
         {
           "Level": 1,
           "Move": "Ember",
-          "Type": "Fire"
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 4,
@@ -1635,7 +1686,10 @@
         {
           "Level": 12,
           "Move": "Flame Wheel",
-          "Type": "Fire"
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 16,
@@ -1645,7 +1699,10 @@
         {
           "Level": 24,
           "Move": "Fire Fang",
-          "Type": "Fire"
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 28,
@@ -1665,7 +1722,10 @@
         {
           "Level": 40,
           "Move": "Flamethrower",
-          "Type": "Fire"
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 44,
@@ -1675,7 +1735,10 @@
         {
           "Level": 48,
           "Move": "Rock Slide",
-          "Type": "Rock"
+          "Type": "Rock",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 52,
@@ -1685,7 +1748,10 @@
         {
           "Level": 56,
           "Move": "Flare Blitz",
-          "Type": "Fire"
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -2017,12 +2083,18 @@
         {
           "Level": 5,
           "Move": "Flamethrower",
-          "Type": "Fire"
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 64,
           "Move": "Raging Fury",
-          "Type": "Fire"
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -2529,7 +2601,10 @@
         {
           "Level": 4,
           "Move": "Thunder Shock",
-          "Type": "Electric"
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 6,
@@ -2539,7 +2614,10 @@
         {
           "Level": 9,
           "Move": "Bullet Seed",
-          "Type": "Grass"
+          "Type": "Grass",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 11,
@@ -2554,7 +2632,10 @@
         {
           "Level": 16,
           "Move": "Charge Beam",
-          "Type": "Electric"
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 20,
@@ -2564,7 +2645,10 @@
         {
           "Level": 22,
           "Move": "Electro Ball",
-          "Type": "Electric"
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 26,
@@ -2574,17 +2658,26 @@
         {
           "Level": 29,
           "Move": "Energy Ball",
-          "Type": "Grass"
+          "Type": "Grass",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 34,
           "Move": "Seed Bomb",
-          "Type": "Grass"
+          "Type": "Grass",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 34,
           "Move": "Discharge",
-          "Type": "Electric"
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 41,
@@ -2877,7 +2970,10 @@
         {
           "Level": 4,
           "Move": "Thunder Shock",
-          "Type": "Electric"
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 6,
@@ -2902,7 +2998,10 @@
         {
           "Level": 16,
           "Move": "Charge Beam",
-          "Type": "Electric"
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 20,
@@ -2912,7 +3011,10 @@
         {
           "Level": 22,
           "Move": "Electro Ball",
-          "Type": "Electric"
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 26,
@@ -2932,7 +3034,10 @@
         {
           "Level": 34,
           "Move": "Discharge",
-          "Type": "Electric"
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 41,
@@ -3247,7 +3352,10 @@
         {
           "Level": 1,
           "Move": "Poison Sting",
-          "Type": "Poison"
+          "Type": "Poison",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 4,
@@ -3257,7 +3365,10 @@
         {
           "Level": 8,
           "Move": "Bite",
-          "Type": "Dark"
+          "Type": "Dark",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 12,
@@ -3282,7 +3393,10 @@
         {
           "Level": 28,
           "Move": "Barb Barrage",
-          "Type": "Poison"
+          "Type": "Poison",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 32,
@@ -3312,7 +3426,10 @@
         {
           "Level": 48,
           "Move": "Crunch",
-          "Type": "Dark"
+          "Type": "Dark",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 52,
@@ -3726,7 +3843,10 @@
         {
           "Level": 8,
           "Move": "Bite",
-          "Type": "Dark"
+          "Type": "Dark",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 12,
@@ -3751,7 +3871,10 @@
         {
           "Level": 28,
           "Move": "Barb Barrage",
-          "Type": "Poison"
+          "Type": "Poison",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 32,
@@ -3781,7 +3904,10 @@
         {
           "Level": 48,
           "Move": "Crunch",
-          "Type": "Dark"
+          "Type": "Dark",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 52,
@@ -4167,7 +4293,10 @@
         {
           "Level": 1,
           "Move": "Rock Smash",
-          "Type": "Fighting"
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 6,
@@ -4187,12 +4316,18 @@
         {
           "Level": 24,
           "Move": "Poison Jab",
-          "Type": "Poison"
+          "Type": "Poison",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 30,
           "Move": "Brick Break",
-          "Type": "Fighting"
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 36,
@@ -4217,7 +4352,10 @@
         {
           "Level": 60,
           "Move": "Close Combat",
-          "Type": "Fighting"
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -4621,7 +4759,10 @@
         {
           "Level": "Evo",
           "Move": "Dire Claw",
-          "Type": "Poison"
+          "Type": "Poison",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 6,
@@ -4641,12 +4782,18 @@
         {
           "Level": 24,
           "Move": "Poison Jab",
-          "Type": "Poison"
+          "Type": "Poison",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 30,
           "Move": "Brick Break",
-          "Type": "Fighting"
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 36,
@@ -4671,7 +4818,10 @@
         {
           "Level": 60,
           "Move": "Close Combat",
-          "Type": "Fighting"
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -5108,7 +5258,10 @@
         {
           "Level": 5,
           "Move": "Axe Kick",
-          "Type": "Fighting"
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -5621,7 +5774,10 @@
         {
           "Level": 1,
           "Move": "Scratch",
-          "Type": "Normal"
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 1,
@@ -5641,7 +5797,10 @@
         {
           "Level": 12,
           "Move": "Shadow Sneak",
-          "Type": "Ghost"
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 16,
@@ -5671,12 +5830,18 @@
         {
           "Level": 36,
           "Move": "Shadow Ball",
-          "Type": "Ghost"
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 40,
           "Move": "Bitter Malice",
-          "Type": "Ghost"
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 44,
@@ -6035,12 +6200,18 @@
         {
           "Level": "Evo",
           "Move": "Shadow Claw",
-          "Type": "Ghost"
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 12,
           "Move": "Shadow Sneak",
-          "Type": "Ghost"
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 16,
@@ -6070,12 +6241,18 @@
         {
           "Level": 40,
           "Move": "Shadow Ball",
-          "Type": "Ghost"
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 46,
           "Move": "Bitter Malice",
-          "Type": "Ghost"
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 52,
@@ -6535,7 +6712,10 @@
         {
           "Level": "Evo",
           "Move": "Esper Wing",
-          "Type": "Psychic"
+          "Type": "Psychic",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 18,
@@ -6550,7 +6730,10 @@
         {
           "Level": 30,
           "Move": "Aerial Ace",
-          "Type": "Flying"
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 36,
@@ -6570,7 +6753,10 @@
         {
           "Level": 57,
           "Move": "Air Slash",
-          "Type": "Flying"
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 64,
@@ -6585,7 +6771,10 @@
         {
           "Level": 80,
           "Move": "Hurricane",
-          "Type": "Flying"
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -7075,7 +7264,10 @@
         {
           "Level": 35,
           "Move": "Dragon Pulse",
-          "Type": "Dragon"
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 43,
@@ -7085,7 +7277,10 @@
         {
           "Level": 49,
           "Move": "Iron Head",
-          "Type": "Steel"
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 56,
@@ -7402,7 +7597,10 @@
         {
           "Level": "Evo",
           "Move": "Iron Tail",
-          "Type": "Steel"
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 15,
@@ -7427,7 +7625,10 @@
         {
           "Level": 35,
           "Move": "Dragon Pulse",
-          "Type": "Dragon"
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 43,
@@ -7442,7 +7643,10 @@
         {
           "Level": 49,
           "Move": "Iron Head",
-          "Type": "Steel"
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 58,
@@ -7452,7 +7656,10 @@
         {
           "Level": 67,
           "Move": "Heavy Slam",
-          "Type": "Steel"
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -7890,7 +8097,10 @@
         {
           "Level": "Evo",
           "Move": "Rock Slide",
-          "Type": "Rock"
+          "Type": "Rock",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 9,
@@ -7900,7 +8110,10 @@
         {
           "Level": 12,
           "Move": "Icy Wind",
-          "Type": "Ice"
+          "Type": "Ice",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 15,
@@ -7910,7 +8123,10 @@
         {
           "Level": 18,
           "Move": "Avalanche",
-          "Type": "Ice"
+          "Type": "Ice",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 21,
@@ -7920,7 +8136,10 @@
         {
           "Level": 24,
           "Move": "Ice Fang",
-          "Type": "Ice"
+          "Type": "Ice",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 27,
@@ -7945,7 +8164,10 @@
         {
           "Level": 41,
           "Move": "Blizzard",
-          "Type": "Ice"
+          "Type": "Ice",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 46,
@@ -7955,12 +8177,18 @@
         {
           "Level": 51,
           "Move": "Stone Edge",
-          "Type": "Rock"
+          "Type": "Rock",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 61,
           "Move": "Mountain Gale",
-          "Type": "Ice"
+          "Type": "Ice",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -8272,7 +8500,10 @@
         {
           "Level": "Evo",
           "Move": "Psyshield Bash",
-          "Type": "Psychic"
+          "Type": "Psychic",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 3,
@@ -8292,7 +8523,10 @@
         {
           "Level": 13,
           "Move": "Stomp",
-          "Type": "Normal"
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 16,
@@ -8302,7 +8536,10 @@
         {
           "Level": 21,
           "Move": "Take Down",
-          "Type": "Normal"
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 23,
@@ -8322,7 +8559,10 @@
         {
           "Level": 37,
           "Move": "Zen Headbutt",
-          "Type": "Psychic"
+          "Type": "Psychic",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 49,
@@ -8332,7 +8572,10 @@
         {
           "Level": 55,
           "Move": "Double-Edge",
-          "Type": "Normal"
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 62,
@@ -8752,19 +8995,26 @@
         {
           "Level": "Evo",
           "Move": "Stone Axe",
-          "Type": "Rock"
+          "Type": "Rock",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 4,
           "Move": "Fury Cutter",
-          "Type": "Bug"
+          "Type": "Bug",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 6,
           "Move": "Silver Wind",
           "Type": "Bug",
           "Tags": [
-            "Deleted"
+            "Deleted",
+            "Stab"
           ]
         },
         {
@@ -8775,7 +9025,10 @@
         {
           "Level": 12,
           "Move": "Smack Down",
-          "Type": "Rock"
+          "Type": "Rock",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 16,
@@ -8805,12 +9058,18 @@
         {
           "Level": 36,
           "Move": "Rock Slide",
-          "Type": "Rock"
+          "Type": "Rock",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 40,
           "Move": "X-Scissor",
-          "Type": "Bug"
+          "Type": "Bug",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 44,
@@ -9177,12 +9436,18 @@
         {
           "Level": "Evo",
           "Move": "Headlong Rush",
-          "Type": "Ground"
+          "Type": "Ground",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 8,
           "Move": "Fury Swipes",
-          "Type": "Normal"
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 13,
@@ -9197,7 +9462,10 @@
         {
           "Level": 22,
           "Move": "Slash",
-          "Type": "Normal"
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 25,
@@ -9222,17 +9490,26 @@
         {
           "Level": 41,
           "Move": "Snore",
-          "Type": "Normal"
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 48,
           "Move": "High Horsepower",
-          "Type": "Ground"
+          "Type": "Ground",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 56,
           "Move": "Thrash",
-          "Type": "Normal"
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 64,
@@ -9739,7 +10016,10 @@
         {
           "Level": 12,
           "Move": "Aqua Jet",
-          "Type": "Water"
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 16,
@@ -9779,7 +10059,10 @@
         {
           "Level": 44,
           "Move": "Wave Crash",
-          "Type": "Water"
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 48,
@@ -10153,7 +10436,10 @@
         {
           "Level": 12,
           "Move": "Aqua Jet",
-          "Type": "Water"
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 16,
@@ -10193,7 +10479,10 @@
         {
           "Level": 44,
           "Move": "Wave Crash",
-          "Type": "Water"
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 48,
@@ -10554,12 +10843,18 @@
         {
           "Level": 1,
           "Move": "Metal Claw",
-          "Type": "Steel"
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 8,
           "Move": "Dragon Breath",
-          "Type": "Dragon"
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 16,
@@ -10574,12 +10869,18 @@
         {
           "Level": 32,
           "Move": "Flash Cannon",
-          "Type": "Steel"
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 40,
           "Move": "Dragon Claw",
-          "Type": "Dragon"
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 48,
@@ -10602,7 +10903,10 @@
         {
           "Level": 64,
           "Move": "Metal Burst",
-          "Type": "Steel"
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 72,
@@ -10612,12 +10916,18 @@
         {
           "Level": 80,
           "Move": "Iron Tail",
-          "Type": "Steel"
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 88,
           "Move": "Roar of Time",
-          "Type": "Dragon"
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -10985,12 +11295,18 @@
         {
           "Level": 1,
           "Move": "Water Pulse",
-          "Type": "Water"
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 8,
           "Move": "Dragon Breath",
-          "Type": "Dragon"
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 16,
@@ -11028,7 +11344,10 @@
         {
           "Level": 64,
           "Move": "Aqua Tail",
-          "Type": "Water"
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 72,
@@ -11038,12 +11357,18 @@
         {
           "Level": 80,
           "Move": "Spacial Rend",
-          "Type": "Dragon"
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 88,
           "Move": "Hydro Pump",
-          "Type": "Water"
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -11442,7 +11767,10 @@
         {
           "Level": 1,
           "Move": "Fairy Wind",
-          "Type": "Fairy"
+          "Type": "Fairy",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 5,
@@ -11462,7 +11790,10 @@
         {
           "Level": 20,
           "Move": "Draining Kiss",
-          "Type": "Fairy"
+          "Type": "Fairy",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 25,
@@ -11482,7 +11813,10 @@
         {
           "Level": 40,
           "Move": "Dazzling Gleam",
-          "Type": "Fairy"
+          "Type": "Fairy",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 45,
@@ -11507,7 +11841,10 @@
         {
           "Level": 65,
           "Move": "Moonblast",
-          "Type": "Fairy"
+          "Type": "Fairy",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 70,
@@ -11517,7 +11854,10 @@
         {
           "Level": 75,
           "Move": "Springtide Storm",
-          "Type": "Fairy"
+          "Type": "Fairy",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -11807,7 +12147,10 @@
         {
           "Level": 1,
           "Move": "Fairy Wind",
-          "Type": "Fairy"
+          "Type": "Fairy",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 5,
@@ -11827,7 +12170,10 @@
         {
           "Level": 20,
           "Move": "Draining Kiss",
-          "Type": "Fairy"
+          "Type": "Fairy",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 25,
@@ -11847,7 +12193,10 @@
         {
           "Level": 40,
           "Move": "Dazzling Gleam",
-          "Type": "Fairy"
+          "Type": "Fairy",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 45,
@@ -11872,7 +12221,10 @@
         {
           "Level": 65,
           "Move": "Moonblast",
-          "Type": "Fairy"
+          "Type": "Fairy",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 70,
@@ -11882,7 +12234,10 @@
         {
           "Level": 75,
           "Move": "Springtide Storm",
-          "Type": "Fairy"
+          "Type": "Fairy",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/Tutor Moves List": [
