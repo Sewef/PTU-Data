@@ -128,21 +128,104 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aerial Ace",
-        "Bulk Up",
-        "Energy Ball",
-        "False Swipe",
-        "Focus Energy",
-        "Giga Impact",
-        "Gust (N)",
-        "Hyper Beam",
-        "Magical Leaf",
-        "Psycho Cut",
-        "Rest",
-        "Rock Smash",
-        "Shadow Claw",
-        "Spikes",
-        "Swift"
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Bulk Up",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Energy Ball",
+          "Type": "Grass",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "False Swipe",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Focus Energy",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Gust",
+          "Type": "Flying",
+          "Tags": [
+            "N"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Magical Leaf",
+          "Type": "Grass",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Psycho Cut",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Claw",
+          "Type": "Ghost",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Spikes",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -267,26 +350,140 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aerial Ace",
-        "Bulldoze",
-        "Calm Mind",
-        "Drain Punch",
-        "Fire Punch",
-        "Flamethrower",
-        "Giga Impact",
-        "Hyper Beam",
-        "Iron Tail",
-        "Mystical Fire",
-        "Ominous Wind",
-        "Quick Attack (N)",
-        "Rest",
-        "Rock Slide",
-        "Rock Smash",
-        "Shadow Ball",
-        "Shadow Claw",
-        "Swift",
-        "Thunder Punch",
-        "Wild Charge"
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Bulldoze",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Calm Mind",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Drain Punch",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Fire Punch",
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Flamethrower",
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Tail",
+          "Type": "Steel",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Mystical Fire",
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ominous Wind",
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Quick Attack",
+          "Type": "Normal",
+          "Tags": [
+            "N"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Slide",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Ball",
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Claw",
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Thunder Punch",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Wild Charge",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -411,24 +608,122 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aerial Ace",
-        "Aqua Tail",
-        "Dark Pulse",
-        "False Swipe",
-        "Focus Energy",
-        "Giga Impact",
-        "Hyper Beam",
-        "Ice Beam",
-        "Icy Wind",
-        "Iron Tail",
-        "Megahorn",
-        "Rest",
-        "Rock Smash",
-        "Poison Jab",
-        "Psycho Cut",
-        "Tackle (N)",
-        "Water Pulse",
-        "X-Scissor"
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Aqua Tail",
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Dark Pulse",
+          "Type": "Dark",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "False Swipe",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Focus Energy",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Beam",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Icy Wind",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Tail",
+          "Type": "Steel",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Megahorn",
+          "Type": "Bug",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Poison Jab",
+          "Type": "Poison",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Psycho Cut",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Tackle",
+          "Type": "Normal",
+          "Tags": [
+            "N"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Water Pulse",
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "X-Scissor",
+          "Type": "Bug",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -540,18 +835,84 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aerial Ace",
-        "Fire Fang",
-        "Flamethrower",
-        "Iron Tail",
-        "Outrage",
-        "Play Rough",
-        "Rest",
-        "Rock Slide",
-        "Rock Smash",
-        "Snarl",
-        "Swift",
-        "Wild Charge"
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Fire Fang",
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Flamethrower",
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Tail",
+          "Type": "Steel",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Outrage",
+          "Type": "Dragon",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Play Rough",
+          "Type": "Fairy",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Slide",
+          "Type": "Rock",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Snarl",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Wild Charge",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -664,24 +1025,122 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aerial Ace",
-        "Bulldoze",
-        "Fire Fang",
-        "Flamethrower",
-        "Giga Impact",
-        "Hyper Beam",
-        "Iron Head",
-        "Iron Tail",
-        "Outrage",
-        "Play Rough",
-        "Rest",
-        "Rock Slide",
-        "Rock Smash",
-        "Snarl",
-        "Stone Edge",
-        "Swift",
-        "Thunder Fang",
-        "Wild Charge"
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Bulldoze",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Fire Fang",
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Flamethrower",
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Head",
+          "Type": "Steel",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Tail",
+          "Type": "Steel",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Outrage",
+          "Type": "Dragon",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Play Rough",
+          "Type": "Fairy",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Slide",
+          "Type": "Rock",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Snarl",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Stone Edge",
+          "Type": "Rock",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Thunder Fang",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Wild Charge",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -794,14 +1253,64 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Charge Beam",
-        "Energy Ball",
-        "Ice Ball",
-        "Magical Leaf",
-        "Rest",
-        "Swift",
-        "Thunderbolt",
-        "Wild Charge"
+        {
+          "Move": "Charge Beam",
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Energy Ball",
+          "Type": "Grass",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Ball",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Magical Leaf",
+          "Type": "Grass",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Thunderbolt",
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Wild Charge",
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -912,16 +1421,72 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Charge Beam",
-        "Energy Ball",
-        "Giga Impact",
-        "Hyper Beam",
-        "Ice Ball",
-        "Magical Leaf",
-        "Rest",
-        "Swift",
-        "Thunderbolt",
-        "Wild Charge"
+        {
+          "Move": "Charge Beam",
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Energy Ball",
+          "Type": "Grass",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Ball",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Magical Leaf",
+          "Type": "Grass",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Thunderbolt",
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Wild Charge",
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -1044,18 +1609,84 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aqua Tail",
-        "Dark Pulse",
-        "Ice Ball",
-        "Ice Beam",
-        "Icy Wind",
-        "Poison Jab",
-        "Rest",
-        "Shadow Ball",
-        "Sludge Bomb",
-        "Spikes",
-        "Swift",
-        "Water Pulse"
+        {
+          "Move": "Aqua Tail",
+          "Type": "Water",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Dark Pulse",
+          "Type": "Dark",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Ball",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Beam",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Icy Wind",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Poison Jab",
+          "Type": "Poison",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Ball",
+          "Type": "Ghost",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Sludge Bomb",
+          "Type": "Poison",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Spikes",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Water Pulse",
+          "Type": "Water",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -1173,20 +1804,96 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aqua Tail",
-        "Dark Pulse",
-        "Giga Impact",
-        "Hyper Beam",
-        "Ice Ball",
-        "Ice Beam",
-        "Icy Wind",
-        "Poison Jab",
-        "Rest",
-        "Shadow Ball",
-        "Sludge Bomb",
-        "Spikes",
-        "Swift",
-        "Water Pulse"
+        {
+          "Move": "Aqua Tail",
+          "Type": "Water",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Dark Pulse",
+          "Type": "Dark",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Ball",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Beam",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Icy Wind",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Poison Jab",
+          "Type": "Poison",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Ball",
+          "Type": "Ghost",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Sludge Bomb",
+          "Type": "Poison",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Spikes",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Water Pulse",
+          "Type": "Water",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -1292,21 +1999,102 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aerial Ace",
-        "Bulk Up",
-        "Calm Mind",
-        "Drain Punch",
-        "False Swipe",
-        "Focus Energy",
-        "Iron Tail",
-        "Poison Jab",
-        "Rest",
-        "Rock Smash",
-        "Shadow Ball",
-        "Shadow Claw",
-        "Snarl",
-        "Swift",
-        "X-Scissor"
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Bulk Up",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Calm Mind",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Drain Punch",
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "False Swipe",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Focus Energy",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Tail",
+          "Type": "Steel",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Poison Jab",
+          "Type": "Poison",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Ball",
+          "Type": "Ghost",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Claw",
+          "Type": "Ghost",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Snarl",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "X-Scissor",
+          "Type": "Bug",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -1410,24 +2198,120 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aerial Ace",
-        "Bulk Up",
-        "Calm Mind",
-        "Drain Punch",
-        "False Swipe",
-        "Focus Energy",
-        "Giga Impact",
-        "Hyper Beam",
-        "Iron Tail",
-        "Poison Jab",
-        "Power Shift",
-        "Rest",
-        "Rock Smash",
-        "Shadow Ball",
-        "Shadow Claw",
-        "Snarl",
-        "Swift",
-        "X-Scissor"
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Bulk Up",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Calm Mind",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Drain Punch",
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "False Swipe",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Focus Energy",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Tail",
+          "Type": "Steel",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Poison Jab",
+          "Type": "Poison",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Power Shift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Ball",
+          "Type": "Ghost",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Claw",
+          "Type": "Ghost",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Snarl",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "X-Scissor",
+          "Type": "Bug",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -1563,18 +2447,89 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Absorb (N)",
-        "Aerial Ace",
-        "Baby-Doll Eyes",
-        "Drain Punch",
-        "Energy Ball",
-        "Focus Energy",
-        "Giga Impact",
-        "Hyper Beam",
-        "Magical Leaf",
-        "Poison Jab",
-        "Rest",
-        "Rock Smash"
+        {
+          "Move": "Absorb",
+          "Type": "Grass",
+          "Tags": [
+            "N",
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Baby-Doll Eyes",
+          "Type": "Fairy",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Drain Punch",
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Energy Ball",
+          "Type": "Grass",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Focus Energy",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Magical Leaf",
+          "Type": "Grass",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Poison Jab",
+          "Type": "Poison",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -1685,14 +2640,58 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aerial Ace",
-        "Calm Mind",
-        "Dark Pulse",
-        "Rest",
-        "Shadow Ball",
-        "Sludge Bomb",
-        "Snarl",
-        "Swift"
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Calm Mind",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Dark Pulse",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Ball",
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Sludge Bomb",
+          "Type": "Poison",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Snarl",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -1807,18 +2806,88 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aerial Ace",
-        "Calm Mind",
-        "Dark Pulse",
-        "Flamethrower",
-        "Giga Impact",
-        "Hyper Beam",
-        "Ominous Wind",
-        "Rest",
-        "Shadow Ball",
-        "Sludge Bomb",
-        "Snarl",
-        "Swift"
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Calm Mind",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Dark Pulse",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Flamethrower",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ominous Wind",
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Ball",
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Sludge Bomb",
+          "Type": "Poison",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Snarl",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -1934,22 +3003,110 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aerial Ace",
-        "Bulk Up",
-        "Dazzling Gleam",
-        "Giga Impact",
-        "Hyper Beam",
-        "Mystical Fire",
-        "Ominous Wind",
-        "Power Shift",
-        "Psychic",
-        "Quick Attack (N)",
-        "Rest",
-        "Rock Slide",
-        "Rock Smash",
-        "Shadow Ball",
-        "Swift",
-        "Zen Headbutt"
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Bulk Up",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Dazzling Gleam",
+          "Type": "Fairy",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Mystical Fire",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ominous Wind",
+          "Type": "Ghost",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Power Shift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Psychic",
+          "Type": "Psychic",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Quick Attack",
+          "Type": "Normal",
+          "Tags": [
+            "N"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Slide",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Ball",
+          "Type": "Ghost",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Zen Headbutt",
+          "Type": "Psychic",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -2064,18 +3221,90 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Bubble (N)",
-        "Draco Meteor",
-        "Ice Beam",
-        "Iron Head",
-        "Iron Tail",
-        "Outrage",
-        "Rest",
-        "Rock Slide",
-        "Sludge Bomb",
-        "Steel Beam",
-        "Thunderbolt",
-        "Water Pulse"
+        {
+          "Move": "Bubble",
+          "Type": "Water",
+          "Tags": [
+            "N"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Draco Meteor",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Beam",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Head",
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Tail",
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Outrage",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Slide",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Sludge Bomb",
+          "Type": "Poison",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Steel Beam",
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Thunderbolt",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Water Pulse",
+          "Type": "Water",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -2187,25 +3416,132 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Bubble (N)",
-        "Bulldoze",
-        "Draco Meteor",
-        "Fire Punch",
-        "Flamethrower",
-        "Giga Impact",
-        "Hyper Beam",
-        "Ice Beam",
-        "Iron Head",
-        "Iron Tail",
-        "Outrage",
-        "Rest",
-        "Rock Slide",
-        "Rock Smash",
-        "Sludge Bomb",
-        "Steel Beam",
-        "Thunderbolt",
-        "Thunder Punch",
-        "Water Pulse"
+        {
+          "Move": "Bubble",
+          "Type": "Water",
+          "Tags": [
+            "N"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Bulldoze",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Draco Meteor",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Fire Punch",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Flamethrower",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Beam",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Head",
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Tail",
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Outrage",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Slide",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Sludge Bomb",
+          "Type": "Poison",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Steel Beam",
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Thunderbolt",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Thunder Punch",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Water Pulse",
+          "Type": "Water",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -2328,25 +3664,134 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Bulldoze",
-        "Earth Power",
-        "Flash Cannon",
-        "Giga Impact",
-        "High Horsepower",
-        "Hyper Beam",
-        "Ice Ball",
-        "Ice Beam",
-        "Ice Fang",
-        "Icy Wind",
-        "Iron Head",
-        "Power Shift",
-        "Rest",
-        "Rock Slide",
-        "Rock Smash",
-        "Stealth Rock",
-        "Stone Edge",
-        "Tackle (N)",
-        "Water Pulse"
+        {
+          "Move": "Bulldoze",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Earth Power",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Flash Cannon",
+          "Type": "Steel",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "High Horsepower",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Ball",
+          "Type": "Ice",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Beam",
+          "Type": "Ice",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Fang",
+          "Type": "Ice",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Icy Wind",
+          "Type": "Ice",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Head",
+          "Type": "Steel",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Power Shift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Slide",
+          "Type": "Rock",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Stealth Rock",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Stone Edge",
+          "Type": "Rock",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Tackle",
+          "Type": "Normal",
+          "Tags": [
+            "N"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Water Pulse",
+          "Type": "Water",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -2452,22 +3897,112 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Bulldoze",
-        "Calm Mind",
-        "Charge Beam",
-        "Energy Ball",
-        "Giga Impact",
-        "High Horsepower",
-        "Hyper Beam",
-        "Iron Tail",
-        "Megahorn",
-        "Psychic",
-        "Rest",
-        "Shadow Ball",
-        "Swift",
-        "Thunderbolt",
-        "Wild Charge",
-        "Zen Headbutt"
+        {
+          "Move": "Bulldoze",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Calm Mind",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Charge Beam",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Energy Ball",
+          "Type": "Grass",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "High Horsepower",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Tail",
+          "Type": "Steel",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Megahorn",
+          "Type": "Bug",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Psychic",
+          "Type": "Psychic",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Ball",
+          "Type": "Ghost",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Thunderbolt",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Wild Charge",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Zen Headbutt",
+          "Type": "Psychic",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -2582,21 +4117,102 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aerial Ace",
-        "Calm Mind",
-        "False Swipe",
-        "Focus Energy",
-        "Giga Impact",
-        "Hyper Beam",
-        "Ominous Wind",
-        "Psycho Cut",
-        "Rest",
-        "Rock Slide",
-        "Rock Smash",
-        "Stealth Rock",
-        "Stone Edge",
-        "Swift",
-        "X-Scissor"
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Calm Mind",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "False Swipe",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Focus Energy",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ominous Wind",
+          "Type": "Ghost",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Psycho Cut",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Slide",
+          "Type": "Rock",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Stealth Rock",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Stone Edge",
+          "Type": "Rock",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "X-Scissor",
+          "Type": "Bug",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -2709,26 +4325,141 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aerial Ace",
-        "Baby-Doll Eyes",
-        "Bulk Up",
-        "Bulldoze",
-        "Earth Power",
-        "Fire Punch",
-        "Focus Energy",
-        "Giga Impact",
-        "High Horsepower",
-        "Hyper Beam",
-        "Ice Punch",
-        "Play Rough",
-        "Rest",
-        "Rock Slide",
-        "Rock Smash",
-        "Shadow Claw",
-        "Stone Edge",
-        "Swift",
-        "Tackle (N)",
-        "Thunder Punch"
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Baby-Doll Eyes",
+          "Type": "Fairy",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Bulk Up",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Bulldoze",
+          "Type": "Ground",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Earth Power",
+          "Type": "Ground",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Fire Punch",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Focus Energy",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "High Horsepower",
+          "Type": "Ground",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Punch",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Play Rough",
+          "Type": "Fairy",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Slide",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Claw",
+          "Type": "Ghost",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Stone Edge",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Tackle",
+          "Type": "Normal",
+          "Tags": [
+            "N",
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Thunder Punch",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     }
   },
@@ -2844,20 +4575,98 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aqua Tail",
-        "Calm Mind",
-        "Giga Impact",
-        "Hyper Beam",
-        "Ice Beam",
-        "Ice Fang",
-        "Icy Wind",
-        "Ominous Wind",
-        "Psychic",
-        "Rest",
-        "Shadow Ball",
-        "Swift",
-        "Water Pulse",
-        "Zen Headbutt"
+        {
+          "Move": "Aqua Tail",
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Calm Mind",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Beam",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Fang",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Icy Wind",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ominous Wind",
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Psychic",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Ball",
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Water Pulse",
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Zen Headbutt",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     },
     "Note": "Basculegion's 2nd Advanced Ability depends on the colour of the Basculin it evolves from. In addition Basculin now has a White colouration that grants it  as its 2nd Advanced Ability in addition to the existing Red and Blue options."
@@ -2975,20 +4784,98 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Aqua Tail",
-        "Calm Mind",
-        "Giga Impact",
-        "Hyper Beam",
-        "Ice Beam",
-        "Ice Fang",
-        "Icy Wind",
-        "Ominous Wind",
-        "Psychic",
-        "Rest",
-        "Shadow Ball",
-        "Swift",
-        "Water Pulse",
-        "Zen Headbutt"
+        {
+          "Move": "Aqua Tail",
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Calm Mind",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Beam",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Fang",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Icy Wind",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ominous Wind",
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Psychic",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shadow Ball",
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Water Pulse",
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Zen Headbutt",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     },
     "Note": "Basculegion's 2nd Advanced Ability depends on the colour of the Basculin it evolves from. In addition Basculin now has a White colouration that grants it  as its 2nd Advanced Ability in addition to the existing Red and Blue options."
@@ -3116,75 +5003,423 @@
         }
       ],
       "TM/HM Move List": [
-        "A1 Cut",
-        "A4 Strength",
-        "01 Hone Claws",
-        "02 Dragon Claw",
-        "05 Roar",
-        "06 Toxic",
-        "08 Bulk Up",
-        "10 Hidden Power",
-        "11 Sunny Day",
-        "13 Ice Beam",
-        "14 Blizzard",
-        "15 Hyper Beam",
-        "17 Protect",
-        "18 Rain Dance",
-        "20 Safeguard",
-        "21 Frustration",
-        "24 Thunderbolt",
-        "25 Thunder",
-        "26 Earthquake",
-        "27 Return",
-        "31 Brick Break",
-        "32 Double Team",
-        "35 Flamethrower",
-        "37 Sandstorm",
-        "38 Fire Blast",
-        "39 Rock Tomb",
-        "40 Aerial Ace",
-        "42 Facade",
-        "44 Rest",
-        "48 Round",
-        "49 Echoed Voice",
-        "50 Overheat",
-        "59 Incinerate",
-        "65 Shadow Claw",
-        "68 Giga Impact",
-        "70 Flash",
-        "71 Stone Edge",
-        "73 Thunder Wave",
-        "77 Psych Up",
-        "78 Bulldoze",
-        "80 Rock Slide",
-        "82 Dragon Tail",
-        "87 Swagger",
-        "88 Sleep Talk",
-        "90 Substitute",
-        "91 Flash Cannon",
-        "92 Trick Room",
-        "94 Rock Smash"
+        {
+          "Move": "Cut",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Strength",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Hone Claws",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Dragon Claw",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Roar",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Toxic",
+          "Type": "Poison",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Bulk Up",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Hidden Power",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Sunny Day",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Ice Beam",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Blizzard",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Protect",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rain Dance",
+          "Type": "Water",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Safeguard",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Frustration",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Thunderbolt",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Thunder",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Earthquake",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Return",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Brick Break",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Double Team",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Flamethrower",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Sandstorm",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Fire Blast",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rock Tomb",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Facade",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Round",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Echoed Voice",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Overheat",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Incinerate",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Shadow Claw",
+          "Type": "Ghost",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Flash",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Stone Edge",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Thunder Wave",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Psych Up",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Bulldoze",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rock Slide",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Dragon Tail",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Swagger",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Sleep Talk",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Substitute",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Flash Cannon",
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Trick Room",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Machine"
+        }
       ],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Ancient Power",
-        "Draco Meteor",
-        "Dragon Pulse",
-        "Earth Power",
-        "Fury Cutter",
-        "Gravity",
-        "Hyper Voice",
-        "Iron Defense",
-        "Iron Head",
-        "Iron Tail",
-        "Magnet Rise",
-        "Mud-Slap",
-        "Outrage",
-        "Sleep Talk",
-        "Snore",
-        "Stealth Rock",
-        "Swift",
-        "Twister"
+        {
+          "Move": "Ancient Power",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Draco Meteor",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Dragon Pulse",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Earth Power",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Fury Cutter",
+          "Type": "Bug",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Gravity",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Voice",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Defense",
+          "Type": "Steel",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Head",
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Iron Tail",
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Magnet Rise",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Mud-Slap",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Outrage",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Sleep Talk",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Snore",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Stealth Rock",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Twister",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        }
       ]
     },
     "Origin Forme": "Dialga is in its Origin Forme when exposed to an Adamant Crystal as an Ext ended Action. Exposing it in Origin Forme reverts it to its Altered Forme (found in the Main PokéDex)."
@@ -3313,74 +5548,419 @@
         }
       ],
       "TM/HM Move List": [
-        "A1 Cut",
-        "A3 Surf",
-        "A4 Strength",
-        "A6 Dive",
-        "01 Hone Claws",
-        "02 Dragon Claw",
-        "05 Roar",
-        "06 Toxic",
-        "07 Hail",
-        "08 Bulk Up",
-        "10 Hidden Power",
-        "11 Sunny Day",
-        "13 Ice Beam",
-        "14 Blizzard",
-        "15 Hyper Beam",
-        "17 Protect",
-        "18 Rain Dance",
-        "20 Safeguard",
-        "21 Frustration",
-        "24 Thunderbolt",
-        "25 Thunder",
-        "26 Earthquake",
-        "27 Return",
-        "31 Brick Break",
-        "32 Double Team",
-        "35 Flamethrower",
-        "37 Sandstorm",
-        "38 Fire Blast",
-        "39 Rock Tomb",
-        "40 Aerial Ace",
-        "42 Facade",
-        "44 Rest",
-        "48 Round",
-        "49 Echoed Voice",
-        "52 Focus Blast",
-        "56 Fling",
-        "59 Incinerate",
-        "65 Shadow Claw",
-        "68 Giga Impact",
-        "71 Stone Edge",
-        "73 Thunder Wave",
-        "77 Psych Up",
-        "78 Bulldoze",
-        "80 Rock Slide",
-        "82 Dragon Tail",
-        "87 Swagger",
-        "88 Sleep Talk",
-        "90 Substitute",
-        "92 Trick Room",
-        "94 Rock Smash"
+        {
+          "Move": "Cut",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Surf",
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Strength",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Dive",
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Hone Claws",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Dragon Claw",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Roar",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Toxic",
+          "Type": "Poison",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Hail",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Bulk Up",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Hidden Power",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Sunny Day",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Ice Beam",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Blizzard",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Protect",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rain Dance",
+          "Type": "Water",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Safeguard",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Frustration",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Thunderbolt",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Thunder",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Earthquake",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Return",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Brick Break",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Double Team",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Flamethrower",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Sandstorm",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Fire Blast",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rock Tomb",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Facade",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Round",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Echoed Voice",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Focus Blast",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Fling",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Incinerate",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Shadow Claw",
+          "Type": "Ghost",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Stone Edge",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Thunder Wave",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Psych Up",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Bulldoze",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rock Slide",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Dragon Tail",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Swagger",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Sleep Talk",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Substitute",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Trick Room",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Machine"
+        }
       ],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Ancient Power",
-        "Aqua Tail",
-        "Dive",
-        "Draco Meteor",
-        "Dragon Pulse",
-        "Earth Power",
-        "Fury Cutter",
-        "Gravity",
-        "Hyper Voice",
-        "Mud-Slap",
-        "Outrage",
-        "Sleep Talk",
-        "Snore",
-        "Swift",
-        "Twister"
+        {
+          "Move": "Ancient Power",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Aqua Tail",
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Dive",
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Draco Meteor",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Dragon Pulse",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Earth Power",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Fury Cutter",
+          "Type": "Bug",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Gravity",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Voice",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Mud-Slap",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Outrage",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Sleep Talk",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Snore",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Twister",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        }
       ]
     },
     "Origin Forme": "Palkia is in its Origin Forme when exposed to a Lustrous Globe as an Extended Action. Exposing it in Origin Forme reverts it to its Altered Forme (found in the Main PokéDex)."
@@ -3483,17 +6063,74 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Calm Mind",
-        "Dazzling Gleam",
-        "Earth Power",
-        "Giga Impact",
-        "Hyper Beam",
-        "Mystical Fire",
-        "Power Shift",
-        "Rest",
-        "Rock Smash",
-        "Sludge Bomb",
-        "Zen Headbutt"
+        {
+          "Move": "Calm Mind",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Dazzling Gleam",
+          "Type": "Fairy",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Earth Power",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Mystical Fire",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Power Shift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Sludge Bomb",
+          "Type": "Poison",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Zen Headbutt",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     },
     "Therian Forme": "The User changes to its Therian Forme if holding a Reveal Glass and uses its Incarnate Form otherwise."
@@ -3597,17 +6234,74 @@
       "TM/HM Move List": [],
       "Egg Move List": [],
       "Tutor Move List": [
-        "Calm Mind",
-        "Dazzling Gleam",
-        "Earth Power",
-        "Giga Impact",
-        "Hyper Beam",
-        "Mystical Fire",
-        "Power Shift",
-        "Rest",
-        "Rock Smash",
-        "Sludge Bomb",
-        "Zen Headbutt"
+        {
+          "Move": "Calm Mind",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Dazzling Gleam",
+          "Type": "Fairy",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Earth Power",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Mystical Fire",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Power Shift",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Sludge Bomb",
+          "Type": "Poison",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Zen Headbutt",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        }
       ]
     }
   }
