@@ -40492,13 +40492,18 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Confusion",
+          "Move": "Power Swap",
           "Type": "Psychic"
         },
         {
           "Level": 1,
-          "Move": "Growl",
-          "Type": "Normal"
+          "Move": "Guard Swap",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 1,
+          "Move": "Astonish",
+          "Type": "Ghost"
         },
         {
           "Level": 1,
@@ -40506,13 +40511,18 @@
           "Type": "Normal"
         },
         {
-          "Level": 5,
-          "Move": "Odor Sleuth",
+          "Level": 1,
+          "Move": "Growl",
           "Type": "Normal"
         },
         {
+          "Level": 5,
+          "Move": "Confusion",
+          "Type": "Psychic"
+        },
+        {
           "Level": 10,
-          "Move": "Assurance",
+          "Move": "Bite",
           "Type": "Dark"
         },
         {
@@ -40521,44 +40531,79 @@
           "Type": "Normal"
         },
         {
-          "Level": 19,
+          "Level": 18,
           "Move": "Psybeam",
           "Type": "Psychic"
         },
         {
-          "Level": 23,
+          "Level": 20,
           "Move": "Agility",
           "Type": "Psychic"
         },
         {
-          "Level": 28,
-          "Move": "Double Hit",
-          "Type": "Normal"
-        },
-        {
-          "Level": 32,
-          "Move": "Zen Headbutt",
-          "Type": "Psychic"
-        },
-        {
-          "Level": 37,
-          "Move": "Crunch",
-          "Type": "Dark"
-        },
-        {
-          "Level": 41,
+          "Level": 20,
           "Move": "Baton Pass",
           "Type": "Normal"
         },
         {
-          "Level": 46,
+          "Level": 23,
+          "Move": "Double Hit",
+          "Type": "Normal"
+        },
+        {
+          "Level": 25,
+          "Move": "Smart Strike",
+          "Type": "Steel"
+        },
+        {
+          "Level": 27,
+          "Move": "Swift",
+          "Type": "Normal"
+        },
+        {
+          "Level": 30,
+          "Move": "Twin Beam",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 33,
+          "Move": "Crunch",
+          "Type": "Dark"
+        },
+        {
+          "Level": 36,
+          "Move": "Body Slam",
+          "Type": "Normal"
+        },
+        {
+          "Level": 38,
+          "Move": "Flash Cannon",
+          "Type": "Steel"
+        },
+        {
+          "Level": 41,
+          "Move": "Psychic",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 44,
           "Move": "Nasty Plot",
           "Type": "Dark"
         },
         {
+          "Level": 46,
+          "Move": "Assurance",
+          "Type": "Dark"
+        },
+        {
+          "Level": 48,
+          "Move": "Thrash",
+          "Type": "Normal"
+        },
+        {
           "Level": 50,
-          "Move": "Psychic",
-          "Type": "Psychic"
+          "Move": "Hyper Beam",
+          "Type": "Normal"
         }
       ],
       "TM/HM Move List": [
