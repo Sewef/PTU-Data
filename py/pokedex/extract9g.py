@@ -3,8 +3,8 @@ from pathlib import Path
 import PyPDF2
 import logging
 
-PDF_PATH = "9G PaldeaDex.pdf"   # ← adapte si besoin
-OUT_JSON = "../../ptu/data/pokedex/pokedex_9g_old.json"
+PDF_PATH = "Gen 9 Homebrew Raw Document.pdf"   # ← adapte si besoin
+OUT_JSON = "../../ptu/data/pokedex/pokedex_9g_temp.json"
 OUT_NDJSON = "pokedex.ndjson"
 OUT_LOG = "pokedex_extraction.log"
 # Logging

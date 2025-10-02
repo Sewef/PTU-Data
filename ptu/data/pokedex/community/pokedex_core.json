@@ -10971,7 +10971,7 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Focus Energy",
+          "Move": "Scratch",
           "Type": "Normal"
         },
         {
@@ -10981,43 +10981,68 @@
         },
         {
           "Level": 1,
+          "Move": "Rock Smash",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 3,
+          "Move": "Focus Energy",
+          "Type": "Normal"
+        },
+        {
+          "Level": 6,
+          "Move": "Swagger",
+          "Type": "Normal"
+        },
+        {
+          "Level": 8,
           "Move": "Low Kick",
           "Type": "Fighting"
         },
         {
-          "Level": 1,
-          "Move": "Scratch",
-          "Type": "Normal"
-        },
-        {
-          "Level": 9,
-          "Move": "Fury Swipes",
-          "Type": "Normal"
-        },
-        {
-          "Level": 13,
-          "Move": "Karate Chop",
-          "Type": "Fighting"
-        },
-        {
-          "Level": 17,
+          "Level": 12,
           "Move": "Seismic Toss",
           "Type": "Fighting"
         },
         {
-          "Level": 21,
+          "Level": 15,
+          "Move": "Bulldoze",
+          "Type": "Ground"
+        },
+        {
+          "Level": 18,
           "Move": "Screech",
           "Type": "Normal"
         },
         {
-          "Level": 25,
-          "Move": "Assurance",
+          "Level": 20,
+          "Move": "Fury Swipes",
+          "Type": "Normal"
+        },
+        {
+          "Level": 23,
+          "Move": "Punishment",
           "Type": "Dark"
         },
         {
+          "Level": 25,
+          "Move": "Submission",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 28,
+          "Move": "Stomping Tantrum",
+          "Type": "Ground"
+        },
+        {
+          "Level": 30,
+          "Move": "Rage Fist",
+          "Type": "Ghost"
+        },
+        {
           "Level": 33,
-          "Move": "Swagger",
-          "Type": "Normal"
+          "Move": "Counter",
+          "Type": "Fighting"
         },
         {
           "Level": 37,
@@ -11030,14 +11055,19 @@
           "Type": "Normal"
         },
         {
-          "Level": 45,
-          "Move": "Punishment",
+          "Level": 44,
+          "Move": "Assurance",
           "Type": "Dark"
         },
         {
-          "Level": 49,
+          "Level": 47,
           "Move": "Close Combat",
           "Type": "Fighting"
+        },
+        {
+          "Level": 50,
+          "Move": "Outrage",
+          "Type": "Dragon"
         },
         {
           "Level": 53,
@@ -11199,62 +11229,107 @@
     "Moves": {
       "Level Up Move List": [
         {
-          "Level": 9,
-          "Move": "Fury Swipes",
+          "Level": 1,
+          "Move": "Scratch",
           "Type": "Normal"
         },
         {
-          "Level": 13,
-          "Move": "Karate Chop",
+          "Level": 1,
+          "Move": "Leer",
+          "Type": "Normal"
+        },
+        {
+          "Level": 1,
+          "Move": "Rock Smash",
           "Type": "Fighting"
         },
         {
-          "Level": 17,
-          "Move": "Seismic Toss",
-          "Type": "Fighting"
-        },
-        {
-          "Level": 21,
-          "Move": "Screech",
+          "Level": 3,
+          "Move": "Focus Energy",
           "Type": "Normal"
         },
         {
-          "Level": 25,
-          "Move": "Assurance",
-          "Type": "Dark"
-        },
-        {
-          "Level": 28,
-          "Move": "Rage",
-          "Type": "Normal"
-        },
-        {
-          "Level": 35,
+          "Level": 6,
           "Move": "Swagger",
           "Type": "Normal"
         },
         {
-          "Level": 41,
-          "Move": "Cross Chop",
+          "Level": 8,
+          "Move": "Low Kick",
           "Type": "Fighting"
         },
         {
-          "Level": 47,
-          "Move": "Thrash",
+          "Level": 12,
+          "Move": "Seismic Toss",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 15,
+          "Move": "Bulldoze",
+          "Type": "Ground"
+        },
+        {
+          "Level": 18,
+          "Move": "Screech",
           "Type": "Normal"
         },
         {
-          "Level": 53,
+          "Level": 20,
+          "Move": "Fury Swipes",
+          "Type": "Normal"
+        },
+        {
+          "Level": 23,
           "Move": "Punishment",
           "Type": "Dark"
         },
         {
-          "Level": 59,
+          "Level": 25,
+          "Move": "Submission",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 28,
+          "Move": "Stomping Tantrum",
+          "Type": "Ground"
+        },
+        {
+          "Level": 30,
+          "Move": "Rage Fist",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 33,
+          "Move": "Counter",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 37,
+          "Move": "Cross Chop",
+          "Type": "Fighting"
+        },
+        {
+          "Level": 41,
+          "Move": "Thrash",
+          "Type": "Normal"
+        },
+        {
+          "Level": 44,
+          "Move": "Assurance",
+          "Type": "Dark"
+        },
+        {
+          "Level": 47,
           "Move": "Close Combat",
           "Type": "Fighting"
         },
         {
-          "Level": 63,
+          "Level": 50,
+          "Move": "Outrage",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 53,
           "Move": "Final Gambit",
           "Type": "Fighting"
         }
