@@ -4195,6 +4195,17 @@
         "Contest Type": "Smart",
         "Contest Effect": "Unsettling"
     },
+    "Meteor Assault": {
+        "Type": "Fighting",
+        "Frequency": "Daily x2",
+        "AC": "2",
+        "Damage Base": "Damage Base 15: 4d10+20 / 45",
+        "Class": "Physical",
+        "Range": "Burst 1, Smite, Exhaust",
+        "Contest Type": "Tough",
+        "Contest Effect": "Exhausting Act",
+        "Effect": "None."
+    },
     "Meteor Beam": {
         "Type": "Rock",
         "Frequency": "Scene x2",
