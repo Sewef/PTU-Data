@@ -4,7 +4,7 @@ import PyPDF2
 import logging
 
 PDF_PATH = "9G PaldeaDex.pdf"   # ← adapte si besoin
-OUT_JSON = "../../ptu/data/pokedex/pokedex_9g.json"
+OUT_JSON = "../../ptu/data/pokedex/pokedex_9g_old.json"
 OUT_NDJSON = "pokedex.ndjson"
 OUT_LOG = "pokedex_extraction.log"
 # Logging
@@ -186,20 +186,18 @@ def extract_page(page_text: str, page_index: int):
 
     #record = {"_page_index": page_index, "_raw_text": page_text}
     record = {}
-    # Titre d'espèce
+    # Titre d’espèce
     species = lines[0]
 
     if not species:
         # Fallback 2 : section Evolution "1 - <Species>"
         for l in lines:
-            m = re.match(r'^\s*1\s*-\s*([A-Za-z'\'\- ]+?)\s*(?:$|\s{2,}|Lv|Minimum|\()', l)
+            m = re.match(r'^\s*1\s*-\s*([A-Za-z’\’\- ]+?)\s*(?:$|\s{2,}|Lv|Minimum|\()', l)
             if m:
                 species = m.group(1).strip()
                 break
 
     record["Species"] = species
-    if not species:
-        logger.warning(f"[p{page_index}] Species title not detected.")
 
     def find_line(pat):
         for i,l in enumerate(lines):
