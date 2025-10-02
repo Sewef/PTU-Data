@@ -106,9 +106,31 @@ def transform_species(obj: Dict[str, Any]) -> Dict[str, Any]:
     # Sort TM/Tutor list alphabetically
     tm_tutor_list = sorted(tm_tutor_list, key=lambda e: (e["Move"].lower() if isinstance(e, dict) else str(e).lower()))
 
+    # Build Other Information with Genders string
+    gd = obj.get("gender_distribution")
+    genders_str = "Genderless"
+    try:
+        if isinstance(gd, dict):
+            male = gd.get("male")
+            female = gd.get("female")
+            genderless = gd.get("genderless")
+            if isinstance(genderless, (int, float)) and float(genderless) >= 1.0:
+                genders_str = "Genderless"
+            elif isinstance(male, (int, float)) and isinstance(female, (int, float)):
+                m_pct = round(float(male) * 100.0, 1)
+                f_pct = round(float(female) * 100.0, 1)
+                genders_str = f"{m_pct}% Male / {f_pct}% Female"
+    except Exception:
+        genders_str = "Genderless"
+
+    other_info = {
+        "Genders": genders_str
+    }
+
     dest = {
         "Species": species_name[:1].upper() + species_name[1:],
         "Base Stats": base_stats,
+        "Other Information": other_info,
         "Moves": {
             "Level Up Move List": level_up_list,
             "TM/Tutor Moves List": tm_tutor_list,

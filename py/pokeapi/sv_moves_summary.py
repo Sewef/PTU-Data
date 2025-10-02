@@ -281,6 +281,25 @@ async def process_pairs(pairs: List[Tuple[str, str]], include_types: bool, cfg: 
             ms, need_types = summarize_sv_moves_from_pokemon_json(
                 data, include_types, override_species_name=display_species
             )
+
+            # Compute gender distribution using species_json_cache (or fetch if missing)
+            gender_dist = {"male": 0.0, "female": 0.0, "genderless": 0.0}
+            try:
+                sp_url = (data.get("species") or {}).get("url")
+                if sp_url:
+                    if sp_url not in species_json_cache:
+                        species_json_cache[sp_url] = await fetch_species_json(session, sp_url, cfg, limiter)
+                    spj = species_json_cache.get(sp_url, {})
+                    gr = spj.get("gender_rate", -1)
+                    if gr == -1:
+                        gender_dist = {"male": 0.0, "female": 0.0, "genderless": 1.0}
+                    else:
+                        female = float(gr) / 8.0
+                        male = 1.0 - female
+                        gender_dist = {"male": male, "female": female, "genderless": 0.0}
+            except Exception:
+                pass
+
             summary = {
                 "Species": display_species,
                 "species": ms.get("species"),
@@ -288,6 +307,7 @@ async def process_pairs(pairs: List[Tuple[str, str]], include_types: bool, cfg: 
                 "stats": stats_map,
                 "version_group": ms.get("version_group"),
                 "moves": ms.get("moves"),
+                "gender_distribution": gender_dist,
             }
 
             summaries.append(summary)
@@ -461,6 +481,25 @@ def main() -> None:
                     stats_map = {s["stat"]["name"]: s["base_stat"] for s in pj.get("stats", []) if s.get("stat")}
 
                     ms, need_types = summarize_sv_moves_from_pokemon_json(pj, include_types, override_species_name=disp)
+
+                    # Compute gender distribution for --from-dir path
+                    gender_dist = {"male": 0.0, "female": 0.0, "genderless": 0.0}
+                    try:
+                        sp_url = (pj.get("species") or {}).get("url")
+                        if sp_url:
+                            if sp_url not in species_json_cache:
+                                species_json_cache[sp_url] = await fetch_species_json(session, sp_url, cfg, limiter)
+                            spj = species_json_cache.get(sp_url, {})
+                            gr = spj.get("gender_rate", -1)
+                            if gr == -1:
+                                gender_dist = {"male": 0.0, "female": 0.0, "genderless": 1.0}
+                            else:
+                                female = float(gr) / 8.0
+                                male = 1.0 - female
+                                gender_dist = {"male": male, "female": female, "genderless": 0.0}
+                    except Exception:
+                        pass
+
                     summary = {
                         "Species": disp,
                         "species": ms.get("species"),
@@ -468,6 +507,7 @@ def main() -> None:
                         "stats": stats_map,
                         "version_group": ms.get("version_group"),
                         "moves": ms.get("moves"),
+                        "gender_distribution": gender_dist,
                     }
                     summaries.append(summary)
                     for url in need_types.keys():
