@@ -8,14 +8,17 @@
       "type": "shell",
       "command": "python -m http.server"
     },
-        {
+    {
       "label": "Copy PTU (robocopy)",
       "type": "shell",
       "command": "robocopy \"D:/GitHub/PTU-Data/ptu\" \"D:/GitHub/sewef.github.io/ptu\" /MIR /R:0 /W:0 & if %ERRORLEVEL% LSS 8 (exit /b 0) else (exit /b %ERRORLEVEL%)",
       "options": {
         "shell": {
           "executable": "cmd.exe",
-          "args": ["/d", "/c"]
+          "args": [
+            "/d",
+            "/c"
+          ]
         }
       },
       "problemMatcher": []
@@ -27,7 +30,10 @@
         "cwd": "D:/GitHub/sewef.github.io",
         "shell": {
           "executable": "cmd.exe",
-          "args": ["/d", "/c"]
+          "args": [
+            "/d",
+            "/c"
+          ]
         }
       },
       "command": "git add . & git diff --cached --quiet && (echo No changes to commit) || (git commit -m \"PTU Data - Auto Deploy\" & git push)",
@@ -39,7 +45,8 @@
         "Copy PTU (robocopy)",
         "Git Deploy"
       ],
-      "dependsOrder": "sequence"
+      "dependsOrder": "sequence",
+      "problemMatcher": []
     }
   ]
 }
