@@ -31,8 +31,8 @@ def split_commas_outside_parens(text: str):
     return parts
 
 
-PDF_PATH = "8G HisuiDex.pdf"
-OUT_JSON = "../../ptu/data/pokedex/pokedex_8g_hisui.json"
+PDF_PATH = "8G GalarDex + Armor_Crown.pdf"
+OUT_JSON = "../../ptu/data/pokedex/pokedex_8g_021025.json"
 OUT_LOG = "pokedex_extraction.log"
 
 # --- Logging setup ---
@@ -148,6 +148,12 @@ def parse_moves_list(lines, start_idx):
             i += 2 if (line == "TM/HM" and nxt == "Move List") else 1
             continue
 
+        # Also accept simplified header "TM Move List"
+        if compare_string_with_spaces(line, "TM Move List") or (line == "TM" and nxt == "Move List"):
+            current = "TM/HM Move List"
+            i += 2 if (line == "TM" and nxt == "Move List") else 1
+            continue
+
         if compare_string_with_spaces(line, "Egg Move List") or (line == "Egg" and nxt == "Move List"):
             current = "Egg Move List"
             i += 2 if (line == "Egg" and nxt == "Move List") else 1
@@ -212,7 +218,7 @@ def extract_page(page_text: str, page_index: int):
     KNOWN_HEADERS = [
         "Base Stats", "Basic Information", "Evolution", "Size Information",
         "Breeding Information", "Diet", "Habitat", "Capability List", "Skill List",
-        "Move List", "Level Up Move List", "TM/HM Move List",
+        "Move List", "Level Up Move List", "TM/HM Move List", "TM Move List",
         "Egg Move List", "Tutor Move List", "Mega Evolution"
     ]
 
@@ -237,6 +243,9 @@ def extract_page(page_text: str, page_index: int):
             fixed_lines.append("Tutor Move List")
             skip_next = True
         elif cur == "TM/HM" and nxt == "Move List":
+            fixed_lines.append("TM/HM Move List")
+            skip_next = True
+        elif cur == "TM" and nxt == "Move List":
             fixed_lines.append("TM/HM Move List")
             skip_next = True
         elif cur == "Egg" and nxt == "Move List":
