@@ -1,241 +1,158 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import argparse
-import json
-import logging
-import re
+import argparse, json, logging, re, sys, shutil
 from pathlib import Path
-from typing import Dict, Any, Iterable, List, Optional
+from typing import Dict, Any, List, Tuple, Iterable
 
-# ------------------------------------------------------------
-# Logging setup
-# ------------------------------------------------------------
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(levelname)s:%(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(levelname)s:%(message)s")
 log = logging.getLogger("reformat_moves")
 
-# ------------------------------------------------------------
-# Helpers
-# ------------------------------------------------------------
-
 RE_N_TAG = re.compile(r"\(N\)", re.IGNORECASE)
-# Supprime les préfixes TM/HM/indices : "06 Toxic", "A1 Cut", "100 Confide"
 RE_TM_PREFIX = re.compile(r"^[A-Za-z]*\d+\s+")
 
-def clean_move_name(raw: str) -> (str, List[str]):
-    """
-    Nettoie un nom de move :
-      - retire le préfixe TM/HM (ex: '06 Toxic' -> 'Toxic', 'A1 Cut' -> 'Cut')
-      - retire le suffixe '(N)' et ajoute le tag 'N' si présent
-      - strip espaces
-    Retourne (move_name, tags_additionnels)
-    """
-    tags = []
+def clean_move_name(raw: str) -> Tuple[str, List[str]]:
+    tags: List[str] = []
     s = raw.strip()
-
-    # 1) Enlever préfixe de code TM/HM (ex: "06 Toxic", "A1 Cut")
-    s = RE_TM_PREFIX.sub("", s)
-
-    # 2) Détecter et retirer (N) où qu'il se trouve
+    s = RE_TM_PREFIX.sub("", s)  # retire "06 " / "A1 " / "100 "
     if RE_N_TAG.search(s):
         tags.append("N")
         s = RE_N_TAG.sub("", s).strip()
-
     return s, tags
 
-
-def get_move_info(move_name: str, moves_ref: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Récupère la fiche move depuis la référence.
-    Si manquante, log une erreur et renvoie un "stub" vide.
-    """
-    info = moves_ref.get(move_name)
+def get_move_info(move: str, moves_ref: Dict[str, Any]) -> Dict[str, Any]:
+    info = moves_ref.get(move)
     if info is None:
-        log.error(f"Move inconnu dans moves.json: '{move_name}'")
+        log.error(f"Move inconnu dans moves.json: '{move}'")
         return {"Type": None, "Class": None}
     return info
 
-
 def should_tag_stab(move_info: Dict[str, Any], mon_types: Iterable[str]) -> bool:
-    """
-    STAB si move.Type ∈ types du Pokémon ET move.Class != 'Status'.
-    Si info incomplète (Type ou Class manquant), on ne tag pas.
-    """
-    m_type = move_info.get("Type")
-    m_class = move_info.get("Class")
-    if not m_type or not m_class:
+    mtype = move_info.get("Type")
+    mclass = move_info.get("Class")
+    if not mtype or not mclass:
         return False
-    if m_class.strip().lower() == "status":
+    if str(mclass).strip().lower() == "status":
         return False
-    return m_type in mon_types
+    return mtype in set(mon_types or [])
 
-
-def build_entry(move_name: str,
-                method: str,
-                base_tags: Optional[List[str]],
-                mon_types: Iterable[str],
+def build_entry(move_name: str, method: str, mon_types: List[str],
                 moves_ref: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Construit l'entrée finale {Move, Type, Tags, Method}
-    """
-    # Nettoyage du nom + tags (N)
-    clean_name, tags_from_name = clean_move_name(move_name)
-    tags = list(base_tags or []) + tags_from_name
-
-    # Infos du move
-    info = get_move_info(clean_name, moves_ref)
-    mtype = info.get("Type")
-
-    # STAB ?
+    clean, tags = clean_move_name(move_name)
+    info = get_move_info(clean, moves_ref)
     if should_tag_stab(info, mon_types):
         tags.append("Stab")
-
-    # dédoublonner les tags en gardant l'ordre d'apparition
+    # dédoublonnage
     seen = set()
     tags = [t for t in tags if not (t in seen or seen.add(t))]
+    return {"Move": clean, "Type": info.get("Type"), "Tags": tags, "Method": method}
 
-    return {
-        "Move": clean_name,
-        "Type": mtype,
-        "Tags": tags,
-        "Method": method
-    }
-
-
-def process_pokemon(mon: Dict[str, Any], moves_ref: Dict[str, Any]) -> List[Dict[str, Any]]:
-    """
-    Transforme toutes les sources de moves du Pokémon en liste normalisée.
-    Sources prises en compte :
-      - Level Up Move List  -> Method: "Level-Up"
-      - TM/HM Move List     -> Method: "Machine"
-      - Egg Move List       -> Method: "Egg"
-      - Tutor Move List     -> Method: "Tutor"
-    """
+def reformat_moves_for_mon(mon: Dict[str, Any], moves_ref: Dict[str, Any]) -> Dict[str, Any]:
+    mon_types = mon.get("Basic Information", {}).get("Type", []) or []
+    moves = mon.get("Moves", {}) or {}
     out: List[Dict[str, Any]] = []
 
-    # Types du Pokémon
-    mon_types = mon.get("Basic Information", {}).get("Type", []) or []
-
-    moves = mon.get("Moves", {})
-
-    # 1) Level-Up
-    lvl_list = moves.get("Level Up Move List") or []
-    for item in lvl_list:
-        # item attendu: {"Level": 3, "Move": "Harden", "Type": "Normal"}
+    # Level-Up
+    for item in moves.get("Level Up Move List") or []:
         mv = item.get("Move")
-        if not mv:
-            continue
-        out.append(
-            build_entry(
-                move_name=mv,
-                method="Level-Up",
-                base_tags=[],
-                mon_types=mon_types,
-                moves_ref=moves_ref
-            )
-        )
+        if mv and str(mv).strip():
+            out.append(build_entry(mv, "Level-Up", mon_types, moves_ref))
 
-    # 2) TM/HM (Machine)
-    tm_list = moves.get("TM/HM Move List") or []
-    for raw in tm_list:
-        out.append(
-            build_entry(
-                move_name=raw,
-                method="Machine",
-                base_tags=[],
-                mon_types=mon_types,
-                moves_ref=moves_ref
-            )
-        )
+    # Machine (TM/HM)
+    for raw in moves.get("TM/HM Move List") or []:
+        if raw and str(raw).strip():
+            out.append(build_entry(raw, "Machine", mon_types, moves_ref))
 
-    # 3) Egg
-    egg_list = moves.get("Egg Move List") or []
-    for raw in egg_list:
-        out.append(
-            build_entry(
-                move_name=raw,
-                method="Egg",
-                base_tags=[],
-                mon_types=mon_types,
-                moves_ref=moves_ref
-            )
-        )
+    # Egg
+    for raw in moves.get("Egg Move List") or []:
+        if raw and str(raw).strip():
+            out.append(build_entry(raw, "Egg", mon_types, moves_ref))
 
-    # 4) Tutor
-    tutor_list = moves.get("Tutor Move List") or []
-    for raw in tutor_list:
-        out.append(
-            build_entry(
-                move_name=raw,
-                method="Tutor",
-                base_tags=[],
-                mon_types=mon_types,
-                moves_ref=moves_ref
-            )
-        )
+    # Tutor
+    for raw in moves.get("Tutor Move List") or []:
+        if raw and str(raw).strip():
+            out.append(build_entry(raw, "Tutor", mon_types, moves_ref))
 
-    return out
+    mon2 = dict(mon)
+    mon2["Moves"] = out
+    return mon2
 
 
-def load_mon_file(path: Path) -> Dict[str, Any]:
+def transform_container(data: Any, moves_ref: Dict[str, Any]) -> Any:
     """
-    Charge le Pokémon depuis un fichier JSON.
-    Tolère que le fichier contienne directement l'objet, une liste, ou du JSONLines avec 1 objet.
+    Transforme selon la forme du pokedex_core:
+      - dict d'un Pokémon        -> dict
+      - list de Pokémon          -> list
+      - dict {key -> Pokémon}    -> dict (mêmes clés)
+    Les objets sans champ 'Moves' sont laissés tels quels.
     """
-    text = path.read_text(encoding="utf-8").strip()
-
-    # Cas JSON Lines: on prend la première ligne non vide
-    if "\n" in text and not (text.startswith("{") or text.startswith("[")):
-        for line in text.splitlines():
-            line = line.strip()
-            if line:
-                return json.loads(line)
-
-    data = json.loads(text)
+    if isinstance(data, dict):
+        # Cas 1: semble être UN pokémon (a des clés Species/Number/etc.)
+        if "Species" in data or "Moves" in data or "Basic Information" in data:
+            return reformat_moves_for_mon(data, moves_ref)
+        # Cas 2: mapping clé -> Pokémon
+        out: Dict[str, Any] = {}
+        for k, v in data.items():
+            if isinstance(v, dict) and ("Species" in v or "Moves" in v or "Basic Information" in v):
+                out[k] = reformat_moves_for_mon(v, moves_ref)
+            else:
+                out[k] = v  # entrée non reconnue, intacte
+        return out
 
     if isinstance(data, list):
-        if not data:
-            raise ValueError("Fichier Pokémon vide (liste vide).")
-        if len(data) > 1:
-            log.warning("Le fichier contient plusieurs entrées ; on utilise la première.")
-        return data[0]
-    elif isinstance(data, dict):
-        return data
-    else:
-        raise ValueError("Format Pokémon inattendu (ni objet ni liste).")
+        out_list: List[Any] = []
+        for item in data:
+            if isinstance(item, dict) and ("Species" in item or "Moves" in item or "Basic Information" in item):
+                out_list.append(reformat_moves_for_mon(item, moves_ref))
+            else:
+                out_list.append(item)  # élément non-Pokémon, intact
+        return out_list
 
-
-# ------------------------------------------------------------
-# CLI
-# ------------------------------------------------------------
+    # Autres formes (JSON Lines, etc.) -> inchangé
+    return data
 
 def main():
-    ap = argparse.ArgumentParser(
-        description="Reformate les moves d'un Pokémon en {Move, Type, Tags, Method}."
-    )
-    ap.add_argument("--pokemon", "-p", required=True, type=Path,
-                    help="Fichier JSON du Pokémon (structure complète).")
-    ap.add_argument("--moves", "-m", required=True, type=Path,
-                    help="Fichier JSON de référence des moves (dict Move -> fiche).")
-    ap.add_argument("--output", "-o", type=Path,
-                    help="Fichier de sortie (JSON). Par défaut: stdout.")
+    ap = argparse.ArgumentParser(description="Reformate la section Moves des Pokémon en format unifié.")
+    ap.add_argument("--pokemon", "-p", required=True, type=Path, help="pokedex_core.json (objet, liste ou mapping).")
+    ap.add_argument("--moves", "-m", required=True, type=Path, help="moves_core.json (dict Move -> fiche).")
+    ap.add_argument("--output", "-o", required=True, type=Path, help="Fichier de sortie.")
+    ap.add_argument("--inplace", action="store_true", help="Autorise l'écrasement du fichier source (crée un .bak).")
     args = ap.parse_args()
 
-    mon = load_mon_file(args.pokemon)
-    moves_ref = json.loads(args.moves.read_text(encoding="utf-8"))
+    src = args.pokemon.resolve()
+    dst = args.output.resolve()
 
-    result = process_pokemon(mon, moves_ref)
+    if dst == src and not args.inplace:
+        log.critical("Refus d'écrire sur le même fichier que l'entrée sans --inplace.")
+        sys.exit(2)
 
+    try:
+        data = json.loads(args.pokemon.read_text(encoding="utf-8"))
+    except Exception as e:
+        log.critical(f"Impossible de lire {args.pokemon}: {e}")
+        sys.exit(1)
+
+    try:
+        moves_ref = json.loads(args.moves.read_text(encoding="utf-8"))
+    except Exception as e:
+        log.critical(f"Impossible de lire {args.moves}: {e}")
+        sys.exit(1)
+
+    result = transform_container(data, moves_ref)
     out_text = json.dumps(result, ensure_ascii=False, indent=2)
-    if args.output:
+
+    if dst == src and args.inplace:
+        # backup
+        backup = src.with_suffix(src.suffix + ".bak")
+        shutil.copy2(src, backup)
+        log.info(f"Backup créé: {backup}")
+
+    try:
         args.output.write_text(out_text, encoding="utf-8")
         log.info(f"Écrit: {args.output}")
-    else:
-        print(out_text)
-
+    except Exception as e:
+        log.critical(f"Échec d'écriture {args.output}: {e}")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
