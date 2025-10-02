@@ -1,26 +1,45 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "http.server",
-            "type": "shell",
-            "command": "python -m http.server"
-        },
-        {
-      "label": "deploy",
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "http.server",
       "type": "shell",
-      "windows": {
-        "command": "powershell",
-        "args": [
-          "-NoProfile",
-          "-ExecutionPolicy", "Bypass",
-          "-Command",
-          "robocopy \"D:\\GitHub\\PTU-Data\\ptu\" \"D:\\GitHub\\sewef.github.io\\ptu\" /MIR /R:0 /W:0; if ($LASTEXITCODE -lt 8) { cd \"D:\\GitHub\\sewef.github.io\"; git add .; git commit -m \"Auto deploy\"; git push origin main; exit 0 } else { exit $LASTEXITCODE }"
-        ]
+      "command": "python -m http.server"
+    },
+        {
+      "label": "Copy PTU (robocopy)",
+      "type": "shell",
+      "command": "robocopy \"D:/GitHub/PTU-Data/ptu\" \"D:/GitHub/sewef.github.io/ptu\" /MIR /R:0 /W:0 & if %ERRORLEVEL% LSS 8 (exit /b 0) else (exit /b %ERRORLEVEL%)",
+      "options": {
+        "shell": {
+          "executable": "cmd.exe",
+          "args": ["/d", "/c"]
+        }
       },
       "problemMatcher": []
+    },
+    {
+      "label": "Git Deploy",
+      "type": "shell",
+      "options": {
+        "cwd": "D:/GitHub/sewef.github.io",
+        "shell": {
+          "executable": "cmd.exe",
+          "args": ["/d", "/c"]
+        }
+      },
+      "command": "git add . & git diff --cached --quiet && (echo No changes to commit) || (git commit -m \"PTU Data - Auto Deploy\" & git push)",
+      "problemMatcher": []
+    },
+    {
+      "label": "Deploy",
+      "dependsOn": [
+        "Copy PTU (robocopy)",
+        "Git Deploy"
+      ],
+      "dependsOrder": "sequence"
     }
-    ]
+  ]
 }
