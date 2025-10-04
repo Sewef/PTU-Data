@@ -421,7 +421,7 @@
     {
         "name": "Dry Skin",
         "frequency": "Static",
-        "effect": "Whenever the user is hit by a damaging Fire- Type Move or ends their turn in Sunny Weather, they lose a Tick of Hit Points. The user is immune to the damage and effects of Water-Type Moves, and whenever the user is hit by a damaging Water-Type Move or ends their turn in Rainy Weather, they gain a Tick of Hit Points."
+        "effect": "Whenever the user is hit by a damaging Fire-Type Move or ends their turn in Sunny Weather, they lose a Tick of Hit Points. The user is immune to the damage and effects of Water-Type Moves, and whenever the user is hit by a damaging Water-Type Move or ends their turn in Rainy Weather, they gain a Tick of Hit Points."
     },
     {
         "name": "Dust Cloud",
@@ -728,7 +728,7 @@
     {
         "name": "Ice Shield",
         "frequency": "Scene – Standard Action, Interrupt",
-        "effect": "The user places up to 3 segments of Ice Wall; each segment must be continuous with another segment, and at least one must be adjacent to the user. These Ice Walls count as Blocking Terrain and last until the end of the encounter or until they are destroyed. Each Ice Wall segment is 2 meters tall, 1 meter wide, and 2 centimeters thick. Each segment has 10 Hit Points, 5 Damage Reduction, and takes damage as if it was Ice- Type."
+        "effect": "The user places up to 3 segments of Ice Wall; each segment must be continuous with another segment, and at least one must be adjacent to the user. These Ice Walls count as Blocking Terrain and last until the end of the encounter or until they are destroyed. Each Ice Wall segment is 2 meters tall, 1 meter wide, and 2 centimeters thick. Each segment has 10 Hit Points, 5 Damage Reduction, and takes damage as if it was Ice-Type."
     },
     {
         "name": "Ignition Boost",
@@ -1477,7 +1477,7 @@
         "name": "Spray Down",
         "frequency": "Scene – Free Action",
         "trigger": "The user hits an airborne target with a ranged",
-        "effect": "The triggering attack's target is knocked down to ground level, and loses all Sky or Levitate Speeds for 3 turns. During this time, they may be hit by Ground- Type Moves even if normally immune."
+        "effect": "The triggering attack's target is knocked down to ground level, and loses all Sky or Levitate Speeds for 3 turns. During this time, they may be hit by Ground-Type Moves even if normally immune."
     },
     {
         "name": "Sprint",
@@ -1536,7 +1536,7 @@
         "name": "Storm Drain",
         "frequency": "Scene – Free Action",
         "trigger": "A ranged Water-Type Move is used within 10",
-        "effect": "The Move is turned into a Single-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or Mind Reader. Additionally, the user is immune to the damage and effects of Water Type attacks, and each time they are hit by a Water- Type attack, the user's Special Attack is raised 1 Combat Stage. Defensive."
+        "effect": "The Move is turned into a Single-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or Mind Reader. Additionally, the user is immune to the damage and effects of Water Type attacks, and each time they are hit by a Water-Type attack, the user's Special Attack is raised 1 Combat Stage. Defensive."
     },
     {
         "name": "Strange Tempo",
@@ -1859,7 +1859,7 @@
     {
         "name": "Winter's Kiss",
         "frequency": "Static",
-        "effect": "The user does not take damage from Ice-Type Moves. Whenever the user uses or is hit by an Ice- Type Move, the user is healed by a Tick of Hit Points. Defensive."
+        "effect": "The user does not take damage from Ice-Type Moves. Whenever the user uses or is hit by an Ice-Type Move, the user is healed by a Tick of Hit Points. Defensive."
     },
     {
         "name": "Wishmaster",
