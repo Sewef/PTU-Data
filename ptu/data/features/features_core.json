@@ -3387,6 +3387,14 @@
           },
           {
             "Name": "Assault Armor",
+            "Prerequisites": "Polished Shine, Expert Athletics or Intimidate",
+            "Frequency": "Scene x2 – Free Action",
+            "Trigger": "Your Pokémon hits with a Steel-Type attack",
+            "Effect": "Your Pokémon may add its Defense Stat to their Damage Roll in place of the attack’s normal offensive stat.",
+            "Source": "Core"
+          },
+          {
+            "Name": "True Steel",
             "Prerequisites": "Polished Shine, Master Athletics or Intimidate",
             "Frequency": "Daily x3 — Free Action",
             "Trigger": "Your Steel-Type Pokémon is hit by a damaging attack",
