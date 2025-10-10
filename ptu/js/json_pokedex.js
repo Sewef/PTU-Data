@@ -540,7 +540,7 @@
   }
 
   function renderAbilityDetails(ab) {
-    if (!ab) return '<p class="text-muted mb-0">Ability introuvable.</p>';
+    if (!ab) return '<p class="text-muted mb-0">Unknown Ability.</p>';
 
     const row = (k, v) => v ? `<div><span class="text-muted">${k}:</span> ${escapeHtml(String(v))}</div>` : "";
     const isBlank = (val) => {
@@ -982,7 +982,7 @@
     const name = String(abilityName || "").trim().toLowerCase();
     if (!name) return;
     const idx = await loadAbilityIndex();
-    const ab = idx.get(name) || null;
+    const ab = idx.get(name) || idx.get(name.split('(')[0].trim()) || null;
     const display = ab?.Name || ab?.__displayName || abilityName;
     $("#moveAbilityModalLabel").textContent = `Ability — ${display}`;
     $("#moveAbilityModalBody").innerHTML = renderAbilityDetails(ab);
