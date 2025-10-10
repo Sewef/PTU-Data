@@ -530,9 +530,9 @@
     ${row('Frequency', mv.Frequency)}
     ${row('AC', mv.AC)}
     ${mv['Damage Base']
-      ? `<div><span class="text-muted">${escapeHtml(mv['Damage Base'].split(':')[0])}:</span> ${escapeHtml(mv['Damage Base'].split(':')[1])}</div>`
-      : (mv.DB ? `<div><span class="text-muted">Damage Base</span> ${escapeHtml(mv.DB)}</div>` : '')
-    }
+        ? `<div><span class="text-muted">${escapeHtml(mv['Damage Base'].split(':')[0])}:</span> ${escapeHtml(mv['Damage Base'].split(':')[1])}</div>`
+        : (mv.DB ? `<div><span class="text-muted">Damage Base</span> ${escapeHtml(mv.DB)}</div>` : '')
+      }
     ${row('Class', mv.Class)}
     ${row('Range', mv.Range)}
     ${row('Keywords', tags)}
@@ -1443,7 +1443,6 @@
     if (move) openMoveModalByName(move);
     if (ability) openAbilityModalByName(ability);
   });
-
 
   document.addEventListener("DOMContentLoaded", async () => {
     selectedLabels = new Set(PRESETS[selectedPreset] || []);
