@@ -539,21 +539,50 @@
   `;
   }
 
-
-
-
   function renderAbilityDetails(ab) {
     if (!ab) return '<p class="text-muted mb-0">Ability introuvable.</p>';
+
     const row = (k, v) => v ? `<div><span class="text-muted">${k}:</span> ${escapeHtml(String(v))}</div>` : "";
-    return `
-      <div class="mb-2"><h4 class="mb-1">${escapeHtml(ab.Name || "Ability")}</h4></div>
-      ${row("Frequency", ab.Frequency)}
-      ${row("Target", ab.Target)}
-      ${row("Trigger", ab.Trigger)}
-      ${ab.Effect ? `<hr class="my-2"><div style="white-space:pre-wrap">${escapeHtml(ab.Effect)}</div>` : ""}
-      ${ab.Bonus ? `<hr class="my-2"><div style="white-space:pre-wrap"><strong>Bonus:</strong> ${escapeHtml(ab.Bonus)}</div>` : ""}
-      ${ab.Special ? `<div style="white-space:pre-wrap"><strong>Special:</strong> ${escapeHtml(ab.Special)}</div>` : ""}`;
+    const isBlank = (val) => {
+      if (val == null) return true;
+      const s = String(val).trim();
+      return !s || /^none$/i.test(s);
+    };
+
+    // Champs principaux (toujours au-dessus)
+    const header =
+      row("Frequency", ab.Frequency) +
+      row("Target", ab.Target) +
+      row("Trigger", ab.Trigger);
+
+    // Sections “effets” flexibles : Effect (sans label), Bonus/Special et
+    // tout autre champ contenant "Effect" (avec label), s’ils ne sont pas vides.
+    const keys = Object.keys(ab);
+    const effectishKeys = keys.filter(k => /(effect|bonus|special)/i.test(k));
+
+    const sections = [];
+    for (const k of effectishKeys) {
+      const v = ab[k];
+      if (isBlank(v)) continue;
+
+      if (/^effect$/i.test(k)) {
+        // "Effect" tout seul → sans label
+        sections.push(
+          `<div style="white-space:pre-wrap">${escapeHtml(String(v))}</div>`
+        );
+      } else {
+        // Bonus, Special, ou tout autre champ contenant "Effect" → avec label
+        sections.push(
+          `<div style="white-space:pre-wrap"><strong>${escapeHtml(k)}:</strong> ${escapeHtml(String(v))}</div>`
+        );
+      }
+    }
+
+    const extras = sections.length ? `<hr class="my-2">${sections.join("")}` : "";
+
+    return `${header}${extras}`;
   }
+
 
   function renderObject(obj, depth = 0) {
     const leftSections = new Set(["Base Stats", "Basic Information", "Evolution", "Other Information", "Battle-Only Forms"]);
