@@ -1,11 +1,21 @@
 /* ===== Core document =================================================== */
 html { overflow-y: scroll; scrollbar-gutter: stable; }
 /* Prevent Bootstrap modal horizontal shift */
-body.modal-open { padding-right: 0 !important; }
-
+:root { scrollbar-gutter: stable; }
 /* ===== Custom Boostrap   =============================================== */
 smaller, .smaller {
   font-size: 0.6em;
+}
+
+/* Neutralise le padding-right inline ajouté par Bootstrap quand une modale s'ouvre */
+body[style*="padding-right"] { padding-right: 0 !important; }
+
+/* Idem pour les barres fixes si tu en as */
+.fixed-top[style*="padding-right"],
+.sticky-top[style*="padding-right"],
+.navbar-fixed-top[style*="padding-right"],
+.navbar-fixed-bottom[style*="padding-right"] {
+  padding-right: 0 !important;
 }
 
 

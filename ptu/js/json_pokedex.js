@@ -1,35 +1,28 @@
-(function () {
-  const CFG = {
-    // NEW — patterns d'icônes inchangés
-    iconPatterns: [
-      (base, num) => `${base}/${num}.png`
-    ],
 
+(function () {
+  // =========================
+  // Config
+  // =========================
+  const CFG = {
+    iconPatterns: [(base, num) => `${base}/${num}.png`],
     showMethodLabel: false
   };
 
-  // Où se trouvent les dossiers core/community/homebrew (relatif au HTML)
-  const DATASET_BASE = "/ptu/data/pokedex"; // ex: "./data" si tes dossiers sont dans /data
+  // =========================
+  // Constants
+  // =========================
+  const DATASET_BASE = "/ptu/data/pokedex";
+  const PRESET_DIRS = { Core: "core", Community: "community", Homebrew: "homebrew" };
 
-  // Dossiers par preset
-  const PRESET_DIRS = {
-    Core: "core",
-    Community: "community",
-    Homebrew: "homebrew",
-  };
-
-  // Fichiers à charger par label (les libellés sont pour affichage / debug)
   const FILES_BY_LABEL = {
     "Core": "pokedex_core.json",
     "AlolaDex": "pokedex_7g.json",
     "GalarDex": "pokedex_8g.json",
     "HisuiDex": "pokedex_8g_hisui.json",
-
     "Core (Updated)": "pokedex_core.json",
     "AlolaDex (Updated)": "pokedex_7g.json",
     "GalarDex (Updated)": "pokedex_8g.json",
     "HisuiDex (Updated)": "pokedex_8g_hisui.json",
-
     "Core (Community Homebrew)": "pokedex_core.json",
     "AlolaDex (Community Homebrew)": "pokedex_7g.json",
     "GalarDex (Community Homebrew)": "pokedex_8g.json",
@@ -37,14 +30,8 @@
     "PaldeaDex (Community Homebrew)": "pokedex_9g.json",
   };
 
-  // Composition par preset (exclusif)
   const PRESETS = {
-    Core: [
-      "Core",
-      "AlolaDex",
-      "GalarDex",
-      "HisuiDex",
-    ],
+    Core: ["Core", "AlolaDex", "GalarDex", "HisuiDex"],
     Community: [
       "Core (Community Homebrew)",
       "AlolaDex (Community Homebrew)",
@@ -61,17 +48,14 @@
     ],
   };
 
-  // --- MOVES / ABILITIES datasets ---------------------------
   const MOVES_BASE = "/ptu/data/moves";
   const ABILITIES_BASE = "/ptu/data/abilities";
 
-  // Map preset -> fichier
   const MOVES_FILE_BY_PRESET = {
     Core: `${MOVES_BASE}/moves_core.json`,
-    Community: `${MOVES_BASE}/moves_9g.json`,      // "9G" pour Paldea/Community
+    Community: `${MOVES_BASE}/moves_9g.json`,
     Homebrew: `${MOVES_BASE}/moves_homebrew.json`
   };
-
   const ABILITIES_FILE_BY_PRESET = {
     Core: `${ABILITIES_BASE}/abilities_core.json`,
     Community: `${ABILITIES_BASE}/abilities_9g.json`,
@@ -79,142 +63,37 @@
   };
 
   let selectedPreset = window.selectedPreset || "Core";
-
-  // Per-preset file selection (labels from PRESETS)
   let selectedLabels = new Set(PRESETS[selectedPreset] || []);
 
-  const _jsonCache = new Map(); // url -> Promise(data[])
+  // =========================
+  // Caches & Utilities
+  // =========================
+  const _fetchCache = new Map(); // url -> Promise(json)
+  const _indexCache = new Map(); // url -> Promise(Map)
+  const pad3 = (n) => String(n).padStart(3, "0");
+  const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+  const $ = (sel) => document.querySelector(sel);
+  const debounce = (fn, delay = 150) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), delay); } };
 
-  // cache simple
-  const _infoCache = new Map(); // url -> Promise(json)
+  const escapeHtml = (s) => String(s).replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
 
-  // fetch JSON avec cache
-  async function fetchJsonCached(url) {
-    if (!url) return [];
-    if (_infoCache.has(url)) return _infoCache.get(url);
-    const p = fetch(url).then(r => r.ok ? r.json() : []).catch(() => []);
-    _infoCache.set(url, p);
+  async function fetchJson(url, { strict = true, cache = "no-store" } = {}) {
+    if (!url) return strict ? Promise.reject(new Error("No URL")) : [];
+    if (_fetchCache.has(url)) return _fetchCache.get(url);
+    const p = fetch(url, { cache })
+      .then((r) => {
+        if (strict && !r.ok) throw new Error(`HTTP ${r.status} for ${url}`);
+        return r.ok ? r.json() : [];
+      })
+      .catch((e) => {
+        console.warn("[fetchJson] skip", url, e.message || e);
+        return [];
+      });
+    _fetchCache.set(url, p);
     return p;
   }
-
-  // Indexe par nom (case-insensitive) -> objet
-  function toNameIndex(arr, key = "Name") {
-    // Tolère array OU objet { name: {...}, ... }
-    const list = Array.isArray(arr)
-      ? arr
-      : (arr && typeof arr === 'object' ? Object.values(arr) : []);
-
-    const map = new Map();
-    for (const it of list) {
-      const n = String(it?.[key] || "").trim().toLowerCase();
-      if (n) map.set(n, it);
-    }
-    return map;
-  }
-
-
-  // charge l’index des moves/abilities selon preset
-  async function loadMoveIndex() {
-    const url = MOVES_FILE_BY_PRESET[selectedPreset] || MOVES_FILE_BY_PRESET.Core;
-    const raw = await fetchJsonCached(url);
-
-    const idx = new Map();
-    if (raw && typeof raw === 'object' && !Array.isArray(raw)) {
-      // format attendu: { "Absorb": {...}, "Acid": {...}, ... }
-      for (const [key, obj] of Object.entries(raw)) {
-        if (!obj || typeof obj !== 'object') continue;
-        const k = key.trim().toLowerCase();
-        // on stocke le nom canonique pour l’affichage
-        obj.__displayName = key;
-        idx.set(k, obj);
-      }
-      console.debug('[moves] preset=', selectedPreset, 'url=', url, 'indexed(keys)=', idx.size);
-      return idx;
-    }
-
-    // fallback si jamais c’est un array (autre source)
-    const arr = Array.isArray(raw) ? raw : [];
-    for (const it of arr) {
-      const name = (it?.Move || it?.Name || '').trim();
-      if (name) {
-        it.__displayName = name;
-        idx.set(name.toLowerCase(), it);
-      }
-    }
-    console.debug('[moves] preset=', selectedPreset, 'url=', url, 'arrayIndexed=', idx.size);
-    return idx;
-  }
-
-  async function loadAbilityIndex() {
-    const url = ABILITIES_FILE_BY_PRESET[selectedPreset] || ABILITIES_FILE_BY_PRESET.Core;
-    const raw = await fetchJsonCached(url);
-
-    const idx = new Map();
-    if (raw && typeof raw === 'object' && !Array.isArray(raw)) {
-      // format attendu: { "Absorb Force": {...}, "Blessed Touch": {...}, ... }
-      for (const [key, obj] of Object.entries(raw)) {
-        if (!obj || typeof obj !== 'object') continue;
-        const k = key.trim().toLowerCase();
-        obj.__displayName = key;
-        idx.set(k, obj);
-      }
-      console.debug('[abilities] preset=', selectedPreset, 'url=', url, 'indexed(keys)=', idx.size);
-      return idx;
-    }
-
-    const arr = Array.isArray(raw) ? raw : [];
-    for (const it of arr) {
-      const name = (it?.Name || '').trim();
-      if (name) {
-        it.__displayName = name;
-        idx.set(name.toLowerCase(), it);
-      }
-    }
-    console.debug('[abilities] preset=', selectedPreset, 'url=', url, 'arrayIndexed=', idx.size);
-    return idx;
-  }
-
-  let dexModalInstance = null;
-
-  function getDexModalInstance() {
-    const el = document.getElementById('dexModal');
-    if (!el) return null;
-    // Réutilise l'instance existante si présente
-    dexModalInstance = bootstrap.Modal.getOrCreateInstance(el, {
-      backdrop: true,
-      focus: true,
-      keyboard: true
-    });
-    return dexModalInstance;
-  }
-
-
-  function isDexModalShown() {
-    const el = document.getElementById('dexModal');
-    return !!el && el.classList.contains('show');
-  }
-
-
-  // Utilities
-  const pad3 = n => String(n).padStart(3, '0');
-  const slugify = s => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-  const $ = (sel) => document.querySelector(sel);
-
-  // ===== Types helpers (handle array OR per-form object) =====
-  function debounce(fn, delay = 150) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), delay); } }
-  const jsStr = s => JSON.stringify(String(s ?? ''));
-
-  // NEW — charge 1 source avec cache
-  async function fetchSource(url) {
-    if (_jsonCache.has(url)) return _jsonCache.get(url);
-    const prom = fetch(url, { cache: "no-store" })
-      .then(r => { if (!r.ok) throw new Error(`${url}: HTTP ${r.status}`); return r.json(); })
-      .then(data => Array.isArray(data) ? data : (Array.isArray(data?.Pokedex) ? data.Pokedex : []))
-      .catch(e => { console.warn("Load error", url, e); return []; });
-    _jsonCache.set(url, prom);
-    return prom;
-  }
-
 
   function urlsForPreset(presetName, onlyLabels) {
     const dir = PRESET_DIRS[presetName];
@@ -225,64 +104,596 @@
     }));
   }
 
-  const _fetchCache = new Map();
-  async function fetchJsonCachedStrict(url) {
-    if (_fetchCache.has(url)) return _fetchCache.get(url);
-    const p = fetch(url, { cache: "no-store" }).then(r => {
-      if (!r.ok) throw new Error(`HTTP ${r.status} for ${url}`);
-      return r.json();
-    });
-    _fetchCache.set(url, p);
-    return p;
-  }
-
-  // Remplace ton loadPokedex existant par celui-ci si besoin
   async function loadPokedex() {
     const sources = urlsForPreset(selectedPreset, Array.from(selectedLabels || []));
     if (!sources.length) throw new Error(`No sources for preset ${selectedPreset}`);
 
-    // charge tout en parallèle; ignore les 404 pour les fichiers absents (ex. 9g en Core)
-    const results = await Promise.all(
-      sources.map(async s => {
-        try {
-          const data = await fetchJsonCachedStrict(s.url);
-          return Array.isArray(data) ? data : Object.values(data); // support liste ou dict {Species: obj}
-        } catch (e) {
-          console.warn(`[loadPokedex] skip ${s.url}: ${e.message}`);
-          return [];
-        }
-      })
-    );
+    const results = await Promise.all(sources.map(async ({ url }) => {
+      const data = await fetchJson(url, { strict: true });
+      if (Array.isArray(data)) return data;
+      // accept { key: obj } maps
+      return data && typeof data === "object" ? Object.values(data) : [];
+    }));
 
-    // fusion simple: concat + dédoublonnage par (Number, Species) si besoin
+    // merge with de-dup (Number::Species)
     const merged = [];
     const seen = new Set();
     for (const arr of results) {
       for (const row of arr) {
-        const num = row.Number ?? row.number ?? "";
-        const sp = row.Species ?? row.species ?? "";
-        const key = `${num}::${sp}`; // si tu préfères seulement Species, remplace la clé
-        if (!seen.has(key)) {
-          seen.add(key);
-          merged.push(row);
-        } else {
-          // si tu veux une fusion plus intelligente, c'est ici (merge deep)
-        }
+        const num = row?.Number ?? row?.number ?? "";
+        const sp = row?.Species ?? row?.species ?? "";
+        const key = `${num}::${sp}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        merged.push(row);
       }
     }
     return merged;
   }
 
+  async function loadIndex(url, nameField) {
+    if (_indexCache.has(url)) return _indexCache.get(url);
+    const p = fetchJson(url, { strict: false }).then(raw => {
+      const idx = new Map();
+      if (raw && typeof raw === "object" && !Array.isArray(raw)) {
+        // map { "Name": {...}, ... }
+        for (const [key, obj] of Object.entries(raw)) {
+          if (!obj || typeof obj !== "object") continue;
+          const k = key.trim().toLowerCase();
+          obj.__displayName = key;
+          idx.set(k, obj);
+        }
+        return idx;
+      }
+      const arr = Array.isArray(raw) ? raw : [];
+      for (const it of arr) {
+        const name = (it?.[nameField] || it?.Move || it?.Name || "").trim();
+        if (name) {
+          it.__displayName = name;
+          idx.set(name.toLowerCase(), it);
+        }
+      }
+      return idx;
+    });
+    _indexCache.set(url, p);
+    return p;
+  }
+
+  function getMovesUrlForPreset() {
+    return MOVES_FILE_BY_PRESET[selectedPreset] || MOVES_FILE_BY_PRESET.Core;
+  }
+  function getAbilitiesUrlForPreset() {
+    return ABILITIES_FILE_BY_PRESET[selectedPreset] || ABILITIES_FILE_BY_PRESET.Core;
+  }
+  function loadMoveIndex() { return loadIndex(getMovesUrlForPreset(), "Move"); }
+  function loadAbilityIndex() { return loadIndex(getAbilitiesUrlForPreset(), "Name"); }
+
+  // =========================
+  // Modal helpers
+  // =========================
+  let dexModalInstance = null;
+  function getDexModalInstance() {
+    const el = $("#dexModal");
+    if (!el) return null;
+    dexModalInstance = bootstrap.Modal.getOrCreateInstance(el, { backdrop: true, focus: true, keyboard: true });
+    return dexModalInstance;
+  }
+  function isDexModalShown() {
+    const el = $("#dexModal");
+    return !!el && el.classList.contains("show");
+  }
+
+  // =========================
+  // Types & Badges helpers
+  // =========================
+  function extractTypes(p) {
+    const t = p?.["Basic Information"]?.Type;
+    if (Array.isArray(t)) {
+      if (t.length && typeof t[0] === "string") return t;
+      if (t.length && typeof t[0] === "object") {
+        const vals = Object.values(t[0]).flatMap(v => Array.isArray(v) ? v : []);
+        return Array.from(new Set(vals));
+      }
+      return [];
+    }
+    if (t && typeof t === "object") {
+      const vals = Object.values(t).flatMap(v => Array.isArray(v) ? v : []);
+      return Array.from(new Set(vals));
+    }
+    return [];
+  }
+
+  function wrapTypes(t) {
+    if (!t) return "";
+    if (typeof t === "string") return t;
+    if (!Array.isArray(t)) t = [t];
+    return t.map(x => `<span class="type-pill card-type-${x}">${x}</span>`).join("");
+  }
+
+  function renderFormType(val) {
+    if (!val) return "";
+    if (typeof val === "string") return val;
+    if (Array.isArray(val)) return wrapTypes(val);
+    if (typeof val === "object") {
+      return Object.entries(val).map(([form, types]) =>
+        `<div class="mb-1"><span class="fw-semibold">${form}</span> : ${wrapTypes(types)}</div>`
+      ).join("");
+    }
+    return String(val ?? "");
+  }
+
+  function collectTypes(rows) {
+    const set = new Set();
+    rows.forEach(r => extractTypes(r).forEach(t => set.add(t)));
+    return Array.from(set).sort();
+  }
+
+  // =========================
+  // Rendering: grid
+  // =========================
+  function setupIcon(img, num, name, mode = "icon") {
+    const slug = slugify(name || "");
+    const base = mode === "full" ? "/ptu/img/pokemon/full" : "/ptu/img/pokemon/icons";
+    // Use the first pattern (others could be tried if you add more)
+    img.src = CFG.iconPatterns[0](base, num, slug);
+  }
+
+  function applyBadgeBackground(el, types) {
+    if (!types || types.length === 0) {
+      el.style.background = "#151922";
+      return;
+    }
+    if (types.length === 1) {
+      el.classList.add(`card-type-${types[0]}`);
+      el.style.background = `var(--type-color)`;
+      el.style.color = "#0f1115";
+      el.style.borderColor = "rgba(255,255,255,.15)";
+    } else {
+      el.classList.add(`card-type-${types[0]}`);
+      const c1 = getComputedStyle(el).getPropertyValue("--type-color")?.trim() || "#333";
+      el.classList.remove(`card-type-${types[0]}`);
+      el.classList.add(`card-type-${types[1]}`);
+      const c2 = getComputedStyle(el).getPropertyValue("--type-color")?.trim() || "#444";
+      el.classList.remove(`card-type-${types[1]}`);
+      el.style.background = `linear-gradient(90deg, ${c1} 50%, ${c2} 50%)`;
+      el.style.borderColor = "rgba(255,255,255,.15)";
+    }
+  }
+
+  function renderGrid(rows) {
+    const grid = $("#dex-grid");
+    grid.innerHTML = "";
+    const frag = document.createDocumentFragment();
+    rows.forEach(p => {
+      const name = p.Species || "Unknown";
+      const num = pad3(p.Number ?? "0");
+      const types = extractTypes(p);
+
+      const li = document.createElement("div");
+      li.className = "dex-badge";
+      li.dataset.types = types.join(",");
+
+      const iconWrap = document.createElement("div");
+      iconWrap.className = "icon dark-background";
+      const img = document.createElement("img");
+      setupIcon(img, p.Icon || p.Number, name, "icon");
+      iconWrap.appendChild(img);
+      li.appendChild(iconWrap);
+
+      const numBadge = document.createElement("div");
+      numBadge.className = "dex-num-badge";
+      numBadge.textContent = `#${num}`;
+      li.appendChild(numBadge);
+
+      const label = document.createElement("div");
+      label.className = "dex-label";
+      label.textContent = name;
+      li.appendChild(label);
+
+      li.addEventListener("click", () => openDetail(p));
+      frag.appendChild(li);
+    });
+    grid.appendChild(frag);
+
+    requestAnimationFrame(() => {
+      grid.querySelectorAll(".dex-badge").forEach(el => {
+        const types = el.dataset.types ? el.dataset.types.split(",") : [];
+        applyBadgeBackground(el, types);
+      });
+    });
+  }
+
+  // =========================
+  // Rendering: details modal
+  // =========================
+  function transformBasicInformation(v) {
+    if (!v || typeof v !== "object") return v;
+    if (v?.Type) {
+      const t = v.Type;
+      if (Array.isArray(t)) {
+        if (t.length && typeof t[0] === "string") {
+          v.Type = wrapTypes(t);
+        } else if (t.length && typeof t[0] === "object") {
+          v.Type = renderFormType(t[0]);
+        } else {
+          v.Type = "";
+        }
+      } else {
+        v.Type = renderFormType(t);
+      }
+    }
+    for (const [bk, bv] of Object.entries(v)) {
+      if (typeof bv === "string" && /ability/i.test(bk) && !/capabilit/i.test(bk) && bv.trim()) {
+        v[bk] = `<a href="#" class="js-ability-link" data-ability="${escapeHtml(bv)}">${escapeHtml(bv)}</a>`;
+      }
+    }
+    return v;
+  }
+
+  function renderBaseStats(stats, depth = 0) {
+    const order = ["HP", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"];
+    const h = Math.min(4 + depth, 6);
+
+    // Single form
+    if (!("Small" in (stats || {}))) {
+      const total = order.reduce((s, k) => s + (stats?.[k] ?? 0), 0);
+      const rows = order.map(k => `
+        <tr><td class="text-start">${k}</td><td class="text-end">${stats?.[k] ?? 0}</td></tr>
+      `).join("");
+      return `
+        <div class="mt-3">
+          <h${h} class="text-muted">Base Stats</h${h}>
+          <table class="table table-sm align-middle"><tbody>
+            ${rows}
+            <tr class="fw-semibold"><td class="text-start">Total</td><td class="text-end">${total}</td></tr>
+          </tbody></table>
+        </div>`;
+    }
+
+    // Multi-size
+    const forms = { "Small": "S", "Average": "M", "Large": "L", "Super Size": "XL" };
+    const totals = {};
+    Object.keys(forms).forEach(f => totals[f] = order.reduce((s, k) => s + (stats[f]?.[k] ?? 0), 0));
+
+    const rows = order.map(k => `
+      <tr><td class="text-start">${k}</td>${Object.keys(forms).map(f => `<td class="text-center">${stats[f]?.[k] ?? 0}</td>`).join("")}</tr>
+    `).join("");
+
+    return `
+      <div class="mt-3">
+        <h${h} class="text-muted">Base Stats</h${h}>
+        <table class="table table-sm align-middle">
+          <thead><tr><th class="text-start"></th>${Object.values(forms).map(lbl => `<th class="text-center">${lbl}</th>`).join("")}</tr></thead>
+          <tbody>
+            ${rows}
+            <tr class="fw-semibold"><td class="text-start">Total</td>${Object.keys(forms).map(f => `<td class="text-center">${totals[f]}</td>`).join("")}</tr>
+          </tbody>
+        </table>
+      </div>`;
+  }
+
+  function renderSkills(skills, depth = 0) {
+    const h = Math.min(4 + depth, 6);
+    const rows = Object.entries(skills || {}).map(([k, v]) => `
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span class="skill-key">${k}</span><span class="skill-val">${v}</span>
+      </li>`).join("");
+    return rows ? `
+      <div class="mt-3">
+        <h${h} class="text-muted">Skills</h${h}>
+        <div class="card accent skills-card"><ul class="list-group list-group-flush skills-list">${rows}</ul></div>
+      </div>` : "";
+  }
+
+  function renderEvolutionList(evos, depth = 0) {
+    if (!Array.isArray(evos) || !evos.length) return "";
+    const h = Math.min(4 + depth, 6);
+    const items = evos.map(e => {
+      const stade = e?.Stade ?? "";
+      const species = e?.Species ?? "";
+      const level = (e?.["Minimum Level"] ?? "").trim();
+      const cond = (e?.Condition ?? "").trim();
+      const label = `${stade} - <a href="#" onclick='openModalBySpecies(${JSON.stringify(String(species))}); return false;'>${escapeHtml(species)}</a>` +
+        `${level ? ` [${escapeHtml(level)}]` : ""}` + `${cond ? ` (${escapeHtml(cond)})` : ""}`;
+      return `<li class="list-group-item d-flex align-items-center"><span class="flex-grow-1">${label}</span></li>`;
+    }).join("");
+    return `
+      <div class="mt-3">
+        <h${h} class="text-muted">Evolution</h${h}>
+        <div class="card accent skills-card"><ul class="list-group list-group-flush skills-list">${items}</ul></div>
+      </div>`;
+  }
+
+  function renderBattleOnlyForms(forms, base) {
+    if (!forms || typeof forms !== "object") return "";
+    const pNum = base?.Number ?? "", pName = base?.Species ?? "Unknown";
+    return Object.entries(forms).map(([label, f]) => {
+      const t = document.createElement("img");
+      setupIcon(t, f?.Icon ?? pNum, `${pName} — ${label}`, "full");
+      const src = t.src;
+      const types = wrapTypes(f?.Type || []);
+      const line = k => f?.[k] ? `<div class="small text-muted">${k}: <span class="text-body">${Array.isArray(f[k]) ? f[k].join(", ") : (typeof f[k] === "object" ? Object.keys(f[k]).join(", ") : String(f[k]))}</span></div>` : "";
+      const stats = f?.Stats ? Object.entries(f.Stats).map(([k, v]) => `<div class="d-flex justify-content-between small border-bottom"><span class="text-muted">${k}</span><span class="fw-semibold">${v}</span></div>`).join("") : "";
+      return `
+        <div class="card accent w-100 mb-2"><div class="card-body">
+          <div class="d-flex align-items-start gap-3">
+            <div class="rounded dark-background p-1"><img class="dex-title-icon" src="${src}"></div>
+            <div class="flex-grow-1">
+              <div class="d-flex flex-wrap align-items-baseline gap-2">
+                <span class="fw-semibold">${label}</span><span class="ms-1">${types}</span>
+              </div>
+              ${line("Ability")}${line("Adv Ability 1")}${line("Adv Ability 2")}${line("Capabilities")}
+              ${stats ? `<div class="mt-2">${stats}</div>` : ""}
+            </div>
+          </div>
+        </div></div>`;
+    }).join("");
+  }
+
+  function renderTmTutorMovesComma(arr, title = "TM/Tutor Moves") {
+    if (!Array.isArray(arr) || arr.length === 0) return "";
+    const parts = arr.map(it => {
+      if (typeof it === "string") return `<span class="small text-muted">${escapeHtml(it)}</span>`;
+      const raw = it?.Move ?? "";
+      const move = raw ? `<a href="#" class="js-move-link" data-move="${escapeHtml(raw)}">${escapeHtml(raw)}</a>` : "";
+      const tagsSup = Array.isArray(it?.Tags) && it.Tags.length ? `<sup class="smaller text-uppercase text-muted">${escapeHtml(it.Tags.join(" "))}</sup>` : "";
+      let method = it?.Method || "";
+      if (method === "Machine") method = "TM";
+      const methodSup = method && method !== "Level-Up" ? `<sup class="smaller text-uppercase text-muted">${escapeHtml(method)}</sup>` : "";
+      return `<span>${move}${tagsSup}${CFG.showMethodLabel ? methodSup : ""}</span>`;
+    });
+    return `<div class="mt-3"><h6 class="text-muted">${title}</h6><p class="mb-0">${parts.join(", ")}</p></div>`;
+  }
+
+  function renderLevelUpMoves(moves) {
+    if (!Array.isArray(moves) || !moves.length) return "";
+    return `
+      <ul class="list-unstyled mb-0">
+        ${moves.map(m => {
+          const tagsSup = Array.isArray(m.Tags) && m.Tags.length ? `<sup class="smaller text-uppercase text-muted ms-1">${escapeHtml(m.Tags.join(" "))}</sup>` : "";
+          const nameHtml = `<a href="#" class="js-move-link" data-move="${escapeHtml(m.Move)}">${escapeHtml(m.Move)}</a>`;
+          return `<li class="d-flex align-items-center mb-1">
+            <span class="text-muted" style="width:50px;">Lv.${m.Level}</span>
+            <span class="fw-semibold flex-grow-1">${nameHtml}${tagsSup}</span>
+            ${wrapTypes([m.Type])}
+          </li>`;
+        }).join("")}
+      </ul>`;
+  }
+
+  function formatDamageBase(mv) {
+    // Normalize the "Damage Base 4: 1d8+6 / 11" line
+    const raw = mv?.["Damage Base"] || mv?.DB || "";
+    if (!raw) return "";
+    const s = String(raw);
+    // if already "Damage Base X: ...", keep label part normalized
+    const m = s.match(/(?:Damage\s*Base\s*)?(\d+)\s*:\s*(.+)$/i);
+    if (m) {
+      const rank = m[1];
+      const detail = m[2];
+      return `<div><span class="text-muted">Damage Base ${escapeHtml(rank)}:</span> ${escapeHtml(detail)}</div>`;
+    }
+    // fallback (raw may contain "4: 1d8+6 / 11" or just "1d8+6 / 11")
+    const m2 = s.match(/(\d+)\s*:\s*(.+)/);
+    if (m2) {
+      return `<div><span class="text-muted">Damage Base ${escapeHtml(m2[1])}:</span> ${escapeHtml(m2[2])}</div>`;
+    }
+    return `<div><span class="text-muted">Damage Base:</span> ${escapeHtml(s)}</div>`;
+  }
+
+  function renderMoveDetails(mv) {
+    if (!mv) return '<p class="text-muted mb-0">Cannot find move.</p>';
+    const row = (k, v) => v ? `<div><span class="text-muted">${k}:</span> ${escapeHtml(String(v))}</div>` : "";
+    const tags = Array.isArray(mv.Tags) && mv.Tags.length ? mv.Tags.join(", ") : (mv.Keywords || mv.Keyword || "");
+    return `
+      ${row("Frequency", mv.Frequency)}
+      ${row("AC", mv.AC)}
+      ${formatDamageBase(mv)}
+      ${row("Class", mv.Class)}
+      ${row("Range", mv.Range)}
+      ${row("Keywords", tags)}
+      ${row("Target", mv.Target)}
+      ${row("Trigger", mv.Trigger)}
+      ${mv.Effect ? `<hr class="my-2"><div style="white-space:pre-wrap">${escapeHtml(mv.Effect)}</div>` : ""}`;
+  }
+
+  function renderAbilityDetails(ab) {
+    if (!ab) return '<p class="text-muted mb-0">Ability introuvable.</p>';
+    const row = (k, v) => v ? `<div><span class="text-muted">${k}:</span> ${escapeHtml(String(v))}</div>` : "";
+    return `
+      <div class="mb-2"><h4 class="mb-1">${escapeHtml(ab.Name || "Ability")}</h4></div>
+      ${row("Frequency", ab.Frequency)}
+      ${row("Target", ab.Target)}
+      ${row("Trigger", ab.Trigger)}
+      ${ab.Effect ? `<hr class="my-2"><div style="white-space:pre-wrap">${escapeHtml(ab.Effect)}</div>` : ""}
+      ${ab.Bonus ? `<hr class="my-2"><div style="white-space:pre-wrap"><strong>Bonus.</strong> ${escapeHtml(ab.Bonus)}</div>` : ""}
+      ${ab.Special ? `<div style="white-space:pre-wrap"><strong>Special.</strong> ${escapeHtml(ab.Special)}</div>` : ""}`;
+  }
+
+  function renderObject(obj, depth = 0) {
+    const leftSections = new Set(["Base Stats", "Basic Information", "Evolution", "Other Information", "Battle-Only Forms"]);
+    if (obj == null) return "";
+
+    if (Array.isArray(obj)) {
+      if (!obj.length) return "";
+      const items = obj.map(v => {
+        if (typeof v === "object") {
+          const inner = renderObject(v, depth + 1);
+          return inner.trim() ? `<li>${inner}</li>` : "";
+        }
+        return `<li>${escapeHtml(String(v))}</li>`;
+      }).filter(Boolean);
+      return items.length ? `<ul>${items.join("")}</ul>` : "";
+    }
+
+    if (typeof obj === "object") {
+      if (depth === 0) {
+        let col1 = "", col2 = "";
+        for (const [k, v0] of Object.entries(obj)) {
+          if (["Species", "Number", "Icon"].includes(k)) continue;
+
+          let v = v0;
+          if (k === "Basic Information") v = transformBasicInformation({ ...(v || {}) });
+
+          // Base Stats
+          if (k === "Base Stats" && v && typeof v === "object") {
+            const block = renderBaseStats(v, depth);
+            (leftSections.has(k) ? (col1 += block) : (col2 += block));
+            continue;
+          }
+          // Evolution
+          if (k === "Evolution" && Array.isArray(v)) {
+            const block = renderEvolutionList(v, depth);
+            (leftSections.has(k) ? (col1 += block) : (col2 += block));
+            continue;
+          }
+          // Capabilities
+          if (k === "Capabilities" && v) {
+            const block = renderCapabilities(v, depth);
+            if (block.trim()) (leftSections.has(k) ? (col1 += block) : (col2 += block));
+            continue;
+          }
+          // Skills
+          if (k === "Skills" && v && typeof v === "object") {
+            const block = renderSkills(v, depth);
+            (leftSections.has(k) ? (col1 += block) : (col2 += block));
+            continue;
+          }
+          // Moves
+          if (k === "Moves" && v) {
+            let blocks = "";
+            if (v["Level Up Move List"]) {
+              blocks += `<div class="mt-3"><h5 class="text-muted">Level-Up Moves</h5>${renderLevelUpMoves(v["Level Up Move List"])}</div>`;
+            }
+            blocks += renderTmTutorMovesComma(v["TM/HM Move List"], "TM/HM Moves");
+            blocks += renderTmTutorMovesComma(v["Egg Move List"], "Egg Moves");
+            blocks += renderTmTutorMovesComma(v["Tutor Move List"], "Tutor Moves");
+            blocks += renderTmTutorMovesComma(v["TM/Tutor Moves List"]);
+            if (blocks.trim()) {
+              const h = Math.min(4 + depth, 6);
+              const card = `<div class="mt-3"><h${h} class="text-muted">Moves</h${h}><div class="card accent"><div class="card-body">${blocks}</div></div></div>`;
+              (leftSections.has(k) ? (col1 += card) : (col2 += card));
+            }
+            continue;
+          }
+          // Battle-Only Forms
+          if (k === "Battle-Only Forms" && v && typeof v === "object") {
+            const html = renderBattleOnlyForms(v, obj);
+            if (html.trim()) {
+              const h = Math.min(4 + depth, 6);
+              const card = `<div class="mt-3"><h${h} class="text-muted">Battle-Only Forms</h${h}><div class="card accent"><div class="card-body">${html}</div></div></div>`;
+              (leftSections.has(k) ? (col1 += card) : (col2 += card));
+            }
+            continue;
+          }
+
+          // generic object/scalar
+          let block = "";
+          if (typeof v === "object" && v !== null) {
+            const inner = renderObject(v, depth + 1);
+            if (!inner.trim()) continue;
+            const h = Math.min(4 + depth, 6);
+            block = `<div class="mt-3"><h${h} class="text-muted">${k}</h${h}><div class="card accent"><div class="card-body">${inner}</div></div></div>`;
+          } else {
+            block = `<div class="row border-bottom py-1"><div class="col-4 fw-semibold">${k}</div><div class="col-8">${v}</div></div>`;
+          }
+          (leftSections.has(k) ? (col1 += block) : (col2 += block));
+        }
+        const hasAny = (col1.trim() || col2.trim());
+        return hasAny ? `<div class="row"><div class="col-md-6">${col1}</div><div class="col-md-6">${col2}</div></div>` : "";
+      }
+
+      // nested
+      let html = "";
+      for (const [k, v] of Object.entries(obj)) {
+        if (Array.isArray(v) && v.length === 0) continue;
+        if (v && typeof v === "object" && !Array.isArray(v) && Object.keys(v).length === 0) continue;
+        if (typeof v === "object" && v !== null) {
+          const inner = renderObject(v, depth + 1);
+          if (!inner.trim()) continue;
+          const h = Math.min(4 + depth, 6);
+          html += `<div class="mt-3"><h${h} class="text-muted">${k}</h${h}><div class="card accent"><div class="card-body">${inner}</div></div></div>`;
+        } else {
+          html += `<div class="row border-bottom py-1"><div class="col-4 fw-semibold">${k}</div><div class="col-8">${v}</div></div>`;
+        }
+      }
+      return html;
+    }
+    return escapeHtml(String(obj));
+  }
+
+  // Capabilities parsing + render (unchanged logic, cleaned)
+  function parseCapabilities(raw) {
+    const rated = [], simple = [];
+    const pushPair = (k, v) => {
+      const key = String(k).trim();
+      if (!key) return;
+      let value = v;
+      if (typeof value === "string") {
+        const s = value.trim();
+        if (s.includes("/")) value = s;
+        else {
+          const n = Number(s);
+          value = Number.isNaN(n) ? s : n;
+        }
+      }
+      if (typeof value === "number" || (typeof value === "string" && value)) rated.push({ key, value });
+      else simple.push(key);
+    };
+    const fromString = (s) => {
+      const str = String(s).trim();
+      if (!str) return;
+      const m = str.match(/^(.+?)\s+(-?\d+(?:\.\d+)?(?:\/\d+(?:\.\d+)?)?)\s*$/);
+      if (m) pushPair(m[1], m[2]);
+      else simple.push(str);
+    };
+    if (Array.isArray(raw)) {
+      raw.forEach(item => {
+        if (item == null) return;
+        if (typeof item === "string") fromString(item);
+        else if (typeof item === "object") Object.entries(item).forEach(([k, v]) => pushPair(k, v));
+        else fromString(item);
+      });
+    } else if (typeof raw === "object" && raw) {
+      Object.entries(raw).forEach(([k, v]) => {
+        if (Array.isArray(v)) v.forEach(x => (typeof x === "string" ? fromString(`${k} ${x}`) : pushPair(k, x)));
+        else if (typeof v === "string") fromString(`${k} ${v}`);
+        else pushPair(k, v);
+      });
+    } else if (raw != null) fromString(raw);
+    return { rated, simple };
+  }
+
+  function renderCapabilities(raw, depth = 0) {
+    const parsed = parseCapabilities(raw);
+    if (!parsed.rated.length && !parsed.simple.length) return "";
+    const h = Math.min(4 + depth, 6);
+    const rated = parsed.rated.map(({ key, value }) => `
+      <div class="cap-item"><div class="cap-head"><span class="cap-key">${key}</span></div><div class="cap-val">${value}</div></div>
+    `).join("");
+    const simple = parsed.simple.map(k => `<span class="cap-chip"><span>${k}</span></span>`).join("");
+    return `
+      <div class="mt-3">
+        <h${h} class="text-muted">Capabilities</h${h}>
+        <div class="card accent"><div class="card-body">
+          ${parsed.rated.length ? `<div class="cap-grid">${rated}</div>` : ""}
+          ${parsed.simple.length ? `<div class="cap-chips">${simple}</div>` : ""}
+        </div></div>
+      </div>`;
+  }
+
+  // =========================
+  // Sidebar
+  // =========================
   function buildReadmeModalIfMissing() {
-    if (document.getElementById("readmeModal")) return;
+    if ($("#readmeModal")) return;
     const el = document.createElement("div");
     el.className = "modal fade";
     el.id = "readmeModal";
     el.tabIndex = -1;
     el.setAttribute("aria-hidden", "true");
     el.innerHTML = `
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Datasets — Readme</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -292,25 +703,20 @@
           <p><strong>Community</strong> — Based on Core dataset, some abilities pools are updated according to the Gen 9 Dex.</p>
           <p><strong>Homebrew</strong>  — Based on Community dataset, updated all mons stats and movepools from Gen 1 to 8.5.</p>
           <hr/>
-
           <h5>Q&A</h5>
           <h6>Homebrew: what are "Deleted" moves?</h6>
           <p>Those are moves that have been removed in Gen 8. When updating, those have been reinjected from the Core Dex. Feel free to keep them or not.</p>
-
           <hr/>
           <h5>Changelog</h5>
           <h6>Core</h6>
           <ul>
-            <li>Following Pokémons have now a minimum evolution level of 20: Shellder, Exeggcute, Eevee.<br>
-            Other Gen-1 Pokémons with Stone Evolution have this condition. Probable oversight.</li>
+            <li>Following Pokémons have now a minimum evolution level of 20: Shellder, Exeggcute, Eevee.<br>Other Gen-1 Pokémons with Stone Evolution have this condition. Probable oversight.</li>
             <li>Rotom have now one entry per form.</li>
             <li>According to the Gen 8 References document, Koffing and Weezing have their new Abilities set.</li>
             <li>Additional Note: The dex formatting follows the Gen 9 Community Homebrew Dex guidelines, but (hopefully) no data has been scrapped.</li>
           </ul>
-
           <h6>Community</h6>
           <p>According to the document, some Pokémon have their Abilities set updated: Gastly, Haunter, Gengar, Lapras, Spinarak, Ariados, Phanpy, Donphan, Spheal, Shiftry, Piplup, Prinplup, Gallade, Gible, Gabite, Whirlipede, Pawniard, Bisharp, Cobalion, Terrakion, Virizion, Keldeo, Skiddo, Gogoat, Honedge, Doublade, Aegislash, Kartana, Samurott Hisuian, Kleavor</p>
-
           <h6>Homebrew</h6>
           <p>
             All Pokémons from Gen 1 to 8.5 has been updated using the newest game generation available and following PTU standard, using Gen 9 Community Homebrew guidelines. Here is the process:<br>
@@ -335,250 +741,19 @@
               </ul>
           </p>
         </div>
-        <div class="modal-footer">
-          <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
-        </div>
-      </div>
-    </div>`;
+        <div class="modal-footer"><button class="btn btn-primary" data-bs-dismiss="modal">OK</button></div>
+      </div></div>`;
     document.body.appendChild(el);
   }
 
-  function buildSourceMenu(onChange) {
-    const sb = document.getElementById('sidebar');
-    if (!sb) return;
-    buildReadmeModalIfMissing();
-
-    const wrap = document.createElement('div');
-    wrap.className = 'mb-3 d-flex flex-column gap-2';
-    wrap.setAttribute('data-role', 'source-menu');
-    wrap.innerHTML = `
-    <div class="d-flex align-items-center justify-content-between">
-      <label class="form-label mb-0">Dataset</label>
-      <button type="button"
-              class="btn btn-primary"
-              style="font-size:.75rem; padding:.1rem .25rem; min-width:unset; width:auto;"
-              id="btn-readme">Readme</button>
-    </div>
-
-    <div class="d-flex flex-wrap gap-1 w-100 mb-2" role="group" aria-label="Dataset presets">
-      <input type="radio" class="btn-check" name="preset" id="preset-core" ${selectedPreset === 'Core' ? 'checked' : ''}>
-      <label class="btn btn-outline-primary d-flex justify-content-center align-items-center flex-grow-1"
-            style="flex-basis:0; min-width:90px;"
-            for="preset-core">Core</label>
-
-      <input type="radio" class="btn-check" name="preset" id="preset-community" ${selectedPreset === 'Community' ? 'checked' : ''}>
-      <label class="btn btn-outline-primary d-flex justify-content-center align-items-center flex-grow-1"
-            style="flex-basis:0; min-width:90px;"
-            for="preset-community">Community</label>
-
-      <input type="radio" class="btn-check" name="preset" id="preset-homebrew" ${selectedPreset === 'Homebrew' ? 'checked' : ''}>
-      <label class="btn btn-outline-primary d-flex justify-content-center align-items-center flex-grow-1"
-            style="flex-basis:0; min-width:90px;"
-            for="preset-homebrew">Homebrew</label>
-    </div>
-
-    <div id="preset-files-box" class="border rounded p-2 small">
-      <div class="fw-semibold mb-1">Included Pokédex</div>
-      <div id="preset-files-list"></div>
-    </div>
-  `;
-
-    const existing = sb.querySelector('[data-role="source-menu"]');
-    if (existing) existing.remove();
-    sb.prepend(wrap);
-    // Render file checkboxes for current preset
-    function renderPresetFiles() {
-      const box = wrap.querySelector('#preset-files-list');
-      const lbls = PRESETS[selectedPreset] || [];
-      const html = lbls.map(lbl => {
-        const fn = FILES_BY_LABEL[lbl];
-        const id = `pdx-file-${lbl.replace(/[^a-z0-9]+/gi, '-')}`;
-        const checked = (selectedLabels.size === 0 || selectedLabels.has(lbl)) ? 'checked' : '';
-        return `<div class="form-check">
-          <input class="form-check-input" type="checkbox" id="${id}" data-label="${lbl}" ${checked}>
-          <label class="form-check-label" for="${id}">${lbl}</label>
-        </div>`;
-        // return `<div class="form-check">
-        //   <input class="form-check-input" type="checkbox" id="${id}" data-label="${lbl}" ${checked}>
-        //   <label class="form-check-label" for="${id}">${lbl} <span class="text-muted">(${fn||'?'})</span></label>
-        // </div>`;
-      }).join('');
-      box.innerHTML = html;
-      box.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-        cb.addEventListener('change', () => {
-          selectedLabels.clear();
-          box.querySelectorAll('input[type="checkbox"]:checked').forEach(c => selectedLabels.add(c.getAttribute('data-label')));
-          reload();
-        });
-      });
-    }
-    renderPresetFiles();
-
-
-    wrap.querySelector('#btn-readme')?.addEventListener('click', () => {
-      bootstrap.Modal.getOrCreateInstance(document.getElementById('readmeModal')).show();
-    });
-
-    const reload = async () => {
-      try {
-        const data = await loadPokedex();
-        window.__POKEDEX = data;
-        // reconstruit les filtres/affichage selon ta logique existante :
-        buildTypeSidebar(data, () => renderGrid(filterRows(data)));
-        renderGrid(filterRows(data));
-      } catch (e) {
-        console.error(e);
-        document.getElementById('dex-grid').innerHTML =
-          `<div class="alert alert-warning">Aucune donnée pour le preset « ${selectedPreset} ».</div>`;
-      }
-      onChange?.();
-    };
-
-    wrap.querySelector('#preset-core')?.addEventListener('change', (ev) => {
-      if (!ev.target.checked) return;
-      selectedPreset = 'Core';
-      selectedLabels = new Set(PRESETS[selectedPreset] || []);
-      renderPresetFiles();
-      reload();
-    });
-    wrap.querySelector('#preset-community')?.addEventListener('change', (ev) => {
-      if (!ev.target.checked) return;
-      selectedPreset = 'Community';
-      selectedLabels = new Set(PRESETS[selectedPreset] || []);
-      renderPresetFiles();
-      reload();
-    });
-    wrap.querySelector('#preset-homebrew')?.addEventListener('change', (ev) => {
-      if (!ev.target.checked) return;
-      selectedPreset = 'Homebrew';
-      selectedLabels = new Set(PRESETS[selectedPreset] || []);
-      renderPresetFiles();
-      reload();
-    });
-  }
-
-
-  // Cherche un Pokémon par son nom complet et ouvre la modale
-  async function openModalBySpecies(speciesName) {
-    // Charger le Pokédex si ce n'est pas déjà fait
-    const data = await loadPokedex();
-
-    // Trouver l'objet correspondant
-    const found = data.find(p =>
-      (p.Species || '').toLowerCase() === speciesName.toLowerCase()
-    );
-
-    if (found) {
-      openDetail(found);
-    } else {
-      alert(`Aucun Pokémon trouvé avec le nom "${speciesName}"`);
-    }
-  }
-
-
-
-  // Derive flat list of distinct types present + robust form handling
-  function extractTypes(p) {
-    const t = p?.['Basic Information']?.Type;
-    if (Array.isArray(t)) {
-      // cas 1: ["Electric", "Fire"]
-      if (t.length && typeof t[0] === 'string') return t;
-      // cas 2: [ { "Heat Rotom": ["Electric","Fire"], ... } ]
-      if (t.length && typeof t[0] === 'object') {
-        const vals = Object.values(t[0]).flatMap(v => Array.isArray(v) ? v : []);
-        return Array.from(new Set(vals));
-      }
-      return [];
-    }
-    if (t && typeof t === 'object') {
-      const vals = Object.values(t).flatMap(v => Array.isArray(v) ? v : []);
-      return Array.from(new Set(vals));
-    }
-    return [];
-  }
-
-
-  function wrapTypes(t) {
-    if (!t) return '';
-    if (typeof t === 'string') return t;    // déjà formaté → renvoyer tel quel
-    if (!Array.isArray(t)) t = [t];         // sécurise si jamais
-    return t.map(x => `<span class="type-pill card-type-${x}">${x}</span>`).join('');
-  }
-
-  function renderFormType(val) {
-    if (!val) return '';
-    if (typeof val === 'string') return val;   // déjà formaté
-    if (Array.isArray(val)) return wrapTypes(val);
-    if (typeof val === 'object') {
-      return Object.entries(val).map(([form, types]) =>
-        `<div class="mb-1"><span class="fw-semibold">${form}</span> : ${wrapTypes(types)}</div>`
-      ).join('');
-    }
-    return String(val ?? '');
-  }
-
-  function renderMoveDetails(mv) {
-    if (!mv) return '<p class="text-muted mb-0">Cannot find move.</p>';
-    // Champs usuels PTU, on affiche ce qu’on trouve
-    const row = (k, v) => v ? `<div><span class="text-muted">${k}:</span> ${escapeHtml(String(v))}</div>` : '';
-    // Tags / Keywords
-    const tags = Array.isArray(mv.Tags) && mv.Tags.length ? mv.Tags.join(', ') :
-      (mv.Keywords || mv.Keyword || '');
-    const type = mv.Type ? wrapTypes([mv.Type]) : '';
-
-    return `
-    ${row('Frequency', mv.Frequency)}
-    ${row('AC', mv.AC)}
-    ${mv['Damage Base']
-        ? `<div><span class="text-muted">${escapeHtml(mv['Damage Base'].split(':')[0])}:</span> ${escapeHtml(mv['Damage Base'].split(':')[1])}</div>`
-        : (mv.DB ? `<div><span class="text-muted">Damage Base</span> ${escapeHtml(mv.DB)}</div>` : '')
-      }
-    ${row('Class', mv.Class)}
-    ${row('Range', mv.Range)}
-    ${row('Keywords', tags)}
-    ${row('Target', mv.Target)}
-    ${row('Trigger', mv.Trigger)}
-    ${mv.Effect ? `<hr class="my-2"><div style="white-space:pre-wrap">${escapeHtml(mv.Effect)}</div>` : ''}
-  `;
-  }
-
-  function renderAbilityDetails(ab) {
-    if (!ab) return '<p class="text-muted mb-0">Ability introuvable.</p>';
-    const row = (k, v) => v ? `<div><span class="text-muted">${k}:</span> ${escapeHtml(String(v))}</div>` : '';
-
-    return `
-    <div class="mb-2">
-      <h4 class="mb-1">${escapeHtml(ab.Name || 'Ability')}</h4>
-    </div>
-    ${row('Frequency', ab.Frequency)}
-    ${row('Target', ab.Target)}
-    ${row('Trigger', ab.Trigger)}
-    ${ab.Effect ? `<hr class="my-2"><div style="white-space:pre-wrap">${escapeHtml(ab.Effect)}</div>` : ''}
-    ${ab.Bonus ? `<hr class="my-2"><div style="white-space:pre-wrap"><strong>Bonus.</strong> ${escapeHtml(ab.Bonus)}</div>` : ''}
-    ${ab.Special ? `<div style="white-space:pre-wrap"><strong>Special.</strong> ${escapeHtml(ab.Special)}</div>` : ''}
-  `;
-  }
-
-
-  function collectTypes(rows) {
-    const set = new Set();
-    rows.forEach(r => extractTypes(r).forEach(t => set.add(t)));
-    return Array.from(set).sort();
-  }
-
-  // Sidebar builder (mirrors your moves sidebar UX)
-  // Seule petite adaptation: buildTypeSidebar ne doit plus effacer tout le #sidebar
-  // mais compléter sous le bloc \"Sources\". On remplace son début :
   function buildTypeSidebar(all, onChange) {
-    const sidebar = document.getElementById('sidebar');
+    const sidebar = $("#sidebar");
     if (!sidebar) return;
+    const old = sidebar.querySelector('[data-role="type-filters"]');
+    if (old) old.remove();
 
-    // NEW — supprime juste l'ancien bloc types s'il existe
-    const oldTypes = sidebar.querySelector('[data-role="type-filters"]');
-    if (oldTypes) oldTypes.remove();
-
-    const typesBox = document.createElement('div');
-    typesBox.setAttribute('data-role', 'type-filters');
+    const typesBox = document.createElement("div");
+    typesBox.setAttribute("data-role", "type-filters");
     const types = collectTypes(all);
     typesBox.innerHTML = `
       <label class="form-label mt-2">Types :</label>
@@ -589,32 +764,26 @@
       <div id="type-filters" class="list-group">
         ${types.map(type => `
           <label class="list-group-item card-type-${type}">
-            <input class="form-check-input me-1" type="checkbox" value="${type}">
-            ${type}
-          </label>
-        `).join('')}
+            <input class="form-check-input me-1" type="checkbox" value="${type}">${type}
+          </label>`).join("")}
       </div>`;
 
-    // NEW — insère sous le menu des sources
     const srcMenu = sidebar.querySelector('[data-role="source-menu"]');
-    if (srcMenu) srcMenu.insertAdjacentElement('afterend', typesBox);
+    if (srcMenu) srcMenu.insertAdjacentElement("afterend", typesBox);
     else sidebar.prepend(typesBox);
 
-    // (le reste de la fonction inchangé)
-    typesBox.querySelectorAll("#type-filters input[type='checkbox']").forEach(input => {
-      input.addEventListener('change', onChange);
-    });
+    typesBox.querySelectorAll("#type-filters input[type='checkbox']").forEach(input => input.addEventListener("change", onChange));
 
-    const sb = document.getElementById('sidebar-search');
-    if (sb) sb.addEventListener('input', debounce(() => {
+    const sb = $("#sidebar-search");
+    if (sb) sb.addEventListener("input", debounce(() => {
       const q = sb.value.toLowerCase();
-      typesBox.querySelectorAll('#type-filters label').forEach(label => {
-        label.style.display = label.textContent.toLowerCase().includes(q) ? '' : 'none';
+      typesBox.querySelectorAll("#type-filters label").forEach(label => {
+        label.style.display = label.textContent.toLowerCase().includes(q) ? "" : "none";
       });
     }, 150));
 
-    const toggle = document.getElementById('toggle-all-types');
-    if (toggle) toggle.addEventListener('click', () => {
+    const toggle = $("#toggle-all-types");
+    if (toggle) toggle.addEventListener("click", () => {
       const boxes = typesBox.querySelectorAll("#type-filters input[type='checkbox']");
       const allChecked = Array.from(boxes).every(cb => cb.checked);
       boxes.forEach(cb => cb.checked = !allChecked);
@@ -623,749 +792,15 @@
   }
 
   function activeTypes() {
-    return Array.from(document.querySelectorAll('#type-filters input:checked')).map(el => el.value);
+    return Array.from(document.querySelectorAll("#type-filters input:checked")).map(el => el.value);
   }
 
-  // Build the grid of small badges
-  function renderGrid(rows) {
-    const grid = document.getElementById('dex-grid');
-    grid.innerHTML = '';
-    const frag = document.createDocumentFragment();
-
-    rows.forEach(p => {
-      const name = p.Species || 'Unknown';
-      const num = pad3(p.Number ?? '0');
-      const types = extractTypes(p);
-
-      const li = document.createElement('div');
-      li.className = 'dex-badge';
-      li.dataset.types = types.join(','); // ← on garde les types pour plus tard
-
-      // icône
-      const iconWrap = document.createElement('div');
-      iconWrap.className = 'icon dark-background';
-      const img = document.createElement('img');
-      setupIcon(img, p.Icon || p.Number, name, "icon");
-      iconWrap.appendChild(img);
-      li.appendChild(iconWrap);
-
-      const numBadge = document.createElement('div');
-      numBadge.className = 'dex-num-badge';
-      numBadge.textContent = `#${num}`;
-      li.appendChild(numBadge);
-
-      const label = document.createElement('div');
-      label.className = 'dex-label';
-      label.textContent = name;
-      li.appendChild(label);
-
-      li.addEventListener('click', () => openDetail(p));
-      frag.appendChild(li);
-    });
-
-    grid.appendChild(frag);
-
-    // Laisse le browser attacher/calculer, puis applique les styles
-    requestAnimationFrame(() => {
-      grid.querySelectorAll('.dex-badge').forEach(el => {
-        const types = el.dataset.types ? el.dataset.types.split(',') : [];
-        applyBadgeBackground(el, types);
-      });
-    });
-  }
-
-  // Background mono or bi-color based on types
-  function applyBadgeBackground(el, types) {
-    if (!types || types.length === 0) {
-      el.style.background = '#151922';
-      return;
-    }
-
-    if (types.length === 1) {
-      el.classList.add(`card-type-${types[0]}`);
-      el.style.background = `var(--type-color)`;
-      el.style.color = '#0f1115';
-      el.style.borderColor = 'rgba(255,255,255,.15)';
-    } else {
-      // Couleur 1
-      el.classList.add(`card-type-${types[0]}`);
-      const c1 = getComputedStyle(el).getPropertyValue('--type-color')?.trim() || '#333';
-      el.classList.remove(`card-type-${types[0]}`);
-
-      // Couleur 2
-      el.classList.add(`card-type-${types[1]}`);
-      const c2 = getComputedStyle(el).getPropertyValue('--type-color')?.trim() || '#444';
-      el.classList.remove(`card-type-${types[1]}`);
-
-      // Deux moitiés nettes, pas de mélange
-      el.style.background = `linear-gradient(90deg, ${c1} 50%, ${c2} 50%)`;
-      el.style.borderColor = 'rgba(255,255,255,.15)';
-    }
-  }
-
-  function setupIcon(img, num, name, mode = "icon") {
-    // mode = "icon" ou "full"
-    const slug = slugify(name || '');
-    const base = mode === "full" ? "/ptu/img/pokemon/full" : "/ptu/img/pokemon/icons";
-
-    img.src = CFG.iconPatterns.map(fn => fn(base, num, slug));
-  }
-
-
-
-  function openDetail(p) {
-    const body = document.getElementById('dexModalBody');
-    const title = document.getElementById('dexModalLabel');
-    const num = String(p.Number ?? '0').padStart(3, '0');
-    const species = p.Species || 'Unknown';
-
-    const typesHTML = wrapTypes(extractTypes(p)) || '';
-
-    title.innerHTML = `
-    <div class="d-flex align-items-start gap-3 w-100">
-      <img id="dexModalIcon" class="dex-title-icon rounded dark-background p-1" width="64" height="64" alt="${species}">
-      <div class="flex-grow-1">
-        <div class="d-flex flex-wrap align-items-baseline gap-2">
-          <span class="h5 mb-0">#${num} — ${species}</span>
-        </div>
-        <div class="dex-title-types mt-1">${typesHTML}</div>
-      </div>
-    </div>
-  `;
-
-    const safe = (typeof structuredClone === 'function')
-      ? structuredClone(p)
-      : JSON.parse(JSON.stringify(p));
-    body.innerHTML = renderObject(safe);
-
-    const img = document.getElementById('dexModalIcon');
-    if (img) setupIcon(img, p.Icon || p.Number, species, "full");
-
-    // 👉 Réutiliser l'instance, et ne montrer que si fermée
-    const inst = getDexModalInstance();
-    if (inst && !isDexModalShown()) {
-      inst.show();
-    } else if (inst) {
-      inst.handleUpdate(); // ajuste le scroll/position, sans recréer de backdrop
-    }
-  }
-
-
-
-
-  // --- helpers ---
-  function renderLevelUpMoves(moves) {
-    if (!Array.isArray(moves) || !moves.length) return '';
-    return `
-    <ul class="list-unstyled mb-0">
-      ${moves.map(m => {
-      // Tags en exposant (si présents)
-      const tagsSup = Array.isArray(m.Tags) && m.Tags.length
-        ? `<sup class="smaller text-uppercase text-muted ms-1">${escapeHtml(m.Tags.join(' '))}</sup>`
-        : '';
-      const nameHtml = `<a href="#" class="js-move-link" data-move="${escapeHtml(m.Move)}">${escapeHtml(m.Move)}</a>`;
-
-      return `
-        <li class="d-flex align-items-center mb-1">
-          <span class="text-muted" style="width:50px;">Lv.${m.Level}</span>
-          <span class="fw-semibold flex-grow-1">${nameHtml}${tagsSup}</span>
-          ${wrapTypes([m.Type])}
-        </li>`;
-    }).join('')}
-    </ul>`;
-  }
-
-
-  function renderStringList(title, arr) {
-    if (!Array.isArray(arr) || !arr.length) return '';
-    return `
-    <div class="mt-3">
-      <h5 class="text-muted">${title}</h5>
-      <ul class="list-unstyled mb-0">
-        ${arr.join(', ')}
-      </ul>
-    </div>`;
-  }
-
-  function renderCapabilities(raw, depth = 0) {
-    // Normalise toute source vers { rated:[{key,value}], simple:[string] }
-    const parsed = parseCapabilities(raw);
-    if (!parsed.rated.length && !parsed.simple.length) return '';
-
-    const h = Math.min(4 + depth, 6);
-
-    // Cartes "numériques"
-    const rated = parsed.rated.map(({ key, value }) => {
-      return `
-      <div class="cap-item">
-        <div class="cap-head">
-          <span class="cap-key">${key}</span>
-        </div>
-        <div class="cap-val">${value}</div>
-      </div>
-    `;
-    }).join('');
-
-    // Chips "simples"
-    const simple = parsed.simple.map(k => {
-      return `<span class="cap-chip"><span>${k}</span></span>`;
-    }).join('');
-
-    return `
-    <div class="mt-3">
-      <h${h} class="text-muted">Capabilities</h${h}>
-      <div class="card accent">
-        <div class="card-body">
-          ${parsed.rated.length ? `<div class="cap-grid">${rated}</div>` : ''}
-          ${parsed.simple.length ? `<div class="cap-chips">${simple}</div>` : ''}
-        </div>
-      </div>
-    </div>
-  `;
-  }
-
-  function parseCapabilities(raw) {
-    const rated = [];
-    const simple = [];
-
-    const pushPair = (k, v) => {
-      const key = String(k).trim();
-      if (!key) return;
-
-      let value = v;
-      // Convertir en nombre seulement si clairement numérique
-      if (typeof value === 'string') {
-        const s = value.trim();
-        if (s.includes('/')) {
-          // fraction (ex: "1/1") -> garder tel quel (string)
-          value = s;
-        } else {
-          const n = Number(s);
-          value = Number.isNaN(n) ? s : n;
-        }
-      }
-
-      // Si c'est une valeur "numérique" ou fraction, on considère rated
-      // (on veut afficher "Jump 1/1" en rated avec "1/1")
-      if (typeof value === 'number' || (typeof value === 'string' && value)) {
-        rated.push({ key, value });
-      } else {
-        simple.push(key);
-      }
-    };
-
-    const fromString = (s) => {
-      const str = String(s).trim();
-      if (!str) return;
-      // "Overland 5", "Jump 1/1", "Swim 3", etc.
-      const m = str.match(/^(.+?)\s+(-?\d+(?:\.\d+)?(?:\/\d+(?:\.\d+)?)?)\s*$/);
-      if (m) pushPair(m[1], m[2]);
-      else simple.push(str);
-    };
-
-    if (Array.isArray(raw)) {
-      raw.forEach(item => {
-        if (item == null) return;
-        if (typeof item === 'string') fromString(item);
-        else if (typeof item === 'object') {
-          Object.entries(item).forEach(([k, v]) => pushPair(k, v));
-        } else fromString(item);
-      });
-    } else if (typeof raw === 'object' && raw) {
-      Object.entries(raw).forEach(([k, v]) => {
-        if (Array.isArray(v)) v.forEach(x => (typeof x === 'string' ? fromString(`${k} ${x}`) : pushPair(k, x)));
-        else if (typeof v === 'string') fromString(`${k} ${v}`);
-        else pushPair(k, v);
-      });
-    } else if (raw != null) {
-      fromString(raw);
-    }
-
-    return { rated, simple };
-  }
-
-
-  function renderBaseStats(stats, depth = 0) {
-    const order = ["HP", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"];
-
-    // Cas simple
-    if (!("Small" in stats)) {
-      const total = order.reduce((s, k) => s + (stats?.[k] ?? 0), 0);
-      const rows = order.map(k => `
-      <tr>
-        <td class="text-start">${k}</td>
-        <td class="text-end">${stats?.[k] ?? 0}</td>
-      </tr>
-    `).join("");
-      return `
-      <div class="mt-3">
-        <h${Math.min(4 + depth, 6)} class="text-muted">Base Stats</h${Math.min(4 + depth, 6)}>
-        <table class="table table-sm align-middle">
-          <tbody>
-            ${rows}
-            <tr class="fw-semibold">
-              <td class="text-start">Total</td>
-              <td class="text-end">${total}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    `;
-    }
-
-    // Cas multi-tailles
-    const forms = {
-      "Small": "S",
-      "Average": "M",
-      "Large": "L",
-      "Super Size": "XL"
-    };
-    const totals = {};
-    Object.keys(forms).forEach(f => {
-      totals[f] = order.reduce((s, k) => s + (stats[f]?.[k] ?? 0), 0);
-    });
-
-    const rows = order.map(k => `
-    <tr>
-      <td class="text-start">${k}</td>
-      ${Object.keys(forms).map(f => `<td class="text-center">${stats[f]?.[k] ?? 0}</td>`).join("")}
-    </tr>
-  `).join("");
-
-    return `
-    <div class="mt-3">
-      <h${Math.min(4 + depth, 6)} class="text-muted">Base Stats</h${Math.min(4 + depth, 6)}>
-      <table class="table table-sm align-middle">
-        <thead>
-          <tr>
-            <th class="text-start"></th>
-            ${Object.values(forms).map(lbl => `<th class="text-center">${lbl}</th>`).join("")}
-          </tr>
-        </thead>
-        <tbody>
-          ${rows}
-          <tr class="fw-semibold">
-            <td class="text-start">Total</td>
-            ${Object.keys(forms).map(f => `<td class="text-center">${totals[f]}</td>`).join("")}
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  `;
-  }
-
-
-  function renderSkills(skills, depth = 0) {
-    // skills est supposé être un objet { "Acrobatics": 2, "Combat": 3, ... }
-
-    const entries = Object.entries(skills || {});
-    const rows = entries.map(([k, v]) => `
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      <span class="skill-key">${k}</span>
-      <span class="skill-val">${v}</span>
-    </li>
-  `).join("");
-
-    const h = Math.min(4 + depth, 6);
-    return `
-    <div class="mt-3">
-      <h${h} class="text-muted">Skills</h${h}>
-      <div class="card accent skills-card">
-        <ul class="list-group list-group-flush skills-list">
-          ${rows}
-        </ul>
-      </div>
-    </div>
-  `;
-  }
-
-  function renderEvolutionList(evos, depth = 0) {
-    // evos attendu: [{ Stade, Species, Condition }]
-    if (!Array.isArray(evos) || evos.length === 0) return '';
-
-    const items = evos.map(e => {
-      const stade = e?.Stade ?? '';
-      const species = e?.Species ?? '';
-      const level = (e?.["Minimum Level"] ?? '').trim();
-      const cond = (e?.Condition ?? '').trim();
-
-      const label = `${stade} - <a href="#" onclick='openModalBySpecies(${jsStr(species)}); return false;'>${escapeHtml(species)}</a>` +
-        `${level ? ` [${escapeHtml(level)}]` : ''}` +
-        `${cond ? ` (${escapeHtml(cond)})` : ''}`;
-
-      return `
-      <li class="list-group-item d-flex align-items-center">
-        <span class="flex-grow-1">${label}</span>
-      </li>`;
-    }).join('');
-
-    const h = Math.min(4 + depth, 6);
-    return `
-    <div class="mt-3">
-      <h${h} class="text-muted">Evolution</h${h}>
-      <div class="card accent skills-card">
-        <ul class="list-group list-group-flush skills-list">
-          ${items}
-        </ul>
-      </div>
-    </div>`;
-  }
-
-
-  function renderBattleOnlyForms(forms, base) {
-    if (!forms || typeof forms !== "object") return "";
-    const pNum = base?.Number ?? "", pName = base?.Species ?? "Unknown";
-
-    return Object.entries(forms).map(([label, f]) => {
-      const src = (() => {
-        const t = document.createElement("img");
-        setupIcon(t, f?.Icon ?? pNum, `${pName} — ${label}`, "full");
-        return t.src;
-      })();
-
-
-      const types = wrapTypes(f?.Type || []);
-      const line = k => f?.[k] ? `<div class="small text-muted">${k}: <span class="text-body">${Array.isArray(f[k]) ? f[k].join(", ")
-        : (typeof f[k] === "object" ? Object.keys(f[k]).join(", ") : String(f[k]))
-        }</span></div>` : "";
-
-      const stats = f?.Stats ? Object.entries(f.Stats)
-        .map(([k, v]) => `<div class="d-flex justify-content-between small border-bottom">
-        <span class="text-muted">${k}</span><span class="fw-semibold">${v}</span>
-      </div>`).join("") : "";
-
-      return `
-      <div class="card accent w-100 mb-2"><div class="card-body">
-        <div class="d-flex align-items-start gap-3">
-          <div class="rounded dark-background p-1">
-            <img class="dex-title-icon" src="${src}">
-          </div>
-          <div class="flex-grow-1">
-            <div class="d-flex flex-wrap align-items-baseline gap-2">
-              <span class="fw-semibold">${label}</span><span class="ms-1">${types}</span>
-            </div>
-            ${line("Ability")}${line("Adv Ability 1")}${line("Adv Ability 2")}${line("Capabilities")}
-            ${stats ? `<div class="mt-2">${stats}</div>` : ""}
-          </div>
-        </div>
-      </div></div>`;
-    }).join("");
-  }
-
-  function renderTmTutorMoves(arr) {
-    if (!Array.isArray(arr) || !arr.length) return '';
-
-    const items = arr.map(it => {
-      // Compatibilité : anciens dex pouvaient avoir des strings
-      if (typeof it === 'string') {
-        return `
-        <li class="d-flex align-items-center mb-1">
-          <span class="fw-semibold flex-grow-1">${escapeHtml(it)}</span>
-        </li>`;
-      }
-
-      const move = escapeHtml(it?.Move ?? '');
-      const type = it?.Type ? wrapTypes([it.Type]) : '';
-      const tags = Array.isArray(it?.Tags) && it.Tags.length
-        ? `<sup class="text-uppercase text-muted small ms-1">${escapeHtml(it.Tags.join(' '))}</sup>`
-        : '';
-
-      return `
-      <li class="d-flex align-items-center mb-1">
-        <span class="fw-semibold flex-grow-1">${move}${tags}</span>
-        ${type}
-      </li>`;
-    }).join('');
-
-    return `
-    <div class="mt-3">
-      <h5 class="text-muted">TM/Tutor Moves</h5>
-      <ul class="list-unstyled mb-0">
-        ${items}
-      </ul>
-    </div>`;
-  }
-
-  function renderTmTutorMovesComma(arr, title = 'TM/Tutor Moves') {
-    if (!Array.isArray(arr) || arr.length === 0) return '';
-
-    const parts = arr.map(it => {
-      if (typeof it === 'string') {
-        return `<span class="small text-muted">${escapeHtml(it)}</span>`;
-      }
-
-      const raw = it?.Move ?? '';
-      const move = raw
-        ? `<a href="#" class="js-move-link" data-move="${escapeHtml(raw)}">${escapeHtml(raw)}</a>`
-        : '';
-
-      // Tags (toujours en exposant, petit + uppercase)
-      const tagsSup = Array.isArray(it?.Tags) && it.Tags.length
-        ? `<sup class="smaller text-uppercase text-muted">${escapeHtml(it.Tags.join(' '))}</sup>`
-        : '';
-
-      // Method (pas affichée si Level-Up, traduit Machine → TM)
-      let method = it?.Method || '';
-      if (method === 'Machine') method = 'TM';
-      const methodSup = method && method !== 'Level-Up'
-        ? `<sup class="smaller text-uppercase text-muted">${escapeHtml(method)}</sup>`
-        : '';
-
-      return `<span class="">${move}${tagsSup}${CFG.showMethodLabel ? methodSup : ""}</span>`;
-    });
-
-    return `
-    <div class="mt-3">
-      <h6 class="text-muted">${title}</h6>
-      <p class="mb-0">${parts.join(', ')}</p>
-    </div>
-  `;
-  }
-
-  function renderObject(obj, depth = 0) {
-    // Dispatch: left column for \"main\" sections
-    const leftSections = new Set([
-      "Base Stats", "Basic Information", "Evolution", "Other Information", "Battle-Only Forms"
-    ]);
-
-    // null/undefined → nothing
-    if (obj == null) return '';
-
-    // Arrays
-    if (Array.isArray(obj)) {
-      if (obj.length === 0) return ''; // skip empty array
-      // Render each item; keep only non-empty items
-      const items = obj.map(v => {
-        if (typeof v === 'object') {
-          const inner = renderObject(v, depth + 1);
-          return inner.trim() ? `<li>${inner}</li>` : '';
-        }
-        return `<li>${escapeHtml(String(v))}</li>`;
-      }).filter(Boolean);
-      if (items.length === 0) return ''; // all items were empty
-      return `<ul>${items.join('')}</ul>`;
-    }
-
-    // Objects
-    if (typeof obj === 'object') {
-      // ROOT: build two columns
-      if (depth === 0) {
-        let col1 = '';
-        let col2 = '';
-        for (const [k, v] of Object.entries(obj)) {
-          if (["Species", "Number", "Icon"].includes(k)) continue; // already shown elsewhere
-
-          // --- special cases / skips you control ---
-          // Render Type
-          if (k === 'Basic Information' && v?.Type) {
-            const t = v.Type;
-            if (Array.isArray(t)) {
-              if (t.length && typeof t[0] === 'string') {
-                v.Type = wrapTypes(t); // ex: ["Electric","Fire"]
-              } else if (t.length && typeof t[0] === 'object') {
-                v.Type = renderFormType(t[0]); // ex: [ { Form: [types], ... } ]
-              } else {
-                v.Type = '';
-              }
-            } else {
-              v.Type = renderFormType(t); // compat: objet simple { Form: [...] }
-            }
-          }
-
-          // Render Type + linkify Abilities in Basic Information
-          if (k === 'Basic Information' && v && typeof v === 'object') {
-            // --- Type handling (inchangé) ---
-            if (v?.Type) {
-              const t = v.Type;
-              if (Array.isArray(t)) {
-                if (t.length && typeof t[0] === 'string') {
-                  v.Type = wrapTypes(t); // ex: ["Electric","Fire"]
-                } else if (t.length && typeof t[0] === 'object') {
-                  v.Type = renderFormType(t[0]); // ex: [ { Form: [types], ... } ]
-                } else {
-                  v.Type = '';
-                }
-              } else {
-                v.Type = renderFormType(t); // compat: objet simple { Form: [...] }
-              }
-            }
-
-            // --- Abilities linkification (ajout minimal) ---
-            for (const [bk, bv] of Object.entries(v)) {
-              if (typeof bv === 'string' && /ability/i.test(bk) && !/capabilit/i.test(bk) && bv.trim()) {
-                v[bk] = `<a href="#" class="js-ability-link" data-ability="${escapeHtml(bv)}">${escapeHtml(bv)}</a>`;
-                console.debug('[Ability-linkified]', bk, '→', bv);
-              }
-            }
-          }
-
-
-          // --- Base Stats en grille 2x3 ---
-          if (k === "Base Stats" && v && typeof v === "object") {
-            const block = renderBaseStats(v, depth);
-            (leftSections.has(k) ? (col1 += block) : (col2 += block));
-            continue;
-          }
-
-          // --- Evolution -> liste cliquable ---
-          if (k === "Evolution" && Array.isArray(v)) {
-            const block = renderEvolutionList(v, depth);
-            (leftSections.has(k) ? (col1 += block) : (col2 += block));
-            continue;
-          }
-
-          // --- Capabilities (layout spécial) ---
-          if (k === "Capabilities" && v) {
-            const block = renderCapabilities(v, depth);
-            if (block.trim()) {
-              (leftSections.has(k) ? (col1 += block) : (col2 += block));
-            }
-            continue;
-          }
-
-          // --- Skills ---
-          if (k === "Skills" && v && typeof v === "object") {
-            const block = renderSkills(v, depth);
-            (leftSections.has(k) ? (col1 += block) : (col2 += block));
-            continue;
-          }
-
-
-          // Render Level Up Move List
-          if (k === "Moves" && v) {
-            let blocks = '';
-            blocks += v["Level Up Move List"] ? `
-            <div class="mt-3">
-              <h5 class="text-muted">Level-Up Moves</h5>
-              ${renderLevelUpMoves(v["Level Up Move List"])}
-            </div>` : '';
-            blocks += renderTmTutorMovesComma(v["TM/HM Move List"], 'TM/HM Moves');
-            blocks += renderTmTutorMovesComma(v["Egg Move List"], 'Egg Moves');
-            blocks += renderTmTutorMovesComma(v["Tutor Move List"], 'Tutor Moves');
-            blocks += renderTmTutorMovesComma(v["TM/Tutor Moves List"]);
-
-            if (blocks.trim()) {
-              const h = Math.min(4 + depth, 6);
-              const card = `
-              <div class="mt-3">
-                <h${h} class="text-muted">Moves</h${h}>
-                <div class="card accent" style="--accent-color: rgba(255,255,255,.08);">
-                  <div class="card-body">${blocks}</div>
-                </div>
-              </div>`;
-              (leftSections.has(k) ? (col1 += card) : (col2 += card));
-            }
-            continue;
-          }
-
-          // --- Battle-Only Forms : micro-fiches pleine largeur ---
-          if (k === "Battle-Only Forms" && v && typeof v === "object") {
-            const html = renderBattleOnlyForms(v, obj);
-            if (html.trim()) {
-              const h = Math.min(4 + depth, 6);
-              const card = `
-              <div class="mt-3">
-                <h${h} class="text-muted">Battle-Only Forms</h${h}>
-                <div class="card accent" style="--accent-color: rgba(255,255,255,.08);">
-                  <div class="card-body">
-                    ${html}
-                  </div>
-                </div>
-              </div>`;
-              (leftSections.has(k) ? (col1 += card) : (col2 += card));
-            }
-            continue;
-          }
-
-          // Add more hand-written exclusions here as needed
-          // ----------------------------------------
-
-          //console.log({ k, v });
-          // Build block
-          let block = '';
-          if (typeof v === 'object' && v !== null) {
-            const inner = renderObject(v, depth + 1);
-            if (!inner.trim()) continue; // child had nothing → skip whole section
-            const h = Math.min(4 + depth, 6);
-            block = `
-            <div class="mt-3">
-              <h${h} class="text-muted">${k}</h${h}>
-              <div class="card accent" style="--accent-color: rgba(255,255,255,.08);">
-                <div class="card-body">
-                  ${inner}
-                </div>
-              </div>
-            </div>`;
-          } else {
-            // scalar
-            block = `
-            <div class="row border-bottom py-1">
-              <div class="col-4 fw-semibold">${k}</div>
-              <div class="col-8">${v}</div>
-            </div>`;
-          }
-
-          (leftSections.has(k) ? (col1 += block) : (col2 += block));
-        }
-
-        // If both columns empty, return empty (lets parent skip the wrapper)
-        const hasAny = (col1.trim() || col2.trim());
-        if (!hasAny) return '';
-
-        return `
-        <div class="row">
-          <div class="col-md-6">${col1}</div>
-          <div class="col-md-6">${col2}</div>
-        </div>`;
-      }
-
-      // NESTED (depth > 0): render as a single column, skipping empties
-      let html = '';
-      for (const [k, v] of Object.entries(obj)) {
-        // generic skip of empty arrays/objects
-        if (Array.isArray(v) && v.length === 0) continue;
-        if (v && typeof v === 'object' && !Array.isArray(v) && Object.keys(v).length === 0) continue;
-
-        if (typeof v === 'object' && v !== null) {
-          const inner = renderObject(v, depth + 1);
-          if (!inner.trim()) continue; // child had nothing
-          const h = Math.min(4 + depth, 6);
-          html += `
-          <div class="mt-3">
-            <h${h} class="text-muted">${k}</h${h}>
-            <div class="card accent" style="--accent-color: rgba(255,255,255,.08);">
-              <div class="card-body">
-                ${inner}
-              </div>
-            </div>
-          </div>`;
-        } else {
-          html += `
-          <div class="row border-bottom py-1">
-            <div class="col-4 fw-semibold">${k}</div>
-            <div class="col-8">${v}</div>
-          </div>`;
-        }
-      }
-      return html;
-    }
-
-    // Fallback for primitives (shouldn't really hit here)
-    return escapeHtml(String(obj));
-  }
-
-  function escapeHtml(s) {
-    const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
-    return s.replace(/[&<>"']/g, c => map[c]);
-  }
-
-  // Filter logic (text + type chips)
   function filterRows(rows) {
-    const q = (document.getElementById('dex-search')?.value || '').trim().toLowerCase();
+    const q = ($("#dex-search")?.value || "").trim().toLowerCase();
     const types = activeTypes();
     return rows.filter(p => {
-      const name = (p.Species || '').toLowerCase();
-      const num = String(p.Number || '');
+      const name = (p.Species || "").toLowerCase();
+      const num = String(p.Number || "");
       const hasQ = !q || name.includes(q) || num.includes(q);
       const pTypes = extractTypes(p);
       const typeOk = types.length === 0 || pTypes.some(t => types.includes(t));
@@ -1374,68 +809,176 @@
   }
 
   function wireSearch(all) {
-    const inp = document.getElementById('dex-search');
-    if (inp) inp.addEventListener('input', debounce(() => renderGrid(filterRows(all)), 120));
-
-    document.getElementById('clear-filters')?.addEventListener('click', () => {
-      inp.value = '';
+    const inp = $("#dex-search");
+    if (inp) inp.addEventListener("input", debounce(() => renderGrid(filterRows(all)), 120));
+    $("#clear-filters")?.addEventListener("click", () => {
+      inp.value = "";
       document.querySelectorAll("#type-filters input[type='checkbox']").forEach(cb => cb.checked = false);
       renderGrid(filterRows(all));
     });
   }
 
-  // Boot
+  // =========================
+  // Source menu / presets
+  // =========================
+  function buildSourceMenu(onChange) {
+    const sb = $("#sidebar");
+    if (!sb) return;
+    buildReadmeModalIfMissing();
+
+    const wrap = document.createElement("div");
+    wrap.className = "mb-3 d-flex flex-column gap-2";
+    wrap.setAttribute("data-role", "source-menu");
+    wrap.innerHTML = `
+      <div class="d-flex align-items-center justify-content-between">
+        <label class="form-label mb-0">Dataset</label>
+        <button type="button" class="btn btn-primary" style="font-size:.75rem; padding:.1rem .25rem; min-width:unset; width:auto;" id="btn-readme">Readme</button>
+      </div>
+      <div class="d-flex flex-wrap gap-1 w-100 mb-2" role="group" aria-label="Dataset presets">
+        ${["Core", "Community", "Homebrew"].map(p => `
+          <input type="radio" class="btn-check" name="preset" id="preset-${p.toLowerCase()}" ${selectedPreset === p ? "checked" : ""}>
+          <label class="btn btn-outline-primary d-flex justify-content-center align-items-center flex-grow-1" style="flex-basis:0; min-width:90px;" for="preset-${p.toLowerCase()}">${p}</label>
+        `).join("")}
+      </div>
+      <div id="preset-files-box" class="border rounded p-2 small">
+        <div class="fw-semibold mb-1">Included Pokédex</div>
+        <div id="preset-files-list"></div>
+      </div>`;
+
+    sb.querySelector('[data-role="source-menu"]')?.remove();
+    sb.prepend(wrap);
+
+    function renderPresetFiles() {
+      const box = wrap.querySelector("#preset-files-list");
+      const lbls = PRESETS[selectedPreset] || [];
+      box.innerHTML = lbls.map(lbl => {
+        const id = `pdx-file-${lbl.replace(/[^a-z0-9]+/gi, "-")}`;
+        const checked = (selectedLabels.size === 0 || selectedLabels.has(lbl)) ? "checked" : "";
+        return `<div class="form-check">
+          <input class="form-check-input" type="checkbox" id="${id}" data-label="${lbl}" ${checked}>
+          <label class="form-check-label" for="${id}">${lbl}</label>
+        </div>`;
+      }).join("");
+      box.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener("change", () => {
+          selectedLabels.clear();
+          box.querySelectorAll('input[type="checkbox"]:checked').forEach(c => selectedLabels.add(c.getAttribute("data-label")));
+          reload();
+        });
+      });
+    }
+
+    async function reload() {
+      try {
+        const data = await loadPokedex();
+        window.__POKEDEX = data;
+        buildTypeSidebar(data, () => renderGrid(filterRows(data)));
+        renderGrid(filterRows(data));
+      } catch (e) {
+        console.error(e);
+        $("#dex-grid").innerHTML = `<div class="alert alert-warning">Aucune donnée pour le preset « ${selectedPreset} ».</div>`;
+      }
+      onChange?.();
+    }
+
+    wrap.querySelector("#btn-readme")?.addEventListener("click", () => {
+      bootstrap.Modal.getOrCreateInstance($("#readmeModal")).show();
+    });
+
+    // single handler for radios
+    wrap.addEventListener("change", (ev) => {
+      const tgt = ev.target;
+      if (!(tgt instanceof HTMLInputElement)) return;
+      if (tgt.name !== "preset" || !tgt.checked) return;
+      const id = tgt.id;
+      if (id.endsWith("core")) selectedPreset = "Core";
+      else if (id.endsWith("community")) selectedPreset = "Community";
+      else if (id.endsWith("homebrew")) selectedPreset = "Homebrew";
+      selectedLabels = new Set(PRESETS[selectedPreset] || []);
+      renderPresetFiles();
+      reload();
+    });
+
+    renderPresetFiles();
+  }
+
+  // =========================
+  // Open detail modal
+  // =========================
+  function openDetail(p) {
+    const body = $("#dexModalBody");
+    const title = $("#dexModalLabel");
+    const num = pad3(p.Number ?? "0");
+    const species = p.Species || "Unknown";
+    const typesHTML = wrapTypes(extractTypes(p)) || "";
+
+    title.innerHTML = `
+      <div class="d-flex align-items-start gap-3 w-100">
+        <img id="dexModalIcon" class="dex-title-icon rounded dark-background p-1" width="64" height="64" alt="${species}">
+        <div class="flex-grow-1">
+          <div class="d-flex flex-wrap align-items-baseline gap-2">
+            <span class="h5 mb-0">#${num} — ${species}</span>
+          </div>
+          <div class="dex-title-types mt-1">${typesHTML}</div>
+        </div>
+      </div>`;
+
+    const safe = (typeof structuredClone === "function") ? structuredClone(p) : JSON.parse(JSON.stringify(p));
+    body.innerHTML = renderObject(safe);
+
+    const img = $("#dexModalIcon");
+    if (img) setupIcon(img, p.Icon || p.Number, species, "full");
+
+    const inst = getDexModalInstance();
+    if (inst && !isDexModalShown()) inst.show();
+    else if (inst) inst.handleUpdate();
+  }
+
+  async function openModalBySpecies(speciesName) {
+    const data = await loadPokedex();
+    const found = data.find(p => (p.Species || "").toLowerCase() === String(speciesName || "").toLowerCase());
+    if (found) openDetail(found);
+    else alert(`Aucun Pokémon trouvé avec le nom "${speciesName}"`);
+  }
+
+  // =========================
+  // Move & Ability modal
+  // =========================
   let _moveAbilityModal;
   function ensureMoveAbilityModal() {
     if (_moveAbilityModal) return _moveAbilityModal;
-    const el = document.getElementById('moveAbilityModal');
+    const el = $("#moveAbilityModal");
     if (!el) return null;
     _moveAbilityModal = new bootstrap.Modal(el, { backdrop: true });
     return _moveAbilityModal;
   }
 
   async function openMoveModalByName(moveName) {
-    const name = String(moveName || '').trim().toLowerCase();
+    const name = String(moveName || "").trim().toLowerCase();
     if (!name) return;
     const idx = await loadMoveIndex();
-    const mv = idx.get(name) || idx.get(name.replace(/[-–—]/g, ' ')) || null; // petite tolérance
-    if (!mv) {
-      console.warn('[moves] introuvable:', moveName);
-      // Affiche les 30 premières clés disponibles pour comparer vite fait
-      console.debug('[moves] index keys sample =', Array.from(idx.keys()).slice(0, 30));
-    }
+    const mv = idx.get(name) || idx.get(name.replace(/[-–—]/g, " ")) || null;
     const display = mv?.Move || mv?.Name || mv?.__displayName || moveName;
-    const labelEl = document.getElementById('moveAbilityModalLabel');
-    const typeHtml = mv?.Type ? wrapTypes([mv.Type]) : '';
-    labelEl.innerHTML = `
-      <div>
-        <div class="fw-semibold">Move — ${escapeHtml(display)}</div>
-        <div class="mt-1">${typeHtml}</div>
-      </div>
-    `;
-    document.getElementById('moveAbilityModalBody').innerHTML = renderMoveDetails(mv);
+    const labelEl = $("#moveAbilityModalLabel");
+    const typeHtml = mv?.Type ? wrapTypes([mv.Type]) : "";
+    labelEl.innerHTML = `<div><div class="fw-semibold">Move — ${escapeHtml(display)}</div><div class="mt-1">${typeHtml}</div></div>`;
+    $("#moveAbilityModalBody").innerHTML = renderMoveDetails(mv);
     ensureMoveAbilityModal()?.show();
   }
 
   async function openAbilityModalByName(abilityName) {
-    const name = String(abilityName || '').trim().toLowerCase();
+    const name = String(abilityName || "").trim().toLowerCase();
     if (!name) return;
     const idx = await loadAbilityIndex();
     const ab = idx.get(name) || null;
-    if (!ab) {
-      console.warn('[abilities] introuvable:', abilityName);
-      console.debug('[abilities] index keys sample =', Array.from(idx.keys()).slice(0, 30));
-    }
     const display = ab?.Name || ab?.__displayName || abilityName;
-    document.getElementById('moveAbilityModalLabel').textContent = `Ability — ${display}`;
-    document.getElementById('moveAbilityModalBody').innerHTML = renderAbilityDetails(ab);
-
+    $("#moveAbilityModalLabel").textContent = `Ability — ${display}`;
+    $("#moveAbilityModalBody").innerHTML = renderAbilityDetails(ab);
     ensureMoveAbilityModal()?.show();
   }
 
-  // Délégation globale : clics sur move / ability
-  document.addEventListener('click', (ev) => {
-    const a = ev.target.closest('a.js-move-link, a.js-ability-link');
+  document.addEventListener("click", (ev) => {
+    const a = ev.target.closest("a.js-move-link, a.js-ability-link");
     if (!a) return;
     ev.preventDefault();
     const move = a.dataset.move;
@@ -1444,9 +987,11 @@
     if (ability) openAbilityModalByName(ability);
   });
 
+  // =========================
+  // Boot
+  // =========================
   document.addEventListener("DOMContentLoaded", async () => {
     selectedLabels = new Set(PRESETS[selectedPreset] || []);
-    // NEW — construit le menu des sources *avant* de charger
     buildSourceMenu();
 
     const data = await loadPokedex();
@@ -1454,7 +999,7 @@
 
     window.openModalBySpecies = (speciesName) => {
       const found = (window.__POKEDEX || []).find(
-        p => String(p.Species || '').toLowerCase() === String(speciesName || '').toLowerCase()
+        p => String(p.Species || "").toLowerCase() === String(speciesName || "").toLowerCase()
       );
       if (found) { openDetail(found); }
     };
@@ -1467,32 +1012,30 @@
     wireSearch(data);
     renderGrid(filterRows(data));
   });
-  document.addEventListener('DOMContentLoaded', () => {
-    const modalEl = document.getElementById('dexModal');
-    if (modalEl) {
-      modalEl.addEventListener('hidden.bs.modal', () => {
-        // Si jamais Bootstrap ne l'a pas retiré (plugins, CSS custom, etc.)
-        document.querySelectorAll('.modal-backdrop').forEach(b => b.remove());
-        document.body.classList.remove('modal-open');
-        document.body.style.removeProperty('paddingRight');
-      });
-    }
+
+  // Backdrop/padding-right fix on hide (avoids layout shift on grid)
+  document.addEventListener("DOMContentLoaded", () => {
+    const modalEl = $("#dexModal");
+    if (!modalEl) return;
+    modalEl.addEventListener("hidden.bs.modal", () => {
+      document.querySelectorAll(".modal-backdrop").forEach(b => b.remove());
+      document.body.classList.remove("modal-open");
+      document.body.style.removeProperty("paddingRight");
+      document.body.style.removeProperty("padding-right");
+    });
   });
 
-  document.addEventListener('click', (e) => {
-    const a = e.target.closest('a[data-dex-number], a[data-dex-species]');
+  // Delegated open via data attributes
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a[data-dex-number], a[data-dex-species]");
     if (!a) return;
-
     e.preventDefault();
-    const number = a.getAttribute('data-dex-number');
-    const species = a.getAttribute('data-dex-species');
-
-    // Récupère ton Pokémon dans tes données (à adapter selon où tu stockes 'data')
-    // Exemple si tu as gardé 'data' dans une variable globale/module :
+    const number = a.getAttribute("data-dex-number");
+    const species = a.getAttribute("data-dex-species");
     const target = window.__pokedexData?.find(p =>
       (number && String(p.Number) === String(number)) ||
       (species && String(p.Species).toLowerCase() === String(species).toLowerCase())
     );
-    if (target) openDetail(target); // ← met à jour la modale sans réempiler de backdrop
+    if (target) openDetail(target);
   });
 })();
