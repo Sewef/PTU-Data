@@ -450,14 +450,14 @@
     return `
       <ul class="list-unstyled mb-0">
         ${moves.map(m => {
-          const tagsSup = Array.isArray(m.Tags) && m.Tags.length ? `<sup class="smaller text-uppercase text-muted ms-1">${escapeHtml(m.Tags.join(" "))}</sup>` : "";
-          const nameHtml = `<a href="#" class="js-move-link" data-move="${escapeHtml(m.Move)}">${escapeHtml(m.Move)}</a>`;
-          return `<li class="d-flex align-items-center mb-1">
+      const tagsSup = Array.isArray(m.Tags) && m.Tags.length ? `<sup class="smaller text-uppercase text-muted ms-1">${escapeHtml(m.Tags.join(" "))}</sup>` : "";
+      const nameHtml = `<a href="#" class="js-move-link" data-move="${escapeHtml(m.Move)}">${escapeHtml(m.Move)}</a>`;
+      return `<li class="d-flex align-items-center mb-1">
             <span class="text-muted" style="width:50px;">Lv.${m.Level}</span>
             <span class="fw-semibold flex-grow-1">${nameHtml}${tagsSup}</span>
             ${wrapTypes([m.Type])}
           </li>`;
-        }).join("")}
+    }).join("")}
       </ul>`;
   }
 
@@ -483,19 +483,64 @@
 
   function renderMoveDetails(mv) {
     if (!mv) return '<p class="text-muted mb-0">Cannot find move.</p>';
-    const row = (k, v) => v ? `<div><span class="text-muted">${k}:</span> ${escapeHtml(String(v))}</div>` : "";
-    const tags = Array.isArray(mv.Tags) && mv.Tags.length ? mv.Tags.join(", ") : (mv.Keywords || mv.Keyword || "");
+
+    const row = (k, v) =>
+      v ? `<div><span class="text-muted">${k}:</span> ${escapeHtml(String(v))}</div>` : "";
+
+    const tags = Array.isArray(mv.Tags) && mv.Tags.length
+      ? mv.Tags.join(", ")
+      : (mv.Keywords || mv.Keyword || "");
+
+    const isBlank = (val) => {
+      if (val == null) return true;
+      const s = String(val).trim();
+      return !s || /^none$/i.test(s);
+    };
+
+    const ignoreFields = new Set(["Contest Type", "Contest Effect"]);
+    const extraSections = [];
+
+    // Tous les champs contenant "Effect", sauf ceux ignorés
+    const effectKeys = Object.keys(mv).filter(
+      k => /effect/i.test(k) && !ignoreFields.has(k)
+    );
+
+    for (const k of effectKeys) {
+      const v = mv[k];
+      if (isBlank(v)) continue;
+
+      if (/^effect$/i.test(k)) {
+        // Cas particulier : "Effect" → sans label
+        extraSections.push(
+          `<div style="white-space:pre-wrap">${escapeHtml(String(v))}</div>`
+        );
+      } else {
+        // Autres effets → avec label
+        extraSections.push(
+          `<div style="white-space:pre-wrap"><strong>${escapeHtml(k)}:</strong> ${escapeHtml(String(v))}</div>`
+        );
+      }
+    }
+
+    const extraHtml = extraSections.length
+      ? `<hr class="my-2">${extraSections.join("")}`
+      : "";
+
     return `
-      ${row("Frequency", mv.Frequency)}
-      ${row("AC", mv.AC)}
-      ${formatDamageBase(mv)}
-      ${row("Class", mv.Class)}
-      ${row("Range", mv.Range)}
-      ${row("Keywords", tags)}
-      ${row("Target", mv.Target)}
-      ${row("Trigger", mv.Trigger)}
-      ${mv.Effect ? `<hr class="my-2"><div style="white-space:pre-wrap">${escapeHtml(mv.Effect)}</div>` : ""}`;
+    ${row("Frequency", mv.Frequency)}
+    ${row("AC", mv.AC)}
+    ${formatDamageBase(mv)}
+    ${row("Class", mv.Class)}
+    ${row("Range", mv.Range)}
+    ${row("Keywords", tags)}
+    ${row("Target", mv.Target)}
+    ${row("Trigger", mv.Trigger)}
+    ${extraHtml}
+  `;
   }
+
+
+
 
   function renderAbilityDetails(ab) {
     if (!ab) return '<p class="text-muted mb-0">Ability introuvable.</p>';
@@ -506,8 +551,8 @@
       ${row("Target", ab.Target)}
       ${row("Trigger", ab.Trigger)}
       ${ab.Effect ? `<hr class="my-2"><div style="white-space:pre-wrap">${escapeHtml(ab.Effect)}</div>` : ""}
-      ${ab.Bonus ? `<hr class="my-2"><div style="white-space:pre-wrap"><strong>Bonus.</strong> ${escapeHtml(ab.Bonus)}</div>` : ""}
-      ${ab.Special ? `<div style="white-space:pre-wrap"><strong>Special.</strong> ${escapeHtml(ab.Special)}</div>` : ""}`;
+      ${ab.Bonus ? `<hr class="my-2"><div style="white-space:pre-wrap"><strong>Bonus:</strong> ${escapeHtml(ab.Bonus)}</div>` : ""}
+      ${ab.Special ? `<div style="white-space:pre-wrap"><strong>Special:</strong> ${escapeHtml(ab.Special)}</div>` : ""}`;
   }
 
   function renderObject(obj, depth = 0) {
