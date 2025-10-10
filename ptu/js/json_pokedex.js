@@ -61,12 +61,118 @@
     ],
   };
 
+  // --- MOVES / ABILITIES datasets ---------------------------
+  const MOVES_BASE = "/ptu/data/moves";
+  const ABILITIES_BASE = "/ptu/data/abilities";
+
+  // Map preset -> fichier
+  const MOVES_FILE_BY_PRESET = {
+    Core: `${MOVES_BASE}/moves_core.json`,
+    Community: `${MOVES_BASE}/moves_9g.json`,      // "9G" pour Paldea/Community
+    Homebrew: `${MOVES_BASE}/moves_homebrew.json`
+  };
+
+  const ABILITIES_FILE_BY_PRESET = {
+    Core: `${ABILITIES_BASE}/abilities_core.json`,
+    Community: `${ABILITIES_BASE}/abilities_9g.json`,
+    Homebrew: `${ABILITIES_BASE}/abilities_homebrew.json`
+  };
+
   let selectedPreset = window.selectedPreset || "Core";
 
   // Per-preset file selection (labels from PRESETS)
   let selectedLabels = new Set(PRESETS[selectedPreset] || []);
 
   const _jsonCache = new Map(); // url -> Promise(data[])
+
+  // cache simple
+  const _infoCache = new Map(); // url -> Promise(json)
+
+  // fetch JSON avec cache
+  async function fetchJsonCached(url) {
+    if (!url) return [];
+    if (_infoCache.has(url)) return _infoCache.get(url);
+    const p = fetch(url).then(r => r.ok ? r.json() : []).catch(() => []);
+    _infoCache.set(url, p);
+    return p;
+  }
+
+  // Indexe par nom (case-insensitive) -> objet
+  function toNameIndex(arr, key = "Name") {
+    // Tolère array OU objet { name: {...}, ... }
+    const list = Array.isArray(arr)
+      ? arr
+      : (arr && typeof arr === 'object' ? Object.values(arr) : []);
+
+    const map = new Map();
+    for (const it of list) {
+      const n = String(it?.[key] || "").trim().toLowerCase();
+      if (n) map.set(n, it);
+    }
+    return map;
+  }
+
+
+  // charge l’index des moves/abilities selon preset
+  async function loadMoveIndex() {
+    const url = MOVES_FILE_BY_PRESET[selectedPreset] || MOVES_FILE_BY_PRESET.Core;
+    const raw = await fetchJsonCached(url);
+
+    const idx = new Map();
+    if (raw && typeof raw === 'object' && !Array.isArray(raw)) {
+      // format attendu: { "Absorb": {...}, "Acid": {...}, ... }
+      for (const [key, obj] of Object.entries(raw)) {
+        if (!obj || typeof obj !== 'object') continue;
+        const k = key.trim().toLowerCase();
+        // on stocke le nom canonique pour l’affichage
+        obj.__displayName = key;
+        idx.set(k, obj);
+      }
+      console.debug('[moves] preset=', selectedPreset, 'url=', url, 'indexed(keys)=', idx.size);
+      return idx;
+    }
+
+    // fallback si jamais c’est un array (autre source)
+    const arr = Array.isArray(raw) ? raw : [];
+    for (const it of arr) {
+      const name = (it?.Move || it?.Name || '').trim();
+      if (name) {
+        it.__displayName = name;
+        idx.set(name.toLowerCase(), it);
+      }
+    }
+    console.debug('[moves] preset=', selectedPreset, 'url=', url, 'arrayIndexed=', idx.size);
+    return idx;
+  }
+
+  async function loadAbilityIndex() {
+    const url = ABILITIES_FILE_BY_PRESET[selectedPreset] || ABILITIES_FILE_BY_PRESET.Core;
+    const raw = await fetchJsonCached(url);
+
+    const idx = new Map();
+    if (raw && typeof raw === 'object' && !Array.isArray(raw)) {
+      // format attendu: { "Absorb Force": {...}, "Blessed Touch": {...}, ... }
+      for (const [key, obj] of Object.entries(raw)) {
+        if (!obj || typeof obj !== 'object') continue;
+        const k = key.trim().toLowerCase();
+        obj.__displayName = key;
+        idx.set(k, obj);
+      }
+      console.debug('[abilities] preset=', selectedPreset, 'url=', url, 'indexed(keys)=', idx.size);
+      return idx;
+    }
+
+    const arr = Array.isArray(raw) ? raw : [];
+    for (const it of arr) {
+      const name = (it?.Name || '').trim();
+      if (name) {
+        it.__displayName = name;
+        idx.set(name.toLowerCase(), it);
+      }
+    }
+    console.debug('[abilities] preset=', selectedPreset, 'url=', url, 'arrayIndexed=', idx.size);
+    return idx;
+  }
 
   let dexModalInstance = null;
 
@@ -120,7 +226,7 @@
   }
 
   const _fetchCache = new Map();
-  async function fetchJsonCached(url) {
+  async function fetchJsonCachedStrict(url) {
     if (_fetchCache.has(url)) return _fetchCache.get(url);
     const p = fetch(url, { cache: "no-store" }).then(r => {
       if (!r.ok) throw new Error(`HTTP ${r.status} for ${url}`);
@@ -139,7 +245,7 @@
     const results = await Promise.all(
       sources.map(async s => {
         try {
-          const data = await fetchJsonCached(s.url);
+          const data = await fetchJsonCachedStrict(s.url);
           return Array.isArray(data) ? data : Object.values(data); // support liste ou dict {Species: obj}
         } catch (e) {
           console.warn(`[loadPokedex] skip ${s.url}: ${e.message}`);
@@ -166,8 +272,6 @@
     }
     return merged;
   }
-
-
 
   function buildReadmeModalIfMissing() {
     if (document.getElementById("readmeModal")) return;
@@ -413,6 +517,49 @@
     return String(val ?? '');
   }
 
+  function renderMoveDetails(mv) {
+    if (!mv) return '<p class="text-muted mb-0">Cannot find move.</p>';
+    // Champs usuels PTU, on affiche ce qu’on trouve
+    const row = (k, v) => v ? `<div><span class="text-muted">${k}:</span> ${escapeHtml(String(v))}</div>` : '';
+    // Tags / Keywords
+    const tags = Array.isArray(mv.Tags) && mv.Tags.length ? mv.Tags.join(', ') :
+      (mv.Keywords || mv.Keyword || '');
+    const type = mv.Type ? wrapTypes([mv.Type]) : '';
+
+    return `
+    ${row('Frequency', mv.Frequency)}
+    ${row('AC', mv.AC)}
+    ${mv['Damage Base']
+      ? `<div><span class="text-muted">${escapeHtml(mv['Damage Base'].split(':')[0])}:</span> ${escapeHtml(mv['Damage Base'].split(':')[1])}</div>`
+      : (mv.DB ? `<div><span class="text-muted">Damage Base</span> ${escapeHtml(mv.DB)}</div>` : '')
+    }
+    ${row('Class', mv.Class)}
+    ${row('Range', mv.Range)}
+    ${row('Keywords', tags)}
+    ${row('Target', mv.Target)}
+    ${row('Trigger', mv.Trigger)}
+    ${mv.Effect ? `<hr class="my-2"><div style="white-space:pre-wrap">${escapeHtml(mv.Effect)}</div>` : ''}
+  `;
+  }
+
+  function renderAbilityDetails(ab) {
+    if (!ab) return '<p class="text-muted mb-0">Ability introuvable.</p>';
+    const row = (k, v) => v ? `<div><span class="text-muted">${k}:</span> ${escapeHtml(String(v))}</div>` : '';
+
+    return `
+    <div class="mb-2">
+      <h4 class="mb-1">${escapeHtml(ab.Name || 'Ability')}</h4>
+    </div>
+    ${row('Frequency', ab.Frequency)}
+    ${row('Target', ab.Target)}
+    ${row('Trigger', ab.Trigger)}
+    ${ab.Effect ? `<hr class="my-2"><div style="white-space:pre-wrap">${escapeHtml(ab.Effect)}</div>` : ''}
+    ${ab.Bonus ? `<hr class="my-2"><div style="white-space:pre-wrap"><strong>Bonus.</strong> ${escapeHtml(ab.Bonus)}</div>` : ''}
+    ${ab.Special ? `<div style="white-space:pre-wrap"><strong>Special.</strong> ${escapeHtml(ab.Special)}</div>` : ''}
+  `;
+  }
+
+
   function collectTypes(rows) {
     const set = new Set();
     rows.forEach(r => extractTypes(r).forEach(t => set.add(t)));
@@ -616,10 +763,12 @@
       const tagsSup = Array.isArray(m.Tags) && m.Tags.length
         ? `<sup class="smaller text-uppercase text-muted ms-1">${escapeHtml(m.Tags.join(' '))}</sup>`
         : '';
+      const nameHtml = `<a href="#" class="js-move-link" data-move="${escapeHtml(m.Move)}">${escapeHtml(m.Move)}</a>`;
+
       return `
         <li class="d-flex align-items-center mb-1">
           <span class="text-muted" style="width:50px;">Lv.${m.Level}</span>
-          <span class="fw-semibold flex-grow-1">${escapeHtml(m.Move)}${tagsSup}</span>
+          <span class="fw-semibold flex-grow-1">${nameHtml}${tagsSup}</span>
           ${wrapTypes([m.Type])}
         </li>`;
     }).join('')}
@@ -829,6 +978,7 @@
     </div>
   `;
   }
+
   function renderEvolutionList(evos, depth = 0) {
     // evos attendu: [{ Stade, Species, Condition }]
     if (!Array.isArray(evos) || evos.length === 0) return '';
@@ -848,8 +998,6 @@
         <span class="flex-grow-1">${label}</span>
       </li>`;
     }).join('');
-
-
 
     const h = Math.min(4 + depth, 6);
     return `
@@ -946,7 +1094,10 @@
         return `<span class="small text-muted">${escapeHtml(it)}</span>`;
       }
 
-      const move = escapeHtml(it?.Move ?? '');
+      const raw = it?.Move ?? '';
+      const move = raw
+        ? `<a href="#" class="js-move-link" data-move="${escapeHtml(raw)}">${escapeHtml(raw)}</a>`
+        : '';
 
       // Tags (toujours en exposant, petit + uppercase)
       const tagsSup = Array.isArray(it?.Tags) && it.Tags.length
@@ -970,8 +1121,6 @@
     </div>
   `;
   }
-
-
 
   function renderObject(obj, depth = 0) {
     // Dispatch: left column for \"main\" sections
@@ -1022,6 +1171,34 @@
               v.Type = renderFormType(t); // compat: objet simple { Form: [...] }
             }
           }
+
+          // Render Type + linkify Abilities in Basic Information
+          if (k === 'Basic Information' && v && typeof v === 'object') {
+            // --- Type handling (inchangé) ---
+            if (v?.Type) {
+              const t = v.Type;
+              if (Array.isArray(t)) {
+                if (t.length && typeof t[0] === 'string') {
+                  v.Type = wrapTypes(t); // ex: ["Electric","Fire"]
+                } else if (t.length && typeof t[0] === 'object') {
+                  v.Type = renderFormType(t[0]); // ex: [ { Form: [types], ... } ]
+                } else {
+                  v.Type = '';
+                }
+              } else {
+                v.Type = renderFormType(t); // compat: objet simple { Form: [...] }
+              }
+            }
+
+            // --- Abilities linkification (ajout minimal) ---
+            for (const [bk, bv] of Object.entries(v)) {
+              if (typeof bv === 'string' && /ability/i.test(bk) && !/capabilit/i.test(bk) && bv.trim()) {
+                v[bk] = `<a href="#" class="js-ability-link" data-ability="${escapeHtml(bv)}">${escapeHtml(bv)}</a>`;
+                console.debug('[Ability-linkified]', bk, '→', bv);
+              }
+            }
+          }
+
 
           // --- Base Stats en grille 2x3 ---
           if (k === "Base Stats" && v && typeof v === "object") {
@@ -1099,6 +1276,7 @@
             }
             continue;
           }
+
           // Add more hand-written exclusions here as needed
           // ----------------------------------------
 
@@ -1207,6 +1385,65 @@
   }
 
   // Boot
+  let _moveAbilityModal;
+  function ensureMoveAbilityModal() {
+    if (_moveAbilityModal) return _moveAbilityModal;
+    const el = document.getElementById('moveAbilityModal');
+    if (!el) return null;
+    _moveAbilityModal = new bootstrap.Modal(el, { backdrop: true });
+    return _moveAbilityModal;
+  }
+
+  async function openMoveModalByName(moveName) {
+    const name = String(moveName || '').trim().toLowerCase();
+    if (!name) return;
+    const idx = await loadMoveIndex();
+    const mv = idx.get(name) || idx.get(name.replace(/[-–—]/g, ' ')) || null; // petite tolérance
+    if (!mv) {
+      console.warn('[moves] introuvable:', moveName);
+      // Affiche les 30 premières clés disponibles pour comparer vite fait
+      console.debug('[moves] index keys sample =', Array.from(idx.keys()).slice(0, 30));
+    }
+    const display = mv?.Move || mv?.Name || mv?.__displayName || moveName;
+    const labelEl = document.getElementById('moveAbilityModalLabel');
+    const typeHtml = mv?.Type ? wrapTypes([mv.Type]) : '';
+    labelEl.innerHTML = `
+      <div>
+        <div class="fw-semibold">Move — ${escapeHtml(display)}</div>
+        <div class="mt-1">${typeHtml}</div>
+      </div>
+    `;
+    document.getElementById('moveAbilityModalBody').innerHTML = renderMoveDetails(mv);
+    ensureMoveAbilityModal()?.show();
+  }
+
+  async function openAbilityModalByName(abilityName) {
+    const name = String(abilityName || '').trim().toLowerCase();
+    if (!name) return;
+    const idx = await loadAbilityIndex();
+    const ab = idx.get(name) || null;
+    if (!ab) {
+      console.warn('[abilities] introuvable:', abilityName);
+      console.debug('[abilities] index keys sample =', Array.from(idx.keys()).slice(0, 30));
+    }
+    const display = ab?.Name || ab?.__displayName || abilityName;
+    document.getElementById('moveAbilityModalLabel').textContent = `Ability — ${display}`;
+    document.getElementById('moveAbilityModalBody').innerHTML = renderAbilityDetails(ab);
+
+    ensureMoveAbilityModal()?.show();
+  }
+
+  // Délégation globale : clics sur move / ability
+  document.addEventListener('click', (ev) => {
+    const a = ev.target.closest('a.js-move-link, a.js-ability-link');
+    if (!a) return;
+    ev.preventDefault();
+    const move = a.dataset.move;
+    const ability = a.dataset.ability;
+    if (move) openMoveModalByName(move);
+    if (ability) openAbilityModalByName(ability);
+  });
+
 
   document.addEventListener("DOMContentLoaded", async () => {
     selectedLabels = new Set(PRESETS[selectedPreset] || []);
