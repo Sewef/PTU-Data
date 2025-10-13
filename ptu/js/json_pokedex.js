@@ -467,11 +467,9 @@
     if (!raw) return "";
     const s = String(raw);
     // if already "Damage Base X: ...", keep label part normalized
-    const m = s.match(/(?:Damage\s*Base\s*)?(\d+)\s*:\s*(.+)$/i);
+    const m = s.match(/(Damage Base.*)\s*:\s*(.+)$/i);
     if (m) {
-      const rank = m[1];
-      const detail = m[2];
-      return `<div><span class="text-muted">Damage Base ${escapeHtml(rank)}:</span> ${escapeHtml(detail)}</div>`;
+      return `<div><span class="text-muted">${m[1]}:</span> ${m[2]}</div>`;
     }
     // fallback (raw may contain "4: 1d8+6 / 11" or just "1d8+6 / 11")
     const m2 = s.match(/(\d+)\s*:\s*(.+)/);
