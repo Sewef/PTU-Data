@@ -72,12 +72,12 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Tackle",
+          "Move": "Growl",
           "Type": "Normal"
         },
         {
           "Level": 1,
-          "Move": "Growl",
+          "Move": "Tackle",
           "Type": "Normal"
         },
         {
@@ -124,16 +124,16 @@
         },
         {
           "Level": 18,
-          "Move": "Synthesis",
-          "Type": "Grass"
-        },
-        {
-          "Level": 18,
           "Move": "Foresight",
           "Type": "Normal",
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 18,
+          "Move": "Synthesis",
+          "Type": "Grass"
         },
         {
           "Level": 21,
@@ -1644,12 +1644,12 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Scratch",
+          "Move": "Growl",
           "Type": "Normal"
         },
         {
           "Level": 1,
-          "Move": "Growl",
+          "Move": "Scratch",
           "Type": "Normal"
         },
         {
@@ -3021,12 +3021,12 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Pound",
+          "Move": "Growl",
           "Type": "Normal"
         },
         {
           "Level": 1,
-          "Move": "Growl",
+          "Move": "Pound",
           "Type": "Normal"
         },
         {
@@ -5551,16 +5551,16 @@
         },
         {
           "Level": 13,
-          "Move": "Work Up",
-          "Type": "Normal"
-        },
-        {
-          "Level": 13,
           "Move": "Odor Sleuth",
           "Type": "Normal",
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 13,
+          "Move": "Work Up",
+          "Type": "Normal"
         },
         {
           "Level": 16,
@@ -5899,16 +5899,16 @@
         },
         {
           "Level": 13,
-          "Move": "Work Up",
-          "Type": "Normal"
-        },
-        {
-          "Level": 13,
           "Move": "Odor Sleuth",
           "Type": "Normal",
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 13,
+          "Move": "Work Up",
+          "Type": "Normal"
         },
         {
           "Level": 16,
@@ -6361,13 +6361,13 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Vise Grip",
-          "Type": "Normal"
+          "Move": "Mud-Slap",
+          "Type": "Ground"
         },
         {
           "Level": 1,
-          "Move": "Mud-Slap",
-          "Type": "Ground"
+          "Move": "Vise Grip",
+          "Type": "Normal"
         },
         {
           "Level": 5,
@@ -7238,6 +7238,15 @@
           "Method": "Machine"
         },
         {
+          "Move": "Mud Slap",
+          "Type": "Ground",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
           "Move": "Mud-Slap",
           "Type": "Ground",
           "Tags": [],
@@ -7358,6 +7367,15 @@
           "Method": "Machine"
         },
         {
+          "Move": "Vice Grip",
+          "Type": "Normal",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
           "Move": "Vise Grip",
           "Type": "Normal",
           "Tags": [],
@@ -7380,32 +7398,6 @@
           "Method": "Machine"
         },
         {
-          "Move": "X-Scissor",
-          "Type": "Bug",
-          "Tags": [
-            "Stab"
-          ],
-          "Method": "Egg"
-        },
-        {
-          "Move": "Vice Grip",
-          "Type": "Normal",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Mud Slap",
-          "Type": "Ground",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
           "Move": "X Scissor",
           "Type": "Bug",
           "Tags": [
@@ -7414,6 +7406,14 @@
             "N"
           ],
           "Method": "Machine"
+        },
+        {
+          "Move": "X-Scissor",
+          "Type": "Bug",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Egg"
         }
       ]
     }
@@ -7529,16 +7529,16 @@
         },
         {
           "Level": 25,
-          "Move": "Slam",
-          "Type": "Normal"
-        },
-        {
-          "Level": 25,
           "Move": "Dizzy Punch",
           "Type": "Normal",
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 25,
+          "Move": "Slam",
+          "Type": "Normal"
         },
         {
           "Level": 29,
@@ -7928,16 +7928,16 @@
         },
         {
           "Level": 25,
-          "Move": "Slam",
-          "Type": "Normal"
-        },
-        {
-          "Level": 25,
           "Move": "Dizzy Punch",
           "Type": "Normal",
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 25,
+          "Move": "Slam",
+          "Type": "Normal"
         },
         {
           "Level": 29,
@@ -8440,16 +8440,16 @@
         },
         {
           "Level": 33,
-          "Move": "Flatter",
-          "Type": "Dark"
-        },
-        {
-          "Level": 33,
           "Move": "Captivate",
           "Type": "Normal",
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 33,
+          "Move": "Flatter",
+          "Type": "Dark"
         },
         {
           "Level": 36,
@@ -8787,6 +8787,14 @@
         },
         {
           "Level": 30,
+          "Move": "Aromatherapy",
+          "Type": "Grass",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 30,
           "Move": "Covet",
           "Type": "Normal"
         },
@@ -8815,14 +8823,6 @@
           "Level": 54,
           "Move": "Quiver Dance",
           "Type": "Bug"
-        },
-        {
-          "Level": 30,
-          "Move": "Aromatherapy",
-          "Type": "Grass",
-          "Tags": [
-            "Deleted"
-          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -9173,6 +9173,14 @@
         },
         {
           "Level": 32,
+          "Move": "Aromatherapy",
+          "Type": "Grass",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 32,
           "Move": "Covet",
           "Type": "Normal"
         },
@@ -9201,14 +9209,6 @@
           "Level": 64,
           "Move": "Quiver Dance",
           "Type": "Bug"
-        },
-        {
-          "Level": 32,
-          "Move": "Aromatherapy",
-          "Type": "Grass",
-          "Tags": [
-            "Deleted"
-          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -9625,12 +9625,12 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Tackle",
+          "Move": "Leer",
           "Type": "Normal"
         },
         {
           "Level": 1,
-          "Move": "Leer",
+          "Move": "Tackle",
           "Type": "Normal"
         },
         {
@@ -11473,16 +11473,16 @@
         },
         {
           "Level": 48,
-          "Move": "Double-Edge",
-          "Type": "Normal"
-        },
-        {
-          "Level": 48,
           "Move": "Double Edge",
           "Type": "Normal",
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 48,
+          "Move": "Double-Edge",
+          "Type": "Normal"
         }
       ],
       "TM/Tutor Moves List": [
@@ -11823,16 +11823,16 @@
         },
         {
           "Level": 48,
-          "Move": "Double-Edge",
-          "Type": "Normal"
-        },
-        {
-          "Level": 48,
           "Move": "Double Edge",
           "Type": "Normal",
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 48,
+          "Move": "Double-Edge",
+          "Type": "Normal"
         }
       ],
       "TM/Tutor Moves List": [
@@ -12088,16 +12088,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
+          "Move": "Peck",
+          "Type": "Flying"
+        },
+        {
+          "Level": 1,
           "Move": "Poison Sting",
           "Type": "Poison",
           "Tags": [
             "Stab"
           ]
-        },
-        {
-          "Level": 1,
-          "Move": "Peck",
-          "Type": "Flying"
         },
         {
           "Level": 5,
@@ -12157,6 +12157,14 @@
           ]
         },
         {
+          "Level": 40,
+          "Move": "Venom Drench",
+          "Type": "Poison",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
           "Level": 45,
           "Move": "Poison Jab",
           "Type": "Poison",
@@ -12168,14 +12176,6 @@
           "Level": 50,
           "Move": "Toxic",
           "Type": "Poison"
-        },
-        {
-          "Level": 40,
-          "Move": "Venom Drench",
-          "Type": "Poison",
-          "Tags": [
-            "Deleted"
-          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -12493,6 +12493,14 @@
           ]
         },
         {
+          "Level": 42,
+          "Move": "Venom Drench",
+          "Type": "Poison",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
           "Level": 49,
           "Move": "Poison Jab",
           "Type": "Poison",
@@ -12504,14 +12512,6 @@
           "Level": 56,
           "Move": "Toxic",
           "Type": "Poison"
-        },
-        {
-          "Level": 42,
-          "Move": "Venom Drench",
-          "Type": "Poison",
-          "Tags": [
-            "Deleted"
-          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -13545,9 +13545,10 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Water Gun",
+          "Move": "Bubble",
           "Type": "Water",
           "Tags": [
+            "Deleted",
             "Stab"
           ]
         },
@@ -13561,19 +13562,18 @@
         },
         {
           "Level": 1,
-          "Move": "Water Sport",
+          "Move": "Water Gun",
           "Type": "Water",
           "Tags": [
-            "Deleted"
+            "Stab"
           ]
         },
         {
           "Level": 1,
-          "Move": "Bubble",
+          "Move": "Water Sport",
           "Type": "Water",
           "Tags": [
-            "Deleted",
-            "Stab"
+            "Deleted"
           ]
         },
         {
@@ -14728,6 +14728,15 @@
           "Method": "Machine"
         },
         {
+          "Move": "Dual Chop",
+          "Type": "Dragon",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
           "Move": "Endure",
           "Type": "Normal",
           "Tags": [],
@@ -14978,15 +14987,6 @@
           "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
-        },
-        {
-          "Move": "Dual Chop",
-          "Type": "Dragon",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
         }
       ]
     }
@@ -15076,16 +15076,16 @@
         },
         {
           "Level": 8,
-          "Move": "Ingrain",
-          "Type": "Grass"
-        },
-        {
-          "Level": 8,
           "Move": "Flash",
           "Type": "Normal",
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 8,
+          "Move": "Ingrain",
+          "Type": "Grass"
         },
         {
           "Level": 12,
@@ -15749,13 +15749,13 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Scratch",
-          "Type": "Normal"
+          "Move": "Poison Gas",
+          "Type": "Poison"
         },
         {
           "Level": 1,
-          "Move": "Poison Gas",
-          "Type": "Poison"
+          "Move": "Scratch",
+          "Type": "Normal"
         },
         {
           "Level": 5,
@@ -15846,6 +15846,14 @@
           ]
         },
         {
+          "Level": 45,
+          "Move": "Venom Drench",
+          "Type": "Poison",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
           "Level": 50,
           "Move": "Toxic",
           "Type": "Poison"
@@ -15854,14 +15862,6 @@
           "Level": 55,
           "Move": "Endeavor",
           "Type": "Normal"
-        },
-        {
-          "Level": 45,
-          "Move": "Venom Drench",
-          "Type": "Poison",
-          "Tags": [
-            "Deleted"
-          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -16226,18 +16226,18 @@
       "Level Up Move List": [
         {
           "Level": "Evo",
-          "Move": "Fire Lash",
-          "Type": "Fire",
-          "Tags": [
-            "Stab"
-          ]
-        },
-        {
-          "Level": "Evo",
           "Move": "Captivate",
           "Type": "Normal",
           "Tags": [
             "Deleted"
+          ]
+        },
+        {
+          "Level": "Evo",
+          "Move": "Fire Lash",
+          "Type": "Fire",
+          "Tags": [
+            "Stab"
           ]
         },
         {
@@ -16313,17 +16313,17 @@
           ]
         },
         {
-          "Level": 58,
-          "Move": "Toxic",
-          "Type": "Poison"
-        },
-        {
           "Level": 51,
           "Move": "Venom Drench",
           "Type": "Poison",
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 58,
+          "Move": "Toxic",
+          "Type": "Poison"
         }
       ],
       "TM/Tutor Moves List": [
@@ -16803,6 +16803,11 @@
       "Level Up Move List": [
         {
           "Level": 1,
+          "Move": "Leer",
+          "Type": "Normal"
+        },
+        {
+          "Level": 1,
           "Move": "Tackle",
           "Type": "Normal",
           "Tags": [
@@ -16810,9 +16815,12 @@
           ]
         },
         {
-          "Level": 1,
-          "Move": "Leer",
-          "Type": "Normal"
+          "Level": 4,
+          "Move": "Baby Doll Eyes",
+          "Type": "Fairy",
+          "Tags": [
+            "Deleted"
+          ]
         },
         {
           "Level": 4,
@@ -16890,6 +16898,15 @@
         },
         {
           "Level": 44,
+          "Move": "Double Edge",
+          "Type": "Normal",
+          "Tags": [
+            "Stab",
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 44,
           "Move": "Double-Edge",
           "Type": "Normal",
           "Tags": [
@@ -16902,23 +16919,6 @@
           "Type": "Fighting",
           "Tags": [
             "Stab"
-          ]
-        },
-        {
-          "Level": 44,
-          "Move": "Double Edge",
-          "Type": "Normal",
-          "Tags": [
-            "Stab",
-            "Deleted"
-          ]
-        },
-        {
-          "Level": 4,
-          "Move": "Baby Doll Eyes",
-          "Type": "Fairy",
-          "Tags": [
-            "Deleted"
           ]
         }
       ],
@@ -17279,6 +17279,15 @@
         },
         {
           "Level": 54,
+          "Move": "Double Edge",
+          "Type": "Normal",
+          "Tags": [
+            "Stab",
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 54,
           "Move": "Double-Edge",
           "Type": "Normal",
           "Tags": [
@@ -17292,15 +17301,6 @@
           "Tags": [
             "Stab"
           ]
-        },
-        {
-          "Level": 54,
-          "Move": "Double Edge",
-          "Type": "Normal",
-          "Tags": [
-            "Stab",
-            "Deleted"
-          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -17308,6 +17308,15 @@
           "Move": "Attract",
           "Type": "Normal",
           "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Baby Doll Eyes",
+          "Type": "Fairy",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
           "Method": "Machine"
         },
         {
@@ -17621,15 +17630,6 @@
           "Move": "Zen Headbutt",
           "Type": "Psychic",
           "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Baby Doll Eyes",
-          "Type": "Fairy",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
           "Method": "Machine"
         }
       ]
@@ -18085,18 +18085,18 @@
         },
         {
           "Level": 46,
-          "Move": "Leaf Storm",
-          "Type": "Grass",
-          "Tags": [
-            "Stab"
-          ]
-        },
-        {
-          "Level": 46,
           "Move": "Aromatherapy",
           "Type": "Grass",
           "Tags": [
             "Deleted"
+          ]
+        },
+        {
+          "Level": 46,
+          "Move": "Leaf Storm",
+          "Type": "Grass",
+          "Tags": [
+            "Stab"
           ]
         }
       ],
@@ -18468,6 +18468,14 @@
         },
         {
           "Level": 46,
+          "Move": "Aromatherapy",
+          "Type": "Grass",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 46,
           "Move": "Leaf Storm",
           "Type": "Grass",
           "Tags": [
@@ -18478,14 +18486,6 @@
           "Level": 58,
           "Move": "High Jump Kick",
           "Type": "Fighting"
-        },
-        {
-          "Level": 46,
-          "Move": "Aromatherapy",
-          "Type": "Grass",
-          "Tags": [
-            "Deleted"
-          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -18870,12 +18870,12 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Wrap",
+          "Move": "Growth",
           "Type": "Normal"
         },
         {
           "Level": 1,
-          "Move": "Growth",
+          "Move": "Wrap",
           "Type": "Normal"
         },
         {
@@ -18900,6 +18900,14 @@
           "Level": 12,
           "Move": "Charm",
           "Type": "Fairy"
+        },
+        {
+          "Level": 12,
+          "Move": "Flower Shield",
+          "Type": "Fairy",
+          "Tags": [
+            "Deleted"
+          ]
         },
         {
           "Level": 15,
@@ -18946,6 +18954,14 @@
         },
         {
           "Level": 36,
+          "Move": "Aromatherapy",
+          "Type": "Grass",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 36,
           "Move": "Bind",
           "Type": "Normal"
         },
@@ -18971,22 +18987,6 @@
           "Level": 48,
           "Move": "Grassy Terrain",
           "Type": "Grass"
-        },
-        {
-          "Level": 36,
-          "Move": "Aromatherapy",
-          "Type": "Grass",
-          "Tags": [
-            "Deleted"
-          ]
-        },
-        {
-          "Level": 12,
-          "Move": "Flower Shield",
-          "Type": "Fairy",
-          "Tags": [
-            "Deleted"
-          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -19765,12 +19765,12 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Tackle",
+          "Move": "Leer",
           "Type": "Normal"
         },
         {
           "Level": 1,
-          "Move": "Leer",
+          "Move": "Tackle",
           "Type": "Normal"
         },
         {
@@ -19798,16 +19798,16 @@
         },
         {
           "Level": 25,
-          "Move": "Take Down",
-          "Type": "Normal"
-        },
-        {
-          "Level": 25,
           "Move": "Bestow",
           "Type": "Normal",
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 25,
+          "Move": "Take Down",
+          "Type": "Normal"
         },
         {
           "Level": 30,
@@ -20234,13 +20234,13 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Sand Attack",
-          "Type": "Ground"
+          "Move": "Defense Curl",
+          "Type": "Normal"
         },
         {
           "Level": 1,
-          "Move": "Defense Curl",
-          "Type": "Normal"
+          "Move": "Sand Attack",
+          "Type": "Ground"
         },
         {
           "Level": 1,
@@ -21816,21 +21816,21 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Harden",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
           "Move": "Baton Pass",
           "Type": "Normal"
         },
         {
           "Level": 1,
-          "Move": "Water Sport",
-          "Type": "Water",
+          "Move": "Bide",
+          "Type": "Normal",
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 1,
+          "Move": "Harden",
+          "Type": "Normal"
         },
         {
           "Level": 1,
@@ -21842,8 +21842,8 @@
         },
         {
           "Level": 1,
-          "Move": "Bide",
-          "Type": "Normal",
+          "Move": "Water Sport",
+          "Type": "Water",
           "Tags": [
             "Deleted"
           ]
@@ -22072,16 +22072,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
+          "Move": "Imprison",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 1,
           "Move": "Tackle",
           "Type": "Normal",
           "Tags": [
             "Stab"
           ]
-        },
-        {
-          "Level": 1,
-          "Move": "Imprison",
-          "Type": "Psychic"
         },
         {
           "Level": 5,
@@ -22099,16 +22099,16 @@
         },
         {
           "Level": 10,
-          "Move": "Scary Face",
-          "Type": "Normal"
-        },
-        {
-          "Level": 10,
           "Move": "Pursuit",
           "Type": "Dark",
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 10,
+          "Move": "Scary Face",
+          "Type": "Normal"
         },
         {
           "Level": 15,
@@ -22146,6 +22146,14 @@
         },
         {
           "Level": 40,
+          "Move": "X Scissor",
+          "Type": "Bug",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 40,
           "Move": "X-Scissor",
           "Type": "Bug"
         },
@@ -22160,6 +22168,15 @@
           "Type": "Normal",
           "Tags": [
             "Stab"
+          ]
+        },
+        {
+          "Level": 55,
+          "Move": "Double Edge",
+          "Type": "Normal",
+          "Tags": [
+            "Stab",
+            "Deleted"
           ]
         },
         {
@@ -22191,23 +22208,6 @@
           "Level": 85,
           "Move": "Heal Block",
           "Type": "Psychic",
-          "Tags": [
-            "Deleted"
-          ]
-        },
-        {
-          "Level": 55,
-          "Move": "Double Edge",
-          "Type": "Normal",
-          "Tags": [
-            "Stab",
-            "Deleted"
-          ]
-        },
-        {
-          "Level": 40,
-          "Move": "X Scissor",
-          "Type": "Bug",
           "Tags": [
             "Deleted"
           ]
@@ -22451,6 +22451,15 @@
       "Level Up Move List": [
         {
           "Level": "Evo",
+          "Move": "Multi Attack",
+          "Type": "Normal",
+          "Tags": [
+            "Stab",
+            "Deleted"
+          ]
+        },
+        {
+          "Level": "Evo",
           "Move": "Multi-Attack",
           "Type": "Normal",
           "Tags": [
@@ -22510,6 +22519,14 @@
         },
         {
           "Level": 40,
+          "Move": "X Scissor",
+          "Type": "Bug",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 40,
           "Move": "X-Scissor",
           "Type": "Bug"
         },
@@ -22524,6 +22541,15 @@
           "Type": "Normal",
           "Tags": [
             "Stab"
+          ]
+        },
+        {
+          "Level": 55,
+          "Move": "Double Edge",
+          "Type": "Normal",
+          "Tags": [
+            "Stab",
+            "Deleted"
           ]
         },
         {
@@ -22554,32 +22580,6 @@
           "Tags": [
             "Deleted",
             "Stab"
-          ]
-        },
-        {
-          "Level": 55,
-          "Move": "Double Edge",
-          "Type": "Normal",
-          "Tags": [
-            "Stab",
-            "Deleted"
-          ]
-        },
-        {
-          "Level": 40,
-          "Move": "X Scissor",
-          "Type": "Bug",
-          "Tags": [
-            "Deleted"
-          ]
-        },
-        {
-          "Level": "Evo",
-          "Move": "Multi Attack",
-          "Type": "Normal",
-          "Tags": [
-            "Stab",
-            "Deleted"
           ]
         }
       ],
@@ -23753,16 +23753,16 @@
         },
         {
           "Level": 6,
-          "Move": "Stockpile",
-          "Type": "Normal"
-        },
-        {
-          "Level": 6,
           "Move": "Spit Up",
           "Type": "Normal",
           "Tags": [
             "Stab"
           ]
+        },
+        {
+          "Level": 6,
+          "Move": "Stockpile",
+          "Type": "Normal"
         },
         {
           "Level": 6,
@@ -24179,13 +24179,13 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Tackle",
-          "Type": "Normal"
+          "Move": "Smog",
+          "Type": "Poison"
         },
         {
           "Level": 1,
-          "Move": "Smog",
-          "Type": "Poison"
+          "Move": "Tackle",
+          "Type": "Normal"
         },
         {
           "Level": 4,
@@ -24653,16 +24653,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Tackle",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
           "Move": "Nuzzle",
           "Type": "Electric",
           "Tags": [
             "Stab"
           ]
+        },
+        {
+          "Level": 1,
+          "Move": "Tackle",
+          "Type": "Normal"
         },
         {
           "Level": 5,
@@ -25102,16 +25102,6 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Scratch",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
-          "Move": "Splash",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
           "Move": "Astonish",
           "Type": "Ghost",
           "Tags": [
@@ -25121,6 +25111,16 @@
         {
           "Level": 1,
           "Move": "Copycat",
+          "Type": "Normal"
+        },
+        {
+          "Level": 1,
+          "Move": "Scratch",
+          "Type": "Normal"
+        },
+        {
+          "Level": 1,
+          "Move": "Splash",
           "Type": "Normal"
         },
         {
@@ -25623,18 +25623,18 @@
         },
         {
           "Level": 44,
-          "Move": "Wave Crash",
-          "Type": "Water",
+          "Move": "Synchronoise",
+          "Type": "Psychic",
           "Tags": [
+            "Deleted",
             "Stab"
           ]
         },
         {
           "Level": 44,
-          "Move": "Synchronoise",
-          "Type": "Psychic",
+          "Move": "Wave Crash",
+          "Type": "Water",
           "Tags": [
-            "Deleted",
             "Stab"
           ]
         }
@@ -26925,12 +26925,12 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Tackle",
+          "Move": "Leer",
           "Type": "Normal"
         },
         {
           "Level": 1,
-          "Move": "Leer",
+          "Move": "Tackle",
           "Type": "Normal"
         },
         {
@@ -27372,6 +27372,15 @@
           "Method": "Machine"
         },
         {
+          "Move": "Autotomize",
+          "Type": "Steel",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
           "Move": "Body Slam",
           "Type": "Normal",
           "Tags": [],
@@ -27683,15 +27692,6 @@
           "Type": "Bug",
           "Tags": [],
           "Method": "Machine"
-        },
-        {
-          "Move": "Autotomize",
-          "Type": "Steel",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
         }
       ]
     }
@@ -27862,6 +27862,15 @@
           "Type": "Fighting",
           "Tags": [
             "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Autotomize",
+          "Type": "Steel",
+          "Tags": [
+            "Deleted",
+            "N"
           ],
           "Method": "Machine"
         },
@@ -28280,15 +28289,6 @@
           "Move": "X-Scissor",
           "Type": "Bug",
           "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Autotomize",
-          "Type": "Steel",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
           "Method": "Machine"
         }
       ]
@@ -29724,6 +29724,15 @@
           "Method": "Machine"
         },
         {
+          "Move": "Slam",
+          "Type": "Normal",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
           "Move": "Sleep Talk",
           "Type": "Normal",
           "Tags": [],
@@ -29833,15 +29842,6 @@
             "Stab"
           ],
           "Method": "Machine"
-        },
-        {
-          "Move": "Slam",
-          "Type": "Normal",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
         }
       ]
     }
@@ -29915,18 +29915,13 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Scratch",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
           "Move": "Defense Curl",
           "Type": "Normal"
         },
         {
-          "Level": 3,
-          "Move": "Mist",
-          "Type": "Ice"
+          "Level": 1,
+          "Move": "Scratch",
+          "Type": "Normal"
         },
         {
           "Level": 3,
@@ -29935,6 +29930,11 @@
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 3,
+          "Move": "Mist",
+          "Type": "Ice"
         },
         {
           "Level": 6,
@@ -30019,6 +30019,14 @@
         },
         {
           "Level": 42,
+          "Move": "Hail",
+          "Type": "Ice",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 42,
           "Move": "Snowscape",
           "Type": "Ice"
         },
@@ -30028,14 +30036,6 @@
           "Type": "Ice",
           "Tags": [
             "Stab"
-          ]
-        },
-        {
-          "Level": 42,
-          "Move": "Hail",
-          "Type": "Ice",
-          "Tags": [
-            "Deleted"
           ]
         }
       ],
@@ -30427,16 +30427,16 @@
         },
         {
           "Level": 3,
-          "Move": "Mist",
-          "Type": "Ice"
-        },
-        {
-          "Level": 3,
           "Move": "Bide",
           "Type": "Normal",
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 3,
+          "Move": "Mist",
+          "Type": "Ice"
         },
         {
           "Level": 6,
@@ -30557,6 +30557,16 @@
           "Type": "Ice",
           "Tags": [
             "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Blizzard",
+          "Type": "Ice",
+          "Tags": [
+            "Stab",
+            "Deleted",
+            "N"
           ],
           "Method": "Machine"
         },
@@ -30685,9 +30695,46 @@
           "Method": "Machine"
         },
         {
+          "Move": "Fury Cutter",
+          "Type": "Bug",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Fury Swipes",
+          "Type": "Normal",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
           "Move": "Giga Impact",
           "Type": "Normal",
           "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Gyro Ball",
+          "Type": "Steel",
+          "Tags": [
+            "Stab",
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Hail",
+          "Type": "Ice",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
           "Method": "Machine"
         },
         {
@@ -30752,6 +30799,25 @@
           "Method": "Machine"
         },
         {
+          "Move": "Iron Defense",
+          "Type": "Steel",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Iron Head",
+          "Type": "Steel",
+          "Tags": [
+            "Stab",
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
           "Move": "Knock Off",
           "Type": "Dark",
           "Tags": [],
@@ -30770,10 +30836,29 @@
           "Method": "Machine"
         },
         {
+          "Move": "Metal Burst",
+          "Type": "Steel",
+          "Tags": [
+            "Stab",
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
           "Move": "Mirror Coat",
           "Type": "Psychic",
           "Tags": [],
           "Method": "Egg"
+        },
+        {
+          "Move": "Mist",
+          "Type": "Ice",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
         },
         {
           "Move": "Night Slash",
@@ -30788,9 +30873,28 @@
           "Method": "Machine"
         },
         {
+          "Move": "Powder Snow",
+          "Type": "Ice",
+          "Tags": [
+            "Stab",
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
           "Move": "Protect",
           "Type": "Normal",
           "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rapid Spin",
+          "Type": "Normal",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
           "Method": "Machine"
         },
         {
@@ -30809,6 +30913,15 @@
           "Move": "Rock Tomb",
           "Type": "Rock",
           "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rollout",
+          "Type": "Rock",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
           "Method": "Machine"
         },
         {
@@ -30864,6 +30977,15 @@
           "Method": "Machine"
         },
         {
+          "Move": "Swift",
+          "Type": "Normal",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
           "Move": "Take Down",
           "Type": "Normal",
           "Tags": [],
@@ -30899,128 +31021,6 @@
           "Move": "X-Scissor",
           "Type": "Bug",
           "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Mist",
-          "Type": "Ice",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Blizzard",
-          "Type": "Ice",
-          "Tags": [
-            "Stab",
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Swift",
-          "Type": "Normal",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Fury Swipes",
-          "Type": "Normal",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Powder Snow",
-          "Type": "Ice",
-          "Tags": [
-            "Stab",
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Rollout",
-          "Type": "Rock",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Fury Cutter",
-          "Type": "Bug",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Rapid Spin",
-          "Type": "Normal",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Hail",
-          "Type": "Ice",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Iron Defense",
-          "Type": "Steel",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Gyro Ball",
-          "Type": "Steel",
-          "Tags": [
-            "Stab",
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Metal Burst",
-          "Type": "Steel",
-          "Tags": [
-            "Stab",
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Iron Head",
-          "Type": "Steel",
-          "Tags": [
-            "Stab",
-            "Deleted",
-            "N"
-          ],
           "Method": "Machine"
         }
       ]
@@ -31093,16 +31093,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Tail Whip",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
           "Move": "Powder Snow",
           "Type": "Ice",
           "Tags": [
             "Stab"
           ]
+        },
+        {
+          "Level": 1,
+          "Move": "Tail Whip",
+          "Type": "Normal"
         },
         {
           "Level": 4,
@@ -31196,6 +31196,15 @@
           ]
         },
         {
+          "Level": 48,
+          "Move": "Sheer Cold",
+          "Type": "Ice",
+          "Tags": [
+            "Stab",
+            "Deleted"
+          ]
+        },
+        {
           "Level": 52,
           "Move": "Blizzard",
           "Type": "Ice",
@@ -31208,15 +31217,6 @@
           "Move": "Grudge",
           "Type": "Ghost",
           "Tags": [
-            "Deleted"
-          ]
-        },
-        {
-          "Level": 48,
-          "Move": "Sheer Cold",
-          "Type": "Ice",
-          "Tags": [
-            "Stab",
             "Deleted"
           ]
         }
@@ -31660,6 +31660,25 @@
           "Method": "Machine"
         },
         {
+          "Move": "Aurora Beam",
+          "Type": "Ice",
+          "Tags": [
+            "Stab",
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Aurora Veil",
+          "Type": "Ice",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
           "Move": "Avalanche",
           "Type": "Ice",
           "Tags": [
@@ -31704,6 +31723,15 @@
           "Method": "Machine"
         },
         {
+          "Move": "Confuse Ray",
+          "Type": "Ghost",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
           "Move": "Dark Pulse",
           "Type": "Dark",
           "Tags": [],
@@ -31713,6 +31741,15 @@
           "Move": "Dig",
           "Type": "Ground",
           "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Disable",
+          "Type": "Normal",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
           "Method": "Machine"
         },
         {
@@ -31750,6 +31787,15 @@
           "Method": "Machine"
         },
         {
+          "Move": "Extrasensory",
+          "Type": "Psychic",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
           "Move": "Facade",
           "Type": "Normal",
           "Tags": [],
@@ -31777,6 +31823,15 @@
           "Move": "Giga Impact",
           "Type": "Normal",
           "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Grudge",
+          "Type": "Ghost",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
           "Method": "Machine"
         },
         {
@@ -31810,10 +31865,39 @@
           "Method": "Egg"
         },
         {
+          "Move": "Ice Beam",
+          "Type": "Ice",
+          "Tags": [
+            "Stab",
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Ice Shard",
+          "Type": "Ice",
+          "Tags": [
+            "Stab",
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
           "Move": "Icicle Spear",
           "Type": "Ice",
           "Tags": [
             "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Mist",
+          "Type": "Ice",
+          "Tags": [
+            "Deleted",
+            "N"
           ],
           "Method": "Machine"
         },
@@ -31897,6 +31981,16 @@
           "Method": "Egg"
         },
         {
+          "Move": "Sheer Cold",
+          "Type": "Ice",
+          "Tags": [
+            "Stab",
+            "Deleted",
+            "N"
+          ],
+          "Method": "Machine"
+        },
+        {
           "Move": "Sleep Talk",
           "Type": "Normal",
           "Tags": [],
@@ -31906,6 +32000,15 @@
           "Move": "Snowscape",
           "Type": "Ice",
           "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Spite",
+          "Type": "Ghost",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
           "Method": "Machine"
         },
         {
@@ -31964,109 +32067,6 @@
           "Move": "Zen Headbutt",
           "Type": "Psychic",
           "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Disable",
-          "Type": "Normal",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Mist",
-          "Type": "Ice",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Ice Beam",
-          "Type": "Ice",
-          "Tags": [
-            "Stab",
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Aurora Beam",
-          "Type": "Ice",
-          "Tags": [
-            "Stab",
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Confuse Ray",
-          "Type": "Ghost",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Spite",
-          "Type": "Ghost",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Grudge",
-          "Type": "Ghost",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Extrasensory",
-          "Type": "Psychic",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Sheer Cold",
-          "Type": "Ice",
-          "Tags": [
-            "Stab",
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Ice Shard",
-          "Type": "Ice",
-          "Tags": [
-            "Stab",
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Aurora Veil",
-          "Type": "Ice",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
           "Method": "Machine"
         }
       ]
@@ -32138,16 +32138,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Sand Attack",
-          "Type": "Ground"
-        },
-        {
-          "Level": 1,
           "Move": "Metal Claw",
           "Type": "Steel",
           "Tags": [
             "Stab"
           ]
+        },
+        {
+          "Level": 1,
+          "Move": "Sand Attack",
+          "Type": "Ground"
         },
         {
           "Level": 4,
@@ -33029,12 +33029,12 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Growl",
+          "Move": "Fake Out",
           "Type": "Normal"
         },
         {
           "Level": 1,
-          "Move": "Fake Out",
+          "Move": "Growl",
           "Type": "Normal"
         },
         {
@@ -34033,12 +34033,12 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Tackle",
+          "Move": "Defense Curl",
           "Type": "Normal"
         },
         {
           "Level": 1,
-          "Move": "Defense Curl",
+          "Move": "Tackle",
           "Type": "Normal"
         },
         {
@@ -35545,13 +35545,13 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Pound",
-          "Type": "Normal"
+          "Move": "Poison Gas",
+          "Type": "Poison"
         },
         {
           "Level": 1,
-          "Move": "Poison Gas",
-          "Type": "Poison"
+          "Move": "Pound",
+          "Type": "Normal"
         },
         {
           "Level": 4,
@@ -37218,6 +37218,14 @@
         },
         {
           "Level": 36,
+          "Move": "Will O Wisp",
+          "Type": "Fire",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 36,
           "Move": "Will-O-Wisp",
           "Type": "Fire"
         },
@@ -37242,14 +37250,6 @@
           "Type": "Fire",
           "Tags": [
             "Stab"
-          ]
-        },
-        {
-          "Level": 36,
-          "Move": "Will O Wisp",
-          "Type": "Fire",
-          "Tags": [
-            "Deleted"
           ]
         }
       ],
@@ -37314,6 +37314,15 @@
           "Move": "Dig",
           "Type": "Ground",
           "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Double Edge",
+          "Type": "Normal",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
           "Method": "Machine"
         },
         {
@@ -37491,6 +37500,15 @@
           "Move": "Mega Punch",
           "Type": "Normal",
           "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Mud Slap",
+          "Type": "Ground",
+          "Tags": [
+            "Deleted",
+            "N"
+          ],
           "Method": "Machine"
         },
         {
@@ -37676,24 +37694,6 @@
           "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
-        },
-        {
-          "Move": "Double Edge",
-          "Type": "Normal",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Mud Slap",
-          "Type": "Ground",
-          "Tags": [
-            "Deleted",
-            "N"
-          ],
-          "Method": "Machine"
         }
       ]
     }
@@ -37758,16 +37758,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
+          "Move": "Quick Attack",
+          "Type": "Normal"
+        },
+        {
+          "Level": 1,
           "Move": "Thunder Shock",
           "Type": "Electric",
           "Tags": [
             "Stab"
           ]
-        },
-        {
-          "Level": 1,
-          "Move": "Quick Attack",
-          "Type": "Normal"
         },
         {
           "Level": 5,
@@ -37848,6 +37848,15 @@
           ]
         },
         {
+          "Level": 55,
+          "Move": "Natures Madness",
+          "Type": "Fairy",
+          "Tags": [
+            "Stab",
+            "Deleted"
+          ]
+        },
+        {
           "Level": 60,
           "Move": "Wild Charge",
           "Type": "Electric",
@@ -37869,15 +37878,6 @@
           "Level": 75,
           "Move": "Electric Terrain",
           "Type": "Electric"
-        },
-        {
-          "Level": 55,
-          "Move": "Natures Madness",
-          "Type": "Fairy",
-          "Tags": [
-            "Stab",
-            "Deleted"
-          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -38186,16 +38186,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
+          "Move": "Astonish",
+          "Type": "Ghost"
+        },
+        {
+          "Level": 1,
           "Move": "Confusion",
           "Type": "Psychic",
           "Tags": [
             "Stab"
           ]
-        },
-        {
-          "Level": 1,
-          "Move": "Astonish",
-          "Type": "Ghost"
         },
         {
           "Level": 5,
@@ -38277,6 +38277,15 @@
           ]
         },
         {
+          "Level": 55,
+          "Move": "Natures Madness",
+          "Type": "Fairy",
+          "Tags": [
+            "Stab",
+            "Deleted"
+          ]
+        },
+        {
           "Level": 60,
           "Move": "Moonblast",
           "Type": "Fairy",
@@ -38298,15 +38307,6 @@
           "Level": 75,
           "Move": "Psychic Terrain",
           "Type": "Psychic"
-        },
-        {
-          "Level": 55,
-          "Move": "Natures Madness",
-          "Type": "Fairy",
-          "Tags": [
-            "Stab",
-            "Deleted"
-          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -38614,16 +38614,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Rock Smash",
-          "Type": "Fighting"
-        },
-        {
-          "Level": 1,
           "Move": "Leafage",
           "Type": "Grass",
           "Tags": [
             "Stab"
           ]
+        },
+        {
+          "Level": 1,
+          "Move": "Rock Smash",
+          "Type": "Fighting"
         },
         {
           "Level": 5,
@@ -38698,6 +38698,15 @@
           ]
         },
         {
+          "Level": 55,
+          "Move": "Natures Madness",
+          "Type": "Fairy",
+          "Tags": [
+            "Stab",
+            "Deleted"
+          ]
+        },
+        {
           "Level": 60,
           "Move": "Wood Hammer",
           "Type": "Grass",
@@ -38719,15 +38728,6 @@
           "Level": 75,
           "Move": "Grassy Terrain",
           "Type": "Grass"
-        },
-        {
-          "Level": 55,
-          "Move": "Natures Madness",
-          "Type": "Fairy",
-          "Tags": [
-            "Stab",
-            "Deleted"
-          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -39090,16 +39090,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Water Gun",
-          "Type": "Water",
+          "Move": "Disarming Voice",
+          "Type": "Fairy",
           "Tags": [
             "Stab"
           ]
         },
         {
           "Level": 1,
-          "Move": "Disarming Voice",
-          "Type": "Fairy",
+          "Move": "Water Gun",
+          "Type": "Water",
           "Tags": [
             "Stab"
           ]
@@ -39111,12 +39111,12 @@
         },
         {
           "Level": 10,
-          "Move": "Mist",
+          "Move": "Haze",
           "Type": "Ice"
         },
         {
           "Level": 10,
-          "Move": "Haze",
+          "Move": "Mist",
           "Type": "Ice"
         },
         {
@@ -39188,6 +39188,15 @@
           ]
         },
         {
+          "Level": 55,
+          "Move": "Natures Madness",
+          "Type": "Fairy",
+          "Tags": [
+            "Stab",
+            "Deleted"
+          ]
+        },
+        {
           "Level": 60,
           "Move": "Moonblast",
           "Type": "Fairy",
@@ -39212,15 +39221,6 @@
           "Level": 75,
           "Move": "Misty Terrain",
           "Type": "Fairy"
-        },
-        {
-          "Level": 55,
-          "Move": "Natures Madness",
-          "Type": "Fairy",
-          "Tags": [
-            "Stab",
-            "Deleted"
-          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -39539,13 +39539,13 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Teleport",
-          "Type": "Psychic"
+          "Move": "Splash",
+          "Type": "Normal"
         },
         {
           "Level": 1,
-          "Move": "Splash",
-          "Type": "Normal"
+          "Move": "Teleport",
+          "Type": "Psychic"
         }
       ],
       "TM/Tutor Moves List": []
@@ -40272,6 +40272,14 @@
         },
         {
           "Level": 49,
+          "Move": "Magic Coat",
+          "Type": "Psychic",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 49,
           "Move": "Psychic",
           "Type": "Psychic",
           "Tags": [
@@ -40308,14 +40316,6 @@
           "Level": 84,
           "Move": "Hyper Beam",
           "Type": "Normal",
-          "Tags": [
-            "Deleted"
-          ]
-        },
-        {
-          "Level": 49,
-          "Move": "Magic Coat",
-          "Type": "Psychic",
           "Tags": [
             "Deleted"
           ]
@@ -40701,6 +40701,11 @@
       "Level Up Move List": [
         {
           "Level": 1,
+          "Move": "Charge Beam",
+          "Type": "Electric"
+        },
+        {
+          "Level": 1,
           "Move": "Confusion",
           "Type": "Psychic",
           "Tags": [
@@ -40714,18 +40719,13 @@
         },
         {
           "Level": 1,
-          "Move": "Morning Sun",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
           "Move": "Moonlight",
           "Type": "Fairy"
         },
         {
           "Level": 1,
-          "Move": "Charge Beam",
-          "Type": "Electric"
+          "Move": "Morning Sun",
+          "Type": "Normal"
         },
         {
           "Level": 8,
@@ -40791,6 +40791,14 @@
         },
         {
           "Level": 80,
+          "Move": "Autotomize",
+          "Type": "Steel",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 80,
           "Move": "Gravity",
           "Type": "Psychic"
         },
@@ -40800,14 +40808,6 @@
           "Type": "Psychic",
           "Tags": [
             "Stab"
-          ]
-        },
-        {
-          "Level": 80,
-          "Move": "Autotomize",
-          "Type": "Steel",
-          "Tags": [
-            "Deleted"
           ]
         }
       ],
@@ -41187,6 +41187,11 @@
       "Level Up Move List": [
         {
           "Level": 1,
+          "Move": "Charge Beam",
+          "Type": "Electric"
+        },
+        {
+          "Level": 1,
           "Move": "Confusion",
           "Type": "Psychic",
           "Tags": [
@@ -41203,18 +41208,13 @@
         },
         {
           "Level": 1,
-          "Move": "Morning Sun",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
           "Move": "Moonlight",
           "Type": "Fairy"
         },
         {
           "Level": 1,
-          "Move": "Charge Beam",
-          "Type": "Electric"
+          "Move": "Morning Sun",
+          "Type": "Normal"
         },
         {
           "Level": 8,
@@ -41280,6 +41280,14 @@
         },
         {
           "Level": 80,
+          "Move": "Autotomize",
+          "Type": "Steel",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 80,
           "Move": "Gravity",
           "Type": "Psychic"
         },
@@ -41289,14 +41297,6 @@
           "Type": "Psychic",
           "Tags": [
             "Stab"
-          ]
-        },
-        {
-          "Level": 80,
-          "Move": "Autotomize",
-          "Type": "Steel",
-          "Tags": [
-            "Deleted"
           ]
         }
       ],
@@ -41704,6 +41704,11 @@
       "Level Up Move List": [
         {
           "Level": 1,
+          "Move": "Charge Beam",
+          "Type": "Electric"
+        },
+        {
+          "Level": 1,
           "Move": "Confusion",
           "Type": "Psychic",
           "Tags": [
@@ -41717,18 +41722,13 @@
         },
         {
           "Level": 1,
-          "Move": "Morning Sun",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
           "Move": "Moonlight",
           "Type": "Fairy"
         },
         {
           "Level": 1,
-          "Move": "Charge Beam",
-          "Type": "Electric"
+          "Move": "Morning Sun",
+          "Type": "Normal"
         },
         {
           "Level": 8,
@@ -41772,6 +41772,14 @@
           "Type": "Steel"
         },
         {
+          "Level": 60,
+          "Move": "Autotomize",
+          "Type": "Steel",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
           "Level": 64,
           "Move": "Power Gem",
           "Type": "Rock"
@@ -41803,14 +41811,6 @@
           "Type": "Psychic",
           "Tags": [
             "Stab"
-          ]
-        },
-        {
-          "Level": 60,
-          "Move": "Autotomize",
-          "Type": "Steel",
-          "Tags": [
-            "Deleted"
           ]
         }
       ],
@@ -42223,7 +42223,15 @@
         },
         {
           "Level": 1,
-          "Move": "Dragon Breath",
+          "Move": "Bulldoze",
+          "Type": "Ground",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
+          "Level": 1,
+          "Move": "Core Enforcer",
           "Type": "Dragon",
           "Tags": [
             "Stab"
@@ -42231,8 +42239,8 @@
         },
         {
           "Level": 1,
-          "Move": "Bulldoze",
-          "Type": "Ground",
+          "Move": "Dragon Breath",
+          "Type": "Dragon",
           "Tags": [
             "Stab"
           ]
@@ -42249,14 +42257,6 @@
           "Level": 1,
           "Move": "Thousand Waves",
           "Type": "Ground",
-          "Tags": [
-            "Stab"
-          ]
-        },
-        {
-          "Level": 1,
-          "Move": "Core Enforcer",
-          "Type": "Dragon",
           "Tags": [
             "Stab"
           ]
@@ -42301,6 +42301,15 @@
           ]
         },
         {
+          "Level": 48,
+          "Move": "Lands Wrath",
+          "Type": "Ground",
+          "Tags": [
+            "Stab",
+            "Deleted"
+          ]
+        },
+        {
           "Level": 56,
           "Move": "Glare",
           "Type": "Normal"
@@ -42337,15 +42346,6 @@
           "Type": "Dragon",
           "Tags": [
             "Stab"
-          ]
-        },
-        {
-          "Level": 48,
-          "Move": "Lands Wrath",
-          "Type": "Ground",
-          "Tags": [
-            "Stab",
-            "Deleted"
           ]
         }
       ],
@@ -42652,7 +42652,15 @@
         },
         {
           "Level": 1,
-          "Move": "Dragon Breath",
+          "Move": "Bulldoze",
+          "Type": "Ground",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
+          "Level": 1,
+          "Move": "Core Enforcer",
           "Type": "Dragon",
           "Tags": [
             "Stab"
@@ -42660,8 +42668,8 @@
         },
         {
           "Level": 1,
-          "Move": "Bulldoze",
-          "Type": "Ground",
+          "Move": "Dragon Breath",
+          "Type": "Dragon",
           "Tags": [
             "Stab"
           ]
@@ -42678,14 +42686,6 @@
           "Level": 1,
           "Move": "Thousand Waves",
           "Type": "Ground",
-          "Tags": [
-            "Stab"
-          ]
-        },
-        {
-          "Level": 1,
-          "Move": "Core Enforcer",
-          "Type": "Dragon",
           "Tags": [
             "Stab"
           ]
@@ -42730,6 +42730,15 @@
           ]
         },
         {
+          "Level": 48,
+          "Move": "Lands Wrath",
+          "Type": "Ground",
+          "Tags": [
+            "Stab",
+            "Deleted"
+          ]
+        },
+        {
           "Level": 56,
           "Move": "Glare",
           "Type": "Normal"
@@ -42766,15 +42775,6 @@
           "Type": "Dragon",
           "Tags": [
             "Stab"
-          ]
-        },
-        {
-          "Level": 48,
-          "Move": "Lands Wrath",
-          "Type": "Ground",
-          "Tags": [
-            "Stab",
-            "Deleted"
           ]
         }
       ],
@@ -43081,7 +43081,15 @@
         },
         {
           "Level": 1,
-          "Move": "Dragon Breath",
+          "Move": "Bulldoze",
+          "Type": "Ground",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
+          "Level": 1,
+          "Move": "Core Enforcer",
           "Type": "Dragon",
           "Tags": [
             "Stab"
@@ -43089,8 +43097,8 @@
         },
         {
           "Level": 1,
-          "Move": "Bulldoze",
-          "Type": "Ground",
+          "Move": "Dragon Breath",
+          "Type": "Dragon",
           "Tags": [
             "Stab"
           ]
@@ -43107,14 +43115,6 @@
           "Level": 1,
           "Move": "Thousand Waves",
           "Type": "Ground",
-          "Tags": [
-            "Stab"
-          ]
-        },
-        {
-          "Level": 1,
-          "Move": "Core Enforcer",
-          "Type": "Dragon",
           "Tags": [
             "Stab"
           ]
@@ -43159,6 +43159,15 @@
           ]
         },
         {
+          "Level": 48,
+          "Move": "Lands Wrath",
+          "Type": "Ground",
+          "Tags": [
+            "Stab",
+            "Deleted"
+          ]
+        },
+        {
           "Level": 56,
           "Move": "Glare",
           "Type": "Normal"
@@ -43195,15 +43204,6 @@
           "Type": "Dragon",
           "Tags": [
             "Stab"
-          ]
-        },
-        {
-          "Level": 48,
-          "Move": "Lands Wrath",
-          "Type": "Ground",
-          "Tags": [
-            "Stab",
-            "Deleted"
           ]
         }
       ],
@@ -43497,14 +43497,6 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Water Gun",
-          "Type": "Water",
-          "Tags": [
-            "Stab"
-          ]
-        },
-        {
-          "Level": 1,
           "Move": "Fire Spin",
           "Type": "Fire",
           "Tags": [
@@ -43514,6 +43506,14 @@
         {
           "Level": 1,
           "Move": "Steam Eruption",
+          "Type": "Water",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
+          "Level": 1,
+          "Move": "Water Gun",
           "Type": "Water",
           "Tags": [
             "Stab"
@@ -43578,12 +43578,12 @@
         },
         {
           "Level": 60,
-          "Move": "Mist",
+          "Move": "Haze",
           "Type": "Ice"
         },
         {
           "Level": 60,
-          "Move": "Haze",
+          "Move": "Mist",
           "Type": "Ice"
         },
         {
@@ -43974,6 +43974,14 @@
       "Level Up Move List": [
         {
           "Level": 1,
+          "Move": "Constrict",
+          "Type": "Normal",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 1,
           "Move": "Pound",
           "Type": "Normal"
         },
@@ -43981,14 +43989,6 @@
           "Level": 1,
           "Move": "Wrap",
           "Type": "Normal"
-        },
-        {
-          "Level": 1,
-          "Move": "Constrict",
-          "Type": "Normal",
-          "Tags": [
-            "Deleted"
-          ]
         },
         {
           "Level": 5,
@@ -44385,6 +44385,15 @@
         },
         {
           "Level": 1,
+          "Move": "Power Up Punch",
+          "Type": "Fighting",
+          "Tags": [
+            "Stab",
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 1,
           "Move": "Power-Up Punch",
           "Type": "Fighting",
           "Tags": [
@@ -44494,15 +44503,6 @@
           "Type": "Fighting",
           "Tags": [
             "Stab"
-          ]
-        },
-        {
-          "Level": 1,
-          "Move": "Power Up Punch",
-          "Type": "Fighting",
-          "Tags": [
-            "Stab",
-            "Deleted"
           ]
         }
       ],
@@ -44796,12 +44796,12 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Rapid Spin",
+          "Move": "Feint",
           "Type": "Normal"
         },
         {
           "Level": 1,
-          "Move": "Feint",
+          "Move": "Rapid Spin",
           "Type": "Normal"
         },
         {
@@ -45189,16 +45189,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Wrap",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
           "Move": "Thunder Shock",
           "Type": "Electric",
           "Tags": [
             "Stab"
           ]
+        },
+        {
+          "Level": 1,
+          "Move": "Wrap",
+          "Type": "Normal"
         },
         {
           "Level": 5,
@@ -45542,13 +45542,13 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Tackle",
-          "Type": "Normal"
+          "Move": "Absorb",
+          "Type": "Grass"
         },
         {
           "Level": 1,
-          "Move": "Absorb",
-          "Type": "Grass"
+          "Move": "Tackle",
+          "Type": "Normal"
         },
         {
           "Level": 5,
@@ -45618,6 +45618,14 @@
         },
         {
           "Level": 65,
+          "Move": "Double Edge",
+          "Type": "Normal",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 65,
           "Move": "Double-Edge",
           "Type": "Normal"
         },
@@ -45625,14 +45633,6 @@
           "Level": 70,
           "Move": "Skull Bash",
           "Type": "Normal"
-        },
-        {
-          "Level": 65,
-          "Move": "Double Edge",
-          "Type": "Normal",
-          "Tags": [
-            "Deleted"
-          ]
         }
       ],
       "TM/Tutor Moves List": [
@@ -46209,18 +46209,18 @@
         },
         {
           "Level": 1,
-          "Move": "Dragon Tail",
+          "Move": "Dragon Rage",
           "Type": "Dragon",
           "Tags": [
+            "Deleted",
             "Stab"
           ]
         },
         {
           "Level": 1,
-          "Move": "Dragon Rage",
+          "Move": "Dragon Tail",
           "Type": "Dragon",
           "Tags": [
-            "Deleted",
             "Stab"
           ]
         },
@@ -46691,11 +46691,6 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Growl",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
           "Move": "Acid",
           "Type": "Poison",
           "Tags": [
@@ -46704,8 +46699,13 @@
         },
         {
           "Level": 1,
-          "Move": "Peck",
-          "Type": "Flying"
+          "Move": "Dragon Pulse",
+          "Type": "Dragon"
+        },
+        {
+          "Level": 1,
+          "Move": "Growl",
+          "Type": "Normal"
         },
         {
           "Level": 1,
@@ -46714,8 +46714,8 @@
         },
         {
           "Level": 1,
-          "Move": "Dragon Pulse",
-          "Type": "Dragon"
+          "Move": "Peck",
+          "Type": "Flying"
         },
         {
           "Level": 7,
@@ -46937,6 +46937,56 @@
           "Type": "Flying"
         },
         {
+          "Level": 1,
+          "Move": "Acid",
+          "Type": "Poison",
+          "Tags": [
+            "Stab",
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 1,
+          "Move": "Air Slash",
+          "Type": "Flying",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 1,
+          "Move": "Dragon Pulse",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab",
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 1,
+          "Move": "Growl",
+          "Type": "Normal",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 1,
+          "Move": "Helping Hand",
+          "Type": "Normal",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 1,
+          "Move": "Peck",
+          "Type": "Flying",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
           "Level": 7,
           "Move": "Fury Attack",
           "Type": "Normal"
@@ -46993,56 +47043,6 @@
           "Type": "Dragon",
           "Tags": [
             "Stab"
-          ]
-        },
-        {
-          "Level": 1,
-          "Move": "Growl",
-          "Type": "Normal",
-          "Tags": [
-            "Deleted"
-          ]
-        },
-        {
-          "Level": 1,
-          "Move": "Acid",
-          "Type": "Poison",
-          "Tags": [
-            "Stab",
-            "Deleted"
-          ]
-        },
-        {
-          "Level": 1,
-          "Move": "Peck",
-          "Type": "Flying",
-          "Tags": [
-            "Deleted"
-          ]
-        },
-        {
-          "Level": 1,
-          "Move": "Helping Hand",
-          "Type": "Normal",
-          "Tags": [
-            "Deleted"
-          ]
-        },
-        {
-          "Level": 1,
-          "Move": "Air Slash",
-          "Type": "Flying",
-          "Tags": [
-            "Deleted"
-          ]
-        },
-        {
-          "Level": 1,
-          "Move": "Dragon Pulse",
-          "Type": "Dragon",
-          "Tags": [
-            "Stab",
-            "Deleted"
           ]
         }
       ],
@@ -47447,12 +47447,12 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Tackle",
+          "Move": "Harden",
           "Type": "Normal"
         },
         {
           "Level": 1,
-          "Move": "Harden",
+          "Move": "Tackle",
           "Type": "Normal"
         },
         {
@@ -47542,16 +47542,16 @@
         },
         {
           "Level": 70,
-          "Move": "Double-Edge",
-          "Type": "Normal"
-        },
-        {
-          "Level": 70,
           "Move": "Double Edge",
           "Type": "Normal",
           "Tags": [
             "Deleted"
           ]
+        },
+        {
+          "Level": 70,
+          "Move": "Double-Edge",
+          "Type": "Normal"
         }
       ],
       "TM/Tutor Moves List": [
@@ -47850,16 +47850,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Fire Spin",
-          "Type": "Fire",
+          "Move": "Astonish",
+          "Type": "Ghost",
           "Tags": [
             "Stab"
           ]
         },
         {
           "Level": 1,
-          "Move": "Astonish",
-          "Type": "Ghost",
+          "Move": "Fire Spin",
+          "Type": "Fire",
           "Tags": [
             "Stab"
           ]
@@ -47940,6 +47940,14 @@
         },
         {
           "Level": 55,
+          "Move": "Will O Wisp",
+          "Type": "Fire",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 55,
           "Move": "Will-O-Wisp",
           "Type": "Fire"
         },
@@ -47962,14 +47970,6 @@
           "Type": "Fire",
           "Tags": [
             "Stab"
-          ]
-        },
-        {
-          "Level": 55,
-          "Move": "Will O Wisp",
-          "Type": "Fire",
-          "Tags": [
-            "Deleted"
           ]
         }
       ],
@@ -48233,16 +48233,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Helping Hand",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
           "Move": "Gyro Ball",
           "Type": "Steel",
           "Tags": [
             "Stab"
           ]
+        },
+        {
+          "Level": 1,
+          "Move": "Helping Hand",
+          "Type": "Normal"
         },
         {
           "Level": 1,
@@ -48277,6 +48277,14 @@
         },
         {
           "Level": 24,
+          "Move": "Gear Up",
+          "Type": "Steel",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 24,
           "Move": "Magnetic Flux",
           "Type": "Electric"
         },
@@ -48305,9 +48313,25 @@
           "Type": "Normal"
         },
         {
+          "Level": 42,
+          "Move": "Mind Reader",
+          "Type": "Normal",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
           "Level": 48,
           "Move": "Shift Gear",
           "Type": "Steel"
+        },
+        {
+          "Level": 54,
+          "Move": "Crafty Shield",
+          "Type": "Fairy",
+          "Tags": [
+            "Deleted"
+          ]
         },
         {
           "Level": 54,
@@ -48365,30 +48389,6 @@
           "Level": 97,
           "Move": "Trump Card",
           "Type": "Normal",
-          "Tags": [
-            "Deleted"
-          ]
-        },
-        {
-          "Level": 42,
-          "Move": "Mind Reader",
-          "Type": "Normal",
-          "Tags": [
-            "Deleted"
-          ]
-        },
-        {
-          "Level": 54,
-          "Move": "Crafty Shield",
-          "Type": "Fairy",
-          "Tags": [
-            "Deleted"
-          ]
-        },
-        {
-          "Level": 24,
-          "Move": "Gear Up",
-          "Type": "Steel",
           "Tags": [
             "Deleted"
           ]
@@ -48801,18 +48801,8 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Fire Punch",
-          "Type": "Fire"
-        },
-        {
-          "Level": 1,
-          "Move": "Ice Punch",
-          "Type": "Ice"
-        },
-        {
-          "Level": 1,
-          "Move": "Thunder Punch",
-          "Type": "Electric"
+          "Move": "Copycat",
+          "Type": "Normal"
         },
         {
           "Level": 1,
@@ -48829,8 +48819,21 @@
         },
         {
           "Level": 1,
-          "Move": "Copycat",
-          "Type": "Normal"
+          "Move": "Fire Punch",
+          "Type": "Fire"
+        },
+        {
+          "Level": 1,
+          "Move": "Ice Punch",
+          "Type": "Ice"
+        },
+        {
+          "Level": 1,
+          "Move": "Pursuit",
+          "Type": "Dark",
+          "Tags": [
+            "Deleted"
+          ]
         },
         {
           "Level": 1,
@@ -48842,11 +48845,8 @@
         },
         {
           "Level": 1,
-          "Move": "Pursuit",
-          "Type": "Dark",
-          "Tags": [
-            "Deleted"
-          ]
+          "Move": "Thunder Punch",
+          "Type": "Electric"
         },
         {
           "Level": 9,
@@ -49325,8 +49325,21 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Scratch",
+          "Move": "Fake Out",
           "Type": "Normal"
+        },
+        {
+          "Level": 1,
+          "Move": "Power Up Punch",
+          "Type": "Fighting",
+          "Tags": [
+            "Deleted"
+          ]
+        },
+        {
+          "Level": 1,
+          "Move": "Power-Up Punch",
+          "Type": "Fighting"
         },
         {
           "Level": 1,
@@ -49335,15 +49348,7 @@
         },
         {
           "Level": 1,
-          "Move": "Spark",
-          "Type": "Electric",
-          "Tags": [
-            "Stab"
-          ]
-        },
-        {
-          "Level": 1,
-          "Move": "Fake Out",
+          "Move": "Scratch",
           "Type": "Normal"
         },
         {
@@ -49353,8 +49358,11 @@
         },
         {
           "Level": 1,
-          "Move": "Power-Up Punch",
-          "Type": "Fighting"
+          "Move": "Spark",
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 8,
@@ -49430,14 +49438,6 @@
           "Level": 96,
           "Move": "Close Combat",
           "Type": "Fighting"
-        },
-        {
-          "Level": 1,
-          "Move": "Power Up Punch",
-          "Type": "Fighting",
-          "Tags": [
-            "Deleted"
-          ]
         }
       ],
       "TM/Tutor Moves List": [

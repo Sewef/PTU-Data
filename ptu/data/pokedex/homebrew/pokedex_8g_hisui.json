@@ -1666,16 +1666,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Leer",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
           "Move": "Ember",
           "Type": "Fire",
           "Tags": [
             "Stab"
           ]
+        },
+        {
+          "Level": 1,
+          "Move": "Leer",
+          "Type": "Normal"
         },
         {
           "Level": 4,
@@ -2596,13 +2596,13 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Tackle",
-          "Type": "Normal"
+          "Move": "Charge",
+          "Type": "Electric"
         },
         {
           "Level": 1,
-          "Move": "Charge",
-          "Type": "Electric"
+          "Move": "Tackle",
+          "Type": "Normal"
         },
         {
           "Level": 4,
@@ -2671,16 +2671,16 @@
         },
         {
           "Level": 34,
-          "Move": "Seed Bomb",
-          "Type": "Grass",
+          "Move": "Discharge",
+          "Type": "Electric",
           "Tags": [
             "Stab"
           ]
         },
         {
           "Level": 34,
-          "Move": "Discharge",
-          "Type": "Electric",
+          "Move": "Seed Bomb",
+          "Type": "Grass",
           "Tags": [
             "Stab"
           ]
@@ -3035,16 +3035,16 @@
         },
         {
           "Level": 34,
-          "Move": "Seed Bomb",
-          "Type": "Grass"
-        },
-        {
-          "Level": 34,
           "Move": "Discharge",
           "Type": "Electric",
           "Tags": [
             "Stab"
           ]
+        },
+        {
+          "Level": 34,
+          "Move": "Seed Bomb",
+          "Type": "Grass"
         },
         {
           "Level": 41,
@@ -3354,16 +3354,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Tackle",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
           "Move": "Poison Sting",
           "Type": "Poison",
           "Tags": [
             "Stab"
           ]
+        },
+        {
+          "Level": 1,
+          "Move": "Tackle",
+          "Type": "Normal"
         },
         {
           "Level": 4,
@@ -3418,12 +3418,12 @@
         },
         {
           "Level": 40,
-          "Move": "Stockpile",
+          "Move": "Spit Up",
           "Type": "Normal"
         },
         {
           "Level": 40,
-          "Move": "Spit Up",
+          "Move": "Stockpile",
           "Type": "Normal"
         },
         {
@@ -3897,12 +3897,12 @@
         },
         {
           "Level": 40,
-          "Move": "Stockpile",
+          "Move": "Spit Up",
           "Type": "Normal"
         },
         {
           "Level": 40,
-          "Move": "Spit Up",
+          "Move": "Stockpile",
           "Type": "Normal"
         },
         {
@@ -4292,11 +4292,6 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Scratch",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
           "Move": "Leer",
           "Type": "Normal"
         },
@@ -4307,6 +4302,11 @@
           "Tags": [
             "Stab"
           ]
+        },
+        {
+          "Level": 1,
+          "Move": "Scratch",
+          "Type": "Normal"
         },
         {
           "Level": 6,
@@ -5786,16 +5786,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
+          "Move": "Leer",
+          "Type": "Normal"
+        },
+        {
+          "Level": 1,
           "Move": "Scratch",
           "Type": "Normal",
           "Tags": [
             "Stab"
           ]
-        },
-        {
-          "Level": 1,
-          "Move": "Leer",
-          "Type": "Normal"
         },
         {
           "Level": 4,
@@ -10861,16 +10861,16 @@
       "Level Up Move List": [
         {
           "Level": 1,
-          "Move": "Scary Face",
-          "Type": "Normal"
-        },
-        {
-          "Level": 1,
           "Move": "Metal Claw",
           "Type": "Steel",
           "Tags": [
             "Stab"
           ]
+        },
+        {
+          "Level": 1,
+          "Move": "Scary Face",
+          "Type": "Normal"
         },
         {
           "Level": 8,
