@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-SAFE injector: never deletes existing Level-Up moves.
+SAFE injector v2: never deletes existing Level-Up moves and avoids duplicate insertions
+caused by different punctuation/casing (e.g., "Double Edge" vs "Double-Edge").
 
 What it does
 - Fetch PokéAPI in parallel (Gen 9→6 window).
@@ -11,22 +12,22 @@ What it does
     keep both the early (0/Evo/1) and the most-recent later level (>1). We only APPEND missing ones.
   * If move is missing in Gen 9 but existed earlier, inject levels from most recent earlier gen (8,7,6).
 - TM/HM, Tutor, Egg: fill from any of Gen 9..6 and sort alphabetically.
-- Writes a single diff CSV for ALL insertions (Level-Up, TM/HM, Tutor, Egg).
-- Guardrail: asserts that, per species, the final Level-Up list length is NEVER lower than the original.
-  If it would be, we restore the original list and log an ERROR line.
+- Diff CSV for ALL insertions (Level-Up, TM/HM, Tutor, Egg).
+- NEW: canonicalize move names via slug for presence checks to prevent duplicates.
+- NEW: when appending, reuse existing display text for a slug (keeps hyphen/spacing style).
 
 Usage:
-  python inject_legacy_moves_safe.py \
+  python inject_legacy_moves_safe_v2.py \
     --pokedex pokedex_core.json \
     --mapping mapping.csv \
     --out pokedex_core.legacy.json \
     --diff-csv learnset_diff.csv \
     --workers 8
 """
-import argparse, csv, json, sys, time, re, threading
+import argparse,json, sys, time, re, threading
 from typing import Dict, List, Tuple, Optional, Any, Set
 from concurrent.futures import ThreadPoolExecutor, as_completed
-
+from csv import DictReader, DictWriter
 try:
     import requests
 except ImportError:
@@ -36,7 +37,6 @@ except ImportError:
 # ---------- Logging ----------
 def log_info(msg: str): sys.stderr.write(f"[INFO] {msg}\n")
 def log_warn(msg: str): sys.stderr.write(f"[WARN] {msg}\n")
-def log_err(msg: str):  sys.stderr.write(f"[ERROR] {msg}\n")
 
 # ---------- Version Group → Generation ----------
 VG_TO_GEN = {
@@ -62,7 +62,7 @@ def make_session()->requests.Session:
     s = requests.Session()
     adapter = requests.adapters.HTTPAdapter(pool_connections=100, pool_maxsize=100, max_retries=0)
     s.mount("http://", adapter); s.mount("https://", adapter)
-    s.headers.update({"User-Agent":"PTU-Legacy-Moves/SAFE-1.0"})
+    s.headers.update({"User-Agent":"PTU-Legacy-Moves/SAFE-2.0"})
     return s
 
 def http_get(session, url, tries=3, backoff=0.8):
@@ -80,7 +80,8 @@ def http_get(session, url, tries=3, backoff=0.8):
     return None
 
 def slugify(name:str)->str:
-    s=name.strip().lower().replace("’","").replace("'","").replace(" ","-")
+    s=name.strip().lower().replace("’","").replace("'","")
+    s=re.sub(r"\s+","-",s)
     s=re.sub(r"[^a-z0-9\-]+","",s)
     return s
 
@@ -133,7 +134,7 @@ def extract_methods_by_gen(pdata:dict)->Dict[str, Dict[str, Set[int]]]:
             out.setdefault(mslug,{}).setdefault(meth,set()).add(gen)
     return out
 
-def titlecase_move(slug:str)->str:
+def titlecase_from_slug(slug:str)->str:
     return " ".join(p.capitalize() for p in slug.split("-"))
 
 def move_type_from_cache(slug:str)->Optional[str]:
@@ -163,7 +164,32 @@ def decide(levels_by_gen:Dict[int,List[int]]):
         for g in [8,7,6]:
             if g in levels_by_gen and levels_by_gen[g]:
                 inject_from_recent=sorted(levels_by_gen[g]); break
-    return inject_from_recent, early_keep, mr_later
+    return inject_from_recent, early_keep, mr_later, has9
+
+# ---- Canonical presence checks & display reuse ----
+def species_display_for_slug(entries:list, slug:str)->Optional[str]:
+    """Return first existing display text for this slug in entries (by 'Move'), if any."""
+    s=slugify(slug)
+    for e in entries:
+        if isinstance(e,dict):
+            nm=e.get("Move","")
+            if slugify(nm)==s: return nm
+    return None
+
+def levelup_has(entries:list, slug:str, level)->bool:
+    s=slugify(slug)
+    for e in entries:
+        if isinstance(e,dict):
+            if slugify(e.get("Move",""))==s and e.get("Level")==level:
+                return True
+    return False
+
+def list_has_move(entries:list, slug:str)->bool:
+    s=slugify(slug)
+    for e in entries:
+        if isinstance(e,dict) and slugify(e.get("Move",""))==s: return True
+        if isinstance(e,str) and slugify(e)==s: return True
+    return False
 
 def normalize_simple_list(name:str, species:str, lst:list)->list:
     if not isinstance(lst,list):
@@ -180,22 +206,15 @@ def normalize_simple_list(name:str, species:str, lst:list)->list:
     if changed: log_info(f"{species}: {name} — normalized {changed} string entries into dicts")
     return lst
 
-def contains_move(lst:list, name:str)->bool:
-    nm=name.strip().lower()
-    for e in lst:
-        if isinstance(e,dict):
-            if str(e.get("Move","")).strip().lower()==nm: return True
-        elif isinstance(e,str):
-            if e.strip().lower()==nm: return True
-    return False
-
 # ---------- Main ----------
 def main():
-    ap=argparse.ArgumentParser(description="SAFE inject Legacy Level-Up + TM/HM + Tutor + Egg (Gen9→6)")
+    ap=argparse.ArgumentParser(description="SAFE inject v3 (never deletes by default; optional dedupe to fix duplicate later levels)")
     ap.add_argument("--pokedex", required=True)
     ap.add_argument("--mapping", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--diff-csv", default=None)
+    ap.add_argument("--dedupe-output", action="store_true", help="If set, collapse later-level duplicates per move to the canonical one.")
+    ap.add_argument("--dedupe-report", default=None, help="CSV path to write removed entries during dedupe.")
     ap.add_argument("--workers", type=int, default=8)
     args=ap.parse_args()
 
@@ -203,11 +222,11 @@ def main():
     # mapping
     mp={}
     with open(args.mapping,"r",encoding="utf-8-sig",newline="") as f:
-        for row in csv.DictReader(f):
+        for row in DictReader(f):
             s=(row.get("species") or "").strip(); o=(row.get("othername") or "").strip()
             if s and o: mp[s]=o
     if not mp:
-        log_err("Mapping CSV is empty or headers are wrong (need species,othername)"); sys.exit(2)
+        sys.stderr.write("[ERROR] Mapping CSV is empty or missing headers species,othername\n"); sys.exit(2)
 
     # pairs
     pairs=[]
@@ -215,7 +234,9 @@ def main():
         sname=spec.get("Species")
         if not sname: continue
         oname=mp.get(sname)
-        if not oname: log_warn(f"No mapping for '{sname}'"); continue
+        if not oname: 
+            log_warn(f"No mapping for '{sname}'"); 
+            continue
         pairs.append((sname,oname))
 
     session=make_session()
@@ -258,6 +279,9 @@ def main():
             if not data: log_warn(f"Missing move payload: {mname}")
 
     # inject
+
+    # container to collect dedupe removals if enabled
+    dedupe_removed_rows = []
     diff_rows=[]
     total_added=0
     for spec in pokedex:
@@ -279,51 +303,43 @@ def main():
         tutor=normalize_simple_list("Tutor Move List", sname, tutor)
         egg=normalize_simple_list("Egg Move List", sname, egg)
 
-        # snapshot for guardrail
-        before_len=len(lvl_list)
-
-        # helper
-        def has_levelup(move, level):
-            for e in lvl_list:
-                if isinstance(e,dict) and e.get("Move","").strip().lower()==move.strip().lower() and e.get("Level")==level:
-                    return True
-            return False
+        # helper to pick display text consistent with existing entries for a slug
+        def pick_display(slug: str)->str:
+            existing = species_display_for_slug(lvl_list, slug) or species_display_for_slug(tmhm, slug) or species_display_for_slug(tutor, slug) or species_display_for_slug(egg, slug)
+            return existing if existing else titlecase_from_slug(slug)
 
         # per-move injection
         for mslug, levels in lvmap.items():
-            disp=titlecase_move(mslug)
-            mtype=move_type_from_cache(mslug)
-            inject_from_recent, early_keep, mr_later_gen = decide(levels)
-            has9 = bool(levels.get(9, []))
+            disp = pick_display(mslug)
+            mtype = move_type_from_cache(mslug)
+            inject_from_recent, early_keep, mr_later_gen, has9 = decide(levels)
             canonical_later = choose_latest_later_level(levels)
 
             # Missing in Gen9 → copy most recent earlier
             if not has9 and inject_from_recent:
+                src_gen = next((g for g in (8,7,6) if g in levels and levels[g]), None)
                 for L in inject_from_recent:
-                    # enforce canonical for later levels when appending
                     if L>1 and canonical_later is not None and L!=canonical_later: 
                         continue
                     Lfield="Evo" if L==0 else L
-                    if not has_levelup(disp, Lfield):
-                        entry={"Level": Lfield, "Move": disp, "Type": mtype if mtype else None}
-                        entry["Tags"]=["Legacy"]
+                    if not levelup_has(lvl_list, mslug, Lfield):
+                        entry={"Level": Lfield, "Move": disp, "Type": mtype if mtype else None, "Tags":["Legacy"]}
                         lvl_list.append(entry)
                         total_added+=1
-                        diff_rows.append({"Species": sname, "PokeAPIName": oname, "Move": disp, "Level": Lfield, "Type": entry["Type"], "Reason": "MissingInGen9FromEarlierGen", "SourceGen": next((g for g in (8,7,6) if g in levels and levels[g]), None)})
+                        diff_rows.append({"Species": sname, "PokeAPIName": oname, "Move": disp, "Level": Lfield, "Type": entry["Type"], "Reason": "MissingInGen9FromEarlierGen", "SourceGen": src_gen})
 
             # Early + later pair rule (append only missing ones)
             if early_keep and canonical_later is not None:
                 for L in early_keep:
                     Lfield="Evo" if L==0 else L
-                    if not has_levelup(disp, Lfield):
+                    if not levelup_has(lvl_list, mslug, Lfield):
                         entry={"Level": Lfield, "Move": disp, "Type": mtype if mtype else None}
                         if not has9: entry["Tags"]=["Legacy"]
                         lvl_list.append(entry); total_added+=1
                         diff_rows.append({"Species": sname, "PokeAPIName": oname, "Move": disp, "Level": Lfield, "Type": entry["Type"], "Reason": "EarlyAndLaterPair", "SourceGen": mr_later_gen})
-                # later canonical
                 L=canonical_later
                 if L is not None:
-                    if not has_levelup(disp, L):
+                    if not levelup_has(lvl_list, mslug, L):
                         entry={"Level": L, "Move": disp, "Type": mtype if mtype else None}
                         if not has9: entry["Tags"]=["Legacy"]
                         lvl_list.append(entry); total_added+=1
@@ -331,21 +347,21 @@ def main():
 
         # TM/HM / Tutor / Egg additions
         for mslug, methods in mdmap.items():
-            disp=titlecase_move(mslug)
-            mtype=move_type_from_cache(mslug)
+            disp = pick_display(mslug)
+            mtype = move_type_from_cache(mslug)
 
             if methods.get("machine"):
-                if not contains_move(tmhm, disp):
+                if not list_has_move(tmhm, mslug):
                     tmhm.append({"Move": disp, "Type": mtype if mtype else None})
                     diff_rows.append({"Species": sname, "PokeAPIName": oname, "Move": disp, "Level": "", "Type": mtype if mtype else None, "Reason":"TM/HM", "SourceGen": max(methods["machine"])})
 
             if methods.get("tutor"):
-                if not contains_move(tutor, disp):
+                if not list_has_move(tutor, mslug):
                     tutor.append({"Move": disp, "Type": mtype if mtype else None})
                     diff_rows.append({"Species": sname, "PokeAPIName": oname, "Move": disp, "Level": "", "Type": mtype if mtype else None, "Reason":"Tutor", "SourceGen": max(methods["tutor"])})
 
             if methods.get("egg"):
-                if not contains_move(egg, disp):
+                if not list_has_move(egg, mslug):
                     egg.append({"Move": disp, "Type": mtype if mtype else None})
                     diff_rows.append({"Species": sname, "PokeAPIName": oname, "Move": disp, "Level": "", "Type": mtype if mtype else None, "Reason":"Egg", "SourceGen": max(methods["egg"])})
 
@@ -360,15 +376,104 @@ def main():
             return (n, e.get("Move",""))
         lvl_list.sort(key=sort_key)
 
-        # guardrail: never shrink Level-Up list
-        after_len=len(lvl_list)
-        if after_len < before_len:
-            log_err(f"{sname}: Level-Up list shrank ({before_len} -> {after_len}). Restoring original list to avoid data loss.")
-            # restore: reload original before sorting (best-effort: we cannot recover exact original order here)
-            # But we kept before_len number; safest is to skip changes by reloading from spec snapshot would be needed.
-            # Simpler: append N dummy markers? We'll instead abort species changes by not writing out.
-            # For simplicity, we won't roll back, just ensure no deletions happen in practice by design.
-            # This branch should never be hit since we never delete. Logged for visibility.
+
+    # optional output dedupe pass (fix duplicate later levels) — removes entries
+    if args.dedupe_output:
+        # build convenient maps for generation levels
+        def canonical_later_for(api_name: str, move_slug: str) -> Optional[int]:
+            lvmap = levels_by_api.get(api_name, {})
+            levels_by_gen = lvmap.get(move_slug, {})
+            # compute canonical later as earlier
+            later={g:[L for L in lvls if L>1] for g,lvls in levels_by_gen.items()}
+            later={g:v for g,v in later.items() if v}
+            if not later: return None
+            g=max(later.keys())
+            return max(later[g])
+
+        for spec in pokedex:
+            sname = spec.get("Species")
+            if not sname: continue
+            oname = mp.get(sname)
+            if not oname: continue
+
+            moves = spec.get("Moves", {})
+            lvl_list = moves.get("Level Up Move List", [])
+            if not isinstance(lvl_list, list): continue
+
+            # group indices by slug
+            by_slug = {}
+            for idx, e in enumerate(lvl_list):
+                if not isinstance(e, dict): continue
+                m = e.get("Move", "")
+                s = slugify(m)
+                by_slug.setdefault(s, []).append(idx)
+
+            to_keep = set()
+            to_drop = set()
+
+            for s, idxs in by_slug.items():
+                # pull slug→any one slug string to query canonical level
+                # We need the original mslug as PokéAPI uses dashes; our slug should match move endpoint names
+                # Reconstruct a "slug-ish" name: already good.
+                mslug = s
+                # map indices entries
+                entries = [lvl_list[i] for i in idxs if isinstance(lvl_list[i], dict)]
+                # detect canonical later using API data:
+                can_later = canonical_later_for(oname, mslug)
+                if can_later is None:
+                    # No later anywhere: keep everything untouched
+                    to_keep.update(idxs)
+                    continue
+
+                # Keep all early (Evo/0 and/or 1) that are present
+                for i in idxs:
+                    e = lvl_list[i]
+                    if not isinstance(e, dict): 
+                        to_keep.add(i); 
+                        continue
+                    L = e.get("Level")
+                    if (isinstance(L, str) and str(L).lower()=="evo") or L==1:
+                        to_keep.add(i)
+
+                # Keep exactly one later: the canonical one; drop others with Level >1
+                kept_one = False
+                for i in idxs:
+                    e = lvl_list[i]
+                    if not isinstance(e, dict): 
+                        continue
+                    L = e.get("Level")
+                    if isinstance(L, int) and L>1:
+                        if L == can_later and not kept_one:
+                            to_keep.add(i); kept_one=True
+                        else:
+                            to_drop.add(i)
+
+                # If no canonical later found among entries (e.g., only old later levels present), we do not synthesize here.
+                # The injection phase already tried to add canonical later if missing. If still missing, we keep nothing extra.
+
+            if to_drop:
+                # Record removals for report
+                for i in sorted(to_drop):
+                    e = lvl_list[i]
+                    if isinstance(e, dict):
+                        dedupe_removed_rows.append({
+                            "Species": sname,
+                            "PokeAPIName": oname,
+                            "Move": e.get("Move"),
+                            "Level": e.get("Level"),
+                            "Type": e.get("Type"),
+                            "Reason": "RemovedByDedupe",
+                            "SourceGen": ""
+                        })
+                # Apply removal
+                lvl_list[:] = [e for i, e in enumerate(lvl_list) if i in to_keep]
+
+        # write dedupe report CSV if requested
+        if args.dedupe_report:
+            import csv
+            with open(args.dedupe_report, "w", encoding="utf-8", newline="") as f:
+                w = DictWriter(f, fieldnames=["Species","PokeAPIName","Move","Level","Type","Reason","SourceGen"])
+                w.writeheader(); w.writerows(dedupe_removed_rows)
 
     # write out
     with open(args.out,"w",encoding="utf-8") as f:
@@ -376,7 +481,7 @@ def main():
 
     if args.diff_csv:
         with open(args.diff_csv,"w",encoding="utf-8",newline="") as f:
-            w=csv.DictWriter(f, fieldnames=["Species","PokeAPIName","Move","Level","Type","Reason","SourceGen"])
+            w=DictWriter(f, fieldnames=["Species","PokeAPIName","Move","Level","Type","Reason","SourceGen"])
             w.writeheader(); w.writerows(diff_rows)
 
     log_info(f"[DONE] Added {total_added} Level-Up entries across {len(pokedex)} species.")
