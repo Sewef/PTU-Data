@@ -76,3 +76,16 @@ Newer: Will apply the "stone-evolved stade n will learn n-1 learnset if has too 
 py find_species_with_few_levelups.py  --in ../../ptu/data/pokedex/updated/pokedex_core.json  --only-stones --min 10
 
 Will check species with few level up moves for manual processing. --only-stones to get only mons which evolve with stone
+
+--
+py update_moves_from_pokeapi.py --pokedex ../../ptu/data/pokedex/community/pokedex_core.json --mapping mapping.csv --out ../../ptu/data/pokedex/homebrew/pokedex_core.json --min-gen 4 --max-gen 9
+py filter_levelup_moves.py --in ../../ptu/data/pokedex/homebrew/pokedex_core.json --out ../../ptu/data/pokedex/homebrew/pokedex_core.json
+
+py update_moves_from_pokeapi.py --pokedex ../../ptu/data/pokedex/community/pokedex_7g.json --mapping mapping.csv --out ../../ptu/data/pokedex/homebrew/pokedex_7g.json --min-gen 4 --max-gen 9
+py filter_levelup_moves.py --in ../../ptu/data/pokedex/homebrew/pokedex_7g.json --out ../../ptu/data/pokedex/homebrew/pokedex_7g.json
+
+py update_moves_from_pokeapi.py --pokedex ../../ptu/data/pokedex/community/pokedex_8g.json --mapping mapping.csv --out ../../ptu/data/pokedex/homebrew/pokedex_8g.json --min-gen 4 --max-gen 9
+py filter_levelup_moves.py --in ../../ptu/data/pokedex/homebrew/pokedex_8g.json --out ../../ptu/data/pokedex/homebrew/pokedex_8g.json
+
+py update_moves_from_pokeapi.py --pokedex ../../ptu/data/pokedex/community/pokedex_8g_hisui.json --mapping mapping.csv --out ../../ptu/data/pokedex/homebrew/pokedex_8g_hisui.json --min-gen 4 --max-gen 9
+py filter_levelup_moves.py --in ../../ptu/data/pokedex/homebrew/pokedex_8g_hisui.json --out ../../ptu/data/pokedex/homebrew/pokedex_8g_hisui.json

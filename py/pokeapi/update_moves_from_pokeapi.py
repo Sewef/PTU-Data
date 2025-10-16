@@ -53,6 +53,15 @@ VERSION_GROUPS = {
     # Gen 6
     "x-y": (6, "X/Y"),
     "omega-ruby-alpha-sapphire": (6, "Omega Ruby/Alpha Sapphire"),
+
+    # ➜ Gen 5 (AJOUTER)
+    "black-white": (5, "Black/White"),
+    "black-2-white-2": (5, "Black 2/White 2"),
+
+    # ➜ Gen 4 (AJOUTER)
+    "diamond-pearl": (4, "Diamond/Pearl"),
+    "platinum": (4, "Platinum"),
+    "heartgold-soulsilver": (4, "HeartGold/SoulSilver"),
 }
 
 MOVE_METHOD_SLUG_TO_KIND = {
@@ -65,6 +74,15 @@ MOVE_METHOD_SLUG_TO_KIND = {
 # Order (priority) for selecting the "most recent" version group inside the same generation,
 # when a Pokémon has multiple entries in the same gen. Larger index = higher priority.
 VERSION_GROUP_PRIORITY = [
+    # ➜ Gen 4 (AJOUTER d'abord, plus ancien)
+    "diamond-pearl",
+    "platinum",
+    "heartgold-soulsilver",
+
+    # ➜ Gen 5 (AJOUTER ensuite)
+    "black-white",
+    "black-2-white-2",
+
     # Gen 6
     "x-y",
     "omega-ruby-alpha-sapphire",
@@ -76,9 +94,10 @@ VERSION_GROUP_PRIORITY = [
     "sword-shield",
     "brilliant-diamond-and-shining-pearl",
     "legends-arceus",
-    # Gen 9
+    # Gen 9 (le plus récent à la fin)
     "scarlet-violet",
 ]
+
 VG_PRIORITY_RANK = {vg: i for i, vg in enumerate(VERSION_GROUP_PRIORITY)}
 
 def to_title(name: str) -> str:
@@ -172,6 +191,12 @@ async def build_moves_for_pokemon(
     data = await fetch_json(session, f"{POKEAPI_BASE}/pokemon/{pokemon_slug}")
     if not data:
         return {"level_up": [], "machine": [], "tutor": [], "egg": []}
+    # Get species URL from the /pokemon data to avoid alt-form slugs 404
+    species_url = (data.get("species") or {}).get("url")
+    evolved = False
+    if species_url:
+        species_json = await fetch_json(session, species_url)
+        evolved = bool(species_json and species_json.get("evolves_from_species"))
 
     # Collect by method and version_group
     per_method: Dict[str, Dict[str, List[Tuple[int, str]]]] = {
@@ -197,27 +222,29 @@ async def build_moves_for_pokemon(
             level = vgd.get("level_learned_at") or 0
             per_method.setdefault(method_slug, {}).setdefault(vg, []).append((level, move_slug))
 
-    # TM/Machine, Tutor, Egg: collect across gens min..max, dedupe, alph sort
-    async def as_move_dicts(pairs: List[Tuple[int, str]], method_label: str) -> List[Dict[str, Any]]:
+        # TM/Machine, Tutor, Egg: collect across gens min..max, avec Tags Legacy selon le jeu source
+    async def as_move_dicts(pairs_by_vg: Dict[str, List[Tuple[int, str]]], method_label: str) -> List[Dict[str, Any]]:
         out = []
-        for _, slug in pairs:
-            t = await get_move_type(session, slug, move_type_cache)
-            out.append({"Move": to_title(slug), "Type": t or None, "Tags": [], "Method": method_label})
+        for vg, pairs in pairs_by_vg.items():
+            gen = version_group_gen(vg)
+            if gen is None or gen < min_gen or gen > max_gen:
+                continue
+            label = version_group_label(vg)
+            for _, slug in pairs:
+                t = await get_move_type(session, slug, move_type_cache)
+                tags = []
+                # Si ce n’est pas de la gen max, on ajoute le tag Legacy
+                if gen < max_gen:
+                    tags = ["Legacy", label]
+                out.append({"Move": to_title(slug), "Type": t or None, "Tags": tags, "Method": method_label})
         return out
 
-    machine_pairs = []
-    for vg, pairs in per_method.get("machine", {}).items():
-        machine_pairs.extend(pairs)
-    tutor_pairs = []
-    for vg, pairs in per_method.get("tutor", {}).items():
-        tutor_pairs.extend(pairs)
-    egg_pairs = []
-    for vg, pairs in per_method.get("egg", {}).items():
-        egg_pairs.extend(pairs)
-
-    machine = unique_sorted_names(await as_move_dicts(machine_pairs, "Machine"))
-    tutor   = unique_sorted_names(await as_move_dicts(tutor_pairs, "Tutor"))
-    egg     = unique_sorted_names(await as_move_dicts(egg_pairs, "Egg"))
+    machine = unique_sorted_names(await as_move_dicts(per_method.get("machine", {}), "Machine"))
+    tutor   = unique_sorted_names(await as_move_dicts(per_method.get("tutor", {}), "Tutor"))
+    if evolved:
+        egg = []
+    else:
+        egg = unique_sorted_names(await as_move_dicts(per_method.get("egg", {}), "Egg"))
 
         # Level-up:
     # 1) Choose latest VG (<= max_gen) that has level-up entries. Use only its moves (with levels) as base.
