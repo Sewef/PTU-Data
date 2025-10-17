@@ -62,6 +62,8 @@
     Homebrew: `${ABILITIES_BASE}/abilities_homebrew.json`
   };
 
+  const SHOWN_TAGS = new Set(["N", "Stab"]);
+
   let selectedPreset = window.selectedPreset || "Core";
   let selectedLabels = new Set(PRESETS[selectedPreset] || []);
 
@@ -430,13 +432,19 @@
     }).join("");
   }
 
+  function renderTags(tags) {
+    if (Array.isArray(tags) && tags.length)
+      tags = tags.filter(t => SHOWN_TAGS.has(t));
+    return Array.isArray(tags) && tags.length ? `<sup class="smaller text-uppercase text-muted ms-1">${escapeHtml(tags.join(" "))}</sup>` : "";
+  }
+
   function renderTmTutorMovesComma(arr, title = "TM/Tutor Moves") {
     if (!Array.isArray(arr) || arr.length === 0) return "";
     const parts = arr.map(it => {
       if (typeof it === "string") return `<span class="small text-muted">${escapeHtml(it)}</span>`;
       const raw = it?.Move ?? "";
       const move = raw ? `<a href="#" class="js-move-link" data-move="${escapeHtml(raw)}">${escapeHtml(raw)}</a>` : "";
-      const tagsSup = Array.isArray(it?.Tags) && it.Tags.length ? `<sup class="smaller text-uppercase text-muted">${escapeHtml(it.Tags.join(" "))}</sup>` : "";
+      const tagsSup = renderTags(it?.Tags);
       let method = it?.Method || "";
       if (method === "Machine") method = "TM";
       const methodSup = method && method !== "Level-Up" ? `<sup class="smaller text-uppercase text-muted">${escapeHtml(method)}</sup>` : "";
@@ -450,7 +458,7 @@
     return `
       <ul class="list-unstyled mb-0">
         ${moves.map(m => {
-      const tagsSup = Array.isArray(m.Tags) && m.Tags.length ? `<sup class="smaller text-uppercase text-muted ms-1">${escapeHtml(m.Tags.join(" "))}</sup>` : "";
+      const tagsSup = renderTags(m?.Tags);
       const nameHtml = `<a href="#" class="js-move-link" data-move="${escapeHtml(m.Move)}">${escapeHtml(m.Move)}</a>`;
       return `<li class="d-flex align-items-center mb-1">
             <span class="text-muted" style="width:50px;">Lv.${m.Level}</span>
