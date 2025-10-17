@@ -89,3 +89,10 @@ py filter_levelup_moves.py --in ../../ptu/data/pokedex/homebrew/pokedex_8g.json 
 
 py update_moves_from_pokeapi.py --pokedex ../../ptu/data/pokedex/community/pokedex_8g_hisui.json --mapping mapping.csv --out ../../ptu/data/pokedex/homebrew/pokedex_8g_hisui.json --min-gen 4 --max-gen 9
 py filter_levelup_moves.py --in ../../ptu/data/pokedex/homebrew/pokedex_8g_hisui.json --out ../../ptu/data/pokedex/homebrew/pokedex_8g_hisui.json
+
+--
+py audit_evolved_low_levelup.py --pokedex ../../ptu/data/pokedex/homebrew/pokedex_core.json 
+
+Will audit empty level up move list 
+
+--
