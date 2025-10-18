@@ -67,14 +67,15 @@
   let selectedPreset = window.selectedPreset || "Core";
   let selectedLabels = new Set(PRESETS[selectedPreset] || []);
 
-  
+
   // =========================
   // Filtering / Performance
   // =========================
   let TYPE_MATCH_MODE = 'any'; // 'any' (OR) || 'all' (AND) for type matching
   const GRID_CHUNK_SIZE = 60; // smaller batch to speed up first paint
+  let __RENDER_SEQ = 0;
   const __TYPE_CACHE__ = new WeakMap(); // cache pokemon -> types[]
-// =========================
+  // =========================
   // Caches & Utilities
   // =========================
   const _fetchCache = new Map(); // url -> Promise(json)
@@ -195,56 +196,90 @@
   // =========================
   // Types & Badges helpers
   // =========================
-// Extraction robuste des types, y compris le cas:
-// "Type": [ { "Baille": ["Fire","Flying"], "Pom Pom": ["Electric","Flying"], ... } ]
-function extractTypes(p) {
-  const info = p?.["Basic Information"] || {};
-  const raw = info.Type;
+  // Extraction robuste des types, y compris le cas:
+  // "Type": [ { "Baille": ["Fire","Flying"], "Pom Pom": ["Electric","Flying"], ... } ]
+  function extractTypes(p) {
+    const info = p?.["Basic Information"] || {};
+    const raw = info.Type;
 
-  const out = [];
-  const push = (t) => {
-    if (!t) return;
-    const s = String(t).trim();
-    if (s && !out.includes(s)) out.push(s);
-  };
+    const out = [];
+    const push = (t) => {
+      if (!t) return;
+      const s = String(t).trim();
+      if (s && !out.includes(s)) out.push(s);
+    };
 
-  if (Array.isArray(raw)) {
-    // ex: ["Fire","Flying"] OU [ { "Baille":[...], "Pom Pom":[...] } ]
-    for (const item of raw) {
-      if (typeof item === "string") {
-        push(item);
-      } else if (item && typeof item === "object") {
-        // Union de toutes les formes si objet rencontré
-        for (const v of Object.values(item)) {
-          if (Array.isArray(v)) {
-            v.forEach(push);
-          } else {
-            push(v);
+    if (Array.isArray(raw)) {
+      // ex: ["Fire","Flying"] OU [ { "Baille":[...], "Pom Pom":[...] } ]
+      for (const item of raw) {
+        if (typeof item === "string") {
+          push(item);
+        } else if (item && typeof item === "object") {
+          // Union de toutes les formes si objet rencontré
+          for (const v of Object.values(item)) {
+            if (Array.isArray(v)) {
+              v.forEach(push);
+            } else {
+              push(v);
+            }
           }
         }
       }
-    }
-  } else if (raw && typeof raw === "object") {
-    // Au cas où "Type" serait directement un objet { Forme: [..], ... }
-    for (const v of Object.values(raw)) {
-      if (Array.isArray(v)) {
-        v.forEach(push);
-      } else {
-        push(v);
+    } else if (raw && typeof raw === "object") {
+      // Au cas où "Type" serait directement un objet { Forme: [..], ... }
+      for (const v of Object.values(raw)) {
+        if (Array.isArray(v)) {
+          v.forEach(push);
+        } else {
+          push(v);
+        }
       }
+    } else {
+      // String simple ou null/undefined
+      push(raw);
     }
-  } else {
-    // String simple ou null/undefined
-    push(raw);
+
+    // Si tu utilises un cache des types, on le nourrit proprement
+    if (typeof __TYPE_CACHE__ !== "undefined" && __TYPE_CACHE__ && typeof __TYPE_CACHE__.set === "function") {
+      __TYPE_CACHE__.set(p, out);
+    }
+
+    return out;
   }
 
-  // Si tu utilises un cache des types, on le nourrit proprement
-  if (typeof __TYPE_CACHE__ !== "undefined" && __TYPE_CACHE__ && typeof __TYPE_CACHE__.set === "function") {
-    __TYPE_CACHE__.set(p, out);
+  // Strictly read only the species' own types (ignore per-form mappings)
+  function speciesTypes(p) {
+    const info = p?.["Basic Information"] || {};
+    const raw = info.Type;
+    const out = [];
+    const push = (t) => {
+      if (!t) return;
+      const s = String(t).trim();
+      if (s && !out.includes(s)) out.push(s);
+    };
+    if (Array.isArray(raw)) {
+      // Only keep plain string entries (species' base typing)
+      for (const item of raw) {
+        if (typeof item === "string") push(item);
+      }
+    } else if (typeof raw === "string") {
+      push(raw);
+    }
+    // Fallback: if nothing detected from plain strings, fall back to union (keeps old behavior)
+    if (!out.length) return extractTypes(p);
+    return out;
   }
 
-  return out;
-}
+  // Snapshot the current radio mode to avoid stale globals
+  function currentTypeMatchMode() {
+    const checked = document.querySelector('input[name="type-mode"]:checked');
+    if (checked) return checked.id.endsWith('all') ? 'all' : 'any';
+    // Fallback to last known global (avoids race when clicking label then a type immediately)
+    if (typeof TYPE_MATCH_MODE !== "undefined" && (TYPE_MATCH_MODE === 'all' || TYPE_MATCH_MODE === 'any')) {
+      return TYPE_MATCH_MODE;
+    }
+    return 'any';
+  }
 
 
   function wrapTypes(t) {
@@ -304,65 +339,71 @@ function extractTypes(p) {
     }
   }
 
-  
+
   function renderGrid(rows) {
-  const grid = $("#dex-grid");
-  if (!grid) return;
-  grid.innerHTML = "";
-  grid.querySelectorAll("#grid-sentinel").forEach(n => n.remove());
+    const __SEQ__ = (++__RENDER_SEQ);
 
-  const CHUNK = (typeof GRID_CHUNK_SIZE === "number" && GRID_CHUNK_SIZE > 0) ? GRID_CHUNK_SIZE : 60;
-  let index = 0;
+    const grid = $("#dex-grid");
+    if (!grid) return;
+    grid.innerHTML = "";
+    grid.querySelectorAll("#grid-sentinel").forEach(n => n.remove());
 
-  function appendBatch() {
-    const frag = document.createDocumentFragment();
-    const end = Math.min(index + CHUNK, rows.length);
-    for (; index < end; index++) {
-      const p = rows[index];
-      const name = p.Species || "Unknown";
-      const num = pad3(p.Number ?? "0");
-      const types = extractTypes(p);
+    const CHUNK = (typeof GRID_CHUNK_SIZE === "number" && GRID_CHUNK_SIZE > 0) ? GRID_CHUNK_SIZE : 60;
+    let index = 0;
 
-      const li = document.createElement("div");
-      li.className = "dex-badge";
-      li.dataset.types = (types || []).join(",");
+    function appendBatch() {
+      if (__SEQ__ !== __RENDER_SEQ) return;
+      const frag = document.createDocumentFragment();
+      const end = Math.min(index + CHUNK, rows.length);
+      for (; index < end; index++) {
+        const p = rows[index];
+        const name = p.Species || "Unknown";
+        const num = pad3(p.Number ?? "0");
+        const types = extractTypes(p);
 
-      const iconWrap = document.createElement("div");
-      iconWrap.className = "icon dark-background";
-      const img = document.createElement("img");
-      setupIcon(img, p.Icon || p.Number, name, "icon");
-      iconWrap.appendChild(img);
-      li.appendChild(iconWrap);
+        const li = document.createElement("div");
+        li.className = "dex-badge";
+        li.dataset.types = (types || []).join(",");
 
-      const numBadge = document.createElement("div");
-      numBadge.className = "dex-num-badge";
-      numBadge.textContent = `#${num}`;
-      li.appendChild(numBadge);
+        const iconWrap = document.createElement("div");
+        iconWrap.className = "icon dark-background";
+        const img = document.createElement("img");
+        setupIcon(img, p.Icon || p.Number, name, "icon");
+        iconWrap.appendChild(img);
+        li.appendChild(iconWrap);
 
-      const label = document.createElement("div");
-      label.className = "dex-label";
-      label.textContent = name;
-      li.appendChild(label);
+        const numBadge = document.createElement("div");
+        numBadge.className = "dex-num-badge";
+        numBadge.textContent = `#${num}`;
+        li.appendChild(numBadge);
 
-      li.addEventListener("click", () => openDetail(p));
-      frag.appendChild(li);
+        const label = document.createElement("div");
+        label.className = "dex-label";
+        label.textContent = name;
+        li.appendChild(label);
+
+        li.addEventListener("click", () => openDetail(p));
+        frag.appendChild(li);
+      }
+      if (__SEQ__ !== __RENDER_SEQ) return;
+
+      grid.appendChild(frag);
+
+      // Apply type backgrounds to the last batch only
+      const batch = Array.from(grid.querySelectorAll(".dex-badge")).slice(-CHUNK);
+      for (const el of batch) {
+        const types = el.dataset.types ? el.dataset.types.split(",") : [];
+        applyBadgeBackground(el, types);
+      }
+
+      if (__SEQ__ !== __RENDER_SEQ) return;
+      if (index < rows.length) {
+        setTimeout(appendBatch, 0);
+      }
     }
-    grid.appendChild(frag);
 
-    // Apply type backgrounds to the last batch only
-    const batch = Array.from(grid.querySelectorAll(".dex-badge")).slice(-CHUNK);
-    for (const el of batch) {
-      const types = el.dataset.types ? el.dataset.types.split(",") : [];
-      applyBadgeBackground(el, types);
-    }
-
-    if (index < rows.length) {
-      setTimeout(appendBatch, 0);
-    }
+    appendBatch();
   }
-
-  appendBatch();
-}
 
 
   // =========================
@@ -825,13 +866,13 @@ function extractTypes(p) {
   // =========================
   // Sidebar
   // =========================
-  
+
   function buildTypeSidebar(all, onChange) {
     const sidebar = $("#sidebar");
     if (!sidebar) return;
 
     // Inject compact CSS once
-    (function ensureTypePillCSS(){
+    (function ensureTypePillCSS() {
       if (document.getElementById("dex-typepill-style")) return;
       const s = document.createElement("style");
       s.id = "dex-typepill-style";
@@ -904,7 +945,7 @@ function extractTypes(p) {
       typesBox.querySelector("#filter-move")?.addEventListener("input", debounce(onChange, 150));
       typesBox.querySelector("#filter-ability")?.addEventListener("input", debounce(onChange, 150));
       typesBox.querySelector("#clear-filters")?.addEventListener("click", () => {
-        typesBox.querySelectorAll("button[data-type]").forEach(b => { b.setAttribute("data-selected","0"); b.classList.remove("active"); });
+        typesBox.querySelectorAll("button[data-type]").forEach(b => { b.setAttribute("data-selected", "0"); b.classList.remove("active"); });
         TYPE_MATCH_MODE = 'any';
         const anyRadio = typesBox.querySelector("#type-mode-any");
         if (anyRadio) anyRadio.checked = true;
@@ -930,13 +971,27 @@ function extractTypes(p) {
   }
 
 
+
+  // Keep TYPE_MATCH_MODE synced and re-filter on change, avoiding stale reads
+  document.addEventListener('change', (ev) => {
+    const t = ev.target;
+    if (!(t instanceof Element)) return;
+    if (t.matches('input[name="type-mode"]')) {
+      window.TYPE_MATCH_MODE = t.id.endsWith('all') ? 'all' : 'any';
+      // Re-render with the new mode
+      try {
+        const all = window.__pokedexData || [];
+        renderGrid(filterRows(all));
+      } catch { }
+    }
+  }, true);
   function activeTypes() {
     const box = document.querySelector('[data-role="type-filters"] #type-badges');
     if (!box) return [];
     return Array.from(box.querySelectorAll('button[data-type][data-selected="1"]')).map(b => b.getAttribute("data-type"));
   }
 
-  
+
   function pokemonHasAbility(p, query) {
     if (!query) return true;
     const q = String(query).trim().toLowerCase();
@@ -967,7 +1022,7 @@ function extractTypes(p) {
     return false;
   }
 
-  
+
   function filterRows(rows) {
     const qRaw = ($("#dex-search")?.value || "").trim().toLowerCase();
     const types = activeTypes();
@@ -984,8 +1039,8 @@ function extractTypes(p) {
       if (abilQ && !pokemonHasAbility(p, abilQ)) return false;
 
       if (types.length) {
-        const pTypes = extractTypes(p);
-        if (TYPE_MATCH_MODE === 'all') {
+        const pTypes = speciesTypes(p);
+        if (currentTypeMatchMode() === 'all') {
           for (const t of types) if (!pTypes.includes(t)) return false;
         } else {
           let ok = false;
