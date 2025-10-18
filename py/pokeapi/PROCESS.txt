@@ -96,3 +96,8 @@ py audit_evolved_low_levelup.py --pokedex ../../ptu/data/pokedex/homebrew/pokede
 Will audit empty level up move list 
 
 --
+py add_stab_tags_batch.py --input ../../ptu/data/pokedex/homebrew/ --moves ../../ptu/data/moves/moves_homebrew.json --inplace --list-key "TM/HM Move List"
+py add_stab_tags_batch.py --input ../../ptu/data/pokedex/homebrew/ --moves ../../ptu/data/moves/moves_homebrew.json --inplace --list-key "Tutor Move List"
+py add_stab_tags_batch.py --input ../../ptu/data/pokedex/homebrew/ --moves ../../ptu/data/moves/moves_homebrew.json --inplace --list-key "Egg Move List"
+
+Add STAB tag to moves
