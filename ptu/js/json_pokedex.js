@@ -77,6 +77,24 @@
   const __TYPE_CACHE__ = new WeakMap(); // cache pokemon -> types[]
   // =========================
   // Caches & Utilities
+
+  // --- Wildcard helpers (normalize + glob '*' anywhere) ---
+  function __normalizeToken(s) {
+    return String(s || "")
+      .toLowerCase()
+      .replace(/[\u2013\u2014\-_]/g, "-")  // normalize dashes
+      .replace(/\s+/g, " ")                // collapse spaces
+      .trim();
+  }
+  function __makeWildcardMatcher(queryRaw) {
+    const q = __normalizeToken(queryRaw || "");
+    if (!q) return () => true;
+    // escape regex specials then expand '*' to '.*'
+    const esc = q.replace(/[.+?^${}()|[\]\\]/g, "\\$&");
+    const glob = esc.replace(/\*/g, ".*");
+    const rx = new RegExp("^" + glob + "$");
+    return (s) => rx.test(__normalizeToken(s));
+  }
   // =========================
   const _fetchCache = new Map(); // url -> Promise(json)
   const _indexCache = new Map(); // url -> Promise(Map)
@@ -908,12 +926,12 @@
 
         <div class="mt-2">
           <label class="form-label mb-1">Learns move</label>
-          <input id="filter-move" class="form-control form-control-sm" placeholder="eg: Thunderbolt">
+          <input id="filter-move" class="form-control form-control-sm" placeholder="eg: Thunderbolt or *bolt">
         </div>
 
         <div class="mt-2">
           <label class="form-label mb-1">Has ability</label>
-          <input id="filter-ability" class="form-control form-control-sm" placeholder="eg: Intimidate">
+          <input id="filter-ability" class="form-control form-control-sm" placeholder="eg: Intimidate or *date">
         </div>
 
         <div class="mt-2">
@@ -992,22 +1010,22 @@
   }
 
 
-  function pokemonHasAbility(p, query) {
-    if (!query) return true;
-    const q = String(query).trim().toLowerCase();
-    const info = p?.["Basic Information"] || {};
+  function pokemonHasAbility(p, queryRaw) {
+    const matcher = __makeWildcardMatcher(queryRaw);
+    if (!p || !p["Basic Information"]) return matcher("");
+    const info = p["Basic Information"];
     for (const [k, v] of Object.entries(info)) {
       if (!/ability/i.test(k)) continue;
-      const s = String(v || "").toLowerCase();
-      if (s.includes(q)) return true;
+      if (matcher(v)) return true;
     }
     return false;
   }
 
-  function pokemonLearnsMove(p, query) {
-    if (!query) return true;
-    const q = String(query).trim().toLowerCase();
-    const mv = p?.Moves || {};
+  function pokemonLearnsMove(p, queryRaw) {
+    const matcher = __makeWildcardMatcher(queryRaw);
+    if (!p || !p.Moves) return matcher("");
+
+    const mv = p.Moves;
     const lists = [
       ...(Array.isArray(mv["Level Up Move List"]) ? mv["Level Up Move List"] : []),
       ...(Array.isArray(mv["TM/HM Move List"]) ? mv["TM/HM Move List"] : []),
@@ -1017,7 +1035,7 @@
     ];
     for (const it of lists) {
       const name = (typeof it === "string") ? it : (it?.Move || it?.Name || "");
-      if (String(name).trim?.().toLowerCase().includes(q) || String(name).toLowerCase().includes(q)) return true;
+      if (matcher(name)) return true;
     }
     return false;
   }
