@@ -745,18 +745,6 @@
           "Method": "Tutor"
         },
         {
-          "Move": "Rest",
-          "Type": "Psychic",
-          "Tags": [],
-          "Method": "Tutor"
-        },
-        {
-          "Move": "Rock Smash",
-          "Type": "Fighting",
-          "Tags": [],
-          "Method": "Tutor"
-        },
-        {
           "Move": "Poison Jab",
           "Type": "Poison",
           "Tags": [],
@@ -765,6 +753,18 @@
         {
           "Move": "Psycho Cut",
           "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Rock Smash",
+          "Type": "Fighting",
           "Tags": [],
           "Method": "Tutor"
         },
@@ -3776,13 +3776,13 @@
           "Method": "Tutor"
         },
         {
-          "Move": "Thunderbolt",
+          "Move": "Thunder Punch",
           "Type": "Electric",
           "Tags": [],
           "Method": "Tutor"
         },
         {
-          "Move": "Thunder Punch",
+          "Move": "Thunderbolt",
           "Type": "Electric",
           "Tags": [],
           "Method": "Tutor"
@@ -5358,20 +5358,44 @@
       ],
       "TM/HM Move List": [
         {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Blizzard",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Brick Break",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Bulk Up",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Bulldoze",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
           "Move": "Cut",
           "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
         },
         {
-          "Move": "Strength",
+          "Move": "Double Team",
           "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Hone Claws",
-          "Type": "Dark",
           "Tags": [],
           "Method": "Machine"
         },
@@ -5384,158 +5408,16 @@
           "Method": "Machine"
         },
         {
-          "Move": "Roar",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Toxic",
-          "Type": "Poison",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Bulk Up",
-          "Type": "Fighting",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Hidden Power",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Sunny Day",
-          "Type": "Fire",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Ice Beam",
-          "Type": "Ice",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Blizzard",
-          "Type": "Ice",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Hyper Beam",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Protect",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Rain Dance",
-          "Type": "Water",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Safeguard",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Frustration",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Thunderbolt",
-          "Type": "Electric",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Thunder",
-          "Type": "Electric",
-          "Tags": [],
+          "Move": "Dragon Tail",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
           "Method": "Machine"
         },
         {
           "Move": "Earthquake",
           "Type": "Ground",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Return",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Brick Break",
-          "Type": "Fighting",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Double Team",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Flamethrower",
-          "Type": "Fire",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Sandstorm",
-          "Type": "Rock",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Fire Blast",
-          "Type": "Fire",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Rock Tomb",
-          "Type": "Rock",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Aerial Ace",
-          "Type": "Flying",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Facade",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Rest",
-          "Type": "Psychic",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Round",
-          "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
         },
@@ -5546,87 +5428,25 @@
           "Method": "Machine"
         },
         {
-          "Move": "Overheat",
-          "Type": "Fire",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Incinerate",
-          "Type": "Fire",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Shadow Claw",
-          "Type": "Ghost",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Giga Impact",
+          "Move": "Facade",
           "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Fire Blast",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Flamethrower",
+          "Type": "Fire",
           "Tags": [],
           "Method": "Machine"
         },
         {
           "Move": "Flash",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Stone Edge",
-          "Type": "Rock",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Thunder Wave",
-          "Type": "Electric",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Psych Up",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Bulldoze",
-          "Type": "Ground",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Rock Slide",
-          "Type": "Rock",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Dragon Tail",
-          "Type": "Dragon",
-          "Tags": [
-            "Stab"
-          ],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Swagger",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Sleep Talk",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Substitute",
           "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
@@ -5640,14 +5460,194 @@
           "Method": "Machine"
         },
         {
-          "Move": "Trick Room",
+          "Move": "Frustration",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Hidden Power",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Hone Claws",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Ice Beam",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Incinerate",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Overheat",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Protect",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Psych Up",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rain Dance",
+          "Type": "Water",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rest",
           "Type": "Psychic",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Return",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Roar",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rock Slide",
+          "Type": "Rock",
           "Tags": [],
           "Method": "Machine"
         },
         {
           "Move": "Rock Smash",
           "Type": "Fighting",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rock Tomb",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Round",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Safeguard",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Sandstorm",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Shadow Claw",
+          "Type": "Ghost",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Sleep Talk",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Stone Edge",
+          "Type": "Rock",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Strength",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Substitute",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Sunny Day",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Swagger",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Thunder",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Thunder Wave",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Thunderbolt",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Toxic",
+          "Type": "Poison",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Trick Room",
+          "Type": "Psychic",
           "Tags": [],
           "Method": "Machine"
         }
@@ -5919,21 +5919,37 @@
       ],
       "TM/HM Move List": [
         {
-          "Move": "Cut",
-          "Type": "Normal",
+          "Move": "Aerial Ace",
+          "Type": "Flying",
           "Tags": [],
           "Method": "Machine"
         },
         {
-          "Move": "Surf",
-          "Type": "Water",
-          "Tags": [
-            "Stab"
-          ],
+          "Move": "Blizzard",
+          "Type": "Ice",
+          "Tags": [],
           "Method": "Machine"
         },
         {
-          "Move": "Strength",
+          "Move": "Brick Break",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Bulk Up",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Bulldoze",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Cut",
           "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
@@ -5947,8 +5963,8 @@
           "Method": "Machine"
         },
         {
-          "Move": "Hone Claws",
-          "Type": "Dark",
+          "Move": "Double Team",
+          "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
         },
@@ -5961,14 +5977,64 @@
           "Method": "Machine"
         },
         {
-          "Move": "Roar",
+          "Move": "Dragon Tail",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Earthquake",
+          "Type": "Ground",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Echoed Voice",
           "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
         },
         {
-          "Move": "Toxic",
-          "Type": "Poison",
+          "Move": "Facade",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Fire Blast",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Flamethrower",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Fling",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Focus Blast",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Frustration",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
         },
@@ -5979,32 +6045,14 @@
           "Method": "Machine"
         },
         {
-          "Move": "Bulk Up",
-          "Type": "Fighting",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
           "Move": "Hidden Power",
           "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
         },
         {
-          "Move": "Sunny Day",
-          "Type": "Fire",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Ice Beam",
-          "Type": "Ice",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Blizzard",
-          "Type": "Ice",
+          "Move": "Hone Claws",
+          "Type": "Dark",
           "Tags": [],
           "Method": "Machine"
         },
@@ -6015,7 +6063,25 @@
           "Method": "Machine"
         },
         {
+          "Move": "Ice Beam",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Incinerate",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
           "Move": "Protect",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Psych Up",
           "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
@@ -6027,32 +6093,8 @@
           "Method": "Machine"
         },
         {
-          "Move": "Safeguard",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Frustration",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Thunderbolt",
-          "Type": "Electric",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Thunder",
-          "Type": "Electric",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Earthquake",
-          "Type": "Ground",
+          "Move": "Rest",
+          "Type": "Psychic",
           "Tags": [],
           "Method": "Machine"
         },
@@ -6063,32 +6105,20 @@
           "Method": "Machine"
         },
         {
-          "Move": "Brick Break",
-          "Type": "Fighting",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Double Team",
+          "Move": "Roar",
           "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
         },
         {
-          "Move": "Flamethrower",
-          "Type": "Fire",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Sandstorm",
+          "Move": "Rock Slide",
           "Type": "Rock",
           "Tags": [],
           "Method": "Machine"
         },
         {
-          "Move": "Fire Blast",
-          "Type": "Fire",
+          "Move": "Rock Smash",
+          "Type": "Fighting",
           "Tags": [],
           "Method": "Machine"
         },
@@ -6099,50 +6129,20 @@
           "Method": "Machine"
         },
         {
-          "Move": "Aerial Ace",
-          "Type": "Flying",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Facade",
-          "Type": "Normal",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Rest",
-          "Type": "Psychic",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
           "Move": "Round",
           "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
         },
         {
-          "Move": "Echoed Voice",
+          "Move": "Safeguard",
           "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
         },
         {
-          "Move": "Focus Blast",
-          "Type": "Fighting",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Fling",
-          "Type": "Dark",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Incinerate",
-          "Type": "Fire",
+          "Move": "Sandstorm",
+          "Type": "Rock",
           "Tags": [],
           "Method": "Machine"
         },
@@ -6153,7 +6153,7 @@
           "Method": "Machine"
         },
         {
-          "Move": "Giga Impact",
+          "Move": "Sleep Talk",
           "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
@@ -6165,32 +6165,26 @@
           "Method": "Machine"
         },
         {
-          "Move": "Thunder Wave",
-          "Type": "Electric",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Psych Up",
+          "Move": "Strength",
           "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
         },
         {
-          "Move": "Bulldoze",
-          "Type": "Ground",
+          "Move": "Substitute",
+          "Type": "Normal",
           "Tags": [],
           "Method": "Machine"
         },
         {
-          "Move": "Rock Slide",
-          "Type": "Rock",
+          "Move": "Sunny Day",
+          "Type": "Fire",
           "Tags": [],
           "Method": "Machine"
         },
         {
-          "Move": "Dragon Tail",
-          "Type": "Dragon",
+          "Move": "Surf",
+          "Type": "Water",
           "Tags": [
             "Stab"
           ],
@@ -6203,26 +6197,32 @@
           "Method": "Machine"
         },
         {
-          "Move": "Sleep Talk",
-          "Type": "Normal",
+          "Move": "Thunder",
+          "Type": "Electric",
           "Tags": [],
           "Method": "Machine"
         },
         {
-          "Move": "Substitute",
-          "Type": "Normal",
+          "Move": "Thunder Wave",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Thunderbolt",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Toxic",
+          "Type": "Poison",
           "Tags": [],
           "Method": "Machine"
         },
         {
           "Move": "Trick Room",
           "Type": "Psychic",
-          "Tags": [],
-          "Method": "Machine"
-        },
-        {
-          "Move": "Rock Smash",
-          "Type": "Fighting",
           "Tags": [],
           "Method": "Machine"
         }
