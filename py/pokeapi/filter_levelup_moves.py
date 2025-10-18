@@ -3,7 +3,12 @@
 """
 Filter Level-Up moves in a PTU-style pokedex JSON.
 
-Rules (applied in this order):
+Changes in this version:
+- When handling evolved Pokémon (stage > 1), Level 1 moves are transferred to Tutor
+  **only if** the immediate previous stage does NOT learn that move at Level 1.
+  (If transferred, ensure tag "N" is present.)
+
+Rules (applied in this order to the Level Up list before any transfer consideration):
 1) On an evolved Pokémon (stage > 1): if a move appears at level 1 AND also later (higher level) OR as Evo,
    remove its level-1 occurrence(s) for that move.
 2) If a move has an Evo occurrence, remove all other level-up occurrences for that move (keep only Evo).
@@ -18,6 +23,8 @@ Usage:
 import argparse
 import json
 from typing import Any, Dict, List, Tuple, Optional
+
+# --------------------------- helpers ---------------------------
 
 def is_evo_level(level: Any) -> bool:
     # Treat any non-int or string "Evo" (case-insensitive) as Evo marker
@@ -80,6 +87,69 @@ def has_tag_larceus(tags: Any) -> bool:
             return True
     return False
 
+def build_species_index(pokedex: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
+    """Lowercased species name -> entry"""
+    idx: Dict[str, Dict[str, Any]] = {}
+    for e in pokedex:
+        nm = e.get("Species")
+        if isinstance(nm, str):
+            idx[nm.strip().lower()] = e
+    return idx
+
+def prev_stage_species_name(entry: Dict[str, Any]) -> Optional[str]:
+    """Find the immediate previous stage species name from the Evolution array.
+    It looks for the row of current species to get its Stage/Stade, then finds stage-1 species.
+    """
+    evo_list = entry.get("Evolution") or []
+    if not isinstance(evo_list, list) or not evo_list:
+        return None
+    current_name = entry.get("Species")
+    current_stage = None
+    for row in evo_list:
+        if not isinstance(row, dict):
+            continue
+        if row.get("Species") == current_name:
+            val = row.get("Stade", row.get("Stage"))
+            try:
+                current_stage = int(val)
+            except Exception:
+                current_stage = None
+            break
+    if current_stage is None or current_stage <= 1:
+        return None
+    target_stage = current_stage - 1
+    # Find a species with stage == target_stage (prefer exact match)
+    for row in evo_list:
+        if not isinstance(row, dict):
+            continue
+        try:
+            st = int(row.get("Stade", row.get("Stage")))
+        except Exception:
+            continue
+        if st == target_stage:
+            nm = row.get("Species")
+            if isinstance(nm, str) and nm.strip():
+                return nm
+    return None
+
+def species_has_move_at_level_1(species_entry: Dict[str, Any], move_name: str) -> bool:
+    """Return True if species_entry level-up list contains move_name at Level 1."""
+    moves_block = species_entry.get("Moves") or {}
+    level_list = moves_block.get("Level Up Move List") or []
+    if not isinstance(level_list, list):
+        return False
+    target = move_name.strip().lower()
+    for e in level_list:
+        if not isinstance(e, dict):
+            continue
+        mv = (e.get("Move") or "").strip().lower()
+        lvl = e.get("Level")
+        if mv == target and isinstance(lvl, int) and lvl == 1:
+            return True
+    return False
+
+# --------------------------- core filter ---------------------------
+
 def filter_levelup(levelups: List[Dict[str, Any]], is_evolved: bool) -> List[Dict[str, Any]]:
     # Group entries by Move name
     by_move: Dict[str, List[Dict[str, Any]]] = {}
@@ -128,6 +198,8 @@ def filter_levelup(levelups: List[Dict[str, Any]], is_evolved: bool) -> List[Dic
     return result
 
 def process_pokedex(pokedex: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    species_idx = build_species_index(pokedex)
+
     for entry in pokedex:
         moves_block = entry.get("Moves")
         if not isinstance(moves_block, dict):
@@ -140,29 +212,46 @@ def process_pokedex(pokedex: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         stage = stage_of_species(entry)
         is_evolved = (stage is not None and stage > 1)
 
-        # Apply level-up filtering rules
+        # Apply level-up filtering rules (pre-transfer)
         filtered = filter_levelup(lvl_list, is_evolved=is_evolved)
 
-        # Final step: if evolved, transfer remaining Level 1 moves to Tutor Move List with Tags ["N"]
+        # Transfer rule (modified):
+        # For evolved species, transfer remaining Level 1 moves to Tutor **only if**
+        # the previous stage does NOT learn that move at Level 1.
         if is_evolved:
-            to_transfer = [x for x in filtered if x.get("Level") == 1]
+            prev_name = prev_stage_species_name(entry)
+            prev_entry = species_idx.get(prev_name.strip().lower()) if isinstance(prev_name, str) else None
+
+            to_transfer = []
+            keep_in_levelup = []
+            for e in filtered:
+                if e.get("Level") == 1:
+                    mv = (e.get("Move") or "").strip()
+                    if mv and (not prev_entry or not species_has_move_at_level_1(prev_entry, mv)):
+                        # move to Tutor
+                        to_transfer.append(e)
+                    else:
+                        # keep in Level Up (since prev learns it at 1)
+                        keep_in_levelup.append(e)
+                else:
+                    keep_in_levelup.append(e)
+
+            filtered = keep_in_levelup
+
             if to_transfer:
-                # Remove them from Level Up
-                filtered = [x for x in filtered if x.get("Level") != 1]
-                # Ensure Tutor list exists
                 tutor_list = moves_block.get("Tutor Move List")
                 if not isinstance(tutor_list, list):
                     tutor_list = []
-                # Build a set for dedupe by move name (case-insensitive)
+                # existing by move name (ci)
                 existing = { (d.get("Move","").strip().lower()) for d in tutor_list if isinstance(d, dict) }
-                # Append transfers
+
                 for e in to_transfer:
                     mv = (e.get("Move") or "").strip()
                     if not mv:
                         continue
                     key = mv.lower()
                     if key in existing:
-                        # Find existing tutor entry and ensure it has tag "N"
+                        # ensure "N" tag on existing entry
                         for _t in tutor_list:
                             if isinstance(_t, dict) and (_t.get("Move") or "").strip().lower() == key:
                                 tags = _t.get("Tags")
@@ -182,9 +271,7 @@ def process_pokedex(pokedex: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
                     }
                     tutor_list.append(tutor_entry)
                     existing.add(key)
-                # Optionally sort for stability
                 tutor_list = sorted(tutor_list, key=lambda d: (d.get("Move") or ""))
-
                 moves_block["Tutor Move List"] = tutor_list
 
         # Write back filtered level-up
