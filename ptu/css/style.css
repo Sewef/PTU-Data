@@ -99,7 +99,7 @@ aside .list-group#sidebar { display:block; gap:0; padding:0; }
 #sidebar .form-check-input { margin-top: 0; }
 #sidebar label.list-group-item { cursor: pointer; user-select: none; }
 #sidebar .text-muted { opacity: .8; }
-#sidebar .btn { width: 100%; }
+/* #sidebar .btn { width: 100%; } */
 
 /* Collapsibles */
 .triangle-toggle::before {

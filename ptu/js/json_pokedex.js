@@ -67,7 +67,14 @@
   let selectedPreset = window.selectedPreset || "Core";
   let selectedLabels = new Set(PRESETS[selectedPreset] || []);
 
+  
   // =========================
+  // Filtering / Performance
+  // =========================
+  let TYPE_MATCH_MODE = 'any'; // 'any' (OR) || 'all' (AND) for type matching
+  const GRID_CHUNK_SIZE = 60; // smaller batch to speed up first paint
+  const __TYPE_CACHE__ = new WeakMap(); // cache pokemon -> types[]
+// =========================
   // Caches & Utilities
   // =========================
   const _fetchCache = new Map(); // url -> Promise(json)
@@ -188,22 +195,57 @@
   // =========================
   // Types & Badges helpers
   // =========================
-  function extractTypes(p) {
-    const t = p?.["Basic Information"]?.Type;
-    if (Array.isArray(t)) {
-      if (t.length && typeof t[0] === "string") return t;
-      if (t.length && typeof t[0] === "object") {
-        const vals = Object.values(t[0]).flatMap(v => Array.isArray(v) ? v : []);
-        return Array.from(new Set(vals));
+// Extraction robuste des types, y compris le cas:
+// "Type": [ { "Baille": ["Fire","Flying"], "Pom Pom": ["Electric","Flying"], ... } ]
+function extractTypes(p) {
+  const info = p?.["Basic Information"] || {};
+  const raw = info.Type;
+
+  const out = [];
+  const push = (t) => {
+    if (!t) return;
+    const s = String(t).trim();
+    if (s && !out.includes(s)) out.push(s);
+  };
+
+  if (Array.isArray(raw)) {
+    // ex: ["Fire","Flying"] OU [ { "Baille":[...], "Pom Pom":[...] } ]
+    for (const item of raw) {
+      if (typeof item === "string") {
+        push(item);
+      } else if (item && typeof item === "object") {
+        // Union de toutes les formes si objet rencontré
+        for (const v of Object.values(item)) {
+          if (Array.isArray(v)) {
+            v.forEach(push);
+          } else {
+            push(v);
+          }
+        }
       }
-      return [];
     }
-    if (t && typeof t === "object") {
-      const vals = Object.values(t).flatMap(v => Array.isArray(v) ? v : []);
-      return Array.from(new Set(vals));
+  } else if (raw && typeof raw === "object") {
+    // Au cas où "Type" serait directement un objet { Forme: [..], ... }
+    for (const v of Object.values(raw)) {
+      if (Array.isArray(v)) {
+        v.forEach(push);
+      } else {
+        push(v);
+      }
     }
-    return [];
+  } else {
+    // String simple ou null/undefined
+    push(raw);
   }
+
+  // Si tu utilises un cache des types, on le nourrit proprement
+  if (typeof __TYPE_CACHE__ !== "undefined" && __TYPE_CACHE__ && typeof __TYPE_CACHE__.set === "function") {
+    __TYPE_CACHE__.set(p, out);
+  }
+
+  return out;
+}
+
 
   function wrapTypes(t) {
     if (!t) return "";
@@ -262,18 +304,28 @@
     }
   }
 
+  
   function renderGrid(rows) {
-    const grid = $("#dex-grid");
-    grid.innerHTML = "";
+  const grid = $("#dex-grid");
+  if (!grid) return;
+  grid.innerHTML = "";
+  grid.querySelectorAll("#grid-sentinel").forEach(n => n.remove());
+
+  const CHUNK = (typeof GRID_CHUNK_SIZE === "number" && GRID_CHUNK_SIZE > 0) ? GRID_CHUNK_SIZE : 60;
+  let index = 0;
+
+  function appendBatch() {
     const frag = document.createDocumentFragment();
-    rows.forEach(p => {
+    const end = Math.min(index + CHUNK, rows.length);
+    for (; index < end; index++) {
+      const p = rows[index];
       const name = p.Species || "Unknown";
       const num = pad3(p.Number ?? "0");
       const types = extractTypes(p);
 
       const li = document.createElement("div");
       li.className = "dex-badge";
-      li.dataset.types = types.join(",");
+      li.dataset.types = (types || []).join(",");
 
       const iconWrap = document.createElement("div");
       iconWrap.className = "icon dark-background";
@@ -294,16 +346,24 @@
 
       li.addEventListener("click", () => openDetail(p));
       frag.appendChild(li);
-    });
+    }
     grid.appendChild(frag);
 
-    requestAnimationFrame(() => {
-      grid.querySelectorAll(".dex-badge").forEach(el => {
-        const types = el.dataset.types ? el.dataset.types.split(",") : [];
-        applyBadgeBackground(el, types);
-      });
-    });
+    // Apply type backgrounds to the last batch only
+    const batch = Array.from(grid.querySelectorAll(".dex-badge")).slice(-CHUNK);
+    for (const el of batch) {
+      const types = el.dataset.types ? el.dataset.types.split(",") : [];
+      applyBadgeBackground(el, types);
+    }
+
+    if (index < rows.length) {
+      setTimeout(appendBatch, 0);
+    }
   }
+
+  appendBatch();
+}
+
 
   // =========================
   // Rendering: details modal
@@ -479,7 +539,7 @@
     if (m) {
       return `<div><span class="text-muted">${m[1]}:</span> ${m[2]}</div>`;
     }
-    // fallback (raw may contain "4: 1d8+6 / 11" or just "1d8+6 / 11")
+    // fallback (raw may contain "4: 1d8+6 / 11" || just "1d8+6 / 11")
     const m2 = s.match(/(\d+)\s*:\s*(.+)/);
     if (m2) {
       return `<div><span class="text-muted">Damage Base ${escapeHtml(m2[1])}:</span> ${escapeHtml(m2[2])}</div>`;
@@ -765,67 +825,180 @@
   // =========================
   // Sidebar
   // =========================
+  
   function buildTypeSidebar(all, onChange) {
     const sidebar = $("#sidebar");
     if (!sidebar) return;
-    const old = sidebar.querySelector('[data-role="type-filters"]');
-    if (old) old.remove();
 
-    const typesBox = document.createElement("div");
-    typesBox.setAttribute("data-role", "type-filters");
+    // Inject compact CSS once
+    (function ensureTypePillCSS(){
+      if (document.getElementById("dex-typepill-style")) return;
+      const s = document.createElement("style");
+      s.id = "dex-typepill-style";
+      s.textContent = `
+        [data-role="type-filters"] #type-badges{display:flex;flex-wrap:wrap;gap:.25rem .25rem;margin-bottom:.25rem}
+        .type-pill{padding:.15rem .4rem;font-size:.75rem;line-height:1;border-radius:9999px;border:1px solid rgba(255,255,255,.15);opacity:.95}
+        .type-pill.active{outline:1px solid rgba(255,255,255,.25);opacity:1}
+        [data-role="type-filters"] .btn-group.btn-group-sm .btn{padding:.15rem .35rem;font-size:.75rem}
+        [data-role="type-filters"] .form-label{margin-bottom:.25rem}
+      `;
+      document.head.appendChild(s);
+    })();
+
+    let typesBox = sidebar.querySelector('[data-role="type-filters"]');
     const types = collectTypes(all);
-    typesBox.innerHTML = `
-      <label class="form-label mt-2">Types :</label>
-      <div class="mb-2">
-        <input id="sidebar-search" class="form-control form-control-sm mb-2" placeholder="Filter types..."/>
-        <button id="toggle-all-types" class="btn btn-sm btn-primary w-100 mb-2">Select/Deselect all</button>
-      </div>
-      <div id="type-filters" class="list-group">
-        ${types.map(type => `
-          <label class="list-group-item card-type-${type}">
-            <input class="form-check-input me-1" type="checkbox" value="${type}">${type}
-          </label>`).join("")}
-      </div>`;
 
-    const srcMenu = sidebar.querySelector('[data-role="source-menu"]');
-    if (srcMenu) srcMenu.insertAdjacentElement("afterend", typesBox);
-    else sidebar.prepend(typesBox);
+    if (!typesBox) {
+      typesBox = document.createElement("div");
+      typesBox.setAttribute("data-role", "type-filters");
 
-    typesBox.querySelectorAll("#type-filters input[type='checkbox']").forEach(input => input.addEventListener("change", onChange));
+      typesBox.innerHTML = `
+        <label class="form-label mt-2 d-flex align-items-center justify-content-between">
+          <span>Types</span>
+          <div class="btn-group btn-group-sm" role="group" aria-label="Type matching mode">
+            <input type="radio" class="btn-check" name="type-mode" id="type-mode-any">
+            <label class="btn btn-outline-primary" for="type-mode-any" title="Match any of the selected types">ANY</label>
+            <input type="radio" class="btn-check" name="type-mode" id="type-mode-all">
+            <label class="btn btn-outline-primary" for="type-mode-all" title="Must include all selected types">ALL</label>
+          </div>
+        </label>
 
-    const sb = $("#sidebar-search");
-    if (sb) sb.addEventListener("input", debounce(() => {
-      const q = sb.value.toLowerCase();
-      typesBox.querySelectorAll("#type-filters label").forEach(label => {
-        label.style.display = label.textContent.toLowerCase().includes(q) ? "" : "none";
+        <div class="mb-2 d-flex gap-1 flex-wrap" id="type-badges"></div>
+
+        <div class="mt-2">
+          <label class="form-label mb-1">Learns move</label>
+          <input id="filter-move" class="form-control form-control-sm" placeholder="eg: Thunderbolt">
+        </div>
+
+        <div class="mt-2">
+          <label class="form-label mb-1">Has ability</label>
+          <input id="filter-ability" class="form-control form-control-sm" placeholder="eg: Intimidate">
+        </div>
+
+        <div class="mt-2">
+          <button id="clear-filters" class="btn btn-sm btn-outline-secondary w-100">Clear filters</button>
+        </div>
+            `;
+
+      const srcMenu = sidebar.querySelector('[data-role="source-menu"]');
+      if (srcMenu) srcMenu.insertAdjacentElement("afterend", typesBox);
+      else sidebar.prepend(typesBox);
+
+      // Delegated once
+      typesBox.addEventListener("click", (ev) => {
+        const btn = ev.target.closest("button[data-type]");
+        if (!btn) return;
+        const sel = btn.getAttribute("data-selected") === "1";
+        btn.setAttribute("data-selected", sel ? "0" : "1");
+        btn.classList.toggle("active", !sel);
+        onChange();
       });
-    }, 150));
+      typesBox.addEventListener("change", (ev) => {
+        const el = ev.target;
+        if (!(el instanceof HTMLInputElement)) return;
+        if (el.name === "type-mode") {
+          TYPE_MATCH_MODE = el.id.endsWith("all") ? "all" : "any";
+          onChange();
+        }
+      });
+      typesBox.querySelector("#filter-move")?.addEventListener("input", debounce(onChange, 150));
+      typesBox.querySelector("#filter-ability")?.addEventListener("input", debounce(onChange, 150));
+      typesBox.querySelector("#clear-filters")?.addEventListener("click", () => {
+        typesBox.querySelectorAll("button[data-type]").forEach(b => { b.setAttribute("data-selected","0"); b.classList.remove("active"); });
+        TYPE_MATCH_MODE = 'any';
+        const anyRadio = typesBox.querySelector("#type-mode-any");
+        if (anyRadio) anyRadio.checked = true;
+        const moveInp = typesBox.querySelector("#filter-move");
+        const abilInp = typesBox.querySelector("#filter-ability");
+        if (moveInp) moveInp.value = "";
+        if (abilInp) abilInp.value = "";
+        onChange();
+      });
+    }
 
-    const toggle = $("#toggle-all-types");
-    if (toggle) toggle.addEventListener("click", () => {
-      const boxes = typesBox.querySelectorAll("#type-filters input[type='checkbox']");
-      const allChecked = Array.from(boxes).every(cb => cb.checked);
-      boxes.forEach(cb => cb.checked = !allChecked);
-      onChange();
-    });
+    // Always refresh inline badges without duplicating the section
+    const badgeWrap = typesBox.querySelector("#type-badges");
+    badgeWrap.innerHTML = types.map(t => `<button type="button" class="btn btn-sm type-pill card-type-${t}" data-type="${t}" data-selected="0">${t}</button>`).join("");
+
+    // Sync radios
+    const anyRadio = typesBox.querySelector("#type-mode-any");
+    const allRadio = typesBox.querySelector("#type-mode-all");
+    if (anyRadio && allRadio) {
+      anyRadio.checked = TYPE_MATCH_MODE === 'any';
+      allRadio.checked = TYPE_MATCH_MODE === 'all';
+    }
   }
+
 
   function activeTypes() {
-    return Array.from(document.querySelectorAll("#type-filters input:checked")).map(el => el.value);
+    const box = document.querySelector('[data-role="type-filters"] #type-badges');
+    if (!box) return [];
+    return Array.from(box.querySelectorAll('button[data-type][data-selected="1"]')).map(b => b.getAttribute("data-type"));
   }
 
-  function filterRows(rows) {
-    const q = ($("#dex-search")?.value || "").trim().toLowerCase();
-    const types = activeTypes();
-    return rows.filter(p => {
-      const name = (p.Species || "").toLowerCase();
-      const num = String(p.Number || "");
-      const hasQ = !q || name.includes(q) || num.includes(q);
-      const pTypes = extractTypes(p);
-      const typeOk = types.length === 0 || pTypes.some(t => types.includes(t));
-      return hasQ && typeOk;
-    }).sort((a, b) => (a.Number || 0) - (b.Number || 0));
+  
+  function pokemonHasAbility(p, query) {
+    if (!query) return true;
+    const q = String(query).trim().toLowerCase();
+    const info = p?.["Basic Information"] || {};
+    for (const [k, v] of Object.entries(info)) {
+      if (!/ability/i.test(k)) continue;
+      const s = String(v || "").toLowerCase();
+      if (s.includes(q)) return true;
+    }
+    return false;
   }
+
+  function pokemonLearnsMove(p, query) {
+    if (!query) return true;
+    const q = String(query).trim().toLowerCase();
+    const mv = p?.Moves || {};
+    const lists = [
+      ...(Array.isArray(mv["Level Up Move List"]) ? mv["Level Up Move List"] : []),
+      ...(Array.isArray(mv["TM/HM Move List"]) ? mv["TM/HM Move List"] : []),
+      ...(Array.isArray(mv["Egg Move List"]) ? mv["Egg Move List"] : []),
+      ...(Array.isArray(mv["Tutor Move List"]) ? mv["Tutor Move List"] : []),
+      ...(Array.isArray(mv["TM/Tutor Moves List"]) ? mv["TM/Tutor Moves List"] : []),
+    ];
+    for (const it of lists) {
+      const name = (typeof it === "string") ? it : (it?.Move || it?.Name || "");
+      if (String(name).trim?.().toLowerCase().includes(q) || String(name).toLowerCase().includes(q)) return true;
+    }
+    return false;
+  }
+
+  
+  function filterRows(rows) {
+    const qRaw = ($("#dex-search")?.value || "").trim().toLowerCase();
+    const types = activeTypes();
+    const moveQ = ($("#filter-move")?.value || "").trim().toLowerCase();
+    const abilQ = ($("#filter-ability")?.value || "").trim().toLowerCase();
+
+    const out = rows.filter(p => {
+      const name = (p.Species || "").toLowerCase();
+      if (qRaw && !name.includes(qRaw)) {
+        const num = String(p.Number || "");
+        if (!num.includes(qRaw)) return false;
+      }
+      if (moveQ && !pokemonLearnsMove(p, moveQ)) return false;
+      if (abilQ && !pokemonHasAbility(p, abilQ)) return false;
+
+      if (types.length) {
+        const pTypes = extractTypes(p);
+        if (TYPE_MATCH_MODE === 'all') {
+          for (const t of types) if (!pTypes.includes(t)) return false;
+        } else {
+          let ok = false;
+          for (const t of types) if (pTypes.includes(t)) { ok = true; break; }
+          if (!ok) return false;
+        }
+      }
+      return true;
+    }).sort((a, b) => (a.Number || 0) - (b.Number || 0));
+
+    return out;
+  }
+
 
   function wireSearch(all) {
     const inp = $("#dex-search");
