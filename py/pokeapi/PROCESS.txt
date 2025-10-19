@@ -78,6 +78,10 @@ py find_species_with_few_levelups.py  --in ../../ptu/data/pokedex/updated/pokede
 Will check species with few level up moves for manual processing. --only-stones to get only mons which evolve with stone
 
 --
+py merge_stone_evo_levelups.py --input-dir ../../ptu/data/pokedex/homebrew/ --in-place
+Add shitty moves to evo
+
+--
 py update_moves_from_pokeapi.py --pokedex ../../ptu/data/pokedex/community/pokedex_core.json --mapping mapping.csv --out ../../ptu/data/pokedex/homebrew/pokedex_core.json --min-gen 4 --max-gen 9
 py filter_levelup_moves.py --in ../../ptu/data/pokedex/homebrew/pokedex_core.json --out ../../ptu/data/pokedex/homebrew/pokedex_core.json
 
