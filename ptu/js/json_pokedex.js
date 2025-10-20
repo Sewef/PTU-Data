@@ -62,6 +62,15 @@
     Homebrew: `${ABILITIES_BASE}/abilities_homebrew.json`
   };
 
+  // Add this next to your other FILE_BY_PRESET constants
+  const POKESHEETS_FILE_BY_PRESET = {
+    Homebrew: {
+      dex: "/ptu/data/pokesheets/pokedex_homebrew.json",
+      moves: "/ptu/data/pokesheets/moves_homebrew.json",
+    }
+  };
+
+
   const SHOWN_TAGS = new Set(["N", "Stab"]);
 
   let selectedPreset = window.selectedPreset || "Core";
@@ -210,6 +219,81 @@
     const el = $("#dexModal");
     return !!el && el.classList.contains("show");
   }
+
+  async function copyToClipboard(text) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      // Fallback
+      try {
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        return true;
+      } catch {
+        return false;
+      }
+    }
+  }
+
+  function showPokesheetsFeedback(msg, ok = true) {
+    const fb = document.querySelector("#pokesheets-feedback");
+    if (!fb) return;
+    fb.textContent = msg;
+    fb.classList.toggle("text-success", ok);
+    fb.classList.toggle("text-danger", !ok);
+  }
+
+  function getPokesheetsUrlsForPreset() {
+    // Only defined for Homebrew today
+    return POKESHEETS_FILE_BY_PRESET[selectedPreset] || null;
+  }
+  // We'll reuse window.__POKEDEX as the Dex payload (merged, filtered by selected labels)
+
+  document.addEventListener("click", async (ev) => {
+    const btnDex = ev.target.closest("#btn-copy-pokesheets-dex");
+    const btnMoves = ev.target.closest("#btn-copy-pokesheets-moves");
+    if (!btnDex && !btnMoves) return;
+
+    const urls = getPokesheetsUrlsForPreset();
+    if (!urls) {
+      showPokesheetsFeedback("Pokésheets export is only available for the Homebrew dataset.", false);
+      return;
+    }
+
+    if (btnDex) {
+      try {
+        const raw = await fetch(urls.dex, { cache: "no-store" }).then(r => r.ok ? r.json() : null);
+        if (!raw) throw new Error("HTTP");
+        const txt = await fetch(urls.dex, { cache: "no-store" }).then(r => r.ok ? r.text() : null);
+        const ok = await copyToClipboard(txt);
+        showPokesheetsFeedback(ok ? "Dex JSON copied to clipboard." : "Failed to copy Dex JSON.", ok);
+      } catch {
+        showPokesheetsFeedback("Failed to copy Dex JSON.", false);
+      }
+      return;
+    }
+
+    if (btnMoves) {
+      try {
+        const raw = await fetch(urls.moves, { cache: "no-store" }).then(r => r.ok ? r.json() : null);
+        if (!raw) throw new Error("HTTP");
+        const txt = await fetch(urls.dex, { cache: "no-store" }).then(r => r.ok ? r.text() : null);
+        const ok = await copyToClipboard(txt);
+        showPokesheetsFeedback(ok ? "Moves JSON copied to clipboard." : "Failed to copy Moves JSON.", ok);
+      } catch {
+        showPokesheetsFeedback("Failed to copy Moves JSON.", false);
+      }
+    }
+  });
+
+
 
   // =========================
   // Types & Badges helpers
@@ -1154,7 +1238,15 @@
     wrap.innerHTML = `
       <div class="d-flex align-items-center justify-content-between">
         <label class="form-label mb-0">Dataset</label>
-        <button type="button" class="btn btn-primary" style="font-size:.75rem; padding:.1rem .25rem; min-width:unset; width:auto;" id="btn-readme">Readme</button>
+        <div class="d-flex align-items-center gap-1">
+          <button type="button"
+                  id="btn-pokesheets"
+                  class="btn btn-outline-primary"
+                  style="font-size:.75rem; padding:.1rem .4rem; display:${selectedPreset === "Homebrew" ? "inline-block" : "none"};">
+            Pokésheets
+          </button>
+          <button type="button" class="btn btn-primary" style="font-size:.75rem; padding:.1rem .25rem; min-width:unset; width:auto;" id="btn-readme">Readme</button>
+        </div>
       </div>
       <div class="d-flex flex-wrap gap-1 w-100 mb-2" role="group" aria-label="Dataset presets">
         ${["Core", "Community", "Homebrew"].map(p => `
@@ -1166,6 +1258,7 @@
         <div class="fw-semibold mb-1">Included Pokédex</div>
         <div id="preset-files-list"></div>
       </div>`;
+
 
     sb.querySelector('[data-role="source-menu"]')?.remove();
     sb.prepend(wrap);
@@ -1207,6 +1300,14 @@
       bootstrap.Modal.getOrCreateInstance($("#readmeModal")).show();
     });
 
+    // Open Pokésheets modal (Homebrew only)
+    wrap.querySelector("#btn-pokesheets")?.addEventListener("click", () => {
+      bootstrap.Modal.getOrCreateInstance($("#pokesheetsModal")).show();
+      // clear any previous feedback
+      const fb = $("#pokesheets-feedback");
+      if (fb) fb.textContent = "";
+    });
+
     // single handler for radios
     wrap.addEventListener("change", (ev) => {
       const tgt = ev.target;
@@ -1216,10 +1317,18 @@
       if (id.endsWith("core")) selectedPreset = "Core";
       else if (id.endsWith("community")) selectedPreset = "Community";
       else if (id.endsWith("homebrew")) selectedPreset = "Homebrew";
+
+      // NEW: enforce button visibility
+      wrap.querySelector("#btn-pokesheets")?.style.setProperty(
+        "display",
+        selectedPreset === "Homebrew" ? "inline-block" : "none"
+      );
+
       selectedLabels = new Set(PRESETS[selectedPreset] || []);
       renderPresetFiles();
       reload();
     });
+
 
     renderPresetFiles();
   }
