@@ -444,6 +444,10 @@ def transform_entry(src: Dict[str, Any], abilities_db: Dict[str, Dict[str, Any]]
     basic_info = src.get("Basic Information") or {}
     types = [t for t in (basic_info.get("Type") or []) if isinstance(t, str)]
 
+    # Image URL
+    image_info = src.get("Icon") or src.get("Number")
+    image_url = "https://sewef.github.io/ptu/img/pokemon/icons/{}.png".format(str(image_info)) if image_info else None
+
     # Stats
     base_stats = base_stats_to_pokesheets(src.get("Base Stats") or {})
 
@@ -566,7 +570,7 @@ def transform_entry(src: Dict[str, Any], abilities_db: Dict[str, Dict[str, Any]]
         "regionOfOrigin": None,
         "entryText": None,
         "pokeApiId": number if number is not None else None,
-        "imageFileUrl": None,
+        "imageFileUrl": image_url,
         "cryFileUrl": None,
         "baseStats": base_stats,
         "size": size,
@@ -644,6 +648,7 @@ def main():
     ap.add_argument("--in-dir", required=True, help="Directory with *.json pokedex files")
     ap.add_argument("--abilities", required=True, help="abilities.json path")
     ap.add_argument("--out", required=True, help="Output JSON path")
+    ap.add_argument("--minimize", required=False, help="Minimize output JSON (no pretty print)", action="store_true")
     args = ap.parse_args()
 
     in_dir = Path(args.in_dir)
@@ -658,7 +663,15 @@ def main():
 
     log(f"[info] transforming {len(src_entries)} species…")
     transformed = [transform_entry(e, abilities_db) for e in src_entries]
-    write_json(Path(args.out), transformed)
+    
+    out_path = Path(args.out)
+    if args.minimize:
+        with out_path.open("w", encoding="utf-8") as f:
+            json.dump(transformed, f, ensure_ascii=False, separators=(",", ":"))
+    else:
+        write_json(out_path, transformed)
+
+
     log(f"[ok] wrote {args.out} (species: {len(transformed)})")
 
 if __name__ == "__main__":
