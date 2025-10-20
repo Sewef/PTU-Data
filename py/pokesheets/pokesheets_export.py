@@ -453,7 +453,7 @@ def parse_capabilities_block(caps_raw) -> Tuple[Dict[str, Any], str]:
 
 def transform_entry(src: Dict[str, Any], abilities_db: Dict[str, Dict[str, Any]]) -> Dict[str, Any]:
     species_src = to_str(src.get("Species")) or "Unknown"
-    species_out = f"{species_src} Homebrew"  # append " Updated" as requested
+    species_out = f"{species_src} (Homebrew)"  # append " Updated" as requested
 
     number = to_str(src.get("Number"))
     basic_info = src.get("Basic Information") or {}
