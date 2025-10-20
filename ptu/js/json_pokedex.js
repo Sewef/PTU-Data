@@ -429,6 +429,8 @@
   // =========================
   function transformBasicInformation(v) {
     if (!v || typeof v !== "object") return v;
+
+    // Type -> déjà en place
     if (v?.Type) {
       const t = v.Type;
       if (Array.isArray(t)) {
@@ -443,13 +445,27 @@
         v.Type = renderFormType(t);
       }
     }
+
+    // NEW: Ability(s) -> string OU tableau -> liens cliquables
     for (const [bk, bv] of Object.entries(v)) {
-      if (typeof bv === "string" && /ability/i.test(bk) && !/capabilit/i.test(bk) && bv.trim()) {
-        v[bk] = `<a href="#" class="js-ability-link" data-ability="${escapeHtml(bv)}">${escapeHtml(bv)}</a>`;
+      if (/ability/i.test(bk) && !/capabilit/i.test(bk)) {
+        if (Array.isArray(bv)) {
+          const parts = bv
+            .filter(x => x != null && String(x).trim())
+            .map(name => {
+              const s = String(name).trim();
+              return `<a href="#" class="js-ability-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
+            });
+          v[bk] = parts.join(" / ");
+        } else if (typeof bv === "string" && bv.trim()) {
+          const s = bv.trim();
+          v[bk] = `<a href="#" class="js-ability-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
+        }
       }
     }
     return v;
   }
+
 
   function renderBaseStats(stats, depth = 0) {
     const order = ["HP", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"];
@@ -528,28 +544,63 @@
   function renderBattleOnlyForms(forms, base) {
     if (!forms || typeof forms !== "object") return "";
     const pNum = base?.Number ?? "", pName = base?.Species ?? "Unknown";
+
+    const linkifyAbilities = (val) => {
+      if (Array.isArray(val)) {
+        return val
+          .filter(x => x != null && String(x).trim())
+          .map(name => {
+            const s = String(name).trim();
+            return `<a href="#" class="js-ability-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
+          })
+          .join(", ");
+      }
+      if (typeof val === "string" && val.trim()) {
+        const s = val.trim();
+        return `<a href="#" class="js-ability-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
+      }
+      return Array.isArray(val) ? val.join(", ")
+        : (typeof val === "object" && val ? Object.keys(val).join(", ")
+          : String(val ?? ""));
+    };
+
     return Object.entries(forms).map(([label, f]) => {
       const t = document.createElement("img");
       setupIcon(t, f?.Icon ?? pNum, `${pName} — ${label}`, "full");
       const src = t.src;
       const types = wrapTypes(f?.Type || []);
-      const line = k => f?.[k] ? `<div class="small text-muted">${k}: <span class="text-body">${Array.isArray(f[k]) ? f[k].join(", ") : (typeof f[k] === "object" ? Object.keys(f[k]).join(", ") : String(f[k]))}</span></div>` : "";
-      const stats = f?.Stats ? Object.entries(f.Stats).map(([k, v]) => `<div class="d-flex justify-content-between small border-bottom"><span class="text-muted">${k}</span><span class="fw-semibold">${v}</span></div>`).join("") : "";
+
+      const line = (k) => {
+        const val = f?.[k];
+        if (!val) return "";
+        const content = (/ability/i.test(k) && !/capabilit/i.test(k))
+          ? linkifyAbilities(val)
+          : (Array.isArray(val) ? val.join(", ")
+            : (typeof val === "object" ? Object.keys(val).join(", ")
+              : String(val)));
+        return `<div class="small text-muted">${k}: <span class="text-body">${content}</span></div>`;
+      };
+
+      const stats = f?.Stats ? Object.entries(f.Stats).map(([k, v]) =>
+        `<div class="d-flex justify-content-between small border-bottom"><span class="text-muted">${k}</span><span class="fw-semibold">${v}</span></div>`
+      ).join("") : "";
+
       return `
-        <div class="card accent w-100 mb-2"><div class="card-body">
-          <div class="d-flex align-items-start gap-3">
-            <div class="rounded dark-background p-1"><img class="dex-title-icon" src="${src}"></div>
-            <div class="flex-grow-1">
-              <div class="d-flex flex-wrap align-items-baseline gap-2">
-                <span class="fw-semibold">${label}</span><span class="ms-1">${types}</span>
-              </div>
-              ${line("Ability")}${line("Adv Ability 1")}${line("Adv Ability 2")}${line("Capabilities")}
-              ${stats ? `<div class="mt-2">${stats}</div>` : ""}
+      <div class="card accent w-100 mb-2"><div class="card-body">
+        <div class="d-flex align-items-start gap-3">
+          <div class="rounded dark-background p-1"><img class="dex-title-icon" src="${src}"></div>
+          <div class="flex-grow-1">
+            <div class="d-flex flex-wrap align-items-baseline gap-2">
+              <span class="fw-semibold">${label}</span><span class="ms-1">${types}</span>
             </div>
+            ${line("Ability")}${line("Adv Ability 1")}${line("Adv Ability 2")}${line("Adv Ability 3")}${line("High Ability")}${line("Capabilities")}
+            ${stats ? `<div class="mt-2">${stats}</div>` : ""}
           </div>
-        </div></div>`;
+        </div>
+      </div></div>`;
     }).join("");
   }
+
 
   function renderTags(tags) {
     if (Array.isArray(tags) && tags.length)
@@ -1014,12 +1065,19 @@
     const matcher = __makeWildcardMatcher(queryRaw);
     if (!p || !p["Basic Information"]) return matcher("");
     const info = p["Basic Information"];
+
     for (const [k, v] of Object.entries(info)) {
       if (!/ability/i.test(k)) continue;
-      if (matcher(v)) return true;
+
+      if (Array.isArray(v)) {
+        if (v.some(x => matcher(String(x || "")))) return true;
+      } else {
+        if (matcher(String(v || ""))) return true;
+      }
     }
     return false;
   }
+
 
   function pokemonLearnsMove(p, queryRaw) {
     const matcher = __makeWildcardMatcher(queryRaw);
