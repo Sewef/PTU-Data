@@ -279,7 +279,7 @@ def load_abilities_db(path: Optional[Path]) -> Dict[str, Dict[str, Any]]:
     log(f"[info] abilities loaded: {len(db)} entries")
     return db
 
-def map_abilities(basic_info: Dict[str, Any], abilities_db: Dict[str, Dict[str, Any]]):
+def map_abilities(basic_info: Dict[str, Any], abilities_db: Dict[str, Dict[str, Any]], species_name: Optional[str]=None):
     # Source: Basic Ability 1/2, Adv Ability 1/2, High Ability
     basics, advs, highs = [], [], []
 
@@ -296,10 +296,25 @@ def map_abilities(basic_info: Dict[str, Any], abilities_db: Dict[str, Dict[str, 
         norm = _norm_name_for_lookup(name)
         
         norm = norm.strip('*')
+
+        # If name contains a parenthetical (e.g. "Type Aura (Water)"), try lookup without it
+        # but restore the original name (with parentheses) on the matched entry.
+        if isinstance(norm, str) and "(" in norm and ")" in norm:
+            stripped_norm = re.sub(r"\s*\([^)]*\)", "", norm).strip()
+            # normalize spaces like _norm_name_for_lookup would
+            stripped_norm = re.sub(r"\s+", " ", stripped_norm)
+            # try also without trailing commas
+            alt_norms = [stripped_norm, stripped_norm.rstrip(",").strip()] if stripped_norm else []
+            for candidate in alt_norms:
+                if candidate and candidate in abilities_db:
+                    # copy entry to preserve original DB shape but ensure returned name keeps parentheses
+                    abilities_db[candidate] = {**abilities_db[candidate], "name": name}
+                    norm = candidate
+                    break
         
         meta = abilities_db.get(norm)
         if not meta:
-            warn(f"[abilities] not found in abilities.json: {name}")
+            warn(f"[abilities] not found in abilities.json: {name} ({species_name})")
             return {
                 "name": name,
                 "effect": None,
@@ -438,7 +453,7 @@ def parse_capabilities_block(caps_raw) -> Tuple[Dict[str, Any], str]:
 
 def transform_entry(src: Dict[str, Any], abilities_db: Dict[str, Dict[str, Any]]) -> Dict[str, Any]:
     species_src = to_str(src.get("Species")) or "Unknown"
-    species_out = f"{species_src} Updated"  # append " Updated" as requested
+    species_out = f"{species_src} Homebrew"  # append " Updated" as requested
 
     number = to_str(src.get("Number"))
     basic_info = src.get("Basic Information") or {}
@@ -478,7 +493,7 @@ def transform_entry(src: Dict[str, Any], abilities_db: Dict[str, Dict[str, Any]]
     diets = split_csv_like(to_str(other_info.get("Diet")))
 
     # Abilities (avec lookup enrichi + logs si non trouvé)
-    basic_abl_objs, adv_abl_objs, high_abl_objs, basic_names, adv_names, high_names = map_abilities(basic_info, abilities_db)
+    basic_abl_objs, adv_abl_objs, high_abl_objs, basic_names, adv_names, high_names = map_abilities(basic_info, abilities_db, species_src)
 
     # Evolution (stage + min level si présent sur la ligne de l'espèce)
     evolution = src.get("Evolution") or []
