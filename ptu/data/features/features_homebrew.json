@@ -750,7 +750,7 @@
           {
             "Name": "Flexible Preparations",
             "Tags": "[+Any]",
-            "Prerequisites": "Adaptable Performance, one Coordinator Skill at Adept",
+            "Prerequisites": "Coordinator, one Coordinator Skill at Adept",
             "Frequency": "Daily — Extended Action",
             "Target": "You spend at least half an hour training your Pokémon",
             "Effect": "All Pokemon you Train during this time may reallocate up to 2d6 of Poffin Derived Contest Stats from one Contest Stat to another. They may also reallocate up to 10 Stat Points between their Stats and trade one Naturally Learned Move in their movepool for any other move on their Level-Up list that they could learn at their current level or lower. The Pokemon must still adhere to Base Stat Relation. These effects last until the end of the day."
@@ -5620,7 +5620,7 @@
             "Tags": "[Orders]",
             "Prerequisites": "Channeler",
             "Frequency": "Scene x3 — Standard Action",
-            "Effect": "For one full round, whenever a Channeled Pokémon successfully hits a foe, all Channeled Pokémon » gain +1 Accuracy and +1 Evasion against that foe for the duration of this Feature."
+            "Effect": "For one full round, whenever a Channeled Pokémon successfully hits a foe, all Channeled Pokémon gain +1 Accuracy and +1 Evasion against that foe for the duration of this Feature."
           },
           {
             "Name": "Spirit Boost",
