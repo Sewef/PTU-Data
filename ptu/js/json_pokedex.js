@@ -1386,10 +1386,17 @@
   }
 
   async function openMoveModalByName(moveName) {
-    const name = String(moveName || "").trim().toLowerCase();
+    const raw = String(moveName || "").trim();
+    const base = raw.split("*")[0].trim(); // trim anything after '*' (eg. "Move* [...]" -> "Move")
+    const name = base.toLowerCase();
     if (!name) return;
     const idx = await loadMoveIndex();
-    const mv = idx.get(name) || idx.get(name.replace(/[-–—]/g, " ")) || null;
+    // Also normalize moves in the index by trimming after '*'
+    const found = Array.from(idx.entries()).find(([key, mv]) => {
+      const moveBase = key.split("*")[0].trim().toLowerCase();
+      return moveBase === name;
+    });
+    const mv = found ? found[1] : null;
     const display = mv?.Move || mv?.Name || mv?.__displayName || moveName;
     const labelEl = $("#moveAbilityModalLabel");
     const typeHtml = mv?.Type ? wrapTypes([mv.Type]) : "";
