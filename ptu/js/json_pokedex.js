@@ -64,6 +64,14 @@
 
   // Add this next to your other FILE_BY_PRESET constants
   const POKESHEETS_FILE_BY_PRESET = {
+    Core: {
+      dex: "/ptu/data/pokesheets/pokedex_core.json",
+      moves: "/ptu/data/pokesheets/moves_core.json",
+    },
+    Community: {
+      dex: "/ptu/data/pokesheets/pokedex_community.json",
+      moves: "/ptu/data/pokesheets/moves_community.json",
+    },
     Homebrew: {
       dex: "/ptu/data/pokesheets/pokedex_homebrew.json",
       moves: "/ptu/data/pokesheets/moves_homebrew.json",
@@ -1242,7 +1250,7 @@
           <button type="button"
                   id="btn-pokesheets"
                   class="btn btn-outline-primary"
-                  style="font-size:.75rem; padding:.1rem .4rem; display:${selectedPreset === "Homebrew" ? "inline-block" : "none"};">
+                  style="font-size:.75rem; padding:.1rem .4rem;">
             Pokésheets
           </button>
           <button type="button" class="btn btn-primary" style="font-size:.75rem; padding:.1rem .25rem; min-width:unset; width:auto;" id="btn-readme">Readme</button>
@@ -1317,13 +1325,6 @@
       if (id.endsWith("core")) selectedPreset = "Core";
       else if (id.endsWith("community")) selectedPreset = "Community";
       else if (id.endsWith("homebrew")) selectedPreset = "Homebrew";
-
-      // NEW: enforce button visibility
-      wrap.querySelector("#btn-pokesheets")?.style.setProperty(
-        "display",
-        selectedPreset === "Homebrew" ? "inline-block" : "none"
-      );
-
       selectedLabels = new Set(PRESETS[selectedPreset] || []);
       renderPresetFiles();
       reload();
