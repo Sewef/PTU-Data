@@ -51,7 +51,20 @@
     {
       "label": "Pokesheets Homebrew",
       "type": "shell",
-      "command": "py py/pokesheets/pokesheets_export.py --in-dir ptu/data/pokedex/homebrew/ --out ptu/data/pokedex/pokesheets_homebrew.json --abilities ptu/data/abilities/abilities_homebrew.json"
+      "command": "py py/pokesheets/pokesheets_export.py --tag Homebrew --minimize --in-dir ptu/data/pokedex/homebrew/ --out ptu/data/pokesheets/pokedex_homebrew.json --abilities ptu/data/abilities/abilities_homebrew.json",
+      "problemMatcher": []
+    },
+    {
+      "label": "Pokesheets Core",
+      "type": "shell",
+      "command": "py py/pokesheets/pokesheets_export.py --tag Core --minimize --in-dir ptu/data/pokedex/core/ --out ptu/data/pokesheets/pokedex_core.json --abilities ptu/data/abilities/abilities_core.json",
+      "problemMatcher": []
+    },
+    {
+      "label": "Pokesheets Community",
+      "type": "shell",
+      "command": "py py/pokesheets/pokesheets_export.py --tag Community --minimize --in-dir ptu/data/pokedex/community/ --out ptu/data/pokesheets/pokedex_community.json --abilities ptu/data/abilities/abilities_9g.json",
+      "problemMatcher": []
     }
   ]
 }

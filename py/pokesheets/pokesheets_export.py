@@ -451,9 +451,9 @@ def parse_capabilities_block(caps_raw) -> Tuple[Dict[str, Any], str]:
 
 # ---------------- Transform core → Pokesheets ----------------
 
-def transform_entry(src: Dict[str, Any], abilities_db: Dict[str, Dict[str, Any]]) -> Dict[str, Any]:
+def transform_entry(src: Dict[str, Any], abilities_db: Dict[str, Dict[str, Any]], tag: str) -> Dict[str, Any]:
     species_src = to_str(src.get("Species")) or "Unknown"
-    species_out = f"{species_src} (Homebrew)"  # append " Updated" as requested
+    species_out = f"{species_src} ({tag})"  # append " Updated" as requested
 
     number = to_str(src.get("Number"))
     basic_info = src.get("Basic Information") or {}
@@ -660,6 +660,7 @@ def load_all_species_from_dir(in_dir: Path) -> List[Dict[str, Any]]:
 
 def main():
     ap = argparse.ArgumentParser(description="Aggregate pokedex JSONs + abilities.json → Pokesheets format (with logs and fallbacks)")
+    ap.add_argument("--tag", required=True, help="Suffix tag to append to species names (e.g. 'Homebrew')")
     ap.add_argument("--in-dir", required=True, help="Directory with *.json pokedex files")
     ap.add_argument("--abilities", required=True, help="abilities.json path")
     ap.add_argument("--out", required=True, help="Output JSON path")
@@ -677,7 +678,7 @@ def main():
         warn("no species found in directory")
 
     log(f"[info] transforming {len(src_entries)} species…")
-    transformed = [transform_entry(e, abilities_db) for e in src_entries]
+    transformed = [transform_entry(e, abilities_db, args.tag) for e in src_entries]
     
     out_path = Path(args.out)
     if args.minimize:
