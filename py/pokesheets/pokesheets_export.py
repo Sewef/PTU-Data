@@ -28,6 +28,28 @@ def log(msg: str):
 def warn(msg: str):
     print(f"[warn] {msg}", file=sys.stderr)
 
+# ---------------- Normalizers ----------------
+
+def clean_move_name(name: Optional[str]) -> Optional[str]:
+    """
+    Normalize a move name coming from various sources.
+    - Trim whitespace
+    - Drop trailing ' (N)' markers
+    - Strip anything after the first asterisk '*'
+    - Collapse internal spaces
+    """
+    s = to_str(name)
+    if not s:
+        return None
+    # remove " (N)" (historical flag)
+    s = re.sub(r"\s*\(N\)\s*$", "", s)
+    # cut at first '*' if present
+    if "*" in s:
+        s = s.split("*", 1)[0]
+    # collapse extra spaces and trim
+    s = re.sub(r"\s+", " ", s).strip()
+    return s or None
+
 # ---------------- Parsing helpers ----------------
 
 _SKILL_KEYS = [
@@ -110,7 +132,7 @@ def base_stats_to_pokesheets(bs: Dict[str, Any]) -> Dict[str, int]:
 def map_level_up_moves(moves: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     out = []
     for m in moves or []:
-        name = to_str(m.get("Move"))
+        name = clean_move_name(m.get("Move"))
         if not name:
             continue
         lvl = m.get("Level")
@@ -150,12 +172,12 @@ def collect_tm_egg_tutor_moves(moves_block: Dict[str, Any]) -> Tuple[List[str], 
     tml = moves_block.get("TM/Tutor Moves List") or []
     for it in tml:
         if isinstance(it, str):
-            mv = it.replace(" (N)", "").strip()
+            mv = clean_move_name(it)
             if mv:
                 tutor.append(mv)  # par défaut
             continue
         if isinstance(it, dict):
-            mv = to_str(it.get("Move"))
+            mv = clean_move_name(it.get("Move"))
             if not mv:
                 continue
             method = normalize_method(to_str(it.get("Method")))
@@ -170,14 +192,20 @@ def collect_tm_egg_tutor_moves(moves_block: Dict[str, Any]) -> Tuple[List[str], 
 
     # 2) Listes legacy (strings)
     for mv in moves_block.get("TM/HM Move List") or []:
-        if isinstance(mv, str) and mv.strip():
-            machine.append(mv.replace(" (N)", "").strip())
+        if isinstance(mv, str):
+            mv = clean_move_name(mv)
+            if mv:
+                machine.append(mv)
     for mv in moves_block.get("Egg Move List") or []:
-        if isinstance(mv, str) and mv.strip():
-            egg.append(mv.replace(" (N)", "").strip())
+        if isinstance(mv, str):
+            mv = clean_move_name(mv)
+            if mv:
+                egg.append(mv)
     for mv in moves_block.get("Tutor Move List") or []:
-        if isinstance(mv, str) and mv.strip():
-            tutor.append(mv.replace(" (N)", "").strip())
+        if isinstance(mv, str):
+            mv = clean_move_name(mv)
+            if mv:
+                tutor.append(mv)
 
     # dédoublonner en conservant l'ordre
     def dedupe(seq: List[str]) -> List[str]:
@@ -283,19 +311,36 @@ def map_abilities(basic_info: Dict[str, Any], abilities_db: Dict[str, Dict[str, 
     # Source: Basic Ability 1/2, Adv Ability 1/2, High Ability
     basics, advs, highs = [], [], []
 
+    # Accept strings or arrays for abilities
+    def extend_from_key(key: str, dest: List[str]):
+        v = basic_info.get(key)
+        if isinstance(v, list):
+            for it in v:
+                s = to_str(it)
+                if s:
+                    dest.append(s)
+        else:
+            s = to_str(v)
+            if s:
+                dest.append(s)
+
     for k in ("Basic Ability 1","Basic Ability 2"):
-        v = to_str((basic_info or {}).get(k))
-        if v: basics.append(v)
+        extend_from_key(k, basics)
     for k in ("Adv Ability 1","Adv Ability 2"):
-        v = to_str((basic_info or {}).get(k))
-        if v: advs.append(v)
-    v = to_str((basic_info or {}).get("High Ability"))
-    if v: highs.append(v)
+        extend_from_key(k, advs)
+    extend_from_key("High Ability", highs)
+
+    def _norm_name_for_lookup_local(name: Optional[str]) -> Optional[str]:
+        if not isinstance(name, str):
+            return None
+        return re.sub(r"\s+", " ", name.strip().lower())
 
     def lookup(name: str) -> Dict[str, Any]:
-        norm = _norm_name_for_lookup(name)
-        
-        norm = norm.strip('*')
+        norm = _norm_name_for_lookup_local(name)
+
+        # strip '*' like requested for abilities too (already handled previously)
+        if isinstance(norm, str):
+            norm = norm.strip('*')
 
         # If name contains a parenthetical (e.g. "Type Aura (Water)"), try lookup without it
         # but restore the original name (with parentheses) on the matched entry.
@@ -311,7 +356,7 @@ def map_abilities(basic_info: Dict[str, Any], abilities_db: Dict[str, Dict[str, 
                     abilities_db[candidate] = {**abilities_db[candidate], "name": name}
                     norm = candidate
                     break
-        
+
         meta = abilities_db.get(norm)
         if not meta:
             warn(f"[abilities] not found in abilities.json: {name} ({species_name})")
@@ -686,7 +731,6 @@ def main():
             json.dump(transformed, f, ensure_ascii=False, separators=(",", ":"))
     else:
         write_json(out_path, transformed)
-
 
     log(f"[ok] wrote {args.out} (species: {len(transformed)})")
 
