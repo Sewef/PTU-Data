@@ -6,7 +6,8 @@
     {
       "label": "http.server",
       "type": "shell",
-      "command": "python -m http.server"
+      "command": "python -m http.server",
+      "problemMatcher": []
     },
     {
       "label": "Copy PTU (robocopy)",
@@ -96,6 +97,6 @@
       "type": "shell",
       "command": "py py/pokesheets/pokesheets_export_moves.py ptu/data/moves/moves_9g.json ptu/data/pokesheets/moves_community.json --minimize",
       "problemMatcher": []
-    },
+    }
   ]
 }
