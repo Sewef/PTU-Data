@@ -614,6 +614,8 @@
       </div>` : "";
   }
 
+
+
   function renderEvolutionList(evos, base, depth = 0) {
     if (!Array.isArray(evos) || !evos.length) return "";
     const h = Math.min(4 + depth, 6);
@@ -625,16 +627,11 @@
     );
     const current = String(base?.Species || "").toLowerCase();
 
-    const filtered = evos.filter(e => {
-      const sp = String(e?.Species || "").toLowerCase();
-      return sp === current || avail.has(sp);
-    });
-
-    if (!filtered.length) return "";
-
-    const items = filtered.map(e => {
+    const items = evos.map(e => {
       const stade = e?.Stade ?? "";
       const species = e?.Species ?? "";
+      const sp = String(species).toLowerCase();
+
       const levelNum = e?.["Minimum Level"];
       const cond = (e?.Condition ?? "").trim();
 
@@ -643,9 +640,25 @@
         level = `Lv ${levelNum} Minimum`;
       }
 
-      const label = `${stade} - <a href="#" class="fw-semibold js-species-link" onclick='openModalBySpecies(${JSON.stringify(String(species))}); return false;'>${escapeHtml(species)}</a>` +
+      const exists = (sp === current) || avail.has(sp);
+
+      // Build species label: clickable if exists, plain text with tooltip if not
+      let speciesLabel;
+      if (exists) {
+        speciesLabel =
+          `<a href="#" class="fw-semibold js-species-link" onclick='openModalBySpecies(${JSON.stringify(String(species))}); return false;'>${escapeHtml(species)}</a>`;
+      } else {
+        // Non-clickable with tooltip (Bootstrap-compatible)
+        const tip = "Not found in current dataset";
+        speciesLabel =
+          `<span class="fw-semibold text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="top" title="${tip}">${escapeHtml(species)}</span>`;
+      }
+
+      const extra =
         `${level ? ` [${escapeHtml(level)}]` : ""}` +
         `${cond ? ` (${escapeHtml(cond)})` : ""}`;
+
+      const label = `${stade} - ${speciesLabel}${extra}`;
 
       return `<li class="list-group-item d-flex align-items-center"><span class="flex-grow-1">${label}</span></li>`;
     }).join("");
