@@ -618,32 +618,16 @@
     if (!Array.isArray(evos) || !evos.length) return "";
     const h = Math.min(4 + depth, 6);
 
-    // --- Simplified normalization: only first word is kept ---
-    const toLower = s => String(s || "").trim().toLowerCase();
-    const normalizeSpecies = s => toLower(s).split(" ")[0]; // base species only
+    // Build availability set from the currently loaded/merged Pokédex.
+    const avail = new Set(
+      (window.__POKEDEX || window.__pokedexData || [])
+        .map(x => String(x?.Species || "").toLowerCase())
+    );
+    const current = String(base?.Species || "").toLowerCase();
 
-    // --- Build availability sets ---
-    const dataset = (window.__POKEDEX || window.__pokedexData || []);
-    const avail = new Set(dataset.map(x => toLower(x?.Species)));
-    const availRoots = new Set(dataset.map(x => normalizeSpecies(x?.Species)));
-
-    const current = toLower(base?.Species);
-    const currentRoot = normalizeSpecies(base?.Species);
-
-    const speciesAvailable = name => {
-      const s = toLower(name);
-      return avail.has(s) || availRoots.has(normalizeSpecies(name));
-    };
-
-    const isBaseRow = name => {
-      const s = toLower(name);
-      return s === current || normalizeSpecies(name) === currentRoot;
-    };
-
-    // --- Filter evolution lines ---
     const filtered = evos.filter(e => {
-      const sp = String(e?.Species || "");
-      return isBaseRow(sp) || speciesAvailable(sp);
+      const sp = String(e?.Species || "").toLowerCase();
+      return sp === current || avail.has(sp);
     });
 
     if (!filtered.length) return "";
@@ -651,19 +635,16 @@
     const items = filtered.map(e => {
       const stade = e?.Stade ?? "";
       const species = e?.Species ?? "";
-      const cond = (e?.Condition ?? "").trim();
       const levelNum = e?.["Minimum Level"];
+      const cond = (e?.Condition ?? "").trim();
 
-      const levelStr = (typeof levelNum === "number" && !isNaN(levelNum))
-        ? `Lv ${levelNum} Minimum` : "";
+      let level = "";
+      if (typeof levelNum === "number" && !isNaN(levelNum)) {
+        level = `Lv ${levelNum} Minimum`;
+      }
 
-      const linkTarget = isBaseRow(species)
-        ? String(base?.Species || species)
-        : species;
-
-      const label =
-        `${stade} - <a href="#" class="fw-semibold js-species-link" onclick='openModalBySpecies(${JSON.stringify(String(linkTarget))}); return false;'>${escapeHtml(species)}</a>` +
-        `${levelStr ? ` [${escapeHtml(levelStr)}]` : ""}` +
+      const label = `${stade} - <a href="#" class="fw-semibold js-species-link" onclick='openModalBySpecies(${JSON.stringify(String(species))}); return false;'>${escapeHtml(species)}</a>` +
+        `${level ? ` [${escapeHtml(level)}]` : ""}` +
         `${cond ? ` (${escapeHtml(cond)})` : ""}`;
 
       return `<li class="list-group-item d-flex align-items-center"><span class="flex-grow-1">${label}</span></li>`;
