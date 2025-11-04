@@ -622,7 +622,7 @@
       const species = e?.Species ?? "";
       const level = (e?.["Minimum Level"] ?? "").trim();
       const cond = (e?.Condition ?? "").trim();
-      const label = `${stade} - <a href="#" onclick='openModalBySpecies(${JSON.stringify(String(species))}); return false;'>${escapeHtml(species)}</a>` +
+      const label = `${stade} - <a href="#" class="fw-semibold js-species-link" onclick='openModalBySpecies(${JSON.stringify(String(species))}); return false;'>${escapeHtml(species)}</a>` +
         `${level ? ` [${escapeHtml(level)}]` : ""}` + `${cond ? ` (${escapeHtml(cond)})` : ""}`;
       return `<li class="list-group-item d-flex align-items-center"><span class="flex-grow-1">${label}</span></li>`;
     }).join("");

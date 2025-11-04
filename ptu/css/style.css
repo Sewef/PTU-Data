@@ -207,6 +207,8 @@ aside .list-group#sidebar { display:block; gap:0; padding:0; }
 #dexModal .border-bottom.py-1 { border-color: rgba(255,255,255,.08) !important; }
 #dexModal .border-bottom.py-1 .fw-bold { opacity:.85; }
 
+.js-move-link, .js-ability-link, .js-species-link { text-decoration:none; cursor:pointer; }
+.js-move-link:hover, .js-ability-link:hover, .js-species-link:hover { text-decoration:underline; }
 
 /* ===== Capabilities (numeric & chips) ================================== */
 .cap-grid {
