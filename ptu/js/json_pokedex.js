@@ -619,7 +619,6 @@
     const h = Math.min(4 + depth, 6);
 
     // Build availability set from the currently loaded/merged Pokédex.
-    // If a target Species isn't present in the active datasets, we hide that branch.
     const avail = new Set(
       (window.__POKEDEX || window.__pokedexData || [])
         .map(x => String(x?.Species || "").toLowerCase())
@@ -628,8 +627,6 @@
 
     const filtered = evos.filter(e => {
       const sp = String(e?.Species || "").toLowerCase();
-      // Always keep the current species' own row (Stade 1) for context,
-      // and any species that exists in the active datasets.
       return sp === current || avail.has(sp);
     });
 
@@ -638,18 +635,26 @@
     const items = filtered.map(e => {
       const stade = e?.Stade ?? "";
       const species = e?.Species ?? "";
-      const level = (e?.["Minimum Level"] ?? "").trim();
+      const levelNum = e?.["Minimum Level"];
       const cond = (e?.Condition ?? "").trim();
+
+      let level = "";
+      if (typeof levelNum === "number" && !isNaN(levelNum)) {
+        level = `Lv ${levelNum} Minimum`;
+      }
+
       const label = `${stade} - <a href="#" class="fw-semibold js-species-link" onclick='openModalBySpecies(${JSON.stringify(String(species))}); return false;'>${escapeHtml(species)}</a>` +
-        `${level ? ` [${escapeHtml(level)}]` : ""}` + `${cond ? ` (${escapeHtml(cond)})` : ""}`;
+        `${level ? ` [${escapeHtml(level)}]` : ""}` +
+        `${cond ? ` (${escapeHtml(cond)})` : ""}`;
+
       return `<li class="list-group-item d-flex align-items-center"><span class="flex-grow-1">${label}</span></li>`;
     }).join("");
 
     return `
-      <div class="mt-3">
-        <h${h} class="text-muted">Evolution</h${h}>
-        <div class="card accent skills-card"><ul class="list-group list-group-flush skills-list">${items}</ul></div>
-      </div>`;
+    <div class="mt-3">
+      <h${h} class="text-muted">Evolution</h${h}>
+      <div class="card accent skills-card"><ul class="list-group list-group-flush skills-list">${items}</ul></div>
+    </div>`;
   }
 
   function renderBattleOnlyForms(forms, base) {
