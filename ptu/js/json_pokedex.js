@@ -614,10 +614,28 @@
       </div>` : "";
   }
 
-  function renderEvolutionList(evos, depth = 0) {
+  function renderEvolutionList(evos, base, depth = 0) {
     if (!Array.isArray(evos) || !evos.length) return "";
     const h = Math.min(4 + depth, 6);
-    const items = evos.map(e => {
+
+    // Build availability set from the currently loaded/merged Pokédex.
+    // If a target Species isn't present in the active datasets, we hide that branch.
+    const avail = new Set(
+      (window.__POKEDEX || window.__pokedexData || [])
+        .map(x => String(x?.Species || "").toLowerCase())
+    );
+    const current = String(base?.Species || "").toLowerCase();
+
+    const filtered = evos.filter(e => {
+      const sp = String(e?.Species || "").toLowerCase();
+      // Always keep the current species' own row (Stade 1) for context,
+      // and any species that exists in the active datasets.
+      return sp === current || avail.has(sp);
+    });
+
+    if (!filtered.length) return "";
+
+    const items = filtered.map(e => {
       const stade = e?.Stade ?? "";
       const species = e?.Species ?? "";
       const level = (e?.["Minimum Level"] ?? "").trim();
@@ -626,6 +644,7 @@
         `${level ? ` [${escapeHtml(level)}]` : ""}` + `${cond ? ` (${escapeHtml(cond)})` : ""}`;
       return `<li class="list-group-item d-flex align-items-center"><span class="flex-grow-1">${label}</span></li>`;
     }).join("");
+
     return `
       <div class="mt-3">
         <h${h} class="text-muted">Evolution</h${h}>
@@ -885,7 +904,7 @@
           }
           // Evolution
           if (k === "Evolution" && Array.isArray(v)) {
-            const block = renderEvolutionList(v, depth);
+            const block = renderEvolutionList(v, obj, depth);
             (leftSections.has(k) ? (col1 += block) : (col2 += block));
             continue;
           }
