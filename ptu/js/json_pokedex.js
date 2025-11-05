@@ -1112,6 +1112,11 @@ function renderTags(tags) {
           <label class="form-label mb-1">Has ability</label>
           <input id="filter-ability" class="form-control form-control-sm" placeholder="eg: Intimidate or *date">
         </div>
+        
+        <div class="mt-2">
+          <label class="form-label mb-1">Has capability</label>
+          <input id="filter-capability" class="form-control form-control-sm" placeholder="eg: Underdog or under*">
+        </div>
 
         <div class="mt-2">
           <button id="clear-filters" class="btn btn-sm btn-outline-secondary w-100">Clear filters</button>
@@ -1141,6 +1146,7 @@ function renderTags(tags) {
       });
       typesBox.querySelector("#filter-move")?.addEventListener("input", debounce(onChange, 150));
       typesBox.querySelector("#filter-ability")?.addEventListener("input", debounce(onChange, 150));
+      typesBox.querySelector("#filter-capability")?.addEventListener("input", debounce(onChange, 150));
       typesBox.querySelector("#clear-filters")?.addEventListener("click", () => {
         typesBox.querySelectorAll("button[data-type]").forEach(b => { b.setAttribute("data-selected", "0"); b.classList.remove("active"); });
         TYPE_MATCH_MODE = 'any';
@@ -1148,8 +1154,10 @@ function renderTags(tags) {
         if (anyRadio) anyRadio.checked = true;
         const moveInp = typesBox.querySelector("#filter-move");
         const abilInp = typesBox.querySelector("#filter-ability");
+        const capaInp = typesBox.querySelector("#filter-capability");
         if (moveInp) moveInp.value = "";
         if (abilInp) abilInp.value = "";
+        if (capaInp) capaInp.value = "";
         onChange();
       });
     }
@@ -1188,6 +1196,20 @@ function renderTags(tags) {
     return Array.from(box.querySelectorAll('button[data-type][data-selected="1"]')).map(b => b.getAttribute("data-type"));
   }
 
+  function pokemonHasCapability(p, queryRaw) {
+    const matcher = __makeWildcardMatcher(queryRaw);
+    if (!p || !p["Capabilities"]) return matcher("");
+    const info = p["Capabilities"];
+
+    for (const [k, v] of Object.entries(info)) {
+      if (Array.isArray(v)) {
+        if (v.some(x => matcher(String(x || "")))) return true;
+      } else {
+        if (matcher(String(v || ""))) return true;
+      }
+    }
+    return false;
+  }
 
   function pokemonHasAbility(p, queryRaw) {
     const matcher = __makeWildcardMatcher(queryRaw);
@@ -1232,6 +1254,7 @@ function renderTags(tags) {
     const types = activeTypes();
     const moveQ = ($("#filter-move")?.value || "").trim().toLowerCase();
     const abilQ = ($("#filter-ability")?.value || "").trim().toLowerCase();
+    const capaQ = ($("#filter-capability")?.value || "").trim().toLowerCase();
 
     const out = rows.filter(p => {
       const name = (p.Species || "").toLowerCase();
@@ -1241,6 +1264,7 @@ function renderTags(tags) {
       }
       if (moveQ && !pokemonLearnsMove(p, moveQ)) return false;
       if (abilQ && !pokemonHasAbility(p, abilQ)) return false;
+      if (capaQ && !pokemonHasCapability(p, capaQ)) return false;
 
       if (types.length) {
         const pTypes = speciesTypes(p);
