@@ -1115,7 +1115,7 @@ function renderTags(tags) {
         
         <div class="mt-2">
           <label class="form-label mb-1">Has capability</label>
-          <input id="filter-capability" class="form-control form-control-sm" placeholder="eg: Underdog or under*">
+          <input id="filter-capability" class="form-control form-control-sm" placeholder="eg: Underdog, under* or Mountable*">
         </div>
 
         <div class="mt-2">
