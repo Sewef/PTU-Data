@@ -73,8 +73,7 @@
       </div>
     </div>
   </div>
-
-  
+  <!-- Readme modal -->
   <div class="modal fade" id="readmeModal" data-bs-scroll="true" tabIndex="-1" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-scrollable">
     <div class="modal-content">
@@ -107,7 +106,9 @@
           Kartana, Samurott Hisuian, Kleavor</p>
         <h6>Homebrew</h6>
         <p>
-          All Pokémons from Gen 1 to 8.5 have been updated. Their new movepool is a fusion of all moveset from Gen 4 to 9, starting from the last, following lots of filtering conditions. This encourage to use most of moves availables in the game without letting some behind, Gen 8 and 9 scrapped too much content.<br>
+            All Pokémons from Gen 1 to 8.5 have been updated. Their new movepool is a fusion of all moveset from Gen 4
+            to 9, starting from the last, following lots of filtering conditions. This encourage to use most of moves
+            availables in the game without letting some behind, Gen 8 and 9 scrapped too much content.<br>
         <ul>
           <li>Extract Base Stats, Moves, Evolutionary Stage from PokeAPI</li>
           <li>Transform stats for PTU format: base_stat / 10, rounded up from .5.</li>
@@ -119,9 +120,11 @@
           </li>
           <li>Deduplication rules:
             <ul>
-              <li>If Pokémon Stage > 1: if move is Level 1 and exists later or as Evo, remove the Level-1 occurence.</li>
+                <li>If Pokémon Stage > 1: if move is Level 1 and exists later or as Evo, remove the Level-1 occurence.
+                </li>
               <li>If a move axists as Evo, remove all other Level-up occurences and keep the Evo one.</li>
-              <li>If there are still duplicates, remove the Legend: Arceus one first (this game messed a lot with level-up move lists).</li>
+                <li>If there are still duplicates, remove the Legend: Arceus one first (this game messed a lot with
+                  level-up move lists).</li>
               <li>If there are still duplicates, keep the lowest level one.</li>
             </ul>
           </li>
@@ -131,6 +134,31 @@
     </div>
   </div>
   </div>
+  <!-- Pokésheets modal -->
+  <div class="modal fade" id="pokesheetsModal" data-bs-scroll="true" tabIndex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Pokésheets Export</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="small text-muted mb-2">
+            Copy ready-to-paste JSON for Pokésheets.
+          </p>
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary" id="btn-copy-pokesheets-dex">Copy Dex</button>
+            <button type="button" class="btn btn-outline-primary" id="btn-copy-pokesheets-moves">Copy Moves</button>
+          </div>
+          <div id="pokesheets-feedback" class="mt-2 small" style="min-height:1rem;"></div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
