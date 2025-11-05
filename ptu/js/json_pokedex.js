@@ -19,10 +19,10 @@
     "AlolaDex": "pokedex_7g.json",
     "GalarDex": "pokedex_8g.json",
     "HisuiDex": "pokedex_8g_hisui.json",
-    "Core (Updated)": "pokedex_core.json",
-    "AlolaDex (Updated)": "pokedex_7g.json",
-    "GalarDex (Updated)": "pokedex_8g.json",
-    "HisuiDex (Updated)": "pokedex_8g_hisui.json",
+    "Core (Homebrew)": "pokedex_core.json",
+    "AlolaDex (Homebrew)": "pokedex_7g.json",
+    "GalarDex (Homebrew)": "pokedex_8g.json",
+    "HisuiDex (Homebrew)": "pokedex_8g_hisui.json",
     "Core (Community Homebrew)": "pokedex_core.json",
     "AlolaDex (Community Homebrew)": "pokedex_7g.json",
     "GalarDex (Community Homebrew)": "pokedex_8g.json",
@@ -40,10 +40,10 @@
       "PaldeaDex (Community Homebrew)",
     ],
     Homebrew: [
-      "Core (Updated)",
-      "AlolaDex (Updated)",
-      "GalarDex (Updated)",
-      "HisuiDex (Updated)",
+      "Core (Homebrew)",
+      "AlolaDex (Homebrew)",
+      "GalarDex (Homebrew)",
+      "HisuiDex (Homebrew)",
       "PaldeaDex (Community Homebrew)",
     ],
   };
@@ -730,8 +730,7 @@
     }).join("");
   }
 
-
-  function renderTags(tags) {
+function renderTags(tags) {
     if (Array.isArray(tags) && tags.length)
       tags = tags.filter(t => SHOWN_TAGS.has(t));
     return Array.isArray(tags) && tags.length ? `<sup class="smaller text-uppercase text-muted ms-1">${escapeHtml(tags.join(" "))}</sup>` : "";
@@ -1281,17 +1280,22 @@
     wrap.className = "mb-3 d-flex flex-column gap-2";
     wrap.setAttribute("data-role", "source-menu");
     wrap.innerHTML = `
+      <div class="d-flex align-items-center gap-1">
+        <button type="button"
+                id="btn-pokesheets"
+                class="btn btn-outline-primary"
+                style="font-size:.75rem; padding:.1rem .4rem;">
+          Pokésheets
+        </button>
+        <button type="button" 
+                id="btn-readme"
+                class="btn btn-primary"
+                style="font-size:.75rem; padding:.1rem .25rem; min-width:unset; width:auto;">
+          Readme
+        </button>
+      </div>
       <div class="d-flex align-items-center justify-content-between">
         <label class="form-label mb-0">Dataset</label>
-        <div class="d-flex align-items-center gap-1">
-          <button type="button"
-                  id="btn-pokesheets"
-                  class="btn btn-outline-primary"
-                  style="font-size:.75rem; padding:.1rem .4rem;">
-            Pokésheets
-          </button>
-          <button type="button" class="btn btn-primary" style="font-size:.75rem; padding:.1rem .25rem; min-width:unset; width:auto;" id="btn-readme">Readme</button>
-        </div>
       </div>
       <div class="d-flex flex-wrap gap-1 w-100 mb-2" role="group" aria-label="Dataset presets">
         ${["Core", "Community", "Homebrew"].map(p => `
