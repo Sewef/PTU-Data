@@ -19,10 +19,10 @@
     "AlolaDex": "pokedex_7g.json",
     "GalarDex": "pokedex_8g.json",
     "HisuiDex": "pokedex_8g_hisui.json",
-    "Core (Updated)": "pokedex_core.json",
-    "AlolaDex (Updated)": "pokedex_7g.json",
-    "GalarDex (Updated)": "pokedex_8g.json",
-    "HisuiDex (Updated)": "pokedex_8g_hisui.json",
+    "Core (Homebrew)": "pokedex_core.json",
+    "AlolaDex (Homebrew)": "pokedex_7g.json",
+    "GalarDex (Homebrew)": "pokedex_8g.json",
+    "HisuiDex (Homebrew)": "pokedex_8g_hisui.json",
     "Core (Community Homebrew)": "pokedex_core.json",
     "AlolaDex (Community Homebrew)": "pokedex_7g.json",
     "GalarDex (Community Homebrew)": "pokedex_8g.json",
@@ -40,10 +40,10 @@
       "PaldeaDex (Community Homebrew)",
     ],
     Homebrew: [
-      "Core (Updated)",
-      "AlolaDex (Updated)",
-      "GalarDex (Updated)",
-      "HisuiDex (Updated)",
+      "Core (Homebrew)",
+      "AlolaDex (Homebrew)",
+      "GalarDex (Homebrew)",
+      "HisuiDex (Homebrew)",
       "PaldeaDex (Community Homebrew)",
     ],
   };
@@ -64,6 +64,14 @@
 
   // Add this next to your other FILE_BY_PRESET constants
   const POKESHEETS_FILE_BY_PRESET = {
+    Core: {
+      dex: "/ptu/data/pokesheets/pokedex_core.json",
+      moves: "/ptu/data/pokesheets/moves_core.json",
+    },
+    Community: {
+      dex: "/ptu/data/pokesheets/pokedex_community.json",
+      moves: "/ptu/data/pokesheets/moves_community.json",
+    },
     Homebrew: {
       dex: "/ptu/data/pokesheets/pokedex_homebrew.json",
       moves: "/ptu/data/pokesheets/moves_homebrew.json",
@@ -606,23 +614,60 @@
       </div>` : "";
   }
 
-  function renderEvolutionList(evos, depth = 0) {
+
+
+  function renderEvolutionList(evos, base, depth = 0) {
     if (!Array.isArray(evos) || !evos.length) return "";
     const h = Math.min(4 + depth, 6);
+
+    // Build availability set from the currently loaded/merged Pokédex.
+    const avail = new Set(
+      (window.__POKEDEX || window.__pokedexData || [])
+        .map(x => String(x?.Species || "").toLowerCase())
+    );
+    const current = String(base?.Species || "").toLowerCase();
+
     const items = evos.map(e => {
       const stade = e?.Stade ?? "";
       const species = e?.Species ?? "";
-      const level = (e?.["Minimum Level"] ?? "").trim();
+      const sp = String(species).toLowerCase();
+
+      const levelNum = e?.["Minimum Level"];
       const cond = (e?.Condition ?? "").trim();
-      const label = `${stade} - <a href="#" onclick='openModalBySpecies(${JSON.stringify(String(species))}); return false;'>${escapeHtml(species)}</a>` +
-        `${level ? ` [${escapeHtml(level)}]` : ""}` + `${cond ? ` (${escapeHtml(cond)})` : ""}`;
+
+      let level = "";
+      if (typeof levelNum === "number" && !isNaN(levelNum)) {
+        level = `Lv ${levelNum} Minimum`;
+      }
+
+      const exists = (sp === current) || avail.has(sp);
+
+      // Build species label: clickable if exists, plain text with tooltip if not
+      let speciesLabel;
+      if (exists) {
+        speciesLabel =
+          `<a href="#" class="fw-semibold js-species-link" onclick='openModalBySpecies(${JSON.stringify(String(species))}); return false;'>${escapeHtml(species)}</a>`;
+      } else {
+        // Non-clickable with tooltip (Bootstrap-compatible)
+        const tip = "Not found in current dataset";
+        speciesLabel =
+          `<span class="fw-semibold text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="top" title="${tip}">${escapeHtml(species)}</span>`;
+      }
+
+      const extra =
+        `${level ? ` [${escapeHtml(level)}]` : ""}` +
+        `${cond ? ` (${escapeHtml(cond)})` : ""}`;
+
+      const label = `${stade} - ${speciesLabel}${extra}`;
+
       return `<li class="list-group-item d-flex align-items-center"><span class="flex-grow-1">${label}</span></li>`;
     }).join("");
+
     return `
-      <div class="mt-3">
-        <h${h} class="text-muted">Evolution</h${h}>
-        <div class="card accent skills-card"><ul class="list-group list-group-flush skills-list">${items}</ul></div>
-      </div>`;
+    <div class="mt-3">
+      <h${h} class="text-muted">Evolution</h${h}>
+      <div class="card accent skills-card"><ul class="list-group list-group-flush skills-list">${items}</ul></div>
+    </div>`;
   }
 
   function renderBattleOnlyForms(forms, base) {
@@ -685,8 +730,7 @@
     }).join("");
   }
 
-
-  function renderTags(tags) {
+function renderTags(tags) {
     if (Array.isArray(tags) && tags.length)
       tags = tags.filter(t => SHOWN_TAGS.has(t));
     return Array.isArray(tags) && tags.length ? `<sup class="smaller text-uppercase text-muted ms-1">${escapeHtml(tags.join(" "))}</sup>` : "";
@@ -877,7 +921,7 @@
           }
           // Evolution
           if (k === "Evolution" && Array.isArray(v)) {
-            const block = renderEvolutionList(v, depth);
+            const block = renderEvolutionList(v, obj, depth);
             (leftSections.has(k) ? (col1 += block) : (col2 += block));
             continue;
           }
@@ -1068,6 +1112,11 @@
           <label class="form-label mb-1">Has ability</label>
           <input id="filter-ability" class="form-control form-control-sm" placeholder="eg: Intimidate or *date">
         </div>
+        
+        <div class="mt-2">
+          <label class="form-label mb-1">Has capability</label>
+          <input id="filter-capability" class="form-control form-control-sm" placeholder="eg: Underdog, under* or Mountable*">
+        </div>
 
         <div class="mt-2">
           <button id="clear-filters" class="btn btn-sm btn-outline-secondary w-100">Clear filters</button>
@@ -1097,6 +1146,7 @@
       });
       typesBox.querySelector("#filter-move")?.addEventListener("input", debounce(onChange, 150));
       typesBox.querySelector("#filter-ability")?.addEventListener("input", debounce(onChange, 150));
+      typesBox.querySelector("#filter-capability")?.addEventListener("input", debounce(onChange, 150));
       typesBox.querySelector("#clear-filters")?.addEventListener("click", () => {
         typesBox.querySelectorAll("button[data-type]").forEach(b => { b.setAttribute("data-selected", "0"); b.classList.remove("active"); });
         TYPE_MATCH_MODE = 'any';
@@ -1104,8 +1154,10 @@
         if (anyRadio) anyRadio.checked = true;
         const moveInp = typesBox.querySelector("#filter-move");
         const abilInp = typesBox.querySelector("#filter-ability");
+        const capaInp = typesBox.querySelector("#filter-capability");
         if (moveInp) moveInp.value = "";
         if (abilInp) abilInp.value = "";
+        if (capaInp) capaInp.value = "";
         onChange();
       });
     }
@@ -1144,6 +1196,20 @@
     return Array.from(box.querySelectorAll('button[data-type][data-selected="1"]')).map(b => b.getAttribute("data-type"));
   }
 
+  function pokemonHasCapability(p, queryRaw) {
+    const matcher = __makeWildcardMatcher(queryRaw);
+    if (!p || !p["Capabilities"]) return matcher("");
+    const info = p["Capabilities"];
+
+    for (const [k, v] of Object.entries(info)) {
+      if (Array.isArray(v)) {
+        if (v.some(x => matcher(String(x || "")))) return true;
+      } else {
+        if (matcher(String(v || ""))) return true;
+      }
+    }
+    return false;
+  }
 
   function pokemonHasAbility(p, queryRaw) {
     const matcher = __makeWildcardMatcher(queryRaw);
@@ -1188,6 +1254,7 @@
     const types = activeTypes();
     const moveQ = ($("#filter-move")?.value || "").trim().toLowerCase();
     const abilQ = ($("#filter-ability")?.value || "").trim().toLowerCase();
+    const capaQ = ($("#filter-capability")?.value || "").trim().toLowerCase();
 
     const out = rows.filter(p => {
       const name = (p.Species || "").toLowerCase();
@@ -1197,6 +1264,7 @@
       }
       if (moveQ && !pokemonLearnsMove(p, moveQ)) return false;
       if (abilQ && !pokemonHasAbility(p, abilQ)) return false;
+      if (capaQ && !pokemonHasCapability(p, capaQ)) return false;
 
       if (types.length) {
         const pTypes = speciesTypes(p);
@@ -1236,17 +1304,22 @@
     wrap.className = "mb-3 d-flex flex-column gap-2";
     wrap.setAttribute("data-role", "source-menu");
     wrap.innerHTML = `
+      <div class="d-flex align-items-center gap-1">
+        <button type="button"
+                id="btn-pokesheets"
+                class="btn btn-outline-primary"
+                style="font-size:.75rem; padding:.1rem .4rem;">
+          Pokésheets
+        </button>
+        <button type="button" 
+                id="btn-readme"
+                class="btn btn-primary"
+                style="font-size:.75rem; padding:.1rem .25rem; min-width:unset; width:auto;">
+          Readme
+        </button>
+      </div>
       <div class="d-flex align-items-center justify-content-between">
         <label class="form-label mb-0">Dataset</label>
-        <div class="d-flex align-items-center gap-1">
-          <button type="button"
-                  id="btn-pokesheets"
-                  class="btn btn-outline-primary"
-                  style="font-size:.75rem; padding:.1rem .4rem; display:${selectedPreset === "Homebrew" ? "inline-block" : "none"};">
-            Pokésheets
-          </button>
-          <button type="button" class="btn btn-primary" style="font-size:.75rem; padding:.1rem .25rem; min-width:unset; width:auto;" id="btn-readme">Readme</button>
-        </div>
       </div>
       <div class="d-flex flex-wrap gap-1 w-100 mb-2" role="group" aria-label="Dataset presets">
         ${["Core", "Community", "Homebrew"].map(p => `
@@ -1317,13 +1390,6 @@
       if (id.endsWith("core")) selectedPreset = "Core";
       else if (id.endsWith("community")) selectedPreset = "Community";
       else if (id.endsWith("homebrew")) selectedPreset = "Homebrew";
-
-      // NEW: enforce button visibility
-      wrap.querySelector("#btn-pokesheets")?.style.setProperty(
-        "display",
-        selectedPreset === "Homebrew" ? "inline-block" : "none"
-      );
-
       selectedLabels = new Set(PRESETS[selectedPreset] || []);
       renderPresetFiles();
       reload();
@@ -1385,10 +1451,17 @@
   }
 
   async function openMoveModalByName(moveName) {
-    const name = String(moveName || "").trim().toLowerCase();
+    const raw = String(moveName || "").trim();
+    const base = raw.split("*")[0].trim(); // trim anything after '*' (eg. "Move* [...]" -> "Move")
+    const name = base.toLowerCase();
     if (!name) return;
     const idx = await loadMoveIndex();
-    const mv = idx.get(name) || idx.get(name.replace(/[-–—]/g, " ")) || null;
+    // Also normalize moves in the index by trimming after '*'
+    const found = Array.from(idx.entries()).find(([key, mv]) => {
+      const moveBase = key.split("*")[0].trim().toLowerCase();
+      return moveBase === name;
+    });
+    const mv = found ? found[1] : null;
     const display = mv?.Move || mv?.Name || mv?.__displayName || moveName;
     const labelEl = $("#moveAbilityModalLabel");
     const typeHtml = mv?.Type ? wrapTypes([mv.Type]) : "";

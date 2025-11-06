@@ -32,7 +32,7 @@ def parse_damage_base(db: Any, damage_class: str) -> Any:
     return ""
 
 def clean_name(name: str) -> str:
-    name = re.sub(r"\*.*$", "", name).strip()
+    name = name.split("*")[0].strip()
     name = re.sub(r"\s*\[.*?\]\s*$", "", name).strip()
     return name
 
