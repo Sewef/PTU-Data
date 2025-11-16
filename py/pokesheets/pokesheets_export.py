@@ -163,56 +163,71 @@ def collect_tm_egg_tutor_moves(moves_block: Dict[str, Any]) -> Tuple[List[str], 
       - machineMoves
       - eggMoves
       - tutorMoves
-    En priorité, on lit 'TM/Tutor Moves List' (objets {Move, Type, Tags, Method}).
-    On complète avec les listes historiques: TM/HM Move List, Egg Move List, Tutor Move List.
+
+    Sources possibles :
+      - "TM/Tutor Moves List" (nouveau format unifié, objets {Move, Type, Tags, Method})
+      - "TM/HM Move List"     (legacy, strings OU objets)
+      - "Egg Move List"       (legacy, strings OU objets)
+      - "Tutor Move List"     (legacy, strings OU objets)
     """
-    machine, egg, tutor = [], [], []
+    machine: List[str] = []
+    egg: List[str] = []
+    tutor: List[str] = []
+
+    def _append_item(it: Any, default_method: Optional[str] = None):
+        """
+        Ajoute un move à la bonne liste en fonction :
+          - de it["Method"] si présent
+          - sinon de default_method (Machine / Egg / Tutor)
+        """
+        if isinstance(it, str):
+            mv = clean_move_name(it)
+            if not mv:
+                return
+            method = normalize_method(default_method)
+        elif isinstance(it, dict):
+            mv = clean_move_name(it.get("Move"))
+            if not mv:
+                return
+            method = normalize_method(to_str(it.get("Method"))) or normalize_method(default_method)
+        else:
+            mv = clean_move_name(str(it))
+            if not mv:
+                return
+            method = normalize_method(default_method)
+
+        if method == "Machine":
+            machine.append(mv)
+        elif method == "Egg":
+            egg.append(mv)
+        elif method in ("Tutor", "Level-Up", None):
+            tutor.append(mv)
+        else:
+            # Méthodes exotiques → considérer comme Tutor par défaut
+            tutor.append(mv)
 
     # 1) Nouvelle liste unifiée (objets)
     tml = moves_block.get("TM/Tutor Moves List") or []
     for it in tml:
-        if isinstance(it, str):
-            mv = clean_move_name(it)
-            if mv:
-                tutor.append(mv)  # par défaut
-            continue
-        if isinstance(it, dict):
-            mv = clean_move_name(it.get("Move"))
-            if not mv:
-                continue
-            method = normalize_method(to_str(it.get("Method")))
-            if method == "Machine":
-                machine.append(mv)
-            elif method == "Egg":
-                egg.append(mv)
-            elif method in ("Tutor", "Level-Up", None):
-                tutor.append(mv)
-            else:
-                tutor.append(mv)
+        _append_item(it, default_method="Tutor")  # par défaut: Tutor si Method absent
 
-    # 2) Listes legacy (strings)
-    for mv in moves_block.get("TM/HM Move List") or []:
-        if isinstance(mv, str):
-            mv = clean_move_name(mv)
-            if mv:
-                machine.append(mv)
-    for mv in moves_block.get("Egg Move List") or []:
-        if isinstance(mv, str):
-            mv = clean_move_name(mv)
-            if mv:
-                egg.append(mv)
-    for mv in moves_block.get("Tutor Move List") or []:
-        if isinstance(mv, str):
-            mv = clean_move_name(mv)
-            if mv:
-                tutor.append(mv)
+    # 2) Listes legacy (TM/HM, Egg, Tutor), qui peuvent être strings OU objets
+    for it in moves_block.get("TM/HM Move List") or []:
+        _append_item(it, default_method="Machine")
+
+    for it in moves_block.get("Egg Move List") or []:
+        _append_item(it, default_method="Egg")
+
+    for it in moves_block.get("Tutor Move List") or []:
+        _append_item(it, default_method="Tutor")
 
     # dédoublonner en conservant l'ordre
     def dedupe(seq: List[str]) -> List[str]:
         seen, out = set(), []
         for x in seq:
             if x not in seen:
-                seen.add(x); out.append(x)
+                seen.add(x)
+                out.append(x)
         return out
 
     return dedupe(machine), dedupe(egg), dedupe(tutor)
