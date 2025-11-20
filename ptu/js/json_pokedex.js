@@ -889,7 +889,7 @@ function renderTags(tags) {
 
 
   function renderObject(obj, depth = 0) {
-    const leftSections = new Set(["Base Stats", "Basic Information", "Evolution", "Other Information", "Battle-Only Forms"]);
+    const leftSections = new Set(["Base Stats", "Basic Information", "Evolution", "Other Information", "Battle-Only Forms", "Confined"]);
     if (obj == null) return "";
 
     if (Array.isArray(obj)) {
