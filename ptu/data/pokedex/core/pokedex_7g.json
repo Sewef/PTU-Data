@@ -2712,6 +2712,7 @@
     "Base Stats": {
       "HP": 5,
       "Attack": 5,
+      "Defense": 5,
       "Special Attack": 7,
       "Special Defense": 6,
       "Speed": 4
@@ -8047,6 +8048,13 @@
       "Adv Ability 3": "Revelation",
       "High Ability": "Competitive"
     },
+    "Evolution": [
+      {
+        "Stade": 1,
+        "Species": "Oricorio",
+        "Condition": ""
+      }
+    ],
     "Other Information": {
       "Size Information": {
         "Height": "2' 0\" / 0.6 m (Small)",
@@ -13024,6 +13032,7 @@
     "Number": 750,
     "Base Stats": {
       "HP": 10,
+      "Attack": 13,
       "Defense": 10,
       "Special Attack": 6,
       "Special Defense": 9,
@@ -13785,6 +13794,7 @@
       "Attack": 7,
       "Defense": 9,
       "Special Attack": 5,
+      "Special Defense": 13,
       "Speed": 4
     },
     "Basic Information": {
@@ -23808,6 +23818,7 @@
       "HP": 6,
       "Attack": 10,
       "Defense": 6,
+      "Special Attack": 10,
       "Special Defense": 6,
       "Speed": 12
     },
@@ -33779,6 +33790,7 @@
     "Icon": 10107,
     "Base Stats": {
       "HP": 4,
+      "Attack": 4,
       "Defense": 4,
       "Special Attack": 5,
       "Special Defense": 4,
@@ -34339,7 +34351,8 @@
       "Attack": 6,
       "Defense": 6,
       "Special Attack": 8,
-      "Special Defense": 7
+      "Special Defense": 7,
+      "Speed": 12
     },
     "Basic Information": {
       "Type": [
@@ -42348,6 +42361,7 @@
       "HP": 10,
       "Attack": 16,
       "Defense": 13,
+      "Special Attack": 11,
       "Special Defense": 11,
       "Speed": 8
     },
