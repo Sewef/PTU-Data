@@ -292,7 +292,7 @@
       try {
         const raw = await fetch(urls.moves, { cache: "no-store" }).then(r => r.ok ? r.json() : null);
         if (!raw) throw new Error("HTTP");
-        const txt = await fetch(urls.dex, { cache: "no-store" }).then(r => r.ok ? r.text() : null);
+        const txt = await fetch(urls.moves, { cache: "no-store" }).then(r => r.ok ? r.text() : null);
         const ok = await copyToClipboard(txt);
         showPokesheetsFeedback(ok ? "Moves JSON copied to clipboard." : "Failed to copy Moves JSON.", ok);
       } catch {
