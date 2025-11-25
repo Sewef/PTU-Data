@@ -343,6 +343,16 @@ def map_abilities(basic_info: Dict[str, Any], abilities_db: Dict[str, Dict[str, 
         extend_from_key(k, basics)
     for k in ("Adv Ability 1","Adv Ability 2"):
         extend_from_key(k, advs)
+        
+    if "Basic Ability" in basic_info and not (
+        "Basic Ability 1" in basic_info or "Basic Ability 2" in basic_info
+    ):
+        extend_from_key("Basic Ability", basics)
+
+    if "Adv Ability" in basic_info and not (
+        "Adv Ability 1" in basic_info or "Adv Ability 2" in basic_info
+    ):
+        extend_from_key("Adv Ability", advs)
     extend_from_key("High Ability", highs)
 
     def _norm_name_for_lookup_local(name: Optional[str]) -> Optional[str]:

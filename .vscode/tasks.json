@@ -12,7 +12,7 @@
     {
       "label": "Copy PTU (robocopy)",
       "type": "shell",
-      "command": "robocopy \"D:/GitHub/PTU-Data/ptu\" \"D:/GitHub/sewef.github.io/ptu\" /MIR /R:0 /W:0 & if %ERRORLEVEL% LSS 8 (exit /b 0) else (exit /b %ERRORLEVEL%)",
+      "command": "robocopy \"C:/GitHub/PTU-Data/ptu\" \"C:/GitHub/sewef.github.io/ptu\" /MIR /R:0 /W:0 & if %ERRORLEVEL% LSS 8 (exit /b 0) else (exit /b %ERRORLEVEL%)",
       "options": {
         "shell": {
           "executable": "cmd.exe",
@@ -28,7 +28,7 @@
       "label": "Git Deploy",
       "type": "shell",
       "options": {
-        "cwd": "D:/GitHub/sewef.github.io",
+        "cwd": "C:/GitHub/sewef.github.io",
         "shell": {
           "executable": "cmd.exe",
           "args": [
