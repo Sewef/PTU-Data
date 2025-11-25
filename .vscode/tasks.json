@@ -92,7 +92,7 @@
         "reveal": "silent",
         "close": false
       },
-      "command": "py py/pokesheets/pokesheets_export.py --tag Homebrew --minimize --in-dir ptu/data/pokedex/homebrew/ --out ptu/data/pokesheets/pokedex_homebrew.json --abilities ptu/data/abilities/abilities_homebrew.json",
+      "command": "py py/pokesheets/pokesheets_export.py --tag Homebrew --in-dir ptu/data/pokedex/homebrew/ --out ptu/data/pokesheets/pokedex_homebrew.json --abilities ptu/data/abilities/abilities_homebrew.json",
       "problemMatcher": []
     },
     {
@@ -102,7 +102,7 @@
         "reveal": "silent",
         "close": true
       },
-      "command": "py py/pokesheets/pokesheets_export_moves.py ptu/data/moves/moves_homebrew.json ptu/data/pokesheets/moves_homebrew.json --minimize",
+      "command": "py py/pokesheets/pokesheets_export_moves.py ptu/data/moves/moves_homebrew.json ptu/data/pokesheets/moves_homebrew.json",
       "problemMatcher": []
     },
     {
@@ -112,7 +112,7 @@
         "reveal": "silent",
         "close": true
       },
-      "command": "py py/pokesheets/pokesheets_export.py --tag Core --minimize --in-dir ptu/data/pokedex/core/ --out ptu/data/pokesheets/pokedex_core.json --abilities ptu/data/abilities/abilities_core.json",
+      "command": "py py/pokesheets/pokesheets_export.py --tag Core --in-dir ptu/data/pokedex/core/ --out ptu/data/pokesheets/pokedex_core.json --abilities ptu/data/abilities/abilities_core.json",
       "problemMatcher": []
     },
     {
@@ -122,7 +122,7 @@
         "reveal": "silent",
         "close": true
       },
-      "command": "py py/pokesheets/pokesheets_export_moves.py ptu/data/moves/moves_core.json ptu/data/pokesheets/moves_core.json --minimize",
+      "command": "py py/pokesheets/pokesheets_export_moves.py ptu/data/moves/moves_core.json ptu/data/pokesheets/moves_core.json",
       "problemMatcher": []
     },
     {
@@ -132,7 +132,7 @@
         "reveal": "silent",
         "close": true
       },
-      "command": "py py/pokesheets/pokesheets_export.py --tag Community --minimize --in-dir ptu/data/pokedex/community/ --out ptu/data/pokesheets/pokedex_community.json --abilities ptu/data/abilities/abilities_9g.json",
+      "command": "py py/pokesheets/pokesheets_export.py --tag Community --in-dir ptu/data/pokedex/community/ --out ptu/data/pokesheets/pokedex_community.json --abilities ptu/data/abilities/abilities_9g.json",
       "problemMatcher": []
     },
     {
@@ -142,7 +142,7 @@
         "reveal": "silent",
         "close": true
       },
-      "command": "py py/pokesheets/pokesheets_export_moves.py ptu/data/moves/moves_9g.json ptu/data/pokesheets/moves_community.json --minimize",
+      "command": "py py/pokesheets/pokesheets_export_moves.py ptu/data/moves/moves_9g.json ptu/data/pokesheets/moves_community.json",
       "problemMatcher": []
     }
   ]
