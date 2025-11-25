@@ -24,6 +24,24 @@
       },
       "problemMatcher": []
     },
+        {
+      "label": "Minify Data",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "py/deploy/minify_json.py",
+        "ptu/data"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "problemMatcher": []
+    },
     {
       "label": "Git Deploy",
       "type": "shell",
@@ -48,6 +66,7 @@
       },
       "dependsOn": [
         "Pokesheets All",
+        "Minify Data",
         "Copy PTU (robocopy)",
         "Git Deploy"
       ],
@@ -71,7 +90,7 @@
       "type": "shell",
       "presentation": {
         "reveal": "silent",
-        "close": true
+        "close": false
       },
       "command": "py py/pokesheets/pokesheets_export.py --tag Homebrew --minimize --in-dir ptu/data/pokedex/homebrew/ --out ptu/data/pokesheets/pokedex_homebrew.json --abilities ptu/data/abilities/abilities_homebrew.json",
       "problemMatcher": []

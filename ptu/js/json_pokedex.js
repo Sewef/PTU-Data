@@ -15,19 +15,19 @@
   const PRESET_DIRS = { Core: "core", Community: "community", Homebrew: "homebrew" };
 
   const FILES_BY_LABEL = {
-    "Core": "pokedex_core.json",
-    "AlolaDex": "pokedex_7g.json",
-    "GalarDex": "pokedex_8g.json",
-    "HisuiDex": "pokedex_8g_hisui.json",
-    "Core (Homebrew)": "pokedex_core.json",
-    "AlolaDex (Homebrew)": "pokedex_7g.json",
-    "GalarDex (Homebrew)": "pokedex_8g.json",
-    "HisuiDex (Homebrew)": "pokedex_8g_hisui.json",
-    "Core (Community Homebrew)": "pokedex_core.json",
-    "AlolaDex (Community Homebrew)": "pokedex_7g.json",
-    "GalarDex (Community Homebrew)": "pokedex_8g.json",
-    "HisuiDex (Community Homebrew)": "pokedex_8g_hisui.json",
-    "PaldeaDex (Community Homebrew)": "pokedex_9g.json",
+    "Core": "pokedex_core.min.json",
+    "AlolaDex": "pokedex_7g.min.json",
+    "GalarDex": "pokedex_8g.min.json",
+    "HisuiDex": "pokedex_8g_hisui.min.json",
+    "Core (Homebrew)": "pokedex_core.min.json",
+    "AlolaDex (Homebrew)": "pokedex_7g.min.json",
+    "GalarDex (Homebrew)": "pokedex_8g.min.json",
+    "HisuiDex (Homebrew)": "pokedex_8g_hisui.min.json",
+    "Core (Community Homebrew)": "pokedex_core.min.json",
+    "AlolaDex (Community Homebrew)": "pokedex_7g.min.json",
+    "GalarDex (Community Homebrew)": "pokedex_8g.min.json",
+    "HisuiDex (Community Homebrew)": "pokedex_8g_hisui.min.json",
+    "PaldeaDex (Community Homebrew)": "pokedex_9g.min.json",
   };
 
   const PRESETS = {
@@ -65,16 +65,16 @@
   // Add this next to your other FILE_BY_PRESET constants
   const POKESHEETS_FILE_BY_PRESET = {
     Core: {
-      dex: "/ptu/data/pokesheets/pokedex_core.json",
-      moves: "/ptu/data/pokesheets/moves_core.json",
+      dex: "/ptu/data/pokesheets/pokedex_core.min.json",
+      moves: "/ptu/data/pokesheets/moves_core.min.json",
     },
     Community: {
-      dex: "/ptu/data/pokesheets/pokedex_community.json",
-      moves: "/ptu/data/pokesheets/moves_community.json",
+      dex: "/ptu/data/pokesheets/pokedex_community.min.json",
+      moves: "/ptu/data/pokesheets/moves_community.min.json",
     },
     Homebrew: {
-      dex: "/ptu/data/pokesheets/pokedex_homebrew.json",
-      moves: "/ptu/data/pokesheets/moves_homebrew.json",
+      dex: "/ptu/data/pokesheets/pokedex_homebrew.min.json",
+      moves: "/ptu/data/pokesheets/moves_homebrew.min.json",
     }
   };
 
@@ -292,7 +292,7 @@
       try {
         const raw = await fetch(urls.moves, { cache: "no-store" }).then(r => r.ok ? r.json() : null);
         if (!raw) throw new Error("HTTP");
-        const txt = await fetch(urls.moves, { cache: "no-store" }).then(r => r.ok ? r.text() : null);
+        const txt = await fetch(urls.dex, { cache: "no-store" }).then(r => r.ok ? r.text() : null);
         const ok = await copyToClipboard(txt);
         showPokesheetsFeedback(ok ? "Moves JSON copied to clipboard." : "Failed to copy Moves JSON.", ok);
       } catch {
