@@ -443,12 +443,20 @@
             "Ropes": {
                 "type": "table",
                 "rowPerField": false,
-                "columns": ["Item", "Effect", "Price"]
+                "columns": [
+                    "Item",
+                    "Effect",
+                    "Price"
+                ]
             },
             "Repels": {
                 "type": "table",
                 "rowPerField": false,
-                "columns": ["Strenght", "Effect", "Price"]
+                "columns": [
+                    "Strenght",
+                    "Effect",
+                    "Price"
+                ]
             }
         },
         "Travel Gear": [
@@ -543,6 +551,171 @@
                         "Price": "₽400"
                     }
                 ]
+            }
+        ]
+    },
+    "Crafting Kits": {
+        "Crafting Kits": [
+            {
+                "Item": "Chemistry Set",
+                "Effect": "Used to create Repels, Potions, and other objects.",
+                "Price": "₽1000"
+            },
+            {
+                "Item": "Cooking Set",
+                "Effect": "Used by Chefs to create Snacks and Refreshments.",
+                "Price": "₽1000"
+            },
+            {
+                "Item": "Dowsing Rod",
+                "Effect": "Dowsing Rods have been attuned to the energy resonance given off by Shards. They may be used while in any route, cave, or outside area and can be bought for $2000. They may be activated by spending 10 minutes searching an area, and may be activated a number of times per day equal to half of the trainer’s Occult Education Rank.\nAfter the 10 minutes, roll 1d6 per Occult Education Rank. If the area being searched is a beach, cave, desert, or any other sandy or rocky area, roll +1d6. If you have Skill Stunt (Dowsing), you roll an additional 1d6.\nFor each die that results in 4 or higher, you find 1 Shard of a random color: Red, Orange, Yellow, Green, Blue, or Violet. You may reroll any die that result in 6, gaining that shard and potentially more.",
+                "Price": "₽2000"
+            },
+            {
+                "Item": "Poffin Mixer",
+                "Effect": "Poffin Mixer can be used by any Trainer to create Poffins. You simply insert cooking ingredients worth $500, and at least one of the listed berries. You create two Poffins that raises the Contest Stat most represented by the berries used by +1 Contest Die. Some Berries can raise multiple Contest Stats; you choose which to raise when using these Berries to make Poffins. Cheri, Figy, Razz, Spelon and Belue Berries raise Cool; Chesto, Wiki, Bluk, Spelon and Pamtre Berries raise Beauty; Pecha, Mago, Nanab, Pamtre, and Watmel Berries raise Cute; Rawst, Aguav, Wepear, Watmel, and Durin Berries raise Smart; Aspear, Iapapa, Pinap, Durin, and Belue Berries raise Tough. Poffins can be purchased for $500 in bakeries and Contest halls, and Poffin Mixers cost $500 as well.",
+                "Price": "₽500"
+            },
+            {
+                "Item": "Poké Ball Tool Box",
+                "Effect": "These tool boxes let those with the know-how craft and repair Poké Balls. They cost $500 and can be found in most Poké Marts.",
+                "Price": "₽500"
+            },
+            {
+                "Item": "Portable Grower / Berry Planter",
+                "Effect": "Portable Growers can be used to grow berries and herbs. Portable Growers protect the plants within them from external weather, and never need to be fertilized. Each Grower holds one plant.",
+                "Price": "₽2000"
+            },
+            {
+                "Item": "Shards",
+                "Effect": "Shards are bits of colored energized crystal and are used for various crafting purposes. Each color is associated with three Types. Red is Fire, Fairy, and Psychic; Orange is Normal, Fighting, and Dragon; Yellow is Electric, Rock and Steel; Green is Bug, Grass, and Ground; Blue is Water, Ice, and Flying; Violet is Poison, Dark, and Ghost.",
+                "Price": "---"
+            }
+        ]
+    },
+    "Equipment": {
+        "Body Equipment": [
+            {
+                "Item": "Light Armor",
+                "Effect": "Grants 5 Damage Reduction",
+                "Cost": "₽8000"
+            },
+            {
+                "Item": "Heavy Armor",
+                "Effect": "Heavy Armor grants +10 Damage Reduction. Heavy Armor causes the wearer's Speed's Default Combat Stage to be -1.",
+                "Cost": "₽12000"
+            },
+            {
+                "Item": "Fancy Clothes",
+                "Effect": "Each set of Fancy Clothes is assigned a Contest Stat - either Beauty, Cool, Cute, Smart, or Tough. Trainers wearing these clothes may roll 2d6 during the Introduction Stage of a Contest to try to generate Contest Stat Dice for the assigned Stat.",
+                "Cost": "₽5000"
+            },
+            {
+                "Item": "Stealth Clothes",
+                "Effect": "Whether it's a dark cloak and hood, a ninja suit, or spy gear, these clothes help you blend in. This body-slot equipment raises your modifier to Stealth Checks made to remain unseen by +4, to a maximum total modifier of +4.",
+                "Cost": "₽2000"
+            }
+        ],
+        "Head Equipment": [
+            {
+                "Item": "Dark Vision Goggles",
+                "Effect": "These Goggles simply grant the Darkvision Capability while worn.",
+                "Cost": "₽1000"
+            },
+            {
+                "Item": "Gas Mask",
+                "Effect": "Gas Masks are invaluable equipment when trying to breathe in toxic environments or heavy smoke. They not only let you breathe through environmental toxins or smoke, but you become immune to the Moves Rage Powder, Poison Gas, Poisonpowder, Sleep Powder, Smog, Smokescreen, Spore, Stun Spore, and Sweet Scent.",
+                "Cost": "₽1500"
+            },
+            {
+                "Item": "Helmet",
+                "Effect": "The user gains 15 Damage Reduction against Critical Hits. The user resists the Moves Headbutt and Zen Headbutt and can't be flinched by these Moves.",
+                "Cost": "₽2250"
+            },
+            {
+                "Item": "Re-Breather",
+                "Effect": "This small partial face mask allows Trainers and Pokemon to breathe underwater as if they had the Gilled Capability for up to an hour. The Re-Breather is refilled automatically in 5 minutes while in open air.",
+                "Cost": "₽4000"
+            },
+            {
+                "Item": "Sunglasses",
+                "Effect": "+1 to Charm, Guile, and Intimidate Checks, to a maximum total modifier of +3.",
+                "Cost": "₽2000"
+            }
+        ],
+        "Feet Equipment": [
+            {
+                "Item": "Snow Boots",
+                "Effect": "Snow Boots grant you the Naturewalk (Tundra) capability, but lower your Overland Speed by -1 while on ice or deep snow.",
+                "Cost": "₽1500"
+            },
+            {
+                "Item": "Running Shoes",
+                "Effect": "Running Shoes grant a +2 bonus to Athletics Checks, to a maximum total modifier of +3, and increase your Overland Speed by +1.",
+                "Cost": "₽2000"
+            },
+            {
+                "Item": "Flippers",
+                "Effect": "Flippers grant a +2 bonus to your Swim speed when fully submerged, and decrease your Overland speed by the same amount.",
+                "Cost": "₽2000"
+            },
+            {
+                "Item": "Jungle Boots",
+                "Effect": "Jungle Boots grant you the Naturewalk (Forest) capability.",
+                "Cost": "₽1500"
+            }
+        ],
+        "Hand Equipment": [
+            {
+                "Item": "Fishing Rod",
+                "Effect": "Fishing Rods are used to Fish. They are two-handed items. They come in three varieties; Old Rods, Good Rods, and Super Rods. Old Rods cost ₽1000, Good Rods cost ₽5,000, and Super Rods cost ₽15,000."
+            },
+            {
+                "Item": "Glue Cannon",
+                "Effect": "Glue Cannons are exactly what you expect; This two-handed Equipment piece is a hand-held cannon that launches globs of glue. Attacking with a Glue Cannon expends a charge, which must be purchased. The attack is an AC8 Status Attack. If it hits, the target is Slowed. On a critical hit, the target is instead Stuck and Trapped. The Glue Cannon and three charge packets cost ₽3000, and additional charge packets costs ₽100."
+            },
+            {
+                "Item": "Hand Net",
+                "Effect": "A long net, usually on the end of a long stick, these pieces of two-handed Equipment are usually used for bug catching or fishing. As an AC6 Status Attack, you may attempt to net a Small Pokemon using this item. If you hit, you manage to scoop up the Pokemon, trapping them. You may move with the Pokemon, dragging them with you. Pokemon may still attack from the Hand Net using long-range attacks, or try to attack the net itself, potentially breaking it and freeing themselves. Capture Rolls against Pokémon in a net receive a -20 bonus.\nHand Nets with 50 Hit Points cost ₽100; 100 Hit Points cost ₽600; and 200 Hit Points cost ₽1500. Nets aren't broken until all of their Hit Points are depleted."
+            },
+            {
+                "Item": "Weighted Nets",
+                "Effect": "Weighted Nets are foldable nets used for trapping Pokemon. These two-handed nets, when Equipped, can be thrown at a target as a Standard Action, as a Status Attack with an AC of 8. While a Pokemon is netted, you may pull on the rope attached to the Net to pull the Pokemon 1 Meter towards you as a Standard Action.\nPokemon hit by a weighted net become Slowed as long as the net remains and cannot use Sky or Levitate Speeds except to safely lower themselves back to the ground. A Pokemon may attack the Net to attempt to break free. Capture Rolls against Pokémon in a net receive a -20 bonus.\nWeighted Nets with 50 Hit Points cost ₽500; 80 Hit Points cost ₽850; and 150 Hit Points cost ₽1200."
+            },
+            {
+                "Item": "Capture Styler",
+                "Effect": "A Capture Styler is a Main-Hand specialized piece of equipment used by some certified Pokémon Rangers in a region. It emits a string of energy that is used in a similar fashion to a lasso but is too weak to physically restrain a target. Instead, the energy has a calming effect on Pokémon.\nTrainers using a Capture Styler may use Survival in place of Charm when raising the Disposition of Pokémon. Acquiring a Capture Styler is easy for those who become certified Pokémon Rangers; most qualified Rangers receive one as part of the job. They are not for sale to the general public and may cost upwards of ₽7500 on the black market due to their iconic nature - it's easy to assume that someone who has a Capture Styler is a Ranger."
+            },
+            {
+                "Item": "Light Shield",
+                "Effect": "A Shield is an Off-Hand defensive item held in one hand or braced to an arm. Light Shields grant +2 Evasion. They may be readied as a Standard Action to instead grant +4 Evasion and 10 Damage Reduction until the end of your next turn, but also cause you to become Slowed for that duration. If used Two-Handed, light shields can also function as a Small Melee Weapon. Light Shields cost around ₽3000.",
+                "Cost": "₽3000"
+            },
+            {
+                "Item": "Heavy Shield",
+                "Effect": "A Shield is an Off-Hand defensive item held in one hand or braced to an arm. Heavy Shields grant +2 Evasion and may be readied as a Standard Action to grant +6 Evasion and 15 Damage Reduction until the end of your next turn, but also cause you to become Slowed for that duration. If used Two-Handed, shields can also function as a Small Melee Weapon. Heavy Shields cost around ₽4500.",
+                "Cost": "₽4500"
+            },
+            {
+                "Item": "Wonder Launcher",
+                "Effect": "This strange and complicated two-handed machine can only be used by those that have an Expert-Level Medicine or Technology Education Skill. The wielder can spend 1 AP to activate it, and apply an X-Item at a Pokémon within 8 meters. X-Items applied through the Wonder Launcher do not cause the target to forfeit any actions. Items combined by a Researcher may be used in the Wonder Launcher, and do not cause the target to forfeit any actions even if they are also a Restorative. Wonder Launchers cost $10,000 or more.",
+                "Cost": "₽10000"
+            }
+        ],
+        "Accessory Items": [
+            {
+                "Item": "Focus",
+                "Effect": "A Focus grants +5 Bonus to a Stat, chosen when crafted. This Bonus is applied AFTER Combat Stages. Focuses are often Accessory-Slot Items, but may be crafted as Head-Slot, Hand or Off-Hand Slot Items as well; a Trainer may only benefit from one Focus at a time, regardless of the Equipment Slot. Focuses are not usually found in stores, but may sometimes be found for ₽6000 at your GM’s discretion.",
+                "Cost": "₽6000"
+            },
+            {
+                "Item": "Snag Machine",
+                "Effect": "Snag Machines are extremely illegal machines that allow trainers to steal another Trainer’s Pokémon. They come in both large, immovable varieties and smaller portable varieties. The Portable Variety is an Accessory-Slot Item. Inserting a Poké Ball into a Large Snag Machine turns it into a Snag Ball permanently, but Large Snag Machines may only turn 5 Poké Balls into Snag Balls per day. Inserting a Poké Ball into a Portable Snag Machine, which is a Swift Action, turns it into a Snag Ball after one round, but only for that round. Snag Balls have the same properties as the Poké Ball type they were before being inserted into the machine, but receive a -2 penalty on all Poké Ball attack rolls, and are capable of capturing owned Pokémon. Snag Machines cannot be bought in stores, but may sell on the black market for prices of ₽30,000 or more.",
+                "Cost": "₽30000"
+            },
+            {
+                "Item": "Mega Ring",
+                "Effect": "Mega Rings are extraordinarily rare accessories that allow a Trainer’s Pokémon to Mega Evolve when used in conjunction with a Mega Stone. They cannot be bought in stores anywhere and must usually be earned through a trial of sorts, governed by a Gym Leader or other influential Pokémon Trainer. They can take the form of a bracelet, a necklace, or an actual ring."
             }
         ]
     }
