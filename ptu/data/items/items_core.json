@@ -133,126 +133,126 @@
             {
                 "Item": "Potion",
                 "Effect": "Heals 20 Hit Points",
-                "Cost": "₽200"
+                "Price": "₽200"
             },
             {
                 "Item": "Super Potion",
                 "Effect": "Heals 35 Hit Points",
-                "Cost": "₽380"
+                "Price": "₽380"
             },
             {
                 "Item": "Hyper Potion",
                 "Effect": "Heals 70 Hit Points",
-                "Cost": "₽800"
+                "Price": "₽800"
             },
             {
                 "Item": "Antidote",
                 "Effect": "Cures Poison",
-                "Cost": "₽200"
+                "Price": "₽200"
             },
             {
                 "Item": "Paralyze Heal",
                 "Effect": "Cures Paralysis",
-                "Cost": "₽200"
+                "Price": "₽200"
             },
             {
                 "Item": "Burn Heal",
                 "Effect": "Cures Burns",
-                "Cost": "₽200"
+                "Price": "₽200"
             },
             {
                 "Item": "Ice Heal",
                 "Effect": "Cures Freezing",
-                "Cost": "₽200"
+                "Price": "₽200"
             },
             {
                 "Item": "Full Heal",
                 "Effect": "Cures all Persistent Status Afflictions",
-                "Cost": "₽450"
+                "Price": "₽450"
             },
             {
                 "Item": "Full Restore",
                 "Effect": "Heals a Pokemon for 80 Hit Points and cures any Status Afflictions",
-                "Cost": "₽1450"
+                "Price": "₽1450"
             },
             {
                 "Item": "Revive",
                 "Effect": "Revives fainted Pokémon and sets to 20 Hit Points",
-                "Cost": "₽300"
+                "Price": "₽300"
             },
             {
                 "Item": "Energy Powder",
                 "Effect": "Heals 25 Hit Points – Repulsive",
-                "Cost": "₽150"
+                "Price": "₽150"
             },
             {
                 "Item": "Energy Root",
                 "Effect": "Heals 70 Hit Points – Repulsive",
-                "Cost": "₽500"
+                "Price": "₽500"
             },
             {
                 "Item": "Heal Powder",
                 "Effect": "Cure all Persistent Status Afflictions – Repulsive",
-                "Cost": "₽350"
+                "Price": "₽350"
             },
             {
                 "Item": "Revival Herb",
                 "Effect": "Revives Pokemon and sets to 50% Hit Points – Repulsive",
-                "Cost": "₽350"
+                "Price": "₽350"
             }
         ],
         "X-Items": [
             {
                 "Item": "X Attack",
                 "Effect": "Increases the Pokemon's Attack by two Combat Stages",
-                "Cost": "₽350"
+                "Price": "₽350"
             },
             {
                 "Item": "X Defend",
                 "Effect": "Increases the Pokemon's Defense by two Combat Stages",
-                "Cost": "₽350"
+                "Price": "₽350"
             },
             {
                 "Item": "X Special",
                 "Effect": "Increases the Pokemon's Special Attack by two Combat Stages",
-                "Cost": "₽350"
+                "Price": "₽350"
             },
             {
                 "Item": "X Sp. Def",
                 "Effect": "Increases the Pokemon's Special Defense by two Combat Stages",
-                "Cost": "₽350"
+                "Price": "₽350"
             },
             {
                 "Item": "X Speed",
                 "Effect": "Increases the Pokemon's Speed by two Combat Stages",
-                "Cost": "₽350"
+                "Price": "₽350"
             },
             {
                 "Item": "Dire Hit",
                 "Effect": "Increases Critical Hit Range of all moves by +2.",
-                "Cost": "₽600"
+                "Price": "₽600"
             },
             {
                 "Item": "X Accuracy",
                 "Effect": "Increases Accuracy by +2",
-                "Cost": "₽600"
+                "Price": "₽600"
             },
             {
                 "Item": "Guard Spec",
                 "Effect": "Prevents reduction of Combat Stages or Accuracy on the Pokemon for 5 Turns",
-                "Cost": "₽700"
+                "Price": "₽700"
             }
         ],
         "Bandages and Poultices": [
             {
                 "Item": "Bandages",
                 "Effect": "See attached Section",
-                "Cost": "₽300"
+                "Price": "₽300"
             },
             {
                 "Item": "Poultices",
                 "Effect": "See attached Section – Repulsive",
-                "Cost": "₽225"
+                "Price": "₽225"
             }
         ]
     },
@@ -261,49 +261,49 @@
             {
                 "Item": "Candy Bar",
                 "Effect": "Snack. Grants a Digestion Buff that heals 5 Hit Points.",
-                "Cost": "₽75"
+                "Price": "₽75"
             },
             {
                 "Item": "Honey Snack.",
                 "Effect": "Grants a Digestion Buff that heals 5 Hit Points. May be used as Bait",
-                "Cost": "₽100"
+                "Price": "₽100"
             },
             {
                 "Item": "Leftovers",
                 "Effect": "Snack. When their Digestion Buff is traded in, the user recovers 1/16th of their max Hit Points at the beginning of each turn for the rest of the encounter.",
-                "Cost": "₽350"
+                "Price": "₽350"
             },
             {
                 "Item": "Black Sludge",
                 "Effect": "Poison-Type Pokémon may consume the Black Sludge as a Snack Item; when the Digestion Buff is traded in, they recover 1/8th of their Max Hit Points at the beginning of each turn for the rest of the encounter.",
-                "Cost": "₽500"
+                "Price": "₽500"
             }
         ],
         "Refreshment Items": [
             {
                 "Item": "Enriched Water",
                 "Effect": "Heals 20 Hit Points.",
-                "Cost": "₽75"
+                "Price": "₽75"
             },
             {
                 "Item": "Shuckle's Berry Juice",
                 "Effect": "Heals 30 Hit Points.",
-                "Cost": "---"
+                "Price": "---"
             },
             {
                 "Item": "Super Soda Pop",
                 "Effect": "Heals 30 Hit Points.",
-                "Cost": "₽125"
+                "Price": "₽125"
             },
             {
                 "Item": "Sparkling Lemonade",
                 "Effect": "Heals 50 Hit Points.",
-                "Cost": "₽250"
+                "Price": "₽250"
             },
             {
                 "Item": "MooMoo Milk",
                 "Effect": "Heals 80 Hit Points.",
-                "Cost": "₽500"
+                "Price": "₽500"
             }
         ],
         "Miscellaneous Food": [
@@ -321,7 +321,7 @@
                 "columns": [
                     "Tier",
                     "Berry List",
-                    "Cost"
+                    "Price"
                 ]
             },
             "Yields": {
@@ -334,17 +334,17 @@
             {
                 "Tier": "1",
                 "Berry List": "Cheri Berry, Chesto Berry, Pecha Berry, Rawst Berry, Aspear Berry, Oran Berry, Persim Berry, Razz Berry (and similar).",
-                "Cost": "₽150"
+                "Price": "₽150"
             },
             {
                 "Tier": "2",
                 "Berry List": "Lum Berry, Sitrus Berry, Figy Berry (And similar), Liechi Berry (and similar), Pamtre Berry (and similar), Enigma Berry, Lansat Berry, Micle Berry, Cornn Berry, Magost Berry, Rabuta Berry, Nomel Berry, Spelon Berry, Jaboca Berry, Rowap Berry, Starf Berry",
-                "Cost": "₽250"
+                "Price": "₽250"
             },
             {
                 "Tier": "3",
                 "Berry List": "Leppa Berry, Pomeg Berry (and similar), Occa Berry (and similar), Custap Berry, Kee Berry, Maranga Berry",
-                "Cost": "₽500"
+                "Price": "₽500"
             }
         ],
         "Yields": [
@@ -435,6 +435,114 @@
                 "Herb Type": "Balm Mushroom",
                 "Effect": "The user is cured of Burn, Paralysis, or Poison. If they are, they lose 1 Combat Stage in a random Stat.",
                 "Price": "---"
+            }
+        ]
+    },
+    "Travel Gear": {
+        "_display": {
+            "Ropes": {
+                "type": "table",
+                "rowPerField": false,
+                "columns": ["Item", "Effect", "Price"]
+            },
+            "Repels": {
+                "type": "table",
+                "rowPerField": false,
+                "columns": ["Strenght", "Effect", "Price"]
+            }
+        },
+        "Travel Gear": [
+            {
+                "Item": "Bait",
+                "Effect": "Bait is a tasty, strong-smelling morsel of food designed to attract Pokémon. It may be used in two ways; to lure Pokémon, or to distract Pokémon.\nTo lure Pokémon, set the bait on a route. Every 15 minutes thereafter, roll 1d20 until you roll 15 or higher. If you roll 3 times without success, the bait loses its potency and fails. If you succeed however, a random Pokémon, based on your GM's discretion will appear. The Pokémon attracted with bait should usually be of a Level comparable to the party's Pokémon. Bait is often used for Fishing in this way.\nTo distract Pokémon, throw it at a Wild Pokémon as a Standard Action. The target must then make a Focus Roll with a DC of 12. If they fail, the Pokémon gives up its next Standard Action to eat the food.",
+                "Price": "₽250"
+            },
+            {
+                "Item": "Collection Jar",
+                "Effect": "A simple sealable glass jar. Useful when collecting Items from Pokémon, such as Honey from Pokémon with the Honey Gather Ability, or MooMoo Milk from Pokémon with the Milk Collection Ability.",
+                "Price": "₽100"
+            },
+            {
+                "Item": "First Aid Kit",
+                "Effect": "Required to use the First Aid Expertise Feature. By Draining 1 AP, any Trainer can make a Medicine Education Check on a target as an Extended Action. The target gains Hit Points equal to the result, and is cured of Burn, Poison, and Paralysis.",
+                "Price": "₽500"
+            },
+            {
+                "Item": "Fishing Lure",
+                "Effect": "Instead of Bait, some trainers may opt to use a Fishing Lure when attempting to Fish. Fishing Lures work just like Bait, but can be used multiple times. If the line snaps or the fish gets away, they may take your lure with them, however.",
+                "Price": "₽1500"
+            },
+            {
+                "Item": "Saddle",
+                "Effect": "Saddles help Trainers ride Pokémon. They are created with a specific Pokémon species in mind, and only Pokémon with that body type can wear the saddle. A common Saddle type fits Ponyta, Rapidash, Blitzle, and Zebstrika, for example. Saddles grant a +3 bonus to all Skill Checks made to mount Pokémon, or to remain on the Saddle when hit by an attack.",
+                "Price": "₽2000"
+            },
+            {
+                "Item": "Ropes",
+                "Effect": "Rope has many different uses, and is thus popular gear for explorers, campers, and hikers. Rope can only be damaged by Fire-Type attacks, or attacks made with sharp objects – knives, swords, sharp teeth, and Moves like Scratch, Slash, Leaf Blade, Razor Leaf, etc. The Move Cut ignores all Damage Reduction against Rope. Rope can be bought in any length of 25 Feet up to 300. The listed prices below reflect 25 feet of rope; simply multiply the price appropriately for more.",
+                "Ropes": [
+                    {
+                        "Item": "Basic Rope",
+                        "Effect": "Basic Fiber Rope. Has a tensile strength of 35 kg or 77 lbs. It has 5 Hit Points.",
+                        "Price": "₽100"
+                    },
+                    {
+                        "Item": "Utility Rope",
+                        "Effect": "Braided Utility Rope. Has a tensile strength of 80 kg or 176 lbs. It has 20 Hit Points and 10 Damage Reduction.",
+                        "Price": "₽200"
+                    },
+                    {
+                        "Item": "Sturdy Rope",
+                        "Effect": "Sturdy Rope with a tensile strength of 225 kg or roughly 500lbs. 30 Hit Points and 20 Damage Reduction.",
+                        "Price": "₽400"
+                    }
+                ]
+            },
+            {
+                "Item": "Sleeping Bag",
+                "Effect": "A standard sleeping bag.",
+                "Price": "₽1000 (Single) or 1800 (Double)"
+            },
+            {
+                "Item": "Tents:",
+                "Effect": "Standard outdoor tents. Provide protection from the elements of nature. A small one person tent would be about 1m x 1.5m x 1.5m, or 2.25 cubic meters – meaning 900 in price.",
+                "Price": "₽400 per meter cubed"
+            },
+            {
+                "Item": "Lighter",
+                "Effect": "For creating flames in a hurry.",
+                "Price": "₽150 (Regular) or ₽1000 (Waterproof)"
+            },
+            {
+                "Item": "Flashlight:",
+                "Effect": "For, you know, seeing. In the dark. Yes.",
+                "Price": "₽200 (Regular) or ₽600 (Waterproof)"
+            },
+            {
+                "Item": "Water Filter",
+                "Effect": "Can ensure that river or pond water is clean to drink after being filtered.",
+                "Price": "₽500"
+            },
+            {
+                "Item": "Repels",
+                "Effect": "Repels can be sprayed on one's self in order to ward off wilds with a subtle smell that greatly annoys Pokémon. It's best to not make your own Pokémon endure the smell while using Repels yourself. Most wild Pokémon won't bother you when you spray Repel on yourself, and will make themselves scarce before you even approach.\nSpraying a wild Pokémon directly with Repel will cause that Pokémon, if the Repel can affect Pokémon of that level, to immediately shift away from the user as far as the Pokémon is able as an Interrupt, forfeiting their next Shift Action. Spraying a Pokémon with a Repel is an AC6 Status Attack.",
+                "Repels": [
+                    {
+                        "Strenght": "Repel",
+                        "Effect": "Lasts 1 hour; causes Pokémon of level 15 or lower to flee.",
+                        "Price": "₽200"
+                    },
+                    {
+                        "Strenght": "Super Repel",
+                        "Effect": "Lasts 2 hours; causes Pokémon of level 25 or lower to flee.",
+                        "Price": "₽300"
+                    },
+                    {
+                        "Strenght": "Max Repel",
+                        "Effect": "Lasts 5 hours; causes Pokémon of level 35 or lower to flee.",
+                        "Price": "₽400"
+                    }
+                ]
             }
         ]
     }

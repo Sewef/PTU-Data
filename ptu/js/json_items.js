@@ -59,7 +59,7 @@ function renderCategory(cat) {
 
   const searchBox = document.createElement("div");
   searchBox.className = "mb-3";
-  searchBox.innerHTML = `<input type="text" id="filter-search" class="form-control" placeholder="Rechercher...">`;
+  searchBox.innerHTML = `<input type="text" id="filter-search" class="form-control" placeholder="Search...">`;
   pane.appendChild(searchBox);
 
   const row = document.createElement("div");
@@ -143,9 +143,62 @@ function renderAsCards(entries, subcat, q, rowEl) {
     );
 
     Object.entries(obj).forEach(([k, v]) => {
+      // ignorer les champs déjà affichés dans le titre
       if (["Item", "Ball Name", "Herb Type", "Apricorn Type", "Tier"].includes(k)) return;
-      body.insertAdjacentHTML("beforeend", `<p><strong>${escapeHTML(k)}:</strong> ${escapeHTML(String(v))}</p>`);
+
+      // --- Si le champ est un tableau d'objets : afficher un tableau interne ---
+      if (Array.isArray(v) && v.length > 0 && typeof v[0] === "object") {
+        const meta = (itemsData[activeCategory]._display && itemsData[activeCategory]._display[k]) || {};
+        const columns = meta.columns || Object.keys(v[0]);
+
+        const wrap = document.createElement("div");
+        wrap.className = "table-responsive mt-2";
+
+        const table = document.createElement("table");
+        table.className = "table table-sm table-striped mb-0";
+
+        // en-tête
+        const thead = document.createElement("thead");
+        const headRow = document.createElement("tr");
+        columns.forEach(c => {
+          const th = document.createElement("th");
+          th.textContent = c;
+          headRow.appendChild(th);
+        });
+        thead.appendChild(headRow);
+        table.appendChild(thead);
+
+        // corps
+        const tbody = document.createElement("tbody");
+        v.forEach(entry => {
+          const tr = document.createElement("tr");
+          columns.forEach(c => {
+            const td = document.createElement("td");
+            const val = entry[c];
+            td.textContent = val == null ? "—" : String(val);
+            tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+
+        wrap.appendChild(table);
+
+        const label = document.createElement("p");
+        label.innerHTML = `<strong>${escapeHTML(k)}:</strong>`;
+        body.appendChild(label);
+        body.appendChild(wrap);
+
+        return;
+      }
+
+      // --- Sinon, rendu normal du champ ---
+      body.insertAdjacentHTML(
+        "beforeend",
+        `<p><strong>${escapeHTML(k)}:</strong> ${escapeHTML(String(v))}</p>`
+      );
     });
+
 
     card.appendChild(body);
     col.appendChild(card);
@@ -336,5 +389,6 @@ function escapeHTML(str) {
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
+    .replaceAll("'", "&#039;")
+    .replaceAll(/\n/g, "<br>");
 }
