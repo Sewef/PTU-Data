@@ -21,11 +21,30 @@ function loadJsonAsCard(file, container, cols = 3) {
         if (searchInput) {
             searchInput.oninput = function () {
                 const query = this.value.toLowerCase();
-                const filtered = allItems.filter(item =>
-                    Object.values(item).some(value =>
-                        typeof value === "string" && value.toLowerCase().includes(query)
-                    )
-                );
+                const filtered = allItems.filter(item => {
+                    const nameMatches = item.Name?.toLowerCase().includes(query);
+
+                    const otherMatches = Object.entries(item)
+                        .filter(([key]) => key !== 'Name')
+                        .some(([key, value]) =>
+                            typeof value === "string" && value.toLowerCase().includes(query)
+                        );
+
+                    return nameMatches || otherMatches;
+                });
+
+                // Et ajoute le tri (priorité au nom)
+                filtered.sort((a, b) => {
+                    const an = a.Name?.toLowerCase() || "";
+                    const bn = b.Name?.toLowerCase() || "";
+
+                    const aHit = an.includes(query);
+                    const bHit = bn.includes(query);
+
+                    if (aHit !== bHit) return aHit ? -1 : 1;
+                    return an.localeCompare(bn);
+                });
+
                 renderFilteredCards(filtered, container, cols);
             };
         }
@@ -72,7 +91,7 @@ function renderItemAsCard(item, depth = 0) {
             str += `<h3>${value ?? ""}</h3>`;
         } else {
             const safeValue = (value ?? "").toString().replace(/\n/g, "<br>");
-        
+
             // --- CAS SPÉCIAL DAMAGE BASE ---
             if (key === "Damage Base") {
                 // On met en gras tout ce qui est avant le premier ":"
@@ -84,7 +103,7 @@ function renderItemAsCard(item, depth = 0) {
                 str += `<strong>${key}</strong>: ${safeValue}<br>`;
             }
         }
-        
+
     });
 
     return str;
@@ -138,9 +157,24 @@ function loadJsonAsCard_2(file, container, searchInputId) {
                     const filteredData = {};
 
                     Object.entries(data).forEach(([sectionTitle, entries]) => {
-                        const filteredEntries = Object.entries(entries).filter(([name, desc]) =>
-                            name.toLowerCase().includes(query) || desc.toLowerCase().includes(query)
-                        );
+                        // Priorité : le Nom d'abord
+                        let filteredEntries = Object.entries(entries).filter(([name, desc]) => {
+                            const nameMatches = name.toLowerCase().includes(query);
+                            const descMatches = typeof desc === "string" && desc.toLowerCase().includes(query);
+                            return nameMatches || descMatches;
+                        });
+
+                        // Tri : résultats dont le nom match en premier
+                        filteredEntries.sort((a, b) => {
+                            const [nameA, descA] = a;
+                            const [nameB, descB] = b;
+
+                            const aHit = nameA.toLowerCase().includes(query);
+                            const bHit = nameB.toLowerCase().includes(query);
+
+                            if (aHit !== bHit) return aHit ? -1 : 1;
+                            return nameA.localeCompare(nameB);
+                        });
 
                         if (filteredEntries.length > 0) {
                             filteredData[sectionTitle] = Object.fromEntries(filteredEntries);
@@ -153,9 +187,6 @@ function loadJsonAsCard_2(file, container, searchInputId) {
         }
     });
 }
-
-
-
 
 function renderFilteredCards_2(data, container) {
     container.innerHTML = "";
