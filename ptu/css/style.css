@@ -40,6 +40,10 @@ body[style*="padding-right"] { padding-right: 0 !important; }
 .card-type-Steel      { --type-color:#B7B7CE; }
 .card-type-Fairy      { --type-color:#D685AD; }
 
+.card-type-Physical   { --type-color:#a52321; }
+.card-type-Special    { --type-color:#268bd2; }
+.card-type-Status     { --type-color:#839496; }
+
 /* Cards & sidebar items accented by type (inset bar on the left) */
 .card-body[class*="card-type-"],
 #sidebar .list-group-item[class*="card-type-"],
@@ -47,6 +51,12 @@ body[style*="padding-right"] { padding-right: 0 !important; }
   box-shadow: inset 6px 0 0 0 var(--type-color, transparent);
   border-top-left-radius: var(--bs-border-radius);
   border-bottom-left-radius: var(--bs-border-radius);
+}
+
+/*  Badge ayant la couleur du type */
+.badge-type {
+    background-color: var(--type-color) !important;
+    color: #fff !important;
 }
 
 /* Type pill */

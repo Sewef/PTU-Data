@@ -1,6 +1,6 @@
 function debounce(fn, delay = 150) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), delay); } }
 
-function jsonToItems(obj){
+function jsonToItems(obj) {
   return Object.entries(obj).map(([name, value]) =>
     typeof value === "string" ? { Name: name, Description: value } : { Name: name, ...value }
   );
@@ -162,22 +162,23 @@ function loadJsonAsCard(file, container, cols = 3) {
   });
 }
 
-function renderFilteredCards(data, container, cols){
+function renderFilteredCards(data, container, cols) {
   container.innerHTML = "";
-  const colSize = Math.floor(12/cols);
-  const colClass = `col-12 col-md-${colSize}`;
+  const colSize = Math.floor(12 / cols);
   const frag = document.createDocumentFragment();
 
-  data.forEach(item=>{
+  data.forEach(item => {
     const wrapper = document.createElement("div");
-    wrapper.className = colClass;
+    wrapper.className = `col-12 col-md-${colSize}`;
 
     const typeClass = item.Type ? `card-type-${item.Type}` : "";
+
     const card = document.createElement("div");
-    card.className = "card h-100 overflow-hidden rounded-3";
+    card.className = "card h-100 bg-white border shadow-sm overflow-hidden rounded-3";
+
     const body = document.createElement("div");
-    body.className = `card-body ${typeClass} bg-light`;
-    body.innerHTML = renderItemAsCard(item);
+    body.className = `card-body bg-light ${typeClass} lh-1`;
+    body.innerHTML = renderMoveCard(item);
 
     card.appendChild(body);
     wrapper.appendChild(card);
@@ -186,6 +187,7 @@ function renderFilteredCards(data, container, cols){
 
   container.appendChild(frag);
 }
+
 
 function renderItemAsCard(item, depth = 0) {
   let str = '';
@@ -226,3 +228,73 @@ function renderItemAsCard(item, depth = 0) {
 
   return str;
 }
+
+function renderMoveCard(item) {
+  let html = "";
+
+  // ----- TITRE AVEC BADGES -----
+  let title = item.Name || "";
+
+  // Badge coloré du type
+  if (item.Type)
+    title += ` <span class="badge badge-type">${item.Type}</span>`;
+
+  // Badges complémentaires
+  if (item.Frequency)
+    title += ` <span class="badge bg-secondary">${item.Frequency}</span>`;
+
+  // Badge physique/spéciale/status basé sur Class
+  // Badge de classe (Physical / Special / Status)
+  if (item.Class) {
+    const cls = item.Class.toLowerCase();
+    let classTag = "Status";  // default
+
+    if (cls.includes("physical")) classTag = "Physical";
+    else if (cls.includes("special")) classTag = "Special";
+    else if (cls.includes("status")) classTag = "Status";
+
+    // Le badge utilise la couleur définie par .card-type-XXX
+    title += ` <span class="badge badge-type card-type-${classTag}">${item.Class}</span>`;
+  }
+
+  html += `<h5 class="card-title">${title}</h5>`;
+
+  // ----- Best-PTU rendering -----
+  for (const [key, value] of Object.entries(item)) {
+    if (["Name", "Type"].includes(key)) continue;
+
+    // Sous-objet
+    if (typeof value === "object" && value !== null && !Array.isArray(value)) {
+      html += `<p><strong>${key}:</strong></p>`;
+      html += `<div class="ms-3">${renderMoveCard(value)}</div>`;
+      continue;
+    }
+
+    // ----- DAMAGE BASE : afficher seulement le contenu -----
+    if (key === "Damage Base") {
+      const raw = (value ?? "").toString();
+
+      // Séparer "Damage Base 2:" du reste
+      const idx = raw.indexOf(":");
+      if (idx !== -1) {
+        const left = raw.slice(0, idx + 1);      // ex: "Damage Base 2:"
+        const right = raw.slice(idx + 1).trim(); // ex: "1d6+3 / 7"
+
+        html += `<p><strong>${left}</strong> ${right}</p>`;
+      } else {
+        // cas improbable où il n’y a pas de ":"
+        html += `<p>${raw}</p>`;
+      }
+      continue;
+    }
+
+
+    // Valeur simple
+    const safeValue = (value ?? "").toString().replace(/\n/g, "<br>");
+    html += `<p><strong>${key}:</strong> ${safeValue}</p>`;
+  }
+
+
+  return html;
+}
+
