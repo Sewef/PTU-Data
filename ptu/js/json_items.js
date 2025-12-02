@@ -193,10 +193,18 @@ function renderAsCards(entries, subcat, q, rowEl) {
       }
 
       // --- Sinon, rendu normal du champ ---
+      let displayValue = String(v);
+
+      // Ajout automatique du symbole ₽ sur le champ Price
+      if (k === "Price" && !isNaN(v)) {
+        displayValue = `₽${v}`;
+      }
+
       body.insertAdjacentHTML(
         "beforeend",
-        `<p><strong>${escapeHTML(k)}:</strong> ${escapeHTML(String(v))}</p>`
+        `<p><strong>${escapeHTML(k)}:</strong> ${escapeHTML(displayValue)}</p>`
       );
+
     });
 
 
