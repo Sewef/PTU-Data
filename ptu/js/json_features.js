@@ -264,12 +264,15 @@ function renderSection(clsName, branchName = "Default") {
   const title = (cls.branches.length === 1 && branchName === "Default")
     ? clsName
     : `${clsName} – ${branchName}`;
-  pane.insertAdjacentHTML("afterbegin", `<h2 class="mt-3 mb-4">${title}</h2>`);
+  pane.insertAdjacentHTML("afterbegin", `<h2 class="mb-2">${title}</h2>`);
+
   pane.insertAdjacentHTML("beforeend",
-    `<div class="mb-3"><input type="text" id="features-search" class="form-control" placeholder="Search features..."></div>`);
+    `<div class="mb-2">
+      <input type="text" id="features-search" class="form-control" placeholder="Search features...">
+   </div>`);
 
   const row = document.createElement("div");
-  row.className = "row g-3";
+  row.className = "row g-3 mt-1";
   pane.appendChild(row);
 
   if (clsName === "General") {
