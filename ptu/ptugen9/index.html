@@ -15,8 +15,6 @@
   <script src="/ptu/js/jquery-3.7.1.min.js"></script>
   <script src="/ptu/js/popper.min.js"></script>
   <script src="/ptu/js/bootstrap.min.js"></script>
-  <script src="/ptu/js/json_utils.js"></script>
-  <script src="/ptu/js/helpers.js"></script>
 
   <title>PTU Data - Home gen 9</title>
 </head>
@@ -51,9 +49,13 @@
       </div>
     </div>
 
-    <script>
-      includeHTML(() => setActive());
-    </script>
+  <script type="module">
+    import { includeHTML, setActive, showPageWhenLoaded } from "/ptu/js/helpers.js";
+    includeHTML(() => {
+      setActive();
+      showPageWhenLoaded();
+    });
+  </script>
 </body>
 
 </html>
