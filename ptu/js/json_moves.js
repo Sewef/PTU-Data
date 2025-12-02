@@ -1,144 +1,73 @@
-function debounce(fn, delay = 150) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), delay); } }
+import {
+  debounce,
+  jsonToItems,
+  buildPillSection,
+  getSelectedPills,
+  filterText,
+  filterByTypes,
+  filterByClasses
+} from "/ptu/js/helpers.js";
 
-function jsonToItems(obj) {
-  return Object.entries(obj).map(([name, value]) =>
-    typeof value === "string" ? { Name: name, Description: value } : { Name: name, ...value }
-  );
-}
-
-function buildTypeSidebar(moves, container, cols) {
+function buildSidebarMoves(allItems, container, cols) {
   const sidebar = document.getElementById("sidebar");
-  if (!sidebar) return;
+  sidebar.innerHTML = "";
 
-  const types = [...new Set(moves.map(m => m.Type).filter(Boolean))].sort();
-  sidebar.innerHTML = `
-  <label class="form-label">Types</label>
-  <div id="type-filters" class="d-flex flex-wrap gap-1">
-  ${types.map(type => `
-    <button
-      type="button"
-      class="btn btn-sm type-pill card-type-${type}"
-      data-type="${type}"
-      data-selected="0"
-    >
-      ${type}
-    </button>
-  `).join("")}
-  </div>
+  // ====================
+  // Types
+  // ====================
+  const moveTypes = [...new Set(allItems.map(m => m.Type).filter(Boolean))].sort();
 
-  <div class="mt-3">
-    <label class="form-label">Class</label>
-    <div id="class-filters" class="d-flex flex-wrap gap-1">
-      ${["Physical", "Special", "Status"].map(cls => `
-        <button
-          type="button"
-          class="btn btn-sm type-pill card-type-${cls}"
-          data-class="${cls}"
-          data-selected="0"
-        >
-          ${cls}
-        </button>
-      `).join("")}
-    </div>
-  </div>
-`;
+  const typesGroup = document.createElement("div");
+  typesGroup.className = "mb-3";
 
+  const typesLabel = document.createElement("label");
+  typesLabel.className = "form-label";
+  typesLabel.textContent = "Types";
+  typesGroup.appendChild(typesLabel);
 
-  // Listeners
-  // sidebar.querySelectorAll("#type-filters input[type='checkbox']").forEach(input => {
-  //   input.addEventListener("change", () => filterAndRender(moves, container, cols));
-  // });
-
-  // gestion click pills
-  sidebar.querySelector('#type-filters').addEventListener('click', (ev) => {
-    const btn = ev.target.closest("button[data-type]");
-    if (!btn) return;
-
-    const selected = btn.getAttribute("data-selected") === "1";
-    btn.setAttribute("data-selected", selected ? "0" : "1");
-    btn.classList.toggle("active", !selected);
-
-    filterAndRender(moves, container, cols);
+  // Les pills sont insérées DANS ce group
+  buildPillSection(typesGroup, "type-filters", moveTypes, {
+    attr: "data-type",
+    onChange: () => refreshMoves(allItems, container, cols)
   });
 
-  // Gestion click des Class
-  sidebar.querySelector("#class-filters").addEventListener("click", (ev) => {
-    const btn = ev.target.closest("button[data-class]");
-    if (!btn) return;
+  sidebar.appendChild(typesGroup);
 
-    const selected = btn.getAttribute("data-selected") === "1";
-    btn.setAttribute("data-selected", selected ? "0" : "1");
-    btn.classList.toggle("active", !selected);
+  // ====================
+  // Class
+  // ====================
+  const classGroup = document.createElement("div");
+  classGroup.className = "mt-3";
 
-    filterAndRender(moves, container, cols);
+  const classLabel = document.createElement("label");
+  classLabel.className = "form-label";
+  classLabel.textContent = "Class";
+  classGroup.appendChild(classLabel);
+
+  buildPillSection(classGroup, "class-filters", ["Physical", "Special", "Status"], {
+    attr: "data-class",
+    onChange: () => refreshMoves(allItems, container, cols)
   });
 
-
-  const sidebarSearch = document.getElementById("sidebar-search");
-  if (sidebarSearch) {
-    sidebarSearch.addEventListener("input", debounce(() => {
-      const q = sidebarSearch.value.toLowerCase();
-      document.querySelectorAll("#type-filters label").forEach(label => {
-        const text = label.textContent.toLowerCase();
-        label.style.display = text.includes(q) ? "" : "none";
-      });
-    }), 150);
-  }
-
-
-  // Bouton tout cocher / décocher
-  const toggleBtn = document.getElementById("toggle-all-types");
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
-      const typeFilters = document.getElementById("type-filters");
-      const checkboxes = typeFilters.querySelectorAll('input[type="checkbox"]');
-      const allChecked = Array.from(checkboxes).every(cb => cb.checked);
-      checkboxes.forEach(cb => cb.checked = !allChecked);
-      filterAndRender(moves, container, cols);
-    });
-  }
+  sidebar.appendChild(classGroup);
 }
 
 
-function getActiveTypes() {
-  return Array.from(document.querySelectorAll('#type-filters button[data-selected="1"]'))
-    .map(btn => btn.dataset.type);
-}
-
-function getActiveClasses() {
-  return Array.from(document.querySelectorAll('#class-filters button[data-selected="1"]'))
-    .map(btn => btn.dataset.class);
-}
-
-function filterAndRender(allItems, container, cols = 3) {
+function refreshMoves(allItems, container, cols) {
   const query = document.getElementById("card-search")?.value.toLowerCase() || "";
-  const activeTypes = getActiveTypes();
-  const activeClasses = getActiveClasses();
 
-  const filtered = allItems.filter(item => {
-    const nameMatches = item.Name?.toLowerCase().includes(query);
-    const otherMatches = Object.entries(item)
-      .filter(([key]) => key !== 'Name')
-      .some(([key, value]) => typeof value === "string" && value.toLowerCase().includes(query));
+  const types = getSelectedPills(document, "type-filters", "data-type");
+  const classes = getSelectedPills(document, "class-filters", "data-class");
 
-    const matchesType = activeTypes.length === 0 || activeTypes.includes(item.Type);
-    const matchesClass = activeClasses.length === 0 || activeClasses.includes(item.Class);
-
-    return (nameMatches || otherMatches) && matchesType && matchesClass;
-  });
-
-  filtered.sort((a, b) => {
-    const qa = query, an = a.Name?.toLowerCase() || "", bn = b.Name?.toLowerCase() || "";
-    const aHit = an.includes(qa), bHit = bn.includes(qa);
-    if (aHit !== bHit) return aHit ? -1 : 1;
-    return an.localeCompare(bn);
-  });
+  const filtered = allItems
+    .filter(item => filterText(query, item))
+    .filter(item => filterByTypes(item, types))
+    .filter(item => filterByClasses(item, classes));
 
   renderFilteredCards(filtered, container, cols);
 }
 
-
-function loadMovesAsCard(file, container, cols = 3) {
+export function loadMovesAsCard(file, container, cols = 3) {
   $.getJSON(file, function (data) {
     if (typeof data !== 'object' || Object.keys(data).length === 0) {
       alert(`Error: no data found in ${file}`);
@@ -147,17 +76,17 @@ function loadMovesAsCard(file, container, cols = 3) {
 
     const allItems = jsonToItems(data);
 
-    buildTypeSidebar(allItems, container, cols);
-    filterAndRender(allItems, container, cols);
+    buildSidebarMoves(allItems, container, cols);
+    refreshMoves(allItems, container, cols);
 
     const searchInput = document.getElementById("card-search");
     if (searchInput) {
-      searchInput.oninput = debounce(() => filterAndRender(allItems, container, cols), 150);
+      searchInput.oninput = debounce(() => refreshMoves(allItems, container, cols), 150);
     }
   });
 }
 
-function loadKeywordsAsCard(file, container, cols = 3) {
+export function loadKeywordsAsCard(file, container, cols = 3) {
   $.getJSON(file, function (data) {
     if (typeof data !== 'object' || Object.keys(data).length === 0) {
       alert(`Error: no data found in ${file}`);

@@ -149,7 +149,7 @@ function renderPTUCardWithBadges(item) {
    2.   Loader standard
    ======================= */
 
-function loadJsonAsCard(file, container, cols = 3) {
+export function loadJsonAsCard(file, container, cols = 3) {
     $.getJSON(file, data => {
         if (!data || typeof data !== "object") {
             alert(`Error: no data found in ${file}`);
@@ -174,7 +174,7 @@ function loadJsonAsCard(file, container, cols = 3) {
         (statuses, keywords, etc.)
    ======================= */
 
-function loadJsonAsCard_2(file, container, searchInputId) {
+export function loadJsonAsCard_2(file, container, searchInputId) {
     $.getJSON(file, data => {
         if (!data || typeof data !== "object") {
             alert(`Error: no data found in ${file}`);

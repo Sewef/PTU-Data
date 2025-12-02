@@ -7,7 +7,7 @@ let selectedSources = new Set();
 let edgeColSize = 4;
 let edgeContainer = null;
 
-function loadEdges(path, container = document.getElementById("cards-container"), col = 3) {
+export function loadEdges(path, container = document.getElementById("cards-container"), col = 3) {
   fetch(path)
     .then(r => r.json())
     .then(json => {

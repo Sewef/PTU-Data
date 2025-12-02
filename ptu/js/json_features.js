@@ -4,7 +4,7 @@ let activeSources = new Set();
 let currentLink = null;
 
 // ------------------------- CHARGEMENT JSON ---------------------------------
-function loadClasses(path) {
+export function loadClasses(path) {
   fetch(path)
     .then(r => r.json())
     .then(json => {

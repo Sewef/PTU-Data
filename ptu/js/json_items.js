@@ -10,7 +10,7 @@ let activeCategory = null;
 let edgeColSize = 4;
 let edgeContainer = null;
 
-function loadItems(path, container = document.getElementById("cards-container"), col = 3) {
+export function loadItems(path, container = document.getElementById("cards-container"), col = 3) {
   fetch(path)
     .then(r => r.json())
     .then(json => {

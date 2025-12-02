@@ -14,8 +14,6 @@
   <script src="/ptu/js/jquery-3.7.1.min.js"></script>
   <script src="/ptu/js/popper.min.js"></script>
   <script src="/ptu/js/bootstrap.min.js"></script>
-  <script src="/ptu/js/json_utils.js"></script>
-  <script src="/ptu/js/helpers.js"></script>
 
   <title>PTU Data - Abilities</title>
 </head>
@@ -39,9 +37,15 @@
       </main>
     </div>
   </div>
-  <script>
-    includeHTML(() => setActive());
-    loadJsonAsCard("/ptu/data/abilities/abilities_core.min.json", document.getElementById("cards-container", 3));
+  <script type="module">
+    import { includeHTML, setActive, showPageWhenLoaded } from "/ptu/js/helpers.js";
+    import { loadJsonAsCard } from "/ptu/js/json_utils.js";
+    includeHTML(() => {
+      setActive();
+      showPageWhenLoaded();
+      loadJsonAsCard("/ptu/data/abilities/abilities_core.min.json", document.getElementById("cards-container", 3));
+    });
   </script>
 </body>
+
 </html>
