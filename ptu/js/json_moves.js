@@ -16,20 +16,36 @@ function buildTypeSidebar(moves, container, cols) {
     <input type="text" id="sidebar-search" class="form-control form-control-sm mb-2" placeholder="Filter types...">
     <button id="toggle-all-types" class="btn btn-sm btn-primary w-100 mb-2">Select/Deselect all</button>
   </div>
-  <div id="type-filters" class="list-group">
-    ${types.map(type => `
-      <label class="list-group-item card-type-${type}">
-        <input class="form-check-input me-1" type="checkbox" value="${type}">
-        ${type}
-      </label>
-    `).join("")}
-  </div>
+  <div id="type-filters" class="d-flex flex-wrap gap-1">
+  ${types.map(type => `
+    <button
+      type="button"
+      class="btn btn-sm type-pill card-type-${type}"
+      data-type="${type}"
+      data-selected="0"
+    >
+      ${type}
+    </button>
+  `).join("")}
+</div>
 `;
 
 
   // Listeners
-  sidebar.querySelectorAll("#type-filters input[type='checkbox']").forEach(input => {
-    input.addEventListener("change", () => filterAndRender(moves, container, cols));
+  // sidebar.querySelectorAll("#type-filters input[type='checkbox']").forEach(input => {
+  //   input.addEventListener("change", () => filterAndRender(moves, container, cols));
+  // });
+
+  // gestion click pills
+  sidebar.querySelector('#type-filters').addEventListener('click', (ev) => {
+    const btn = ev.target.closest("button[data-type]");
+    if (!btn) return;
+
+    const selected = btn.getAttribute("data-selected") === "1";
+    btn.setAttribute("data-selected", selected ? "0" : "1");
+    btn.classList.toggle("active", !selected);
+
+    filterAndRender(moves, container, cols);
   });
 
   const sidebarSearch = document.getElementById("sidebar-search");
@@ -59,8 +75,8 @@ function buildTypeSidebar(moves, container, cols) {
 
 
 function getActiveTypes() {
-  return Array.from(document.querySelectorAll('#type-filters input:checked'))
-    .map(el => el.value);
+  return Array.from(document.querySelectorAll('#type-filters button[data-selected="1"]'))
+    .map(btn => btn.dataset.type);
 }
 
 function filterAndRender(allItems, container, cols = 3) {
