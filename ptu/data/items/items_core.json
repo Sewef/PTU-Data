@@ -9,19 +9,19 @@
             },
             {
                 "Ball Name": "Great Ball",
-                "Modifier": "-10",
+                "Modifier": "-10 (+2)",
                 "Special": "A better Poké Ball with no special Effect.",
                 "Price": 400
             },
             {
                 "Ball Name": "Ultra Ball",
-                "Modifier": "-15",
+                "Modifier": "-15 (+3)",
                 "Special": "The best generic Poké Ball.",
                 "Price": 800
             },
             {
                 "Ball Name": "Master Ball",
-                "Modifier": "-100",
+                "Modifier": "-100 (+20)",
                 "Special": "Incredibly Rare. Worth at least ₽300,000. Sold nowhere.",
                 "Price": 800
             },
@@ -34,43 +34,43 @@
             {
                 "Ball Name": "Level Ball",
                 "Modifier": "0",
-                "Special": "-20 Modifier if the target is under half the level your active Pokémon is.",
+                "Special": "-20 (+4) Modifier if the target is under half the level your active Pokémon is.",
                 "Price": 800
             },
             {
                 "Ball Name": "Lure Ball",
                 "Modifier": "0",
-                "Special": "-20 Modifier if the target was baited into the encounter with food.",
+                "Special": "-20 (+4) Modifier if the target was baited into the encounter with food.",
                 "Price": 800
             },
             {
                 "Ball Name": "Moon Ball",
                 "Modifier": "0",
-                "Special": "-20 Modifier if the target evolves with an Evolution Stone.",
+                "Special": "-20 (+4) Modifier if the target evolves with an Evolution Stone.",
                 "Price": 800
             },
             {
                 "Ball Name": "Friend Ball",
-                "Modifier": "-5",
+                "Modifier": "-5 (+1)",
                 "Special": "A caught Pokémon will start with +1 Loyalty.",
                 "Price": 800
             },
             {
                 "Ball Name": "Love Ball",
                 "Modifier": "0",
-                "Special": "-30 Modifier if the user has an active Pokemon that is of the same evolutionary line as the target, and the opposite gender. Does not work with genderless Pokémon.",
+                "Special": "-30 (+6) Modifier if the user has an active Pokemon that is of the same evolutionary line as the target, and the opposite gender. Does not work with genderless Pokémon.",
                 "Price": 800
             },
             {
                 "Ball Name": "Heavy Ball",
                 "Modifier": "0",
-                "Special": "-5 Modifier for each Weight Class the target is above 1.",
+                "Special": "-5 (+1) Modifier for each Weight Class the target is above 1.",
                 "Price": 800
             },
             {
                 "Ball Name": "Fast Ball",
                 "Modifier": "0",
-                "Special": "-20 Modifier if the target has a Movement Capability above 7.",
+                "Special": "-20 (+4) Modifier if the target has a Movement Capability above 7.",
                 "Price": 800
             },
             {
@@ -88,66 +88,66 @@
             {
                 "Ball Name": "Repeat Ball",
                 "Modifier": "0",
-                "Special": "-20 Modifier if you already own a Pokémon of the target's species.",
+                "Special": "-20 (+4) Modifier if you already own a Pokémon of the target's species.",
                 "Price": 800
             },
             {
                 "Ball Name": "Timer Ball",
-                "Modifier": "5",
-                "Special": "-5 to the Modifier after every round since the beginning of the encounter, until the Modifier is -20.",
+                "Modifier": "5 (-1)",
+                "Special": "-5 (+1) to the Modifier after every round since the beginning of the encounter, until the Modifier is -20.",
                 "Price": 800
             },
             {
                 "Ball Name": "Nest Ball",
                 "Modifier": "0",
-                "Special": "-20 Modifier if the target is under level 10.",
+                "Special": "-20 (+4) Modifier if the target is under level 10.",
                 "Price": 800
             },
             {
                 "Ball Name": "Net Ball",
                 "Modifier": "0",
-                "Special": "-20 Modifier, if the target is Water or Bug type.",
+                "Special": "-20 (+4) Modifier, if the target is Water or Bug type.",
                 "Price": 800
             },
             {
                 "Ball Name": "Dive Ball",
                 "Modifier": "0",
-                "Special": "-20 Modifier, if the target was found underwater or underground.",
+                "Special": "-20 (+4) Modifier, if the target was found underwater or underground.",
                 "Price": 800
             },
             {
                 "Ball Name": "Luxury Ball",
-                "Modifier": "-5",
+                "Modifier": "-5 (+1)",
                 "Special": "A caught Pokémon is easily pleased and starts with a raised happiness.",
                 "Price": 800
             },
             {
                 "Ball Name": "Heal Ball",
-                "Modifier": "-5",
+                "Modifier": "-5 (+1)",
                 "Special": "A caught Pokemon will heal to Max HP immediately upon capture.",
                 "Price": 800
             },
             {
                 "Ball Name": "Quick Ball",
-                "Modifier": "-20",
-                "Special": "+5 to Modifier after 1 round of the encounter, +10 to Modifier after round 2, +20 to modifier after round 3.",
+                "Modifier": "-20 (+4)",
+                "Special": "+5 (-1) to Modifier after 1 round of the encounter, +10 to Modifier after round 2, +20 to modifier after round 3.",
                 "Price": 800
             },
             {
                 "Ball Name": "Dusk Ball",
                 "Modifier": "0",
-                "Special": "-20 Modifier if it is dark, or if there is very little light out, when used.",
+                "Special": "-20 (+4) Modifier if it is dark, or if there is very little light out, when used.",
                 "Price": 800
             },
             {
                 "Ball Name": "Cherish Ball",
-                "Modifier": "-5",
+                "Modifier": "-5 (+1)",
                 "Special": "A decorative Poké Ball often given out during special events.",
                 "Price": 800
             },
             {
                 "Ball Name": "Park Ball",
-                "Modifier": "-15",
+                "Modifier": "-15 (+3)",
                 "Special": "Used during Safari hunts.",
                 "Price": 800
             }
