@@ -704,6 +704,9 @@ def transform_entry(src: Dict[str, Any], abilities_db: Dict[str, Dict[str, Any]]
 def load_all_species_from_dir(in_dir: Path) -> List[Dict[str, Any]]:
     out: List[Dict[str, Any]] = []
     for path in sorted(in_dir.glob("*.json")):
+    # ignorer les fichiers .min.json
+        if path.name.endswith(".min.json"):
+            continue
         try:
             data = read_json(path)
         except Exception as e:
