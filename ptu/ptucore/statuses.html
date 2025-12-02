@@ -27,8 +27,8 @@
       <aside class="col-md-2 col-sm-3"></aside>
       <main class="col-md-10">
         <h1 class="h4 mb-3">Statuses</h1>
-        <div class="mb-3">
-          <input type="text" id="card-search" class="form-control" placeholder="Search Statuses...">
+        <div class="search-wrap mb-3">
+          <input type="text" id="dex-search" class="form-control" placeholder="Search statuses...">
         </div>
         <div id="card-container" class="row g-3 w-100"></div>
       </main>
@@ -42,7 +42,7 @@
     includeHTML(() => {
       setActive();
       showPageWhenLoaded();
-      loadJsonAsCard_2("/ptu/data/statuses/statuses_core.min.json", document.getElementById("card-container"), "card-search");
+      loadJsonAsCard_2("/ptu/data/statuses/statuses_core.min.json", document.getElementById("card-container"), "dex-search");
     });
   </script>
 </body>

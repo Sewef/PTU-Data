@@ -57,16 +57,11 @@ function renderCategory(cat) {
   const pane = edgeContainer;
   pane.innerHTML = "";
 
-  const searchBox = document.createElement("div");
-  searchBox.className = "mb-3";
-  searchBox.innerHTML = `<input type="text" id="filter-search" class="form-control" placeholder="Search...">`;
-  pane.appendChild(searchBox);
-
   const row = document.createElement("div");
   row.className = "row g-3";
   pane.appendChild(row);
 
-  const queryInput = document.getElementById("filter-search");
+  const queryInput = document.getElementById("items-search");
 
   const update = () => {
     row.innerHTML = "";
