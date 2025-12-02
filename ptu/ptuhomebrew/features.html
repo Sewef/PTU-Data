@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,9 +16,8 @@
   <script src="/ptu/js/jquery-3.7.1.min.js"></script>
   <script src="/ptu/js/popper.min.js"></script>
   <script src="/ptu/js/bootstrap.min.js"></script>
-  <script src="/ptu/js/helpers.js"></script>
-  <script src="/ptu/js/json_features.js"></script>
 </head>
+
 <body>
   <div w3-include-html="header.html"></div>
   <div class="container-fluid py-3">
@@ -31,9 +31,16 @@
       </main>
     </div>
   </div>
-  <script>
-    includeHTML(() => setActive());
-    loadClasses("/ptu/data/features/features_homebrew.min.json");
+
+  <script type="module">
+    import { includeHTML, setActive, showPageWhenLoaded } from "/ptu/js/helpers.js";
+    import { loadClasses } from "/ptu/js/json_features.js";
+    includeHTML(() => {
+      setActive();
+      showPageWhenLoaded();
+      loadClasses("/ptu/data/features/features_core.min.json");
+    });
   </script>
 </body>
+
 </html>

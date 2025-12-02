@@ -16,9 +16,8 @@
   <script src="/ptu/js/jquery-3.7.1.min.js"></script>
   <script src="/ptu/js/popper.min.js"></script>
   <script src="/ptu/js/bootstrap.min.js"></script>
-  <script src="/ptu/js/helpers.js"></script>
   <script>
-    window.selectedPreset = "Homebrew";
+    window.selectedPreset = "Core";
   </script>
 </head>
 
@@ -166,8 +165,13 @@
 </body>
 
 </html>
-<script>
-  // Ensure shared header (and its CSS links) is injected
-  includeHTML(() => setActive());
+
+<script type="module">
+  import { includeHTML, setActive, showPageWhenLoaded } from "/ptu/js/helpers.js";
+  import { loadPokedexPage } from "/ptu/js/json_pokedex.js";
+  includeHTML(() => {
+    setActive();
+    showPageWhenLoaded();
+    loadPokedexPage();
+  });
 </script>
-<script src="/ptu/js/json_pokedex.js" defer></script>

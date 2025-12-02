@@ -15,7 +15,7 @@
   <script src="/ptu/js/jquery-3.7.1.min.js"></script>
   <script src="/ptu/js/popper.min.js"></script>
   <script src="/ptu/js/bootstrap.min.js"></script>
-
+  
   <title>PTU Data - Statuses</title>
 </head>
 
@@ -29,15 +29,17 @@
       </div>
 
       <div id="card-container" class="row g-3 w-100"></div>
-
-      <script>
-        loadJsonAsCard_2("/ptu/data/statuses/statuses_homebrew.min.json", document.getElementById("card-container"), "card-search");
-      </script>
     </div>
   </div>
 
-  <script>
-    includeHTML(() => setActive());
+  <script type="module">
+    import { includeHTML, setActive, showPageWhenLoaded } from "/ptu/js/helpers.js";
+    import { loadJsonAsCard_2 } from "/ptu/js/json_utils.js";
+    includeHTML(() => {
+      setActive();
+      showPageWhenLoaded();
+      loadJsonAsCard_2("/ptu/data/statuses/statuses_homebrew.min.json", document.getElementById("card-container"), "card-search");
+    });
   </script>
 </body>
 

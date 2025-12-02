@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,12 +13,12 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/ptu/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="PTU-Data" />
   <link rel="manifest" href="/ptu/site.webmanifest" />
+
   <script src="/ptu/js/jquery-3.7.1.min.js"></script>
   <script src="/ptu/js/popper.min.js"></script>
   <script src="/ptu/js/bootstrap.min.js"></script>
-  <script src="/ptu/js/helpers.js"></script>
-  <script src="/ptu/js/json_moves.js"></script>
 </head>
+
 <body>
   <div w3-include-html="header.html"></div>
   <div class="container-fluid py-3">
@@ -59,12 +60,16 @@
     </div>
   </div>
 
-  <script>
-    includeHTML(() => setActive());
-    window.addEventListener("DOMContentLoaded", function () {
+  <script type="module">
+    import { includeHTML, setActive, showPageWhenLoaded } from "/ptu/js/helpers.js";
+    import { loadMovesAsCard, loadKeywordsAsCard } from "/ptu/js/json_moves.js";
+    includeHTML(() => {
+      setActive();
+      showPageWhenLoaded();
       loadKeywordsAsCard("/ptu/data/moves/keywords_9G.min.json", document.getElementById("keywords-container"), 2);
       loadMovesAsCard("/ptu/data/moves/moves_homebrew.min.json", document.getElementById("moves-container"), 2);
     });
   </script>
 </body>
+
 </html>

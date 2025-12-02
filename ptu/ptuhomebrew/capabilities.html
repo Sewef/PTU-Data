@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,8 +16,6 @@
   <script src="/ptu/js/jquery-3.7.1.min.js"></script>
   <script src="/ptu/js/popper.min.js"></script>
   <script src="/ptu/js/bootstrap.min.js"></script>
-  <script src="/ptu/js/helpers.js"></script>
-  <script src="/ptu/js/json_utils.js"></script>
 </head>
 
 <body>
@@ -38,9 +37,16 @@
       </main>
     </div>
   </div>
-  <script>
-    includeHTML(() => setActive());
-    loadJsonAsCard("/ptu/data/capabilities/capabilities_9G.min.json", document.getElementById("cards-container"), 2);
+
+  <script type="module">
+    import { includeHTML, setActive, showPageWhenLoaded } from "/ptu/js/helpers.js";
+    import { loadJsonAsCard } from "/ptu/js/json_utils.js";
+    includeHTML(() => {
+      setActive();
+      showPageWhenLoaded();
+      loadJsonAsCard("/ptu/data/capabilities/capabilities_9G.min.json", document.getElementById("cards-container"), 2);
+    });
   </script>
 </body>
+
 </html>
