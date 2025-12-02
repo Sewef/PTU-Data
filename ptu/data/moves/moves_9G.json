@@ -17,9 +17,9 @@
         "Damage Base": "Damage Base 4: 1d8+6 / 1",
         "Class": "Physical",
         "Range": "Melee, 1 Target, Priority",
+        "Effect": "None",
         "Contest Type": "Tough",
-        "Contest Effect": "Saving Grace",
-        "Effect": "None"
+        "Contest Effect": "Saving Grace"
     },
     "Acid": {
         "Type": "Poison",
@@ -832,9 +832,9 @@
         "Damage Base": "Damage Base 4: 1d8+6 / 11",
         "Class": "Physical",
         "Range": "2, 1 Target",
+        "Effect": "None",
         "Contest Type": "Tough",
-        "Contest Effect": "Steady Performance",
-        "Effect": "None"
+        "Contest Effect": "Steady Performance"
     },
     "Brave Bird": {
         "Type": "Flying",
@@ -1922,9 +1922,9 @@
         "Damage Base": "Damage Base 5: 1d8+8 / 13",
         "Class": "Physical",
         "Range": "6, 1 Target, Double Strike; or 6, 2 Targets",
+        "Effect": "None",
         "Contest Type": "Smart",
-        "Contest Effect": "Double Time",
-        "Effect": "None"
+        "Contest Effect": "Double Time"
     },
     "Dragon Energy": {
         "Type": "Dragon",
@@ -2065,9 +2065,9 @@
         "Damage Base": "Damage Base 4: 1d8+6 / 11",
         "Class": "Physical",
         "Range": "Melee, 1 Target, Double Strike",
+        "Effect": "None",
         "Contest Type": "Cool",
-        "Contest Effect": "Reliable",
-        "Effect": "None"
+        "Contest Effect": "Reliable"
     },
     "Dynamax Cannon": {
         "Type": "Dragon",
@@ -2321,9 +2321,9 @@
         "Damage Base": "Damage Base 16: 5d10+20 / 50",
         "Class": "Special",
         "Range": "Line 6, Smite, Exhaust",
+        "Effect": "None",
         "Contest Type": "Cool",
-        "Contest Effect": "Seen Nothing Yet",
-        "Effect": "None"
+        "Contest Effect": "Seen Nothing Yet"
     },
     "Expanding Force": {
         "Type": "Psychic",
@@ -4716,9 +4716,9 @@
         "Damage Base": "Damage Base 15: 4d10+20 / 45",
         "Class": "Physical",
         "Range": "Burst 1, Smite, Exhaust",
+        "Effect": "None",
         "Contest Type": "Tough",
-        "Contest Effect": "Exhausting Act",
-        "Effect": "None"
+        "Contest Effect": "Exhausting Act"
     },
     "Meteor Beam": {
         "Type": "Rock",
@@ -5315,9 +5315,9 @@
         "Damage Base": "Damage Base 8: 2d8+10 / 19",
         "Class": "Special",
         "Range": "Cone 2, Sonic",
+        "Effect": "None",
         "Contest Type": "Cool",
-        "Contest Effect": "Attention Grabber",
-        "Effect": "None"
+        "Contest Effect": "Attention Grabber"
     },
     "Overheat": {
         "Type": "Fire",
@@ -8737,9 +8737,9 @@
         "Damage Base": "Damage Base 8: 2d8+10 / 19",
         "Class": "Physical",
         "Range": "Melee, 1 Target, Priority, Recoil 1/4",
+        "Effect": "None",
         "Contest Type": "Tough",
-        "Contest Effect": "Steady Performance",
-        "Effect": "None"
+        "Contest Effect": "Steady Performance"
     },
     "Wave Dash* [New]": {
         "Type": "Water",

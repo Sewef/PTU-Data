@@ -17,9 +17,9 @@
         "Damage Base": "Damage Base 4: 1d8+6 / 1",
         "Class": "Physical",
         "Range": "Melee, 1 Target, Priority",
+        "Effect": "None",
         "Contest Type": "Tough",
-        "Contest Effect": "Saving Grace",
-        "Effect": "None"
+        "Contest Effect": "Saving Grace"
     },
     "Acid": {
         "Type": "Poison",
@@ -4202,9 +4202,9 @@
         "Damage Base": "Damage Base 15: 4d10+20 / 45",
         "Class": "Physical",
         "Range": "Burst 1, Smite, Exhaust",
+        "Effect": "None",
         "Contest Type": "Tough",
-        "Contest Effect": "Exhausting Act",
-        "Effect": "None"
+        "Contest Effect": "Exhausting Act"
     },
     "Meteor Beam": {
         "Type": "Rock",
