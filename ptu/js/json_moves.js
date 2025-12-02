@@ -12,10 +12,7 @@ function buildTypeSidebar(moves, container, cols) {
 
   const types = [...new Set(moves.map(m => m.Type).filter(Boolean))].sort();
   sidebar.innerHTML = `
-  <div class="mb-3">
-    <input type="text" id="sidebar-search" class="form-control form-control-sm mb-2" placeholder="Filter types...">
-    <button id="toggle-all-types" class="btn btn-sm btn-primary w-100 mb-2">Select/Deselect all</button>
-  </div>
+  <label class="form-label">Types</label>
   <div id="type-filters" class="d-flex flex-wrap gap-1">
   ${types.map(type => `
     <button
@@ -27,7 +24,23 @@ function buildTypeSidebar(moves, container, cols) {
       ${type}
     </button>
   `).join("")}
-</div>
+  </div>
+
+  <div class="mt-3">
+    <label class="form-label">Class</label>
+    <div id="class-filters" class="d-flex flex-wrap gap-1">
+      ${["Physical", "Special", "Status"].map(cls => `
+        <button
+          type="button"
+          class="btn btn-sm type-pill card-type-${cls}"
+          data-class="${cls}"
+          data-selected="0"
+        >
+          ${cls}
+        </button>
+      `).join("")}
+    </div>
+  </div>
 `;
 
 
@@ -47,6 +60,19 @@ function buildTypeSidebar(moves, container, cols) {
 
     filterAndRender(moves, container, cols);
   });
+
+  // Gestion click des Class
+  sidebar.querySelector("#class-filters").addEventListener("click", (ev) => {
+    const btn = ev.target.closest("button[data-class]");
+    if (!btn) return;
+
+    const selected = btn.getAttribute("data-selected") === "1";
+    btn.setAttribute("data-selected", selected ? "0" : "1");
+    btn.classList.toggle("active", !selected);
+
+    filterAndRender(moves, container, cols);
+  });
+
 
   const sidebarSearch = document.getElementById("sidebar-search");
   if (sidebarSearch) {
@@ -79,9 +105,15 @@ function getActiveTypes() {
     .map(btn => btn.dataset.type);
 }
 
+function getActiveClasses() {
+  return Array.from(document.querySelectorAll('#class-filters button[data-selected="1"]'))
+    .map(btn => btn.dataset.class);
+}
+
 function filterAndRender(allItems, container, cols = 3) {
   const query = document.getElementById("card-search")?.value.toLowerCase() || "";
   const activeTypes = getActiveTypes();
+  const activeClasses = getActiveClasses();
 
   const filtered = allItems.filter(item => {
     const nameMatches = item.Name?.toLowerCase().includes(query);
@@ -90,8 +122,9 @@ function filterAndRender(allItems, container, cols = 3) {
       .some(([key, value]) => typeof value === "string" && value.toLowerCase().includes(query));
 
     const matchesType = activeTypes.length === 0 || activeTypes.includes(item.Type);
+    const matchesClass = activeClasses.length === 0 || activeClasses.includes(item.Class);
 
-    return (nameMatches || otherMatches) && matchesType;
+    return (nameMatches || otherMatches) && matchesType && matchesClass;
   });
 
   filtered.sort((a, b) => {
