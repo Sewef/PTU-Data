@@ -1,12 +1,12 @@
 {
   "General": {
     "Name": "General",
-    "category": "Other",
-    "source": "Core",
-    "branches": [
+    "Category": "Other",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Command Versatility",
             "Prerequisites": "Adept Command, Guile, or Pokémon Education",
@@ -108,7 +108,7 @@
             "Prerequisites": "Expert Command or Intimidate",
             "Frequency": "Static",
             "Effect": "You gain the Reckless Advance and Strike Again! Orders.",
-            "orders": [
+            "Orders": [
               {
                 "Name": "Reckless Advance",
                 "Tags": "[Orders][Stratagem]",
@@ -134,7 +134,7 @@
             "Prerequisites": "Expert Perception or Guile",
             "Frequency": "Static",
             "Effect": "You gain the Trick Shot and Long Shot Orders.",
-            "orders": [
+            "Orders": [
               {
                 "Name": "Trick Shot",
                 "Tags": "[Orders][Stratagem]",
@@ -160,7 +160,7 @@
             "Prerequisites": "Expert Charm or Guile",
             "Frequency": "Static",
             "Effect": "You gain the Capricious Whirl and Dazzling Dervish Orders.",
-            "orders": [
+            "Orders": [
               {
                 "Name": "Capricious Whirl",
                 "Tags": "[Orders][Stratagem]",
@@ -186,7 +186,7 @@
             "Prerequisites": "Expert Charm or Intimidate",
             "Frequency": "Static",
             "Effect": "You gain the Brace for Impact and Sentinel Stance Orders.",
-            "orders": [
+            "Orders": [
               {
                 "Name": "Brace for Impact",
                 "Tags": "[Orders][Stratagem]",
@@ -212,7 +212,7 @@
             "Prerequisites": "Expert Command or Perception",
             "Frequency": "Static",
             "Effect": "You gain the Pinpoint Strike and Perfect Aim Orders.",
-            "orders": [
+            "Orders": [
               {
                 "Name": "Pinpoint Strike",
                 "Tags": "[Orders][Stratagem]",
@@ -405,12 +405,12 @@
   },
   "Ace Trainer": {
     "Name": "Ace Trainer",
-    "category": "Introductory",
-    "source": "Core",
-    "branches": [
+    "Category": "Introductory",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Ace Trainer",
             "Tags": "[Class]",
@@ -463,7 +463,7 @@
           },
           {
             "Name": "Signature Technique Modifications",
-            "techniques": [
+            "Techniques": [
               {
                 "Name": "Cone, Line, Burst, and Blast Moves",
                 "Scattershot – Agility Training": "Instead of the Move's normal range, it has a range of 4m, 3 Targets.",
@@ -496,12 +496,12 @@
   },
   "Capture Specialist": {
     "Name": "Capture Specialist",
-    "category": "Introductory",
-    "source": "Erratum September 2015",
-    "branches": [
+    "Category": "Introductory",
+    "Source": "Erratum September 2015",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Capture Specialist",
             "Tags": "[Class][+Speed]",
@@ -536,7 +536,7 @@
           },
           {
             "Name": "Capture Techniques",
-            "techniques": [
+            "Techniques": [
               {
                 "Name": "Capture Skills",
                 "Frequency": "Static",
@@ -597,12 +597,12 @@
   },
   "Capture Specialist (old)": {
     "Name": "Capture Specialist (old)",
-    "category": "Introductory",
-    "source": "Core",
-    "branches": [
+    "Category": "Introductory",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Capture Specialist",
             "Tags": "[Class][+Speed]",
@@ -638,7 +638,7 @@
           },
           {
             "Name": "Capture Techniques",
-            "techniques": [
+            "Techniques": [
               {
                 "Name": "Capture Skills",
                 "Frequency": "Static",
@@ -699,12 +699,12 @@
   },
   "Commander": {
     "Name": "Commander",
-    "category": "Introductory",
-    "source": "Core",
-    "branches": [
+    "Category": "Introductory",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Commander",
             "Tags": "[Class]",
@@ -760,12 +760,12 @@
   },
   "Coordinator": {
     "Name": "Coordinator",
-    "category": "Introductory",
-    "source": "Core",
-    "branches": [
+    "Category": "Introductory",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Coordinator",
             "Tags": "[Class]",
@@ -819,7 +819,7 @@
           {
             "Name": "Innovation Moves",
             "Description": "The Coordinator's \"Innovation\" Feature lets the Coordinator create new Moves for their Pokémon. These Moves can serve to fill voids in Move Lists for both Battles and Contests and provide utility.\nTo create a Move, first choose a Contest Type. This affects the Move's effects and of course its role in Contests.\nNext choose a Contest Effect. Look at the \"Contest Effects\" section (page 266) under \"Contests\" for the full list. Pick one. That's right, any of them. This determines what the Move does during a Contest, of course.\nThird, choose one of the four templates below. This determines the Move's effects in Battle. These are modified by the Contest Type of the Move. Remember, Cool is associated with Attack, Tough with Defense, Beauty with Special Attack, Smart with Special Defense, and Cute with Speed.\nAnd finally, name your Move! This is the best part!",
-            "templates": [
+            "Templates": [
               {
                 "Name": "Template #1",
                 "Type": "Normal",
@@ -864,12 +864,12 @@
   },
   "Hobbyist": {
     "Name": "Hobbyist",
-    "category": "Introductory",
-    "source": "Erratum May 2015",
-    "branches": [
+    "Category": "Introductory",
+    "Source": "Erratum May 2015",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Hobbyist",
             "Tags": "[Class]",
@@ -985,12 +985,12 @@
   },
   "Hobbyist (old)": {
     "Name": "Hobbyist",
-    "category": "Introductory",
-    "source": "Core",
-    "branches": [
+    "Category": "Introductory",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Hobbyist",
             "Tags": "[Class]",
@@ -1106,12 +1106,12 @@
   },
   "Mentor": {
     "Name": "Mentor",
-    "category": "Introductory",
-    "source": "Core",
-    "branches": [
+    "Category": "Introductory",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Mentor",
             "Tags": "[Class]",
@@ -1195,12 +1195,12 @@
   },
   "Cheerleader": {
     "Name": "Cheerleader",
-    "category": "Battling",
-    "source": "Erratum September 2015",
-    "branches": [
+    "Category": "Battling",
+    "Source": "Erratum September 2015",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Cheerleader",
             "Tags": "[Class]",
@@ -1256,12 +1256,12 @@
   },
   "Cheerleader (old)": {
     "Name": "Cheerleader (old)",
-    "category": "Battling",
-    "source": "Core",
-    "branches": [
+    "Category": "Battling",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Cheerleader",
             "Tags": "[Class]",
@@ -1320,12 +1320,12 @@
   },
   "Duelist": {
     "Name": "Duelist",
-    "category": "Battling",
-    "source": "Core",
-    "branches": [
+    "Category": "Battling",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Duelist",
             "Tags": "[Class]",
@@ -1383,12 +1383,12 @@
   },
   "Enduring Soul": {
     "Name": "Enduring Soul",
-    "category": "Battling",
-    "source": "Core",
-    "branches": [
+    "Category": "Battling",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Enduring Soul",
             "Tags": "[Class]",
@@ -1442,12 +1442,12 @@
   },
   "Juggler": {
     "Name": "Juggler",
-    "category": "Battling",
-    "source": "Core",
-    "branches": [
+    "Category": "Battling",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Juggler",
             "Tags": "[Class][+Speed]",
@@ -1507,12 +1507,12 @@
   },
   "Rider": {
     "Name": "Rider",
-    "category": "Battling",
-    "source": "Core",
-    "branches": [
+    "Category": "Battling",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Rider",
             "Tags": "[Class][+Speed]",
@@ -1573,12 +1573,12 @@
   },
   "Taskmaster": {
     "Name": "Taskmaster",
-    "category": "Battling",
-    "source": "Core",
-    "branches": [
+    "Category": "Battling",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Taskmaster",
             "Tags": "[Class]",
@@ -1643,12 +1643,12 @@
   },
   "Trickster": {
     "Name": "Trickster",
-    "category": "Battling",
-    "source": "Core",
-    "branches": [
+    "Category": "Battling",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Trickster",
             "Tags": "[Class]",
@@ -1717,7 +1717,7 @@
           },
           {
             "Name": "Trickster Techniques",
-            "techniques": [
+            "Techniques": [
               {
                 "Name": "Mind Games",
                 "Frequency": "Scene x2 — Free Action",
@@ -1750,12 +1750,12 @@
   },
   "Stat Ace": {
     "Name": "Stat Ace",
-    "category": "Specialist Team",
-    "source": "Core",
-    "branches": [
+    "Category": "Specialist Team",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Attack",
-        "features": [
+        "Features": [
           {
             "Name": "Stat Ace",
             "Tags": "[Class][Branch]",
@@ -1813,7 +1813,7 @@
       },
       {
         "Name": "Defense",
-        "features": [
+        "Features": [
           {
             "Name": "Stat Ace",
             "Tags": "[Class][Branch]",
@@ -1871,7 +1871,7 @@
       },
       {
         "Name": "Special Attack",
-        "features": [
+        "Features": [
           {
             "Name": "Stat Ace",
             "Tags": "[Class][Branch]",
@@ -1929,7 +1929,7 @@
       },
       {
         "Name": "Special Defense",
-        "features": [
+        "Features": [
           {
             "Name": "Stat Ace",
             "Tags": "[Class][Branch]",
@@ -1987,7 +1987,7 @@
       },
       {
         "Name": "Speed",
-        "features": [
+        "Features": [
           {
             "Name": "Stat Ace",
             "Tags": "[Class][Branch]",
@@ -2047,12 +2047,12 @@
   },
   "Style Expert": {
     "Name": "Style Expert",
-    "category": "Specialist Team",
-    "source": "Core",
-    "branches": [
+    "Category": "Specialist Team",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Beauty",
-        "features": [
+        "Features": [
           {
             "Name": "Style Expert",
             "Tags": "[Class][Branch]",
@@ -2106,7 +2106,7 @@
       },
       {
         "Name": "Cool",
-        "features": [
+        "Features": [
           {
             "Name": "Style Expert",
             "Tags": "[Class][Branch]",
@@ -2160,7 +2160,7 @@
       },
       {
         "Name": "Cute",
-        "features": [
+        "Features": [
           {
             "Name": "Style Expert",
             "Tags": "[Class][Branch]",
@@ -2214,7 +2214,7 @@
       },
       {
         "Name": "Smart",
-        "features": [
+        "Features": [
           {
             "Name": "Style Expert",
             "Tags": "[Class][Branch]",
@@ -2268,7 +2268,7 @@
       },
       {
         "Name": "Tough",
-        "features": [
+        "Features": [
           {
             "Name": "Style Expert",
             "Tags": "[Class][Branch]",
@@ -2324,12 +2324,12 @@
   },
   "Type Ace": {
     "Name": "Type Ace",
-    "category": "Specialist Team",
-    "source": "Core",
-    "branches": [
+    "Category": "Specialist Team",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Bug",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -2392,7 +2392,7 @@
       },
       {
         "Name": "Dark",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -2456,7 +2456,7 @@
       },
       {
         "Name": "Dragon",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -2520,7 +2520,7 @@
       },
       {
         "Name": "Electric",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -2583,7 +2583,7 @@
       },
       {
         "Name": "Fairy",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -2646,7 +2646,7 @@
       },
       {
         "Name": "Fighting",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -2709,7 +2709,7 @@
       },
       {
         "Name": "Fire",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -2772,7 +2772,7 @@
       },
       {
         "Name": "Flying",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -2835,7 +2835,7 @@
       },
       {
         "Name": "Ghost",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -2898,7 +2898,7 @@
       },
       {
         "Name": "Grass",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -2962,7 +2962,7 @@
       },
       {
         "Name": "Ground",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -3025,7 +3025,7 @@
       },
       {
         "Name": "Ice",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -3088,7 +3088,7 @@
       },
       {
         "Name": "Normal",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -3152,7 +3152,7 @@
       },
       {
         "Name": "Poison",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -3216,7 +3216,7 @@
       },
       {
         "Name": "Psychic",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -3279,7 +3279,7 @@
       },
       {
         "Name": "Rock",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -3343,7 +3343,7 @@
       },
       {
         "Name": "Steel",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -3406,7 +3406,7 @@
       },
       {
         "Name": "Water",
-        "features": [
+        "Features": [
           {
             "Name": "Type Ace",
             "Tags": "[Class][Branch]",
@@ -3474,12 +3474,12 @@
   },
   "Chef": {
     "Name": "Chef",
-    "category": "Professional",
-    "source": "Core",
-    "branches": [
+    "Category": "Professional",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Chef",
             "Tags": "[Class]",
@@ -3609,12 +3609,12 @@
   },
   "Chronicler": {
     "Name": "Chronicler",
-    "category": "Professional",
-    "source": "Core",
-    "branches": [
+    "Category": "Professional",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Chronicler",
             "Tags": "[Class]",
@@ -3670,12 +3670,12 @@
   },
   "Fashionista": {
     "Name": "Fashionista",
-    "category": "Professional",
-    "source": "Core",
-    "branches": [
+    "Category": "Professional",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Fashionista",
             "Tags": "[Class]",
@@ -3789,12 +3789,12 @@
   },
   "Researcher": {
     "Name": "Researcher",
-    "category": "Professional",
-    "source": "Core",
-    "branches": [
+    "Category": "Professional",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Core",
-        "features": [
+        "Features": [
           {
             "Name": "Researcher",
             "Tags": "[Class][Branch]",
@@ -3806,7 +3806,7 @@
       },
       {
         "Name": "General",
-        "features": [
+        "Features": [
           {
             "Name": "Breadth of Knowledge",
             "Prerequisites": "General Research Field, Novice General Education",
@@ -3837,7 +3837,7 @@
       },
       {
         "Name": "General (old)",
-        "features": [
+        "Features": [
           {
             "Name": "Breadth of Knowledge",
             "Prerequisites": "General Research Field, Novice General Education",
@@ -3869,7 +3869,7 @@
       },
       {
         "Name": "Apothecary",
-        "features": [
+        "Features": [
           {
             "Name": "Apothecary",
             "Prerequisites": "Apothecary Research Field, Novice Medicine Education",
@@ -3930,7 +3930,7 @@
       },
       {
         "Name": "Apothecary (old)",
-        "features": [
+        "Features": [
           {
             "Name": "Apothecary",
             "Prerequisites": "Apothecary Research Field, Novice Medicine Education",
@@ -3990,7 +3990,7 @@
       },
       {
         "Name": "Artificer",
-        "features": [
+        "Features": [
           {
             "Name": "Crystal Artificer",
             "Prerequisites": "Artificer Research Field, Gem Lore",
@@ -4062,7 +4062,7 @@
       },
       {
         "Name": "Botany",
-        "features": [
+        "Features": [
           {
             "Name": "Seed Bag",
             "Rank 1 Prerequisites": "Green Thumb, Adept General Education, Adept Survival",
@@ -4088,7 +4088,7 @@
       },
       {
         "Name": "Chemistry",
-        "features": [
+        "Features": [
           {
             "Name": "Chemist",
             "Prerequisites": "Chemistry Research Field, Repel Crafter",
@@ -4148,7 +4148,7 @@
       },
       {
         "Name": "Climatology",
-        "features": [
+        "Features": [
           {
             "Name": "Climatology",
             "Prerequisites": "Climatology Research Field, Novice Survival",
@@ -4180,7 +4180,7 @@
       },
       {
         "Name": "Occultism",
-        "features": [
+        "Features": [
           {
             "Name": "Witch Hunter",
             "Prerequisites": "Occultism Research Field, Novice Occult Education",
@@ -4210,7 +4210,7 @@
       },
       {
         "Name": "Paleontology",
-        "features": [
+        "Features": [
           {
             "Name": "Fossil Restoration",
             "Prerequisites": "Paleontology Research Field, Paleontologist, Novice Pokémon Education",
@@ -4243,7 +4243,7 @@
       },
       {
         "Name": "Pokémon Caretaking",
-        "features": [
+        "Features": [
           {
             "Name": "Pusher",
             "Prerequisites": "Pokémon Caretaking Research Field, Novice Pokémon Education",
@@ -4275,7 +4275,7 @@
       },
       {
         "Name": "Gadgeteer",
-        "features": [
+        "Features": [
           {
             "Name": "Improvised Gadgets",
             "Prerequisites": "Gadgeteer Research Field, Novice Technology Education",
@@ -4307,7 +4307,7 @@
       },
       {
         "Name": "Engineer",
-        "features": [
+        "Features": [
           {
             "Name": "Engineer",
             "Prerequisites": "Engineer Research Field, Pokébot Training",
@@ -4363,7 +4363,7 @@
       },
       {
         "Name": "Jailbreaker",
-        "features": [
+        "Features": [
           {
             "Name": "Jailbreaker",
             "Prerequisites": "Jailbreaker Research Field, Basic Balls",
@@ -4414,7 +4414,7 @@
       },
       {
         "Name": "Upgrader",
-        "features": [
+        "Features": [
           {
             "Name": "Upgrader",
             "Prerequisites": "Upgrader Research Field, Novice Medicine Edu, Novice Technology Edu",
@@ -4478,12 +4478,12 @@
   },
   "Survivalist": {
     "Name": "Survivalist",
-    "category": "Professional",
-    "source": "Erratum May 2015",
-    "branches": [
+    "Category": "Professional",
+    "Source": "Erratum May 2015",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Survivalist",
             "Tags": "[Class][+HP]",
@@ -4586,12 +4586,12 @@
   },
   "Survivalist (old)": {
     "Name": "Survivalist",
-    "category": "Professional",
-    "source": "Core",
-    "branches": [
+    "Category": "Professional",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Survivalist",
             "Tags": "[Class][+HP]",
@@ -4694,12 +4694,12 @@
   },
   "Athlete": {
     "Name": "Athlete",
-    "category": "Fighter",
-    "source": "Core",
-    "branches": [
+    "Category": "Fighter",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Athlete",
             "Tags": "[Class][+HP]",
@@ -4778,12 +4778,12 @@
   },
   "Dancer": {
     "Name": "Dancer",
-    "category": "Fighter",
-    "source": "Core",
-    "branches": [
+    "Category": "Fighter",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Dancer",
             "Tags": "[Class][+Speed]",
@@ -4856,12 +4856,12 @@
   },
   "Hunter": {
     "Name": "Hunter",
-    "category": "Fighter",
-    "source": "Erratum May 2015",
-    "branches": [
+    "Category": "Fighter",
+    "Source": "Erratum May 2015",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Hunter",
             "Tags": "[Class][+Speed]",
@@ -4920,12 +4920,12 @@
   },
   "Hunter (old)": {
     "Name": "Hunter",
-    "category": "Fighter",
-    "source": "Core",
-    "branches": [
+    "Category": "Fighter",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Hunter",
             "Tags": "[Class][+Speed]",
@@ -4984,12 +4984,12 @@
   },
   "Martial Artist": {
     "Name": "Martial Artist",
-    "category": "Fighter",
-    "source": "Core",
-    "branches": [
+    "Category": "Fighter",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Guts",
-        "features": [
+        "Features": [
           {
             "Name": "Martial Artist",
             "Tags": "[Class][+HP]",
@@ -5102,7 +5102,7 @@
       },
       {
         "Name": "Inner Focus",
-        "features": [
+        "Features": [
           {
             "Name": "Martial Artist",
             "Tags": "[Class][+Speed]",
@@ -5214,7 +5214,7 @@
       },
       {
         "Name": "Iron Fist",
-        "features": [
+        "Features": [
           {
             "Name": "Martial Artist",
             "Tags": "[Class][+Defense]",
@@ -5327,7 +5327,7 @@
       },
       {
         "Name": "Limber",
-        "features": [
+        "Features": [
           {
             "Name": "Martial Artist",
             "Tags": "[Class][+Speed]",
@@ -5440,7 +5440,7 @@
       },
       {
         "Name": "Reckless",
-        "features": [
+        "Features": [
           {
             "Name": "Martial Artist",
             "Tags": "[Class][+Attack]",
@@ -5553,7 +5553,7 @@
       },
       {
         "Name": "Technician",
-        "features": [
+        "Features": [
           {
             "Name": "Martial Artist",
             "Tags": "[Class][+Speed]",
@@ -5667,12 +5667,12 @@
   },
   "Musician": {
     "Name": "Musician",
-    "category": "Fighter",
-    "source": "Core",
-    "branches": [
+    "Category": "Fighter",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Musician",
             "Tags": "[Class][+Special Attack]",
@@ -5748,12 +5748,12 @@
   },
   "Provocateur": {
     "Name": "Provocateur",
-    "category": "Fighter",
-    "source": "Core",
-    "branches": [
+    "Category": "Fighter",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Provocateur",
             "Tags": "[Class][+Speed]",
@@ -5811,12 +5811,12 @@
   },
   "Rogue": {
     "Name": "Rogue",
-    "category": "Fighter",
-    "source": "Core",
-    "branches": [
+    "Category": "Fighter",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Rogue",
             "Tags": "[Class][+Attack]",
@@ -5875,12 +5875,12 @@
   },
   "Roughneck": {
     "Name": "Roughneck",
-    "category": "Fighter",
-    "source": "Core",
-    "branches": [
+    "Category": "Fighter",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Roughneck",
             "Tags": "[Class][+Defense]",
@@ -5940,12 +5940,12 @@
   },
   "Tumbler": {
     "Name": "Tumbler",
-    "category": "Fighter",
-    "source": "Core",
-    "branches": [
+    "Category": "Fighter",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Tumbler",
             "Tags": "[Class][+Speed]",
@@ -6003,12 +6003,12 @@
   },
   "Aura Guardian": {
     "Name": "Aura Guardian",
-    "category": "Supernatural",
-    "source": "Core",
-    "branches": [
+    "Category": "Supernatural",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Aura Guardian",
             "Tags": "[Class][+Attack or Special Attack]",
@@ -6060,12 +6060,12 @@
   },
   "Channeler": {
     "Name": "Channeler",
-    "category": "Supernatural",
-    "source": "Core",
-    "branches": [
+    "Category": "Supernatural",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Channeler",
             "Tags": "[Class]",
@@ -6122,12 +6122,12 @@
   },
   "Hex Maniac": {
     "Name": "Hex Maniac",
-    "category": "Supernatural",
-    "source": "Core",
-    "branches": [
+    "Category": "Supernatural",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Hex Maniac",
             "Tags": "[Class][+HP]",
@@ -6214,12 +6214,12 @@
   },
   "Ninja": {
     "Name": "Ninja",
-    "category": "Supernatural",
-    "source": "Core",
-    "branches": [
+    "Category": "Supernatural",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Ninja",
             "Tags": "[Class][+Speed]",
@@ -6277,12 +6277,12 @@
   },
   "Oracle": {
     "Name": "Oracle",
-    "category": "Supernatural",
-    "source": "Core",
-    "branches": [
+    "Category": "Supernatural",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Oracle",
             "Tags": "[Class][+Special Defense]",
@@ -6296,7 +6296,7 @@
             "Prerequisites": "Oracle",
             "Frequency": "Daily x3 — Extended Action",
             "Effect": "You may perform an Augury or Scrying.",
-            "techniques": [
+            "Techniques": [
               {
                 "Name": "Augury",
                 "Target": "Self",
@@ -6352,12 +6352,12 @@
   },
   "Sage": {
     "Name": "Sage",
-    "category": "Supernatural",
-    "source": "Core",
-    "branches": [
+    "Category": "Supernatural",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Sage",
             "Tags": "[Class][+HP]",
@@ -6417,12 +6417,12 @@
   },
   "Telekinetic": {
     "Name": "Telekinetic",
-    "category": "Supernatural",
-    "source": "Core",
-    "branches": [
+    "Category": "Supernatural",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Telekinetic",
             "Tags": "[Class][+Special Attack]",
@@ -6472,12 +6472,12 @@
   },
   "Telepath": {
     "Name": "Telepath",
-    "category": "Supernatural",
-    "source": "Core",
-    "branches": [
+    "Category": "Supernatural",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Telepath",
             "Tags": "[Class][+Special Defense]",
@@ -6535,12 +6535,12 @@
   },
   "Warper": {
     "Name": "Warper",
-    "category": "Supernatural",
-    "source": "Core",
-    "branches": [
+    "Category": "Supernatural",
+    "Source": "Core",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Warper",
             "Tags": "[Class][+Speed]",
@@ -6598,12 +6598,12 @@
   },
   "Backpacker": {
     "Name": "Backpacker",
-    "category": "Uncategorized",
-    "source": "Erratum May 2015",
-    "branches": [
+    "Category": "Uncategorized",
+    "Source": "Erratum May 2015",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Backpacker",
             "Tags": "[Class][+Speed]",
@@ -6687,12 +6687,12 @@
   },
   "Medic": {
     "Name": "Medic",
-    "category": "Uncategorized",
-    "source": "Erratum September 2015",
-    "branches": [
+    "Category": "Uncategorized",
+    "Source": "Erratum September 2015",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Medic",
             "Tags": "[Class]",
@@ -6740,12 +6740,12 @@
   },
   "Berserker": {
     "Name": "Berserker",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Berserker",
             "Tags": "[Class][+HP]",
@@ -6804,12 +6804,12 @@
   },
   "Rune Master": {
     "Name": "Rune Master",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Rune Master",
             "Tags": "[Class][+Attack or Special Attack]",
@@ -6878,12 +6878,12 @@
   },
   "Arcanist": {
     "Name": "Arcanist",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Arcanist",
             "Tags": "[Class][+Special Attack][Weapon]",
@@ -6935,10 +6935,10 @@
           },
           {
             "Name": "Power Manipulations",
-            "techniques": [
+            "Techniques": [
               {
                 "Name": "Rank 1 Power Manipulations",
-                "techniques": [
+                "Techniques": [
                   {
                     "Name": "Energy Finesse",
                     "Condition": "The triggering Move is an Arcane Weapon Move and has an Effect Range",
@@ -6961,7 +6961,7 @@
               },
               {
                 "Name": "Rank 2 Power Manipulations",
-                "techniques": [
+                "Techniques": [
                   {
                     "Name": "Berserk Blow",
                     "Condition": "The Triggering Move is 1-Target",
@@ -6989,12 +6989,12 @@
   },
   "Fortress": {
     "Name": "Fortress",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Fortress",
             "Tags": "[Class][+Defense][Weapon]",
@@ -7052,12 +7052,12 @@
   },
   "Marksman": {
     "Name": "Marksman",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Marksman",
             "Tags": "[Class][+Attack][Weapon]",
@@ -7114,12 +7114,12 @@
   },
   "Skirmisher": {
     "Name": "Skirmisher",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Skirmisher",
             "Tags": "[Class][+Speed][Weapon]",
@@ -7179,12 +7179,12 @@
   },
   "Swarmlord": {
     "Name": "Swarmlord",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Arachnid",
-        "features": [
+        "Features": [
           {
             "Name": "Arachnid's Embrace",
             "Tags": "[Class][+Attack]",
@@ -7289,7 +7289,7 @@
       },
       {
         "Name": "Monarch",
-        "features": [
+        "Features": [
           {
             "Name": "Monarch's Embrace",
             "Tags": "[Class][+Special Attack]",
@@ -7396,12 +7396,12 @@
   },
   "Shade Caller": {
     "Name": "Shade Caller",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Shade Caller",
             "Tags": "[Class][+Attack or Special Attack]",
@@ -7457,12 +7457,12 @@
   },
   "Herald of Pride": {
     "Name": "Herald of Pride",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Herald of Pride",
             "Tags": "[Class][+Attack][Weapon]",
@@ -7520,12 +7520,12 @@
   },
   "Spark Master": {
     "Name": "Spark Master",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Spark Master",
             "Tags": "[Class][+Speed]",
@@ -7603,12 +7603,12 @@
   },
   "Glamour Weaver": {
     "Name": "Glamour Weaver",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Glamour Weaver",
             "Tags": "[Class][+Special Attack]",
@@ -7665,12 +7665,12 @@
   },
   "Fire Bringer": {
     "Name": "Fire Bringer",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Fire Bringer",
             "Tags": "[Class][+Attack and Special Attack]",
@@ -7748,12 +7748,12 @@
   },
   "Wind Runner": {
     "Name": "Wind Runner",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Wind Runner",
             "Tags": "[Class][+Speed]",
@@ -7830,12 +7830,12 @@
   },
   "Apparition": {
     "Name": "Apparition",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Apparition",
             "Tags": "[Class][+Attack][Weapon]",
@@ -7892,12 +7892,12 @@
   },
   "Druid": {
     "Name": "Druid",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Flower",
-        "features": [
+        "Features": [
           {
             "Name": "Flower Oath",
             "Tags": "[Class][+Special Attack]",
@@ -8002,7 +8002,7 @@
       },
       {
         "Name": "Fungal",
-        "features": [
+        "Features": [
           {
             "Name": "Fungal Oath",
             "Tags": "[Class][+Special Defense]",
@@ -8107,7 +8107,7 @@
       },
       {
         "Name": "Wood",
-        "features": [
+        "Features": [
           {
             "Name": "Wood Oath",
             "Tags": "[Class][+Attack]",
@@ -8214,12 +8214,12 @@
   },
   "Earth Shaker": {
     "Name": "Earth Shaker",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Earth Shaker",
             "Tags": "[Class][+Defense]",
@@ -8270,12 +8270,12 @@
   },
   "Frost Touched": {
     "Name": "Frost Touched",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Frost Touched",
             "Tags": "[Class][+Attack or Special Attack]",
@@ -8353,12 +8353,12 @@
   },
   "Prism": {
     "Name": "Prism",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Prism",
             "Tags": "[Class][+Special Attack]",
@@ -8415,12 +8415,12 @@
   },
   "Miasmic": {
     "Name": "Miasmic",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Miasmic",
             "Tags": "[Class][+Defense]",
@@ -8477,12 +8477,12 @@
   },
   "Stone Warrior": {
     "Name": "Stone Warrior",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Stone Warrior",
             "Tags": "[Class][+Defense]",
@@ -8532,12 +8532,12 @@
   },
   "Steelheart": {
     "Name": "Steelheart",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Steelheart",
             "Tags": "[Class][+Defense][Weapon]",
@@ -8595,12 +8595,12 @@
   },
   "Maelstrom": {
     "Name": "Maelstrom",
-    "category": "Game of Throhs",
-    "source": "Game of Throhs",
-    "branches": [
+    "Category": "Game of Throhs",
+    "Source": "Game of Throhs",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Maelstrom",
             "Tags": "[Class][+Speed]",
@@ -8679,12 +8679,12 @@
   },
   "Glitch Bender": {
     "Name": "Glitch Bender",
-    "category": "Do Porygon Dream of Mareep",
-    "source": "Do Porygon Dream of Mareep",
-    "branches": [
+    "Category": "Do Porygon Dream of Mareep",
+    "Source": "Do Porygon Dream of Mareep",
+    "Branches": [
       {
         "Name": "Default",
-        "features": [
+        "Features": [
           {
             "Name": "Glitch Bender",
             "Tags": "[Class][+Special Defense]",
