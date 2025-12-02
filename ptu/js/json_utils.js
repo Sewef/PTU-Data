@@ -51,12 +51,17 @@ function ptuSort(list, query) {
    1.   Rendu principal
    ======================= */
 
-function renderPTUCard(item, depth = 0) {
+function renderPTUCard(item, depth = 0, showRootTitle = true) {
     let html = "";
 
     // Titre
-    if (item.Name)
-        html += `<h5 class="card-title">${item.Name}</h5>`;
+    if (item.Name) {
+        if (depth === 0 && showRootTitle) {
+            html += `<h5 class="card-title">${item.Name}</h5>`;
+        } else if (depth > 0) {
+            html += `<h6 class="text-muted">${item.Name}</h6>`;
+        }
+    }
 
     // Champs
     for (const [key, value] of Object.entries(item)) {
@@ -101,18 +106,44 @@ function renderPTUCards(list, container, cols = 3) {
         const col = document.createElement("div");
         col.className = `col-12 col-md-${colSize}`;
 
+        const typeClass = item.Type ? `card-type-${item.Type}` : "";
+
         const card = document.createElement("div");
         card.className = "card h-100 bg-white border shadow-sm overflow-hidden rounded-3";
 
         const body = document.createElement("div");
-        body.className = "card-body bg-light";
-        body.innerHTML = renderPTUCard(item);
+        body.className = `card-body bg-light ${typeClass}`;
+        body.innerHTML = renderPTUCardWithBadges(item);
 
         card.appendChild(body);
         col.appendChild(card);
         container.appendChild(col);
     });
 }
+
+function renderPTUCardWithBadges(item) {
+    let html = "";
+
+    // Badges : Category, Source, Type
+    let title = item.Name || "";
+
+    if (item.Category)
+        title += ` <span class="badge bg-secondary">${item.Category}</span>`;
+
+    if (item.Source)
+        title += ` <span class="badge bg-info">${item.Source}</span>`;
+
+    if (item.Type)
+        title += ` <span class="badge bg-warning text-dark">${item.Type}</span>`;
+
+    html += `<h5 class="card-title">${title}</h5>`;
+
+    // Suite classique
+    html += renderPTUCard(item, 0, false);
+
+    return html;
+}
+
 
 /* =======================
    2.   Loader standard
