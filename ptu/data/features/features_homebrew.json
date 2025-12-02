@@ -6238,14 +6238,12 @@
           },
           {
             "Name": "Front Line Healer",
-            "Tags": "[Class]",
             "Prerequisites": "Medic",
             "Frequency": "Static",
             "Effect": "When you apply a Restorative, you gain +5 Damage Reduction for 1 full round. Whenever you use Combat Medic's Primer's Rank 2 effect, you may apply the same effect on yourself. Damage Reduction from this Feature does not stack with itself."
           },
           {
             "Name": "Medical Techniques",
-            "Tags": "[Class]",
             "Prerequisites": "Medic, Adept Medicine Education",
             "Frequency": "1 AP — Free Action",
             "Trigger": "You apply a Restorative Item",
