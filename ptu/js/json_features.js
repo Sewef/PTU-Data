@@ -252,6 +252,19 @@ function featureSource(feat, fallback) {
 
 
 // ------------------------- SECTION MAIN -----------------------------------
+function makeGaugeBar(value) {
+  const v = Math.max(0, Math.min(5, Number(value) || 0));
+  const percent = (v / 5) * 100;
+
+  // progress-bar fine avec classes Bootstrap
+  return `
+    <div class="progress" style="height: 6px; width: 100%;">
+      <div class="progress-bar bg-primary" role="progressbar" style="width:${percent}%"></div>
+    </div>
+  `;
+}
+
+
 function renderSection(clsName, branchName = "Default") {
   const pane = document.getElementById("cards-container");
   pane.innerHTML = "";
@@ -265,8 +278,37 @@ function renderSection(clsName, branchName = "Default") {
   const title = (cls.branches.length === 1 && branchName === "Default")
     ? clsName
     : `${clsName} – ${branchName}`;
-  pane.insertAdjacentHTML("afterbegin", `<h2 class="mb-2">${title}</h2>`);
-  
+  // pane.insertAdjacentHTML("afterbegin", `<h2 class="mb-2">${title}</h2>`);
+  let supportInline = "";
+  const stats = cls.Stats;
+
+  if (clsName !== "General" && stats && typeof stats === "object") {
+
+    // Construire chaque colonne (une par stat)
+    const cols = Object.entries(stats)
+      .map(([label, value]) => `
+      <span class="d-flex flex-column align-items-start" style="line-height:2.25;">
+        <span class="fw-semibold text-muted">${label}</span>
+        ${makeGaugeBar(value)}
+      </span>
+    `)
+      .join("");
+
+    supportInline = `
+    <span class="ms-4 d-flex align-items-end" 
+          style="font-size:0.9rem; gap:2rem; white-space:nowrap;">
+      ${cols}
+    </span>
+  `;
+  }
+  pane.insertAdjacentHTML(
+    "afterbegin",
+    `<h2 class="mb-3 d-flex align-items-end flex-wrap">
+     <span>${title}</span>
+     ${supportInline}
+   </h2>`
+  );
+
   const row = document.createElement("div");
   row.className = "row g-3 mt-1";
   pane.appendChild(row);
@@ -355,7 +397,6 @@ function collectLeafFeatures(featObj, nameOverride = null, embedOnly = false) {
 
   return list;
 }
-
 
 /* ------------------------------------------------------------------ *
  * 1. createCard() – rend une carte et, récursivement, ses sous-cartes

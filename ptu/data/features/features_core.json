@@ -406,6 +406,10 @@
   "Ace Trainer": {
     "Name": "Ace Trainer",
     "category": "Introductory",
+    "Stats": {
+      "Passive Pokémon Support": 4,
+      "Active Pokémon Support": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -497,6 +501,10 @@
   "Capture Specialist": {
     "Name": "Capture Specialist",
     "category": "Introductory",
+    "Stats": {
+      "Travel and Investigation": 4,
+      "Trainer Combat": 1
+    },
     "source": "Erratum September 2015",
     "branches": [
       {
@@ -598,6 +606,10 @@
   "Capture Specialist (old)": {
     "Name": "Capture Specialist (old)",
     "category": "Introductory",
+    "Stats": {
+      "Travel and Investigation": 4,
+      "Trainer Combat": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -700,6 +712,9 @@
   "Commander": {
     "Name": "Commander",
     "category": "Introductory",
+    "Stats": {
+      "Active Pokémon Support": 5
+    },
     "source": "Core",
     "branches": [
       {
@@ -761,6 +776,10 @@
   "Coordinator": {
     "Name": "Coordinator",
     "category": "Introductory",
+    "Stats": {
+      "Active Pokémon Support": 3,
+      "Passive Pokémon Support": 2
+    },
     "source": "Core",
     "branches": [
       {
@@ -865,6 +884,13 @@
   "Hobbyist": {
     "Name": "Hobbyist",
     "category": "Introductory",
+    "Stats": {
+      "Active Pokémon Support": 4,
+      "Passive Pokémon Support": 1,
+      "Crafting": 1,
+      "Trainer Combat": 1,
+      "Travel and Investigation": 1
+    },
     "source": "Erratum May 2015",
     "branches": [
       {
@@ -986,6 +1012,13 @@
   "Hobbyist (old)": {
     "Name": "Hobbyist",
     "category": "Introductory",
+    "Stats": {
+      "Active Pokémon Support": 4,
+      "Passive Pokémon Support": 1,
+      "Crafting": 1,
+      "Trainer Combat": 1,
+      "Travel and Investigation": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -1107,6 +1140,9 @@
   "Mentor": {
     "Name": "Mentor",
     "category": "Introductory",
+    "Stats": {
+      "Passive Pokémon Support": 5
+    },
     "source": "Core",
     "branches": [
       {
@@ -1196,6 +1232,10 @@
   "Cheerleader": {
     "Name": "Cheerleader",
     "category": "Battling",
+    "Stats": {
+      "Active Pokémon Support": 4,
+      "Passive Pokémon Support": 1
+    },
     "source": "Erratum September 2015",
     "branches": [
       {
@@ -1257,6 +1297,10 @@
   "Cheerleader (old)": {
     "Name": "Cheerleader (old)",
     "category": "Battling",
+    "Stats": {
+      "Active Pokémon Support": 4,
+      "Passive Pokémon Support": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -1321,6 +1365,10 @@
   "Duelist": {
     "Name": "Duelist",
     "category": "Battling",
+    "Stats": {
+      "Active Pokémon Support": 4,
+      "Passive Pokémon Support": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -1384,6 +1432,9 @@
   "Enduring Soul": {
     "Name": "Enduring Soul",
     "category": "Battling",
+    "Stats": {
+      "Passive Pokémon Support": 5
+    },
     "source": "Core",
     "branches": [
       {
@@ -1443,6 +1494,9 @@
   "Juggler": {
     "Name": "Juggler",
     "category": "Battling",
+    "Stats": {
+      "Active Pokémon Support": 5
+    },
     "source": "Core",
     "branches": [
       {
@@ -1508,6 +1562,11 @@
   "Rider": {
     "Name": "Rider",
     "category": "Battling",
+    "Stats": {
+      "Passive Pokémon Support": 2,
+      "Active Pokémon Support": 2,
+      "Trainer Combat": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -1574,6 +1633,10 @@
   "Taskmaster": {
     "Name": "Taskmaster",
     "category": "Battling",
+    "Stats": {
+      "Active Pokémon Support": 3,
+      "Passive Pokémon Support": 2
+    },
     "source": "Core",
     "branches": [
       {
@@ -1644,6 +1707,10 @@
   "Trickster": {
     "Name": "Trickster",
     "category": "Battling",
+    "Stats": {
+      "Active Pokémon Support": 4,
+      "Passive Pokémon Support": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -1751,6 +1818,10 @@
   "Stat Ace": {
     "Name": "Stat Ace",
     "category": "Specialist Team",
+    "Stats": {
+      "Passive Pokémon Support": 4,
+      "Active Pokémon Support": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -2048,6 +2119,10 @@
   "Style Expert": {
     "Name": "Style Expert",
     "category": "Specialist Team",
+    "Stats": {
+      "Active Pokémon Support": 4,
+      "Passive Pokémon Support": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -2325,6 +2400,10 @@
   "Type Ace": {
     "Name": "Type Ace",
     "category": "Specialist Team",
+    "Stats": {
+      "Active Pokémon Support": 3,
+      "Passive Pokémon Support": 2
+    },
     "source": "Core",
     "branches": [
       {
@@ -3475,6 +3554,9 @@
   "Chef": {
     "Name": "Chef",
     "category": "Professional",
+    "Stats": {
+      "Crafting": 5
+    },
     "source": "Core",
     "branches": [
       {
@@ -3610,6 +3692,11 @@
   "Chronicler": {
     "Name": "Chronicler",
     "category": "Professional",
+    "Stats": {
+      "Passive Pokémon Support": 2,
+      "Travel and Investigation": 2,
+      "Active Pokémon Support": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -3671,6 +3758,11 @@
   "Fashionista": {
     "Name": "Fashionista",
     "category": "Professional",
+    "Stats": {
+      "Crafting": 3,
+      "Passive Pokémon Support": 1,
+      "Active Pokémon Support": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -3790,6 +3882,12 @@
   "Researcher": {
     "Name": "Researcher",
     "category": "Professional",
+    "Stats": {
+      "Crafting": 2,
+      "Passive Pokémon Support": 1,
+      "Travel and Investigation": 1,
+      "Trainer Combat": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -4479,6 +4577,11 @@
   "Survivalist": {
     "Name": "Survivalist",
     "category": "Professional",
+    "Stats": {
+      "Travel and Investigation": 2,
+      "Active Pokémon Support": 2,
+      "Trainer Combat": 1
+    },
     "source": "Erratum May 2015",
     "branches": [
       {
@@ -4587,6 +4690,11 @@
   "Survivalist (old)": {
     "Name": "Survivalist",
     "category": "Professional",
+    "Stats": {
+      "Travel and Investigation": 2,
+      "Active Pokémon Support": 2,
+      "Trainer Combat": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -4695,6 +4803,10 @@
   "Athlete": {
     "Name": "Athlete",
     "category": "Fighter",
+    "Stats": {
+      "Trainer Combat": 4,
+      "Passive Pokémon Support": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -4779,6 +4891,11 @@
   "Dancer": {
     "Name": "Dancer",
     "category": "Fighter",
+    "Stats": {
+      "Trainer Combat": 3,
+      "Active Pokémon Support": 1,
+      "Passive Pokémon Support": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -4857,6 +4974,11 @@
   "Hunter": {
     "Name": "Hunter",
     "category": "Fighter",
+    "Stats": {
+      "Trainer Combat": 3,
+      "Active Pokémon Support": 1,
+      "Passive Pokémon Support": 1
+    },
     "source": "Erratum May 2015",
     "branches": [
       {
@@ -4921,6 +5043,11 @@
   "Hunter (old)": {
     "Name": "Hunter",
     "category": "Fighter",
+    "Stats": {
+      "Trainer Combat": 3,
+      "Active Pokémon Support": 1,
+      "Passive Pokémon Support": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -4985,6 +5112,9 @@
   "Martial Artist": {
     "Name": "Martial Artist",
     "category": "Fighter",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Core",
     "branches": [
       {
@@ -5668,6 +5798,10 @@
   "Musician": {
     "Name": "Musician",
     "category": "Fighter",
+    "Stats": {
+      "Trainer Combat": 3,
+      "Active Pokémon Support": 2
+    },
     "source": "Core",
     "branches": [
       {
@@ -5749,6 +5883,9 @@
   "Provocateur": {
     "Name": "Provocateur",
     "category": "Fighter",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Core",
     "branches": [
       {
@@ -5812,6 +5949,9 @@
   "Rogue": {
     "Name": "Rogue",
     "category": "Fighter",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Core",
     "branches": [
       {
@@ -5876,6 +6016,9 @@
   "Roughneck": {
     "Name": "Roughneck",
     "category": "Fighter",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Core",
     "branches": [
       {
@@ -5941,6 +6084,9 @@
   "Tumbler": {
     "Name": "Tumbler",
     "category": "Fighter",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Core",
     "branches": [
       {
@@ -6004,6 +6150,10 @@
   "Aura Guardian": {
     "Name": "Aura Guardian",
     "category": "Supernatural",
+    "Stats": {
+      "Trainer Combat": 4,
+      "Travel and Investigation": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -6061,6 +6211,10 @@
   "Channeler": {
     "Name": "Channeler",
     "category": "Supernatural",
+    "Stats": {
+      "Active Pokémon Support": 3,
+      "Travel and Investigation": 2
+    },
     "source": "Core",
     "branches": [
       {
@@ -6123,6 +6277,9 @@
   "Hex Maniac": {
     "Name": "Hex Maniac",
     "category": "Supernatural",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Core",
     "branches": [
       {
@@ -6215,6 +6372,10 @@
   "Ninja": {
     "Name": "Ninja",
     "category": "Supernatural",
+    "Stats": {
+      "Trainer Combat": 4,
+      "Crafting": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -6278,6 +6439,10 @@
   "Oracle": {
     "Name": "Oracle",
     "category": "Supernatural",
+    "Stats": {
+      "Travel and Investigation": 3,
+      "Trainer Combat": 2
+    },
     "source": "Core",
     "branches": [
       {
@@ -6353,6 +6518,9 @@
   "Sage": {
     "Name": "Sage",
     "category": "Supernatural",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Core",
     "branches": [
       {
@@ -6418,6 +6586,10 @@
   "Telekinetic": {
     "Name": "Telekinetic",
     "category": "Supernatural",
+    "Stats": {
+      "Trainer Combat": 4,
+      "Travel and Investigation": 1
+    },
     "source": "Core",
     "branches": [
       {
@@ -6473,6 +6645,10 @@
   "Telepath": {
     "Name": "Telepath",
     "category": "Supernatural",
+    "Stats": {
+      "Travel and Investigation": 3,
+      "Trainer Combat": 3
+    },
     "source": "Core",
     "branches": [
       {
@@ -6536,6 +6712,10 @@
   "Warper": {
     "Name": "Warper",
     "category": "Supernatural",
+    "Stats": {
+      "Trainer Combat": 3,
+      "Travel and Investigation": 2
+    },
     "source": "Core",
     "branches": [
       {
@@ -6599,6 +6779,10 @@
   "Backpacker": {
     "Name": "Backpacker",
     "category": "Uncategorized",
+    "Stats": {
+      "Travel and Investigation": 3,
+      "Trainer Combat": 2
+    },
     "source": "Erratum May 2015",
     "branches": [
       {
@@ -6688,6 +6872,10 @@
   "Medic": {
     "Name": "Medic",
     "category": "Uncategorized",
+    "Stats": {
+      "Travel and Investigation": 3,
+      "Trainer Combat": 2
+    },
     "source": "Erratum September 2015",
     "branches": [
       {
@@ -6741,6 +6929,9 @@
   "Berserker": {
     "Name": "Berserker",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -6805,6 +6996,11 @@
   "Rune Master": {
     "Name": "Rune Master",
     "category": "Game of Throhs",
+    "Stats": {
+      "Travel and Investigation": 2,
+      "Passive Pokémon Support": 2,
+      "Trainer Combat": 1
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -6879,6 +7075,9 @@
   "Arcanist": {
     "Name": "Arcanist",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -6990,6 +7189,9 @@
   "Fortress": {
     "Name": "Fortress",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -7053,6 +7255,9 @@
   "Marksman": {
     "Name": "Marksman",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -7115,6 +7320,9 @@
   "Skirmisher": {
     "Name": "Skirmisher",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -7180,6 +7388,10 @@
   "Swarmlord": {
     "Name": "Swarmlord",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 4,
+      "Travel and Investigation": 1
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -7397,6 +7609,10 @@
   "Shade Caller": {
     "Name": "Shade Caller",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 4,
+      "Travel and Investigation": 1
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -7458,6 +7674,9 @@
   "Herald of Pride": {
     "Name": "Herald of Pride",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -7521,6 +7740,10 @@
   "Spark Master": {
     "Name": "Spark Master",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 4,
+      "Travel and Investigation": 1
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -7604,6 +7827,9 @@
   "Glamour Weaver": {
     "Name": "Glamour Weaver",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -7666,6 +7892,9 @@
   "Fire Bringer": {
     "Name": "Fire Bringer",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -7749,6 +7978,10 @@
   "Wind Runner": {
     "Name": "Wind Runner",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 3,
+      "Travel and Investigation": 2
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -7831,6 +8064,10 @@
   "Apparition": {
     "Name": "Apparition",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 4,
+      "Travel and Investigation": 1
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -7893,6 +8130,9 @@
   "Druid": {
     "Name": "Druid",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -8215,6 +8455,9 @@
   "Earth Shaker": {
     "Name": "Earth Shaker",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -8271,6 +8514,10 @@
   "Frost Touched": {
     "Name": "Frost Touched",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 4,
+      "Travel and Investigation": 1
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -8354,6 +8601,10 @@
   "Prism": {
     "Name": "Prism",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 4,
+      "Travel and Investigation": 1
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -8416,6 +8667,9 @@
   "Miasmic": {
     "Name": "Miasmic",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -8478,6 +8732,9 @@
   "Stone Warrior": {
     "Name": "Stone Warrior",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -8533,6 +8790,9 @@
   "Steelheart": {
     "Name": "Steelheart",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -8596,6 +8856,10 @@
   "Maelstrom": {
     "Name": "Maelstrom",
     "category": "Game of Throhs",
+    "Stats": {
+      "Trainer Combat": 4,
+      "Travel and Investigation": 1
+    },
     "source": "Game of Throhs",
     "branches": [
       {
@@ -8680,6 +8944,9 @@
   "Glitch Bender": {
     "Name": "Glitch Bender",
     "category": "Do Porygon Dream of Mareep",
+    "Stats": {
+      "Trainer Combat": 5
+    },
     "source": "Do Porygon Dream of Mareep",
     "branches": [
       {
