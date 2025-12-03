@@ -54,19 +54,25 @@ const PRESETS = {
 
 const MOVES_BASE = "/ptu/data/moves";
 const ABILITIES_BASE = "/ptu/data/abilities";
+const CAPABILITIES_BASE = "/ptu/data/capabilities";
 
 const MOVES_FILE_BY_PRESET = {
-  Core: `${MOVES_BASE}/moves_core.json`,
-  Community: `${MOVES_BASE}/moves_9g.json`,
-  Homebrew: `${MOVES_BASE}/moves_homebrew.json`
+  Core: `${MOVES_BASE}/moves_core.min.json`,
+  Community: `${MOVES_BASE}/moves_9g.min.json`,
+  Homebrew: `${MOVES_BASE}/moves_homebrew.min.json`
 };
 const ABILITIES_FILE_BY_PRESET = {
-  Core: `${ABILITIES_BASE}/abilities_core.json`,
-  Community: `${ABILITIES_BASE}/abilities_9g.json`,
-  Homebrew: `${ABILITIES_BASE}/abilities_homebrew.json`
+  Core: `${ABILITIES_BASE}/abilities_core.min.json`,
+  Community: `${ABILITIES_BASE}/abilities_9g.min.json`,
+  Homebrew: `${ABILITIES_BASE}/abilities_homebrew.min.json`
 };
 
-// Add this next to your other FILE_BY_PRESET constants
+const CAPABILITIES_FILE_BY_PRESET = {
+  Core: `${CAPABILITIES_BASE}/capabilities_core.min.json`,
+  Community: `${CAPABILITIES_BASE}/capabilities_9G.min.json`,
+  Homebrew: `${CAPABILITIES_BASE}/capabilities_9G.min.json`
+};
+
 const POKESHEETS_FILE_BY_PRESET = {
   Core: {
     dex: "/ptu/data/pokesheets/pokedex_core.min.json",
@@ -184,15 +190,28 @@ async function loadIndex(url, nameField) {
   const p = fetchJson(url, { strict: false }).then(raw => {
     const idx = new Map();
     if (raw && typeof raw === "object" && !Array.isArray(raw)) {
-      // map { "Name": {...}, ... }
       for (const [key, obj] of Object.entries(raw)) {
-        if (!obj || typeof obj !== "object") continue;
-        const k = key.trim().toLowerCase();
-        obj.__displayName = key;
-        idx.set(k, obj);
+
+        // Cas capabilities : la valeur est un STRING
+        if (typeof obj === "string") {
+          idx.set(key.trim().toLowerCase(), {
+            Name: key,
+            Effect: obj,
+            __displayName: key
+          });
+          continue;
+        }
+
+        // Cas normal : objet JSON structuré
+        if (obj && typeof obj === "object") {
+          const k = key.trim().toLowerCase();
+          obj.__displayName = key;
+          idx.set(k, obj);
+        }
       }
       return idx;
     }
+
     const arr = Array.isArray(raw) ? raw : [];
     for (const it of arr) {
       const name = (it?.[nameField] || it?.Move || it?.Name || "").trim();
@@ -213,8 +232,12 @@ function getMovesUrlForPreset() {
 function getAbilitiesUrlForPreset() {
   return ABILITIES_FILE_BY_PRESET[selectedPreset] || ABILITIES_FILE_BY_PRESET.Core;
 }
+function getCapabilitiesUrlForPreset() {
+  return CAPABILITIES_FILE_BY_PRESET[selectedPreset] || CAPABILITIES_FILE_BY_PRESET.Core;
+}
 function loadMoveIndex() { return loadIndex(getMovesUrlForPreset(), "Move"); }
 function loadAbilityIndex() { return loadIndex(getAbilitiesUrlForPreset(), "Name"); }
+function loadCapabilityIndex() { return loadIndex(getCapabilitiesUrlForPreset(), "Name"); }
 
 // =========================
 // Modal helpers
@@ -561,7 +584,6 @@ function transformBasicInformation(v) {
   return v;
 }
 
-
 function renderBaseStats(stats, depth = 0) {
   const order = ["HP", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"];
   const h = Math.min(4 + depth, 6);
@@ -888,6 +910,15 @@ function renderAbilityDetails(ab) {
   return `${header}${extras}`;
 }
 
+function renderCapabilityDetails(cap) {
+  if (!cap) return '<p class="text-muted mb-0">Unknown Capability.</p>';
+
+  // cap.Effect est ajouté automatiquement par loadIndex() avec notre patch
+  const text = cap.Effect || cap.effect || String(cap) || "";
+
+  return `${escapeHtml(text)}
+  `;
+}
 
 function renderObject(obj, depth = 0) {
   const leftSections = new Set(["Base Stats", "Basic Information", "Evolution", "Other Information", "Battle-Only Forms", "Confined"]);
@@ -1047,10 +1078,26 @@ function renderCapabilities(raw, depth = 0) {
   const parsed = parseCapabilities(raw);
   if (!parsed.rated.length && !parsed.simple.length) return "";
   const h = Math.min(4 + depth, 6);
+
   const rated = parsed.rated.map(({ key, value }) => `
-      <div class="cap-item"><div class="cap-head"><span class="cap-key">${key}</span></div><div class="cap-val">${value}</div></div>
+      <div class="cap-item">
+        <div class="cap-head">
+          <a href="#" class="js-ability-link" data-capability="${escapeHtml(key)}">
+            ${escapeHtml(key)}
+          </a>
+        </div>
+        <div class="cap-val">${escapeHtml(String(value))}</div>
+      </div>
     `).join("");
-  const simple = parsed.simple.map(k => `<span class="cap-chip"><span>${k}</span></span>`).join("");
+
+  const simple = parsed.simple.map(k => `
+    <span class="cap-chip">
+      <a href="#" class="js-ability-link" data-capability="${escapeHtml(k)}">
+        ${escapeHtml(k)}
+      </a>
+    </span>
+  `).join("");
+
   return `
       <div class="mt-3">
         <h${h} class="text-muted">Capabilities</h${h}>
@@ -1060,6 +1107,7 @@ function renderCapabilities(raw, depth = 0) {
         </div></div>
       </div>`;
 }
+
 
 // =========================
 // Sidebar
@@ -1160,9 +1208,9 @@ function buildTypeSidebar(all, onChange) {
   badgeWrap.innerHTML = ""; // On nettoie au cas où
 
   buildPillSection(badgeWrap, "type-badges", types, {
-  attr: "data-type",
-  onChange
-});
+    attr: "data-type",
+    onChange
+  });
 
   // Sync radios
   const anyRadio = typesBox.querySelector("#type-mode-any");
@@ -1174,8 +1222,6 @@ function buildTypeSidebar(all, onChange) {
 }
 
 
-
-// Keep TYPE_MATCH_MODE synced and re-filter on change, avoiding stale reads
 document.addEventListener('change', (ev) => {
   const t = ev.target;
   if (!(t instanceof Element)) return;
@@ -1482,15 +1528,80 @@ async function openAbilityModalByName(abilityName) {
   ensureMoveAbilityModal()?.show();
 }
 
+async function openCapabilityModalByName(capNameRaw) {
+  const raw = String(capNameRaw || "").trim();
+  if (!raw) return;
+
+  const idx = await loadCapabilityIndex(); // Map(keys lowercase -> obj)
+
+  // 1) Normalisation brute
+  const exact = raw.toLowerCase();
+
+  // 2) Recherche EXACTE
+  let cap = idx.get(exact);
+
+  // 3) Si "Mountable 1", chercher "Mountable X"
+  if (!cap) {
+    const baseWord = raw.split(/[ (]/)[0].trim().toLowerCase(); // "mountable"
+    const maybe = Array.from(idx.entries()).find(([key]) =>
+      key.startsWith(baseWord)   // mountable x
+    );
+    if (maybe) cap = maybe[1];
+  }
+
+  // 4) Cas Naturewalk (Forest) → chercher juste "naturewalk"
+  if (!cap) {
+    const base = raw.toLowerCase().split("(")[0].trim(); // "naturewalk"
+    const maybe2 = idx.get(base);
+    if (maybe2) cap = maybe2;
+  }
+
+  // 5) Dernière chance : fuzzy
+  if (!cap) {
+    const fuzzy = Array.from(idx.entries()).find(([key]) =>
+      key.includes(exact)
+      || exact.includes(key)
+    );
+    if (fuzzy) cap = fuzzy[1];
+  }
+
+  // Si toujours rien
+  if (!cap) {
+    ensureMoveAbilityModal()?.show();
+    document.querySelector("#moveAbilityModalLabel").textContent =
+      `Capability — ${raw}`;
+    document.querySelector("#moveAbilityModalBody").innerHTML =
+      `<p class="text-muted">No data for capability « ${escapeHtml(raw)} ».</p>`;
+    return;
+  }
+
+  // Affichage
+  const display = cap.Name || cap.__displayName || raw;
+  const modal = ensureMoveAbilityModal();
+
+  document.querySelector("#moveAbilityModalLabel").textContent =
+    `Capability — ${display}`;
+
+  document.querySelector("#moveAbilityModalBody").innerHTML =
+    renderCapabilityDetails(cap);
+
+  modal?.show();
+}
+
 document.addEventListener("click", (ev) => {
-  const a = ev.target.closest("a.js-move-link, a.js-ability-link");
+  const a = ev.target.closest("a.js-move-link, a.js-ability-link, a.js-capability-link");
   if (!a) return;
   ev.preventDefault();
+
   const move = a.dataset.move;
   const ability = a.dataset.ability;
+  const capa = a.dataset.capability;
+
   if (move) openMoveModalByName(move);
   if (ability) openAbilityModalByName(ability);
+  if (capa) openCapabilityModalByName(capa);
 });
+
 
 export async function loadPokedexPage() {
   // Initialisation des presets
