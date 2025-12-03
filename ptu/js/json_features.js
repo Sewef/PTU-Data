@@ -301,13 +301,27 @@ function renderSection(clsName, branchName = "Default") {
     </span>
   `;
   }
-  pane.insertAdjacentHTML(
-    "afterbegin",
-    `<h2 class="mb-3 d-flex align-items-end flex-wrap">
+  
+  // --- Portrait (image du dossier ptu/img/features) ---
+let imgBase = clsName.replace(/\(.*?\)/g, "").trim(); 
+const imgPath = `/ptu/img/features/${imgBase}.png`;
+
+const portraitHTML = `
+  <img src="${imgPath}"
+       onerror="this.style.display='none'"
+       class="me-3 rounded-circle"
+       style="width:72px; height:72px; object-fit:cover;">
+`;
+
+// --- Titre + stats + portrait ---
+pane.insertAdjacentHTML(
+  "afterbegin",
+  `<h2 class="mb-3 d-flex align-items-center flex-wrap">
+     ${portraitHTML}
      <span>${title}</span>
      ${supportInline}
    </h2>`
-  );
+);
 
   const row = document.createElement("div");
   row.className = "row g-3 mt-1";
