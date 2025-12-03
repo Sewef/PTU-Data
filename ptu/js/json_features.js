@@ -278,7 +278,6 @@ function renderSection(clsName, branchName = "Default") {
   const title = (cls.branches.length === 1 && branchName === "Default")
     ? clsName
     : `${clsName} – ${branchName}`;
-  // pane.insertAdjacentHTML("afterbegin", `<h2 class="mb-2">${title}</h2>`);
   let supportInline = "";
   const stats = cls.Stats;
 
@@ -301,27 +300,52 @@ function renderSection(clsName, branchName = "Default") {
     </span>
   `;
   }
-  
-  // --- Portrait (image du dossier ptu/img/features) ---
-let imgBase = clsName.replace(/\(.*?\)/g, "").trim(); 
-const imgPath = `/ptu/img/features/${imgBase}.png`;
 
-const portraitHTML = `
+  // --- Portrait ---
+  let imgBase = clsName.replace(/\(.*?\)/g, "").trim();
+  const imgPath = `/ptu/img/features/${imgBase}.png`;
+
+  const portraitHTML = `
   <img src="${imgPath}"
        onerror="this.style.display='none'"
        class="me-3 rounded-circle"
-       style="width:72px; height:72px; object-fit:cover;">
+       style="width:60px; height:60px; object-fit:cover;">
 `;
 
-// --- Titre + stats + portrait ---
-pane.insertAdjacentHTML(
-  "afterbegin",
-  `<h2 class="mb-3 d-flex align-items-center flex-wrap">
-     ${portraitHTML}
-     <span>${title}</span>
-     ${supportInline}
-   </h2>`
-);
+  // --- Badges de la classe (catégorie + source si présents)
+  const classBadges = [];
+
+  if (clsName !== "General") {
+    const currentBranch = branches[0];
+    const currentSource = branchSource(currentBranch, cls.source);
+    if (cls.category) {
+      classBadges.push(`<span class="badge bg-secondary me-1">${cls.category}</span>`);
+    }
+    if (currentSource) {
+      classBadges.push(`<span class="badge bg-info me-1">${currentSource}</span>`);
+    }
+  }
+
+  const badgesHTML = `<span class="class-badges">${classBadges.join("")}</span>`;
+
+  // --- Final : header complet ---
+  pane.insertAdjacentHTML(
+    "afterbegin",
+    `
+  <div class="mb-3" style="font-size:1rem;">
+    <h2 class="d-flex align-items-center flex-wrap mb-1" style="gap:1rem; font-size:1.5rem;">
+      ${portraitHTML}
+      <span class="d-flex flex-column">
+        <span class="d-flex align-items-center" style="gap:0.5rem;">
+          <span>${title}</span>
+          <span>${classBadges.join("")}</span>
+        </span>
+        ${supportInline}
+      </span>
+    </h2>
+  </div>
+  `
+  );
 
   const row = document.createElement("div");
   row.className = "row g-3 mt-1";
@@ -340,7 +364,7 @@ pane.insertAdjacentHTML(
         }
         const leafs = collectLeafFeatures(feat);
         leafs.forEach((leaf, idx) =>
-          row.appendChild(createCard(leaf, cls, cardIndex++ === 0, true))
+          row.appendChild(createCard(leaf, cls, true))
         );
       });
     });
@@ -349,7 +373,7 @@ pane.insertAdjacentHTML(
     const leafs = [];
     branches.forEach(br => br.features.forEach(f => leafs.push(...collectLeafFeatures(f))));
     leafs.forEach((leaf, idx) =>
-      row.appendChild(createCard(leaf, cls, idx === 0, false, /* embedSubs = */ false))
+      row.appendChild(createCard(leaf, cls, false, /* embedSubs = */ false))
     );
   }
 
@@ -415,7 +439,7 @@ function collectLeafFeatures(featObj, nameOverride = null, embedOnly = false) {
 /* ------------------------------------------------------------------ *
  * 1. createCard() – rend une carte et, récursivement, ses sous-cartes
  * ------------------------------------------------------------------ */
-function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
+function createCard(feat, clsMeta, isGeneral, nested = false) {
   // ----- conteneur colonne (pas de colonne Bootstrap quand imbriqué)
   const col = document.createElement("div");
   if (!nested) col.className = "col-md-12";
@@ -429,7 +453,7 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
   body.className = "card-body bg-light";
 
   // ----- badges
-  const showBadges = isGeneral ? true : (!nested && firstInBranch);
+  const showBadges = isGeneral;
 
   const catBadge = isGeneral
     ? (feat.Category || null)
@@ -481,7 +505,7 @@ function createCard(feat, clsMeta, firstInBranch, isGeneral, nested = false) {
   // ----- enfants imbriqués uniquement ici
   if (feat.__children && Array.isArray(feat.__children)) {
     feat.__children.forEach(child => {
-      body.appendChild(createCard(child, clsMeta, false, isGeneral, true));
+      body.appendChild(createCard(child, clsMeta, isGeneral, true));
     });
   }
 

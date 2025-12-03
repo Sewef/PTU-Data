@@ -655,7 +655,7 @@
   "Commander": {
     "Name": "Commander",
     "category": "Introductory",
-        "Stats": {
+    "Stats": {
       "Active Pokémon Support": 5
     },
     "source": "Homebrew",
@@ -3681,13 +3681,13 @@
       },
       {
         "Name": "General",
+        "Source": "Erratum May 2015",
         "features": [
           {
             "Name": "Breadth of Knowledge",
             "Prerequisites": "General Research Field, Novice General Education",
             "Frequency": "Static",
-            "Effect": "You gain three Skill Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet.",
-            "Source": "Erratum May 2015"
+            "Effect": "You gain three Skill Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet."
           },
           {
             "Name": "Bookworm",
@@ -3712,13 +3712,13 @@
       },
       {
         "Name": "Apothecary",
+        "Source": "Erratum September 2015",
         "features": [
           {
             "Name": "Apothecary",
             "Prerequisites": "Apothecary Research Field, Novice Medicine Education",
             "Frequency": "At-Will — Extended Action",
-            "Effect": "You gain use any Apothecary Recipe for which you qualify.",
-            "Source": "Erratum September 2015"
+            "Effect": "You gain use any Apothecary Recipe for which you qualify."
           },
           {
             "Name": "Patch Cure",
@@ -4097,13 +4097,13 @@
       },
       {
         "Name": "Engineer",
+        "Source": "Do Porygon Dream of Mareep",
         "features": [
           {
             "Name": "Engineer",
             "Prerequisites": "Engineer Research Field, Pokébot Training",
             "Frequency": "At-Will — Extended Action",
-            "Effect": "You may craft any Engineer Recipe for which you qualify",
-            "Source": "Do Porygon Dream of Mareep"
+            "Effect": "You may craft any Engineer Recipe for which you qualify"
           },
           {
             "Name": "Robofighter",
@@ -4153,13 +4153,13 @@
       },
       {
         "Name": "Jailbreaker",
+        "Source": "Do Porygon Dream of Mareep",
         "features": [
           {
             "Name": "Jailbreaker",
             "Prerequisites": "Jailbreaker Research Field, Basic Balls",
             "Frequency": "At-Will — Extended Action",
-            "Effect": "You may craft any Poké Ball Case Recipe for which you qualify.",
-            "Source": "Do Porygon Dream of Mareep"
+            "Effect": "You may craft any Poké Ball Case Recipe for which you qualify."
           },
           {
             "Name": "Poké Ball Mods",
@@ -4204,13 +4204,13 @@
       },
       {
         "Name": "Upgrader",
+        "Source": "Do Porygon Dream of Mareep",
         "features": [
           {
             "Name": "Upgrader",
             "Prerequisites": "Upgrader Research Field, Novice Medicine Edu, Novice Technology Edu",
             "Frequency": "At-Will — Extended Action",
-            "Effect": "You may craft any Augmentation Recipe for which you qualify and install them on yourself and willing Pokémon and Trainers.",
-            "Source": "Do Porygon Dream of Mareep"
+            "Effect": "You may craft any Augmentation Recipe for which you qualify and install them on yourself and willing Pokémon and Trainers."
           },
           {
             "Name": "Emergency Reactivation",
