@@ -42,9 +42,14 @@
             </button>
           </div>
           <div id="keywords-section" class="collapse">
-            <div class="mb-3">
-              <input type="text" id="keyword-search" class="form-control" placeholder="Search keywords...">
+            <div class="search-wrap mb-3">
+              <div class="row g-2 align-items-center">
+                <div class="col-sm-6">
+                  <input id="keyword-search" class="form-control" placeholder="Search keywords..." />
+                </div>
+              </div>
             </div>
+
             <div id="keywords-container" class="row g-3 w-100"></div>
           </div>
         </section>
@@ -52,8 +57,13 @@
         <!-- Moves list -->
         <section id="moves">
           <div class="search-wrap mb-3">
-            <input type="text" id="card-search" class="form-control" placeholder="Search moves...">
+            <div class="row g-2 align-items-center">
+              <div class="col-sm-6">
+                <input id="card-search" class="form-control" placeholder="Search moves..." />
+              </div>
+            </div>
           </div>
+
           <div id="moves-container" class="row g-3 w-100"></div>
         </section>
       </main>
