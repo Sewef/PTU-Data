@@ -261,16 +261,12 @@ function renderSection(clsName, branchName = "Default") {
   let branches = cls.branches.filter(b => b.Name === branchName);
   if (branches.length === 0) branches = [cls.branches[0]]; // fallback gracieux
   branchName = branches[0].Name;
+
   const title = (cls.branches.length === 1 && branchName === "Default")
     ? clsName
     : `${clsName} – ${branchName}`;
   pane.insertAdjacentHTML("afterbegin", `<h2 class="mb-2">${title}</h2>`);
-
-  pane.insertAdjacentHTML("beforeend",
-    `<div class="mb-2">
-      <input type="text" id="features-search" class="form-control" placeholder="Search features...">
-   </div>`);
-
+  
   const row = document.createElement("div");
   row.className = "row g-3 mt-1";
   pane.appendChild(row);

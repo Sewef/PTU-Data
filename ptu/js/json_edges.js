@@ -60,42 +60,34 @@ function buildCategoryMenu() {
   );
 
   sb.insertAdjacentHTML("beforeend", `<label class="form-label">Categories:</label>`);
-const catWrap = document.createElement("div");
-catWrap.className = "sidebar-cats";
-sb.appendChild(catWrap);
+  const catWrap = document.createElement("div");
+  catWrap.className = "sidebar-cats";
+  sb.appendChild(catWrap);
 
-[...categories].sort((a, b) => {
-  const order = ["Skill", "Crafting", "Pokémon Training", "Combat", "Other"];
-  const ai = order.indexOf(a), bi = order.indexOf(b);
-  if (ai !== -1 && bi !== -1) return ai - bi;
-  if (ai !== -1) return -1;
-  if (bi !== -1) return 1;
-  return a.localeCompare(b);
-}).forEach(cat => {
-  const btn = document.createElement("button");
-  btn.className = "list-group-item list-group-item-action";
-  btn.textContent = cat;
-  btn.addEventListener("click", () => {
-    activeCategory = cat;
-    document.querySelectorAll("#sidebar .sidebar-cats .list-group-item").forEach(e => e.classList.remove("active"));
-    btn.classList.add("active");
-    renderCategory(cat);
+  [...categories].sort((a, b) => {
+    const order = ["Skill", "Crafting", "Pokémon Training", "Combat", "Other"];
+    const ai = order.indexOf(a), bi = order.indexOf(b);
+    if (ai !== -1 && bi !== -1) return ai - bi;
+    if (ai !== -1) return -1;
+    if (bi !== -1) return 1;
+    return a.localeCompare(b);
+  }).forEach(cat => {
+    const btn = document.createElement("button");
+    btn.className = "list-group-item list-group-item-action";
+    btn.textContent = cat;
+    btn.addEventListener("click", () => {
+      activeCategory = cat;
+      document.querySelectorAll("#sidebar .sidebar-cats .list-group-item").forEach(e => e.classList.remove("active"));
+      btn.classList.add("active");
+      renderCategory(cat);
+    });
+    catWrap.appendChild(btn);
   });
-  catWrap.appendChild(btn);
-});
-
-// ⚠️ Surtout pas: sb.appendChild(catList);
-
 }
 
 function renderCategory(cat) {
   const pane = edgeContainer;
   pane.innerHTML = "";
-
-  const searchBox = document.createElement("div");
-  searchBox.className = "mb-3";
-  searchBox.innerHTML = `<input type="text" id="filter-search" class="form-control" placeholder="Search...">`;
-  pane.appendChild(searchBox);
 
   const row = document.createElement("div");
   row.className = "row g-3";
