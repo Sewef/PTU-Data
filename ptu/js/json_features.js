@@ -258,7 +258,7 @@ function makeGaugeBar(value) {
 
   // progress-bar fine avec classes Bootstrap
   return `
-    <div class="progress" style="height: 6px; width: 100%;">
+    <div class="progress" style="height: 6px; width: 100%; min-width: 170px">
       <div class="progress-bar bg-primary" role="progressbar" style="width:${percent}%"></div>
     </div>
   `;
