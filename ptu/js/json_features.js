@@ -294,8 +294,8 @@ function renderSection(clsName, branchName = "Default") {
       .join("");
 
     supportInline = `
-    <span class="ms-4 d-flex align-items-end" 
-          style="font-size:0.9rem; gap:2rem; white-space:nowrap;">
+    <span class="ms-4 d-flex flex-wrap align-items-end" 
+          style="font-size:0.9rem; gap:2rem;">
       ${cols}
     </span>
   `;
