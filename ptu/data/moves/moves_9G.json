@@ -7220,7 +7220,8 @@
         "Range": "Melee, 1 Target, Set Up",
         "Contest Type": "Cool",
         "Contest Effect": "Special Attention",
-        "Set-Up Effect": "If the weather is not Sunny, the user gains +1 Combat Stage in Attack and Special Defense, and the user's turn ends. If the weather is Sunny, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword."
+        "Set-Up Effect": "If the weather is not Sunny, the user gains +1 Combat Stage in Attack and Special Defense, and the user's turn ends. If the weather is Sunny, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword.",
+        "Resolution Effect": "The user attacks with Solar Blade. If the weather is Rainy, Sandstorming, or Hailing, Solar Blade’s Damage Base is lowered to 6 (2d6+8 / 15)."
     },
     "Sonic Boom": {
         "Type": "Normal",
