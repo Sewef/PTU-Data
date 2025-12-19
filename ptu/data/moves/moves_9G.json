@@ -38,10 +38,10 @@
         "AC": "None",
         "Class": "Status",
         "Range": "Self, Set-Up",
-        "Contest Type": "Tough",
-        "Contest Effect": "Get Ready!",
         "Set-Up Effect": "The user becomes Liquefied. While Liquefied, the user is Slowed and cannot take Standard Actions except to Resolve the effect of Acid Armor, and the user's Movement is never obstructed by rough or slow terrain, and they can shift even through the smallest openings. Furthermore, while liquefied, the user is completely immune to all Physical damage, and becomes completely invisible if fully submerged in any liquid.",
-        "Resolution Effect": "The user gains +1 Defense Combat Stage, and then stops being liquified."
+        "Resolution Effect": "The user gains +1 Defense Combat Stage, and then stops being liquified.",
+        "Contest Type": "Tough",
+        "Contest Effect": "Get Ready!"
     },
     "Acid Spray": {
         "Type": "Poison",
@@ -1665,11 +1665,11 @@
         "Damage Base": "Damage Base 8: 2d8+10 / 19",
         "Class": "Physical",
         "Range": "Burst 1, Set-Up, Full Action, Groundsource",
+        "Set-Up Effect": "The user shifts 25 meters underground and their turn ends.",
+        "Resolution Effect": "The user may shift horizontally using their burrow or overland speed, and then shifts 25 meters straight up. Upon reaching the surface, the user attacks with Dig, creating a Burst 1.",
         "Contest Type": "Smart",
         "Contest Effect": "Special Attention",
-        "Special": "Grants Burrow +3",
-        "Set-Up Effect": "The user shifts 25 meters underground and their turn ends.",
-        "Resolution Effect": "The user may shift horizontally using their burrow or overland speed, and then shifts 25 meters straight up. Upon reaching the surface, the user attacks with Dig, creating a Burst 1."
+        "Special": "Grants Burrow +3"
     },
     "Dire Claw": {
         "Type": "Poison",
@@ -1732,11 +1732,11 @@
         "Damage Base": "Damage Base 8: 2d8+10 / 19",
         "Class": "Physical",
         "Range": "Burst 1, Set-Up, Full Action",
+        "Set-Up Effect": "The user moves underwater and their turn ends. The user must be in water at least 10 meters deep to use Dive. While underwater, the user may not be targeted by Moves.",
+        "Resolution Effect": "The user may shift horizontally using their underwater speed, and then may shift straight up until reaching a target. The user then attacks with Dive, creating a Burst 1.",
         "Contest Type": "Beauty",
         "Contest Effect": "Special Attention",
-        "Special": "Swim +3",
-        "Set-Up Effect": "The user moves underwater and their turn ends. The user must be in water at least 10 meters deep to use Dive. While underwater, the user may not be targeted by Moves.",
-        "Resolution Effect": "The user may shift horizontally using their underwater speed, and then may shift straight up until reaching a target. The user then attacks with Dive, creating a Burst 1."
+        "Special": "Swim +3"
     },
     "Dizzy Punch": {
         "Type": "Normal",
@@ -2821,11 +2821,11 @@
         "Damage Base": "Damage Base 8: 2d8+10 / 19",
         "Class": "Physical",
         "Range": "Melee, Dash, Set-Up",
+        "Set-Up Effect": "The user is moved up 25 meters into the air.",
+        "Resolution Effect": "The user may shift twice while in the air, using their overland or sky speed, and then comes down next to a legal target, and attacks with Fly.",
         "Contest Type": "Smart",
         "Contest Effect": "Special Attention",
-        "Special": "Grants Sky +3",
-        "Set-Up Effect": "The user is moved up 25 meters into the air.",
-        "Resolution Effect": "The user may shift twice while in the air, using their overland or sky speed, and then comes down next to a legal target, and attacks with Fly."
+        "Special": "Grants Sky +3"
     },
     "Flying Press": {
         "Type": "Fighting",
@@ -2929,10 +2929,10 @@
         "Damage Base": "Damage Base 14: 4d10+15 / 40",
         "Class": "Physical",
         "Range": "10, Single Target, Set-Up, Full Action",
-        "Contest Type": "Beauty",
-        "Contest Effect": "Seen Nothing Yet",
         "Set-Up Effect": "The user may shift, then ends their turn.",
-        "Resolution Effect": "The user uses Freeze Shock. Freeze Shock paralyzes on 15+."
+        "Resolution Effect": "The user uses Freeze Shock. Freeze Shock paralyzes on 15+.",
+        "Contest Type": "Beauty",
+        "Contest Effect": "Seen Nothing Yet"
     },
     "Freeze-Dry": {
         "Type": "Ice",
@@ -3092,10 +3092,10 @@
         "AC": "None",
         "Class": "Status",
         "Range": "Self, Set-Up",
-        "Contest Type": "Beauty",
-        "Contest Effect": "Catching Up",
         "Set-Up Effect": "The user may not shift this round. The user may create as many squares of Rough Terrain as it wants within a Burst 3 as plants burst through the ground, regardless of the surface material.",
-        "Resolution Effect": "The user raises its Special Attack, Special Defense, and Speed by 2 Combat Stages each."
+        "Resolution Effect": "The user raises its Special Attack, Special Defense, and Speed by 2 Combat Stages each.",
+        "Contest Type": "Beauty",
+        "Contest Effect": "Catching Up"
     },
     "Giga Drain": {
         "Type": "Grass",
@@ -3810,10 +3810,10 @@
         "Damage Base": "Damage Base 14: 4d10+15 / 40",
         "Class": "Special",
         "Range": "10, Single Target, Set-Up, Full Action",
-        "Contest Type": "Beauty",
-        "Contest Effect": "Seen Nothing Yet",
         "Set-Up Effect": "The user may shift, then ends their turn.",
-        "Resolution Effect": "The user uses Ice Burn. Ice Burn Burns on 15+."
+        "Resolution Effect": "The user uses Ice Burn. Ice Burn Burns on 15+.",
+        "Contest Type": "Beauty",
+        "Contest Effect": "Seen Nothing Yet"
     },
     "Ice Fang": {
         "Type": "Ice",
@@ -4727,10 +4727,10 @@
         "Damage Base": "Damage Base 12: 3d12+10 / 30",
         "Class": "Special",
         "Range": "Cone 3, Set-Up",
-        "Contest Type": "Tough",
-        "Contest Effect": "Special Attention",
         "Set-Up Effect": "The user's Special Attack is raised by +1 Combat Stage.",
         "Resolution Effect": "The user attacks with Meteor Beam.",
+        "Contest Type": "Tough",
+        "Contest Effect": "Special Attention",
         "Effect": "None"
     },
     "Meteor Mash": {
@@ -5433,10 +5433,10 @@
         "Damage Base": "Damage Base 9: 2d10+10 / 21",
         "Class": "Physical",
         "Range": "Melee, 1 Target, Set-Up",
-        "Contest Type": "Smart",
-        "Contest Effect": "Seen Nothing Yet",
         "Set-Up Effect": "The user is removed from the field, and their turn ends.",
-        "Resolution Effect": "Phantom Force's user appears adjacent to any legal target on the field, ignoring Movement Capabilities, and then uses Phantom Force's attack. Phantom Force cannot be avoided by Moves with the Shield Keyword, the Dodge Ability, or similar effects, and Intercepts may not be attempted in response."
+        "Resolution Effect": "Phantom Force's user appears adjacent to any legal target on the field, ignoring Movement Capabilities, and then uses Phantom Force's attack. Phantom Force cannot be avoided by Moves with the Shield Keyword, the Dodge Ability, or similar effects, and Intercepts may not be attempted in response.",
+        "Contest Type": "Smart",
+        "Contest Effect": "Seen Nothing Yet"
     },
     "Photon Geyser": {
         "Type": "Psychic",
@@ -6111,10 +6111,10 @@
         "Damage Base": "Damage Base 8: 2d8+10 / 19",
         "Class": "Special",
         "Range": "10, 3 Targets, Set-Up",
-        "Contest Type": "Cool",
-        "Contest Effect": "Special Attention",
         "Set-Up Effect": "The user may not shift this round. The user whips up a whirlwind around themselves, granting +2 Evasion until the end of their next turn, and destroying any Smokescreen or Hazards on any squares they are standing on and in all squares adjacent to them.",
-        "Resolution Effect": "The user attacks with Razor Wind. Razor Wind is a Critical Hit on 18+."
+        "Resolution Effect": "The user attacks with Razor Wind. Razor Wind is a Critical Hit on 18+.",
+        "Contest Type": "Cool",
+        "Contest Effect": "Special Attention"
     },
     "Recover": {
         "Type": "Normal",
@@ -6717,10 +6717,10 @@
         "Damage Base": "Damage Base 12: 3d12+10 / 30",
         "Class": "Physical",
         "Range": "Melee, 1 Target, Set-Up",
-        "Contest Type": "Smart",
-        "Contest Effect": "Seen Nothing Yet",
         "Set-Up Effect": "The user is removed from the field, and their turn ends.",
-        "Resolution Effect": "Shadow Force's user appears adjacent to any legal Target, ignoring Movement Capabilities, and then uses Shadow Force's attack. Shadow Force cannot be avoided by Moves with the Shield Keyword, the Dodge Ability, or similar effects, and Intercepts may not be attempted in response."
+        "Resolution Effect": "Shadow Force's user appears adjacent to any legal Target, ignoring Movement Capabilities, and then uses Shadow Force's attack. Shadow Force cannot be avoided by Moves with the Shield Keyword, the Dodge Ability, or similar effects, and Intercepts may not be attempted in response.",
+        "Contest Type": "Smart",
+        "Contest Effect": "Seen Nothing Yet"
     },
     "Shadow Punch": {
         "Type": "Ghost",
@@ -6936,10 +6936,10 @@
         "Damage Base": "Damage Base 13: 4d10+10 / 35",
         "Class": "Physical",
         "Range": "Melee, 1 Target, Dash, Push, Set-Up",
-        "Contest Type": "Tough",
-        "Contest Effect": "Special Attention",
         "Set-Up Effect": "The use gains +1 Defense CS.",
-        "Resolution Effect": "The user may attack with Skull Bash. The target is pushed 3 meters."
+        "Resolution Effect": "The user may attack with Skull Bash. The target is pushed 3 meters.",
+        "Contest Type": "Tough",
+        "Contest Effect": "Special Attention"
     },
     "Sky Attack": {
         "Type": "Flying",
@@ -6948,10 +6948,10 @@
         "Damage Base": "Damage Base 14: 4d10+15 / 40",
         "Class": "Physical",
         "Range": "Melee, Pass, Set-Up, Full Action",
-        "Contest Type": "Cool",
-        "Contest Effect": "Special Attention",
         "Set-Up Effect": "The user is moved up 25 meters into the air.",
-        "Resolution Effect": "The user may shift until they are next to a legal target in the encounter. They may then shift again, and pass through legal targets to attack with Sky Attack. Sky Attack Flinches a target on 17-20 during Accuracy Check."
+        "Resolution Effect": "The user may shift until they are next to a legal target in the encounter. They may then shift again, and pass through legal targets to attack with Sky Attack. Sky Attack Flinches a target on 17-20 during Accuracy Check.",
+        "Contest Type": "Cool",
+        "Contest Effect": "Special Attention"
     },
     "Sky Drop": {
         "Type": "Flying",
@@ -6960,10 +6960,10 @@
         "Damage Base": "Damage Base 6: 2d6+8 / 15",
         "Class": "Physical",
         "Range": "Melee, Target, Set-Up",
-        "Contest Type": "Smart",
-        "Contest Effect": "Special Attention",
         "Set-Up Effect": "Make Sky Drop's Accuracy Check. If the user hits, the user and target are moved 25 meters into the air. The target forfeits their next turn, and cannot Shift or take actions until Sky Drop is resolved.",
-        "Resolution Effect": "Shift while in the air, and lower both the user and the target heights back to the ground. Then apply Sky Drop's damage. If the target has a Sky or Levitate Speed, Sky Drop fails to deal damage. If the user is Fainted after the Set-Up but before the Resolution, the target falls to the ground and takes damage as if Sky Drop had a Damage Base of 3 (1d6+5/8) unless they have a Sky or Levitate Speed, in which case they take no damage."
+        "Resolution Effect": "Shift while in the air, and lower both the user and the target heights back to the ground. Then apply Sky Drop's damage. If the target has a Sky or Levitate Speed, Sky Drop fails to deal damage. If the user is Fainted after the Set-Up but before the Resolution, the target falls to the ground and takes damage as if Sky Drop had a Damage Base of 3 (1d6+5/8) unless they have a Sky or Levitate Speed, in which case they take no damage.",
+        "Contest Type": "Smart",
+        "Contest Effect": "Special Attention"
     },
     "Sky Uppercut": {
         "Type": "Fighting",
@@ -7206,10 +7206,10 @@
         "Damage Base": "Damage Base 12: 3d12+10 / 30",
         "Class": "Special",
         "Range": "Line 6, Set-Up",
-        "Contest Type": "Cool",
-        "Contest Effect": "Special Attention",
         "Set-Up Effect": "If the weather is not Sunny, the user's turn ends. If the weather is Sunny, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword.",
-        "Resolution Effect": "The user attacks with Solar Beam. If the weather is Rainy, Sandstorming, or Hailing, Solar Beam's Damage Base is lowered to 6 (2d6+8 / 15)."
+        "Resolution Effect": "The user attacks with Solar Beam. If the weather is Rainy, Sandstorming, or Hailing, Solar Beam's Damage Base is lowered to 6 (2d6+8 / 15).",
+        "Contest Type": "Cool",
+        "Contest Effect": "Special Attention"
     },
     "Solar Blade": {
         "Type": "Grass",
@@ -7218,10 +7218,10 @@
         "Damage Base": "Damage Base 13: 4d10+10 / 35",
         "Class": "Physical",
         "Range": "Melee, 1 Target, Set Up",
-        "Contest Type": "Cool",
-        "Contest Effect": "Special Attention",
         "Set-Up Effect": "If the weather is not Sunny, the user gains +1 Combat Stage in Attack and Special Defense, and the user's turn ends. If the weather is Sunny, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword.",
-        "Resolution Effect": "The user attacks with Solar Blade. If the weather is Rainy, Sandstorming, or Hailing, Solar Blade’s Damage Base is lowered to 6 (2d6+8 / 15)."
+        "Resolution Effect": "The user attacks with Solar Blade. If the weather is Rainy, Sandstorming, or Hailing, Solar Blade’s Damage Base is lowered to 6 (2d6+8 / 15).",
+        "Contest Type": "Cool",
+        "Contest Effect": "Special Attention"
     },
     "Sonic Boom": {
         "Type": "Normal",
