@@ -92,7 +92,11 @@ function renderPTUCard(item, depth = 0, showRootTitle = true) {
         }
 
         // Valeur simple
-        html += `<p><strong>${key}:</strong> ${value ?? ""}</p>`;
+        let displayValue = value;
+        if (key === "Description" && typeof value === "string") {
+            displayValue = value.replace(/\n/g, "<br>");
+        }
+        html += `<p><strong>${key}:</strong> ${displayValue ?? ""}</p>`;
     }
 
     return html;
