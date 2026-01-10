@@ -643,11 +643,12 @@ function renderEvolutionList(evos, base, depth = 0) {
   if (!Array.isArray(evos) || !evos.length) return "";
   const h = Math.min(4 + depth, 6);
 
-  // Build availability set from the currently loaded/merged Pokédex.
-  const avail = new Set(
-    (window.__POKEDEX || window.__pokedexData || [])
-      .map(x => String(x?.Species || "").toLowerCase())
+  // Build availability map from the currently loaded/merged Pokédex.
+  const all = (window.__POKEDEX || window.__pokedexData || []);
+  const bySpecies = new Map(
+    all.map(x => [String(x?.Species || "").toLowerCase(), x?.Number])
   );
+  const avail = new Set(bySpecies.keys());
   const current = String(base?.Species || "").toLowerCase();
 
   const items = evos.map(e => {
@@ -664,12 +665,14 @@ function renderEvolutionList(evos, base, depth = 0) {
     }
 
     const exists = (sp === current) || avail.has(sp);
+    const numForSp = bySpecies.get(sp);
 
     // Build species label: clickable if exists, plain text with tooltip if not
     let speciesLabel;
     if (exists) {
+      const numAttr = (numForSp != null) ? ` data-dex-number="${escapeHtml(String(numForSp))}"` : "";
       speciesLabel =
-        `<a href="#" class="fw-semibold js-species-link" onclick='openModalBySpecies(${JSON.stringify(String(species))}); return false;'>${escapeHtml(species)}</a>`;
+        `<a href="#" class="fw-semibold js-species-link" data-dex-species="${escapeHtml(String(species))}"${numAttr}>${escapeHtml(species)}</a>`;
     } else {
       // Non-clickable with tooltip (Bootstrap-compatible)
       const tip = "Not found in current dataset";
