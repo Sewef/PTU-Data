@@ -644,11 +644,14 @@ function renderEvolutionList(evos, base, depth = 0) {
   const h = Math.min(4 + depth, 6);
 
   // Build availability map from the currently loaded/merged Pokédex.
+  // Use exact species name (which includes regional forms like "Linoone Galar")
   const all = (window.__POKEDEX || window.__pokedexData || []);
-  const bySpecies = new Map(
-    all.map(x => [String(x?.Species || "").toLowerCase(), x?.Number])
-  );
-  const avail = new Set(bySpecies.keys());
+  const bySpeciesExact = new Map();
+  for (const p of all) {
+    const sp = String(p?.Species || "").toLowerCase();
+    if (!sp) continue;
+    bySpeciesExact.set(sp, p);
+  }
   const current = String(base?.Species || "").toLowerCase();
 
   const items = evos.map(e => {
@@ -664,8 +667,10 @@ function renderEvolutionList(evos, base, depth = 0) {
       level = `Lv ${levelNum} Minimum`;
     }
 
-    const exists = (sp === current) || avail.has(sp);
-    const numForSp = bySpecies.get(sp);
+    // Exact match on full species name (includes regional forms)
+    const exists = (sp === current) || bySpeciesExact.has(sp);
+    const targetPokemon = bySpeciesExact.get(sp);
+    const numForSp = targetPokemon?.Number;
 
     // Build species label: clickable if exists, plain text with tooltip if not
     let speciesLabel;
@@ -1656,9 +1661,20 @@ document.addEventListener("click", (e) => {
   e.preventDefault();
   const number = a.getAttribute("data-dex-number");
   const species = a.getAttribute("data-dex-species");
-  const target = window.__pokedexData?.find(p =>
-    (number && String(p.Number) === String(number)) ||
-    (species && String(p.Species).toLowerCase() === String(species).toLowerCase())
-  );
+  
+  // Prioritize exact species name match (handles regional forms correctly)
+  let target = null;
+  if (species) {
+    target = window.__pokedexData?.find(p =>
+      String(p.Species).toLowerCase() === String(species).toLowerCase()
+    );
+  }
+  // Fallback to number-only match if no species match found
+  if (!target && number) {
+    target = window.__pokedexData?.find(p =>
+      String(p.Number) === String(number)
+    );
+  }
+  
   if (target) openDetail(target);
 });
