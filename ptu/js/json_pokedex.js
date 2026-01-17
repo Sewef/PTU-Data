@@ -239,6 +239,11 @@ function loadMoveIndex() { return loadIndex(getMovesUrlForPreset(), "Move"); }
 function loadAbilityIndex() { return loadIndex(getAbilitiesUrlForPreset(), "Name"); }
 function loadCapabilityIndex() { return loadIndex(getCapabilitiesUrlForPreset(), "Name"); }
 
+function clearIndexCache() {
+  _indexCache.clear();
+  _fetchCache.clear(); // Clear fetch cache too to reload JSON data
+}
+
 // =========================
 // Modal helpers
 // =========================
@@ -1413,6 +1418,7 @@ function buildSourceMenu(onChange) {
 
   async function reload() {
     try {
+      clearIndexCache(); // Clear cached indexes when changing preset
       const data = await loadPokedex();
       window.__POKEDEX = data;
       buildTypeSidebar(data, () => renderGrid(filterRows(data)));
