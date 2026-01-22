@@ -69,8 +69,8 @@ const ABILITIES_FILE_BY_PRESET = {
 
 const CAPABILITIES_FILE_BY_PRESET = {
   Core: `${CAPABILITIES_BASE}/capabilities_core.min.json`,
-  Community: `${CAPABILITIES_BASE}/capabilities_9G.min.json`,
-  Homebrew: `${CAPABILITIES_BASE}/capabilities_9G.min.json`
+  Community: `${CAPABILITIES_BASE}/capabilities_9g.min.json`,
+  Homebrew: `${CAPABILITIES_BASE}/capabilities_9g.min.json`
 };
 
 const POKESHEETS_FILE_BY_PRESET = {
