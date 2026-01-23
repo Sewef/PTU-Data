@@ -150,6 +150,59 @@ aside .list-group#sidebar { display:block; gap:0; padding:0; }
   transition: transform .08s ease, box-shadow .08s ease;
 }
 .dex-badge:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+.dex-badge.legendary {
+  /* keep an inner golden outline and base shadow */
+  box-shadow: inset 0 0 0 2px rgba(255,215,0,0.9), 0 6px 18px rgba(0,0,0,.25);
+  position: relative;
+  overflow: hidden;
+  /* fallback solid background while pseudo-element paints the gradient */
+  background: linear-gradient(135deg, #151922 0%, #2a2620 50%, #151922 100%);
+}
+
+/* Diagonal metallic gradient (gold + platinum) crossing the border.
+   Implemented with a full-size pseudo-element and a thin glossy highlight. */
+.dex-badge.legendary::before {
+  content: "";
+  position: absolute;
+  inset: -12%; /* slightly larger so the diagonal crosses cleanly */
+  z-index: 0;
+  pointer-events: none;
+  /* layered gradients: wide soft gold band + metallic silver wash + subtle warm core */
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,0.00) 0%,
+      rgba(230,232,234,0.12) 8%, /* platinum edge */
+      rgba(200,200,200,0.20) 16%,
+      rgba(255,240,150,0.20) 28%, /* warm gold wash */
+      rgba(255,215,0,0.75) 48%,  /* strong gold core */
+      rgba(255,165,0,0.60) 52%,
+      rgba(200,200,200,0.20) 72%, /* silver fade */
+      rgba(230,232,234,0.10) 84%,
+      rgba(255,255,255,0.00) 100%
+    );
+  transform: rotate(0.001deg);
+  filter: saturate(1.25) contrast(1.05) blur(0.2px);
+  mix-blend-mode: overlay;
+}
+
+/* Thin glossy diagonal highlight for metallic sheen */
+.dex-badge.legendary::after {
+  content: "";
+  position: absolute;
+  inset: -30% -40% -30% -40%;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg,
+    rgba(255,255,255,0.00) 0%,
+    rgba(255,255,255,0.65) 48%,
+    rgba(255,255,255,0.00) 52%);
+  transform: skewX(-18deg) translateY(-10%);
+  opacity: 0.22;
+  filter: blur(6px) saturate(1.2);
+}
+
+/* Ensure badge child content sits above the gradient pseudo-elements */
+.dex-badge.legendary > * { position: relative; z-index: 1; }
 
 .dex-badge .icon {
   grid-column: 1;

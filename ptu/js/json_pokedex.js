@@ -504,6 +504,9 @@ function renderGrid(rows) {
 
       const li = document.createElement("div");
       li.className = "dex-badge";
+      if (p.Legendary) {
+        li.classList.add("legendary");
+      }
       li.dataset.types = (types || []).join(",");
 
       const iconWrap = document.createElement("div");
