@@ -24,7 +24,7 @@ if sys.platform == 'win32':
 SCRIPT_DIR = Path(__file__).parent
 WORKSPACE_ROOT = SCRIPT_DIR.parent
 ICON_REF_FILE = SCRIPT_DIR / "pokedex" / "icon_ref.csv"
-POKEMON_IMG_DIR = WORKSPACE_ROOT / "ptu" / "img" / "pokemon" / "icons"
+POKEMON_IMG_DIR = WORKSPACE_ROOT / "ptu" / "img" / "pokemon" / "full"
 POKEDEX_DIR = WORKSPACE_ROOT / "ptu" / "data" / "pokedex"
 
 
