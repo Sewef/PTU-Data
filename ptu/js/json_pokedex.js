@@ -956,7 +956,7 @@ function renderObject(obj, depth = 0) {
     if (depth === 0) {
       let col1 = "", col2 = "";
       for (const [k, v0] of Object.entries(obj)) {
-        if (["Species", "Number", "Icon"].includes(k)) continue;
+        if (["Species", "Number", "Icon", "Legendary"].includes(k)) continue;
 
         let v = v0;
         if (k === "Basic Information") v = transformBasicInformation({ ...(v || {}) });
