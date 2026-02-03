@@ -8,6 +8,52 @@ import {
   filterByClasses
 } from "/ptu/js/helpers.js";
 
+export const DAMAGE_BASE_TABLE = {
+  1: { dmg: '1d6+1', min: 2, avg: 5, max: 7 },
+  2: { dmg: '1d6+3', min: 4, avg: 7, max: 9 },
+  3: { dmg: '1d6+5', min: 6, avg: 9, max: 11 },
+  4: { dmg: '1d8+6', min: 7, avg: 11, max: 14 },
+  5: { dmg: '1d8+8', min: 9, avg: 13, max: 16 },
+  6: { dmg: '2d6+8', min: 10, avg: 15, max: 20 },
+  7: { dmg: '2d6+10', min: 12, avg: 17, max: 22 },
+  8: { dmg: '2d8+10', min: 12, avg: 19, max: 26 },
+  9: { dmg: '2d10+10', min: 12, avg: 21, max: 30 },
+  10: { dmg: '3d8+10', min: 13, avg: 24, max: 34 },
+  11: { dmg: '3d10+10', min: 13, avg: 27, max: 40 },
+  12: { dmg: '3d12+10', min: 13, avg: 30, max: 46 },
+  13: { dmg: '4d10+10', min: 14, avg: 35, max: 50 },
+  14: { dmg: '4d10+15', min: 19, avg: 40, max: 55 },
+  15: { dmg: '4d10+20', min: 24, avg: 45, max: 60 },
+  16: { dmg: '5d10+20', min: 25, avg: 50, max: 70 },
+  17: { dmg: '5d12+25', min: 30, avg: 60, max: 85 },
+  18: { dmg: '6d12+25', min: 31, avg: 65, max: 97 },
+  19: { dmg: '6d12+30', min: 36, avg: 70, max: 102 },
+  20: { dmg: '6d12+35', min: 41, avg: 75, max: 107 },
+  21: { dmg: '6d12+40', min: 46, avg: 80, max: 112 },
+  22: { dmg: '6d12+45', min: 51, avg: 85, max: 117 },
+  23: { dmg: '6d12+50', min: 56, avg: 90, max: 122 },
+  24: { dmg: '6d12+55', min: 61, avg: 95, max: 127 },
+  25: { dmg: '6d12+60', min: 66, avg: 100, max: 132 },
+  26: { dmg: '7d12+65', min: 72, avg: 110, max: 149 },
+  27: { dmg: '8d12+70', min: 78, avg: 120, max: 166 },
+  28: { dmg: '8d12+80', min: 88, avg: 130, max: 176 }
+};
+
+function formatDamageBaseValue(raw) {
+  if (raw == null || raw === "") return "";
+
+  const match = String(raw).match(/\d+/);
+  if (!match) return String(raw);
+
+  const value = Number.parseInt(match[0], 10);
+  if (!Number.isFinite(value)) return String(raw);
+
+  const info = DAMAGE_BASE_TABLE[value];
+  if (!info) return String(value);
+
+  return `${value} (${info.dmg} / ${info.avg})`;
+}
+
 function buildSidebarMoves(allItems, container, cols) {
   const sidebar = document.getElementById("sidebar");
   sidebar.innerHTML = "";
@@ -192,10 +238,8 @@ function renderItemAsCard(item, depth = 0) {
 
       // --- CAS SPÉCIAL DAMAGE BASE ---
       if (key === "Damage Base") {
-        // On met en gras tout ce qui est avant le premier ":"
-        const [beforeColon, ...afterParts] = safeValue.split(':');
-        const afterText = afterParts.length ? afterParts.join(':') : "";
-        str += `<strong>${beforeColon}</strong>: ${afterText}<br>`;
+        const formatted = formatDamageBaseValue(value);
+        str += `<strong>Damage Base</strong>: ${formatted}<br>`;
       } else {
         // Rendu normal pour tous les autres champs
         str += `<strong>${key}</strong>: ${safeValue}<br>`;
@@ -248,21 +292,10 @@ function renderMoveCard(item) {
       continue;
     }
 
-    // ----- DAMAGE BASE : afficher seulement le contenu -----
+    // ----- DAMAGE BASE : afficher valeur + table -----
     if (key === "Damage Base") {
-      const raw = (value ?? "").toString();
-
-      // Séparer "Damage Base 2:" du reste
-      const idx = raw.indexOf(":");
-      if (idx !== -1) {
-        const left = raw.slice(0, idx + 1);      // ex: "Damage Base 2:"
-        const right = raw.slice(idx + 1).trim(); // ex: "1d6+3 / 7"
-
-        html += `<p><strong>${left}</strong> ${right}</p>`;
-      } else {
-        // cas improbable où il n’y a pas de ":"
-        html += `<p>${raw}</p>`;
-      }
+      const formatted = formatDamageBaseValue(value ?? "");
+      html += `<p><strong>Damage Base:</strong> ${formatted}</p>`;
       continue;
     }
 

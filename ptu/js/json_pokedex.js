@@ -3,6 +3,7 @@ import {
   buildPillSection,
   getSelectedPills
 } from "/ptu/js/helpers.js";
+import { DAMAGE_BASE_TABLE } from "/ptu/js/json_moves.js";
 
 // =========================
 // Config
@@ -807,21 +808,25 @@ function renderLevelUpMoves(moves) {
 }
 
 function formatDamageBase(mv) {
-  // Normalize the "Damage Base 4: 1d8+6 / 11" line
   const raw = mv?.["Damage Base"] || mv?.DB || "";
-  if (!raw) return "";
-  const s = String(raw);
-  // if already "Damage Base X: ...", keep label part normalized
-  const m = s.match(/(Damage Base.*)\s*:\s*(.+)$/i);
-  if (m) {
-    return `<div><span class="text-muted">${m[1]}:</span> ${m[2]}</div>`;
+  if (raw == null || raw === "") return "";
+
+  const match = String(raw).match(/\d+/);
+  if (!match) {
+    return `<div><span class="text-muted">Damage Base:</span> ${escapeHtml(String(raw))}</div>`;
   }
-  // fallback (raw may contain "4: 1d8+6 / 11" || just "1d8+6 / 11")
-  const m2 = s.match(/(\d+)\s*:\s*(.+)/);
-  if (m2) {
-    return `<div><span class="text-muted">Damage Base ${escapeHtml(m2[1])}:</span> ${escapeHtml(m2[2])}</div>`;
+
+  const value = Number.parseInt(match[0], 10);
+  if (!Number.isFinite(value)) {
+    return `<div><span class="text-muted">Damage Base:</span> ${escapeHtml(String(raw))}</div>`;
   }
-  return `<div><span class="text-muted">Damage Base:</span> ${escapeHtml(s)}</div>`;
+
+  const info = DAMAGE_BASE_TABLE[value];
+  if (!info) {
+    return `<div><span class="text-muted">Damage Base:</span> ${escapeHtml(String(value))}</div>`;
+  }
+
+  return `<div><span class="text-muted">Damage Base:</span> ${escapeHtml(String(value))} (${escapeHtml(info.dmg)} / ${escapeHtml(String(info.avg))})</div>`;
 }
 
 function renderMoveDetails(mv) {
