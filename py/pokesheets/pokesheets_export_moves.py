@@ -26,7 +26,10 @@ def parse_damage_base(db: Any, damage_class: str) -> Any:
         return ""
     if db is None:
         return ""
-    m = re.search(r"Damage\s*Base\s*(\d+)", str(db))
+    # Extract the numeric value from the Damage Base field
+    # New format: "9" (just the number)
+    # Old format: "Damage Base 9" or "Damage Base 9: 2d10+10 / 21"
+    m = re.search(r"(\d+)", str(db))
     if m:
         return int(m.group(1))
     return ""
