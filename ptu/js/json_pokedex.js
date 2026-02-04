@@ -32,7 +32,7 @@ const FILES_BY_LABEL = {
   "AlolaDex (Community Homebrew)": "pokedex_7g.min.json",
   "GalarDex (Community Homebrew)": "pokedex_8g.min.json",
   "HisuiDex (Community Homebrew)": "pokedex_8g_hisui.min.json",
-  "PaldeaDex (Community Homebrew)": "pokedex_community.min.json",
+  "PaldeaDex (Community Homebrew)": "pokedex_9g.min.json",
 };
 
 const PRESETS = {
