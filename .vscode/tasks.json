@@ -132,7 +132,7 @@
         "reveal": "silent",
         "close": true
       },
-      "command": "py py/pokesheets/pokesheets_export.py --tag Community --in-dir ptu/data/pokedex/community/ --out ptu/data/pokesheets/pokedex_community.json --abilities ptu/data/abilities/abilities_9g.json",
+      "command": "py py/pokesheets/pokesheets_export.py --tag Community --in-dir ptu/data/pokedex/community/ --out ptu/data/pokesheets/pokedex_community.json --abilities ptu/data/abilities/abilities_community.json",
       "problemMatcher": []
     },
     {
@@ -142,7 +142,7 @@
         "reveal": "silent",
         "close": true
       },
-      "command": "py py/pokesheets/pokesheets_export_moves.py ptu/data/moves/moves_9g.json ptu/data/pokesheets/moves_community.json",
+      "command": "py py/pokesheets/pokesheets_export_moves.py ptu/data/moves/moves_community.json ptu/data/pokesheets/moves_community.json",
       "problemMatcher": []
     }
   ]

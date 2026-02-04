@@ -3,7 +3,7 @@ from collections import OrderedDict
 from shutil import copy2
 from pathlib import Path
 
-IN_PATH = Path(r"c:\GitHub\PTU-Data\ptu\data\moves\moves_9g.json")
+IN_PATH = Path(r"c:\GitHub\PTU-Data\ptu\data\moves\moves_community.json")
 BACKUP_PATH = IN_PATH.with_suffix(".json.bak")
 
 def reorder_entry(entry: OrderedDict) -> OrderedDict:

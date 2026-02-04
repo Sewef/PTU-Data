@@ -4,7 +4,7 @@ import PyPDF2
 import logging
 
 PDF_PATH = "Gen 9 Homebrew Raw Document.pdf"   # ← adapte si besoin
-OUT_JSON = "../../ptu/data/pokedex/pokedex_9g_temp.json"
+OUT_JSON = "../../ptu/data/pokedex/pokedex_community_temp.json"
 OUT_NDJSON = "pokedex.ndjson"
 OUT_LOG = "pokedex_extraction.log"
 # Logging

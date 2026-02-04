@@ -32,7 +32,7 @@ const FILES_BY_LABEL = {
   "AlolaDex (Community Homebrew)": "pokedex_7g.min.json",
   "GalarDex (Community Homebrew)": "pokedex_8g.min.json",
   "HisuiDex (Community Homebrew)": "pokedex_8g_hisui.min.json",
-  "PaldeaDex (Community Homebrew)": "pokedex_9g.min.json",
+  "PaldeaDex (Community Homebrew)": "pokedex_community.min.json",
 };
 
 const PRESETS = {
@@ -59,19 +59,19 @@ const CAPABILITIES_BASE = "/ptu/data/capabilities";
 
 const MOVES_FILE_BY_PRESET = {
   Core: `${MOVES_BASE}/moves_core.min.json`,
-  Community: `${MOVES_BASE}/moves_9g.min.json`,
+  Community: `${MOVES_BASE}/moves_community.min.json`,
   Homebrew: `${MOVES_BASE}/moves_homebrew.min.json`
 };
 const ABILITIES_FILE_BY_PRESET = {
   Core: `${ABILITIES_BASE}/abilities_core.min.json`,
-  Community: `${ABILITIES_BASE}/abilities_9g.min.json`,
+  Community: `${ABILITIES_BASE}/abilities_community.min.json`,
   Homebrew: `${ABILITIES_BASE}/abilities_homebrew.min.json`
 };
 
 const CAPABILITIES_FILE_BY_PRESET = {
   Core: `${CAPABILITIES_BASE}/capabilities_core.min.json`,
-  Community: `${CAPABILITIES_BASE}/capabilities_9g.min.json`,
-  Homebrew: `${CAPABILITIES_BASE}/capabilities_9g.min.json`
+  Community: `${CAPABILITIES_BASE}/capabilities_community.min.json`,
+  Homebrew: `${CAPABILITIES_BASE}/capabilities_community.min.json`
 };
 
 const POKESHEETS_FILE_BY_PRESET = {
