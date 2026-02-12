@@ -1840,7 +1840,7 @@
             "Prerequisites": "Stat Ace (Attack)",
             "Frequency": "1 AP — Free Action",
             "Trigger": "At the end of your Pokémon's turn, their Attack Stat is at its default number of Combat Stages or less.",
-            "Effect": "The triggering Pokémon gains +1 Combat Stage to Attack."
+            "Effect": "The triggering Pokémon gains +1 Combat Stage to Attack. (Note: The \"Default\" number of Combat Stages is usually 0)"
           },
           {
             "Name": "Stat Training",
@@ -1855,14 +1855,14 @@
             "Tags": "[Branch]",
             "Prerequisites": "Stat Ace (Attack), Adept Command or Focus",
             "Frequency": "Scene — Free Action",
-            "Effect": "Your Pokémon may use a Physical 'Melee, 1-Target' Move as if its range was 'Melee, Pass' or 'Melee, 3-Targets'."
+            "Effect": "You may activate this Feature to cause one of your Pokémon to use a Physical \"Melee, 1-Target\" Move as if its range was \"Melee, Pass\" or \"Melee, 3-Targets\" instead."
           },
           {
             "Name": "Stat Mastery",
             "Tags": "[Branch]",
             "Prerequisites": "Stat Maneuver (Attack)",
             "Frequency": "Static",
-            "Effect": "When your Pokémon uses a Push, Disarm, or Dirty Trick Maneuver successfully, the target loses a Tick of Hit Points."
+            "Effect": "When your Pokémon successfully uses a Push, Disarm, or Dirty Trick Combat Maneuver, the target of the Maneuver loses a Tick of Hit Points."
           },
           {
             "Name": "Stat Embodiment",
@@ -1870,7 +1870,7 @@
             "Prerequisites": "4 Stat Ace (Attack) Features, Expert Command or Focus",
             "Frequency": "1 AP — Swift Action, Priority (Limited)",
             "Target": "Your Pokémon",
-            "Effect": "Your Pokémon gains either Sheer Force or Defiant for the Scene. Switching does not end this effect."
+            "Effect": "Your Pokémon gains either Sheer Force or Defiant for the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
           },
           {
             "Name": "Stat Stratagem",
@@ -1878,7 +1878,7 @@
             "Prerequisites": "Stat Link (Attack), Stat Training (Attack), Master Focus or Command",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
-            "Effect": "While Bound, the target's damaging Melee Attacks have +1 Critical Hit Range per positive Combat Stage in Attack (max +3)."
+            "Effect": "While this Feature is Bound, the target's damaging Melee Attacks have their Critical Hit Range increased by 1 for each positive Combat Stage they have in Attack, up to a maximum of +3."
           }
         ]
       },
@@ -1898,7 +1898,7 @@
             "Prerequisites": "Stat Ace (Defense)",
             "Frequency": "1 AP — Free Action",
             "Trigger": "At the end of your Pokémon's turn, their Defense Stat is at its default number of Combat Stages or less.",
-            "Effect": "The triggering Pokémon gains +1 Combat Stage to Defense."
+            "Effect": "The triggering Pokémon gains +1 Combat Stage to Defense. (Note: The \"Default\" number of Combat Stages is usually 0)"
           },
           {
             "Name": "Stat Training",
@@ -1913,14 +1913,14 @@
             "Tags": "[Branch]",
             "Prerequisites": "Stat Ace (Defense), Adept Command or Focus",
             "Frequency": "Scene — Free Action",
-            "Effect": "When hit by a Physical Attack, your Pokémon defends as if its Defense Combat Stages were at +6."
+            "Effect": "You may activate this feature whenever your Pokémon is hit by a Physical Attack to receive the blow as if your Pokémon's Defense Combat Stages were at +6 instead of their current value."
           },
           {
             "Name": "Stat Mastery",
             "Tags": "[Branch]",
             "Prerequisites": "Stat Maneuver (Defense)",
             "Frequency": "Static",
-            "Effect": "If your Pokémon does not Shift during its turn, it gains +5 Damage Reduction for one round."
+            "Effect": "Whenever your Pokémon do not spend their Shift Action to Shift during a turn, they gain +5 Damage Reduction for one full round."
           },
           {
             "Name": "Stat Embodiment",
@@ -1928,7 +1928,7 @@
             "Prerequisites": "4 Stat Ace (Defense) Features, Expert Command or Focus",
             "Frequency": "1 AP — Swift Action, Priority (Limited)",
             "Target": "Your Pokémon",
-            "Effect": "Your Pokémon gains either Filter or Battle Armor for the Scene. Switching does not end this effect."
+            "Effect": "Your Pokémon gains either Filter or Battle Armor for the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
           },
           {
             "Name": "Stat Stratagem",
@@ -1936,7 +1936,7 @@
             "Prerequisites": "Stat Link (Defense), Stat Training (Defense), Master Focus or Command",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
-            "Effect": "While Bound, the target gains +2 Save Checks vs. Paralysis, Sleep, and Freeze per Combat Stage in Defense (max +6)."
+            "Effect": "While this Feature is Bound, the target gains a +2 bonus to Save Checks against Paralysis, Sleep, and Freeze for each positive Combat Stage they have in Defense, up to a maximum of +6."
           }
         ]
       },
@@ -1956,7 +1956,7 @@
             "Prerequisites": "Stat Ace (Special Attack)",
             "Frequency": "1 AP — Free Action",
             "Trigger": "At the end of your Pokémon's turn, their Special Attack Stat is at its default number of Combat Stages or less.",
-            "Effect": "The triggering Pokémon gains +1 Combat Stage to Special Attack."
+            "Effect": "The triggering Pokémon gains +1 Combat Stage to Special Attack. (Note: The \"Default\" of Combat Stages is usually 0)"
           },
           {
             "Name": "Stat Training",
@@ -1971,14 +1971,14 @@
             "Tags": "[Branch]",
             "Prerequisites": "Stat Ace (Special Attack), Adept Command or Focus",
             "Frequency": "Scene — Free Action",
-            "Effect": "Your Pokémon may reduce the Area of Effect of a Special Move to gain increased range options."
+            "Effect": "You may activate this Feature to allow your Pokémon to use a Special Burst, Cone, Close Blast, Ranged Blast, or Line of any size as a Burst 1, Cone 2, Close Blast 2, or Line 4 instead."
           },
           {
             "Name": "Stat Mastery",
             "Tags": "[Branch]",
             "Prerequisites": "Stat Maneuver (Special Attack)",
             "Frequency": "Static",
-            "Effect": "The Range of your Pokémon's Special Non-Melee Moves is increased by +2."
+            "Effect": "The Range of your Pokémon's Special Non-Melee Moves is increased by +2. This does not affect the size of Area-Of-Effect moves (But does affect the range at which you can place Ranged Blasts)."
           },
           {
             "Name": "Stat Embodiment",
@@ -1986,7 +1986,7 @@
             "Prerequisites": "4 Stat Ace (Special Attack) Features, Expert Command or Focus",
             "Frequency": "1 AP — Swift Action, Priority (Limited)",
             "Target": "Your Pokémon",
-            "Effect": "Your Pokémon gains either Tinted Lens or Competitive for the Scene. Switching does not end this effect."
+            "Effect": "Your Pokémon gains either Tinted Lens or Competitive for the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
           },
           {
             "Name": "Stat Stratagem",
@@ -1994,7 +1994,7 @@
             "Prerequisites": "Stat Link (Special Attack), Stat Training (Special Attack), Master Focus or Command",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
-            "Effect": "While Bound, your Pokémon's Ranged Attacks have +1 Effect Range per positive Combat Stage in Special Attack (max +3)."
+            "Effect": "While this Feature is Bound, the target's damaging Ranged Attacks have their Effect Range increased by 1 for each positive Combat Stage they have in Special Attack, up to a maximum of +3."
           }
         ]
       },
@@ -2014,7 +2014,7 @@
             "Prerequisites": "Stat Ace (Special Defense)",
             "Frequency": "1 AP — Free Action",
             "Trigger": "At the end of your Pokémon's turn, their Special Defense Stat is at its default number of Combat Stages or less.",
-            "Effect": "The triggering Pokémon gains +1 Combat Stage to Special Defense."
+            "Effect": "The triggering Pokémon gains +1 Combat Stage to Special Defense. (Note: The \"Default\" number of Combat Stages is usually 0)"
           },
           {
             "Name": "Stat Training",
@@ -2029,14 +2029,14 @@
             "Tags": "[Branch]",
             "Prerequisites": "Stat Ace (Special Defense), Adept Command or Focus",
             "Frequency": "Scene — Free Action",
-            "Effect": "When hit by a Special Attack, your Pokémon defends as if its Special Defense Combat Stages were at +6."
+            "Effect": "You may activate this feature whenever your Pokémon is hit by a Special Attack to receive the blow as if your Pokémon's Special Defense Combat Stages were at +6 instead of their current value."
           },
           {
             "Name": "Stat Mastery",
             "Tags": "[Branch]",
             "Prerequisites": "Stat Maneuver (Special Defense)",
             "Frequency": "Static",
-            "Effect": "Your Pokémon loses 5 fewer HP from passive effects (min 1)."
+            "Effect": "Whenever your Pokémon would lose a Tick of Hit Points from Status Afflictions, Weather, or other effects, they lose 5 fewer Hit Points, to a minimum of 1."
           },
           {
             "Name": "Stat Embodiment",
@@ -2044,7 +2044,7 @@
             "Prerequisites": "4 Stat Ace (Special Defense) Features, Expert Command or Focus",
             "Frequency": "1 AP — Swift Action, Priority (Limited)",
             "Target": "Your Pokémon",
-            "Effect": "Your Pokémon gains either Multiscale or Tolerance for the Scene. Switching does not end this effect."
+            "Effect": "Your Pokémon gains either Multiscale or Tolerance for the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
           },
           {
             "Name": "Stat Stratagem",
@@ -2052,7 +2052,7 @@
             "Prerequisites": "Stat Link (Special Defense), Stat Training (Special Defense), Master Focus or Command",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
-            "Effect": "While Bound, your Pokémon gains +2 Save Checks vs. Confusion, Rage, and Infatuation per Special Defense Stage (max +6)."
+            "Effect": "While this Feature is Bound, the target gains a +2 bonus to Save Checks against Confusion, Rage, and Infatuation for each positive Combat Stage they have in Special Defense, up to a maximum of +6."
           }
         ]
       },
@@ -2072,7 +2072,7 @@
             "Prerequisites": "Stat Ace (Speed)",
             "Frequency": "1 AP — Free Action",
             "Trigger": "At the end of your Pokémon's turn, their Speed Stat is at its default number of Combat Stages or less.",
-            "Effect": "The triggering Pokémon gains +1 Combat Stage to Speed."
+            "Effect": "The triggering Pokémon gains +1 Combat Stage to Speed. (Note: The \"Default\" number of Combat Stages is usually 0)"
           },
           {
             "Name": "Stat Training",
@@ -2087,7 +2087,7 @@
             "Tags": "[Branch]",
             "Prerequisites": "Stat Ace (Speed), Adept Command or Focus",
             "Frequency": "Scene — Free Action",
-            "Effect": "Your Pokémon may use a Move as Priority, or a Priority Move as Priority (Advanced)."
+            "Effect": "You may activate this Feature at any time to cause your Pokémon to use a Move as Priority or a Priority Move as Priority (Advanced)."
           },
           {
             "Name": "Stat Mastery",
@@ -2102,7 +2102,7 @@
             "Prerequisites": "4 Stat Ace (Speed) Features, Expert Command or Focus",
             "Frequency": "1 AP — Swift Action, Priority (Limited)",
             "Target": "Your Pokémon",
-            "Effect": "Your Pokémon gains either Speed Boost or Vanguard for the Scene. Switching does not end this effect."
+            "Effect": "Your Pokémon gains either Speed Boost or Vanguard for the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability."
           },
           {
             "Name": "Stat Stratagem",
@@ -2110,7 +2110,7 @@
             "Prerequisites": "Stat Link (Speed), Stat Training (Speed), Master Focus or Command",
             "Frequency": "2 AP — Standard Action",
             "Target": "Your Pokémon",
-            "Effect": "While Bound, your Pokémon's Movement Capabilities are increased by +1 per positive Speed Stage (max +3)."
+            "Effect": "While this Feature is Bound, The target's Movement Capabilities are increased by 1 for each positive Combat Stage they have in Speed, up to a maximum of +3."
           }
         ]
       }
