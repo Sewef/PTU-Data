@@ -524,6 +524,9 @@ def parse_capabilities_block(caps_raw) -> Tuple[Dict[str, Any], str]:
 def transform_entry(src: Dict[str, Any], abilities_db: Dict[str, Dict[str, Any]], tag: str) -> Dict[str, Any]:
     species_src = to_str(src.get("Species")) or "Unknown"
     species_out = f"{species_src} ({tag})"  # append " Updated" as requested
+    
+    # Extract Form if present
+    form_src = to_str(src.get("Form"))
 
     number = to_str(src.get("Number"))
     basic_info = src.get("Basic Information") or {}
@@ -648,7 +651,7 @@ def transform_entry(src: Dict[str, Any], abilities_db: Dict[str, Dict[str, Any]]
         "pokedexEntryDocumentId": None,
         "pokedexDocumentId": None,
         "species": species_out,
-        "form": None,
+        "form": form_src,
         "types": types,
         "legendary": False,
         "nationalDexNumber": number if number is not None else None,
