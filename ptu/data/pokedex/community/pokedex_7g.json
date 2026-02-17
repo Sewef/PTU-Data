@@ -41,7 +41,7 @@
       },
       {
         "Stade": 3,
-        "Species": "Decidueye Hisuian",
+        "Species": "Decidueye", "Form": "Hisui",
         "Condition": "",
         "Minimum Level": 30
       }
@@ -9337,19 +9337,19 @@
       },
       {
         "Stade": 2,
-        "Species": "Lycanroc Midday",
+        "Species": "Lycanroc ", "Form": "Midday",
         "Condition": "Sun Stone",
         "Minimum Level": 25
       },
       {
         "Stade": 2,
-        "Species": "Lycanroc Midnight",
+        "Species": "Lycanroc ", "Form": "Midnight",
         "Condition": "Moon Stone",
         "Minimum Level": 25
       },
       {
         "Stade": 2,
-        "Species": "Lycanroc Dusk",
+        "Species": "Lycanroc ", "Form": "Dusk",
         "Condition": "Dusk Stone",
         "Minimum Level": 25
       }
@@ -9720,7 +9720,7 @@
     }
   },
   {
-    "Species": "Lycanroc Midday",
+    "Species": "Lycanroc ", "Form": "Midday",
     "Number": 745,
     "Base Stats": {
       "HP": 8,
@@ -9748,7 +9748,7 @@
       },
       {
         "Stade": 2,
-        "Species": "Lycanroc Midday",
+        "Species": "Lycanroc ", "Form": "Midday",
         "Condition": "Sun Stone",
         "Minimum Level": 25
       }
@@ -10125,7 +10125,7 @@
     }
   },
   {
-    "Species": "Lycanroc Midnight",
+    "Species": "Lycanroc ", "Form": "Midnight",
     "Number": 745,
     "Icon": "745-midnight",
     "Base Stats": {
@@ -10154,7 +10154,7 @@
       },
       {
         "Stade": 2,
-        "Species": "Lycanroc Midnight",
+        "Species": "Lycanroc ", "Form": "Midnight",
         "Condition": "Moon Stone",
         "Minimum Level": 25
       }
@@ -10577,7 +10577,7 @@
     }
   },
   {
-    "Species": "Lycanroc Dusk",
+    "Species": "Lycanroc ", "Form": "Dusk",
     "Number": 745,
     "Icon": "745-dusk",
     "Base Stats": {
@@ -10606,7 +10606,7 @@
       },
       {
         "Stade": 2,
-        "Species": "Lycanroc Dusk",
+        "Species": "Lycanroc ", "Form": "Dusk",
         "Condition": "Dusk Stone",
         "Minimum Level": 25
       }
@@ -10987,7 +10987,7 @@
     }
   },
   {
-    "Species": "Wishiwashi Solo",
+    "Species": "Wishiwashi ", "Form": "Solo",
     "Number": 746,
     "Base Stats": {
       "HP": 5,
@@ -11378,7 +11378,7 @@
     }
   },
   {
-    "Species": "Wishiwashi Schooling",
+    "Species": "Wishiwashi ", "Form": "Schooling",
     "Number": 746,
     "Icon": "746-schooling",
     "Base Stats": {
@@ -23385,7 +23385,7 @@
     "Legendary": true
   },
   {
-    "Species": "Minior Meteor",
+    "Species": "Minior", "Form": "Meteor",
     "Number": 774,
     "Base Stats": {
       "HP": 6,
@@ -23813,7 +23813,7 @@
     }
   },
   {
-    "Species": "Minior Core",
+    "Species": "Minior", "Form": "Core",
     "Number": 774,
     "Icon": "774-core",
     "Base Stats": {
@@ -29308,7 +29308,7 @@
     }
   },
   {
-    "Species": "Rattata Alola",
+    "Species": "Rattata", "Form": "Alola",
     "Number": 19,
     "Icon": "19-alola",
     "Base Stats": {
@@ -29333,12 +29333,12 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Rattata Alola",
+        "Species": "Rattata", "Form": "Alola",
         "Condition": ""
       },
       {
         "Stade": 2,
-        "Species": "Raticate Alola",
+        "Species": "Raticate", "Form": "Alola",
         "Condition": "",
         "Minimum Level": 20
       }
@@ -29831,7 +29831,7 @@
     }
   },
   {
-    "Species": "Raticate Alola",
+    "Species": "Raticate", "Form": "Alola",
     "Number": 20,
     "Icon": "20-alola",
     "Base Stats": {
@@ -29856,12 +29856,12 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Rattata Alola",
+        "Species": "Rattata", "Form": "Alola",
         "Condition": ""
       },
       {
         "Stade": 2,
-        "Species": "Raticate Alola",
+        "Species": "Raticate", "Form": "Alola",
         "Condition": "",
         "Minimum Level": 20
       }
@@ -30345,7 +30345,7 @@
     }
   },
   {
-    "Species": "Raichu Alola",
+    "Species": "Raichu", "Form": "Alola",
     "Number": 26,
     "Icon": "26-alola",
     "Base Stats": {
@@ -30381,7 +30381,7 @@
       },
       {
         "Stade": 3,
-        "Species": "Raichu Alola",
+        "Species": "Raichu", "Form": "Alola",
         "Condition": "Thunderstone",
         "Minimum Level": 20
       }
@@ -30882,7 +30882,7 @@
     }
   },
   {
-    "Species": "Sandshrew Alola",
+    "Species": "Sandshrew", "Form": "Alola",
     "Number": 27,
     "Icon": "27-alola",
     "Base Stats": {
@@ -30907,12 +30907,12 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Sandshrew Alola",
+        "Species": "Sandshrew", "Form": "Alola",
         "Condition": ""
       },
       {
         "Stade": 2,
-        "Species": "Sandslash Alola",
+        "Species": "Sandslash", "Form": "Alola",
         "Condition": "Ice Stone",
         "Minimum Level": 20
       }
@@ -31425,7 +31425,7 @@
     }
   },
   {
-    "Species": "Sandslash Alola",
+    "Species": "Sandslash", "Form": "Alola",
     "Number": 28,
     "Icon": "28-alola",
     "Base Stats": {
@@ -31450,12 +31450,12 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Sandshrew Alola",
+        "Species": "Sandshrew", "Form": "Alola",
         "Condition": ""
       },
       {
         "Stade": 2,
-        "Species": "Sandslash Alola",
+        "Species": "Sandslash", "Form": "Alola",
         "Condition": "Ice Stone",
         "Minimum Level": 20
       }
@@ -31920,7 +31920,7 @@
     }
   },
   {
-    "Species": "Vulpix Alola",
+    "Species": "Vulpix", "Form": "Alola",
     "Number": 37,
     "Icon": "37-alola",
     "Base Stats": {
@@ -31944,12 +31944,12 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Vulpix Alola",
+        "Species": "Vulpix", "Form": "Alola",
         "Condition": ""
       },
       {
         "Stade": 2,
-        "Species": "Ninetales Alola",
+        "Species": "Ninetales", "Form": "Alola",
         "Condition": "Ice Stone",
         "Minimum Level": 20
       }
@@ -32416,7 +32416,7 @@
     }
   },
   {
-    "Species": "Ninetales Alola",
+    "Species": "Ninetales", "Form": "Alola",
     "Number": 38,
     "Icon": "38-alola",
     "Base Stats": {
@@ -32441,12 +32441,12 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Vulpix Alola",
+        "Species": "Vulpix", "Form": "Alola",
         "Condition": ""
       },
       {
         "Stade": 2,
-        "Species": "Ninetales Alola",
+        "Species": "Ninetales", "Form": "Alola",
         "Condition": "Ice Stone",
         "Minimum Level": 20
       }
@@ -32908,7 +32908,7 @@
     }
   },
   {
-    "Species": "Diglett Alola",
+    "Species": "Diglett", "Form": "Alola",
     "Number": 50,
     "Icon": "50-alola",
     "Base Stats": {
@@ -32933,12 +32933,12 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Diglett Alola",
+        "Species": "Diglett", "Form": "Alola",
         "Condition": ""
       },
       {
         "Stade": 2,
-        "Species": "Dugtrio Alola",
+        "Species": "Dugtrio", "Form": "Alola",
         "Condition": "",
         "Minimum Level": 25
       }
@@ -33362,7 +33362,7 @@
     }
   },
   {
-    "Species": "Dugtrio Alola",
+    "Species": "Dugtrio", "Form": "Alola",
     "Number": 51,
     "Icon": "51-alola",
     "Base Stats": {
@@ -33387,12 +33387,12 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Diglett Alola",
+        "Species": "Diglett", "Form": "Alola",
         "Condition": ""
       },
       {
         "Stade": 2,
-        "Species": "Dugtrio Alola",
+        "Species": "Dugtrio", "Form": "Alola",
         "Condition": "",
         "Minimum Level": 25
       }
@@ -33787,7 +33787,7 @@
     }
   },
   {
-    "Species": "Meowth Alola",
+    "Species": "Meowth", "Form": "Alola",
     "Number": 52,
     "Icon": "52-alola",
     "Base Stats": {
@@ -33811,12 +33811,12 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Meowth Alola",
+        "Species": "Meowth", "Form": "Alola",
         "Condition": ""
       },
       {
         "Stade": 2,
-        "Species": "Persian Alola",
+        "Species": "Persian", "Form": "Alola",
         "Condition": "",
         "Minimum Level": 25
       }
@@ -34345,7 +34345,7 @@
     }
   },
   {
-    "Species": "Persian Alola",
+    "Species": "Persian", "Form": "Alola",
     "Number": 53,
     "Icon": "53-alola",
     "Base Stats": {
@@ -34369,12 +34369,12 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Meowth Alola",
+        "Species": "Meowth", "Form": "Alola",
         "Condition": ""
       },
       {
         "Stade": 2,
-        "Species": "Persian Alola",
+        "Species": "Persian", "Form": "Alola",
         "Condition": "",
         "Minimum Level": 25
       }
@@ -34851,7 +34851,7 @@
     }
   },
   {
-    "Species": "Geodude Alola",
+    "Species": "Geodude", "Form": "Alola",
     "Number": 74,
     "Icon": "74-alola",
     "Base Stats": {
@@ -34876,18 +34876,18 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Geodude Alola",
+        "Species": "Geodude", "Form": "Alola",
         "Condition": ""
       },
       {
         "Stade": 2,
-        "Species": "Graveler Alola",
+        "Species": "Graveler", "Form": "Alola",
         "Condition": "",
         "Minimum Level": 25
       },
       {
         "Stade": 3,
-        "Species": "Golem Alola",
+        "Species": "Golem", "Form": "Alola",
         "Condition": "",
         "Minimum Level": 30
       }
@@ -35387,7 +35387,7 @@
     }
   },
   {
-    "Species": "Graveler Alola",
+    "Species": "Graveler", "Form": "Alola",
     "Number": 75,
     "Icon": "75-alola",
     "Base Stats": {
@@ -35412,18 +35412,18 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Geodude Alola",
+        "Species": "Geodude", "Form": "Alola",
         "Condition": ""
       },
       {
         "Stade": 2,
-        "Species": "Graveler Alola",
+        "Species": "Graveler", "Form": "Alola",
         "Condition": "",
         "Minimum Level": 25
       },
       {
         "Stade": 3,
-        "Species": "Golem Alola",
+        "Species": "Golem", "Form": "Alola",
         "Condition": "",
         "Minimum Level": 30
       }
@@ -35865,7 +35865,7 @@
     }
   },
   {
-    "Species": "Golem Alola",
+    "Species": "Golem", "Form": "Alola",
     "Number": 76,
     "Icon": "76-alola",
     "Base Stats": {
@@ -35890,18 +35890,18 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Geodude Alola",
+        "Species": "Geodude", "Form": "Alola",
         "Condition": ""
       },
       {
         "Stade": 2,
-        "Species": "Graveler Alola",
+        "Species": "Graveler", "Form": "Alola",
         "Condition": "",
         "Minimum Level": 25
       },
       {
         "Stade": 3,
-        "Species": "Golem Alola",
+        "Species": "Golem", "Form": "Alola",
         "Condition": "",
         "Minimum Level": 30
       }
@@ -36390,7 +36390,7 @@
     }
   },
   {
-    "Species": "Grimer Alola",
+    "Species": "Grimer", "Form": "Alola",
     "Number": 88,
     "Icon": "88-alola",
     "Base Stats": {
@@ -36415,12 +36415,12 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Grimer Alola",
+        "Species": "Grimer", "Form": "Alola",
         "Condition": ""
       },
       {
         "Stade": 2,
-        "Species": "Muk Alola",
+        "Species": "Muk", "Form": "Alola",
         "Condition": "",
         "Minimum Level": 35
       }
@@ -36969,7 +36969,7 @@
     }
   },
   {
-    "Species": "Muk Alola",
+    "Species": "Muk", "Form": "Alola",
     "Number": 89,
     "Icon": "89-alola",
     "Base Stats": {
@@ -36994,12 +36994,12 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Grimer Alola",
+        "Species": "Grimer", "Form": "Alola",
         "Condition": ""
       },
       {
         "Stade": 2,
-        "Species": "Muk Alola",
+        "Species": "Muk", "Form": "Alola",
         "Condition": "",
         "Minimum Level": 35
       }
@@ -37502,7 +37502,7 @@
     }
   },
   {
-    "Species": "Exeggutor Alola",
+    "Species": "Exeggutor", "Form": "Alola",
     "Number": 103,
     "Icon": "103-alola",
     "Base Stats": {
@@ -37532,7 +37532,7 @@
       },
       {
         "Stade": 2,
-        "Species": "Exeggutor Alola",
+        "Species": "Exeggutor", "Form": "Alola",
         "Condition": "Leaf Stone",
         "Minimum Level": 20
       }
@@ -38049,7 +38049,7 @@
     }
   },
   {
-    "Species": "Marowak Alola",
+    "Species": "Marowak", "Form": "Alola",
     "Number": 105,
     "Icon": "105-alola",
     "Base Stats": {
@@ -38079,7 +38079,7 @@
       },
       {
         "Stade": 2,
-        "Species": "Marowak Alola",
+        "Species": "Marowak", "Form": "Alola",
         "Condition": "",
         "Minimum Level": 25
       }
@@ -42368,7 +42368,7 @@
     "Legendary": true
   },
   {
-    "Species": "Necrozma Dusk Mane",
+    "Species": "Necrozma", "Form": "Dusk Mane",
     "Number": 800,
     "Icon": "800-dusk",
     "Base Stats": {
@@ -42943,7 +42943,7 @@
     "Legendary": true
   },
   {
-    "Species": "Necrozma Dawn Wings",
+    "Species": "Necrozma", "Form": "Dawn Wings",
     "Number": 800,
     "Icon": "800-dawn",
     "Base Stats": {
@@ -43511,7 +43511,7 @@
     "Legendary": true
   },
   {
-    "Species": "Zygarde 10% Forme",
+    "Species": "Zygarde", "Form": "10% Forme",
     "Number": 718,
     "Icon": "718-10",
     "Base Stats": {
@@ -43977,7 +43977,7 @@
     "Legendary": true
   },
   {
-    "Species": "Zygarde 50% Forme",
+    "Species": "Zygarde", "Form": "50% Forme",
     "Number": 718,
     "Icon": "718-50",
     "Base Stats": {
@@ -44436,7 +44436,7 @@
     "Legendary": true
   },
   {
-    "Species": "Zygarde Complete Forme",
+    "Species": "Zygarde", "Form": "Complete Forme",
     "Number": 718,
     "Icon": "710-100",
     "Base Stats": {

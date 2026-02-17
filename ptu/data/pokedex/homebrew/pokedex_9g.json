@@ -4599,13 +4599,13 @@
       },
       {
         "Stade": 2,
-        "Species": "Oinkologne Male",
+        "Species": "Oinkologne", "Form": "Male",
         "Condition": "",
         "Minimum Level": 15
       },
       {
         "Stade": 2,
-        "Species": "Oinkologne Female",
+        "Species": "Oinkologne", "Form": "Female",
         "Condition": "",
         "Minimum Level": 15
       }
@@ -4978,7 +4978,7 @@
     }
   },
   {
-    "Species": "Oinkologne Male",
+    "Species": "Oinkologne", "Form": "Male",
     "Number": 916,
     "Base Stats": {
       "HP": 11,
@@ -5006,7 +5006,7 @@
       },
       {
         "Stade": 2,
-        "Species": "Oinkologne Male",
+        "Species": "Oinkologne", "Form": "Male",
         "Condition": "",
         "Minimum Level": 15
       }
@@ -5426,7 +5426,7 @@
     }
   },
   {
-    "Species": "Oinkologne Female",
+    "Species": "Oinkologne", "Form": "Female",
     "Number": 916,
     "Base Stats": {
       "HP": 12,
@@ -5454,7 +5454,7 @@
       },
       {
         "Stade": 2,
-        "Species": "Oinkologne Female",
+        "Species": "Oinkologne", "Form": "Female",
         "Condition": "",
         "Minimum Level": 15
       }
@@ -27342,7 +27342,7 @@
       },
       {
         "Stade": 2,
-        "Species": "Palafin ",
+        "Species": "Palafin", "Form": "Zero Form",
         "Condition": "",
         "Minimum Level": 25
       }
@@ -27718,7 +27718,7 @@
     }
   },
   {
-    "Species": "Palafin Zero Form",
+    "Species": "Palafin", "Form": "Zero Form",
     "Number": 964,
     "Base Stats": {
       "HP": 10,
@@ -27746,7 +27746,7 @@
       },
       {
         "Stade": 2,
-        "Species": "Palafin ",
+        "Species": "Palafin", "Form": "Zero Form",
         "Condition": "",
         "Minimum Level": 25
       }
@@ -28242,7 +28242,7 @@
     }
   },
   {
-    "Species": "Palafin Hero Form",
+    "Species": "Palafin", "Form": "Hero Form",
     "Number": 964,
     "Icon": "964-hero",
     "Base Stats": {
@@ -28271,7 +28271,7 @@
       },
       {
         "Stade": 2,
-        "Species": "Palafin ",
+        "Species": "Palafin", "Form": "Zero Form",
         "Condition": "",
         "Minimum Level": 25
       }
@@ -35164,7 +35164,7 @@
     }
   },
   {
-    "Species": "Paldean Tauros Combat Breed",
+    "Species": "Tauros", "Form": "Combat Breed",
     "Number": 128,
     "Icon": "128-paldea-combat",
     "Base Stats": {
@@ -35188,7 +35188,7 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Paldean Tauros Combat Breed",
+        "Species": "Tauros", "Form": "Combat Breed",
         "Condition": ""
       }
     ],
@@ -35566,7 +35566,7 @@
     }
   },
   {
-    "Species": "Paldean Tauros Blaze Breed",
+    "Species": "Tauros", "Form": "Blaze Breed",
     "Number": 128,
     "Icon": "128-paldea-blaze",
     "Base Stats": {
@@ -35591,7 +35591,7 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Paldean Tauros Blaze Breed",
+        "Species": "Tauros", "Form": "Blaze Breed",
         "Condition": ""
       }
     ],
@@ -36007,7 +36007,7 @@
     }
   },
   {
-    "Species": "Paldean Tauros Aqua Breed",
+    "Species": "Tauros", "Form": "Aqua Breed",
     "Number": 128,
     "Icon": "128-paldea-aqua",
     "Base Stats": {
@@ -36032,7 +36032,7 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Paldean Tauros Aqua Breed",
+        "Species": "Tauros", "Form": "Aqua Breed",
         "Condition": ""
       }
     ],
@@ -37122,7 +37122,7 @@
     }
   },
   {
-    "Species": "Paldean Wooper",
+    "Species": "Wooper", "Form": "Paldea",
     "Number": 194,
     "Icon": "194-paldea",
     "Base Stats": {
@@ -37147,7 +37147,7 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Paldean Wooper",
+        "Species": "Wooper", "Form": "Paldea",
         "Condition": ""
       },
       {
@@ -37627,7 +37627,7 @@
     "Evolution": [
       {
         "Stade": 1,
-        "Species": "Paldean Wooper",
+        "Species": "Wooper", "Form": "Paldea",
         "Condition": ""
       },
       {

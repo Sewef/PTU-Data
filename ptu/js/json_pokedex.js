@@ -134,6 +134,13 @@ const escapeHtml = (s) => String(s).replace(/[&<>"']/g, (c) => ({
   "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
 }[c]));
 
+// Helper: Build full display name including form if present
+function getFullSpeciesName(p) {
+  const species = p?.Species || "";
+  const form = p?.Form || "";
+  return form ? `${species} (${form})` : species;
+}
+
 async function fetchJson(url, { strict = true, cache = "no-store" } = {}) {
   if (!url) return strict ? Promise.reject(new Error("No URL")) : [];
   if (_fetchCache.has(url)) return _fetchCache.get(url);
@@ -170,14 +177,15 @@ async function loadPokedex() {
     return data && typeof data === "object" ? Object.values(data) : [];
   }));
 
-  // merge with de-dup (Number::Species)
+  // merge with de-dup (Number::Species::Form)
   const merged = [];
   const seen = new Set();
   for (const arr of results) {
     for (const row of arr) {
       const num = row?.Number ?? row?.number ?? "";
       const sp = row?.Species ?? row?.species ?? "";
-      const key = `${num}::${sp}`;
+      const form = row?.Form ?? "";
+      const key = `${num}::${sp}::${form}`;
       if (seen.has(key)) continue;
       seen.add(key);
       merged.push(row);
@@ -499,7 +507,7 @@ function renderGrid(rows) {
     const end = Math.min(index + CHUNK, rows.length);
     for (; index < end; index++) {
       const p = rows[index];
-      const name = p.Species || "Unknown";
+      const name = getFullSpeciesName(p) || "Unknown";
       const num = pad3(p.Number ?? "0");
       const types = extractTypes(p);
 
@@ -653,20 +661,22 @@ function renderEvolutionList(evos, base, depth = 0) {
   const h = Math.min(4 + depth, 6);
 
   // Build availability map from the currently loaded/merged Pokédex.
-  // Use exact species name (which includes regional forms like "Linoone Galar")
+  // Use exact full species name including form (e.g. "Raichu Alola")
   const all = (window.__POKEDEX || window.__pokedexData || []);
   const bySpeciesExact = new Map();
   for (const p of all) {
-    const sp = String(p?.Species || "").toLowerCase();
-    if (!sp) continue;
-    bySpeciesExact.set(sp, p);
+    const fullName = getFullSpeciesName(p).toLowerCase();
+    if (!fullName) continue;
+    bySpeciesExact.set(fullName, p);
   }
-  const current = String(base?.Species || "").toLowerCase();
+  const current = getFullSpeciesName(base).toLowerCase();
 
   const items = evos.map(e => {
     const stade = e?.Stade ?? "";
     const species = e?.Species ?? "";
-    const sp = String(species).toLowerCase();
+    const form = e?.Form ?? "";
+    const fullSpecies = form ? `${species} (${form})` : species;
+    const sp = String(fullSpecies).toLowerCase();
 
     const levelNum = e?.["Minimum Level"];
     const cond = (e?.Condition ?? "").trim();
@@ -686,12 +696,12 @@ function renderEvolutionList(evos, base, depth = 0) {
     if (exists) {
       const numAttr = (numForSp != null) ? ` data-dex-number="${escapeHtml(String(numForSp))}"` : "";
       speciesLabel =
-        `<a href="#" class="fw-semibold js-species-link" data-dex-species="${escapeHtml(String(species))}"${numAttr}>${escapeHtml(species)}</a>`;
+        `<a href="#" class="fw-semibold js-species-link" data-dex-species="${escapeHtml(String(fullSpecies))}"${numAttr}>${escapeHtml(fullSpecies)}</a>`;
     } else {
       // Non-clickable with tooltip (Bootstrap-compatible)
       const tip = "Not found in current dataset";
       speciesLabel =
-        `<span class="fw-semibold text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="top" title="${tip}">${escapeHtml(species)}</span>`;
+        `<span class="fw-semibold text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="top" title="${tip}">${escapeHtml(fullSpecies)}</span>`;
     }
 
     const extra =
@@ -961,7 +971,7 @@ function renderObject(obj, depth = 0) {
     if (depth === 0) {
       let col1 = "", col2 = "";
       for (const [k, v0] of Object.entries(obj)) {
-        if (["Species", "Number", "Icon", "Legendary"].includes(k)) continue;
+        if (["Species", "Number", "Icon", "Legendary", "Form"].includes(k)) continue;
 
         let v = v0;
         if (k === "Basic Information") v = transformBasicInformation({ ...(v || {}) });
@@ -1476,14 +1486,15 @@ function openDetail(p) {
   const title = $("#dexModalLabel");
   const num = pad3(p.Number ?? "0");
   const species = p.Species || "Unknown";
+  const displayName = getFullSpeciesName(p) || species;
   const typesHTML = wrapTypes(extractTypes(p)) || "";
 
   title.innerHTML = `
       <div class="d-flex align-items-start gap-3 w-100">
-        <img id="dexModalIcon" class="dex-title-icon rounded dark-background p-1" width="64" height="64" alt="${species}">
+        <img id="dexModalIcon" class="dex-title-icon rounded dark-background p-1" width="64" height="64" alt="${displayName}">
         <div class="flex-grow-1">
           <div class="d-flex flex-wrap align-items-baseline gap-2">
-            <span class="h5 mb-0">#${num} — ${species}</span>
+            <span class="h5 mb-0">#${num} — ${displayName}</span>
           </div>
           <div class="dex-title-types mt-1">${typesHTML}</div>
         </div>
@@ -1493,7 +1504,7 @@ function openDetail(p) {
   body.innerHTML = renderObject(safe);
 
   const img = $("#dexModalIcon");
-  if (img) setupIcon(img, p.Icon || p.Number, species, "full");
+  if (img) setupIcon(img, p.Icon || p.Number, displayName, "full");
 
   const inst = getDexModalInstance();
   if (inst && !isDexModalShown()) inst.show();
@@ -1637,10 +1648,11 @@ export async function loadPokedexPage() {
   window.__POKEDEX = data;
   window.__pokedexData = data;
 
-  // Fonction globale : open by species
+  // Fonction globale : open by species (now handles forms like "Raichu Alola")
   window.openModalBySpecies = (speciesName) => {
+    const searchName = String(speciesName || "").toLowerCase();
     const found = (window.__POKEDEX || []).find(
-      p => String(p.Species || "").toLowerCase() === String(speciesName || "").toLowerCase()
+      p => getFullSpeciesName(p).toLowerCase() === searchName
     );
     if (found) openDetail(found);
   };
@@ -1676,11 +1688,12 @@ document.addEventListener("click", (e) => {
   const number = a.getAttribute("data-dex-number");
   const species = a.getAttribute("data-dex-species");
   
-  // Prioritize exact species name match (handles regional forms correctly)
+  // Prioritize exact species name match (handles regional forms like "Raichu Alola")
   let target = null;
   if (species) {
+    const searchName = String(species).toLowerCase();
     target = window.__pokedexData?.find(p =>
-      String(p.Species).toLowerCase() === String(species).toLowerCase()
+      getFullSpeciesName(p).toLowerCase() === searchName
     );
   }
   // Fallback to number-only match if no species match found
