@@ -102,7 +102,7 @@ let selectedLabels = new Set(PRESETS[selectedPreset] || []);
 let TYPE_MATCH_MODE = 'any'; // 'any' (OR) || 'all' (AND) for type matching
 const GRID_CHUNK_SIZE = 60; // smaller batch to speed up first paint
 let __RENDER_SEQ = 0;
-const __TYPE_CACHE__ = new WeakMap(); // cache pokemon -> types[]
+let __TYPE_CACHE__ = new WeakMap(); // cache pokemon -> types[] (must be let to allow reset)
 // =========================
 // Caches & Utilities
 
@@ -251,6 +251,7 @@ function loadCapabilityIndex() { return loadIndex(getCapabilitiesUrlForPreset(),
 function clearIndexCache() {
   _indexCache.clear();
   _fetchCache.clear(); // Clear fetch cache too to reload JSON data
+  __TYPE_CACHE__ = new WeakMap(); // Reset type cache for new preset
 }
 
 // =========================
