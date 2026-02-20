@@ -113,8 +113,15 @@
             to 9, starting from the last, following lots of filtering conditions. This encourage to use most of moves
             availables in the game without letting some behind, Gen 8 and 9 scrapped too much content.<br>
           <ul>
-            <li>Extract Base Stats, Moves, Evolutionary Stage from PokeAPI</li>
-            <li>Transform stats for PTU format: base_stat / 10, rounded up from .5.</li>
+            Abilities updated:
+            <li>Wingull, Pelipper: Added Basic Ability 2 → Drizzle</li>
+            <li>Roggenrola, Boldore: Added Basic Ability 2 → Weak Armor</li>
+            <li>Gigalith: Added Basic Ability 2 → Sand Stream</li>
+            <li>Cubchoo, Beartic: Changed High Ability → Slush Rush</li>
+          </ul>
+          <ul>
+            Moves update process:
+            <li>Extract Moves, Evolutionary Stage from PokeAPI</li>
             <li>Special stone-evolution logic:
               <ul>
                 <li>If evolved by stone and has <10 level-up moves → inherit level-up moves from previous stage.</li>
