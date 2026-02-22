@@ -8,7 +8,7 @@
 
   
   <!-- Theme script must load before body to prevent flash -->
-  <script src="/ptu/js/theme-switcher.js"></script>
+  <script src="/ptu/js/theme-switcher.min.js"></script>
 
   <link rel="stylesheet" href="/ptu/css/bootstrap.min.css">
   <link rel="stylesheet" href="/ptu/css/style.css">
@@ -46,8 +46,8 @@
   </div>
 
   <script type="module">
-    import { includeHTML, setActive, showPageWhenLoaded } from "/ptu/js/helpers.js";
-    import { loadItems } from "/ptu/js/json_items.js";
+    import { includeHTML, setActive, showPageWhenLoaded } from "/ptu/js/helpers.min.js";
+    import { loadItems } from "/ptu/js/json_items.min.js";
     includeHTML(() => {
       setActive();
       showPageWhenLoaded();

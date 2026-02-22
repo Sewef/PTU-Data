@@ -13,6 +13,7 @@
       "label": "Copy PTU (robocopy)",
       "type": "shell",
       "command": "robocopy \"C:/GitHub/PTU-Data/ptu\" \"C:/GitHub/sewef.github.io/ptu\" /MIR /R:0 /W:0 & if %ERRORLEVEL% LSS 8 (exit /b 0) else (exit /b %ERRORLEVEL%)",
+      "command": "robocopy \"D:/GitHub/PTU-Data/ptu\" \"D:/GitHub/sewef.github.io/ptu\" /MIR /R:0 /W:0 & if %ERRORLEVEL% LSS 8 (exit /b 0) else (exit /b %ERRORLEVEL%)",
       "options": {
         "shell": {
           "executable": "cmd.exe",
@@ -43,10 +44,23 @@
       "problemMatcher": []
     },
     {
+      "label": "Minify JS",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "py/deploy/minify_js.py",
+        "ptu/js"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "Git Deploy",
       "type": "shell",
       "options": {
-        "cwd": "C:/GitHub/sewef.github.io",
         "shell": {
           "executable": "cmd.exe",
           "args": [
@@ -67,6 +81,7 @@
       "dependsOn": [
         "Pokesheets All",
         "Minify Data",
+        "Minify JS",
         "Copy PTU (robocopy)",
         "Git Deploy"
       ],
