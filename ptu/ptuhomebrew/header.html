@@ -19,10 +19,30 @@
 <body>
   <header class="border-bottom">
     <div class="container d-flex flex-wrap justify-content-center py-3">
-      <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-        <img src="/ptu/img/logo64.png" alt="Logo" class="bi me-2 d-inline-block align-text-top" style="image-rendering: pixelated;">
-        <span class="fs-4">PTU Data Homebrew</span>
-      </a>
+      <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+        <img src="/ptu/img/logo64.png" alt="Logo" class="bi me-2 d-inline-block align-text-top" style="image-rendering: pixelated;" id="logo-img" onload="if(Math.random() < 0.01) this.src='/ptu/img/logo64-shiny.png';">
+        <div class="dropdown">
+          <button class="btn btn-link dropdown-toggle p-0 text-dark text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 1.5rem;">
+            PTU Data Homebrew
+          </button>
+          <ul class="dropdown-menu" id="dataset-dropdown">
+            <li><a class="dropdown-item" href="../ptucore/index.html">PTU Data Core 1.05</a></li>
+            <li><a class="dropdown-item" href="../ptucommunity/index.html">PTU Data Gen 9</a></li>
+            <li><a class="dropdown-item active" href="./index.html">PTU Data Homebrew</a></li>
+          </ul>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const hash = window.location.hash;
+              const links = document.querySelectorAll('#dataset-dropdown a.dropdown-item');
+              links.forEach(link => {
+                if (!link.href.includes('index.html')) return;
+                const currentHref = link.href.split('#')[0];
+                link.href = currentHref + hash;
+              });
+            });
+          </script>
+        </div>
+      </div>
   
       <ul class="nav nav-pills align-items-center">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>

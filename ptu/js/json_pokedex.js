@@ -95,6 +95,37 @@ const SHOWN_TAGS = new Set(["N", "Stab"]);
 let selectedPreset = window.selectedPreset || "Core";
 let selectedLabels = new Set(PRESETS[selectedPreset] || []);
 
+// =========================
+// Hash state management
+// =========================
+function getHashParams() {
+  const hash = window.location.hash.slice(1);
+  const params = new URLSearchParams(hash);
+  return params;
+}
+
+function setHashParams(obj) {
+  const params = new URLSearchParams(obj);
+  const newHash = params.toString();
+  window.history.replaceState({}, "", `#${newHash}`);
+}
+
+function loadPokedexState() {
+  const params = getHashParams();
+  const query = params.get("q") || "";
+  const typeStr = params.get("types") || "";
+  const mode = params.get("mode") || "any";
+  
+  return { query, typeStr, mode };
+}
+
+function savePokedexState(query, types, mode) {
+  const obj = {};
+  if (query) obj.q = query;
+  if (types && types.length) obj.types = types.join(",");
+  if (mode && mode !== "any") obj.mode = mode;
+  setHashParams(obj);
+}
 
 // =========================
 // Filtering / Performance
@@ -1364,10 +1395,14 @@ function filterRows(rows) {
 
 function wireSearch(all) {
   const inp = $("#dex-search");
-  if (inp) inp.addEventListener("input", debounce(() => renderGrid(filterRows(all)), 120));
+  if (inp) inp.addEventListener("input", debounce(() => {
+    savePokedexState(inp.value, activeTypes(), currentTypeMatchMode());
+    renderGrid(filterRows(all));
+  }, 120));
   $("#clear-filters")?.addEventListener("click", () => {
     inp.value = "";
     document.querySelectorAll("#type-filters input[type='checkbox']").forEach(cb => cb.checked = false);
+    savePokedexState("", [], "any");
     renderGrid(filterRows(all));
   });
 }
@@ -1664,7 +1699,30 @@ export async function loadPokedexPage() {
   if (s) openModalBySpecies(s);
 
   // Build filtres + grille
-  buildTypeSidebar(data, () => renderGrid(filterRows(data)));
+  buildTypeSidebar(data, () => {
+    savePokedexState($("#dex-search")?.value || "", activeTypes(), currentTypeMatchMode());
+    renderGrid(filterRows(data));
+  });
+  
+  // Restaurer l'état depuis le hash après que les filtres soient construits
+  const state = loadPokedexState();
+  if (state.query) {
+    const inp = $("#dex-search");
+    if (inp) inp.value = state.query;
+  }
+  if (state.typeStr) {
+    const types = state.typeStr.split(",").filter(t => t);
+    types.forEach(t => {
+      const cb = document.querySelector(`#type-filter-${t}`);
+      if (cb) cb.checked = true;
+    });
+  }
+  if (state.mode && state.mode !== "any") {
+    const modeRadio = document.querySelector(`#type-mode-${state.mode}`);
+    if (modeRadio) modeRadio.checked = true;
+    TYPE_MATCH_MODE = state.mode;
+  }
+  
   wireSearch(data);
   renderGrid(filterRows(data));
 }

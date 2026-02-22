@@ -3,6 +3,26 @@ let classesData = {};
 let activeSources = new Set();
 let currentLink = null;
 
+// Parse hash parameters (format: #key=value&key=value)
+function getHashParams() {
+  const hash = window.location.hash.slice(1);
+  const params = new URLSearchParams(hash);
+  return params;
+}
+
+function setHashParams(obj) {
+  const params = new URLSearchParams(obj);
+  const newHash = params.toString();
+  const url = new URL(window.location);
+  const oldHash = url.hash.slice(1);
+  
+  if (oldHash === newHash) {
+    return; // No change
+  }
+  
+  window.history.pushState({}, "", `#${newHash}`);
+}
+
 // ------------------------- CHARGEMENT JSON ---------------------------------
 export function loadClasses(path) {
   fetch(path)
@@ -11,7 +31,7 @@ export function loadClasses(path) {
       classesData = json;
       buildSidebar();
 
-      const params = new URLSearchParams(window.location.search);
+      const params = getHashParams();
       const section = params.get("section");
       const branch = params.get("branch");
 
@@ -233,16 +253,19 @@ function setActiveLink(el) {
 
   const section = el.dataset.section;
   const branch = el.dataset.branch;
-  const url = new URL(window.location);
-  const prev = url.searchParams.get("section") + "|" + url.searchParams.get("branch");
+  
+  const oldParams = getHashParams();
+  const prev = oldParams.get("section") + "|" + oldParams.get("branch");
   const next = section + "|" + branch;
 
-  url.searchParams.set("section", section);
-  url.searchParams.set("branch", branch);
+  const newParams = new URLSearchParams();
+  newParams.set("section", section);
+  newParams.set("branch", branch);
+  
   if (prev === next) {
-    window.history.replaceState({}, "", url);
+    window.history.replaceState({}, "", `#${newParams.toString()}`);
   } else {
-    window.history.pushState({}, "", url);
+    window.history.pushState({}, "", `#${newParams.toString()}`);
   }
 }
 

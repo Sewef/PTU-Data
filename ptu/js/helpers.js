@@ -1,7 +1,10 @@
 export function includeHTML(callback) {
   const elements = document.querySelectorAll('[w3-include-html]');
   let total = elements.length;
-  if (total === 0 && callback) callback();
+  if (total === 0 && callback) {
+    callback();
+    setupVersionSwitcher();
+  }
 
   elements.forEach(el => {
     const file = el.getAttribute("w3-include-html");
@@ -19,12 +22,18 @@ export function includeHTML(callback) {
         el.innerHTML = data;
         el.removeAttribute("w3-include-html");
         total--;
-        if (total === 0 && callback) callback(); // callback après tous les includes
+        if (total === 0 && callback) {
+          callback(); // callback après tous les includes
+          setupVersionSwitcher();
+        }
       })
       .catch(err => {
         el.innerHTML = "Include failed.";
         total--;
-        if (total === 0 && callback) callback();
+        if (total === 0 && callback) {
+          callback();
+          setupVersionSwitcher();
+        }
       });
   });
 }
@@ -132,4 +141,18 @@ export function filterByTypes(item, types) {
 export function filterByClasses(item, classes) {
   if (!classes.length) return true;
   return classes.includes(item.Class);
+}
+
+// --- Version Switcher ---
+export function setupVersionSwitcher() {
+  const links = document.querySelectorAll('.dropdown-menu .dropdown-item');
+  const currentPath = window.location.pathname;
+  const hash = window.location.hash; // Préserver le hash (état de la page)
+  const currentFile = currentPath.split('/').pop() || 'index.html';
+
+  links.forEach(link => {
+    const href = link.getAttribute('href');
+    const newPath = href.replace(/[^/]*\.html$/, currentFile);
+    link.href = newPath + hash;
+  });
 }
