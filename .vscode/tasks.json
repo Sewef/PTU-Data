@@ -57,6 +57,20 @@
       "problemMatcher": []
     },
     {
+      "label": "Minify CSS",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "py/deploy/minify_css.py",
+        "ptu/css"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "Git Deploy",
       "type": "shell",
       "options": {
@@ -82,6 +96,7 @@
         "Pokesheets All",
         "Minify Data",
         "Minify JS",
+        "Minify CSS",
         "Copy PTU (robocopy)",
         "Git Deploy"
       ],
