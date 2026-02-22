@@ -212,7 +212,7 @@ function renderSidebar() {
         catCol.insertAdjacentHTML("beforeend", `
           <a href="#" class="list-group-item list-group-item-action ps-4 d-flex justify-content-between align-items-center collapse-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#${clsId}">
             <span>${clsName}</span>
-            <span class="badge bg-light text-muted ms-auto text-truncate" style="max-width:10rem" title="${cls.source}">${cls.source}</span>
+            <span class="badge bg-secondary-subtle ms-auto text-truncate" style="max-width:10rem" title="${cls.source}">${cls.source}</span>
             <span class="triangle-toggle ms-2"></span>
           </a>`);
         const brWrap = document.createElement("div");
@@ -236,7 +236,7 @@ function makeLink(label, src, data = {}, pad = 3) {
   a.className = `list-group-item list-group-item-action ps-${pad} d-flex justify-content-between align-items-center`;
   a.innerHTML = `
     <span>${label}</span>
-    <span class="badge bg-light text-muted ms-auto text-truncate" style="max-width:10rem" title="${src}">${src}</span>`;
+    <span class="badge bg-secondary-subtle ms-auto text-truncate" style="max-width:10rem" title="${src}">${src}</span>`;
   Object.entries(data).forEach(([k, v]) => a.dataset[k] = v);
   a.addEventListener("click", e => {
     e.preventDefault();
@@ -469,11 +469,11 @@ function createCard(feat, clsMeta, isGeneral, nested = false) {
 
   // ----- carte principale
   const card = document.createElement("div");
-  card.className = `card ${nested ? "mb-2" : ""} bg-white border shadow-sm overflow-hidden rounded-3`;
+  card.className = `card ${nested ? "mb-2" : ""} bg-body border shadow-sm overflow-hidden rounded-3`;
   card.dataset.title = feat.Name || "(unnamed)";
 
   const body = document.createElement("div");
-  body.className = "card-body bg-light";
+  body.className = "card-body bg-body-secondary";
 
   // ----- badges
   const showBadges = isGeneral;
@@ -643,9 +643,9 @@ function renderAsTable(entries, title, meta, q, parentEl) {
 
   // Carte + body
   const card = document.createElement("div");
-  card.className = "card h-100 bg-white border shadow-sm mb-2 overflow-hidden rounded-3";
+  card.className = "card h-100 bg-body border shadow-sm mb-2 overflow-hidden rounded-3";
   const body = document.createElement("div");
-  body.className = "card-body bg-light";
+  body.className = "card-body bg-body-secondary";
 
   // Wrapper responsive
   const wrap = document.createElement("div");

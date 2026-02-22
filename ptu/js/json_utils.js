@@ -113,10 +113,10 @@ function renderPTUCards(list, container, cols = 3) {
         const typeClass = item.Type ? `card-type-${item.Type}` : "";
 
         const card = document.createElement("div");
-        card.className = "card h-100 bg-white border shadow-sm overflow-hidden rounded-3";
+        card.className = "card h-100 bg-body border shadow-sm overflow-hidden rounded-3";
 
         const body = document.createElement("div");
-        body.className = `card-body bg-light ${typeClass}`;
+        body.className = `card-body bg-body-secondary ${typeClass}`;
         body.innerHTML = renderPTUCardWithBadges(item);
 
         card.appendChild(body);
@@ -202,10 +202,10 @@ export function loadJsonAsCard_2(file, container, searchInputId) {
                     col.className = "col-12 col-md-4";
 
                     const card = document.createElement("div");
-                    card.className = "card h-100 bg-white border shadow-sm overflow-hidden rounded-3";
+                    card.className = "card h-100 bg-body border shadow-sm overflow-hidden rounded-3";
 
                     const body = document.createElement("div");
-                    body.className = "card-body bg-light";
+                    body.className = "card-body bg-body-secondary";
                     body.innerHTML = renderPTUCard({ Name: name, Description: desc });
 
                     card.appendChild(body);

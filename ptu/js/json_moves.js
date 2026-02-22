@@ -198,10 +198,10 @@ function renderFilteredCards(data, container, cols) {
     const typeClass = item.Type ? `card-type-${item.Type}` : "";
 
     const card = document.createElement("div");
-    card.className = "card h-100 bg-white border shadow-sm overflow-hidden rounded-3";
+    card.className = "card h-100 bg-body border shadow-sm overflow-hidden rounded-3";
 
     const body = document.createElement("div");
-    body.className = `card-body bg-light ${typeClass} lh-1`;
+    body.className = `card-body bg-body-secondary ${typeClass} lh-1`;
     body.innerHTML = renderMoveCard(item);
 
     card.appendChild(body);
@@ -226,7 +226,7 @@ function renderItemAsCard(item, depth = 0) {
                 <div class="mt-3">
                     <h${headingLevel} class="text-muted">${key}</h${headingLevel}>
                     <div class="card mt-1">
-                        <div class="card-body bg-light">
+                        <div class="card-body bg-body-secondary">
                             ${nestedHTML}
                         </div>
                     </div>

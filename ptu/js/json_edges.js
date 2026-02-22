@@ -110,9 +110,9 @@ function renderCategory(cat) {
       const col = document.createElement("div");
       col.className = `col-12 col-md-${edgeColSize}`;
       const card = document.createElement("div");
-      card.className = "card h-100 bg-white border shadow-sm overflow-hidden rounded-3";
+      card.className = "card h-100 bg-body border shadow-sm overflow-hidden rounded-3";
       const body = document.createElement("div");
-      body.className = "card-body bg-light";
+      body.className = "card-body bg-body-secondary";
       body.insertAdjacentHTML("beforeend", `<h5 class="card-title">${name} <span class="badge bg-secondary">${e.Category}</span> <span class="badge bg-info">${e.Source}</span></h5>`);
       Object.entries(e).forEach(([k, v]) => {
         if (["Category", "Source"].includes(k)) return;

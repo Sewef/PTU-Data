@@ -127,10 +127,10 @@ function renderAsCards(entries, subcat, q, rowEl) {
     col.className = `col-12 col-md-${edgeColSize}`;
 
     const card = document.createElement("div");
-    card.className = "card h-100 bg-white border shadow-sm overflow-hidden rounded-3";
+    card.className = "card h-100 bg-body border shadow-sm overflow-hidden rounded-3";
 
     const body = document.createElement("div");
-    body.className = "card-body bg-light";
+    body.className = "card-body bg-body-secondary";
 
     body.insertAdjacentHTML(
       "beforeend",
@@ -221,10 +221,10 @@ function renderAsTable(entries, subcat, meta, q, rowEl) {
   col.className = "col-12";
 
   const card = document.createElement("div");
-  card.className = "card h-100 bg-white border shadow-sm overflow-hidden rounded-3";
+  card.className = "card h-100 bg-body border shadow-sm overflow-hidden rounded-3";
 
   const body = document.createElement("div");
-  body.className = "card-body bg-light";
+  body.className = "card-body bg-body-secondary";
 
   /* --- wrapper responsive pour scroll horizontal si nécessaire --- */
   const wrap = document.createElement("div");
