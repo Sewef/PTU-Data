@@ -15,7 +15,10 @@ export function includeHTML(callback) {
 
     fetch(file)
       .then(resp => {
-        if (!resp.ok) throw new Error("Page not found");
+        if (!resp.ok) {
+          console.error(`Failed to load ${file}: ${resp.status} ${resp.statusText}`);
+          throw new Error(`Page not found: ${resp.status}`);
+        }
         return resp.text();
       })
       .then(data => {
@@ -25,10 +28,15 @@ export function includeHTML(callback) {
         if (total === 0 && callback) {
           callback(); // callback après tous les includes
           setupVersionSwitcher();
+          // Réinitialiser le theme switcher après inclusion du header
+          if (typeof window.initThemeSwitcher === 'function') {
+            window.initThemeSwitcher();
+          }
         }
       })
       .catch(err => {
-        el.innerHTML = "Include failed.";
+        console.error(`Include error for ${file}:`, err);
+        el.innerHTML = `Include failed: ${err.message}`;
         total--;
         if (total === 0 && callback) {
           callback();
@@ -145,13 +153,14 @@ export function filterByClasses(item, classes) {
 
 // --- Version Switcher ---
 export function setupVersionSwitcher() {
-  const links = document.querySelectorAll('.dropdown-menu .dropdown-item');
+  const links = document.querySelectorAll('.dropdown-menu a.dropdown-item');
   const currentPath = window.location.pathname;
   const hash = window.location.hash; // Préserver le hash (état de la page)
   const currentFile = currentPath.split('/').pop() || 'index.html';
 
   links.forEach(link => {
     const href = link.getAttribute('href');
+    if (!href) return; // Skip if no href
     const newPath = href.replace(/[^/]*\.html$/, currentFile);
     link.href = newPath + hash;
   });

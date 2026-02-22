@@ -2,6 +2,7 @@
 html { overflow-y: scroll; scrollbar-gutter: stable; }
 /* Prevent Bootstrap modal horizontal shift */
 :root { scrollbar-gutter: stable; }
+
 /* ===== Custom Boostrap   =============================================== */
 smaller, .smaller {
   font-size: 0.6em;
@@ -16,6 +17,21 @@ body[style*="padding-right"] { padding-right: 0 !important; }
 .navbar-fixed-top[style*="padding-right"],
 .navbar-fixed-bottom[style*="padding-right"] {
   padding-right: 0 !important;
+}
+
+/* ===== Theme Switcher ================================================== */
+.bd-mode-toggle {
+  z-index: 1500;
+}
+
+.bd-mode-toggle .dropdown-menu .active .bi {
+  display: block !important;
+}
+
+.bi {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
 }
 
 
