@@ -391,8 +391,7 @@ function renderGlobalSearchResults(results) {
       const cls = classesData[clsName];
       
       features.forEach(feat => {
-        // Nettoyer les enfants précédents pour éviter l'accumulation
-        delete feat.__children;
+        // collectLeafFeatures clone maintenant complètement, pas besoin de nettoyer
         const leafs = collectLeafFeatures(feat);
         leafs.forEach(leaf => {
           // Créer un wrapper pour la carte avec le badge source
@@ -562,54 +561,70 @@ function renderSection(clsName, branchName = "Default") {
 }
 
 
-// --------- Collecte récursive des Features (carte-mère + feuilles) --------
-function collectLeafFeatures(featObj, nameOverride = null, embedOnly = false) {
-  const list = [];
-  const isSimpleTextMap = obj =>
-    obj && typeof obj === "object" &&
-    !Array.isArray(obj) &&
-    Object.values(obj).every(v => typeof v === "string");
+// --------- Collecte récursive des Features (version robuste) --------
+/**
+ * Prépare une feature pour l'affichage en clonant et en collectant les enfants.
+ * Toujours cloner pour éviter de muterer les originaux du JSON.
+ */
+function prepareFeatureForDisplay(featObj, nameOverride = null) {
+  // Clone complet pour éviter toute mutation des originaux
+  const cleaned = JSON.parse(JSON.stringify(featObj));
+  
+  // Appliquer l'override du nom si fourni
+  if (nameOverride) {
+    cleaned.Name = nameOverride;
+  }
+  if (!cleaned.Name) {
+    cleaned.Name = "(unnamed)";
+  }
 
-  const hasAnyContent = obj =>
-    Object.entries(obj).some(([, v]) =>
-      typeof v === "string" || isSimpleTextMap(v)
-    );
+  // Collecter les enfants depuis les arrays de sous-features
+  const children = [];
+  const displayMeta = cleaned._display || {};
 
-  // Toujours cloner pour éviter de modifier les objets originaux du JSON
-  const cleaned = { ...featObj, Name: featObj.Name || nameOverride || "(unnamed)" };
-  const subCards = [];
-
-  // Recherche de tableaux de sous-features
-  const displayMeta = featObj._display || {};
-  for (const [key, val] of Object.entries(featObj)) {
+  for (const [key, val] of Object.entries(cleaned)) {
     if (!Array.isArray(val)) continue;
+    
+    // Vérifier si c'est un tableau de features
+    if (!val.every(v => typeof v === "object")) continue;
 
-    // Si _display dit "table" pour cette clé, on la laisse sur l'objet (elle sera
-    // rendue en tableau dans createCard) au lieu de la convertir en sous-cartes.
+    // Respecter le type d'affichage (tables vs cards)
     const meta = normalizeDisplayMeta(displayMeta[key]);
-    if (meta.type === "table") continue;
+    if (meta.type === "table") continue; // Les tables restent dans l'objet
 
-    if (val.every(v => typeof v === "object" && (v.Name || v.Effect))) {
+    // C'est un tableau de sous-features, les transformer en enfants
+    if (val.some(v => v.Name || v.Effect)) {
       val.forEach(sub => {
-        // Optimisation: passer le sub directement si son Name existe déjà
-        const useName = sub.Name || `(${key})`;
-        subCards.push(...collectLeafFeatures(sub, useName === sub.Name ? null : useName, true));
+        children.push(prepareFeatureForDisplay(sub));
       });
     }
   }
 
-  // Si l'objet principal contient du contenu, on le garde
-  if (hasAnyContent(cleaned)) {
-    if (subCards.length > 0) {
-      cleaned.__children = subCards;
-    }
-    if (!embedOnly) list.push(cleaned);
-    else return [cleaned];
-  } else if (embedOnly && subCards.length > 0) {
-    return subCards;
+  if (children.length > 0) {
+    cleaned._children = children;
   }
 
-  return list;
+  return cleaned;
+}
+
+/**
+ * Collecte les features "feuille" (affichables) à partir d'une arborescence.
+ */
+function collectLeafFeatures(featObj, nameOverride = null) {
+  const feature = prepareFeatureForDisplay(featObj, nameOverride);
+  
+  // Si la feature a du contenu, la retourner
+  const hasContent = Object.entries(feature).some(([k, v]) => {
+    if (k.startsWith('_') || k === 'Name') return false; // Ignorer les meta
+    return v != null;
+  });
+
+  if (hasContent) {
+    return [feature];
+  }
+
+  // Sinon, retourner ses enfants (si elle en a)
+  return feature._children || [];
 }
 
 /* ------------------------------------------------------------------ *
@@ -647,7 +662,7 @@ function createCard(feat, clsMeta, isGeneral, nested = false) {
 
   // ----- champs simples
   Object.entries(feat).forEach(([k, v]) => {
-    if (["Name", "Source", "source", "Category", "__children"].includes(k)) return;
+    if (["Name", "Source", "source", "Category", "_children"].includes(k)) return;
     if (v == null || typeof v === "object") return;
 
     if (k === "Effect" && /<\s*table/i.test(v)) {
@@ -679,8 +694,8 @@ function createCard(feat, clsMeta, isGeneral, nested = false) {
   });
 
   // ----- enfants imbriqués uniquement ici
-  if (feat.__children && Array.isArray(feat.__children)) {
-    feat.__children.forEach(child => {
+  if (feat._children && Array.isArray(feat._children)) {
+    feat._children.forEach(child => {
       body.appendChild(createCard(child, clsMeta, isGeneral, true));
     });
   }
