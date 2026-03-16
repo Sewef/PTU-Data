@@ -379,11 +379,11 @@ function renderGlobalSearchResults(results) {
   
   // Title
   pane.insertAdjacentHTML("afterbegin", 
-    `<h2 class="mb-3" style="font-size:1.5rem;">Search Results</h2>`
+    `<h2 class="mb-1" style="font-size:1.5rem;">Search Results</h2>`
   );
   
   const row = document.createElement("div");
-  row.className = "row g-3 mt-1";
+  row.className = "row g-3 mt-2";
   
   // Iterate through results and display features
   Object.entries(results).forEach(([clsName, branches]) => {

@@ -9,6 +9,7 @@ let itemsData = {};
 let activeCategory = null;
 let edgeColSize = 4;
 let edgeContainer = null;
+let _itemSearchTimeout = null;
 
 export function loadItems(path, container = document.getElementById("cards-container"), col = 3) {
   fetch(path)
@@ -18,6 +19,7 @@ export function loadItems(path, container = document.getElementById("cards-conta
       edgeContainer = container;
       edgeColSize = Math.floor(12 / col);
       buildCategoryMenu();
+      setupGlobalItemSearch();
       const firstCat = Object.keys(itemsData)[0];
       if (firstCat) {
         activeCategory = firstCat;
@@ -46,11 +48,149 @@ function buildCategoryMenu() {
       activeCategory = cat;
       document.querySelectorAll("#sidebar .list-group-item").forEach(e => e.classList.remove("active"));
       btn.classList.add("active");
+      const searchEl = document.getElementById("items-search");
+      if (searchEl) searchEl.value = "";
       renderCategory(cat);
     });
     catList.appendChild(btn);
   });
   sb.appendChild(catList);
+}
+
+// --------- Global item search setup ------------------------------------------
+function setupGlobalItemSearch() {
+  const searchEl = document.getElementById("items-search");
+  if (!searchEl) return;
+
+  searchEl.addEventListener("input", e => {
+    clearTimeout(_itemSearchTimeout);
+    const q = e.target.value.toLowerCase();
+
+    _itemSearchTimeout = setTimeout(() => {
+      if (!q.trim()) {
+        // Empty search: redisplay active category
+        if (activeCategory) renderCategory(activeCategory);
+      } else {
+        // Global search
+        const results = globalItemSearch(q);
+        if (results && Object.keys(results).length > 0) {
+          renderGlobalItemSearchResults(results);
+        } else {
+          // No results found
+          const pane = edgeContainer;
+          pane.innerHTML = `<div class="alert alert-info">No items match "<strong>${escapeHTML(q)}</strong>"</div>`;
+        }
+      }
+    }, 200); // 200ms debounce
+  });
+}
+
+// --------- Global item search -----------------------------------
+function globalItemSearch(query) {
+  if (!query) return null;
+
+  const q = query.toLowerCase();
+  const results = {}; // { category: { subcategory: [items] } }
+
+  Object.entries(itemsData).forEach(([category, catData]) => {
+    if (!catData || typeof catData !== "object") return;
+
+    Object.entries(catData).forEach(([subcategory, entries]) => {
+      if (subcategory === "_display" || !Array.isArray(entries)) return;
+
+      const matches = [];
+      entries.forEach(item => {
+        if (typeof item !== "object" || !item) return;
+
+        // Search in all fields
+        const nameMatch = Object.values(item).some(v =>
+          v && String(v).toLowerCase().includes(q)
+        );
+
+        if (nameMatch) {
+          matches.push(item);
+        }
+      });
+
+      if (matches.length > 0) {
+        if (!results[category]) results[category] = {};
+        results[category][subcategory] = matches;
+      }
+    });
+  });
+
+  return Object.keys(results).length > 0 ? results : null;
+}
+
+// --------- Render global search results --------------------------------
+function renderGlobalItemSearchResults(results) {
+  const pane = edgeContainer;
+  pane.innerHTML = "";
+
+  // Title
+  pane.insertAdjacentHTML(
+    "afterbegin",
+    `<h2 class="mb-1" style="font-size:1.5rem;">Search Results</h2>`
+  );
+
+  const row = document.createElement("div");
+  row.className = "row g-3 mt-2";
+  pane.appendChild(row);
+
+  // Iterate through results and display items
+  Object.entries(results).forEach(([category, subcats]) => {
+    Object.entries(subcats).forEach(([subcategory, items]) => {
+      items.forEach(item => {
+        // Wrapper column for context badge + card
+        const wrapper = document.createElement("div");
+        wrapper.className = `col-12 col-md-${edgeColSize} d-flex flex-column`;
+
+        // Source context badge
+        const contextBadge = document.createElement("div");
+        contextBadge.className = "mb-2";
+        contextBadge.innerHTML = `
+          <small class="text-muted">
+            From <strong>${escapeHTML(category)}</strong>
+            ${subcategory !== "Items" ? ` › ${escapeHTML(subcategory)}` : ""}
+          </small>
+        `;
+        wrapper.appendChild(contextBadge);
+
+        // Create the card
+        const card = document.createElement("div");
+        card.className = "card flex-grow-1 bg-body border shadow-sm overflow-hidden rounded-3";
+        const body = document.createElement("div");
+        body.className = "card-body bg-body-secondary";
+
+        const name = item.Item || item["Ball Name"] || item["Herb Type"] || item["Apricorn Type"] || item["Tier"] || "???";
+
+        // Title with badges
+        body.insertAdjacentHTML(
+          "beforeend",
+          `<h5 class="card-title">${escapeHTML(name)} <span class="badge bg-secondary">${escapeHTML(subcategory)}</span></h5>`
+        );
+
+        // All fields
+        Object.entries(item).forEach(([k, v]) => {
+          if (["Item", "Ball Name", "Herb Type", "Apricorn Type", "Tier"].includes(k)) return;
+
+          let displayValue = String(v);
+          if (k === "Price" && !isNaN(v)) {
+            displayValue = `₽${v}`;
+          }
+
+          body.insertAdjacentHTML(
+            "beforeend",
+            `<p><strong>${escapeHTML(k)}:</strong> ${escapeHTML(displayValue)}</p>`
+          );
+        });
+
+        card.appendChild(body);
+        wrapper.appendChild(card);
+        row.appendChild(wrapper);
+      });
+    });
+  });
 }
 
 function renderCategory(cat) {
@@ -62,35 +202,28 @@ function renderCategory(cat) {
   pane.appendChild(row);
 
   const queryInput = document.getElementById("items-search");
+  const q = (queryInput && queryInput.value || "").toLowerCase();
 
-  const update = () => {
-    row.innerHTML = "";
-    const q = (queryInput.value || "").toLowerCase();
+  const categoryData = itemsData[cat];
+  if (!categoryData || typeof categoryData !== "object") return;
 
-    const categoryData = itemsData[cat];
-    if (!categoryData || typeof categoryData !== "object") return;
+  const displayConfig = categoryData._display || {}; // map { subcat: { type, rowPerField, idField } }
 
-    const displayConfig = categoryData._display || {}; // map { subcat: { type, rowPerField, idField } }
+  // Display each sub-category that is an Array
+  Object.entries(categoryData).forEach(([subcat, entries]) => {
+    if (subcat === "_display") return; // meta, not rendered directly
 
-    // Affiche chaque sous-catégorie qui est un Array
-    Object.entries(categoryData).forEach(([subcat, entries]) => {
-      if (subcat === "_display") return; // méta, pas de rendu direct
+    if (Array.isArray(entries)) {
+      const meta = normalizeDisplayMeta(displayConfig[subcat]);
 
-      if (Array.isArray(entries)) {
-        const meta = normalizeDisplayMeta(displayConfig[subcat]);
-
-        if (meta.type === "table") {
-          renderAsTable(entries, subcat, meta, q, row);
-        } else {
-          renderAsCards(entries, subcat, q, row);
-        }
+      if (meta.type === "table") {
+        renderAsTable(entries, subcat, meta, q, row);
+      } else {
+        renderAsCards(entries, subcat, q, row);
       }
-      // les autres clés (objets non-array) ne sont pas rendues (typiquement: sous-containers)
-    });
-  };
-
-  queryInput.addEventListener("input", update);
-  update();
+    }
+    // other keys (non-array objects) are not rendered (typically: sub-containers)
+  });
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 }

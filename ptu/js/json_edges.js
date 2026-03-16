@@ -89,11 +89,11 @@ function renderGlobalEdgeSearchResults(results) {
   
   // Title
   pane.insertAdjacentHTML("afterbegin", 
-    `<h2 class="mb-3" style="font-size:1.5rem;">Search Results</h2>`
+    `<h2 class="mb-1" style="font-size:1.5rem;">Search Results</h2>`
   );
   
   const row = document.createElement("div");
-  row.className = "row g-3";
+  row.className = "row g-3 mt-2";
   pane.appendChild(row);
   
   // Iterate through results and display edges
