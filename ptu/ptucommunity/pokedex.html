@@ -153,21 +153,34 @@
   </div>
   <!-- Pokésheets modal -->
   <div class="modal fade" id="pokesheetsModal" data-bs-scroll="true" tabIndex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Pokésheets Export</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p class="small text-muted mb-2">
-            Copy ready-to-paste JSON for Pokésheets.
-          </p>
-          <div class="d-grid gap-2">
-            <button type="button" class="btn btn-outline-primary" id="btn-copy-pokesheets-dex">Copy Dex</button>
-            <button type="button" class="btn btn-outline-primary" id="btn-copy-pokesheets-moves">Copy Moves</button>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <p class="small text-muted mb-2">
+                Copy ready-to-paste JSON for Pokésheets.
+              </p>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn btn-outline-primary" id="btn-copy-pokesheets-dex">Copy Dex</button>
+                <button type="button" class="btn btn-outline-primary" id="btn-copy-pokesheets-moves">Copy Moves</button>
+              </div>
+              <div id="pokesheets-feedback" class="mt-2 small" style="min-height:1rem;"></div>
+            </div>
+            <div class="col-md-6">
+              <p class="small text-muted mb-2">How to use:</p>
+              <ol class="small">
+                <li>Go to <a href="https://pokesheets.app" target="_blank" rel="noopener noreferrer">pokesheets.app</a></li>
+                <li>Click <strong>Generate Pokémon</strong></li>
+                <li>Click <strong>Edit Homebrew</strong></li>
+                <li>Paste the copied data</li>
+              </ol>
+            </div>
           </div>
-          <div id="pokesheets-feedback" class="mt-2 small" style="min-height:1rem;"></div>
         </div>
         <div class="modal-footer">
           <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>

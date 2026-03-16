@@ -98,15 +98,24 @@ let selectedLabels = new Set(PRESETS[selectedPreset] || []);
 // =========================
 // Hash state management
 // =========================
+let _cachedHashParams = null;
+let _lastHashTime = 0;
+
 function getHashParams() {
   const hash = window.location.hash.slice(1);
-  const params = new URLSearchParams(hash);
-  return params;
+  // Cache to avoid recreating URLSearchParams object on each call
+  if (_cachedHashParams && _lastHashTime === hash) {
+    return _cachedHashParams;
+  }
+  _cachedHashParams = new URLSearchParams(hash);
+  _lastHashTime = hash;
+  return _cachedHashParams;
 }
 
 function setHashParams(obj) {
   const params = new URLSearchParams(obj);
   const newHash = params.toString();
+  _cachedHashParams = null; // Invalidate cache
   window.history.replaceState({}, "", `#${newHash}`);
 }
 
@@ -349,9 +358,12 @@ document.addEventListener("click", async (ev) => {
 
   if (btnDex) {
     try {
-      const raw = await fetch(urls.dex, { cache: "no-store" }).then(r => r.ok ? r.json() : null);
-      if (!raw) throw new Error("HTTP");
-      const txt = await fetch(urls.dex, { cache: "no-store" }).then(r => r.ok ? r.text() : null);
+      // Single fetch - extract both JSON and text from response
+      const response = await fetch(urls.dex, { cache: "no-store" });
+      if (!response.ok) throw new Error("HTTP");
+      const txt = await response.text();
+      // Validate JSON by parsing
+      JSON.parse(txt);
       const ok = await copyToClipboard(txt);
       showPokesheetsFeedback(ok ? "Dex JSON copied to clipboard." : "Failed to copy Dex JSON.", ok);
     } catch {
@@ -362,9 +374,12 @@ document.addEventListener("click", async (ev) => {
 
   if (btnMoves) {
     try {
-      const raw = await fetch(urls.moves, { cache: "no-store" }).then(r => r.ok ? r.json() : null);
-      if (!raw) throw new Error("HTTP");
-      const txt = await fetch(urls.moves, { cache: "no-store" }).then(r => r.ok ? r.text() : null);
+      // Single fetch - extract both JSON and text from response
+      const response = await fetch(urls.moves, { cache: "no-store" });
+      if (!response.ok) throw new Error("HTTP");
+      const txt = await response.text();
+      // Validate JSON by parsing
+      JSON.parse(txt);
       const ok = await copyToClipboard(txt);
       showPokesheetsFeedback(ok ? "Moves JSON copied to clipboard." : "Failed to copy Moves JSON.", ok);
     } catch {
@@ -381,6 +396,11 @@ document.addEventListener("click", async (ev) => {
 // Extraction robuste des types, y compris le cas:
 // "Type": [ { "Baille": ["Fire","Flying"], "Pom Pom": ["Electric","Flying"], ... } ]
 function extractTypes(p) {
+  // Check cache first (WeakMap: pokemon object -> types array)
+  if (typeof __TYPE_CACHE__ !== "undefined" && __TYPE_CACHE__ && __TYPE_CACHE__.has(p)) {
+    return __TYPE_CACHE__.get(p);
+  }
+
   const info = p?.["Basic Information"] || {};
   const raw = info.Type;
 
@@ -421,7 +441,7 @@ function extractTypes(p) {
     push(raw);
   }
 
-  // Si tu utilises un cache des types, on le nourrit proprement
+  // Cache the result for future calls
   if (typeof __TYPE_CACHE__ !== "undefined" && __TYPE_CACHE__ && typeof __TYPE_CACHE__.set === "function") {
     __TYPE_CACHE__.set(p, out);
   }
@@ -492,6 +512,24 @@ function collectTypes(rows) {
 // =========================
 // Rendering: grid
 // =========================
+// Cache for type colors to avoid repeated getComputedStyle calls
+const _typeColorCache = new Map();
+
+function getTypeColor(type) {
+  if (_typeColorCache.has(type)) return _typeColorCache.get(type);
+  
+  const dummy = document.createElement("div");
+  dummy.style.display = "none";
+  dummy.classList.add(`card-type-${type}`);
+  document.body.appendChild(dummy);
+  
+  const color = getComputedStyle(dummy).getPropertyValue("--type-color")?.trim() || "#999";
+  document.body.removeChild(dummy);
+  
+  _typeColorCache.set(type, color);
+  return color;
+}
+
 function setupIcon(img, num, name, mode = "icon") {
   const slug = slugify(name || "");
   const base = mode === "full" ? "/ptu/img/pokemon/full" : "/ptu/img/pokemon/icons";
@@ -510,12 +548,9 @@ function applyBadgeBackground(el, types) {
     el.style.color = "#0f1115";
     el.style.borderColor = "rgba(255,255,255,.15)";
   } else {
-    el.classList.add(`card-type-${types[0]}`);
-    const c1 = getComputedStyle(el).getPropertyValue("--type-color")?.trim() || "#333";
-    el.classList.remove(`card-type-${types[0]}`);
-    el.classList.add(`card-type-${types[1]}`);
-    const c2 = getComputedStyle(el).getPropertyValue("--type-color")?.trim() || "#444";
-    el.classList.remove(`card-type-${types[1]}`);
+    // Pre-compute colors for gradient - avoid repeated getComputedStyle calls
+    const c1 = getTypeColor(types[0]);
+    const c2 = getTypeColor(types[1]);
     el.style.background = `linear-gradient(90deg, ${c1} 50%, ${c2} 50%)`;
     el.style.borderColor = "rgba(255,255,255,.15)";
   }
