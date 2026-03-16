@@ -2,25 +2,67 @@
 let classesData = {};
 let activeSources = new Set();
 let currentLink = null;
+let _cachedHashParams = null;
+let _lastHashTime = 0;
+let _currentViewClass = null; // Classe actuellement affichée
+let _currentViewBranch = null; // Branche actuellement affichée
+let _searchTimeout = null; // Timer global pour la recherche
 
-// Parse hash parameters (format: #key=value&key=value)
+// Constantes regex compilées
+const COLUMN_GROUP_REGEX = /^(.*?)(?:_(\d+))$/;
+const WHITESPACE_REGEX = /\s+/g;
+
+// Parse hash parameters with cache (format: #key=value&key=value)
 function getHashParams() {
-  const hash = window.location.hash.slice(1);
-  const params = new URLSearchParams(hash);
-  return params;
+  const hash = window.location.hash;
+  // Cache pour éviter de recréer l'objet URLSearchParams à chaque appel
+  if (_cachedHashParams && _lastHashTime === hash) {
+    return _cachedHashParams;
+  }
+  _cachedHashParams = new URLSearchParams(hash.slice(1));
+  _lastHashTime = hash;
+  return _cachedHashParams;
 }
 
 function setHashParams(obj) {
   const params = new URLSearchParams(obj);
   const newHash = params.toString();
-  const url = new URL(window.location);
-  const oldHash = url.hash.slice(1);
+  const oldHash = window.location.hash.slice(1);
   
   if (oldHash === newHash) {
     return; // No change
   }
   
+  _cachedHashParams = null; // Invalider le cache
   window.history.pushState({}, "", `#${newHash}`);
+}
+
+// --------- Configuration de la recherche globale --------------------------
+function setupGlobalSearch() {
+  const searchEl = document.getElementById("features-search");
+  if (!searchEl) return;
+
+  searchEl.addEventListener("input", e => {
+    clearTimeout(_searchTimeout);
+    const q = e.target.value.toLowerCase();
+
+    _searchTimeout = setTimeout(() => {
+      if (!q.trim()) {
+        // Recherche vide: réafficher la classe courante
+        renderSection(_currentViewClass, _currentViewBranch);
+      } else {
+        // Recherche globale
+        const results = globalFeatureSearch(q);
+        if (results) {
+          renderGlobalSearchResults(results);
+        } else {
+          // Aucun résultat trouvé
+          const pane = document.getElementById("cards-container");
+          pane.innerHTML = `<div class="alert alert-info">No features match "<strong>${escapeHTML(q)}</strong>"</div>`;
+        }
+      }
+    }, 200); // 200ms debounce
+  });
 }
 
 // ------------------------- CHARGEMENT JSON ---------------------------------
@@ -38,6 +80,10 @@ export function loadClasses(path) {
       let clsName = section && classesData[section] ? section : (classesData.General ? "General" : Object.keys(classesData)[0]);
       let brName = branch || classesData[clsName].branches[0].Name;
 
+      // Stocker la vue actuelle
+      _currentViewClass = clsName;
+      _currentViewBranch = brName;
+
       renderSection(clsName, brName);
 
       const l = document.querySelector(`[data-section="${clsName}"][data-branch="${brName}"]`);
@@ -50,6 +96,9 @@ export function loadClasses(path) {
           new bootstrap.Collapse(parentCollapse, { toggle: true });
         }
       }
+
+      // Configurer la recherche globale (une seule fois)
+      setupGlobalSearch();
     })
     .catch(err => console.error("JSON load error:", err));
 }
@@ -162,9 +211,10 @@ function renderSidebar() {
 
   // ----- CATÉGORIES --------------------------------------------------------
   const cats = {};
+  const lowerQ = q.toLowerCase(); // Cache la conversion lowercase
   Object.entries(classesData).forEach(([clsName, cls]) => {
     if (clsName === "General") return;
-    if (q && !clsName.toLowerCase().includes(q)) return;
+    if (q && !clsName.toLowerCase().includes(lowerQ)) return;
 
     const visibleBranches = cls.branches.filter(br => activeSources.has(branchSource(br, cls.source)));
     if (visibleBranches.length === 0) return;
@@ -195,7 +245,7 @@ function renderSidebar() {
     <span class="me-2">${getCategoryIcon(cat)}</span>
     <span class="flex-grow-1">${cat}</span>
     <span class="triangle-toggle ms-2"></span>`;
-    catTgl.addEventListener("click", e => e.preventDefault());
+    catTgl.onclick = () => false; // Préféré à addEventListener pour prévenir le défaut
     box.appendChild(catTgl);
 
     const catCol = document.createElement("div");
@@ -209,10 +259,11 @@ function renderSidebar() {
         catCol.appendChild(makeLink(clsName, branchSource(branches[0], cls.source), { section: clsName, branch: "Default" }, 4));
       } else {
         const clsId = `collapse-cls-${clsName.replace(/\s+/g, "-")}`;
-        catCol.insertAdjacentHTML("beforeend", `
+        // Échapper les valeurs pour éviter XSS
+    catCol.insertAdjacentHTML("beforeend", `
           <a href="#" class="list-group-item list-group-item-action ps-4 d-flex justify-content-between align-items-center collapse-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#${clsId}">
-            <span>${clsName}</span>
-            <span class="badge bg-secondary-subtle ms-auto text-truncate" style="max-width:10rem" title="${cls.source}">${cls.source}</span>
+            <span>${escapeHTML(clsName)}</span>
+            <span class="badge bg-secondary-subtle ms-auto text-truncate" style="max-width:10rem" title="${escapeHTML(cls.source)}">${escapeHTML(cls.source)}</span>
             <span class="triangle-toggle ms-2"></span>
           </a>`);
         const brWrap = document.createElement("div");
@@ -234,15 +285,18 @@ function makeLink(label, src, data = {}, pad = 3) {
   const a = document.createElement("a");
   a.href = "#";
   a.className = `list-group-item list-group-item-action ps-${pad} d-flex justify-content-between align-items-center`;
+  // Échapper les valeurs HTML pour éviter XSS
+  const escapedLabel = escapeHTML(label);
+  const escapedSrc = escapeHTML(src);
   a.innerHTML = `
-    <span>${label}</span>
-    <span class="badge bg-secondary-subtle ms-auto text-truncate" style="max-width:10rem" title="${src}">${src}</span>`;
+    <span>${escapedLabel}</span>
+    <span class="badge bg-secondary-subtle ms-auto text-truncate" style="max-width:10rem" title="${escapedSrc}">${escapedSrc}</span>`;
   Object.entries(data).forEach(([k, v]) => a.dataset[k] = v);
-  a.addEventListener("click", e => {
-    e.preventDefault();
+  a.onclick = () => {
     renderSection(data.section, data.branch);
     setActiveLink(a);
-  });
+    return false;
+  };
   return a;
 }
 
@@ -273,6 +327,107 @@ function featureSource(feat, fallback) {
   return feat.Source || feat.source || fallback || "Unknown";
 }
 
+// --------- Recherche globale des features --------------------------------
+function globalFeatureSearch(query) {
+  if (!query) return null;
+  
+  const q = query.toLowerCase();
+  const results = {}; // { className: { branchName: [features] } }
+  
+  Object.entries(classesData).forEach(([clsName, cls]) => {
+    cls.branches?.forEach(br => {
+      const matchedFeatures = [];
+      
+      br.features?.forEach(feat => {
+        // Collecter récursivement toutes les features qui matchent
+        const collectMatches = (f) => {
+          const matched = [];
+          if (!f) return matched;
+          
+          const name = (f.Name || "").toLowerCase();
+          if (name.includes(q)) {
+            matched.push(f);
+          }
+          
+          // Chercher dans les sous-features (arrays de features)
+          if (Array.isArray(f.features)) {
+            f.features.forEach(sub => {
+              matched.push(...collectMatches(sub));
+            });
+          }
+          
+          return matched;
+        };
+        
+        matchedFeatures.push(...collectMatches(feat));
+      });
+      
+      if (matchedFeatures.length > 0) {
+        if (!results[clsName]) results[clsName] = {};
+        results[clsName][br.Name] = matchedFeatures;
+      }
+    });
+  });
+  
+  return Object.keys(results).length > 0 ? results : null;
+}
+
+// --------- Rendu des résultats de recherche globale ----------------------
+function renderGlobalSearchResults(results) {
+  const pane = document.getElementById("cards-container");
+  pane.innerHTML = "";
+  
+  // Titre
+  pane.insertAdjacentHTML("afterbegin", 
+    `<h2 class="mb-3" style="font-size:1.5rem;">Search Results</h2>`
+  );
+  
+  const row = document.createElement("div");
+  row.className = "row g-3 mt-1";
+  
+  // Parcourir les résultats et afficher les features
+  Object.entries(results).forEach(([clsName, branches]) => {
+    Object.entries(branches).forEach(([brName, features]) => {
+      const cls = classesData[clsName];
+      
+      features.forEach(feat => {
+        // Nettoyer les enfants précédents pour éviter l'accumulation
+        delete feat.__children;
+        const leafs = collectLeafFeatures(feat);
+        leafs.forEach(leaf => {
+          // Créer un wrapper pour la carte avec le badge source
+          const wrapper = document.createElement("div");
+          wrapper.className = "col-md-12";
+          
+          // Badge de provenance
+          const badge = document.createElement("div");
+          badge.className = "mb-2";
+          badge.innerHTML = `
+            <small class="text-muted">
+              From <strong>${escapeHTML(clsName)}</strong> 
+              ${brName !== "Default" ? `› ${escapeHTML(brName)}` : ""}
+              ${cls.category ? ` • ${escapeHTML(cls.category)}` : ""}
+            </small>
+          `;
+          wrapper.appendChild(badge);
+          
+          // Créer la carte
+          const cardCol = createCard(leaf, cls, clsName === "General", false);
+          // createCard retourne déjà une colonne, donc on extrait juste la carte
+          const card = cardCol.querySelector(".card");
+          if (card) {
+            wrapper.appendChild(card);
+          }
+          
+          row.appendChild(wrapper);
+        });
+      });
+    });
+  });
+  
+  pane.appendChild(row);
+}
+
 
 // ------------------------- SECTION MAIN -----------------------------------
 function makeGaugeBar(value) {
@@ -289,6 +444,10 @@ function makeGaugeBar(value) {
 
 
 function renderSection(clsName, branchName = "Default") {
+  // Mettre à jour la vue courante
+  _currentViewClass = clsName;
+  _currentViewBranch = branchName;
+
   const pane = document.getElementById("cards-container");
   pane.innerHTML = "";
   const cls = classesData[clsName];
@@ -400,14 +559,6 @@ function renderSection(clsName, branchName = "Default") {
     );
   }
 
-  document.getElementById("features-search").addEventListener("input", e => {
-    const q = e.target.value.toLowerCase();
-    // cibler uniquement les cartes top-level :
-    row.querySelectorAll(':scope > .col-md-12 > .card').forEach(card => {
-      const match = (card.dataset.title || "").toLowerCase().includes(q);
-      card.parentElement.style.display = match ? "" : "none";
-    });
-  });
 }
 
 
@@ -424,6 +575,7 @@ function collectLeafFeatures(featObj, nameOverride = null, embedOnly = false) {
       typeof v === "string" || isSimpleTextMap(v)
     );
 
+  // Toujours cloner pour éviter de modifier les objets originaux du JSON
   const cleaned = { ...featObj, Name: featObj.Name || nameOverride || "(unnamed)" };
   const subCards = [];
 
@@ -439,8 +591,9 @@ function collectLeafFeatures(featObj, nameOverride = null, embedOnly = false) {
 
     if (val.every(v => typeof v === "object" && (v.Name || v.Effect))) {
       val.forEach(sub => {
-        const child = { ...sub, Name: sub.Name || `(${key})` };
-        subCards.push(...collectLeafFeatures(child, child.Name, true));
+        // Optimisation: passer le sub directement si son Name existe déjà
+        const useName = sub.Name || `(${key})`;
+        subCards.push(...collectLeafFeatures(sub, useName === sub.Name ? null : useName, true));
       });
     }
   }
@@ -590,7 +743,7 @@ function escapeHTML(str) {
 }
 
 function computeColumnGroups(cols, meta) {
-  const rx = new RegExp(meta.columnGroupRegex || "^(.*?)(?:_(\\d+))$");
+  const rx = new RegExp(meta.columnGroupRegex || COLUMN_GROUP_REGEX.source);
   const groups = [];
   let i = 0;
   while (i < cols.length) {
@@ -611,27 +764,7 @@ function computeColumnGroups(cols, meta) {
 }
 
 function renderAsTable(entries, title, meta, q, parentEl) {
-  // --- helper interne pour fusionner les colonnes "Bloc_1/2/3" → colspan
-  function computeColumnGroups(cols, meta) {
-    const rx = new RegExp(meta.columnGroupRegex || "^(.*?)(?:_(\\d+))$");
-    const groups = [];
-    let i = 0;
-    while (i < cols.length) {
-      const m = String(cols[i]).match(rx);
-      const base = (m ? m[1] : cols[i]).trim();
-      let span = 1, j = i + 1;
-      while (j < cols.length) {
-        const m2 = String(cols[j]).match(rx);
-        const base2 = (m2 ? m2[1] : cols[j]).trim();
-        if (base2 !== base) break;
-        span++; j++;
-      }
-      const label = (meta.groupLabels && meta.groupLabels[base]) || base;
-      groups.push({ label, span });
-      i = j;
-    }
-    return groups;
-  }
+  // Note: computeColumnGroups est définie au niveau global pour éviter la duplication
 
   // Filtrage texte
   const filtered = entries.filter(obj => {
