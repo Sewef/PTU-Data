@@ -1460,6 +1460,12 @@ function buildSourceMenu(onChange) {
                 style="font-size:.75rem; padding:.1rem .4rem;">
           Pokésheets
         </button>
+        <button type="button"
+                id="btn-ptugen"
+                class="btn btn-outline-primary"
+                style="font-size:.75rem; padding:.1rem .4rem;">
+          PTU-Gen
+        </button>
         <button type="button" 
                 id="btn-readme"
                 class="btn btn-primary"
@@ -1529,6 +1535,10 @@ function buildSourceMenu(onChange) {
     // clear any previous feedback
     const fb = $("#pokesheets-feedback");
     if (fb) fb.textContent = "";
+  });
+  
+  wrap.querySelector("#btn-ptugen")?.addEventListener("click", () => {
+    window.open("https://ptu-gen.onrender.com", "_blank", "noopener,noreferrer");
   });
 
   // single handler for radios
