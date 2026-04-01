@@ -143,6 +143,7 @@ let TYPE_MATCH_MODE = 'any'; // 'any' (OR) || 'all' (AND) for type matching
 const GRID_CHUNK_SIZE = 60; // smaller batch to speed up first paint
 let __RENDER_SEQ = 0;
 let __TYPE_CACHE__ = new WeakMap(); // cache pokemon -> types[] (must be let to allow reset)
+let SELECTED_EVOLUTION_STAGES = new Set(); // evolution stages 1, 2, 3, or 'final'
 // =========================
 // Caches & Utilities
 
@@ -1226,6 +1227,7 @@ function buildTypeSidebar(all, onChange) {
         .type-pill.active{outline:1px solid rgba(255,255,255,.25);opacity:1}
         [data-role="type-filters"] .btn-group.btn-group-sm .btn{padding:.15rem .35rem;font-size:.75rem}
         [data-role="type-filters"] .form-label{margin-bottom:.25rem}
+        [data-role="type-filters"] button[data-stage].active{background-color:var(--bs-primary);border-color:var(--bs-primary);color:white}
       `;
     document.head.appendChild(s);
   })();
@@ -1266,6 +1268,16 @@ function buildTypeSidebar(all, onChange) {
         </div>
 
         <div class="mt-2">
+          <label class="form-label mb-1">Evolution stage</label>
+          <div class="d-grid gap-1" id="evolution-stage-filters" style="grid-template-columns: 1fr 1fr;">
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-stage="1" data-selected="0">Stage 1</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-stage="2" data-selected="0">Stage 2</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-stage="3" data-selected="0">Stage 3</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-stage="final" data-selected="0">Final Stage</button>
+          </div>
+        </div>
+
+        <div class="mt-2">
           <button id="clear-filters" class="btn btn-sm btn-outline-secondary w-100">Clear filters</button>
         </div>
             `;
@@ -1286,8 +1298,32 @@ function buildTypeSidebar(all, onChange) {
     typesBox.querySelector("#filter-move")?.addEventListener("input", debounce(onChange, 150));
     typesBox.querySelector("#filter-ability")?.addEventListener("input", debounce(onChange, 150));
     typesBox.querySelector("#filter-capability")?.addEventListener("input", debounce(onChange, 150));
+    
+    const stageContainer = typesBox.querySelector("#evolution-stage-filters");
+    if (stageContainer) {
+      stageContainer.addEventListener("click", (ev) => {
+        const btn = ev.target;
+        if (!(btn instanceof HTMLButtonElement) || !btn.hasAttribute("data-stage")) return;
+        
+        const stage = btn.getAttribute("data-stage");
+        const isSelected = btn.getAttribute("data-selected") === "1";
+        
+        if (isSelected) {
+          SELECTED_EVOLUTION_STAGES.delete(stage);
+          btn.setAttribute("data-selected", "0");
+          btn.classList.remove("active");
+        } else {
+          SELECTED_EVOLUTION_STAGES.add(stage);
+          btn.setAttribute("data-selected", "1");
+          btn.classList.add("active");
+        }
+        onChange();
+      });
+    }
     typesBox.querySelector("#clear-filters")?.addEventListener("click", () => {
       typesBox.querySelectorAll("button[data-type]").forEach(b => { b.setAttribute("data-selected", "0"); b.classList.remove("active"); });
+      typesBox.querySelectorAll("button[data-stage]").forEach(b => { b.setAttribute("data-selected", "0"); b.classList.remove("active"); });
+      SELECTED_EVOLUTION_STAGES.clear();
       TYPE_MATCH_MODE = 'any';
       const anyRadio = typesBox.querySelector("#type-mode-any");
       if (anyRadio) anyRadio.checked = true;
@@ -1393,6 +1429,42 @@ function pokemonLearnsMove(p, queryRaw) {
   return false;
 }
 
+function getPokemonEvolutionStage(p) {
+  if (!p || !Array.isArray(p.Evolution)) return null;
+  const species = p.Species || "";
+  const stages = p.Evolution;
+  for (const stage of stages) {
+    if (stage.Species === species) {
+      return stage.Stade || null;
+    }
+  }
+  return null;
+}
+
+function getPokemonIsLastEvolution(p) {
+  if (!p || !Array.isArray(p.Evolution)) return false;
+  const stages = p.Evolution;
+  if (stages.length === 0) return false;
+  const lastStage = stages[stages.length - 1].Stade;
+  const currentStage = getPokemonEvolutionStage(p);
+  return currentStage === lastStage;
+}
+
+function pokemonMatchesEvolutionStages(p, selectedStages) {
+  if (!selectedStages || selectedStages.size === 0) return true;
+  
+  const current = getPokemonEvolutionStage(p);
+  if (current === null) return true; // Include if no evolution data
+  
+  if (selectedStages.has("final")) {
+    if (getPokemonIsLastEvolution(p)) return true;
+  }
+  
+  if (selectedStages.has(String(current))) return true;
+  
+  return false;
+}
+
 
 function filterRows(rows) {
   const qRaw = ($("#dex-search")?.value || "").trim().toLowerCase();
@@ -1410,6 +1482,7 @@ function filterRows(rows) {
     if (moveQ && !pokemonLearnsMove(p, moveQ)) return false;
     if (abilQ && !pokemonHasAbility(p, abilQ)) return false;
     if (capaQ && !pokemonHasCapability(p, capaQ)) return false;
+    if (!pokemonMatchesEvolutionStages(p, SELECTED_EVOLUTION_STAGES)) return false;
 
     if (types.length) {
       const pTypes = speciesTypes(p);
