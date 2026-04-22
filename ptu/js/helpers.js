@@ -96,18 +96,21 @@ export function jsonToItems(obj) {
 }
 
 // --- Build pill filter section ---
-export function buildPillSection(root, id, values, { attr = "data-type", onChange } = {}) {
+export function buildPillSection(root, id, values, { attr = "data-type", onChange, useTypeClass = true } = {}) {
   const container = document.createElement("div");
   container.id = id;
   container.className = "d-flex flex-wrap gap-1";
 
-  container.innerHTML = values.map(v => `
-    <button type="button"
-      class="btn btn-sm type-pill card-type-${v}"
-      ${attr}="${v}"
-      data-selected="0"
-    >${v}</button>
-  `).join("");
+  container.innerHTML = values.map(v => {
+    const typeClass = useTypeClass ? `card-type-${v}` : "";
+    return `
+      <button type="button"
+        class="btn btn-sm type-pill ${typeClass}"
+        ${attr}="${v}"
+        data-selected="0"
+      >${v}</button>
+    `;
+  }).join("");
 
   container.addEventListener("click", ev => {
     const btn = ev.target.closest(`button[${attr}]`);
@@ -189,6 +192,18 @@ export function filterByEffect(item, hasEffectFilter) {
   if (hasNoEffect) return !moveHasEffect;
   
   return true;
+}
+
+// --- Contest Type filter ---
+export function filterByContestType(item, contestTypes) {
+  if (!contestTypes.length) return true;
+  return contestTypes.includes(item["Contest Type"]);
+}
+
+// --- Contest Effect filter ---
+export function filterByContestEffect(item, contestEffects) {
+  if (!contestEffects.length) return true;
+  return contestEffects.includes(item["Contest Effect"]);
 }
 
 // --- Version Switcher ---

@@ -7,7 +7,9 @@ import {
   filterByTypes,
   filterByClasses,
   filterByDamageBase,
-  filterByEffect
+  filterByEffect,
+  filterByContestType,
+  filterByContestEffect
 } from "/ptu/js/helpers.js";
 
 export const DAMAGE_BASE_TABLE = {
@@ -147,6 +149,60 @@ function buildSidebarMoves(allItems, container, cols) {
   });
 
   sidebar.appendChild(effectGroup);
+
+  // ====================
+  // Contest Type
+  // ====================
+  const contestTypes = [...new Set(
+    allItems
+      .map(m => m["Contest Type"])
+      .filter(Boolean)
+  )].sort();
+
+  if (contestTypes.length > 0) {
+    const contestTypeGroup = document.createElement("div");
+    contestTypeGroup.className = "mt-3";
+
+    const contestTypeLabel = document.createElement("label");
+    contestTypeLabel.className = "form-label";
+    contestTypeLabel.textContent = "Contest Type";
+    contestTypeGroup.appendChild(contestTypeLabel);
+
+    buildPillSection(contestTypeGroup, "contest-type-filters", contestTypes, {
+      attr: "data-contest-type",
+      onChange: () => refreshMoves(allItems, container, cols),
+      useTypeClass: false
+    });
+
+    sidebar.appendChild(contestTypeGroup);
+  }
+
+  // ====================
+  // Contest Effect
+  // ====================
+  const contestEffects = [...new Set(
+    allItems
+      .map(m => m["Contest Effect"])
+      .filter(Boolean)
+  )].sort();
+
+  if (contestEffects.length > 0) {
+    const contestEffectGroup = document.createElement("div");
+    contestEffectGroup.className = "mt-3";
+
+    const contestEffectLabel = document.createElement("label");
+    contestEffectLabel.className = "form-label";
+    contestEffectLabel.textContent = "Contest Effect";
+    contestEffectGroup.appendChild(contestEffectLabel);
+
+    buildPillSection(contestEffectGroup, "contest-effect-filters", contestEffects, {
+      attr: "data-contest-effect",
+      onChange: () => refreshMoves(allItems, container, cols),
+      useTypeClass: false
+    });
+
+    sidebar.appendChild(contestEffectGroup);
+  }
 }
 
 
@@ -157,13 +213,17 @@ function refreshMoves(allItems, container, cols) {
   const classes = getSelectedPills(document, "class-filters", "data-class");
   const damageBases = getSelectedPills(document, "damage-base-filters", "data-damage-base");
   const effects = getSelectedPills(document, "effect-filters", "data-effect");
+  const contestTypes = getSelectedPills(document, "contest-type-filters", "data-contest-type");
+  const contestEffects = getSelectedPills(document, "contest-effect-filters", "data-contest-effect");
 
   const filtered = allItems
     .filter(item => filterText(query, item))
     .filter(item => filterByTypes(item, types))
     .filter(item => filterByClasses(item, classes))
     .filter(item => filterByDamageBase(item, damageBases))
-    .filter(item => filterByEffect(item, effects));
+    .filter(item => filterByEffect(item, effects))
+    .filter(item => filterByContestType(item, contestTypes))
+    .filter(item => filterByContestEffect(item, contestEffects));
 
   renderFilteredCards(filtered, container, cols);
 }
