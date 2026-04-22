@@ -9,7 +9,9 @@ import {
   filterByDamageBase,
   filterByEffect,
   filterByContestType,
-  filterByContestEffect
+  filterByContestEffect,
+  filterByRangeDistance,
+  filterByRangeKeyword
 } from "/ptu/js/helpers.js";
 
 export const DAMAGE_BASE_TABLE = {
@@ -151,6 +153,124 @@ function buildSidebarMoves(allItems, container, cols) {
   sidebar.appendChild(effectGroup);
 
   // ====================
+  // Range Distance
+  // ====================
+  const rangeDistances = new Set();
+  allItems.forEach(m => {
+    const range = m.Range || "";
+    const parts = range.split(',').map(p => p.trim());
+    
+    parts.forEach(part => {
+      // Melee
+      if (part.toLowerCase().includes('melee')) {
+        rangeDistances.add('Melee');
+      }
+      // Nombre isolé
+      const match = part.match(/^(\d+)$/);
+      if (match) {
+        rangeDistances.add(match[1]);
+      }
+      // Nombres dans "Cone 2", "Line 6", etc.
+      const keywordMatch = part.match(/^(?:Cone|Line|Burst|Close Blast|Blast)\s+(\d+)$/i);
+      if (keywordMatch) {
+        rangeDistances.add(keywordMatch[1]);
+      }
+    });
+  });
+
+  const sortedDistances = [...rangeDistances].sort((a, b) => {
+    if (a === 'Melee') return -1;
+    if (b === 'Melee') return 1;
+    return Number(a) - Number(b);
+  });
+
+  if (sortedDistances.length > 0) {
+    const rangeDistanceGroup = document.createElement("div");
+    rangeDistanceGroup.className = "mt-3";
+
+    const rangeDistanceLabel = document.createElement("label");
+    rangeDistanceLabel.className = "form-label";
+    rangeDistanceLabel.textContent = "Range Distance";
+    rangeDistanceGroup.appendChild(rangeDistanceLabel);
+
+    buildPillSection(rangeDistanceGroup, "range-distance-filters", sortedDistances, {
+      attr: "data-range-distance",
+      onChange: () => refreshMoves(allItems, container, cols),
+      useTypeClass: false
+    });
+
+    sidebar.appendChild(rangeDistanceGroup);
+  }
+
+  // ====================
+  // Range Keywords
+  // ====================
+  const rangeKeywords = new Set();
+  allItems.forEach(m => {
+    const range = m.Range || "";
+    const parts = range.split(',').map(p => p.trim());
+    
+    parts.forEach(part => {
+      // Ignorer les nombres seuls
+      if (/^\d+$/.test(part)) return;
+      
+      // Gérer les patterns "X or Y" (ex: "Burst 1 or Close Blast 2")
+      const orParts = part.split(/\s+or\s+/i);
+      
+      orParts.forEach(subPart => {
+        subPart = subPart.trim();
+        
+        // Pattern "Recoil 1/3", "Recoil 1/2", etc. -> garder seulement "Recoil"
+        const recoilMatch = subPart.match(/^Recoil\s+\d+\/\d+$/i);
+        if (recoilMatch) {
+          rangeKeywords.add('Recoil');
+          return;
+        }
+        
+        // Pattern "Burst 1*", "Cone 2*", etc. -> garder seulement le mot-clé
+        const asteriskMatch = subPart.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+\d+\*$/i);
+        if (asteriskMatch) {
+          rangeKeywords.add(asteriskMatch[1]);
+          return;
+        }
+        
+        // Pattern "Cone 2", "Line 6", etc.
+        const keywordMatch = subPart.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+\d+$/i);
+        if (keywordMatch) {
+          rangeKeywords.add(keywordMatch[1]);
+          return;
+        }
+        
+        // Autres mots en enlevant les nombres
+        const cleaned = subPart.replace(/\d+/g, '').trim();
+        if (cleaned && cleaned.toLowerCase() !== 'melee') {
+          rangeKeywords.add(cleaned);
+        }
+      });
+    });
+  });
+
+  const sortedKeywords = [...rangeKeywords].sort();
+
+  if (sortedKeywords.length > 0) {
+    const rangeKeywordGroup = document.createElement("div");
+    rangeKeywordGroup.className = "mt-3";
+
+    const rangeKeywordLabel = document.createElement("label");
+    rangeKeywordLabel.className = "form-label";
+    rangeKeywordLabel.textContent = "Range Keywords";
+    rangeKeywordGroup.appendChild(rangeKeywordLabel);
+
+    buildPillSection(rangeKeywordGroup, "range-keyword-filters", sortedKeywords, {
+      attr: "data-range-keyword",
+      onChange: () => refreshMoves(allItems, container, cols),
+      useTypeClass: false
+    });
+
+    sidebar.appendChild(rangeKeywordGroup);
+  }
+
+  // ====================
   // Contest Type
   // ====================
   const contestTypes = [...new Set(
@@ -213,6 +333,8 @@ function refreshMoves(allItems, container, cols) {
   const classes = getSelectedPills(document, "class-filters", "data-class");
   const damageBases = getSelectedPills(document, "damage-base-filters", "data-damage-base");
   const effects = getSelectedPills(document, "effect-filters", "data-effect");
+  const rangeDistances = getSelectedPills(document, "range-distance-filters", "data-range-distance");
+  const rangeKeywords = getSelectedPills(document, "range-keyword-filters", "data-range-keyword");
   const contestTypes = getSelectedPills(document, "contest-type-filters", "data-contest-type");
   const contestEffects = getSelectedPills(document, "contest-effect-filters", "data-contest-effect");
 
@@ -222,6 +344,8 @@ function refreshMoves(allItems, container, cols) {
     .filter(item => filterByClasses(item, classes))
     .filter(item => filterByDamageBase(item, damageBases))
     .filter(item => filterByEffect(item, effects))
+    .filter(item => filterByRangeDistance(item, rangeDistances))
+    .filter(item => filterByRangeKeyword(item, rangeKeywords))
     .filter(item => filterByContestType(item, contestTypes))
     .filter(item => filterByContestEffect(item, contestEffects));
 

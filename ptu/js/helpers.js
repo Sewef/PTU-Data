@@ -101,16 +101,22 @@ export function buildPillSection(root, id, values, { attr = "data-type", onChang
   container.id = id;
   container.className = "d-flex flex-wrap gap-1";
 
-  container.innerHTML = values.map(v => {
-    const typeClass = useTypeClass ? `card-type-${v}` : "";
-    return `
-      <button type="button"
-        class="btn btn-sm type-pill ${typeClass}"
-        ${attr}="${v}"
-        data-selected="0"
-      >${v}</button>
-    `;
-  }).join("");
+  values.forEach(v => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "btn btn-sm type-pill";
+    
+    if (useTypeClass) {
+      // Sanitize class name: remove spaces and special chars
+      const sanitizedClass = `card-type-${v.replace(/\s+/g, '')}`;
+      btn.classList.add(sanitizedClass);
+    }
+    
+    btn.setAttribute(attr, v);
+    btn.setAttribute("data-selected", "0");
+    btn.textContent = v;
+    container.appendChild(btn);
+  });
 
   container.addEventListener("click", ev => {
     const btn = ev.target.closest(`button[${attr}]`);
@@ -204,6 +210,85 @@ export function filterByContestType(item, contestTypes) {
 export function filterByContestEffect(item, contestEffects) {
   if (!contestEffects.length) return true;
   return contestEffects.includes(item["Contest Effect"]);
+}
+
+// --- Range Distance filter ---
+export function filterByRangeDistance(item, rangeDistances) {
+  if (!rangeDistances.length) return true;
+  const range = item.Range || "";
+  
+  // Extraire Melee et les nombres isolés
+  const parts = range.split(',').map(p => p.trim());
+  const distances = new Set();
+  
+  parts.forEach(part => {
+    // Si c'est Melee
+    if (part.toLowerCase().includes('melee')) {
+      distances.add('Melee');
+    }
+    // Si c'est un nombre isolé (pas suivi d'un mot comme "1 Target")
+    const match = part.match(/^(\d+)$/);
+    if (match) {
+      distances.add(match[1]);
+    }
+    // Extraire les nombres dans "Cone 2", "Line 6", etc.
+    const keywordMatch = part.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+(\d+)$/i);
+    if (keywordMatch) {
+      distances.add(keywordMatch[2]);
+    }
+  });
+  
+  return rangeDistances.some(d => distances.has(d));
+}
+
+// --- Range Keyword filter ---
+export function filterByRangeKeyword(item, rangeKeywords) {
+  if (!rangeKeywords.length) return true;
+  const range = item.Range || "";
+  
+  const parts = range.split(',').map(p => p.trim());
+  const keywords = new Set();
+  
+  parts.forEach(part => {
+    // Ignorer les nombres seuls
+    if (/^\d+$/.test(part)) return;
+    
+    // Gérer les patterns "X or Y" (ex: "Burst 1 or Close Blast 2")
+    const orParts = part.split(/\s+or\s+/i);
+    
+    orParts.forEach(subPart => {
+      subPart = subPart.trim();
+      
+      // Pattern "Recoil 1/3", "Recoil 1/2", etc. -> garder seulement "Recoil"
+      const recoilMatch = subPart.match(/^Recoil\s+\d+\/\d+$/i);
+      if (recoilMatch) {
+        keywords.add('Recoil');
+        return;
+      }
+      
+      // Pattern "Burst 1*", "Cone 2*", etc. -> garder seulement le mot-clé
+      const asteriskMatch = subPart.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+\d+\*$/i);
+      if (asteriskMatch) {
+        keywords.add(asteriskMatch[1]);
+        return;
+      }
+      
+      // Extraire les patterns comme "Cone 2", "Line 6", etc. en gardant que le mot
+      const keywordMatch = subPart.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+\d+$/i);
+      if (keywordMatch) {
+        keywords.add(keywordMatch[1]);
+        return;
+      }
+      
+      // Pour les autres, enlever les nombres et garder les mots
+      const cleaned = subPart.replace(/\d+/g, '').trim();
+      if (cleaned && cleaned.toLowerCase() !== 'melee') {
+        keywords.add(cleaned);
+      }
+    });
+  });
+  
+  return rangeKeywords.some(k => keywords.has(k));
 }
 
 // --- Version Switcher ---
