@@ -20,10 +20,15 @@ def minify_json_folder(folder):
                 with open(source_path, "r", encoding="utf-8") as f:
                     data = json.load(f)
 
+                # Pretty format the source file
+                with open(source_path, "w", encoding="utf-8") as f:
+                    json.dump(data, f, indent=2, ensure_ascii=False)
+
+                # Create minified version
                 with open(dest_path, "w", encoding="utf-8") as f:
                     json.dump(data, f, separators=(",", ":"), ensure_ascii=False)
 
-                print(f"✔ Minified: {source_path} → {dest_path}")
+                print(f"✔ Formatted & Minified: {source_path} → {dest_path}")
 
             except Exception as e:
                 print(f"❌ Error with '{source_path}': {e}")
