@@ -11,7 +11,8 @@ import {
   filterByContestType,
   filterByContestEffect,
   filterByRangeDistance,
-  filterByRangeKeyword
+  filterByRangeKeyword,
+  filterByTargeting
 } from "/ptu/js/helpers.js";
 
 export const DAMAGE_BASE_TABLE = {
@@ -243,7 +244,9 @@ function buildSidebarMoves(allItems, container, cols) {
         
         // Autres mots en enlevant les nombres
         const cleaned = subPart.replace(/\d+/g, '').trim();
-        if (cleaned && cleaned.toLowerCase() !== 'melee') {
+        // Exclure 'melee', 'target' et 'targets' (gérés par d'autres filtres)
+        const lowerCleaned = cleaned.toLowerCase();
+        if (cleaned && lowerCleaned !== 'melee' && lowerCleaned !== 'target' && lowerCleaned !== 'targets') {
           rangeKeywords.add(cleaned);
         }
       });
@@ -269,6 +272,25 @@ function buildSidebarMoves(allItems, container, cols) {
 
     sidebar.appendChild(rangeKeywordGroup);
   }
+
+  // ====================
+  // Targeting (Single vs Multi)
+  // ====================
+  const targetingGroup = document.createElement("div");
+  targetingGroup.className = "mt-3";
+
+  const targetingLabel = document.createElement("label");
+  targetingLabel.className = "form-label";
+  targetingLabel.textContent = "Targeting";
+  targetingGroup.appendChild(targetingLabel);
+
+  buildPillSection(targetingGroup, "targeting-filters", ["Single Target", "Multi Target"], {
+    attr: "data-targeting",
+    onChange: () => refreshMoves(allItems, container, cols),
+    useTypeClass: false
+  });
+
+  sidebar.appendChild(targetingGroup);
 
   // ====================
   // Contest Type
@@ -335,6 +357,7 @@ function refreshMoves(allItems, container, cols) {
   const effects = getSelectedPills(document, "effect-filters", "data-effect");
   const rangeDistances = getSelectedPills(document, "range-distance-filters", "data-range-distance");
   const rangeKeywords = getSelectedPills(document, "range-keyword-filters", "data-range-keyword");
+  const targeting = getSelectedPills(document, "targeting-filters", "data-targeting");
   const contestTypes = getSelectedPills(document, "contest-type-filters", "data-contest-type");
   const contestEffects = getSelectedPills(document, "contest-effect-filters", "data-contest-effect");
 
@@ -346,6 +369,7 @@ function refreshMoves(allItems, container, cols) {
     .filter(item => filterByEffect(item, effects))
     .filter(item => filterByRangeDistance(item, rangeDistances))
     .filter(item => filterByRangeKeyword(item, rangeKeywords))
+    .filter(item => filterByTargeting(item, targeting))
     .filter(item => filterByContestType(item, contestTypes))
     .filter(item => filterByContestEffect(item, contestEffects));
 

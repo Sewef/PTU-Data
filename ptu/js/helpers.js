@@ -282,13 +282,42 @@ export function filterByRangeKeyword(item, rangeKeywords) {
       
       // Pour les autres, enlever les nombres et garder les mots
       const cleaned = subPart.replace(/\d+/g, '').trim();
-      if (cleaned && cleaned.toLowerCase() !== 'melee') {
+      // Exclure 'melee', 'target' et 'targets' (gérés par d'autres filtres)
+      const lowerCleaned = cleaned.toLowerCase();
+      if (cleaned && lowerCleaned !== 'melee' && lowerCleaned !== 'target' && lowerCleaned !== 'targets') {
         keywords.add(cleaned);
       }
     });
   });
   
   return rangeKeywords.some(k => keywords.has(k));
+}
+
+// --- Targeting filter (Single vs Multi) ---
+export function filterByTargeting(item, targeting) {
+  if (!targeting.length) return true;
+  const range = item.Range || "";
+  
+  const hasSingleTarget = targeting.includes("Single Target");
+  const hasMultiTarget = targeting.includes("Multi Target");
+  
+  // Si les deux sont sélectionnés, montrer tout
+  if (hasSingleTarget && hasMultiTarget) return true;
+  
+  // Déterminer si le move est single ou multi target
+  const lowerRange = range.toLowerCase();
+  
+  // Single target: "1 Target" uniquement
+  const isSingleTarget = /\b1\s+target\b/i.test(range);
+  
+  // Multi target: Cone, Line, Burst, Blast, "X Targets" (X > 1), All, etc.
+  const isMultiTarget = /\b(cone|line|burst|blast|all)\b/i.test(range) ||
+                        /\b([2-9]|\d{2,})\s+targets?\b/i.test(range);
+  
+  if (hasSingleTarget && isSingleTarget) return true;
+  if (hasMultiTarget && isMultiTarget) return true;
+  
+  return false;
 }
 
 // --- Version Switcher ---
