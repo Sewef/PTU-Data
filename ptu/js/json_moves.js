@@ -5,7 +5,9 @@ import {
   getSelectedPills,
   filterText,
   filterByTypes,
-  filterByClasses
+  filterByClasses,
+  filterByDamageBase,
+  filterByEffect
 } from "/ptu/js/helpers.js";
 
 export const DAMAGE_BASE_TABLE = {
@@ -96,6 +98,55 @@ function buildSidebarMoves(allItems, container, cols) {
   });
 
   sidebar.appendChild(classGroup);
+
+  // ====================
+  // Damage Base
+  // ====================
+  const damageBases = [...new Set(
+    allItems
+      .map(m => {
+        const db = m["Damage Base"];
+        if (!db) return null;
+        const match = String(db).match(/\d+/);
+        return match ? match[0] : null;
+      })
+      .filter(Boolean)
+  )].sort((a, b) => Number(a) - Number(b));
+
+  if (damageBases.length > 0) {
+    const damageBaseGroup = document.createElement("div");
+    damageBaseGroup.className = "mt-3";
+
+    const damageBaseLabel = document.createElement("label");
+    damageBaseLabel.className = "form-label";
+    damageBaseLabel.textContent = "Damage Base";
+    damageBaseGroup.appendChild(damageBaseLabel);
+
+    buildPillSection(damageBaseGroup, "damage-base-filters", damageBases, {
+      attr: "data-damage-base",
+      onChange: () => refreshMoves(allItems, container, cols)
+    });
+
+    sidebar.appendChild(damageBaseGroup);
+  }
+
+  // ====================
+  // Has Effect
+  // ====================
+  const effectGroup = document.createElement("div");
+  effectGroup.className = "mt-3";
+
+  const effectLabel = document.createElement("label");
+  effectLabel.className = "form-label";
+  effectLabel.textContent = "Effects";
+  effectGroup.appendChild(effectLabel);
+
+  buildPillSection(effectGroup, "effect-filters", ["With Effect", "No Effect"], {
+    attr: "data-effect",
+    onChange: () => refreshMoves(allItems, container, cols)
+  });
+
+  sidebar.appendChild(effectGroup);
 }
 
 
@@ -104,11 +155,15 @@ function refreshMoves(allItems, container, cols) {
 
   const types = getSelectedPills(document, "type-filters", "data-type");
   const classes = getSelectedPills(document, "class-filters", "data-class");
+  const damageBases = getSelectedPills(document, "damage-base-filters", "data-damage-base");
+  const effects = getSelectedPills(document, "effect-filters", "data-effect");
 
   const filtered = allItems
     .filter(item => filterText(query, item))
     .filter(item => filterByTypes(item, types))
-    .filter(item => filterByClasses(item, classes));
+    .filter(item => filterByClasses(item, classes))
+    .filter(item => filterByDamageBase(item, damageBases))
+    .filter(item => filterByEffect(item, effects));
 
   renderFilteredCards(filtered, container, cols);
 }

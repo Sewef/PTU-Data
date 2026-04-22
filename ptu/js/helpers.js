@@ -151,6 +151,46 @@ export function filterByClasses(item, classes) {
   return classes.includes(item.Class);
 }
 
+// --- Damage Base filter ---
+export function filterByDamageBase(item, damageBases) {
+  if (!damageBases.length) return true;
+  // Extract numeric value from Damage Base
+  const damageBase = item["Damage Base"];
+  if (!damageBase) return false;
+  const match = String(damageBase).match(/\d+/);
+  if (!match) return false;
+  return damageBases.includes(match[0]);
+}
+
+// --- Effect filter ---
+export function filterByEffect(item, hasEffectFilter) {
+  if (!hasEffectFilter.length) return true;
+  
+  const hasWithEffect = hasEffectFilter.includes("With Effect");
+  const hasNoEffect = hasEffectFilter.includes("No Effect");
+  
+  // Si les deux sont sélectionnés, montrer tout
+  if (hasWithEffect && hasNoEffect) return true;
+  
+  // Helper pour vérifier si une valeur est vide ou "None"
+  const isNoneOrEmpty = (value) => {
+    if (!value) return true;
+    const str = String(value).trim().toLowerCase();
+    return str === "" || str === "none" || str === "none.";
+  };
+  
+  // Vérifier si le move a un effet réel
+  const effect = item.Effect || "";
+  const setUpEffect = item["Set-Up Effect"] || "";
+  
+  const moveHasEffect = !isNoneOrEmpty(effect) || !isNoneOrEmpty(setUpEffect);
+  
+  if (hasWithEffect) return moveHasEffect;
+  if (hasNoEffect) return !moveHasEffect;
+  
+  return true;
+}
+
 // --- Version Switcher ---
 export function setupVersionSwitcher() {
   const links = document.querySelectorAll('.dropdown-menu a.dropdown-item');
