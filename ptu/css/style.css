@@ -82,7 +82,7 @@ body[style*="padding-right"] { padding-right: 0 !important; }
   font-size: .75rem;
   border-radius: 999px;
   color: #0f1115;
-  background: var(--type-color);
+  background: var(--type-color, #e9ecef);
   font-weight: 700;
   margin-right: .25rem;
 }
