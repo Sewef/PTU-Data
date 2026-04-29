@@ -217,25 +217,29 @@ export function filterByRangeDistance(item, rangeDistances) {
   if (!rangeDistances.length) return true;
   const range = item.Range || "";
   
-  // Extraire Melee et les nombres isolés
-  const parts = range.split(',').map(p => p.trim());
+  // Split by "; or " to separate variants
+  const variants = range.split(/;\s*or\s+/i).map(v => v.trim());
   const distances = new Set();
   
-  parts.forEach(part => {
-    // Si c'est Melee
-    if (part.toLowerCase().includes('melee')) {
-      distances.add('Melee');
-    }
-    // Si c'est un nombre isolé (pas suivi d'un mot comme "1 Target")
-    const match = part.match(/^(\d+)$/);
-    if (match) {
-      distances.add(match[1]);
-    }
-    // Extraire les nombres dans "Cone 2", "Line 6", etc.
-    const keywordMatch = part.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+(\d+)$/i);
-    if (keywordMatch) {
-      distances.add(keywordMatch[2]);
-    }
+  variants.forEach(variant => {
+    const parts = variant.split(',').map(p => p.trim());
+    
+    parts.forEach(part => {
+      // Si c'est Melee
+      if (part.toLowerCase().includes('melee')) {
+        distances.add('Melee');
+      }
+      // Si c'est un nombre isolé (pas suivi d'un mot comme "1 Target")
+      const match = part.match(/^(\d+)$/);
+      if (match) {
+        distances.add(match[1]);
+      }
+      // Extraire les nombres dans "Cone 2", "Line 6", etc.
+      const keywordMatch = part.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+(\d+)$/i);
+      if (keywordMatch) {
+        distances.add(keywordMatch[2]);
+      }
+    });
   });
   
   return rangeDistances.some(d => distances.has(d));
@@ -246,47 +250,55 @@ export function filterByRangeKeyword(item, rangeKeywords) {
   if (!rangeKeywords.length) return true;
   const range = item.Range || "";
   
-  const parts = range.split(',').map(p => p.trim());
+  // Split by "; or " to separate variants
+  const variants = range.split(/;\s*or\s+/i).map(v => v.trim());
   const keywords = new Set();
   
-  parts.forEach(part => {
-    // Ignorer les nombres seuls
-    if (/^\d+$/.test(part)) return;
+  variants.forEach(variant => {
+    const parts = variant.split(',').map(p => p.trim());
     
-    // Gérer les patterns "X or Y" (ex: "Burst 1 or Close Blast 2")
-    const orParts = part.split(/\s+or\s+/i);
-    
-    orParts.forEach(subPart => {
-      subPart = subPart.trim();
+    parts.forEach(part => {
+      // Supprimer le contenu entre parenthèses (ex: "(see Effect)")
+      part = part.replace(/\s*\([^)]*\)/g, '').trim();
       
-      // Pattern "Recoil 1/3", "Recoil 1/2", etc. -> garder seulement "Recoil"
-      const recoilMatch = subPart.match(/^Recoil\s+\d+\/\d+$/i);
-      if (recoilMatch) {
-        keywords.add('Recoil');
-        return;
-      }
+      // Ignorer les nombres seuls
+      if (/^\d+$/.test(part)) return;
       
-      // Pattern "Burst 1*", "Cone 2*", etc. -> garder seulement le mot-clé
-      const asteriskMatch = subPart.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+\d+\*$/i);
-      if (asteriskMatch) {
-        keywords.add(asteriskMatch[1]);
-        return;
-      }
+      // Gérer les patterns "X or Y" (ex: "Burst 1 or Close Blast 2")
+      const orParts = part.split(/\s+or\s+/i);
       
-      // Extraire les patterns comme "Cone 2", "Line 6", etc. en gardant que le mot
-      const keywordMatch = subPart.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+\d+$/i);
-      if (keywordMatch) {
-        keywords.add(keywordMatch[1]);
-        return;
-      }
-      
-      // Pour les autres, enlever les nombres et garder les mots
-      const cleaned = subPart.replace(/\d+/g, '').trim();
-      // Exclure 'melee', 'target' et 'targets' (gérés par d'autres filtres)
-      const lowerCleaned = cleaned.toLowerCase();
-      if (cleaned && lowerCleaned !== 'melee' && lowerCleaned !== 'target' && lowerCleaned !== 'targets') {
-        keywords.add(cleaned);
-      }
+      orParts.forEach(subPart => {
+        subPart = subPart.trim();
+        
+        // Pattern "Recoil 1/3", "Recoil 1/2", etc. -> garder seulement "Recoil"
+        const recoilMatch = subPart.match(/^Recoil\s+\d+\/\d+$/i);
+        if (recoilMatch) {
+          keywords.add('Recoil');
+          return;
+        }
+        
+        // Pattern "Burst 1*", "Cone 2*", etc. -> garder seulement le mot-clé
+        const asteriskMatch = subPart.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+\d+\*$/i);
+        if (asteriskMatch) {
+          keywords.add(asteriskMatch[1]);
+          return;
+        }
+        
+        // Extraire les patterns comme "Cone 2", "Line 6", etc. en gardant que le mot
+        const keywordMatch = subPart.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+\d+$/i);
+        if (keywordMatch) {
+          keywords.add(keywordMatch[1]);
+          return;
+        }
+        
+        // Pour les autres, enlever les nombres et garder les mots
+        const cleaned = subPart.replace(/\d+/g, '').trim();
+        // Exclure 'melee', 'target' et 'targets' (gérés par d'autres filtres)
+        const lowerCleaned = cleaned.toLowerCase();
+        if (cleaned && lowerCleaned !== 'melee' && lowerCleaned !== 'target' && lowerCleaned !== 'targets') {
+          keywords.add(cleaned);
+        }
+      });
     });
   });
   
@@ -304,15 +316,24 @@ export function filterByTargeting(item, targeting) {
   // Si les deux sont sélectionnés, montrer tout
   if (hasSingleTarget && hasMultiTarget) return true;
   
-  // Déterminer si le move est single ou multi target
-  const lowerRange = range.toLowerCase();
+  // Split by "; or " to separate variants and check each one
+  const variants = range.split(/;\s*or\s+/i).map(v => v.trim());
   
-  // Single target: "1 Target" uniquement
-  const isSingleTarget = /\b1\s+target\b/i.test(range);
+  let isSingleTarget = false;
+  let isMultiTarget = false;
   
-  // Multi target: Cone, Line, Burst, Blast, "X Targets" (X > 1), All, etc.
-  const isMultiTarget = /\b(cone|line|burst|blast|all)\b/i.test(range) ||
-                        /\b([2-9]|\d{2,})\s+targets?\b/i.test(range);
+  variants.forEach(variant => {
+    // Single target: "1 Target" uniquement
+    if (/\b1\s+target\b/i.test(variant)) {
+      isSingleTarget = true;
+    }
+    
+    // Multi target: Cone, Line, Burst, Blast, "X Targets" (X > 1), All, etc.
+    if (/\b(cone|line|burst|blast|all)\b/i.test(variant) ||
+        /\b([2-9]|\d{2,})\s+targets?\b/i.test(variant)) {
+      isMultiTarget = true;
+    }
+  });
   
   if (hasSingleTarget && isSingleTarget) return true;
   if (hasMultiTarget && isMultiTarget) return true;

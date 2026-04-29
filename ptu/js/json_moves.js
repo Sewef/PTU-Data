@@ -159,23 +159,28 @@ function buildSidebarMoves(allItems, container, cols) {
   const rangeDistances = new Set();
   allItems.forEach(m => {
     const range = m.Range || "";
-    const parts = range.split(',').map(p => p.trim());
+    // Split by "; or " to separate variants
+    const variants = range.split(/;\s*or\s+/i).map(v => v.trim());
     
-    parts.forEach(part => {
-      // Melee
-      if (part.toLowerCase().includes('melee')) {
-        rangeDistances.add('Melee');
-      }
-      // Nombre isolé
-      const match = part.match(/^(\d+)$/);
-      if (match) {
-        rangeDistances.add(match[1]);
-      }
-      // Nombres dans "Cone 2", "Line 6", etc.
-      const keywordMatch = part.match(/^(?:Cone|Line|Burst|Close Blast|Blast)\s+(\d+)$/i);
-      if (keywordMatch) {
-        rangeDistances.add(keywordMatch[1]);
-      }
+    variants.forEach(variant => {
+      const parts = variant.split(',').map(p => p.trim());
+      
+      parts.forEach(part => {
+        // Melee
+        if (part.toLowerCase().includes('melee')) {
+          rangeDistances.add('Melee');
+        }
+        // Nombre isolé
+        const match = part.match(/^(\d+)$/);
+        if (match) {
+          rangeDistances.add(match[1]);
+        }
+        // Nombres dans "Cone 2", "Line 6", etc.
+        const keywordMatch = part.match(/^(?:Cone|Line|Burst|Close Blast|Blast)\s+(\d+)$/i);
+        if (keywordMatch) {
+          rangeDistances.add(keywordMatch[1]);
+        }
+      });
     });
   });
 
@@ -209,46 +214,54 @@ function buildSidebarMoves(allItems, container, cols) {
   const rangeKeywords = new Set();
   allItems.forEach(m => {
     const range = m.Range || "";
-    const parts = range.split(',').map(p => p.trim());
+    // Split by "; or " to separate variants
+    const variants = range.split(/;\s*or\s+/i).map(v => v.trim());
     
-    parts.forEach(part => {
-      // Ignorer les nombres seuls
-      if (/^\d+$/.test(part)) return;
+    variants.forEach(variant => {
+      const parts = variant.split(',').map(p => p.trim());
       
-      // Gérer les patterns "X or Y" (ex: "Burst 1 or Close Blast 2")
-      const orParts = part.split(/\s+or\s+/i);
-      
-      orParts.forEach(subPart => {
-        subPart = subPart.trim();
+      parts.forEach(part => {
+        // Supprimer le contenu entre parenthèses (ex: "(see Effect)")
+        part = part.replace(/\s*\([^)]*\)/g, '').trim();
         
-        // Pattern "Recoil 1/3", "Recoil 1/2", etc. -> garder seulement "Recoil"
-        const recoilMatch = subPart.match(/^Recoil\s+\d+\/\d+$/i);
-        if (recoilMatch) {
-          rangeKeywords.add('Recoil');
-          return;
-        }
+        // Ignorer les nombres seuls
+        if (/^\d+$/.test(part)) return;
         
-        // Pattern "Burst 1*", "Cone 2*", etc. -> garder seulement le mot-clé
-        const asteriskMatch = subPart.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+\d+\*$/i);
-        if (asteriskMatch) {
-          rangeKeywords.add(asteriskMatch[1]);
-          return;
-        }
+        // Gérer les patterns "X or Y" (ex: "Burst 1 or Close Blast 2")
+        const orParts = part.split(/\s+or\s+/i);
         
-        // Pattern "Cone 2", "Line 6", etc.
-        const keywordMatch = subPart.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+\d+$/i);
-        if (keywordMatch) {
-          rangeKeywords.add(keywordMatch[1]);
-          return;
-        }
-        
-        // Autres mots en enlevant les nombres
-        const cleaned = subPart.replace(/\d+/g, '').trim();
-        // Exclure 'melee', 'target' et 'targets' (gérés par d'autres filtres)
-        const lowerCleaned = cleaned.toLowerCase();
-        if (cleaned && lowerCleaned !== 'melee' && lowerCleaned !== 'target' && lowerCleaned !== 'targets') {
-          rangeKeywords.add(cleaned);
-        }
+        orParts.forEach(subPart => {
+          subPart = subPart.trim();
+          
+          // Pattern "Recoil 1/3", "Recoil 1/2", etc. -> garder seulement "Recoil"
+          const recoilMatch = subPart.match(/^Recoil\s+\d+\/\d+$/i);
+          if (recoilMatch) {
+            rangeKeywords.add('Recoil');
+            return;
+          }
+          
+          // Pattern "Burst 1*", "Cone 2*", etc. -> garder seulement le mot-clé
+          const asteriskMatch = subPart.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+\d+\*$/i);
+          if (asteriskMatch) {
+            rangeKeywords.add(asteriskMatch[1]);
+            return;
+          }
+          
+          // Pattern "Cone 2", "Line 6", etc.
+          const keywordMatch = subPart.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+\d+$/i);
+          if (keywordMatch) {
+            rangeKeywords.add(keywordMatch[1]);
+            return;
+          }
+          
+          // Autres mots en enlevant les nombres
+          const cleaned = subPart.replace(/\d+/g, '').trim();
+          // Exclure 'melee', 'target' et 'targets' (gérés par d'autres filtres)
+          const lowerCleaned = cleaned.toLowerCase();
+          if (cleaned && lowerCleaned !== 'melee' && lowerCleaned !== 'target' && lowerCleaned !== 'targets') {
+            rangeKeywords.add(cleaned);
+          }
+        });
       });
     });
   });
