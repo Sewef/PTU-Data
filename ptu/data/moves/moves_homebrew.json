@@ -1334,7 +1334,7 @@
     "Contest Type": "Beauty",
     "Contest Effect": "Catching Up"
   },
-  "Conversion2": {
+  "Conversion 2": {
     "Type": "Normal",
     "Frequency": "At-Will",
     "AC": "None",
@@ -1934,6 +1934,17 @@
     "Effect": "For each 10% of HP the user is missing, Dragon Energy's Damage Base is reduced by 1.",
     "Contest Type": "Cool",
     "Contest Effect": "Seen Nothing Yet"
+  },
+  "Dragon Hammer": {
+    "Type": "Dragon",
+    "Frequency": "EOT",
+    "AC": "2",
+    "Damage Base": "9",
+    "Class": "Physical",
+    "Range": "Melee, 1 Target or Line 3",
+    "Effect": "None",
+    "Contest Type": "Cool",
+    "Contest Effect": "Big Show"
   },
   "Dragon Pulse": {
     "Type": "Dragon",

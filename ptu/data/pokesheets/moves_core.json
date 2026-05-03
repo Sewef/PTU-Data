@@ -884,6 +884,19 @@
     "critsOn": null
   },
   {
+    "name": "Branch Poke",
+    "type": "Grass",
+    "frequency": "At-Will",
+    "accuracyCheck": 2,
+    "damageBase": 4,
+    "damageClass": "Physical",
+    "range": "2, 1 Target",
+    "effects": "",
+    "contestType": "Tough",
+    "contestEffect": "Steady Performance",
+    "critsOn": null
+  },
+  {
     "name": "Brave Bird",
     "type": "Flying",
     "frequency": "Scene x2",
@@ -1391,7 +1404,7 @@
     "critsOn": null
   },
   {
-    "name": "Conversion2",
+    "name": "Conversion 2",
     "type": "Normal",
     "frequency": "At-Will",
     "accuracyCheck": "",
@@ -2028,6 +2041,19 @@
     "critsOn": null
   },
   {
+    "name": "Dragon Darts",
+    "type": "Dragon",
+    "frequency": "EoT",
+    "accuracyCheck": 2,
+    "damageBase": 5,
+    "damageClass": "Physical",
+    "range": "6, 1 Target, Double Strike; or 6, 2 Targets",
+    "effects": "",
+    "contestType": "Smart",
+    "contestEffect": "Double Time",
+    "critsOn": null
+  },
+  {
     "name": "Dragon Energy",
     "type": "Dragon",
     "frequency": "Daily x2",
@@ -2038,6 +2064,19 @@
     "effects": "For each 10% of HP the user is missing, Dragon Energy's Damage Base is reduced by 1.",
     "contestType": "Cool",
     "contestEffect": "Seen Nothing Yet",
+    "critsOn": null
+  },
+  {
+    "name": "Dragon Hammer",
+    "type": "Dragon",
+    "frequency": "EoT",
+    "accuracyCheck": 2,
+    "damageBase": 9,
+    "damageClass": "Physical",
+    "range": "Melee, 1 Target or Line 3",
+    "effects": "",
+    "contestType": "Cool",
+    "contestEffect": "Big Show",
     "critsOn": null
   },
   {
@@ -5743,6 +5782,19 @@
     "effects": "After damage is dealt, the user becomes Enraged and Confused.",
     "contestType": "Cool",
     "contestEffect": "Reliable",
+    "critsOn": null
+  },
+  {
+    "name": "Overdrive",
+    "type": "Electric",
+    "frequency": "EoT",
+    "accuracyCheck": 2,
+    "damageBase": 8,
+    "damageClass": "Special",
+    "range": "Cone 2, Sonic",
+    "effects": "",
+    "contestType": "Cool",
+    "contestEffect": "Attention Grabber",
     "critsOn": null
   },
   {
@@ -9511,6 +9563,19 @@
     "damageClass": "Physical",
     "range": "Melee, 1 Target",
     "effects": "Waterfall Flinches the target on 17+.",
+    "contestType": "Tough",
+    "contestEffect": "Steady Performance",
+    "critsOn": null
+  },
+  {
+    "name": "Wave Crash",
+    "type": "Water",
+    "frequency": "EoT",
+    "accuracyCheck": 2,
+    "damageBase": 8,
+    "damageClass": "Physical",
+    "range": "Melee, 1 Target, Priority, Recoil 1/4",
+    "effects": "",
     "contestType": "Tough",
     "contestEffect": "Steady Performance",
     "critsOn": null

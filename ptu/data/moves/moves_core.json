@@ -726,6 +726,17 @@
     "Contest Effect": "Special Attention",
     "Special": "Grants High Jump +1"
   },
+  "Branch Poke": {
+    "Type": "Grass",
+    "Frequency": "At-Will",
+    "AC": "2",
+    "Damage Base": "4",
+    "Class": "Physical",
+    "Range": "2, 1 Target",
+    "Effect": "None",
+    "Contest Type": "Tough",
+    "Contest Effect": "Steady Performance"
+  },
   "Brave Bird": {
     "Type": "Flying",
     "Frequency": "Scene x2",
@@ -1140,7 +1151,7 @@
     "Contest Type": "Beauty",
     "Contest Effect": "Catching Up"
   },
-  "Conversion2": {
+  "Conversion 2": {
     "Type": "Normal",
     "Frequency": "At-Will",
     "AC": "None",
@@ -1663,6 +1674,17 @@
     "Contest Type": "Cool",
     "Contest Effect": "Get Ready!"
   },
+  "Dragon Darts": {
+    "Type": "Dragon",
+    "Frequency": "EOT",
+    "AC": "2",
+    "Damage Base": "5",
+    "Class": "Physical",
+    "Range": "6, 1 Target, Double Strike; or 6, 2 Targets",
+    "Effect": "None",
+    "Contest Type": "Smart",
+    "Contest Effect": "Double Time"
+  },
   "Dragon Energy": {
     "Type": "Dragon",
     "Frequency": "Daily x2",
@@ -1673,6 +1695,17 @@
     "Effect": "For each 10% of HP the user is missing, Dragon Energy's Damage Base is reduced by 1.",
     "Contest Type": "Cool",
     "Contest Effect": "Seen Nothing Yet"
+  },
+  "Dragon Hammer": {
+    "Type": "Dragon",
+    "Frequency": "EOT",
+    "AC": "2",
+    "Damage Base": "9",
+    "Class": "Physical",
+    "Range": "Melee, 1 Target or Line 3",
+    "Effect": "None",
+    "Contest Type": "Cool",
+    "Contest Effect": "Big Show"
   },
   "Dragon Pulse": {
     "Type": "Dragon",
@@ -4725,6 +4758,17 @@
     "Effect": "After damage is dealt, the user becomes Enraged and Confused.",
     "Contest Type": "Cool",
     "Contest Effect": "Reliable"
+  },
+  "Overdrive": {
+    "Type": "Electric",
+    "Frequency": "EOT",
+    "AC": "2",
+    "Damage Base": "8",
+    "Class": "Special",
+    "Range": "Cone 2, Sonic",
+    "Effect": "None",
+    "Contest Type": "Cool",
+    "Contest Effect": "Attention Grabber"
   },
   "Overheat": {
     "Type": "Fire",
@@ -7834,6 +7878,17 @@
     "Class": "Physical",
     "Range": "Melee, 1 Target",
     "Effect": "Waterfall Flinches the target on 17+.",
+    "Contest Type": "Tough",
+    "Contest Effect": "Steady Performance"
+  },
+  "Wave Crash": {
+    "Type": "Water",
+    "Frequency": "EOT",
+    "AC": "2",
+    "Damage Base": "8",
+    "Class": "Physical",
+    "Range": "Melee, 1 Target, Priority, Recoil 1/4",
+    "Effect": "None",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },

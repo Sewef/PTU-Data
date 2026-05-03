@@ -1651,7 +1651,7 @@
     "critsOn": null
   },
   {
-    "name": "Conversion2",
+    "name": "Conversion 2",
     "type": "Normal",
     "frequency": "At-Will",
     "accuracyCheck": "",
@@ -2389,6 +2389,19 @@
     "effects": "For each 10% of HP the user is missing, Dragon Energy's Damage Base is reduced by 1.",
     "contestType": "Cool",
     "contestEffect": "Seen Nothing Yet",
+    "critsOn": null
+  },
+  {
+    "name": "Dragon Hammer",
+    "type": "Dragon",
+    "frequency": "EoT",
+    "accuracyCheck": 2,
+    "damageBase": 9,
+    "damageClass": "Physical",
+    "range": "Melee, 1 Target or Line 3",
+    "effects": "",
+    "contestType": "Cool",
+    "contestEffect": "Big Show",
     "critsOn": null
   },
   {
