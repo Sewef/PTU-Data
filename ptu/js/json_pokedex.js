@@ -1286,18 +1286,20 @@ function buildTypeSidebar(all, onChange) {
     if (srcMenu) srcMenu.insertAdjacentElement("afterend", typesBox);
     else sidebar.prepend(typesBox);
 
-    // Delegated once
+    // Delegated once — use indirection so subsequent buildTypeSidebar calls can update the callback
+    const callOnChange = () => typesBox._onChange?.();
+
     typesBox.addEventListener("change", (ev) => {
       const el = ev.target;
       if (!(el instanceof HTMLInputElement)) return;
       if (el.name === "type-mode") {
         TYPE_MATCH_MODE = el.id.endsWith("all") ? "all" : "any";
-        onChange();
+        callOnChange();
       }
     });
-    typesBox.querySelector("#filter-move")?.addEventListener("input", debounce(onChange, 150));
-    typesBox.querySelector("#filter-ability")?.addEventListener("input", debounce(onChange, 150));
-    typesBox.querySelector("#filter-capability")?.addEventListener("input", debounce(onChange, 150));
+    typesBox.querySelector("#filter-move")?.addEventListener("input", debounce(callOnChange, 150));
+    typesBox.querySelector("#filter-ability")?.addEventListener("input", debounce(callOnChange, 150));
+    typesBox.querySelector("#filter-capability")?.addEventListener("input", debounce(callOnChange, 150));
     
     const stageContainer = typesBox.querySelector("#evolution-stage-filters");
     if (stageContainer) {
@@ -1317,7 +1319,7 @@ function buildTypeSidebar(all, onChange) {
           btn.setAttribute("data-selected", "1");
           btn.classList.add("active");
         }
-        onChange();
+        callOnChange();
       });
     }
     typesBox.querySelector("#clear-filters")?.addEventListener("click", () => {
@@ -1333,9 +1335,12 @@ function buildTypeSidebar(all, onChange) {
       if (moveInp) moveInp.value = "";
       if (abilInp) abilInp.value = "";
       if (capaInp) capaInp.value = "";
-      onChange();
+      callOnChange();
     });
   }
+
+  // Always update the stored onChange so the indirected listeners use the latest dataset
+  typesBox._onChange = onChange;
 
   // Always refresh inline badges without duplicating the section
   const badgeWrap = typesBox.querySelector("#type-badges");
@@ -1361,9 +1366,9 @@ document.addEventListener('change', (ev) => {
   if (!(t instanceof Element)) return;
   if (t.matches('input[name="type-mode"]')) {
     window.TYPE_MATCH_MODE = t.id.endsWith('all') ? 'all' : 'any';
-    // Re-render with the new mode
+    // Re-render with the new mode — always use the currently loaded dataset
     try {
-      const all = window.__pokedexData || [];
+      const all = window.__POKEDEX || window.__pokedexData || [];
       renderGrid(filterRows(all));
     } catch { }
   }
@@ -1505,13 +1510,13 @@ function wireSearch(all) {
   const inp = $("#dex-search");
   if (inp) inp.addEventListener("input", debounce(() => {
     savePokedexState(inp.value, activeTypes(), currentTypeMatchMode());
-    renderGrid(filterRows(all));
+    renderGrid(filterRows(window.__POKEDEX || all));
   }, 120));
   $("#clear-filters")?.addEventListener("click", () => {
     inp.value = "";
     document.querySelectorAll("#type-filters input[type='checkbox']").forEach(cb => cb.checked = false);
     savePokedexState("", [], "any");
-    renderGrid(filterRows(all));
+    renderGrid(filterRows(window.__POKEDEX || all));
   });
 }
 
@@ -1589,6 +1594,7 @@ function buildSourceMenu(onChange) {
       clearIndexCache(); // Clear cached indexes when changing preset
       const data = await loadPokedex();
       window.__POKEDEX = data;
+      window.__pokedexData = data;
       buildTypeSidebar(data, () => renderGrid(filterRows(data)));
       renderGrid(filterRows(data));
     } catch (e) {
