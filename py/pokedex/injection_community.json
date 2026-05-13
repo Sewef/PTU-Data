@@ -1,0 +1,1350 @@
+{
+  "pdf": "py\\1-6G Pokedex_Playtest105Plus.pdf",
+  "pokedex_in": "ptu\\data\\pokedex\\community\\pokedex_core.json",
+  "pokedex_out": "ptu\\data\\pokedex\\community\\pokedex_core.json",
+  "pages_seen": 748,
+  "warnings": [
+    "Page 511: species 'Meowstic' has multiple forms but none detected",
+    "Page 735: species 'Kyurem' has multiple forms but none detected"
+  ],
+  "summary": {
+    "parsed_section_moves": 135,
+    "added": 133,
+    "duplicates_skipped": 2,
+    "missing_species": 0,
+    "ambiguous_species_form": 0,
+    "missing_move_api": 0,
+    "details": [
+      {
+        "status": "added",
+        "species": "Mew",
+        "form": null,
+        "move": "Transform",
+        "level": 1,
+        "type": "Normal",
+        "stab": false,
+        "page": 683
+      },
+      {
+        "status": "added",
+        "species": "Mew",
+        "form": null,
+        "move": "Psychic",
+        "level": 30,
+        "type": "Psychic",
+        "stab": true,
+        "page": 683
+      },
+      {
+        "status": "added",
+        "species": "Mew",
+        "form": null,
+        "move": "Barrier",
+        "level": 40,
+        "type": "Psychic",
+        "stab": false,
+        "page": 683
+      },
+      {
+        "status": "added",
+        "species": "Mew",
+        "form": null,
+        "move": "Aura Sphere",
+        "level": 100,
+        "type": "Fighting",
+        "stab": false,
+        "page": 683
+      },
+      {
+        "status": "added",
+        "species": "Mewtwo",
+        "form": null,
+        "move": "Psycho Cut",
+        "level": 43,
+        "type": "Psychic",
+        "stab": true,
+        "page": 684
+      },
+      {
+        "status": "added",
+        "species": "Mewtwo",
+        "form": null,
+        "move": "Psychic",
+        "level": 64,
+        "type": "Psychic",
+        "stab": true,
+        "page": 684
+      },
+      {
+        "status": "added",
+        "species": "Mewtwo",
+        "form": null,
+        "move": "Psystrike",
+        "level": 100,
+        "type": "Psychic",
+        "stab": true,
+        "page": 684
+      },
+      {
+        "status": "added",
+        "species": "Genesect",
+        "form": null,
+        "move": "Techno Blast",
+        "level": 1,
+        "type": "Normal",
+        "stab": false,
+        "page": 685
+      },
+      {
+        "status": "added",
+        "species": "Genesect",
+        "form": null,
+        "move": "Hyper Beam",
+        "level": 73,
+        "type": "Normal",
+        "stab": false,
+        "page": 685
+      },
+      {
+        "status": "added",
+        "species": "Heatran",
+        "form": null,
+        "move": "Lava Plume",
+        "level": 49,
+        "type": "Fire",
+        "stab": true,
+        "page": 686
+      },
+      {
+        "status": "added",
+        "species": "Heatran",
+        "form": null,
+        "move": "Magma Storm",
+        "level": 96,
+        "type": "Fire",
+        "stab": true,
+        "page": 686
+      },
+      {
+        "status": "added",
+        "species": "Articuno",
+        "form": null,
+        "move": "Ice Beam",
+        "level": 43,
+        "type": "Ice",
+        "stab": true,
+        "page": 687
+      },
+      {
+        "status": "added",
+        "species": "Articuno",
+        "form": null,
+        "move": "Sheer Cold",
+        "level": 78,
+        "type": "Ice",
+        "stab": true,
+        "page": 687
+      },
+      {
+        "status": "added",
+        "species": "Zapdos",
+        "form": null,
+        "move": "Discharge",
+        "level": 50,
+        "type": "Electric",
+        "stab": true,
+        "page": 688
+      },
+      {
+        "status": "added",
+        "species": "Zapdos",
+        "form": null,
+        "move": "Thunder",
+        "level": 78,
+        "type": "Electric",
+        "stab": true,
+        "page": 688
+      },
+      {
+        "status": "added",
+        "species": "Moltres",
+        "form": null,
+        "move": "Flamethrower",
+        "level": 36,
+        "type": "Fire",
+        "stab": true,
+        "page": 689
+      },
+      {
+        "status": "added",
+        "species": "Moltres",
+        "form": null,
+        "move": "Sky Attack",
+        "level": 78,
+        "type": "Flying",
+        "stab": true,
+        "page": 689
+      },
+      {
+        "status": "added",
+        "species": "Raikou",
+        "form": null,
+        "move": "Thunder",
+        "level": 85,
+        "type": "Electric",
+        "stab": true,
+        "page": 690
+      },
+      {
+        "status": "added",
+        "species": "Entei",
+        "form": null,
+        "move": "Eruption",
+        "level": 85,
+        "type": "Fire",
+        "stab": true,
+        "page": 691
+      },
+      {
+        "status": "added",
+        "species": "Suicune",
+        "form": null,
+        "move": "Blizzard",
+        "level": 85,
+        "type": "Ice",
+        "stab": false,
+        "page": 692
+      },
+      {
+        "status": "added",
+        "species": "Regirock",
+        "form": null,
+        "move": "Ancient Power",
+        "level": 31,
+        "type": "Rock",
+        "stab": true,
+        "page": 693
+      },
+      {
+        "status": "added",
+        "species": "Regirock",
+        "form": null,
+        "move": "Stone Edge",
+        "level": 43,
+        "type": "Rock",
+        "stab": true,
+        "page": 693
+      },
+      {
+        "status": "added",
+        "species": "Regice",
+        "form": null,
+        "move": "Ancient Power",
+        "level": 31,
+        "type": "Rock",
+        "stab": false,
+        "page": 694
+      },
+      {
+        "status": "added",
+        "species": "Regice",
+        "form": null,
+        "move": "Ice Beam",
+        "level": 43,
+        "type": "Ice",
+        "stab": true,
+        "page": 694
+      },
+      {
+        "status": "added",
+        "species": "Registeel",
+        "form": null,
+        "move": "Ancient Power",
+        "level": 31,
+        "type": "Rock",
+        "stab": false,
+        "page": 695
+      },
+      {
+        "status": "added",
+        "species": "Registeel",
+        "form": null,
+        "move": "Flash Cannon",
+        "level": 43,
+        "type": "Steel",
+        "stab": true,
+        "page": 695
+      },
+      {
+        "status": "added",
+        "species": "Regigigas",
+        "form": null,
+        "move": "Crush Grip",
+        "level": 75,
+        "type": "Normal",
+        "stab": true,
+        "page": 696
+      },
+      {
+        "status": "added",
+        "species": "Regigigas",
+        "form": null,
+        "move": "Giga Impact",
+        "level": 100,
+        "type": "Normal",
+        "stab": true,
+        "page": 696
+      },
+      {
+        "status": "added",
+        "species": "Cobalion",
+        "form": null,
+        "move": "Sacred Sword",
+        "level": 42,
+        "type": "Fighting",
+        "stab": true,
+        "page": 697
+      },
+      {
+        "status": "added",
+        "species": "Cobalion",
+        "form": null,
+        "move": "Metal Burst",
+        "level": 67,
+        "type": "Steel",
+        "stab": true,
+        "page": 697
+      },
+      {
+        "status": "added",
+        "species": "Terrakion",
+        "form": null,
+        "move": "Sacred Sword",
+        "level": 42,
+        "type": "Fighting",
+        "stab": true,
+        "page": 698
+      },
+      {
+        "status": "added",
+        "species": "Terrakion",
+        "form": null,
+        "move": "Stone Edge",
+        "level": 67,
+        "type": "Rock",
+        "stab": true,
+        "page": 698
+      },
+      {
+        "status": "added",
+        "species": "Virizion",
+        "form": null,
+        "move": "Sacred Sword",
+        "level": 42,
+        "type": "Fighting",
+        "stab": true,
+        "page": 699
+      },
+      {
+        "status": "added",
+        "species": "Virizion",
+        "form": null,
+        "move": "Leaf Blade",
+        "level": 67,
+        "type": "Grass",
+        "stab": true,
+        "page": 699
+      },
+      {
+        "status": "added",
+        "species": "Keldeo",
+        "form": null,
+        "move": "Sacred Sword",
+        "level": 43,
+        "type": "Fighting",
+        "stab": true,
+        "page": 700
+      },
+      {
+        "status": "added",
+        "species": "Keldeo",
+        "form": null,
+        "move": "Hydro Pump",
+        "level": 67,
+        "type": "Water",
+        "stab": true,
+        "page": 700
+      },
+      {
+        "status": "added",
+        "species": "Uxie",
+        "form": null,
+        "move": "Future Sight",
+        "level": 36,
+        "type": "Psychic",
+        "stab": true,
+        "page": 701
+      },
+      {
+        "status": "added",
+        "species": "Uxie",
+        "form": null,
+        "move": "Extrasensory",
+        "level": 51,
+        "type": "Psychic",
+        "stab": true,
+        "page": 701
+      },
+      {
+        "status": "added",
+        "species": "Uxie",
+        "form": null,
+        "move": "Memento",
+        "level": 76,
+        "type": "Dark",
+        "stab": false,
+        "page": 701
+      },
+      {
+        "status": "added",
+        "species": "Mesprit",
+        "form": null,
+        "move": "Future Sight",
+        "level": 36,
+        "type": "Psychic",
+        "stab": true,
+        "page": 702
+      },
+      {
+        "status": "added",
+        "species": "Mesprit",
+        "form": null,
+        "move": "Extrasensory",
+        "level": 51,
+        "type": "Psychic",
+        "stab": true,
+        "page": 702
+      },
+      {
+        "status": "added",
+        "species": "Mesprit",
+        "form": null,
+        "move": "Healing Wish",
+        "level": 76,
+        "type": "Psychic",
+        "stab": false,
+        "page": 702
+      },
+      {
+        "status": "added",
+        "species": "Azelf",
+        "form": null,
+        "move": "Future Sight",
+        "level": 36,
+        "type": "Psychic",
+        "stab": true,
+        "page": 703
+      },
+      {
+        "status": "added",
+        "species": "Azelf",
+        "form": null,
+        "move": "Extrasensory",
+        "level": 51,
+        "type": "Psychic",
+        "stab": true,
+        "page": 703
+      },
+      {
+        "status": "added",
+        "species": "Azelf",
+        "form": null,
+        "move": "Explosion",
+        "level": 76,
+        "type": "Normal",
+        "stab": false,
+        "page": 703
+      },
+      {
+        "status": "added",
+        "species": "Tornadus",
+        "form": "Incarnate Forme",
+        "move": "Rain Dance",
+        "level": 61,
+        "type": "Water",
+        "stab": false,
+        "page": 704
+      },
+      {
+        "status": "added",
+        "species": "Tornadus",
+        "form": "Incarnate Forme",
+        "move": "Hurricane",
+        "level": 67,
+        "type": "Flying",
+        "stab": true,
+        "page": 704
+      },
+      {
+        "status": "added",
+        "species": "Tornadus",
+        "form": "Therian Forme",
+        "move": "Rain Dance",
+        "level": 61,
+        "type": "Water",
+        "stab": false,
+        "page": 705
+      },
+      {
+        "status": "added",
+        "species": "Tornadus",
+        "form": "Therian Forme",
+        "move": "Hurricane",
+        "level": 67,
+        "type": "Flying",
+        "stab": true,
+        "page": 705
+      },
+      {
+        "status": "added",
+        "species": "Thundurus",
+        "form": "Incarnate Forme",
+        "move": "Charge",
+        "level": 55,
+        "type": "Electric",
+        "stab": false,
+        "page": 706
+      },
+      {
+        "status": "added",
+        "species": "Thundurus",
+        "form": "Incarnate Forme",
+        "move": "Thunder",
+        "level": 67,
+        "type": "Electric",
+        "stab": true,
+        "page": 706
+      },
+      {
+        "status": "added",
+        "species": "Thundurus",
+        "form": "Therian Forme",
+        "move": "Charge",
+        "level": 55,
+        "type": "Electric",
+        "stab": false,
+        "page": 707
+      },
+      {
+        "status": "added",
+        "species": "Thundurus",
+        "form": "Therian Forme",
+        "move": "Thunder",
+        "level": 67,
+        "type": "Electric",
+        "stab": true,
+        "page": 707
+      },
+      {
+        "status": "added",
+        "species": "Landorus",
+        "form": "Incarnate Forme",
+        "move": "Earthquake",
+        "level": 55,
+        "type": "Ground",
+        "stab": true,
+        "page": 708
+      },
+      {
+        "status": "added",
+        "species": "Landorus",
+        "form": "Incarnate Forme",
+        "move": "Fissure",
+        "level": 67,
+        "type": "Ground",
+        "stab": true,
+        "page": 708
+      },
+      {
+        "status": "added",
+        "species": "Landorus",
+        "form": "Therian Forme",
+        "move": "Earthquake",
+        "level": 55,
+        "type": "Ground",
+        "stab": true,
+        "page": 709
+      },
+      {
+        "status": "added",
+        "species": "Landorus",
+        "form": "Therian Forme",
+        "move": "Fissure",
+        "level": 67,
+        "type": "Ground",
+        "stab": true,
+        "page": 709
+      },
+      {
+        "status": "added",
+        "species": "Lugia",
+        "form": null,
+        "move": "Aeroblast",
+        "level": 43,
+        "type": "Flying",
+        "stab": true,
+        "page": 710
+      },
+      {
+        "status": "added",
+        "species": "Lugia",
+        "form": null,
+        "move": "Sky Attack",
+        "level": 99,
+        "type": "Flying",
+        "stab": true,
+        "page": 710
+      },
+      {
+        "status": "added",
+        "species": "Ho-Oh",
+        "form": null,
+        "move": "Sacred Fire",
+        "level": 43,
+        "type": "Fire",
+        "stab": true,
+        "page": 711
+      },
+      {
+        "status": "added",
+        "species": "Ho-Oh",
+        "form": null,
+        "move": "Sky Attack",
+        "level": 99,
+        "type": "Flying",
+        "stab": true,
+        "page": 711
+      },
+      {
+        "status": "added",
+        "species": "Latias",
+        "form": null,
+        "move": "Mist Ball",
+        "level": 24,
+        "type": "Psychic",
+        "stab": true,
+        "page": 712
+      },
+      {
+        "status": "added",
+        "species": "Latias",
+        "form": null,
+        "move": "Psycho Shift",
+        "level": 28,
+        "type": "Psychic",
+        "stab": false,
+        "page": 712
+      },
+      {
+        "status": "added",
+        "species": "Latios",
+        "form": null,
+        "move": "Luster Purge",
+        "level": 24,
+        "type": "Psychic",
+        "stab": true,
+        "page": 713
+      },
+      {
+        "status": "added",
+        "species": "Latios",
+        "form": null,
+        "move": "Psycho Shift",
+        "level": 28,
+        "type": "Psychic",
+        "stab": false,
+        "page": 713
+      },
+      {
+        "status": "added",
+        "species": "Phione",
+        "form": null,
+        "move": "Aqua Ring",
+        "level": 54,
+        "type": "Water",
+        "stab": false,
+        "page": 714
+      },
+      {
+        "status": "added",
+        "species": "Phione",
+        "form": null,
+        "move": "Rain Dance",
+        "level": 69,
+        "type": "Water",
+        "stab": false,
+        "page": 714
+      },
+      {
+        "status": "added",
+        "species": "Manaphy",
+        "form": null,
+        "move": "Aqua Ring",
+        "level": 54,
+        "type": "Water",
+        "stab": false,
+        "page": 715
+      },
+      {
+        "status": "added",
+        "species": "Manaphy",
+        "form": null,
+        "move": "Heart Swap",
+        "level": 76,
+        "type": "Psychic",
+        "stab": false,
+        "page": 715
+      },
+      {
+        "status": "added",
+        "species": "Celebi",
+        "form": null,
+        "move": "Magical Leaf",
+        "level": 19,
+        "type": "Grass",
+        "stab": true,
+        "page": 716
+      },
+      {
+        "status": "added",
+        "species": "Celebi",
+        "form": null,
+        "move": "Future Sight",
+        "level": 64,
+        "type": "Psychic",
+        "stab": true,
+        "page": 716
+      },
+      {
+        "status": "added",
+        "species": "Celebi",
+        "form": null,
+        "move": "Leaf Storm",
+        "level": 82,
+        "type": "Grass",
+        "stab": true,
+        "page": 716
+      },
+      {
+        "status": "added",
+        "species": "Jirachi",
+        "form": null,
+        "move": "Healing Wish",
+        "level": 50,
+        "type": "Psychic",
+        "stab": false,
+        "page": 717
+      },
+      {
+        "status": "added",
+        "species": "Jirachi",
+        "form": null,
+        "move": "Future Sight",
+        "level": 55,
+        "type": "Psychic",
+        "stab": true,
+        "page": 717
+      },
+      {
+        "status": "added",
+        "species": "Jirachi",
+        "form": null,
+        "move": "Doom Desire",
+        "level": 70,
+        "type": "Steel",
+        "stab": true,
+        "page": 717
+      },
+      {
+        "status": "added",
+        "species": "Shaymin",
+        "form": "Sky Forme",
+        "move": "Energy Ball",
+        "level": 73,
+        "type": "Grass",
+        "stab": true,
+        "page": 719
+      },
+      {
+        "status": "added",
+        "species": "Shaymin",
+        "form": "Sky Forme",
+        "move": "Seed Flare",
+        "level": 100,
+        "type": "Grass",
+        "stab": true,
+        "page": 719
+      },
+      {
+        "status": "added",
+        "species": "Diancie",
+        "form": null,
+        "move": "Diamond Storm",
+        "level": 50,
+        "type": "Rock",
+        "stab": true,
+        "page": 721
+      },
+      {
+        "status": "added",
+        "species": "Meloetta",
+        "form": "Aria Form",
+        "move": "Hyper Voice",
+        "level": 64,
+        "type": "Normal",
+        "stab": true,
+        "page": 722
+      },
+      {
+        "status": "added",
+        "species": "Meloetta",
+        "form": "Aria Form",
+        "move": "Perish Song",
+        "level": 85,
+        "type": "Normal",
+        "stab": false,
+        "page": 722
+      },
+      {
+        "status": "added",
+        "species": "Meloetta",
+        "form": "Step Form",
+        "move": "Acrobatics",
+        "level": 26,
+        "type": "Flying",
+        "stab": false,
+        "page": 723
+      },
+      {
+        "status": "added",
+        "species": "Meloetta",
+        "form": "Step Form",
+        "move": "Close Combat",
+        "level": 78,
+        "type": "Fighting",
+        "stab": true,
+        "page": 723
+      },
+      {
+        "status": "added",
+        "species": "Deoxys",
+        "form": "Normal Forme",
+        "move": "Recover",
+        "level": 61,
+        "type": "Normal",
+        "stab": false,
+        "page": 724
+      },
+      {
+        "status": "added",
+        "species": "Deoxys",
+        "form": "Normal Forme",
+        "move": "Psycho Boost",
+        "level": 67,
+        "type": "Psychic",
+        "stab": true,
+        "page": 724
+      },
+      {
+        "status": "added",
+        "species": "Deoxys",
+        "form": "Normal Forme",
+        "move": "Hyper Beam",
+        "level": 73,
+        "type": "Normal",
+        "stab": false,
+        "page": 724
+      },
+      {
+        "status": "added",
+        "species": "Deoxys",
+        "form": "Attack Forme",
+        "move": "Superpower",
+        "level": 37,
+        "type": "Fighting",
+        "stab": false,
+        "page": 725
+      },
+      {
+        "status": "added",
+        "species": "Deoxys",
+        "form": "Attack Forme",
+        "move": "Psycho Boost",
+        "level": 67,
+        "type": "Psychic",
+        "stab": true,
+        "page": 725
+      },
+      {
+        "status": "added",
+        "species": "Deoxys",
+        "form": "Attack Forme",
+        "move": "Hyper Beam",
+        "level": 73,
+        "type": "Normal",
+        "stab": false,
+        "page": 725
+      },
+      {
+        "status": "added",
+        "species": "Deoxys",
+        "form": "Defense Forme",
+        "move": "Recover",
+        "level": 61,
+        "type": "Normal",
+        "stab": false,
+        "page": 726
+      },
+      {
+        "status": "added",
+        "species": "Deoxys",
+        "form": "Defense Forme",
+        "move": "Psycho Boost",
+        "level": 67,
+        "type": "Psychic",
+        "stab": true,
+        "page": 726
+      },
+      {
+        "status": "added",
+        "species": "Deoxys",
+        "form": "Defense Forme",
+        "move": "Counter",
+        "level": 73,
+        "type": "Fighting",
+        "stab": false,
+        "page": 726
+      },
+      {
+        "status": "added",
+        "species": "Deoxys",
+        "form": "Defense Forme",
+        "move": "Mirror Coat",
+        "level": 73,
+        "type": "Psychic",
+        "stab": true,
+        "page": 726
+      },
+      {
+        "status": "added",
+        "species": "Deoxys",
+        "form": "Speed Forme",
+        "move": "Recover",
+        "level": 61,
+        "type": "Normal",
+        "stab": false,
+        "page": 727
+      },
+      {
+        "status": "added",
+        "species": "Deoxys",
+        "form": "Speed Forme",
+        "move": "Psycho Boost",
+        "level": 67,
+        "type": "Psychic",
+        "stab": true,
+        "page": 727
+      },
+      {
+        "status": "added",
+        "species": "Deoxys",
+        "form": "Speed Forme",
+        "move": "Extreme Speed",
+        "level": 73,
+        "type": "Normal",
+        "stab": false,
+        "page": 727
+      },
+      {
+        "status": "added",
+        "species": "Darkrai",
+        "form": null,
+        "move": "Nightmare",
+        "level": 38,
+        "type": "Ghost",
+        "stab": false,
+        "page": 728
+      },
+      {
+        "status": "added",
+        "species": "Darkrai",
+        "form": null,
+        "move": "Dark Void",
+        "level": 66,
+        "type": "Dark",
+        "stab": false,
+        "page": 728
+      },
+      {
+        "status": "added",
+        "species": "Darkrai",
+        "form": null,
+        "move": "Dream Eater",
+        "level": 84,
+        "type": "Psychic",
+        "stab": false,
+        "page": 728
+      },
+      {
+        "status": "added",
+        "species": "Cresselia",
+        "form": null,
+        "move": "Moonlight",
+        "level": 57,
+        "type": "Fairy",
+        "stab": false,
+        "page": 729
+      },
+      {
+        "status": "added",
+        "species": "Cresselia",
+        "form": null,
+        "move": "Psycho Cut",
+        "level": 66,
+        "type": "Psychic",
+        "stab": true,
+        "page": 729
+      },
+      {
+        "status": "added",
+        "species": "Cresselia",
+        "form": null,
+        "move": "Lunar Dance",
+        "level": 84,
+        "type": "Psychic",
+        "stab": false,
+        "page": 729
+      },
+      {
+        "status": "added",
+        "species": "Kyogre",
+        "form": null,
+        "move": "Origin Pulse",
+        "level": 45,
+        "type": "Water",
+        "stab": true,
+        "page": 730
+      },
+      {
+        "status": "added",
+        "species": "Kyogre",
+        "form": null,
+        "move": "Water Spout",
+        "level": 90,
+        "type": "Water",
+        "stab": true,
+        "page": 730
+      },
+      {
+        "status": "added",
+        "species": "Groudon",
+        "form": null,
+        "move": "Precipice Blades",
+        "level": 45,
+        "type": "Ground",
+        "stab": true,
+        "page": 731
+      },
+      {
+        "status": "added",
+        "species": "Groudon",
+        "form": null,
+        "move": "Eruption",
+        "level": 90,
+        "type": "Fire",
+        "stab": false,
+        "page": 731
+      },
+      {
+        "status": "added",
+        "species": "Rayquaza",
+        "form": null,
+        "move": "Extreme Speed",
+        "level": 45,
+        "type": "Normal",
+        "stab": false,
+        "page": 732
+      },
+      {
+        "status": "added",
+        "species": "Rayquaza",
+        "form": null,
+        "move": "Fly",
+        "level": 65,
+        "type": "Flying",
+        "stab": true,
+        "page": 732
+      },
+      {
+        "status": "added",
+        "species": "Rayquaza",
+        "form": null,
+        "move": "Outrage",
+        "level": 80,
+        "type": "Dragon",
+        "stab": true,
+        "page": 732
+      },
+      {
+        "status": "added",
+        "species": "Reshiram",
+        "form": null,
+        "move": "Fusion Flare",
+        "level": 50,
+        "type": "Fire",
+        "stab": true,
+        "page": 733
+      },
+      {
+        "status": "added",
+        "species": "Reshiram",
+        "form": null,
+        "move": "Fire Blast",
+        "level": 78,
+        "type": "Fire",
+        "stab": true,
+        "page": 733
+      },
+      {
+        "status": "added",
+        "species": "Reshiram",
+        "form": null,
+        "move": "Blue Flare",
+        "level": 100,
+        "type": "Fire",
+        "stab": true,
+        "page": 733
+      },
+      {
+        "status": "added",
+        "species": "Zekrom",
+        "form": null,
+        "move": "Fusion Bolt",
+        "level": 50,
+        "type": "Electric",
+        "stab": true,
+        "page": 734
+      },
+      {
+        "status": "added",
+        "species": "Zekrom",
+        "form": null,
+        "move": "Thunder",
+        "level": 78,
+        "type": "Electric",
+        "stab": true,
+        "page": 734
+      },
+      {
+        "status": "added",
+        "species": "Zekrom",
+        "form": null,
+        "move": "Bolt Strike",
+        "level": 100,
+        "type": "Electric",
+        "stab": true,
+        "page": 734
+      },
+      {
+        "status": "added",
+        "species": "Kyurem",
+        "form": null,
+        "move": "Glaciate",
+        "level": 50,
+        "type": "Ice",
+        "stab": true,
+        "page": 735
+      },
+      {
+        "status": "added",
+        "species": "Kyurem",
+        "form": null,
+        "move": "Blizzard",
+        "level": 78,
+        "type": "Ice",
+        "stab": true,
+        "page": 735
+      },
+      {
+        "status": "added",
+        "species": "Kyurem",
+        "form": "Zekrom Fusion Forme",
+        "move": "Fusion Bolt",
+        "level": 43,
+        "type": "Electric",
+        "stab": false,
+        "page": 736
+      },
+      {
+        "status": "added",
+        "species": "Kyurem",
+        "form": "Zekrom Fusion Forme",
+        "move": "Freeze Shock",
+        "level": 50,
+        "type": "Ice",
+        "stab": true,
+        "page": 736
+      },
+      {
+        "status": "added",
+        "species": "Kyurem",
+        "form": "Zekrom Fusion Forme",
+        "move": "Blizzard",
+        "level": 78,
+        "type": "Ice",
+        "stab": true,
+        "page": 736
+      },
+      {
+        "status": "added",
+        "species": "Kyurem",
+        "form": "Reshiram Fusion Forme",
+        "move": "Fusion Flare",
+        "level": 43,
+        "type": "Fire",
+        "stab": false,
+        "page": 737
+      },
+      {
+        "status": "added",
+        "species": "Kyurem",
+        "form": "Reshiram Fusion Forme",
+        "move": "Ice Burn",
+        "level": 50,
+        "type": "Ice",
+        "stab": true,
+        "page": 737
+      },
+      {
+        "status": "added",
+        "species": "Kyurem",
+        "form": "Reshiram Fusion Forme",
+        "move": "Blizzard",
+        "level": 78,
+        "type": "Ice",
+        "stab": true,
+        "page": 737
+      },
+      {
+        "status": "added",
+        "species": "Dialga",
+        "form": null,
+        "move": "Aura Sphere",
+        "level": 37,
+        "type": "Fighting",
+        "stab": false,
+        "page": 738
+      },
+      {
+        "status": "added",
+        "species": "Dialga",
+        "form": null,
+        "move": "Roar Of Time",
+        "level": 46,
+        "type": "Dragon",
+        "stab": true,
+        "page": 738
+      },
+      {
+        "status": "added",
+        "species": "Palkia",
+        "form": null,
+        "move": "Aura Sphere",
+        "level": 37,
+        "type": "Fighting",
+        "stab": false,
+        "page": 739
+      },
+      {
+        "status": "added",
+        "species": "Palkia",
+        "form": null,
+        "move": "Spacial Rend",
+        "level": 46,
+        "type": "Dragon",
+        "stab": true,
+        "page": 739
+      },
+      {
+        "status": "added",
+        "species": "Giratina",
+        "form": "Origin Forme",
+        "move": "Aura Sphere",
+        "level": 37,
+        "type": "Fighting",
+        "stab": false,
+        "page": 740
+      },
+      {
+        "status": "added",
+        "species": "Giratina",
+        "form": "Origin Forme",
+        "move": "Shadow Force",
+        "level": 46,
+        "type": "Ghost",
+        "stab": true,
+        "page": 740
+      },
+      {
+        "status": "added",
+        "species": "Giratina",
+        "form": "Altered Forme",
+        "move": "Aura Sphere",
+        "level": 37,
+        "type": "Fighting",
+        "stab": false,
+        "page": 741
+      },
+      {
+        "status": "added",
+        "species": "Giratina",
+        "form": "Altered Forme",
+        "move": "Shadow Force",
+        "level": 46,
+        "type": "Ghost",
+        "stab": true,
+        "page": 741
+      },
+      {
+        "status": "added",
+        "species": "Arceus",
+        "form": null,
+        "move": "Hyper Voice",
+        "level": 30,
+        "type": "Normal",
+        "stab": true,
+        "page": 745
+      },
+      {
+        "status": "added",
+        "species": "Arceus",
+        "form": null,
+        "move": "Hyper Beam",
+        "level": 80,
+        "type": "Normal",
+        "stab": true,
+        "page": 745
+      },
+      {
+        "status": "added",
+        "species": "Arceus",
+        "form": null,
+        "move": "Judgment",
+        "level": 100,
+        "type": "Normal",
+        "stab": true,
+        "page": 745
+      }
+    ]
+  }
+}
