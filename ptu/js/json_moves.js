@@ -8,6 +8,7 @@ import {
   filterByClasses,
   filterByDamageBase,
   filterByEffect,
+  filterByFrequency,
   filterByContestType,
   filterByContestEffect,
   filterByRangeDistance,
@@ -152,6 +153,33 @@ function buildSidebarMoves(allItems, container, cols) {
   });
 
   sidebar.appendChild(effectGroup);
+
+  // ====================
+  // Frequency
+  // ====================
+  const frequencies = [...new Set(
+    allItems
+      .map(m => m["Frequency"])
+      .filter(Boolean)
+  )].sort();
+
+  if (frequencies.length > 0) {
+    const frequencyGroup = document.createElement("div");
+    frequencyGroup.className = "mt-3";
+
+    const frequencyLabel = document.createElement("label");
+    frequencyLabel.className = "form-label";
+    frequencyLabel.textContent = "Frequency";
+    frequencyGroup.appendChild(frequencyLabel);
+
+    buildPillSection(frequencyGroup, "frequency-filters", frequencies, {
+      attr: "data-frequency",
+      onChange: () => refreshMoves(allItems, container, cols),
+      useTypeClass: false
+    });
+
+    sidebar.appendChild(frequencyGroup);
+  }
 
   // ====================
   // Range Distance
@@ -368,6 +396,7 @@ function refreshMoves(allItems, container, cols) {
   const classes = getSelectedPills(document, "class-filters", "data-class");
   const damageBases = getSelectedPills(document, "damage-base-filters", "data-damage-base");
   const effects = getSelectedPills(document, "effect-filters", "data-effect");
+  const frequencies = getSelectedPills(document, "frequency-filters", "data-frequency");
   const rangeDistances = getSelectedPills(document, "range-distance-filters", "data-range-distance");
   const rangeKeywords = getSelectedPills(document, "range-keyword-filters", "data-range-keyword");
   const targeting = getSelectedPills(document, "targeting-filters", "data-targeting");
@@ -380,6 +409,7 @@ function refreshMoves(allItems, container, cols) {
     .filter(item => filterByClasses(item, classes))
     .filter(item => filterByDamageBase(item, damageBases))
     .filter(item => filterByEffect(item, effects))
+    .filter(item => filterByFrequency(item, frequencies))
     .filter(item => filterByRangeDistance(item, rangeDistances))
     .filter(item => filterByRangeKeyword(item, rangeKeywords))
     .filter(item => filterByTargeting(item, targeting))

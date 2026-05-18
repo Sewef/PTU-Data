@@ -411,7 +411,7 @@
     "Effect": "Blessing – Any user affected by Aurora Veil may activate it when receiving Damage to resist the Damage one step. Aurora Veil may be activated 2 times, and then disappears.",
     "Contest Type": "Beauty",
     "Contest Effect": "Excitement",
-    "Special": "Aurora Veil can only be used when the user is in Hailing Weather. The Blessings persist even after Hailing Weather has ended, however. is in Hailing Weather. The Blessings persist even after Hailing Weather has ended, however."
+    "Special": "Aurora Veil can only be used when the user is in Hailing Weather. The Blessings persist even after Hailing Weather has ended, however."
   },
   "Autotomize": {
     "Type": "Steel",
@@ -5614,7 +5614,7 @@
     "Damage Base": "5",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Dash",
-    "Effect": "After dealing damage, the target is Slowed for 1 round. A target may only be Slowed by this Move once per Scene. +1",
+    "Effect": "After dealing damage, the target is Slowed for 1 round. A target may only be Slowed by this Move once per Scene.",
     "Special": "Grants Overland and Long Jump +1"
   },
   "Pound": {
@@ -7467,10 +7467,10 @@
     "AC": "3",
     "Damage Base": "11",
     "Class": "Special",
-    "Range": "Close Blast 3, Smite",
-    "Effect": "Steam Eruption burns all legal targets on a 15+.",
-    "Contest Type": "Cool",
-    "Contest Effect": "Seen Nothing Yet"
+    "Range": "Burst 1",
+    "Effect": "Steam Eruption Burns all Legal Targets on 15+. Steam Eruption may be used even if the user is Frozen, and cures the user and all Legal Targets of the Frozen condition.",
+    "Contest Type": "Beauty",
+    "Contest Effect": "Inversed Appeal"
   },
   "Steamroller": {
     "Type": "Bug",

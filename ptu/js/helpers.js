@@ -212,6 +212,12 @@ export function filterByContestEffect(item, contestEffects) {
   return contestEffects.includes(item["Contest Effect"]);
 }
 
+// --- Frequency filter ---
+export function filterByFrequency(item, frequencies) {
+  if (!frequencies.length) return true;
+  return frequencies.includes(item["Frequency"]);
+}
+
 // --- Range Distance filter ---
 export function filterByRangeDistance(item, rangeDistances) {
   if (!rangeDistances.length) return true;

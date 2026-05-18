@@ -5212,13 +5212,15 @@
             "Prerequisites": "Martial Artist (Guts)",
             "Frequency": "Static",
             "Effect": "You gain the Wrestlemania Martial Achievement.",
-            "Wrestlemania": {
-              "Name": "Wrestlemania",
-              "Prerequisites": "Guts Ability",
-              "Frequency": "1 AP – Swift Action",
-              "Trigger": "You begin your turn with Dominance in a Grapple",
-              "Effect": "This turn, you may perform two different Grappling Effects as a Full Action instead of just one."
-            }
+            "martial achievement": [
+              {
+                "Name": "Wrestlemania",
+                "Prerequisites": "Guts Ability",
+                "Frequency": "1 AP – Swift Action",
+                "Trigger": "You begin your turn with Dominance in a Grapple",
+                "Effect": "This turn, you may perform two different Grappling Effects as a Full Action instead of just one."
+              }
+            ]
           },
           {
             "Name": "Second Strike",
@@ -5325,12 +5327,14 @@
             "Prerequisites": "Martial Artist (Inner Focus)",
             "Frequency": "Static",
             "Effect": "You gain the Heightened Intensity Martial Achievement.",
-            "Heightened Intensity": {
-              "Name": "Heightened Intensity",
-              "Prerequisites": "Inner Focus Ability",
-              "Frequency": "AP – Shift Action",
-              "Effect": "You may use Focus Energy as a Free Action"
-            }
+            "martial achievement": [
+              {
+                "Name": "Heightened Intensity",
+                "Prerequisites": "Inner Focus Ability",
+                "Frequency": "AP – Shift Action",
+                "Effect": "You may use Focus Energy as a Free Action"
+              }
+            ]
           },
           {
             "Name": "Second Strike",
@@ -5437,13 +5441,15 @@
             "Prerequisites": "Martial Artist (Iron Fist)",
             "Frequency": "Static",
             "Effect": "You gain the Pummeling Momentum Martial Achievement.",
-            "Pummeling Momentum": {
-              "Name": "Pummeling Momentum",
-              "Prerequisites": "Iron Fist Ability",
-              "Frequency": "1 AP – Free Action",
-              "Trigger": "You hit a foe with a Move affected by Iron Fist",
-              "Effect": "You Tag the triggering foe and gain a +1 bonus to your Accuracy Rolls and Evasion against that foe. Each subsequent time that you hit the Tagged foe with a Move affected by Iron Fist, this bonus increases by +1, to a maximum of your Combat Rank. If you ever spend a turn without successfully hitting your Tagged foe, the foe loses their Tag and the bonus is lost."
-            }
+            "martial achievement": [
+              {
+                "Name": "Pummeling Momentum",
+                "Prerequisites": "Iron Fist Ability",
+                "Frequency": "1 AP – Free Action",
+                "Trigger": "You hit a foe with a Move affected by Iron Fist",
+                "Effect": "You Tag the triggering foe and gain a +1 bonus to your Accuracy Rolls and Evasion against that foe. Each subsequent time that you hit the Tagged foe with a Move affected by Iron Fist, this bonus increases by +1, to a maximum of your Combat Rank. If you ever spend a turn without successfully hitting your Tagged foe, the foe loses their Tag and the bonus is lost."
+              }
+            ]
           },
           {
             "Name": "Second Strike",
@@ -5550,13 +5556,15 @@
             "Prerequisites": "Martial Artist (Limber)",
             "Frequency": "Static",
             "Effect": "You gain the Bend Like the Willow Martial Achievement.",
-            "Bend Like the Willow": {
-              "Name": "Bend Like the Willow",
-              "Prerequisites": "Limber Ability",
-              "Frequency": "2 AP – Free Action, Interrupt",
-              "Trigger": "An adjacent foe initiates a Disarm, Grapple, Push, or Trip Maneuver against you, and either misses or fails the Opposed Check.",
-              "Effect": "You may attempt the same Combat Maneuver against the triggering foe as a Free Action."
-            }
+            "martial achievement": [
+              {
+                "Name": "Bend Like the Willow",
+                "Prerequisites": "Limber Ability",
+                "Frequency": "2 AP – Free Action, Interrupt",
+                "Trigger": "An adjacent foe initiates a Disarm, Grapple, Push, or Trip Maneuver against you, and either misses or fails the Opposed Check.",
+                "Effect": "You may attempt the same Combat Maneuver against the triggering foe as a Free Action."
+              }
+            ]
           },
           {
             "Name": "Second Strike",
@@ -5663,13 +5671,15 @@
             "Prerequisites": "Martial Artist (Reckless)",
             "Frequency": "Static",
             "Effect": "You gain the Soft Landing Martial Achievement.",
-            "Soft Landing": {
-              "Name": "Soft Landing",
-              "Prerequisites": "Reckless Ability",
-              "Frequency": "1 AP – Full Action",
-              "Trigger": "You take fall damage, or miss with Jump Kick or High Jump Kick",
-              "Effect": "When taking fall damage, calculate the result as if you had fallen X meters less, where X is half your Combat Rank. If you miss with Jump Kick or High Jump Kick, you lose no Hit Points as a result."
-            }
+            "martial achievement": [
+              {
+                "Name": "Soft Landing",
+                "Prerequisites": "Reckless Ability",
+                "Frequency": "1 AP – Full Action",
+                "Trigger": "You take fall damage, or miss with Jump Kick or High Jump Kick",
+                "Effect": "When taking fall damage, calculate the result as if you had fallen X meters less, where X is half your Combat Rank. If you miss with Jump Kick or High Jump Kick, you lose no Hit Points as a result."
+              }
+            ]
           },
           {
             "Name": "Second Strike",
@@ -5776,12 +5786,14 @@
             "Prerequisites": "Martial Artist (Technician)",
             "Frequency": "Static",
             "Effect": "You gain the Whirlwind Strikes Martial Achievement.",
-            "Whirlwind Strikes": {
-              "Name": "Whirlwind Strikes",
-              "Prerequisites": "Technician",
-              "Frequency": "1 AP – Full Action",
-              "Effect": "You may use Rock Smash, targeting against any number of adjacent foes. You do not count as Flanked for one full round."
-            }
+            "martial achievement": [
+              {
+                "Name": "Whirlwind Strikes",
+                "Prerequisites": "Technician",
+                "Frequency": "1 AP – Full Action",
+                "Effect": "You may use Rock Smash, targeting against any number of adjacent foes. You do not count as Flanked for one full round."
+              }
+            ]
           },
           {
             "Name": "Second Strike",
