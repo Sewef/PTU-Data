@@ -680,6 +680,17 @@ function createCard(feat, clsMeta, isGeneral, nested = false) {
   // ----- arrays declared as "table" via _display -----
   const disp = feat._display || {};
   Object.entries(feat).forEach(([k, v]) => {
+    if (k.startsWith("_")) return; // Skip metadata keys
+    
+    // NEW: Handle hierarchical table structure (moveTable, abilityTable, etc.)
+    if (typeof v === "object" && v !== null && !Array.isArray(v) && v.groups && Array.isArray(v.groups)) {
+      const searchInput = document.getElementById("features-search");
+      const q = searchInput ? (searchInput.value || "") : "";
+      renderHierarchicalTable(v, k, q, body);
+      return;
+    }
+    
+    // LEGACY: Handle flat array tables
     if (!Array.isArray(v)) return;
     const meta = normalizeDisplayMeta(disp[k]);
     if (meta.type !== "table") return;
@@ -705,6 +716,87 @@ function createCard(feat, clsMeta, isGeneral, nested = false) {
 }
 
 /* ========== TABLE RENDERING HELPERS ===================================== */
+
+/**
+ * Renders a hierarchical table structure with groups (new format)
+ * Structure: { columns: [...], groups: [ { label: "...", rows: [...] }, ... ] }
+ */
+function renderHierarchicalTable(tableObj, title, q, parentEl) {
+  if (!tableObj.groups || !Array.isArray(tableObj.groups) || tableObj.groups.length === 0) {
+    return;
+  }
+
+  // Card + body
+  const card = document.createElement("div");
+  card.className = "card h-100 bg-body border shadow-sm mb-2 overflow-hidden rounded-3";
+  const body = document.createElement("div");
+  body.className = "card-body bg-body-secondary";
+
+  // Responsive wrapper
+  const wrap = document.createElement("div");
+  wrap.className = "table-responsive";
+
+  // Table
+  const table = document.createElement("table");
+  table.className = "table table-sm table-striped mb-0 items-table";
+
+  const columns = tableObj.columns || [];
+  
+  // Colgroup with widths
+  if (columns.length > 0) {
+    const cg = document.createElement("colgroup");
+    columns.forEach(() => {
+      cg.appendChild(document.createElement("col"));
+    });
+    table.appendChild(cg);
+  }
+
+  // Build table body with groups as sections
+  const tbody = document.createElement("tbody");
+
+  tableObj.groups.forEach((group) => {
+    const groupLabel = group.label || "Group";
+    const groupRows = group.rows || [];
+
+    // Add group label row (spanning all columns)
+    const labelRow = document.createElement("tr");
+    labelRow.className = "table-group-header";
+    const labelCell = document.createElement("td");
+    labelCell.colSpan = columns.length || groupRows[0]?.length || 1;
+    labelCell.className = "fw-bold bg-light text-muted";
+    labelCell.textContent = groupLabel;
+    labelRow.appendChild(labelCell);
+    tbody.appendChild(labelRow);
+
+    // Add data rows for this group
+    groupRows.forEach((rowObj) => {
+      // Apply search filter
+      if (q) {
+        const hay = Object.values(rowObj || {})
+          .map(v => (v == null ? "" : String(v).toLowerCase()))
+          .join(" ");
+        if (!hay.includes(String(q).toLowerCase())) {
+          return; // Skip this row
+        }
+      }
+
+      const tr = document.createElement("tr");
+      columns.forEach(colName => {
+        const td = document.createElement("td");
+        const v = rowObj[colName];
+        td.innerHTML = v == null ? "—" : escapeHTML(String(v));
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+  });
+
+  table.appendChild(tbody);
+  wrap.appendChild(table);
+  body.appendChild(wrap);
+  card.appendChild(body);
+  parentEl.appendChild(card);
+}
 
 // Generic detection of best idField if not provided (most distinctive key)
 function resolveIdField(preferred, entries) {
@@ -962,7 +1054,9 @@ function renderAsTable(entries, title, meta, q, parentEl) {
   const css = `
   .items-table{table-layout:fixed;width:100%}
   .items-table th,.items-table td{white-space:normal;word-break:break-word;overflow-wrap:anywhere;hyphens:auto;vertical-align:middle}
-  .items-table--transposed thead th:first-child,.items-table--transposed tbody th:first-child{width:18ch}`;
+  .items-table--transposed thead th:first-child,.items-table--transposed tbody th:first-child{width:18ch}
+  .items-table tbody tr.table-group-header:hover{background-color:inherit !important}
+  .items-table tbody tr.table-group-header td{padding:0.75rem !important}`;
   const style = document.createElement("style");
   style.id = "items-table-css";
   style.textContent = css;
