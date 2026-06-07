@@ -9338,20 +9338,22 @@
       },
       {
         "Stade": 2,
-        "Species": "Lycanroc ",
+        "Species": "Lycanroc",
         "Form": "Midday",
         "Condition": "Sun Stone",
         "Minimum Level": 25
       },
       {
         "Stade": 2,
-        "Species": "Lycanroc Midnight",
+        "Species": "Lycanroc",
+        "Form": "Midnight",
         "Condition": "Moon Stone",
         "Minimum Level": 25
       },
       {
         "Stade": 2,
-        "Species": "Lycanroc Dusk",
+        "Species": "Lycanroc",
+        "Form": "Dusk",
         "Condition": "Dusk Stone",
         "Minimum Level": 25
       }
@@ -9722,7 +9724,7 @@
     }
   },
   {
-    "Species": "Lycanroc ",
+    "Species": "Lycanroc",
     "Form": "Midday",
     "Number": 745,
     "Base Stats": {
@@ -9751,7 +9753,7 @@
       },
       {
         "Stade": 2,
-        "Species": "Lycanroc ",
+        "Species": "Lycanroc",
         "Form": "Midday",
         "Condition": "Sun Stone",
         "Minimum Level": 25
@@ -10129,7 +10131,8 @@
     }
   },
   {
-    "Species": "Lycanroc Midnight",
+    "Species": "Lycanroc",
+    "Form": "Midnight",
     "Number": 745,
     "Icon": "745-midnight",
     "Base Stats": {
@@ -10158,7 +10161,8 @@
       },
       {
         "Stade": 2,
-        "Species": "Lycanroc Midnight",
+        "Species": "Lycanroc",
+        "Form": "Midnight",
         "Condition": "Moon Stone",
         "Minimum Level": 25
       }
@@ -10581,7 +10585,8 @@
     }
   },
   {
-    "Species": "Lycanroc Dusk",
+    "Species": "Lycanroc",
+    "Form": "Dusk",
     "Number": 745,
     "Icon": "745-dusk",
     "Base Stats": {
@@ -10610,7 +10615,8 @@
       },
       {
         "Stade": 2,
-        "Species": "Lycanroc Dusk",
+        "Species": "Lycanroc",
+        "Form": "Dusk",
         "Condition": "Dusk Stone",
         "Minimum Level": 25
       }
