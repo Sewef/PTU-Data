@@ -553,7 +553,15 @@ function getTypeColor(type) {
 
 function setupIcon(img, num, name, mode = "icon") {
   const slug = slugify(name || "");
-  const base = mode === "full" ? "/ptu/img/pokemon/full" : "/ptu/img/pokemon/icons";
+  let base = mode === "full" ? "/ptu/img/pokemon/full" : "/ptu/img/pokemon/icons";
+  
+  // For FanDex, add subdirectory based on selected dataset
+  if (selectedPreset === "FanDex" && selectedLabels.size > 0) {
+    const firstLabel = Array.from(selectedLabels)[0];
+    const subdir = firstLabel.toLowerCase(); // "Insurgence" -> "insurgence"
+    base = `${base}/${subdir}`;
+  }
+  
   // Use the first pattern (others could be tried if you add more)
   img.src = CFG.iconPatterns[0](base, num, slug);
 }
