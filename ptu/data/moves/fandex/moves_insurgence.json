@@ -31,9 +31,9 @@
         "AC": "2",
         "Damage Base": 10,
         "Class": "Special",
-        "Range": "Line 6, Set-Up",
+        "Range": "Line 6, Set-Up, New Moon",
         "Set-Up Effect": "If the weather is not a New Moon, the user’s turn ends. If the weather is a New Moon, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword.",
-        "Resolution Effect": "The user attacks with Lunar Cannon. "
+        "Resolution Effect": "The user attacks with Lunar Cannon."
     },
     "Medusa Ray": {
         "Type": "Rock",
@@ -56,7 +56,7 @@
         "AC": "None",
         "Class": "Status",
         "Range": "Field, Weather",
-        "Effect": "The Weather becomes a New Moon for 5 rounds."
+        "Effect": "The Weather becomes a New Moon for 5 rounds.\nWhile a New Moon, Dark-Type and Ghost-Type Attacks gain a +5 bonus to Damage Rolls, and Fairy-Type Attacks suffer a -5 Damage penalty.\n» Lunar Cannon, Shadow Force and Phantom Force lose the Set-Up Keyword, and move immediately to the resolution effect.\n» Morning Sun, Synthesis, and Moonlight cause the user to regain only 1⁄4 of their full Hit Point value. » Users with Shadow Dance will have their initiative doubled.\n» Users with Heliophobia will regain a tick of Hit Points at the end of each turn."
     },
     "Retrograde": {
         "Type": "Normal",
