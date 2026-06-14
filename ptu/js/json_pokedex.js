@@ -74,6 +74,10 @@ const FANDEX_MECHANICS_FILES = {
   "Insurgence": "insurgence_mechanics.html"
 };
 
+const FANDEX_SOURCE_URLS = {
+  "Insurgence": "https://docs.google.com/document/d/1Y686fpUCixqBgic_NW_Wrk7X38vI9sqEiSMwFKRKWW0/"
+};
+
 const MOVES_BASE = "/ptu/data/moves";
 const ABILITIES_BASE = "/ptu/data/abilities";
 const CAPABILITIES_BASE = "/ptu/data/capabilities";
@@ -116,7 +120,7 @@ const SHOWN_TAGS = new Set(["N", "Stab"]);
 
 let selectedPreset = window.selectedPreset || "Core";
 let selectedLabels = new Set(PRESETS[selectedPreset] || []);
-let selectedFanDexBase = "Core"; // Base dataset for FanDex (Core, Community or Homebrew)
+let selectedFanDexBase = window.selectedPreset || "Core"; // Base dataset for FanDex (Core, Community or Homebrew)
 
 // =========================
 // Hash state management
@@ -1844,13 +1848,19 @@ function buildSourceMenu(onChange) {
       // Check if this FanDex has a mechanics file
       const hasMechanics = isFanDex && FANDEX_MECHANICS_FILES[lbl];
       const mechanicsBtn = hasMechanics 
-        ? `<button class="btn btn-sm btn-outline-info ms-2" data-mechanics-fandex="${lbl}" title="View ${lbl} Mechanics" style="padding: 0.1rem 0.4rem; font-size: 0.75rem;">Mecanics 📖</button>`
+        ? `<button class="btn btn-sm btn-outline-info ms-1" data-mechanics-fandex="${lbl}" title="View ${lbl} Mechanics" style="padding: 0.1rem 0.4rem; font-size: 0.75rem;">📖</button>`
+        : "";
+      
+      // Check if this FanDex has a source URL
+      const hasSource = isFanDex && FANDEX_SOURCE_URLS[lbl];
+      const sourceBtn = hasSource 
+        ? `<a href="${FANDEX_SOURCE_URLS[lbl]}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary ms-1" title="View ${lbl} Source" style="padding: 0.1rem 0.4rem; font-size: 0.75rem;">🔗</a>`
         : "";
       
       return `<div class="form-check d-flex align-items-center">
           <input class="form-check-input" type="checkbox" id="${id}" data-label="${lbl}" ${checked}>
           <label class="form-check-label flex-grow-1" for="${id}">${lbl}</label>
-          ${mechanicsBtn}
+          ${mechanicsBtn}${sourceBtn}
         </div>`;
     }).join("");
     
