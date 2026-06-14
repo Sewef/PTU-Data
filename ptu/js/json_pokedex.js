@@ -61,25 +61,25 @@ const PRESETS = {
 const FANDEX_FILES = {
   "Insurgence": "pokedex_insurgence.min.json",
   "Sage": "pokedex_sage.min.json",
-  "Uranium": "pokedex_uranium.json"
+  "Uranium": "pokedex_uranium.min.json"
 };
 
 const FANDEX_MOVES_FILES = {
   "Insurgence": "moves_insurgence.min.json",
   "Sage": "moves_sage.min.json",
-  "Uranium": "moves_uranium.json"
+  "Uranium": "moves_uranium.min.json"
 };
 
 const FANDEX_ABILITIES_FILES = {
   "Insurgence": "abilities_insurgence.min.json",
   "Sage": "abilities_sage.min.json",
-  "Uranium": "abilities_uranium.json"
+  "Uranium": "abilities_uranium.min.json"
 };
 
 const FANDEX_CAPABILITIES_FILES = {
   "Insurgence": "capabilities_insurgence.min.json",
   "Sage": "capabilities_sage.min.json",
-  "Uranium": "capabilities_uranium.json"
+  "Uranium": "capabilities_uranium.min.json"
 };
 
 const FANDEX_MECHANICS_FILES = {
