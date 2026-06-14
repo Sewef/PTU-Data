@@ -4,72 +4,90 @@
 """
 extract_min_level_from_evolutions.py
 ------------------------------------
-Prend un fichier JSON (pokedex_core, etc.) et parcourt toutes les entrées "Evolution".
-Pour chaque objet d'évolution, on extrait via regex les segments de type **"Lv XX Minimum"**
-et on les place dans un champ **"Minimum Level"**. On nettoie ensuite **Condition** en retirant ce segment,
-en conservant le reste si applicable (sinon Condition devient chaîne vide "").
+Prend un fichier JSON (pokedex_insurgence, etc.) et parcourt toutes les entrées "Evolution".
+Pour chaque string d'évolution du format "X - Species Name Minimum YY", on extrait:
+- Le numéro de stage (X)
+- Le nom de l'espèce (sans "Minimum YY")
+- Le niveau minimum (YY) dans un champ "Minimum Level"
 
-- Détection insensible à la casse : r'(?i)\\bLv\\s*\\d+\\s*Minimum\\b'
-- S'il y a plusieurs occurrences dans la même Condition, on garde la **première** pour "Minimum Level"
-  et on supprime **toutes** les occurrences du texte dans Condition.
+Le format d'entrée est un tableau de strings :
+    "Evolution": ["1 - Delta Bulbasaur", "2 - Delta Ivysaur Minimum 15", ...]
+
+Le format de sortie est un tableau d'objets :
+    "Evolution": [
+        {"Stage": 1, "Species": "Delta Bulbasaur"},
+        {"Stage": 2, "Species": "Delta Ivysaur", "Minimum Level": 15},
+        ...
+    ]
 
 Usage :
-    python extract_min_level_from_evolutions.py --in pokedex_core.json --out pokedex_core_fixed.json
+    python extract_min_level_from_evolutions.py --in pokedex_insurgence.json --out pokedex_insurgence.json
     # Optionnel --dry-run pour ne pas écrire et juste afficher un rapport
 """
 
 import argparse
 import json
 import re
-from copy import deepcopy
 from pathlib import Path
 from typing import Any, Dict, List, Tuple, Union
 
-LEVEL_PATTERN = re.compile(r'(?i)\bLv\s*\d+\s*Minimum\b')
+# Pattern pour "Minimum 15", "Minimum 30", etc.
+LEVEL_PATTERN = re.compile(r'(?i)\bMinimum\s+(\d+)\b')
+# Pattern pour le stage: "1 - Delta Bulbasaur"
+STAGE_PATTERN = re.compile(r'^(\d+)\s*-\s*(.+)$')
 
-def tidy_condition_text(s: str) -> str:
-    # Supprimer espaces multiples et espaces autour des virgules / tirets
-    s = re.sub(r'\s+', ' ', s).strip()
-    s = re.sub(r'\s*,\s*', ', ', s)
-    s = re.sub(r'\s*-\s*', ' - ', s)
-    # Nettoyer ponctuation résiduelle en bout
-    s = s.strip(' ,;')
-    return s
-
-def process_evolution_item(item: Dict[str, Any]) -> Tuple[bool, Dict[str, Any]]:
+def parse_evolution_string(evo_str: str) -> Tuple[bool, Dict[str, Any]]:
     """
-    Retourne (changed, new_item). Si Condition contient "Lv XX Minimum",
-    on stocke la première occurrence dans "Minimum Level" et on retire toutes les occurrences de Condition.
+    Parse une string d'évolution du format "2 - Delta Ivysaur Minimum 15"
+    et retourne (changed, object).
+    
+    L'objet résultant contient:
+    - Stage: numéro de l'étape
+    - Species: nom du Pokémon (sans le stage et sans "Minimum XX")
+    - Minimum Level: le niveau extrait (si présent)
     """
+    if not isinstance(evo_str, str):
+        return (False, evo_str)
+    
+    original = evo_str.strip()
     changed = False
-    new_item = deepcopy(item)
-
-    cond = new_item.get("Condition")
-    if not isinstance(cond, str):
-        return (False, new_item)
-
-    matches = LEVEL_PATTERN.findall(cond)
-    if not matches:
-        return (False, new_item)
-
-    # Garder la première occurrence telle quelle (respecte la casse du texte source)
-    first = matches[0].strip()
-    new_item["Minimum Level"] = first
-
-    # Retirer toutes les occurrences du pattern de Condition
-    cond_clean = LEVEL_PATTERN.sub('', cond)
-    cond_clean = tidy_condition_text(cond_clean)
-
-    new_item["Condition"] = cond_clean if cond_clean else ""
-
-    changed = True
-    return (changed, new_item)
+    
+    # Extraire stage et reste
+    stage_match = STAGE_PATTERN.match(original)
+    if not stage_match:
+        # Pas de format "X - ...", retourner tel quel
+        return (False, evo_str)
+    
+    stage = int(stage_match.group(1))
+    rest = stage_match.group(2).strip()
+    
+    # Chercher "Minimum XX"
+    level_match = LEVEL_PATTERN.search(rest)
+    
+    result = {"Stage": stage}
+    
+    if level_match:
+        # Extraire le niveau
+        level_num = int(level_match.group(1))
+        result["Minimum Level"] = level_num
+        
+        # Retirer "Minimum XX" du nom de l'espèce
+        species = LEVEL_PATTERN.sub('', rest).strip()
+        result["Species"] = species
+        changed = True
+    else:
+        result["Species"] = rest
+        # Toujours considéré comme changé car on structure en objet
+        changed = True
+    
+    return (changed, result)
 
 
 def process_document(data: Union[List[Any], Dict[str, Any]]) -> Tuple[Union[List[Any], Dict[str, Any]], Dict[str, Any]]:
     """
     Accepte soit une liste d'entrées (Pokémon), soit un dict {Species: obj}.
     Parcourt chaque entrée, puis son tableau Evolution (si présent) et transforme les items.
+    Convertit les strings d'évolution en objets structurés avec extraction du niveau minimum.
     Retourne (data_modifiée, rapport).
     """
     stats = {"species_total": 0, "species_with_evolution": 0, "evolution_items_processed": 0, "min_level_extracted": 0}
@@ -84,14 +102,11 @@ def process_document(data: Union[List[Any], Dict[str, Any]]) -> Tuple[Union[List
         stats["species_with_evolution"] += 1
         new_evo = []
         for it in evo:
-            if isinstance(it, dict):
-                stats["evolution_items_processed"] += 1
-                changed, new_it = process_evolution_item(it)
-                if changed:
-                    stats["min_level_extracted"] += 1
-                new_evo.append(new_it)
-            else:
-                new_evo.append(it)
+            stats["evolution_items_processed"] += 1
+            changed, new_it = parse_evolution_string(it)
+            if changed and isinstance(new_it, dict) and "Minimum Level" in new_it:
+                stats["min_level_extracted"] += 1
+            new_evo.append(new_it)
         entry = {**entry, "Evolution": new_evo}
         return entry
 
@@ -114,7 +129,7 @@ def process_document(data: Union[List[Any], Dict[str, Any]]) -> Tuple[Union[List
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Extraire 'Lv XX Minimum' depuis Evolution[].Condition -> 'Minimum Level'.")
+    ap = argparse.ArgumentParser(description="Convertir Evolution strings en objets avec extraction de 'Minimum XX'.")
     ap.add_argument("--in", dest="infile", required=True, help="Chemin du JSON d'entrée (liste ou {Species: obj}).")
     ap.add_argument("--out", dest="outfile", required=False, help="Chemin du JSON de sortie.")
     ap.add_argument("--dry-run", action="store_true", help="N'écrit pas de fichier, affiche seulement le rapport.")
