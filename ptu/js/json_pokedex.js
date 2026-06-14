@@ -55,7 +55,8 @@ const PRESETS = {
     "Variant",
     "Insurgence",
     "Sage",
-    "Uranium"
+    "Uranium",
+    "Slime Rancher"
   ],
 };
 
@@ -63,7 +64,8 @@ const FANDEX_FILES = {
   "Variant": "pokedex_variant.json",
   "Insurgence": "pokedex_insurgence.min.json",
   "Sage": "pokedex_sage.min.json",
-  "Uranium": "pokedex_uranium.min.json"
+  "Uranium": "pokedex_uranium.min.json",
+  "Slime Rancher": "pokedex_slimerancher.min.json"
 };
 
 const FANDEX_MOVES_FILES = {
