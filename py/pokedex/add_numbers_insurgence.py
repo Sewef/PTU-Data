@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 
 def main():
-    input_file = Path("../../ptu/data/pokedex/fandex/pokedex_sage.json")
+    input_file = Path("../../ptu/data/pokedex/fandex/pokedex_uranium.json")
     output_file = input_file
     
     # Load the data
