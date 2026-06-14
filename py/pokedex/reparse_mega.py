@@ -1,7 +1,7 @@
 import json
 
 # Nom du fichier à modifier
-FILENAME = "../../ptu/data/pokedex/pokedex_core.json"
+FILENAME = "../../ptu/data/pokedex/pokedex_insurgence.json"
 
 # Charger le JSON
 with open(FILENAME, "r", encoding="utf-8") as f:
