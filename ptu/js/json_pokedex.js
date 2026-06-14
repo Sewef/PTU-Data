@@ -55,19 +55,19 @@ const PRESETS = {
 };
 
 const FANDEX_FILES = {
-  "Insurgence": "pokedex_insurgence.json"
+  "Insurgence": "pokedex_insurgence.min.json"
 };
 
 const FANDEX_MOVES_FILES = {
-  "Insurgence": "moves_insurgence.json"
+  "Insurgence": "moves_insurgence.min.json"
 };
 
 const FANDEX_ABILITIES_FILES = {
-  "Insurgence": "abilities_insurgence.json"
+  "Insurgence": "abilities_insurgence.min.json"
 };
 
 const FANDEX_CAPABILITIES_FILES = {
-  "Insurgence": "capabilities_insurgence.json"
+  "Insurgence": "capabilities_insurgence.min.json"
 };
 
 const FANDEX_MECHANICS_FILES = {
