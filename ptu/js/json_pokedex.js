@@ -210,7 +210,7 @@ function urlsForPreset(presetName, onlyLabels) {
     const labels = (onlyLabels && onlyLabels.length > 0) ? onlyLabels : [];
     return labels.map(lbl => ({
       label: lbl,
-      url: `${DATASET_BASE}${DATASET_BASE.endsWith("/") ? "" : "/"}${FANDEX_FILES[lbl]}`
+      url: `${DATASET_BASE}${DATASET_BASE.endsWith("/") ? "" : "/"}fandex/${FANDEX_FILES[lbl]}`
     }));
   }
   const dir = PRESET_DIRS[presetName];
