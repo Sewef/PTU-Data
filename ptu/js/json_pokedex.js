@@ -51,6 +51,11 @@ const PRESETS = {
     "HisuiDex (Homebrew)",
     "PaldeaDex (Community Homebrew)",
   ],
+  FanDex: ["Insurgence"],
+};
+
+const FANDEX_FILES = {
+  "Insurgence": "pokedex_insurgence.json"
 };
 
 const MOVES_BASE = "/ptu/data/moves";
@@ -94,6 +99,7 @@ const SHOWN_TAGS = new Set(["N", "Stab"]);
 
 let selectedPreset = window.selectedPreset || "Core";
 let selectedLabels = new Set(PRESETS[selectedPreset] || []);
+let selectedFanDexBase = window.selectedPreset || "Core"; // Base dataset pour FanDex (Core, Community ou Homebrew)
 
 // =========================
 // Hash state management
@@ -199,6 +205,14 @@ async function fetchJson(url, { strict = true, cache = "no-store" } = {}) {
 }
 
 function urlsForPreset(presetName, onlyLabels) {
+  if (presetName === "FanDex") {
+    // For FanDex, if onlyLabels is an empty array, don't load anything
+    const labels = (onlyLabels && onlyLabels.length > 0) ? onlyLabels : [];
+    return labels.map(lbl => ({
+      label: lbl,
+      url: `${DATASET_BASE}${DATASET_BASE.endsWith("/") ? "" : "/"}${FANDEX_FILES[lbl]}`
+    }));
+  }
   const dir = PRESET_DIRS[presetName];
   const labels = (onlyLabels && onlyLabels.length ? onlyLabels : (PRESETS[presetName] || []));
   return labels.map(lbl => ({
@@ -209,8 +223,11 @@ function urlsForPreset(presetName, onlyLabels) {
 
 async function loadPokedex() {
   const sources = urlsForPreset(selectedPreset, Array.from(selectedLabels || []));
-  if (!sources.length) throw new Error(`No sources for preset ${selectedPreset}`);
-
+  if (!sources.length) {
+    // For FanDex without selection, return an empty array instead of an error
+    if (selectedPreset === "FanDex") return [];
+    throw new Error(`No sources for preset ${selectedPreset}`);
+  }
   const results = await Promise.all(sources.map(async ({ url }) => {
     const data = await fetchJson(url, { strict: true });
     if (Array.isArray(data)) return data;
@@ -277,13 +294,16 @@ async function loadIndex(url, nameField) {
 }
 
 function getMovesUrlForPreset() {
-  return MOVES_FILE_BY_PRESET[selectedPreset] || MOVES_FILE_BY_PRESET.Core;
+  const preset = selectedPreset === "FanDex" ? selectedFanDexBase : selectedPreset;
+  return MOVES_FILE_BY_PRESET[preset] || MOVES_FILE_BY_PRESET.Core;
 }
 function getAbilitiesUrlForPreset() {
-  return ABILITIES_FILE_BY_PRESET[selectedPreset] || ABILITIES_FILE_BY_PRESET.Core;
+  const preset = selectedPreset === "FanDex" ? selectedFanDexBase : selectedPreset;
+  return ABILITIES_FILE_BY_PRESET[preset] || ABILITIES_FILE_BY_PRESET.Core;
 }
 function getCapabilitiesUrlForPreset() {
-  return CAPABILITIES_FILE_BY_PRESET[selectedPreset] || CAPABILITIES_FILE_BY_PRESET.Core;
+  const preset = selectedPreset === "FanDex" ? selectedFanDexBase : selectedPreset;
+  return CAPABILITIES_FILE_BY_PRESET[preset] || CAPABILITIES_FILE_BY_PRESET.Core;
 }
 function loadMoveIndex() { return loadIndex(getMovesUrlForPreset(), "Move"); }
 function loadAbilityIndex() { return loadIndex(getAbilitiesUrlForPreset(), "Name"); }
@@ -1554,11 +1574,22 @@ function buildSourceMenu(onChange) {
       <div class="d-flex align-items-center justify-content-between">
         <label class="form-label mb-0">Dataset</label>
       </div>
-      <div class="d-flex flex-wrap gap-1 w-100 mb-2" role="group" aria-label="Dataset presets">
-        ${["Core", "Community", "Homebrew"].map(p => `
+      <div class="d-grid gap-1 w-100 mb-2" style="grid-template-columns: 1fr 1fr;" role="group" aria-label="Dataset presets">
+        ${["Core", "Community", "Homebrew", "FanDex"].map(p => `
           <input type="radio" class="btn-check" name="preset" id="preset-${p.toLowerCase()}" ${selectedPreset === p ? "checked" : ""}>
-          <label class="btn btn-outline-primary d-flex justify-content-center align-items-center flex-grow-1" style="flex-basis:0; min-width:90px;" for="preset-${p.toLowerCase()}">${p}</label>
+          <label class="btn btn-outline-primary d-flex justify-content-center align-items-center" for="preset-${p.toLowerCase()}">${p}</label>
         `).join("")}
+      </div>
+      <div id="fandex-base-box" class="border rounded p-2 small mb-2" style="display: none;">
+        <div class="fw-semibold mb-1">Base Dataset</div>
+        <div id="fandex-base-radios" class="d-flex flex-wrap gap-1">
+          ${["Core", "Community", "Homebrew"].map(base => `
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="fandex-base" id="fandex-base-${base.toLowerCase()}" value="${base}" ${selectedFanDexBase === base ? "checked" : ""}>
+              <label class="form-check-label" for="fandex-base-${base.toLowerCase()}">${base}</label>
+            </div>
+          `).join("")}
+        </div>
       </div>
       <div id="preset-files-box" class="border rounded p-2 small">
         <div class="fw-semibold mb-1">Included Pokédex</div>
@@ -1571,10 +1602,23 @@ function buildSourceMenu(onChange) {
 
   function renderPresetFiles() {
     const box = wrap.querySelector("#preset-files-list");
+    const fandexBaseBox = wrap.querySelector("#fandex-base-box");
+    
+    // Show/hide the "Base Dataset" box for FanDex
+    if (fandexBaseBox) {
+      fandexBaseBox.style.display = selectedPreset === "FanDex" ? "block" : "none";
+    }
+    
     const lbls = PRESETS[selectedPreset] || [];
+    
+    // For FanDex, no checkbox checked by default
+    const defaultChecked = selectedPreset === "FanDex" ? false : (selectedLabels.size === 0 || selectedLabels.has);
+    
     box.innerHTML = lbls.map(lbl => {
       const id = `pdx-file-${lbl.replace(/[^a-z0-9]+/gi, "-")}`;
-      const checked = (selectedLabels.size === 0 || selectedLabels.has(lbl)) ? "checked" : "";
+      const checked = selectedPreset === "FanDex" 
+        ? (selectedLabels.has(lbl) ? "checked" : "")
+        : ((selectedLabels.size === 0 || selectedLabels.has(lbl)) ? "checked" : "");
       return `<div class="form-check">
           <input class="form-check-input" type="checkbox" id="${id}" data-label="${lbl}" ${checked}>
           <label class="form-check-label" for="${id}">${lbl}</label>
@@ -1624,14 +1668,31 @@ function buildSourceMenu(onChange) {
   wrap.addEventListener("change", (ev) => {
     const tgt = ev.target;
     if (!(tgt instanceof HTMLInputElement)) return;
-    if (tgt.name !== "preset" || !tgt.checked) return;
-    const id = tgt.id;
-    if (id.endsWith("core")) selectedPreset = "Core";
-    else if (id.endsWith("community")) selectedPreset = "Community";
-    else if (id.endsWith("homebrew")) selectedPreset = "Homebrew";
-    selectedLabels = new Set(PRESETS[selectedPreset] || []);
-    renderPresetFiles();
-    reload();
+    
+    // Handle main preset radios
+    if (tgt.name === "preset" && tgt.checked) {
+      const id = tgt.id;
+      if (id.endsWith("core")) selectedPreset = "Core";
+      else if (id.endsWith("community")) selectedPreset = "Community";
+      else if (id.endsWith("homebrew")) selectedPreset = "Homebrew";
+      else if (id.endsWith("fandex")) selectedPreset = "FanDex";
+      
+      // For FanDex, don't select anything by default
+      if (selectedPreset === "FanDex") {
+        selectedLabels.clear();
+      } else {
+        selectedLabels = new Set(PRESETS[selectedPreset] || []);
+      }
+      renderPresetFiles();
+      reload();
+    }
+    
+    // Handle Base Dataset radios for FanDex
+    if (tgt.name === "fandex-base" && tgt.checked) {
+      selectedFanDexBase = tgt.value;
+      clearIndexCache(); // Recharger les indexes avec le nouveau base dataset
+      reload();
+    }
   });
 
 
