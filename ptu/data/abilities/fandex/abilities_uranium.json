@@ -1,0 +1,99 @@
+[
+    {
+        "Name": "Acceleration",
+        "Frequency": "Static",
+        "Effect": "The user increases the Damage Base of all Priority Moves by +2."
+    },
+    {
+        "Name": "Atomize",
+        "Frequency": "At-Will – Free Action",
+        "Trigger": "The user uses a Normal-Type damaging Move",
+        "Effect": "The Move is changed to be Nuclear-Type."
+    },
+    {
+        "Name": "Bloodlust",
+        "Frequency": "At-Will – Free Action",
+        "Trigger": "The user damages an opponent with aMelee Attack",
+        "Effect": "The user gains a tick of temporary Hit Points."
+    },
+    {
+        "Name": "Chernobyl",
+        "Frequency": "Scene x2 – Swift Action",
+        "Effect": "The Weather changes to be Nuclear Fallout for 1 full round."
+    },
+    {
+        "Name": "Deep Freeze",
+        "Frequency": "Scene – Free Action",
+        "Trigger": "The user is hit with a Melee Attack",
+        "Effect": "The attacking foe becomes Frozen. The foe is automatically cured of the Frozen Condition after 1 full round."
+    },
+    {
+        "Name": "Disenchant",
+        "Frequency": "Static",
+        "Effect": "The user is immune to Fairy-Type attacks. Defensive. Bonus: If the user is hit by a damaging Fairy-Type attack, the user of that attack loses 1 CS in the stat used to make that attack."
+    },
+    {
+        "Name": "Elementalist",
+        "Frequency": "Static",
+        "Effect": "The user gains STAB on Fire, Electric, and Water-Type Moves. "
+    },
+    {
+        "Name": "Geiger Sense",
+        "Frequency": "Static",
+        "Effect": "This Pokémon has +2 Accuracy against Nuclear-Type Pokémon and Pokémon that have been hit with a Nuclear-Type attack since the start of this Pokémon’s last turn. This bonus does not work in Nuclear Fallout, or against Pokémon with the Lead Skin Ability."
+    },
+    {
+        "Name": "Infuriate",
+        "Frequency": "Scene x2 – Free Action",
+        "Trigger": "The user is damaged by a Physical Move",
+        "Effect": "The user gains +1 Attack CS."
+    },
+    {
+        "Name": "Lazy",
+        "Frequency": "Static",
+        "Effect": "When this Pokémon enters an encounter, it gains +5 DR but is Slowed. At the end of any of its turns, it may end this effect for the rest of the Scene, or until it returns to its Pokéball, as a Free Action."
+    },
+    {
+        "Name": "Lead Skin",
+        "Frequency": "Static",
+        "Effect": "The user is immune to Nuclear-Type attacks, and counts as a Steel-Type for the purposes of the Radiation Ability. Defensive. Bonus: The user is immune to being Poisoned or Badly Poisoned. Defensive."
+    },
+    {
+        "Name": "Petrify",
+        "Frequency": "At-Will – Swift Action",
+        "Target": "Pokémon or Trainer within 5 meters",
+        "Effect": "Lower the target’s Speed 1 Combat Stage. You may target a specific foe only once per Scene with Petrify. "
+    },
+    {
+        "Name": "Quick Charge",
+        "Frequency": "Scene – Free Action",
+        "Trigger": "A Round begins",
+        "Effect": "The user may take their turn at the top of the round. Priority, Interrupt, or Reaction Moves or Abilities cannot be declared in response to the user’s turn Bonus: The user’s Overland capability is increased by +2."
+    },
+    {
+        "Name": "Radioactive",
+        "Frequency": "Static",
+        "Effect": "When dealing damage with a damaging attack against a Pokémon that is neither Steel-type or Nuclear-type, this Pokémon does +X damage (before type-effectiveness). When dealing damage with a damaging attack  against a Pokémon that is Steel-type or Nuclear- type, this Pokémon does -X damage (before type- effectiveness).  When taking damage from a damaging attack that is not Nuclear-Type, this Pokémon takes +X damage (before type-effectiveness). This Pokémon does not take the extra damage while this Pokémon is in Nuclear Fallout. X is equal to half this Pokémon’s tick value (to a minimum of 1). When this Pokémon is using a Nuclear-type Move, X is instead equal to its tick value. This Ability may not be disabled, copied, or swapped away in any way. "
+    },
+    {
+        "Name": "Rebuild",
+        "Frequency": "Static",
+        "Effect": "At the beginning of the user’s turn, if it has not been damaged or lost any Hit Points since the end of its last turn, it gains a tick of temporary hit points. Bonus: The user is immune to the damaging effects of Weather. "
+    },
+    {
+        "Name": "Sharp Coral",
+        "Frequency": "At-Will – Free Action",
+        "Trigger": "The user is hit by a damaging attack",
+        "Effect": "The user gains -1 CS in the Defense hit by the attack. If this was in Defense, it gains +1 Attack CS. If this was in Special Defense, it gains +1 Special Attack CS."
+    },
+    {
+        "Name": "Sound Boost",
+        "Frequency": "Static",
+        "Effect": "The user increases the Damage Base of all Sonic Moves by +2."
+    },
+    {
+        "Name": "Stormbringer",
+        "Frequency": "Scene x3 – Swift Action",
+        "Effect": "The Weather changes to be a Thunderstorm for 1 full round."
+    }
+]

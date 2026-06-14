@@ -1,0 +1,220 @@
+{
+    "Atomic Punch": {
+        "Type": "Nuclear",
+        "Frequency": "EOT",
+        "AC": "3",
+        "Damage Base": 8,
+        "Class": "Physical",
+        "Range": "Melee, 1 Target",
+        "Effect": "Atomic Punch Paralyzes the target on 18+. This Move is affected by Iron Fist."
+    },
+    "Drain Life": {
+        "Type": "Dark",
+        "Frequency": "Scene x2",
+        "AC": "2",
+        "Damage Base": 8,
+        "Class": "Physical",
+        "Range": "Melee, 1 Target",
+        "Effect": "After the target takes damage, the user gains HP equal to half of the damage they dealt to the target. This Move is affected by Strong Jaw."
+    },
+    "Expunge": {
+        "Type": "Nuclear",
+        "Frequency": "Scene x2",
+        "AC": "7",
+        "Damage Base": 11,
+        "Class": "Special",
+        "Range": "4, Ranged Blast 2, Smite",
+        "Effect": "When calculating Weakness and Resistance for Expunge, Nuclear-Typed targets calculate damage as if Nuclear was weak to Nuclear; if the user has the Radioactive Ability, it treats the target at though the target was not Nuclear-Typed for the purposes of Radioactive. If the target is in Nuclear Fallout Weather, Expunge cannot miss."
+    },
+    "Fallout": {
+        "Type": "Nuclear",
+        "Frequency": "Daily x2",
+        "AC": "None",
+        "Class": "Status",
+        "Range": "Field, Weather",
+        "Effect": "The weather becomes Nuclear Fallout for 3 rounds. While in Nuclear Fallout, all non-Nuclear or Steel Type Pokémon lose a Tick of Hit Points at the beginning of their turn. "
+    },
+    "Fission Burst": {
+        "Type": "Nuclear",
+        "Frequency": "Daily",
+        "AC": "2",
+        "Damage Base": 15,
+        "Class": "Physical",
+        "Range": "Burst 3, Smite",
+        "Effect": "The user’s Hit Points are set to -50% of their full Hit Point value. This Hit Point loss may not be prevented or reduced in any way. The user’s loyalty toward its trainer may be lowered. This Move may be prevented by Damp."
+    },
+    "Flame Impact": {
+        "Type": "Fire",
+        "Frequency": "EOT",
+        "AC": "2",
+        "Damage Base": 7,
+        "Class": "Physical",
+        "Range": "Melee, 1 Target, Dash, Priority"
+    },
+    "Gamma Ray": {
+        "Type": "Nuclear",
+        "Frequency": "At-Will",
+        "AC": "2",
+        "Damage Base": 4,
+        "Class": "Special",
+        "Range": "4, 1 Target"
+    },
+    "Get Lucky": {
+        "Type": "Psychic",
+        "Frequency": "Daily",
+        "AC": "2",
+        "Damage Base": 7,
+        "Class": "Special",
+        "Range": "Burst 1, Spirit Surge, Sonic",
+        "Effect": "The user becomes Pumped. While Pumped, the user’s Critical Range is extended by 2, or 18+ if the Critical Range is not otherwise extended. Being switched will cause this effect to end. "
+    },
+    "Golden Fist": {
+        "Type": "Fighting",
+        "Frequency": "Daily",
+        "AC": "2",
+        "Damage Base": 7,
+        "Class": "Physical",
+        "Range": "Melee, 1 Target",
+        "Effect": "Golden Fist scatters metal coins equal in value to 1d8 times the user’s level. If it is a trainer battle, the winner of the battle gets to pick up the coins. This Move is affected by Iron Fist."
+    },
+    "Half-Life": {
+        "Type": "Nuclear",
+        "Frequency": "Scene",
+        "AC": "4",
+        "Class": "Special",
+        "Range": "4, 1 Target",
+        "Effect": "The target loses 1/2 of their current Hit Points."
+    },
+    "Infernal Blade": {
+        "Type": "Fire",
+        "Frequency": "Scene",
+        "AC": "3",
+        "Damage Base": 9,
+        "Class": "Physical",
+        "Range": "Melee, Pass",
+        "Effect": "Infernal Blade Burns legal targets on a 19+. When calculating Weakness and Resistance for Infernal Blade, Fairy-Typed targets calculate damage as if Fairy was weak to Fire."
+    },
+    "Instant Crush": {
+        "Type": "Psychic",
+        "Frequency": "EOT",
+        "AC": "2",
+        "Damage Base": 6,
+        "Class": "Special",
+        "Range": "4, 1 Target, Priority"
+    },
+    "Laser Pulse": {
+        "Type": "See Effect",
+        "Frequency": "Scene",
+        "AC": "2",
+        "Damage Base": 9,
+        "Class": "Special",
+        "Range": "6, Ranged Blast 3",
+        "Effect": "After targeting Laser Pulse, roll 1d3. On a 1, this attack is Fire-Type; on a 2, it is Ice-Type; on a 3, it is Electric-Type. This Move benefits from Mega Launcher."
+    },
+    "Metal Cruncher": {
+        "Type": "Steel",
+        "Frequency": "Scene",
+        "AC": "7",
+        "Damage Base": 12,
+        "Class": "Physical",
+        "Range": "Melee, 1 Target, Smite, Spirit Surge",
+        "Effect": "Metal Cruncher lowers the target’s Defense 1 Combat Stage on a 7+."
+    },
+    "Metal Whip": {
+        "Type": "Steel",
+        "Frequency": "Scene x2",
+        "AC": "4",
+        "Damage Base": 5,
+        "Class": "Physical",
+        "Range": "Melee, 1 Target",
+        "Effect": "The target is put in a Vortex.",
+        "Special": "Grants Threaded"
+    },
+    "Nuclear Slash": {
+        "Type": "Nuclear",
+        "Frequency": "EOT",
+        "AC": "4",
+        "Damage Base": 6,
+        "Class": "Physical",
+        "Range": "Melee, Pass",
+        "Effect": "Nuclear Slash is a Critical Hit on 18+."
+    },
+    "Nuclear Waste": {
+        "Type": "Nuclear",
+        "Frequency": "Scene x2",
+        "AC": "4",
+        "Class": "Status",
+        "Range": "Burst 1",
+        "Effect": "Legal Targets are Badly Poisoned. "
+    },
+    "Proton Beam": {
+        "Type": "Nuclear",
+        "Frequency": "Scene",
+        "AC": "4",
+        "Damage Base": 10,
+        "Class": "Special",
+        "Range": "Cone 3, Smite, Reckless",
+        "Effect": "Lower the user’s Special Attack 2 Combat Stages after damage."
+    },
+    "Quantum Leap": {
+        "Type": "Nuclear",
+        "Frequency": "Scene x2",
+        "AC": "2",
+        "Damage Base": 10,
+        "Class": "Physical",
+        "Range": "Melee, 1 Target, Set-Up",
+        "Set-Up Effect": "The user is removed from the field, and their turn ends.",
+        "Resolution Effect": "Quantum Leap’s user appears adjacent to any legal target on the field, ignoring Movement Capabilities, and then uses Quantum Leap’s attack. Quantum Leap cannot be avoided by Moves with the Shield Keyword, the Dodge Ability, or similar effects, and Intercepts may not be attempted in response."
+    },
+    "Radioacid": {
+        "Type": "Nuclear",
+        "Frequency": "Scene x2",
+        "AC": "2",
+        "Damage Base": 6,
+        "Class": "Special",
+        "Range": "6, 1 Target",
+        "Effect": "Radioacid Burns the target on 15+."
+    },
+    "Sky Fall": {
+        "Type": "Flying",
+        "Frequency": "Scene",
+        "AC": "2",
+        "Damage Base": 9,
+        "Class": "Special",
+        "Range": "6, 1 Target",
+        "Effect": "Sky Fall Paralyzes the target on 15+. "
+    },
+    "Sticky Terrain": {
+        "Type": "Poison",
+        "Frequency": "Daily x2",
+        "AC": "None",
+        "Class": "Status",
+        "Range": "Field",
+        "Effect": "The Field becomes Sticky for five rounds.  While the Field is Sticky, non-Flying and non- Levitating Pokémon cannot declare Priority or  Interrupt Moves outside their own Initiatives. In addition, all Jumping Capabilities of creatures touching the ground are reduced by 2, to a minimum of 0."
+    },
+    "Subduction": {
+        "Type": "Ground",
+        "Frequency": "Daily x2",
+        "AC": "4",
+        "Damage Base": 14,
+        "Class": "Physical",
+        "Range": "6, 1 Target, Smite",
+        "Effect": "The target’s Speed is lowered 2 Combat Stages, and the user becomes Confused after Damage."
+    },
+    "Sudden Strike": {
+        "Type": "Dark",
+        "Frequency": "At-Will",
+        "AC": "2",
+        "Damage Base": 4,
+        "Class": "Physical",
+        "Range": "Melee, 1 Target, Priority"
+    },
+    "Thunderstorm": {
+        "Type": "Electric",
+        "Frequency": "Daily x2",
+        "AC": "None",
+        "Class": "Status",
+        "Range": "Field, Weather",
+        "Effect": "The weather becomes a Thunderstorm for 5 rounds. While in a Thunderstorm, all non-Electric or Ground Type Pokémon lose a Tick of Hit Points at the beginning of their turn. Thunder never misses in a Thunderstorm."
+    }
+}
