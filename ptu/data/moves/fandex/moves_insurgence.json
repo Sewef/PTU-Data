@@ -1,0 +1,69 @@
+{
+    "Ancient Roar": {
+        "Type": "Rock",
+        "Frequency": "EoT",
+        "AC": "2",
+        "Damage Base": 8,
+        "Class": "Special",
+        "Range": "Burst 1, Sonic"
+    },
+    "Corrode": {
+        "Type": "Poison",
+        "Frequency": "EoT",
+        "AC": "2",
+        "Damage Base": 7,
+        "Class": "Special",
+        "Range": "6, 1 Target",
+        "Effect": "When calculating Weakness and Resistance for Corrode, Steel-Typed targets calculate damage as if Steel was weak to Poison."
+    },
+    "Crystal Rush": {
+        "Type": "Crystal",
+        "Frequency": "Scene",
+        "AC": "2",
+        "Damage Base": 5,
+        "Class": "Physical",
+        "Range": "Melee, 1 Target, Priority",
+        "Effect": "Prior to using this move, the user changes into the Crystal Type for the remainder of the Scene. Crystal Type moves always deal neutral damage. All non-Sonic attacks on Crystal Type Pokémon deal  neutral damage. Sonic attacks instead deal super- effective damage. "
+    },
+    "Lunar Cannon": {
+        "Type": "Dark",
+        "Frequency": "Scene x2",
+        "AC": "2",
+        "Damage Base": 10,
+        "Class": "Special",
+        "Range": "Line 6, Set-Up",
+        "Set-Up Effect": "If the weather is not a New Moon, the user’s turn ends. If the weather is a New Moon, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword.",
+        "Resolution Effect": "The user attacks with Lunar Cannon. "
+    },
+    "Medusa Ray": {
+        "Type": "Rock",
+        "Frequency": "Daily",
+        "AC": "2",
+        "Class": "Status",
+        "Range": "5, 1 Target",
+        "Effect": "The target gains the Rock Type in addition to its other Types for 5 turns."
+    },
+    "Morph": {
+        "Type": "Normal",
+        "Frequency": "Daily",
+        "Class": "Status",
+        "Range": "Self",
+        "Effect": "The user uses the move Transform. After resolving the effects of Transform, the user copies the target’s Type(s). If the user is now single typed, it may either change that type, or add a second type of its choice. If the user is now double typed, it may remove one of those types, or change one of those types. These changes last until the end of the Scene, or the user changes Types again."
+    },
+    "New Moon": {
+        "Type": "Dark",
+        "Frequency": "Daily x2",
+        "AC": "None",
+        "Class": "Status",
+        "Range": "Field, Weather",
+        "Effect": "The Weather becomes a New Moon for 5 rounds."
+    },
+    "Retrograde": {
+        "Type": "Normal",
+        "Frequency": "Scene",
+        "AC": "2",
+        "Class": "Status",
+        "Range": "10, 1 Target",
+        "Effect": "The target has all of its CS reset, and all Coats removed. If the target is under the effects of Mega Evolution, the move Transform, or any Moves, Capabilities, Abilities or Features that change a targets Form(e) or Type, those effects immediately end."
+    }
+}

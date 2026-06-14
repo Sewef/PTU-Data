@@ -22417,7 +22417,7 @@
     }
   },
   {
-    "Species": "Roselia Delta For M",
+    "Species": "Roselia Delta Form",
     "Number": 767,
     "Base Stats": {
       "HP": 5,
@@ -40850,7 +40850,7 @@
         },
         {
           "Move": "Medusa Ray*",
-          "Type": null,
+          "Type": "Rock",
           "Tags": [
             "N"
           ],
@@ -43051,7 +43051,7 @@
         },
         {
           "Move": "Ancient Roar*",
-          "Type": null,
+          "Type": "Rock",
           "Tags": [
             "N"
           ],
@@ -60537,9 +60537,10 @@
         },
         {
           "Move": "Ancient Roar*",
-          "Type": null,
+          "Type": "Rock",
           "Tags": [
-            "N"
+            "N",
+            "Stab"
           ],
           "Method": "Tutor"
         },
@@ -60649,7 +60650,7 @@
         },
         {
           "Move": "New Moon*",
-          "Type": null,
+          "Type": "Dark",
           "Tags": [
             "N"
           ],
