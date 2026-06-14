@@ -75,7 +75,7 @@ const FANDEX_MECHANICS_FILES = {
 };
 
 const FANDEX_SOURCE_URLS = {
-  "Insurgence": "https://docs.google.com/document/d/1Y686fpUCixqBgic_NW_Wrk7X38vI9sqEiSMwFKRKWW0/"
+  "Insurgence": "https://docs.google.com/document/d/1Y686fpUCixqBgic_NW_Wrk7X38vI9sqEiSMwFKRKWW0/edit?tab=t.0#bookmark=id.5l96it1gtgpk"
 };
 
 const MOVES_BASE = "/ptu/data/moves";
