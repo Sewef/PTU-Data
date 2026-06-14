@@ -70,9 +70,14 @@ const FANDEX_CAPABILITIES_FILES = {
   "Insurgence": "capabilities_insurgence.json"
 };
 
+const FANDEX_MECHANICS_FILES = {
+  "Insurgence": "insurgence_mechanics.html"
+};
+
 const MOVES_BASE = "/ptu/data/moves";
 const ABILITIES_BASE = "/ptu/data/abilities";
 const CAPABILITIES_BASE = "/ptu/data/capabilities";
+const MECHANICS_BASE = "/ptu/data/mechanics";
 
 const MOVES_FILE_BY_PRESET = {
   Core: `${MOVES_BASE}/moves_core.min.json`,
@@ -1773,6 +1778,48 @@ function buildSourceMenu(onChange) {
   sb.querySelector('[data-role="source-menu"]')?.remove();
   sb.prepend(wrap);
 
+  async function openMechanicsModal(fandexLabel) {
+    const mechanicsFile = FANDEX_MECHANICS_FILES[fandexLabel];
+    if (!mechanicsFile) {
+      console.error(`No mechanics file found for ${fandexLabel}`);
+      return;
+    }
+    
+    const modalTitle = $("#mechanicsModalLabel");
+    const modalBody = $("#mechanicsModalBody");
+    
+    if (modalTitle) {
+      modalTitle.textContent = `${fandexLabel} — Special Mechanics`;
+    }
+    
+    if (modalBody) {
+      modalBody.innerHTML = '<p class="text-muted">Loading...</p>';
+    }
+    
+    try {
+      const url = `${MECHANICS_BASE}/${mechanicsFile}`;
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const html = await response.text();
+      
+      if (modalBody) {
+        modalBody.innerHTML = html;
+      }
+      
+      // Open the modal
+      const modalEl = $("#mechanicsModal");
+      if (modalEl) {
+        const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+        modal.show();
+      }
+    } catch (error) {
+      console.error(`Failed to load mechanics for ${fandexLabel}:`, error);
+      if (modalBody) {
+        modalBody.innerHTML = `<div class="alert alert-warning">Failed to load mechanics file for ${fandexLabel}.</div>`;
+      }
+    }
+  }
+
   function renderPresetFiles() {
     const box = wrap.querySelector("#preset-files-list");
     const fandexBaseBox = wrap.querySelector("#fandex-base-box");
@@ -1783,6 +1830,7 @@ function buildSourceMenu(onChange) {
     }
     
     const lbls = PRESETS[selectedPreset] || [];
+    const isFanDex = selectedPreset === "FanDex";
     
     // For FanDex, no checkbox checked by default
     const defaultChecked = selectedPreset === "FanDex" ? false : (selectedLabels.size === 0 || selectedLabels.has);
@@ -1792,16 +1840,35 @@ function buildSourceMenu(onChange) {
       const checked = selectedPreset === "FanDex" 
         ? (selectedLabels.has(lbl) ? "checked" : "")
         : ((selectedLabels.size === 0 || selectedLabels.has(lbl)) ? "checked" : "");
-      return `<div class="form-check">
+      
+      // Check if this FanDex has a mechanics file
+      const hasMechanics = isFanDex && FANDEX_MECHANICS_FILES[lbl];
+      const mechanicsBtn = hasMechanics 
+        ? `<button class="btn btn-sm btn-outline-info ms-2" data-mechanics-fandex="${lbl}" title="View ${lbl} Mechanics" style="padding: 0.1rem 0.4rem; font-size: 0.75rem;">Mecanics 📖</button>`
+        : "";
+      
+      return `<div class="form-check d-flex align-items-center">
           <input class="form-check-input" type="checkbox" id="${id}" data-label="${lbl}" ${checked}>
-          <label class="form-check-label" for="${id}">${lbl}</label>
+          <label class="form-check-label flex-grow-1" for="${id}">${lbl}</label>
+          ${mechanicsBtn}
         </div>`;
     }).join("");
+    
     box.querySelectorAll('input[type="checkbox"]').forEach(cb => {
       cb.addEventListener("change", () => {
         selectedLabels.clear();
         box.querySelectorAll('input[type="checkbox"]:checked').forEach(c => selectedLabels.add(c.getAttribute("data-label")));
         reload();
+      });
+    });
+    
+    // Add event listeners for mechanics buttons
+    box.querySelectorAll('[data-mechanics-fandex]').forEach(btn => {
+      btn.addEventListener("click", async (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const fandexLabel = btn.getAttribute("data-mechanics-fandex");
+        await openMechanicsModal(fandexLabel);
       });
     });
   }
