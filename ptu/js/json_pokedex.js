@@ -53,38 +53,45 @@ const PRESETS = {
   ],
   FanDex: [
     "Insurgence",
-    "Sage"
+    "Sage",
+    "Uranium"
   ],
 };
 
 const FANDEX_FILES = {
   "Insurgence": "pokedex_insurgence.min.json",
-  "Sage": "pokedex_sage.min.json"
+  "Sage": "pokedex_sage.min.json",
+  "Uranium": "pokedex_uranium.json"
 };
 
 const FANDEX_MOVES_FILES = {
   "Insurgence": "moves_insurgence.min.json",
-  "Sage": "moves_sage.min.json"
+  "Sage": "moves_sage.min.json",
+  "Uranium": "moves_uranium.json"
 };
 
 const FANDEX_ABILITIES_FILES = {
   "Insurgence": "abilities_insurgence.min.json",
-  "Sage": "abilities_sage.min.json"
+  "Sage": "abilities_sage.min.json",
+  "Uranium": "abilities_uranium.json"
 };
 
 const FANDEX_CAPABILITIES_FILES = {
   "Insurgence": "capabilities_insurgence.min.json",
-  "Sage": "capabilities_sage.min.json"
+  "Sage": "capabilities_sage.min.json",
+  "Uranium": "capabilities_uranium.json"
 };
 
 const FANDEX_MECHANICS_FILES = {
   "Insurgence": "insurgence_mechanics.html",
-  "Sage": "sage_mechanics.html"
+  "Sage": "sage_mechanics.html",
+  "Uranium": "uranium_mechanics.html"
 };
 
 const FANDEX_SOURCE_URLS = {
   "Insurgence": "https://docs.google.com/document/d/1Y686fpUCixqBgic_NW_Wrk7X38vI9sqEiSMwFKRKWW0/edit?tab=t.0#bookmark=id.5l96it1gtgpk",
-  "Sage": "https://docs.google.com/document/d/1Y686fpUCixqBgic_NW_Wrk7X38vI9sqEiSMwFKRKWW0/edit?tab=t.0#bookmark=id.esoj8x4i3as3"
+  "Sage": "https://docs.google.com/document/d/1Y686fpUCixqBgic_NW_Wrk7X38vI9sqEiSMwFKRKWW0/edit?tab=t.0#bookmark=id.esoj8x4i3as3",
+  "Uranium": "https://docs.google.com/document/d/1Y686fpUCixqBgic_NW_Wrk7X38vI9sqEiSMwFKRKWW0/edit?tab=t.0#bookmark=id.fxqffpi5o480"
 };
 
 const MOVES_BASE = "/ptu/data/moves";
@@ -160,7 +167,7 @@ function loadPokedexState() {
   const query = params.get("q") || "";
   const typeStr = params.get("types") || "";
   const mode = params.get("mode") || "any";
-  
+
   return { query, typeStr, mode };
 }
 
@@ -285,10 +292,10 @@ async function loadPokedex() {
 
 async function loadIndex(url, nameField) {
   if (_indexCache.has(url)) return _indexCache.get(url);
-  
+
   // Helper to normalize ability/capability names by removing trailing "*"
   const normalizeKey = (key) => key.trim().toLowerCase().replace(/\*+$/, '');
-  
+
   const p = fetchJson(url, { strict: false }).then(raw => {
     const idx = new Map();
     if (raw && typeof raw === "object" && !Array.isArray(raw)) {
@@ -332,24 +339,24 @@ async function loadIndexMultiple(urls, nameField, fandexLabel) {
   if (!Array.isArray(urls) || urls.length === 0) {
     return new Map();
   }
-  
+
   // Load all indexes
   const indexes = await Promise.all(urls.map(url => loadIndex(url, nameField)));
-  
+
   // If only one URL, return it directly
   if (indexes.length === 1) {
     return indexes[0];
   }
-  
+
   // Merge indexes with override detection
   const mergedIndex = new Map();
   const overrides = new Map(); // Track which entries are overridden
-  
+
   // First pass: add all entries from base (first index)
   for (const [key, value] of indexes[0]) {
     mergedIndex.set(key, { ...value, __source: "base" });
   }
-  
+
   // Second pass: add/override with FanDex entries (second index)
   for (const [key, value] of indexes[1]) {
     if (mergedIndex.has(key)) {
@@ -367,7 +374,7 @@ async function loadIndexMultiple(urls, nameField, fandexLabel) {
       mergedIndex.set(key, { ...value, __source: "fandex", __fandexLabel: fandexLabel });
     }
   }
-  
+
   return mergedIndex;
 }
 
@@ -404,17 +411,17 @@ function getCapabilitiesUrlForPreset() {
   const preset = selectedPreset === "FanDex" ? selectedFanDexBase : selectedPreset;
   return { urls: [CAPABILITIES_FILE_BY_PRESET[preset] || CAPABILITIES_FILE_BY_PRESET.Core], fandexLabel: null };
 }
-function loadMoveIndex() { 
+function loadMoveIndex() {
   const config = getMovesUrlForPreset();
-  return loadIndexMultiple(config.urls, "Move", config.fandexLabel); 
+  return loadIndexMultiple(config.urls, "Move", config.fandexLabel);
 }
-function loadAbilityIndex() { 
+function loadAbilityIndex() {
   const config = getAbilitiesUrlForPreset();
-  return loadIndexMultiple(config.urls, "Name", config.fandexLabel); 
+  return loadIndexMultiple(config.urls, "Name", config.fandexLabel);
 }
-function loadCapabilityIndex() { 
+function loadCapabilityIndex() {
   const config = getCapabilitiesUrlForPreset();
-  return loadIndexMultiple(config.urls, "Name", config.fandexLabel); 
+  return loadIndexMultiple(config.urls, "Name", config.fandexLabel);
 }
 
 function clearIndexCache() {
@@ -646,15 +653,15 @@ const _typeColorCache = new Map();
 
 function getTypeColor(type) {
   if (_typeColorCache.has(type)) return _typeColorCache.get(type);
-  
+
   const dummy = document.createElement("div");
   dummy.style.display = "none";
   dummy.classList.add(`card-type-${type}`);
   document.body.appendChild(dummy);
-  
+
   const color = getComputedStyle(dummy).getPropertyValue("--type-color")?.trim() || "#999";
   document.body.removeChild(dummy);
-  
+
   _typeColorCache.set(type, color);
   return color;
 }
@@ -662,14 +669,14 @@ function getTypeColor(type) {
 function setupIcon(img, num, name, mode = "icon") {
   const slug = slugify(name || "");
   let base = mode === "full" ? "/ptu/img/pokemon/full" : "/ptu/img/pokemon/icons";
-  
+
   // For FanDex, add subdirectory based on selected dataset
   if (selectedPreset === "FanDex" && selectedLabels.size > 0) {
     const firstLabel = Array.from(selectedLabels)[0];
     const subdir = firstLabel.toLowerCase(); // "Insurgence" -> "insurgence"
     base = `${base}/${subdir}`;
   }
-  
+
   // Use the first pattern (others could be tried if you add more)
   img.src = CFG.iconPatterns[0](base, num, slug);
 }
@@ -1511,16 +1518,16 @@ function buildTypeSidebar(all, onChange) {
     typesBox.querySelector("#filter-move")?.addEventListener("input", debounce(callOnChange, 150));
     typesBox.querySelector("#filter-ability")?.addEventListener("input", debounce(callOnChange, 150));
     typesBox.querySelector("#filter-capability")?.addEventListener("input", debounce(callOnChange, 150));
-    
+
     const stageContainer = typesBox.querySelector("#evolution-stage-filters");
     if (stageContainer) {
       stageContainer.addEventListener("click", (ev) => {
         const btn = ev.target;
         if (!(btn instanceof HTMLButtonElement) || !btn.hasAttribute("data-stage")) return;
-        
+
         const stage = btn.getAttribute("data-stage");
         const isSelected = btn.getAttribute("data-selected") === "1";
-        
+
         if (isSelected) {
           SELECTED_EVOLUTION_STAGES.delete(stage);
           btn.setAttribute("data-selected", "0");
@@ -1668,16 +1675,16 @@ function getPokemonIsLastEvolution(p) {
 
 function pokemonMatchesEvolutionStages(p, selectedStages) {
   if (!selectedStages || selectedStages.size === 0) return true;
-  
+
   const current = getPokemonEvolutionStage(p);
   if (current === null) return true; // Include if no evolution data
-  
+
   if (selectedStages.has("final")) {
     if (getPokemonIsLastEvolution(p)) return true;
   }
-  
+
   if (selectedStages.has(String(current))) return true;
-  
+
   return false;
 }
 
@@ -1797,28 +1804,28 @@ function buildSourceMenu(onChange) {
       console.error(`No mechanics file found for ${fandexLabel}`);
       return;
     }
-    
+
     const modalTitle = $("#mechanicsModalLabel");
     const modalBody = $("#mechanicsModalBody");
-    
+
     if (modalTitle) {
       modalTitle.textContent = `${fandexLabel} — Special Mechanics`;
     }
-    
+
     if (modalBody) {
       modalBody.innerHTML = '<p class="text-muted">Loading...</p>';
     }
-    
+
     try {
       const url = `${MECHANICS_BASE}/${mechanicsFile}`;
       const response = await fetch(url);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const html = await response.text();
-      
+
       if (modalBody) {
         modalBody.innerHTML = html;
       }
-      
+
       // Open the modal
       const modalEl = $("#mechanicsModal");
       if (modalEl) {
@@ -1836,43 +1843,43 @@ function buildSourceMenu(onChange) {
   function renderPresetFiles() {
     const box = wrap.querySelector("#preset-files-list");
     const fandexBaseBox = wrap.querySelector("#fandex-base-box");
-    
+
     // Show/hide the "Base Dataset" box for FanDex
     if (fandexBaseBox) {
       fandexBaseBox.style.display = selectedPreset === "FanDex" ? "block" : "none";
     }
-    
+
     const lbls = PRESETS[selectedPreset] || [];
     const isFanDex = selectedPreset === "FanDex";
-    
+
     // For FanDex, no checkbox checked by default
     const defaultChecked = selectedPreset === "FanDex" ? false : (selectedLabels.size === 0 || selectedLabels.has);
-    
+
     box.innerHTML = lbls.map(lbl => {
       const id = `pdx-file-${lbl.replace(/[^a-z0-9]+/gi, "-")}`;
-      const checked = selectedPreset === "FanDex" 
+      const checked = selectedPreset === "FanDex"
         ? (selectedLabels.has(lbl) ? "checked" : "")
         : ((selectedLabels.size === 0 || selectedLabels.has(lbl)) ? "checked" : "");
-      
+
       // Check if this FanDex has a mechanics file
       const hasMechanics = isFanDex && FANDEX_MECHANICS_FILES[lbl];
-      const mechanicsBtn = hasMechanics 
+      const mechanicsBtn = hasMechanics
         ? `<button class="btn btn-sm btn-outline-info ms-1" data-mechanics-fandex="${lbl}" title="View ${lbl} Mechanics" style="padding: 0.1rem 0.4rem; font-size: 0.75rem;">📖</button>`
         : "";
-      
+
       // Check if this FanDex has a source URL
       const hasSource = isFanDex && FANDEX_SOURCE_URLS[lbl];
-      const sourceBtn = hasSource 
+      const sourceBtn = hasSource
         ? `<a href="${FANDEX_SOURCE_URLS[lbl]}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary ms-1" title="View ${lbl} Source" style="padding: 0.1rem 0.4rem; font-size: 0.75rem;">🔗</a>`
         : "";
-      
+
       return `<div class="form-check d-flex align-items-center">
           <input class="form-check-input" type="checkbox" id="${id}" data-label="${lbl}" ${checked}>
           <label class="form-check-label flex-grow-1" for="${id}">${lbl}</label>
           ${mechanicsBtn}${sourceBtn}
         </div>`;
     }).join("");
-    
+
     box.querySelectorAll('input[type="checkbox"]').forEach(cb => {
       cb.addEventListener("change", () => {
         selectedLabels.clear();
@@ -1880,7 +1887,7 @@ function buildSourceMenu(onChange) {
         reload();
       });
     });
-    
+
     // Add event listeners for mechanics buttons
     box.querySelectorAll('[data-mechanics-fandex]').forEach(btn => {
       btn.addEventListener("click", async (e) => {
@@ -1918,7 +1925,7 @@ function buildSourceMenu(onChange) {
     const fb = $("#pokesheets-feedback");
     if (fb) fb.textContent = "";
   });
-  
+
   wrap.querySelector("#btn-ptugen")?.addEventListener("click", () => {
     window.open("https://ptu-gen.onrender.com", "_blank", "noopener,noreferrer");
   });
@@ -1927,7 +1934,7 @@ function buildSourceMenu(onChange) {
   wrap.addEventListener("change", (ev) => {
     const tgt = ev.target;
     if (!(tgt instanceof HTMLInputElement)) return;
-    
+
     // Handle main preset radios
     if (tgt.name === "preset" && tgt.checked) {
       const id = tgt.id;
@@ -1935,7 +1942,7 @@ function buildSourceMenu(onChange) {
       else if (id.endsWith("community")) selectedPreset = "Community";
       else if (id.endsWith("homebrew")) selectedPreset = "Homebrew";
       else if (id.endsWith("fandex")) selectedPreset = "FanDex";
-      
+
       // For FanDex, don't select anything by default
       if (selectedPreset === "FanDex") {
         selectedLabels.clear();
@@ -1945,7 +1952,7 @@ function buildSourceMenu(onChange) {
       renderPresetFiles();
       reload();
     }
-    
+
     // Handle Base Dataset radios for FanDex
     if (tgt.name === "fandex-base" && tgt.checked) {
       selectedFanDexBase = tgt.value;
@@ -2147,7 +2154,7 @@ export async function loadPokedexPage() {
     savePokedexState($("#dex-search")?.value || "", activeTypes(), currentTypeMatchMode());
     renderGrid(filterRows(data));
   });
-  
+
   // Restaurer l'état depuis le hash après que les filtres soient construits
   const state = loadPokedexState();
   if (state.query) {
@@ -2166,7 +2173,7 @@ export async function loadPokedexPage() {
     if (modeRadio) modeRadio.checked = true;
     TYPE_MATCH_MODE = state.mode;
   }
-  
+
   wireSearch(data);
   renderGrid(filterRows(data));
 }
@@ -2190,7 +2197,7 @@ document.addEventListener("click", (e) => {
   e.preventDefault();
   const number = a.getAttribute("data-dex-number");
   const species = a.getAttribute("data-dex-species");
-  
+
   // Prioritize exact species name match (handles regional forms like "Raichu Alola")
   let target = null;
   if (species) {
@@ -2205,6 +2212,6 @@ document.addEventListener("click", (e) => {
       String(p.Number) === String(number)
     );
   }
-  
+
   if (target) openDetail(target);
 });
