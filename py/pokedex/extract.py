@@ -31,8 +31,8 @@ def split_commas_outside_parens(text: str):
     return parts
 
 
-PDF_PATH = "InsurgenceDex 1.05.pdf"
-OUT_JSON = "../../ptu/data/pokedex/pokedex_insurgence.json"
+PDF_PATH = "SageDex 1.05.pdf"
+OUT_JSON = "../../ptu/data/pokedex/pokedex_sage.json"
 OUT_LOG = "pokedex_extraction.log"
 
 # --- Logging setup ---
