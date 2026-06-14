@@ -52,6 +52,7 @@ const PRESETS = {
     "PaldeaDex (Community Homebrew)",
   ],
   FanDex: [
+    "Variant",
     "Insurgence",
     "Sage",
     "Uranium"
@@ -59,6 +60,7 @@ const PRESETS = {
 };
 
 const FANDEX_FILES = {
+  "Variant": "pokedex_variant.json",
   "Insurgence": "pokedex_insurgence.min.json",
   "Sage": "pokedex_sage.min.json",
   "Uranium": "pokedex_uranium.min.json"
@@ -83,12 +85,14 @@ const FANDEX_CAPABILITIES_FILES = {
 };
 
 const FANDEX_MECHANICS_FILES = {
+  "Variant": "variant_mechanics.html",
   "Insurgence": "insurgence_mechanics.html",
   "Sage": "sage_mechanics.html",
   "Uranium": "uranium_mechanics.html"
 };
 
 const FANDEX_SOURCE_URLS = {
+  "Variant": "https://docs.google.com/document/d/1Y686fpUCixqBgic_NW_Wrk7X38vI9sqEiSMwFKRKWW0/edit?tab=t.0#bookmark=id.wzm669exkjej",
   "Insurgence": "https://docs.google.com/document/d/1Y686fpUCixqBgic_NW_Wrk7X38vI9sqEiSMwFKRKWW0/edit?tab=t.0#bookmark=id.5l96it1gtgpk",
   "Sage": "https://docs.google.com/document/d/1Y686fpUCixqBgic_NW_Wrk7X38vI9sqEiSMwFKRKWW0/edit?tab=t.0#bookmark=id.esoj8x4i3as3",
   "Uranium": "https://docs.google.com/document/d/1Y686fpUCixqBgic_NW_Wrk7X38vI9sqEiSMwFKRKWW0/edit?tab=t.0#bookmark=id.fxqffpi5o480"

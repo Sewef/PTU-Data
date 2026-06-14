@@ -1,6 +1,6 @@
 import json
 
-INPUT_FILE = "../../ptu/data/pokedex/fandex/pokedex_uranium.json"
+INPUT_FILE = "../../ptu/data/pokedex/fandex/pokedex_variant.json"
 OUTPUT_FILE = INPUT_FILE
 
 def normalize_gender(text):
