@@ -171,7 +171,8 @@ function __normalizeToken(s) {
     .toLowerCase()
     .replace(/[\u2013\u2014\-_]/g, "-")  // normalize dashes
     .replace(/\s+/g, " ")                // collapse spaces
-    .trim();
+    .trim()
+    .replace(/\*+$/, "");                // remove trailing asterisks
 }
 function __makeWildcardMatcher(queryRaw) {
   const q = __normalizeToken(queryRaw || "");
@@ -266,6 +267,10 @@ async function loadPokedex() {
 
 async function loadIndex(url, nameField) {
   if (_indexCache.has(url)) return _indexCache.get(url);
+  
+  // Helper to normalize ability/capability names by removing trailing "*"
+  const normalizeKey = (key) => key.trim().toLowerCase().replace(/\*+$/, '');
+  
   const p = fetchJson(url, { strict: false }).then(raw => {
     const idx = new Map();
     if (raw && typeof raw === "object" && !Array.isArray(raw)) {
@@ -273,7 +278,7 @@ async function loadIndex(url, nameField) {
 
         // Cas capabilities : la valeur est un STRING
         if (typeof obj === "string") {
-          idx.set(key.trim().toLowerCase(), {
+          idx.set(normalizeKey(key), {
             Name: key,
             Effect: obj,
             __displayName: key
@@ -283,7 +288,7 @@ async function loadIndex(url, nameField) {
 
         // Cas normal : objet JSON structuré
         if (obj && typeof obj === "object") {
-          const k = key.trim().toLowerCase();
+          const k = normalizeKey(key);
           obj.__displayName = key;
           idx.set(k, obj);
         }
@@ -296,7 +301,7 @@ async function loadIndex(url, nameField) {
       const name = (it?.[nameField] || it?.Move || it?.Name || "").trim();
       if (name) {
         it.__displayName = name;
-        idx.set(name.toLowerCase(), it);
+        idx.set(normalizeKey(name), it);
       }
     }
     return idx;
@@ -1940,10 +1945,10 @@ async function openMoveModalByName(moveName) {
 }
 
 async function openAbilityModalByName(abilityName) {
-  const name = String(abilityName || "").trim().toLowerCase();
+  const name = String(abilityName || "").trim().toLowerCase().replace(/\*+$/, '');
   if (!name) return;
   const idx = await loadAbilityIndex();
-  const ab = idx.get(name) || idx.get(name.split('(')[0].trim()) || null;
+  const ab = idx.get(name) || idx.get(name.split('(')[0].trim().replace(/\*+$/, '')) || null;
   const display = ab?.Name || ab?.__displayName || abilityName;
   $("#moveAbilityModalLabel").textContent = `Ability — ${display}`;
   $("#moveAbilityModalBody").innerHTML = renderAbilityDetails(ab);
@@ -1956,15 +1961,15 @@ async function openCapabilityModalByName(capNameRaw) {
 
   const idx = await loadCapabilityIndex(); // Map(keys lowercase -> obj)
 
-  // 1) Normalisation brute
-  const exact = raw.toLowerCase();
+  // 1) Normalisation brute (removing trailing *)
+  const exact = raw.toLowerCase().replace(/\*+$/, '');
 
   // 2) Recherche EXACTE
   let cap = idx.get(exact);
 
   // 3) Si "Mountable 1", chercher "Mountable X"
   if (!cap) {
-    const baseWord = raw.split(/[ (]/)[0].trim().toLowerCase(); // "mountable"
+    const baseWord = raw.split(/[ (]/)[0].trim().toLowerCase().replace(/\*+$/, ''); // "mountable"
     const maybe = Array.from(idx.entries()).find(([key]) =>
       key.startsWith(baseWord)   // mountable x
     );
@@ -1973,7 +1978,7 @@ async function openCapabilityModalByName(capNameRaw) {
 
   // 4) Cas Naturewalk (Forest) → chercher juste "naturewalk"
   if (!cap) {
-    const base = raw.toLowerCase().split("(")[0].trim(); // "naturewalk"
+    const base = raw.toLowerCase().split("(")[0].trim().replace(/\*+$/, ''); // "naturewalk"
     const maybe2 = idx.get(base);
     if (maybe2) cap = maybe2;
   }
