@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 
 def main():
-    input_file = Path("../../ptu/data/pokedex/pokedex_insurgence.json")
+    input_file = Path("../../ptu/data/pokedex/fandex/pokedex_sage.json")
     output_file = input_file
     
     # Load the data
@@ -21,7 +21,7 @@ def main():
         return
     
     # Add Number field starting from 727
-    start_number = 727
+    start_number = 1
     for i, pokemon in enumerate(data):
         if isinstance(pokemon, dict):
             # Create new dict with Number right after Species
@@ -36,7 +36,7 @@ def main():
     with output_file.open("w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     
-    print(f"✓ Added Number field to {len(data)} Pokémon (727-{726 + len(data)})")
+    print(f"✓ Added Number field to {len(data)} Pokémon")
 
 if __name__ == "__main__":
     main()

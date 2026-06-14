@@ -18262,18 +18262,18 @@
       },
       {
         "Stage": 2,
-        "Minimum Level": 20,
-        "Species": "Caranox"
+        "Minimum Level": 2,
+        "Species": "Caranox  0"
       },
       {
         "Stage": 2,
-        "Minimum Level": 20,
-        "Species": "Carajoule"
+        "Minimum Level": 2,
+        "Species": "Carajoule  0"
       },
       {
         "Stage": 2,
-        "Minimum Level": 20,
-        "Species": "Caracrust"
+        "Minimum Level": 2,
+        "Species": "Caracrust  0"
       }
     ],
     "Size Information": {
@@ -18630,8 +18630,8 @@
       },
       {
         "Stage": 2,
-        "Minimum Level": 20,
-        "Species": "Caranox"
+        "Minimum Level": 2,
+        "Species": "Caranox  0"
       }
     ],
     "Size Information": {
@@ -19105,8 +19105,8 @@
       },
       {
         "Stage": 2,
-        "Minimum Level": 20,
-        "Species": "Carajoule"
+        "Minimum Level": 2,
+        "Species": "Carajoule  0"
       }
     ],
     "Size Information": {
@@ -53196,8 +53196,7 @@
     }
   },
   {
-    "Species": "Noxial",
-    "Form": "Exothermic",
+    "Species": "Noxial Exothermi C",
     "Number": 102,
     "Base Stats": {
       "HP": 4,
@@ -53717,10 +53716,8 @@
     }
   },
   {
-    "Species": "Noxial",
-    "Form": "Endothermic",
+    "Species": "Noxial Endothermic",
     "Number": 102,
-    "Icon": "102-endothermic",
     "Base Stats": {
       "HP": 4,
       "Attack": 6,
@@ -60409,8 +60406,8 @@
       },
       {
         "Stage": 2,
-        "Minimum Level": 25,
-        "Species": "Trikotta"
+        "Minimum Level": 2,
+        "Species": "Trikotta  5"
       },
       {
         "Stage": 3,
@@ -60934,8 +60931,8 @@
       },
       {
         "Stage": 2,
-        "Minimum Level": 25,
-        "Species": "Trikotta"
+        "Minimum Level": 2,
+        "Species": "Trikotta  5"
       },
       {
         "Stage": 3,
@@ -88325,14 +88322,12 @@
       {
         "Stage": 2,
         "Minimum Level": 25,
-        "Species": "Macuarrior",
-        "Condition": "Male"
+        "Species": "Macuarrior ; Male"
       },
       {
         "Stage": 2,
         "Minimum Level": 25,
-        "Species": "Ocerumi",
-        "Condition": "Female"
+        "Species": "Ocerumi ; Female"
       }
     ],
     "Size Information": {
@@ -88783,8 +88778,7 @@
       {
         "Stage": 2,
         "Minimum Level": 25,
-        "Species": "Macuarrior",
-        "Condition": "Male"
+        "Species": "Macuarrior ; Male"
       }
     ],
     "Size Information": {
@@ -89285,8 +89279,7 @@
       {
         "Stage": 2,
         "Minimum Level": 25,
-        "Species": "Ocerumi",
-        "Condition": "Female"
+        "Species": "Ocerumi ; Female"
       }
     ],
     "Size Information": {
@@ -120370,8 +120363,7 @@
           "Method": "Tutor"
         }
       ]
-    },
-    "Legendary": true
+    }
   },
   {
     "Species": "Erion",
@@ -120932,8 +120924,7 @@
           "Method": "Tutor"
         }
       ]
-    },
-    "Legendary": true
+    }
   },
   {
     "Species": "Erace",
@@ -121510,8 +121501,7 @@
           "Method": "Tutor"
         }
       ]
-    },
-    "Legendary": true
+    }
   },
   {
     "Species": "Patama",
@@ -122070,8 +122060,7 @@
           "Method": "Tutor"
         }
       ]
-    },
-    "Legendary": true
+    }
   },
   {
     "Species": "Machima",
@@ -122607,8 +122596,7 @@
           "Method": "Tutor"
         }
       ]
-    },
-    "Legendary": true
+    }
   },
   {
     "Species": "Yacuma",
@@ -123178,8 +123166,7 @@
           "Method": "Tutor"
         }
       ]
-    },
-    "Legendary": true
+    }
   },
   {
     "Species": "Quetzar Statue Forme",
@@ -123887,14 +123874,11 @@
           "Method": "Tutor"
         }
       ]
-    },
-    "Legendary": true
+    }
   },
   {
-    "Species": "Quetzar",
-    "Form": "Space",
-    "Number": 227,
-    "Icon": "227-space",
+    "Species": "Quetzar Space Forme",
+    "Number": 228,
     "Base Stats": {
       "HP": 11,
       "Attack": 9,
@@ -124611,12 +124595,11 @@
           "Method": "Tutor"
         }
       ]
-    },
-    "Legendary": true
+    }
   },
   {
     "Species": "Xochi",
-    "Number": 228,
+    "Number": 229,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -125266,12 +125249,11 @@
           "Method": "Tutor"
         }
       ]
-    },
-    "Legendary": true
+    }
   },
   {
     "Species": "Xotec",
-    "Number": 229,
+    "Number": 230,
     "Base Stats": {
       "HP": 10,
       "Attack": 10,
@@ -125896,7 +125878,6 @@
           "Method": "Tutor"
         }
       ]
-    },
-    "Legendary": true
+    }
   }
 ]
