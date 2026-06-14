@@ -103885,9 +103885,548 @@
       "Guster"
     ],
     "Skills": {
+      "Athletics": "5d6+2",
       "Acrobatics": "4d6",
-      "Combat": "5d6+2"
+      "Combat": "5d6+2",
+      "Stealth": "1d6",
+      "Perception": "2d6",
+      "Focus": "2d6"
     },
-    "Moves": {}
+    "Confined": "If Hoopa’s Confined Form is exposed to the Cloud Bottle and the bottle is uncorked, the stormy spirit within the bottle will change Hoopa to its Unbound Forme for three full days. After that, the Cloud Bottle cannot be activated again for three days. If the Cloud Bottle is destroyed, Hoopa becomes permanently Unbound until a new Cloud Bottle is created and used to seal the stormy power controlling Hoopa.\nWhile Unbound, Hoopa is always Enraged and cannot be cured of this condition. Additionally some of its Moves are changed to different Electric Type Moves, provided that it does not already have them on its Movelist (if it does, the move that would become a duplicate remains unchanged):\n» Fairy Wind becomes Thunder Shock.\n» Brine becomes Thunderbolt.\n» Mirror Move becomes Thunder.\n» Aeroblast becomes Fusion Bolt",
+    "Moves": {
+      "Level Up Move List": [
+        {
+          "Level": 1,
+          "Move": "Tailwind",
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
+          "Level": 1,
+          "Move": "Defog",
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
+          "Level": 1,
+          "Move": "Mist",
+          "Type": "Ice"
+        },
+        {
+          "Level": 1,
+          "Move": "Gust",
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
+          "Level": 6,
+          "Move": "Fairy Wind",
+          "Type": "Fairy"
+        },
+        {
+          "Level": 10,
+          "Move": "Icy Wind",
+          "Type": "Ice"
+        },
+        {
+          "Level": 15,
+          "Move": "Safeguard",
+          "Type": "Normal"
+        },
+        {
+          "Level": 19,
+          "Move": "Air Cutter",
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
+          "Level": 25,
+          "Move": "Razor Wind",
+          "Type": "Normal"
+        },
+        {
+          "Level": 29,
+          "Move": "Agility",
+          "Type": "Psychic"
+        },
+        {
+          "Level": 35,
+          "Move": "Brine",
+          "Type": "Water"
+        },
+        {
+          "Level": 46,
+          "Move": "Fly",
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
+          "Level": 50,
+          "Move": "Mirror Move",
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
+          "Level": 55,
+          "Move": "Weather Ball",
+          "Type": "Normal"
+        },
+        {
+          "Level": 68,
+          "Move": "Nasty Plot",
+          "Type": "Dark"
+        },
+        {
+          "Level": 75,
+          "Move": "Hurricane",
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
+          "Level": 85,
+          "Move": "Aeroblast",
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ]
+        }
+      ],
+      "TM/HM Move List": [
+        {
+          "Move": "Fly",
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Calm Mind",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Toxic",
+          "Type": "Poison",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Hidden Power",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Sunny Day",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Taunt",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Ice Beam",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Blizzard",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Hyper Beam",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Light Screen",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Protect",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rain Dance",
+          "Type": "Water",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Safeguard",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Frustration",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Thunderbolt",
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Thunder",
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Return",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Double Team",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Reflect",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Aerial Ace",
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Torment",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Facade",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Rest",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Thief",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Round",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Focus Blast",
+          "Type": "Fighting",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Energy Ball",
+          "Type": "Grass",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Fling",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Sky Drop",
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Charge Beam",
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Quash",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Acrobatics",
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Embargo",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Giga Impact",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Flash",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Volt Switch",
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Thunder Wave",
+          "Type": "Electric",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Psych Up",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Grass Knot",
+          "Type": "Grass",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Swagger",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Sleep Talk",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Substitute",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Wild Charge",
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Machine"
+        },
+        {
+          "Move": "Confide",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Machine"
+        }
+      ],
+      "Egg Move List": [],
+      "Tutor Move List": [
+        {
+          "Move": "Aeroblast",
+          "Type": "Flying",
+          "Tags": [
+            "N",
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Air Cutter",
+          "Type": "Flying",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Block",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Covet",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Dual Chop",
+          "Type": "Dragon",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Fire Punch",
+          "Type": "Fire",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Foul Play",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Hyper Voice",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Ice Punch",
+          "Type": "Ice",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Knock Off",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Last Resort",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Recycle",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Role Play",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Shock Wave",
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Signal Beam",
+          "Type": "Bug",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Snatch",
+          "Type": "Dark",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Snore",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Thunder Punch",
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Trick",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Uproar",
+          "Type": "Normal",
+          "Tags": [],
+          "Method": "Tutor"
+        },
+        {
+          "Move": "Zen Headbutt",
+          "Type": "Psychic",
+          "Tags": [],
+          "Method": "Tutor"
+        }
+      ]
+    }
   }
 ]
