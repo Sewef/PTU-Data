@@ -58,6 +58,18 @@ const FANDEX_FILES = {
   "Insurgence": "pokedex_insurgence.json"
 };
 
+const FANDEX_MOVES_FILES = {
+  "Insurgence": "moves_insurgence.json"
+};
+
+const FANDEX_ABILITIES_FILES = {
+  "Insurgence": "abilities_insurgence.json"
+};
+
+const FANDEX_CAPABILITIES_FILES = {
+  "Insurgence": "capabilities_insurgence.json"
+};
+
 const MOVES_BASE = "/ptu/data/moves";
 const ABILITIES_BASE = "/ptu/data/abilities";
 const CAPABILITIES_BASE = "/ptu/data/capabilities";
@@ -99,7 +111,7 @@ const SHOWN_TAGS = new Set(["N", "Stab"]);
 
 let selectedPreset = window.selectedPreset || "Core";
 let selectedLabels = new Set(PRESETS[selectedPreset] || []);
-let selectedFanDexBase = window.selectedPreset || "Core"; // Base dataset pour FanDex (Core, Community ou Homebrew)
+let selectedFanDexBase = "Core"; // Base dataset for FanDex (Core, Community or Homebrew)
 
 // =========================
 // Hash state management
@@ -293,21 +305,94 @@ async function loadIndex(url, nameField) {
   return p;
 }
 
+async function loadIndexMultiple(urls, nameField, fandexLabel) {
+  if (!Array.isArray(urls) || urls.length === 0) {
+    return new Map();
+  }
+  
+  // Load all indexes
+  const indexes = await Promise.all(urls.map(url => loadIndex(url, nameField)));
+  
+  // If only one URL, return it directly
+  if (indexes.length === 1) {
+    return indexes[0];
+  }
+  
+  // Merge indexes with override detection
+  const mergedIndex = new Map();
+  const overrides = new Map(); // Track which entries are overridden
+  
+  // First pass: add all entries from base (first index)
+  for (const [key, value] of indexes[0]) {
+    mergedIndex.set(key, { ...value, __source: "base" });
+  }
+  
+  // Second pass: add/override with FanDex entries (second index)
+  for (const [key, value] of indexes[1]) {
+    if (mergedIndex.has(key)) {
+      // Override detected
+      const baseEntry = mergedIndex.get(key);
+      mergedIndex.set(key, {
+        ...value,
+        __source: "fandex",
+        __fandexLabel: fandexLabel,
+        __override: true,
+        __baseEntry: baseEntry
+      });
+      overrides.set(key, true);
+    } else {
+      mergedIndex.set(key, { ...value, __source: "fandex", __fandexLabel: fandexLabel });
+    }
+  }
+  
+  return mergedIndex;
+}
+
 function getMovesUrlForPreset() {
+  if (selectedPreset === "FanDex" && selectedLabels.size > 0) {
+    const firstLabel = Array.from(selectedLabels)[0];
+    const baseUrl = MOVES_FILE_BY_PRESET[selectedFanDexBase] || MOVES_FILE_BY_PRESET.Core;
+    const fandexFile = FANDEX_MOVES_FILES[firstLabel];
+    const fandexUrl = fandexFile ? `${MOVES_BASE}/fandex/${fandexFile}` : null;
+    return fandexUrl ? { urls: [baseUrl, fandexUrl], fandexLabel: firstLabel } : { urls: [baseUrl], fandexLabel: null };
+  }
   const preset = selectedPreset === "FanDex" ? selectedFanDexBase : selectedPreset;
-  return MOVES_FILE_BY_PRESET[preset] || MOVES_FILE_BY_PRESET.Core;
+  return { urls: [MOVES_FILE_BY_PRESET[preset] || MOVES_FILE_BY_PRESET.Core], fandexLabel: null };
 }
 function getAbilitiesUrlForPreset() {
+  if (selectedPreset === "FanDex" && selectedLabels.size > 0) {
+    const firstLabel = Array.from(selectedLabels)[0];
+    const baseUrl = ABILITIES_FILE_BY_PRESET[selectedFanDexBase] || ABILITIES_FILE_BY_PRESET.Core;
+    const fandexFile = FANDEX_ABILITIES_FILES[firstLabel];
+    const fandexUrl = fandexFile ? `${ABILITIES_BASE}/fandex/${fandexFile}` : null;
+    return fandexUrl ? { urls: [baseUrl, fandexUrl], fandexLabel: firstLabel } : { urls: [baseUrl], fandexLabel: null };
+  }
   const preset = selectedPreset === "FanDex" ? selectedFanDexBase : selectedPreset;
-  return ABILITIES_FILE_BY_PRESET[preset] || ABILITIES_FILE_BY_PRESET.Core;
+  return { urls: [ABILITIES_FILE_BY_PRESET[preset] || ABILITIES_FILE_BY_PRESET.Core], fandexLabel: null };
 }
 function getCapabilitiesUrlForPreset() {
+  if (selectedPreset === "FanDex" && selectedLabels.size > 0) {
+    const firstLabel = Array.from(selectedLabels)[0];
+    const baseUrl = CAPABILITIES_FILE_BY_PRESET[selectedFanDexBase] || CAPABILITIES_FILE_BY_PRESET.Core;
+    const fandexFile = FANDEX_CAPABILITIES_FILES[firstLabel];
+    const fandexUrl = fandexFile ? `${CAPABILITIES_BASE}/fandex/${fandexFile}` : null;
+    return fandexUrl ? { urls: [baseUrl, fandexUrl], fandexLabel: firstLabel } : { urls: [baseUrl], fandexLabel: null };
+  }
   const preset = selectedPreset === "FanDex" ? selectedFanDexBase : selectedPreset;
-  return CAPABILITIES_FILE_BY_PRESET[preset] || CAPABILITIES_FILE_BY_PRESET.Core;
+  return { urls: [CAPABILITIES_FILE_BY_PRESET[preset] || CAPABILITIES_FILE_BY_PRESET.Core], fandexLabel: null };
 }
-function loadMoveIndex() { return loadIndex(getMovesUrlForPreset(), "Move"); }
-function loadAbilityIndex() { return loadIndex(getAbilitiesUrlForPreset(), "Name"); }
-function loadCapabilityIndex() { return loadIndex(getCapabilitiesUrlForPreset(), "Name"); }
+function loadMoveIndex() { 
+  const config = getMovesUrlForPreset();
+  return loadIndexMultiple(config.urls, "Move", config.fandexLabel); 
+}
+function loadAbilityIndex() { 
+  const config = getAbilitiesUrlForPreset();
+  return loadIndexMultiple(config.urls, "Name", config.fandexLabel); 
+}
+function loadCapabilityIndex() { 
+  const config = getCapabilitiesUrlForPreset();
+  return loadIndexMultiple(config.urls, "Name", config.fandexLabel); 
+}
 
 function clearIndexCache() {
   _indexCache.clear();
@@ -938,6 +1023,32 @@ function formatDamageBase(mv) {
 function renderMoveDetails(mv) {
   if (!mv) return '<p class="text-muted mb-0">Cannot find move.</p>';
 
+  // Display FanDex source badge
+  let sourceBadge = "";
+  if (mv.__source === "fandex" && mv.__fandexLabel) {
+    sourceBadge = `<span class="badge bg-info mb-2">Source: ${escapeHtml(mv.__fandexLabel)}</span><br>`;
+  }
+
+  // Check for override warning
+  let overrideWarning = "";
+  if (mv.__override && mv.__baseEntry) {
+    overrideWarning = `
+      <div class="alert alert-warning mb-3" role="alert">
+        <strong>⚠️ Warning - Override:</strong> This move exists in both the base dataset and FanDex.
+        <details class="mt-2">
+          <summary style="cursor: pointer; user-select: none;">Show base version</summary>
+          <div class="mt-2 p-2 border rounded bg-light">
+            ${renderMoveDetailsCore(mv.__baseEntry)}
+          </div>
+        </details>
+      </div>
+    `;
+  }
+
+  return sourceBadge + overrideWarning + renderMoveDetailsCore(mv);
+}
+
+function renderMoveDetailsCore(mv) {
   const row = (k, v) =>
     v ? `<div><span class="text-muted">${k}:</span> ${escapeHtml(String(v))}</div>` : "";
 
@@ -996,6 +1107,32 @@ function renderMoveDetails(mv) {
 function renderAbilityDetails(ab) {
   if (!ab) return '<p class="text-muted mb-0">Unknown Ability.</p>';
 
+  // Display FanDex source badge
+  let sourceBadge = "";
+  if (ab.__source === "fandex" && ab.__fandexLabel) {
+    sourceBadge = `<span class="badge bg-info mb-2">Source: ${escapeHtml(ab.__fandexLabel)}</span><br>`;
+  }
+
+  // Check for override warning
+  let overrideWarning = "";
+  if (ab.__override && ab.__baseEntry) {
+    overrideWarning = `
+      <div class="alert alert-warning mb-3" role="alert">
+        <strong>⚠️ Warning - Override:</strong> This ability exists in both the base dataset and FanDex.
+        <details class="mt-2">
+          <summary style="cursor: pointer; user-select: none;">Show base version</summary>
+          <div class="mt-2 p-2 border rounded bg-light">
+            ${renderAbilityDetailsCore(ab.__baseEntry)}
+          </div>
+        </details>
+      </div>
+    `;
+  }
+
+  return sourceBadge + overrideWarning + renderAbilityDetailsCore(ab);
+}
+
+function renderAbilityDetailsCore(ab) {
   const row = (k, v) => v ? `<div><span class="text-muted">${k}:</span> ${escapeHtml(String(v))}</div>` : "";
   const isBlank = (val) => {
     if (val == null) return true;
@@ -1040,10 +1177,33 @@ function renderAbilityDetails(ab) {
 function renderCapabilityDetails(cap) {
   if (!cap) return '<p class="text-muted mb-0">Unknown Capability.</p>';
 
-  // cap.Effect est ajouté automatiquement par loadIndex() avec notre patch
+  // Display FanDex source badge
+  let sourceBadge = "";
+  if (cap.__source === "fandex" && cap.__fandexLabel) {
+    sourceBadge = `<span class="badge bg-info mb-2">Source: ${escapeHtml(cap.__fandexLabel)}</span><br>`;
+  }
+
+  // Check for override warning
+  let overrideWarning = "";
+  if (cap.__override && cap.__baseEntry) {
+    const baseText = cap.__baseEntry.Effect || cap.__baseEntry.effect || String(cap.__baseEntry) || "";
+    overrideWarning = `
+      <div class="alert alert-warning mb-3" role="alert">
+        <strong>⚠️ Warning - Override:</strong> This capability exists in both the base dataset and FanDex.
+        <details class="mt-2">
+          <summary style="cursor: pointer; user-select: none;">Show base version</summary>
+          <div class="mt-2 p-2 border rounded bg-light">
+            ${escapeHtml(baseText)}
+          </div>
+        </details>
+      </div>
+    `;
+  }
+
+  // cap.Effect is automatically added by loadIndex() with our patch
   const text = cap.Effect || cap.effect || String(cap) || "";
 
-  return `${escapeHtml(text)}
+  return `${sourceBadge}${overrideWarning}${escapeHtml(text)}
   `;
 }
 
