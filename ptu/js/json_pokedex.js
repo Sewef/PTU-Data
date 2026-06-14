@@ -894,7 +894,7 @@ function renderEvolutionList(evos, base, depth = 0) {
       `${level ? ` [${escapeHtml(level)}]` : ""}` +
       `${cond ? ` (${escapeHtml(cond)})` : ""}`;
 
-    const label = `${stade} - ${speciesLabel}${extra}`;
+    const label = `${stade} - ${speciesLabel} ${extra}`;
 
     return `<li class="list-group-item d-flex align-items-center"><span class="flex-grow-1">${label}</span></li>`;
   }).join("");
