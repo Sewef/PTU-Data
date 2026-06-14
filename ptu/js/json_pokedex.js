@@ -51,31 +51,40 @@ const PRESETS = {
     "HisuiDex (Homebrew)",
     "PaldeaDex (Community Homebrew)",
   ],
-  FanDex: ["Insurgence"],
+  FanDex: [
+    "Insurgence",
+    "Sage"
+  ],
 };
 
 const FANDEX_FILES = {
-  "Insurgence": "pokedex_insurgence.min.json"
+  "Insurgence": "pokedex_insurgence.min.json",
+  "Sage": "pokedex_sage.json"
 };
 
 const FANDEX_MOVES_FILES = {
-  "Insurgence": "moves_insurgence.min.json"
+  "Insurgence": "moves_insurgence.min.json",
+  "Sage": "moves_sage.json"
 };
 
 const FANDEX_ABILITIES_FILES = {
-  "Insurgence": "abilities_insurgence.min.json"
+  "Insurgence": "abilities_insurgence.min.json",
+  "Sage": "abilities_sage.json"
 };
 
 const FANDEX_CAPABILITIES_FILES = {
-  "Insurgence": "capabilities_insurgence.min.json"
+  "Insurgence": "capabilities_insurgence.min.json",
+  "Sage": "capabilities_sage.json"
 };
 
 const FANDEX_MECHANICS_FILES = {
-  "Insurgence": "insurgence_mechanics.html"
+  "Insurgence": "insurgence_mechanics.html",
+  "Sage": "sage_mechanics.html"
 };
 
 const FANDEX_SOURCE_URLS = {
-  "Insurgence": "https://docs.google.com/document/d/1Y686fpUCixqBgic_NW_Wrk7X38vI9sqEiSMwFKRKWW0/edit?tab=t.0#bookmark=id.5l96it1gtgpk"
+  "Insurgence": "https://docs.google.com/document/d/1Y686fpUCixqBgic_NW_Wrk7X38vI9sqEiSMwFKRKWW0/edit?tab=t.0#bookmark=id.5l96it1gtgpk",
+  "Sage": "https://docs.google.com/document/d/1Y686fpUCixqBgic_NW_Wrk7X38vI9sqEiSMwFKRKWW0/edit?tab=t.0#bookmark=id.esoj8x4i3as3"
 };
 
 const MOVES_BASE = "/ptu/data/moves";
