@@ -59,22 +59,22 @@ const PRESETS = {
 
 const FANDEX_FILES = {
   "Insurgence": "pokedex_insurgence.min.json",
-  "Sage": "pokedex_sage.json"
+  "Sage": "pokedex_sage.min.json"
 };
 
 const FANDEX_MOVES_FILES = {
   "Insurgence": "moves_insurgence.min.json",
-  "Sage": "moves_sage.json"
+  "Sage": "moves_sage.min.json"
 };
 
 const FANDEX_ABILITIES_FILES = {
   "Insurgence": "abilities_insurgence.min.json",
-  "Sage": "abilities_sage.json"
+  "Sage": "abilities_sage.min.json"
 };
 
 const FANDEX_CAPABILITIES_FILES = {
   "Insurgence": "capabilities_insurgence.min.json",
-  "Sage": "capabilities_sage.json"
+  "Sage": "capabilities_sage.min.json"
 };
 
 const FANDEX_MECHANICS_FILES = {
