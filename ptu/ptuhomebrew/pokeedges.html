@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PTU Data – Poké Edges</title>
+
+  
+  <!-- Theme script must load before body to prevent flash -->
+  <script src="/ptu/js/theme-switcher.min.js"></script>
+
+  <link rel="stylesheet" href="/ptu/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/ptu/css/style.min.css">
+  <link rel="icon" type="image/png" href="/ptu/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/ptu/favicon.svg" />
+  <link rel="shortcut icon" href="/ptu/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/ptu/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="PTU-Data" />
+  <link rel="manifest" href="/ptu/site.webmanifest" />
+  <script src="/ptu/js/jquery-3.7.1.min.js"></script>
+  <script src="/ptu/js/popper.min.js"></script>
+  <script src="/ptu/js/bootstrap.min.js"></script>
+  <script src="/ptu/js/scroll-to-top.min.js"></script>
+</head>
+
+<body>
+  <div w3-include-html="header.html"></div>
+  <div class="container-fluid py-3">
+    <div class="row">
+      <aside class="col-md-2 col-sm-3">
+        <div id="sidebar" class="list-group"></div>
+      </aside>
+      <main class="col-md-10">
+        <h1 class="h4 mb-3">Poké Edges</h1>
+        <div class="search-wrap mb-3">
+          <div class="row g-2 align-items-center">
+            <div class="col-sm-6">
+              <input id="filter-search" class="form-control" placeholder="Search pokéedges..." />
+            </div>
+          </div>
+        </div>
+        <div id="cards-container" class="w-100 py-2"></div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module">
+    import { includeHTML, setActive, showPageWhenLoaded } from "/ptu/js/helpers.min.js";
+    import { loadEdges } from "/ptu/js/json_edges.min.js";
+    includeHTML(() => {
+      setActive();
+      showPageWhenLoaded();
+      loadEdges("/ptu/data/pokeedges/pokeedges_core.min.json", document.getElementById("cards-container"), 2);
+    });
+  </script>
+</body>
+
+</html>
