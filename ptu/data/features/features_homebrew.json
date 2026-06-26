@@ -8,6 +8,14 @@
         "Name": "Default",
         "features": [
           {
+            "Name": "Hello World!",
+            "Prerequisites": "Fizz",
+            "Frequency": "Buzz",
+            "Effect": "[[move:Tackle]]\n[[feature:Walk It Off]]\n[[edge:Bad Mood]]\n[[ability:Intimidate]]\n[[capability:Amorphous]]\n[[item:Basic Ball]]\n[[status:Poisoned]](EMPOUAZONAY)\n[[keyword:Double Strike]]\n[[pokeedge:Accuracy Training]]\n[[feature:Reckless Advance]]\n[[feature:Hits the Spot]]",
+            "Source": "Homebrew",
+            "Category": "Pokémon Raising and Battling"
+          },
+          {
             "Name": "Command Versatility",
             "Prerequisites": "Adept Command, Guile, or Pokémon Education",
             "Frequency": "1 AP — Free Action",
@@ -1047,7 +1055,7 @@
                 "Name": "Empowered Development",
                 "Prerequisites": "Mentor, Charm as a Mentor Skill",
                 "Target": "A Pokémon with at least 1 Tutor Point",
-                "Effect": "The target loses 1 Tutor Point, and gains any three of the following Poké Edges: Skill Improvement, Advanced Mobility, or Capability Training. A Pokémon may be targeted only once by Empowered Development. The target may gain Poké Edges this way even if they do not meet the \"Prerequisites\", however, they must still follow other limitations; Advanced Mobility can only improve a Movement Capability once, for example."
+                "Effect": "The target loses 1 Tutor Point, and gains any three of the following Poké Edges: [[capability:Skill Improvement]], [[capability:Advanced Mobility]], or [[capability:Capability Training]]. A Pokémon may be targeted only once by Empowered Development. The target may gain Poké Edges this way even if they do not meet the \"Prerequisites\", however, they must still follow other limitations; Advanced Mobility can only improve a Movement Capability once, for example."
               },
               {
                 "Name": "Corrective Learning",
@@ -1235,7 +1243,7 @@
             "Prerequisites": "Enduring Soul, Adept Athletics or Focus",
             "Frequency": "At-Will – Extended Action",
             "Target": "Your Pokémon with at least 2 Tutor Points remaining",
-            "Effect": "The target loses 2 Tutor Points, and gains the Walk It Off Feature, treated in all ways as an Ability for the target.",
+            "Effect": "The target loses 2 Tutor Points, and gains the [[feature:Walk It Off]] Feature, treated in all ways as an Ability for the target.",
             "Bonus": "You gain the Walk It Off Feature, even if you do not meet the prerequisites."
           },
           {
@@ -2226,7 +2234,7 @@
             "Name": "Insectoid Utility",
             "Prerequisites": "Type Ace (Bug)",
             "Frequency": "Static",
-            "Effect": "Your Pokémon with the following Capabilities have the upgrades below applied to them.\n» Threaded: Your Pokémon may use its Threaded attack to perform the Trip, Grapple, Push and Disarm Combat Maneuvers and ignores Weight and Size restrictions when doing so.\n» Wallclimber: Immunity to Push and Trip effects.\n» Naturewalk: Immunity to Slowed or Stuck in its appropriate Terrains.\n» Sky: Your Pokémon has a +1 bonus to its Speed Evasion.",
+            "Effect": "Your Pokémon with the following Capabilities have the upgrades below applied to them.\n» [[capability:Threaded]]: Your Pokémon may use its [[capability:Threaded]] attack to perform the Trip, Grapple, Push and Disarm Combat Maneuvers and ignores Weight and Size restrictions when doing so.\n» Wallclimber: Immunity to Push and Trip effects.\n» Naturewalk: Immunity to Slowed or Stuck in its appropriate Terrains.\n» Sky: Your Pokémon has a +1 bonus to its Speed Evasion.",
             "Source": "Core"
           },
           {
@@ -2853,8 +2861,8 @@
             "Name": "Mold the Earth",
             "Prerequisites": "Type Ace (Ground)",
             "Frequency": "Scene x2 — Free Action",
-            "Trigger": "Your Pokémon with the Groundshaper Capability uses a Ground-Type Move",
-            "Effect": "Your Pokémon may use the Groundshaper Capability as a Free Action. When used this way, Groundshaper creates Spike Hazards in each square turned into Rough or Slow Terrain. If you wish, instead of Groundshaper's normal range, you may choose to affect the square targeted by the attack and all cardinally adjacent squares. If the triggering Move is a Burst, Blast, Line, or Cone, you may choose to affect all squares in the targeted area instead.",
+            "Trigger": "Your Pokémon with the [[capability:Groundshaper]] Capability uses a Ground-Type Move",
+            "Effect": "Your Pokémon may use the [[capability:Groundshaper]] Capability as a Free Action. When used this way, [[capability:Groundshaper]] creates Spike Hazards in each square turned into Rough or Slow Terrain. If you wish, instead of [[capability:Groundshaper]]'s normal range, you may choose to affect the square targeted by the attack and all cardinally adjacent squares. If the triggering Move is a Burst, Blast, Line, or Cone, you may choose to affect all squares in the targeted area instead.",
             "Source": "Core"
           },
           {
@@ -2877,8 +2885,8 @@
             "Name": "Upheaval",
             "Prerequisites": "Mold the Earth, Master Perception or Intuition",
             "Frequency": "Daily x3 — Free Action",
-            "Trigger": "Your Pokémon uses the Groundshaper Capability, or a Move with the Groundsource keyword",
-            "Effect": "Your Pokémon may make a Trip Attempt as a Free Action against any Pokémon targeted by the Move, or standing on a square changed by the Groundshaper capability. Your Pokémon gains a bonus to their Combat Roll equal to half of your Type-Linked Skill Rank.",
+            "Trigger": "Your Pokémon uses the [[capability:Groundshaper]] Capability, or a Move with the Groundsource keyword",
+            "Effect": "Your Pokémon may make a Trip Attempt as a Free Action against any Pokémon targeted by the Move, or standing on a square changed by the [[capability:Groundshaper]] capability. Your Pokémon gains a bonus to their Combat Roll equal to half of your Type-Linked Skill Rank.",
             "Source": "Core"
           }
         ]
@@ -3978,7 +3986,7 @@
             "Tags": "[+Special Defense][Gift]",
             "Prerequisites": "Occultism Research Field, Novice Occult Education",
             "Frequency": "Static",
-            "Effect": "You gain the Psionic Sight Feature, even if you do not meet the prerequisites. Additionally, you gain the Mindlock Capability, and you and your Pokémon's attacks gain a +2 bonus to Accuracy against Psychic-, Ghost-, and Dark-Types.",
+            "Effect": "You gain the Psionic Sight Feature, even if you do not meet the prerequisites. Additionally, you gain the [[capability:Mindlock]] Capability, and you and your Pokémon's attacks gain a +2 bonus to Accuracy against Psychic-, Ghost-, and Dark-Types.",
             "Source": "Homebrew"
           },
           {
@@ -4048,7 +4056,7 @@
             "Name": "Pusher",
             "Prerequisites": "Pokémon Caretaking Research Field, Novice Pokémon Education",
             "Frequency": "Static",
-            "Effect": "Your Pokémon gain the Basic Ranged Attacks, Aura Pulse, Enticing Bait, Extended Invisibility, Far Reading, Precise Threadings, Seismometer, TK Mastery, and Trail Sniffer Poke Edges automatically if they qualify for them, without having to invest any Tutor Points.",
+            "Effect": "Your Pokémon gain the Basic Ranged Attacks, [[capability:Aura Pulse]], Enticing Bait, Extended Invisibility, Far Reading, Precise Threadings, Seismometer, TK Mastery, and Trail Sniffer Poke Edges automatically if they qualify for them, without having to invest any Tutor Points.",
             "Bonus": "If you own a Pokemon above Level 25, your Pokémon under level 25 gain +25% Experience.",
             "Source": "Homebrew"
           },
@@ -4084,15 +4092,15 @@
             "Name": "Improvised Gadgets",
             "Prerequisites": "Gadgeteer Research Field, Novice Technology Education",
             "Frequency": "Bind 2 AP — Extended Action",
-            "Target": "A willing Pokémon with the Magnetic, Zapper, or Threaded Capability",
-            "Effect": "Choose one of the Capabilities listed in the Target line that the target Pokémon has. You create a Main or Off-Hand Equipment Item usable by Trainers that grants the user the chosen Capability. Whenever a Trainer makes Struggle Attacks using Zapper through this Item, they may choose to use your Technology Education Rank tripled in place of an offensive Stat. When this Feature is Unbound, the Equipment Item breaks and cannot be repaired. You may only have X instances of this Feature Bound at once, where X is equal to half your Technology Education Rank."
+            "Target": "A willing Pokémon with the [[capability:Magnetic]], [[capability:Zapper]], or [[capability:Threaded]] Capability",
+            "Effect": "Choose one of the Capabilities listed in the Target line that the target Pokémon has. You create a Main or Off-Hand Equipment Item usable by Trainers that grants the user the chosen Capability. Whenever a Trainer makes Struggle Attacks using [[capability:Zapper]] through this Item, they may choose to use your Technology Education Rank tripled in place of an offensive Stat. When this Feature is Unbound, the Equipment Item breaks and cannot be repaired. You may only have X instances of this Feature Bound at once, where X is equal to half your Technology Education Rank."
           },
           {
             "Name": "I Meant to Do That",
             "Prerequisites": "Improvised Gadgets, Adept Technology Education",
             "Frequency": "At-Will — Special",
             "Trigger": "You must have at least one Equipment Item you created with Improvised Gadgets equipped to use this Feature.",
-            "Effect": "Choose one of your equipped items you created with Improved Gadgets. It is destroyed and cannot be repaired, and that instance of Improvised Gadgets is immediately Unbound. Use the effect below corresponding to the Capability granted by the chosen item.\n» Magnetic: You may activate this effect as a Standard Action Interrupt whenever a Steel or Electric-Type attack or an attack with a metal Weapon would hit a target within 5 meters. The attack instead misses all targets within 5 meters.\n» Threaded: Choose up to 3 targets within 4 meters and perform an AC 4 Status Attack against them as a Standard Action. All hit targets become Stuck and Trapped for one full round.\nZapper: You may activate this effect as a Swift Action upon hitting a foe with a Zapper-modified Struggle Attack. The foe is Paralyzed."
+            "Effect": "Choose one of your equipped items you created with Improved Gadgets. It is destroyed and cannot be repaired, and that instance of Improvised Gadgets is immediately Unbound. Use the effect below corresponding to the Capability granted by the chosen item.\n» [[capability:Magnetic]]: You may activate this effect as a Standard Action Interrupt whenever a Steel or Electric-Type attack or an attack with a metal Weapon would hit a target within 5 meters. The attack instead misses all targets within 5 meters.\n» [[capability:Threaded]]: Choose up to 3 targets within 4 meters and perform an AC 4 Status Attack against them as a Standard Action. All hit targets become Stuck and Trapped for one full round.\n[[capability:Zapper]]: You may activate this effect as a Swift Action upon hitting a foe with a [[capability:Zapper]]-modified Struggle Attack. The foe is Paralyzed."
           },
           {
             "Name": "Capsule Science",
@@ -4105,7 +4113,7 @@
             "Prerequisites": "Capsule Science, Master Technology Education",
             "Frequency": "Daily x3 — Extended Action",
             "Target": "A willing Pokémon with one of the Capabilities listed below",
-            "Effect": "Choose one of the Capabilities below which the target Pokémon has. You create a consumable item with the effect below, depending on the chosen Capability. All unused items created with Enhanced Capsules are rendered inert after an Extended Rest (including modifications to other items).\n» Glow: This item may be attached to a Wonder Launcher as a Standard Action to give the following effect for the rest of the Scene: Whenever you apply an Item to a target using this Wonder Launcher, that target gains the Illuminate Ability for one full round.\n» Magnetic: This item may be loaded into a Cap Cannon to provide two Bean Cap Ammo. When fired, these Bean Caps cannot miss.\n» Threaded: This item may be loaded into a Cap Cannon to provide two Glue Cap Ammo. When fired, they affect a Blast 2 instead of a single target.\n» Zapper: This item may be loaded into a Cap Cannon as a single Net Cap Ammo. Targets trapped by this Net Cap are Suppressed while trapped. Targets immune to Electric-Type attacks are immune to this effect."
+            "Effect": "Choose one of the Capabilities below which the target Pokémon has. You create a consumable item with the effect below, depending on the chosen Capability. All unused items created with Enhanced Capsules are rendered inert after an Extended Rest (including modifications to other items).\n» Glow: This item may be attached to a Wonder Launcher as a Standard Action to give the following effect for the rest of the Scene: Whenever you apply an Item to a target using this Wonder Launcher, that target gains the Illuminate Ability for one full round.\n» [[capability:Magnetic]]: This item may be loaded into a Cap Cannon to provide two Bean Cap Ammo. When fired, these Bean Caps cannot miss.\n» [[capability:Threaded]]: This item may be loaded into a Cap Cannon to provide two Glue Cap Ammo. When fired, they affect a Blast 2 instead of a single target.\n» [[capability:Zapper]]: This item may be loaded into a Cap Cannon as a single Net Cap Ammo. Targets trapped by this Net Cap are Suppressed while trapped. Targets immune to Electric-Type attacks are immune to this effect."
           }
         ]
       },
@@ -4244,7 +4252,7 @@
             "Prerequisites": "Upgrader, Master Technology Edu",
             "Frequency": "At-Will — Extended Action",
             "Target": "You or your Pokémon with Augmentations",
-            "Effect": "Choose an Augmentation the target has and apply the upgrade below. Experimental Designs may affect a target twice.\n» Enhanced Sight: The user gains the X-Ray Vision Capability.\n» Smart Vision: The user learns the Move Feint without taking a Move Slot.\n» Synthetic Muscle: The user recovers from Injuries twice as fast and heals one more Injury per day.\n» Embedded Weaponry: The weapon is Fine and gains Deadly Strike as a Master Move.\n» Wired Reflexes: The user gains one more Reflex Point per Scene and may also spend Reflex Points to gain +2 Critical Hit Range for one full round.\n» Medical Nanobots: Once a Scene, the user may cure themselves of all Persistent Status Afflictions as a Standard Action.\n» Dermal Plating: The user may also activate Dermal Plating to resist Special Damage.\n» Thermal-Optic Camo: While active, the user is invisible to Aura Reading and Thought Detection."
+            "Effect": "Choose an Augmentation the target has and apply the upgrade below. Experimental Designs may affect a target twice.\n» Enhanced Sight: The user gains the [[capability:X-Ray Vision]] Capability.\n» Smart Vision: The user learns the Move Feint without taking a Move Slot.\n» Synthetic Muscle: The user recovers from Injuries twice as fast and heals one more Injury per day.\n» Embedded Weaponry: The weapon is Fine and gains Deadly Strike as a Master Move.\n» Wired Reflexes: The user gains one more Reflex Point per Scene and may also spend Reflex Points to gain +2 Critical Hit Range for one full round.\n» Medical Nanobots: Once a Scene, the user may cure themselves of all Persistent Status Afflictions as a Standard Action.\n» Dermal Plating: The user may also activate Dermal Plating to resist Special Damage.\n» Thermal-Optic Camo: While active, the user is invisible to Aura Reading and Thought Detection."
           },
           {
             "Name": "Upgrader Recipes",
@@ -4319,7 +4327,7 @@
             "Tags": "[+HP][Orders]",
             "Prerequisites": "Survivalist, Expert Survival",
             "Frequency": "Scene x2 – Shift Action",
-            "Effect": "Wilderness Guide's effect depends on your current terrain.\n» Grassland or Forest: All allies gain the Stealth Capability and a +2 bonus to their Overland Speed for one full round.\n» Ocean or Wetlands: All allies gain 5 Damage Reduction and a +2 bonus to their Swim Speed for one full round.\n» Desert or Tundra: All allies do not lose Hit Points from Weather and ignore any Evasion increases from foes' Abilities for one full round.\n» Mountain or Cave: All allies do not trigger Hazards or Attacks of Opportunity and cannot be Blinded for one full round.\n» Urban: All allies gain +1 Evasion and a +2 bonus on Accuracy Rolls and Skill Checks to perform the Dirty Trick and Manipulate Combat Maneuvers for one full round."
+            "Effect": "Wilderness Guide's effect depends on your current terrain.\n» Grassland or Forest: All allies gain the [[capability:Stealth]] Capability and a +2 bonus to their [[capability:Overland]] Speed for one full round.\n» Ocean or Wetlands: All allies gain 5 Damage Reduction and a +2 bonus to their Swim Speed for one full round.\n» Desert or Tundra: All allies do not lose Hit Points from Weather and ignore any Evasion increases from foes' Abilities for one full round.\n» Mountain or Cave: All allies do not trigger Hazards or Attacks of Opportunity and cannot be Blinded for one full round.\n» Urban: All allies gain +1 Evasion and a +2 bonus on Accuracy Rolls and Skill Checks to perform the Dirty Trick and Manipulate Combat Maneuvers for one full round."
           },
           {
             "Name": "Terrain Talent",
@@ -4344,12 +4352,12 @@
               {
                 "Name": "Plains Runner – Grassland Terrain",
                 "Frequency": "Static",
-                "Effect": "Your Overland Speed is increased by +2. You gain a +2 bonus to Perception Checks to spot or identify objects in the far distance."
+                "Effect": "Your [[capability:Overland]] Speed is increased by +2. You gain a +2 bonus to Perception Checks to spot or identify objects in the far distance."
               },
               {
                 "Name": "Forest Ranger – Forest Terrain",
                 "Frequency": "Static",
-                "Effect": "You're used to navigating the dense plant life of large forests. You gain the Stealth Capability."
+                "Effect": "You're used to navigating the dense plant life of large forests. You gain the [[capability:Stealth]] Capability."
               },
               {
                 "Name": "Marsh Stomper – Wetland Terrain",
@@ -4359,7 +4367,7 @@
               {
                 "Name": "Deep Diver – Ocean Terrain",
                 "Frequency": "Static",
-                "Effect": "You love nothing better than the smell of the sea. Your Swimming Capability is equal to your Overland Capability instead of half. Additionally, you may hold your breath underwater for a number of minutes equal to your Survival Rank before you start suffocating."
+                "Effect": "You love nothing better than the smell of the sea. Your [[capability:Swim]](Swimming) Capability is equal to your [[capability:Overland]] Capability instead of half. Additionally, you may hold your breath underwater for a number of minutes equal to your Survival Rank before you start suffocating."
               },
               {
                 "Name": "Arctic Pilgrim – Tundra Terrain",
@@ -5761,7 +5769,7 @@
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Aura Guardian",
             "Frequency": "2 AP — Swift Action",
-            "Effect": "You gain the Aura Reader Capability for the rest of the scene. If your Intuition is Adept Rank or higher, you also gain the Aura Pulse Capability."
+            "Effect": "You gain the [[capability:Aura Reader]] Capability for the rest of the scene. If your Intuition is Adept Rank or higher, you also gain the [[capability:Aura Pulse]] Capability."
           },
           {
             "Name": "The Power of Aura",
@@ -5782,10 +5790,10 @@
           {
             "Name": "Ambient Aura",
             "Tags": "[+Attack or Special Attack]",
-            "Prerequisites": "Aura Reader, Expert Intuition",
+            "Prerequisites": "[[capability:Aura Reader]], Expert Intuition",
             "Frequency": "Scene x2 — Swift Action",
             "Trigger": "You use a Move with the Aura keyword",
-            "Effect": "You gain an Aura Blessing that can be spent any time as a Free Action Interrupt. When you spend an Aura Blessing, you choose one of the effects below. You may only have one Aura Blessing at a time, and you must have the Aura Pulse Capability to use Ambient Aura.\n» You create an energy barrier around you or an ally within 5 meters granting Damage Reduction equal to your Intuition Rank tripled until the end of your next turn.\n» You cure yourself of a Volatile Status Affliction.\n» Gain the Blindsense Capability until the end of the Scene."
+            "Effect": "You gain an Aura Blessing that can be spent any time as a Free Action Interrupt. When you spend an Aura Blessing, you choose one of the effects below. You may only have one Aura Blessing at a time, and you must have the [[capability:Aura Pulse]] Capability to use Ambient Aura.\n» You create an energy barrier around you or an ally within 5 meters granting Damage Reduction equal to your Intuition Rank tripled until the end of your next turn.\n» You cure yourself of a Volatile Status Affliction.\n» Gain the [[capability:Blindsense]] Capability until the end of the Scene."
           },
           {
             "Name": "Aura Mastery",
@@ -5995,7 +6003,7 @@
             "Prerequisites": "Ninja, Adept Stealth",
             "Frequency": "At-Will — Standard Action",
             "Effect": "You form an Illusion around yourself. This Illusion may be used to hide yourself in a shroud of darkness if in darkness, or to make yourself look like a mundane object (such as a crate, potted plant, or similar). The Illusion can even fool Aura, concealing you from Aura Sight for its duration. However, the Illusion requires complete concentration, and is broken if you take any actions at all. Anyone that interacts with the Illusion directly may make an Occult Education or Intuition Check with a DC equal to 10 plus your Stealth Rank; if they succeed, the Illusion is broken.",
-            "Bonus": "You gain the Blender Capability."
+            "Bonus": "You gain the [[capability:Blender]] Capability."
           },
           {
             "Name": "Utility Drop",
@@ -6066,7 +6074,7 @@
             "Tags": "[+Special Defense]",
             "Prerequisites": "Oracle",
             "Frequency": "Static",
-            "Effect": "You gain the Darkvision capability, and you may see through Invisibility and Illusions. You are Immune to and ignore the effects of foes' Moves with the Illusion keyword, and these Moves may not be activated against you. You may target characters removed from the field due to Ghost Step, Phasing, or any Ghost-Type Move as if they were in the square from which they disappeared, and you ignore the effects of the Blender and Stealth Capabilities. Additionally, when you spend AP to increase an Accuracy roll, you gain a +2 bonus instead of +1(this bonus stacks with Instinctive Aptitude)."
+            "Effect": "You gain the Darkvision capability, and you may see through Invisibility and Illusions. You are Immune to and ignore the effects of foes' Moves with the Illusion keyword, and these Moves may not be activated against you. You may target characters removed from the field due to Ghost Step, [[capability:Phasing]], or any Ghost-Type Move as if they were in the square from which they disappeared, and you ignore the effects of the [[capability:Blender]] and [[capability:Stealth]]Capabilities. Additionally, when you spend AP to increase an Accuracy roll, you gain a +2 bonus instead of +1(this bonus stacks with Instinctive Aptitude)."
           },
           {
             "Name": "Small Prophecies",
@@ -6189,7 +6197,7 @@
             "Tags": "[Class][+Special Attack]",
             "Prerequisites": "Elemental Connection (Psychic), Iron Mind",
             "Frequency": "Static",
-            "Effect": "You gain the Telekinetic Capability."
+            "Effect": "You gain the [[capability:Telekinetic]] Capability."
           },
           {
             "Name": "PK Alpha",
@@ -6248,7 +6256,7 @@
             "Tags": "[Class][+Special Defense]",
             "Prerequisites": "Elemental Connection (Psychic), Iron Mind, Novice Intuition",
             "Frequency": "2 AP — Swift Action",
-            "Effect": "You gain the Telepathy Capability for the rest of the scene."
+            "Effect": "You gain the [[capability:Telepathy]] Capability for the rest of the scene."
           },
           {
             "Name": "Honed Mind",
@@ -6269,7 +6277,7 @@
             "Tags": "[+Special Defense]",
             "Prerequisites": "Telepathic Awareness",
             "Frequency": "Scene — Standard Action",
-            "Effect": "You become aware of the number of living Humans or Pokémon within X meters of yourself; X is equal to your Focus Rank tripled. Pokémon or Trainers with the Mindlock Capability are not detected by this Ability. You may only use Thought Detection as long as you have the Telepathy Capability."
+            "Effect": "You become aware of the number of living Humans or Pokémon within X meters of yourself; X is equal to your Focus Rank tripled. Pokémon or Trainers with the [[capability:Mindlock]] Capability are not detected by this Ability. You may only use Thought Detection as long as you have the [[capability:Telepathy]] Capability."
           },
           {
             "Name": "Telepathic Warning",
@@ -6277,7 +6285,7 @@
             "Prerequisites": "Telepathic Awareness, Expert Focus or Intuition",
             "Frequency": "1 AP — Free Action",
             "Trigger": "You or an Ally use an Attack",
-            "Effect": "You're able to give your allies heed of attacks. All allies that would be hit by the attack may take a Shift Action as an Interrupt to move out of the area of effect of the attack. Using this leaves discoverable Psychic Residue on each affected ally. You may only use Telepathic Warning as long as you have the Telepath Capability."
+            "Effect": "You're able to give your allies heed of attacks. All allies that would be hit by the attack may take a Shift Action as an Interrupt to move out of the area of effect of the attack. Using this leaves discoverable Psychic Residue on each affected ally. You may only use Telepathic Warning as long as you have the [[capability:Telepath]]Capability."
           },
           {
             "Name": "Mental Assault",
@@ -6292,7 +6300,7 @@
             "Prerequisites": "Honed Mind, Master Focus or Intuition",
             "Frequency": "Bind 1 AP — Standard Action",
             "Target": "Pokémon or Trainers",
-            "Effect": "You smoothly plant a thought into the subject's head that lasts as long as this Feature is Bound. They won't know exactly why or how they thought of it; they will naturally assume they thought of it themselves, and their brain will attempt to get there as logically as it can. The target may not necessarily act on the Suggestion, especially if it is against their nature. Using Suggestion to plant a specific thought may cause the target to think about a specific subject, dredging up surface thoughts related to the matter. Using this on a target leaves discoverable psychic residue. You may only use Suggestion as long as you have the Telepathy Capability, though you may keep it Bound without having Telepathy active."
+            "Effect": "You smoothly plant a thought into the subject's head that lasts as long as this Feature is Bound. They won't know exactly why or how they thought of it; they will naturally assume they thought of it themselves, and their brain will attempt to get there as logically as it can. The target may not necessarily act on the Suggestion, especially if it is against their nature. Using Suggestion to plant a specific thought may cause the target to think about a specific subject, dredging up surface thoughts related to the matter. Using this on a target leaves discoverable psychic residue. You may only use Suggestion as long as you have the [[capability:Telepathy]] Capability, though you may keep it Bound without having [[capability:Telepathy]] active."
           }
         ]
       }
@@ -6343,15 +6351,15 @@
             "Tags": "[+Speed]",
             "Prerequisites": "Space Distortion, Expert Guile",
             "Frequency": "Daily x3 — Free Action",
-            "Trigger": "You use the Move Teleport or activate the Teleporter Capability",
-            "Effect": "Choose One: You activate Teleporter as if your Teleporter value were three times its normal value or you may take one willing Pokémon or Trainer along with you as you teleport so long as you are touching them when you activate Farcast. You may expend two uses of Farcast at once to choose both effects."
+            "Trigger": "You use the Move Teleport or activate the [[capability:Teleporter]] Capability",
+            "Effect": "Choose One: You activate [[capability:Teleporter]] as if your [[capability:Teleporter]] value were three times its normal value or you may take one willing Pokémon or Trainer along with you as you teleport so long as you are touching them when you activate Farcast. You may expend two uses of Farcast at once to choose both effects."
           },
           {
             "Name": "Warped Transmission",
             "Tags": "[+Speed]",
             "Prerequisites": "Farcast, Master Guile",
             "Frequency": "2 AP — Swift Action",
-            "Trigger": "You activate the Teleporter Capability or use the Move Ally Switch",
+            "Trigger": "You activate the [[capability:Teleporter]] Capability or use the Move Ally Switch",
             "Effect": "All adjacent foes to the square you end in after teleporting or using Ally Switch have their Evasion lowered by 3 for one full round and cannot trigger Attacks of Opportunity against you for Shifting until the end of your next turn."
           },
           {
@@ -6616,7 +6624,7 @@
             "Prerequisites": "Rune Master, Tag Scribe",
             "Frequency": "At-Will — Special",
             "Effect": "As an Extended Action, you may set a Cleanse Tag against any ﬂat surface, turning it into a Glyph. Glyphs have HP equal to your Level, and no other stats. Glyphs last until they are destroyed or intentionally deactivated. You may have a number of active Glyphs equal to your Occult Education Rank. When setting a Glyph, you may have the Glyphs be either visible or invisible, as you prefer. At any time, as a Standard Action, you may Channel any Glyph you have set down. This causes the Glyph to become visible if it was not. While you are channeling a Glyph, you are able to see through the Glyph, listen through it, and project your voice through it. Alternatively, you may pay 1 AP to set a Glyph as a Swift Action.",
-            "Bonus": "Your Unown gain the Letter Press Capability."
+            "Bonus": "Your Unown gain the [[capability:Letter Press]] Capability."
           },
           {
             "Name": "Words of Power",
@@ -6998,7 +7006,7 @@
             "Tags": "[+Attack]",
             "Prerequisites": "Swarmlord",
             "Frequency": "Static",
-            "Effect": "You gain the Threaded and Wallclimber Capabilities."
+            "Effect": "You gain the [[capability:Threaded]] and Wallclimber Capabilities."
           },
           {
             "Name": "Broodlord",
@@ -7124,7 +7132,7 @@
             "Tags": "[+Special Attack]",
             "Prerequisites": "Swarmlord",
             "Frequency": "Static",
-            "Effect": "You gain the Threaded and Wallclimber Capabilities."
+            "Effect": "You gain the [[capability:Threaded]] and Wallclimber Capabilities."
           },
           {
             "Name": "Broodlord",
@@ -7275,7 +7283,7 @@
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Shade Caller, Adept Guile or Stealth",
             "Frequency": "2 AP — Standard Action",
-            "Effect": "You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the encounter. All targets without Darkvision attacking from or into the Shifting Darkness receive a -3 penalty to Accuracy. You may count Shifting Darkness as complete darkness for the purposes of activating your Living Shadow. As a Static effect, you also gain the Darkvision Capability."
+            "Effect": "You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the encounter. All targets without Darkvision attacking from or into the Shifting Darkness receive a -3 penalty to Accuracy. You may count Shifting Darkness as complete darkness for the purposes of activating your Living Shadow. As a Static effect, you also gain the [[capability:Darkvision]] Capability."
           },
           {
             "Name": "Sharpen Shadows",
@@ -7392,7 +7400,7 @@
             "Tags": "[+Speed]",
             "Prerequisites": "Storm Wizard Rank 1, Adept Acrobatics",
             "Frequency": "Static",
-            "Effect": "You gain the Magnetic Capability and may use this magnetism to stick to surfaces with significant metal content (ex: metal walls obviously, concrete with metal I-beams inside, etc). You may use your Overland to traverse any such surfaces, even if that means walking vertically up a wall or upside down on a ceiling. You may choose not to be Pushed when on such a surface."
+            "Effect": "You gain the [[capability:Magnetic]] Capability and may use this magnetism to stick to surfaces with significant metal content (ex: metal walls obviously, concrete with metal I-beams inside, etc). You may use your [[capability:Overland]] to traverse any such surfaces, even if that means walking vertically up a wall or upside down on a ceiling. You may choose not to be Pushed when on such a surface."
           },
           {
             "Name": "Body of Lightning",
@@ -7544,7 +7552,7 @@
             "Tags": "[+Attack and Special Attack]",
             "Prerequisites": "Fire Bringer",
             "Frequency": "Static",
-            "Effect": "You gain the Heater Capability, and are immune to the Burn condition."
+            "Effect": "You gain the [[capability:Heater]] Capability, and are immune to the Burn condition."
           },
           {
             "Name": "Firebrand",
@@ -7712,7 +7720,7 @@
             "Tags": "[Class][+Attack][Weapon]",
             "Prerequisites": "Elemental Connection (Ghost), Novice Intimidate, Novice Occult Education",
             "Frequency": "Static",
-            "Effect": "When wielding Melee Weapons, you may use Occult Education or Intimidate instead of Combat to determine the Damage Base of your Struggle Attacks, to resist Disarm Maneuvers, and to qualify for a Weapon's Moves. Your Weapon Attacks always treat you as having the Reach Capability, and foes may not activate Reaction effects against them that specify being hit by a Melee Attack."
+            "Effect": "When wielding Melee Weapons, you may use Occult Education or Intimidate instead of Combat to determine the Damage Base of your Struggle Attacks, to resist Disarm Maneuvers, and to qualify for a Weapon's Moves. Your Weapon Attacks always treat you as having the [[capability:Reach]] Capability, and foes may not activate Reaction effects against them that specify being hit by a Melee Attack."
           },
           {
             "Name": "Shadow Arms",
@@ -7734,14 +7742,14 @@
             "Prerequisites": "Apparition, Adept Intimidate or Occult Education",
             "Frequency": "Bind 2 AP — Standard Action",
             "Effect": "While this Feature is Bound, your Struggle Attacks and Weapon Attacks Flinch targets on 18+, and may deal Ghost-Type Damage if you wish.",
-            "Bonus": "You gain the Dead Silent Capability, and a bonus to Stealth checks equal to half your Intimidate or Occult Education Rank."
+            "Bonus": "You gain the [[capability:Dead Silent]] Capability, and a bonus to Stealth checks equal to half your Intimidate or Occult Education Rank."
           },
           {
             "Name": "Shadow Form",
             "Tags": "[+Attack]",
             "Prerequisites": "Silent Assassin, Expert Intimidate or Occult Education",
             "Frequency": "Bind 2 AP — Swift Action",
-            "Effect": "While this Feature is Bound, your appearance becomes wan and obviously otherworldly. Your natural Weaknesses, Resistances, and Immunities change to match that of the Ghost Type. Additionally, while in Shadow Form, you are immune to the Cursed Status (if you were previously Cursed, you are instantly cured upon going into Shadow Form) and gain the Phasing Capability. You may unbind this Feature as a Swift Action, returning to your normal appearance."
+            "Effect": "While this Feature is Bound, your appearance becomes wan and obviously otherworldly. Your natural Weaknesses, Resistances, and Immunities change to match that of the Ghost Type. Additionally, while in Shadow Form, you are immune to the Cursed Status (if you were previously Cursed, you are instantly cured upon going into Shadow Form) and gain the [[capability:Phasing]] Capability. You may unbind this Feature as a Swift Action, returning to your normal appearance."
           },
           {
             "Name": "Phantom Menace",
@@ -7784,7 +7792,7 @@
             "Tags": "[+Special Attack]",
             "Prerequisites": "Druid (Flower Oath)",
             "Frequency": "Static",
-            "Effect": "You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword."
+            "Effect": "You gain the [[capability:Naturewalk (Grassland) and Naturewalk (Forest)]] capabilities, and you are immune to Moves with the Powder keyword."
           },
           {
             "Name": "Overgrowth",
@@ -7799,7 +7807,7 @@
             "Tags": "[+Special Attack]",
             "Prerequisites": "Green Path (Flower Oath)",
             "Frequency": "Scene ×2 — Standard Action",
-            "Effect": "Six flowery bushes suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or on terrain where only a few inches cover the soil (such as most sidewalks, parking lots, gravel, or woodchip lots)."
+            "Effect": "Six flowery bushes suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the [[capability:Naturewalk (Forest) capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or on terrain where only a few inches cover the soil (such as most sidewalks, parking lots, gravel, or woodchip lots)]]."
           },
           {
             "Name": "Nature's Embrace",
@@ -7914,7 +7922,7 @@
             "Tags": "[+Special Defense]",
             "Prerequisites": "Druid (Fungal Oath)",
             "Frequency": "Static",
-            "Effect": "You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword."
+            "Effect": "You gain the [[capability:Naturewalk (Grassland) and Naturewalk (Forest)]] capabilities, and you are immune to Moves with the Powder keyword."
           },
           {
             "Name": "Overgrowth",
@@ -7929,7 +7937,7 @@
             "Tags": "[+Special Defense]",
             "Prerequisites": "Green Path (Fungal Oath)",
             "Frequency": "Scene ×2 — Standard Action",
-            "Effect": "Six mushroom patches suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or on terrain where only a few inches cover the soil (such as most sidewalks, parking lots, gravel, or woodchip lots)."
+            "Effect": "Six mushroom patches suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the [[capability:Naturewalk (Forest) capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or on terrain where only a few inches cover the soil (such as most sidewalks, parking lots, gravel, or woodchip lots)]]."
           },
           {
             "Name": "Nature's Embrace",
@@ -8044,7 +8052,7 @@
             "Tags": "[+Attack]",
             "Prerequisites": "Druid (Wood Oath)",
             "Frequency": "Static",
-            "Effect": "You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword."
+            "Effect": "You gain the [[capability:Naturewalk (Grassland) and Naturewalk (Forest)]] capabilities, and you are immune to Moves with the Powder keyword."
           },
           {
             "Name": "Overgrowth",
@@ -8059,7 +8067,7 @@
             "Tags": "[+Attack]",
             "Prerequisites": "Green Path (Wood Oath)",
             "Frequency": "Scene ×2 — Standard Action",
-            "Effect": "Six small saplings suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the Naturewalk (Forest) capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or on terrain where only a few inches cover the soil (such as most sidewalks, parking lots, gravel, or woodchip lots)."
+            "Effect": "Six small saplings suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter and acts as rough terrain that blocks line of sight for Pokémon and Trainers without the [[capability:Naturewalk (Forest) capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or on terrain where only a few inches cover the soil (such as most sidewalks, parking lots, gravel, or woodchip lots)]]."
           },
           {
             "Name": "Nature's Embrace",
@@ -8184,7 +8192,7 @@
             "Tags": "[+Defense]",
             "Prerequisites": "Earth Shaker",
             "Frequency": "Static",
-            "Effect": "You gain the Tremorsense and Groundshaper Capabilities, and you gain Naturewalk for Cave, Mountain and Desert."
+            "Effect": "You gain the [[capability:Tremorsense]] and [[capability:Groundshaper]] Capabilities, and you gain Naturewalk for Cave, Mountain and Desert."
           },
           {
             "Name": "Earth Mother's Blessing",
@@ -8251,7 +8259,7 @@
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Frost Touched",
             "Frequency": "Static",
-            "Effect": "You gain the Naturewalk (Tundra) Capability, are immune to being Frozen, and do not lose Hit Points from Hail."
+            "Effect": "You gain the [[capability:Naturewalk (Tundra)]] Capability, are immune to being Frozen, and do not lose Hit Points from Hail."
           },
           {
             "Name": "Glacial Defense",
@@ -8265,7 +8273,7 @@
             "Tags": "[+Attack or Special Attack]",
             "Prerequisites": "Expert Athletics or Survival",
             "Frequency": "2 AP — Standard Action",
-            "Effect": "Set 6 square meters of Frozen Domain within range 6. All 6 meters must be adjacent with at least one other space of Frozen Domain. All legal targets passing through these squares must make an Acrobatics check with a DC equal to 4 + twice your Survival Rank. On failure, the target is Tripped. Pokémon who are flying, levitating, or have the Naturewalk (Tundra) Capability are immune to this effect. When standing on a square affected by Frozen Domain, you may act as if you were in Hail weather. When a Fire-Type attack originates from or targets a square of Frozen Domain, that square of Frozen Domain melts and is cleared. Frozen Domain is considered a Hazard."
+            "Effect": "Set 6 square meters of Frozen Domain within range 6. All 6 meters must be adjacent with at least one other space of Frozen Domain. All legal targets passing through these squares must make an Acrobatics check with a DC equal to 4 + twice your Survival Rank. On failure, the target is Tripped. Pokémon who are flying, levitating, or have the [[capability:Naturewalk (Tundra)]] Capability are immune to this effect. When standing on a square affected by Frozen Domain, you may act as if you were in Hail weather. When a Fire-Type attack originates from or targets a square of Frozen Domain, that square of Frozen Domain melts and is cleared. Frozen Domain is considered a Hazard."
           },
           {
             "Name": "Winter is Coming",
@@ -8360,7 +8368,7 @@
             "Tags": "[+Special Attack]",
             "Prerequisites": "Prism",
             "Frequency": "Static",
-            "Effect": "You gain the Illusionist Capability."
+            "Effect": "You gain the [[capability:Illusionist]] Capability."
           },
           {
             "Name": "Luminous Aura",
@@ -8587,7 +8595,7 @@
             "Tags": "[Class][+Speed]",
             "Prerequisites": "Elemental Connection (Water), Novice Athletics, Novice Acrobatics",
             "Frequency": "Static",
-            "Effect": "You gain the Gilled Capability, and a +2 bonus to your Swim speed. Whenever your Water-Type Moves miss all targets, you gain a Tick of Temporary Hit Points."
+            "Effect": "You gain the [[capability:Gilled]] Capability, and a +2 bonus to your Swim speed. Whenever your Water-Type Moves miss all targets, you gain a Tick of Temporary Hit Points."
           },
           {
             "Name": "Water's Shroud",
