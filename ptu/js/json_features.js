@@ -263,7 +263,7 @@ function renderSidebar() {
     catCol.insertAdjacentHTML("beforeend", `
           <a href="#" class="list-group-item list-group-item-action ps-4 d-flex justify-content-between align-items-center collapse-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#${clsId}">
             <span>${escapeHTML(clsName)}</span>
-            <span class="badge bg-secondary-subtle ms-auto text-truncate" style="max-width:10rem" title="${escapeHTML(cls.source)}">${escapeHTML(cls.source)}</span>
+            <span class="badge bg-info ms-auto text-truncate" style="max-width:10rem" title="${escapeHTML(cls.source)}">${escapeHTML(cls.source)}</span>
             <span class="triangle-toggle ms-2"></span>
           </a>`);
         const brWrap = document.createElement("div");
@@ -290,7 +290,7 @@ function makeLink(label, src, data = {}, pad = 3) {
   const escapedSrc = escapeHTML(src);
   a.innerHTML = `
     <span>${escapedLabel}</span>
-    <span class="badge bg-secondary-subtle ms-auto text-truncate" style="max-width:10rem" title="${escapedSrc}">${escapedSrc}</span>`;
+    <span class="badge bg-info ms-auto text-truncate" style="max-width:10rem" title="${escapedSrc}">${escapedSrc}</span>`;
   Object.entries(data).forEach(([k, v]) => a.dataset[k] = v);
   a.onclick = () => {
     renderSection(data.section, data.branch);
