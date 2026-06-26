@@ -381,19 +381,44 @@ function flattenFeatures(data) {
     for (const branch of branches) {
       const features = Array.isArray(branch?.features) ? branch.features : [];
       for (const feature of features) {
-        if (feature && typeof feature === "object") {
-          out.push({
-            ...feature,
-            Class: className,
-            Branch: branch.Name || "Default",
-            Category: feature.Category || classData.category,
-            Source: feature.Source || classData.source
-          });
-        }
+        collectFeatureEntries(out, feature, {
+          Class: className,
+          Branch: branch.Name || "Default",
+          Category: classData.category,
+          Source: classData.source
+        });
       }
     }
   }
   return out;
+}
+
+function collectFeatureEntries(out, feature, context) {
+  if (!feature || typeof feature !== "object") return;
+
+  const entry = {
+    ...feature,
+    Class: context.Class,
+    Branch: context.Branch,
+    Category: feature.Category || context.Category,
+    Source: feature.Source || context.Source
+  };
+  out.push(entry);
+
+  for (const [key, value] of Object.entries(feature)) {
+    if (key.startsWith("_") || key === "moveTable" || key === "abilityTable") continue;
+    if (!Array.isArray(value)) continue;
+    for (const child of value) {
+      if (child && typeof child === "object" && child.Name) {
+        collectFeatureEntries(out, child, {
+          ...context,
+          Parent: feature.Name,
+          Category: entry.Category,
+          Source: entry.Source
+        });
+      }
+    }
+  }
 }
 
 async function fetchJson(url) {
