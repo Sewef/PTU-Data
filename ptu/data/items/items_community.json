@@ -2,151 +2,151 @@
   "Poké Ball": {
     "Poké Balls": [
       {
-        "Ball Name": "Basic Ball",
+        "Name": "Basic Ball",
         "Modifier": "0",
         "Special": "Basic Poké Ball; often called just a \"Poké Ball\".",
         "Price": 250
       },
       {
-        "Ball Name": "Great Ball",
+        "Name": "Great Ball",
         "Modifier": "-10 / +2",
         "Special": "A better Poké Ball with no special Effect.",
         "Price": 400
       },
       {
-        "Ball Name": "Ultra Ball",
+        "Name": "Ultra Ball",
         "Modifier": "-15 / +3",
         "Special": "The best generic Poké Ball.",
         "Price": 800
       },
       {
-        "Ball Name": "Master Ball",
+        "Name": "Master Ball",
         "Modifier": "-100 / +20",
         "Special": "Incredibly Rare. Worth at least ₽300,000. Sold nowhere.",
         "Price": 800
       },
       {
-        "Ball Name": "Safari Ball",
+        "Name": "Safari Ball",
         "Modifier": "0",
         "Special": "Used during Safari hunts.",
         "Price": 800
       },
       {
-        "Ball Name": "Level Ball",
+        "Name": "Level Ball",
         "Modifier": "0",
         "Special": "-20 / +4 Modifier if the target is under half the level your active Pokémon is.",
         "Price": 800
       },
       {
-        "Ball Name": "Lure Ball",
+        "Name": "Lure Ball",
         "Modifier": "0",
         "Special": "-20 / +4 Modifier if the target was baited into the encounter with food.",
         "Price": 800
       },
       {
-        "Ball Name": "Moon Ball",
+        "Name": "Moon Ball",
         "Modifier": "0",
         "Special": "-20 / +4 Modifier if the target evolves with an Evolution Stone.",
         "Price": 800
       },
       {
-        "Ball Name": "Friend Ball",
+        "Name": "Friend Ball",
         "Modifier": "-5 / +1",
         "Special": "A caught Pokémon will start with +1 Loyalty.",
         "Price": 800
       },
       {
-        "Ball Name": "Love Ball",
+        "Name": "Love Ball",
         "Modifier": "0",
         "Special": "-30 / +6 Modifier if the user has an active Pokemon that is of the same evolutionary line as the target, and the opposite gender. Does not work with genderless Pokémon.",
         "Price": 800
       },
       {
-        "Ball Name": "Heavy Ball",
+        "Name": "Heavy Ball",
         "Modifier": "0",
         "Special": "-5 / +1 Modifier for each Weight Class the target is above 1.",
         "Price": 800
       },
       {
-        "Ball Name": "Fast Ball",
+        "Name": "Fast Ball",
         "Modifier": "0",
         "Special": "-20 / +4 Modifier if the target has a Movement Capability above 7.",
         "Price": 800
       },
       {
-        "Ball Name": "Sport Ball",
+        "Name": "Sport Ball",
         "Modifier": "0",
         "Special": "Used during Safari hunts.",
         "Price": 800
       },
       {
-        "Ball Name": "Premier Ball",
+        "Name": "Premier Ball",
         "Modifier": "0",
         "Special": "Given as promotional balls during sales.",
         "Price": 800
       },
       {
-        "Ball Name": "Repeat Ball",
+        "Name": "Repeat Ball",
         "Modifier": "0",
         "Special": "-20 / +4 Modifier if you already own a Pokémon of the target's species.",
         "Price": 800
       },
       {
-        "Ball Name": "Timer Ball",
+        "Name": "Timer Ball",
         "Modifier": "5 / -1",
         "Special": "-5 / +1 to the Modifier after every round since the beginning of the encounter, until the Modifier is -20 / +4.",
         "Price": 800
       },
       {
-        "Ball Name": "Nest Ball",
+        "Name": "Nest Ball",
         "Modifier": "0",
         "Special": "-20 / +4 Modifier if the target is under level 10.",
         "Price": 800
       },
       {
-        "Ball Name": "Net Ball",
+        "Name": "Net Ball",
         "Modifier": "0",
         "Special": "-20 / +4 Modifier, if the target is Water or Bug type.",
         "Price": 800
       },
       {
-        "Ball Name": "Dive Ball",
+        "Name": "Dive Ball",
         "Modifier": "0",
         "Special": "-20 / +4 Modifier, if the target was found underwater or underground.",
         "Price": 800
       },
       {
-        "Ball Name": "Luxury Ball",
+        "Name": "Luxury Ball",
         "Modifier": "-5 / +1",
         "Special": "A caught Pokémon is easily pleased and starts with a raised happiness.",
         "Price": 800
       },
       {
-        "Ball Name": "Heal Ball",
+        "Name": "Heal Ball",
         "Modifier": "-5 / +1",
         "Special": "A caught Pokemon will heal to Max HP immediately upon capture.",
         "Price": 800
       },
       {
-        "Ball Name": "Quick Ball",
+        "Name": "Quick Ball",
         "Modifier": "-20 / +4",
         "Special": "+5 / -1 to Modifier after 1 round of the encounter, +10 to Modifier after round 2, +20 to modifier after round 3.",
         "Price": 800
       },
       {
-        "Ball Name": "Dusk Ball",
+        "Name": "Dusk Ball",
         "Modifier": "0",
         "Special": "-20 / +4 Modifier if it is dark, or if there is very little light out, when used.",
         "Price": 800
       },
       {
-        "Ball Name": "Cherish Ball",
+        "Name": "Cherish Ball",
         "Modifier": "-5 / +1",
         "Special": "A decorative Poké Ball often given out during special events.",
         "Price": 800
       },
       {
-        "Ball Name": "Park Ball",
+        "Name": "Park Ball",
         "Modifier": "-15 / +3",
         "Special": "Used during Safari hunts.",
         "Price": 800
@@ -154,60 +154,60 @@
     ],
     "Poké Ball Cases": [
       {
-        "Item": "Poké Ball Cases",
+        "Name": "Poké Ball Cases",
         "Description": "Cases are additions to a Poké Ball that wrap around its outside. A Poké Ball can only have one case at a time. Cases can be removed as a Shift Action, and applied as a Standard Action. Poké Ball cases come in several varieties. The Jailbreaker class can create Cases. The following six Poké Ball Case types are relatively common and can be purchased in most stores that specialize in selling a variety of Poké Balls.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Bounce Case",
+        "Name": "Bounce Case",
         "Price": 800,
         "Effect": "A Poké Ball in a Bounce Case may bounce once when thrown or launched, up to a distance of 3 meters. This can be used to extend the effective range of a Poké Ball, hit around obstacles, or trigger effects such as the Capture Specialist's Curve Ball on an additional target.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Contest Case",
+        "Name": "Contest Case",
         "Price": 400,
         "Effect": "Whenever a Pokémon is released from a Contest Case into a Contest, they gain 1 Appeal Point during the introduction stage.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Flash Case",
+        "Name": "Flash Case",
         "Price": 800,
         "Effect": "When a Poké Ball with a Flash Case is thrown, it uses the Move Flash originating from the spot where it landed.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Lock Case",
+        "Name": "Lock Case",
         "Price": 400,
         "Effect": "A Lock Case grants a -10 Capture modifier to any Poké Ball. It also stops Pokémon from exiting Poké Balls unless explicitly released by their owners.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Medicine Case",
+        "Name": "Medicine Case",
         "Price": 400,
         "Effect": "A Medicine Case may be filled with an Antidote, Paralyze Heal, Burn Heal, Ice Heal, Awakening or Full Heal. This consumes the used item. When a Pokémon is recalled into a Poké Ball with a filled Medicine Case, the item is automatically used on the Pokémon. Filling a Medicine Case is an Standard Action. Medicine Cases may be refilled multiple times but may only have one sort of consumable in them at a time.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Spray Case",
+        "Name": "Spray Case",
         "Price": 800,
         "Effect": "A Spray Case may be filled with a Pester Ball or Repel of any variety. This consumes the used item. Upon hitting a target, the Spray Case is emptied, spraying the item it was filled with onto its target, automatically hitting. This can occur when attempting to catch Pokémon (the effect is resolved before the capture roll), or when releasing a Pokémon from its Poké Ball (the effect is resolved before the Pokémon within is released). Spray Cases may be refilled numerous times, but may only have one sort of consumable in them at a time.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Devil Case",
+        "Name": "Devil Case",
         "Price": 3000,
         "Effect": "These dangerous and often illegal cases remove the failsafe on Poké Balls that prevents them from catching Pokémon that are at 0 Hit Points or less. It allows Poké Balls to catch Fainted Pokémon as normal, but automatically inflicts 2 Injuries when hitting a Pokémon - whether the Capture is successful or not.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Storage Case",
+        "Name": "Storage Case",
         "Price": 15000,
         "Effect": "These extremely useful cases are capable of \"Capturing\" non-living matter. Once applied to a Poké Ball, Storage Cases cannot be removed. The object or objects in question must be smaller than 2 meters in any dimension. A single Storage Case can capture several discrete objects, but they must all be supported by a single surface; a 2x2 meter rug or mat is often used for this purpose. Capture Rolls against inanimate objects automatically succeed. Poké Balls with Storage Cases count towards the total number of Pokémon that the trainer can carry. Storage Cases are often illegal due to their uses in smuggling and theft.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Zap Case",
+        "Name": "Zap Case",
         "Price": 1500,
         "Effect": "Whenever a Poké Ball with a Zap Case hits a target it deals damage as if using a Struggle Attack. This Damage is Electric-Typed. If the Ball is already used as a Struggle Attack (such as with Curve Ball), then the Zap Case changes the damage to Electric-Type and adds bonus damage equal to twice the user's Technology Education skill. When attempting to catch Pokémon, damage is resolved before the capture roll. This can also be used when releasing a Pokémon (damage is resolved before the Pokémon is released).",
         "Source": "Do Porygon Dream of Mareep"
@@ -215,30 +215,30 @@
     ],
     "Poké Ball Accessories": [
       {
-        "Item": "Poké Ball Accessories",
+        "Name": "Poké Ball Accessories",
         "Description": "These are assorted accessories for Poké Balls which don't take the form of a Case and thus can be used on Poké Balls contained in Cases. Similar to Cases, however, they are attached with a Standard Action and removed with a Shift Action.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Bait Attachment",
+        "Name": "Bait Attachment",
         "Price": 300,
         "Effect": "These attachments afix a piece of bait to the triggering device of a Poké Ball. When the bait is taken, the attachment automatically triggers a capture attempt along with any effect that would be caused by a Poké Ball Cases.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Camera Kit",
+        "Name": "Camera Kit",
         "Price": 1200,
         "Effect": "A small camera, microphone, and speaker set affixed to the outside of a Poké Ball or Case. These allow a Trainer to remotely release and command their Pokémon or attempt to capture a Pokémon.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Poké Ball Alarm",
+        "Name": "Poké Ball Alarm",
         "Price": 1000,
         "Effect": "A belt with six slots for Poké Balls. Poké Balls affixed to the belt are locked in place with a number pad password to unlock them. Tampering with the belt triggers the password prompt, and failure to input the correct password within a minute triggers a loud alarm system.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Poké Ball Tracking Chip",
+        "Name": "Poké Ball Tracking Chip",
         "Price": 200,
         "Effect": "A chip embedded in the inner workings of the Poké Ball that emits a signal allowing the Ball's owner to remotely track the location of the Ball. Depending on the setting, these may be built in by default.",
         "Source": "Do Porygon Dream of Mareep"
@@ -248,203 +248,203 @@
   "Medicines": {
     "Basic Restoratives": [
       {
-        "Item": "Potion",
+        "Name": "Potion",
         "Effect": "Heals 20 Hit Points",
         "Price": 200
       },
       {
-        "Item": "Super Potion",
+        "Name": "Super Potion",
         "Effect": "Heals 35 Hit Points",
         "Price": 380
       },
       {
-        "Item": "Hyper Potion",
+        "Name": "Hyper Potion",
         "Effect": "Heals 70 Hit Points",
         "Price": 800
       },
       {
-        "Item": "Antidote",
+        "Name": "Antidote",
         "Effect": "Cures Poison",
         "Price": 200
       },
       {
-        "Item": "Paralyze Heal",
+        "Name": "Paralyze Heal",
         "Effect": "Cures Paralysis",
         "Price": 200
       },
       {
-        "Item": "Burn Heal",
+        "Name": "Burn Heal",
         "Effect": "Cures Burns",
         "Price": 200
       },
       {
-        "Item": "Ice Heal",
+        "Name": "Ice Heal",
         "Effect": "Cures Freezing",
         "Price": 200
       },
       {
-        "Item": "Full Heal",
+        "Name": "Full Heal",
         "Effect": "Cures all Persistent Status Afflictions",
         "Price": 450
       },
       {
-        "Item": "Full Restore",
+        "Name": "Full Restore",
         "Effect": "Heals a Pokemon for 80 Hit Points and cures any Status Afflictions",
         "Price": 1450
       },
       {
-        "Item": "Revive",
+        "Name": "Revive",
         "Effect": "Revives fainted Pokémon and sets to 20 Hit Points",
         "Price": 300
       },
       {
-        "Item": "Energy Powder",
+        "Name": "Energy Powder",
         "Effect": "Heals 25 Hit Points – Repulsive",
         "Price": 150
       },
       {
-        "Item": "Energy Root",
+        "Name": "Energy Root",
         "Effect": "Heals 70 Hit Points – Repulsive",
         "Price": 500
       },
       {
-        "Item": "Heal Powder",
+        "Name": "Heal Powder",
         "Effect": "Cure all Persistent Status Afflictions – Repulsive",
         "Price": 350
       },
       {
-        "Item": "Revival Herb",
+        "Name": "Revival Herb",
         "Effect": "Revives Pokemon and sets to 50% Hit Points – Repulsive",
         "Price": 350
       }
     ],
     "X-Items": [
       {
-        "Item": "X Attack",
+        "Name": "X Attack",
         "Effect": "Increases the Pokemon's Attack by two Combat Stages",
         "Price": 350
       },
       {
-        "Item": "X Defend",
+        "Name": "X Defend",
         "Effect": "Increases the Pokemon's Defense by two Combat Stages",
         "Price": 350
       },
       {
-        "Item": "X Special",
+        "Name": "X Special",
         "Effect": "Increases the Pokemon's Special Attack by two Combat Stages",
         "Price": 350
       },
       {
-        "Item": "X Sp. Def",
+        "Name": "X Sp. Def",
         "Effect": "Increases the Pokemon's Special Defense by two Combat Stages",
         "Price": 350
       },
       {
-        "Item": "X Speed",
+        "Name": "X Speed",
         "Effect": "Increases the Pokemon's Speed by two Combat Stages",
         "Price": 350
       },
       {
-        "Item": "Dire Hit",
+        "Name": "Dire Hit",
         "Effect": "Increases Critical Hit Range of all moves by +2.",
         "Price": 600
       },
       {
-        "Item": "X Accuracy",
+        "Name": "X Accuracy",
         "Effect": "Increases Accuracy by +2",
         "Price": 600
       },
       {
-        "Item": "Guard Spec",
+        "Name": "Guard Spec",
         "Effect": "Prevents reduction of Combat Stages or Accuracy on the Pokemon for 5 Turns",
         "Price": 700
       }
     ],
     "Bandages and Poultices": [
       {
-        "Item": "Bandages",
+        "Name": "Bandages",
         "Effect": "See attached Section",
         "Price": 300
       },
       {
-        "Item": "Poultices",
+        "Name": "Poultices",
         "Effect": "See attached Section – Repulsive",
         "Price": 225
       }
     ],
     "Future Drugs and Medicine": [
       {
-        "Item": "Future Drugs and Medicine",
+        "Name": "Future Drugs and Medicine",
         "Description": "Advances in biotechnology allow scientists to create ever more complex and effective drugs in a sci-fi civilization. Sci-fi settings are often filled with a cornucopia of medicines that accomplish tasks we would think impossible today. The following items can help Pokémon and Trainers alike in a variety of situations and are generally appropriate for campaigns with a Transhuman Age level of technology or higher, though some of these options may also fit in a Robotic Age campaign."
       },
       {
-        "Item": "Anti-Radiation Pills",
+        "Name": "Anti-Radiation Pills",
         "Price": 400,
         "Effect": "An advanced version of the real life potassium iodide pills. These not only protect the thyroid but instead guard against all forms of radiation poisoning, granting the user Hazard Immunity for radioactive environments only for 24 hours.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Prescient Powder",
+        "Name": "Prescient Powder",
         "Price": 2500,
         "Effect": "An illegal and dangerous substance produced by desert-dwelling Steelix. Taking the drug inflicts 3 injuries on the user and allows them to use either a Scry or Augury once. The user also gains the Psychic Navigator Edge for two hours. Habitual use of the drug can lead to addiction and health problems.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Berserker Bolus",
+        "Name": "Berserker Bolus",
         "Price": 500,
         "Effect": "A combat drug used by street gangs. Immediately inflicts 1 injury on the user upon taking it, but for the duration of the Scene, the user is immune to Flinch effects, gains a +2 bonus to Save Rolls, and adds 5 to all Damage Rolls. However, they are Enraged and may not make Save Rolls to end the effect until all combat ceases for at least a few minutes.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Locus Lozenge",
+        "Name": "Locus Lozenge",
         "Price": 500,
         "Effect": "A drug to help the user focus on a single task. The user gains a +3 bonus to Focus and Intuition checks for the next hour but suffers a -4 penalty to Perception checks to notice outside events.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Oxygenation Vial",
+        "Name": "Oxygenation Vial",
         "Price": 500,
         "Effect": "These vials contain a solution of oxygen-encasing lipids that are injected directly into the bloodstream. One injection is enough to allow the user to go without breathing for up to thirty minutes. Subsequent injections extend the effect, but each one after the first in a 24 hour period causes the user to take one injury as their body suffers complications from the imbalance caused by the solution. These are often carried as a last resort device for astronauts and deep sea divers, as well as used by EMTs to stabilize patients.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Puissance Pellet",
+        "Name": "Puissance Pellet",
         "Price": 450,
         "Effect": "This painkiller and adrenaline injection lets the user temporarily ignore their debilitating injuries. A user with 5 or more injuries does not suffer Hit Point loss equal to their number of injuries when taking Standard Actions. If you are using the optional rule to decrease combat stages for each Injury, the user ignores these combat stage losses. This effect lasts for 5 turns, and at the end of the effect, the user automatically takes another injury.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Rambo Roids",
+        "Name": "Rambo Roids",
         "Price": 750,
         "Effect": "The user treats their Power Capability as increased by 2 for the next hour. However, each time they lift an object or perform a feat of strength beyond their normal means, they must make an Athletics check with a DC of 12. If they fail, they take an Injury immediately. Each such feat of strength induces a cumulative -1 penalty to these Athletics checks.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Shock Syringe",
+        "Name": "Shock Syringe",
         "Price": 500,
         "Effect": "This drug enhances the sensitivity of the user’s nerves, enhancing their perception and making it incredibly useful for scouts and recon missions. However, the enhanced sense of touch greatly lowers the user’s pain tolerance. The user gains a +3 bonus to Perception, Focus, and Guile and a +1 bonus to Accuracy. However, each time the user takes an Injury, they are Flinched. The effects of Shock Syringe last for an hour.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Soldier Pill",
+        "Name": "Soldier Pill",
         "Price": 750,
         "Effect": "A potentially dangerous stimulant that provides the user enough energy to go 24 hours without sleep. Upon taking the pill twice in a 48 hour period, the user begins to take 1 injury every 2 hours until they choose to go to sleep. The user of a Soldier Pill gets a +3 bonus to rolls to wake up from Sleep.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Spritz Spray",
+        "Name": "Spritz Spray",
         "Price": 250,
         "Effect": "A drug that improves reflexes at the cost of mental focus. The user of Spritz gains +5 initiative and +1 Evasion for the next 5 rounds of combat but suffers a -3 penalty to Perception and Focus checks for the next hour.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Volatile Machine",
+        "Name": "Volatile Machine",
         "Price": "10x the cost of the equivalent TM",
         "Effect": "An experimental variant of the technology used in creating TMs and HMs, Volatile Machines, or VMs for short, teach a specific Move like their counterparts but can be used by any Pokémon regardless of normal Move compatibility. VMs usually take the form of highly advanced drugs for gene therapy and often require a Pokémon stay under monitoring in a medical facility for the duration of application, during which time they receive several different drug formulas. Applying a VM can take anywhere from a day to a week to even longer, by GM discretion. VMs are very powerful items and not appropriate for all campaigns. Moves taught via VM take up two Move slots and a Vitamin slot, and as a result Pokémon who use a VM may only ever learn a maximum of 5 moves by default, of which only one other may be a TM or Tutor Move. Pokémon can only have one VM Move at a time, even if Features or other effects would normally allow them to have more.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "White Light",
+        "Name": "White Light",
         "Price": 800,
         "Effect": "So named for the soft white glow the liquid gives off, White Light is a crude “truth serum”. It is slow-acting, taking upwards of an hour to take fulleffect on a victim. The victim becomes more suggestible and gullible. All of their Guile, Intuition, and Focus Checks made during an interrogation are subject to a -5 penalty.",
         "Source": "Do Porygon Dream of Mareep"
@@ -454,55 +454,55 @@
   "Food Items": {
     "Snacks": [
       {
-        "Item": "Candy Bar",
+        "Name": "Candy Bar",
         "Effect": "Snack. Grants a Digestion Buff that heals 5 Hit Points.",
         "Price": 75
       },
       {
-        "Item": "Honey Snack",
+        "Name": "Honey Snack",
         "Effect": "Grants a Digestion Buff that heals 5 Hit Points. May be used as Bait.",
         "Price": 100
       },
       {
-        "Item": "Leftovers",
+        "Name": "Leftovers",
         "Effect": "Snack. When their Digestion Buff is traded in, the user recovers 1/16th of their max Hit Points at the beginning of each turn for the rest of the encounter.",
         "Price": 350
       },
       {
-        "Item": "Black Sludge",
+        "Name": "Black Sludge",
         "Effect": "Poison-Type Pokémon may consume the Black Sludge as a Snack Item; when the Digestion Buff is traded in, they recover 1/8th of their Max Hit Points at the beginning of each turn for the rest of the encounter.",
         "Price": 500
       }
     ],
     "Refreshment Items": [
       {
-        "Item": "Enriched Water",
+        "Name": "Enriched Water",
         "Effect": "Heals 20 Hit Points.",
         "Price": 75
       },
       {
-        "Item": "Shuckle's Berry Juice",
+        "Name": "Shuckle's Berry Juice",
         "Effect": "Heals 30 Hit Points."
       },
       {
-        "Item": "Super Soda Pop",
+        "Name": "Super Soda Pop",
         "Effect": "Heals 30 Hit Points.",
         "Price": 125
       },
       {
-        "Item": "Sparkling Lemonade",
+        "Name": "Sparkling Lemonade",
         "Effect": "Heals 50 Hit Points.",
         "Price": 250
       },
       {
-        "Item": "MooMoo Milk",
+        "Name": "MooMoo Milk",
         "Effect": "Heals 80 Hit Points.",
         "Price": 500
       }
     ],
     "Miscellaneous Food": [
       {
-        "Item": "Baby Food",
+        "Name": "Baby Food",
         "Effect": "A nutritious food that causes young Pokémon to grow quickly. When consumed, increases Experience Gain of Pokémon at level 15 or lower by 20% for the rest of the day."
       }
     ]
@@ -513,7 +513,7 @@
         "type": "table",
         "rowPerField": false,
         "columns": [
-          "Tier",
+          "Name",
           "Berry List",
           "Price"
         ]
@@ -526,17 +526,17 @@
     },
     "Tiers": [
       {
-        "Tier": "1",
+        "Name": "1",
         "Berry List": "Cheri Berry, Chesto Berry, Pecha Berry, Rawst Berry, Aspear Berry, Oran Berry, Persim Berry, Razz Berry (and similar).",
         "Price": 150
       },
       {
-        "Tier": "2",
+        "Name": "2",
         "Berry List": "Lum Berry, Sitrus Berry, Figy Berry (And similar), Liechi Berry (and similar), Pamtre Berry (and similar), Enigma Berry, Lansat Berry, Micle Berry, Cornn Berry, Magost Berry, Rabuta Berry, Nomel Berry, Spelon Berry, Jaboca Berry, Rowap Berry, Starf Berry",
         "Price": 250
       },
       {
-        "Tier": "3",
+        "Name": "3",
         "Berry List": "Leppa Berry, Pomeg Berry (and similar), Occa Berry (and similar), Custap Berry, Kee Berry, Maranga Berry",
         "Price": 500
       }
@@ -561,74 +561,74 @@
     ],
     "Apricorns": [
       {
-        "Apricorn Type": "Red Apricorns",
+        "Name": "Red Apricorns",
         "Poké Ball": "Level Ball"
       },
       {
-        "Apricorn Type": "Yellow Apricorns",
+        "Name": "Yellow Apricorns",
         "Poké Ball": "Moon Ball"
       },
       {
-        "Apricorn Type": "Blue Apricorns",
+        "Name": "Blue Apricorns",
         "Poké Ball": "Lure Ball"
       },
       {
-        "Apricorn Type": "Green Apricorns",
+        "Name": "Green Apricorns",
         "Poké Ball": "Friend Ball"
       },
       {
-        "Apricorn Type": "Pink Apricorns",
+        "Name": "Pink Apricorns",
         "Poké Ball": "Love Ball"
       },
       {
-        "Apricorn Type": "White Apricorns",
+        "Name": "White Apricorns",
         "Poké Ball": "Fast Ball"
       },
       {
-        "Apricorn Type": "Black Apricorns",
+        "Name": "Black Apricorns",
         "Poké Ball": "Heavy Ball"
       }
     ],
     "Herbs": [
       {
-        "Herb Type": "Energy Root*",
+        "Name": "Energy Root*",
         "Effect": "Heals 70 Hit Points – Repulsive",
         "Price": 500
       },
       {
-        "Herb Type": "Revival Herb",
+        "Name": "Revival Herb",
         "Effect": "Revives Pokémon and sets to 50% Hit Points – Repulsive",
         "Price": 350
       },
       {
-        "Herb Type": "Mental Herb",
+        "Name": "Mental Herb",
         "Effect": "Cures all Volatile Status Effects.",
         "Price": 300
       },
       {
-        "Herb Type": "Power Herb",
+        "Name": "Power Herb",
         "Effect": "Eliminates the Set-Up turn of Moves with the Set-Up Keyword.",
         "Price": 300
       },
       {
-        "Herb Type": "White Herb",
+        "Name": "White Herb",
         "Effect": "Any negative Combat Stages are set to 0.",
         "Price": 300
       },
       {
-        "Herb Type": "Tiny Mushroom",
+        "Name": "Tiny Mushroom",
         "Effect": "The user loses 5 HP, and gains +1 Combat Stage in a random Stat."
       },
       {
-        "Herb Type": "Big Mushroom",
+        "Name": "Big Mushroom",
         "Effect": "The Poisoned; if they do, they gain +1 Combat Stage in two random Stats."
       },
       {
-        "Herb Type": "Balm Mushroom",
+        "Name": "Balm Mushroom",
         "Effect": "The user is cured of Burn, Paralysis, or Poison. If they are, they lose 1 Combat Stage in a random Stat."
       },
       {
-        "Item": "Mirror Herb",
+        "Name": "Mirror Herb",
         "Effect": "When another Pokémon or Trainer gains positive Combat Stages, the user may trade in this Food Buff to also gain those Combat Stages.",
         "Price": 500,
         "Source": "Community"
@@ -641,7 +641,7 @@
         "type": "table",
         "rowPerField": false,
         "columns": [
-          "Item",
+          "Name",
           "Effect",
           "Price"
         ]
@@ -658,78 +658,78 @@
     },
     "Travel Gear": [
       {
-        "Item": "Bait",
+        "Name": "Bait",
         "Effect": "Bait is a tasty, strong-smelling morsel of food designed to attract Pokémon. It may be used in two ways; to lure Pokémon, or to distract Pokémon.\nTo lure Pokémon, set the bait on a route. Every 15 minutes thereafter, roll 1d20 until you roll 15 or higher. If you roll 3 times without success, the bait loses its potency and fails. If you succeed however, a random Pokémon, based on your GM's discretion will appear. The Pokémon attracted with bait should usually be of a Level comparable to the party's Pokémon. Bait is often used for Fishing in this way.\nTo distract Pokémon, throw it at a Wild Pokémon as a Standard Action. The target must then make a Focus Roll with a DC of 12. If they fail, the Pokémon gives up its next Standard Action to eat the food.",
         "Price": 250
       },
       {
-        "Item": "Collection Jar",
+        "Name": "Collection Jar",
         "Effect": "A simple sealable glass jar. Useful when collecting Items from Pokémon, such as Honey from Pokémon with the Honey Gather Ability, or MooMoo Milk from Pokémon with the Milk Collection Ability.",
         "Price": 100
       },
       {
-        "Item": "First Aid Kit",
+        "Name": "First Aid Kit",
         "Effect": "Required to use the First Aid Expertise Feature. By Draining 1 AP, any Trainer can make a Medicine Education Check on a target as an Extended Action. The target gains Hit Points equal to the result, and is cured of Burn, Poison, and Paralysis.",
         "Price": 500
       },
       {
-        "Item": "Fishing Lure",
+        "Name": "Fishing Lure",
         "Effect": "Instead of Bait, some trainers may opt to use a Fishing Lure when attempting to Fish. Fishing Lures work just like Bait, but can be used multiple times. If the line snaps or the fish gets away, they may take your lure with them, however.",
         "Price": 1500
       },
       {
-        "Item": "Saddle",
+        "Name": "Saddle",
         "Effect": "Saddles help Trainers ride Pokémon. They are created with a specific Pokémon species in mind, and only Pokémon with that body type can wear the saddle. A common Saddle type fits Ponyta, Rapidash, Blitzle, and Zebstrika, for example. Saddles grant a +3 bonus to all Skill Checks made to mount Pokémon, or to remain on the Saddle when hit by an attack.",
         "Price": 2000
       },
       {
-        "Item": "Ropes",
+        "Name": "Ropes",
         "Effect": "Rope has many different uses, and is thus popular gear for explorers, campers, and hikers. Rope can only be damaged by Fire-Type attacks, or attacks made with sharp objects – knives, swords, sharp teeth, and Moves like Scratch, Slash, Leaf Blade, Razor Leaf, etc. The Move Cut ignores all Damage Reduction against Rope. Rope can be bought in any length of 25 Feet up to 300. The listed prices below reflect 25 feet of rope; simply multiply the price appropriately for more.",
         "Ropes": [
           {
-            "Item": "Basic Rope",
+            "Name": "Basic Rope",
             "Effect": "Basic Fiber Rope. Has a tensile strength of 35 kg or 77 lbs. It has 5 Hit Points.",
             "Price": 100
           },
           {
-            "Item": "Utility Rope",
+            "Name": "Utility Rope",
             "Effect": "Braided Utility Rope. Has a tensile strength of 80 kg or 176 lbs. It has 20 Hit Points and 10 Damage Reduction.",
             "Price": 200
           },
           {
-            "Item": "Sturdy Rope",
+            "Name": "Sturdy Rope",
             "Effect": "Sturdy Rope with a tensile strength of 225 kg or roughly 500lbs. 30 Hit Points and 20 Damage Reduction.",
             "Price": 400
           }
         ]
       },
       {
-        "Item": "Sleeping Bag",
+        "Name": "Sleeping Bag",
         "Effect": "A standard sleeping bag.",
         "Price": "₽1000 (Single) or 1800 (Double)"
       },
       {
-        "Item": "Tents:",
+        "Name": "Tents:",
         "Effect": "Standard outdoor tents. Provide protection from the elements of nature. A small one person tent would be about 1m x 1.5m x 1.5m, or 2.25 cubic meters – meaning 900 in price.",
         "Price": "₽400 per meter cubed"
       },
       {
-        "Item": "Lighter",
+        "Name": "Lighter",
         "Effect": "For creating flames in a hurry.",
         "Price": "₽150 (Regular) or ₽1000 (Waterproof)"
       },
       {
-        "Item": "Flashlight:",
+        "Name": "Flashlight:",
         "Effect": "For, you know, seeing. In the dark. Yes.",
         "Price": "₽200 (Regular) or ₽600 (Waterproof)"
       },
       {
-        "Item": "Water Filter",
+        "Name": "Water Filter",
         "Effect": "Can ensure that river or pond water is clean to drink after being filtered.",
         "Price": 500
       },
       {
-        "Item": "Repels",
+        "Name": "Repels",
         "Effect": "Repels can be sprayed on one's self in order to ward off wilds with a subtle smell that greatly annoys Pokémon. It's best to not make your own Pokémon endure the smell while using Repels yourself. Most wild Pokémon won't bother you when you spray Repel on yourself, and will make themselves scarce before you even approach.\nSpraying a wild Pokémon directly with Repel will cause that Pokémon, if the Repel can affect Pokémon of that level, to immediately shift away from the user as far as the Pokémon is able as an Interrupt, forfeiting their next Shift Action. Spraying a Pokémon with a Repel is an AC6 Status Attack.",
         "Repels": [
           {
@@ -754,37 +754,37 @@
   "Crafting Kits": {
     "Crafting Kits": [
       {
-        "Item": "Chemistry Set",
+        "Name": "Chemistry Set",
         "Effect": "Used to create Repels, Potions, and other objects.",
         "Price": 1000
       },
       {
-        "Item": "Cooking Set",
+        "Name": "Cooking Set",
         "Effect": "Used by Chefs to create Snacks and Refreshments.",
         "Price": 1000
       },
       {
-        "Item": "Dowsing Rod",
+        "Name": "Dowsing Rod",
         "Effect": "Dowsing Rods have been attuned to the energy resonance given off by Shards. They may be used while in any route, cave, or outside area and can be bought for $2000. They may be activated by spending 10 minutes searching an area, and may be activated a number of times per day equal to half of the trainer's Occult Education Rank.\nAfter the 10 minutes, roll 1d6 per Occult Education Rank. If the area being searched is a beach, cave, desert, or any other sandy or rocky area, roll +1d6. If you have Skill Stunt (Dowsing), you roll an additional 1d6.\nFor each die that results in 4 or higher, you find 1 Shard of a random color: Red, Orange, Yellow, Green, Blue, or Violet. You may reroll any die that result in 6, gaining that shard and potentially more.",
         "Price": 2000
       },
       {
-        "Item": "Poffin Mixer",
+        "Name": "Poffin Mixer",
         "Effect": "Poffin Mixer can be used by any Trainer to create Poffins. You simply insert cooking ingredients worth $500, and at least one of the listed berries. You create two Poffins that raises the Contest Stat most represented by the berries used by +1 Contest Die. Some Berries can raise multiple Contest Stats; you choose which to raise when using these Berries to make Poffins. Cheri, Figy, Razz, Spelon and Belue Berries raise Cool; Chesto, Wiki, Bluk, Spelon and Pamtre Berries raise Beauty; Pecha, Mago, Nanab, Pamtre, and Watmel Berries raise Cute; Rawst, Aguav, Wepear, Watmel, and Durin Berries raise Smart; Aspear, Iapapa, Pinap, Durin, and Belue Berries raise Tough. Poffins can be purchased for $500 in bakeries and Contest halls, and Poffin Mixers cost $500 as well.",
         "Price": 500
       },
       {
-        "Item": "Poké Ball Tool Box",
+        "Name": "Poké Ball Tool Box",
         "Effect": "These tool boxes let those with the know-how craft and repair Poké Balls. They cost $500 and can be found in most Poké Marts.",
         "Price": 500
       },
       {
-        "Item": "Portable Grower / Berry Planter",
+        "Name": "Portable Grower / Berry Planter",
         "Effect": "Portable Growers can be used to grow berries and herbs. Portable Growers protect the plants within them from external weather, and never need to be fertilized. Each Grower holds one plant.",
         "Price": 2000
       },
       {
-        "Item": "Shards",
+        "Name": "Shards",
         "Effect": "Shards are bits of colored energized crystal and are used for various crafting purposes. Each color is associated with three Types. Red is Fire, Fairy, and Psychic; Orange is Normal, Fighting, and Dragon; Yellow is Electric, Rock and Steel; Green is Bug, Grass, and Ground; Blue is Water, Ice, and Flying; Violet is Poison, Dark, and Ghost."
       }
     ]
@@ -792,14 +792,14 @@
   "Books": {
     "Book Item Mechanics": [
       {
-        "Item": "Book Item Mechanics",
+        "Name": "Book Item Mechanics",
         "Description": "Books hold knowledge, and knowledge is power! Books are Items associated with Education Skills that can be used during Extended Actions to Drain your AP to receive certain benefits.\nAfter half an hour of study, you can Drain 1 AP to gain the benefits of one Rank of a Book , if you meet the prerequisite Skill for that Book’s Rank. Ranks in an individual book must be gained sequentially (e.g. you must have the Novice Rank effect to gain the the Expert Rank effect).\nThe benefits from a Book last until an Extended Rest is taken; when an Extended Rest is taken, you may choose to renew any Drain previously held from Books and continue to gain the effects.\nBooks generally cost $1000, but we are still looking at how to best price them. Give us feedback!",
         "Source": "Erratum May 2015"
       }
     ],
     "General Eduction Books": [
       {
-        "Item": "Study Manual",
+        "Name": "Study Manual",
         "Description": "A Study Manual is always assigned to a single Skill and covers a specific narrow field that can be taken as a Skill Stunt. A list of examples is provided.",
         "Rank 1 - Novice General Education": "You gain a Skill Stunt in the associated Skill of the Study Manual covering the narrow field specified by the Study Manual.",
         "Rank 2 - Expert General Education": "You gain a general +2 Bonus to the associated Skill. This Bonus does not stack with other bonuses from Books or Equipment to the same Skill.",
@@ -807,14 +807,14 @@
         "Source": "Erratum May 2015"
       },
       {
-        "Item": "The Joy of Cooking",
+        "Name": "The Joy of Cooking",
         "Description": "A cookbook for novice and experienced chefs alike.",
         "Rank 1 - Novice General Education": "Your material costs for crafting Food Items of any variety are reduced by 10%.",
         "Rank 2 - Expert General Education": "Meal and Refreshment you create cause whoever eats them to gain a Tick of Hit Points.",
         "Source": "Erratum May 2015"
       },
       {
-        "Item": "How Berries??",
+        "Name": "How Berries??",
         "Description": "A beginner’s guide to the proper care of berry plants.",
         "Rank 1 - Adept General Education": "Once per day when making a Yield Roll, add +1 to the result.",
         "Rank 2 - Expert General Education": "You may create Mulch from Food Scrap.",
@@ -823,14 +823,14 @@
     ],
     "Medicine Education Books": [
       {
-        "Item": "First Aid Manual",
+        "Name": "First Aid Manual",
         "Description": "A training manual given to all EMTs.",
         "Rank 1 - Novice Medicine Education": "You gain a +10 Bonus to Medicine Education Checks made to use a First Aid Kit.",
         "Rank 2 - Expert Medicine Education": "You may use the First Aid Expertise Feature once per day.",
         "Source": "Erratum May 2015"
       },
       {
-        "Item": "Traditional Medicine Reference*",
+        "Name": "Traditional Medicine Reference*",
         "Description": "A volume dedicated to properly preparing herbal medications.",
         "Rank 1 - Adept Medicine Education": "Targets you administer Herbal Restoratives to do not lose Combat Stages no matter how many Herbal Restoratives they've had in the same day.",
         "Rank 2 - Expert Medicine Education": "Whenever you administer an Herbal Restorative to a target, they may choose to gain the Food Buff associated with Herbal Restoratives, regardless of how many Herbal Restoratives they've used this day.",
@@ -838,7 +838,7 @@
         "Source": "Erratum May 2015"
       },
       {
-        "Item": "Caretaker's Manual",
+        "Name": "Caretaker's Manual",
         "Description": "An invaluable guide to patient care with wide appeal and praised by both nurses and rangers.",
         "Rank 1 - Adept Medicine Education": "Once per Scene, you may assist an adjacent ally in Taking a Breather as a Standard Action, and they do not Shift or become Tripped as part of this action. If the target is Confused or Enraged, you may roll Medicine Education instead of Command to assist them.",
         "Rank 2 - Master Medicine Education": "This effect can only be bound while taking an Extended Rest and Drains AP for the next day. During this Extended Rest, Pokémon and Trainers in your care heal twice as many Hit Points while resting, heal Injuries twice as quickly, and may heal an additional Injury per day. This stacks with use of Bandages.",
@@ -847,21 +847,21 @@
     ],
     "Occult Education Books": [
       {
-        "Item": "Dowsing For Dummies",
+        "Name": "Dowsing For Dummies",
         "Description": "A favorite of rock collectors everywhere, this book teaches the user how to attune their dowsing rods.",
         "Rank 1 - Novice Occult Education": "Roll +1d6 when searching for Shards.",
         "Rank 2 - Adept Occult Education": "When you begin searching for Shards, you may choose to expend an additional activation of Dowsing for the day. If you do, choose a Shard Color; all the Shards you find during this search will be of the chosen Color.",
         "Source": "Erratum May 2015"
       },
       {
-        "Item": "How to Avoid Being Spooked",
+        "Name": "How to Avoid Being Spooked",
         "Description": "A questionable old tome filled with Ghost-related esoterica.",
         "Rank 1 - Adept Occult Education": "While holding a Cleanse Tag in your Main or Off-Hand Equipment Slot, you can see Pokémon and Trainers using the Invisibility Capability.",
         "Rank 2 - Expert Occult Education": "While holding a Cleanse Tag in your Main or Off-Hand Equipment Slot, you are immune to the Cursed Status Affliction.",
         "Source": "Erratum May 2015"
       },
       {
-        "Item": "Tinfoil Gospel: Your Primer on Thwarting the Conspiracies of the New World Order",
+        "Name": "Tinfoil Gospel: Your Primer on Thwarting the Conspiracies of the New World Order",
         "Description": "An even more questionable tome, filled with laughable conspiracy theories. Its mental exercises are strangely effective, however.",
         "Rank 1 - Novice Occult Education": "You gain the Iron Mind Edge and the Skill Stunt - Focus (resisting Telepathy).",
         "Rank 2 - Expert Occult Education": "Your Aura becomes muddled and difficult to read. Pokémon and Trainers with the Aura Reader Capability cannot discern the tint of your Aura and must succeed on an opposed Intuition or Focus Check vs your Occult Education or Focus in order to read the hue of your Aura. Upon failure, they may not attempt to read your Aura again for the remainder of the Scene.",
@@ -870,14 +870,14 @@
     ],
     "Pokémon Education Books": [
       {
-        "Item": "Type Study Manual",
+        "Name": "Type Study Manual",
         "Description": "These Books focus on one particular Pokemon Type.",
         "Rank 1 - Novice Pokémon Education": "You gain a -5 Bonus on Capture Checks against the studied Type.",
         "Rank 2 - Expert Pokémon Education": "When you apply Experience Training, you may choose to give one of your Pokémon of the studied Type +10 Bonus Experience. The same Pokémon cannot be chosen two days in a row.",
         "Source": "Erratum May 2015"
       },
       {
-        "Item": "Pokémon Daycare Licensing Guide",
+        "Name": "Pokémon Daycare Licensing Guide",
         "Description": "This book teaches advanced Pokémon Breeding techniques.",
         "Rank 1 - Adept Pokémon Education": "When Breeding Pokémon of this Book's Egg Group, you may choose which parent's species the Egg is of.",
         "Rank 2 - Master Pokémon Education": "When hatching Eggs of Pokémon of this Book's Egg Group, the hatched Pokémon learns their first Inheritance Move at Level 10 instead of Level 20.",
@@ -886,21 +886,21 @@
     ],
     "Survival Books": [
       {
-        "Item": "Fishing 101",
+        "Name": "Fishing 101",
         "Description": "A good way to waste an afternoon sitting at the side of a boat.",
         "Rank 1 - Novice Survival": "You gain the Snare Capture Technique, but it only applies to Pokémon you have fished up.",
         "Rank 2 - Adept Survival": "Whenever you fish up a Pokémon, choose two Combat Stats. That Pokémon becomes Flinched and loses 1 Combat Stage in each of the chosen Stats.",
         "Source": "Erratum May 2015"
       },
       {
-        "Item": "A Field Guide to Fungi",
+        "Name": "A Field Guide to Fungi",
         "Description": "This book tells you which mushrooms are good to eat and which ones will give you a bad trip.",
         "Rank 1 - Novice Survival": "You automatically identify all Tiny Mushrooms, Big Mushrooms, and Balm Mushrooms you pick. Whenever you or your Pokémon consume one of those Mushrooms, they ignore the negative effect of the Mushroom (Hit Point loss, Poison, Combat Stage loss).",
         "Rank 2 - Adept Survival": "You can create the Hearty Meal Chef Recipe as an Extended Action but only by using Mushrooms as ingredients.",
         "Source": "Erratum May 2015"
       },
       {
-        "Item": "Travel Guide",
+        "Name": "Travel Guide",
         "Description": "A Travel Guide covers a specific location, such as a mountain or a pair of routes in the wilderness. Travel Guides are usually written for the more popular destinations in a region, but they might not necessarily exist for more obscure and out of the way locations.",
         "Rank 1 - Novice Survival: You gain the following Skill Stunts while traveling in the studied location": "Survival (Foraging) and Survival (Navigation).",
         "Rank 2 - Expert Survival": "You and your Pokémon do not take damage from naturally occurring Weather effects in the studied location.",
@@ -909,21 +909,21 @@
     ],
     "Technology Education Books": [
       {
-        "Item": "The Anarchist Cookbook",
+        "Name": "The Anarchist Cookbook",
         "Description": "The simple act of owning this book isn't illegal, but carrying out its suggestions might be.",
         "Rank 1 - Novice Technology Education": "Whenever you apply a Repel to a target, they become Blinded until the end of their next turn. This may only affect a target once per Scene.",
         "Rank 2 - Expert Technology Education": "Whenever you hit a target with a Repel or Pester Ball, they lose Hit Points equal to your Technology Education Rank.",
         "Source": "Erratum May 2015"
       },
       {
-        "Item": "Poké Ball Technical Manual",
+        "Name": "Poké Ball Technical Manual",
         "Description": "Your all-in-one guide to balls.",
         "Rank 1 - Novice Technology Education": "Your material costs for crafting Poke Balls of any variety are reduced by 10%.",
         "Rank 2 - Expert Technology Education": "Poke Balls you craft gain a +2 Bonus to Accuracy Rolls.",
         "Source": "Erratum May 2015"
       },
       {
-        "Item": "DIY Engineering",
+        "Name": "DIY Engineering",
         "Rank 1 - Novice Technology Education": "Your material costs for crafting items crafted from Mechanical Scrap are reduced by 10%.",
         "Rank 2 - Expert Technology Education": "Whenever you Scrap an Item you created, you gain Scrap worth 75% of its monetary cost instead of only 50%.",
         "Source": "Erratum May 2015"
@@ -933,125 +933,125 @@
   "Equipment": {
     "Body Equipment": [
       {
-        "Item": "Light Armor",
+        "Name": "Light Armor",
         "Effect": "Grants 5 Damage Reduction",
         "Price": 8000
       },
       {
-        "Item": "Heavy Armor",
+        "Name": "Heavy Armor",
         "Effect": "Heavy Armor grants +10 Damage Reduction. Heavy Armor causes the wearer's Speed's Default Combat Stage to be -1.",
         "Price": 12000
       },
       {
-        "Item": "Fancy Clothes",
+        "Name": "Fancy Clothes",
         "Effect": "Each set of Fancy Clothes is assigned a Contest Stat - either Beauty, Cool, Cute, Smart, or Tough. Trainers wearing these clothes may roll 2d6 during the Introduction Stage of a Contest to try to generate Contest Stat Dice for the assigned Stat.",
         "Price": 5000
       },
       {
-        "Item": "Stealth Clothes",
+        "Name": "Stealth Clothes",
         "Effect": "Whether it's a dark cloak and hood, a ninja suit, or spy gear, these clothes help you blend in. This body-slot equipment raises your modifier to Stealth Checks made to remain unseen by +4, to a maximum total modifier of +4.",
         "Price": 2000
       }
     ],
     "Head Equipment": [
       {
-        "Item": "Dark Vision Goggles",
+        "Name": "Dark Vision Goggles",
         "Effect": "These Goggles simply grant the Darkvision Capability while worn.",
         "Price": 1000
       },
       {
-        "Item": "Gas Mask",
+        "Name": "Gas Mask",
         "Effect": "Gas Masks are invaluable equipment when trying to breathe in toxic environments or heavy smoke. They not only let you breathe through environmental toxins or smoke, but you become immune to the Moves Rage Powder, Poison Gas, Poisonpowder, Sleep Powder, Smog, Smokescreen, Spore, Stun Spore, and Sweet Scent.",
         "Price": 1500
       },
       {
-        "Item": "Helmet",
+        "Name": "Helmet",
         "Effect": "The user gains 15 Damage Reduction against Critical Hits. The user resists the Moves Headbutt and Zen Headbutt and can't be flinched by these Moves.",
         "Price": 2250
       },
       {
-        "Item": "Re-Breather",
+        "Name": "Re-Breather",
         "Effect": "This small partial face mask allows Trainers and Pokemon to breathe underwater as if they had the Gilled Capability for up to an hour. The Re-Breather is refilled automatically in 5 minutes while in open air.",
         "Price": 4000
       },
       {
-        "Item": "Sunglasses",
+        "Name": "Sunglasses",
         "Effect": "+1 to Charm, Guile, and Intimidate Checks, to a maximum total modifier of +3.",
         "Price": 2000
       }
     ],
     "Feet Equipment": [
       {
-        "Item": "Snow Boots",
+        "Name": "Snow Boots",
         "Effect": "Snow Boots grant you the Naturewalk (Tundra) capability, but lower your Overland Speed by -1 while on ice or deep snow.",
         "Price": 1500
       },
       {
-        "Item": "Running Shoes",
+        "Name": "Running Shoes",
         "Effect": "Running Shoes grant a +2 bonus to Athletics Checks, to a maximum total modifier of +3, and increase your Overland Speed by +1.",
         "Price": 2000
       },
       {
-        "Item": "Flippers",
+        "Name": "Flippers",
         "Effect": "Flippers grant a +2 bonus to your Swim speed when fully submerged, and decrease your Overland speed by the same amount.",
         "Price": 2000
       },
       {
-        "Item": "Jungle Boots",
+        "Name": "Jungle Boots",
         "Effect": "Jungle Boots grant you the Naturewalk (Forest) capability.",
         "Price": 1500
       }
     ],
     "Hand Equipment": [
       {
-        "Item": "Fishing Rod",
+        "Name": "Fishing Rod",
         "Effect": "Fishing Rods are used to Fish. They are two-handed items. They come in three varieties; Old Rods, Good Rods, and Super Rods. Old Rods cost ₽1000, Good Rods cost ₽5,000, and Super Rods cost ₽15,000."
       },
       {
-        "Item": "Glue Cannon",
+        "Name": "Glue Cannon",
         "Effect": "Glue Cannons are exactly what you expect; This two-handed Equipment piece is a hand-held cannon that launches globs of glue. Attacking with a Glue Cannon expends a charge, which must be purchased. The attack is an AC8 Status Attack. If it hits, the target is Slowed. On a critical hit, the target is instead Stuck and Trapped. The Glue Cannon and three charge packets cost ₽3000, and additional charge packets costs ₽100."
       },
       {
-        "Item": "Hand Net",
+        "Name": "Hand Net",
         "Effect": "A long net, usually on the end of a long stick, these pieces of two-handed Equipment are usually used for bug catching or fishing. As an AC6 Status Attack, you may attempt to net a Small Pokemon using this item. If you hit, you manage to scoop up the Pokemon, trapping them. You may move with the Pokemon, dragging them with you. Pokemon may still attack from the Hand Net using long-range attacks, or try to attack the net itself, potentially breaking it and freeing themselves. Capture Rolls against Pokémon in a net receive a -20 bonus.\nHand Nets with 50 Hit Points cost ₽100; 100 Hit Points cost ₽600; and 200 Hit Points cost ₽1500. Nets aren't broken until all of their Hit Points are depleted."
       },
       {
-        "Item": "Weighted Nets",
+        "Name": "Weighted Nets",
         "Effect": "Weighted Nets are foldable nets used for trapping Pokemon. These two-handed nets, when Equipped, can be thrown at a target as a Standard Action, as a Status Attack with an AC of 8. While a Pokemon is netted, you may pull on the rope attached to the Net to pull the Pokemon 1 Meter towards you as a Standard Action.\nPokemon hit by a weighted net become Slowed as long as the net remains and cannot use Sky or Levitate Speeds except to safely lower themselves back to the ground. A Pokemon may attack the Net to attempt to break free. Capture Rolls against Pokémon in a net receive a -20 bonus.\nWeighted Nets with 50 Hit Points cost ₽500; 80 Hit Points cost ₽850; and 150 Hit Points cost ₽1200."
       },
       {
-        "Item": "Capture Styler",
+        "Name": "Capture Styler",
         "Effect": "A Capture Styler is a Main-Hand specialized piece of equipment used by some certified Pokémon Rangers in a region. It emits a string of energy that is used in a similar fashion to a lasso but is too weak to physically restrain a target. Instead, the energy has a calming effect on Pokémon.\nTrainers using a Capture Styler may use Survival in place of Charm when raising the Disposition of Pokémon. Acquiring a Capture Styler is easy for those who become certified Pokémon Rangers; most qualified Rangers receive one as part of the job. They are not for sale to the general public and may cost upwards of ₽7500 on the black market due to their iconic nature - it's easy to assume that someone who has a Capture Styler is a Ranger."
       },
       {
-        "Item": "Light Shield",
+        "Name": "Light Shield",
         "Effect": "A Shield is an Off-Hand defensive item held in one hand or braced to an arm. Light Shields grant +2 Evasion. They may be readied as a Standard Action to instead grant +4 Evasion and 10 Damage Reduction until the end of your next turn, but also cause you to become Slowed for that duration. If used Two-Handed, light shields can also function as a Small Melee Weapon. Light Shields cost around ₽3000.",
         "Price": 3000
       },
       {
-        "Item": "Heavy Shield",
+        "Name": "Heavy Shield",
         "Effect": "A Shield is an Off-Hand defensive item held in one hand or braced to an arm. Heavy Shields grant +2 Evasion and may be readied as a Standard Action to grant +6 Evasion and 15 Damage Reduction until the end of your next turn, but also cause you to become Slowed for that duration. If used Two-Handed, shields can also function as a Small Melee Weapon. Heavy Shields cost around ₽4500.",
         "Price": 4500
       },
       {
-        "Item": "Wonder Launcher",
+        "Name": "Wonder Launcher",
         "Effect": "This strange and complicated two-handed machine can only be used by those that have an Expert-Level Medicine or Technology Education Skill. The wielder can spend 1 AP to activate it, and apply an X-Item at a Pokémon within 8 meters. X-Items applied through the Wonder Launcher do not cause the target to forfeit any actions. Items combined by a Researcher may be used in the Wonder Launcher, and do not cause the target to forfeit any actions even if they are also a Restorative. Wonder Launchers cost $10,000 or more.",
         "Price": 10000
       }
     ],
     "Accessory Items": [
       {
-        "Item": "Focus",
+        "Name": "Focus",
         "Effect": "A Focus grants +5 Bonus to a Stat, chosen when crafted. This Bonus is applied AFTER Combat Stages. Focuses are often Accessory-Slot Items, but may be crafted as Head-Slot, Hand or Off-Hand Slot Items as well; a Trainer may only benefit from one Focus at a time, regardless of the Equipment Slot. Focuses are not usually found in stores, but may sometimes be found for ₽6000 at your GM's discretion.",
         "Price": 6000
       },
       {
-        "Item": "Snag Machine",
+        "Name": "Snag Machine",
         "Effect": "Snag Machines are extremely illegal machines that allow trainers to steal another Trainer's Pokémon. They come in both large, immovable varieties and smaller portable varieties. The Portable Variety is an Accessory-Slot Item. Inserting a Poké Ball into a Large Snag Machine turns it into a Snag Ball permanently, but Large Snag Machines may only turn 5 Poké Balls into Snag Balls per day. Inserting a Poké Ball into a Portable Snag Machine, which is a Swift Action, turns it into a Snag Ball after one round, but only for that round. Snag Balls have the same properties as the Poké Ball type they were before being inserted into the machine, but receive a -2 penalty on all Poké Ball attack rolls, and are capable of capturing owned Pokémon. Snag Machines cannot be bought in stores, but may sell on the black market for prices of ₽30,000 or more.",
         "Price": 30000
       },
       {
-        "Item": "Mega Ring",
+        "Name": "Mega Ring",
         "Effect": "Mega Rings are extraordinarily rare accessories that allow a Trainer's Pokémon to Mega Evolve when used in conjunction with a Mega Stone. They cannot be bought in stores anywhere and must usually be earned through a trial of sorts, governed by a Gym Leader or other influential Pokémon Trainer. They can take the form of a bracelet, a necklace, or an actual ring."
       }
     ]
@@ -1059,215 +1059,215 @@
   "Pokémon Items": {
     "Held Items": [
       {
-        "Item": "Big Root",
+        "Name": "Big Root",
         "Effect": "HP stealing moves restore double HP. Cannot be used by Trainers.",
         "Price": 1000
       },
       {
-        "Item": "Bright Powder",
+        "Name": "Bright Powder",
         "Effect": "+2 to Speed Evasion. Cannot be used by Trainers.",
         "Price": 2000
       },
       {
-        "Item": "Choice Item",
+        "Name": "Choice Item",
         "Effect": "Choice Items are tied to a Specific Stat. While worn, the default state of the Stat is +2 Combat Stages instead of 0. However, the user is Suppressed and cannot be cured until the end of Combat, even if the item is removed. Cannot be used by Trainers.",
         "Price": 3000
       },
       {
-        "Item": "Contest Accessory",
+        "Name": "Contest Accessory",
         "Effect": "The user rolls +2d6 during the Introduction Stage of a Contest. Cannot be used by Trainers.",
         "Price": 1500
       },
       {
-        "Item": "Contest Fashion",
+        "Name": "Contest Fashion",
         "Effect": "These Items have a chosen Contest Stat; Beauty, Cool, Cute, Smart, or Tough. When held, once per Contest, the holder may re-roll any 1s made when using a Move of the chosen Type. Cannot be used by Trainers.",
         "Price": 1000
       },
       {
-        "Item": "Everstone",
+        "Name": "Everstone",
         "Effect": "Evolution is prevented for the holder. Cannot be used by Trainers.",
         "Price": 1500
       },
       {
-        "Item": "Eviolite",
+        "Name": "Eviolite",
         "Effect": "Only affects not-fully-evolved Pokemon of a single family, decided when the Eviolite is made. Grants a +5 Bonus to two different Stats, after Combat Stages, decided when the Eviolite is made. Prevents Pokemon from evolving when held. Cannot be used by Trainers.",
         "Price": 4000
       },
       {
-        "Item": "Expert Belt",
+        "Name": "Expert Belt",
         "Effect": "Whenever the holder deals Super Effective Damage, they deal an additional 5 damage (this damage is not multiplied). Accessory Item for Trainers.",
         "Price": 3500
       },
       {
-        "Item": "Flame Orb",
+        "Name": "Flame Orb",
         "Effect": "Induces burn on holder. Off-Hand Item for Trainers. Standard Action to drop.",
         "Price": 3800
       },
       {
-        "Item": "Focus Band",
+        "Name": "Focus Band",
         "Effect": "Whenever the user faints, roll 1d20. Once a Scene on a result of 16+, the holder does not faint, and is left with 1 Hit Point. Accessory Item for Trainers.",
         "Price": 4700
       },
       {
-        "Item": "Focus Sash",
+        "Name": "Focus Sash",
         "Effect": "Once a Scene, if damage from a Move would take Focus Sash's holder's Hit Points from Max to 0 or less, Focus Sash's holder instead has 1 Hit Point remaining. Accessory Item for Trainers.",
         "Price": 4700
       },
       {
-        "Item": "Full Incense",
+        "Name": "Full Incense",
         "Effect": "The holder gains the Stall ability. Cannot be used by Trainers.",
         "Price": 900
       },
       {
-        "Item": "Go-Goggles",
+        "Name": "Go-Goggles",
         "Effect": "The user does not take damage from Sandstorm. Head Item for Trainers.",
         "Price": 1500
       },
       {
-        "Item": "Iron Ball",
+        "Name": "Iron Ball",
         "Effect": "The Holder's Speed is halved, and any immunity to Ground Type is lost. Hand Item for Trainers. Standard Action to drop.",
         "Price": 900
       },
       {
-        "Item": "King's Rock",
+        "Name": "King's Rock",
         "Effect": "Attacks cause Flinch on a roll of 19+. This does not stack with any abilities, moves, or effects that extend flinch rate. Head Item for Trainers.",
         "Price": 2500
       },
       {
-        "Item": "Lagging Item",
+        "Name": "Lagging Item",
         "Effect": "The Lagging Items are tied to a specific Stat. When held, they set that Stat to -4 Combat Stages. Cannot be used by Trainers. Standard Action to drop.",
         "Price": 900
       },
       {
-        "Item": "Lax Incense",
+        "Name": "Lax Incense",
         "Effect": "+1 to all Stat Evasions. Cannot be used by Trainers.",
         "Price": 2000
       },
       {
-        "Item": "Life Orb",
+        "Name": "Life Orb",
         "Effect": "Whenever the holder deals direct damage, increase the damage by +5, and then the holder loses Hit Points equal to 1/16th of their Max Hit Points. Off-Hand Item for Trainers.",
         "Price": 3700
       },
       {
-        "Item": "Luck Incense",
+        "Name": "Luck Incense",
         "Effect": "Grants +1 Bonus to all Accuracy Rolls. A roll of 1 always misses. Cannot be used by Trainers.",
         "Price": 1800
       },
       {
-        "Item": "Quick Claw",
+        "Name": "Quick Claw",
         "Effect": "The user adds +10 to their Initiative. Accessory Item for Trainers.",
         "Price": 4200
       },
       {
-        "Item": "Razor Claw",
+        "Name": "Razor Claw",
         "Effect": "The holder's damaging attacks have their Critical Hit Range extended by +1.",
         "Price": 3000
       },
       {
-        "Item": "Razor Fang",
+        "Name": "Razor Fang",
         "Effect": "The holder's damaging attacks cause an Injury on a roll of 19+. Accessory Item for Trainers.",
         "Price": 3000
       },
       {
-        "Item": "Safety Goggles",
+        "Name": "Safety Goggles",
         "Effect": "The holder is immune to Moves with the Powder Keyword. Accessory or Head Item for Trainers.",
         "Price": 1500
       },
       {
-        "Item": "Shell Bell",
+        "Name": "Shell Bell",
         "Effect": "Whenever the user damages a foe, they gain a Tick of Temporary Hit Points. Accessory Item for Trainers.",
         "Price": 5200
       },
       {
-        "Item": "Shock Collar",
+        "Name": "Shock Collar",
         "Effect": "Comes with a remote activator, which when pressed, causes the Pokémon or Trainer wearing the shock collar to lose Hit Points equal to 1/6th of their Max Hit Points. This may be used to activate the \"Press\" Feature. Collars that work on Ground Type Pokemon are available for an additional ₽500.",
         "Price": 500
       },
       {
-        "Item": "Stat Boosters",
+        "Name": "Stat Boosters",
         "Effect": "These items have a chosen Stat, either Attack, Defense, Special Attack, Special Defense, Speed, Evasion, or Accuracy. These items cause the default Stage of their linked Stat to be +1 Combat Stage instead of 0, or simply +1 for Accuracy and Evasion. Accessory Item for Trainers.",
         "Price": 4000
       },
       {
-        "Item": "Toxic Orb",
+        "Name": "Toxic Orb",
         "Effect": "Induces Poison on holder. Off-Hand Item for Trainers. Standard Action to drop.",
         "Price": 4800
       },
       {
-        "Item": "Type Boosters",
+        "Name": "Type Boosters",
         "Effect": "These items come in a variety of each of the Elemental Types, and grants a +5 Damage Bonus to all direct damage Moves of its Specific Type when performed by the user. Accessory Item for Trainers.",
         "Price": 1800
       },
       {
-        "Item": "Type Brace",
+        "Name": "Type Brace",
         "Effect": "These items come in a variety of each of the Elemental Types, and grant the holder 15 Damage Reduction against that specific Type. Accessory Item for Trainers.",
         "Price": 2000
       },
       {
-        "Item": "Winter Cloak",
+        "Name": "Winter Cloak",
         "Effect": "The user does not take damage from Hail. Accessory Item for Trainers.",
         "Price": 1500
       },
       {
-        "Item": "Type Gem",
+        "Name": "Type Gem",
         "Effect": "These items come in a variety of each of the Elemental Types, and are consumed as a Free Action to give a +3 Damage Base bonus to one attack of their Type. Off-hand or Accessory Slot Item for Trainers."
       },
       {
-        "Item": "Type Plate",
+        "Name": "Type Plate",
         "Effect": "These Rare items come in a variety of each of the Elemental Types, and act as both a Type Booster and a Type Brace. Accessory Slot Item for Trainers."
       },
       {
-        "Item": "Mega Stone",
+        "Name": "Mega Stone",
         "Effect": "An item that allows a Pokémon to Mega Evolve when used in conjunction with a Mega Ring. Each Mega Stone is specific to one species and Mega Evolved form."
       },
       {
-        "Item": "Metal Powder",
+        "Name": "Metal Powder",
         "Effect": "When held by an untransformed Ditto, increases both Defense and Special Defense by +2 Combat Stages. Cannot be used by Trainers."
       },
       {
-        "Item": "Rare Leek",
+        "Name": "Rare Leek",
         "Effect": "When held by a Farfetch'd, this rare Leek increase the holder's critical range by 2. Rare Leeks are Wielded. Cannot be used by Trainers."
       },
       {
-        "Item": "Thick Club",
+        "Name": "Thick Club",
         "Effect": "When held by a Cubone or Marowak, this rare, dense bone grants the Pure Power Ability. Thick Clubs are Wielded. Cannot be used by Trainers."
       },
       {
-        "Item": "Pink Pearl",
+        "Name": "Pink Pearl",
         "Effect": "Acts as a Psychic Type Booster. If held by a Spoink, it also acts as a Special Attack Stat Booster."
       },
       {
-        "Item": "Loaded Dice",
+        "Name": "Loaded Dice",
         "Effect": "Whenever the user uses a Five-Strike Move, when determining how many times the Move hits, roll the d8 twice and take the better result. Cannot be used by Trainers.",
         "Price": 7777,
         "Source": "Community"
       },
       {
-        "Item": "Punching Glove",
+        "Name": "Punching Glove",
         "Effect": "The User's melee moves do not count as Melee moves for the purpose of effects that would trigger upon being hit by a melee attack. Additionally, the user gets a +5 bonus to Damage Rolls of punching moves. Off-hand Item for trainers.",
         "Price": 4000,
         "Source": "Community"
       },
       {
-        "Item": "Covert Cloak",
+        "Name": "Covert Cloak",
         "Effect": "Once per Scene, when the user is hit by a damaging Move, they may become immune to all of its effects except Damage and direct Hit Point Loss. Additionally while holding this Item, the user gains a +2 bonus to Stealth checks made to remain unseen, up to a maximum bonus of +4. Accessory Item for Trainers.",
         "Price": 5000,
         "Source": "Community"
       },
       {
-        "Item": "Clear Amulet",
+        "Name": "Clear Amulet",
         "Effect": "The user’s Combat Stages may not be lowered by the effect of foes’ Features, Abilities, or Moves. Status Afflictions may still alter their Combat Stages. Accessory Item for Trainers.",
         "Price": 2500,
         "Source": "Community"
       },
       {
-        "Item": "Ability Shield",
+        "Name": "Ability Shield",
         "Effect": "The user's Abilities cannot be altered by effects from other Pokémon or Trainers. Off-hand Item for Trainers.",
         "Price": 1500,
         "Source": "Community"
       },
       {
-        "Item": "Booster Energy",
+        "Name": "Booster Energy",
         "Effect": "Once per Scene, the user may activate Abilities and Moves dependent on a single Weather or Terrain effect of their choice as though that effect was active. This effect lasts until the user is Fainted or switches out. Off-hand Item for Trainers.",
         "Price": 7500,
         "Source": "Community"
@@ -1275,513 +1275,513 @@
     ],
     "Pokémon Toolkits": [
       {
-        "Item": "Egg Warmer",
+        "Name": "Egg Warmer",
         "Effect": "Egg Warmers are insulated cases that carry up to four Pokémon Eggs and protect them from harm. They also cause Pokémon to hatch twice as fast; each day spent in an Egg Warmer counts as 2 days for the purposes of Hatch Rate.",
         "Price": 2500
       },
       {
-        "Item": "Groomer's Kit",
+        "Name": "Groomer's Kit",
         "Effect": "Used by Trainers with the Groomer Edge to clean their Pokémon.",
         "Price": 500
       },
       {
-        "Item": "Reanimation Machine",
+        "Name": "Reanimation Machine",
         "Effect": "Can be used to revive Fossils. Reanimation Machines also come in a smaller but more expensive Portable variety. Prices are up to GM discretion, often upwards of $10,000. See the Pokémon section for more details (page 216).",
         "Price": 10000
       }
     ],
     "Evolutionary Items": [
       {
-        "Item": "Evolutionary Stones",
+        "Name": "Evolutionary Stones",
         "Price": 3000
       },
       {
-        "Item": "Evolutionary Keepsakes",
+        "Name": "Evolutionary Keepsakes",
         "Price": 3000
       },
       {
-        "Item": "Do I really need to list them all?"
+        "Name": "Do I really need to list them all?"
       }
     ],
     "Vitamins": [
       {
-        "Item": "HP Up",
+        "Name": "HP Up",
         "Effect": "Raise the user's HP Base Stat 1.",
         "Price": 4900
       },
       {
-        "Item": "Protein",
+        "Name": "Protein",
         "Effect": "Raise the user's Attack Base Stat 1.",
         "Price": 4900
       },
       {
-        "Item": "Iron",
+        "Name": "Iron",
         "Effect": "Raise the user's Defense Base Stat 1.",
         "Price": 4900
       },
       {
-        "Item": "Calcium",
+        "Name": "Calcium",
         "Effect": "Raise the user's Special Attack Base Stat 1.",
         "Price": 4900
       },
       {
-        "Item": "Zinc",
+        "Name": "Zinc",
         "Effect": "Raise the user's Special Defense Base Stat 1.",
         "Price": 4900
       },
       {
-        "Item": "Carbos",
+        "Name": "Carbos",
         "Effect": "Raise the user's Speed Base Stat 1.",
         "Price": 4900
       },
       {
-        "Item": "Heart Booster",
+        "Name": "Heart Booster",
         "Effect": "The Pokemon gains 2 Tutor Points. Use only one per Pokémon.",
         "Price": 9800
       },
       {
-        "Item": "PP Up",
+        "Name": "PP Up",
         "Effect": "Raise one of the user's Move's Frequency one level. Use only one per Pokémon.\nAt-Will Moves cannot have their Frequency increased further. EOT Moves become At-Will. Daily and Scene Moves gain an additional use in their Frequency's unit of time. For example, a Daily Move becomes Daily x2, and a Scene x2 Move becomes Scene x3.",
         "Price": 9800
       },
       {
-        "Item": "Heart Scale",
+        "Name": "Heart Scale",
         "Effect": "This tiny rainbow scale from a Luvdisc is valued by Apothecary Researchers, because it can be used to create the Heart Booster vitamin. Luvdiscs will produce them occasionally; they can be found along sandy beaches, and ancient ones can be found in desert, caves, or underground. Heart Scales cannot normally be bought, but Heart Boosters are detailed in the vitamins section."
       },
       {
-        "Item": "Rare Candy",
+        "Name": "Rare Candy",
         "Effect": "These very rare treats are created from Shuckles that have held a Berry for a long time. When ingested by a Pokémon, the eater gains enough experience to reach its next Level. Pokémon may benefit from up to five Rare Candies in their lifetime. Rare Candies can cost ₽9800 or more.",
         "Price": 9800
       },
       {
-        "Item": "Stat Suppressants",
+        "Name": "Stat Suppressants",
         "Effect": "These medicines have an identical effect to the Suppressant Berries – they lower one of the user's Base Stats by 1 point and only function if the Trainer of the Pokémon wants them to. These cost ₽500.",
         "Price": 500
       }
     ],
     "TMs and HMs": [
       {
-        "Item": "01 - Hone Claws",
+        "Name": "01 - Hone Claws",
         "Price": 1200
       },
       {
-        "Item": "02 - Dragon Claw",
+        "Name": "02 - Dragon Claw",
         "Price": 2400
       },
       {
-        "Item": "03 - Psyshock",
+        "Name": "03 - Psyshock",
         "Price": 2900
       },
       {
-        "Item": "04 - Calm Mind",
+        "Name": "04 - Calm Mind",
         "Price": 1200
       },
       {
-        "Item": "05 - Roar",
+        "Name": "05 - Roar",
         "Price": 1000
       },
       {
-        "Item": "06 - Toxic",
+        "Name": "06 - Toxic",
         "Price": 1900
       },
       {
-        "Item": "07 - Hail",
+        "Name": "07 - Hail",
         "Price": 1500
       },
       {
-        "Item": "08 - Bulk Up",
+        "Name": "08 - Bulk Up",
         "Price": 1200
       },
       {
-        "Item": "09 - Venoshock",
+        "Name": "09 - Venoshock",
         "Price": 2300
       },
       {
-        "Item": "10 - Hidden Power",
+        "Name": "10 - Hidden Power",
         "Price": 1500
       },
       {
-        "Item": "11 - Sunny Day",
+        "Name": "11 - Sunny Day",
         "Price": 1500
       },
       {
-        "Item": "12 - Taunt",
+        "Name": "12 - Taunt",
         "Price": 1000
       },
       {
-        "Item": "13 - Ice Beam",
+        "Name": "13 - Ice Beam",
         "Price": 4200
       },
       {
-        "Item": "14 - Blizzard",
+        "Name": "14 - Blizzard",
         "Price": 5100
       },
       {
-        "Item": "15 - Hyper Beam",
+        "Name": "15 - Hyper Beam",
         "Price": 5000
       },
       {
-        "Item": "16 - Light Screen",
+        "Name": "16 - Light Screen",
         "Price": 1500
       },
       {
-        "Item": "17 - Protect",
+        "Name": "17 - Protect",
         "Price": 2500
       },
       {
-        "Item": "18 - Rain Dance",
+        "Name": "18 - Rain Dance",
         "Price": 1500
       },
       {
-        "Item": "19 - Roost",
+        "Name": "19 - Roost",
         "Price": 2500
       },
       {
-        "Item": "20 - Safeguard",
+        "Name": "20 - Safeguard",
         "Price": 1000
       },
       {
-        "Item": "21 - Frustration",
+        "Name": "21 - Frustration",
         "Price": 3000
       },
       {
-        "Item": "22 - Solarbeam",
+        "Name": "22 - Solarbeam",
         "Price": 4600
       },
       {
-        "Item": "23 - Smack Down",
+        "Name": "23 - Smack Down",
         "Price": 2500
       },
       {
-        "Item": "24 - Thunderbolt",
+        "Name": "24 - Thunderbolt",
         "Price": 4200
       },
       {
-        "Item": "25 - Thunder",
+        "Name": "25 - Thunder",
         "Price": 5100
       },
       {
-        "Item": "26 - Earthquake",
+        "Name": "26 - Earthquake",
         "Price": 4000
       },
       {
-        "Item": "27 - Return",
+        "Name": "27 - Return",
         "Price": 3000
       },
       {
-        "Item": "28 - Dig",
+        "Name": "28 - Dig",
         "Price": 3400
       },
       {
-        "Item": "29 - Psychic",
+        "Name": "29 - Psychic",
         "Price": 3000
       },
       {
-        "Item": "30 - Shadow Ball",
+        "Name": "30 - Shadow Ball",
         "Price": 2700
       },
       {
-        "Item": "31 - Brick Break",
+        "Name": "31 - Brick Break",
         "Price": 2400
       },
       {
-        "Item": "32 - Double Team",
+        "Name": "32 - Double Team",
         "Price": 2500
       },
       {
-        "Item": "33 - Reflect",
+        "Name": "33 - Reflect",
         "Price": 1500
       },
       {
-        "Item": "34 - Sludge Wave",
+        "Name": "34 - Sludge Wave",
         "Price": 4200
       },
       {
-        "Item": "35 - Flamethrower",
+        "Name": "35 - Flamethrower",
         "Price": 4200
       },
       {
-        "Item": "36 - Sludge Bomb",
+        "Name": "36 - Sludge Bomb",
         "Price": 4300
       },
       {
-        "Item": "37 - Sandstorm",
+        "Name": "37 - Sandstorm",
         "Price": 1500
       },
       {
-        "Item": "38 - Fire Blast",
+        "Name": "38 - Fire Blast",
         "Price": 5100
       },
       {
-        "Item": "39 - Rock Tomb",
+        "Name": "39 - Rock Tomb",
         "Price": 2800
       },
       {
-        "Item": "40 - Aerial Ace",
+        "Name": "40 - Aerial Ace",
         "Price": 2800
       },
       {
-        "Item": "41 - Torment",
+        "Name": "41 - Torment",
         "Price": 1000
       },
       {
-        "Item": "42 - Facade",
+        "Name": "42 - Facade",
         "Price": 3100
       },
       {
-        "Item": "43 - Flame Charge",
+        "Name": "43 - Flame Charge",
         "Price": 2100
       },
       {
-        "Item": "44 - Rest",
+        "Name": "44 - Rest",
         "Price": 2000
       },
       {
-        "Item": "45 - Attract",
+        "Name": "45 - Attract",
         "Price": 1200
       },
       {
-        "Item": "46 - Thief",
+        "Name": "46 - Thief",
         "Price": 2200
       },
       {
-        "Item": "47 - Low Sweep",
+        "Name": "47 - Low Sweep",
         "Price": 2400
       },
       {
-        "Item": "48 - Round",
+        "Name": "48 - Round",
         "Price": 2800
       },
       {
-        "Item": "49 - Echoed Voice",
+        "Name": "49 - Echoed Voice",
         "Price": 1500
       },
       {
-        "Item": "50 - Overheat",
+        "Name": "50 - Overheat",
         "Price": 5100
       },
       {
-        "Item": "51 - Steel Wing",
+        "Name": "51 - Steel Wing",
         "Price": 2200
       },
       {
-        "Item": "52 - Focus Blast",
+        "Name": "52 - Focus Blast",
         "Price": 4400
       },
       {
-        "Item": "53 - Energy Ball",
+        "Name": "53 - Energy Ball",
         "Price": 2700
       },
       {
-        "Item": "54 - False Swipe",
+        "Name": "54 - False Swipe",
         "Price": 1200
       },
       {
-        "Item": "55 - Scald",
+        "Name": "55 - Scald",
         "Price": 3000
       },
       {
-        "Item": "56 - Fling",
+        "Name": "56 - Fling",
         "Price": 2000
       },
       {
-        "Item": "57 - Charge Beam",
+        "Name": "57 - Charge Beam",
         "Price": 2300
       },
       {
-        "Item": "58 - Sky Drop",
+        "Name": "58 - Sky Drop",
         "Price": 2800
       },
       {
-        "Item": "59 - Incinerate",
+        "Name": "59 - Incinerate",
         "Price": 1400
       },
       {
-        "Item": "60 - Quash",
+        "Name": "60 - Quash",
         "Price": 1000
       },
       {
-        "Item": "61 - Will-O-Wisp",
+        "Name": "61 - Will-O-Wisp",
         "Price": 2200
       },
       {
-        "Item": "62 - Acrobatics",
+        "Name": "62 - Acrobatics",
         "Price": 2800
       },
       {
-        "Item": "63 - Embargo",
+        "Name": "63 - Embargo",
         "Price": 1000
       },
       {
-        "Item": "64 - Explosion",
+        "Name": "64 - Explosion",
         "Price": 7500
       },
       {
-        "Item": "65 - Shadow Claw",
+        "Name": "65 - Shadow Claw",
         "Price": 2400
       },
       {
-        "Item": "66 - Payback",
+        "Name": "66 - Payback",
         "Price": 2500
       },
       {
-        "Item": "67 - Retaliate",
+        "Name": "67 - Retaliate",
         "Price": 3600
       },
       {
-        "Item": "68 - Giga Impact",
+        "Name": "68 - Giga Impact",
         "Price": 5000
       },
       {
-        "Item": "69 - Rock Polish",
+        "Name": "69 - Rock Polish",
         "Price": 1200
       },
       {
-        "Item": "70 - Flash",
+        "Name": "70 - Flash",
         "Price": 1500
       },
       {
-        "Item": "71 - Stone Edge",
+        "Name": "71 - Stone Edge",
         "Price": 3900
       },
       {
-        "Item": "72 - Volt Switch",
+        "Name": "72 - Volt Switch",
         "Price": 3100
       },
       {
-        "Item": "73 - Thunder Wave",
+        "Name": "73 - Thunder Wave",
         "Price": 2200
       },
       {
-        "Item": "74 - Gyro Ball",
+        "Name": "74 - Gyro Ball",
         "Price": 2500
       },
       {
-        "Item": "75 - Swords Dance",
+        "Name": "75 - Swords Dance",
         "Price": 1200
       },
       {
-        "Item": "76 - Struggle Bug",
+        "Name": "76 - Struggle Bug",
         "Price": 1700
       },
       {
-        "Item": "77 - Psych Up",
+        "Name": "77 - Psych Up",
         "Price": 2100
       },
       {
-        "Item": "78 - Bulldoze",
+        "Name": "78 - Bulldoze",
         "Price": 2400
       },
       {
-        "Item": "79 - Frost Breath",
+        "Name": "79 - Frost Breath",
         "Price": 1000
       },
       {
-        "Item": "80 - Rock Slide",
+        "Name": "80 - Rock Slide",
         "Price": 4200
       },
       {
-        "Item": "81 - X-Scissor",
+        "Name": "81 - X-Scissor",
         "Price": 2400
       },
       {
-        "Item": "82 - Dragon Tail",
+        "Name": "82 - Dragon Tail",
         "Price": 2800
       },
       {
-        "Item": "83 - Infestation",
+        "Name": "83 - Infestation",
         "Price": 2200
       },
       {
-        "Item": "84 - Poison Jab",
+        "Name": "84 - Poison Jab",
         "Price": 3000
       },
       {
-        "Item": "85 - Dream Eater",
+        "Name": "85 - Dream Eater",
         "Price": 3000
       },
       {
-        "Item": "86 - Grass Knot",
+        "Name": "86 - Grass Knot",
         "Price": 2900
       },
       {
-        "Item": "87 - Swagger",
+        "Name": "87 - Swagger",
         "Price": 1000
       },
       {
-        "Item": "88 - Sleep Talk",
+        "Name": "88 - Sleep Talk",
         "Price": 1500
       },
       {
-        "Item": "89 - U-Turn",
+        "Name": "89 - U-Turn",
         "Price": 3100
       },
       {
-        "Item": "90 - Substitute",
+        "Name": "90 - Substitute",
         "Price": 2000
       },
       {
-        "Item": "91 - Flash Cannon",
+        "Name": "91 - Flash Cannon",
         "Price": 2700
       },
       {
-        "Item": "92 - Trick Room",
+        "Name": "92 - Trick Room",
         "Price": 2000
       },
       {
-        "Item": "93 - Wild Charge",
+        "Name": "93 - Wild Charge",
         "Price": 2500
       },
       {
-        "Item": "94 - Rock Smash",
+        "Name": "94 - Rock Smash",
         "Price": 1500
       },
       {
-        "Item": "95 - Snarl",
+        "Name": "95 - Snarl",
         "Price": 2400
       },
       {
-        "Item": "96 - Nature Power",
+        "Name": "96 - Nature Power",
         "Price": 2000
       },
       {
-        "Item": "97 - Dark Pulse",
+        "Name": "97 - Dark Pulse",
         "Price": 2700
       },
       {
-        "Item": "98 - Power-Up Punch",
+        "Name": "98 - Power-Up Punch",
         "Price": 2300
       },
       {
-        "Item": "99 - Dazzling Gleam",
+        "Name": "99 - Dazzling Gleam",
         "Price": 2700
       },
       {
-        "Item": "100 - Confide",
+        "Name": "100 - Confide",
         "Price": 1000
       },
       {
-        "Item": "A1 - Cut",
+        "Name": "A1 - Cut",
         "Price": 75
       },
       {
-        "Item": "A2 - Fly",
+        "Name": "A2 - Fly",
         "Price": 3200
       },
       {
-        "Item": "A3 - Surf",
+        "Name": "A3 - Surf",
         "Price": 5000
       },
       {
-        "Item": "A4 - Strength",
+        "Name": "A4 - Strength",
         "Price": 3400
       },
       {
-        "Item": "A5 - Waterfall",
+        "Name": "A5 - Waterfall",
         "Price": 3700
       },
       {
-        "Item": "A6 - Dive",
+        "Name": "A6 - Dive",
         "Price": 2900
       }
     ]
@@ -1789,32 +1789,32 @@
   "Combat Items": {
     "Combat Items": [
       {
-        "Item": "Caltrops & Toxic Caltrops",
+        "Name": "Caltrops & Toxic Caltrops",
         "Effect": "These items let the user use the Move Spikes and Toxic Spikes, respectively, as a Standard Action. The item is then consumed. Caltrops are not usually sold in stores, but may be found from specialty shops for ₽500.",
         "Price": 500
       },
       {
-        "Item": "Dream Mist",
+        "Name": "Dream Mist",
         "Effect": "Dream Mist may be used as an AC 6 Melee Status Attack, performed as a Standard Action. If it hits, the target falls Asleep. Dream Mist is collected from Pokémon with the eponymous Capability using a Collection Jar but is also in rare occult shops for ₽500.",
         "Price": 500
       },
       {
-        "Item": "Magic Flute",
+        "Name": "Magic Flute",
         "Effect": "Magic Flutes are rare artifacts made only by skilled crafters with occult knowledge. They are not usually found in stores. When a Flute is crafted, it is tied to a particular Status Condition. Once per day, the Flute may be played as a Standard Action. All Pokémon and Trainers within 20 meters of the Flute are cured of that Status. These rare artifacts cannot be found in most ordinary stores but may cost upwards of ₽4000 from an appropriate occult vendor.",
         "Price": 4000
       },
       {
-        "Item": "Cleanse Tags",
+        "Name": "Cleanse Tags",
         "Effect": "Cleanse Tags are small strips of paper with a prayer or incantation written on them. When created, the creator makes an Occult Education Roll; this is the Cleanse Tag's Power Value. When glued, taped, or nailed to a surface, they stop Pokémon or Trainers within 30 meters of the tag from Phasing through that surface, as if it was solid, unless they make a Focus Skill Check with a result greater than the Tag's Power Value. On a success, the tag is destroyed; on failure, the tag holds, and the encroacher cannot try again for at least an hour.\n They may also be stuck onto a weapon or appendage to let a Normal or Fighting-Type Attack hit a Ghost-Type Pokémon for Regularly-Effective Damage; once damage has been dealt, the Cleanse Tag is destroyed. Those with an Occult Education of Novice or higher can also burn a Cleanse Tag as a Standard Action to remove the Cursed, Suppressed, or Disabled condition from a single target within 5 meters.\n Those with an Occult Education of Expert or higher can burn a Cleanse Tags to cause all Pokémon and Trainers within 30 meters with the Invisibility and Phasing Capabilities to make a Focus Check; those whose result does not exceed the Tag's Power Value lose both capabilities for 5 minutes.\n Cleanse Tags are simply made of paper and prayer and cannot normally be purchased. However, select occult shops may carry them for ₽500 or more depending on the rarity of occult knowledge in the setting.",
         "Price": 500
       },
       {
-        "Item": "Pester Balls",
+        "Name": "Pester Balls",
         "Effect": "Pester Balls are small balls full of chemicals that come in six varieties, each of which inflicts a different Status Affliction when they hit a target. The Status Afflictions they can cause are: Rage, Confusion, Burn, Poison, Paralysis, and Sleep.\n After being hit by any Pester Ball, a target becomes immune to the effects of further Pester Balls for 1 hour. Throwing and hitting with Pester Balls is the same as with Poké Balls.\n Pester Balls cost ₽350.",
         "Price": 350
       },
       {
-        "Item": "Smoke Ball",
+        "Name": "Smoke Ball",
         "Effect": "When used, a Smoke Ball creates a 3 meter blast that fills the area with smoke, as if the move Smokescreen had been used. Smoke Balls can only be found in specialty shops for around ₽500.",
         "Price": 500
       }
@@ -1823,42 +1823,42 @@
   "Sci-Fi Gear": {
     "Technology Levels": [
       {
-        "Item": "Technology Levels",
+        "Name": "Technology Levels",
         "Description": "Of course, this book wouldn’t try to claim all of these items are appropriate for all sci-fi campaigns. The staggering variation in genres calls for separating items and equipment by tech level so GMs and players have a sense for whether a particular piece of technology is appropriate for their campaign. the tech levels described below aren’t meant to be hard and fast rules but instead general guidelines.\nModern Age: This category covers gear that is plausible to acquire in modern times. For GMs intending only to add a little sci-fi to their campaign, all of these items would be appropriate.\nRobotic Age: Commercial robotics have taken off, space travel is more common, and colonization of the solar system is underway. Most items will fall into this category, and even modern campaigns might borrow selected items from this tech level. All Pokébots will also fall under this tech level.\nTranshuman Age: Despite the name, this doesn’t necessarily imply the ultratech of many transhuman sci-fi works but simply the age when technology to surpass human limits becomes more viable, including much in the way of biotech and virtual reality technology. All cybernetic augmentations fall under this tech level.\nGalactic Age: Civilization spans the stars, and space travel is ubiquitous. Galactic level tech can verge on the fantastical and be mistaken for magic. It is appropriate for very high tech soft sci-fi campaigns.\nGenre Tech: This category is for genre-specific items and equipment that don’t fit neatly into tech levels.",
         "Source": "Do Porygon Dream of Mareep"
       }
     ],
     "Modern Age Gear": [
       {
-        "Item": "Poké Ball Cannon",
+        "Name": "Poké Ball Cannon",
         "Equipment Slots": "Main + Off Hand",
         "Price": 4500,
         "Effect": "Increases Poké Ball and Pester Ball accuracy by +1 and range to 15 meters. Balls deal 2d6 unreducible damage upon hitting a target. Balls take a Shift Action to ready in the Poké Ball Cannon.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Hazmat Suit",
+        "Name": "Hazmat Suit",
         "Equipment Slots": "Body + Head",
         "Price": 3500,
         "Effect": "Acts as a Gas Mask but also grants the Hazard Immunity capability and immunity to non-damaging Poison Type Moves.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Spacesuit",
+        "Name": "Spacesuit",
         "Equipment Slots": "Body + Head",
         "Price": 8000,
         "Effect": "Grants Vacuum Immunity and Free Floating 4. Weighs 200 pounds and is thus difficult for most Trainers to use in normal gravity. A Robotic Age upgraded version costing an extra 2000 confers Hazard Immunity too and weighs only 100 pounds instead.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Thermal Goggles",
+        "Name": "Thermal Goggles",
         "Equipment Slots": "Head",
         "Price": 1000,
         "Effect": "Allows you to see in the IR spectrum, enabling you to easily pick out a person or Pokémon in camouflage or to identify sources of heat.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Handheld Propeller",
+        "Name": "Handheld Propeller",
         "Equipment Slots": "Off Hand",
         "Price": 3500,
         "Effect": "Increases Swim speed by +3.",
@@ -1867,28 +1867,28 @@
     ],
     "Robotic Age Gear": [
       {
-        "Item": "Lifting Frame",
+        "Name": "Lifting Frame",
         "Equipment Slots": "Main + Off Hand",
         "Price": 3000,
         "Effect": "A mechanized frame worn over each arm with motorized muscles. Grants +2 to Power Capability. The frames are too unwieldy to use other equipment such as weapons while wearing them.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Extendable Grabby Arm",
+        "Name": "Extendable Grabby Arm",
         "Equipment Slots": "Main Hand",
         "Price": 750,
         "Effect": "A dexterous and flexible arm with a hand at the end. Can be used to grab and manipulate objects from 3 meters away.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Thermal Dampening Suit",
+        "Name": "Thermal Dampening Suit",
         "Equipment Slots": "Body",
         "Price": 2000,
         "Effect": "The user is invisible to thermal imaging gear.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Treecko Gear",
+        "Name": "Treecko Gear",
         "Equipment Slots": "Main-Hand, Off-Hand, Feet",
         "Price": 3500,
         "Effect": "Grants the Wallclimber capability.",
@@ -1897,28 +1897,28 @@
     ],
     "Transhuman Age Gear": [
       {
-        "Item": "Pheromone Emitter",
+        "Name": "Pheromone Emitter",
         "Equipment Slots": "Accessory",
         "Price": 2000,
         "Effect": "Emits pheromones as a Swift Action that give a +4 bonus to a Charm or Intimidate check against wild Pokémon. Requires a Pheromone Cartridge to use. Comes with 1 Cartridge. More can be bought for 250 apiece.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Sonic Filter",
+        "Name": "Sonic Filter",
         "Equipment Slots": "Accessory",
         "Price": 2500,
         "Effect": "Creates a portable field of directed white noise with a 2 meter radius when activated. Anyone within can hold a conversation normally, but anyone outside the field just hears static coming from the direction of the wearer. Moves with the Sonic Keyword aimed at a target within the field require 2 more on Accuracy Roll to hit.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Mind Aegis",
+        "Name": "Mind Aegis",
         "Equipment Slots": "Head",
         "Price": 4000,
         "Effect": "Grants a +6 bonus to Focus checks to resist Telepathy. If the wearer has the Iron Mind Edge, Mind Aegis grants the Mindlock capability instead.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Scrubbing Spray",
+        "Name": "Scrubbing Spray",
         "Equipment Slots": "Off-Hand",
         "Price": 3500,
         "Effect": "Sprays a chemical agent over an area that destroys most forensic evidence, such as trace biomatter. Perception checks to track someone or to search for forensic evidence take a -6 penalty. Requires a Scrub Cartridge to use. Comes with 1 Cartridge. More can be bought for 300 apiece.",
@@ -1927,28 +1927,28 @@
     ],
     "Galactic Age Gear": [
       {
-        "Item": "Universal Translator",
+        "Name": "Universal Translator",
         "Equipment Slots": "Head",
         "Price": 10000,
         "Effect": "You understand any spoken language recognized by the Universal Translator and can speak into it and have your words translated immediately. Usually programmed with all of the major human languages. Can be used to speak with Pokémon.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Gravity Modulation Suit",
+        "Name": "Gravity Modulation Suit",
         "Equipment Slots": "Body",
         "Price": 4000,
         "Effect": "You may treat the local gravity as if it were 1 lower or 1 higher. Changing the setting on the suit is an At-Will Extended Action requiring time for the suit to adjust to the new settings.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Pokéradar",
+        "Name": "Pokéradar",
         "Equipment Slot": "Off Hand",
         "Price": 5000,
         "Effect": "Contrary to its name, this handheld device actually detects both human and Pokémon lifesigns in a 20 meter radius and can display their relative location to you on a screen. No information is given about specific species.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "X-Ray Goggles",
+        "Name": "X-Ray Goggles",
         "Equipment Slot": "Head",
         "Price": 8000,
         "Effect": "Grants the user the X-Ray Vision Capability.",
@@ -1957,19 +1957,19 @@
     ],
     "Genre Tech": [
       {
-        "Item": "Dimensional Field Analyzer",
+        "Name": "Dimensional Field Analyzer",
         "Price": 5000,
         "Effect": "A handheld device the size of a Geiger counter for campaigns featuring time travel or interdimensional travel of some other sort. This device can be calibrated to recognize a 'home' universe or timeline and can measure the amount of difference between a parallel universe and that home universe.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Anomaly Detector",
+        "Name": "Anomaly Detector",
         "Price": 2150,
         "Effect": "When pointed at a person, Pokémon, or object, this handheld device can determine whether or not it belongs to this timeline or parallel universe. It gives no indication to the nature of the home universe, however.",
         "Source": "Do Porygon Dream of Mareep"
       },
       {
-        "Item": "Glitch Detection Crystal",
+        "Name": "Glitch Detection Crystal",
         "Equipment Slots": "Accessory",
         "Price": 800,
         "Effect": "A crystal necklace which begins to display pixelated effects and static when near Glitch phenomena. Pixellation and static effects intensify proportionally to proximity to the phenomena.",

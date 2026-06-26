@@ -3,7 +3,7 @@
 // Sous-catégories = clés contenant des Arrays (ex: "Items", "Tiers", "Yields"...).
 // Option JSON : dans chaque catégorie, un objet facultatif "_display" permet
 // d'indiquer l'affichage des sous-catégories, ex.:
-// "_display": { "Tiers": { type: "table", rowPerField: true, idField: "Tier" } }
+// "_display": { "Tiers": { type: "table", rowPerField: true, idField: "Name" } }
 
 let itemsData = {};
 let activeCategory = null;
@@ -162,7 +162,7 @@ function renderGlobalItemSearchResults(results) {
         const body = document.createElement("div");
         body.className = "card-body bg-body-secondary";
 
-        const name = item.Item || item["Ball Name"] || item["Herb Type"] || item["Apricorn Type"] || item["Tier"] || "???";
+        const name = getItemName(item);
 
         // Title with badges
         const source = itemSource(item, category);
@@ -173,7 +173,7 @@ function renderGlobalItemSearchResults(results) {
 
         // All fields
         Object.entries(item).forEach(([k, v]) => {
-          if (["Item", "Ball Name", "Herb Type", "Apricorn Type", "Tier", "Source", "source"].includes(k)) return;
+          if (["Name", "Source", "source"].includes(k)) return;
 
           let displayValue = String(v);
           if (k === "Price" && !isNaN(v)) {
@@ -259,11 +259,15 @@ function itemSource(item, category = activeCategory) {
   return item.Source || item.source || categoryData?.source || categoryData?.Source || "Core";
 }
 
+function getItemName(item) {
+  return item.Name || "???";
+}
+
 function renderAsCards(entries, subcat, q, rowEl) {
   entries.forEach(obj => {
     if (typeof obj !== "object" || !obj) return;
 
-    const name = obj.Item || obj["Ball Name"] || obj["Herb Type"] || obj["Apricorn Type"] || obj["Tier"] || "???";
+    const name = getItemName(obj);
 
     if (
       q &&
@@ -288,7 +292,7 @@ function renderAsCards(entries, subcat, q, rowEl) {
 
     Object.entries(obj).forEach(([k, v]) => {
       // ignorer les champs déjà affichés dans le titre
-      if (["Item", "Ball Name", "Herb Type", "Apricorn Type", "Tier", "Source", "source"].includes(k)) return;
+      if (["Name", "Source", "source"].includes(k)) return;
 
       // --- Si le champ est un tableau d'objets : afficher un tableau interne ---
       if (Array.isArray(v) && v.length > 0 && typeof v[0] === "object") {
