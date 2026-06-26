@@ -1,6 +1,6 @@
 {
   "Poké Ball": {
-    "Balls": [
+    "Poké Balls": [
       {
         "Ball Name": "Basic Ball",
         "Modifier": "0",
@@ -151,6 +151,98 @@
         "Special": "Used during Safari hunts.",
         "Price": 800
       }
+    ],
+    "Poké Ball Cases": [
+      {
+        "Item": "Poké Ball Cases",
+        "Description": "Cases are additions to a Poké Ball that wrap around its outside. A Poké Ball can only have one case at a time. Cases can be removed as a Shift Action, and applied as a Standard Action. Poké Ball cases come in several varieties. The Jailbreaker class can create Cases. The following six Poké Ball Case types are relatively common and can be purchased in most stores that specialize in selling a variety of Poké Balls.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Bounce Case",
+        "Price": 800,
+        "Effect": "A Poké Ball in a Bounce Case may bounce once when thrown or launched, up to a distance of 3 meters. This can be used to extend the effective range of a Poké Ball, hit around obstacles, or trigger effects such as the Capture Specialist's Curve Ball on an additional target.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Contest Case",
+        "Price": 400,
+        "Effect": "Whenever a Pokémon is released from a Contest Case into a Contest, they gain 1 Appeal Point during the introduction stage.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Flash Case",
+        "Price": 800,
+        "Effect": "When a Poké Ball with a Flash Case is thrown, it uses the Move Flash originating from the spot where it landed.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Lock Case",
+        "Price": 400,
+        "Effect": "A Lock Case grants a -10 Capture modifier to any Poké Ball. It also stops Pokémon from exiting Poké Balls unless explicitly released by their owners.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Medicine Case",
+        "Price": 400,
+        "Effect": "A Medicine Case may be filled with an Antidote, Paralyze Heal, Burn Heal, Ice Heal, Awakening or Full Heal. This consumes the used item. When a Pokémon is recalled into a Poké Ball with a filled Medicine Case, the item is automatically used on the Pokémon. Filling a Medicine Case is an Standard Action. Medicine Cases may be refilled multiple times but may only have one sort of consumable in them at a time.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Spray Case",
+        "Price": 800,
+        "Effect": "A Spray Case may be filled with a Pester Ball or Repel of any variety. This consumes the used item. Upon hitting a target, the Spray Case is emptied, spraying the item it was filled with onto its target, automatically hitting. This can occur when attempting to catch Pokémon (the effect is resolved before the capture roll), or when releasing a Pokémon from its Poké Ball (the effect is resolved before the Pokémon within is released). Spray Cases may be refilled numerous times, but may only have one sort of consumable in them at a time.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Devil Case",
+        "Price": 3000,
+        "Effect": "These dangerous and often illegal cases remove the failsafe on Poké Balls that prevents them from catching Pokémon that are at 0 Hit Points or less. It allows Poké Balls to catch Fainted Pokémon as normal, but automatically inflicts 2 Injuries when hitting a Pokémon - whether the Capture is successful or not.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Storage Case",
+        "Price": 15000,
+        "Effect": "These extremely useful cases are capable of \"Capturing\" non-living matter. Once applied to a Poké Ball, Storage Cases cannot be removed. The object or objects in question must be smaller than 2 meters in any dimension. A single Storage Case can capture several discrete objects, but they must all be supported by a single surface; a 2x2 meter rug or mat is often used for this purpose. Capture Rolls against inanimate objects automatically succeed. Poké Balls with Storage Cases count towards the total number of Pokémon that the trainer can carry. Storage Cases are often illegal due to their uses in smuggling and theft.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Zap Case",
+        "Price": 1500,
+        "Effect": "Whenever a Poké Ball with a Zap Case hits a target it deals damage as if using a Struggle Attack. This Damage is Electric-Typed. If the Ball is already used as a Struggle Attack (such as with Curve Ball), then the Zap Case changes the damage to Electric-Type and adds bonus damage equal to twice the user's Technology Education skill. When attempting to catch Pokémon, damage is resolved before the capture roll. This can also be used when releasing a Pokémon (damage is resolved before the Pokémon is released).",
+        "Source": "Do Porygon Dream of Mareep"
+      }
+    ],
+    "Poké Ball Accessories": [
+      {
+        "Item": "Poké Ball Accessories",
+        "Description": "These are assorted accessories for Poké Balls which don't take the form of a Case and thus can be used on Poké Balls contained in Cases. Similar to Cases, however, they are attached with a Standard Action and removed with a Shift Action.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Bait Attachment",
+        "Price": 300,
+        "Effect": "These attachments afix a piece of bait to the triggering device of a Poké Ball. When the bait is taken, the attachment automatically triggers a capture attempt along with any effect that would be caused by a Poké Ball Cases.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Camera Kit",
+        "Price": 1200,
+        "Effect": "A small camera, microphone, and speaker set affixed to the outside of a Poké Ball or Case. These allow a Trainer to remotely release and command their Pokémon or attempt to capture a Pokémon.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Poké Ball Alarm",
+        "Price": 1000,
+        "Effect": "A belt with six slots for Poké Balls. Poké Balls affixed to the belt are locked in place with a number pad password to unlock them. Tampering with the belt triggers the password prompt, and failure to input the correct password within a minute triggers a loud alarm system.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Poké Ball Tracking Chip",
+        "Price": 200,
+        "Effect": "A chip embedded in the inner workings of the Poké Ball that emits a signal allowing the Ball's owner to remotely track the location of the Ball. Depending on the setting, these may be built in by default.",
+        "Source": "Do Porygon Dream of Mareep"
+      }
     ]
   },
   "Medicines": {
@@ -278,6 +370,84 @@
         "Item": "Poultices",
         "Effect": "See attached Section – Repulsive",
         "Price": 225
+      }
+    ],
+    "Future Drugs and Medicine": [
+      {
+        "Item": "Future Drugs and Medicine",
+        "Description": "Advances in biotechnology allow scientists to create ever more complex and effective drugs in a sci-fi civilization. Sci-fi settings are often filled with a cornucopia of medicines that accomplish tasks we would think impossible today. The following items can help Pokémon and Trainers alike in a variety of situations and are generally appropriate for campaigns with a Transhuman Age level of technology or higher, though some of these options may also fit in a Robotic Age campaign."
+      },
+      {
+        "Item": "Anti-Radiation Pills",
+        "Price": 400,
+        "Effect": "An advanced version of the real life potassium iodide pills. These not only protect the thyroid but instead guard against all forms of radiation poisoning, granting the user Hazard Immunity for radioactive environments only for 24 hours.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Prescient Powder",
+        "Price": 2500,
+        "Effect": "An illegal and dangerous substance produced by desert-dwelling Steelix. Taking the drug inflicts 3 injuries on the user and allows them to use either a Scry or Augury once. The user also gains the Psychic Navigator Edge for two hours. Habitual use of the drug can lead to addiction and health problems.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Berserker Bolus",
+        "Price": 500,
+        "Effect": "A combat drug used by street gangs. Immediately inflicts 1 injury on the user upon taking it, but for the duration of the Scene, the user is immune to Flinch effects, gains a +2 bonus to Save Rolls, and adds 5 to all Damage Rolls. However, they are Enraged and may not make Save Rolls to end the effect until all combat ceases for at least a few minutes.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Locus Lozenge",
+        "Price": 500,
+        "Effect": "A drug to help the user focus on a single task. The user gains a +3 bonus to Focus and Intuition checks for the next hour but suffers a -4 penalty to Perception checks to notice outside events.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Oxygenation Vial",
+        "Price": 500,
+        "Effect": "These vials contain a solution of oxygen-encasing lipids that are injected directly into the bloodstream. One injection is enough to allow the user to go without breathing for up to thirty minutes. Subsequent injections extend the effect, but each one after the first in a 24 hour period causes the user to take one injury as their body suffers complications from the imbalance caused by the solution. These are often carried as a last resort device for astronauts and deep sea divers, as well as used by EMTs to stabilize patients.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Puissance Pellet",
+        "Price": 450,
+        "Effect": "This painkiller and adrenaline injection lets the user temporarily ignore their debilitating injuries. A user with 5 or more injuries does not suffer Hit Point loss equal to their number of injuries when taking Standard Actions. If you are using the optional rule to decrease combat stages for each Injury, the user ignores these combat stage losses. This effect lasts for 5 turns, and at the end of the effect, the user automatically takes another injury.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Rambo Roids",
+        "Price": 750,
+        "Effect": "The user treats their Power Capability as increased by 2 for the next hour. However, each time they lift an object or perform a feat of strength beyond their normal means, they must make an Athletics check with a DC of 12. If they fail, they take an Injury immediately. Each such feat of strength induces a cumulative -1 penalty to these Athletics checks.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Shock Syringe",
+        "Price": 500,
+        "Effect": "This drug enhances the sensitivity of the user’s nerves, enhancing their perception and making it incredibly useful for scouts and recon missions. However, the enhanced sense of touch greatly lowers the user’s pain tolerance. The user gains a +3 bonus to Perception, Focus, and Guile and a +1 bonus to Accuracy. However, each time the user takes an Injury, they are Flinched. The effects of Shock Syringe last for an hour.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Soldier Pill",
+        "Price": 750,
+        "Effect": "A potentially dangerous stimulant that provides the user enough energy to go 24 hours without sleep. Upon taking the pill twice in a 48 hour period, the user begins to take 1 injury every 2 hours until they choose to go to sleep. The user of a Soldier Pill gets a +3 bonus to rolls to wake up from Sleep.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Spritz Spray",
+        "Price": 250,
+        "Effect": "A drug that improves reflexes at the cost of mental focus. The user of Spritz gains +5 initiative and +1 Evasion for the next 5 rounds of combat but suffers a -3 penalty to Perception and Focus checks for the next hour.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Volatile Machine",
+        "Price": "10x the cost of the equivalent TM",
+        "Effect": "An experimental variant of the technology used in creating TMs and HMs, Volatile Machines, or VMs for short, teach a specific Move like their counterparts but can be used by any Pokémon regardless of normal Move compatibility. VMs usually take the form of highly advanced drugs for gene therapy and often require a Pokémon stay under monitoring in a medical facility for the duration of application, during which time they receive several different drug formulas. Applying a VM can take anywhere from a day to a week to even longer, by GM discretion. VMs are very powerful items and not appropriate for all campaigns. Moves taught via VM take up two Move slots and a Vitamin slot, and as a result Pokémon who use a VM may only ever learn a maximum of 5 moves by default, of which only one other may be a TM or Tutor Move. Pokémon can only have one VM Move at a time, even if Features or other effects would normally allow them to have more.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "White Light",
+        "Price": 800,
+        "Effect": "So named for the soft white glow the liquid gives off, White Light is a crude “truth serum”. It is slow-acting, taking upwards of an hour to take fulleffect on a victim. The victim becomes more suggestible and gullible. All of their Guile, Intuition, and Focus Checks made during an interrogation are subject to a -5 penalty.",
+        "Source": "Do Porygon Dream of Mareep"
       }
     ]
   },
@@ -1647,6 +1817,163 @@
         "Item": "Smoke Ball",
         "Effect": "When used, a Smoke Ball creates a 3 meter blast that fills the area with smoke, as if the move Smokescreen had been used. Smoke Balls can only be found in specialty shops for around ₽500.",
         "Price": 500
+      }
+    ]
+  },
+  "Sci-Fi Gear": {
+    "Technology Levels": [
+      {
+        "Item": "Technology Levels",
+        "Description": "Of course, this book wouldn’t try to claim all of these items are appropriate for all sci-fi campaigns. The staggering variation in genres calls for separating items and equipment by tech level so GMs and players have a sense for whether a particular piece of technology is appropriate for their campaign. the tech levels described below aren’t meant to be hard and fast rules but instead general guidelines.\nModern Age: This category covers gear that is plausible to acquire in modern times. For GMs intending only to add a little sci-fi to their campaign, all of these items would be appropriate.\nRobotic Age: Commercial robotics have taken off, space travel is more common, and colonization of the solar system is underway. Most items will fall into this category, and even modern campaigns might borrow selected items from this tech level. All Pokébots will also fall under this tech level.\nTranshuman Age: Despite the name, this doesn’t necessarily imply the ultratech of many transhuman sci-fi works but simply the age when technology to surpass human limits becomes more viable, including much in the way of biotech and virtual reality technology. All cybernetic augmentations fall under this tech level.\nGalactic Age: Civilization spans the stars, and space travel is ubiquitous. Galactic level tech can verge on the fantastical and be mistaken for magic. It is appropriate for very high tech soft sci-fi campaigns.\nGenre Tech: This category is for genre-specific items and equipment that don’t fit neatly into tech levels.",
+        "Source": "Do Porygon Dream of Mareep"
+      }
+    ],
+    "Modern Age Gear": [
+      {
+        "Item": "Poké Ball Cannon",
+        "Equipment Slots": "Main + Off Hand",
+        "Price": 4500,
+        "Effect": "Increases Poké Ball and Pester Ball accuracy by +1 and range to 15 meters. Balls deal 2d6 unreducible damage upon hitting a target. Balls take a Shift Action to ready in the Poké Ball Cannon.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Hazmat Suit",
+        "Equipment Slots": "Body + Head",
+        "Price": 3500,
+        "Effect": "Acts as a Gas Mask but also grants the Hazard Immunity capability and immunity to non-damaging Poison Type Moves.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Spacesuit",
+        "Equipment Slots": "Body + Head",
+        "Price": 8000,
+        "Effect": "Grants Vacuum Immunity and Free Floating 4. Weighs 200 pounds and is thus difficult for most Trainers to use in normal gravity. A Robotic Age upgraded version costing an extra 2000 confers Hazard Immunity too and weighs only 100 pounds instead.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Thermal Goggles",
+        "Equipment Slots": "Head",
+        "Price": 1000,
+        "Effect": "Allows you to see in the IR spectrum, enabling you to easily pick out a person or Pokémon in camouflage or to identify sources of heat.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Handheld Propeller",
+        "Equipment Slots": "Off Hand",
+        "Price": 3500,
+        "Effect": "Increases Swim speed by +3.",
+        "Source": "Do Porygon Dream of Mareep"
+      }
+    ],
+    "Robotic Age Gear": [
+      {
+        "Item": "Lifting Frame",
+        "Equipment Slots": "Main + Off Hand",
+        "Price": 3000,
+        "Effect": "A mechanized frame worn over each arm with motorized muscles. Grants +2 to Power Capability. The frames are too unwieldy to use other equipment such as weapons while wearing them.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Extendable Grabby Arm",
+        "Equipment Slots": "Main Hand",
+        "Price": 750,
+        "Effect": "A dexterous and flexible arm with a hand at the end. Can be used to grab and manipulate objects from 3 meters away.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Thermal Dampening Suit",
+        "Equipment Slots": "Body",
+        "Price": 2000,
+        "Effect": "The user is invisible to thermal imaging gear.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Treecko Gear",
+        "Equipment Slots": "Main-Hand, Off-Hand, Feet",
+        "Price": 3500,
+        "Effect": "Grants the Wallclimber capability.",
+        "Source": "Do Porygon Dream of Mareep"
+      }
+    ],
+    "Transhuman Age Gear": [
+      {
+        "Item": "Pheromone Emitter",
+        "Equipment Slots": "Accessory",
+        "Price": 2000,
+        "Effect": "Emits pheromones as a Swift Action that give a +4 bonus to a Charm or Intimidate check against wild Pokémon. Requires a Pheromone Cartridge to use. Comes with 1 Cartridge. More can be bought for 250 apiece.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Sonic Filter",
+        "Equipment Slots": "Accessory",
+        "Price": 2500,
+        "Effect": "Creates a portable field of directed white noise with a 2 meter radius when activated. Anyone within can hold a conversation normally, but anyone outside the field just hears static coming from the direction of the wearer. Moves with the Sonic Keyword aimed at a target within the field require 2 more on Accuracy Roll to hit.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Mind Aegis",
+        "Equipment Slots": "Head",
+        "Price": 4000,
+        "Effect": "Grants a +6 bonus to Focus checks to resist Telepathy. If the wearer has the Iron Mind Edge, Mind Aegis grants the Mindlock capability instead.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Scrubbing Spray",
+        "Equipment Slots": "Off-Hand",
+        "Price": 3500,
+        "Effect": "Sprays a chemical agent over an area that destroys most forensic evidence, such as trace biomatter. Perception checks to track someone or to search for forensic evidence take a -6 penalty. Requires a Scrub Cartridge to use. Comes with 1 Cartridge. More can be bought for 300 apiece.",
+        "Source": "Do Porygon Dream of Mareep"
+      }
+    ],
+    "Galactic Age Gear": [
+      {
+        "Item": "Universal Translator",
+        "Equipment Slots": "Head",
+        "Price": 10000,
+        "Effect": "You understand any spoken language recognized by the Universal Translator and can speak into it and have your words translated immediately. Usually programmed with all of the major human languages. Can be used to speak with Pokémon.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Gravity Modulation Suit",
+        "Equipment Slots": "Body",
+        "Price": 4000,
+        "Effect": "You may treat the local gravity as if it were 1 lower or 1 higher. Changing the setting on the suit is an At-Will Extended Action requiring time for the suit to adjust to the new settings.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Pokéradar",
+        "Equipment Slot": "Off Hand",
+        "Price": 5000,
+        "Effect": "Contrary to its name, this handheld device actually detects both human and Pokémon lifesigns in a 20 meter radius and can display their relative location to you on a screen. No information is given about specific species.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "X-Ray Goggles",
+        "Equipment Slot": "Head",
+        "Price": 8000,
+        "Effect": "Grants the user the X-Ray Vision Capability.",
+        "Source": "Do Porygon Dream of Mareep"
+      }
+    ],
+    "Genre Tech": [
+      {
+        "Item": "Dimensional Field Analyzer",
+        "Price": 5000,
+        "Effect": "A handheld device the size of a Geiger counter for campaigns featuring time travel or interdimensional travel of some other sort. This device can be calibrated to recognize a 'home' universe or timeline and can measure the amount of difference between a parallel universe and that home universe.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Anomaly Detector",
+        "Price": 2150,
+        "Effect": "When pointed at a person, Pokémon, or object, this handheld device can determine whether or not it belongs to this timeline or parallel universe. It gives no indication to the nature of the home universe, however.",
+        "Source": "Do Porygon Dream of Mareep"
+      },
+      {
+        "Item": "Glitch Detection Crystal",
+        "Equipment Slots": "Accessory",
+        "Price": 800,
+        "Effect": "A crystal necklace which begins to display pixelated effects and static when near Glitch phenomena. Pixellation and static effects intensify proportionally to proximity to the phenomena.",
+        "Source": "Do Porygon Dream of Mareep"
       }
     ]
   }
