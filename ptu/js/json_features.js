@@ -340,21 +340,19 @@ function globalFeatureSearch(query) {
       
       br.features?.forEach(feat => {
         // Recursively collect all matching features
-        const collectMatches = (f) => {
+        const collectMatches = (f, parents = []) => {
           const matched = [];
           if (!f) return matched;
           
           const name = (f.Name || "").toLowerCase();
-          if (name.includes(q)) {
-            matched.push(f);
+          if (name.includes(q) || featureTableContentMatchesQuery(f, q)) {
+            matched.push({ feature: f, parents });
           }
           
-          // Search in sub-features (arrays of features)
-          if (Array.isArray(f.features)) {
-            f.features.forEach(sub => {
-              matched.push(...collectMatches(sub));
-            });
-          }
+          const childParents = [...parents, f];
+          getSubFeatures(f).forEach(sub => {
+            matched.push(...collectMatches(sub, childParents));
+          });
           
           return matched;
         };
@@ -370,6 +368,76 @@ function globalFeatureSearch(query) {
   });
   
   return Object.keys(results).length > 0 ? results : null;
+}
+
+function getSubFeatures(feat) {
+  const displayMeta = feat._display || {};
+  const subFeatures = [];
+
+  Object.entries(feat).forEach(([key, value]) => {
+    if (!Array.isArray(value)) return;
+
+    const meta = normalizeDisplayMeta(displayMeta[key]);
+    if (meta.type === "table") return;
+
+    if (!value.every(item => item && typeof item === "object" && !Array.isArray(item))) return;
+    if (!value.some(item => item.Name || item.Effect)) return;
+
+    subFeatures.push(...value);
+  });
+
+  return subFeatures;
+}
+
+function valueMatchesQuery(value, q) {
+  if (value == null) return false;
+
+  if (Array.isArray(value)) {
+    return value.some(item => valueMatchesQuery(item, q));
+  }
+
+  if (typeof value === "object") {
+    return Object.values(value).some(item => valueMatchesQuery(item, q));
+  }
+
+  return String(value).toLowerCase().includes(q);
+}
+
+function featureTableContentMatchesQuery(feat, q) {
+  const disp = feat._display || {};
+
+  return Object.entries(feat).some(([key, value]) => {
+    if (key.startsWith("_")) return false;
+
+    if (value && typeof value === "object" && !Array.isArray(value) && Array.isArray(value.groups)) {
+      return value.groups.some(group =>
+        valueMatchesQuery(group.label, q) || valueMatchesQuery(group.rows || [], q)
+      );
+    }
+
+    if (!Array.isArray(value)) return false;
+
+    const meta = normalizeDisplayMeta(disp[key]);
+    if (meta.type !== "table") return false;
+
+    return valueMatchesQuery(value, q);
+  });
+}
+
+function resultContextParts(brName, clsName, cls, result) {
+  const parts = [clsName];
+  if (brName !== "Default") parts.push(brName);
+
+  const category = result.feature.Category
+    || [...result.parents].reverse().find(parent => parent.Category)?.Category
+    || cls.category;
+  if (category) parts.push(category);
+
+  result.parents.forEach(parent => {
+    if (parent.Name) parts.push(parent.Name);
+  });
+
+  return parts;
 }
 
 // --------- Render global search results --------------------------------
@@ -390,7 +458,13 @@ function renderGlobalSearchResults(results) {
     Object.entries(branches).forEach(([brName, features]) => {
       const cls = classesData[clsName];
       
-      features.forEach(feat => {
+      features.forEach(result => {
+        const feat = result.feature || result;
+        const normalizedResult = {
+          feature: feat,
+          parents: Array.isArray(result.parents) ? result.parents : []
+        };
+
         // collectLeafFeatures now fully clones, no need to clean
         const leafs = collectLeafFeatures(feat);
         leafs.forEach(leaf => {
@@ -401,11 +475,12 @@ function renderGlobalSearchResults(results) {
           // Source badge
           const badge = document.createElement("div");
           badge.className = "mb-2";
+          const context = resultContextParts(brName, clsName, cls, normalizedResult)
+            .map(part => escapeHTML(part))
+            .join(" • ");
           badge.innerHTML = `
             <small class="text-muted">
-              From <strong>${escapeHTML(clsName)}</strong> 
-              ${brName !== "Default" ? `› ${escapeHTML(brName)}` : ""}
-              ${cls.category ? ` • ${escapeHTML(cls.category)}` : ""}
+              From <strong>${context}</strong>
             </small>
           `;
           wrapper.appendChild(badge);
