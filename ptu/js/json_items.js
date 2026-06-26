@@ -165,14 +165,15 @@ function renderGlobalItemSearchResults(results) {
         const name = item.Item || item["Ball Name"] || item["Herb Type"] || item["Apricorn Type"] || item["Tier"] || "???";
 
         // Title with badges
+        const source = itemSource(item, category);
         body.insertAdjacentHTML(
           "beforeend",
-          `<h5 class="card-title">${escapeHTML(name)} <span class="badge bg-secondary">${escapeHTML(subcategory)}</span></h5>`
+          `<h5 class="card-title">${escapeHTML(name)} <span class="badge bg-secondary">${escapeHTML(subcategory)}</span> <span class="badge bg-info">${escapeHTML(source)}</span></h5>`
         );
 
         // All fields
         Object.entries(item).forEach(([k, v]) => {
-          if (["Item", "Ball Name", "Herb Type", "Apricorn Type", "Tier"].includes(k)) return;
+          if (["Item", "Ball Name", "Herb Type", "Apricorn Type", "Tier", "Source", "source"].includes(k)) return;
 
           let displayValue = String(v);
           if (k === "Price" && !isNaN(v)) {
@@ -197,10 +198,6 @@ function renderCategory(cat) {
   const pane = edgeContainer;
   pane.innerHTML = "";
 
-  const row = document.createElement("div");
-  row.className = "row g-3";
-  pane.appendChild(row);
-
   const queryInput = document.getElementById("items-search");
   const q = (queryInput && queryInput.value || "").toLowerCase();
 
@@ -214,6 +211,19 @@ function renderCategory(cat) {
     if (subcat === "_display") return; // meta, not rendered directly
 
     if (Array.isArray(entries)) {
+      const section = document.createElement("section");
+      section.className = "mb-4";
+
+      section.insertAdjacentHTML(
+        "beforeend",
+        `<h3 class="mb-3 border-bottom pb-2" style="font-size:1.15rem;">${escapeHTML(subcat)}</h3>`
+      );
+
+      const row = document.createElement("div");
+      row.className = "row g-3";
+      section.appendChild(row);
+      pane.appendChild(section);
+
       const meta = normalizeDisplayMeta(displayConfig[subcat]);
 
       if (meta.type === "table") {
@@ -244,6 +254,11 @@ function normalizeDisplayMeta(raw) {
   return { type: "cards" };
 }
 
+function itemSource(item, category = activeCategory) {
+  const categoryData = itemsData[category];
+  return item.Source || item.source || categoryData?.source || categoryData?.Source || "Core";
+}
+
 function renderAsCards(entries, subcat, q, rowEl) {
   entries.forEach(obj => {
     if (typeof obj !== "object" || !obj) return;
@@ -264,15 +279,16 @@ function renderAsCards(entries, subcat, q, rowEl) {
 
     const body = document.createElement("div");
     body.className = "card-body bg-body-secondary";
+    const source = itemSource(obj);
 
     body.insertAdjacentHTML(
       "beforeend",
-      `<h5 class="card-title">${escapeHTML(name)} <span class="badge bg-secondary">${escapeHTML(subcat)}</span></h5>`
+      `<h5 class="card-title">${escapeHTML(name)} <span class="badge bg-secondary">${escapeHTML(subcat)}</span> <span class="badge bg-info">${escapeHTML(source)}</span></h5>`
     );
 
     Object.entries(obj).forEach(([k, v]) => {
       // ignorer les champs déjà affichés dans le titre
-      if (["Item", "Ball Name", "Herb Type", "Apricorn Type", "Tier"].includes(k)) return;
+      if (["Item", "Ball Name", "Herb Type", "Apricorn Type", "Tier", "Source", "source"].includes(k)) return;
 
       // --- Si le champ est un tableau d'objets : afficher un tableau interne ---
       if (Array.isArray(v) && v.length > 0 && typeof v[0] === "object") {

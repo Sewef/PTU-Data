@@ -613,6 +613,147 @@
       }
     ]
   },
+  "Books": {
+    "Book Item Mechanics": [
+      {
+        "Item": "Book Item Mechanics",
+        "Description": "Books hold knowledge, and knowledge is power! Books are Items associated with Education Skills that can be used during Extended Actions to Drain your AP to receive certain benefits.\nAfter half an hour of study, you can Drain 1 AP to gain the benefits of one Rank of a Book , if you meet the prerequisite Skill for that Book’s Rank. Ranks in an individual book must be gained sequentially (e.g. you must have the Novice Rank effect to gain the the Expert Rank effect).\nThe benefits from a Book last until an Extended Rest is taken; when an Extended Rest is taken, you may choose to renew any Drain previously held from Books and continue to gain the effects.\nBooks generally cost $1000, but we are still looking at how to best price them. Give us feedback!",
+        "Source": "Erratum May 2015"
+      }
+    ],
+    "General Eduction Books": [
+      {
+        "Item": "Study Manual",
+        "Description": "A Study Manual is always assigned to a single Skill and covers a specific narrow field that can be taken as a Skill Stunt. A list of examples is provided.",
+        "Rank 1 - Novice General Education": "You gain a Skill Stunt in the associated Skill of the Study Manual covering the narrow field specified by the Study Manual.",
+        "Rank 2 - Expert General Education": "You gain a general +2 Bonus to the associated Skill. This Bonus does not stack with other bonuses from Books or Equipment to the same Skill.",
+        "Examples": "Gossip Mag - Charm (regional celebrities), Locksmith’s Manual - Stealth (lock-picking), Paleontology Manual - Survival (digging up fossils), How to be 1337 - Technology Education (hacking)",
+        "Source": "Erratum May 2015"
+      },
+      {
+        "Item": "The Joy of Cooking",
+        "Description": "A cookbook for novice and experienced chefs alike.",
+        "Rank 1 - Novice General Education": "Your material costs for crafting Food Items of any variety are reduced by 10%.",
+        "Rank 2 - Expert General Education": "Meal and Refreshment you create cause whoever eats them to gain a Tick of Hit Points.",
+        "Source": "Erratum May 2015"
+      },
+      {
+        "Item": "How Berries??",
+        "Description": "A beginner’s guide to the proper care of berry plants.",
+        "Rank 1 - Adept General Education": "Once per day when making a Yield Roll, add +1 to the result.",
+        "Rank 2 - Expert General Education": "You may create Mulch from Food Scrap.",
+        "Source": "Erratum May 2015"
+      }
+    ],
+    "Medicine Education Books": [
+      {
+        "Item": "First Aid Manual",
+        "Description": "A training manual given to all EMTs.",
+        "Rank 1 - Novice Medicine Education": "You gain a +10 Bonus to Medicine Education Checks made to use a First Aid Kit.",
+        "Rank 2 - Expert Medicine Education": "You may use the First Aid Expertise Feature once per day.",
+        "Source": "Erratum May 2015"
+      },
+      {
+        "Item": "Traditional Medicine Reference*",
+        "Description": "A volume dedicated to properly preparing herbal medications.",
+        "Rank 1 - Adept Medicine Education": "Targets you administer Herbal Restoratives to do not lose Combat Stages no matter how many Herbal Restoratives they've had in the same day.",
+        "Rank 2 - Expert Medicine Education": "Whenever you administer an Herbal Restorative to a target, they may choose to gain the Food Buff associated with Herbal Restoratives, regardless of how many Herbal Restoratives they've used this day.",
+        "Note": "*See Herbal Restoratives in Miscellaneous Errata Caretaker's Manual",
+        "Source": "Erratum May 2015"
+      },
+      {
+        "Item": "Caretaker's Manual",
+        "Description": "An invaluable guide to patient care with wide appeal and praised by both nurses and rangers.",
+        "Rank 1 - Adept Medicine Education": "Once per Scene, you may assist an adjacent ally in Taking a Breather as a Standard Action, and they do not Shift or become Tripped as part of this action. If the target is Confused or Enraged, you may roll Medicine Education instead of Command to assist them.",
+        "Rank 2 - Master Medicine Education": "This effect can only be bound while taking an Extended Rest and Drains AP for the next day. During this Extended Rest, Pokémon and Trainers in your care heal twice as many Hit Points while resting, heal Injuries twice as quickly, and may heal an additional Injury per day. This stacks with use of Bandages.",
+        "Source": "Erratum May 2015"
+      }
+    ],
+    "Occult Education Books": [
+      {
+        "Item": "Dowsing For Dummies",
+        "Description": "A favorite of rock collectors everywhere, this book teaches the user how to attune their dowsing rods.",
+        "Rank 1 - Novice Occult Education": "Roll +1d6 when searching for Shards.",
+        "Rank 2 - Adept Occult Education": "When you begin searching for Shards, you may choose to expend an additional activation of Dowsing for the day. If you do, choose a Shard Color; all the Shards you find during this search will be of the chosen Color.",
+        "Source": "Erratum May 2015"
+      },
+      {
+        "Item": "How to Avoid Being Spooked",
+        "Description": "A questionable old tome filled with Ghost-related esoterica.",
+        "Rank 1 - Adept Occult Education": "While holding a Cleanse Tag in your Main or Off-Hand Equipment Slot, you can see Pokémon and Trainers using the Invisibility Capability.",
+        "Rank 2 - Expert Occult Education": "While holding a Cleanse Tag in your Main or Off-Hand Equipment Slot, you are immune to the Cursed Status Affliction.",
+        "Source": "Erratum May 2015"
+      },
+      {
+        "Item": "Tinfoil Gospel: Your Primer on Thwarting the Conspiracies of the New World Order",
+        "Description": "An even more questionable tome, filled with laughable conspiracy theories. Its mental exercises are strangely effective, however.",
+        "Rank 1 - Novice Occult Education": "You gain the Iron Mind Edge and the Skill Stunt - Focus (resisting Telepathy).",
+        "Rank 2 - Expert Occult Education": "Your Aura becomes muddled and difficult to read. Pokémon and Trainers with the Aura Reader Capability cannot discern the tint of your Aura and must succeed on an opposed Intuition or Focus Check vs your Occult Education or Focus in order to read the hue of your Aura. Upon failure, they may not attempt to read your Aura again for the remainder of the Scene.",
+        "Source": "Erratum May 2015"
+      }
+    ],
+    "Pokémon Education Books": [
+      {
+        "Item": "Type Study Manual",
+        "Description": "These Books focus on one particular Pokemon Type.",
+        "Rank 1 - Novice Pokémon Education": "You gain a -5 Bonus on Capture Checks against the studied Type.",
+        "Rank 2 - Expert Pokémon Education": "When you apply Experience Training, you may choose to give one of your Pokémon of the studied Type +10 Bonus Experience. The same Pokémon cannot be chosen two days in a row.",
+        "Source": "Erratum May 2015"
+      },
+      {
+        "Item": "Pokémon Daycare Licensing Guide",
+        "Description": "This book teaches advanced Pokémon Breeding techniques.",
+        "Rank 1 - Adept Pokémon Education": "When Breeding Pokémon of this Book's Egg Group, you may choose which parent's species the Egg is of.",
+        "Rank 2 - Master Pokémon Education": "When hatching Eggs of Pokémon of this Book's Egg Group, the hatched Pokémon learns their first Inheritance Move at Level 10 instead of Level 20.",
+        "Source": "Erratum May 2015"
+      }
+    ],
+    "Survival Books": [
+      {
+        "Item": "Fishing 101",
+        "Description": "A good way to waste an afternoon sitting at the side of a boat.",
+        "Rank 1 - Novice Survival": "You gain the Snare Capture Technique, but it only applies to Pokémon you have fished up.",
+        "Rank 2 - Adept Survival": "Whenever you fish up a Pokémon, choose two Combat Stats. That Pokémon becomes Flinched and loses 1 Combat Stage in each of the chosen Stats.",
+        "Source": "Erratum May 2015"
+      },
+      {
+        "Item": "A Field Guide to Fungi",
+        "Description": "This book tells you which mushrooms are good to eat and which ones will give you a bad trip.",
+        "Rank 1 - Novice Survival": "You automatically identify all Tiny Mushrooms, Big Mushrooms, and Balm Mushrooms you pick. Whenever you or your Pokémon consume one of those Mushrooms, they ignore the negative effect of the Mushroom (Hit Point loss, Poison, Combat Stage loss).",
+        "Rank 2 - Adept Survival": "You can create the Hearty Meal Chef Recipe as an Extended Action but only by using Mushrooms as ingredients.",
+        "Source": "Erratum May 2015"
+      },
+      {
+        "Item": "Travel Guide",
+        "Description": "A Travel Guide covers a specific location, such as a mountain or a pair of routes in the wilderness. Travel Guides are usually written for the more popular destinations in a region, but they might not necessarily exist for more obscure and out of the way locations.",
+        "Rank 1 - Novice Survival: You gain the following Skill Stunts while traveling in the studied location": "Survival (Foraging) and Survival (Navigation).",
+        "Rank 2 - Expert Survival": "You and your Pokémon do not take damage from naturally occurring Weather effects in the studied location.",
+        "Source": "Erratum May 2015"
+      }
+    ],
+    "Technology Education Books": [
+      {
+        "Item": "The Anarchist Cookbook",
+        "Description": "The simple act of owning this book isn't illegal, but carrying out its suggestions might be.",
+        "Rank 1 - Novice Technology Education": "Whenever you apply a Repel to a target, they become Blinded until the end of their next turn. This may only affect a target once per Scene.",
+        "Rank 2 - Expert Technology Education": "Whenever you hit a target with a Repel or Pester Ball, they lose Hit Points equal to your Technology Education Rank.",
+        "Source": "Erratum May 2015"
+      },
+      {
+        "Item": "Poké Ball Technical Manual",
+        "Description": "Your all-in-one guide to balls.",
+        "Rank 1 - Novice Technology Education": "Your material costs for crafting Poke Balls of any variety are reduced by 10%.",
+        "Rank 2 - Expert Technology Education": "Poke Balls you craft gain a +2 Bonus to Accuracy Rolls.",
+        "Source": "Erratum May 2015"
+      },
+      {
+        "Item": "DIY Engineering",
+        "Rank 1 - Novice Technology Education": "Your material costs for crafting items crafted from Mechanical Scrap are reduced by 10%.",
+        "Rank 2 - Expert Technology Education": "Whenever you Scrap an Item you created, you gain Scrap worth 75% of its monetary cost instead of only 50%.",
+        "Source": "Erratum May 2015"
+      }
+    ]
+  },
   "Equipment": {
     "Body Equipment": [
       {
