@@ -702,7 +702,7 @@ function collectLeafFeatures(featObj, nameOverride = null) {
 }
 
 /* ------------------------------------------------------------------ *
- * Create card - renders a card and recursively its sub-cards
+ * Create card — renders a card and recursively its sub-cards
  * ------------------------------------------------------------------ */
 function createCard(feat, clsMeta, isGeneral, nested = false) {
   // ----- column container (no Bootstrap column when nested)

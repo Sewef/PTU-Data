@@ -3,7 +3,7 @@ import {
   buildPillSection,
   getSelectedPills
 } from "/ptu/js/helpers.js";
-import { DAMAGE_BASE_TABLE } from "/ptu/js/json_moves.js";
+import { configureReferenceModal } from "/ptu/js/ptu_reference_modal.js";
 
 // =========================
 // Config
@@ -68,24 +68,6 @@ const FANDEX_FILES = {
   "Slime Rancher": "pokedex_slimerancher.min.json"
 };
 
-const FANDEX_MOVES_FILES = {
-  "Insurgence": "moves_insurgence.min.json",
-  "Sage": "moves_sage.min.json",
-  "Uranium": "moves_uranium.min.json"
-};
-
-const FANDEX_ABILITIES_FILES = {
-  "Insurgence": "abilities_insurgence.min.json",
-  "Sage": "abilities_sage.min.json",
-  "Uranium": "abilities_uranium.min.json"
-};
-
-const FANDEX_CAPABILITIES_FILES = {
-  "Insurgence": "capabilities_insurgence.min.json",
-  "Sage": "capabilities_sage.min.json",
-  "Uranium": "capabilities_uranium.min.json"
-};
-
 const FANDEX_MECHANICS_FILES = {
   "Variant": "variant_mechanics.html",
   "Insurgence": "insurgence_mechanics.html",
@@ -101,27 +83,7 @@ const FANDEX_SOURCE_URLS = {
   "Slime Rancher": "https://docs.google.com/document/d/1Y686fpUCixqBgic_NW_Wrk7X38vI9sqEiSMwFKRKWW0/edit?tab=t.0#bookmark=id.az542nzarvmw"
 };
 
-const MOVES_BASE = "/ptu/data/moves";
-const ABILITIES_BASE = "/ptu/data/abilities";
-const CAPABILITIES_BASE = "/ptu/data/capabilities";
 const MECHANICS_BASE = "/ptu/data/mechanics";
-
-const MOVES_FILE_BY_PRESET = {
-  Core: `${MOVES_BASE}/moves_core.min.json`,
-  Community: `${MOVES_BASE}/moves_community.min.json`,
-  Homebrew: `${MOVES_BASE}/moves_homebrew.min.json`
-};
-const ABILITIES_FILE_BY_PRESET = {
-  Core: `${ABILITIES_BASE}/abilities_core.min.json`,
-  Community: `${ABILITIES_BASE}/abilities_community.min.json`,
-  Homebrew: `${ABILITIES_BASE}/abilities_homebrew.min.json`
-};
-
-const CAPABILITIES_FILE_BY_PRESET = {
-  Core: `${CAPABILITIES_BASE}/capabilities_core.min.json`,
-  Community: `${CAPABILITIES_BASE}/capabilities_community.min.json`,
-  Homebrew: `${CAPABILITIES_BASE}/capabilities_community.min.json`
-};
 
 const POKESHEETS_FILE_BY_PRESET = {
   Core: {
@@ -144,6 +106,12 @@ const SHOWN_TAGS = new Set(["N", "Stab"]);
 let selectedPreset = window.selectedPreset || "Core";
 let selectedLabels = new Set(PRESETS[selectedPreset] || []);
 let selectedFanDexBase = window.selectedPreset || "Core"; // Base dataset for FanDex (Core, Community or Homebrew)
+
+configureReferenceModal({
+  getPreset: () => selectedPreset,
+  getSelectedLabels: () => selectedLabels,
+  getFanDexBase: () => selectedFanDexBase
+});
 
 // =========================
 // Hash state management
@@ -217,7 +185,6 @@ function __makeWildcardMatcher(queryRaw) {
 }
 // =========================
 const _fetchCache = new Map(); // url -> Promise(json)
-const _indexCache = new Map(); // url -> Promise(Map)
 const pad3 = (n) => String(n).padStart(3, "0");
 const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 const $ = (sel) => document.querySelector(sel);
@@ -297,144 +264,9 @@ async function loadPokedex() {
   return merged;
 }
 
-async function loadIndex(url, nameField) {
-  if (_indexCache.has(url)) return _indexCache.get(url);
-
-  // Helper to normalize ability/capability names by removing trailing "*"
-  const normalizeKey = (key) => key.trim().toLowerCase().replace(/\*+$/, '');
-
-  const p = fetchJson(url, { strict: false }).then(raw => {
-    const idx = new Map();
-    if (raw && typeof raw === "object" && !Array.isArray(raw)) {
-      for (const [key, obj] of Object.entries(raw)) {
-
-        // Cas capabilities : la valeur est un STRING
-        if (typeof obj === "string") {
-          idx.set(normalizeKey(key), {
-            Name: key,
-            Effect: obj,
-            __displayName: key
-          });
-          continue;
-        }
-
-        // Cas normal : objet JSON structuré
-        if (obj && typeof obj === "object") {
-          const k = normalizeKey(key);
-          obj.__displayName = key;
-          idx.set(k, obj);
-        }
-      }
-      return idx;
-    }
-
-    const arr = Array.isArray(raw) ? raw : [];
-    for (const it of arr) {
-      const name = (it?.[nameField] || it?.Move || it?.Name || "").trim();
-      if (name) {
-        it.__displayName = name;
-        idx.set(normalizeKey(name), it);
-      }
-    }
-    return idx;
-  });
-  _indexCache.set(url, p);
-  return p;
-}
-
-async function loadIndexMultiple(urls, nameField, fandexLabel) {
-  if (!Array.isArray(urls) || urls.length === 0) {
-    return new Map();
-  }
-
-  // Load all indexes
-  const indexes = await Promise.all(urls.map(url => loadIndex(url, nameField)));
-
-  // If only one URL, return it directly
-  if (indexes.length === 1) {
-    return indexes[0];
-  }
-
-  // Merge indexes with override detection
-  const mergedIndex = new Map();
-  const overrides = new Map(); // Track which entries are overridden
-
-  // First pass: add all entries from base (first index)
-  for (const [key, value] of indexes[0]) {
-    mergedIndex.set(key, { ...value, __source: "base" });
-  }
-
-  // Second pass: add/override with FanDex entries (second index)
-  for (const [key, value] of indexes[1]) {
-    if (mergedIndex.has(key)) {
-      // Override detected
-      const baseEntry = mergedIndex.get(key);
-      mergedIndex.set(key, {
-        ...value,
-        __source: "fandex",
-        __fandexLabel: fandexLabel,
-        __override: true,
-        __baseEntry: baseEntry
-      });
-      overrides.set(key, true);
-    } else {
-      mergedIndex.set(key, { ...value, __source: "fandex", __fandexLabel: fandexLabel });
-    }
-  }
-
-  return mergedIndex;
-}
-
-function getMovesUrlForPreset() {
-  if (selectedPreset === "FanDex" && selectedLabels.size > 0) {
-    const firstLabel = Array.from(selectedLabels)[0];
-    const baseUrl = MOVES_FILE_BY_PRESET[selectedFanDexBase] || MOVES_FILE_BY_PRESET.Core;
-    const fandexFile = FANDEX_MOVES_FILES[firstLabel];
-    const fandexUrl = fandexFile ? `${MOVES_BASE}/fandex/${fandexFile}` : null;
-    return fandexUrl ? { urls: [baseUrl, fandexUrl], fandexLabel: firstLabel } : { urls: [baseUrl], fandexLabel: null };
-  }
-  const preset = selectedPreset === "FanDex" ? selectedFanDexBase : selectedPreset;
-  return { urls: [MOVES_FILE_BY_PRESET[preset] || MOVES_FILE_BY_PRESET.Core], fandexLabel: null };
-}
-function getAbilitiesUrlForPreset() {
-  if (selectedPreset === "FanDex" && selectedLabels.size > 0) {
-    const firstLabel = Array.from(selectedLabels)[0];
-    const baseUrl = ABILITIES_FILE_BY_PRESET[selectedFanDexBase] || ABILITIES_FILE_BY_PRESET.Core;
-    const fandexFile = FANDEX_ABILITIES_FILES[firstLabel];
-    const fandexUrl = fandexFile ? `${ABILITIES_BASE}/fandex/${fandexFile}` : null;
-    return fandexUrl ? { urls: [baseUrl, fandexUrl], fandexLabel: firstLabel } : { urls: [baseUrl], fandexLabel: null };
-  }
-  const preset = selectedPreset === "FanDex" ? selectedFanDexBase : selectedPreset;
-  return { urls: [ABILITIES_FILE_BY_PRESET[preset] || ABILITIES_FILE_BY_PRESET.Core], fandexLabel: null };
-}
-function getCapabilitiesUrlForPreset() {
-  if (selectedPreset === "FanDex" && selectedLabels.size > 0) {
-    const firstLabel = Array.from(selectedLabels)[0];
-    const baseUrl = CAPABILITIES_FILE_BY_PRESET[selectedFanDexBase] || CAPABILITIES_FILE_BY_PRESET.Core;
-    const fandexFile = FANDEX_CAPABILITIES_FILES[firstLabel];
-    const fandexUrl = fandexFile ? `${CAPABILITIES_BASE}/fandex/${fandexFile}` : null;
-    return fandexUrl ? { urls: [baseUrl, fandexUrl], fandexLabel: firstLabel } : { urls: [baseUrl], fandexLabel: null };
-  }
-  const preset = selectedPreset === "FanDex" ? selectedFanDexBase : selectedPreset;
-  return { urls: [CAPABILITIES_FILE_BY_PRESET[preset] || CAPABILITIES_FILE_BY_PRESET.Core], fandexLabel: null };
-}
-function loadMoveIndex() {
-  const config = getMovesUrlForPreset();
-  return loadIndexMultiple(config.urls, "Move", config.fandexLabel);
-}
-function loadAbilityIndex() {
-  const config = getAbilitiesUrlForPreset();
-  return loadIndexMultiple(config.urls, "Name", config.fandexLabel);
-}
-function loadCapabilityIndex() {
-  const config = getCapabilitiesUrlForPreset();
-  return loadIndexMultiple(config.urls, "Name", config.fandexLabel);
-}
-
-function clearIndexCache() {
-  _indexCache.clear();
-  _fetchCache.clear(); // Clear fetch cache too to reload JSON data
-  __TYPE_CACHE__ = new WeakMap(); // Reset type cache for new preset
+function clearPokedexCaches() {
+  _fetchCache.clear();
+  __TYPE_CACHE__ = new WeakMap();
 }
 
 // =========================
@@ -807,12 +639,12 @@ function transformBasicInformation(v) {
           .filter(x => x != null && String(x).trim())
           .map(name => {
             const s = String(name).trim();
-            return `<a href="#" class="js-ability-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
+            return `<a href="#" class="js-reference-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
           });
         v[bk] = parts.join(" / ");
       } else if (typeof bv === "string" && bv.trim()) {
         const s = bv.trim();
-        v[bk] = `<a href="#" class="js-ability-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
+        v[bk] = `<a href="#" class="js-reference-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
       }
     }
   }
@@ -914,7 +746,7 @@ function renderEvolutionList(evos, base, depth = 0) {
     if (exists) {
       const numAttr = (numForSp != null) ? ` data-dex-number="${escapeHtml(String(numForSp))}"` : "";
       speciesLabel =
-        `<a href="#" class="fw-semibold js-species-link" data-dex-species="${escapeHtml(String(fullSpecies))}"${numAttr}>${escapeHtml(fullSpecies)}</a>`;
+        `<a href="#" class="fw-semibold js-reference-link" data-dex-species="${escapeHtml(String(fullSpecies))}"${numAttr}>${escapeHtml(fullSpecies)}</a>`;
     } else {
       // Non-clickable with tooltip (Bootstrap-compatible)
       const tip = "Not found in current dataset";
@@ -926,7 +758,7 @@ function renderEvolutionList(evos, base, depth = 0) {
       `${level ? ` [${escapeHtml(level)}]` : ""}` +
       `${cond ? ` (${escapeHtml(cond)})` : ""}`;
 
-    const label = `${stade} - ${speciesLabel} ${extra}`;
+    const label = `${stade} — ${speciesLabel} ${extra}`;
 
     return `<li class="list-group-item d-flex align-items-center"><span class="flex-grow-1">${label}</span></li>`;
   }).join("");
@@ -948,13 +780,13 @@ function renderBattleOnlyForms(forms, base) {
         .filter(x => x != null && String(x).trim())
         .map(name => {
           const s = String(name).trim();
-          return `<a href="#" class="js-ability-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
+          return `<a href="#" class="js-reference-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
         })
         .join(", ");
     }
     if (typeof val === "string" && val.trim()) {
       const s = val.trim();
-      return `<a href="#" class="js-ability-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
+      return `<a href="#" class="js-reference-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
     }
     return Array.isArray(val) ? val.join(", ")
       : (typeof val === "object" && val ? Object.keys(val).join(", ")
@@ -1009,7 +841,7 @@ function renderTmTutorMovesComma(arr, title = "TM/Tutor Moves") {
   const parts = arr.map(it => {
     if (typeof it === "string") return `<span class="small text-muted">${escapeHtml(it)}</span>`;
     const raw = it?.Move ?? "";
-    const move = raw ? `<a href="#" class="js-move-link" data-move="${escapeHtml(raw)}">${escapeHtml(raw)}</a>` : "";
+    const move = raw ? `<a href="#" class="js-reference-link" data-move="${escapeHtml(raw)}">${escapeHtml(raw)}</a>` : "";
     const tagsSup = renderTags(it?.Tags);
     let method = it?.Method || "";
     if (method === "Machine") method = "TM";
@@ -1025,7 +857,7 @@ function renderLevelUpMoves(moves) {
       <ul class="list-unstyled mb-0">
         ${moves.map(m => {
     const tagsSup = renderTags(m?.Tags);
-    const nameHtml = `<a href="#" class="js-move-link" data-move="${escapeHtml(m.Move)}">${escapeHtml(m.Move)}</a>`;
+    const nameHtml = `<a href="#" class="js-reference-link" data-move="${escapeHtml(m.Move)}">${escapeHtml(m.Move)}</a>`;
     return `<li class="d-flex align-items-center mb-1">
             <span class="text-muted" style="width:50px;">Lv.${m.Level}</span>
             <span class="fw-semibold flex-grow-1">${nameHtml}${tagsSup}</span>
@@ -1033,215 +865,6 @@ function renderLevelUpMoves(moves) {
           </li>`;
   }).join("")}
       </ul>`;
-}
-
-function formatDamageBase(mv) {
-  const raw = mv?.["Damage Base"] || mv?.DB || "";
-  if (raw == null || raw === "") return "";
-
-  const match = String(raw).match(/\d+/);
-  if (!match) {
-    return `<div><span class="text-muted">Damage Base:</span> ${escapeHtml(String(raw))}</div>`;
-  }
-
-  const value = Number.parseInt(match[0], 10);
-  if (!Number.isFinite(value)) {
-    return `<div><span class="text-muted">Damage Base:</span> ${escapeHtml(String(raw))}</div>`;
-  }
-
-  const info = DAMAGE_BASE_TABLE[value];
-  if (!info) {
-    return `<div><span class="text-muted">Damage Base:</span> ${escapeHtml(String(value))}</div>`;
-  }
-
-  return `<div><span class="text-muted">Damage Base:</span> ${escapeHtml(String(value))} (${escapeHtml(info.dmg)} / ${escapeHtml(String(info.avg))})</div>`;
-}
-
-function renderMoveDetails(mv) {
-  if (!mv) return '<p class="text-muted mb-0">Cannot find move.</p>';
-
-  // Display FanDex source badge
-  let sourceBadge = "";
-  if (mv.__source === "fandex" && mv.__fandexLabel) {
-    sourceBadge = `<span class="badge bg-info mb-2">Source: ${escapeHtml(mv.__fandexLabel)}</span><br>`;
-  }
-
-  // Check for override warning
-  let overrideWarning = "";
-  if (mv.__override && mv.__baseEntry) {
-    overrideWarning = `
-      <div class="alert alert-warning mb-3" role="alert">
-        <strong>⚠️ Warning - Override:</strong> This move exists in both the base dataset and FanDex.
-        <details class="mt-2">
-          <summary style="cursor: pointer; user-select: none;">Show base version</summary>
-          <div class="mt-2 p-2 border rounded bg-light">
-            ${renderMoveDetailsCore(mv.__baseEntry)}
-          </div>
-        </details>
-      </div>
-    `;
-  }
-
-  return sourceBadge + overrideWarning + renderMoveDetailsCore(mv);
-}
-
-function renderMoveDetailsCore(mv) {
-  const row = (k, v) =>
-    v ? `<div><span class="text-muted">${k}:</span> ${escapeHtml(String(v))}</div>` : "";
-
-  const tags = Array.isArray(mv.Tags) && mv.Tags.length
-    ? mv.Tags.join(", ")
-    : (mv.Keywords || mv.Keyword || "");
-
-  const isBlank = (val) => {
-    if (val == null) return true;
-    const s = String(val).trim();
-    return !s || /^none$/i.test(s);
-  };
-
-  const ignoreFields = new Set(["Contest Type", "Contest Effect"]);
-  const extraSections = [];
-
-  // Tous les champs contenant "Effect", sauf ceux ignorés
-  const effectKeys = Object.keys(mv).filter(
-    k => /effect/i.test(k) && !ignoreFields.has(k)
-  );
-
-  for (const k of effectKeys) {
-    const v = mv[k];
-    if (isBlank(v)) continue;
-
-    if (/^effect$/i.test(k)) {
-      // Cas particulier : "Effect" → sans label
-      extraSections.push(
-        `<div style="white-space:pre-wrap">${escapeHtml(String(v))}</div>`
-      );
-    } else {
-      // Autres effets → avec label
-      extraSections.push(
-        `<div style="white-space:pre-wrap"><strong>${escapeHtml(k)}:</strong> ${escapeHtml(String(v))}</div>`
-      );
-    }
-  }
-
-  const extraHtml = extraSections.length
-    ? `<hr class="my-2">${extraSections.join("")}`
-    : "";
-
-  return `
-    ${row("Frequency", mv.Frequency)}
-    ${row("AC", mv.AC)}
-    ${formatDamageBase(mv)}
-    ${row("Class", mv.Class)}
-    ${row("Range", mv.Range)}
-    ${row("Keywords", tags)}
-    ${row("Target", mv.Target)}
-    ${row("Trigger", mv.Trigger)}
-    ${extraHtml}
-  `;
-}
-
-function renderAbilityDetails(ab) {
-  if (!ab) return '<p class="text-muted mb-0">Unknown Ability.</p>';
-
-  // Display FanDex source badge
-  let sourceBadge = "";
-  if (ab.__source === "fandex" && ab.__fandexLabel) {
-    sourceBadge = `<span class="badge bg-info mb-2">Source: ${escapeHtml(ab.__fandexLabel)}</span><br>`;
-  }
-
-  // Check for override warning
-  let overrideWarning = "";
-  if (ab.__override && ab.__baseEntry) {
-    overrideWarning = `
-      <div class="alert alert-warning mb-3" role="alert">
-        <strong>⚠️ Warning - Override:</strong> This ability exists in both the base dataset and FanDex.
-        <details class="mt-2">
-          <summary style="cursor: pointer; user-select: none;">Show base version</summary>
-          <div class="mt-2 p-2 border rounded bg-light">
-            ${renderAbilityDetailsCore(ab.__baseEntry)}
-          </div>
-        </details>
-      </div>
-    `;
-  }
-
-  return sourceBadge + overrideWarning + renderAbilityDetailsCore(ab);
-}
-
-function renderAbilityDetailsCore(ab) {
-  const row = (k, v) => v ? `<div><span class="text-muted">${k}:</span> ${escapeHtml(String(v))}</div>` : "";
-  const isBlank = (val) => {
-    if (val == null) return true;
-    const s = String(val).trim();
-    return !s || /^none$/i.test(s);
-  };
-
-  // Champs principaux (toujours au-dessus)
-  const header =
-    row("Frequency", ab.Frequency) +
-    row("Target", ab.Target) +
-    row("Trigger", ab.Trigger);
-
-  // Sections “effets” flexibles : Effect (sans label), Bonus/Special et
-  // tout autre champ contenant "Effect" (avec label), s’ils ne sont pas vides.
-  const keys = Object.keys(ab);
-  const effectishKeys = keys.filter(k => /(effect|bonus|special)/i.test(k));
-
-  const sections = [];
-  for (const k of effectishKeys) {
-    const v = ab[k];
-    if (isBlank(v)) continue;
-
-    if (/^effect$/i.test(k)) {
-      // "Effect" tout seul → sans label
-      sections.push(
-        `<div style="white-space:pre-wrap">${escapeHtml(String(v))}</div>`
-      );
-    } else {
-      // Bonus, Special, ou tout autre champ contenant "Effect" → avec label
-      sections.push(
-        `<div style="white-space:pre-wrap"><strong>${escapeHtml(k)}:</strong> ${escapeHtml(String(v))}</div>`
-      );
-    }
-  }
-
-  const extras = sections.length ? `<hr class="my-2">${sections.join("")}` : "";
-
-  return `${header}${extras}`;
-}
-
-function renderCapabilityDetails(cap) {
-  if (!cap) return '<p class="text-muted mb-0">Unknown Capability.</p>';
-
-  // Display FanDex source badge
-  let sourceBadge = "";
-  if (cap.__source === "fandex" && cap.__fandexLabel) {
-    sourceBadge = `<span class="badge bg-info mb-2">Source: ${escapeHtml(cap.__fandexLabel)}</span><br>`;
-  }
-
-  // Check for override warning
-  let overrideWarning = "";
-  if (cap.__override && cap.__baseEntry) {
-    const baseText = cap.__baseEntry.Effect || cap.__baseEntry.effect || String(cap.__baseEntry) || "";
-    overrideWarning = `
-      <div class="alert alert-warning mb-3" role="alert">
-        <strong>⚠️ Warning - Override:</strong> This capability exists in both the base dataset and FanDex.
-        <details class="mt-2">
-          <summary style="cursor: pointer; user-select: none;">Show base version</summary>
-          <div class="mt-2 p-2 border rounded bg-light">
-            ${escapeHtml(baseText)}
-          </div>
-        </details>
-      </div>
-    `;
-  }
-
-  // cap.Effect is automatically added by loadIndex() with our patch
-  const text = cap.Effect || cap.effect || String(cap) || "";
-
-  return `${sourceBadge}${overrideWarning}${escapeHtml(text)}
-  `;
 }
 
 function renderObject(obj, depth = 0) {
@@ -1406,7 +1029,7 @@ function renderCapabilities(raw, depth = 0) {
   const rated = parsed.rated.map(({ key, value }) => `
       <div class="cap-item">
         <div class="cap-head">
-          <a href="#" class="js-ability-link" data-capability="${escapeHtml(key)}">
+          <a href="#" class="js-reference-link" data-capability="${escapeHtml(key)}">
             ${escapeHtml(key)}
           </a>
         </div>
@@ -1416,7 +1039,7 @@ function renderCapabilities(raw, depth = 0) {
 
   const simple = parsed.simple.map(k => `
     <span class="cap-chip">
-      <a href="#" class="js-ability-link" data-capability="${escapeHtml(k)}">
+      <a href="#" class="js-reference-link" data-capability="${escapeHtml(k)}">
         ${escapeHtml(k)}
       </a>
     </span>
@@ -1908,7 +1531,7 @@ function buildSourceMenu(onChange) {
 
   async function reload() {
     try {
-      clearIndexCache(); // Clear cached indexes when changing preset
+      clearPokedexCaches();
       const data = await loadPokedex();
       window.__POKEDEX = data;
       window.__pokedexData = data;
@@ -1963,7 +1586,7 @@ function buildSourceMenu(onChange) {
     // Handle Base Dataset radios for FanDex
     if (tgt.name === "fandex-base" && tgt.checked) {
       selectedFanDexBase = tgt.value;
-      clearIndexCache(); // Recharger les indexes avec le nouveau base dataset
+      clearPokedexCaches();
       reload();
     }
   });
@@ -2012,122 +1635,6 @@ async function openModalBySpecies(speciesName) {
   else alert(`Aucun Pokémon trouvé avec le nom "${speciesName}"`);
 }
 
-// =========================
-// Move & Ability modal
-// =========================
-let _moveAbilityModal;
-function ensureMoveAbilityModal() {
-  if (_moveAbilityModal) return _moveAbilityModal;
-  const el = $("#moveAbilityModal");
-  if (!el) return null;
-  _moveAbilityModal = new bootstrap.Modal(el, { backdrop: true });
-  return _moveAbilityModal;
-}
-
-async function openMoveModalByName(moveName) {
-  const raw = String(moveName || "").trim();
-  const base = raw.split("*")[0].trim(); // trim anything after '*' (eg. "Move* [...]" -> "Move")
-  const name = base.toLowerCase();
-  if (!name) return;
-  const idx = await loadMoveIndex();
-  // Also normalize moves in the index by trimming after '*'
-  const found = Array.from(idx.entries()).find(([key, mv]) => {
-    const moveBase = key.split("*")[0].trim().toLowerCase();
-    return moveBase === name;
-  });
-  const mv = found ? found[1] : null;
-  const display = mv?.Move || mv?.Name || mv?.__displayName || moveName;
-  const labelEl = $("#moveAbilityModalLabel");
-  const typeHtml = mv?.Type ? wrapTypes([mv.Type]) : "";
-  labelEl.innerHTML = `<div><div class="fw-semibold">Move — ${escapeHtml(display)}</div><div class="mt-1">${typeHtml}</div></div>`;
-  $("#moveAbilityModalBody").innerHTML = renderMoveDetails(mv);
-  ensureMoveAbilityModal()?.show();
-}
-
-async function openAbilityModalByName(abilityName) {
-  const name = String(abilityName || "").trim().toLowerCase().replace(/\*+$/, '');
-  if (!name) return;
-  const idx = await loadAbilityIndex();
-  const ab = idx.get(name) || idx.get(name.split('(')[0].trim().replace(/\*+$/, '')) || null;
-  const display = ab?.Name || ab?.__displayName || abilityName;
-  $("#moveAbilityModalLabel").textContent = `Ability — ${display}`;
-  $("#moveAbilityModalBody").innerHTML = renderAbilityDetails(ab);
-  ensureMoveAbilityModal()?.show();
-}
-
-async function openCapabilityModalByName(capNameRaw) {
-  const raw = String(capNameRaw || "").trim();
-  if (!raw) return;
-
-  const idx = await loadCapabilityIndex(); // Map(keys lowercase -> obj)
-
-  // 1) Normalisation brute (removing trailing *)
-  const exact = raw.toLowerCase().replace(/\*+$/, '');
-
-  // 2) Recherche EXACTE
-  let cap = idx.get(exact);
-
-  // 3) Si "Mountable 1", chercher "Mountable X"
-  if (!cap) {
-    const baseWord = raw.split(/[ (]/)[0].trim().toLowerCase().replace(/\*+$/, ''); // "mountable"
-    const maybe = Array.from(idx.entries()).find(([key]) =>
-      key.startsWith(baseWord)   // mountable x
-    );
-    if (maybe) cap = maybe[1];
-  }
-
-  // 4) Cas Naturewalk (Forest) → chercher juste "naturewalk"
-  if (!cap) {
-    const base = raw.toLowerCase().split("(")[0].trim().replace(/\*+$/, ''); // "naturewalk"
-    const maybe2 = idx.get(base);
-    if (maybe2) cap = maybe2;
-  }
-
-  // 5) Dernière chance : fuzzy
-  if (!cap) {
-    const fuzzy = Array.from(idx.entries()).find(([key]) =>
-      key.includes(exact)
-      || exact.includes(key)
-    );
-    if (fuzzy) cap = fuzzy[1];
-  }
-
-  // Si toujours rien
-  if (!cap) {
-    ensureMoveAbilityModal()?.show();
-    document.querySelector("#moveAbilityModalLabel").textContent =
-      `Capability — ${raw}`;
-    document.querySelector("#moveAbilityModalBody").innerHTML =
-      `<p class="text-muted">No data for capability « ${escapeHtml(raw)} ».</p>`;
-    return;
-  }
-
-  // Affichage
-  const display = cap.Name || cap.__displayName || raw;
-  const modal = ensureMoveAbilityModal();
-
-  document.querySelector("#moveAbilityModalLabel").textContent =
-    `Capability — ${display}`;
-
-  document.querySelector("#moveAbilityModalBody").innerHTML =
-    renderCapabilityDetails(cap);
-
-  modal?.show();
-}
-
-document.addEventListener("click", (ev) => {
-  const a = ev.target.closest("a.js-move-link, a.js-ability-link, a.js-capability-link");
-  if (!a) return;
-  ev.preventDefault();
-
-  const move = a.dataset.move;
-  const ability = a.dataset.ability;
-  const capa = a.dataset.capability;
-
-  if (move) openMoveModalByName(move);
-  if (ability) openAbilityModalByName(ability);
-  if (capa) openCapabilityModalByName(capa);
-});
 
 
 export async function loadPokedexPage() {

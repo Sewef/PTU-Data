@@ -1,9 +1,17 @@
 export function includeHTML(callback) {
+  const finish = () => {
+    if (callback) callback();
+    setupVersionSwitcher();
+    if (typeof window.initThemeSwitcher === 'function') {
+      window.initThemeSwitcher();
+    }
+    initPTUReferenceLinks();
+  };
+
   const elements = document.querySelectorAll('[w3-include-html]');
   let total = elements.length;
-  if (total === 0 && callback) {
-    callback();
-    setupVersionSwitcher();
+  if (total === 0) {
+    finish();
   }
 
   elements.forEach(el => {
@@ -25,25 +33,28 @@ export function includeHTML(callback) {
         el.innerHTML = data;
         el.removeAttribute("w3-include-html");
         total--;
-        if (total === 0 && callback) {
-          callback(); // callback après tous les includes
-          setupVersionSwitcher();
-          // Réinitialiser le theme switcher après inclusion du header
-          if (typeof window.initThemeSwitcher === 'function') {
-            window.initThemeSwitcher();
-          }
+        if (total === 0) {
+          finish();
+          return;
         }
       })
       .catch(err => {
         console.error(`Include error for ${file}:`, err);
         el.innerHTML = `Include failed: ${err.message}`;
         total--;
-        if (total === 0 && callback) {
-          callback();
-          setupVersionSwitcher();
+        if (total === 0) {
+          finish();
+          return;
         }
       });
   });
+}
+
+function initPTUReferenceLinks() {
+  if (window.PTU_REFERENCE_LINKS_DISABLED === true) return;
+  import("/ptu/js/ptu_reference_modal.js")
+    .then(module => module.initReferenceLinks?.())
+    .catch(err => console.warn("[helpers] Reference links unavailable:", err));
 }
 
 export function setActive() {
