@@ -38,7 +38,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self, Set-Up",
-    "Set-Up Effect": "The user becomes Liquefied. While Liquefied, the user is Slowed and cannot take Standard Actions except to Resolve the effect of Acid Armor, and the user's Movement is never obstructed by rough or slow terrain, and they can shift even through the smallest openings. Furthermore, while liquefied, the user is completely immune to all Physical damage, and becomes completely invisible if fully submerged in any liquid.",
+    "Set-Up Effect": "The user becomes Liquefied. While Liquefied, the user is [[status:Slowed]] and cannot take Standard Actions except to Resolve the effect of Acid Armor, and the user's Movement is never obstructed by rough or slow terrain, and they can shift even through the smallest openings. Furthermore, while liquefied, the user is completely immune to all Physical damage, and becomes completely invisible if fully submerged in any liquid.",
     "Resolution Effect": "The user gains +1 Defense Combat Stage, and then stops being liquified.",
     "Contest Type": "Tough",
     "Contest Effect": "Get Ready!"
@@ -175,7 +175,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "The Target is Trapped for 2 rounds. Anchor Shot may only be used from the user's Anchor Token.",
+    "Effect": "The Target is [[status:Trapped]] for 2 rounds. Anchor Shot may only be used from the user's Anchor Token.",
     "Contest Type": "Tough",
     "Contest Effect": "Catching Up"
   },
@@ -300,7 +300,7 @@
     "Damage Base": "5",
     "Class": "Special",
     "Range": "4, 2 Targets; or 4, 1 Target (see Effect)",
-    "Effect": "Once per Scene, you may create Slick Hazards in two Blasts 3, anywhere within range. If used on only 1 target, this Move gains the Double Strike keyword, and if Slick Hazards are created, you may create them in a single Blast 5, centered on the target. Hazards and does not have to stop shifting or become Vulnerable from them.",
+    "Effect": "Once per Scene, you may create Slick Hazards in two Blasts 3, anywhere within range. If used on only 1 target, this Move gains the Double Strike keyword, and if Slick Hazards are created, you may create them in a single Blast 5, centered on the target. Hazards and does not have to stop shifting or become [[status:Vulnerable]] from them.",
     "Special": "The user may ignore Slick"
   },
   "Assist": {
@@ -342,7 +342,7 @@
     "Damage Base": "12",
     "Class": "Special",
     "Range": "8, Ranged Blast 2, Smite, Friendly",
-    "Effect": "Legal targets hit by Astral Barrage are Slowed for one full round.",
+    "Effect": "Legal targets hit by Astral Barrage are [[status:Slowed]] for one full round.",
     "Contest Type": "Smart",
     "Contest Effect": "Unsettling"
   },
@@ -461,7 +461,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self, Interrupt, Shield, Trigger",
-    "Effect": "If the user is hit by an attack, the user may use Baneful Bunker. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move's effects. In addition, if the triggering attack was Melee ranged, the attacker is Poisoned.",
+    "Effect": "If the user is hit by an attack, the user may use Baneful Bunker. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move's effects. In addition, if the triggering attack was Melee ranged, the attacker is [[status:Poisoned]].",
     "Contest Type": "Smart",
     "Contest Effect": "Inversed Appeal"
   },
@@ -472,7 +472,7 @@
     "Damage Base": "2",
     "Class": "Physical",
     "Range": "6, 1 Target, Five Strike",
-    "Effect": "The target is Poisoned on a 17+. Once a Scene, if Barb Barrage's target has a Status Condition, you may choose to not roll for Five Strike. Instead, treat Barb Barrage as though it automatically rolled an 8 for Five Strike.",
+    "Effect": "The target is [[status:Poisoned]] on a 17+. Once a Scene, if Barb Barrage's target has a Status Condition, you may choose to not roll for Five Strike. Instead, treat Barb Barrage as though it automatically rolled an 8 for Five Strike.",
     "Contest Type": "Smart",
     "Contest Effect": "Reliable"
   },
@@ -503,7 +503,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "The user is replaced with another Pokémon from their trainer's roster. All Combat Stage, Coats, and [Stratagems] on Baton Pass' user are transferred to the replacement. Baton Pass may be used to switch even if the user is Trapped.",
+    "Effect": "The user is replaced with another Pokémon from their trainer's roster. All Combat Stage, Coats, and [Stratagems] on Baton Pass' user are transferred to the replacement. Baton Pass may be used to switch even if the user is [[status:Trapped]].",
     "Contest Type": "Cute",
     "Contest Effect": "Inversed Appeal"
   },
@@ -514,7 +514,7 @@
     "Damage Base": "10",
     "Class": "Physical",
     "Range": "6, 1 Target, Priority",
-    "Effect": "Beak Blast must be declared at the start of the round. If the user is hit by a Melee attack this round, their attacker is Burned. At the end of the round, the user may shift and attack with Beak Blast.",
+    "Effect": "Beak Blast must be declared at the start of the round. If the user is hit by a Melee attack this round, their attacker is [[status:Burned]]. At the end of the round, the user may shift and attack with Beak Blast.",
     "Contest Type": "Cool",
     "Contest Effect": "Special Attention"
   },
@@ -534,7 +534,7 @@
     "Damage Base": "12",
     "Class": "Special",
     "Range": "7, 1 Target, Sonic",
-    "Effect": "The target immediately Shifts towards the user, forfeiting their next Shift Action. This movement does not provoke Attacks of Opportunity. On 17+, the target additionally is Infatuated with the user and Trapped."
+    "Effect": "The target immediately Shifts towards the user, forfeiting their next Shift Action. This movement does not provoke Attacks of Opportunity. On 17+, the target additionally is [[status:Infatuation]](Infatuated) with the user and [[status:Trapped]]."
   },
   "Behemoth Bash": {
     "Type": "Steel",
@@ -636,7 +636,7 @@
     "Damage Base": "6",
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "Legal targets hit by Bitter Malice are Stuck and Trapped until the end of their next turn on a 19+. Once a Scene, if Bitter Malice's target has a Status Condition, you may have Bitter Malice's Damage Base be 12 instead (3d12+10 / 30).",
+    "Effect": "Legal targets hit by Bitter Malice are [[status:Stuck]] and [[status:Trapped]] until the end of their next turn on a 19+. Once a Scene, if Bitter Malice's target has a Status Condition, you may have Bitter Malice's Damage Base be 12 instead (3d12+10 / 30).",
     "Contest Type": "Smart",
     "Contest Effect": "Unsettling"
   },
@@ -680,7 +680,7 @@
     "Damage Base": "10",
     "Class": "Special",
     "Range": "6, Ranged Blast 3, Smite",
-    "Effect": "The target is Flinched on a 15+ and Frozen on a 19+.",
+    "Effect": "The target is [[status:Flinch]](Flinched) on a 15+ and [[status:Frozen]] on a 19+.",
     "Contest Type": "Cool",
     "Contest Effect": "Unsettling"
   },
@@ -701,7 +701,7 @@
     "AC": "2",
     "Class": "Status",
     "Range": "Melee, 1 Target",
-    "Effect": "The target is Stuck and Trapped until the beginning of your next turn.",
+    "Effect": "The target is [[status:Stuck]] and [[status:Trapped]] until the beginning of your next turn.",
     "Contest Type": "Cute",
     "Contest Effect": "Sabotage"
   },
@@ -712,7 +712,7 @@
     "Damage Base": "14",
     "Class": "Special",
     "Range": "Line 4, Smite, Reckless",
-    "Effect": "After dealing damage, the user becomes Slowed and Vulnerable until the end of their next turn."
+    "Effect": "After dealing damage, the user becomes [[status:Slowed]] and [[status:Vulnerable]] until the end of their next turn."
   },
   "Blue Flare": {
     "Type": "Fire",
@@ -820,7 +820,7 @@
     "Damage Base": "9",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Dash, Full Action",
-    "Effect": "The user first Shifts, gaining a +1 Bonus to Movement Speed and to their Jump Capabilities. After the user Shifts, they may attack with Bounce. The target becomes Vulnerable, and is Paralyzed on 16+.",
+    "Effect": "The user first Shifts, gaining a +1 Bonus to Movement Speed and to their Jump Capabilities. After the user Shifts, they may attack with Bounce. The target becomes [[status:Vulnerable]], and is [[status:Paralysis]](Paralyzed) on 16+.",
     "Contest Type": "Cute",
     "Contest Effect": "Special Attention",
     "Special": "Grants High Jump +1"
@@ -1003,7 +1003,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self, Interrupt, Shield, Trigger",
-    "Effect": "If the user is hit by an attack, the user may use this Move. The user is instead not hit by the attack. You do not take any damage nor are you affected by any of the attack's effects. In addition, if the triggering attack was Melee ranged, the attacker is Burned."
+    "Effect": "If the user is hit by an attack, the user may use this Move. The user is instead not hit by the attack. You do not take any damage nor are you affected by any of the attack's effects. In addition, if the triggering attack was Melee ranged, the attacker is [[status:Burned]]."
   },
   "Burning Jealousy": {
     "Type": "Fire",
@@ -1124,7 +1124,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Field",
-    "Effect": "The weather changes to Snowy for 5 rounds and the user may immediately be recalled in the same turn. A new Pokémon may immediately be sent out. Using this Move lets a Trapped user be recalled. If the user is not recalled, their movement this turn does not provoke Attacks of Opportunity instead. NOTE: If you are using the Weathers from Domovoi's Rework, the user's side also gains 2 charges of the [Hailing] Blessing, as if they used Hail or Snowscape.",
+    "Effect": "The weather changes to Snowy for 5 rounds and the user may immediately be recalled in the same turn. A new Pokémon may immediately be sent out. Using this Move lets a [[status:Trapped]] user be recalled. If the user is not recalled, their movement this turn does not provoke Attacks of Opportunity instead. NOTE: If you are using the Weathers from Domovoi's Rework, the user's side also gains 2 charges of the [Hailing] Blessing, as if they used Hail or Snowscape.",
     "Contest Type": "Beauty",
     "Contest Effect": "Catching Up"
   },
@@ -1157,7 +1157,7 @@
     "Damage Base": "6",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Push",
-    "Effect": "The target is Pushed 6 meters minus their Weight Class. On 15+, the target is also Tripped.",
+    "Effect": "The target is Pushed 6 meters minus their Weight Class. On 15+, the target is also [[status:Tripped]].",
     "Contest Type": "Tough",
     "Contest Effect": "Big Show"
   },
@@ -1278,7 +1278,7 @@
     "AC": "None",
     "Class": "Physical",
     "Range": "Any, 1 Target, Reaction, Trigger",
-    "Effect": "This Move may be used as a Reaction when the user is hit by a damaging attack. Resolve the triggering attack, with the user resisting the attack one step further. After the attack is resolved, if the user was not Fainted, the triggering foe then loses Hit Points equal to the amount of Hit Points lost by the user from the triggering attack. The triggering foe then becomes Tripped and you may choose 2 allies. The chosen allies may Disengage 2 meters towards the triggering foe as a Free Action.",
+    "Effect": "This Move may be used as a Reaction when the user is hit by a damaging attack. Resolve the triggering attack, with the user resisting the attack one step further. After the attack is resolved, if the user was not [[status:Fainted]], the triggering foe then loses Hit Points equal to the amount of Hit Points lost by the user from the triggering attack. The triggering foe then becomes [[status:Tripped]] and you may choose 2 allies. The chosen allies may Disengage 2 meters towards the triggering foe as a Free Action.",
     "Contest Type": "Beauty",
     "Contest Effect": "Double Time"
   },
@@ -1298,7 +1298,7 @@
     "AC": "2",
     "Class": "Status",
     "Range": "6, 1 Target",
-    "Effect": "The target is Confused.",
+    "Effect": "The target is [[status:Confusion]](Confused).",
     "Contest Type": "Smart",
     "Contest Effect": "Unsettling"
   },
@@ -1411,7 +1411,7 @@
     "AC": "None",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Reaction, Trigger",
-    "Effect": "Counter may be used as a Reaction when the user is hit by a damaging Physical Attack. Resolve the Triggering Attack, with Counter's user resisting the attack one step further. After the attack is resolved, if Counter's user was not Fainted, the triggering foe then loses Hit Points equal to twice the amount of Hit Points lost by the user from the triggering attack. Note that Counter is Physical, and while it cannot miss, it cannot hit targets immune to Fighting-Type Moves.",
+    "Effect": "Counter may be used as a Reaction when the user is hit by a damaging Physical Attack. Resolve the Triggering Attack, with Counter's user resisting the attack one step further. After the attack is resolved, if Counter's user was not [[status:Fainted]], the triggering foe then loses Hit Points equal to twice the amount of Hit Points lost by the user from the triggering attack. Note that Counter is Physical, and while it cannot miss, it cannot hit targets immune to Fighting-Type Moves.",
     "Contest Type": "Tough",
     "Contest Effect": "Double Time"
   },
@@ -1519,7 +1519,7 @@
     "Damage Base": "7",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "The target becomes Infatuated with the user on 17+."
+    "Effect": "The target becomes [[status:Infatuation]](Infatuated) with the user on 17+."
   },
   "Curse": {
     "Type": "Ghost",
@@ -1527,7 +1527,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "If the user is not a Ghost Type, Curse has a Frequency of EOT, and when used the user lowers its Speed by -1 Combat Stage, but raises Attack and Defense by +1 Combat Stage each. If the user is a Ghost Type, Curse has a Frequency of Scene, and when used the user loses 1/3rd of their Max Hit Points and a target Pokémon or Trainer within 8 meters of the user becomes Cursed. This Hit Point loss cannot be prevented in any way.",
+    "Effect": "If the user is not a Ghost Type, Curse has a Frequency of EOT, and when used the user lowers its Speed by -1 Combat Stage, but raises Attack and Defense by +1 Combat Stage each. If the user is a Ghost Type, Curse has a Frequency of Scene, and when used the user loses 1/3rd of their Max Hit Points and a target Pokémon or Trainer within 8 meters of the user becomes [[status:Cursed]]. This Hit Point loss cannot be prevented in any way.",
     "Contest Type": "Tough",
     "Contest Effect": "Safe Option"
   },
@@ -1559,7 +1559,7 @@
     "AC": "10",
     "Class": "Status",
     "Range": "Melee, 1 Target",
-    "Effect": "The target falls Asleep. Once per Scene, Dark Void may be used as if its range were \"Burst 5, Friendly\" instead.",
+    "Effect": "The target falls [[status:Sleep]](Asleep). Once per Scene, Dark Void may be used as if its range were \"Burst 5, Friendly\" instead.",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
   },
@@ -1611,7 +1611,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "The user becomes Curled Up. While Curled Up, the user becomes immune to Critical Hits and gains 10 Damage Reduction. However, while Curled Up, the user is Slowed and their Accuracy is lowered by -4. The user may stop being Curled Up as a Swift Action. If the user has Rollout or Ice Ball in their Move List, they do not become Slowed while Curled Up. Furthermore, when using the Moves Rollout or Ice Ball while Curled Up, the user gains a +10 bonus to the damage rolls of those Moves and does not suffer Accuracy Penalties from being Curled Up.",
+    "Effect": "The user becomes Curled Up. While Curled Up, the user becomes immune to Critical Hits and gains 10 Damage Reduction. However, while Curled Up, the user is [[status:Slowed]] and their Accuracy is lowered by -4. The user may stop being Curled Up as a Swift Action. If the user has Rollout or Ice Ball in their Move List, they do not become [[status:Slowed]] while Curled Up. Furthermore, when using the Moves Rollout or Ice Ball while Curled Up, the user gains a +10 bonus to the damage rolls of those Moves and does not suffer Accuracy Penalties from being Curled Up.",
     "Contest Type": "Cute",
     "Contest Effect": "Sabotage"
   },
@@ -1676,7 +1676,7 @@
     "Damage Base": "6",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Dire Claw is a Critical Hit on a 19+. Dire Claw gives the target a Status ailment on a 15+. If this is triggered, roll 1d3; on 1 the target is Poisoned; on 2 the target is Paralyzed; on 3 the target is Flinched.",
+    "Effect": "Dire Claw is a Critical Hit on a 19+. Dire Claw gives the target a Status ailment on a 15+. If this is triggered, roll 1d3; on 1 the target is [[status:Poisoned]]; on 2 the target is [[status:Paralysis]](Paralyzed); on 3 the target is [[status:Flinch]](Flinched).",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
@@ -1686,7 +1686,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "1 Target, Trigger",
-    "Effect": "Disable may be used as a Free Action that does not take up a Command whenever the user is hit by a Move. That Move becomes Disabled for the attacker.",
+    "Effect": "Disable may be used as a Free Action that does not take up a Command whenever the user is hit by a Move. That Move becomes [[status:Disabled]] for the attacker.",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
   },
@@ -1986,7 +1986,7 @@
     "Damage Base": "6",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Push",
-    "Effect": "The target is Pushed 6 meters minus their Weight Class. On a roll of 15+, the target is also Tripped.",
+    "Effect": "The target is Pushed 6 meters minus their Weight Class. On a roll of 15+, the target is also [[status:Tripped]].",
     "Contest Type": "Smart",
     "Contest Effect": "Big Show"
   },
@@ -2173,7 +2173,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Field",
-    "Effect": "The field becomes Electrified for 5 rounds. While Electrified, Pokémon and Trainers touching the ground are immune to Sleep, and Electric-Type attacks used by Pokémon and Trainers touching the ground gain a +10 Bonus to Damage Rolls.",
+    "Effect": "The field becomes Electrified for 5 rounds. While Electrified, Pokémon and Trainers touching the ground are immune to [[status:Sleep]], and Electric-Type attacks used by Pokémon and Trainers touching the ground gain a +10 Bonus to Damage Rolls.",
     "Contest Type": "Cool",
     "Contest Effect": "Sabotage"
   },
@@ -2255,7 +2255,7 @@
     "AC": "2",
     "Class": "Status",
     "Range": "4, 1 Target, Social",
-    "Effect": "Roll 1d6. On a result of 1 or 2, the target becomes Confused; on a result of 3 or 4 the target becomes Suppressed; on a result of 5 or 6 the target becomes Enraged.",
+    "Effect": "Roll 1d6. On a result of 1 or 2, the target becomes [[status:Confusion]](Confused); on a result of 3 or 4 the target becomes [[status:Suppressed]]; on a result of 5 or 6 the target becomes [[status:Rage]](Enraged).",
     "Contest Type": "Cute",
     "Contest Effect": "Good Show!"
   },
@@ -2384,7 +2384,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Burst 3, Friendly",
-    "Effect": "All legal targets become Trapped and Slowed while the user remains in the encounter. This effect ends if the user switches or is Fainted.",
+    "Effect": "All legal targets become [[status:Trapped]] and [[status:Slowed]] while the user remains in the encounter. This effect ends if the user switches or is [[status:Fainted]].",
     "Contest Type": "Cute",
     "Contest Effect": "Unsettling"
   },
@@ -2510,7 +2510,7 @@
     "Damage Base": "12",
     "Class": "Special",
     "Range": "Line 3",
-    "Effect": "Roll Accuracy for this Move 3 times. For each target, if one of these rolls succeeds, this Move hits that target. For each successful roll after the first, choose one of the following additional effects:\n» That target is Slowed for 1 full round.\n» That target is Suppressed.\nIf one or more of the rolls crit, this Move is a Critical Hit. This Move is 1 step more effective against targets that have hit the user for Super Effective damage since the beginning of their last turn."
+    "Effect": "Roll Accuracy for this Move 3 times. For each target, if one of these rolls succeeds, this Move hits that target. For each successful roll after the first, choose one of the following additional effects:\n» That target is [[status:Slowed]] for 1 full round.\n» That target is [[status:Suppressed]].\nIf one or more of the rolls crit, this Move is a Critical Hit. This Move is 1 step more effective against targets that have hit the user for Super Effective damage since the beginning of their last turn."
   },
   "Fiery Dance": {
     "Type": "Fire",
@@ -2570,7 +2570,7 @@
     "Damage Base": "7",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Fire Fang Burns or Flinches on 18-19 during Accuracy Check; flip a coin to determine whether the foe gets Burned or Flinches. On 20 during Accuracy Check, the foe is Burned and Flinches.",
+    "Effect": "Fire Fang Burns or Flinches on 18-19 during Accuracy Check; flip a coin to determine whether the foe gets [[status:Burned]] or Flinches. On 20 during Accuracy Check, the foe is [[status:Burned]] and Flinches.",
     "Contest Type": "Beauty",
     "Contest Effect": "Steady Performance"
   },
@@ -2788,7 +2788,7 @@
     "Damage Base": "6",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Dash",
-    "Effect": "If Flip Turn successfully hits its target, the user deals damage and then immediately is returned to its Poké Ball in the same turn. A New Pokémon may immediately be sent out. Using Flip Turn lets a Trapped user be recalled.",
+    "Effect": "If Flip Turn successfully hits its target, the user deals damage and then immediately is returned to its Poké Ball in the same turn. A New Pokémon may immediately be sent out. Using Flip Turn lets a [[status:Trapped]] user be recalled.",
     "Contest Type": "Cool",
     "Contest Effect": "Inversed Appeal"
   },
@@ -2885,7 +2885,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Burst 5, Social",
-    "Effect": "Until the end of the user's next turn, all Foes must target the user when using a Move that targets their opponents. This effect ends if the user is Fainted or Switched out.",
+    "Effect": "Until the end of the user's next turn, all Foes must target the user when using a Move that targets their opponents. This effect ends if the user is [[status:Fainted]] or Switched out.",
     "Contest Type": "Cute",
     "Contest Effect": "Tease"
   },
@@ -3135,7 +3135,7 @@
     "Damage Base": "16",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Smite, Reckless",
-    "Effect": "After dealing damage, the user becomes Slowed and Vulnerable until the end of their next turn.",
+    "Effect": "After dealing damage, the user becomes [[status:Slowed]] and [[status:Vulnerable]] until the end of their next turn.",
     "Contest Type": "Tough",
     "Contest Effect": "Exhausting Act"
   },
@@ -3146,7 +3146,7 @@
     "Damage Base": "13",
     "Class": "Physical",
     "Range": "Line 8, Smite",
-    "Effect": "Legal targets hit by Glacial Lance are Stuck and Trapped until the end of their next turn.",
+    "Effect": "Legal targets hit by Glacial Lance are [[status:Stuck]] and [[status:Trapped]] until the end of their next turn.",
     "Contest Type": "Smart",
     "Contest Effect": "Special Attention"
   },
@@ -3157,7 +3157,7 @@
     "Damage Base": "7",
     "Class": "Special",
     "Range": "Burst 2",
-    "Effect": "All Legal Targets have their Speed lowered 1 Combat Stage. On an Even-Numbered Roll, all Legal Targets on the ground are Slowed.",
+    "Effect": "All Legal Targets have their Speed lowered 1 Combat Stage. On an Even-Numbered Roll, all Legal Targets on the ground are [[status:Slowed]].",
     "Contest Type": "Beauty",
     "Contest Effect": "Steady Performance"
   },
@@ -3168,7 +3168,7 @@
     "Damage Base": "12",
     "Class": "Physical",
     "Range": "Melee, Pass, Smite, Reckless",
-    "Effect": "On hit, you may choose to become Vulnerable for 1 full round. If you do, this attack is one step more effective. Additionally, the next successful damaging attack against you while Vulnerable this way is automatically a Critical Hit.",
+    "Effect": "On hit, you may choose to become [[status:Vulnerable]] for 1 full round. If you do, this attack is one step more effective. Additionally, the next successful damaging attack against you while [[status:Vulnerable]] this way is automatically a Critical Hit.",
     "Contest Type": "Tough",
     "Contest Effect": "Exhausting Act"
   },
@@ -3219,7 +3219,7 @@
     "AC": "6",
     "Class": "Status",
     "Range": "6, 1 Target, Sonic",
-    "Effect": "The target falls Asleep.",
+    "Effect": "The target falls [[status:Sleep]](Asleep).",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
   },
@@ -3292,7 +3292,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "6, 1 Target, Interrupt",
-    "Effect": "You may use Grudge as an Interrupt when a Damaging Attack causes the user to faint. Grudge is activated as a Free Action (does not take up a Command). The attack is resolved as usual, and the user Faints. The attacker that caused the user to Faint becomes Suppressed for the remainder of the encounter; switching and Taking a Breather does not end Suppression when used this way.",
+    "Effect": "You may use Grudge as an Interrupt when a Damaging Attack causes the user to faint. Grudge is activated as a Free Action (does not take up a Command). The attack is resolved as usual, and the user Faints. The attacker that caused the user to Faint becomes [[status:Suppressed]] for the remainder of the encounter; switching and Taking a Breather does not end Suppression when used this way.",
     "Contest Type": "Tough",
     "Contest Effect": "Unsettling"
   },
@@ -3786,7 +3786,7 @@
     "AC": "6",
     "Class": "Status",
     "Range": "4, 1 Target",
-    "Effect": "The target falls Asleep.",
+    "Effect": "The target falls [[status:Sleep]](Asleep).",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
   },
@@ -3831,7 +3831,7 @@
     "Damage Base": "7",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Ice Fang Freezes or Flinches on 18+ during Accuracy Check; flip a coin to determine whether the foe gets Frozen or Flinches. On 20 during Accuracy Check, the foe is Frozen and Flinches.",
+    "Effect": "Ice Fang Freezes or Flinches on 18+ during Accuracy Check; flip a coin to determine whether the foe gets [[status:Frozen]] or Flinches. On 20 during Accuracy Check, the foe is [[status:Frozen]] and Flinches.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
   },
@@ -3875,7 +3875,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "Burst 1",
-    "Effect": "All targets are Tripped on a roll of 18+. If the user moves through an area of Terrain, or a Field-range Terrain is active, those effects immediately end.",
+    "Effect": "All targets are [[status:Tripped]] on a roll of 18+. If the user moves through an area of Terrain, or a Field-range Terrain is active, those effects immediately end.",
     "Contest Type": "Beauty",
     "Contest Effect": "Steady Performance"
   },
@@ -3949,7 +3949,7 @@
     "Damage Base": "6",
     "Class": "Special",
     "Range": "8, Ranged Blast 2",
-    "Effect": "Legal targets hit by Infernal Parade are Burned on a 17+. Once a Scene, if at least one of Infernal Parade's targets has a Status Condition, you may have Infernal Parade's Damage Base be 12 instead (3d12+10 / 30).",
+    "Effect": "Legal targets hit by Infernal Parade are [[status:Burned]] on a 17+. Once a Scene, if at least one of Infernal Parade's targets has a Status Condition, you may have Infernal Parade's Damage Base be 12 instead (3d12+10 / 30).",
     "Contest Type": "Beauty",
     "Contest Effect": "Sabotage"
   },
@@ -4202,7 +4202,7 @@
     "Damage Base": "10",
     "Class": "Physical",
     "Range": "4, 1 Target",
-    "Effect": "This Move gains additional Effects depending on the number of allies that have Fainted this Scene. These Effects are cumulative. 1: The target is Flinched on 15+. 2: The target is Cursed on 17+. 3: This Move gains Smite. Once per Scene, this Move may Deal damage of a Type of any of the Fainted allies instead of Ghost. This does not affect whether this Move gains STAB or not."
+    "Effect": "This Move gains additional Effects depending on the number of allies that have [[status:Fainted]] this Scene. These Effects are cumulative. 1: The target is [[status:Flinch]](Flinched) on 15+. 2: The target is [[status:Cursed]] on 17+. 3: This Move gains Smite. Once per Scene, this Move may Deal damage of a Type of any of the [[status:Fainted]] allies instead of Ghost. This does not affect whether this Move gains STAB or not."
   },
   "Lava Plume": {
     "Type": "Fire",
@@ -4359,7 +4359,7 @@
     "AC": "6",
     "Class": "Status",
     "Range": "6, 1 Target, Social",
-    "Effect": "The target falls Asleep.",
+    "Effect": "The target falls [[status:Sleep]](Asleep).",
     "Contest Type": "Beauty",
     "Contest Effect": "Excitement"
   },
@@ -4582,7 +4582,7 @@
     "Damage Base": "10",
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "The target is Poisoned. Then, choose an ally. That ally and the target become Linked to each other. Whenever the Linked ally takes damage, the Linked foe loses a Tick of Hit Points. This effect ends when the user is Fainted or the Scene ends."
+    "Effect": "The target is [[status:Poisoned]]. Then, choose an ally. That ally and the target become Linked to each other. Whenever the Linked ally takes damage, the Linked foe loses a Tick of Hit Points. This effect ends when the user is [[status:Fainted]] or the Scene ends."
   },
   "Mat Block": {
     "Type": "Fighting",
@@ -4618,7 +4618,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "6, 1 Target, Social",
-    "Effect": "The user casts a foul spell on the target, causing it to become Trapped and Slowed for the remainder of the encounter.",
+    "Effect": "The user casts a foul spell on the target, causing it to become [[status:Trapped]] and [[status:Slowed]] for the remainder of the encounter.",
     "Contest Type": "Beauty",
     "Contest Effect": "Unsettling"
   },
@@ -4682,7 +4682,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "8, 1 Target, Trigger, Free Action",
-    "Effect": "Memento may be used as a Free Action when the user becomes Fainted. Memento's target has each of their stats lowered by -2 CS.",
+    "Effect": "Memento may be used as a Free Action when the user becomes [[status:Fainted]]. Memento's target has each of their stats lowered by -2 CS.",
     "Contest Type": "Tough",
     "Contest Effect": "Big Show"
   },
@@ -4840,7 +4840,7 @@
     "AC": "None",
     "Class": "Special",
     "Range": "Any, 1 Target, Reaction",
-    "Effect": "Mirror Coat may be used as a Reaction when the user is hit by a damaging Special Attack. Resolve the Triggering Attack, with Mirror Coat's user resisting the attack one step further. After the attack is resolved, if Mirror Coat's user was not Fainted, the triggering foe then loses Hit Points equal to twice the amount of Hit Points lost by the user from the triggering attack. Note that Mirror Coat is Special, and while it cannot miss, it cannot hit targets immune to Psychic-Type Moves.",
+    "Effect": "Mirror Coat may be used as a Reaction when the user is hit by a damaging Special Attack. Resolve the Triggering Attack, with Mirror Coat's user resisting the attack one step further. After the attack is resolved, if Mirror Coat's user was not [[status:Fainted]], the triggering foe then loses Hit Points equal to twice the amount of Hit Points lost by the user from the triggering attack. Note that Mirror Coat is Special, and while it cannot miss, it cannot hit targets immune to Psychic-Type Moves.",
     "Contest Type": "Beauty",
     "Contest Effect": "Double Time"
   },
@@ -4956,7 +4956,7 @@
     "Damage Base": "5",
     "Class": "Special",
     "Range": "Burst 1, Spirit Surge",
-    "Effect": "This Move destroys all Hazards within a Burst 5 that were placed by foes, removes Leech Seeds, and removes the user's Trapped or Stuck conditions. All targets that are hit are Poisoned."
+    "Effect": "This Move destroys all Hazards within a Burst 5 that were placed by foes, removes Leech Seeds, and removes the user's [[status:Trapped]] or [[status:Stuck]] conditions. All targets that are hit are [[status:Poisoned]]."
   },
   "Mould* [Hex]": {
     "Type": "Grass",
@@ -4976,7 +4976,7 @@
     "Damage Base": "10",
     "Class": "Physical",
     "Range": "5, 1 Target",
-    "Effect": "The target is Flinched on a 15+.",
+    "Effect": "The target is [[status:Flinch]](Flinched) on a 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Sabotage"
   },
@@ -5167,7 +5167,7 @@
     "AC": "2",
     "Class": "Status",
     "Range": "Melee, 1 Target",
-    "Effect": "Nightmare can only hit Legal Targets that are Asleep. The target gains Bad Sleep.",
+    "Effect": "Nightmare can only hit Legal Targets that are [[status:Sleep]](Asleep). The target gains [[status:Bad Sleep]].",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
   },
@@ -5177,7 +5177,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "The user gains +1 CS in each stat. In addition, the user may not be recalled or switched out until the end of the Scene, and counts as Slowed for the purposes of any movement that would end further away from the nearest enemy than the user started.",
+    "Effect": "The user gains +1 CS in each stat. In addition, the user may not be recalled or switched out until the end of the Scene, and counts as [[status:Slowed]] for the purposes of any movement that would end further away from the nearest enemy than the user started.",
     "Contest Type": "Tough",
     "Contest Effect": "Get Ready!"
   },
@@ -5241,7 +5241,7 @@
     "Damage Base": "11",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Slice",
-    "Effect": "This Move automatically Critically Hits targets at or below half of their Max Hit Points. After dealing damage, the target becomes Suppressed for 1 full round."
+    "Effect": "This Move automatically Critically Hits targets at or below half of their Max Hit Points. After dealing damage, the target becomes [[status:Suppressed]] for 1 full round."
   },
   "Octazooka": {
     "Type": "Water",
@@ -5260,7 +5260,7 @@
     "AC": "2",
     "Class": "Status",
     "Range": "Melee, 1 Target",
-    "Effect": "The user initiates a Grapple Maneuver with the target, which automatically hits. If successful, until the user no longer has Dominance in the grapple, the target is Trapped and loses 1 CS in Defense and Special Defense at the end of each of their turns.",
+    "Effect": "The user initiates a Grapple Maneuver with the target, which automatically hits. If successful, until the user no longer has Dominance in the grapple, the target is [[status:Trapped]] and loses 1 CS in Defense and Special Defense at the end of each of their turns.",
     "Contest Type": "Tough",
     "Contest Effect": "Sabotage"
   },
@@ -5313,7 +5313,7 @@
     "Damage Base": "12",
     "Class": "Physical",
     "Range": "Melee, All Adjacent Foes, Smite",
-    "Effect": "After damage is dealt, the user becomes Enraged and Confused.",
+    "Effect": "After damage is dealt, the user becomes [[status:Rage]](Enraged) and [[status:Confusion]](Confused).",
     "Contest Type": "Cool",
     "Contest Effect": "Reliable"
   },
@@ -5366,7 +5366,7 @@
     "AC": "2",
     "Class": "Status",
     "Range": "6, 1 Target, Social",
-    "Effect": "If Parting Shot successfully hits, the target's Attack and Special Attack stats are lowered by one Combat Stage and the user is immediately recalled in the same turn. A new Pokémon may immediately be sent out. Using Parting Shot lets a Trapped user be recalled.",
+    "Effect": "If Parting Shot successfully hits, the target's Attack and Special Attack stats are lowered by one Combat Stage and the user is immediately recalled in the same turn. A new Pokémon may immediately be sent out. Using Parting Shot lets a [[status:Trapped]] user be recalled.",
     "Contest Type": "Smart",
     "Contest Effect": "Catching Up"
   },
@@ -5431,7 +5431,7 @@
     "Damage Base": "12",
     "Class": "Special",
     "Range": "Melee, All Adjacent Foes, Smite",
-    "Effect": "After damage is dealt, the user becomes Enraged and Confused.",
+    "Effect": "After damage is dealt, the user becomes [[status:Rage]](Enraged) and [[status:Confusion]](Confused).",
     "Contest Type": "Beauty",
     "Contest Effect": "Safe Option"
   },
@@ -5550,7 +5550,7 @@
     "AC": "6",
     "Class": "Status",
     "Range": "4, 1 Target, Powder",
-    "Effect": "The target is Poisoned.",
+    "Effect": "The target is [[status:Poisoned]].",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
   },
@@ -5605,7 +5605,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "4, 1 Target, Smite, Slice",
-    "Effect": "Roll Accuracy for this Move 3 times. If one of these rolls succeeds, this Move hits. For each successful roll after the first, choose one of the following additional effects: » The target is Vulnerable until the end of their next turn. » The target's Moves are resisted 1 step further until the end of their next turn. » This Move's damage cannot be resisted. If one or more of the rolls crit, this Move is a Critical Hit, and you may choose an additional effect."
+    "Effect": "Roll Accuracy for this Move 3 times. If one of these rolls succeeds, this Move hits. For each successful roll after the first, choose one of the following additional effects: » The target is [[status:Vulnerable]] until the end of their next turn. » The target's Moves are resisted 1 step further until the end of their next turn. » This Move's damage cannot be resisted. If one or more of the rolls crit, this Move is a Critical Hit, and you may choose an additional effect."
   },
   "Pounce": {
     "Type": "Bug",
@@ -5614,7 +5614,7 @@
     "Damage Base": "5",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Dash",
-    "Effect": "After dealing damage, the target is Slowed for 1 round. A target may only be Slowed by this Move once per Scene.",
+    "Effect": "After dealing damage, the target is [[status:Slowed]] for 1 round. A target may only be [[status:Slowed]] by this Move once per Scene.",
     "Special": "Grants Overland and Long Jump +1"
   },
   "Pound": {
@@ -5667,7 +5667,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "The user's Attack stat and Defense stat are switched and the user's Special Attack stat and Special Defense stat are switched. These changes last for the remainder of the scene, or until the user is switched out or Fainted.",
+    "Effect": "The user's Attack stat and Defense stat are switched and the user's Special Attack stat and Special Defense stat are switched. These changes last for the remainder of the scene, or until the user is switched out or [[status:Fainted]].",
     "Contest Type": "Cool",
     "Contest Effect": "Inversed Appeal"
   },
@@ -5697,7 +5697,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "The user's Attack stat and Defense stat are switched for the remainder of the scene, or until the user is switched out or Fainted.",
+    "Effect": "The user's Attack stat and Defense stat are switched for the remainder of the scene, or until the user is switched out or [[status:Fainted]].",
     "Contest Type": "Cool",
     "Contest Effect": "Inversed Appeal"
   },
@@ -5975,7 +5975,7 @@
     "Damage Base": "12",
     "Class": "Physical",
     "Range": "6, 1 Target, Smite",
-    "Effect": "The target is Burned on 19+.",
+    "Effect": "The target is [[status:Burned]] on 19+.",
     "Contest Type": "Cool",
     "Contest Effect": "Attention Grabber"
   },
@@ -6027,7 +6027,7 @@
     "Damage Base": "6",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Spirit Surge",
-    "Effect": "The user becomes Enraged. Until the end of the user's next turn, if the user is Enraged, the user gains +1 Attack Combat Stage whenever they are damaged by an Damaging Move or Attack.",
+    "Effect": "The user becomes [[status:Rage]](Enraged). Until the end of the user's next turn, if the user is [[status:Rage]](Enraged), the user gains +1 Attack Combat Stage whenever they are damaged by an Damaging Move or Attack.",
     "Contest Type": "Cool",
     "Contest Effect": "Get Ready!"
   },
@@ -6046,7 +6046,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Burst 1 or Line 6, Powder",
-    "Effect": "All targets hit by Rage Powder are Enraged. While enraged, they must shift to target the user when using a Move or Attack if the user is within reach. If the user is Fainted or Switched out, all targets hit by Rage Powder are cured of rage.",
+    "Effect": "All targets hit by Rage Powder are [[status:Rage]](Enraged). While enraged, they must shift to target the user when using a Move or Attack if the user is within reach. If the user is [[status:Fainted]] or Switched out, all targets hit by Rage Powder are cured of rage.",
     "Contest Type": "Smart",
     "Contest Effect": "Tease"
   },
@@ -6066,7 +6066,7 @@
     "Damage Base": "9",
     "Class": "Special",
     "Range": "Burst 1, Spirit Surge",
-    "Effect": "The user becomes Enraged. Legal targets become Enraged on a 16+.",
+    "Effect": "The user becomes [[status:Rage]](Enraged). Legal targets become [[status:Rage]](Enraged) on a 16+.",
     "Contest Type": "Tough",
     "Contest Effect": "Exhausting Act"
   },
@@ -6087,7 +6087,7 @@
     "Damage Base": "5",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Spirit Surge",
-    "Effect": "Rapid Spin destroys all Hazards within 5 meters, removes Leech Seeds, and removes the user's Trapped or Stuck status. If Rapid Spin hits, the user's speed raises 1 CS.",
+    "Effect": "Rapid Spin destroys all Hazards within 5 meters, removes Leech Seeds, and removes the user's [[status:Trapped]] or [[status:Stuck]] status. If Rapid Spin hits, the user's speed raises 1 CS.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
   },
@@ -6191,7 +6191,7 @@
     "Damage Base": "8",
     "Class": "Special",
     "Range": "Burst 3, Friendly, Sonic",
-    "Effect": "All Legal Targets fall Asleep on 16+. As long as Meloetta knows Relic Song, it may change between Aria Form and Step Form as a Swift Action when using Relic Song, or as a Standard Action otherwise. Both Aria and Step Form must be statted with the same HP Stat.",
+    "Effect": "All Legal Targets fall [[status:Sleep]](Asleep) on 16+. As long as Meloetta knows Relic Song, it may change between Aria Form and Step Form as a Swift Action when using Relic Song, or as a Standard Action otherwise. Both Aria and Step Form must be statted with the same HP Stat.",
     "Contest Type": "Beauty",
     "Contest Effect": "Excitement"
   },
@@ -6201,7 +6201,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "The user is set to their full Hit Point value. The user is cured of any Status ailments. Then, the user falls Asleep. The user cannot make Sleep Checks at the beginning of their turn. They are cured of the Sleep at the end of their turn in 2 rounds.",
+    "Effect": "The user is set to their full Hit Point value. The user is cured of any Status ailments. Then, the user falls [[status:Sleep]](Asleep). The user cannot make [[status:Sleep]] Checks at the beginning of their turn. They are cured of the [[status:Sleep]] at the end of their turn in 2 rounds.",
     "Contest Type": "Cute",
     "Contest Effect": "Reflective Appeal"
   },
@@ -6212,7 +6212,7 @@
     "Damage Base": "7",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Retaliate's Damage Base is doubled to DB 14 (4d10+15 / 40) if an ally has been Fainted by a Damaging Move used by the Target in the last 2 rounds of Combat.",
+    "Effect": "Retaliate's Damage Base is doubled to DB 14 (4d10+15 / 40) if an ally has been [[status:Fainted]] by a Damaging Move used by the Target in the last 2 rounds of Combat.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
   },
@@ -6266,7 +6266,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "None",
-    "Effect": "An ally that Fainted this Scene may use a Move as a Free Action as if they were not Fainted, originating from a square adjacent to the user. The chosen ally may be a Pokémon in a Poké Ball."
+    "Effect": "An ally that [[status:Fainted]] this Scene may use a Move as a Free Action as if they were not [[status:Fainted]], originating from a square adjacent to the user. The chosen ally may be a Pokémon in a Poké Ball."
   },
   "Rising Voltage": {
     "Type": "Electric",
@@ -6296,7 +6296,7 @@
     "Damage Base": "15",
     "Class": "Special",
     "Range": "Burst 8, Smite, Exhaust",
-    "Effect": "All legal targets are Slowed, even if the attack misses.",
+    "Effect": "All legal targets are [[status:Slowed]], even if the attack misses.",
     "Contest Type": "Cool",
     "Contest Effect": "Seen Nothing Yet"
   },
@@ -6459,7 +6459,7 @@
     "AC": "4",
     "Class": "Status",
     "Range": "4, 1 Target",
-    "Effect": "The target becomes Cursed and Vulnerable until it is switched out.",
+    "Effect": "The target becomes [[status:Cursed]] and [[status:Vulnerable]] until it is switched out.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
@@ -6510,7 +6510,7 @@
     "AC": "2",
     "Class": "Status",
     "Range": "2, 1 Target",
-    "Effect": "The target is Blinded until the end of their next turn.",
+    "Effect": "The target is [[status:Blind]](Blinded) until the end of their next turn.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
   },
@@ -6542,7 +6542,7 @@
     "Damage Base": "10",
     "Class": "Special",
     "Range": "6, Ranged Blast 3, Smite",
-    "Effect": "The target is Burned on a 15+",
+    "Effect": "The target is [[status:Burned]] on a 15+",
     "Contest Type": "Tough",
     "Contest Effect": "Unsettling"
   },
@@ -6769,7 +6769,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self, Coat, Illusion, Interrupt, Shield",
-    "Effect": "If the user is hit by a Move while above 1/4th Hit Points, after being told how much damage it would deal, they may use this Move. The user is instead not hit by the triggering Move, and does not take any damage, nor are they affected by any of the Move's effects. Instead, they lose 1/4th of their maximum Hit Points. This Hit Point loss cannot be prevented in any way. The user may then Disengage up to their full Movement as a Free Action, or be switched out, even if they are Trapped. They leave behind a Tail Token on any one square they occupied. The Tail Token counts as Rough Terrain for foes, and if an ally Shifts over it, they may remove it from the field to gain the same amount of Temporary Hit Points as the user lost when activating this Move. This Move may not be activated against Moves with the Sonic keyword."
+    "Effect": "If the user is hit by a Move while above 1/4th Hit Points, after being told how much damage it would deal, they may use this Move. The user is instead not hit by the triggering Move, and does not take any damage, nor are they affected by any of the Move's effects. Instead, they lose 1/4th of their maximum Hit Points. This Hit Point loss cannot be prevented in any way. The user may then Disengage up to their full Movement as a Free Action, or be switched out, even if they are [[status:Trapped]]. They leave behind a Tail Token on any one square they occupied. The Tail Token counts as Rough Terrain for foes, and if an ally Shifts over it, they may remove it from the field to gain the same amount of Temporary Hit Points as the user lost when activating this Move. This Move may not be activated against Moves with the Sonic keyword."
   },
   "Sheer Cold": {
     "Type": "Ice",
@@ -6871,7 +6871,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self, Interrupt, Shield, Trigger",
-    "Effect": "If the user is hit by a Move, the user may use this Move. The user is instead not hit by the triggering Move. You do not take any damage nor are you affected by any of the Move's effects. In addition, if the triggering Move was Melee ranged, the attacker's Speed is lowered by -2 Combat Stages and they are Slowed until the end of the user's next turn. If the target already has negative Speed Combat Stages, the target is Stuck and Trapped instead of Slowed.",
+    "Effect": "If the user is hit by a Move, the user may use this Move. The user is instead not hit by the triggering Move. You do not take any damage nor are you affected by any of the Move's effects. In addition, if the triggering Move was Melee ranged, the attacker's Speed is lowered by -2 Combat Stages and they are [[status:Slowed]] until the end of the user's next turn. If the target already has negative Speed Combat Stages, the target is [[status:Stuck]] and [[status:Trapped]] instead of [[status:Slowed]].",
     "Contest Type": "Smart",
     "Contest Effect": "Inversed Appeal",
     "Special": "Grants Threaded"
@@ -6903,7 +6903,7 @@
     "AC": "10",
     "Class": "Status",
     "Range": "Burst 2, Friendly, Sonic",
-    "Effect": "All legal Targets fall Asleep. On a miss, Sing instead causes targets to become Slowed and suffer a -2 penalty to their Evasion until the end of the user's next turn.",
+    "Effect": "All legal Targets fall [[status:Sleep]](Asleep). On a miss, Sing instead causes targets to become [[status:Slowed]] and suffer a -2 penalty to their Evasion until the end of the user's next turn.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
   },
@@ -6923,7 +6923,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Melee, 1 Target",
-    "Effect": "The user loses one of their Abilities, selected by the user, and gains one the target's Abilities, selected at random, for the remainder of encounter. The target loses the copied Ability, and gains the user's lost Ability. This effect ends if either the target or the user is Switched out or Fainted, but only for that Pokémon or Trainer.",
+    "Effect": "The user loses one of their Abilities, selected by the user, and gains one the target's Abilities, selected at random, for the remainder of encounter. The target loses the copied Ability, and gains the user's lost Ability. This effect ends if either the target or the user is Switched out or [[status:Fainted]], but only for that Pokémon or Trainer.",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
   },
@@ -6970,7 +6970,7 @@
     "Class": "Physical",
     "Range": "Melee, Target, Set-Up",
     "Set-Up Effect": "Make Sky Drop's Accuracy Check. If the user hits, the user and target are moved 25 meters into the air. The target forfeits their next turn, and cannot Shift or take actions until Sky Drop is resolved.",
-    "Resolution Effect": "Shift while in the air, and lower both the user and the target heights back to the ground. Then apply Sky Drop's damage. If the target has a Sky or Levitate Speed, Sky Drop fails to deal damage. If the user is Fainted after the Set-Up but before the Resolution, the target falls to the ground and takes damage as if Sky Drop had a Damage Base of 3 (1d6+5/8) unless they have a Sky or Levitate Speed, in which case they take no damage.",
+    "Resolution Effect": "Shift while in the air, and lower both the user and the target heights back to the ground. Then apply Sky Drop's damage. If the target has a Sky or Levitate Speed, Sky Drop fails to deal damage. If the user is [[status:Fainted]] after the Set-Up but before the Resolution, the target falls to the ground and takes damage as if Sky Drop had a Damage Base of 3 (1d6+5/8) unless they have a Sky or Levitate Speed, in which case they take no damage.",
     "Contest Type": "Smart",
     "Contest Effect": "Special Attention"
   },
@@ -7033,7 +7033,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "Select another of the user's Moves at random; this turn, the user may Shift and use that Move despite being Asleep. Sleep Talk can be only be used by Sleeping targets.",
+    "Effect": "Select another of the user's Moves at random; this turn, the user may Shift and use that Move despite being [[status:Sleep]](Asleep). Sleep Talk can be only be used by Sleeping targets.",
     "Contest Type": "Cute",
     "Contest Effect": "Steady Performance"
   },
@@ -7099,7 +7099,7 @@
     "Damage Base": "7",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "If the target is Paralyzed, Smelling Salt's Damage Base is doubled to 14 (4d10+15 / 40), and cures the target of Paralysis.",
+    "Effect": "If the target is [[status:Paralysis]](Paralyzed), Smelling Salt's Damage Base is doubled to 14 (4d10+15 / 40), and cures the target of Paralysis.",
     "Contest Type": "Smart",
     "Contest Effect": "Unsettling"
   },
@@ -7311,7 +7311,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "5",
-    "Effect": "Spider Web cannot miss. The target is Stuck and Trapped. If the user is freed of the Stuck condition, they are freed of Trapped as well.",
+    "Effect": "Spider Web cannot miss. The target is [[status:Stuck]] and [[status:Trapped]]. If the user is freed of the [[status:Stuck]] condition, they are freed of [[status:Trapped]] as well.",
     "Contest Type": "Smart",
     "Contest Effect": "Sabotage",
     "Special": "Grants Threaded"
@@ -7333,7 +7333,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "6, Hazard",
-    "Effect": "Set 8 square meters of Spikes within your range, all 8 meters must be adjacent with at least one other space of Spikes. Spikes cause terrain to count as Slow Terrain, and a grounded foe that runs into the hazards will lose a Tick of Hit Points and become Slowed until the end of their next turn.",
+    "Effect": "Set 8 square meters of Spikes within your range, all 8 meters must be adjacent with at least one other space of Spikes. Spikes cause terrain to count as Slow Terrain, and a grounded foe that runs into the hazards will lose a Tick of Hit Points and become [[status:Slowed]] until the end of their next turn.",
     "Contest Type": "Smart",
     "Contest Effect": "Sabotage"
   },
@@ -7374,7 +7374,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "8, 1 Target",
-    "Effect": "The Target is Trapped for 2 rounds.",
+    "Effect": "The Target is [[status:Trapped]] for 2 rounds.",
     "Contest Type": "Smart",
     "Contest Effect": "Sabotage"
   },
@@ -7395,7 +7395,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "1 Target, Trigger",
-    "Effect": "Spite may be used as a Free Action that does not take up a Command whenever the user is hit by a Move. That Move becomes Disabled for the attacker.",
+    "Effect": "Spite may be used as a Free Action that does not take up a Command whenever the user is hit by a Move. That Move becomes [[status:Disabled]] for the attacker.",
     "Contest Type": "Tough",
     "Contest Effect": "Excitement"
   },
@@ -7425,7 +7425,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "4, 1 Target, Powder",
-    "Effect": "The target falls Asleep.",
+    "Effect": "The target falls [[status:Sleep]](Asleep).",
     "Contest Type": "Beauty",
     "Contest Effect": "Get Ready!"
   },
@@ -7435,7 +7435,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "6, 1 Target, Priority",
-    "Effect": "Until the end of the user's next turn, the target is Blinded and Vulnerable.",
+    "Effect": "Until the end of the user's next turn, the target is [[status:Blind]](Blinded) and [[status:Vulnerable]].",
     "Contest Type": "Smart",
     "Contest Effect": "Attention Grabber"
   },
@@ -7468,7 +7468,7 @@
     "Damage Base": "11",
     "Class": "Special",
     "Range": "Burst 1",
-    "Effect": "Steam Eruption Burns all Legal Targets on 15+. Steam Eruption may be used even if the user is Frozen, and cures the user and all Legal Targets of the Frozen condition.",
+    "Effect": "Steam Eruption Burns all Legal Targets on 15+. Steam Eruption may be used even if the user is [[status:Frozen]], and cures the user and all Legal Targets of the [[status:Frozen]] condition.",
     "Contest Type": "Beauty",
     "Contest Effect": "Inversed Appeal"
   },
@@ -7501,7 +7501,7 @@
     "Damage Base": "13",
     "Class": "Physical",
     "Range": "Melee, Pass, Dash, Smite, Spirit Surge",
-    "Effect": "Legal targets hit by Steel Roller are Tripped on a roll of 15+. Any Hazards in spaces Passed through or adjacent to those spaces are removed (they are removed before they can affect the user). If the user moves through an area of Terrain, or a Field-range Terrain is active, those effects immediately end.",
+    "Effect": "Legal targets hit by Steel Roller are [[status:Tripped]] on a roll of 15+. Any Hazards in spaces Passed through or adjacent to those spaces are removed (they are removed before they can affect the user). If the user moves through an area of Terrain, or a Field-range Terrain is active, those effects immediately end.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
@@ -7522,7 +7522,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "6, Hazard",
-    "Effect": "Set 8 square meters of Sticky Web hazards within your range, all 8 meters must be adjacent with at least one other space of Sticky Web. Sticky Web causes Terrain to become Slow Terrain, and a foe that runs into the hazard has its Speed lowered by one stage, and they become Slowed until the end of their next turn. Flying- type Pokémon and Pokémon and Trainers with Levitate are not affected by Sticky Web. Bug-type Pokémon may move over Sticky Web harmlessly, destroying the Hazards as they do so.",
+    "Effect": "Set 8 square meters of Sticky Web hazards within your range, all 8 meters must be adjacent with at least one other space of Sticky Web. Sticky Web causes Terrain to become Slow Terrain, and a foe that runs into the hazard has its Speed lowered by one stage, and they become [[status:Slowed]] until the end of their next turn. Flying- type Pokémon and Pokémon and Trainers with Levitate are not affected by Sticky Web. Bug-type Pokémon may move over Sticky Web harmlessly, destroying the Hazards as they do so.",
     "Contest Type": "Smart",
     "Contest Effect": "Sabotage",
     "Special": "Grants Threaded"
@@ -7642,7 +7642,7 @@
     "AC": "3",
     "Class": "Status",
     "Range": "Cone 2",
-    "Effect": "Targets have their Speed CS lowered by -1. If this lowers their Speed CS to -6, or if their Speed CS was already at -6, the target is instead Stuck.",
+    "Effect": "Targets have their Speed CS lowered by -1. If this lowers their Speed CS to -6, or if their Speed CS was already at -6, the target is instead [[status:Stuck]].",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement",
     "Special": "Grants Threaded"
@@ -7674,7 +7674,7 @@
     "AC": "6",
     "Class": "Status",
     "Range": "6, 1 Target, Powder",
-    "Effect": "The target is Paralyzed.",
+    "Effect": "The target is [[status:Paralysis]](Paralyzed).",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
   },
@@ -7685,7 +7685,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Recoil 1/3",
-    "Effect": "On an accuracy roll of 15+, the target is Tripped.",
+    "Effect": "On an accuracy roll of 15+, the target is [[status:Tripped]].",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
   },
@@ -7778,7 +7778,7 @@
     "AC": "6",
     "Class": "Status",
     "Range": "4, 1 Target, Sonic",
-    "Effect": "The target becomes Confused. On miss, the target suffers a -2 penalty to Accuracy Rolls for one full round.",
+    "Effect": "The target becomes [[status:Confusion]](Confused). On miss, the target suffers a -2 penalty to Accuracy Rolls for one full round.",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
   },
@@ -7839,7 +7839,7 @@
     "AC": "6",
     "Class": "Status",
     "Range": "6, 1 Target, Social",
-    "Effect": "The target becomes Confused. On miss, the target suffers a -2 penalty to Accuracy Rolls for one full round.",
+    "Effect": "The target becomes [[status:Confusion]](Confused). On miss, the target suffers a -2 penalty to Accuracy Rolls for one full round.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
   },
@@ -7913,7 +7913,7 @@
     "Damage Base": "6",
     "Class": "Special",
     "Range": "6, 1 Target, Smite",
-    "Effect": "The target and all foes adjacent to them are Slowed for 1 full Round. If an affected foe was already Slowed or Stuck, it becomes Stuck instead."
+    "Effect": "The target and all foes adjacent to them are [[status:Slowed]] for 1 full Round. If an affected foe was already [[status:Slowed]] or [[status:Stuck]], it becomes [[status:Stuck]] instead."
   },
   "Tachyon Cutter": {
     "Type": "Steel",
@@ -8014,7 +8014,7 @@
     "AC": "3",
     "Class": "Status",
     "Range": "6, 1 Target, Social",
-    "Effect": "The target becomes Enraged.",
+    "Effect": "The target becomes [[status:Rage]](Enraged).",
     "Contest Type": "Smart",
     "Contest Effect": "Inversed Appeal"
   },
@@ -8065,7 +8065,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "4, 1 Target",
-    "Effect": "The target becomes Lifted. While Lifted, they gain the Levitate Ability, are Slowed, and lose all Movement Capabilities except for the Levitate 4 granted by Levitate (reduced to 2 by the Slow condition). While Lifted, the user may not apply any Evasion bonuses to determine whether they are hit by Moves or not. The Lifted target may use a Shift Action to roll 1d20; on a result of 16+, they stop being Lifted.",
+    "Effect": "The target becomes Lifted. While Lifted, they gain the Levitate Ability, are [[status:Slowed]], and lose all Movement Capabilities except for the Levitate 4 granted by Levitate (reduced to 2 by the Slow condition). While Lifted, the user may not apply any Evasion bonuses to determine whether they are hit by Moves or not. The Lifted target may use a Shift Action to roll 1d20; on a result of 16+, they stop being Lifted.",
     "Contest Type": "Smart",
     "Contest Effect": "Steady Performance",
     "Special": "Grants Telekinetic"
@@ -8150,7 +8150,7 @@
     "Damage Base": "9",
     "Class": "Physical",
     "Range": "Burst 1, Groundsource",
-    "Effect": "Legal Targets are Trapped for 2 rounds.",
+    "Effect": "Legal Targets are [[status:Trapped]] for 2 rounds.",
     "Contest Type": "Tough",
     "Contest Effect": "Tease"
   },
@@ -8161,7 +8161,7 @@
     "Damage Base": "12",
     "Class": "Physical",
     "Range": "Melee, All Adjacent Foes, Smite",
-    "Effect": "After damage is dealt, the user becomes Enraged and Confused.",
+    "Effect": "After damage is dealt, the user becomes [[status:Rage]](Enraged) and [[status:Confusion]](Confused).",
     "Contest Type": "Tough",
     "Contest Effect": "Reliable"
   },
@@ -8205,7 +8205,7 @@
     "Damage Base": "7",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Thunder Fang Paralyzes or Flinches on 18- 19 during Accuracy Check; flip a coin to determine whether the foe gets Paralyzed or Flinches. On 20 during Accuracy Check, the foe is Paralyzed and Flinched.",
+    "Effect": "Thunder Fang Paralyzes or Flinches on 18- 19 during Accuracy Check; flip a coin to determine whether the foe gets [[status:Paralysis]](Paralyzed) or Flinches. On 20 during Accuracy Check, the foe is [[status:Paralysis]](Paralyzed) and [[status:Flinch]](Flinched).",
     "Contest Type": "Smart",
     "Contest Effect": "Steady Performance"
   },
@@ -8318,7 +8318,7 @@
     "AC": "2",
     "Class": "Status",
     "Range": "10, 1 Target, Social",
-    "Effect": "The target becomes Suppressed.",
+    "Effect": "The target becomes [[status:Suppressed]].",
     "Contest Type": "Tough",
     "Contest Effect": "Inversed Appeal"
   },
@@ -8328,7 +8328,7 @@
     "AC": "4",
     "Class": "Status",
     "Range": "4, 1 Target",
-    "Effect": "The target is Badly Poisoned. If the user is Poison Type, Toxic cannot miss.",
+    "Effect": "The target is [[status:Badly Poisoned]]. If the user is Poison Type, Toxic cannot miss.",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
   },
@@ -8338,7 +8338,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "6, Hazard",
-    "Effect": "Set 8 square meters of Toxic Spikes, all 8 meters must be adjacent with at least one other space of Toxic Spikes next to each other. Toxic Spikes cause Terrain to become Slow Terrain, and a grounded foe that runs into the hazard becomes Poisoned, and Slowed until the end of their next turn. If there are 2 Layers of Toxic Spikes on the same space, it Deadly Poisons the foes instead. Poison-Type Pokémon may move over Toxic Spikes harmlessly, destroying the Hazards as they do so.",
+    "Effect": "Set 8 square meters of Toxic Spikes, all 8 meters must be adjacent with at least one other space of Toxic Spikes next to each other. Toxic Spikes cause Terrain to become Slow Terrain, and a grounded foe that runs into the hazard becomes [[status:Poisoned]], and [[status:Slowed]] until the end of their next turn. If there are 2 Layers of Toxic Spikes on the same space, it Deadly Poisons the foes instead. Poison-Type Pokémon may move over Toxic Spikes harmlessly, destroying the Hazards as they do so.",
     "Contest Type": "Smart",
     "Contest Effect": "Sabotage"
   },
@@ -8348,7 +8348,7 @@
     "AC": "2",
     "Class": "Status",
     "Range": "6, 1 Target",
-    "Effect": "The target is Poisoned and has their Speed lowered by 1 Combat Stage. If the target is already Poisoned, they instead lose a Tick of Hit Points and has their Speed lowered by 2 Combat Stages.",
+    "Effect": "The target is [[status:Poisoned]] and has their Speed lowered by 1 Combat Stage. If the target is already [[status:Poisoned]], they instead lose a Tick of Hit Points and has their Speed lowered by 2 Combat Stages.",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
   },
@@ -8380,7 +8380,7 @@
     "Damage Base": "8",
     "Class": "Special",
     "Range": "6, 1 target",
-    "Effect": "Tri Attack gives the target a Status ailment on 17+ during Accuracy Check. If this effect is triggered, roll 1d3; on 1 the target is Paralyzed; on 2 the target is Burned; on 3 the target is Frozen.",
+    "Effect": "Tri Attack gives the target a Status ailment on 17+ during Accuracy Check. If this effect is triggered, roll 1d3; on 1 the target is [[status:Paralysis]](Paralyzed); on 2 the target is [[status:Burned]]; on 3 the target is [[status:Frozen]].",
     "Contest Type": "Beauty",
     "Contest Effect": "Steady Performance"
   },
@@ -8516,7 +8516,7 @@
     "Damage Base": "7",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Dash",
-    "Effect": "If U-Turn successfully hits its target, the user deals damage and then immediately is returned to its Poké Ball in the same turn. A New Pokémon may immediately be sent out. Using U-Turn lets a Trapped user be recalled.",
+    "Effect": "If U-Turn successfully hits its target, the user deals damage and then immediately is returned to its Poké Ball in the same turn. A New Pokémon may immediately be sent out. Using U-Turn lets a [[status:Trapped]] user be recalled.",
     "Contest Type": "Cute",
     "Contest Effect": "Inversed Appeal"
   },
@@ -8570,7 +8570,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Cone 2",
-    "Effect": "All Poisoned targets have their Attack, Special Attack, and Speed lowered by 1 Combat Stage. Venom Drench cannot miss.",
+    "Effect": "All [[status:Poisoned]] targets have their Attack, Special Attack, and Speed lowered by 1 Combat Stage. Venom Drench cannot miss.",
     "Contest Type": "Smart",
     "Contest Effect": "Sabotage"
   },
@@ -8581,7 +8581,7 @@
     "Damage Base": "7",
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "If the target is Poisoned, Venoshock has a Damage Base of 13 (4d10+10 / 35) instead.",
+    "Effect": "If the target is [[status:Poisoned]], Venoshock has a Damage Base of 13 (4d10+10 / 35) instead.",
     "Contest Type": "Smart",
     "Contest Effect": "Incentives"
   },
@@ -8636,7 +8636,7 @@
     "Damage Base": "7",
     "Class": "Special",
     "Range": "5, 1 Target",
-    "Effect": "If Volt Switch successfully hits its target, the user deals damage and then immediately is returned to its Poké Ball in the same turn. A New Pokémon may immediately be sent out. Using Volt Switch lets a Trapped user be recalled.",
+    "Effect": "If Volt Switch successfully hits its target, the user deals damage and then immediately is returned to its Poké Ball in the same turn. A New Pokémon may immediately be sent out. Using Volt Switch lets a [[status:Trapped]] user be recalled.",
     "Contest Type": "Cute",
     "Contest Effect": "Inversed Appeal"
   },
@@ -8658,7 +8658,7 @@
     "Damage Base": "5",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "If the target is Asleep, Wake-Up Slap has a Damage Base of 10 (3d8+10 / 24) instead, and cures the target of Sleep.",
+    "Effect": "If the target is [[status:Sleep]](Asleep), Wake-Up Slap has a Damage Base of 10 (3d8+10 / 24) instead, and cures the target of [[status:Sleep]].",
     "Contest Type": "Smart",
     "Contest Effect": "Inversed Appeal"
   },
@@ -8801,7 +8801,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Push",
-    "Effect": "If Wicked Blow hits, it is a Critical Hit. The target is Pushed 6 meters minus their Weight Class. On a roll of 15+, the target is also Tripped.",
+    "Effect": "If Wicked Blow hits, it is a Critical Hit. The target is Pushed 6 meters minus their Weight Class. On a roll of 15+, the target is also [[status:Tripped]].",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
@@ -8812,7 +8812,7 @@
     "Damage Base": "10",
     "Class": "Physical",
     "Range": "Melee, Dash, Pass",
-    "Effect": "All legal targets fall Asleep on 18+.",
+    "Effect": "All legal targets fall [[status:Sleep]](Asleep) on 18+.",
     "Contest Type": "Smart",
     "Contest Effect": "Catching Up"
   },
@@ -8844,7 +8844,7 @@
     "Damage Base": "10",
     "Class": "Special",
     "Range": "6, Ranged Blast 3, Smite",
-    "Effect": "The target is Paralyzed on a 15+.",
+    "Effect": "The target is [[status:Paralysis]](Paralyzed) on a 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Unsettling"
   },
@@ -8854,7 +8854,7 @@
     "AC": "5",
     "Class": "Status",
     "Range": "6, 1 Target",
-    "Effect": "The target is Burned.",
+    "Effect": "The target is [[status:Burned]].",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
   },
@@ -8977,7 +8977,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "2, 1 Target, Social",
-    "Effect": "The target falls Asleep at the end of their next turn. Yawn cannot miss.",
+    "Effect": "The target falls [[status:Sleep]](Asleep) at the end of their next turn. Yawn cannot miss.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
   },
@@ -8988,7 +8988,7 @@
     "Damage Base": "11",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "This Move automatically Critically Hits targets at or below half of their Max Hit Points. After dealing damage, the target becomes Vulnerable for one full round."
+    "Effect": "This Move automatically Critically Hits targets at or below half of their Max Hit Points. After dealing damage, the target becomes [[status:Vulnerable]] for one full round."
   },
   "Zap Cannon": {
     "Type": "Electric",

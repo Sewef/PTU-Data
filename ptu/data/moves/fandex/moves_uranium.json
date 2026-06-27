@@ -145,7 +145,7 @@
     "AC": "4",
     "Class": "Status",
     "Range": "Burst 1",
-    "Effect": "Legal Targets are Badly Poisoned. "
+    "Effect": "Legal Targets are [[status:Badly Poisoned]]. "
   },
   "Proton Beam": {
     "Type": "Nuclear",
@@ -199,7 +199,7 @@
     "Damage Base": 14,
     "Class": "Physical",
     "Range": "6, 1 Target, Smite",
-    "Effect": "The target’s Speed is lowered 2 Combat Stages, and the user becomes Confused after Damage."
+    "Effect": "The target’s Speed is lowered 2 Combat Stages, and the user becomes [[status:Confusion]](Confused) after Damage."
   },
   "Sudden Strike": {
     "Type": "Dark",

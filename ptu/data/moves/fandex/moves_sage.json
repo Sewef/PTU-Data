@@ -5,7 +5,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Field, Weather",
-    "Effect": "The weather becomes Acid Rain for 3 rounds. While in Acid Rain, all non-Poison or Steel Type Pokémon lose a Tick of Hit Points at the beginning of their turn. In addition, Venoshock counts targets in Acid Rain as being Poisoned.",
+    "Effect": "The weather becomes Acid Rain for 3 rounds. While in Acid Rain, all non-Poison or Steel Type Pokémon lose a Tick of Hit Points at the beginning of their turn. In addition, Venoshock counts targets in Acid Rain as being [[status:Poisoned]].",
     "Contest Type": "Smart"
   },
   "Asteroid Belt": {
@@ -14,7 +14,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "The user gains 5 Asteroid Counters. Whenever the user is hit by a Melee Attack the user may expend one Asteroid Counter. If they do, the triggering foe loses a Tick of Hit Points, and on a d20 roll of 20 is Frozen.",
+    "Effect": "The user gains 5 Asteroid Counters. Whenever the user is hit by a Melee Attack the user may expend one Asteroid Counter. If they do, the triggering foe loses a Tick of Hit Points, and on a d20 roll of 20 is [[status:Frozen]].",
     "Contest Type": "Tough"
   },
   "Asteroid Shot": {
@@ -122,7 +122,7 @@
     "Damage Base": 2,
     "Class": "Special",
     "Range": "Cone 3, Spirit Surge",
-    "Effect": "Engulf destroys all Hazards within the Cone and removes Leech Seeds and the Trapped or Stuck status of the user and those in the Cone (even immune Targets).",
+    "Effect": "Engulf destroys all Hazards within the Cone and removes Leech Seeds and the [[status:Trapped]] or [[status:Stuck]] status of the user and those in the Cone (even immune Targets).",
     "Contest Type": "Smart"
   },
   "Fiesta": {
@@ -151,7 +151,7 @@
     "Damage Base": 14,
     "Class": "Special",
     "Range": "Burst 1, Smite",
-    "Effect": "All targets hit by Genesis Shackles are Slowed and Trapped until they Take a Breather. After resolving damage from this Move, Quetzar transforms into Statue Forme.",
+    "Effect": "All targets hit by Genesis Shackles are [[status:Slowed]] and [[status:Trapped]] until they Take a Breather. After resolving damage from this Move, Quetzar transforms into Statue Forme.",
     "Special": "This move may not be used in the same Scene as Cosmic Ascent.",
     "Contest Type": "Smart"
   },
@@ -228,7 +228,7 @@
     "Damage Base": 7,
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "If the target is Confused, Perplex’s Damage Base is increased to Damage Base 13 (4d10+10 / 35).",
+    "Effect": "If the target is [[status:Confusion]](Confused), Perplex’s Damage Base is increased to Damage Base 13 (4d10+10 / 35).",
     "Contest Type": "Smart"
   },
   "Possession": {
@@ -305,7 +305,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Close Burst 5",
-    "Effect": "The user and one foe in the Burst enter a Standoff with each other. While in a Standoff, creatures are Trapped, take a -3 penalty to accuracy against creatures outside the Standoff, and resist all damage from creatures outside the Standoff one step further. In addition, those in a Standoff may not voluntarily move more than 5m away from the other participant. If forced to move, they may not move in any way unless it brings them closer to the other participant. A Standoff ends when either participant Faints or is recalled (such as by U-Turn or Roar).",
+    "Effect": "The user and one foe in the Burst enter a Standoff with each other. While in a Standoff, creatures are [[status:Trapped]], take a -3 penalty to accuracy against creatures outside the Standoff, and resist all damage from creatures outside the Standoff one step further. In addition, those in a Standoff may not voluntarily move more than 5m away from the other participant. If forced to move, they may not move in any way unless it brings them closer to the other participant. A Standoff ends when either participant Faints or is recalled (such as by U-Turn or Roar).",
     "Contest Type": "Tough"
   },
   "Storm of Gold": {
