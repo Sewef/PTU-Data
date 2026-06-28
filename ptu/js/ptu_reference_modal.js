@@ -211,7 +211,7 @@ function ensureReferenceModal() {
 }
 
 function hasReferenceToken(text) {
-  return new RegExp(`\\[\\[\\s*(${REFERENCE_TYPE_PATTERN})\\s*:[^\\]]+\\]\\](?:\\([^)]*\\))?`, "i").test(text || "");
+  return new RegExp(`\\[\\[\\s*(${REFERENCE_TYPE_PATTERN})\\s*:[^\\]]+\\]\\]`, "i").test(text || "");
 }
 
 function canReplaceTextNode(node) {
@@ -224,7 +224,7 @@ function canReplaceTextNode(node) {
 
 function replaceReferenceTextNode(node) {
   const text = node.nodeValue;
-  const rx = new RegExp(`\\[\\[\\s*(${REFERENCE_TYPE_PATTERN})\\s*:\\s*([^\\]]+?)\\s*\\]\\](?:\\(([^)]*)\\))?`, "gi");
+  const rx = new RegExp(`\\[\\[\\s*(${REFERENCE_TYPE_PATTERN})\\s*:\\s*([^\\]]+?)\\s*\\]\\]`, "gi");
   let last = 0;
   let match;
   const frag = document.createDocumentFragment();
@@ -233,12 +233,34 @@ function replaceReferenceTextNode(node) {
     if (match.index > last) frag.appendChild(document.createTextNode(text.slice(last, match.index)));
     const type = normalizeType(match[1]);
     const name = match[2].trim();
-    const label = (match[3] || "").trim() || name;
+    const display = readReferenceDisplay(text, rx.lastIndex);
+    const label = (display?.label || "").trim() || name;
     frag.appendChild(createReferenceLink(type, name, label));
-    last = rx.lastIndex;
+    last = display ? display.end : rx.lastIndex;
   }
   if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
   node.parentNode.replaceChild(frag, node);
+}
+
+function readReferenceDisplay(text, start) {
+  if (text[start] !== "(") return null;
+
+  let depth = 0;
+  for (let i = start; i < text.length; i++) {
+    if (text[i] === "(") {
+      depth++;
+    } else if (text[i] === ")") {
+      depth--;
+      if (depth === 0) {
+        return {
+          label: text.slice(start + 1, i),
+          end: i + 1
+        };
+      }
+    }
+  }
+
+  return null;
 }
 
 function createReferenceLink(type, name, label = name) {
