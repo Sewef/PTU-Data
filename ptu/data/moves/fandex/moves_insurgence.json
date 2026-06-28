@@ -5,7 +5,7 @@
     "AC": "2",
     "Damage Base": 8,
     "Class": "Special",
-    "Range": "Burst 1, Sonic"
+    "Range": "Burst 1, [[keyword:Sonic]]"
   },
   "Corrode": {
     "Type": "Poison",
@@ -22,8 +22,8 @@
     "AC": "2",
     "Damage Base": 5,
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Priority",
-    "Effect": "Prior to using this move, the user changes into the Crystal Type for the remainder of the Scene. Crystal Type moves always deal neutral damage. All non-Sonic attacks on Crystal Type Pokémon deal  neutral damage. Sonic attacks instead deal super- effective damage. "
+    "Range": "Melee, 1 Target, [[keyword:Priority]]",
+    "Effect": "Prior to using this move, the user changes into the Crystal Type for the remainder of the Scene. Crystal Type moves always deal neutral damage. All non-[[keyword:Sonic]] attacks on Crystal Type Pokémon deal  neutral damage. [[keyword:Sonic]] attacks instead deal super- effective damage. "
   },
   "Lunar Cannon": {
     "Type": "Dark",
@@ -31,8 +31,8 @@
     "AC": "2",
     "Damage Base": 10,
     "Class": "Special",
-    "Range": "Line 6, Set-Up",
-    "Set-Up Effect": "If the weather is not a New Moon, the user’s turn ends. If the weather is a New Moon, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword.",
+    "Range": "Line 6, [[keyword:Set-Up]]",
+    "Set-Up Effect": "If the weather is not a New Moon, the user’s turn ends. If the weather is a New Moon, immediately proceed to the Resolution Effect instead and this Move loses the [[keyword:Set-Up]] keyword.",
     "Resolution Effect": "The user attacks with Lunar Cannon."
   },
   "Medusa Ray": {
@@ -56,7 +56,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Field, Weather",
-    "Effect": "The Weather becomes a New Moon for 5 rounds.\nWhile a New Moon, Dark-Type and Ghost-Type Attacks gain a +5 bonus to Damage Rolls, and Fairy-Type Attacks suffer a -5 Damage penalty.\n» Lunar Cannon, Shadow Force and Phantom Force lose the Set-Up Keyword, and move immediately to the resolution effect.\n» Morning Sun, Synthesis, and Moonlight cause the user to regain only 1⁄4 of their full Hit Point value. » Users with Shadow Dance will have their initiative doubled.\n» Users with Heliophobia will regain a tick of Hit Points at the end of each turn.",
+    "Effect": "The Weather becomes a New Moon for 5 rounds.\nWhile a New Moon, Dark-Type and Ghost-Type Attacks gain a +5 bonus to Damage Rolls, and Fairy-Type Attacks suffer a -5 Damage penalty.\n» Lunar Cannon, Shadow Force and Phantom Force lose the [[keyword:Set-Up]] Keyword, and move immediately to the resolution effect.\n» Morning Sun, Synthesis, and Moonlight cause the user to regain only 1⁄4 of their full Hit Point value. » Users with Shadow Dance will have their initiative doubled.\n» Users with Heliophobia will regain a tick of Hit Points at the end of each turn.",
     "Note": "This mecanic is described in the Mecanics in the side panel."
   },
   "Retrograde": {
@@ -65,6 +65,6 @@
     "AC": "2",
     "Class": "Status",
     "Range": "10, 1 Target",
-    "Effect": "The target has all of its CS reset, and all Coats removed. If the target is under the effects of Mega Evolution, the move Transform, or any Moves, Capabilities, Abilities or Features that change a targets Form(e) or Type, those effects immediately end."
+    "Effect": "The target has all of its CS reset, and all [[keyword:Coat]](Coats) removed. If the target is under the effects of Mega Evolution, the move Transform, or any Moves, Capabilities, Abilities or Features that change a targets Form(e) or Type, those effects immediately end."
   }
 }

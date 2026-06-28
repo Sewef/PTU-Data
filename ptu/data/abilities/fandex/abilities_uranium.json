@@ -25,7 +25,7 @@
     "Name": "Deep Freeze",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user is hit with a Melee Attack",
-    "Effect": "The attacking foe becomes Frozen. The foe is automatically cured of the Frozen Condition after 1 full round."
+    "Effect": "The attacking foe becomes [[status:Frozen]]. The foe is automatically cured of the [[status:Frozen]] Condition after 1 full round."
   },
   {
     "Name": "Disenchant",
@@ -51,12 +51,12 @@
   {
     "Name": "Lazy",
     "Frequency": "Static",
-    "Effect": "When this Pokémon enters an encounter, it gains +5 DR but is Slowed. At the end of any of its turns, it may end this effect for the rest of the Scene, or until it returns to its Pokéball, as a Free Action."
+    "Effect": "When this Pokémon enters an encounter, it gains +5 DR but is [[status:Slowed]]. At the end of any of its turns, it may end this effect for the rest of the Scene, or until it returns to its Pokéball, as a Free Action."
   },
   {
     "Name": "Lead Skin",
     "Frequency": "Static",
-    "Effect": "The user is immune to Nuclear-Type attacks, and counts as a Steel-Type for the purposes of the Radiation Ability. Defensive. Bonus: The user is immune to being Poisoned or Badly Poisoned. Defensive."
+    "Effect": "The user is immune to Nuclear-Type attacks, and counts as a Steel-Type for the purposes of the Radiation Ability. Defensive. Bonus: The user is immune to being [[status:Poisoned]] or [[status:Badly Poisoned]]. Defensive."
   },
   {
     "Name": "Petrify",

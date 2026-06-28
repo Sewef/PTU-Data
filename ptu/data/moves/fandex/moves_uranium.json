@@ -23,7 +23,7 @@
     "AC": "7",
     "Damage Base": 11,
     "Class": "Special",
-    "Range": "4, Ranged Blast 2, Smite",
+    "Range": "4, Ranged Blast 2, [[keyword:Smite]]",
     "Effect": "When calculating Weakness and Resistance for Expunge, Nuclear-Typed targets calculate damage as if Nuclear was weak to Nuclear; if the user has the Radioactive Ability, it treats the target at though the target was not Nuclear-Typed for the purposes of Radioactive. If the target is in Nuclear Fallout Weather, Expunge cannot miss."
   },
   "Fallout": {
@@ -40,7 +40,7 @@
     "AC": "2",
     "Damage Base": 15,
     "Class": "Physical",
-    "Range": "Burst 3, Smite",
+    "Range": "Burst 3, [[keyword:Smite]]",
     "Effect": "The user’s Hit Points are set to -50% of their full Hit Point value. This Hit Point loss may not be prevented or reduced in any way. The user’s loyalty toward its trainer may be lowered. This Move may be prevented by Damp."
   },
   "Flame Impact": {
@@ -49,7 +49,7 @@
     "AC": "2",
     "Damage Base": 7,
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Priority"
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Priority]]"
   },
   "Gamma Ray": {
     "Type": "Nuclear",
@@ -65,7 +65,7 @@
     "AC": "2",
     "Damage Base": 7,
     "Class": "Special",
-    "Range": "Burst 1, Spirit Surge, Sonic",
+    "Range": "Burst 1, [[keyword:Spirit Surge]], [[keyword:Sonic]]",
     "Effect": "The user becomes Pumped. While Pumped, the user’s Critical Range is extended by 2, or 18+ if the Critical Range is not otherwise extended. Being switched will cause this effect to end. "
   },
   "Golden Fist": {
@@ -91,7 +91,7 @@
     "AC": "3",
     "Damage Base": 9,
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, [[keyword:Pass]]",
     "Effect": "Infernal Blade Burns legal targets on a 19+. When calculating Weakness and Resistance for Infernal Blade, Fairy-Typed targets calculate damage as if Fairy was weak to Fire."
   },
   "Instant Crush": {
@@ -100,7 +100,7 @@
     "AC": "2",
     "Damage Base": 6,
     "Class": "Special",
-    "Range": "4, 1 Target, Priority"
+    "Range": "4, 1 Target, [[keyword:Priority]]"
   },
   "Laser Pulse": {
     "Type": "See Effect",
@@ -117,7 +117,7 @@
     "AC": "7",
     "Damage Base": 12,
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Smite, Spirit Surge",
+    "Range": "Melee, 1 Target, [[keyword:Smite]], [[keyword:Spirit Surge]]",
     "Effect": "Metal Cruncher lowers the target’s Defense 1 Combat Stage on a 7+."
   },
   "Metal Whip": {
@@ -127,7 +127,7 @@
     "Damage Base": 5,
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "The target is put in a Vortex.",
+    "Effect": "The target is put in a [[keyword:Vortex]].",
     "Special": "Grants Threaded"
   },
   "Nuclear Slash": {
@@ -136,7 +136,7 @@
     "AC": "4",
     "Damage Base": 6,
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, [[keyword:Pass]]",
     "Effect": "Nuclear Slash is a Critical Hit on 18+."
   },
   "Nuclear Waste": {
@@ -145,7 +145,7 @@
     "AC": "4",
     "Class": "Status",
     "Range": "Burst 1",
-    "Effect": "Legal Targets are Badly Poisoned. "
+    "Effect": "Legal Targets are [[status:Badly Poisoned]]. "
   },
   "Proton Beam": {
     "Type": "Nuclear",
@@ -153,7 +153,7 @@
     "AC": "4",
     "Damage Base": 10,
     "Class": "Special",
-    "Range": "Cone 3, Smite, Reckless",
+    "Range": "Cone 3, [[keyword:Smite]], Reckless",
     "Effect": "Lower the user’s Special Attack 2 Combat Stages after damage."
   },
   "Quantum Leap": {
@@ -162,7 +162,7 @@
     "AC": "2",
     "Damage Base": 10,
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Set-Up",
+    "Range": "Melee, 1 Target, [[keyword:Set-Up]]",
     "Set-Up Effect": "The user is removed from the field, and their turn ends.",
     "Resolution Effect": "Quantum Leap’s user appears adjacent to any legal target on the field, ignoring Movement Capabilities, and then uses Quantum Leap’s attack. Quantum Leap cannot be avoided by Moves with the Shield Keyword, the Dodge Ability, or similar effects, and Intercepts may not be attempted in response."
   },
@@ -190,7 +190,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Field",
-    "Effect": "The Field becomes Sticky for five rounds.  While the Field is Sticky, non-Flying and non- Levitating Pokémon cannot declare Priority or  Interrupt Moves outside their own Initiatives. In addition, all Jumping Capabilities of creatures touching the ground are reduced by 2, to a minimum of 0."
+    "Effect": "The Field becomes Sticky for five rounds.  While the Field is Sticky, non-Flying and non- Levitating Pokémon cannot declare [[keyword:Priority]] or  [[keyword:Interrupt]] Moves outside their own Initiatives. In addition, all Jumping Capabilities of creatures touching the ground are reduced by 2, to a minimum of 0."
   },
   "Subduction": {
     "Type": "Ground",
@@ -198,8 +198,8 @@
     "AC": "4",
     "Damage Base": 14,
     "Class": "Physical",
-    "Range": "6, 1 Target, Smite",
-    "Effect": "The target’s Speed is lowered 2 Combat Stages, and the user becomes Confused after Damage."
+    "Range": "6, 1 Target, [[keyword:Smite]]",
+    "Effect": "The target’s Speed is lowered 2 Combat Stages, and the user becomes [[status:Confusion]](Confused) after Damage."
   },
   "Sudden Strike": {
     "Type": "Dark",
@@ -207,7 +207,7 @@
     "AC": "2",
     "Damage Base": 4,
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Priority"
+    "Range": "Melee, 1 Target, [[keyword:Priority]]"
   },
   "Thunderstorm": {
     "Type": "Electric",

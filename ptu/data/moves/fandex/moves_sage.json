@@ -5,7 +5,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Field, Weather",
-    "Effect": "The weather becomes Acid Rain for 3 rounds. While in Acid Rain, all non-Poison or Steel Type Pokémon lose a Tick of Hit Points at the beginning of their turn. In addition, Venoshock counts targets in Acid Rain as being Poisoned.",
+    "Effect": "The weather becomes Acid Rain for 3 rounds. While in Acid Rain, all non-Poison or Steel Type Pokémon lose a Tick of Hit Points at the beginning of their turn. In addition, Venoshock counts targets in Acid Rain as being [[status:Poisoned]].",
     "Contest Type": "Smart"
   },
   "Asteroid Belt": {
@@ -14,7 +14,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "The user gains 5 Asteroid Counters. Whenever the user is hit by a Melee Attack the user may expend one Asteroid Counter. If they do, the triggering foe loses a Tick of Hit Points, and on a d20 roll of 20 is Frozen.",
+    "Effect": "The user gains 5 Asteroid Counters. Whenever the user is hit by a Melee Attack the user may expend one Asteroid Counter. If they do, the triggering foe loses a Tick of Hit Points, and on a d20 roll of 20 is [[status:Frozen]].",
     "Contest Type": "Tough"
   },
   "Asteroid Shot": {
@@ -33,7 +33,7 @@
     "AC": "2",
     "Damage Base": 25,
     "Class": "Special",
-    "Range": "Burst 2, Smite",
+    "Range": "Burst 2, [[keyword:Smite]]",
     "Effect": "The user’s Hit Points are set to -50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way. The user’s loyalty toward its trainer may be lowered. Damp prevents this Move from being used.",
     "Contest Type": "Smart"
   },
@@ -43,8 +43,8 @@
     "AC": "2",
     "Damage Base": 8,
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
-    "Effect": "Blessings may not be activated in response to Battering Ram.",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
+    "Effect": "[[keyword:Blessing]](Blessings) may not be activated in response to Battering Ram.",
     "Contest Type": "Tough"
   },
   "Brace": {
@@ -100,7 +100,7 @@
     "AC": "6",
     "Damage Base": 8,
     "Class": "Physical",
-    "Range": "Burst 3, Smite",
+    "Range": "Burst 3, [[keyword:Smite]]",
     "Effect": "After resolving damage from this Move, Quetzar transforms into Space Forme.",
     "Special": "This move may not be used in the same Scene as Genesis Shackles.",
     "Contest Type": "Tough"
@@ -111,7 +111,7 @@
     "AC": "2",
     "Damage Base": 9,
     "Class": "Special",
-    "Range": "6, Ranged Blast 2, Smite",
+    "Range": "6, Ranged Blast 2, [[keyword:Smite]]",
     "Effect": "When calculating Weakness and Resistance for Dust Devil, Flying-Typed targets calculate damage as if Flying was neutral to Ground. Dust Devil ignores the Levitate ability.",
     "Contest Type": "Cool"
   },
@@ -121,8 +121,8 @@
     "AC": "2",
     "Damage Base": 2,
     "Class": "Special",
-    "Range": "Cone 3, Spirit Surge",
-    "Effect": "Engulf destroys all Hazards within the Cone and removes Leech Seeds and the Trapped or Stuck status of the user and those in the Cone (even immune Targets).",
+    "Range": "Cone 3, [[keyword:Spirit Surge]]",
+    "Effect": "Engulf destroys all Hazards within the Cone and removes Leech Seeds and the [[status:Trapped]] or [[status:Stuck]] status of the user and those in the Cone (even immune Targets).",
     "Contest Type": "Smart"
   },
   "Fiesta": {
@@ -130,8 +130,8 @@
     "Frequency": "EOT",
     "AC": "None",
     "Class": "Status",
-    "Range": "6, Hazard",
-    "Effect": "Set 4 square meters of Treat hazards within 6 meters (these are only Hazards for the purposes of effects that remove Hazards – foes cannot otherwise interact with them). Any ally that ends their turn in a Treat hazard removes that Hazard and gains a Tick of Temporary Hit Points.",
+    "Range": "6, [[keyword:Hazard]]",
+    "Effect": "Set 4 square meters of Treat hazards within 6 meters (these are only Hazards for the purposes of effects that remove Hazards – foes cannot otherwise interact with them). Any ally that ends their turn in a Treat hazard removes that [[keyword:Hazard]] and gains a Tick of Temporary Hit Points.",
     "Contest Type": "Cute"
   },
   "Frost Slash": {
@@ -140,8 +140,8 @@
     "AC": "2",
     "Damage Base": 7,
     "Class": "Physical",
-    "Range": "Melee, Pass",
-    "Effect": "If used as a Pass Move, Frost Slash is a Critical Hit on 18+. If used as a Melee, 1 Target Move, Frost Slash Freezes the Target on a 19+",
+    "Range": "Melee, [[keyword:Pass]]",
+    "Effect": "If used as a [[keyword:Pass]] Move, Frost Slash is a Critical Hit on 18+. If used as a Melee, 1 Target Move, Frost Slash Freezes the Target on a 19+",
     "Contest Type": "Beauty"
   },
   "Genesis Shackles": {
@@ -150,8 +150,8 @@
     "AC": "4",
     "Damage Base": 14,
     "Class": "Special",
-    "Range": "Burst 1, Smite",
-    "Effect": "All targets hit by Genesis Shackles are Slowed and Trapped until they Take a Breather. After resolving damage from this Move, Quetzar transforms into Statue Forme.",
+    "Range": "Burst 1, [[keyword:Smite]]",
+    "Effect": "All targets hit by Genesis Shackles are [[status:Slowed]] and [[status:Trapped]] until they Take a Breather. After resolving damage from this Move, Quetzar transforms into Statue Forme.",
     "Special": "This move may not be used in the same Scene as Cosmic Ascent.",
     "Contest Type": "Smart"
   },
@@ -161,7 +161,7 @@
     "AC": "2",
     "Damage Base": 4,
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Priority",
+    "Range": "Melee, 1 Target, [[keyword:Priority]]",
     "Contest Type": "Cool"
   },
   "Karma Beam": {
@@ -170,7 +170,7 @@
     "AC": "2",
     "Damage Base": 7,
     "Class": "Special",
-    "Range": "Line 4, Smite",
+    "Range": "Line 4, [[keyword:Smite]]",
     "Effect": "If the user was damaged by a Super Effective Move since the end of its last turn, Karma Beam has a Damage Base of 14 (4d10+15 / 40) instead.",
     "Contest Type": "Smart"
   },
@@ -180,7 +180,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "Raise the user’s Defense 1 Combat Stage and raise the user’s Special Defense 1 Combat Stage. If it is Sunny, double the amount of Combat Stages gained",
+    "Effect": "Raise the user’s Defense 1 Combat Stage and raise the user’s Special Defense 1 Combat Stage. If it is [[keyword:Weather]](Sunny), double the amount of Combat Stages gained",
     "Contest Type": "Cool"
   },
   "Meltdown": {
@@ -189,7 +189,7 @@
     "AC": "2",
     "Damage Base": 25,
     "Class": "Special",
-    "Range": "Burst 2, Smite",
+    "Range": "Burst 2, [[keyword:Smite]]",
     "Effect": "The user’s Hit Points are set to -50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way. The user’s loyalty toward its trainer may be lowered. Damp prevents this Move from being used.",
     "Contest Type": "Smart"
   },
@@ -228,7 +228,7 @@
     "Damage Base": 7,
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "If the target is Confused, Perplex’s Damage Base is increased to Damage Base 13 (4d10+10 / 35).",
+    "Effect": "If the target is [[status:Confusion]](Confused), Perplex’s Damage Base is increased to Damage Base 13 (4d10+10 / 35).",
     "Contest Type": "Smart"
   },
   "Possession": {
@@ -257,7 +257,7 @@
     "AC": "2",
     "Damage Base": 4,
     "Class": "Special",
-    "Range": "4, 1 Target, Priority",
+    "Range": "4, 1 Target, [[keyword:Priority]]",
     "Contest Type": "Smart"
   },
   "Salt Crash": {
@@ -295,7 +295,7 @@
     "AC": "3",
     "Damage Base": 9,
     "Class": "Special",
-    "Range": "Burst 2, Friendly, Spirit Surge",
+    "Range": "Burst 2, [[keyword:Friendly]], [[keyword:Spirit Surge]]",
     "Effect": "This move Burns foes on a roll of 18+. All allies in this move’s area of effect gain +1 CS in their stat of choice.",
     "Contest Type": "Beauty"
   },
@@ -305,7 +305,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Close Burst 5",
-    "Effect": "The user and one foe in the Burst enter a Standoff with each other. While in a Standoff, creatures are Trapped, take a -3 penalty to accuracy against creatures outside the Standoff, and resist all damage from creatures outside the Standoff one step further. In addition, those in a Standoff may not voluntarily move more than 5m away from the other participant. If forced to move, they may not move in any way unless it brings them closer to the other participant. A Standoff ends when either participant Faints or is recalled (such as by U-Turn or Roar).",
+    "Effect": "The user and one foe in the Burst enter a Standoff with each other. While in a Standoff, creatures are [[status:Trapped]], take a -3 penalty to accuracy against creatures outside the Standoff, and resist all damage from creatures outside the Standoff one step further. In addition, those in a Standoff may not voluntarily move more than 5m away from the other participant. If forced to move, they may not move in any way unless it brings them closer to the other participant. A Standoff ends when either participant Faints or is recalled (such as by U-Turn or Roar).",
     "Contest Type": "Tough"
   },
   "Storm of Gold": {
@@ -314,7 +314,7 @@
     "AC": "2",
     "Damage Base": 14,
     "Class": "Physical",
-    "Range": "8, Ranged Blast 3, Smite",
+    "Range": "8, Ranged Blast 3, [[keyword:Smite]]",
     "Effect": "This move Confuses targets on a roll of 19+. Storm of Gold scatters metal coins equal in value to 2d10 times the user’s level. If it is a trainer battle, the winner of the battle gets to pick up the coins.",
     "Contest Type": "Tough"
   },
@@ -324,7 +324,7 @@
     "AC": "2",
     "Damage Base": 6,
     "Class": "Special",
-    "Range": "Close Burst 2, Spirit Surge",
+    "Range": "Close Burst 2, [[keyword:Spirit Surge]]",
     "Effect": "The Weather becomes Clear. Clear Weather is the default weather, conferring no innate bonuses or penalties of any sort.",
     "Contest Type": "Beauty"
   },
@@ -334,7 +334,7 @@
     "AC": "7",
     "Damage Base": 12,
     "Class": "Special",
-    "Range": "4, Ranged Blast 2, Smite",
+    "Range": "4, Ranged Blast 2, [[keyword:Smite]]",
     "Effect": "Terrorize Confuses Legal Targets on 19+.",
     "Contest Type": "Smart"
   },
