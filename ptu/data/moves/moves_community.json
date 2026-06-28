@@ -411,7 +411,7 @@
     "Effect": "[[keyword:Blessing]] – Any user affected by Aurora Veil may activate it when receiving Damage to resist the Damage one step. Aurora Veil may be activated 2 times, and then disappears.",
     "Contest Type": "Beauty",
     "Contest Effect": "Excitement",
-    "Special": "Aurora Veil can only be used when the user is in Hailing Weather. The [[keyword:Blessing]](Blessings) persist even after Hailing Weather has ended, however."
+    "Special": "Aurora Veil can only be used when the user is in [[keyword:Weather]](Hailing Weather). The [[keyword:Blessing]](Blessings) persist even after [[keyword:Weather]](Hailing Weather) has ended, however."
   },
   "Autotomize": {
     "Type": "Steel",
@@ -419,7 +419,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "For the remainder of the Encounter, the user's Weight Class is one value lower, to a minimum of 1. If the user can, the user's Speed is raised by +2 Combat Stages.",
+    "Effect": "For the remainder of the Encounter, the user's [[keyword:Weight Class]] is one value lower, to a minimum of 1. If the user can, the user's Speed is raised by +2 Combat Stages.",
     "Contest Type": "Smart",
     "Contest Effect": "Get Ready!"
   },
@@ -691,7 +691,7 @@
     "Damage Base": "11",
     "Class": "Special",
     "Range": "4, Ranged Blast 2, [[keyword:Smite]]",
-    "Effect": "Blizzard Freezes all legal target on 15+. If the target is in Hailing Weather, Blizzard cannot miss.",
+    "Effect": "Blizzard Freezes all legal target on 15+. If the target is in [[keyword:Weather]](Hailing Weather), Blizzard cannot miss.",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
   },
@@ -1124,7 +1124,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Field",
-    "Effect": "The weather changes to Snowy for 5 rounds and the user may immediately be recalled in the same turn. A new Pokémon may immediately be sent out. Using this Move lets a [[status:Trapped]] user be recalled. If the user is not recalled, their movement this turn does not provoke Attacks of Opportunity instead. NOTE: If you are using the Weathers from Domovoi's Rework, the user's side also gains 2 charges of the [Hailing] Blessing, as if they used Hail or Snowscape.",
+    "Effect": "The weather changes to Snowy for 5 rounds and the user may immediately be recalled in the same turn. A new Pokémon may immediately be sent out. Using this Move lets a [[status:Trapped]] user be recalled. If the user is not recalled, their movement this turn does not provoke Attacks of Opportunity instead. NOTE: If you are using the Weathers from Domovoi's Rework, the user's side also gains 2 charges of the [[[keyword:Weather]](Hailing)] Blessing, as if they used Hail or Snowscape.",
     "Contest Type": "Beauty",
     "Contest Effect": "Catching Up"
   },
@@ -1157,7 +1157,7 @@
     "Damage Base": "6",
     "Class": "Physical",
     "Range": "Melee, 1 Target, [[keyword:Push]]",
-    "Effect": "The target is Pushed 6 meters minus their Weight Class. On 15+, the target is also [[status:Tripped]].",
+    "Effect": "The target is Pushed 6 meters minus their [[keyword:Weight Class]]. On 15+, the target is also [[status:Tripped]].",
     "Contest Type": "Tough",
     "Contest Effect": "Big Show"
   },
@@ -1986,7 +1986,7 @@
     "Damage Base": "6",
     "Class": "Physical",
     "Range": "Melee, 1 Target, [[keyword:Push]]",
-    "Effect": "The target is Pushed 6 meters minus their Weight Class. On a roll of 15+, the target is also [[status:Tripped]].",
+    "Effect": "The target is Pushed 6 meters minus their [[keyword:Weight Class]]. On a roll of 15+, the target is also [[status:Tripped]].",
     "Contest Type": "Smart",
     "Contest Effect": "Big Show"
   },
@@ -2214,7 +2214,7 @@
     "Damage Base": "13",
     "Class": "Special",
     "Range": "Line 4, Full Action, [[keyword:Smite]]",
-    "Effect": "For 1 round, any ally that enters a square adjacent to the user, or starts movement there, may Disengage into any square of the Area of Effect of this Move without expending Movement, and then continue their Shift. If the user is in Rainy Weather, this Move is a Standard Action."
+    "Effect": "For 1 round, any ally that enters a square adjacent to the user, or starts movement there, may Disengage into any square of the Area of Effect of this Move without expending Movement, and then continue their Shift. If the user is in [[keyword:Weather]](Rainy Weather), this Move is a Standard Action."
   },
   "Electroweb": {
     "Type": "Electric",
@@ -3197,8 +3197,8 @@
     "AC": "2",
     "Damage Base": "See Effect",
     "Class": "Special",
-    "Range": "5, 1 Target, Weight Class",
-    "Effect": "Grass Knot's Damage Base is equal to twice the target's Weight Class.",
+    "Range": "5, 1 Target, [[keyword:Weight Class]]",
+    "Effect": "Grass Knot's Damage Base is equal to twice the target's [[keyword:Weight Class]].",
     "Contest Type": "Smart",
     "Contest Effect": "Incentives"
   },
@@ -3281,7 +3281,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "Raise the user's Attack 1 Combat Stage and raise the user's Special Attack 1 Combat Stage. If it is Sunny, double the amount of Combat Stages gained.",
+    "Effect": "Raise the user's Attack 1 Combat Stage and raise the user's Special Attack 1 Combat Stage. If it is [[keyword:Weather]](Sunny), double the amount of Combat Stages gained.",
     "Contest Type": "Beauty",
     "Contest Effect": "Get Ready!",
     "Special": "Grants Inflatable"
@@ -3366,7 +3366,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Field, Weather",
-    "Effect": "The weather changes to Hail for 5 rounds. While it is Hailing, all non-Ice Type Pokémon lose a Tick of Hit Points at the beginning of their turn.",
+    "Effect": "The weather changes to Hail for 5 rounds. While it is [[keyword:Weather]](Hailing), all non-Ice Type Pokémon lose a Tick of Hit Points at the beginning of their turn.",
     "Contest Type": "Beauty",
     "Contest Effect": "Sabotage"
   },
@@ -3681,7 +3681,7 @@
     "Damage Base": "11",
     "Class": "Special",
     "Range": "Burst 1, [[keyword:Smite]]",
-    "Effect": "Hurricane Confuses its target on 15+. If the target is in Sunny Weather, Hurricane's Accuracy Check is 11. If the target is in Rainy Weather, Hurricane cannot miss. If the target is airborne as a result of Fly or Sky Drop, Hurricane cannot miss.",
+    "Effect": "Hurricane Confuses its target on 15+. If the target is in [[keyword:Weather]](Sunny Weather), Hurricane's Accuracy Check is 11. If the target is in [[keyword:Weather]](Rainy Weather), Hurricane cannot miss. If the target is airborne as a result of Fly or Sky Drop, Hurricane cannot miss.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
   },
@@ -3714,7 +3714,7 @@
     "Damage Base": "8",
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "This Move does not deal reduced damage in Sunny Weather. It instead deals +10 damage in Sunny Weather. NOTE: If you are using the Weathers from Domovoi's Rework, the [Sun Shining] Blessing may not be activated against this Move."
+    "Effect": "This Move does not deal reduced damage in [[keyword:Weather]](Sunny Weather). It instead deals +10 damage in [[keyword:Weather]](Sunny Weather). NOTE: If you are using the Weathers from Domovoi's Rework, the [Sun Shining] Blessing may not be activated against this Move."
   },
   "Hyper Beam": {
     "Type": "Normal",
@@ -4369,8 +4369,8 @@
     "AC": "2",
     "Damage Base": "See Effect",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Weight Class",
-    "Effect": "Low Kick's Damage Base is equal to twice the target's Weight Class.",
+    "Range": "Melee, 1 Target, [[keyword:Weight Class]]",
+    "Effect": "Low Kick's Damage Base is equal to twice the target's [[keyword:Weight Class]].",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
@@ -4935,7 +4935,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "The user regains Hit Points equal to half of its full Hit Point value. If it is Sunny, the user gains 2/3 of its full Hit Point value. If it is Rainy, Sand Storming or Hailing the user gains 1/4 of their full Hit Point value.",
+    "Effect": "The user regains Hit Points equal to half of its full Hit Point value. If it is [[keyword:Weather]](Sunny), the user gains 2/3 of its full Hit Point value. If it is [[keyword:Weather]](Rainy), [[keyword:Weather]](Sand Storming) or [[keyword:Weather]](Hailing) the user gains 1/4 of their full Hit Point value.",
     "Contest Type": "Beauty",
     "Contest Effect": "Reflective Appeal"
   },
@@ -4945,7 +4945,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "The user regains Hit Points equal to half of its full Hit Point value. If it is Sunny, the user gains 2/3 of its full Hit Point value. If it is Rainy, Sand Storming or Hailing the user gains 1/4 of their full Hit Point value.",
+    "Effect": "The user regains Hit Points equal to half of its full Hit Point value. If it is [[keyword:Weather]](Sunny), the user gains 2/3 of its full Hit Point value. If it is [[keyword:Weather]](Rainy), [[keyword:Weather]](Sand Storming) or [[keyword:Weather]](Hailing) the user gains 1/4 of their full Hit Point value.",
     "Contest Type": "Beauty",
     "Contest Effect": "Reflective Appeal"
   },
@@ -6076,7 +6076,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Field, Weather",
-    "Effect": "The weather becomes Rainy for 5 rounds. While Rainy, Water-Type Attacks gain a +5 bonus to Damage Rolls, and Fire-Type Attacks suffer a -5 Damage penalty.",
+    "Effect": "The weather becomes [[keyword:Weather]](Rainy) for 5 rounds. While [[keyword:Weather]](Rainy), Water-Type Attacks gain a +5 bonus to Damage Rolls, and Fire-Type Attacks suffer a -5 Damage penalty.",
     "Contest Type": "Tough",
     "Contest Effect": "Sabotage"
   },
@@ -6531,7 +6531,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Field, Weather",
-    "Effect": "The weather changes to a Sandstorm for 5 rounds. While it is Sandstorming, all non-Ground, Rock, or Steel Type Pokémon lose a Tick of Hit Points at the beginning of their turn.",
+    "Effect": "The weather changes to a [[keyword:Weather]](Sandstorm) for 5 rounds. While it is [[keyword:Weather]](Sandstorming), all non-Ground, Rock, or Steel Type Pokémon lose a Tick of Hit Points at the beginning of their turn.",
     "Contest Type": "Tough",
     "Contest Effect": "Sabotage"
   },
@@ -6850,7 +6850,7 @@
     "Frequency": "Daily x2",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "The user regains Hit Points equal to half of its full Hit Point value. If it is Sand Storming, the user gains 2/3 of its full Hit Point value instead. If it is Sunny, Rainy or Hailing the user gains 1/4 of their full Hit Point value instead.",
+    "Effect": "The user regains Hit Points equal to half of its full Hit Point value. If it is [[keyword:Weather]](Sand Storming), the user gains 2/3 of its full Hit Point value instead. If it is [[keyword:Weather]](Sunny), [[keyword:Weather]](Rainy) or [[keyword:Weather]](Hailing) the user gains 1/4 of their full Hit Point value instead.",
     "Contest Type": "Tough",
     "Contest Effect": "Reflective Appeal"
   },
@@ -7215,8 +7215,8 @@
     "Damage Base": "12",
     "Class": "Special",
     "Range": "Line 6, [[keyword:Set-Up]]",
-    "Set-Up Effect": "If the weather is not Sunny, the user's turn ends. If the weather is Sunny, immediately proceed to the Resolution Effect instead and this Move loses the [[keyword:Set-Up]] keyword.",
-    "Resolution Effect": "The user attacks with Solar Beam. If the weather is Rainy, Sandstorming, or Hailing, Solar Beam's Damage Base is lowered to 6 (2d6+8 / 15).",
+    "Set-Up Effect": "If the weather is not [[keyword:Weather]](Sunny), the user's turn ends. If the weather is [[keyword:Weather]](Sunny), immediately proceed to the Resolution Effect instead and this Move loses the [[keyword:Set-Up]] keyword.",
+    "Resolution Effect": "The user attacks with Solar Beam. If the weather is [[keyword:Weather]](Rainy), [[keyword:Weather]](Sandstorming), or [[keyword:Weather]](Hailing), Solar Beam's Damage Base is lowered to 6 (2d6+8 / 15).",
     "Contest Type": "Cool",
     "Contest Effect": "Special Attention"
   },
@@ -7227,8 +7227,8 @@
     "Damage Base": "13",
     "Class": "Physical",
     "Range": "Melee, 1 Target, [[keyword:Set-Up]]",
-    "Set-Up Effect": "If the weather is not Sunny, the user gains +1 Combat Stage in Attack and Special Defense, and the user's turn ends. If the weather is Sunny, immediately proceed to the Resolution Effect instead and this Move loses the [[keyword:Set-Up]] keyword.",
-    "Resolution Effect": "The user attacks with Solar Blade. If the weather is Rainy, Sandstorming, or Hailing, Solar Blade’s Damage Base is lowered to 6 (2d6+8 / 15).",
+    "Set-Up Effect": "If the weather is not [[keyword:Weather]](Sunny), the user gains +1 Combat Stage in Attack and Special Defense, and the user's turn ends. If the weather is [[keyword:Weather]](Sunny), immediately proceed to the Resolution Effect instead and this Move loses the [[keyword:Set-Up]] keyword.",
+    "Resolution Effect": "The user attacks with Solar Blade. If the weather is [[keyword:Weather]](Rainy), [[keyword:Weather]](Sandstorming), or [[keyword:Weather]](Hailing), Solar Blade’s Damage Base is lowered to 6 (2d6+8 / 15).",
     "Contest Type": "Cool",
     "Contest Effect": "Special Attention"
   },
@@ -7725,7 +7725,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Field, Weather",
-    "Effect": "The weather becomes Sunny for 5 rounds. While Sunny, Fire-Type Attacks gain a +5 bonus to Damage Rolls, and Water-Type Attacks suffer a -5 Damage penalty.",
+    "Effect": "The weather becomes [[keyword:Weather]](Sunny) for 5 rounds. While [[keyword:Weather]](Sunny), Fire-Type Attacks gain a +5 bonus to Damage Rolls, and Water-Type Attacks suffer a -5 Damage penalty.",
     "Contest Type": "Beauty",
     "Contest Effect": "Sabotage"
   },
@@ -7902,7 +7902,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "The user regains Hit Points equal to half of its full Hit Point value. If it is Sunny, the user gains 2/3 of its full Hit Point value instead. If it is Rainy, Sand Storming or Hailing the user gains 1/4 of their full Hit Point value instead.",
+    "Effect": "The user regains Hit Points equal to half of its full Hit Point value. If it is [[keyword:Weather]](Sunny), the user gains 2/3 of its full Hit Point value instead. If it is [[keyword:Weather]](Rainy), [[keyword:Weather]](Sand Storming) or [[keyword:Weather]](Hailing) the user gains 1/4 of their full Hit Point value instead.",
     "Contest Type": "Smart",
     "Contest Effect": "Reflective Appeal"
   },
@@ -8183,7 +8183,7 @@
     "Damage Base": "11",
     "Class": "Special",
     "Range": "12, 1 Target, [[keyword:Smite]]",
-    "Effect": "Thunder Paralyzes its target on 15+. If the target is in Sunny Weather, Thunder's Accuracy Check is 11. If the target is in Rainy Weather, Thunder cannot miss. If the target is airborne as a result of Fly or Sky Drop, Thunder cannot miss.",
+    "Effect": "Thunder Paralyzes its target on 15+. If the target is in [[keyword:Weather]](Sunny Weather), Thunder's Accuracy Check is 11. If the target is in [[keyword:Weather]](Rainy Weather), Thunder cannot miss. If the target is airborne as a result of Fly or Sky Drop, Thunder cannot miss.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
   },
@@ -8769,7 +8769,7 @@
     "Damage Base": "5",
     "Class": "Special",
     "Range": "8, 1 Target",
-    "Effect": "If it is Sunny, Weather Ball is Fire-Type. If it is Rainy, Weather Ball is Water-Type. If it is Hailing, Weather Ball is Ice-Type. If it is Sandstorming, Weather Ball is Rock-Type. When a weather effect is on the field, Weather Ball has a Damage Base of 10 (3d8+10 / 24). If there are multiple Weather Effects on the field, choose one type for Weather Ball to be that corresponds with an existing Weather Effect.",
+    "Effect": "If it is [[keyword:Weather]](Sunny), Weather Ball is Fire-Type. If it is [[keyword:Weather]](Rainy), Weather Ball is Water-Type. If it is [[keyword:Weather]](Hailing), Weather Ball is Ice-Type. If it is [[keyword:Weather]](Sandstorming), Weather Ball is Rock-Type. When a weather effect is on the field, Weather Ball has a Damage Base of 10 (3d8+10 / 24). If there are multiple Weather Effects on the field, choose one type for Weather Ball to be that corresponds with an existing Weather Effect.",
     "Contest Type": "Smart",
     "Contest Effect": "Incentives"
   },
@@ -8801,7 +8801,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "Melee, 1 Target, [[keyword:Push]]",
-    "Effect": "If Wicked Blow hits, it is a Critical Hit. The target is Pushed 6 meters minus their Weight Class. On a roll of 15+, the target is also [[status:Tripped]].",
+    "Effect": "If Wicked Blow hits, it is a Critical Hit. The target is Pushed 6 meters minus their [[keyword:Weight Class]]. On a roll of 15+, the target is also [[status:Tripped]].",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
