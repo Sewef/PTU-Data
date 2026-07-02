@@ -562,8 +562,7 @@ function renderItemAsCard(item, depth = 0) {
 
 function renderMoveCard(item) {
   let html = "";
-  const hasTablePlaceholderInDescription = typeof item.Description === "string"
-    && /\{\{table:[^}]+\}\}/.test(item.Description);
+  let pendingTableHtml = "";
 
   // ----- TITRE AVEC BADGES -----
   let title = item.Name || "";
@@ -598,14 +597,9 @@ function renderMoveCard(item) {
 
     // ----- TABLE OBJECT -----
     if (key === "table" && typeof value === "object" && value?.type === "table") {
-      // If the table is referenced in Description, it will be rendered inline there.
-      if (hasTablePlaceholderInDescription) {
-        continue;
-      }
-
       const tableHtml = renderSimpleTableHTML(value, { defaultHeaderRows: 2 });
       if (tableHtml) {
-        html += renderShowHideBlock("Table", tableHtml);
+        pendingTableHtml = renderShowHideBlock("Table", tableHtml);
       }
       continue;
     }
@@ -626,24 +620,7 @@ function renderMoveCard(item) {
 
     // ----- DESCRIPTION WITH TABLE PLACEHOLDER -----
     if (key === "Description" && typeof value === "string") {
-      let description = value;
-
-      if (item.table && typeof item.table === "object" && item.table.type === "table") {
-        const tableHtml = renderSimpleTableHTML(item.table, { defaultHeaderRows: 2 });
-
-        if (tableHtml) {
-          if (/\{\{table:[^}]+\}\}/.test(description)) {
-            description = description.replace(/\{\{table:([^}]+)\}\}/g, (_m, tableName) => {
-              const title = tableName ? `Table - ${tableName}` : "Table";
-              return renderShowHideBlock(title, tableHtml);
-            });
-          } else {
-            description += `\n${renderShowHideBlock("Table", tableHtml)}`;
-          }
-        } else {
-          description = description.replace(/\{\{table:[^}]+\}\}/g, "");
-        }
-      }
+      const description = value.replace(/\s*\{\{table:[^}]+\}\}\s*/g, "").trim();
 
       const safeValue = applyCustomShowHideTags(description);
       html += `<div class="mb-2"><strong>${key}:</strong> ${safeValue}</div>`;
@@ -656,6 +633,10 @@ function renderMoveCard(item) {
     html += `<p><strong>${key}:</strong> ${safeValue}</p>`;
   }
 
+
+  if (pendingTableHtml) {
+    html += pendingTableHtml;
+  }
 
   return html;
 }

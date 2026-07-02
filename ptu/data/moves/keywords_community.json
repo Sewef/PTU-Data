@@ -3,7 +3,7 @@
     "Description": "Moves with this Keyword manipulate Aura and may be affected by certain Abilities or effects."
   },
   "Berry": {
-    "Description": "Natural Gift has a different Damage Base and Elemental Type based on the Berry the user has stored a Digestion Buff from. Consult the Chart below.{{table:Berry}}",
+    "Description": "Natural Gift has a different Damage Base and Elemental Type based on the Berry the user has stored a Digestion Buff from. Consult the Chart below.",
     "table": {
       "type": "table",
       "rows": [
@@ -724,7 +724,7 @@
     "Description": "Whenever a Move with Double Strike is used, make two Attack Rolls. If one Attack Roll hits, the Move does damage as indicated by its Damage Base value; if both Attack Rolls hit however, the Damage Base value is doubled. Each hit may Critically Hit separately; when adding damage from Critical Hit, add the Damage Base before it's doubled. For example, if one Double Kick attack is a Critical Hit, add +1d6+5 to the damage roll. If both are Critical Hits, add +2d6+10."
   },
   "Environ": {
-    "Description": "A Pokémon using a Move with the Environ keyword consults the chart below for what Move or effect to use.{{table:Environ}}",
+    "Description": "A Pokémon using a Move with the Environ keyword consults the chart below for what Move or effect to use.",
     "table": {
       "type": "table",
       "rows": [
@@ -852,7 +852,7 @@
     "Description": "Whenever a Move with Five Strike is used, roll 1d8. On a result of 1, the attack hits one time. On a result of 2 or 3, the attack hits two times. On a result of 4, 5, or 6, the attack hits three times. On a result of 7, the attack hits four times. On a roll of 8, the attack hits five times. Multiply the Move's Damage Base by the number of times hit; that becomes its new Damage Base. You may always apply Technician to Moves with Five Strike. Apply STAB and all other effects that raise Damage Base only after the Move's final Damage Base has been calculated."
   },
   "Fling": {
-    "Description": "The Move Fling is very unique! Its effect depends on the held item of the user. If used a Trainer, they must throw an item in either hand.{{table:Fling}}",
+    "Description": "The Move Fling is very unique! Its effect depends on the held item of the user. If used a Trainer, they must throw an item in either hand.",
     "table": {
       "type": "table",
       "rows": [
@@ -1046,7 +1046,7 @@
     "Description": "Moves with the Weather keyword affects an area, changing the rules of the battle. Damage can be altered and even the Effects of moves can change depending on the Weather in battle. There can only be one Weather Effect in place at a time; new Weather Effects replace old Weather Effects. Weather Conditions last 5 rounds. Note that despite their names, Weather Conditions are not usually found as natural occurrences. A bright and sunny day does not count as Sunny Weather, nor does rain count as Rainy Weather. However, particularly severe examples of the corresponding weather can count. For example, a tropical rainstorm could count as Rainy weather.\nThe following are the four Weather Conditions and their effects:\n<div class=\"ptu-showhide\"><button class=\"btn btn-sm btn-primary \" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#weather\"aria-expanded=\"false\" aria-controls=\"weather\">Show / Hide</button><div id=\"weather\" class=\"collapse mt-0 row g-3 w-100\"><strong>Hail:</strong> While it is Hailing, all non-Ice Type Pokémon lose a Tick of Hit Points at the beginning of their turn.\n» Blizzard cannot miss in Hail.\n» Users with Ice Body recover a Tick of Hit Points at the beginning of each turn.\n» Users with Snow Cloak have their Evasion increased by +2 and adjacent allies are not damaged.\n» Users with Thermosensitive have Movement Capabilities reduced by half.\n<strong>Rainy:</strong> While Rainy, Water-Type Attacks gain a +5 bonus to Damage Rolls, and Fire-Type Attacks suffer a -5 Damage penalty.\n» Thunder and Hurricane cannot miss in Rain.\n» Users with Hydration are cured of one Status Affliction at the end of each turn.\n» Users with Rain Dish recover a Tick of Hit Points at the beginning of each turn.\n» Users with Swift Swim have their Speed Combat Stages increased by +4.\n» Users with Desert Weather gain 1/16th of their Max Hit Points at the end of each turn.\n» Users wth Dry Skin gain a Tick of Hit Points at the end of each turn.\n<strong>Sandstorm:</strong> While it is Sandstorming, all non-Ground, Rock, or Steel Type Pokémon lose a Tick of Hit Points at the beginning of their turn.\n» Users with Sand Force gain a +5 Damage Bonus to Ground, Rock, and Steel-Type Moves.\n» Users with Sand Rush have their Speed Combat Stages increased by +4.\n» Users with Desert Weather are immune to Sandstorm.\n<strong>Sunny:</strong> While Sunny, Fire-Type Attacks gain a +5 bonus to Damage Rolls, and Water-Type Attacks suffer a -5 Damage penalty.\n» Thunder and Hurricane are AC 11 in Sun.\n» Users with Dry Skin lose a Tick of Hit Points at the end of each turn.\n» Users with Thermosensitive have their Attack and Special Attack Combat Stages increased by +2.\n» Users with Desert Weather resist Fire-Type Moves one step further.\n» Users with Sun Blanket gain 1/16th of their Max Hit Points at the beginning of each turn.\n» Users with Leaf Guard are cured of one Status Affliction at the end of each turn.\n» Users with Harvest automatically retain uses of Digestion Buffs.\n» Users with Chlorophyll have their Speed Combat Stages increased by +4.\n» Users with Flower Gift can create a Burst 4 that increases the Stats of allies and the user by two 2 Combat Stages, distributed as they wish. Users with Forecast change their Type based on the Weather. Fire-Type if Sunny, Water-Type if Rainy, Ice-Type if Hailing, and Rock-Type if in a Sandstorm. Weather Ball changes Types in Weather. Fire-Type if Sunny, Water-Type if Rainy, Ice-Type if Hailing, and Rock-Type if in a Sandstorm.</div></div>"
   },
   "Weight Class": {
-    "Description": "A Move with the Weight Class Keyword refers to the following.{{table:Weight Class}}",
+    "Description": "A Move with the Weight Class Keyword refers to the following.",
     "table": {
       "type": "table",
       "rows": [

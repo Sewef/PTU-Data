@@ -130,6 +130,9 @@ def process_keyword_value(keyword_value: Any, keyword_name: str) -> Dict[str, An
     # If already processed (dict with Description), update it
     if isinstance(keyword_value, dict):
         result = keyword_value.copy()
+
+        if isinstance(result.get("Description"), str):
+            result["Description"] = re.sub(r'\s*\{\{table:[^}]+\}\}\s*', ' ', result["Description"]).strip()
         
         # Ensure headerRows is set in table if present
         if "table" in result and isinstance(result["table"], dict):
