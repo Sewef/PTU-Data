@@ -147,6 +147,7 @@ def convert_table(table_data: Dict[str, Any]) -> Dict[str, Any]:
     # This allows us to "compact" columns by moving data upwards
     column_data = {col: [] for col in columns}
     start_row_index = 1 if has_header_row else 0  # Skip first row if it's a header
+    header_rows_count = 2  # Group row + column row
     
     for group in groups:
         rows = group.get("rows", [])
@@ -180,6 +181,7 @@ def convert_table(table_data: Dict[str, Any]) -> Dict[str, Any]:
     # Assemble final table structure
     result = {
         "type": "table",
+        "headerRows": header_rows_count,
         "rows": [group_header_row, column_header_row] + data_rows
     }
     

@@ -1,6 +1,7 @@
 import {
   debounce,
   jsonToItems,
+  renderSimpleTableHTML,
   buildPillSection,
   getSelectedPills,
   filterText,
@@ -79,7 +80,7 @@ function buildSidebarMoves(allItems, container, cols) {
   typesLabel.textContent = "Types";
   typesGroup.appendChild(typesLabel);
 
-  // Les pills sont insérées DANS ce group
+  // Les pills sont ins+�r+�es DANS ce group
   buildPillSection(typesGroup, "type-filters", moveTypes, {
     attr: "data-type",
     onChange: () => refreshMoves(allItems, container, cols)
@@ -198,7 +199,7 @@ function buildSidebarMoves(allItems, container, cols) {
         if (part.toLowerCase().includes('melee')) {
           rangeDistances.add('Melee');
         }
-        // Nombre isolé
+        // Nombre isol+�
         const match = part.match(/^(\d+)$/);
         if (match) {
           rangeDistances.add(match[1]);
@@ -249,13 +250,13 @@ function buildSidebarMoves(allItems, container, cols) {
       const parts = variant.split(',').map(p => p.trim());
       
       parts.forEach(part => {
-        // Supprimer le contenu entre parenthèses (ex: "(see Effect)")
+        // Supprimer le contenu entre parenth+�ses (ex: "(see Effect)")
         part = part.replace(/\s*\([^)]*\)/g, '').trim();
         
         // Ignorer les nombres seuls
         if (/^\d+$/.test(part)) return;
         
-        // Gérer les patterns "X or Y" (ex: "Burst 1 or Close Blast 2")
+        // G+�rer les patterns "X or Y" (ex: "Burst 1 or Close Blast 2")
         const orParts = part.split(/\s+or\s+/i);
         
         orParts.forEach(subPart => {
@@ -268,7 +269,7 @@ function buildSidebarMoves(allItems, container, cols) {
             return;
           }
           
-          // Pattern "Burst 1*", "Cone 2*", etc. -> garder seulement le mot-clé
+          // Pattern "Burst 1*", "Cone 2*", etc. -> garder seulement le mot-cl+�
           const asteriskMatch = subPart.match(/^(Cone|Line|Burst|Close Blast|Blast)\s+\d+\*$/i);
           if (asteriskMatch) {
             rangeKeywords.add(asteriskMatch[1]);
@@ -284,7 +285,7 @@ function buildSidebarMoves(allItems, container, cols) {
           
           // Autres mots en enlevant les nombres
           const cleaned = subPart.replace(/\d+/g, '').trim();
-          // Exclure 'melee', 'target' et 'targets' (gérés par d'autres filtres)
+          // Exclure 'melee', 'target' et 'targets' (g+�r+�s par d'autres filtres)
           const lowerCleaned = cleaned.toLowerCase();
           if (cleaned && lowerCleaned !== 'melee' && lowerCleaned !== 'target' && lowerCleaned !== 'targets') {
             rangeKeywords.add(cleaned);
@@ -449,7 +450,7 @@ export function loadKeywordsAsCard(file, container, cols = 3) {
 
     renderFilteredCards(allItems, container, cols);
 
-    // 🎯 Ajout du filtre texte
+    // ��Ļ Ajout du filtre texte
     const searchInput = document.getElementById("keyword-search");
     if (searchInput) {
       searchInput.addEventListener("input", function () {
@@ -471,12 +472,12 @@ function loadJsonAsCard(file, container, cols = 3) {
       return;
     }
 
-    // Déclare allItems localement
+    // D+�clare allItems localement
     const allItems = jsonToItems(data);
 
     renderFilteredCards(allItems, container, cols);
 
-    // Supprime ancien listener s'il existe (évite multi écouteurs)
+    // Supprime ancien listener s'il existe (+�vite multi +�couteurs)
     const searchInput = document.getElementById("card-search");
     if (searchInput) {
       searchInput.oninput = function () {
@@ -542,7 +543,7 @@ function renderItemAsCard(item, depth = 0) {
     } else {
       const safeValue = (value ?? "").toString().replace(/\n/g, "<br>");
 
-      // --- CAS SPÉCIAL DAMAGE BASE ---
+      // --- CAS SP+�CIAL DAMAGE BASE ---
       if (key === "Damage Base") {
         const formatted = formatDamageBaseValue(value);
         str += `<strong>Damage Base</strong>: ${formatted}<br>`;
@@ -563,15 +564,15 @@ function renderMoveCard(item) {
   // ----- TITRE AVEC BADGES -----
   let title = item.Name || "";
 
-  // Badge coloré du type
+  // Badge color+� du type
   if (item.Type)
     title += ` <span class="badge badge-type">${item.Type}</span>`;
 
-  // Badges complémentaires
+  // Badges compl+�mentaires
   if (item.Frequency)
     title += ` <span class="badge bg-secondary">${item.Frequency}</span>`;
 
-  // Badge physique/spéciale/status basé sur Class
+  // Badge physique/sp+�ciale/status bas+� sur Class
   // Badge de classe (Physical / Special / Status)
   if (item.Class) {
     const cls = item.Class.toLowerCase();
@@ -581,7 +582,7 @@ function renderMoveCard(item) {
     else if (cls.includes("special")) classTag = "Special";
     else if (cls.includes("status")) classTag = "Status";
 
-    // Le badge utilise la couleur définie par .card-type-XXX
+    // Le badge utilise la couleur d+�finie par .card-type-XXX
     title += ` <span class="badge badge-type card-type-${classTag}">${item.Class}</span>`;
   }
 
@@ -590,6 +591,12 @@ function renderMoveCard(item) {
   // ----- Best-PTU rendering -----
   for (const [key, value] of Object.entries(item)) {
     if (["Name", "Type"].includes(key)) continue;
+
+    // ----- TABLE OBJECT -----
+    if (key === "table" && typeof value === "object" && value?.type === "table") {
+      html += renderSimpleTableHTML(value, { defaultHeaderRows: 2 });
+      continue;
+    }
 
     // Sous-objet
     if (typeof value === "object" && value !== null && !Array.isArray(value)) {
@@ -602,6 +609,19 @@ function renderMoveCard(item) {
     if (key === "Damage Base") {
       const formatted = formatDamageBaseValue(value ?? "");
       html += `<p><strong>Damage Base:</strong> ${formatted}</p>`;
+      continue;
+    }
+
+    // ----- DESCRIPTION WITH TABLE PLACEHOLDER -----
+    if (key === "Description" && typeof value === "string") {
+      let description = value;
+
+      if (item.table && typeof item.table === "object" && item.table.type === "table") {
+        description = description.replace(/\{\{table:[^}]+\}\}/g, "");
+      }
+
+      const safeValue = description.replace(/\n/g, "<br>");
+      html += `<p><strong>${key}:</strong> ${safeValue}</p>`;
       continue;
     }
 

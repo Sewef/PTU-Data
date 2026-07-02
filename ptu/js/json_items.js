@@ -5,6 +5,8 @@
 // d'indiquer l'affichage des sous-catégories, ex.:
 // "_display": { "Tiers": { type: "table", rowPerField: true, idField: "Name" } }
 
+import { escapeHTML, renderSimpleTable } from "/ptu/js/helpers.js";
+
 let itemsData = {};
 let activeCategory = null;
 let edgeColSize = 4;
@@ -299,38 +301,20 @@ function renderAsCards(entries, subcat, q, rowEl) {
         const meta = (itemsData[activeCategory]._display && itemsData[activeCategory]._display[k]) || {};
         const columns = meta.columns || Object.keys(v[0]);
 
-        const wrap = document.createElement("div");
-        wrap.className = "table-responsive mt-2";
+        const tableObj = {
+          type: "table",
+          headerRows: 1,
+          rows: [
+            columns.map(c => ({ text: c })),
+            ...v.map(entry => columns.map(c => ({ text: entry[c] == null ? "—" : String(entry[c]) })))
+          ]
+        };
 
-        const table = document.createElement("table");
-        table.className = "table table-sm table-striped mb-0";
-
-        // en-tête
-        const thead = document.createElement("thead");
-        const headRow = document.createElement("tr");
-        columns.forEach(c => {
-          const th = document.createElement("th");
-          th.textContent = c;
-          headRow.appendChild(th);
+        const wrap = renderSimpleTable(tableObj, {
+          defaultHeaderRows: 1,
+          wrapperClassName: "table-responsive mt-2"
         });
-        thead.appendChild(headRow);
-        table.appendChild(thead);
-
-        // corps
-        const tbody = document.createElement("tbody");
-        v.forEach(entry => {
-          const tr = document.createElement("tr");
-          columns.forEach(c => {
-            const td = document.createElement("td");
-            const val = entry[c];
-            td.textContent = val == null ? "—" : String(val);
-            tr.appendChild(td);
-          });
-          tbody.appendChild(tr);
-        });
-        table.appendChild(tbody);
-
-        wrap.appendChild(table);
+        if (!wrap) return;
 
         const label = document.createElement("p");
         label.innerHTML = `<strong>${escapeHTML(k)}:</strong>`;
@@ -350,7 +334,7 @@ function renderAsCards(entries, subcat, q, rowEl) {
 
       body.insertAdjacentHTML(
         "beforeend",
-        `<p><strong>${escapeHTML(k)}:</strong> ${escapeHTML(displayValue)}</p>`
+        `<p><strong>${escapeHTML(k)}:</strong> ${escapeHTML(displayValue).replace(/\n/g, "<br>")}</p>`
       );
 
     });
@@ -430,7 +414,7 @@ function renderAsTable(entries, subcat, meta, q, rowEl) {
       cols.forEach(k => {
         const td = document.createElement("td");
         const v = obj[k];
-        td.innerHTML = v == null ? "—" : escapeHTML(String(v));
+        td.innerHTML = v == null ? "—" : escapeHTML(String(v)).replace(/\n/g, "<br>");
         tr.appendChild(td);
       });
       tbody.appendChild(tr);
@@ -484,7 +468,7 @@ function renderAsTable(entries, subcat, meta, q, rowEl) {
     filtered.forEach(obj => {
       const td = document.createElement("td");
       const val = obj[k];
-      td.innerHTML = val == null ? "—" : escapeHTML(String(val));
+      td.innerHTML = val == null ? "—" : escapeHTML(String(val)).replace(/\n/g, "<br>");
       tr.appendChild(td);
     });
 
@@ -539,12 +523,3 @@ function collectRowKeys(entries, idField) {
   return out;
 }
 
-function escapeHTML(str) {
-  return str
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;")
-    .replaceAll(/\n/g, "<br>");
-}

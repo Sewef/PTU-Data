@@ -1,3 +1,8 @@
+import {
+  renderSimpleTable as renderSimpleTableShared,
+  renderHierarchicalTable as renderHierarchicalTableShared
+} from "/ptu/js/helpers.js";
+
 // ----------------------- GLOBAL VARIABLES -----------------------------------
 let classesData = {};
 let activeSources = new Set();
@@ -805,9 +810,12 @@ function createCard(feat, clsMeta, isGeneral, nested = false) {
  * Structure: { type: "table", rows: [ [{text: "...", colspan: 2}, ...], [...], ... ] }
  */
 function renderSimpleTable(tableObj, title, q, parentEl) {
-  if (!tableObj.rows || !Array.isArray(tableObj.rows) || tableObj.rows.length === 0) {
-    return;
-  }
+  const wrap = renderSimpleTableShared(tableObj, {
+    defaultHeaderRows: 2,
+    query: q,
+    wrapperClassName: "table-responsive"
+  });
+  if (!wrap) return;
 
   // Card + body
   const card = document.createElement("div");
@@ -815,75 +823,6 @@ function renderSimpleTable(tableObj, title, q, parentEl) {
   const body = document.createElement("div");
   body.className = "card-body bg-body-secondary";
 
-  // Responsive wrapper
-  const wrap = document.createElement("div");
-  wrap.className = "table-responsive";
-
-  // Table
-  const table = document.createElement("table");
-  table.className = "table table-sm table-striped mb-0 items-table";
-
-  const tbody = document.createElement("tbody");
-
-  // Render each row
-  tableObj.rows.forEach((rowData, rowIndex) => {
-    if (!Array.isArray(rowData)) return;
-
-    // Apply search filter on data rows (skip header rows - first 2 rows typically)
-    if (q && rowIndex >= 2) {
-      const hay = rowData
-        .map(cell => (cell && cell.text ? String(cell.text).toLowerCase() : ""))
-        .join(" ");
-      if (!hay.includes(String(q).toLowerCase())) {
-        return; // Skip this row
-      }
-    }
-
-    const tr = document.createElement("tr");
-    
-    // First two rows are typically headers
-    if (rowIndex < 2) {
-      tr.className = "table-group-header";
-    }
-
-    rowData.forEach(cellData => {
-      const isHeader = rowIndex < 2;
-      const cell = document.createElement(isHeader ? "th" : "td");
-      
-      if (cellData && typeof cellData === "object") {
-        const text = cellData.text != null ? cellData.text : "";
-        cell.innerHTML = text === "" ? "—" : escapeHTML(String(text)).replaceAll("\n", "<br>");
-        
-        // Handle colspan
-        if (cellData.colspan && cellData.colspan > 1) {
-          cell.colSpan = cellData.colspan;
-        }
-        
-        // Handle rowspan if needed
-        if (cellData.rowspan && cellData.rowspan > 1) {
-          cell.rowSpan = cellData.rowspan;
-        }
-        
-        // Apply header styling
-        if (isHeader) {
-          cell.className = "fw-bold bg-light text-center";
-        }
-      } else {
-        // Fallback for simple values
-        cell.innerHTML = cellData != null ? escapeHTML(String(cellData)).replaceAll("\n", "<br>") : "—";
-        if (isHeader) {
-          cell.className = "fw-bold bg-light text-center";
-        }
-      }
-      
-      tr.appendChild(cell);
-    });
-
-    tbody.appendChild(tr);
-  });
-
-  table.appendChild(tbody);
-  wrap.appendChild(table);
   body.appendChild(wrap);
   card.appendChild(body);
   parentEl.appendChild(card);
@@ -894,9 +833,11 @@ function renderSimpleTable(tableObj, title, q, parentEl) {
  * Structure: { columns: [...], groups: [ { label: "...", rows: [...] }, ... ] }
  */
 function renderHierarchicalTable(tableObj, title, q, parentEl) {
-  if (!tableObj.groups || !Array.isArray(tableObj.groups) || tableObj.groups.length === 0) {
-    return;
-  }
+  const wrap = renderHierarchicalTableShared(tableObj, {
+    query: q,
+    wrapperClassName: "table-responsive"
+  });
+  if (!wrap) return;
 
   // Card + body
   const card = document.createElement("div");
@@ -904,67 +845,6 @@ function renderHierarchicalTable(tableObj, title, q, parentEl) {
   const body = document.createElement("div");
   body.className = "card-body bg-body-secondary";
 
-  // Responsive wrapper
-  const wrap = document.createElement("div");
-  wrap.className = "table-responsive";
-
-  // Table
-  const table = document.createElement("table");
-  table.className = "table table-sm table-striped mb-0 items-table";
-
-  const columns = tableObj.columns || [];
-  
-  // Colgroup with widths
-  if (columns.length > 0) {
-    const cg = document.createElement("colgroup");
-    columns.forEach(() => {
-      cg.appendChild(document.createElement("col"));
-    });
-    table.appendChild(cg);
-  }
-
-  // Build table body with groups as sections
-  const tbody = document.createElement("tbody");
-
-  tableObj.groups.forEach((group) => {
-    const groupLabel = group.label || "Group";
-    const groupRows = group.rows || [];
-
-    // Add group label row (spanning all columns)
-    const labelRow = document.createElement("tr");
-    labelRow.className = "table-group-header";
-    const labelCell = document.createElement("td");
-    labelCell.colSpan = columns.length || groupRows[0]?.length || 1;
-    labelCell.className = "fw-bold bg-light text-muted";
-    labelCell.textContent = groupLabel;
-    labelRow.appendChild(labelCell);
-    tbody.appendChild(labelRow);
-
-    // Add data rows for this group
-    groupRows.forEach((rowObj) => {
-      // Apply search filter
-      if (q) {
-        const hay = Object.values(rowObj || {})
-          .map(v => (v == null ? "" : String(v).toLowerCase()))
-          .join(" ");
-        if (!hay.includes(String(q).toLowerCase())) {
-          return; // Skip this row
-        }
-      }
-
-      const tr = document.createElement("tr");
-      columns.forEach(colName => {
-        const td = document.createElement("td");
-        const v = rowObj[colName];
-        td.innerHTML = v == null ? "—" : escapeHTML(String(v));
-        tr.appendChild(td);
-      });
-      tbody.appendChild(tr);
-    });
-  });
-
-  table.appendChild(tbody);
-  wrap.appendChild(table);
   body.appendChild(wrap);
   card.appendChild(body);
   parentEl.appendChild(card);
