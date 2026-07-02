@@ -1893,7 +1893,36 @@
     "Name": "Quill & Rock",
     "Frequency": "Static",
     "Effect": "Squawkabilly's Advanced and High Abilities depend on their plumage color (decided upon generation). Innate.",
-    "Plumage": "\n- Color: Green, Advanced: Rockabilly, High: Intimidate,\n- Color: Blue, Advanced: Pack Hunt, High: Defiant,\n- Color: Yellow, Advanced: Vicious, High: Reckless,\n- Color: White, Advanced: Teamwork, High: Ambush"
+    "table": {
+      "type": "table",
+      "rows": [
+        [
+          "Plumage Color",
+          "Advanced Ability",
+          "High"
+        ],
+        [
+          "Green",
+          "Rockabilly",
+          "Intimidate"
+        ],
+        [
+          "Blue",
+          "Pack Hunt",
+          "Defiant"
+        ],
+        [
+          "Yellow",
+          "Vicious",
+          "Reckless"
+        ],
+        [
+          "White",
+          "Teamwork",
+          "Ambush"
+        ]
+      ]
+    }
   },
   {
     "Name": "RKS System",
@@ -2766,7 +2795,41 @@
     "Frequency": "Daily – Extended Action",
     "Trigger": "The user is having a [Training] Feature applied by its Trainer.",
     "Effect": "Connection – See Below. The user may choose one of the following Types. Until that [Training] Feature no longer applies, the user gains STAB on Moves of that Type and grants the Ability associated with that Type, as well as letting the user learn the Move of that Type as if it was a Move with the Connection keyword for this Ability. Innate.",
-    "Types": "\n- Type: Dark, Ability: Intimidate, Move: Wicked Torque\n- Type: Fire, Ability: Speed Boost, Move: Blazing Torque,\n- Type: Poison, Ability: Toxic Debris, Move: Noxious Torque,\n- Type: Fairy, Ability: Misty Surge, Move: Magical Torque,\n- Type: Fighting, Ability: Stamina, Move: Combat Torque"
+    "table": {
+      "type": "table",
+      "rows": [
+        [
+          "Type",
+          "Ability",
+          "Move"
+        ],
+        [
+          "Dark",
+          "Intimidate",
+          "Wicked Torque"
+        ],
+        [
+          "Fire",
+          "Speed Boost",
+          "Blazing Torque"
+        ],
+        [
+          "Poison",
+          "Toxic Debris",
+          "Noxious Torque"
+        ],
+        [
+          "Fairy",
+          "Misty Surge",
+          "Magical Torque"
+        ],
+        [
+          "Fighting",
+          "Stamina",
+          "Combat Torque"
+        ]
+      ]
+    }
   },
   {
     "Name": "Vename",
