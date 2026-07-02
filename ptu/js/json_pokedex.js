@@ -520,6 +520,47 @@ function setupIcon(img, num, name, mode = "icon") {
   img.src = CFG.iconPatterns[0](base, num, slug);
 }
 
+// Analyze type structure to detect form variants
+function analyzeFormTypes(p) {
+  const info = p?.["Basic Information"] || {};
+  const raw = info.Type;
+  
+  // Check if Type contains an array with form objects
+  if (Array.isArray(raw) && raw.length > 0) {
+    const firstItem = raw[0];
+    if (firstItem && typeof firstItem === "object" && !Array.isArray(firstItem)) {
+      // This is a form variant object like { "Baille": ["Fire","Flying"], "Pom Pom": [...] }
+      const primaryTypes = [];
+      const secondaryTypes = [];
+      
+      for (const formTypes of Object.values(firstItem)) {
+        if (Array.isArray(formTypes)) {
+          if (formTypes[0] && !primaryTypes.includes(formTypes[0])) {
+            primaryTypes.push(formTypes[0]);
+          }
+          if (formTypes[1] && !secondaryTypes.includes(formTypes[1])) {
+            secondaryTypes.push(formTypes[1]);
+          }
+        }
+      }
+      
+      if (primaryTypes.length > 1) {
+        return {
+          hasFormVariants: true,
+          primaryTypes,
+          secondaryType: secondaryTypes[0] || null
+        };
+      }
+    }
+  }
+  
+  // Normal case: return extracted types
+  return {
+    hasFormVariants: false,
+    types: extractTypes(p)
+  };
+}
+
 function applyBadgeBackground(el, types) {
   if (!types || types.length === 0) {
     el.style.background = "#151922";
@@ -530,12 +571,56 @@ function applyBadgeBackground(el, types) {
     el.style.background = `var(--type-color)`;
     el.style.color = "#0f1115";
     el.style.borderColor = "rgba(255,255,255,.15)";
-  } else {
-    // Pre-compute colors for gradient - avoid repeated getComputedStyle calls
+  } else if (types.length === 2) {
+    // Dual-type: 50/50 horizontal split
     const c1 = getTypeColor(types[0]);
     const c2 = getTypeColor(types[1]);
     el.style.background = `linear-gradient(90deg, ${c1} 50%, ${c2} 50%)`;
     el.style.borderColor = "rgba(255,255,255,.15)";
+  } else {
+    // More than 2 types (form variants): horizontal stripes
+    const colors = types.map(t => getTypeColor(t));
+    const stripeHeight = 100 / types.length;
+    const stops = [];
+    for (let i = 0; i < colors.length; i++) {
+      const start = i * stripeHeight;
+      const end = (i + 1) * stripeHeight;
+      stops.push(`${colors[i]} ${start}%`, `${colors[i]} ${end}%`);
+    }
+    el.style.background = `linear-gradient(to bottom, ${stops.join(", ")})`;
+    el.style.borderColor = "rgba(255,255,255,.15)";
+  }
+}
+
+function applyBadgeBackgroundWithForms(el, typeInfo) {
+  if (typeInfo.hasFormVariants) {
+    // Form variants: left half with horizontal stripes, right half with secondary type
+    const primaryColors = typeInfo.primaryTypes.map(t => getTypeColor(t));
+    const stripeHeight = 100 / typeInfo.primaryTypes.length;
+    const leftStops = [];
+    
+    for (let i = 0; i < primaryColors.length; i++) {
+      const start = i * stripeHeight;
+      const end = (i + 1) * stripeHeight;
+      leftStops.push(`${primaryColors[i]} ${start}%`, `${primaryColors[i]} ${end}%`);
+    }
+    
+    if (typeInfo.secondaryType) {
+      const secondaryColor = getTypeColor(typeInfo.secondaryType);
+      el.style.background = `
+        linear-gradient(90deg, 
+          transparent 0%, transparent 50%,
+          ${secondaryColor} 50%, ${secondaryColor} 100%
+        ),
+        linear-gradient(to bottom, ${leftStops.join(", ")})
+      `.trim();
+    } else {
+      el.style.background = `linear-gradient(to bottom, ${leftStops.join(", ")})`;
+    }
+    el.style.borderColor = "rgba(255,255,255,.15)";
+  } else {
+    // Normal types
+    applyBadgeBackground(el, typeInfo.types);
   }
 }
 
@@ -559,14 +644,25 @@ function renderGrid(rows) {
       const p = rows[index];
       const name = getFullSpeciesName(p) || "Unknown";
       const num = pad3(p.Number ?? "0");
-      const types = extractTypes(p);
+      const typeInfo = analyzeFormTypes(p);
 
       const li = document.createElement("div");
       li.className = "dex-badge";
       if (p.Legendary) {
         li.classList.add("legendary");
       }
-      li.dataset.types = (types || []).join(",");
+      
+      // Store type info in dataset for background application
+      if (typeInfo.hasFormVariants) {
+        li.dataset.hasFormVariants = "true";
+        li.dataset.primaryTypes = typeInfo.primaryTypes.join(",");
+        if (typeInfo.secondaryType) {
+          li.dataset.secondaryType = typeInfo.secondaryType;
+        }
+        li.dataset.types = [...typeInfo.primaryTypes, typeInfo.secondaryType].filter(Boolean).join(",");
+      } else {
+        li.dataset.types = (typeInfo.types || []).join(",");
+      }
 
       const iconWrap = document.createElement("div");
       iconWrap.className = "icon dark-background";
@@ -595,8 +691,17 @@ function renderGrid(rows) {
     // Apply type backgrounds to the last batch only
     const batch = Array.from(grid.querySelectorAll(".dex-badge")).slice(-CHUNK);
     for (const el of batch) {
-      const types = el.dataset.types ? el.dataset.types.split(",") : [];
-      applyBadgeBackground(el, types);
+      if (el.dataset.hasFormVariants === "true") {
+        const typeInfo = {
+          hasFormVariants: true,
+          primaryTypes: el.dataset.primaryTypes ? el.dataset.primaryTypes.split(",") : [],
+          secondaryType: el.dataset.secondaryType || null
+        };
+        applyBadgeBackgroundWithForms(el, typeInfo);
+      } else {
+        const types = el.dataset.types ? el.dataset.types.split(",") : [];
+        applyBadgeBackground(el, types);
+      }
     }
 
     if (__SEQ__ !== __RENDER_SEQ) return;
