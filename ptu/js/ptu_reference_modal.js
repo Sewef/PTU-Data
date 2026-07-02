@@ -1,4 +1,5 @@
 import { DAMAGE_BASE_TABLE } from "/ptu/js/json_moves.js";
+import { renderShowHideBlock } from "/ptu/js/helpers.js";
 
 const DATA_BASE = "/ptu/data";
 const REFERENCE_TYPES = ["move", "ability", "capability", "status", "edge", "pokeedge", "item", "feature", "keyword"];
@@ -524,7 +525,13 @@ function renderAbilityDetailsCore(ab) {
       ? `<div style="white-space:pre-wrap">${escapeHtml(String(value))}</div>`
       : `<div style="white-space:pre-wrap"><strong>${escapeHtml(k)}:</strong> ${escapeHtml(String(value))}</div>`;
   }).filter(Boolean);
-  return `${row("Frequency", ab.Frequency)}${row("Target", ab.Target)}${row("Trigger", ab.Trigger)}${effects.length ? `<hr class="my-2">${effects.join("")}` : ""}`;
+
+  const shownKeys = new Set(["Name", "Frequency", "Target", "Trigger", "Source", "source", "Category", "category", ...effectKeys]);
+  const extras = Object.entries(ab)
+    .filter(([key, value]) => !key.startsWith("__") && !shownKeys.has(key) && !isBlank(value))
+    .map(([key, value]) => renderReferenceField(key, value, "mt-3"));
+
+  return `${row("Frequency", ab.Frequency)}${row("Target", ab.Target)}${row("Trigger", ab.Trigger)}${effects.length ? `<hr class="my-2">${effects.join("")}` : ""}${extras.join("")}`;
 }
 
 function renderCapabilityDetails(cap) {
@@ -560,11 +567,20 @@ function renderReferenceTitleBadges(entry) {
 function renderReferenceGenericDetails(entry) {
   const rows = Object.entries(entry)
     .filter(([key, value]) => !key.startsWith("__") && !["Name", "Move", "Source", "source", "Category", "category"].includes(key) && !isBlank(value))
-    .map(([key, value]) => `<div class="mb-2"><span class="text-muted">${escapeHtml(key)}:</span> ${renderReferenceGenericValue(value)}</div>`);
+    .map(([key, value]) => renderReferenceField(key, value, "mb-2"));
   return rows.length ? rows.join("") : '<p class="text-muted mb-0">No details available.</p>';
 }
 
+function renderReferenceField(key, value, className = "mb-2") {
+  if (isReferenceTable(value)) {
+    return `<div class="${className}">${renderReferenceGenericValue(value)}</div>`;
+  }
+  return `<div class="${className}"><span class="text-muted">${escapeHtml(key)}:</span> ${renderReferenceGenericValue(value)}</div>`;
+}
+
 function renderReferenceGenericValue(value) {
+  if (isReferenceTable(value)) return renderReferenceTable(value);
+
   if (Array.isArray(value)) {
     if (!value.length) return "";
     return `<div class="mt-1 ms-3">${value.map(item => `<div>${renderReferenceGenericValue(item)}</div>`).join("")}</div>`;
@@ -576,6 +592,78 @@ function renderReferenceGenericValue(value) {
       .join("")}</div>`;
   }
   return escapeHtml(String(value)).replaceAll("\n", "<br>");
+}
+
+function isReferenceTable(value) {
+  return !!(
+    value
+    && typeof value === "object"
+    && !Array.isArray(value)
+    && (
+      (value.type === "table" && Array.isArray(value.rows))
+      || (Array.isArray(value.columns) && Array.isArray(value.groups))
+    )
+  );
+}
+
+function renderReferenceTable(tableObj) {
+  const tableHtml = tableObj.type === "table" && Array.isArray(tableObj.rows)
+    ? renderSimpleReferenceTable(tableObj)
+    : renderGroupedReferenceTable(tableObj);
+  if (!tableHtml || tableObj.hidden !== true) return tableHtml;
+
+  return renderShowHideBlock(tableObj.collapseTitle || "Table", tableHtml, {
+    open: tableObj.collapseOpen === true,
+    buttonText: tableObj.collapseButtonText || "Show / Hide"
+  });
+}
+
+function renderSimpleReferenceTable(tableObj) {
+  const rows = tableObj.rows || [];
+  if (!rows.length) return "";
+  const headerRows = Math.max(0, Number(tableObj.headerRows ?? 1) || 0);
+  const headRows = rows.slice(0, headerRows);
+  const bodyRows = rows.slice(headerRows);
+  return `
+    <div class="table-responsive mt-2">
+      <table class="table table-sm table-striped mb-0 items-table">
+        ${headRows.length ? `<thead>${headRows.map(row => renderReferenceTableRow(row, "th")).join("")}</thead>` : ""}
+        <tbody>${bodyRows.map(row => renderReferenceTableRow(row, "td")).join("")}</tbody>
+      </table>
+    </div>`;
+}
+
+function renderGroupedReferenceTable(tableObj) {
+  const columns = Array.isArray(tableObj.columns) ? tableObj.columns : [];
+  const groups = Array.isArray(tableObj.groups) ? tableObj.groups : [];
+  return `
+    <div class="table-responsive mt-2">
+      <table class="table table-sm table-striped mb-0 items-table">
+        ${columns.length ? `<thead>${renderReferenceTableRow(columns, "th")}</thead>` : ""}
+        <tbody>
+          ${groups.map(group => {
+            const label = group?.label ? `<tr class="table-group-header"><td colspan="${Math.max(columns.length, 1)}"><strong>${escapeHtml(group.label)}</strong></td></tr>` : "";
+            const rows = Array.isArray(group?.rows) ? group.rows : [];
+            return `${label}${rows.map(row => renderReferenceTableRow(row, "td", columns)).join("")}`;
+          }).join("")}
+        </tbody>
+      </table>
+    </div>`;
+}
+
+function renderReferenceTableRow(row, cellTag = "td", columns = []) {
+  const values = Array.isArray(row)
+    ? row
+    : columns.length
+      ? columns.map(column => row?.[column])
+      : Object.values(row || {});
+  return `<tr>${values.map(value => renderReferenceTableCell(value, cellTag)).join("")}</tr>`;
+}
+
+function renderReferenceTableCell(value, tag) {
+  const text = value && typeof value === "object" && "text" in value ? value.text : value;
+  const colspan = value && typeof value === "object" && value.colspan ? ` colspan="${Number(value.colspan) || 1}"` : "";
+  return `<${tag}${colspan}>${escapeHtml(text ?? "")}</${tag}>`;
 }
 
 function renderSourceAndOverride(entry, noun, renderBase) {
