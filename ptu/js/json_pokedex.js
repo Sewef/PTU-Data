@@ -171,8 +171,7 @@ function __normalizeToken(s) {
     .toLowerCase()
     .replace(/[\u2013\u2014\-_]/g, "-")  // normalize dashes
     .replace(/\s+/g, " ")                // collapse spaces
-    .trim()
-    .replace(/\*+$/, "");                // remove trailing asterisks
+    .trim();
 }
 function __makeWildcardMatcher(queryRaw) {
   const q = __normalizeToken(queryRaw || "");
@@ -1335,36 +1334,60 @@ function activeTypes() {
   );
 }
 
+function valueMatchesMatcher(value, matcher) {
+  if (value == null) return false;
+
+  if (["string", "number", "boolean"].includes(typeof value)) {
+    const text = String(value);
+    return matcher(text) || text.split(",").some(part => matcher(part));
+  }
+
+  if (Array.isArray(value)) {
+    return value.some(item => valueMatchesMatcher(item, matcher));
+  }
+
+  if (typeof value === "object") {
+    return Object.entries(value).some(([key, nestedValue]) =>
+      matcher(key) || valueMatchesMatcher(nestedValue, matcher)
+    );
+  }
+
+  return false;
+}
+
 function pokemonHasCapability(p, queryRaw) {
   const matcher = __makeWildcardMatcher(queryRaw);
-  if (!p || !p["Capabilities"]) return matcher("");
-  const info = p["Capabilities"];
+  if (!p) return matcher("");
 
-  for (const [k, v] of Object.entries(info)) {
-    if (Array.isArray(v)) {
-      if (v.some(x => matcher(String(x || "")))) return true;
-    } else {
-      if (matcher(String(v || ""))) return true;
-    }
-  }
-  return false;
+  return [
+    p["Capabilities"],
+    p.capabilities,
+    p.otherCapabilities,
+    p["Basic Information"]?.Capabilities,
+    p["Basic Information"]?.capabilities,
+    p["Basic Information"]?.otherCapabilities,
+  ].some(value => valueMatchesMatcher(value, matcher));
 }
 
 function pokemonHasAbility(p, queryRaw) {
   const matcher = __makeWildcardMatcher(queryRaw);
-  if (!p || !p["Basic Information"]) return matcher("");
+  if (!p) return matcher("");
+
+  const candidates = [
+    p.abilityLearnset,
+    p.basicAbilities,
+    p.advancedAbilities,
+    p.highAbilities,
+  ];
+
   const info = p["Basic Information"];
-
-  for (const [k, v] of Object.entries(info)) {
-    if (!/ability/i.test(k)) continue;
-
-    if (Array.isArray(v)) {
-      if (v.some(x => matcher(String(x || "")))) return true;
-    } else {
-      if (matcher(String(v || ""))) return true;
+  if (info) {
+    for (const [key, value] of Object.entries(info)) {
+      if (/ability/i.test(key)) candidates.push(value);
     }
   }
-  return false;
+
+  return candidates.some(value => valueMatchesMatcher(value, matcher));
 }
 
 
