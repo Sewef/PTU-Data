@@ -240,7 +240,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Burst 1",
+    "Range": "Burst 1, Healing",
     "Effect": "All allies in the burst are cured of one status condition of their choice.",
     "Contest Type": "Smart",
     "Contest Effect": "Reflective Appeal"
@@ -3094,7 +3094,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Burst 3, Sonic",
+    "Range": "Burst 3, Sonic, Healing",
     "Effect": "All targets are cured of any Persistent Status ailments.",
     "Contest Type": "Beauty",
     "Contest Effect": "Reflective Appeal"
@@ -3124,7 +3124,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "6, 1 Target, Aura",
+    "Range": "6, 1 Target, Aura, Healing",
     "Effect": "Restores 50% of the target's max Hit Points. Heal Pulse's user may not target itself with Heal Pulse.",
     "Contest Type": "Beauty",
     "Contest Effect": "Reflective Appeal"
@@ -3134,7 +3134,7 @@
     "Frequency": "Daily",
     "AC": "None",
     "Class": "Status",
-    "Range": "6, 1 Target",
+    "Range": "6, 1 Target, Healing",
     "Effect": "The user immediately Faints, lowering its HP to 0. The user takes no Injuries from HP Markers when using Healing Wish. The target is immediately cured of up to 3 injuries, healed to their Maximum Hit Points, and has the Frequency of all Moves restored. Healing Wish may target a Pokémon in a Poké Ball. Healing Wish does not restore the Frequency of Healing Wish or Lunar Dance. Injuries healed through Healing Wish count toward the total number of Injuries that can be healed each day, and this healing is limited by the same.",
     "Contest Type": "Cute",
     "Contest Effect": "Safe Option"
@@ -4434,7 +4434,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self",
+    "Range": "Self, Healing",
     "Effect": "The user regains Hit Points equal to half of its full Hit Point value. If it is Sunny, the user gains 2/3 of its full Hit Point value. If it is Rainy, Sand Storming or Hailing the user gains 1/4 of their full Hit Point value.",
     "Contest Type": "Beauty",
     "Contest Effect": "Reflective Appeal"
@@ -5506,7 +5506,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self",
+    "Range": "Self, Healing",
     "Effect": "The user regains Hit Points equal to half of its full Hit Point value.",
     "Contest Type": "Smart",
     "Contest Effect": "Reflective Appeal"
@@ -5567,7 +5567,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self",
+    "Range": "Self, Healing",
     "Effect": "The user is set to their full Hit Point value. The user is cured of any Status ailments. Then, the user falls Asleep. The user cannot make Sleep Checks at the beginning of their turn. They are cured of the Sleep at the end of their turn in 2 rounds.",
     "Contest Type": "Cute",
     "Contest Effect": "Reflective Appeal"
@@ -6311,7 +6311,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self",
+    "Range": "Self, Healing",
     "Effect": "The user regains Hit Points equal to half of its full Hit Points.",
     "Contest Type": "Cute",
     "Contest Effect": "Reflective Appeal"
@@ -7157,7 +7157,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self",
+    "Range": "Self, Healing",
     "Effect": "The user regains Hit Points equal to half of its full Hit Point value. If it is Sunny, the user gains 2/3 of its full Hit Point value instead. If it is Rainy, Sand Storming or Hailing the user gains 1/4 of their full Hit Point value instead.",
     "Contest Type": "Smart",
     "Contest Effect": "Reflective Appeal"
@@ -7993,7 +7993,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "15, 1 Target",
+    "Range": "15, 1 Target, Healing",
     "Effect": "At the end of the user's next turn, the target regains Hit Points equal to half of its full Hit Point value. If the user targets themselves and are replaced in battle, the replacement is healed.",
     "Contest Type": "Cute",
     "Contest Effect": "Reflective Appeal"
