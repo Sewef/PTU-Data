@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
+
   <!-- Theme script must load before body to prevent flash -->
   <script src="/ptu/js/theme-switcher.min.js"></script>
 
@@ -33,6 +33,29 @@
       </aside>
       <main class="col-md-10">
         <h1 class="h4 mb-3">Abilities</h1>
+
+        <!-- Keywords block (collapsible) -->
+        <section id="keywords" class="mb-3">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <h2 class="h5 m-0">Keywords</h2>
+            <button class="btn btn-sm btn-primary" type="button" data-bs-toggle="collapse"
+              data-bs-target="#keywords-section" aria-expanded="false" aria-controls="keywords-section">
+              Show / Hide
+            </button>
+          </div>
+          <div id="keywords-section" class="collapse">
+            <div class="search-wrap mb-3">
+              <div class="row g-2 align-items-center">
+                <div class="col-sm-6">
+                  <input id="keyword-search" class="form-control" placeholder="Search keywords..." />
+                </div>
+              </div>
+            </div>
+
+            <div id="keywords-container" class="row g-3 w-100"></div>
+          </div>
+        </section>
+
         <div class="search-wrap mb-3">
           <div class="row g-2 align-items-center">
             <div class="col-sm-6">
@@ -44,13 +67,15 @@
       </main>
     </div>
   </div>
-  
+
   <script type="module">
     import { includeHTML, setActive, showPageWhenLoaded } from "/ptu/js/helpers.min.js";
     import { loadJsonAsCard } from "/ptu/js/json_utils.min.js";
+    import { loadKeywordsAsCard } from "/ptu/js/json_moves.min.js";
     includeHTML(() => {
       setActive();
       showPageWhenLoaded();
+      loadKeywordsAsCard("/ptu/data/abilities/keywords_core.min.json", document.getElementById("keywords-container"), 2);
       loadJsonAsCard("/ptu/data/abilities/abilities_community.min.json", document.getElementById("cards-container", 3));
     });
   </script>
