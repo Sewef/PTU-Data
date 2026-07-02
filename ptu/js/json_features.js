@@ -1,6 +1,7 @@
 import {
   renderSimpleTable as renderSimpleTableShared,
-  renderHierarchicalTable as renderHierarchicalTableShared
+  renderHierarchicalTable as renderHierarchicalTableShared,
+  renderShowHideBlock
 } from "/ptu/js/helpers.js";
 
 // ----------------------- GLOBAL VARIABLES -----------------------------------
@@ -823,7 +824,15 @@ function renderSimpleTable(tableObj, title, q, parentEl) {
   const body = document.createElement("div");
   body.className = "card-body bg-body-secondary";
 
-  body.appendChild(wrap);
+  if (tableObj?.hidden === true) {
+    const collapseTitle = tableObj.collapseTitle || title || "Table";
+    body.insertAdjacentHTML("beforeend", renderShowHideBlock(collapseTitle, wrap.outerHTML, {
+      open: tableObj.collapseOpen === true,
+      buttonText: tableObj.collapseButtonText || "Show / Hide"
+    }));
+  } else {
+    body.appendChild(wrap);
+  }
   card.appendChild(body);
   parentEl.appendChild(card);
 }
@@ -845,7 +854,15 @@ function renderHierarchicalTable(tableObj, title, q, parentEl) {
   const body = document.createElement("div");
   body.className = "card-body bg-body-secondary";
 
-  body.appendChild(wrap);
+  if (tableObj?.hidden === true) {
+    const collapseTitle = tableObj.collapseTitle || title || "Table";
+    body.insertAdjacentHTML("beforeend", renderShowHideBlock(collapseTitle, wrap.outerHTML, {
+      open: tableObj.collapseOpen === true,
+      buttonText: tableObj.collapseButtonText || "Show / Hide"
+    }));
+  } else {
+    body.appendChild(wrap);
+  }
   card.appendChild(body);
   parentEl.appendChild(card);
 }

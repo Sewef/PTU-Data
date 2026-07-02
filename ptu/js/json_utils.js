@@ -4,6 +4,13 @@
    Style homogène avec json_items.js
    ============================================================ */
 
+import {
+    applyCustomShowHideTags,
+    renderHierarchicalTable,
+    renderShowHideBlock,
+    renderSimpleTable
+} from "/ptu/js/helpers.js";
+
 /* =======================
    0.   Utils généraux
    ======================= */
@@ -54,6 +61,8 @@ function ptuSort(list, query) {
 function renderPTUCard(item, depth = 0, showRootTitle = true) {
     let html = "";
 
+    const shouldShowFieldLabel = key => String(key).toLowerCase() !== "table";
+
     // Titre
     if (item.Name) {
         if (depth === 0 && showRootTitle) {
@@ -67,20 +76,70 @@ function renderPTUCard(item, depth = 0, showRootTitle = true) {
     for (const [key, value] of Object.entries(item)) {
         if (key === "Name") continue;
 
+        // Table format partagé: { type: "table", rows: [...] }
+        if (value && typeof value === "object" && !Array.isArray(value) && value.type === "table" && Array.isArray(value.rows)) {
+            const tableEl = renderSimpleTable(value, {
+                defaultHeaderRows: 2,
+                wrapperClassName: "table-responsive mt-2"
+            });
+            const tableHtml = tableEl ? tableEl.outerHTML : "";
+            const shouldCollapse = value.hidden === true;
+            if (shouldCollapse && tableHtml) {
+                const collapseTitle = value.collapseTitle || (shouldShowFieldLabel(key) ? key : "Table");
+                html += renderShowHideBlock(collapseTitle, tableHtml, {
+                    open: value.collapseOpen === true,
+                    buttonText: value.collapseButtonText || "Show / Hide"
+                });
+            } else {
+                if (shouldShowFieldLabel(key)) {
+                    html += `<p><strong>${key}:</strong></p>`;
+                }
+                html += tableHtml;
+            }
+            continue;
+        }
+
+        // Table hiérarchique legacy: { columns: [...], groups: [...] }
+        if (value && typeof value === "object" && !Array.isArray(value) && Array.isArray(value.groups)) {
+            const tableEl = renderHierarchicalTable(value, {
+                wrapperClassName: "table-responsive mt-2"
+            });
+            const tableHtml = tableEl ? tableEl.outerHTML : "";
+            const shouldCollapse = value.hidden === true;
+            if (shouldCollapse && tableHtml) {
+                const collapseTitle = value.collapseTitle || (shouldShowFieldLabel(key) ? key : "Table");
+                html += renderShowHideBlock(collapseTitle, tableHtml, {
+                    open: value.collapseOpen === true,
+                    buttonText: value.collapseButtonText || "Show / Hide"
+                });
+            } else {
+                if (shouldShowFieldLabel(key)) {
+                    html += `<p><strong>${key}:</strong></p>`;
+                }
+                html += tableHtml;
+            }
+            continue;
+        }
+
         // TABLE interne
         if (Array.isArray(value) && value.length && typeof value[0] === "object") {
             const cols = Object.keys(value[0]);
-            html += `<p><strong>${key}:</strong></p>`;
-            html += `<div class="table-responsive mt-2">
-                <table class="table table-sm table-striped mb-0">
-                    <thead><tr>${cols.map(c => `<th>${c}</th>`).join("")}</tr></thead>
-                    <tbody>
-                        ${value.map(row => `
-                            <tr>${cols.map(c => `<td>${row[c] ?? "—"}</td>`).join("")}</tr>
-                        `).join("")}
-                    </tbody>
-                </table>
-            </div>`;
+            const tableObj = {
+                type: "table",
+                headerRows: 1,
+                rows: [
+                    cols.map(c => ({ text: c })),
+                    ...value.map(row => cols.map(c => ({ text: row[c] ?? "—" })))
+                ]
+            };
+            const tableEl = renderSimpleTable(tableObj, {
+                defaultHeaderRows: 1,
+                wrapperClassName: "table-responsive mt-2"
+            });
+            if (shouldShowFieldLabel(key)) {
+                html += `<p><strong>${key}:</strong></p>`;
+            }
+            html += tableEl ? tableEl.outerHTML : "";
             continue;
         }
 
@@ -94,7 +153,7 @@ function renderPTUCard(item, depth = 0, showRootTitle = true) {
         // Valeur simple
         let displayValue = value;
         if (typeof value === "string") {
-            displayValue = value.replace(/\n/g, "<br>");
+            displayValue = applyCustomShowHideTags(value);
         }
         html += `<p><strong>${key}:</strong> ${displayValue ?? ""}</p>`;
     }

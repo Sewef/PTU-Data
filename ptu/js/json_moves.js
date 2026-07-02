@@ -599,7 +599,11 @@ function renderMoveCard(item) {
     if (key === "table" && typeof value === "object" && value?.type === "table") {
       const tableHtml = renderSimpleTableHTML(value, { defaultHeaderRows: 2 });
       if (tableHtml) {
-        pendingTableHtml = renderShowHideBlock("Table", tableHtml);
+        if (value.hidden === true) {
+          pendingTableHtml = renderShowHideBlock("Table", tableHtml);
+        } else {
+          pendingTableHtml = tableHtml;
+        }
       }
       continue;
     }
