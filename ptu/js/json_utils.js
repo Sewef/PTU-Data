@@ -79,7 +79,7 @@ function renderPTUCard(item, depth = 0, showRootTitle = true) {
         // Table format partagé: { type: "table", rows: [...] }
         if (value && typeof value === "object" && !Array.isArray(value) && value.type === "table" && Array.isArray(value.rows)) {
             const tableEl = renderSimpleTable(value, {
-                defaultHeaderRows: 2,
+                defaultHeaderRows: 1,
                 wrapperClassName: "table-responsive mt-2"
             });
             const tableHtml = tableEl ? tableEl.outerHTML : "";

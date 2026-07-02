@@ -925,8 +925,9 @@
             "Prerequisites": "Hobbyist, Expert General Education or Perception",
             "Frequency": "x2 Uses — Extended Action",
             "Effect": "When you activate Look and Learn, you may gain any of the Features below even though they are Features from other Classes. You do not need to meet their normal prerequisites, but you must meet their Prerequisites listed here. Look and Learn can be used two times; once to learn a Feature from the \"Scene Features\" List, and once to learn a Feature from the \"Action Point Features List\".",
-            "dataTable": {
+            "table": {
               "type": "table",
+              "headerRows": 2,
               "rows": [
                 [
                   {
@@ -1129,8 +1130,9 @@
             "Prerequisites": "Hobbyist, Expert General Education or Perception",
             "Frequency": "x2 Uses — Extended Action",
             "Effect": "When you activate Look and Learn, you may gain any of the Features below even though they are Features from other Classes. You do not need to meet their normal prerequisites, but you must meet their Prerequisites listed here. Look and Learn can be used two times; once to learn a Feature from the \"Scene Features\" List, and once to learn a Feature from the \"Action Point Features List\".",
-            "dataTable": {
+            "table": {
               "type": "table",
+              "headerRows": 2,
               "rows": [
                 [
                   {
@@ -1890,15 +1892,9 @@
             "Frequency": "1 AP — Free Action",
             "Trigger": "Your Pokémon hits a foe suffering from a Status Affliction or one of the other conditions in the table below",
             "Effect": "Choose a Status Affliction or condition the triggering target is suffering from; the target suffers an additional effect according to the table below. Stacked Deck may only affect a foe once per Scene.",
-            "dataTable": {
+            "table": {
               "type": "table",
               "rows": [
-                [
-                  {
-                    "text": "Items",
-                    "colspan": 2
-                  }
-                ],
                 [
                   {
                     "text": "Condition"
@@ -5021,15 +5017,9 @@
             "Rank 3 Prerequisites": "Athlete, Master Athletics",
             "Frequency": "Static",
             "Effect": "You learn two Athlete Moves marked with the Rank of this Feature you are taking or lower.",
-            "dataTable": {
+            "table": {
               "type": "table",
               "rows": [
-                [
-                  {
-                    "text": "Items",
-                    "colspan": 3
-                  }
-                ],
                 [
                   {
                     "text": "Rank 1"
@@ -5339,8 +5329,9 @@
             "Rank 3 Prerequisites": "Martial Artist, Master Combat",
             "Frequency": "Static",
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
-            "moveTable": {
+            "table": {
               "type": "table",
+              "headerRows": 2,
               "rows": [
                 [
                   {
@@ -5511,8 +5502,9 @@
             "Rank 3 Prerequisites": "Martial Artist, Master Combat",
             "Frequency": "Static",
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
-            "moveTable": {
+            "table": {
               "type": "table",
+              "headerRows": 2,
               "rows": [
                 [
                   {
@@ -5682,8 +5674,9 @@
             "Rank 3 Prerequisites": "Martial Artist, Master Combat",
             "Frequency": "Static",
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
-            "moveTable": {
+            "table": {
               "type": "table",
+              "headerRows": 2,
               "rows": [
                 [
                   {
@@ -5854,8 +5847,9 @@
             "Rank 3 Prerequisites": "Martial Artist, Master Combat",
             "Frequency": "Static",
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
-            "moveTable": {
+            "table": {
               "type": "table",
+              "headerRows": 2,
               "rows": [
                 [
                   {
@@ -6026,8 +6020,9 @@
             "Rank 3 Prerequisites": "Martial Artist, Master Combat",
             "Frequency": "Static",
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
-            "moveTable": {
+            "table": {
               "type": "table",
+              "headerRows": 2,
               "rows": [
                 [
                   {
@@ -6198,8 +6193,9 @@
             "Rank 3 Prerequisites": "Martial Artist, Master Combat",
             "Frequency": "Static",
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
-            "moveTable": {
+            "table": {
               "type": "table",
+              "headerRows": 2,
               "rows": [
                 [
                   {
@@ -6858,7 +6854,7 @@
             "Rank 3 Prerequisites": "Hex Maniac, Expert Occult Education",
             "Frequency": "Static",
             "Effect": "Learn two Hex Maniac Moves. You may choose any Move marked with the Hex Maniac Studies Rank you are taking or lower.\n*Note: When using Curse, you must use Curse as if you were a Ghost-Type Pokémon",
-            "moveTable": {
+            "table": {
               "type": "table",
               "rows": [
                 [
@@ -8011,8 +8007,9 @@
             "Rank 3 Prerequisites": "Expert Command or Survival",
             "Frequency": "Static",
             "Effect": "Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen.",
-            "moveTable": {
+            "table": {
               "type": "table",
+              "headerRows": 2,
               "rows": [
                 [
                   {
@@ -8173,8 +8170,9 @@
             "Rank 3 Prerequisites": "Expert Command or Survival",
             "Frequency": "Static",
             "Effect": "Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen.",
-            "moveTable": {
+            "table": {
               "type": "table",
+              "headerRows": 2,
               "rows": [
                 [
                   {
@@ -8477,15 +8475,9 @@
             "Rank 3 Prerequisites": "Master Acrobatics or Focus",
             "Frequency": "Static",
             "Effect": "You may learn two Moves from the list below, marked with the Storm Wizard Rank you are gaining or lower.",
-            "moveTable": {
+            "table": {
               "type": "table",
               "rows": [
-                [
-                  {
-                    "text": "Items",
-                    "colspan": 3
-                  }
-                ],
                 [
                   {
                     "text": "Rank 1 Moves"
@@ -8666,15 +8658,9 @@
             "Rank 2 Prerequisites": "Master Focus or Combat",
             "Frequency": "Static",
             "Effect": "Learn two Fire Bringer Moves from the list below. You may choose any Move marked with the Fire Breather Rank you are taking or lower.",
-            "moveTable": {
+            "table": {
               "type": "table",
               "rows": [
-                [
-                  {
-                    "text": "Items",
-                    "colspan": 2
-                  }
-                ],
                 [
                   {
                     "text": "Rank 1 Moves"
@@ -8770,15 +8756,9 @@
             "Rank 3 Prerequisites": "Master Acrobatics or Perception",
             "Frequency": "Static",
             "Effect": "You may learn two Moves from the list below, marked with the Raging Winds Rank you are gaining or lower.",
-            "moveTable": {
+            "table": {
               "type": "table",
               "rows": [
-                [
-                  {
-                    "text": "Items",
-                    "colspan": 3
-                  }
-                ],
                 [
                   {
                     "text": "Rank 1 Moves"
@@ -8955,8 +8935,9 @@
             "Rank 3 Prerequisites": "Expert Survival or General Education",
             "Frequency": "Static",
             "Effect": "You learn two Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.",
-            "moveTable": {
+            "table": {
               "type": "table",
+              "headerRows": 2,
               "rows": [
                 [
                   {
@@ -9117,8 +9098,9 @@
             "Rank 3 Prerequisites": "Expert Survival or General Education",
             "Frequency": "Static",
             "Effect": "You learn two Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.",
-            "moveTable": {
+            "table": {
               "type": "table",
+              "headerRows": 2,
               "rows": [
                 [
                   {
@@ -9279,8 +9261,9 @@
             "Rank 3 Prerequisites": "Expert Survival or General Education",
             "Frequency": "Static",
             "Effect": "You learn two Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.",
-            "moveTable": {
+            "table": {
               "type": "table",
+              "headerRows": 2,
               "rows": [
                 [
                   {
@@ -9516,15 +9499,9 @@
             "Rank 2 Prerequisites": "Master Athletics or Survival",
             "Frequency": "Static",
             "Effect": "You may learn two Moves from the list below, marked with the Rank of Winter's Herald you are gaining or lower.",
-            "moveTable": {
+            "table": {
               "type": "table",
               "rows": [
-                [
-                  {
-                    "text": "Items",
-                    "colspan": 2
-                  }
-                ],
                 [
                   {
                     "text": "Rank 1 Moves"
@@ -9877,39 +9854,55 @@
             "Rank 3 Prerequisites": "Expert Athletics or Acrobatics",
             "Frequency": "Static",
             "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.",
-            "_display": {
-              "Moves by Rank": {
-                "type": "table",
-                "rowPerField": false,
-                "columns": [
-                  "Rank 1 Moves",
-                  "Rank 2 Moves",
-                  "Rank 3 Moves"
+            "table": {
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Rank 1 Moves"
+                  },
+                  {
+                    "text": "Rank 2 Moves"
+                  },
+                  {
+                    "text": "Rank 3 Moves"
+                  }
                 ],
-                "columnWidths": [
-                  "16ch",
-                  "16ch",
-                  "16ch"
+                [
+                  {
+                    "text": "Aqua Jet"
+                  },
+                  {
+                    "text": "Bubble Beam"
+                  },
+                  {
+                    "text": "Aqua Tail"
+                  }
+                ],
+                [
+                  {
+                    "text": "Aqua Ring"
+                  },
+                  {
+                    "text": "Waterfall"
+                  },
+                  {
+                    "text": "Rain Dance"
+                  }
+                ],
+                [
+                  {
+                    "text": "Water Pulse"
+                  },
+                  {
+                    "text": "Whirlpool"
+                  },
+                  {
+                    "text": "Surf"
+                  }
                 ]
-              }
-            },
-            "Moves by Rank": [
-              {
-                "Rank 1 Moves": "Aqua Jet",
-                "Rank 2 Moves": "Bubble Beam",
-                "Rank 3 Moves": "Aqua Tail"
-              },
-              {
-                "Rank 1 Moves": "Aqua Ring",
-                "Rank 2 Moves": "Waterfall",
-                "Rank 3 Moves": "Rain Dance"
-              },
-              {
-                "Rank 1 Moves": "Water Pulse",
-                "Rank 2 Moves": "Whirlpool",
-                "Rank 3 Moves": "Surf"
-              }
-            ]
+              ]
+            }
           }
         ]
       }

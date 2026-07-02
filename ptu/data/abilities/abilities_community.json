@@ -617,7 +617,38 @@
     "Name": "Embody Aspect",
     "Frequency": "At-Will – Extended Action",
     "Effect": "The user may change between its four different Formes by changing masks, changing its Types and granting an Ability. Innate.",
-    "Masks": "\n- Mask: Teal, Type: Grass, Ability: Defiant,\n- Mask: Wellspring, Type: Grass/Water, Ability: Water Absorb,\n- Mask: Hearthflame, Type: Grass/Fire, Ability: Mold \n- Mask: Cornerstone, Type: Grass/Rock, Ability: Full Guard"
+    "table": {
+      "type": "table",
+      "hidden": false,
+      "headerRows": 1,
+      "rows": [
+        [
+          "Mask",
+          "Type",
+          "Ability"
+        ],
+        [
+          "Teal",
+          "Grass",
+          "Defiant"
+        ],
+        [
+          "Wellspring",
+          "Grass/Water",
+          "Water Absorb"
+        ],
+        [
+          "Hearthflame",
+          "Grass/Fire",
+          "Mold Breaker"
+        ],
+        [
+          "Cornerstone",
+          "Grass/Rock",
+          "Full Guard"
+        ]
+      ]
+    }
   },
   {
     "Name": "Emergency Exit",

@@ -812,7 +812,7 @@ function createCard(feat, clsMeta, isGeneral, nested = false) {
  */
 function renderSimpleTable(tableObj, title, q, parentEl) {
   const wrap = renderSimpleTableShared(tableObj, {
-    defaultHeaderRows: 2,
+    defaultHeaderRows: 1,
     query: q,
     wrapperClassName: "table-responsive"
   });

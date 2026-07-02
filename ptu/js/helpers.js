@@ -115,7 +115,7 @@ export function escapeHTML(str) {
     .replace(/'/g, "&#39;");
 }
 
-export function renderSimpleTableHTML(tableObj, { defaultHeaderRows = 2, query = "", wrapperClassName = "table-responsive mt-2" } = {}) {
+export function renderSimpleTableHTML(tableObj, { defaultHeaderRows = 1, query = "", wrapperClassName = "table-responsive mt-2" } = {}) {
   if (!tableObj || !tableObj.rows || !Array.isArray(tableObj.rows) || tableObj.rows.length === 0) {
     return "";
   }
@@ -175,7 +175,7 @@ export function renderSimpleTableHTML(tableObj, { defaultHeaderRows = 2, query =
   return html;
 }
 
-export function renderSimpleTable(tableObj, { defaultHeaderRows = 2, query = "", wrapperClassName = "table-responsive mt-2" } = {}) {
+export function renderSimpleTable(tableObj, { defaultHeaderRows = 1, query = "", wrapperClassName = "table-responsive mt-2" } = {}) {
   const html = renderSimpleTableHTML(tableObj, { defaultHeaderRows, query, wrapperClassName });
   if (!html) return null;
 
