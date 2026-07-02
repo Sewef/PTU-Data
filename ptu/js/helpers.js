@@ -245,6 +245,49 @@ export function renderHierarchicalTable(tableObj, { query = "", wrapperClassName
   return wrap;
 }
 
+let _showHideCounter = 0;
+
+function toSafeIdBase(value) {
+  return String(value || "details")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "") || "details";
+}
+
+export function renderShowHideBlock(
+  title,
+  innerHTML,
+  { open = false, className = "ptu-showhide", buttonText = "Show / Hide" } = {}
+) {
+  const safeButtonText = escapeHTML(buttonText || "Show / Hide");
+  const content = innerHTML == null ? "" : String(innerHTML);
+  const collapseId = `ptu-collapse-${toSafeIdBase(title)}-${++_showHideCounter}`;
+  const shownClass = open ? " show" : "";
+
+  return `
+    <div class="${className}">
+      <button class="btn btn-sm btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#${collapseId}" aria-expanded="${open ? "true" : "false"}" aria-controls="${collapseId}">${safeButtonText}</button>
+      <div id="${collapseId}" class="collapse${shownClass} mt-2
+        <div class="mt-1">${content}</div>
+      </div>
+    </div>`;
+}
+
+// Custom tag syntax in text: <showhide title="Section">...content...</showhide>
+export function applyCustomShowHideTags(text) {
+  if (text == null) return "";
+
+  let html = String(text);
+  html = html.replace(/<showhide(?:\s+title=(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?\s*>([\s\S]*?)<\/showhide>/gi,
+    (_match, title1, title2, title3, content) => {
+      const title = title1 || title2 || title3 || "Details";
+      const body = String(content || "").replace(/\n/g, "<br>");
+      return renderShowHideBlock(title, body);
+    });
+
+  return html.replace(/\n/g, "<br>");
+}
+
 // --- Build pill filter section ---
 export function buildPillSection(root, id, values, { attr = "data-type", onChange, useTypeClass = true } = {}) {
   const container = document.createElement("div");

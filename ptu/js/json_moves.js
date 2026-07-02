@@ -1,6 +1,8 @@
 import {
   debounce,
   jsonToItems,
+  applyCustomShowHideTags,
+  renderShowHideBlock,
   renderSimpleTableHTML,
   buildPillSection,
   getSelectedPills,
@@ -560,6 +562,8 @@ function renderItemAsCard(item, depth = 0) {
 
 function renderMoveCard(item) {
   let html = "";
+  const hasTablePlaceholderInDescription = typeof item.Description === "string"
+    && /\{\{table:[^}]+\}\}/.test(item.Description);
 
   // ----- TITRE AVEC BADGES -----
   let title = item.Name || "";
@@ -594,7 +598,15 @@ function renderMoveCard(item) {
 
     // ----- TABLE OBJECT -----
     if (key === "table" && typeof value === "object" && value?.type === "table") {
-      html += renderSimpleTableHTML(value, { defaultHeaderRows: 2 });
+      // If the table is referenced in Description, it will be rendered inline there.
+      if (hasTablePlaceholderInDescription) {
+        continue;
+      }
+
+      const tableHtml = renderSimpleTableHTML(value, { defaultHeaderRows: 2 });
+      if (tableHtml) {
+        html += renderShowHideBlock("Table", tableHtml);
+      }
       continue;
     }
 
@@ -617,11 +629,24 @@ function renderMoveCard(item) {
       let description = value;
 
       if (item.table && typeof item.table === "object" && item.table.type === "table") {
-        description = description.replace(/\{\{table:[^}]+\}\}/g, "");
+        const tableHtml = renderSimpleTableHTML(item.table, { defaultHeaderRows: 2 });
+
+        if (tableHtml) {
+          if (/\{\{table:[^}]+\}\}/.test(description)) {
+            description = description.replace(/\{\{table:([^}]+)\}\}/g, (_m, tableName) => {
+              const title = tableName ? `Table - ${tableName}` : "Table";
+              return renderShowHideBlock(title, tableHtml);
+            });
+          } else {
+            description += `\n${renderShowHideBlock("Table", tableHtml)}`;
+          }
+        } else {
+          description = description.replace(/\{\{table:[^}]+\}\}/g, "");
+        }
       }
 
-      const safeValue = description.replace(/\n/g, "<br>");
-      html += `<p><strong>${key}:</strong> ${safeValue}</p>`;
+      const safeValue = applyCustomShowHideTags(description);
+      html += `<div class="mb-2"><strong>${key}:</strong> ${safeValue}</div>`;
       continue;
     }
 
