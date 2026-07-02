@@ -880,95 +880,158 @@
             "Frequency": "x2 Uses — Extended Action",
             "Effect": "When you activate Look and Learn, you may gain any of the Features below even though they are Features from other Classes. You do not need to meet their normal prerequisites, but you must meet their Prerequisites listed here. Look and Learn can be used two times; once to learn a Feature from the \"Scene Features\" List, and once to learn a Feature from the \"Action Point Features List\".",
             "dataTable": {
-              "columns": [
-                "Scene Features List_1",
-                "Scene Features List_2",
-                "Scene Features List_3",
-                "Action Point Features List_1",
-                "Action Point Features List_2",
-                "Action Point Features List_3"
-              ],
-              "groups": [
-                {
-                  "label": "Scene Features List",
-                  "rows": [
-                    {
-                      "Scene Features List_1": "Trainer Class",
-                      "Scene Features List_2": "Feature",
-                      "Scene Features List_3": "Prerequisite"
-                    },
-                    {
-                      "Scene Features List_1": "Ace Trainer",
-                      "Scene Features List_2": "Critical Moment",
-                      "Scene Features List_3": "Commander's Voice"
-                    },
-                    {
-                      "Scene Features List_1": "Capture Specialist",
-                      "Scene Features List_2": "Capture Techniques\n(False Strike and Catch Combo only)",
-                      "Scene Features List_3": "Poké Ball Crafter"
-                    },
-                    {
-                      "Scene Features List_1": "Enduring",
-                      "Scene Features List_2": "Staying Power",
-                      "Scene Features List_3": "Medic Training"
-                    },
-                    {
-                      "Scene Features List_1": "Trickster",
-                      "Scene Features List_2": "Sleight",
-                      "Scene Features List_3": "Command Versatility"
-                    },
-                    {
-                      "Scene Features List_1": "Researcher",
-                      "Scene Features List_2": "Chemical Warfare",
-                      "Scene Features List_3": "Repel Crafter"
-                    },
-                    {
-                      "Scene Features List_1": "Roughneck",
-                      "Scene Features List_2": "Mettle",
-                      "Scene Features List_3": "Defender"
-                    }
-                  ]
-                },
-                {
-                  "label": "Action Point Features List",
-                  "rows": [
-                    {
-                      "Action Point Features List_1": "Trainer Class",
-                      "Action Point Features List_2": "Feature",
-                      "Action Point Features List_3": "Prerequisite"
-                    },
-                    {
-                      "Action Point Features List_1": "Coordinator",
-                      "Action Point Features List_2": "Nuanced Performance",
-                      "Action Point Features List_3": "Grace"
-                    },
-                    {
-                      "Action Point Features List_1": "Juggler",
-                      "Action Point Features List_2": "Round Trip",
-                      "Action Point Features List_3": "Quick Switch"
-                    },
-                    {
-                      "Action Point Features List_1": "Chef",
-                      "Action Point Features List_2": "Hits the Spot",
-                      "Action Point Features List_3": "Basic Cooking"
-                    },
-                    {
-                      "Action Point Features List_1": "Fashionista",
-                      "Action Point Features List_2": "Style is Eternal",
-                      "Action Point Features List_3": "Groomer"
-                    },
-                    {
-                      "Action Point Features List_1": "Athlete",
-                      "Action Point Features List_2": "Coaching",
-                      "Action Point Features List_3": "Swimmer"
-                    },
-                    {
-                      "Action Point Features List_1": "Tumbler",
-                      "Action Point Features List_2": "Quick Gymnastics",
-                      "Action Point Features List_3": "Acrobat"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Scene Features List",
+                    "colspan": 3
+                  },
+                  {
+                    "text": "Action Point Features List",
+                    "colspan": 3
+                  }
+                ],
+                [
+                  {
+                    "text": "Trainer Class"
+                  },
+                  {
+                    "text": "Feature"
+                  },
+                  {
+                    "text": "Prerequisite"
+                  },
+                  {
+                    "text": "Trainer Class"
+                  },
+                  {
+                    "text": "Feature"
+                  },
+                  {
+                    "text": "Prerequisite"
+                  }
+                ],
+                [
+                  {
+                    "text": "Ace Trainer"
+                  },
+                  {
+                    "text": "Critical Moment"
+                  },
+                  {
+                    "text": "Commander's Voice"
+                  },
+                  {
+                    "text": "Coordinator"
+                  },
+                  {
+                    "text": "Nuanced Performance"
+                  },
+                  {
+                    "text": "Grace"
+                  }
+                ],
+                [
+                  {
+                    "text": "Capture Specialist"
+                  },
+                  {
+                    "text": "Capture Techniques\n(False Strike and Catch Combo only)"
+                  },
+                  {
+                    "text": "Poké Ball Crafter"
+                  },
+                  {
+                    "text": "Juggler"
+                  },
+                  {
+                    "text": "Round Trip"
+                  },
+                  {
+                    "text": "Quick Switch"
+                  }
+                ],
+                [
+                  {
+                    "text": "Enduring"
+                  },
+                  {
+                    "text": "Staying Power"
+                  },
+                  {
+                    "text": "Medic Training"
+                  },
+                  {
+                    "text": "Chef"
+                  },
+                  {
+                    "text": "Hits the Spot"
+                  },
+                  {
+                    "text": "Basic Cooking"
+                  }
+                ],
+                [
+                  {
+                    "text": "Trickster"
+                  },
+                  {
+                    "text": "Sleight"
+                  },
+                  {
+                    "text": "Command Versatility"
+                  },
+                  {
+                    "text": "Fashionista"
+                  },
+                  {
+                    "text": "Style is Eternal"
+                  },
+                  {
+                    "text": "Groomer"
+                  }
+                ],
+                [
+                  {
+                    "text": "Researcher"
+                  },
+                  {
+                    "text": "Chemical Warfare"
+                  },
+                  {
+                    "text": "Repel Crafter"
+                  },
+                  {
+                    "text": "Athlete"
+                  },
+                  {
+                    "text": "Coaching"
+                  },
+                  {
+                    "text": "Swimmer"
+                  }
+                ],
+                [
+                  {
+                    "text": "Roughneck"
+                  },
+                  {
+                    "text": "Mettle"
+                  },
+                  {
+                    "text": "Defender"
+                  },
+                  {
+                    "text": "Tumbler"
+                  },
+                  {
+                    "text": "Quick Gymnastics"
+                  },
+                  {
+                    "text": "Acrobat"
+                  }
+                ]
               ]
             }
           }
@@ -1524,28 +1587,46 @@
             "Trigger": "Your Pokémon hits a foe suffering from a Status Affliction or one of the other conditions in the table below",
             "Effect": "Choose a Status Affliction or condition the triggering target is suffering from; the target suffers an additional effect according to the table below. Stacked Deck may only affect a foe once per Scene.",
             "dataTable": {
-              "columns": [
-                "Condition",
-                "Effect"
-              ],
-              "groups": [
-                {
-                  "label": "Items",
-                  "rows": [
-                    {
-                      "Condition": "Bad Dreams, Cursed, Seeded, Burn, Poison",
-                      "Effect": "Whenever the target loses Hit Points from the chosen condition, they lose an additional 5 Hit Points."
-                    },
-                    {
-                      "Condition": "Paralysis, Frozen, Vortex, Sleep",
-                      "Effect": "The next time the target passes their Save Check for the chosen condition, they become Tripped and Slowed.."
-                    },
-                    {
-                      "Condition": "Confuse, Enrage, Suppression, Infatuation",
-                      "Effect": "The target suffers a -2 penalty to their Accuracy and Evasion while suffering from the chosen condition."
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Items",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  {
+                    "text": "Condition"
+                  },
+                  {
+                    "text": "Effect"
+                  }
+                ],
+                [
+                  {
+                    "text": "Bad Dreams, Cursed, Seeded, Burn, Poison"
+                  },
+                  {
+                    "text": "Whenever the target loses Hit Points from the chosen condition, they lose an additional 5 Hit Points."
+                  }
+                ],
+                [
+                  {
+                    "text": "Paralysis, Frozen, Vortex, Sleep"
+                  },
+                  {
+                    "text": "The next time the target passes their Save Check for the chosen condition, they become Tripped and Slowed.."
+                  }
+                ],
+                [
+                  {
+                    "text": "Confuse, Enrage, Suppression, Infatuation"
+                  },
+                  {
+                    "text": "The target suffers a -2 penalty to their Accuracy and Evasion while suffering from the chosen condition."
+                  }
+                ]
               ]
             }
           },
@@ -4443,37 +4524,69 @@
             "Frequency": "Static",
             "Effect": "You learn two Athlete Moves marked with the Rank of this Feature you are taking or lower.",
             "dataTable": {
-              "columns": [
-                "Rank 1",
-                "Rank 2",
-                "Rank 3"
-              ],
-              "groups": [
-                {
-                  "label": "Items",
-                  "rows": [
-                    {
-                      "Rank 1": "Bind",
-                      "Rank 2": "Body Slam",
-                      "Rank 3": "Mega Kick"
-                    },
-                    {
-                      "Rank 1": "Block",
-                      "Rank 2": "Take Down",
-                      "Rank 3": "Facade"
-                    },
-                    {
-                      "Rank 1": "Slam",
-                      "Rank 2": "Extreme Speed",
-                      "Rank 3": "Retaliate"
-                    },
-                    {
-                      "Rank 1": "Strength",
-                      "Rank 2": "Hold Back",
-                      "Rank 3": "Bide"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Items",
+                    "colspan": 3
+                  }
+                ],
+                [
+                  {
+                    "text": "Rank 1"
+                  },
+                  {
+                    "text": "Rank 2"
+                  },
+                  {
+                    "text": "Rank 3"
+                  }
+                ],
+                [
+                  {
+                    "text": "Bind"
+                  },
+                  {
+                    "text": "Body Slam"
+                  },
+                  {
+                    "text": "Mega Kick"
+                  }
+                ],
+                [
+                  {
+                    "text": "Block"
+                  },
+                  {
+                    "text": "Take Down"
+                  },
+                  {
+                    "text": "Facade"
+                  }
+                ],
+                [
+                  {
+                    "text": "Slam"
+                  },
+                  {
+                    "text": "Extreme Speed"
+                  },
+                  {
+                    "text": "Retaliate"
+                  }
+                ],
+                [
+                  {
+                    "text": "Strength"
+                  },
+                  {
+                    "text": "Hold Back"
+                  },
+                  {
+                    "text": "Bide"
+                  }
+                ]
               ]
             }
           }
@@ -4660,74 +4773,122 @@
             "Frequency": "Static",
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves_1",
-                "Rank 1 Moves_2",
-                "Rank 2 Moves_1",
-                "Rank 2 Moves_2",
-                "Rank 3 Moves_1",
-                "Rank 3 Moves_2"
-              ],
-              "groups": [
-                {
-                  "label": "Rank 1 Moves",
-                  "rows": [
-                    {
-                      "Rank 1 Moves_1": "Move",
-                      "Rank 1 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Double Kick",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Focus Energy",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Low Sweep",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Vital Throw",
-                      "Rank 1 Moves_2": "Guts"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 2 Moves",
-                  "rows": [
-                    {
-                      "Rank 2 Moves_1": "Move",
-                      "Rank 2 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Brick Break",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Circle Throw",
-                      "Rank 2 Moves_2": "Guts"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 3 Moves",
-                  "rows": [
-                    {
-                      "Rank 3 Moves_1": "Move",
-                      "Rank 3 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Close Combat",
-                      "Rank 3 Moves_2": "None"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Storm Throw",
-                      "Rank 3 Moves_2": "Guts"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Rank 1 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 2 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 3 Moves",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  }
+                ],
+                [
+                  {
+                    "text": "Double Kick"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Brick Break"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Close Combat"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Focus Energy"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Circle Throw"
+                  },
+                  {
+                    "text": "Guts"
+                  },
+                  {
+                    "text": "Storm Throw"
+                  },
+                  {
+                    "text": "Guts"
+                  }
+                ],
+                [
+                  {
+                    "text": "Low Sweep"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "Vital Throw"
+                  },
+                  {
+                    "text": "Guts"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
               ]
             }
           },
@@ -4784,74 +4945,122 @@
             "Frequency": "Static",
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves_1",
-                "Rank 1 Moves_2",
-                "Rank 2 Moves_1",
-                "Rank 2 Moves_2",
-                "Rank 3 Moves_1",
-                "Rank 3 Moves_2"
-              ],
-              "groups": [
-                {
-                  "label": "Rank 1 Moves",
-                  "rows": [
-                    {
-                      "Rank 1 Moves_1": "Move",
-                      "Rank 1 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Double Kick",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Focus Energy",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Karate Chop",
-                      "Rank 1 Moves_2": "Inner Focus"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Low Sweep",
-                      "Rank 1 Moves_2": "None"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 2 Moves",
-                  "rows": [
-                    {
-                      "Rank 2 Moves_1": "Move",
-                      "Rank 2 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Brick Break",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Low Kick",
-                      "Rank 2 Moves_2": "Inner Focus"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 3 Moves",
-                  "rows": [
-                    {
-                      "Rank 3 Moves_1": "Move",
-                      "Rank 3 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Cross Chop",
-                      "Rank 3 Moves_2": "Inner Focus"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Close Combat",
-                      "Rank 3 Moves_2": "None"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Rank 1 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 2 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 3 Moves",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  }
+                ],
+                [
+                  {
+                    "text": "Double Kick"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Brick Break"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Cross Chop"
+                  },
+                  {
+                    "text": "Inner Focus"
+                  }
+                ],
+                [
+                  {
+                    "text": "Focus Energy"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Low Kick"
+                  },
+                  {
+                    "text": "Inner Focus"
+                  },
+                  {
+                    "text": "Close Combat"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Karate Chop"
+                  },
+                  {
+                    "text": "Inner Focus"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "Low Sweep"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
               ]
             }
           },
@@ -4907,74 +5116,122 @@
             "Frequency": "Static",
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves_1",
-                "Rank 1 Moves_2",
-                "Rank 2 Moves_1",
-                "Rank 2 Moves_2",
-                "Rank 3 Moves_1",
-                "Rank 3 Moves_2"
-              ],
-              "groups": [
-                {
-                  "label": "Rank 1 Moves",
-                  "rows": [
-                    {
-                      "Rank 1 Moves_1": "Move",
-                      "Rank 1 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Double Kick",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Focus Energy",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Low Sweep",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Mach Punch",
-                      "Rank 1 Moves_2": "Iron Fist"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 2 Moves",
-                  "rows": [
-                    {
-                      "Rank 2 Moves_1": "Move",
-                      "Rank 2 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Brick Break",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Comet Punch",
-                      "Rank 2 Moves_2": "Iron Fist"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 3 Moves",
-                  "rows": [
-                    {
-                      "Rank 3 Moves_1": "Move",
-                      "Rank 3 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Close Combat",
-                      "Rank 3 Moves_2": "None"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Sky Uppercut",
-                      "Rank 3 Moves_2": "Iron Fist"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Rank 1 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 2 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 3 Moves",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  }
+                ],
+                [
+                  {
+                    "text": "Double Kick"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Brick Break"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Close Combat"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Focus Energy"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Comet Punch"
+                  },
+                  {
+                    "text": "Iron Fist"
+                  },
+                  {
+                    "text": "Sky Uppercut"
+                  },
+                  {
+                    "text": "Iron Fist"
+                  }
+                ],
+                [
+                  {
+                    "text": "Low Sweep"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "Mach Punch"
+                  },
+                  {
+                    "text": "Iron Fist"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
               ]
             }
           },
@@ -5031,74 +5288,122 @@
             "Frequency": "Static",
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves_1",
-                "Rank 1 Moves_2",
-                "Rank 2 Moves_1",
-                "Rank 2 Moves_2",
-                "Rank 3 Moves_1",
-                "Rank 3 Moves_2"
-              ],
-              "groups": [
-                {
-                  "label": "Rank 1 Moves",
-                  "rows": [
-                    {
-                      "Rank 1 Moves_1": "Move",
-                      "Rank 1 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Acupressure",
-                      "Rank 1 Moves_2": "Limber"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Double Kick",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Focus Energy",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Low Sweep",
-                      "Rank 1 Moves_2": "None"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 2 Moves",
-                  "rows": [
-                    {
-                      "Rank 2 Moves_1": "Move",
-                      "Rank 2 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Brick Break",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Counter",
-                      "Rank 2 Moves_2": "Limber"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Power Trick",
-                      "Rank 2 Moves_2": "Limber"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 3 Moves",
-                  "rows": [
-                    {
-                      "Rank 3 Moves_1": "Move",
-                      "Rank 3 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Close Combat",
-                      "Rank 3 Moves_2": "None"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Rank 1 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 2 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 3 Moves",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  }
+                ],
+                [
+                  {
+                    "text": "Acupressure"
+                  },
+                  {
+                    "text": "Limber"
+                  },
+                  {
+                    "text": "Brick Break"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Close Combat"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Double Kick"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Counter"
+                  },
+                  {
+                    "text": "Limber"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "Focus Energy"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Power Trick"
+                  },
+                  {
+                    "text": "Limber"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "Low Sweep"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
               ]
             }
           },
@@ -5155,74 +5460,122 @@
             "Frequency": "Static",
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves_1",
-                "Rank 1 Moves_2",
-                "Rank 2 Moves_1",
-                "Rank 2 Moves_2",
-                "Rank 3 Moves_1",
-                "Rank 3 Moves_2"
-              ],
-              "groups": [
-                {
-                  "label": "Rank 1 Moves",
-                  "rows": [
-                    {
-                      "Rank 1 Moves_1": "Move",
-                      "Rank 1 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Double Kick",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Focus Energy",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Low Sweep",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Rolling Kick",
-                      "Rank 1 Moves_2": "Reckless"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 2 Moves",
-                  "rows": [
-                    {
-                      "Rank 2 Moves_1": "Move",
-                      "Rank 2 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Brick Break",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Jump Kick",
-                      "Rank 2 Moves_2": "Reckless"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 3 Moves",
-                  "rows": [
-                    {
-                      "Rank 3 Moves_1": "Move",
-                      "Rank 3 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Close Combat",
-                      "Rank 3 Moves_2": "None"
-                    },
-                    {
-                      "Rank 3 Moves_1": "High Jump Kick",
-                      "Rank 3 Moves_2": "Reckless"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Rank 1 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 2 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 3 Moves",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  }
+                ],
+                [
+                  {
+                    "text": "Double Kick"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Brick Break"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Close Combat"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Focus Energy"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Jump Kick"
+                  },
+                  {
+                    "text": "Reckless"
+                  },
+                  {
+                    "text": "High Jump Kick"
+                  },
+                  {
+                    "text": "Reckless"
+                  }
+                ],
+                [
+                  {
+                    "text": "Low Sweep"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "Rolling Kick"
+                  },
+                  {
+                    "text": "Reckless"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
               ]
             }
           },
@@ -5279,74 +5632,122 @@
             "Frequency": "Static",
             "Effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. You must meet a Move's Prerequisites to choose that Move.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves_1",
-                "Rank 1 Moves_2",
-                "Rank 2 Moves_1",
-                "Rank 2 Moves_2",
-                "Rank 3 Moves_1",
-                "Rank 3 Moves_2"
-              ],
-              "groups": [
-                {
-                  "label": "Rank 1 Moves",
-                  "rows": [
-                    {
-                      "Rank 1 Moves_1": "Move",
-                      "Rank 1 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Arm Thrust",
-                      "Rank 1 Moves_2": "Technician"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Double Kick",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Focus Energy",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Low Sweep",
-                      "Rank 1 Moves_2": "None"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 2 Moves",
-                  "rows": [
-                    {
-                      "Rank 2 Moves_1": "Move",
-                      "Rank 2 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Brick Break",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Quick Guard",
-                      "Rank 2 Moves_2": "Technician"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 3 Moves",
-                  "rows": [
-                    {
-                      "Rank 3 Moves_1": "Move",
-                      "Rank 3 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Close Combat",
-                      "Rank 3 Moves_2": "None"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Triple Kick",
-                      "Rank 3 Moves_2": "Technician"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Rank 1 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 2 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 3 Moves",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  }
+                ],
+                [
+                  {
+                    "text": "Arm Thrust"
+                  },
+                  {
+                    "text": "Technician"
+                  },
+                  {
+                    "text": "Brick Break"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Close Combat"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Double Kick"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Quick Guard"
+                  },
+                  {
+                    "text": "Technician"
+                  },
+                  {
+                    "text": "Triple Kick"
+                  },
+                  {
+                    "text": "Technician"
+                  }
+                ],
+                [
+                  {
+                    "text": "Focus Energy"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "Low Sweep"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
               ]
             }
           },
@@ -5891,40 +6292,62 @@
             "Frequency": "Static",
             "Effect": "Learn two Hex Maniac Moves. You may choose any Move marked with the Hex Maniac Studies Rank you are taking or lower.\n*Note: When using Curse, you must use Curse as if you were a Ghost-Type Pokémon",
             "moveTable": {
-              "columns": [
-                "Hex Maniac Moves_1",
-                "Hex Maniac Moves_2"
-              ],
-              "groups": [
-                {
-                  "label": "Hex Maniac Moves",
-                  "rows": [
-                    {
-                      "Hex Maniac Moves_1": "Confuse Ray",
-                      "Hex Maniac Moves_2": "Rank 1"
-                    },
-                    {
-                      "Hex Maniac Moves_1": "Curse*",
-                      "Hex Maniac Moves_2": "Rank 1"
-                    },
-                    {
-                      "Hex Maniac Moves_1": "Hypnosis",
-                      "Hex Maniac Moves_2": "Rank 1"
-                    },
-                    {
-                      "Hex Maniac Moves_1": "Spite",
-                      "Hex Maniac Moves_2": "Rank 1"
-                    },
-                    {
-                      "Hex Maniac Moves_1": "Will-O-Wisp",
-                      "Hex Maniac Moves_2": "Rank 1"
-                    },
-                    {
-                      "Hex Maniac Moves_1": "Hex",
-                      "Hex Maniac Moves_2": "Rank 3"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Hex Maniac Moves",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  {
+                    "text": "Confuse Ray"
+                  },
+                  {
+                    "text": "Rank 1"
+                  }
+                ],
+                [
+                  {
+                    "text": "Curse*"
+                  },
+                  {
+                    "text": "Rank 1"
+                  }
+                ],
+                [
+                  {
+                    "text": "Hypnosis"
+                  },
+                  {
+                    "text": "Rank 1"
+                  }
+                ],
+                [
+                  {
+                    "text": "Spite"
+                  },
+                  {
+                    "text": "Rank 1"
+                  }
+                ],
+                [
+                  {
+                    "text": "Will-O-Wisp"
+                  },
+                  {
+                    "text": "Rank 1"
+                  }
+                ],
+                [
+                  {
+                    "text": "Hex"
+                  },
+                  {
+                    "text": "Rank 3"
+                  }
+                ]
               ]
             }
           },
@@ -7024,86 +7447,122 @@
             "Frequency": "Static",
             "Effect": "Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves_1",
-                "Rank 1 Moves_2",
-                "Rank 2 Moves_1",
-                "Rank 2 Moves_2",
-                "Rank 3 Moves_1",
-                "Rank 3 Moves_2"
-              ],
-              "groups": [
-                {
-                  "label": "Rank 1 Moves",
-                  "rows": [
-                    {
-                      "Rank 1 Moves_1": "Move",
-                      "Rank 1 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Defend Order",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Fury Cutter",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Fell Stinger",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Sticky Web",
-                      "Rank 1 Moves_2": "Arachnid"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 2 Moves",
-                  "rows": [
-                    {
-                      "Rank 2 Moves_1": "Move",
-                      "Rank 2 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Attack Order",
-                      "Rank 2 Moves_2": "Arachnid"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Infestation",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Signal Beam",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Steamroller",
-                      "Rank 2 Moves_2": "None"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 3 Moves",
-                  "rows": [
-                    {
-                      "Rank 3 Moves_1": "Move",
-                      "Rank 3 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Bug Buzz",
-                      "Rank 3 Moves_2": "None"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Megahorn",
-                      "Rank 3 Moves_2": "None"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Spider Web",
-                      "Rank 3 Moves_2": "Arachnid"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Rank 1 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 2 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 3 Moves",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  }
+                ],
+                [
+                  {
+                    "text": "Defend Order"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Attack Order"
+                  },
+                  {
+                    "text": "Arachnid"
+                  },
+                  {
+                    "text": "Bug Buzz"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Fury Cutter"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Infestation"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Megahorn"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Fell Stinger"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Signal Beam"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Spider Web"
+                  },
+                  {
+                    "text": "Arachnid"
+                  }
+                ],
+                [
+                  {
+                    "text": "Sticky Web"
+                  },
+                  {
+                    "text": "Arachnid"
+                  },
+                  {
+                    "text": "Steamroller"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
               ]
             }
           }
@@ -7150,86 +7609,122 @@
             "Frequency": "Static",
             "Effect": "Learn two Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves_1",
-                "Rank 1 Moves_2",
-                "Rank 2 Moves_1",
-                "Rank 2 Moves_2",
-                "Rank 3 Moves_1",
-                "Rank 3 Moves_2"
-              ],
-              "groups": [
-                {
-                  "label": "Rank 1 Moves",
-                  "rows": [
-                    {
-                      "Rank 1 Moves_1": "Move",
-                      "Rank 1 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Defend Order",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Fury Cutter",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Fell Stinger",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Struggle Bug",
-                      "Rank 1 Moves_2": "Monarch"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 2 Moves",
-                  "rows": [
-                    {
-                      "Rank 2 Moves_1": "Move",
-                      "Rank 2 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Infestation",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Powder",
-                      "Rank 2 Moves_2": "Monarch"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Signal Beam",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Steamroller",
-                      "Rank 2 Moves_2": "None"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 3 Moves",
-                  "rows": [
-                    {
-                      "Rank 3 Moves_1": "Move",
-                      "Rank 3 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Bug Buzz",
-                      "Rank 3 Moves_2": "None"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Megahorn",
-                      "Rank 3 Moves_2": "None"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Quiver Dance",
-                      "Rank 3 Moves_2": "Monarch"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Rank 1 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 2 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 3 Moves",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  }
+                ],
+                [
+                  {
+                    "text": "Defend Order"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Infestation"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Bug Buzz"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Fury Cutter"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Powder"
+                  },
+                  {
+                    "text": "Monarch"
+                  },
+                  {
+                    "text": "Megahorn"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Fell Stinger"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Signal Beam"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Quiver Dance"
+                  },
+                  {
+                    "text": "Monarch"
+                  }
+                ],
+                [
+                  {
+                    "text": "Struggle Bug"
+                  },
+                  {
+                    "text": "Monarch"
+                  },
+                  {
+                    "text": "Steamroller"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
               ]
             }
           }
@@ -7418,37 +7913,69 @@
             "Frequency": "Static",
             "Effect": "You may learn two Moves from the list below, marked with the Storm Wizard Rank you are gaining or lower.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves",
-                "Rank 2 Moves",
-                "Rank 3 Moves"
-              ],
-              "groups": [
-                {
-                  "label": "Items",
-                  "rows": [
-                    {
-                      "Rank 1 Moves": "Charge Beam",
-                      "Rank 2 Moves": "Charge",
-                      "Rank 3 Moves": "Discharge"
-                    },
-                    {
-                      "Rank 1 Moves": "Eerie Impulse",
-                      "Rank 2 Moves": "Thunder Punch",
-                      "Rank 3 Moves": "Thunder"
-                    },
-                    {
-                      "Rank 1 Moves": "Shock Wave",
-                      "Rank 2 Moves": "Thunderbolt",
-                      "Rank 3 Moves": "Thunder Wave"
-                    },
-                    {
-                      "Rank 1 Moves": "Spark",
-                      "Rank 2 Moves": "-",
-                      "Rank 3 Moves": "Volt Tackle"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Items",
+                    "colspan": 3
+                  }
+                ],
+                [
+                  {
+                    "text": "Rank 1 Moves"
+                  },
+                  {
+                    "text": "Rank 2 Moves"
+                  },
+                  {
+                    "text": "Rank 3 Moves"
+                  }
+                ],
+                [
+                  {
+                    "text": "Charge Beam"
+                  },
+                  {
+                    "text": "Charge"
+                  },
+                  {
+                    "text": "Discharge"
+                  }
+                ],
+                [
+                  {
+                    "text": "Eerie Impulse"
+                  },
+                  {
+                    "text": "Thunder Punch"
+                  },
+                  {
+                    "text": "Thunder"
+                  }
+                ],
+                [
+                  {
+                    "text": "Shock Wave"
+                  },
+                  {
+                    "text": "Thunderbolt"
+                  },
+                  {
+                    "text": "Thunder Wave"
+                  }
+                ],
+                [
+                  {
+                    "text": "Spark"
+                  },
+                  {
+                    "text": "-"
+                  },
+                  {
+                    "text": "Volt Tackle"
+                  }
+                ]
               ]
             }
           }
@@ -7575,32 +8102,54 @@
             "Frequency": "Static",
             "Effect": "Learn two Fire Bringer Moves from the list below. You may choose any Move marked with the Fire Breather Rank you are taking or lower.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves",
-                "Rank 2 Moves"
-              ],
-              "groups": [
-                {
-                  "label": "Items",
-                  "rows": [
-                    {
-                      "Rank 1 Moves": "Flamethrower",
-                      "Rank 2 Moves": "Blaze Kick"
-                    },
-                    {
-                      "Rank 1 Moves": "Fire Punch",
-                      "Rank 2 Moves": "Fiery Dance"
-                    },
-                    {
-                      "Rank 1 Moves": "Fire Spin",
-                      "Rank 2 Moves": "Flare Blitz"
-                    },
-                    {
-                      "Rank 1 Moves": "Sunny Day",
-                      "Rank 2 Moves": "Heat Wave"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Items",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  {
+                    "text": "Rank 1 Moves"
+                  },
+                  {
+                    "text": "Rank 2 Moves"
+                  }
+                ],
+                [
+                  {
+                    "text": "Flamethrower"
+                  },
+                  {
+                    "text": "Blaze Kick"
+                  }
+                ],
+                [
+                  {
+                    "text": "Fire Punch"
+                  },
+                  {
+                    "text": "Fiery Dance"
+                  }
+                ],
+                [
+                  {
+                    "text": "Fire Spin"
+                  },
+                  {
+                    "text": "Flare Blitz"
+                  }
+                ],
+                [
+                  {
+                    "text": "Sunny Day"
+                  },
+                  {
+                    "text": "Heat Wave"
+                  }
+                ]
               ]
             }
           }
@@ -7657,37 +8206,69 @@
             "Frequency": "Static",
             "Effect": "You may learn two Moves from the list below, marked with the Raging Winds Rank you are gaining or lower.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves",
-                "Rank 2 Moves",
-                "Rank 3 Moves"
-              ],
-              "groups": [
-                {
-                  "label": "Items",
-                  "rows": [
-                    {
-                      "Rank 1 Moves": "Air Cutter",
-                      "Rank 2 Moves": "Air Slash",
-                      "Rank 3 Moves": "Brave Bird"
-                    },
-                    {
-                      "Rank 1 Moves": "Gust",
-                      "Rank 2 Moves": "Bounce",
-                      "Rank 3 Moves": "Hurricane"
-                    },
-                    {
-                      "Rank 1 Moves": "Tailwind",
-                      "Rank 2 Moves": "Defog",
-                      "Rank 3 Moves": "Mirror Move"
-                    },
-                    {
-                      "Rank 1 Moves": "Aerial Ace",
-                      "Rank 2 Moves": "Feather Dance",
-                      "Rank 3 Moves": "Sky Attack"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Items",
+                    "colspan": 3
+                  }
+                ],
+                [
+                  {
+                    "text": "Rank 1 Moves"
+                  },
+                  {
+                    "text": "Rank 2 Moves"
+                  },
+                  {
+                    "text": "Rank 3 Moves"
+                  }
+                ],
+                [
+                  {
+                    "text": "Air Cutter"
+                  },
+                  {
+                    "text": "Air Slash"
+                  },
+                  {
+                    "text": "Brave Bird"
+                  }
+                ],
+                [
+                  {
+                    "text": "Gust"
+                  },
+                  {
+                    "text": "Bounce"
+                  },
+                  {
+                    "text": "Hurricane"
+                  }
+                ],
+                [
+                  {
+                    "text": "Tailwind"
+                  },
+                  {
+                    "text": "Defog"
+                  },
+                  {
+                    "text": "Mirror Move"
+                  }
+                ],
+                [
+                  {
+                    "text": "Aerial Ace"
+                  },
+                  {
+                    "text": "Feather Dance"
+                  },
+                  {
+                    "text": "Sky Attack"
+                  }
+                ]
               ]
             }
           }
@@ -7810,90 +8391,122 @@
             "Frequency": "Static",
             "Effect": "You learn two Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves_1",
-                "Rank 1 Moves_2",
-                "Rank 2 Moves_1",
-                "Rank 2 Moves_2",
-                "Rank 3 Moves_1",
-                "Rank 3 Moves_2"
-              ],
-              "groups": [
-                {
-                  "label": "Rank 1 Moves",
-                  "rows": [
-                    {
-                      "Rank 1 Moves_1": "Move",
-                      "Rank 1 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Cotton Spore",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Mega Drain",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Razor Leaf",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Sweet Scent",
-                      "Rank 1 Moves_2": "Flower Oath"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 2 Moves",
-                  "rows": [
-                    {
-                      "Rank 2 Moves_1": "Move",
-                      "Rank 2 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Aromatherapy",
-                      "Rank 2 Moves_2": "Flower Oath"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Energy Ball",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Magical Leaf",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Seed Bomb",
-                      "Rank 2 Moves_2": "None"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 3 Moves",
-                  "rows": [
-                    {
-                      "Rank 3 Moves_1": "Move",
-                      "Rank 3 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Leech Seed",
-                      "Rank 3 Moves_2": "None"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Petal Dance",
-                      "Rank 3 Moves_2": "Flower Oath"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Power Whip",
-                      "Rank 3 Moves_2": "None"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Solar Beam",
-                      "Rank 3 Moves_2": "None"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Rank 1 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 2 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 3 Moves",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  }
+                ],
+                [
+                  {
+                    "text": "Cotton Spore"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Aromatherapy"
+                  },
+                  {
+                    "text": "Flower Oath"
+                  },
+                  {
+                    "text": "Leech Seed"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Mega Drain"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Energy Ball"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Petal Dance"
+                  },
+                  {
+                    "text": "Flower Oath"
+                  }
+                ],
+                [
+                  {
+                    "text": "Razor Leaf"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Magical Leaf"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Power Whip"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Sweet Scent"
+                  },
+                  {
+                    "text": "Flower Oath"
+                  },
+                  {
+                    "text": "Seed Bomb"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Solar Beam"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ]
               ]
             }
           }
@@ -7940,90 +8553,122 @@
             "Frequency": "Static",
             "Effect": "You learn two Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves_1",
-                "Rank 1 Moves_2",
-                "Rank 2 Moves_1",
-                "Rank 2 Moves_2",
-                "Rank 3 Moves_1",
-                "Rank 3 Moves_2"
-              ],
-              "groups": [
-                {
-                  "label": "Rank 1 Moves",
-                  "rows": [
-                    {
-                      "Rank 1 Moves_1": "Move",
-                      "Rank 1 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Cotton Spore",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Mega Drain",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Razor Leaf",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Stun Spore",
-                      "Rank 1 Moves_2": "Fungal Oath"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 2 Moves",
-                  "rows": [
-                    {
-                      "Rank 2 Moves_1": "Move",
-                      "Rank 2 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Energy Ball",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Giga Drain",
-                      "Rank 2 Moves_2": "Fungal Oath"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Magical Leaf",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Seed Bomb",
-                      "Rank 2 Moves_2": "None"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 3 Moves",
-                  "rows": [
-                    {
-                      "Rank 3 Moves_1": "Move",
-                      "Rank 3 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Leech Seed",
-                      "Rank 3 Moves_2": "None"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Power Whip",
-                      "Rank 3 Moves_2": "None"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Solar Beam",
-                      "Rank 3 Moves_2": "None"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Spore",
-                      "Rank 3 Moves_2": "Fungal Oath"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Rank 1 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 2 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 3 Moves",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  }
+                ],
+                [
+                  {
+                    "text": "Cotton Spore"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Energy Ball"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Leech Seed"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Mega Drain"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Giga Drain"
+                  },
+                  {
+                    "text": "Fungal Oath"
+                  },
+                  {
+                    "text": "Power Whip"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Razor Leaf"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Magical Leaf"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Solar Beam"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Stun Spore"
+                  },
+                  {
+                    "text": "Fungal Oath"
+                  },
+                  {
+                    "text": "Seed Bomb"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Spore"
+                  },
+                  {
+                    "text": "Fungal Oath"
+                  }
+                ]
               ]
             }
           }
@@ -8070,90 +8715,122 @@
             "Frequency": "Static",
             "Effect": "You learn two Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves_1",
-                "Rank 1 Moves_2",
-                "Rank 2 Moves_1",
-                "Rank 2 Moves_2",
-                "Rank 3 Moves_1",
-                "Rank 3 Moves_2"
-              ],
-              "groups": [
-                {
-                  "label": "Rank 1 Moves",
-                  "rows": [
-                    {
-                      "Rank 1 Moves_1": "Move",
-                      "Rank 1 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Cotton Spore",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Ingrain",
-                      "Rank 1 Moves_2": "Tree Oath"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Mega Drain",
-                      "Rank 1 Moves_2": "None"
-                    },
-                    {
-                      "Rank 1 Moves_1": "Razor Leaf",
-                      "Rank 1 Moves_2": "None"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 2 Moves",
-                  "rows": [
-                    {
-                      "Rank 2 Moves_1": "Move",
-                      "Rank 2 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Energy Ball",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Magical Leaf",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Seed Bomb",
-                      "Rank 2 Moves_2": "None"
-                    },
-                    {
-                      "Rank 2 Moves_1": "Spiky Shield",
-                      "Rank 2 Moves_2": "Tree Oath"
-                    }
-                  ]
-                },
-                {
-                  "label": "Rank 3 Moves",
-                  "rows": [
-                    {
-                      "Rank 3 Moves_1": "Move",
-                      "Rank 3 Moves_2": "Prerequisites"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Leech Seed",
-                      "Rank 3 Moves_2": "None"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Petal Blizzard",
-                      "Rank 3 Moves_2": "Tree Oath"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Power Whip",
-                      "Rank 3 Moves_2": "None"
-                    },
-                    {
-                      "Rank 3 Moves_1": "Solar Beam",
-                      "Rank 3 Moves_2": "None"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Rank 1 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 2 Moves",
+                    "colspan": 2
+                  },
+                  {
+                    "text": "Rank 3 Moves",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  },
+                  {
+                    "text": "Move"
+                  },
+                  {
+                    "text": "Prerequisites"
+                  }
+                ],
+                [
+                  {
+                    "text": "Cotton Spore"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Energy Ball"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Leech Seed"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Ingrain"
+                  },
+                  {
+                    "text": "Tree Oath"
+                  },
+                  {
+                    "text": "Magical Leaf"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Petal Blizzard"
+                  },
+                  {
+                    "text": "Tree Oath"
+                  }
+                ],
+                [
+                  {
+                    "text": "Mega Drain"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Seed Bomb"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Power Whip"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ],
+                [
+                  {
+                    "text": "Razor Leaf"
+                  },
+                  {
+                    "text": "None"
+                  },
+                  {
+                    "text": "Spiky Shield"
+                  },
+                  {
+                    "text": "Tree Oath"
+                  },
+                  {
+                    "text": "Solar Beam"
+                  },
+                  {
+                    "text": "None"
+                  }
+                ]
               ]
             }
           }
@@ -8282,32 +8959,54 @@
             "Frequency": "Static",
             "Effect": "You may learn two Moves from the list below, marked with the Rank of Winter's Herald you are gaining or lower.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves",
-                "Rank 2 Moves"
-              ],
-              "groups": [
-                {
-                  "label": "Items",
-                  "rows": [
-                    {
-                      "Rank 1 Moves": "Freeze-Dry",
-                      "Rank 2 Moves": "Avalanche"
-                    },
-                    {
-                      "Rank 1 Moves": "Ice Punch",
-                      "Rank 2 Moves": "Blizzard"
-                    },
-                    {
-                      "Rank 1 Moves": "Ice Beam",
-                      "Rank 2 Moves": "Frost Breath"
-                    },
-                    {
-                      "Rank 1 Moves": "Icicle Crash",
-                      "Rank 2 Moves": "Icicle Spear"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Items",
+                    "colspan": 2
+                  }
+                ],
+                [
+                  {
+                    "text": "Rank 1 Moves"
+                  },
+                  {
+                    "text": "Rank 2 Moves"
+                  }
+                ],
+                [
+                  {
+                    "text": "Freeze-Dry"
+                  },
+                  {
+                    "text": "Avalanche"
+                  }
+                ],
+                [
+                  {
+                    "text": "Ice Punch"
+                  },
+                  {
+                    "text": "Blizzard"
+                  }
+                ],
+                [
+                  {
+                    "text": "Ice Beam"
+                  },
+                  {
+                    "text": "Frost Breath"
+                  }
+                ],
+                [
+                  {
+                    "text": "Icicle Crash"
+                  },
+                  {
+                    "text": "Icicle Spear"
+                  }
+                ]
               ]
             }
           }
@@ -8621,32 +9320,58 @@
             "Frequency": "Static",
             "Effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.",
             "moveTable": {
-              "columns": [
-                "Rank 1 Moves",
-                "Rank 2 Moves",
-                "Rank 3 Moves"
-              ],
-              "groups": [
-                {
-                  "label": "Items",
-                  "rows": [
-                    {
-                      "Rank 1 Moves": "Aqua Jet",
-                      "Rank 2 Moves": "Bubble Beam",
-                      "Rank 3 Moves": "Aqua Tail"
-                    },
-                    {
-                      "Rank 1 Moves": "Aqua Ring",
-                      "Rank 2 Moves": "Waterfall",
-                      "Rank 3 Moves": "Rain Dance"
-                    },
-                    {
-                      "Rank 1 Moves": "Water Pulse",
-                      "Rank 2 Moves": "Whirlpool",
-                      "Rank 3 Moves": "Surf"
-                    }
-                  ]
-                }
+              "type": "table",
+              "rows": [
+                [
+                  {
+                    "text": "Items",
+                    "colspan": 3
+                  }
+                ],
+                [
+                  {
+                    "text": "Rank 1 Moves"
+                  },
+                  {
+                    "text": "Rank 2 Moves"
+                  },
+                  {
+                    "text": "Rank 3 Moves"
+                  }
+                ],
+                [
+                  {
+                    "text": "Aqua Jet"
+                  },
+                  {
+                    "text": "Bubble Beam"
+                  },
+                  {
+                    "text": "Aqua Tail"
+                  }
+                ],
+                [
+                  {
+                    "text": "Aqua Ring"
+                  },
+                  {
+                    "text": "Waterfall"
+                  },
+                  {
+                    "text": "Rain Dance"
+                  }
+                ],
+                [
+                  {
+                    "text": "Water Pulse"
+                  },
+                  {
+                    "text": "Whirlpool"
+                  },
+                  {
+                    "text": "Surf"
+                  }
+                ]
               ]
             }
           }

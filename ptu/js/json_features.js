@@ -757,6 +757,14 @@ function createCard(feat, clsMeta, isGeneral, nested = false) {
   Object.entries(feat).forEach(([k, v]) => {
     if (k.startsWith("_")) return; // Skip metadata keys
     
+    // NEW: Handle simple table structure (type: "table", rows: [...])
+    if (typeof v === "object" && v !== null && !Array.isArray(v) && v.type === "table" && Array.isArray(v.rows)) {
+      const searchInput = document.getElementById("features-search");
+      const q = searchInput ? (searchInput.value || "") : "";
+      renderSimpleTable(v, k, q, body);
+      return;
+    }
+    
     // NEW: Handle hierarchical table structure (moveTable, abilityTable, etc.)
     if (typeof v === "object" && v !== null && !Array.isArray(v) && v.groups && Array.isArray(v.groups)) {
       const searchInput = document.getElementById("features-search");
@@ -793,7 +801,96 @@ function createCard(feat, clsMeta, isGeneral, nested = false) {
 /* ========== TABLE RENDERING HELPERS ===================================== */
 
 /**
- * Renders a hierarchical table structure with groups (new format)
+ * Renders a simple table structure (new format)
+ * Structure: { type: "table", rows: [ [{text: "...", colspan: 2}, ...], [...], ... ] }
+ */
+function renderSimpleTable(tableObj, title, q, parentEl) {
+  if (!tableObj.rows || !Array.isArray(tableObj.rows) || tableObj.rows.length === 0) {
+    return;
+  }
+
+  // Card + body
+  const card = document.createElement("div");
+  card.className = "card h-100 bg-body border shadow-sm mb-2 overflow-hidden rounded-3";
+  const body = document.createElement("div");
+  body.className = "card-body bg-body-secondary";
+
+  // Responsive wrapper
+  const wrap = document.createElement("div");
+  wrap.className = "table-responsive";
+
+  // Table
+  const table = document.createElement("table");
+  table.className = "table table-sm table-striped mb-0 items-table";
+
+  const tbody = document.createElement("tbody");
+
+  // Render each row
+  tableObj.rows.forEach((rowData, rowIndex) => {
+    if (!Array.isArray(rowData)) return;
+
+    // Apply search filter on data rows (skip header rows - first 2 rows typically)
+    if (q && rowIndex >= 2) {
+      const hay = rowData
+        .map(cell => (cell && cell.text ? String(cell.text).toLowerCase() : ""))
+        .join(" ");
+      if (!hay.includes(String(q).toLowerCase())) {
+        return; // Skip this row
+      }
+    }
+
+    const tr = document.createElement("tr");
+    
+    // First two rows are typically headers
+    if (rowIndex < 2) {
+      tr.className = "table-group-header";
+    }
+
+    rowData.forEach(cellData => {
+      const isHeader = rowIndex < 2;
+      const cell = document.createElement(isHeader ? "th" : "td");
+      
+      if (cellData && typeof cellData === "object") {
+        const text = cellData.text != null ? cellData.text : "";
+        cell.innerHTML = text === "" ? "—" : escapeHTML(String(text)).replaceAll("\n", "<br>");
+        
+        // Handle colspan
+        if (cellData.colspan && cellData.colspan > 1) {
+          cell.colSpan = cellData.colspan;
+        }
+        
+        // Handle rowspan if needed
+        if (cellData.rowspan && cellData.rowspan > 1) {
+          cell.rowSpan = cellData.rowspan;
+        }
+        
+        // Apply header styling
+        if (isHeader) {
+          cell.className = "fw-bold bg-light text-center";
+        }
+      } else {
+        // Fallback for simple values
+        cell.innerHTML = cellData != null ? escapeHTML(String(cellData)).replaceAll("\n", "<br>") : "—";
+        if (isHeader) {
+          cell.className = "fw-bold bg-light text-center";
+        }
+      }
+      
+      tr.appendChild(cell);
+    });
+
+    tbody.appendChild(tr);
+  });
+
+  table.appendChild(tbody);
+  wrap.appendChild(table);
+  body.appendChild(wrap);
+  card.appendChild(body);
+  parentEl.appendChild(card);
+}
+
+/**
+ * Renders a hierarchical table structure with groups (old format)
  * Structure: { columns: [...], groups: [ { label: "...", rows: [...] }, ... ] }
  */
 function renderHierarchicalTable(tableObj, title, q, parentEl) {
