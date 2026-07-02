@@ -89,6 +89,9 @@ body[style*="padding-right"] { padding-right: 0 !important; }
   margin-right: .25rem;
 }
 
+.ptu-showhide {
+  padding: 0.5em;
+}
 
 /* ===== Unified Sidebar ================================================== */
 aside .list-group#sidebar { display:block; gap:0; padding:0; }

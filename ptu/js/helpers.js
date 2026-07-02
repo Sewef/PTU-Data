@@ -259,33 +259,37 @@ export function renderShowHideBlock(
   innerHTML,
   { open = false, className = "ptu-showhide", buttonText = "Show / Hide" } = {}
 ) {
+  const safeTitle = escapeHTML(title || "Details");
   const safeButtonText = escapeHTML(buttonText || "Show / Hide");
   const content = innerHTML == null ? "" : String(innerHTML);
   const collapseId = `ptu-collapse-${toSafeIdBase(title)}-${++_showHideCounter}`;
   const shownClass = open ? " show" : "";
 
-  return `
-    <div class="${className}">
-      <button class="btn btn-sm btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#${collapseId}" aria-expanded="${open ? "true" : "false"}" aria-controls="${collapseId}">${safeButtonText}</button>
-      <div id="${collapseId}" class="collapse${shownClass} mt-2
-        <div class="mt-1">${content}</div>
-      </div>
-    </div>`;
+  return `<div class="${className}"><button class="btn btn-sm btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#${collapseId}" aria-expanded="${open ? "true" : "false"}" aria-controls="${collapseId}">${safeButtonText}</button><div id="${collapseId}" class="collapse${shownClass}"><div class="mt-1">${content}</div></div></div>`;
 }
 
 // Custom tag syntax in text: <showhide title="Section">...content...</showhide>
 export function applyCustomShowHideTags(text) {
   if (text == null) return "";
 
+  const placeholders = [];
+
   let html = String(text);
   html = html.replace(/<showhide(?:\s+title=(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?\s*>([\s\S]*?)<\/showhide>/gi,
     (_match, title1, title2, title3, content) => {
       const title = title1 || title2 || title3 || "Details";
       const body = String(content || "").replace(/\n/g, "<br>");
-      return renderShowHideBlock(title, body);
+      const token = `__PTU_SHOWHIDE_${placeholders.length}__`;
+      placeholders.push(renderShowHideBlock(title, body));
+      return token;
     });
 
-  return html.replace(/\n/g, "<br>");
+  html = html.replace(/\n/g, "<br>");
+  placeholders.forEach((block, idx) => {
+    html = html.replace(`__PTU_SHOWHIDE_${idx}__`, block);
+  });
+
+  return html;
 }
 
 // --- Build pill filter section ---
