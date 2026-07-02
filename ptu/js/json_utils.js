@@ -93,7 +93,7 @@ function renderPTUCard(item, depth = 0, showRootTitle = true) {
 
         // Valeur simple
         let displayValue = value;
-        if (key === "Description" && typeof value === "string") {
+        if (typeof value === "string") {
             displayValue = value.replace(/\n/g, "<br>");
         }
         html += `<p><strong>${key}:</strong> ${displayValue ?? ""}</p>`;
