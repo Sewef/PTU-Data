@@ -81,7 +81,7 @@
     "AC": "None",
     "Damage Base": "6",
     "Class": "Physical",
-    "Range": "Melee, 1 Target",
+    "Range": "Melee, 1 Target, Slice",
     "Effect": "Aerial Ace cannot miss.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
@@ -123,7 +123,7 @@
     "AC": "2",
     "Damage Base": "6",
     "Class": "Special",
-    "Range": "Cone 2",
+    "Range": "Cone 2, Slice",
     "Effect": "Air Cutter is a Critical Hit on 18+.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -134,7 +134,7 @@
     "AC": "3",
     "Damage Base": "8",
     "Class": "Special",
-    "Range": "6, 1 Target",
+    "Range": "6, 1 Target, Slice",
     "Effect": "Air Slash Flinches the target on 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
@@ -553,7 +553,7 @@
     "AC": "2",
     "Damage Base": "10",
     "Class": "Physical",
-    "Range": "Melee, 1 Target",
+    "Range": "Melee, 1 Target, Slice",
     "Effect": "The DB of Behemoth Blade increases by +2 for each positive CS the target has, to a maximum of DB 20.",
     "Contest Type": "Cool",
     "Contest Effect": "Good Show!"
@@ -1062,7 +1062,7 @@
     "AC": "4",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, 1 Target",
+    "Range": "Melee, 1 Target, Slice",
     "Effect": "The target is put in a Vortex. Ceaseless Edge is a Critical Hit on a 19+.",
     "Contest Type": "Smart",
     "Contest Effect": "Safe Option"
@@ -1474,7 +1474,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, Pass, Slice",
     "Effect": "Cross Poison is a Critical Hit on 18+, and Poisons the target on 19+.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -1537,7 +1537,7 @@
     "AC": "3",
     "Damage Base": "5",
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, Pass, Slice",
     "Effect": "Cut ignores up to 5 Damage Reduction (Defenses are not Damage Reduction).",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -1898,7 +1898,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target",
+    "Range": "Melee, 1 Target, Slice",
     "Effect": "None",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
@@ -3016,7 +3016,7 @@
     "AC": "3",
     "Damage Base": "4",
     "Class": "Physical",
-    "Range": "Melee, 1 Target",
+    "Range": "Melee, 1 Target, Slice",
     "Effect": "If Fury Cutter is used successfully and consecutively on the same target, the Damage Base is increased by +4 to a maximum of 16. For example, the first hit would have a DB of 4; the second hit a DB of 8; the third hit a DB of 12; the fourth and further hits a DB of 16. If Fury Cuter misses or fails to damage its target, its Damage Base resets.",
     "Contest Type": "Cool",
     "Contest Effect": "Reliable"
@@ -4221,7 +4221,7 @@
     "AC": "2",
     "Damage Base": "9",
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, Pass, Slice",
     "Effect": "Leaf Blade is a Critical Hit on 18+.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
@@ -4703,7 +4703,7 @@
     "AC": "3",
     "Damage Base": "5",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Spirit Surge",
+    "Range": "Melee, 1 Target, Spirit Surge, Slice",
     "Effect": "Raise the user's Attack 1 Combat Stage on 18+.",
     "Contest Type": "Cool",
     "Contest Effect": "Incentives"
@@ -5156,7 +5156,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, Pass, Slice",
     "Effect": "Night Slash is a Critical Hit on 18+",
     "Contest Type": "Beauty",
     "Contest Effect": "Steady Performance"
@@ -5878,7 +5878,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "6, 1 Target",
+    "Range": "6, 1 Target, Slice",
     "Effect": "Psycho Cut is a Critical Hit on 18+.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
@@ -6097,7 +6097,7 @@
     "AC": "4",
     "Damage Base": "6",
     "Class": "Physical",
-    "Range": "Cone 2",
+    "Range": "Cone 2, Slice",
     "Effect": "Razor Leaf is a Critical Hit on 18+.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -6108,7 +6108,7 @@
     "AC": "3",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, Dash, Slice",
     "Effect": "Razor Shell lowers the Target's Defense 1 Combat Stage on an Even-Numbered Roll.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -6119,7 +6119,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Special",
-    "Range": "10, 3 Targets, Set-Up",
+    "Range": "10, 3 Targets, Set-Up, Slice",
     "Set-Up Effect": "The user may not shift this round. The user whips up a whirlwind around themselves, granting +2 Evasion until the end of their next turn, and destroying any Smokescreen or Hazards on any squares they are standing on and in all squares adjacent to them.",
     "Resolution Effect": "The user attacks with Razor Wind. Razor Wind is a Critical Hit on 18+.",
     "Contest Type": "Cool",
@@ -6480,7 +6480,7 @@
     "AC": "None",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target",
+    "Range": "Melee, 1 Target, Slice",
     "Effect": "Sacred Sword cannot miss.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -6638,7 +6638,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Special",
-    "Range": "Melee, 1 Target",
+    "Range": "Melee, 1 Target, Slice",
     "Effect": "When calculating damage, the target subtracts their Defense from Secret Sword's damage instead of their Special Defense. Secret Sword is still otherwise Special ( Special Evasion is used to avoid it, Mirror Coat can reflect it, etc. ).",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -6714,7 +6714,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, Pass, Slice",
     "Effect": "Shadow Claw is a Critical Hit on 18+.",
     "Contest Type": "Cute",
     "Contest Effect": "Exhausting Act"
@@ -7012,7 +7012,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, Pass, Slice",
     "Effect": "Slash is a Critical Hit on 18+.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -7226,7 +7226,7 @@
     "AC": "2",
     "Damage Base": "13",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Set-Up",
+    "Range": "Melee, 1 Target, Set-Up, Slice",
     "Set-Up Effect": "If the weather is not Sunny, the user gains +1 Combat Stage in Attack and Special Defense, and the user's turn ends. If the weather is Sunny, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword.",
     "Resolution Effect": "The user attacks with Solar Blade. If the weather is Rainy, Sandstorming, or Hailing, Solar Blade’s Damage Base is lowered to 6 (2d6+8 / 15).",
     "Contest Type": "Cool",
@@ -7249,7 +7249,7 @@
     "AC": "3",
     "Damage Base": "10",
     "Class": "Special",
-    "Range": "10, 1 Target",
+    "Range": "10, 1 Target, Slice",
     "Effect": "Spacial Rend is a Critical Hit on Even-Numbered Rolls.",
     "Contest Type": "Tough",
     "Contest Effect": "Incentives"
@@ -7565,7 +7565,7 @@
     "AC": "4",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, 1 Target",
+    "Range": "Melee, 1 Target, Slice",
     "Effect": "Stone Axe is a critical hit on an 18+. Once per scene, on a hit, the target may be put in a Vortex.",
     "Contest Type": "Tough",
     "Contest Effect": "Reliable"
@@ -8966,7 +8966,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, Dash, Slice",
     "Effect": "None",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
