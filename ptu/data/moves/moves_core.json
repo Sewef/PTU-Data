@@ -1063,7 +1063,7 @@
     "AC": "2",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, Dash, Reckless",
     "Effect": "The user's Defense and Special Defense are each lowered by -1 Combat Stage.",
     "Contest Type": "Smart",
     "Contest Effect": "Seen Nothing Yet"
@@ -1626,7 +1626,7 @@
     "AC": "4",
     "Damage Base": "13",
     "Class": "Special",
-    "Range": "8, Ranged Blast 3, Smite",
+    "Range": "8, Ranged Blast 3, Smite, Reckless",
     "Effect": "Lower the user's Special Attack 2 Combat Stages after damage.",
     "Contest Type": "Smart",
     "Contest Effect": "Seen Nothing Yet"
@@ -3020,7 +3020,7 @@
     "AC": "3",
     "Damage Base": "10",
     "Class": "Physical",
-    "Range": "Melee, 1 Target",
+    "Range": "Melee, 1 Target, Reckless",
     "Effect": "The user lowers their Speed 1 Combat Stage.",
     "Contest Type": "Cool",
     "Contest Effect": "Desperation"
@@ -3242,7 +3242,7 @@
     "AC": "3",
     "Damage Base": "13",
     "Class": "Physical",
-    "Range": "Melee, Dash, 1 Target",
+    "Range": "Melee, Dash, 1 Target, Reckless",
     "Effect": "If High Jump Kick misses, the user loses Hit Points equal to 1/4th of their Max Hit Points. A failure to hit due to a Move with the Shield keyword does not count as a miss. This Move cannot be used if Gravity is in effect.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -3660,7 +3660,7 @@
     "AC": "3",
     "Damage Base": "10",
     "Class": "Physical",
-    "Range": "Melee, Dash, 1 Target",
+    "Range": "Melee, Dash, 1 Target, Reckless",
     "Effect": "If Jump Kick misses, the user loses Hit Points equal to 1/4th of their Max Hit Points. A failure to hit due to a Move with the Shield keyword does not count as a miss. This Move cannot be used if Gravity is in effect.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -3789,7 +3789,7 @@
     "AC": "4",
     "Damage Base": "13",
     "Class": "Special",
-    "Range": "8, Ranged Blast 3, Smite",
+    "Range": "8, Ranged Blast 3, Smite, Reckless",
     "Effect": "Lower the user's Special Attack 2 Combat Stages after damage.",
     "Contest Type": "Cute",
     "Contest Effect": "Seen Nothing Yet"
@@ -4754,7 +4754,7 @@
     "AC": "3",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, All Adjacent Foes, Smite",
+    "Range": "Melee, All Adjacent Foes, Smite, Reckless",
     "Effect": "After damage is dealt, the user becomes Enraged and Confused.",
     "Contest Type": "Cool",
     "Contest Effect": "Reliable"
@@ -4776,7 +4776,7 @@
     "AC": "4",
     "Damage Base": "13",
     "Class": "Special",
-    "Range": "8, Ranged Blast 3, Smite",
+    "Range": "8, Ranged Blast 3, Smite, Reckless",
     "Effect": "Lower the user's Special Attack 2 Combat Stages after damage.",
     "Contest Type": "Beauty",
     "Contest Effect": "Seen Nothing Yet"
@@ -4872,7 +4872,7 @@
     "AC": "3",
     "Damage Base": "12",
     "Class": "Special",
-    "Range": "Melee, All Adjacent Foes, Smite",
+    "Range": "Melee, All Adjacent Foes, Smite, Reckless",
     "Effect": "After damage is dealt, the user becomes Enraged and Confused.",
     "Contest Type": "Beauty",
     "Contest Effect": "Safe Option"
@@ -5261,7 +5261,7 @@
     "AC": "4",
     "Damage Base": "14",
     "Class": "Special",
-    "Range": "8, Ranged Blast 3, Smite",
+    "Range": "8, Ranged Blast 3, Smite, Reckless",
     "Effect": "Lower the user's Special Attack 2 Combat Stages after damage is resolved.",
     "Contest Type": "Smart",
     "Contest Effect": "Seen Nothing Yet"
@@ -7032,7 +7032,7 @@
     "AC": "2",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, Dash, Reckless",
     "Effect": "Superpower lowers the user's Attack and Defense by 1 Combat Stage each.",
     "Contest Type": "Tough",
     "Contest Effect": "Desperation"
@@ -7369,7 +7369,7 @@
     "AC": "3",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, All Adjacent Foes, Smite",
+    "Range": "Melee, All Adjacent Foes, Smite, Reckless",
     "Effect": "After damage is dealt, the user becomes Enraged and Confused.",
     "Contest Type": "Tough",
     "Contest Effect": "Reliable"
@@ -7689,7 +7689,7 @@
     "AC": "5",
     "Damage Base": "18",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Smite",
+    "Range": "Melee, 1 Target, Smite, Reckless",
     "Effect": "Lower the user's Defense, Special Defense, and Speed by 1 CS each.",
     "Contest Type": "Beauty",
     "Contest Effect": "Seen Nothing Yet"
