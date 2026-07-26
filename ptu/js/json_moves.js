@@ -101,7 +101,7 @@ function buildSidebarMoves(allItems, container, cols) {
   classLabel.textContent = "Class";
   classGroup.appendChild(classLabel);
 
-  buildPillSection(classGroup, "class-filters", ["Physical", "Special", "Status"], {
+  buildPillSection(classGroup, "class-filters", ["Physical", "Special", "Status", "Other"], {
     attr: "data-class",
     onChange: () => refreshMoves(allItems, container, cols)
   });

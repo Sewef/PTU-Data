@@ -351,7 +351,12 @@ export function filterByTypes(item, types) {
 
 export function filterByClasses(item, classes) {
   if (!classes.length) return true;
-  return classes.includes(item.Class);
+
+  const standardClasses = ["Physical", "Special", "Status"];
+  const itemClass = item.Class;
+
+  return classes.includes(itemClass)
+    || (classes.includes("Other") && !standardClasses.includes(itemClass));
 }
 
 // --- Damage Base filter ---
