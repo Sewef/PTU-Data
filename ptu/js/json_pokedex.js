@@ -184,6 +184,7 @@ function __makeWildcardMatcher(queryRaw) {
 }
 // =========================
 const _fetchCache = new Map(); // url -> Promise(json)
+let _sourceLabelByPokemon = new WeakMap(); // pokemon object -> dataset label
 const pad3 = (n) => String(n).padStart(3, "0");
 const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 const $ = (sel) => document.querySelector(sel);
@@ -239,18 +240,24 @@ async function loadPokedex() {
     if (selectedPreset === "FanDex") return [];
     throw new Error(`No sources for preset ${selectedPreset}`);
   }
-  const results = await Promise.all(sources.map(async ({ url }) => {
+  const results = await Promise.all(sources.map(async ({ label, url }) => {
     const data = await fetchJson(url, { strict: true });
-    if (Array.isArray(data)) return data;
+    if (Array.isArray(data)) return { label, rows: data };
     // accept { key: obj } maps
-    return data && typeof data === "object" ? Object.values(data) : [];
+    return {
+      label,
+      rows: data && typeof data === "object" ? Object.values(data) : []
+    };
   }));
 
   // merge with de-dup (Number::Species::Form)
   const merged = [];
   const seen = new Set();
-  for (const arr of results) {
-    for (const row of arr) {
+  for (const { label, rows } of results) {
+    for (const row of rows) {
+      if (row && typeof row === "object") {
+        _sourceLabelByPokemon.set(row, label);
+      }
       const num = row?.Number ?? row?.number ?? "";
       const sp = row?.Species ?? row?.species ?? "";
       const form = row?.Form ?? "";
@@ -265,6 +272,7 @@ async function loadPokedex() {
 
 function clearPokedexCaches() {
   _fetchCache.clear();
+  _sourceLabelByPokemon = new WeakMap();
   __TYPE_CACHE__ = new WeakMap();
 }
 
@@ -504,14 +512,16 @@ function getTypeColor(type) {
   return color;
 }
 
-function setupIcon(img, num, name, mode = "icon") {
+function setupIcon(img, num, name, mode = "icon", pokemon = null) {
   const slug = slugify(name || "");
   let base = mode === "full" ? "/ptu/img/pokemon/full" : "/ptu/img/pokemon/icons";
 
-  // For FanDex, add subdirectory based on selected dataset
+  // For FanDex, use the dataset this Pokémon was loaded from. Using the first
+  // selected label breaks as soon as multiple FanDex sources are displayed.
   if (selectedPreset === "FanDex" && selectedLabels.size > 0) {
-    const firstLabel = Array.from(selectedLabels)[0];
-    const subdir = firstLabel.toLowerCase(); // "Insurgence" -> "insurgence"
+    const sourceLabel = _sourceLabelByPokemon.get(pokemon)
+      || Array.from(selectedLabels)[0];
+    const subdir = sourceLabel.toLowerCase(); // "Insurgence" -> "insurgence"
     base = `${base}/${subdir}`;
   }
 
@@ -666,7 +676,7 @@ function renderGrid(rows) {
       const iconWrap = document.createElement("div");
       iconWrap.className = "icon dark-background";
       const img = document.createElement("img");
-      setupIcon(img, p.Icon || p.Number, name, "icon");
+      setupIcon(img, p.Icon || p.Number, name, "icon", p);
       iconWrap.appendChild(img);
       li.appendChild(iconWrap);
 
@@ -899,7 +909,7 @@ function renderBattleOnlyForms(forms, base) {
 
   return Object.entries(forms).map(([label, f]) => {
     const t = document.createElement("img");
-    setupIcon(t, f?.Icon ?? pNum, `${pName} — ${label}`, "full");
+    setupIcon(t, f?.Icon ?? pNum, `${pName} — ${label}`, "full", base);
     const src = t.src;
     const types = wrapTypes(f?.Type || []);
 
@@ -1749,7 +1759,7 @@ function openDetail(p) {
   body.innerHTML = renderObject(safe);
 
   const img = $("#dexModalIcon");
-  if (img) setupIcon(img, p.Icon || p.Number, displayName, "full");
+  if (img) setupIcon(img, p.Icon || p.Number, displayName, "full", p);
 
   const inst = getDexModalInstance();
   if (inst && !isDexModalShown()) inst.show();
