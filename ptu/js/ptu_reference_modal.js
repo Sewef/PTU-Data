@@ -488,7 +488,9 @@ function renderMoveDetails(mv) {
 function renderMoveDetailsCore(mv) {
   const row = (k, v) => isBlank(v) ? "" : `<div><span class="text-muted">${escapeHtml(k)}:</span> ${escapeHtml(String(v))}</div>`;
   const tags = Array.isArray(mv.Tags) && mv.Tags.length ? mv.Tags.join(", ") : (mv.Keywords || mv.Keyword || "");
-  const effectKeys = Object.keys(mv).filter(k => /effect/i.test(k) && !["Contest Type", "Contest Effect"].includes(k));
+  const effectKeys = Object.keys(mv).filter(k =>
+    /(effect|special)/i.test(k) && !["Contest Type", "Contest Effect"].includes(k)
+  );
   const effects = effectKeys.map(k => {
     const value = mv[k];
     if (isBlank(value)) return "";
