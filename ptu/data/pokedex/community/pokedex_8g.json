@@ -21338,7 +21338,7 @@
     }
   },
   {
-    "Species": "Eiscue ",
+    "Species": "Eiscue",
     "Form": "Ice Face",
     "Number": 875,
     "Base Stats": {
@@ -39232,9 +39232,27 @@
           "Type": "Normal"
         },
         {
+          "Level": 22,
+          "Move": "Swords Dance",
+          "Type": "Normal"
+        },
+        {
+          "Level": 33,
+          "Move": "Iron Head",
+          "Type": "Steel"
+        },
+        {
           "Level": 55,
           "Move": "Crunch",
           "Type": "Dark"
+        },
+        {
+          "Level": 66,
+          "Move": "Moonblast",
+          "Type": "Fairy",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 77,
@@ -39552,6 +39570,19 @@
           "Type": "Normal"
         },
         {
+          "Level": 22,
+          "Move": "Swords Dance",
+          "Type": "Normal"
+        },
+        {
+          "Level": 33,
+          "Move": "Iron Head",
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
           "Level": 44,
           "Move": "Laser Focus",
           "Type": "Normal"
@@ -39560,6 +39591,14 @@
           "Level": 55,
           "Move": "Crunch",
           "Type": "Dark"
+        },
+        {
+          "Level": 66,
+          "Move": "Moonblast",
+          "Type": "Fairy",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 77,
@@ -39879,6 +39918,16 @@
           "Type": "Normal"
         },
         {
+          "Level": 22,
+          "Move": "Iron Defense",
+          "Type": "Steel"
+        },
+        {
+          "Level": 33,
+          "Move": "Iron Head",
+          "Type": "Steel"
+        },
+        {
           "Level": 44,
           "Move": "Laser Focus",
           "Type": "Normal"
@@ -39892,6 +39941,14 @@
           "Level": 66,
           "Move": "Moonblast",
           "Type": "Fairy"
+        },
+        {
+          "Level": 77,
+          "Move": "Close Combat",
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 88,
@@ -40232,6 +40289,19 @@
           "Type": "Normal"
         },
         {
+          "Level": 22,
+          "Move": "Iron Defense",
+          "Type": "Steel"
+        },
+        {
+          "Level": 33,
+          "Move": "Iron Head",
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
           "Level": 44,
           "Move": "Laser Focus",
           "Type": "Normal"
@@ -40245,6 +40315,14 @@
           "Level": 66,
           "Move": "Moonblast",
           "Type": "Fairy"
+        },
+        {
+          "Level": 77,
+          "Move": "Close Combat",
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 88,
@@ -40631,6 +40709,19 @@
           "Type": "Fire"
         },
         {
+          "Level": 56,
+          "Move": "Dynamax Cannon",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
+          "Level": 64,
+          "Move": "Cosmic Power",
+          "Type": "Psychic"
+        },
+        {
           "Level": 72,
           "Move": "Recover",
           "Type": "Normal"
@@ -40639,6 +40730,14 @@
           "Level": 80,
           "Move": "Hyper Beam",
           "Type": "Normal"
+        },
+        {
+          "Level": 88,
+          "Move": "Eternabeam",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/HM Move List": [
@@ -41239,6 +41338,14 @@
           "Level": 80,
           "Move": "Superpower",
           "Type": "Fighting"
+        },
+        {
+          "Level": 88,
+          "Move": "Double Iron Bash",
+          "Type": "Steel",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 96,
@@ -43643,6 +43750,14 @@
           "Type": "Normal"
         },
         {
+          "Level": 45,
+          "Move": "Frezzing Glare",
+          "Type": "Psychic",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
           "Level": 50,
           "Move": "Dream Eater",
           "Type": "Psychic",
@@ -43662,6 +43777,14 @@
           "Level": 60,
           "Move": "Mind Reader",
           "Type": "Normal"
+        },
+        {
+          "Level": 65,
+          "Move": "Future Sight",
+          "Type": "Psychic",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 70,
@@ -44106,6 +44229,14 @@
           "Type": "Fighting"
         },
         {
+          "Level": 45,
+          "Move": "Thunderous Kick",
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
           "Level": 50,
           "Move": "Bulk Up",
           "Type": "Fighting"
@@ -44122,6 +44253,14 @@
           "Level": 60,
           "Move": "Detect",
           "Type": "Fighting"
+        },
+        {
+          "Level": 65,
+          "Move": "Close Combat",
+          "Type": "Fighting",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 70,
@@ -44583,6 +44722,14 @@
           "Type": "Normal"
         },
         {
+          "Level": 45,
+          "Move": "Fiery Wrath",
+          "Type": "Dark",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
           "Level": 50,
           "Move": "Nasty Plot",
           "Type": "Dark"
@@ -44599,6 +44746,11 @@
           "Level": 60,
           "Move": "Endure",
           "Type": "Normal"
+        },
+        {
+          "Level": 65,
+          "Move": "Memento",
+          "Type": "Dark"
         },
         {
           "Level": 70,
@@ -45019,6 +45171,11 @@
           ]
         },
         {
+          "Level": 12,
+          "Move": "Ancient Power",
+          "Type": "Rock"
+        },
+        {
           "Level": 18,
           "Move": "Shock Wave",
           "Type": "Electric",
@@ -45035,6 +45192,14 @@
           "Level": 30,
           "Move": "Extreme Speed",
           "Type": "Normal"
+        },
+        {
+          "Level": 36,
+          "Move": "Thunder Cage",
+          "Type": "Electric",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 42,
@@ -45399,6 +45564,11 @@
           "Type": "Dark"
         },
         {
+          "Level": 12,
+          "Move": "Ancient Power",
+          "Type": "Rock"
+        },
+        {
           "Level": 18,
           "Move": "Dragon Breath",
           "Type": "Dragon",
@@ -45443,6 +45613,14 @@
           "Level": 60,
           "Move": "Laser Focus",
           "Type": "Normal"
+        },
+        {
+          "Level": 66,
+          "Move": "Dragon Energy",
+          "Type": "Dragon",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 72,
@@ -45764,6 +45942,14 @@
           "Level": 30,
           "Move": "Mist",
           "Type": "Ice"
+        },
+        {
+          "Level": 36,
+          "Move": "Icicle Crash",
+          "Type": "Ice",
+          "Tags": [
+            "Stab"
+          ]
         },
         {
           "Level": 42,
@@ -46153,6 +46339,14 @@
           "Type": "Ice"
         },
         {
+          "Level": 36,
+          "Move": "Shadow Ball",
+          "Type": "Ghost",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
           "Level": 42,
           "Move": "Take Down",
           "Type": "Normal"
@@ -46502,6 +46696,19 @@
           "Type": "Normal"
         },
         {
+          "Level": 40,
+          "Move": "Aromatherapy",
+          "Type": "Grass"
+        },
+        {
+          "Level": 48,
+          "Move": "Energy Ball",
+          "Type": "Grass",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
           "Level": 56,
           "Move": "Psychic",
           "Type": "Psychic",
@@ -46523,6 +46730,14 @@
           "Level": 80,
           "Move": "Solar Beam",
           "Type": "Grass",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
+          "Level": 88,
+          "Move": "Future Sight",
+          "Type": "Psychic",
           "Tags": [
             "Stab"
           ]
@@ -46940,6 +47155,19 @@
           "Type": "Normal"
         },
         {
+          "Level": 40,
+          "Move": "Aromatherapy",
+          "Type": "Grass"
+        },
+        {
+          "Level": 48,
+          "Move": "Energy Ball",
+          "Type": "Grass",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
           "Level": 56,
           "Move": "Psychic",
           "Type": "Psychic",
@@ -46961,6 +47189,14 @@
           "Level": 80,
           "Move": "Solar Beam",
           "Type": "Grass"
+        },
+        {
+          "Level": 88,
+          "Move": "Future Sight",
+          "Type": "Psychic",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/HM Move List": [
@@ -47363,6 +47599,19 @@
           "Type": "Normal"
         },
         {
+          "Level": 40,
+          "Move": "Aromatherapy",
+          "Type": "Grass"
+        },
+        {
+          "Level": 48,
+          "Move": "Energy Ball",
+          "Type": "Grass",
+          "Tags": [
+            "Stab"
+          ]
+        },
+        {
           "Level": 56,
           "Move": "Psychic",
           "Type": "Psychic",
@@ -47384,6 +47633,14 @@
           "Level": 80,
           "Move": "Solar Beam",
           "Type": "Grass"
+        },
+        {
+          "Level": 88,
+          "Move": "Future Sight",
+          "Type": "Psychic",
+          "Tags": [
+            "Stab"
+          ]
         }
       ],
       "TM/HM Move List": [

@@ -26360,14 +26360,14 @@
       "Overland": 4,
       "Swim": 2,
       "Levitate": 5,
+      "High Jump": 1,
+      "Long Jump": 1,
       "Power": 5,
       "Sky": 0,
       "Burrow": 0,
-      "High Jump": 0,
-      "Long Jump": 0,
-      "Jump 1 /1, Underdog": -1
+      "Underdog": -1
     },
-    "otherCapabilities": "Jump 1 /1, Underdog"
+    "otherCapabilities": "Underdog"
   },
   {
     "pokedexEntryDocumentId": null,
@@ -26572,7 +26572,7 @@
       "familyName": null,
       "entries": []
     },
-    "evolutionStage": 1,
+    "evolutionStage": 2,
     "evolutionsRemainingMale": null,
     "evolutionsRemainingFemale": null,
     "evolutionsRemainingGenderless": null,
@@ -50474,8 +50474,20 @@
           "learnedLevel": 11
         },
         {
+          "moveName": "Swords Dance",
+          "learnedLevel": 22
+        },
+        {
+          "moveName": "Iron Head",
+          "learnedLevel": 33
+        },
+        {
           "moveName": "Crunch",
           "learnedLevel": 55
+        },
+        {
+          "moveName": "Moonblast",
+          "learnedLevel": 66
         },
         {
           "moveName": "Close Combat",
@@ -50678,12 +50690,24 @@
           "learnedLevel": 11
         },
         {
+          "moveName": "Swords Dance",
+          "learnedLevel": 22
+        },
+        {
+          "moveName": "Iron Head",
+          "learnedLevel": 33
+        },
+        {
           "moveName": "Laser Focus",
           "learnedLevel": 44
         },
         {
           "moveName": "Crunch",
           "learnedLevel": 55
+        },
+        {
+          "moveName": "Moonblast",
+          "learnedLevel": 66
         },
         {
           "moveName": "Close Combat",
@@ -50885,6 +50909,14 @@
           "learnedLevel": 11
         },
         {
+          "moveName": "Iron Defense",
+          "learnedLevel": 22
+        },
+        {
+          "moveName": "Iron Head",
+          "learnedLevel": 33
+        },
+        {
           "moveName": "Laser Focus",
           "learnedLevel": 44
         },
@@ -50895,6 +50927,10 @@
         {
           "moveName": "Moonblast",
           "learnedLevel": 66
+        },
+        {
+          "moveName": "Close Combat",
+          "learnedLevel": 77
         },
         {
           "moveName": "Giga Impact",
@@ -51097,6 +51133,14 @@
           "learnedLevel": 11
         },
         {
+          "moveName": "Iron Defense",
+          "learnedLevel": 22
+        },
+        {
+          "moveName": "Iron Head",
+          "learnedLevel": 33
+        },
+        {
           "moveName": "Laser Focus",
           "learnedLevel": 44
         },
@@ -51107,6 +51151,10 @@
         {
           "moveName": "Moonblast",
           "learnedLevel": 66
+        },
+        {
+          "moveName": "Close Combat",
+          "learnedLevel": 77
         },
         {
           "moveName": "Giga Impact",
@@ -51329,12 +51377,24 @@
           "learnedLevel": 48
         },
         {
+          "moveName": "Dynamax Cannon",
+          "learnedLevel": 56
+        },
+        {
+          "moveName": "Cosmic Power",
+          "learnedLevel": 64
+        },
+        {
           "moveName": "Recover",
           "learnedLevel": 72
         },
         {
           "moveName": "Hyper Beam",
           "learnedLevel": 80
+        },
+        {
+          "moveName": "Eternabeam",
+          "learnedLevel": 88
         }
       ],
       "machineMoves": [
@@ -51736,6 +51796,10 @@
         {
           "moveName": "Superpower",
           "learnedLevel": 80
+        },
+        {
+          "moveName": "Double Iron Bash",
+          "learnedLevel": 88
         },
         {
           "moveName": "Hyper Beam",
@@ -52958,6 +53022,10 @@
           "learnedLevel": 40
         },
         {
+          "moveName": "Frezzing Glare",
+          "learnedLevel": 45
+        },
+        {
           "moveName": "Dream Eater",
           "learnedLevel": 50
         },
@@ -52968,6 +53036,10 @@
         {
           "moveName": "Mind Reader",
           "learnedLevel": 60
+        },
+        {
+          "moveName": "Future Sight",
+          "learnedLevel": 65
         },
         {
           "moveName": "Trick Room",
@@ -53207,6 +53279,10 @@
           "learnedLevel": 40
         },
         {
+          "moveName": "Thunderous Kick",
+          "learnedLevel": 45
+        },
+        {
           "moveName": "Bulk Up",
           "learnedLevel": 50
         },
@@ -53217,6 +53293,10 @@
         {
           "moveName": "Detect",
           "learnedLevel": 60
+        },
+        {
+          "moveName": "Close Combat",
+          "learnedLevel": 65
         },
         {
           "moveName": "Reversal",
@@ -53458,6 +53538,10 @@
           "learnedLevel": 40
         },
         {
+          "moveName": "Fiery Wrath",
+          "learnedLevel": 45
+        },
+        {
           "moveName": "Nasty Plot",
           "learnedLevel": 50
         },
@@ -53468,6 +53552,10 @@
         {
           "moveName": "Endure",
           "learnedLevel": 60
+        },
+        {
+          "moveName": "Memento",
+          "learnedLevel": 65
         },
         {
           "moveName": "Sky Attack",
@@ -53682,6 +53770,10 @@
           "learnedLevel": 6
         },
         {
+          "moveName": "Ancient Power",
+          "learnedLevel": 12
+        },
+        {
           "moveName": "Shock Wave",
           "learnedLevel": 18
         },
@@ -53692,6 +53784,10 @@
         {
           "moveName": "Extreme Speed",
           "learnedLevel": 30
+        },
+        {
+          "moveName": "Thunder Cage",
+          "learnedLevel": 36
         },
         {
           "moveName": "Thunderbolt",
@@ -53909,6 +54005,10 @@
           "learnedLevel": 6
         },
         {
+          "moveName": "Ancient Power",
+          "learnedLevel": 12
+        },
+        {
           "moveName": "Dragon Breath",
           "learnedLevel": 18
         },
@@ -53939,6 +54039,10 @@
         {
           "moveName": "Laser Focus",
           "learnedLevel": 60
+        },
+        {
+          "moveName": "Dragon Energy",
+          "learnedLevel": 66
         },
         {
           "moveName": "Hyper Beam",
@@ -54144,6 +54248,10 @@
         {
           "moveName": "Mist",
           "learnedLevel": 30
+        },
+        {
+          "moveName": "Icicle Crash",
+          "learnedLevel": 36
         },
         {
           "moveName": "Take Down",
@@ -54377,6 +54485,10 @@
           "learnedLevel": 30
         },
         {
+          "moveName": "Shadow Ball",
+          "learnedLevel": 36
+        },
+        {
           "moveName": "Take Down",
           "learnedLevel": 42
         },
@@ -54607,6 +54719,14 @@
           "learnedLevel": 23
         },
         {
+          "moveName": "Aromatherapy",
+          "learnedLevel": 40
+        },
+        {
+          "moveName": "Energy Ball",
+          "learnedLevel": 48
+        },
+        {
           "moveName": "Psychic",
           "learnedLevel": 56
         },
@@ -54621,6 +54741,10 @@
         {
           "moveName": "Solar Beam",
           "learnedLevel": 80
+        },
+        {
+          "moveName": "Future Sight",
+          "learnedLevel": 88
         }
       ],
       "machineMoves": [
@@ -54842,6 +54966,14 @@
           "learnedLevel": 23
         },
         {
+          "moveName": "Aromatherapy",
+          "learnedLevel": 40
+        },
+        {
+          "moveName": "Energy Ball",
+          "learnedLevel": 48
+        },
+        {
           "moveName": "Psychic",
           "learnedLevel": 56
         },
@@ -54856,6 +54988,10 @@
         {
           "moveName": "Solar Beam",
           "learnedLevel": 80
+        },
+        {
+          "moveName": "Future Sight",
+          "learnedLevel": 88
         }
       ],
       "machineMoves": [
@@ -55077,6 +55213,14 @@
           "learnedLevel": 23
         },
         {
+          "moveName": "Aromatherapy",
+          "learnedLevel": 40
+        },
+        {
+          "moveName": "Energy Ball",
+          "learnedLevel": 48
+        },
+        {
           "moveName": "Psychic",
           "learnedLevel": 56
         },
@@ -55091,6 +55235,10 @@
         {
           "moveName": "Solar Beam",
           "learnedLevel": 80
+        },
+        {
+          "moveName": "Future Sight",
+          "learnedLevel": 88
         }
       ],
       "machineMoves": [

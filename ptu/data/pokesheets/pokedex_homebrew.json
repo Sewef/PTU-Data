@@ -30617,14 +30617,14 @@
       "Overland": 4,
       "Swim": 2,
       "Levitate": 5,
+      "High Jump": 1,
+      "Long Jump": 1,
       "Power": 5,
       "Sky": 0,
       "Burrow": 0,
-      "High Jump": 0,
-      "Long Jump": 0,
-      "Jump 1 /1, Underdog": -1
+      "Underdog": -1
     },
-    "otherCapabilities": "Jump 1 /1, Underdog"
+    "otherCapabilities": "Underdog"
   },
   {
     "pokedexEntryDocumentId": null,
@@ -30881,7 +30881,7 @@
       "familyName": null,
       "entries": []
     },
-    "evolutionStage": 1,
+    "evolutionStage": 2,
     "evolutionsRemainingMale": null,
     "evolutionsRemainingFemale": null,
     "evolutionsRemainingGenderless": null,
