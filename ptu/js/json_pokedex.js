@@ -141,15 +141,17 @@ function loadPokedexState() {
   const params = getHashParams();
   const query = params.get("q") || "";
   const typeStr = params.get("types") || "";
+  const habitatStr = params.get("habitats") || "";
   const mode = params.get("mode") || "any";
 
-  return { query, typeStr, mode };
+  return { query, typeStr, habitatStr, mode };
 }
 
-function savePokedexState(query, types, mode) {
+function savePokedexState(query, types, habitats, mode) {
   const obj = {};
   if (query) obj.q = query;
   if (types && types.length) obj.types = types.join(",");
+  if (habitats && habitats.length) obj.habitats = habitats.join(",");
   if (mode && mode !== "any") obj.mode = mode;
   setHashParams(obj);
 }
@@ -489,6 +491,18 @@ function collectTypes(rows) {
   const set = new Set();
   rows.forEach(r => extractTypes(r).forEach(t => set.add(t)));
   return Array.from(set).sort();
+}
+
+function pokemonHabitats(p) {
+  const raw = p?.["Other Information"]?.Habitat;
+  if (typeof raw !== "string") return [];
+  return raw.split(",").map(habitat => habitat.trim()).filter(Boolean);
+}
+
+function collectHabitats(rows) {
+  const set = new Set();
+  rows.forEach(p => pokemonHabitats(p).forEach(habitat => set.add(habitat)));
+  return Array.from(set).sort((a, b) => a.localeCompare(b));
 }
 
 // =========================
@@ -1185,8 +1199,10 @@ function buildTypeSidebar(all, onChange) {
     s.id = "dex-typepill-style";
     s.textContent = `
         [data-role="type-filters"] #type-badges{display:flex;flex-wrap:wrap;gap:.25rem .25rem;margin-bottom:.25rem}
+        [data-role="type-filters"] #habitat-badges{display:flex;flex-wrap:wrap;gap:.25rem .25rem;margin-bottom:.25rem}
         .type-pill{padding:.15rem .4rem;font-size:.75rem;line-height:1;border-radius:9999px;border:1px solid rgba(255,255,255,.15);opacity:.95}
         .type-pill.active{outline:1px solid rgba(255,255,255,.25);opacity:1}
+        #habitat-badges .type-pill.active{background-color:var(--bs-primary);border-color:var(--bs-primary);color:white}
         [data-role="type-filters"] .btn-group.btn-group-sm .btn{padding:.15rem .35rem;font-size:.75rem}
         [data-role="type-filters"] .form-label{margin-bottom:.25rem}
         [data-role="type-filters"] button[data-stage].active{background-color:var(--bs-primary);border-color:var(--bs-primary);color:white}
@@ -1196,6 +1212,7 @@ function buildTypeSidebar(all, onChange) {
 
   let typesBox = sidebar.querySelector('[data-role="type-filters"]');
   const types = collectTypes(all);
+  const habitats = collectHabitats(all);
 
   if (!typesBox) {
     typesBox = document.createElement("div");
@@ -1213,6 +1230,11 @@ function buildTypeSidebar(all, onChange) {
         </label>
 
         <div class="mb-2 d-flex gap-1 flex-wrap" id="type-badges"></div>
+
+        <div class="mt-2">
+          <label class="form-label mb-1">Habitat</label>
+          <div id="habitat-badges-wrap"></div>
+        </div>
 
         <div class="mt-2">
           <label class="form-label mb-1">Learns move</label>
@@ -1286,6 +1308,7 @@ function buildTypeSidebar(all, onChange) {
     }
     typesBox.querySelector("#clear-filters")?.addEventListener("click", () => {
       typesBox.querySelectorAll("button[data-type]").forEach(b => { b.setAttribute("data-selected", "0"); b.classList.remove("active"); });
+      typesBox.querySelectorAll("button[data-habitat]").forEach(b => { b.setAttribute("data-selected", "0"); b.classList.remove("active"); });
       typesBox.querySelectorAll("button[data-stage]").forEach(b => { b.setAttribute("data-selected", "0"); b.classList.remove("active"); });
       SELECTED_EVOLUTION_STAGES.clear();
       TYPE_MATCH_MODE = 'any';
@@ -1311,6 +1334,14 @@ function buildTypeSidebar(all, onChange) {
   buildPillSection(badgeWrap, "type-badges", types, {
     attr: "data-type",
     onChange
+  });
+
+  const habitatWrap = typesBox.querySelector("#habitat-badges-wrap");
+  habitatWrap.innerHTML = "";
+  buildPillSection(habitatWrap, "habitat-badges", habitats, {
+    attr: "data-habitat",
+    onChange,
+    useTypeClass: false
   });
 
   // Sync radios
@@ -1341,6 +1372,14 @@ function activeTypes() {
     document,
     "type-badges",
     "data-type"
+  );
+}
+
+function activeHabitats() {
+  return getSelectedPills(
+    document,
+    "habitat-badges",
+    "data-habitat"
   );
 }
 
@@ -1460,6 +1499,7 @@ function pokemonMatchesEvolutionStages(p, selectedStages) {
 function filterRows(rows) {
   const qRaw = ($("#dex-search")?.value || "").trim().toLowerCase();
   const types = activeTypes();
+  const habitats = activeHabitats();
   const moveQ = ($("#filter-move")?.value || "").trim().toLowerCase();
   const abilQ = ($("#filter-ability")?.value || "").trim().toLowerCase();
   const capaQ = ($("#filter-capability")?.value || "").trim().toLowerCase();
@@ -1474,6 +1514,10 @@ function filterRows(rows) {
     if (abilQ && !pokemonHasAbility(p, abilQ)) return false;
     if (capaQ && !pokemonHasCapability(p, capaQ)) return false;
     if (!pokemonMatchesEvolutionStages(p, SELECTED_EVOLUTION_STAGES)) return false;
+    if (habitats.length) {
+      const pHabitats = pokemonHabitats(p);
+      if (!habitats.some(habitat => pHabitats.includes(habitat))) return false;
+    }
 
     if (types.length) {
       const pTypes = speciesTypes(p);
@@ -1495,13 +1539,13 @@ function filterRows(rows) {
 function wireSearch(all) {
   const inp = $("#dex-search");
   if (inp) inp.addEventListener("input", debounce(() => {
-    savePokedexState(inp.value, activeTypes(), currentTypeMatchMode());
+    savePokedexState(inp.value, activeTypes(), activeHabitats(), currentTypeMatchMode());
     renderGrid(filterRows(window.__POKEDEX || all));
   }, 120));
   $("#clear-filters")?.addEventListener("click", () => {
     inp.value = "";
     document.querySelectorAll("#type-filters input[type='checkbox']").forEach(cb => cb.checked = false);
-    savePokedexState("", [], "any");
+    savePokedexState("", [], [], "any");
     renderGrid(filterRows(window.__POKEDEX || all));
   });
 }
@@ -1803,7 +1847,7 @@ export async function loadPokedexPage() {
 
   // Build filtres + grille
   buildTypeSidebar(data, () => {
-    savePokedexState($("#dex-search")?.value || "", activeTypes(), currentTypeMatchMode());
+    savePokedexState($("#dex-search")?.value || "", activeTypes(), activeHabitats(), currentTypeMatchMode());
     renderGrid(filterRows(data));
   });
 
@@ -1818,6 +1862,17 @@ export async function loadPokedexPage() {
     types.forEach(t => {
       const cb = document.querySelector(`#type-filter-${t}`);
       if (cb) cb.checked = true;
+    });
+  }
+  if (state.habitatStr) {
+    const habitats = state.habitatStr.split(",").filter(Boolean);
+    habitats.forEach(habitat => {
+      const button = Array.from(document.querySelectorAll("#habitat-badges button[data-habitat]"))
+        .find(candidate => candidate.getAttribute("data-habitat") === habitat);
+      if (button) {
+        button.setAttribute("data-selected", "1");
+        button.classList.add("active");
+      }
     });
   }
   if (state.mode && state.mode !== "any") {
