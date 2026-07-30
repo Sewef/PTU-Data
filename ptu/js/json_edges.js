@@ -8,7 +8,7 @@ let edgeColSize = 4;
 let edgeContainer = null;
 let _edgeSearchTimeout = null;
 
-export function loadEdges(path, container = document.getElementById("cards-container"), col = 3) {
+export function loadEdges(path, defaultCat, container = document.getElementById("cards-container"), col = 3) {
   fetch(path)
     .then(r => r.json())
     .then(json => {
@@ -17,7 +17,6 @@ export function loadEdges(path, container = document.getElementById("cards-conta
       edgeColSize = Math.floor(12 / col);
       buildCategoryMenu();
       setupGlobalEdgeSearch();
-      const defaultCat = "Skill";
       const defaultBtn = [...document.querySelectorAll("#sidebar .list-group-item")].find(btn => btn.textContent === defaultCat);
       if (defaultBtn) {
         defaultBtn.classList.add("active");
@@ -227,7 +226,8 @@ function renderCategory(cat) {
     row.innerHTML = "";
     const q = queryInput.value.toLowerCase();
     Object.entries(edgesData).forEach(([name, e]) => {
-      if (e.Category !== cat) return;
+      const edgeCategory = e.Category || "Misc";
+      if (edgeCategory !== cat) return;
       if (!selectedSources.has(e.Source || "Unknown")) return;
       if (
         q &&
@@ -242,7 +242,7 @@ function renderCategory(cat) {
       card.className = "card h-100 bg-body border shadow-sm overflow-hidden rounded-3";
       const body = document.createElement("div");
       body.className = "card-body bg-body-secondary";
-      body.insertAdjacentHTML("beforeend", `<h5 class="card-title">${escapeHTML(name)} <span class="badge bg-secondary">${escapeHTML(e.Category)}</span> <span class="badge bg-info">${escapeHTML(e.Source || "Unknown")}</span></h5>`);
+      body.insertAdjacentHTML("beforeend", `<h5 class="card-title">${escapeHTML(name)} <span class="badge bg-secondary">${escapeHTML(edgeCategory)}</span> <span class="badge bg-info">${escapeHTML(e.Source || "Unknown")}</span></h5>`);
       Object.entries(e).forEach(([k, v]) => {
         if (["Category", "Source"].includes(k)) return;
         body.insertAdjacentHTML("beforeend", `<p><strong>${k}:</strong> ${escapeHTML(v.toString()).replaceAll("\n", "<br>")}</p>`);
