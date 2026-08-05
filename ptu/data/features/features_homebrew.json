@@ -3895,31 +3895,37 @@
             "Name": "Artificer Recipes",
             "recipes": [
               {
+                "Name": "Type Booster",
                 "Prerequisites": "Crystal Artificer",
                 "Ingredients": "x4 Shards of the same Color",
                 "Effects": "You create a Type Booster. The Type chosen must be one of the Types associated with the color of the shards used."
               },
               {
+                "Name": "Type Brace",
                 "Prerequisites": "Crystal Artificer",
                 "Ingredients": "x4 Shards of the same Color",
                 "Effects": "You create a Type Brace. The Type chosen must be one of the Types associated with the color of the shards used."
               },
               {
+                "Name": "Focus Gem",
                 "Prerequisites": "Crystal Resonance",
                 "Ingredients": "Any Six Shards.",
                 "Effect": "You create a Focus that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item."
               },
               {
+                "Name": "Chakra Crystal",
                 "Prerequisites": "Crystal Resonance",
                 "Ingredients": "Any Six Shards",
                 "Effect": "You create a Stat Booster."
               },
               {
+                "Name": "Rainbow Gem",
                 "Prerequisites": "Rainbow Light, Expert Occult Education",
                 "Ingredients": "Two Shards of each Color.",
                 "Effect": "You create a Rainbow Gem that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item. This item has the same effect as a Focus, except that as a Standard Action, any Trainer with Expert Occult Education Rank or higher may change which Stat the Rainbow Amulet is attuned to."
               },
               {
+                "Name": "Plate Crafter",
                 "Prerequisites": "Rainbow Light, Expert Occult Education",
                 "Ingredients": "A Type Booster and a Type Brace of the same Type.",
                 "Effects": "You create a Type Plate matching the Type Booster and Brace used."
