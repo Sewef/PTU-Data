@@ -559,6 +559,357 @@
         "Yield Roll": "1d4-3"
       }
     ],
+    "Berries Effects": [
+      {
+        "Name": "Treat Berries",
+        "Effect": "Treat Berries heal 1/8th of the Pokémon’s Max HP. If the user likes the Treat’s flavor, it heals 1/6th instead. If the user dislikes the treat’s flavor, the user is Confused."
+      },
+      {
+        "Name": "Suppressant Berries",
+        "Effect": "Suppressant Berries lower the indicated Base Stat by 1 when consumed by a Pokémon. This effect works if the Pokémon’s trainer wishes it to."
+      },
+      {
+        "Name": "Move Weakener Berries",
+        "Effect": "Berries that Weaken a Type of Move allow the user to trade in their Digestion Buff to grant one step of resistance when hit by a Move of the indicated type."
+      }
+    ],
+    "Berries": [
+      {
+        "Name": "Cheri Berry",
+        "Tier": 1,
+        "Effect": "Cures Paralysis, Cool Poffin Ingredient"
+      },
+      {
+        "Name": "Chesto Berry",
+        "Tier": 1,
+        "Effect": "Cures Sleep, Beauty Poffin Ingredient"
+      },
+      {
+        "Name": "Pecha Berry",
+        "Tier": 1,
+        "Effect": "Cures Poison, Cute Poffin Ingredient"
+      },
+      {
+        "Name": "Rawst Berry",
+        "Tier": 1,
+        "Effect": "Cures Burn, Smart Poffin Ingredient"
+      },
+      {
+        "Name": "Aspear Berry",
+        "Tier": 1,
+        "Effect": "Cures Freeze, Tough Poffin Ingredient"
+      },
+      {
+        "Name": "Oran Berry",
+        "Tier": 1,
+        "Effect": "Restores 5 Hit Points"
+      },
+      {
+        "Name": "Persim Berry",
+        "Tier": 1,
+        "Effect": "Cures Confusion"
+      },
+      {
+        "Name": "Razz Berry",
+        "Tier": 1,
+        "Effect": "Cool Poffin Ingredient"
+      },
+      {
+        "Name": "Bluk Berry",
+        "Tier": 1,
+        "Effect": "Beauty Poffin Ingredient"
+      },
+      {
+        "Name": "Nanab Berry",
+        "Tier": 1,
+        "Effect": "Cute Poffin Ingredient"
+      },
+      {
+        "Name": "Wepear Berry",
+        "Tier": 1,
+        "Effect": "Smart Poffin Ingredient"
+      },
+      {
+        "Name": "Pinap Berry",
+        "Tier": 1,
+        "Effect": "Tough Poffin Ingredient"
+      },
+      {
+        "Name": "Lum Berry",
+        "Tier": 2,
+        "Effect": "Cures any single status ailment"
+      },
+      {
+        "Name": "Sitrus Berry",
+        "Tier": 2,
+        "Effect": "Restores 15 Hit Points"
+      },
+      {
+        "Name": "Figy Berry",
+        "Tier": 2,
+        "Effect": "Spicy Treat*, Cool Poffin Ingredient"
+      },
+      {
+        "Name": "Wiki Berry",
+        "Tier": 2,
+        "Effect": "Dry Treat*, Beauty Poffin Ingredient"
+      },
+      {
+        "Name": "Mago Berry",
+        "Tier": 2,
+        "Effect": "Sweet Treat*, Cute Poffin Ingredient"
+      },
+      {
+        "Name": "Aguav Berry",
+        "Tier": 2,
+        "Effect": "Bitter Treat*, Smart Poffin Ingredient"
+      },
+      {
+        "Name": "Iapapa Berry",
+        "Tier": 2,
+        "Effect": "Sour Treat*, Tough Poffin Ingredient"
+      },
+      {
+        "Name": "Liechi Berry",
+        "Tier": 2,
+        "Effect": "+1 Attack CS."
+      },
+      {
+        "Name": "Ganlon Berry",
+        "Tier": 2,
+        "Effect": "+1 Defense CS"
+      },
+      {
+        "Name": "Salac Berry",
+        "Tier": 2,
+        "Effect": "+1 Speed CS"
+      },
+      {
+        "Name": "Petaya Berry",
+        "Tier": 2,
+        "Effect": "+1 Special Attack CS"
+      },
+      {
+        "Name": "Apicot Berry",
+        "Tier": 2,
+        "Effect": "+1 Special Defense CS"
+      },
+      {
+        "Name": "Lansat Berry",
+        "Tier": 2,
+        "Effect": "Increases Critical Range by +1 for the remainder of the encounter."
+      },
+      {
+        "Name": "Starf Berry",
+        "Tier": 2,
+        "Effect": "+2 CS to a random Stat. May be used only at 25% HP or lower."
+      },
+      {
+        "Name": "Enigma Berry",
+        "Tier": 2,
+        "Effect": "User gains Temporary HP equal to 1/6th of their Max HP when hit by a Super Effective Move."
+      },
+      {
+        "Name": "Micle Berry",
+        "Tier": 2,
+        "Effect": "Increases Accuracy by +1."
+      },
+      {
+        "Name": "Jaboca Berry",
+        "Tier": 2,
+        "Effect": "Foe dealing Physical Damage to the user loses 1/8 of their Maximum HP."
+      },
+      {
+        "Name": "Rowap Berry",
+        "Tier": 2,
+        "Effect": "Foe dealing Special Damage to the user loses 1/8 of their Maximum HP."
+      },
+      {
+        "Name": "Cornn Berry",
+        "Tier": 2,
+        "Effect": "Cures Disabled Condition."
+      },
+      {
+        "Name": "Magost Berry",
+        "Tier": 2,
+        "Effect": "Cures Enraged condition."
+      },
+      {
+        "Name": "Rabuta Berry",
+        "Tier": 2,
+        "Effect": "Cures Suppressed condition."
+      },
+      {
+        "Name": "Nomel Berry",
+        "Tier": 2,
+        "Effect": "Cures Infatuated condition."
+      },
+      {
+        "Name": "Spelon Berry",
+        "Tier": 2,
+        "Effect": "Cool or Beauty Poffin Ingredient"
+      },
+      {
+        "Name": "Pamtre Berry",
+        "Tier": 2,
+        "Effect": "Cute or Beauty Poffin Ingredient"
+      },
+      {
+        "Name": "Watmel Berry",
+        "Tier": 2,
+        "Effect": "Cute or Smart Poffin Ingredient"
+      },
+      {
+        "Name": "Durin Berry",
+        "Tier": 2,
+        "Effect": "Smart or Tough Poffin Ingredient"
+      },
+      {
+        "Name": "Belue Berry",
+        "Tier": 2,
+        "Effect": "Cool or Tough Poffin Ingredient"
+      },
+      {
+        "Name": "Leppa Berry",
+        "Tier": 3,
+        "Effect": "Restores a Scene Move."
+      },
+      {
+        "Name": "Pomeg Berry",
+        "Tier": 3,
+        "Effect": "HP Suppressant*"
+      },
+      {
+        "Name": "Kelpsy Berry",
+        "Tier": 3,
+        "Effect": "Attack Suppressant*"
+      },
+      {
+        "Name": "Qualot Berry",
+        "Tier": 3,
+        "Effect": "Defense Suppressant*"
+      },
+      {
+        "Name": "Hondew Berry",
+        "Tier": 3,
+        "Effect": "Special Attack Suppressant*"
+      },
+      {
+        "Name": "Grepa Berry",
+        "Tier": 3,
+        "Effect": "Special Defense Suppressant*"
+      },
+      {
+        "Name": "Tamato Berry",
+        "Tier": 3,
+        "Effect": "Speed Suppressant*"
+      },
+      {
+        "Name": "Occa Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Fire-type move*"
+      },
+      {
+        "Name": "Passho Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Water-type move*"
+      },
+      {
+        "Name": "Wacan Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Electric-type move*"
+      },
+      {
+        "Name": "Rindo Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Grass-type move*"
+      },
+      {
+        "Name": "Yache Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Ice-type move*"
+      },
+      {
+        "Name": "Chople Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Fighting-type move*"
+      },
+      {
+        "Name": "Kebia Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Poison-type move*"
+      },
+      {
+        "Name": "Shuca Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Ground-type move*"
+      },
+      {
+        "Name": "Coba Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Flying-type move*"
+      },
+      {
+        "Name": "Payapa Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Psychic-type move*"
+      },
+      {
+        "Name": "Tanga Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Bug-type move*"
+      },
+      {
+        "Name": "Charti Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Rock-type move*"
+      },
+      {
+        "Name": "Kasib Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Ghost-type move*"
+      },
+      {
+        "Name": "Haban Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Dragon-type move*"
+      },
+      {
+        "Name": "Colbur Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Dark-type move*"
+      },
+      {
+        "Name": "Babiri Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's super effective Steel-type move*"
+      },
+      {
+        "Name": "Chilan Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's Normal- type move*"
+      },
+      {
+        "Name": "Roseli Berry",
+        "Tier": 3,
+        "Effect": "Weakens foe's supereffective Fairy- type move*"
+      },
+      {
+        "Name": "Custap Berry",
+        "Tier": 3,
+        "Effect": "Grants the Priority keyword to any Move. May only be used at 25% HP or lower."
+      },
+      {
+        "Name": "Kee Berry",
+        "Tier": 3,
+        "Effect": "+1 Defense CS. Activates as a Free Action when hit by a Physical Move."
+      },
+      {
+        "Name": "Maranga Berry",
+        "Tier": 3,
+        "Effect": "+1 Special Defense CS. Activates as a Free Action when hit by a Special Move."
+      }
+    ],
     "Apricorns": [
       {
         "Name": "Red Apricorns",
@@ -593,7 +944,8 @@
       {
         "Name": "Energy Root*",
         "Effect": "Heals 70 Hit Points – Repulsive",
-        "Price": 500
+        "Price": 500,
+        "Note": "Energy Roots can be grown and harvested like Herbs, but are not Snack Items."
       },
       {
         "Name": "Revival Herb",
@@ -617,15 +969,18 @@
       },
       {
         "Name": "Tiny Mushroom",
-        "Effect": "The user loses 5 HP, and gains +1 Combat Stage in a random Stat."
+        "Effect": "The user loses 5 HP, and gains +1 Combat Stage in a random Stat.",
+        "Note": "Mushrooms may be identified with a DC 20 Survival Check. If identified, you may roll to see which stats that mushroom affects ahead of time."
       },
       {
         "Name": "Big Mushroom",
-        "Effect": "The Poisoned; if they do, they gain +1 Combat Stage in two random Stats."
+        "Effect": "The Poisoned; if they do, they gain +1 Combat Stage in two random Stats.",
+        "Note": "Mushrooms may be identified with a DC 20 Survival Check. If identified, you may roll to see which stats that mushroom affects ahead of time."
       },
       {
         "Name": "Balm Mushroom",
-        "Effect": "The user is cured of Burn, Paralysis, or Poison. If they are, they lose 1 Combat Stage in a random Stat."
+        "Effect": "The user is cured of Burn, Paralysis, or Poison. If they are, they lose 1 Combat Stage in a random Stat.",
+        "Note": "Mushrooms may be identified with a DC 20 Survival Check. If identified, you may roll to see which stats that mushroom affects ahead of time."
       },
       {
         "Name": "Mirror Herb",
