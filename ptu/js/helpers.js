@@ -145,7 +145,7 @@ export function renderSimpleTableHTML(tableObj, { defaultHeaderRows = 1, query =
       let cellClass = "";
 
       if (isHeader) {
-        cellClass = ' class="fw-bold bg-light text-center"';
+        cellClass = ' class="fw-bold text-center"';
       }
 
       let text = "";
