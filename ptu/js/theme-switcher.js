@@ -9,7 +9,13 @@
 (() => {
   'use strict'
 
-  const getStoredTheme = () => localStorage.getItem('theme')
+  const VALID_THEMES = ['light', 'solarized-light', 'dark', 'auto']
+
+  const getStoredTheme = () => {
+    const theme = localStorage.getItem('theme')
+    return VALID_THEMES.includes(theme) ? theme : null
+  }
+
   const setStoredTheme = theme => localStorage.setItem('theme', theme)
 
   const getPreferredTheme = () => {
@@ -24,6 +30,8 @@
   const setTheme = theme => {
     if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.setAttribute('data-bs-theme', 'dark')
+    } else if (theme === 'auto') {
+      document.documentElement.setAttribute('data-bs-theme', 'light')
     } else {
       document.documentElement.setAttribute('data-bs-theme', theme)
     }
@@ -39,7 +47,7 @@
     }
 
     const activeThemeIcon = document.querySelector('.theme-icon-active use')
-    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`) || document.querySelector('[data-bs-theme-value="auto"]')
     const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
 
     document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
@@ -60,7 +68,7 @@
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
     const storedTheme = getStoredTheme()
-    if (storedTheme !== 'light' && storedTheme !== 'dark') {
+    if (!storedTheme || storedTheme === 'auto') {
       setTheme(getPreferredTheme())
     }
   })
