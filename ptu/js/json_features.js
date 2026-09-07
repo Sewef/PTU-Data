@@ -17,6 +17,13 @@ let _searchTimeout = null; // Global timer for search
 // Compiled regex constants
 const COLUMN_GROUP_REGEX = /^(.*?)(?:_(\d+))$/;
 const WHITESPACE_REGEX = /\s+/g;
+const SEARCH_EXCLUDED_KEYS = new Set(["Name", "Source", "source", "Category"]);
+const SEARCH_WEIGHTS = {
+  name: 1000,
+  text: 700,
+  nested: 600,
+  table: 550
+};
 
 // Parse hash parameters with cache (format: #key=value&key=value)
 function getHashParams() {
@@ -50,25 +57,45 @@ function setupGlobalSearch() {
 
   searchEl.addEventListener("input", e => {
     clearTimeout(_searchTimeout);
-    const q = e.target.value.toLowerCase();
 
     _searchTimeout = setTimeout(() => {
-      if (!q.trim()) {
-        // Empty search: redisplay current class
-        renderSection(_currentViewClass, _currentViewBranch);
-      } else {
-        // Global search
-        const results = globalFeatureSearch(q);
-        if (results) {
-          renderGlobalSearchResults(results);
-        } else {
-          // No results found
-          const pane = document.getElementById("cards-container");
-          pane.innerHTML = `<div class="alert alert-info">No features match "<strong>${escapeHTML(q)}</strong>"</div>`;
-        }
-      }
+      renderFeatureSearch(e.target.value);
     }, 200); // 200ms debounce
   });
+}
+
+function readFeatureSearchQuery() {
+  const searchEl = document.getElementById("features-search");
+  return searchEl ? (searchEl.value || "") : "";
+}
+
+function clearFeatureSearch() {
+  clearTimeout(_searchTimeout);
+  _searchTimeout = null;
+
+  const searchEl = document.getElementById("features-search");
+  if (searchEl) searchEl.value = "";
+}
+
+function renderFeatureSearch(rawQuery) {
+  const q = String(rawQuery || "").trim().toLowerCase();
+
+  if (!q) {
+    // Empty search: redisplay current class
+    renderSection(_currentViewClass, _currentViewBranch);
+    return;
+  }
+
+  // Global search
+  const results = globalFeatureSearch(q);
+  if (results) {
+    renderGlobalSearchResults(results);
+    return;
+  }
+
+  // No results found
+  const pane = document.getElementById("cards-container");
+  pane.innerHTML = `<div class="alert alert-info">No features match "<strong>${escapeHTML(q)}</strong>"</div>`;
 }
 
 // ----------------------- JSON LOADING -----------------------------------
@@ -158,7 +185,10 @@ function buildSidebar() {
         }
       });
 
-      if (currentLink && currentLink.dataset.section === "General") {
+      const activeSearch = readFeatureSearchQuery().trim();
+      if (activeSearch) {
+        renderFeatureSearch(activeSearch);
+      } else if (currentLink && currentLink.dataset.section === "General") {
         // on recharge la section General pour appliquer le nouveau filtre
         renderSection("General", "Default");
         // (call preserves scrollTo and local search already in place)
@@ -299,6 +329,7 @@ function makeLink(label, src, data = {}, pad = 3) {
     <span class="badge bg-info ms-auto text-truncate" style="max-width:10rem" title="${escapedSrc}">${escapedSrc}</span>`;
   Object.entries(data).forEach(([k, v]) => a.dataset[k] = v);
   a.onclick = () => {
+    clearFeatureSearch();
     renderSection(data.section, data.branch);
     setActiveLink(a);
     return false;
@@ -335,45 +366,217 @@ function featureSource(feat, fallback) {
 
 // --------- Global feature search -----------------------------------
 function globalFeatureSearch(query) {
-  if (!query) return null;
-  
-  const q = query.toLowerCase();
-  const results = {}; // { className: { branchName: [features] } }
+  const search = makeSearchQuery(query);
+  if (!search.text) return null;
+
+  const results = [];
+  let order = 0;
   
   Object.entries(classesData).forEach(([clsName, cls]) => {
     cls.branches?.forEach(br => {
-      const matchedFeatures = [];
+      const branchSrc = branchSource(br, cls.source);
+      if (clsName !== "General" && !activeSources.has(branchSrc)) return;
       
       br.features?.forEach(feat => {
+        if (clsName === "General" && !activeSources.has(featureSource(feat, cls.source))) return;
+
         // Recursively collect all matching features
         const collectMatches = (f, parents = []) => {
-          const matched = [];
-          if (!f) return matched;
-          
-          const name = (f.Name || "").toLowerCase();
-          if (name.includes(q) || featureTableContentMatchesQuery(f, q)) {
-            matched.push({ feature: f, parents });
+          if (!f) return;
+
+          const scored = scoreFeatureForSearch(f, search);
+          if (scored.score > 0) {
+            results.push({
+              clsName,
+              brName: br.Name,
+              cls,
+              feature: f,
+              parents,
+              order: order++,
+              ...scored
+            });
           }
           
           const childParents = [...parents, f];
           getSubFeatures(f).forEach(sub => {
-            matched.push(...collectMatches(sub, childParents));
+            collectMatches(sub, childParents);
           });
-          
-          return matched;
         };
         
-        matchedFeatures.push(...collectMatches(feat));
+        collectMatches(feat);
       });
-      
-      if (matchedFeatures.length > 0) {
-        if (!results[clsName]) results[clsName] = {};
-        results[clsName][br.Name] = matchedFeatures;
-      }
     });
   });
-  
-  return Object.keys(results).length > 0 ? results : null;
+
+  results.sort(compareFeatureSearchResults);
+  return results.length > 0 ? results : null;
+}
+
+function makeSearchQuery(query) {
+  const text = String(query || "").toLowerCase().replace(WHITESPACE_REGEX, " ").trim();
+  return {
+    text,
+    terms: text.split(" ").filter(Boolean)
+  };
+}
+
+function startsAtWord(text, index) {
+  return index <= 0 || !/[a-z0-9]/.test(text[index - 1]);
+}
+
+function countOccurrences(text, query) {
+  let count = 0;
+  let index = text.indexOf(query);
+  while (index !== -1) {
+    count++;
+    index = text.indexOf(query, index + query.length);
+  }
+  return count;
+}
+
+function scoreTextMatch(value, search, baseScore) {
+  if (value == null || !search.text) return 0;
+
+  const text = String(value).toLowerCase().replace(WHITESPACE_REGEX, " ").trim();
+  if (!text) return 0;
+
+  const phraseIndex = text.indexOf(search.text);
+  if (phraseIndex !== -1) {
+    let quality = 35;
+    if (text === search.text) {
+      quality = 90;
+    } else if (phraseIndex === 0) {
+      quality = 70;
+    } else if (startsAtWord(text, phraseIndex)) {
+      quality = 55;
+    }
+
+    const occurrenceBoost = Math.min(12, countOccurrences(text, search.text) * 2);
+    const lengthPenalty = Math.min(25, Math.floor(Math.max(0, text.length - search.text.length) / 80));
+    return baseScore + quality + occurrenceBoost - lengthPenalty;
+  }
+
+  if (search.terms.length > 1 && search.terms.every(term => text.includes(term))) {
+    const firstIndex = Math.min(...search.terms.map(term => text.indexOf(term)).filter(index => index >= 0));
+    const quality = firstIndex === 0 ? 35 : (startsAtWord(text, firstIndex) ? 25 : 15);
+    const spreadPenalty = Math.min(20, Math.floor(text.length / 120));
+    return baseScore + quality + search.terms.length - spreadPenalty;
+  }
+
+  return 0;
+}
+
+function scoreSearchableValue(value, search, baseScore) {
+  if (value == null) return 0;
+
+  if (Array.isArray(value)) {
+    return value.reduce((best, item) => Math.max(best, scoreSearchableValue(item, search, baseScore)), 0);
+  }
+
+  if (typeof value === "object") {
+    return Object.entries(value).reduce((best, [key, child]) => {
+      if (String(key).startsWith("_")) return best;
+      return Math.max(best, scoreSearchableValue(child, search, baseScore));
+    }, 0);
+  }
+
+  return scoreTextMatch(value, search, baseScore);
+}
+
+function valueContainsQueryPhrase(value, search) {
+  if (value == null || !search.text) return false;
+
+  if (Array.isArray(value)) {
+    return value.some(item => valueContainsQueryPhrase(item, search));
+  }
+
+  if (typeof value === "object") {
+    return Object.entries(value).some(([key, child]) =>
+      !String(key).startsWith("_") && valueContainsQueryPhrase(child, search)
+    );
+  }
+
+  return String(value).toLowerCase().replace(WHITESPACE_REGEX, " ").includes(search.text);
+}
+
+function isSimpleTableObject(value) {
+  return value && typeof value === "object" && !Array.isArray(value) && value.type === "table" && Array.isArray(value.rows);
+}
+
+function isHierarchicalTableObject(value) {
+  return value && typeof value === "object" && !Array.isArray(value) && Array.isArray(value.groups);
+}
+
+function isFeatureArray(value) {
+  return Array.isArray(value)
+    && value.every(item => item && typeof item === "object" && !Array.isArray(item))
+    && value.some(item => item.Name || item.Effect);
+}
+
+function scoreTableContent(value, search) {
+  if (isSimpleTableObject(value)) {
+    return {
+      score: scoreSearchableValue(value.rows, search, SEARCH_WEIGHTS.table),
+      phraseMatched: valueContainsQueryPhrase(value.rows, search)
+    };
+  }
+
+  if (isHierarchicalTableObject(value)) {
+    return {
+      score: scoreSearchableValue(value.groups, search, SEARCH_WEIGHTS.table),
+      phraseMatched: valueContainsQueryPhrase(value.groups, search)
+    };
+  }
+
+  return {
+    score: scoreSearchableValue(value, search, SEARCH_WEIGHTS.table),
+    phraseMatched: valueContainsQueryPhrase(value, search)
+  };
+}
+
+function scoreFeatureForSearch(feat, search) {
+  const displayMeta = feat._display || {};
+  const nameScore = scoreTextMatch(feat.Name, search, SEARCH_WEIGHTS.name);
+  let textScore = 0;
+  let tableScore = 0;
+  let tablePhraseMatched = false;
+
+  Object.entries(feat).forEach(([key, value]) => {
+    if (key.startsWith("_") || SEARCH_EXCLUDED_KEYS.has(key) || value == null) return;
+
+    const meta = normalizeDisplayMeta(displayMeta[key]);
+    const isTable = isSimpleTableObject(value)
+      || isHierarchicalTableObject(value)
+      || (Array.isArray(value) && meta.type === "table");
+
+    if (isTable) {
+      const scoredTable = scoreTableContent(value, search);
+      tableScore = Math.max(tableScore, scoredTable.score);
+      tablePhraseMatched = tablePhraseMatched || scoredTable.phraseMatched;
+      return;
+    }
+
+    if (isFeatureArray(value)) return;
+
+    const baseScore = typeof value === "object" ? SEARCH_WEIGHTS.nested : SEARCH_WEIGHTS.text;
+    textScore = Math.max(textScore, scoreSearchableValue(value, search, baseScore));
+  });
+
+  return {
+    score: Math.max(nameScore, textScore, tableScore),
+    nameScore,
+    textScore,
+    tableScore,
+    tableQuery: tablePhraseMatched ? search.text : ""
+  };
+}
+
+function compareFeatureSearchResults(a, b) {
+  return (b.score - a.score)
+    || (b.nameScore - a.nameScore)
+    || (b.textScore - a.textScore)
+    || (b.tableScore - a.tableScore)
+    || (a.order - b.order);
 }
 
 function getSubFeatures(feat) {
@@ -393,41 +596,6 @@ function getSubFeatures(feat) {
   });
 
   return subFeatures;
-}
-
-function valueMatchesQuery(value, q) {
-  if (value == null) return false;
-
-  if (Array.isArray(value)) {
-    return value.some(item => valueMatchesQuery(item, q));
-  }
-
-  if (typeof value === "object") {
-    return Object.values(value).some(item => valueMatchesQuery(item, q));
-  }
-
-  return String(value).toLowerCase().includes(q);
-}
-
-function featureTableContentMatchesQuery(feat, q) {
-  const disp = feat._display || {};
-
-  return Object.entries(feat).some(([key, value]) => {
-    if (key.startsWith("_")) return false;
-
-    if (value && typeof value === "object" && !Array.isArray(value) && Array.isArray(value.groups)) {
-      return value.groups.some(group =>
-        valueMatchesQuery(group.label, q) || valueMatchesQuery(group.rows || [], q)
-      );
-    }
-
-    if (!Array.isArray(value)) return false;
-
-    const meta = normalizeDisplayMeta(disp[key]);
-    if (meta.type !== "table") return false;
-
-    return valueMatchesQuery(value, q);
-  });
 }
 
 function resultContextParts(brName, clsName, cls, result) {
@@ -460,48 +628,48 @@ function renderGlobalSearchResults(results) {
   row.className = "row g-3 mt-2";
   
   // Iterate through results and display features
-  Object.entries(results).forEach(([clsName, branches]) => {
-    Object.entries(branches).forEach(([brName, features]) => {
-      const cls = classesData[clsName];
-      
-      features.forEach(result => {
-        const feat = result.feature || result;
-        const normalizedResult = {
-          feature: feat,
-          parents: Array.isArray(result.parents) ? result.parents : []
-        };
+  results.forEach(result => {
+    const clsName = result.clsName;
+    const brName = result.brName;
+    const cls = result.cls || classesData[clsName];
+    const feat = result.feature || result;
+    const normalizedResult = {
+      feature: feat,
+      parents: Array.isArray(result.parents) ? result.parents : [],
+      tableQuery: result.tableQuery || ""
+    };
 
-        // collectLeafFeatures now fully clones, no need to clean
-        const leafs = collectLeafFeatures(feat);
-        leafs.forEach(leaf => {
-          // Create a wrapper for the card with source badge
-          const wrapper = document.createElement("div");
-          wrapper.className = "col-md-12";
+    // collectLeafFeatures now fully clones, no need to clean
+    const leafs = collectLeafFeatures(feat);
+    leafs.forEach(leaf => {
+      // Create a wrapper for the card with source badge
+      const wrapper = document.createElement("div");
+      wrapper.className = "col-md-12";
           
-          // Source badge
-          const badge = document.createElement("div");
-          badge.className = "mb-2";
-          const context = resultContextParts(brName, clsName, cls, normalizedResult)
-            .map(part => escapeHTML(part))
+      // Source badge
+      const badge = document.createElement("div");
+      badge.className = "mb-2";
+      const context = resultContextParts(brName, clsName, cls, normalizedResult)
+        .map(part => escapeHTML(part))
             .join(" • ");
-          badge.innerHTML = `
+      badge.innerHTML = `
             <small class="text-muted">
               From <strong>${context}</strong>
             </small>
           `;
-          wrapper.appendChild(badge);
+      wrapper.appendChild(badge);
           
-          // Create the card
-          const cardCol = createCard(leaf, cls, clsName === "General", false);
-          // createCard already returns a column, so just extract the card
-          const card = cardCol.querySelector(".card");
-          if (card) {
-            wrapper.appendChild(card);
-          }
-          
-          row.appendChild(wrapper);
-        });
+      // Create the card
+      const cardCol = createCard(leaf, cls, clsName === "General", false, {
+        tableQuery: normalizedResult.tableQuery
       });
+      // createCard already returns a column, so just extract the card
+      const card = cardCol.querySelector(".card");
+      if (card) {
+        wrapper.appendChild(card);
+      }
+
+      row.appendChild(wrapper);
     });
   });
   
@@ -710,7 +878,9 @@ function collectLeafFeatures(featObj, nameOverride = null) {
 /* ------------------------------------------------------------------ *
  * Create card — renders a card and recursively its sub-cards
  * ------------------------------------------------------------------ */
-function createCard(feat, clsMeta, isGeneral, nested = false) {
+function createCard(feat, clsMeta, isGeneral, nested = false, options = {}) {
+  const tableQuery = options.tableQuery || "";
+
   // ----- column container (no Bootstrap column when nested)
   const col = document.createElement("div");
   if (!nested) col.className = "col-md-12";
@@ -765,17 +935,13 @@ function createCard(feat, clsMeta, isGeneral, nested = false) {
     
     // NEW: Handle simple table structure (type: "table", rows: [...])
     if (typeof v === "object" && v !== null && !Array.isArray(v) && v.type === "table" && Array.isArray(v.rows)) {
-      const searchInput = document.getElementById("features-search");
-      const q = searchInput ? (searchInput.value || "") : "";
-      renderSimpleTable(v, k, q, body);
+      renderSimpleTable(v, k, tableQuery, body);
       return;
     }
     
     // NEW: Handle hierarchical table structure (moveTable, abilityTable, etc.)
     if (typeof v === "object" && v !== null && !Array.isArray(v) && v.groups && Array.isArray(v.groups)) {
-      const searchInput = document.getElementById("features-search");
-      const q = searchInput ? (searchInput.value || "") : "";
-      renderHierarchicalTable(v, k, q, body);
+      renderHierarchicalTable(v, k, tableQuery, body);
       return;
     }
     
@@ -784,18 +950,13 @@ function createCard(feat, clsMeta, isGeneral, nested = false) {
     const meta = normalizeDisplayMeta(disp[k]);
     if (meta.type !== "table") return;
 
-    // local search applied (same Search input for cards)
-    const rootRow = body.closest(".row");
-    const searchInput = document.getElementById("features-search");
-    const q = searchInput ? (searchInput.value || "") : "";
-
-    renderAsTable(v, k, meta, q, body);
+    renderAsTable(v, k, meta, tableQuery, body);
   });
 
   // ----- nested children only here
   if (feat._children && Array.isArray(feat._children)) {
     feat._children.forEach(child => {
-      body.appendChild(createCard(child, clsMeta, isGeneral, true));
+      body.appendChild(createCard(child, clsMeta, isGeneral, true, options));
     });
   }
 
