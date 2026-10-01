@@ -52,7 +52,8 @@
     "Range": "4, 1 Target",
     "Effect": "Acid Spray lowers the target's Special Defense 2 Combat Stages.",
     "Contest Type": "Smart",
-    "Contest Effect": "Unsettling"
+    "Contest Effect": "Unsettling",
+    "Special": "Grants Intoxicator"
   },
   "Acrobatics": {
     "Type": "Flying",
@@ -474,7 +475,8 @@
     "Range": "6, 1 Target, Five Strike",
     "Effect": "The target is Poisoned on a 17+. Once a Scene, if Barb Barrage's target has a Status Condition, you may choose to not roll for Five Strike. Instead, treat Barb Barrage as though it automatically rolled an 8 for Five Strike.",
     "Contest Type": "Smart",
-    "Contest Effect": "Reliable"
+    "Contest Effect": "Reliable",
+    "Special": "Grants Intoxicator"
   },
   "Barrage": {
     "Type": "Normal",
@@ -1679,7 +1681,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Dire Claw is a Critical Hit on a 19+. Dire Claw gives the target a Status ailment on a 15+. If this is triggered, roll 1d3; on 1 the target is Poisoned; on 2 the target is Paralyzed; on 3 the target is Flinched.",
     "Contest Type": "Tough",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "Grants Intoxicator"
   },
   "Disable": {
     "Type": "Normal",
@@ -5523,7 +5526,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Poison Fang Badly Poisons the target on 17+.",
     "Contest Type": "Smart",
-    "Contest Effect": "Incentives"
+    "Contest Effect": "Incentives",
+    "Special": "Grants Intoxicator"
   },
   "Poison Gas": {
     "Type": "Poison",
@@ -5544,7 +5548,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Poison Jab Poisons the target on 15+.",
     "Contest Type": "Smart",
-    "Contest Effect": "Incentives"
+    "Contest Effect": "Incentives",
+    "Special": "Grants Intoxicator"
   },
   "Poison Powder": {
     "Type": "Poison",
@@ -5565,7 +5570,8 @@
     "Range": "6, 1 Target",
     "Effect": "Poison Sting Poisons the target on 17+.",
     "Contest Type": "Smart",
-    "Contest Effect": "Excitement"
+    "Contest Effect": "Excitement",
+    "Special": "Grants Intoxicator"
   },
   "Poison Tail": {
     "Type": "Poison",
@@ -5576,7 +5582,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Poison Tail is a Critical Hit on 18+, and Poisons the target on 19+.",
     "Contest Type": "Smart",
-    "Contest Effect": "Incentives"
+    "Contest Effect": "Incentives",
+    "Special": "Grants Intoxicator"
   },
   "Pollen Puff": {
     "Type": "Bug",
@@ -6793,7 +6800,8 @@
     "Range": "6, 1 Target",
     "Effect": "This attack uses the highest of the user's Attack or Special Attack Stat, though this does not change the Class of the Move. In addition, if the target's Defense is lower than its Special Defense, this attack targets Defense, becoming a Physical Move. The target is poisoned on a 17+.",
     "Contest Type": "Smart",
-    "Contest Effect": "Seen Nothing Yet"
+    "Contest Effect": "Seen Nothing Yet",
+    "Special": "Grants Intoxicator"
   },
   "Shell Smash": {
     "Type": "Normal",
@@ -7048,7 +7056,8 @@
     "Range": "6, 1 Target",
     "Effect": "Sludge Poisons the target on 15+.",
     "Contest Type": "Tough",
-    "Contest Effect": "Desperation"
+    "Contest Effect": "Desperation",
+    "Special": "Grants Intoxicator"
   },
   "Sludge Bomb": {
     "Type": "Poison",
@@ -7059,7 +7068,8 @@
     "Range": "8, 1 Target",
     "Effect": "Sludge Bomb Poisons the target on 15+.",
     "Contest Type": "Tough",
-    "Contest Effect": "Desperation"
+    "Contest Effect": "Desperation",
+    "Special": "Grants Intoxicator"
   },
   "Sludge Wave": {
     "Type": "Poison",
@@ -7114,7 +7124,8 @@
     "Range": "Line 2",
     "Effect": "Smog Poisons the target on an Even-Numbered Roll.",
     "Contest Type": "Tough",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "Grants Intoxicator"
   },
   "Smokescreen": {
     "Type": "Normal",
