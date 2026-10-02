@@ -195,6 +195,13 @@ const escapeHtml = (s) => String(s).replace(/[&<>"']/g, (c) => ({
   "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
 }[c]));
 
+function renderAbilityReference(name) {
+  const label = String(name).trim();
+  const becomesMatch = label.match(/^Becomes\s+(.+)$/i);
+  const abilityName = becomesMatch ? becomesMatch[1].trim() : label;
+  return `<a href="#" class="js-reference-link" data-ability="${escapeHtml(abilityName)}">${escapeHtml(label)}</a>`;
+}
+
 // Helper: Build full display name including form if present
 function getFullSpeciesName(p) {
   const species = p?.Species || "";
@@ -765,14 +772,10 @@ function transformBasicInformation(v) {
       if (Array.isArray(bv)) {
         const parts = bv
           .filter(x => x != null && String(x).trim())
-          .map(name => {
-            const s = String(name).trim();
-            return `<a href="#" class="js-reference-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
-          });
+          .map(renderAbilityReference);
         v[bk] = parts.join(" / ");
       } else if (typeof bv === "string" && bv.trim()) {
-        const s = bv.trim();
-        v[bk] = `<a href="#" class="js-reference-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
+        v[bk] = renderAbilityReference(bv);
       }
     }
   }
@@ -906,15 +909,11 @@ function renderBattleOnlyForms(forms, base) {
     if (Array.isArray(val)) {
       return val
         .filter(x => x != null && String(x).trim())
-        .map(name => {
-          const s = String(name).trim();
-          return `<a href="#" class="js-reference-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
-        })
+        .map(renderAbilityReference)
         .join(", ");
     }
     if (typeof val === "string" && val.trim()) {
-      const s = val.trim();
-      return `<a href="#" class="js-reference-link" data-ability="${escapeHtml(s)}">${escapeHtml(s)}</a>`;
+      return renderAbilityReference(val);
     }
     return Array.isArray(val) ? val.join(", ")
       : (typeof val === "object" && val ? Object.keys(val).join(", ")
