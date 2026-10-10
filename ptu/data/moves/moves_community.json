@@ -19,7 +19,8 @@
     "Range": "Melee, 1 Target, Priority",
     "Effect": "None",
     "Contest Type": "Tough",
-    "Contest Effect": "Saving Grace"
+    "Contest Effect": "Saving Grace",
+    "Special": "(Optional) Grants Materializer"
   },
   "Acid": {
     "Type": "Poison",
@@ -85,7 +86,8 @@
     "Range": "Melee, 1 Target, Slice",
     "Effect": "Aerial Ace cannot miss.",
     "Contest Type": "Cool",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Guster"
   },
   "Aeroblast": {
     "Type": "Flying",
@@ -138,7 +140,8 @@
     "Range": "6, 1 Target, Slice",
     "Effect": "Air Slash Flinches the target on 15+.",
     "Contest Type": "Cool",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Guster"
   },
   "Alluring Voice": {
     "Type": "Fairy",
@@ -189,7 +192,8 @@
     "Range": "6, 1 Target, Spirit Surge",
     "Effect": "On 19+, the user has each of its stats raised by +1 Combat Stage.",
     "Contest Type": "Tough",
-    "Contest Effect": "Desperation"
+    "Contest Effect": "Desperation",
+    "Special": "(Optional) Grants Materializer"
   },
   "Apple Acid": {
     "Type": "Grass",
@@ -209,7 +213,8 @@
     "Damage Base": "7",
     "Class": "Physical",
     "Range": "6, 1 Target, Slice",
-    "Effect": "This Move is a Critical Hit on 18+."
+    "Effect": "This Move is a Critical Hit on 18+.",
+    "Special": "(Optional) Grants Fountain"
   },
   "Aqua Jet": {
     "Type": "Water",
@@ -220,7 +225,8 @@
     "Range": "Melee, 1 Target, Priority",
     "Effect": "None",
     "Contest Type": "Beauty",
-    "Contest Effect": "Saving Grace"
+    "Contest Effect": "Saving Grace",
+    "Special": "(Optional) Grants Fountain"
   },
   "Aqua Ring": {
     "Type": "Water",
@@ -239,7 +245,8 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Spirit Surge",
-    "Effect": "Raise the user's Speed 1 Combat Stage."
+    "Effect": "Raise the user's Speed 1 Combat Stage.",
+    "Special": "(Optional) Grants Fountain"
   },
   "Aqua Tail": {
     "Type": "Water",
@@ -433,7 +440,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "When declaring Avalanche, the user does nothing and may not Shift. At the end of the round, the user Shifts and uses Avalanche on any legal target. If the target damaged the user this round, Avalanche has a Damage Base of 12 (4d10+15 / 40) instead.",
     "Contest Type": "Cool",
-    "Contest Effect": "Double Time"
+    "Contest Effect": "Double Time",
+    "Special": "(Optional) Grants Freezer"
   },
   "Axe Kick": {
     "Type": "Fighting",
@@ -662,7 +670,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Blaze Kick Burns the target on 19+, and is a Critical Hit on 18+.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Firestarter"
   },
   "Blazing Torque": {
     "Type": "Fire",
@@ -922,7 +931,8 @@
     "Range": "4, 1 Target",
     "Effect": "Bubble Beam lowers the target's Speed on 18+.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Desperation"
+    "Contest Effect": "Desperation",
+    "Special": "(Optional) Grants Fountain"
   },
   "Bug Bite": {
     "Type": "Bug",
@@ -1089,7 +1099,8 @@
     "Range": "6, 1 Target",
     "Effect": "If Charge Beam successfully hits a target, roll 1d20. On a roll of 7+, the user's Special Attack is raised by +1 Combat Stage.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Zapper"
   },
   "Charm": {
     "Type": "Fairy",
@@ -1110,7 +1121,8 @@
     "Range": "4, 1 Target, Sonic",
     "Effect": "Chatter confuses all targets on 16+.",
     "Contest Type": "Smart",
-    "Contest Effect": "Catching Up"
+    "Contest Effect": "Catching Up",
+    "Special": "(Optional) Grants Guster"
   },
   "Chilling Water": {
     "Type": "Water",
@@ -1119,7 +1131,8 @@
     "Damage Base": "5",
     "Class": "Special",
     "Range": "5, 1 Target",
-    "Effect": "The target cannot make Attacks of Opportunity for 1 full round and their Attack is lowered by -1 Combat Stage."
+    "Effect": "The target cannot make Attacks of Opportunity for 1 full round and their Attack is lowered by -1 Combat Stage.",
+    "Special": "(Optional) Grants Fountain"
   },
   "Chilly Reception": {
     "Type": "Ice",
@@ -1314,7 +1327,8 @@
     "Range": "6, 1 Target",
     "Effect": "Confusion Confuses the target on 19+.",
     "Contest Type": "Smart",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Constrict": {
     "Type": "Normal",
@@ -1448,7 +1462,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Crabhammer is a Critical Hit on 18+.",
     "Contest Type": "Tough",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Fountain"
   },
   "Crafty Shield": {
     "Type": "Fairy",
@@ -2025,7 +2040,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Dream Eater can only target Sleeping Pokémon or Trainers. After the target takes damage, the user gains Hit Points equal to half of the damage they dealt to the target. Dream Eater does not wake up sleeping targets.",
     "Contest Type": "Smart",
-    "Contest Effect": "Good Show!"
+    "Contest Effect": "Good Show!",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Drill Peck": {
     "Type": "Flying",
@@ -2036,7 +2052,8 @@
     "Range": "Melee, 1 Target, Dash",
     "Effect": "None",
     "Contest Type": "Cool",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Guster"
   },
   "Drill Run": {
     "Type": "Ground",
@@ -2080,7 +2097,8 @@
     "Range": "Melee, 1 Target, Double Strike",
     "Effect": "None",
     "Contest Type": "Cool",
-    "Contest Effect": "Reliable"
+    "Contest Effect": "Reliable",
+    "Special": "(Optional) Grants Guster"
   },
   "Dynamax Cannon": {
     "Type": "Dragon",
@@ -2229,7 +2247,8 @@
     "Range": "4, Ranged Blast 2",
     "Effect": "All Legal Targets are lowered 1 Speed Combat Stage.",
     "Contest Type": "Smart",
-    "Contest Effect": "Sabotage"
+    "Contest Effect": "Sabotage",
+    "Special": "(Optional) Grants Zapper"
   },
   "Embargo": {
     "Type": "Dark",
@@ -2369,7 +2388,8 @@
     "Range": "5, 1 Target",
     "Effect": "Extrasensory Flinches the target on 19+.",
     "Contest Type": "Cool",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Extreme Speed": {
     "Type": "Normal",
@@ -2525,7 +2545,8 @@
     "Range": "4, 1 Target",
     "Effect": "If Fiery Dance successfully hits a foe, it raises the user's Special Attack by 1 Combat Stage on Even-Numbered Rolls.",
     "Contest Type": "Cool",
-    "Contest Effect": "Desperation"
+    "Contest Effect": "Desperation",
+    "Special": "(Optional) Grants Firestarter"
   },
   "Fiery Wrath": {
     "Type": "Dark",
@@ -2536,7 +2557,8 @@
     "Range": "6, 1 Target",
     "Effect": "Fiery Wrath Flinches the target on a 17+. Once per Scene, Fiery Wrath may instead be used as a Fire-Type Move.",
     "Contest Type": "Tough",
-    "Contest Effect": "Inversed Appeal"
+    "Contest Effect": "Inversed Appeal",
+    "Special": "(Optional) Grants Firestarter"
   },
   "Fillet Away": {
     "Type": "Normal",
@@ -2576,7 +2598,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Fire Fang Burns or Flinches on 18-19 during Accuracy Check; flip a coin to determine whether the foe gets Burned or Flinches. On 20 during Accuracy Check, the foe is Burned and Flinches.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Firestarter"
   },
   "Fire Lash": {
     "Type": "Fire",
@@ -2587,7 +2610,8 @@
     "Range": "2, 1 Target",
     "Effect": "The target's Defense is lowered by 1 Combat Stage.",
     "Contest Type": "Cool",
-    "Contest Effect": "Safe Option"
+    "Contest Effect": "Safe Option",
+    "Special": "(Optional) Grants Firestarter"
   },
   "Fire Pledge": {
     "Type": "Fire",
@@ -2598,7 +2622,8 @@
     "Range": "6, 1 Target, Pledge",
     "Effect": "If an ally uses Grass Pledge or Water Pledge, you may use Fire Pledge as Priority (Advanced) immediately after their turn to target the same foe. If used in conjunction with Grass Pledge, Fire Hazards are created in a Burst 1 around the target. If used in conjunction with Water Pledge, a Rainbow is created that lasts for 5 rounds. Consult the Pledge keyword for additional details.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Safe Option"
+    "Contest Effect": "Safe Option",
+    "Special": "(Optional) Grants Firestarter"
   },
   "Fire Punch": {
     "Type": "Fire",
@@ -2609,7 +2634,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Fire Punch Burns the target on 19+ during Accuracy Check.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Firestarter"
   },
   "Fire Spin": {
     "Type": "Fire",
@@ -2676,7 +2702,8 @@
     "Range": "6, 1 Target",
     "Effect": "Any Trainers or Pokémon cardinally adjacent to the target lose 5 Hit Points.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Firestarter"
   },
   "Flame Charge": {
     "Type": "Fire",
@@ -2687,7 +2714,8 @@
     "Range": "Melee, 1 Target, Dash",
     "Effect": "Raise the user's Speed 1 Combat Stage.",
     "Contest Type": "Tough",
-    "Contest Effect": "Excitement"
+    "Contest Effect": "Excitement",
+    "Special": "(Optional) Grants Firestarter"
   },
   "Flame Wheel": {
     "Type": "Fire",
@@ -2698,7 +2726,8 @@
     "Range": "Melee, 1 Target, Dash",
     "Effect": "Flame Wheel Burns the target on 19+.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Reliable"
+    "Contest Effect": "Reliable",
+    "Special": "(Optional) Grants Firestarter"
   },
   "Flamethrower": {
     "Type": "Fire",
@@ -2709,7 +2738,8 @@
     "Range": "4, 1 Target",
     "Effect": "Flamethrower Burns the target on 19+.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Firestarter"
   },
   "Flare Blitz": {
     "Type": "Fire",
@@ -2751,7 +2781,8 @@
     "Damage Base": "6",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "This Move cannot miss. Before attacking, the user may Teleport 4 into a square adjacent to a foe as a Shift Action."
+    "Effect": "This Move cannot miss. Before attacking, the user may Teleport 4 into a square adjacent to a foe as a Shift Action.",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Flatter": {
     "Type": "Dark",
@@ -2794,7 +2825,8 @@
     "Range": "Melee, 1 Target, Dash",
     "Effect": "If Flip Turn successfully hits its target, the user deals damage and then immediately is returned to its Poké Ball in the same turn. A New Pokémon may immediately be sent out. Using Flip Turn lets a Trapped user be recalled.",
     "Contest Type": "Cool",
-    "Contest Effect": "Inversed Appeal"
+    "Contest Effect": "Inversed Appeal",
+    "Special": "(Optional) Grants Fountain"
   },
   "Floral Healing": {
     "Type": "Fairy",
@@ -2838,7 +2870,7 @@
     "Resolution Effect": "The user may shift twice while in the air, using their overland or sky speed, and then comes down next to a legal target, and attacks with Fly.",
     "Contest Type": "Smart",
     "Contest Effect": "Special Attention",
-    "Special": "Grants Sky +3"
+    "Special": "Grants Sky +3\n(Optional) Grants Guster"
   },
   "Flying Press": {
     "Type": "Fighting",
@@ -2956,7 +2988,8 @@
     "Range": "6, 1 Target",
     "Effect": "When calculating Weakness and Resistance for Freeze-Dry, Water-Typed targets calculate damage as if Water was weak to Ice.",
     "Contest Type": "Tough",
-    "Contest Effect": "Saving Grace"
+    "Contest Effect": "Saving Grace",
+    "Special": "(Optional) Grants Freezer"
   },
   "Freezing Glare": {
     "Type": "Psychic",
@@ -2967,7 +3000,8 @@
     "Range": "6, 1 Target",
     "Effect": "Freezing Glare Freezes the target on a 19+. Once per Scene, Freezing Glare may instead be used as an Ice-Type Move.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Unsettling"
+    "Contest Effect": "Unsettling",
+    "Special": "(Optional) Grants Freezer\n(Optional) Grants Telekinetic"
   },
   "Frenzy Plant": {
     "Type": "Grass",
@@ -3519,7 +3553,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Heart Stamp Flinches the target on 15+.",
     "Contest Type": "Cute",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Heart Swap": {
     "Type": "Psychic",
@@ -3540,7 +3575,8 @@
     "Range": "Melee, 1 Target, Dash",
     "Effect": "For each weight class the user is above the target, increase Heat Crash's Damage Base by +2.",
     "Contest Type": "Tough",
-    "Contest Effect": "Incentives"
+    "Contest Effect": "Incentives",
+    "Special": "(Optional) Grants Firestarter"
   },
   "Heat Wave": {
     "Type": "Fire",
@@ -3718,7 +3754,8 @@
     "Damage Base": "8",
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "This Move does not deal reduced damage in Sunny Weather. It instead deals +10 damage in Sunny Weather. NOTE: If you are using the Weathers from Domovoi's Rework, the [Sun Shining] Blessing may not be activated against this Move."
+    "Effect": "This Move does not deal reduced damage in Sunny Weather. It instead deals +10 damage in Sunny Weather. NOTE: If you are using the Weathers from Domovoi's Rework, the [Sun Shining] Blessing may not be activated against this Move.",
+    "Special": "(Optional) Grants Fountain"
   },
   "Hyper Beam": {
     "Type": "Normal",
@@ -3803,7 +3840,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "The user continues to use Ice Ball on each of its turns until they miss any target with Ice Ball, or are not able to hit any target with Ice Ball during their turn. Each successive use of Ice Ball increases Ice Ball's Damage Base by +3 to a maximum of DB 15.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Reliable"
+    "Contest Effect": "Reliable",
+    "Special": "(Optional) Grants Freezer"
   },
   "Ice Beam": {
     "Type": "Ice",
@@ -3814,7 +3852,8 @@
     "Range": "4, 1 Target",
     "Effect": "Ice Beam Freezes on 19+ during Accuracy Check.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Freezer"
   },
   "Ice Burn": {
     "Type": "Ice",
@@ -3837,7 +3876,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Ice Fang Freezes or Flinches on 18+ during Accuracy Check; flip a coin to determine whether the foe gets Frozen or Flinches. On 20 during Accuracy Check, the foe is Frozen and Flinches.",
     "Contest Type": "Cool",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Freezer"
   },
   "Ice Hammer": {
     "Type": "Ice",
@@ -3848,7 +3888,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "The user's Speed is lowered by 1 Combat Stage.",
     "Contest Type": "Cool",
-    "Contest Effect": "Good Show!"
+    "Contest Effect": "Good Show!",
+    "Special": "(Optional) Grants Freezer"
   },
   "Ice Punch": {
     "Type": "Ice",
@@ -3859,7 +3900,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Ice Punch Freezes the target on 19+ during Accuracy Check.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Freezer"
   },
   "Ice Shard": {
     "Type": "Ice",
@@ -3870,7 +3912,8 @@
     "Range": "4, 1 Target, Priority",
     "Effect": "None",
     "Contest Type": "Beauty",
-    "Contest Effect": "Saving Grace"
+    "Contest Effect": "Saving Grace",
+    "Special": "(Optional) Grants Freezer"
   },
   "Ice Spinner": {
     "Type": "Ice",
@@ -3901,7 +3944,8 @@
     "Range": "6, 1 Target",
     "Effect": "Icicle Crash Flinches the target on 15+.",
     "Contest Type": "Tough",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Freezer"
   },
   "Icicle Spear": {
     "Type": "Ice",
@@ -3912,7 +3956,8 @@
     "Range": "6, 1 Target, Five Strike",
     "Effect": "None",
     "Contest Type": "Beauty",
-    "Contest Effect": "Reliable"
+    "Contest Effect": "Reliable",
+    "Special": "(Optional) Grants Freezer"
   },
   "Icy Wind": {
     "Type": "Ice",
@@ -4068,7 +4113,8 @@
     "Damage Base": "6",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Dash, Priority",
-    "Effect": "None"
+    "Effect": "None",
+    "Special": "(Optional) Grants Fountain"
   },
   "Judgment": {
     "Type": "Normal",
@@ -4345,7 +4391,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "The target's Defense is lowered by 1 Combat Stage on a 17+.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Fountain"
   },
   "Lock-On": {
     "Type": "Normal",
@@ -4406,7 +4453,8 @@
     "Damage Base": "8",
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "The target's Special Defense is lowered by -2 Combat Stages."
+    "Effect": "The target's Special Defense is lowered by -2 Combat Stages.",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Lunar Blessing": {
     "Type": "Psychic",
@@ -4889,7 +4937,8 @@
     "Range": "12, 1 Target",
     "Effect": "Mist Ball lowers the target's Special Attack by 1 Combat Stage on an Even-Numbered Roll.",
     "Contest Type": "Smart",
-    "Contest Effect": "Seen Nothing Yet"
+    "Contest Effect": "Seen Nothing Yet",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Misty Explosion": {
     "Type": "Fairy",
@@ -4983,7 +5032,8 @@
     "Range": "5, 1 Target",
     "Effect": "The target is Flinched on a 15+.",
     "Contest Type": "Cool",
-    "Contest Effect": "Sabotage"
+    "Contest Effect": "Sabotage",
+    "Special": "(Optional) Grants Freezer"
   },
   "Mud Bomb": {
     "Type": "Ground",
@@ -5068,7 +5118,8 @@
     "Range": "6, 1 Target",
     "Effect": "Mystical Fire lowers the target's Special Attack by 1 Combat Stage.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Special Attention"
+    "Contest Effect": "Special Attention",
+    "Special": "(Optional) Grants Firestarter"
   },
   "Mystical Power": {
     "Type": "Psychic",
@@ -5216,7 +5267,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Nuzzle Paralyzes the target.",
     "Contest Type": "Cute",
-    "Contest Effect": "Double Time"
+    "Contest Effect": "Double Time",
+    "Special": "(Optional) Grants Zapper"
   },
   "Oblivion Wing": {
     "Type": "Flying",
@@ -5257,7 +5309,8 @@
     "Range": "6, 1 Target",
     "Effect": "On an Even-Numbered Roll, the target's Accuracy is Lowered by 1.",
     "Contest Type": "Tough",
-    "Contest Effect": "Incentives"
+    "Contest Effect": "Incentives",
+    "Special": "(Optional) Grants Fountain"
   },
   "Octolock": {
     "Type": "Fighting",
@@ -5406,7 +5459,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "None",
     "Contest Type": "Cool",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Guster"
   },
   "Perish Song": {
     "Type": "Normal",
@@ -5515,7 +5569,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Pluck takes the target's Held Item or Accessory Slot Item and attaches it to Pluck's user, if the user is not holding anything.",
     "Contest Type": "Cute",
-    "Contest Effect": "Attention Grabber"
+    "Contest Effect": "Attention Grabber",
+    "Special": "(Optional) Grants Guster"
   },
   "Poison Fang": {
     "Type": "Poison",
@@ -5668,7 +5723,8 @@
     "Range": "6, 1 Target",
     "Effect": "None",
     "Contest Type": "Beauty",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Materializer"
   },
   "Power Shift": {
     "Type": "Normal",
@@ -5794,7 +5850,8 @@
     "Damage Base": "4",
     "Class": "Physical",
     "Range": "4, 1 Target, Dash, Push",
-    "Effect": "The user may push the target up to 2 meters."
+    "Effect": "The user may push the target up to 2 meters.",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Psybeam": {
     "Type": "Psychic",
@@ -5805,7 +5862,8 @@
     "Range": "6, 1 Target",
     "Effect": "Psybeam Confuses the target on 19+.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Psyblade": {
     "Type": "Psychic",
@@ -5814,7 +5872,8 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Slice",
-    "Effect": "This Move deals +10 damage if the user or target are in Electric Terrain."
+    "Effect": "This Move deals +10 damage if the user or target are in Electric Terrain.",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Psych Up": {
     "Type": "Normal",
@@ -5847,7 +5906,8 @@
     "Range": "4, 1 Target",
     "Effect": "Light Screen, Reflect and Aurora Veil cannot be declared in response to Psychic Fangs.",
     "Contest Type": "Smart",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Psychic Noise": {
     "Type": "Psychic",
@@ -5890,7 +5950,8 @@
     "Range": "6, 1 Target, Slice",
     "Effect": "Psycho Cut is a Critical Hit on 18+.",
     "Contest Type": "Cool",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Psycho Shift": {
     "Type": "Psychic",
@@ -5911,7 +5972,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "The user gains +5 DR for one full round.",
     "Contest Type": "Smart",
-    "Contest Effect": "Good Show!"
+    "Contest Effect": "Good Show!",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Psyshock": {
     "Type": "Psychic",
@@ -5922,7 +5984,8 @@
     "Range": "4, 1 Target",
     "Effect": "When calculating damage, the target subtracts their Defense from Psyshock's damage instead of their Special Defense. Psyshock is still otherwise Special ( Special Evasion is used to avoid it, Mirror Coat can reflect it, etc. )",
     "Contest Type": "Smart",
-    "Contest Effect": "Incentives"
+    "Contest Effect": "Incentives",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Psystrike": {
     "Type": "Psychic",
@@ -5933,7 +5996,8 @@
     "Range": "4, 1 Target",
     "Effect": "When calculating damage, the target subtracts their Defense from Psystrike's damage instead of their Special Defense. Psystrike is still otherwise Special (Special Evasion is used to avoid it, Mirror Coat can reflect it, etc.)",
     "Contest Type": "Smart",
-    "Contest Effect": "Incentives"
+    "Contest Effect": "Incentives",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Psywave": {
     "Type": "Psychic",
@@ -6120,7 +6184,8 @@
     "Range": "Melee, 1 Target, Dash, Slice",
     "Effect": "Razor Shell lowers the Target's Defense 1 Combat Stage on an Even-Numbered Roll.",
     "Contest Type": "Cool",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Fountain"
   },
   "Razor Wind": {
     "Type": "Normal",
@@ -6373,7 +6438,8 @@
     "Range": "6, 1 Target",
     "Effect": "None",
     "Contest Type": "Tough",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Materializer"
   },
   "Rock Tomb": {
     "Type": "Rock",
@@ -6481,7 +6547,8 @@
     "Range": "6, 1 Target",
     "Effect": "Sacred Fire Burns the target on Even-Numbered Rolls.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Seen Nothing Yet"
+    "Contest Effect": "Seen Nothing Yet",
+    "Special": "(Optional) Grants Firestarter"
   },
   "Sacred Sword": {
     "Type": "Fighting",
@@ -6511,7 +6578,8 @@
     "Damage Base": "4",
     "Class": "Physical",
     "Range": "4, 1 Target",
-    "Effect": "The target becomes Lightly Salted as a Volatile Affliction. While Lightly Salted, they lose 1 Tick of HP at the beginning of each of their turns. Water and Steel-Type Pokemon hit by Salt Cure lose 2 Ticks of HP instead."
+    "Effect": "The target becomes Lightly Salted as a Volatile Affliction. While Lightly Salted, they lose 1 Tick of HP at the beginning of each of their turns. Water and Steel-Type Pokemon hit by Salt Cure lose 2 Ticks of HP instead.",
+    "Special": "(Optional) Grants Materializer"
   },
   "Sand Attack": {
     "Type": "Ground",
@@ -6564,7 +6632,8 @@
     "Range": "5, 1 Target",
     "Effect": "Scald Burns the target on 15+.",
     "Contest Type": "Smart",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Fountain"
   },
   "Scale Shot": {
     "Type": "Dragon",
@@ -7178,7 +7247,8 @@
     "Range": "8, 1 Target",
     "Effect": "Snipe Shot is a Critical Hit on 18+. This Move may not be Intercepted, nor may any Abilities, Moves, or Features be activated to change this Move's target. Any of those existing effects (such as Follow Me) fail.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Reliable"
+    "Contest Effect": "Reliable",
+    "Special": "(Optional) Grants Fountain"
   },
   "Snore": {
     "Type": "Normal",
@@ -7276,7 +7346,8 @@
     "Range": "Melee, 1 Target, Dash",
     "Effect": "Spark Paralyzes the target on 15+.",
     "Contest Type": "Cool",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Zapper"
   },
   "Sparkling Aria": {
     "Type": "Water",
@@ -7581,7 +7652,8 @@
     "Range": "Melee, 1 Target, Slice",
     "Effect": "Stone Axe is a critical hit on an 18+. Once per scene, on a hit, the target may be put in a Vortex.",
     "Contest Type": "Tough",
-    "Contest Effect": "Reliable"
+    "Contest Effect": "Reliable",
+    "Special": "(Optional) Grants Materializer"
   },
   "Stone Edge": {
     "Type": "Rock",
@@ -7592,7 +7664,8 @@
     "Range": "8, 1 Target",
     "Effect": "Stone Edge is a Critical Hit on 17+.",
     "Contest Type": "Tough",
-    "Contest Effect": "Incentives"
+    "Contest Effect": "Incentives",
+    "Special": "(Optional) Grants Materializer"
   },
   "Stored Power": {
     "Type": "Psychic",
@@ -7603,7 +7676,8 @@
     "Range": "10, 1 Target",
     "Effect": "For every Combat Stage the user has above 0, add +2 to Stored Power's Damage Base, up to a maximum of DB20.",
     "Contest Type": "Tough",
-    "Contest Effect": "Incentives"
+    "Contest Effect": "Incentives",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Storm Throw": {
     "Type": "Fighting",
@@ -7813,7 +7887,8 @@
     "Damage Base": "4",
     "Class": "Physical",
     "Range": "Melee, 1 Target, Priority",
-    "Effect": "The target cannot make Attacks of Opportunity for 1 full round."
+    "Effect": "The target cannot make Attacks of Opportunity for 1 full round.",
+    "Special": "(Optional) Grants Zapper"
   },
   "Surging Strikes": {
     "Type": "Water",
@@ -8220,7 +8295,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Thunder Fang Paralyzes or Flinches on 18- 19 during Accuracy Check; flip a coin to determine whether the foe gets Paralyzed or Flinches. On 20 during Accuracy Check, the foe is Paralyzed and Flinched.",
     "Contest Type": "Smart",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Zapper"
   },
   "Thunder Punch": {
     "Type": "Electric",
@@ -8231,7 +8307,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Thunder Punch Paralyzes the target on 19+.",
     "Contest Type": "Cool",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Zapper"
   },
   "Thunder Shock": {
     "Type": "Electric",
@@ -8264,7 +8341,8 @@
     "Range": "4, 1 Target",
     "Effect": "Thunderbolt Paralyzes the target on 19+.",
     "Contest Type": "Cool",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Zapper"
   },
   "Thunderclap": {
     "Type": "Electric",
@@ -8284,7 +8362,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "All legal targets hit lose 1 Defense Combat Stage. Once per Scene, Thunderous Kick may instead be used as an Electric-Type Move.",
     "Contest Type": "Tough",
-    "Contest Effect": "Good Show!"
+    "Contest Effect": "Good Show!",
+    "Special": "(Optional) Grants Zapper"
   },
   "Tickle": {
     "Type": "Normal",
@@ -8323,7 +8402,8 @@
     "Range": "5, 1 Target, Sonic",
     "Effect": "Raise the Special Attack of either the user or an ally within 3 meters by +1 Combat Stage.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Big Show"
+    "Contest Effect": "Big Show",
+    "Special": "(Optional) Grants Firestarter"
   },
   "Torment": {
     "Type": "Dark",
@@ -8651,7 +8731,8 @@
     "Range": "5, 1 Target",
     "Effect": "If Volt Switch successfully hits its target, the user deals damage and then immediately is returned to its Poké Ball in the same turn. A New Pokémon may immediately be sent out. Using Volt Switch lets a Trapped user be recalled.",
     "Contest Type": "Cute",
-    "Contest Effect": "Inversed Appeal"
+    "Contest Effect": "Inversed Appeal",
+    "Special": "(Optional) Grants Zapper"
   },
   "Volt Tackle": {
     "Type": "Electric",
@@ -8696,7 +8777,8 @@
     "Range": "6, 1 Target, Pledge",
     "Effect": "If an ally uses Fire Pledge or Grass Pledge, you may use Water Pledge as Priority (Advanced) immediately after their turn to target the same foe. If used in conjunction with Fire Pledge, a Rainbow is created that lasts for 5 rounds. If used in conjunction with Grass Pledge, the target and all foes adjacent to the target are slowed and have their Speed reduced by 2 Combat Stages. Consult the Pledge keyword for additional details.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Safe Option"
+    "Contest Effect": "Safe Option",
+    "Special": "(Optional) Grants Fountain"
   },
   "Water Pulse": {
     "Type": "Water",
@@ -8707,7 +8789,8 @@
     "Range": "8, 1 Target, Aura",
     "Effect": "Water Pulse Confuses the target on 17+.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Exhausting Act"
+    "Contest Effect": "Exhausting Act",
+    "Special": "(Optional) Grants Fountain"
   },
   "Water Shuriken": {
     "Type": "Water",
@@ -8718,7 +8801,8 @@
     "Range": "6, 1 Target, Five Strike, Priority",
     "Effect": "None",
     "Contest Type": "Cool",
-    "Contest Effect": "Reliable"
+    "Contest Effect": "Reliable",
+    "Special": "(Optional) Grants Fountain"
   },
   "Water Sport": {
     "Type": "Water",
@@ -8751,7 +8835,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "Waterfall Flinches the target on 17+.",
     "Contest Type": "Tough",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Fountain"
   },
   "Wave Crash": {
     "Type": "Water",
@@ -8762,7 +8847,8 @@
     "Range": "Melee, 1 Target, Priority, Recoil 1/4",
     "Effect": "None",
     "Contest Type": "Tough",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Fountain"
   },
   "Wave Dash* [New]": {
     "Type": "Water",
@@ -8773,7 +8859,8 @@
     "Range": "Melee, 1 Target, Dash",
     "Effect": "The user may make the Disengage Maneuver as a Free Action either right before or after using this Move.",
     "Contest Type": "Tough",
-    "Contest Effect": "Excitement"
+    "Contest Effect": "Excitement",
+    "Special": "(Optional) Grants Fountain"
   },
   "Weather Ball": {
     "Type": "Normal",
@@ -8795,7 +8882,8 @@
     "Range": "3, 1 Target",
     "Effect": "The target is put in a Vortex.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Safe Option"
+    "Contest Effect": "Safe Option",
+    "Special": "(Optional) Grants Fountain"
   },
   "Whirlwind": {
     "Type": "Normal",
@@ -8848,7 +8936,8 @@
     "Range": "Melee, 1 Target, Dash, Recoil 1/3",
     "Effect": "None",
     "Contest Type": "Tough",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Zapper"
   },
   "Wildbolt Storm": {
     "Type": "Electric",
@@ -8880,7 +8969,8 @@
     "Range": "Melee, 1 Target",
     "Effect": "None",
     "Contest Type": "Cool",
-    "Contest Effect": "Steady Performance"
+    "Contest Effect": "Steady Performance",
+    "Special": "(Optional) Grants Guster"
   },
   "Wish": {
     "Type": "Normal",
@@ -9023,7 +9113,8 @@
     "Range": "Melee, 1 Target, Dash",
     "Effect": "Zen Headbutt Flinches the target on 15+.",
     "Contest Type": "Beauty",
-    "Contest Effect": "Desperation"
+    "Contest Effect": "Desperation",
+    "Special": "(Optional) Grants Telekinetic"
   },
   "Zing Zap": {
     "Type": "Electric",
@@ -9034,6 +9125,7 @@
     "Range": "Melee, 1 Target",
     "Effect": "Zing Zap Flinches the target on 15+.",
     "Contest Type": "Cool",
-    "Contest Effect": "Tease"
+    "Contest Effect": "Tease",
+    "Special": "(Optional) Grants Zapper"
   }
 }
