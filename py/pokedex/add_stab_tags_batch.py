@@ -42,10 +42,11 @@ def ensure_tags_list(obj: Dict[str, Any]) -> List[str]:
 def add_stab_to_move_obj(move_obj: Dict[str, Any], mon_type_set: Set[str],
                          moves_ref: Optional[Dict[str, Any]]) -> bool:
     """
-    Tente d'ajouter 'Stab' à move_obj['Tags'].
+    Synchronise 'Stab' dans move_obj['Tags'].
     Retourne True si l'objet a été modifié, False sinon.
     - Si move_obj['Type'] manquant, tente de le déduire via moves_ref[Move]['Type'].
-    - Ne tag pas si moves_ref indique explicitement 'Status'.
+    - Ajoute Stab si le type correspond et que le move n'est pas Status.
+    - Retire Stab s'il est devenu invalide.
     """
     move_name = move_obj.get("Move")
     if not isinstance(move_name, str) or not move_name.strip():
@@ -58,14 +59,11 @@ def add_stab_to_move_obj(move_obj: Dict[str, Any], mon_type_set: Set[str],
             mtype = mi["Type"]
             move_obj["Type"] = mtype  # on complète, c'est utile
 
-    if not isinstance(mtype, str):
-        return False
-
     st = is_status(move_name, moves_ref)
-    if st is True:
-        return False
+    should_have_stab = isinstance(mtype, str) and mtype in mon_type_set and st is not True
+    tags = move_obj.get("Tags")
 
-    if mtype in mon_type_set:
+    if should_have_stab:
         tags = ensure_tags_list(move_obj)
         if "Stab" not in tags:
             tags.append("Stab")
@@ -73,6 +71,15 @@ def add_stab_to_move_obj(move_obj: Dict[str, Any], mon_type_set: Set[str],
             seen = set()
             move_obj["Tags"] = [t for t in tags if isinstance(t, str) and not (t in seen or seen.add(t))]
             return True
+
+    if not should_have_stab and isinstance(tags, list) and "Stab" in tags:
+        remaining = [tag for tag in tags if tag != "Stab"]
+        if remaining:
+            move_obj["Tags"] = remaining
+        else:
+            move_obj.pop("Tags", None)
+        return True
+
     return False
 
 # ---------------- core transform ----------------
@@ -155,7 +162,11 @@ def transform_container(data: Any,
 # ---------------- batch over directory ----------------
 
 def find_json_files(root: Path) -> List[Path]:
-    return [p for p in root.rglob("*.json") if p.is_file()]
+    return [
+        p
+        for p in root.rglob("*.json")
+        if p.is_file() and not p.name.endswith(".min.json")
+    ]
 
 def process_file(path: Path, list_key: str, moves_ref: Optional[Dict[str, Any]],
                  inplace: bool, backup: bool, dry_run: bool) -> int:
@@ -181,7 +192,7 @@ def process_file(path: Path, list_key: str, moves_ref: Optional[Dict[str, Any]],
         return 0
 
     if dry_run:
-        log.info(f"[{path}] {count} move(s) taggés STAB (dry-run)")
+        log.info(f"[{path}] {count} move(s) STAB synchronisé(s) (dry-run)")
         return count
 
     # écriture
@@ -195,7 +206,7 @@ def process_file(path: Path, list_key: str, moves_ref: Optional[Dict[str, Any]],
                 return 0
         try:
             path.write_text(new_text, encoding="utf-8")
-            log.info(f"[{path}] {count} move(s) taggés STAB, écrit.")
+            log.info(f"[{path}] {count} move(s) STAB synchronisé(s), écrit.")
         except Exception as e:
             log.error(f"[{path}] Écriture échouée: {e}")
             return 0
@@ -204,7 +215,7 @@ def process_file(path: Path, list_key: str, moves_ref: Optional[Dict[str, Any]],
         out_path = path.with_suffix(".out.json")
         try:
             out_path.write_text(new_text, encoding="utf-8")
-            log.info(f"[{path}] {count} move(s) taggés STAB, écrit -> {out_path.name}")
+            log.info(f"[{path}] {count} move(s) STAB synchronisé(s), écrit -> {out_path.name}")
         except Exception as e:
             log.error(f"[{path}] Écriture échouée: {e}")
             return 0
@@ -262,7 +273,7 @@ def main():
             dry_run=args.dry_run,
         )
 
-    log.info(f"Terminé. Total moves taggés STAB: {total_mods}")
+    log.info(f"Terminé. Total moves STAB synchronisés: {total_mods}")
 
 if __name__ == "__main__":
     main()

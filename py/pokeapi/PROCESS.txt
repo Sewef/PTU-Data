@@ -78,12 +78,12 @@ py find_species_with_few_levelups.py  --in ../../ptu/data/pokedex/updated/pokede
 Will check species with few level up moves for manual processing. --only-stones to get only mons which evolve with stone
 
 --
-py merge_stone_evo_levelups.py --input-dir ../../ptu/data/pokedex/homebrew/ --in-place
-Add shitty moves to evo
-
---
 py update_moves_from_pokeapi.py --pokedex ../../ptu/data/pokedex/community/pokedex_core.json --mapping mapping.csv --out ../../ptu/data/pokedex/homebrew/pokedex_core.json --min-gen 4 --max-gen 9
 py filter_levelup_moves.py --in ../../ptu/data/pokedex/homebrew/pokedex_core.json --out ../../ptu/data/pokedex/homebrew/pokedex_core.json
+
+Move Reminder: when PokeAPI returns more than four ordered level-1 moves for
+one version group, update_moves_from_pokeapi.py keeps the final four natural
+moves and moves the displaced entries to Tutor Move List.
 
 py update_moves_from_pokeapi.py --pokedex ../../ptu/data/pokedex/community/pokedex_7g.json --mapping mapping.csv --out ../../ptu/data/pokedex/homebrew/pokedex_7g.json --min-gen 4 --max-gen 9
 py filter_levelup_moves.py --in ../../ptu/data/pokedex/homebrew/pokedex_7g.json --out ../../ptu/data/pokedex/homebrew/pokedex_7g.json
@@ -94,14 +94,26 @@ py filter_levelup_moves.py --in ../../ptu/data/pokedex/homebrew/pokedex_8g.json 
 py update_moves_from_pokeapi.py --pokedex ../../ptu/data/pokedex/community/pokedex_8g_hisui.json --mapping mapping.csv --out ../../ptu/data/pokedex/homebrew/pokedex_8g_hisui.json --min-gen 4 --max-gen 9
 py filter_levelup_moves.py --in ../../ptu/data/pokedex/homebrew/pokedex_8g_hisui.json --out ../../ptu/data/pokedex/homebrew/pokedex_8g_hisui.json
 
+py ../pokedex/merge_stone_evo_levelups.py --input-dir ../../ptu/data/pokedex/homebrew/ --in-place
+
+Copy the previous stage level-up list into stone evolutions with fewer than 10
+level-up moves. Must run after update_moves_from_pokeapi.py and filtering.
+
 --
-py audit_evolved_low_levelup.py --pokedex ../../ptu/data/pokedex/homebrew/pokedex_core.json 
+py ../pokedex/audit_evolved_low_levelup.py --pokedex ../../ptu/data/pokedex/homebrew/pokedex_core.json
 
 Will audit empty level up move list 
 
 --
-py add_stab_tags_batch.py --input ../../ptu/data/pokedex/homebrew/ --moves ../../ptu/data/moves/moves_homebrew.json --inplace --list-key "TM/HM Move List"
-py add_stab_tags_batch.py --input ../../ptu/data/pokedex/homebrew/ --moves ../../ptu/data/moves/moves_homebrew.json --inplace --list-key "Tutor Move List"
-py add_stab_tags_batch.py --input ../../ptu/data/pokedex/homebrew/ --moves ../../ptu/data/moves/moves_homebrew.json --inplace --list-key "Egg Move List"
+py ../pokedex/add_stab_tags_batch.py --input ../../ptu/data/pokedex/homebrew/ --moves ../../ptu/data/moves/moves_homebrew.json --inplace --no-backup --list-key "Level Up Move List"
+py ../pokedex/add_stab_tags_batch.py --input ../../ptu/data/pokedex/homebrew/ --moves ../../ptu/data/moves/moves_homebrew.json --inplace --no-backup --list-key "TM/HM Move List"
+py ../pokedex/add_stab_tags_batch.py --input ../../ptu/data/pokedex/homebrew/ --moves ../../ptu/data/moves/moves_homebrew.json --inplace --no-backup --list-key "Tutor Move List"
+py ../pokedex/add_stab_tags_batch.py --input ../../ptu/data/pokedex/homebrew/ --moves ../../ptu/data/moves/moves_homebrew.json --inplace --no-backup --list-key "Egg Move List"
+py ../pokedex/add_stab_tags_batch.py --input ../../ptu/data/pokedex/homebrew/ --moves ../../ptu/data/moves/moves_homebrew.json --inplace --no-backup --list-key "TM/Tutor Moves List"
 
-Add STAB tag to moves
+py ../pokedex/filter_tags_batch.py --input ../../ptu/data/pokedex/homebrew/ --allowed N Stab --inplace
+
+py ../deploy/minify_json.py ../../ptu/data/pokedex/homebrew/
+
+Synchronize STAB tags on all move lists (add valid tags and remove stale ones).
+Then remove every tag except N and Stab before rebuilding minified JSON.

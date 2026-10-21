@@ -31,7 +31,7 @@ REQUEST_SLEEP = 0.2  # petite pause par requête
 # préréglages de groupes par génération
 DEFAULT_GROUPS_BY_GEN = {
     7: ["ultra-sun-ultra-moon"],   # alternatif: sun-moon, lets-go-pikachu-lets-go-eevee
-    8: ["sword-shield"],           # alternatif: brilliant-diamond-and-shining-pearl, legends-arceus
+    8: ["sword-shield"],           # alternatif: brilliant-diamond-shining-pearl, legends-arceus
     9: ["scarlet-violet"],         # Gen 9 (SV + DLCs référencés sous le même version_group dans PokeAPI)
 }
 

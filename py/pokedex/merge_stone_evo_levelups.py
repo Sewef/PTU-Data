@@ -39,14 +39,12 @@ def get_stage(row: Dict[str, Any]) -> Optional[int]:
     return parse_int(row.get("Stade", row.get("Stage")))
 
 
-def condition_non_empty(row: Dict[str, Any]) -> bool:
-    """Return True if the evolution 'Condition' field is present and non-empty (any non-empty value)."""
+def is_stone_evolution(row: Dict[str, Any]) -> bool:
+    """Return True when the current stage explicitly evolves with a stone."""
     if not row:
         return False
     val = row.get("Condition")
-    if isinstance(val, str):
-        return val.strip() != ""
-    return bool(val)
+    return isinstance(val, str) and "stone" in val.strip().lower()
 
 
 def find_prev_stage_species(entry: Dict[str, Any], current_stage: int) -> Optional[str]:
@@ -191,7 +189,12 @@ def main():
     if not in_dir.is_dir():
         raise SystemExit(f"Input directory not found: {in_dir}")
 
-    files = sorted([p for p in in_dir.iterdir() if p.suffix.lower() == ".json" and p.is_file()])
+    files = sorted([
+        p for p in in_dir.iterdir()
+        if p.suffix.lower() == ".json"
+        and p.is_file()
+        and not p.name.endswith(".min.json")
+    ])
     if not files:
         raise SystemExit("No .json files found in input directory.")
 
@@ -226,7 +229,7 @@ def main():
             cur_stage = get_stage(self_row)
             if cur_stage is None or cur_stage <= 1:
                 continue
-            if not condition_non_empty(self_row):
+            if not is_stone_evolution(self_row):
                 continue
 
             prev_species = find_prev_stage_species(entry, cur_stage)

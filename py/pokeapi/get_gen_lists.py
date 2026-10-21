@@ -40,7 +40,7 @@ VG_MAP = {
     "scarlet-violet":                (9, "SV"),
     # Gen 8
     "sword-shield":                  (8, "SwSh"),
-    "brilliant-diamond-and-shining-pearl": (8, "BDSP"),
+    "brilliant-diamond-shining-pearl": (8, "BDSP"),
     "legends-arceus":                (8, "PLA"),
     # Gen 7
     "ultra-sun-ultra-moon":          (7, "USUM"),
@@ -56,7 +56,7 @@ ORDERED_VGS = [
     # From newest to oldest for base selection
     "scarlet-violet",
     "sword-shield",
-    "brilliant-diamond-and-shining-pearl",
+    "brilliant-diamond-shining-pearl",
     "legends-arceus",
     "ultra-sun-ultra-moon",
     "sun-moon",

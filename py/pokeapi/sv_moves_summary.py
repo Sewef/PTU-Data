@@ -25,7 +25,7 @@ FALLBACK_VGS = [
     "sword-shield",
     "isle-of-armor",
     "crown-tundra",
-    "brilliant-diamond-and-shining-pearl",
+    "brilliant-diamond-shining-pearl",
     "legends-arceus",
     "ultra-sun-ultra-moon",
     "sun-moon",

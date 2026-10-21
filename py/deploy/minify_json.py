@@ -28,10 +28,10 @@ def minify_json_folder(folder):
                 with open(dest_path, "w", encoding="utf-8") as f:
                     json.dump(data, f, separators=(",", ":"), ensure_ascii=False)
 
-                print(f"✔ Formatted & Minified: {source_path} → {dest_path}")
+                print(f"[OK] Formatted & minified: {source_path} -> {dest_path}")
 
             except Exception as e:
-                print(f"❌ Error with '{source_path}': {e}")
+                print(f"[ERROR] Error with '{source_path}': {e}")
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:

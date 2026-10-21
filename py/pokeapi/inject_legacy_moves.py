@@ -46,7 +46,7 @@ VG_TO_GEN = {
     "ultra-sun-ultra-moon": 7,
     "lets-go-pikachu-lets-go-eevee": 7,
     "sword-shield": 8,
-    "brilliant-diamond-and-shining-pearl": 8,
+    "brilliant-diamond-shining-pearl": 8,
     "legends-arceus": 8,
     "scarlet-violet": 9,
 }

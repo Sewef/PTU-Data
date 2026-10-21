@@ -14,7 +14,8 @@ Rules (applied in this order to the Level Up list before any transfer considerat
 2) If a move has an Evo occurrence, remove all other level-up occurrences for that move (keep only Evo).
 3) If a move is learned multiple times (still duplicates remaining), remove in priority entries whose Tags include "Legends: Arceus".
    (If the only entries are from Legends: Arceus, keep one for the next tie-break.)
-4) If duplicates still remain, keep the one with the lowest level (Evo considered lower than any numeric level).
+4) If duplicates still remain, keep the one with the lowest level (Evo considered lower than any numeric level),
+   regardless of whether it comes from the current game or a Legacy game.
 
 Usage:
     python filter_levelup_moves.py --in pokedex_core.json --out pokedex_core.filtered.json
@@ -22,7 +23,14 @@ Usage:
 
 import argparse
 import json
-from typing import Any, Dict, List, Tuple, Optional
+from typing import Any, Dict, List, Tuple, Optional, Set
+
+
+# Species-specific moves that are intentionally learned at several levels.
+# They must survive the generic duplicate collapsing below.
+DUPLICATE_LEVELUP_EXCEPTIONS: Dict[str, Set[str]] = {
+    "smeargle": {"sketch"},
+}
 
 # --------------------------- helpers ---------------------------
 
@@ -87,6 +95,7 @@ def has_tag_larceus(tags: Any) -> bool:
             return True
     return False
 
+
 def build_species_index(pokedex: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
     """Lowercased species name -> entry"""
     idx: Dict[str, Dict[str, Any]] = {}
@@ -150,7 +159,11 @@ def species_has_move_at_level_1(species_entry: Dict[str, Any], move_name: str) -
 
 # --------------------------- core filter ---------------------------
 
-def filter_levelup(levelups: List[Dict[str, Any]], is_evolved: bool) -> List[Dict[str, Any]]:
+def filter_levelup(
+    levelups: List[Dict[str, Any]],
+    is_evolved: bool,
+    preserve_duplicates: Optional[Set[str]] = None,
+) -> List[Dict[str, Any]]:
     # Group entries by Move name
     by_move: Dict[str, List[Dict[str, Any]]] = {}
     for e in levelups:
@@ -160,8 +173,13 @@ def filter_levelup(levelups: List[Dict[str, Any]], is_evolved: bool) -> List[Dic
         by_move.setdefault(mv, []).append(e)
 
     result: List[Dict[str, Any]] = []
+    preserve_duplicates = {move.strip().lower() for move in (preserve_duplicates or set())}
 
     for move_name, entries in by_move.items():
+        if move_name.strip().lower() in preserve_duplicates:
+            result.extend(entries)
+            continue
+
         # Step 1: evolved species level-1 cull if later exists
         current = list(entries)
         if is_evolved:
@@ -213,7 +231,12 @@ def process_pokedex(pokedex: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         is_evolved = (stage is not None and stage > 1)
 
         # Apply level-up filtering rules (pre-transfer)
-        filtered = filter_levelup(lvl_list, is_evolved=is_evolved)
+        species_key = str(entry.get("Species") or "").strip().lower()
+        filtered = filter_levelup(
+            lvl_list,
+            is_evolved=is_evolved,
+            preserve_duplicates=DUPLICATE_LEVELUP_EXCEPTIONS.get(species_key),
+        )
 
         # Transfer rule (modified):
         # For evolved species, transfer remaining Level 1 moves to Tutor **only if**

@@ -7,6 +7,8 @@ Rules:
 - Remove existing Level Up / TM/HM / Tutor lists before writing new ones.
 - TM: gather all moves with method "machine" from gens 9..6 (inclusive), dedupe, sort alpha.
 - Tutor: same with method "tutor".
+- Move Reminder: level-1 moves displaced from the Pokemon's four natural
+  starting slots according to PokeAPI's `order` field are moved to Tutor.
 - Egg: same with method "egg".
 - Level Up:
     * Take the most recent generation available for this Pokémon (<= max-gen).
@@ -44,7 +46,7 @@ VERSION_GROUPS = {
     "scarlet-violet": (9, "Scarlet/Violet"),
     # Gen 8
     "sword-shield": (8, "Sword/Shield"),
-    "brilliant-diamond-and-shining-pearl": (8, "BDSP"),
+    "brilliant-diamond-shining-pearl": (8, "BDSP"),
     "legends-arceus": (8, "Legends: Arceus"),
     # Gen 7
     "sun-moon": (7, "Sun/Moon"),
@@ -92,7 +94,7 @@ VERSION_GROUP_PRIORITY = [
     "lets-go-pikachu-lets-go-eevee",
     # Gen 8
     "sword-shield",
-    "brilliant-diamond-and-shining-pearl",
+    "brilliant-diamond-shining-pearl",
     "legends-arceus",
     # Gen 9 (le plus récent à la fin)
     "scarlet-violet",
@@ -118,7 +120,11 @@ def unique_sorted_names(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
             seen[key] = it
     return sorted(seen.values(), key=lambda x: x.get("Move",""))
 
-async def fetch_json(session: aiohttp.ClientSession, url: str) -> Optional[Dict[str, Any]]:
+async def fetch_json(
+    session: aiohttp.ClientSession,
+    url: str,
+    log_not_found: bool = True,
+) -> Optional[Dict[str, Any]]:
     try:
         async with session.get(url) as resp:
             if resp.status == 400:
@@ -127,6 +133,8 @@ async def fetch_json(session: aiohttp.ClientSession, url: str) -> Optional[Dict[
             resp.raise_for_status()
             return await resp.json()
     except aiohttp.ClientResponseError as e:
+        if e.status == 404 and not log_not_found:
+            return None
         if e.status == 400:
             sys.stderr.write(f"[WARN] 400 at {url}\n")
             return None
@@ -174,6 +182,44 @@ def version_group_label(vg: str) -> str:
     info = VERSION_GROUPS.get(vg)
     return info[1] if info else vg
 
+
+MoveOccurrence = Tuple[int, Optional[int], str]
+
+
+def split_move_reminder_entries(
+    level_up_by_vg: Dict[str, List[MoveOccurrence]],
+) -> Tuple[Dict[str, List[MoveOccurrence]], Dict[str, List[MoveOccurrence]]]:
+    """Separate level-1 moves that cannot remain in a natural moveset.
+
+    PokeAPI can expose more than four level-1 moves as ``level-up``. Its
+    ``order`` field describes the order in which those moves fill the four
+    available slots: later moves replace the lowest-order ones. Entries that
+    fall out of the final four are only recoverable through the Move Reminder,
+    so PTU treats them as Tutor moves.
+
+    Only ordered level-1 entries are considered. Missing or incomplete order
+    data is left untouched rather than guessing.
+    """
+    natural: Dict[str, List[MoveOccurrence]] = {}
+    reminder: Dict[str, List[MoveOccurrence]] = {}
+
+    for vg, occurrences in level_up_by_vg.items():
+        ordered_level_one = sorted(
+            (
+                occurrence
+                for occurrence in occurrences
+                if occurrence[0] == 1 and isinstance(occurrence[1], int)
+            ),
+            key=lambda occurrence: (occurrence[1], occurrence[2]),
+        )
+        displaced = set(ordered_level_one[:-4]) if len(ordered_level_one) > 4 else set()
+
+        natural[vg] = [occurrence for occurrence in occurrences if occurrence not in displaced]
+        if displaced:
+            reminder[vg] = [occurrence for occurrence in ordered_level_one if occurrence in displaced]
+
+    return natural, reminder
+
 async def build_moves_for_pokemon(
     session: aiohttp.ClientSession,
     pokemon_slug: str,
@@ -188,18 +234,39 @@ async def build_moves_for_pokemon(
         tutor:    list of dicts {"Move","Type","Method":"Tutor"}
         egg:      list of dicts {"Move","Type","Method":"Egg"}
     """
-    data = await fetch_json(session, f"{POKEAPI_BASE}/pokemon/{pokemon_slug}")
+    data = await fetch_json(
+        session,
+        f"{POKEAPI_BASE}/pokemon/{pokemon_slug}",
+        log_not_found=False,
+    )
+    species_json = None
+    if not data:
+        # Some species no longer expose their unsuffixed name through /pokemon
+        # (for example frillish -> frillish-male). Resolve the current default
+        # variety through /pokemon-species instead of hard-coding form names in
+        # mapping.csv.
+        species_json = await fetch_json(
+            session, f"{POKEAPI_BASE}/pokemon-species/{pokemon_slug}"
+        )
+        varieties = (species_json or {}).get("varieties") or []
+        default_variety = next(
+            (variety for variety in varieties if variety.get("is_default")),
+            varieties[0] if varieties else None,
+        )
+        fallback_slug = ((default_variety or {}).get("pokemon") or {}).get("name")
+        if fallback_slug and fallback_slug != pokemon_slug:
+            data = await fetch_json(session, f"{POKEAPI_BASE}/pokemon/{fallback_slug}")
     if not data:
         return {"level_up": [], "machine": [], "tutor": [], "egg": []}
     # Get species URL from the /pokemon data to avoid alt-form slugs 404
     species_url = (data.get("species") or {}).get("url")
     evolved = False
-    if species_url:
+    if species_url and species_json is None:
         species_json = await fetch_json(session, species_url)
-        evolved = bool(species_json and species_json.get("evolves_from_species"))
+    evolved = bool(species_json and species_json.get("evolves_from_species"))
 
     # Collect by method and version_group
-    per_method: Dict[str, Dict[str, List[Tuple[int, str]]]] = {
+    per_method: Dict[str, Dict[str, List[MoveOccurrence]]] = {
         "level-up": {},
         "machine": {},
         "tutor": {},
@@ -220,17 +287,23 @@ async def build_moves_for_pokemon(
             if method_slug not in MOVE_METHOD_SLUG_TO_KIND:
                 continue
             level = vgd.get("level_learned_at") or 0
-            per_method.setdefault(method_slug, {}).setdefault(vg, []).append((level, move_slug))
+            order = vgd.get("order")
+            per_method.setdefault(method_slug, {}).setdefault(vg, []).append((level, order, move_slug))
+
+    level_up_by_vg, move_reminder_by_vg = split_move_reminder_entries(
+        per_method.get("level-up", {})
+    )
+    per_method["level-up"] = level_up_by_vg
 
         # TM/Machine, Tutor, Egg: collect across gens min..max, avec Tags Legacy selon le jeu source
-    async def as_move_dicts(pairs_by_vg: Dict[str, List[Tuple[int, str]]], method_label: str) -> List[Dict[str, Any]]:
+    async def as_move_dicts(pairs_by_vg: Dict[str, List[MoveOccurrence]], method_label: str) -> List[Dict[str, Any]]:
         out = []
         for vg, pairs in pairs_by_vg.items():
             gen = version_group_gen(vg)
             if gen is None or gen < min_gen or gen > max_gen:
                 continue
             label = version_group_label(vg)
-            for _, slug in pairs:
+            for _, _, slug in pairs:
                 t = await get_move_type(session, slug, move_type_cache)
                 tags = []
                 # Si ce n’est pas de la gen max, on ajoute le tag Legacy
@@ -240,7 +313,9 @@ async def build_moves_for_pokemon(
         return out
 
     machine = unique_sorted_names(await as_move_dicts(per_method.get("machine", {}), "Machine"))
-    tutor   = unique_sorted_names(await as_move_dicts(per_method.get("tutor", {}), "Tutor"))
+    explicit_tutor = await as_move_dicts(per_method.get("tutor", {}), "Tutor")
+    move_reminder = await as_move_dicts(move_reminder_by_vg, "Tutor")
+    tutor = unique_sorted_names(explicit_tutor + move_reminder)
     if evolved:
         egg = []
     else:
@@ -278,8 +353,8 @@ async def build_moves_for_pokemon(
 
     if latest_vg:
         # Base from latest
-        base = sorted(lv_vg_to_pairs[latest_vg], key=lambda x: (x[0], x[1]))
-        for lvl, slug in base:
+        base = sorted(lv_vg_to_pairs[latest_vg], key=lambda x: (x[0], x[2]))
+        for lvl, _, slug in base:
             e, lvl_key = await level_entry(lvl, slug)
             level_up.append(e)
             have_pairs.add((e["Move"].lower(), lvl_key))
@@ -294,7 +369,7 @@ async def build_moves_for_pokemon(
             if gen is None or gen < min_gen:
                 continue
             label = version_group_label(vg)
-            for lvl, slug in sorted(lv_vg_to_pairs[vg], key=lambda x: (x[0], x[1])):
+            for lvl, _, slug in sorted(lv_vg_to_pairs[vg], key=lambda x: (x[0], x[2])):
                 e, lvl_key = await level_entry(lvl, slug, tags=["Legacy", label])
                 key = (e["Move"].lower(), lvl_key)
                 if key in have_pairs:
