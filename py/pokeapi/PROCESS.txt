@@ -94,6 +94,9 @@ py filter_levelup_moves.py --in ../../ptu/data/pokedex/homebrew/pokedex_8g.json 
 py update_moves_from_pokeapi.py --pokedex ../../ptu/data/pokedex/community/pokedex_8g_hisui.json --mapping mapping.csv --out ../../ptu/data/pokedex/homebrew/pokedex_8g_hisui.json --min-gen 4 --max-gen 9
 py filter_levelup_moves.py --in ../../ptu/data/pokedex/homebrew/pokedex_8g_hisui.json --out ../../ptu/data/pokedex/homebrew/pokedex_8g_hisui.json
 
+py update_moves_from_pokeapi.py --pokedex ../../ptu/data/pokedex/community/pokedex_9g.json --mapping mapping.csv --out ../../ptu/data/pokedex/homebrew/pokedex_9g.json --min-gen 4 --max-gen 9
+py filter_levelup_moves.py --in ../../ptu/data/pokedex/homebrew/pokedex_9g.json --out ../../ptu/data/pokedex/homebrew/pokedex_9g.json
+
 py ../pokedex/merge_stone_evo_levelups.py --input-dir ../../ptu/data/pokedex/homebrew/ --in-place
 
 Copy the previous stage level-up list into stone evolutions with fewer than 10

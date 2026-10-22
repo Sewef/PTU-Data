@@ -104,6 +104,24 @@ class MoveReminderTests(unittest.TestCase):
             update_moves_from_pokeapi.VERSION_GROUPS,
         )
 
+    def test_form_mapping_keys_do_not_fall_back_to_base_species(self):
+        entry = {"Species": "Samurott", "Form": "Hisui"}
+
+        self.assertEqual(
+            update_moves_from_pokeapi.mapping_key_for_entry(entry),
+            "Samurott Hisui",
+        )
+
+    def test_duplicate_species_are_distinguished_by_form(self):
+        entries = [
+            {"Species": "Basculegion", "Form": "Male"},
+            {"Species": "Basculegion", "Form": "Female"},
+        ]
+
+        keys = [update_moves_from_pokeapi.mapping_key_for_entry(entry) for entry in entries]
+
+        self.assertEqual(keys, ["Basculegion Male", "Basculegion Female"])
+
 
 class BuildMovesIntegrationTests(unittest.IsolatedAsyncioTestCase):
     async def test_missing_pokemon_slug_uses_species_default_variety(self):

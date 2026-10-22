@@ -391,6 +391,17 @@ async def build_moves_for_pokemon(
     return {"level_up": level_up, "machine": machine, "tutor": tutor, "egg": egg}
 
 
+def mapping_key_for_entry(entry: Dict[str, Any]) -> Optional[str]:
+    """Return the mapping.csv key for one concrete Pokedex entry."""
+    species = entry.get("Species")
+    if not isinstance(species, str) or not species.strip():
+        return None
+    species = species.strip()
+    form = entry.get("Form")
+    if isinstance(form, str) and form.strip():
+        return f"{species} {form.strip()}"
+    return species
+
 
 async def main_async(args):
     pokedex_path = Path(args.pokedex).expanduser()
@@ -404,22 +415,28 @@ async def main_async(args):
             sys.stderr.write(f"Failed to parse pokedex JSON: {e}\n")
             return 2
 
-    # Build name -> index map
-    idx_by_species: Dict[str, int] = {}
-    for i, sp in enumerate(pokedex):
-        name = sp.get("Species")
-        if isinstance(name, str):
-            idx_by_species[name] = i
-
     # Read mapping
-    mapping: List[Tuple[str, str]] = []
+    mapping: Dict[str, str] = {}
     with mapping_path.open("r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
             species = (row.get("species") or "").strip()
             other = (row.get("othername") or "").strip()
             if species and other:
-                mapping.append((species, other))
+                mapping[species] = other
+
+    # A regional or alternate form must resolve through its full display key.
+    # Falling back to the base species would silently give e.g. Samurott-Hisui
+    # the regular Samurott learnset. Processing entries by index also preserves
+    # duplicate species such as male/female Basculegion.
+    entries_to_update = []
+    for index, entry in enumerate(pokedex):
+        mapping_key = mapping_key_for_entry(entry)
+        if mapping_key is None:
+            continue
+        slug = mapping.get(mapping_key)
+        if slug:
+            entries_to_update.append((index, slug))
 
     # Prepare HTTP client & cache
     timeout = aiohttp.ClientTimeout(total=60)
@@ -430,14 +447,11 @@ async def main_async(args):
         # Process in small batches for fairness
         sem = asyncio.Semaphore(30)
 
-        async def process_one(species: str, slug: str):
-            if species not in idx_by_species:
-                # Silently ignore missing species in pokedex
-                return
+        async def process_one(index: int, slug: str):
             async with sem:
                 moves = await build_moves_for_pokemon(session, slug, args.min_gen, args.max_gen, move_type_cache)
             # Mutate pokedex entry
-            entry = pokedex[idx_by_species[species]]
+            entry = pokedex[index]
             moves_block = entry.setdefault("Moves", {})
             # Remove old lists
             for k in ["Level Up Move List", "TM/HM Move List", "Tutor Move List", "Egg Move List"]:
@@ -449,7 +463,7 @@ async def main_async(args):
             moves_block["Tutor Move List"]   = moves["tutor"]
             moves_block["Egg Move List"]     = moves["egg"]
 
-        tasks = [process_one(species, other) for species, other in mapping]
+        tasks = [process_one(index, slug) for index, slug in entries_to_update]
         # Run with progress
         for chunk_start in range(0, len(tasks), 50):
             await asyncio.gather(*tasks[chunk_start:chunk_start+50])
