@@ -425,35 +425,35 @@
           },
           {
             "Name": "Perseverance",
-            "Prerequisites": "Ace Trainer",
+            "Prerequisites": "[[feature:Ace Trainer]]",
             "Frequency": "1 AP — Free Action",
             "Trigger": "Your Pokémon gains an Injury",
             "Effect": "The target instead does not gain an Injury. Perseverance may activate only once per Scene per target."
           },
           {
             "Name": "Elite Trainer",
-            "Prerequisites": "Ace Trainer",
+            "Prerequisites": "[[feature:Ace Trainer]]",
             "Frequency": "Static",
-            "Effect": "Choose Agility Training, Brutal Training, Focused Training, or Inspired Training. You gain the chosen Feature, even if you do not meet the prerequisites. When training, you may apply up to two different [Training] Features on each of your Pokémon. If you already have all of these Features, instead pick another Feature for which you qualify."
+            "Effect": "Choose [[feature:Agility Training]], [[feature:Brutal Training]], [[feature:Focused Training]], or [[feature:Inspired Training]]. You gain the chosen Feature, even if you do not meet the prerequisites. When training, you may apply up to two different [Training] Features on each of your Pokémon. If you already have all of these Features, instead pick another Feature for which you qualify."
           },
           {
             "Name": "Critical Moment",
             "Tags": "[Orders]",
-            "Prerequisites": "Elite Trainer, Adept Command",
+            "Prerequisites": "[[feature:Elite Trainer]], Adept Command",
             "Frequency": "Scene x2 — Standard Action",
             "Target": "Your Pokemon with [Training] Features applied",
             "Effect": "The bonuses from your Pokemon's [Training] are tripled until the end of your next turn."
           },
           {
             "Name": "Top Percentage",
-            "Prerequisites": "Ace Trainer, Expert Command",
+            "Prerequisites": "[[feature:Ace Trainer]], Expert Command",
             "Frequency": "At-Will — Free Action",
             "Trigger": "Your Pokémon levels up to a Level evenly divisible by 5",
             "Effect": "Your Pokémon gains an extra Tutor Point. Top Percentage may be used on a single Pokémon a maximum of 4 times. Once a Pokémon has gained 4 Tutor Points in this way, increase each of that Pokémon's Base Stats by +1."
           },
           {
             "Name": "Signature Technique",
-            "Prerequisites": "Elite Trainer, Expert Command",
+            "Prerequisites": "[[feature:Elite Trainer]], Expert Command",
             "Frequency": "At-Will — Extended Action",
             "Trigger": "Your Pokémon with at least 2 Tutor Points remaining",
             "Effect": "The target loses 2 Tutor Points. Choose one Move on the Target's Move List. That Move becomes the target's Signature Technique, and you may apply one of the modifications on the next page to the Move. The Move being modified must fit the category of the modification, and you must have the associated Training Feature to apply a modification. A Pokémon may only have one Signature Technique at a time. If you choose to teach a Pokémon a different Signature Technique, the old one is lost, and 1 Tutor Point is refunded. 1 Tutor Point is also refunded if the Pokémon ever forgets a Signature Technique Move."
@@ -462,7 +462,7 @@
             "Name": "Champ in the Making",
             "Prerequisites": "Four Ace Trainer Feats, Master Command",
             "Frequency": "Drain 1 AP — Free Action",
-            "Trigger": "You use Ace Trainer to give Pokémon Trained Stats",
+            "Trigger": "You use [[feature:Ace Trainer]] to give Pokémon Trained Stats",
             "Effect": "Choose two Trained Stats for each Pokémon instead of one. A Pokémon may only have two Trained Stats this way."
           },
           {
@@ -470,27 +470,27 @@
             "techniques": [
               {
                 "Name": "Cone, Line, Burst, and Blast Moves",
-                "Scattershot – Agility Training": "Instead of the Move's normal range, it has a range of 4m, 3 Targets.",
-                "Shock and Awe – Inspired Training": "Foes targeted by the Move take a -2 penalty to Save Checks and a -1 Penalty to Evasion until the end of the user's next turn.",
-                "Vicious Storm – Brutal Training": "The Move gains the Smite keyword. Applicable to Damaging Moves only."
+                "Scattershot – [[feature:Agility Training]]": "Instead of the Move's normal range, it has a range of 4m, 3 Targets.",
+                "Shock and Awe – [[feature:Inspired Training]]": "Foes targeted by the Move take a -2 penalty to Save Checks and a -1 Penalty to Evasion until the end of the user's next turn.",
+                "Vicious Storm – [[feature:Brutal Training]]": "The Move gains the [[keyword:Smite]] keyword. Applicable to Damaging Moves only."
               },
               {
                 "Name": "Single Target Moves",
-                "Guarding Strike – Inspired Training": "If this Move hits, the user gains +5 Damage Reduction against the target of the attack until the end of their next turn.",
-                "Unbalancing Blow – Brutal Training": "Whether the Move hits or misses, the target becomes Vulnerable until the next time they are hit by a Damaging Attack or one full round has passed, whichever comes first.",
-                "Reliable Attack – Focused Training": "If the Move misses its target, its Frequency is not spent and the user may immediately make a Struggle Attack as a Free Action. Cannot be applied to Moves with the Smite keyword."
+                "Guarding Strike – [[feature:Inspired Training]]": "If this Move hits, the user gains +5 Damage Reduction against the target of the attack until the end of their next turn.",
+                "Unbalancing Blow – [[feature:Brutal Training]]": "Whether the Move hits or misses, the target becomes [[status:Vulnerable]] until the next time they are hit by a Damaging Attack or one full round has passed, whichever comes first.",
+                "Reliable Attack – [[feature:Focused Training]]": "If the Move misses its target, its Frequency is not spent and the user may immediately make a Struggle Attack as a Free Action. Cannot be applied to Moves with the [[keyword:Smite]] keyword."
               },
               {
                 "Name": "Damaging Moves",
-                "Alternative Energy – Focused Training": "Switch the Class of the Move from Physical to Special or vice versa.",
-                "Bloodied Speed – Agility Training": "This Move may be used as Priority (Advanced) if the user has less than half of their maximum Hit Points.",
-                "Double Down – Brutal Training": "The Move gains the Double Strike keyword. Effects and Effect-Ranges may be triggered only once (but either roll may trigger the effect). This may only be applied to Moves with a Damage Base of 4 or less, and may not be applied to Moves whose Damage Base change upon certain conditions (such as Fury Cutter or Ice Ball) or moves with Special-Case Damage (such as Night Shade)."
+                "Alternative Energy – [[feature:Focused Training]]": "Switch the Class of the Move from Physical to Special or vice versa.",
+                "Bloodied Speed – [[feature:Agility Training]]": "This Move may be used as [[keyword:Priority (Advanced)]] if the user has less than half of their maximum Hit Points.",
+                "Double Down – [[feature:Brutal Training]]": "The Move gains the [[keyword:Double Strike]] keyword. Effects and Effect-Ranges may be triggered only once (but either roll may trigger the effect). This may only be applied to Moves with a Damage Base of 4 or less, and may not be applied to Moves whose Damage Base change upon certain conditions (such as [[move:Fury Cutter]] or [[move:Ice Ball]]) or moves with Special-Case Damage (such as [[move:Night Shade]])."
               },
               {
                 "Name": "Status Moves",
-                "Burst of Motivation – Inspired Training": "After this Move is Resolved, the user may increase any Stats with negative Combat Stages by up to +2 Combat Stages (but this cannot put Combat Stages above +0 CS total).",
-                "Supreme Concentration – Focused Training": "This Move may be used even if the user is Paralyzed, Flinched, Enraged, or has failed their Confusion Save Check.",
-                "Double Curse – Agility Training": "The user may target an additional foe with this Attack. This may be applied only to 1-Target Moves."
+                "Burst of Motivation – [[feature:Inspired Training]]": "After this Move is Resolved, the user may increase any Stats with negative Combat Stages by up to +2 Combat Stages (but this cannot put Combat Stages above +0 CS total).",
+                "Supreme Concentration – [[feature:Focused Training]]": "This Move may be used even if the user is [[status:Paralyzed]], [[status:Flinched]], [[status:Enraged]], or has failed their [[status:Confusion]] Save Check.",
+                "Double Curse – [[feature:Agility Training]]": "The user may target an additional foe with this Attack. This may be applied only to 1-Target Moves."
               }
             ]
           }
