@@ -13,19 +13,19 @@
   },
   "Apricorn Balls": {
     "Prerequisites": "Novice Survival or Adept Technology Education",
-    "Description": "As an Extended Action, you may craft Apricorns into their corresponding Poké Ball. Use of this Feature requires access to a Poké Ball Tool Box.",
+    "Description": "As an Extended Action, you may craft Apricorns into their corresponding Poké Ball. Use of this Feature requires access to a [[item:Poké Ball Tool Box]].",
     "Category": "Crafting",
     "Source": "Core"
   },
   "Art of Stealth": {
     "Prerequisites": "Expert Stealth",
-    "Description": "You gain the Stealth Capability.",
+    "Description": "You gain the [[capability:Stealth]] Capability.",
     "Category": "Other",
     "Source": "Core"
   },
   "Athletic Initiative": {
     "Prerequisites": "Adept Athletics",
-    "Description": "You learn the Move Agility.",
+    "Description": "You learn the Move [[move:Agility]].",
     "Category": "Combat",
     "Source": "Core"
   },
@@ -37,25 +37,25 @@
   },
   "Basic Balls": {
     "Prerequisites": "Novice Technology Education",
-    "Description": "You may craft Basic Balls for $100 and Great Balls for $175. Requires access to a Poké Ball Tool Box.",
+    "Description": "You may craft Basic Balls for $100 and Great Balls for $175. Requires access to a [[item:Poké Ball Tool Box]].",
     "Category": "Crafting",
     "Source": "Core"
   },
   "Basic Cooking": {
     "Prerequisites": "Novice Intuition",
-    "Description": "You may create \"Candy Bars\" or \"Baby Food\" with cooking ingredients costing $50. You may fluff the food in any reasonable manner you like.",
+    "Description": "You may create \"[[item:Candy Bars]]\" or \"[[item:Baby Food]]\" with cooking ingredients costing $50. You may fluff the food in any reasonable manner you like.",
     "Category": "Crafting",
     "Source": "Core"
   },
   "Basic Martial Arts": {
     "Prerequisites": "Novice Combat",
-    "Description": "You learn the Move Rock Smash.",
+    "Description": "You learn the Move [[move:Rock Smash]].",
     "Category": "Combat",
     "Source": "Core"
   },
   "Basic Psionics": {
     "Prerequisites": "Elemental Connection (Psychic)",
-    "Description": "You learn the Move Confusion.",
+    "Description": "You learn the Move [[move:Confusion]].",
     "Category": "Combat",
     "Source": "Core"
   },
@@ -84,13 +84,13 @@
   },
   "Charmer": {
     "Prerequisites": "Novice Charm",
-    "Description": "You learn the Move Baby-Doll Eyes.",
+    "Description": "You learn the Move [[move:Baby-Doll Eyes]].",
     "Category": "Combat",
     "Source": "Core"
   },
   "Confidence Artist": {
     "Prerequisites": "Novice Guile",
-    "Description": "You learn the Move Confide.",
+    "Description": "You learn the Move [[move:Confide]].",
     "Category": "Combat",
     "Source": "Core"
   },
@@ -102,7 +102,7 @@
   },
   "Demoralize": {
     "Prerequisites": "Adept Intimidate",
-    "Description": "Whenever you land a Critical Hit on a foe, that foe becomes Vulnerable. Status-Class Moves with an Accuracy Roll can \"Crit\" for the purposes of activating this effect on a natural roll of 19 or higher, and any effects that expand your Critical-Hit Range also expand this range.",
+    "Description": "Whenever you land a Critical Hit on a foe, that foe becomes [[status:Vulnerable]]. Status-Class Moves with an Accuracy Roll can \"Crit\" for the purposes of activating this effect on a natural roll of 19 or higher, and any effects that expand your Critical-Hit Range also expand this range.",
     "Category": "Combat",
     "Source": "Core"
   },
@@ -149,19 +149,19 @@
   },
   "Field Clinic": {
     "Prerequisites": "Adept Medicine Education",
-    "Description": "Whenever your party Sets Up Camp, you may spend $200 worth of Medical Scrap to set up a Field Clinic. While using the Field Clinic, all members gain the following benefits;\n» You may spend $300 of Medical Scrap to create and apply a Bandage or use a First Aid Kit\n» If you have the Nurse Feature, you may spend $300 to activate it without Draining AP.\n» Potions, Super Potions, Hyper Potions, Full Restores, Revives, Energy Powders, and Energy Roots used in this area heal their target an additional 5 Hit Points.",
+    "Description": "Whenever your party Sets Up Camp, you may spend $200 worth of Medical Scrap to set up a Field Clinic. While using the Field Clinic, all members gain the following benefits;\n» You may spend $300 of Medical Scrap to create and apply a [[item:Bandage]] or use a [[item:First Aid Kit]]\n» If you have the [[feature:Nurse]] Feature, you may spend $300 to activate it without Draining AP.\n» [[item:Potions]], [[item:Super Potions]], [[item:Hyper Potions]], [[item:Full Restores]], [[item:Revives]], [[item:Energy Powders]], and [[item:Energy Roots]] used in this area heal their target an additional 5 Hit Points.",
     "Category": "Other",
     "Source": "Erratum September 2015"
   },
   "Flustering Charisma": {
     "Prerequisites": "Adept Charm or Guile",
-    "Description": "When you hit with a Move with the Social keyword, the target takes a -2 penalty to Save Checks against Volatile Status Afflictions for 1 full round.",
+    "Description": "When you hit with a Move with the [[keyword:Social]] keyword, the target takes a -2 penalty to Save Checks against Volatile Status Afflictions for 1 full round.",
     "Category": "Combat",
     "Source": "Core"
   },
   "Gem Lore": {
     "Prerequisites": "Novice Occult Education",
-    "Description": "As an Extended Action, you may turn a Shard into a Gem of one of its associated Types. Additionally, you can turn 4 Red Shards into a Fire Stone; 4 Blue Shards into a Water Stone; 4 Yellow Shards into a Thunder Stone; 4 Orange Shards into a Shiny Stone; 4 Green Shards into a Leaf Stone; or 4 Violet Shards into a Dusk Stone. You can also destroy any of these six Stones to gain 4 Shards of the corresponding color.",
+    "Description": "As an Extended Action, you may turn a [[item:Shard]] into a Gem of one of its associated Types. Additionally, you can turn 4 Red Shards into a Fire Stone; 4 Blue Shards into a Water Stone; 4 Yellow Shards into a Thunder Stone; 4 Orange Shards into a Shiny Stone; 4 Green Shards into a Leaf Stone; or 4 Violet Shards into a Dusk Stone. You can also destroy any of these six Stones to gain 4 Shards of the corresponding color.",
     "Category": "Crafting",
     "Source": "Core"
   },
@@ -173,25 +173,25 @@
   },
   "Grace": {
     "Prerequisites": "Novice Charm, Command, Guile, Intimidate, or Intuition",
-    "Description": "Your Pokémon may consume and benefit from 2 more Poffins each. If this Pokémon is traded to a Trainer without the Grace feature, these extra dice from additional Poffins are not lost, but a Trainer without Grace may not benefit from more than 6 Dice gained from Poffins. You may always use any of the Skills that are prerequisites for Grace in the Introduction Stage of a Contest to roll for Contest Stat Dice of any kind.",
+    "Description": "Your Pokémon may consume and benefit from 2 more [[item:Poffins]] each. If this Pokémon is traded to a Trainer without the Grace feature, these extra dice from additional Poffins are not lost, but a Trainer without Grace may not benefit from more than 6 Dice gained from Poffins. You may always use any of the Skills that are prerequisites for Grace in the Introduction Stage of a Contest to roll for Contest Stat Dice of any kind.",
     "Category": "Pokémon Training",
     "Source": "Core"
   },
   "Gravity Training": {
     "Prerequisites": "Novice Athletics or Focus",
-    "Description": "You gain the Gravitic Tolerance capability at a value of 1-3 or 2-4.",
+    "Description": "You gain the [[capability:Gravitic Tolerance]] capability at a value of 1-3 or 2-4.",
     "Category": "Other",
     "Source": "Do Porygon Dream of Mareep"
   },
   "Green Thumb": {
     "Prerequisites": "Novice General Education or Novice Survival",
-    "Description": "You know how to grow Apricorns and Tier 1 Berries using a Portable Grower or Fertilized Soil.",
+    "Description": "You know how to grow Apricorns and Tier 1 Berries using a [[item:Portable Grower]] or Fertilized Soil.",
     "Category": "Crafting",
     "Source": "Core"
   },
   "Groomer": {
     "Prerequisites": "Novice Pokémon Education",
-    "Description": "You know how to effectively groom your Pokémon with access to a Groomer's Kit. You may groom up to 6 Pokémon in one hour. Grooming Pokémon may count as an hour of Training, and you may apply Experience Training, teach Poke-Edges, and apply any Features that could be applied during Training. If you apply Experience Training from Grooming, use your General Education or Pokémon Education Rank to determine Bonus Experience gained during Training. A Pokémon that has been Groomed also gains a +1d6 Bonus to the Introduction Roll of a Contest for the rest of the day.",
+    "Description": "You know how to effectively groom your Pokémon with access to a [[item:Groomer's Kit]]. You may groom up to 6 Pokémon in one hour. Grooming Pokémon may count as an hour of Training, and you may apply Experience Training, teach Poke-Edges, and apply any Features that could be applied during Training. If you apply Experience Training from Grooming, use your General Education or Pokémon Education Rank to determine Bonus Experience gained during Training. A Pokémon that has been Groomed also gains a +1d6 Bonus to the Introduction Roll of a Contest for the rest of the day.",
     "Category": "Pokémon Training",
     "Source": "Core"
   },
@@ -209,25 +209,25 @@
   },
   "Intimidating Presence": {
     "Prerequisites": "Novice Intimidate",
-    "Description": "You learn the Move Leer.",
+    "Description": "You learn the Move [[move:Leer]].",
     "Category": "Combat",
     "Source": "Core"
   },
   "Iron Mind": {
     "Prerequisites": "Novice Focus",
-    "Description": "You become aware of all attempts to read your mind with Telepathy, whether the attempt is successful or not.",
+    "Description": "You become aware of all attempts to read your mind with [[capability:Telepathy]], whether the attempt is successful or not.",
     "Category": "Other",
     "Source": "Core"
   },
   "Kip Up": {
     "Prerequisites": "Expert Acrobatics",
-    "Description": "You may stand up from being Tripped as a Swift Action",
+    "Description": "You may stand up from being [[status:Tripped]] as a Swift Action",
     "Category": "Combat",
     "Source": "Core"
   },
   "Leader": {
     "Prerequisites": "Adept Command",
-    "Description": "You learn the Move After You.",
+    "Description": "You learn the Move [[move:After You]].",
     "Category": "Combat",
     "Source": "Core"
   },
@@ -251,7 +251,7 @@
   },
   "Mystic Senses": {
     "Prerequisites": "Novice Intuition",
-    "Description": "You may use Intuition instead of Charm to improve the disposition of Wild Pokémon. You may not take Mystic Senses if you have the Elemental Connection Edge, and you may not take Elemental Connection if you have Mystic Senses.",
+    "Description": "You may use Intuition instead of Charm to improve the disposition of Wild Pokémon. You may not take Mystic Senses if you have the [[edge:Elemental Connection]] Edge, and you may not take Elemental Connection if you have Mystic Senses.",
     "Category": "Other",
     "Source": "Core"
   },
@@ -263,12 +263,12 @@
   },
   "Paleontologist": {
     "Prerequisites": "Novice Pokémon Education or Novice Survival",
-    "Description": "You can identify fossils with a DC 10 Pokémon Education or Survival Check. You know how to operate Reanimation Machines and can use them to revive Fossils. See the \"Pokémon Fossils\" section (page 216) for more information.",
+    "Description": "You can identify fossils with a DC 10 Pokémon Education or Survival Check. You know how to operate [[item:Reanimation Machines]] and can use them to revive Fossils. See the \"Pokémon Fossils\" section (page 216) for more information.",
     "Category": "Pokémon Training",
     "Source": "Core"
   },
   "Poké Ball Repair": {
-    "Prerequisites": "Basic Balls or Apricorn Balls",
+    "Prerequisites": "[[edge:Basic Balls]] or [[edge:Apricorn Balls]]",
     "Description": "You may attempt to fix any Poké Ball that has failed to capture a Pokémon and broke. Make a Technology Check with a DC of 15. If you succeed, the Poké Ball is fixed and is treated as if it had not broken. If you fail, the ball is permanently broken. Requires access to a Poké Ball Tool Box.",
     "Category": "Crafting",
     "Source": "Core"
@@ -293,7 +293,7 @@
   },
   "Psychic Navigator": {
     "Prerequisites": "Elemental Connection (Psychic), Adept Perception or Focus",
-    "Description": "You gain the Psychic Navigator Capability.",
+    "Description": "You gain the [[capability:Psychic Navigator]] Capability.",
     "Category": "Other",
     "Source": "Do Porygon Dream of Mareep"
   },
@@ -305,7 +305,7 @@
   },
   "Repel Crafter": {
     "Prerequisites": "Novice Medicine or Technology Edu",
-    "Description": "Create a Repel for $100 or a Super Repel for $150. Requires access to a Chemistry Set.",
+    "Description": "Create a [[item:Repel]] for $100 or a [[item:Super Repel]] for $150. Requires access to a [[item:Chemistry Set]].",
     "Category": "Crafting",
     "Source": "Core"
   },
@@ -340,13 +340,13 @@
   },
   "Smooth": {
     "Prerequisites": "Expert Charm or Focus",
-    "Description": "You gain +4 Evasion against Moves with the Social keyword, and gain a +2 Bonus on Save Checks against Rage and Infatuation.",
+    "Description": "You gain +4 Evasion against Moves with the [[keyword:Social]] keyword, and gain a +2 Bonus on Save Checks against [[status:Rage]] and [[status:Infatuation]].",
     "Category": "Combat",
     "Source": "Core"
   },
   "Sneak's Tricks": {
     "Prerequisites": "Adept Stealth",
-    "Description": "You learn the Move Astonish.",
+    "Description": "You learn the Move [[move:Astonish]].",
     "Category": "Combat",
     "Source": "Core"
   },
@@ -358,7 +358,7 @@
   },
   "Survival Drive": {
     "Prerequisites": "Adept Survival",
-    "Description": "You learn the Move Bulk Up.",
+    "Description": "You learn the Move [[move:Bulk Up]].",
     "Category": "Combat",
     "Source": "Core"
   },
@@ -371,7 +371,7 @@
   "Tag Scribe": {
     "Prerequisites": "Novice Occult Education",
     "Frequency": "Special – Extended Action",
-    "Description": "You create a Cleanse Tag. This may be used a number of times each day equal to half your Occult Education Rank.",
+    "Description": "You create a [[item:Cleanse Tag]]. This may be used a number of times each day equal to half your Occult Education Rank.",
     "Category": "Crafting",
     "Source": "Core"
   },
@@ -419,7 +419,7 @@
   },
   "Work Up": {
     "Prerequisites": "Adept Focus",
-    "Description": "You learn the Move Work Up.",
+    "Description": "You learn the Move [[move:Work Up]].",
     "Category": "Combat",
     "Source": "Core"
   }
