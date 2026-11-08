@@ -21,7 +21,7 @@
             "Prerequisites": "Adept Intimidate",
             "Frequency": "At-Will — Standard Action",
             "Target": "Your own Pokémon",
-            "Effect": "You hit your Pokémon, and they lose 1/6th of their Max Hit Points and are cured of Sleep. Raise any two of their Stats by +1 CS each, and you may add half of your Intimidate Rank to any Skill Checks made this round to make this Pokémon obey orders. Using Press on a Pokémon may make them dislike you.",
+            "Effect": "You hit your Pokémon, and they lose 1/6th of their Max Hit Points and are cured of [[status:Sleep]]. Raise any two of their Stats by +1 CS each, and you may add half of your Intimidate Rank to any Skill Checks made this round to make this Pokémon obey orders. Using Press on a Pokémon may make them dislike you.",
             "Source": "Core",
             "Category": "Pokémon Raising and Battling"
           },
@@ -114,7 +114,7 @@
                 "Tags": "[Orders][Stratagem]",
                 "Frequency": "Bind 2 AP – Standard Action",
                 "Target": "Your Pokémon",
-                "Effect": "While this Feature is Bound, increase the damage rolls of the target's damaging melee attacks by +8, and these attacks Trip targets on Accuracy Rolls of 18+. When the target of Reckless Advance hits with a damaging melee attack, they become Vulnerable for one full round.",
+                "Effect": "While this Feature is Bound, increase the damage rolls of the target's damaging melee attacks by +8, and these attacks [[status:Trip]] targets on Accuracy Rolls of 18+. When the target of Reckless Advance hits with a damaging melee attack, they become [[status:Vulnerable]] for one full round.",
                 "Source": "Core"
               },
               {
@@ -226,7 +226,7 @@
                 "Tags": "[Orders]",
                 "Frequency": "Scene x2 – Standard Action",
                 "Target": "Your Pokémon",
-                "Effect": "The next damaging attack the target performs before the end of your next turn automatically hits and ignores Defensive Abilities but deals damage as if it were resisted one step further than normal. You may still roll to trigger any Effect Ranges or Critical Hits. All targets of the attack may not activate any Blessings in response, and the attack may not be Intercepted or avoided in any way (ex: with Dodge, Shield Moves, etc).",
+                "Effect": "The next damaging attack the target performs before the end of your next turn automatically hits and ignores Defensive Abilities but deals damage as if it were resisted one step further than normal. You may still roll to trigger any Effect Ranges or Critical Hits. All targets of the attack may not activate any Blessings in response, and the attack may not be Intercepted or avoided in any way (ex: with [[ability:Dodge]], [[keyword:Shield]] Moves, etc).",
                 "Source": "Core"
               }
             ],
@@ -257,7 +257,7 @@
             "Prerequisites": "Adept Acrobatics",
             "Frequency": "Scene x2 — Shift Action, Interrupt",
             "Trigger": "You are targeted by a Ranged 1-Target Attack, or are in a Cone, Burst, Blast, or Line.",
-            "Effect": "You may immediately Shift 1 Meter, and then become Tripped. This Feature cannot be used if you are Stuck, Grappled, or otherwise impaired from Shifting. This Feature causes you to dodge Ranged attacks aimed at you, and may let you avoid Cones, Bursts, Blasts, or Lines if the shift removes you from the area of effect.",
+            "Effect": "You may immediately Shift 1 Meter, and then become [[status:Tripped]]. This Feature cannot be used if you are [[status:Stuck]], [[status:Grappled]], or otherwise impaired from Shifting. This Feature causes you to dodge Ranged attacks aimed at you, and may let you avoid Cones, Bursts, Blasts, or Lines if the shift removes you from the area of effect.",
             "Source": "Core",
             "Category": "Combat"
           },
@@ -311,10 +311,10 @@
           },
           {
             "Name": "First Aid Expertise",
-            "Prerequisites": "Medic Training, Expert Medicine Education",
+            "Prerequisites": "[[edge:Medic Training]], Expert Medicine Education",
             "Frequency": "Daily x3 — Extended Action",
             "Target": "Pokémon or Trainers",
-            "Effect": "The target may remove one Injury, has all Hit Points restored, and is cured of all Status Afflictions. You may use First Aid Expertise only once per day per target. First Aid Expertise requires access to a First Aid Kit.",
+            "Effect": "The target may remove one Injury, has all Hit Points restored, and is cured of all Status Afflictions. You may use First Aid Expertise only once per day per target. First Aid Expertise requires access to a [[item:First Aid Kit]].",
             "Source": "Core",
             "Category": "Other"
           },
@@ -330,7 +330,7 @@
             "Name": "Poké Ball Crafter",
             "Prerequisites": "Basic Balls, Poké Ball Repair, Expert Technology",
             "Frequency": "Static",
-            "Effect": "You may craft Dusk, Dive, Heal, Luxury, Net, Nest, Quick, Repeat, or Timer Balls for $700. Requires access to a Poké Ball Tool Box.",
+            "Effect": "You may craft [[item:Dusk Ball]](Dusk), [[item:Dive Ball]](Dive), [[item:Heal Ball]](Heal), [[item:Luxury Ball]](Luxury), [[item:Net Ball]](Net), [[item:Nest Ball]](Nest), [[item:Quick Ball]](Quick), [[item:Repeat Ball]](Repeat), or [[item:Timer Ball]](Timer) Balls for $700. Requires access to a [[item:Poké Ball Tool Box]].",
             "Source": "Core",
             "Category": "Other"
           },
@@ -364,7 +364,7 @@
           {
             "Name": "Arcane Training",
             "Tags": "[+Special Attack][Weapon]",
-            "Prerequisites": "Novice Occult Education, Elemental Connection or Mystic Senses",
+            "Prerequisites": "Novice Occult Education, [[edge:Elemental Connection]] or [[edge:Mystic Senses]]",
             "Frequency": "Static",
             "Effect": " You may use Arcane Weapons. Attacks made with your Arcane Weapons share the Type of your Elemental Connection. If you have Mystic Senses, these Attacks deal Normal Type Damage. Arcane Weapon users that qualified through Mystic Senses or Elemental Connection (Normal) gain a +5 Bonus to Damage Rolls and a +2 Bonus to Effect Range when using Arcane Weapon Attacks. When wielding an Arcane Weapon, you may resist Disarm Maneuvers with your Occult Education.",
             "Source": "Game of Throhs",
@@ -376,14 +376,14 @@
             "Rank 1 Prerequisites": "Novice Focus, Novice Athletics",
             "Rank 2 Prerequisites": "Adept Focus, Adept Athletics",
             "Frequency": "Static",
-            "Rank 1 Effect": " You may create Simple Weapons for $1000, Light Shields for $1,500, and Light Armor for $4,000.",
-            "Rank 2 Effect": " You may create Fine Weapons for $2,000, Helmets for $1,125, Heavy Shields for $2,250 and Heavy Armor for $5,000.",
+            "Rank 1 Effect": "You may create [[item:Simple Weapons]] for $1000, [[item:Light Shields]] for $1,500, and [[item:Light Armor]] for $4,000.",
+            "Rank 2 Effect": "You may create [[item:Fine Weapons]] for $2,000, [[item:Helmets]] for $1,125, [[item:Heavy Shields]] for $2,250 and [[item:Heavy Armor]] for $5,000.",
             "Source": "Game of Throhs",
             "Category": "Uncategorized"
           },
           {
             "Name": "Type Sync",
-            "Prerequisites": "Elemental Connection; a Type-Linked Class; Adept Medicine, Occult, or Tech Education",
+            "Prerequisites": "[[edge:Elemental Connection]]; a Type-Linked Class; Adept Medicine, Occult, or Tech Education",
             "Frequency": "Special — Extended Action",
             "Target": "Your Pokémon",
             "Effect": "The Target gains the Type of your Elemental Connection as an additional Type, or has one of their Types replaced by that Type. See the Type Changes section (page 436) for more information and suggestions. A Pokémon may be targeted by Type Sync only once. This Feature may be performed One Time for each Rank above Untrained you have of your highest of Medicine, Occult, or Tech Education, up to a maximum of 4 times at Master Rank.",
