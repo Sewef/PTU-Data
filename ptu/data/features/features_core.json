@@ -515,22 +515,22 @@
             "Tags": "[Class][+Speed]",
             "Prerequisites": "Acrobatics, Athletics, Stealth, or Survival at Novice; Guile, or Perception at Novice",
             "Frequency": "Static",
-            "Effect": " You gain two Capture Techniques of your choice, found on the next page. You must meet any prerequisites of the Technique."
+            "Effect": "You gain two Capture Techniques of your choice, found on the next page. You must meet any prerequisites of the Technique."
           },
           {
             "Name": "Advanced Capture Techniques",
             "Tags": "[Ranked 4][+Speed]",
-            "Rank 1 Prerequisites": "Capture Specialist",
-            "Rank 2 Prerequisites": "Capture Specialist, any 2 Skills at Adept Rank",
-            "Rank 3 Prerequisites": "Capture Specialist, any 2 Skills at Expert Rank",
-            "Rank 4 Prerequisites": "Capture Specialist, any 3 Skills at Expert Rank",
+            "Rank 1 Prerequisites": "[[feature:Capture Specialist]]",
+            "Rank 2 Prerequisites": "[[feature:Capture Specialist]], any 2 Skills at Adept Rank",
+            "Rank 3 Prerequisites": "[[feature:Capture Specialist]], any 2 Skills at Expert Rank",
+            "Rank 4 Prerequisites": "[[feature:Capture Specialist]], any 3 Skills at Expert Rank",
             "Frequency": "Static",
             "Effect": "At each Rank, you gain two Capture Techniques of your choice, found on the next page. You must meet any prerequisites of the Technique. You may qualify for Advanced Capture Techniques' prerequisites with the Acrobatics, Athletics, Stealth, Survival, Guile, or Perception Skills only."
           },
           {
             "Name": "Captured Momentum",
             "Tags": "[+Speed]",
-            "Prerequisites": "Advanced Capture Techniques Rank 2",
+            "Prerequisites": "[[feature:Advanced Capture Techniques]] Rank 2",
             "Frequency": "At-Will — Free Action",
             "Trigger": "You successfully Capture a Pokémon",
             "Effect": "Choose One Effect:\n» You or your Pokémon gain a +2 bonus to their next Accuracy Roll during this combat.\n» You subtract your highest Skill Rank out of Acrobatics, Athletics, Stealth, Survival, Guile, or Perception from your next Capture Roll during this combat.\n» You gain 1 Temporary Action Point that disappears after one full round."
@@ -538,7 +538,7 @@
           {
             "Name": "Gotta Catch 'Em All",
             "Tags": "[+Speed]",
-            "Prerequisites": "Advanced Capture Techniques Rank 3",
+            "Prerequisites": "[[feature:Advanced Capture Techniques]] Rank 3",
             "Frequency": "Static",
             "Effect": "Every time you Capture a Wild Pokémon that is a member of an evolutionary family of which you own no other Pokémon, you gain 1 Collector Stack. Whenever you make a Capture Roll, you may spend up to three Collector Stacks to gain an equal bonus to your Capture Roll, or you may spend three Collector Stacks to re-roll entirely."
           },
@@ -559,7 +559,7 @@
                 "Name": "Devitalizing Throw",
                 "Frequency": "1 AP – Free Action",
                 "Trigger": "A Pokémon escapes from a Poké Ball you threw",
-                "Effect": "Choose One Effect: The triggering target becomes Slowed; the triggering target loses one Combat Stage in a Stat of your choice; or the triggering target suffers a -3 penalty to their next Save Roll."
+                "Effect": "Choose One Effect: The triggering target becomes [[status:Slowed]]; the triggering target loses one Combat Stage in a Stat of your choice; or the triggering target suffers a -3 penalty to their next Save Roll."
               },
               {
                 "Name": "Fast Pitch",
@@ -569,12 +569,12 @@
               {
                 "Name": "Snare",
                 "Frequency": "Static",
-                "Effect": "You subtract -10 from Capture Rolls made against Pokémon drawn into an encounter by Bait, that are currently distracted by Bait, or are in a Hand Net, Lasso, Weighted Net, or Stuck because of a Glue Cannon."
+                "Effect": "You subtract -10 from Capture Rolls made against Pokémon drawn into an encounter by [[item:Bait]], that are currently distracted by [[item:Bait]], or are in a [[item:Hand Net]], [[item:Lasso]], [[item:Weighted Net]], or [[status:Stuck]] because of a [[item:Glue Cannon]]."
               },
               {
                 "Name": "Tools of the Trade",
                 "Frequency": "Static",
-                "Effect": "Add +2 to all Accuracy Rolls made with Poké Balls, Hand Nets, Lassos, Weighted Nets, Glue Cannons and Cap Cannons. Add +2 to Athletics Checks made when reeling in a Pokémon with a Fishing Rod, and add +4 to 1d20 rolls made to see if a Pokémon is attracted by Bait or a Fishing Lure."
+                "Effect": "Add +2 to all Accuracy Rolls made with Poké Balls, [[item:Hand Nets]], [[item:Lassos]], [[item:Weighted Nets]], [[item:Glue Cannons]] and [[item:Cap Cannons]]. Add +2 to Athletics Checks made when reeling in a Pokémon with a [[item:Fishing Rod]], and add +4 to 1d20 rolls made to see if a Pokémon is attracted by [[item:Bait]] or a [[item:Fishing Lure]]."
               },
               {
                 "Name": "Catch Combo",
@@ -595,7 +595,7 @@
                 "Prerequisites": "3 of Acrobatics, Athletics, Stealth, Survival, Guile, or Perception Skills at Expert Rank",
                 "Frequency": "2 AP – Free Action, Interrupt",
                 "Trigger": "A foe attempts to run away",
-                "Effect": "Before the target moves from its starting location, one of your Pokémon on the field may immediately Shift and use a Struggle Attack as an Interrupt. If this attack hits, the target is Tripped."
+                "Effect": "Before the target moves from its starting location, one of your Pokémon on the field may immediately Shift and use a Struggle Attack as an [[keyword:Interrupt]]. If this attack hits, the target is Tripped."
               }
             ]
           }
