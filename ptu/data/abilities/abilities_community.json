@@ -72,7 +72,7 @@
   {
     "Name": "Aqua Bullet",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:Aqua Jet]]. The user may use Water-Type Moves as a [[keyword:Full Action]] to gain Sky 10 and shift in a straight line before attempting to use their Move. When shifting this way, the user does not provoke attacks of opportunity."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Aqua Jet]]. The user may use Water-Type Moves as a [[keyword:Full Action]] to gain Sky 10 and shift in a straight line before attempting to use their Move. When shifting this way, the user does not provoke attacks of opportunity."
   },
   {
     "Name": "Arena Trap",
@@ -88,7 +88,7 @@
   {
     "Name": "Aroma Veil",
     "Frequency": "Static",
-    "Effect": "The user and all adjacent Pokémon and Trainers cannot become [[status:Confusion]](Confused), [[status:Rage]](Enraged), or [[status:Suppressed]]. Defensive."
+    "Effect": "The user and all adjacent Pokémon and Trainers cannot become [[status:Confusion]](Confused), [[status:Rage]](Enraged), or [[status:Suppressed]]. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Aura Break",
@@ -124,7 +124,7 @@
   {
     "Name": "Battle Armor",
     "Frequency": "Static",
-    "Effect": "The user is immune to Critical Hits; they are instead normal hits. Defensive."
+    "Effect": "The user is immune to Critical Hits; they are instead normal hits. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Beads of Ruin",
@@ -156,12 +156,12 @@
   {
     "Name": "Big Pecks",
     "Frequency": "Static",
-    "Effect": "The user cannot have its Defense Stat lowered. The user cannot have its Defense Combat Stages lowered. Defensive."
+    "Effect": "The user cannot have its Defense Stat lowered. The user cannot have its Defense Combat Stages lowered. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Big Swallow",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:Stockpile]]. Whenever the user uses [[move:Swallow]] or [[move:Spit Up]], it may treat the Stockpile Count as if it was one higher. This Ability has no effect if the Stockpile Counter is already 3."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Stockpile]]. Whenever the user uses [[move:Swallow]] or [[move:Spit Up]], it may treat the Stockpile Count as if it was one higher. This Ability has no effect if the Stockpile Counter is already 3."
   },
   {
     "Name": "Blaze",
@@ -183,13 +183,13 @@
   {
     "Name": "Blur",
     "Frequency": "Static",
-    "Effect": "Attacks and Moves targeting you that don't require an Accuracy Check now require one, as though they had an Accuracy Check of 2. You may only apply half of your Evasion to these Attacks and Moves. Defensive."
+    "Effect": "Attacks and Moves targeting you that don't require an Accuracy Check now require one, as though they had an Accuracy Check of 2. You may only apply half of your Evasion to these Attacks and Moves. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Bodyguard",
     "Frequency": "Scene x2 – Free Action",
     "Trigger": "An adjacent Ally is hit by an attack",
-    "Effect": "The user and the triggering Ally switch places, and the user becomes the target of the triggering attack instead, taking damage from the attack as if resisted one step further. If switching places would not move the triggering Ally out of the area-of-effect of a Burst, Blast, Cone, or Line, this Ability does not prevent the ally from being hit. Defensive."
+    "Effect": "The user and the triggering Ally switch places, and the user becomes the target of the triggering attack instead, taking damage from the attack as if resisted one step further. If switching places would not move the triggering Ally out of the area-of-effect of a Burst, Blast, Cone, or Line, this Ability does not prevent the ally from being hit. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Bone Lord",
@@ -216,7 +216,7 @@
   {
     "Name": "Bulletproof",
     "Frequency": "Static",
-    "Effect": "The user resists all X target ranged attacks one step further. This refers to attacks and Moves that simply hit one target or specify hitting multiple targets, such as [[move:Razor Wind]] hitting three targets. It has no effect on Moves that are capable of hitting multiple targets through areas of effect, such as Bursts or Cones. Defensive."
+    "Effect": "The user resists all X target ranged attacks one step further. This refers to attacks and Moves that simply hit one target or specify hitting multiple targets, such as [[move:Razor Wind]] hitting three targets. It has no effect on Moves that are capable of hitting multiple targets through areas of effect, such as Bursts or Cones. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Bully",
@@ -234,7 +234,7 @@
   {
     "Name": "Cave Crasher",
     "Frequency": "Static",
-    "Effect": "The user resists Ground-Type and Rock-Type attacks one step further. Defensive."
+    "Effect": "The user resists Ground-Type and Rock-Type attacks one step further. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Celebrate",
@@ -272,7 +272,7 @@
   {
     "Name": "Clear Body",
     "Frequency": "Static",
-    "Effect": "The user's Combat Stages may not be lowered by the effect of foes' Feautres, Abilities, or Moves. Status Affictions may still alter their Combat Stages. Defensive."
+    "Effect": "The user's Combat Stages may not be lowered by the effect of foes' Feautres, Abilities, or Moves. Status Affictions may still alter their Combat Stages. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Cloud Nine",
@@ -344,7 +344,7 @@
   {
     "Name": "Copy Master",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:Copycat]]. Whenever the user uses [[move:Copycat]] or [[move:Mimic]], it gains +1 Combat Stage in a Stat of its choice after the Move is resolved."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Copycat]]. Whenever the user uses [[move:Copycat]] or [[move:Mimic]], it gains +1 Combat Stage in a Stat of its choice after the Move is resolved."
   },
   {
     "Name": "Corrosion",
@@ -354,7 +354,7 @@
   {
     "Name": "Corrosive Toxins",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection - [[move:Toxic]]. The user may activate this Ability when using [[move:Toxic]] to allow the Move to ignore Immunity to the Status Affliction, Blessings, and the effects of Abilities that may prevent Hit Point loss from being [[status:Badly Poisoned]] (such as [[ability:Magic Guard]] or [[ability:Poison Heal]])."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Toxic]]. The user may activate this Ability when using [[move:Toxic]] to allow the Move to ignore Immunity to the Status Affliction, Blessings, and the effects of Abilities that may prevent Hit Point loss from being [[status:Badly Poisoned]] (such as [[ability:Magic Guard]] or [[ability:Poison Heal]])."
   },
   {
     "Name": "Costar",
@@ -371,7 +371,7 @@
   {
     "Name": "Courage",
     "Frequency": "Static",
-    "Effect": "While at or under 1/3rd of its Max Hit Point value, the user gains a +5 Damage Bonus to all Damage Rolls, and 5 Damage Reduction. Defensive."
+    "Effect": "While at or under 1/3rd of its Max Hit Point value, the user gains a +5 Damage Bonus to all Damage Rolls, and 5 Damage Reduction. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Cruelty",
@@ -430,7 +430,7 @@
     "Name": "Danger Syrup",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user is hit by an attack",
-    "Effect": "Connection - [[move:Sweet Scent]]. When this Ability is activated the user may use [[move:Sweet Scent]] as a Free Action, ignoring Frequency. Whenever the user hits a foe with [[move:Sweet Scent]], that foe is Blinded for 1 full round."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Sweet Scent]]. When this Ability is activated the user may use [[move:Sweet Scent]] as a Free Action, ignoring Frequency. Whenever the user hits a foe with [[move:Sweet Scent]], that foe is Blinded for 1 full round."
   },
   {
     "Name": "Dark Art",
@@ -483,7 +483,7 @@
     "Name": "Delayed Reaction",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user is hit by a direct damaging attack",
-    "Effect": "Halve the damage taken by the user. At the end of the user's next turn, the user loses Hit Points equal to the other half of the damage. For example, if the user is hit for 11 damage and triggers this Ability, the user would take 5 damage upon being hit and 6 damage at the end of its next turn. Defensive."
+    "Effect": "Halve the damage taken by the user. At the end of the user's next turn, the user loses Hit Points equal to the other half of the damage. For example, if the user is hit for 11 damage and triggers this Ability, the user would take 5 damage upon being hit and 6 damage at the end of its next turn. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Desert Weather",
@@ -498,17 +498,17 @@
   {
     "Name": "Diamond Defense",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:Stealth Rock]]. [[move:Stealth Rock]]'s Frequency is Scene x2, and the user's Stealth Rocks can be treated as dealing Rock-Type or Fairy-Type Damage, whichever is more effective."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Stealth Rock]]. [[move:Stealth Rock]]'s Frequency is Scene x2, and the user's Stealth Rocks can be treated as dealing Rock-Type or Fairy-Type Damage, whichever is more effective."
   },
   {
     "Name": "Dig Away",
     "Frequency": "Daily – Free Action",
-    "Effect": "Connection - [[move:Dig]]. When hit by a Move, this Pokémon may activate this Feature to use [[move:Dig]], frequency allowing, as an interrupt to avoid the attack and shift underground immediately. This consumes a command as normal. The terrain must allow for Dig to be used."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Dig]]. When hit by a Move, this Pokémon may activate this Feature to use [[move:Dig]], frequency allowing, as an interrupt to avoid the attack and shift underground immediately. This consumes a command as normal. The terrain must allow for Dig to be used."
   },
   {
     "Name": "Dire Spore",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:Spore]]. Whenever the user hits a target with Spore, that target is also [[status:Poisoned]]."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Spore]]. Whenever the user hits a target with Spore, that target is also [[status:Poisoned]]."
   },
   {
     "Name": "Discipline",
@@ -519,13 +519,13 @@
     "Name": "Disguise",
     "Frequency": "Daily – Free Action",
     "Trigger": "The user is hit by a Damaging Move.",
-    "Effect": "The triggering attack instead misses and has no effect. The user then gains +1 CS in a Stat of their choice. Defensive."
+    "Effect": "The triggering attack instead misses and has no effect. The user then gains +1 CS in a Stat of their choice. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Dodge",
     "Frequency": "Daily – Free Action",
     "Trigger": "The user is hit by a Damaging Move",
-    "Effect": "The triggering Move instead misses. Defensive."
+    "Effect": "The triggering Move instead misses. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Download",
@@ -573,7 +573,7 @@
   {
     "Name": "Dust Cloud",
     "Frequency": "Static",
-    "Effect": "Connection - Poison [[move:Powder]]. The user may use Moves with the [[keyword:Powder]] Keyword as if they had a Range of \"Burst 1\"."
+    "Effect": "[[abilitykeyword:Connection]] - Poison [[move:Powder]]. The user may use Moves with the [[keyword:Powder]] Keyword as if they had a Range of \"Burst 1\"."
   },
   {
     "Name": "Early Bird",
@@ -583,7 +583,7 @@
   {
     "Name": "Earth Eater",
     "Frequency": "Static",
-    "Effect": "The user is immune to the damage and effects of Ground-Type attacks, and whenever they are hit with a Ground-Type attack, they gain a Tick of Hit Points. Defensive."
+    "Effect": "The user is immune to the damage and effects of Ground-Type attacks, and whenever they are hit with a Ground-Type attack, they gain a Tick of Hit Points. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Effect Spore",
@@ -616,7 +616,7 @@
   {
     "Name": "Embody Aspect",
     "Frequency": "At-Will – Extended Action",
-    "Effect": "The user may change between its four different Formes by changing masks, changing its Types and granting an Ability. Innate.",
+    "Effect": "The user may change between its four different Formes by changing masks, changing its Types and granting an Ability. [[abilitykeyword:Innate]].",
     "table": {
       "type": "table",
       "hidden": false,
@@ -653,7 +653,7 @@
   {
     "Name": "Emergency Exit",
     "Frequency": "Scene – Free Action",
-    "Effect": "When the user's Hit Points drop below half their maximum, their trainer may immediately recall the user and send out another Pokémon as a Free Action. If the user hasn't taken their turn yet, their replacement may act this round. Defensive.",
+    "Effect": "When the user's Hit Points drop below half their maximum, their trainer may immediately recall the user and send out another Pokémon as a Free Action. If the user hasn't taken their turn yet, their replacement may act this round. [[abilitykeyword:Defensive]].",
     "Bonus": " The user is immune to being [[status:Trapped]]."
   },
   {
@@ -669,7 +669,7 @@
   {
     "Name": "Enfeebling Lips",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:Lovely Kiss]]. Whenever the user uses the Move [[move:Lovely Kiss]], they may choose a Stat. If the Move successfully hits, the Pokémon or Trainer being targeted loses 2 Combat Stages in that Stat."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Lovely Kiss]]. Whenever the user uses the Move [[move:Lovely Kiss]], they may choose a Stat. If the Move successfully hits, the Pokémon or Trainer being targeted loses 2 Combat Stages in that Stat."
   },
   {
     "Name": "Exploit",
@@ -684,7 +684,7 @@
   {
     "Name": "Fade Away",
     "Frequency": "Scene – Standard Action, Interrupt",
-    "Effect": "The user becomes Invisible until the beginning of their next turn, and may immediately Shift. This Ability may be activated as an Interrupt when hit by a Physical attack; the user may declare the use of Fade Away to avoid all damage and/or effects of the move. Defensive."
+    "Effect": "The user becomes Invisible until the beginning of their next turn, and may immediately Shift. This Ability may be activated as an Interrupt when hit by a Physical attack; the user may declare the use of Fade Away to avoid all damage and/or effects of the move. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Fairy Aura",
@@ -710,7 +710,7 @@
   {
     "Name": "Filter",
     "Frequency": "Static",
-    "Effect": "The user gains +5 Damage Reduction against Super-Effective damage. Defensive."
+    "Effect": "The user gains +5 Damage Reduction against Super-Effective damage. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Flame Body",
@@ -732,7 +732,7 @@
   {
     "Name": "Flash Fire",
     "Frequency": "Static",
-    "Effect": "The user is immune to the damage and effects of Fire-Type attacks. If the user is hit by a Fire-Type attack, they gain +1 CS in their choice of Attack or Special Attack. Defensive."
+    "Effect": "The user is immune to the damage and effects of Fire-Type attacks. If the user is hit by a Fire-Type attack, they gain +1 CS in their choice of Attack or Special Attack. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Flavorful Aroma",
@@ -758,7 +758,7 @@
   {
     "Name": "Fluffy",
     "Frequency": "Static",
-    "Effect": "The user resists damaging Melee attacks one step further, but resists Fire-Type attacks one step less. Defensive."
+    "Effect": "The user resists damaging Melee attacks one step further, but resists Fire-Type attacks one step less. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Fluffy Charge",
@@ -773,7 +773,7 @@
   {
     "Name": "Flying Fly Trap",
     "Frequency": "Static",
-    "Effect": "The Pokémon takes no damage from Ground Type Moves and Bug Type Moves. Defensive."
+    "Effect": "The Pokémon takes no damage from Ground Type Moves and Bug Type Moves. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Focus",
@@ -798,7 +798,7 @@
   {
     "Name": "Fox Fire",
     "Frequency": "Scene – Standard Action",
-    "Effect": "Connection - [[move:Ember]]. The user creates 3 Fire Wisps. Whenever the user is targeted by a foe within 6 meters, they may spend a Fire Wisp as to use the Move [[move:Ember]] against that foe as a Free Action after the triggering Move is resolved."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Ember]]. The user creates 3 Fire Wisps. Whenever the user is targeted by a foe within 6 meters, they may spend a Fire Wisp as to use the Move [[move:Ember]] against that foe as a Free Action after the triggering Move is resolved."
   },
   {
     "Name": "Freezing Point",
@@ -809,7 +809,7 @@
     "Name": "Friend Guard",
     "Frequency": "Scene – Free Action",
     "Trigger": "An adjacent Ally takes Damage",
-    "Effect": "The damage is resisted one step further. Defensive."
+    "Effect": "The damage is resisted one step further. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Frighten",
@@ -832,12 +832,12 @@
     "Frequency": "Scene – Swift Action",
     "Trigger": "You take Damage while having Temporary Hit",
     "Effect": "You resist the triggering Damage one step further.",
-    "Bonus": " Whenever you take Super-Effective Damage and you have no Temporary Hit Points, you gain a tick of Temporary Hit Points. Defensive."
+    "Bonus": " Whenever you take Super-Effective Damage and you have no Temporary Hit Points, you gain a tick of Temporary Hit Points. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Full Metal Body",
     "Frequency": "Static",
-    "Effect": "The user's Combat Stages may not be lowered by the effect of foes' Features, Abilities, or Moves. Status Afflictions may still alter their Combat Stages. Defensive."
+    "Effect": "The user's Combat Stages may not be lowered by the effect of foes' Features, Abilities, or Moves. Status Afflictions may still alter their Combat Stages. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Fungus Lord",
@@ -848,7 +848,7 @@
   {
     "Name": "Fur Coat",
     "Frequency": "Static",
-    "Effect": "The user resists all Physical Attacks one step further. Defensive."
+    "Effect": "The user resists all Physical Attacks one step further. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Gale Wings",
@@ -870,13 +870,13 @@
   {
     "Name": "Giver",
     "Frequency": "Scene x2 – Swift Action",
-    "Effect": "Connection - [[move:Present]]. After rolling to determine Present's Damage Base, you may choose to ignore the roll and act as if you had rolled a 1 or a 5.",
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Present]]. After rolling to determine Present's Damage Base, you may choose to ignore the roll and act as if you had rolled a 1 or a 5.",
     "Bonus": " The user may know any number of TM and Tutor Moves, instead of a maximum of three."
   },
   {
     "Name": "Glisten",
     "Frequency": "Static",
-    "Effect": "The user is immune to Fairy-Type attacks. Defensive.",
+    "Effect": "The user is immune to Fairy-Type attacks. [[abilitykeyword:Defensive]].",
     "Bonus": " If the user is hit by a damaging Fairy-Type attack, they receive +1 Defense or Special Defense Combat Stages."
   },
   {
@@ -889,7 +889,7 @@
     "Frequency": "At-Will – Swift Action",
     "Trigger": "The user attacks a foe",
     "Effect": "For one full round, if the triggering foe uses an Attack that doesn't target the user, that foe becomes [[status:Slowed]] for one full round. If the foe then is adjacent to the user, they instead become [[status:Stuck]].",
-    "Bonus": "The user is immune to Status Moves used by foes. Defensive."
+    "Bonus": "The user is immune to Status Moves used by foes. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Gooey",
@@ -901,7 +901,7 @@
     "Name": "Gore",
     "Frequency": "Scene x2 – Swift Action",
     "Trigger": "The user uses [[move:Horn Attack]]",
-    "Effect": "Connection - [[move:Horn Attack]]. [[move:Horn Attack]] gains the [[keyword:Double Strike]] keyword, and pushes its target 2 meters."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Horn Attack]]. [[move:Horn Attack]] gains the [[keyword:Double Strike]] keyword, and pushes its target 2 meters."
   },
   {
     "Name": "Gorilla Tactics",
@@ -913,7 +913,7 @@
     "Name": "Grass Pelt",
     "Frequency": "Scene – Swift Action",
     "Effect": "The user gains two ticks worth of Temporary Hit Points.",
-    "Bonus": " When standing on any grassy or leafy terrain that is either Slow or Rough Terrain, the user gains +5 Damage Reduction. Defensive."
+    "Bonus": " When standing on any grassy or leafy terrain that is either Slow or Rough Terrain, the user gains +5 Damage Reduction. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Grassy Surge",
@@ -931,7 +931,7 @@
     "Frequency": "Scene – Free Action, Reaction",
     "Trigger": "A foe directly lowers the user's CS (including Accuracy and Effect Range, but not including things like Status Afflictions).",
     "Effect": "The user's CS are instead raised by the same amount they would have been lowered.",
-    "Bonus": "The user is immune to Push effects, and the effects of Roar. Defensive."
+    "Bonus": "The user is immune to Push effects, and the effects of Roar. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Gulp Missile",
@@ -1008,7 +1008,7 @@
   {
     "Name": "Helper",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:Helping Hand]]. Whenever the user uses a Move that targets a single Ally, that Ally gains a +1 Bonus to Accuracy and Skill Checks until the end of the user's next turn."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Helping Hand]]. Whenever the user uses a Move that targets a single Ally, that Ally gains a +1 Bonus to Accuracy and Skill Checks until the end of the user's next turn."
   },
   {
     "Name": "Honey Paws",
@@ -1018,7 +1018,7 @@
   {
     "Name": "Honey Thief",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:Bug Bite]]. If the user uses [[move:Bug Bite]] to steal the effects of a Digestion Buff, they gain a Tick of Temporary Hit Points."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Bug Bite]]. If the user uses [[move:Bug Bite]] to steal the effects of a Digestion Buff, they gain a Tick of Temporary Hit Points."
   },
   {
     "Name": "Horde Break",
@@ -1055,12 +1055,12 @@
   {
     "Name": "Hyper Cutter",
     "Frequency": "Static",
-    "Effect": "The user's Attack Stat may not be lowered, and its Attack Combat Stages may not be lowered. Defensive."
+    "Effect": "The user's Attack Stat may not be lowered, and its Attack Combat Stages may not be lowered. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Hypnotic",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:Hypnosis]]. When used by the user, Hypnosis cannot miss."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Hypnosis]]. When used by the user, Hypnosis cannot miss."
   },
   {
     "Name": "Ice Body",
@@ -1082,7 +1082,7 @@
   {
     "Name": "Ice Scales",
     "Frequency": "Static",
-    "Effect": "The user resists Special Moves one step further. Defensive."
+    "Effect": "The user resists Special Moves one step further. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Ice Shield",
@@ -1092,7 +1092,7 @@
   {
     "Name": "Illuminate",
     "Frequency": "Static",
-    "Effect": "Attacks that target the user have a -2 Accuracy Penalty against the user. Does not affect attackers with the [[capability:Blindsense]] Capability. Defensive."
+    "Effect": "Attacks that target the user have a -2 Accuracy Penalty against the user. Does not affect attackers with the [[capability:Blindsense]] Capability. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Illusion",
@@ -1102,7 +1102,7 @@
   {
     "Name": "Immunity",
     "Frequency": "Static",
-    "Effect": "The user cannot be [[status:Poisoned]] or [[status:Badly Poisoned]]. Defensive."
+    "Effect": "The user cannot be [[status:Poisoned]] or [[status:Badly Poisoned]]. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Imposter",
@@ -1128,7 +1128,7 @@
   {
     "Name": "Insomnia",
     "Frequency": "Static",
-    "Effect": "The user is immune to the [[status:Sleep]] condition, and cannot use the move [[move:Rest]]. Defensive."
+    "Effect": "The user is immune to the [[status:Sleep]] condition, and cannot use the move [[move:Rest]]. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Interference",
@@ -1228,12 +1228,12 @@
   {
     "Name": "Leek Mastery",
     "Frequency": "Static",
-    "Effect": "Connection - Acrobatics. If the user is holding a [[item:Rare Leek]], they may still use Acrobatics as if they were not holding an item. The user cannot be disarmed of their Stick, nor can be it be forcefully removed by Trick, Switcheroo, Thief, or any other Moves or effects unless the user wishes it."
+    "Effect": "[[abilitykeyword:Connection]] - Acrobatics. If the user is holding a [[item:Rare Leek]], they may still use Acrobatics as if they were not holding an item. The user cannot be disarmed of their Stick, nor can be it be forcefully removed by Trick, Switcheroo, Thief, or any other Moves or effects unless the user wishes it."
   },
   {
     "Name": "Levitate",
     "Frequency": "Static",
-    "Effect": "The Pokémon is immune to the damage and effects of Ground Type Moves, and gains a Levitate Speed of 4, or has existing Levitate Speeds increased by +2. Defensive."
+    "Effect": "The Pokémon is immune to the damage and effects of Ground Type Moves, and gains a Levitate Speed of 4, or has existing Levitate Speeds increased by +2. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Life Force",
@@ -1255,12 +1255,12 @@
     "Frequency": "Scene – Free Action",
     "Trigger": "A ranged Electric Type Move is used within 10 Meters of the user.",
     "Effect": "The Move is turned into a 1-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or [[move:Mind Reader]]. The user's Special Attack is then raised by +1 Combat Stage.",
-    "Bonus": " The user is immune to the damage and effects of Electric Type attacks. Defensive."
+    "Bonus": " The user is immune to the damage and effects of Electric Type attacks. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Limber",
     "Frequency": "Static",
-    "Effect": "The user is immune to [[status:Paralysis]]. Defensive."
+    "Effect": "The user is immune to [[status:Paralysis]]. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Line Charge",
@@ -1292,7 +1292,7 @@
   {
     "Name": "Lullaby",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection - [[move:Sing]]. Whenever the user uses the Move \"[[move:Sing]]\", they may activate this Feature. The user then picks a Pokémon or Trainer being targeted by Sing; Sing automatically hits that target."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Sing]]. Whenever the user uses the Move \"[[move:Sing]]\", they may activate this Feature. The user then picks a Pokémon or Trainer being targeted by Sing; Sing automatically hits that target."
   },
   {
     "Name": "Lunchbox",
@@ -1315,12 +1315,12 @@
     "Name": "Magic Bounce",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user is hit by a Status Move",
-    "Effect": "The user may reflect the Move back to the attacker. This Ability may be used to change the placement and affiliation of any Hazards being set within 10 meters of the user as well. Defensive."
+    "Effect": "The user may reflect the Move back to the attacker. This Ability may be used to change the placement and affiliation of any Hazards being set within 10 meters of the user as well. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Magic Guard",
     "Frequency": "Static",
-    "Effect": "The user is immune to damage and Hit Point loss from Hazards, [[keyword:Weather]], Status Afflictions, Vortexes, [[keyword:Recoil]], [[ability:Hay Fever]], [[ability:Iron Barbs]], [[ability:Rough Skin]], and [[move:Leech Seed]]. Defensive."
+    "Effect": "The user is immune to damage and Hit Point loss from Hazards, [[keyword:Weather]], Status Afflictions, Vortexes, [[keyword:Recoil]], [[ability:Hay Fever]], [[ability:Iron Barbs]], [[ability:Rough Skin]], and [[move:Leech Seed]]. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Magician",
@@ -1332,7 +1332,7 @@
     "Name": "Magma Armor",
     "Frequency": "Static",
     "Effect": "Whenever a foe hits you with a Melee Attack or ends their turn grappling you, they lose a tick of Hit Points. Foes immune to Burn do not suffer this effect.",
-    "Bonus": " The user cannot be [[status:Frozen]]. Defensive."
+    "Bonus": " The user cannot be [[status:Frozen]]. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Magnet Pull",
@@ -1363,7 +1363,7 @@
     "Name": "Migraine",
     "Frequency": "Scene x2 – Free Action",
     "Trigger": "The user hits with [[move:Confusion]] while at 50% Hit Points or less",
-    "Effect": "Connection - [[move:Confusion]]. Confusion automatically gives its target the Confusion Affliction and is a Critical Hit."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Confusion]]. Confusion automatically gives its target the Confusion Affliction and is a Critical Hit."
   },
   {
     "Name": "Mimicry",
@@ -1449,7 +1449,7 @@
   {
     "Name": "Mimitree",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:Mimic]]. Whenever the user uses a Move copied by Mimic, they may choose to replace that Move with Mimic once more. When used this way, the user ignores Mimic's Frequency."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Mimic]]. Whenever the user uses a Move copied by Mimic, they may choose to replace that Move with Mimic once more. When used this way, the user ignores Mimic's Frequency."
   },
   {
     "Name": "Mind Mold",
@@ -1512,7 +1512,7 @@
   {
     "Name": "Motor Drive",
     "Frequency": "Static",
-    "Effect": "The user is immune to the damage and effects of Electric Type attacks. Whenever an Electric Type attack hits the Pokémon, raise their Speed by +1 Combat Stage. Defensive."
+    "Effect": "The user is immune to the damage and effects of Electric Type attacks. Whenever an Electric Type attack hits the Pokémon, raise their Speed by +1 Combat Stage. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Mountain Peak",
@@ -1540,12 +1540,12 @@
     "Name": "Mud Shield",
     "Frequency": "Scene – Swift Action",
     "Effect": "The user gains two ticks worth of Temporary Hit Points.",
-    "Bonus": " When standing on any muddy or dirty terrain that is either Slow or Rough Terrain, the user gains +5 Damage Reduction. Defensive."
+    "Bonus": " When standing on any muddy or dirty terrain that is either Slow or Rough Terrain, the user gains +5 Damage Reduction. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Multiscale",
     "Frequency": "Static",
-    "Effect": "While at full Hit Points, all damage taken is resisted one step further. Defensive."
+    "Effect": "While at full Hit Points, all damage taken is resisted one step further. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Multitype",
@@ -1613,12 +1613,12 @@
   {
     "Name": "Oblivious",
     "Frequency": "Static",
-    "Effect": "The user is immune to the [[status:Rage]](Enraged) and Infatuated conditions. Defensive."
+    "Effect": "The user is immune to the [[status:Rage]](Enraged) and Infatuated conditions. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Odious Spray",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:Poison Gas]]. The user may use [[move:Poison Gas]] as if it had a Range \"8, 1 Target\", an AC of 2, and [[status:Flinch]](Flinched) its target when it hit."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Poison Gas]]. The user may use [[move:Poison Gas]] as if it had a Range \"8, 1 Target\", an AC of 2, and [[status:Flinch]](Flinched) its target when it hit."
   },
   {
     "Name": "Omen",
@@ -1646,7 +1646,7 @@
   {
     "Name": "Overcoat",
     "Frequency": "Static",
-    "Effect": "The user is immune to Moves with the [[keyword:Powder]] Keyword, and does not take damage from any Weather that would normally cause it to take damage. Defensive."
+    "Effect": "The user is immune to Moves with the [[keyword:Powder]] Keyword, and does not take damage from any Weather that would normally cause it to take damage. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Overgrow",
@@ -1656,7 +1656,7 @@
   {
     "Name": "Own Tempo",
     "Frequency": "Static",
-    "Effect": "The user is immune to [[status:Confusion]]. Defensive."
+    "Effect": "The user is immune to [[status:Confusion]]. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Pack Hunt",
@@ -1673,12 +1673,12 @@
     "Name": "Parry",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user is hit by a Melee Attack",
-    "Effect": "The attack instead misses. Defensive."
+    "Effect": "The attack instead misses. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Pastel Veil",
     "Frequency": "Static",
-    "Effect": "The user and allies within 3 meters cannot be [[status:Poisoned]] or [[status:Badly Poisoned]]. Defensive."
+    "Effect": "The user and allies within 3 meters cannot be [[status:Poisoned]] or [[status:Badly Poisoned]]. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Perception",
@@ -1689,12 +1689,12 @@
     "Name": "Perish Body",
     "Frequency": "Daily – Standard Action, Reaction",
     "Trigger": "The user is hit with a Melee attack",
-    "Effect": "The triggering creature and the user each receive a Perish Count of 3. At the beginning of each of the target's turns, their Perish count is lowered by 1. Once a Perish Count reaches 0, set the Pokémon's Hit Points to 0. A Perish Count disappears if a target returns to their Poké Ball, Takes a Breather, or is knocked out. Perish Body never causes Massive Damage. Defensive."
+    "Effect": "The triggering creature and the user each receive a Perish Count of 3. At the beginning of each of the target's turns, their Perish count is lowered by 1. Once a Perish Count reaches 0, set the Pokémon's Hit Points to 0. A Perish Count disappears if a target returns to their Poké Ball, Takes a Breather, or is knocked out. Perish Body never causes Massive Damage. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Permafrost",
     "Frequency": "Static",
-    "Effect": "The user is immune to damage and Hit Point loss from Hazards, [[keyword:Weather]], Status Afflictions, Vortexes, [[keyword:Recoil]], [[ability:Hay Fever]], [[ability:Iron Barbs]], [[ability:Rough Skin]], and [[move:Leech Seed]]. Defensive."
+    "Effect": "The user is immune to damage and Hit Point loss from Hazards, [[keyword:Weather]], Status Afflictions, Vortexes, [[keyword:Recoil]], [[ability:Hay Fever]], [[ability:Iron Barbs]], [[ability:Rough Skin]], and [[move:Leech Seed]]. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Pickpocket",
@@ -1794,7 +1794,7 @@
   {
     "Name": "Prism Armor",
     "Frequency": "Static",
-    "Effect": "The user gains +5 Damage Reduction against Super Effective-Damage. Defensive."
+    "Effect": "The user gains +5 Damage Reduction against Super Effective-Damage. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Probability Control",
@@ -1838,7 +1838,7 @@
     "Name": "Punk Rock",
     "Frequency": "Static",
     "Effect": "The user gains +2 DB to moves that have the [[keyword:Sonic]] keyword.",
-    "Bonus": " The user resists moves with the [[keyword:Sonic]] keyword one step further. Defensive."
+    "Bonus": " The user resists moves with the [[keyword:Sonic]] keyword one step further. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Pure Blooded",
@@ -1853,7 +1853,7 @@
   {
     "Name": "Purifying Salt",
     "Frequency": "Static",
-    "Effect": "The user gains resistance to Ghost-type moves, and cannot be [[status:Burned]], [[status:Frozen]], [[status:Paralysis]](Paralyzed), [[status:Poisoned]], [[status:Cursed]], or put to [[status:Sleep]]. Defensive."
+    "Effect": "The user gains resistance to Ghost-type moves, and cannot be [[status:Burned]], [[status:Frozen]], [[status:Paralysis]](Paralyzed), [[status:Poisoned]], [[status:Cursed]], or put to [[status:Sleep]]. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Quark Drive",
@@ -1875,14 +1875,14 @@
   {
     "Name": "Quick Curl",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection - [[move:Defense Curl]]. The user may activate this Ability to use [[move:Defense Curl]] as an Standard Action Interrupt and gain +10 Damage Reduction for 1 full round."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Defense Curl]]. The user may activate this Ability to use [[move:Defense Curl]] as an Standard Action Interrupt and gain +10 Damage Reduction for 1 full round."
   },
   {
     "Name": "Quick Draw",
     "Frequency": "Scene – Free Action, Interrupt",
     "Trigger": "A foe uses a Move, and the user has not acted this round",
     "Effect": "The user immediately uses a Move on the triggering foe as a Standard Action Interrupt (this Move must still obey Frequency and Range). If this Move hits, the foe also gains a -2 penalty to their attack roll for the triggering attack, unless the foe cannot [[status:Flinch]].",
-    "Bonus": " The user cannot be [[status:Flinch]](Flinched). Defensive."
+    "Bonus": " The user cannot be [[status:Flinch]](Flinched). [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Quick Feet",
@@ -1892,7 +1892,7 @@
   {
     "Name": "Quill & Rock",
     "Frequency": "Static",
-    "Effect": "Squawkabilly's Advanced and High Abilities depend on their plumage color (decided upon generation). Innate.",
+    "Effect": "Squawkabilly's Advanced and High Abilities depend on their plumage color (decided upon generation). [[abilitykeyword:Innate]].",
     "Note": "Quill & Rock must be chosen as Squawkabilly’s level 20 Ability.",
     "table": {
       "type": "table",
@@ -1960,7 +1960,7 @@
   {
     "Name": "Razor Edge",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:Poison Tail]]. The user's Critical Hit Range on all Moves is increased by +2; any Moves with \"Tail\" in their name have their Critical Hit Range increased by +3 instead."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Poison Tail]]. The user's Critical Hit Range on all Moves is increased by +2; any Moves with \"Tail\" in their name have their Critical Hit Range increased by +3 instead."
   },
   {
     "Name": "Receiver",
@@ -2038,7 +2038,7 @@
   {
     "Name": "Root Down",
     "Frequency": "At-Will – Shift Action",
-    "Effect": "Connection - [[move:Ingrain]]. While the user has the Ingrain Coat, they may activate this Ability to gain 5 Damage Reduction."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Ingrain]]. While the user has the Ingrain Coat, they may activate this Ability to gain 5 Damage Reduction."
   },
   {
     "Name": "Rough Skin",
@@ -2088,7 +2088,7 @@
   {
     "Name": "Sap Sipper",
     "Frequency": "Static",
-    "Effect": "The user is immune to the damage and effects of Grass-Type attacks. If the user is hit by a Grass-Type attack, they gain +1 CS in their choice of Attack or Special Attack. Defensive."
+    "Effect": "The user is immune to the damage and effects of Grass-Type attacks. If the user is hit by a Grass-Type attack, they gain +1 CS in their choice of Attack or Special Attack. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Schooling",
@@ -2143,7 +2143,7 @@
   {
     "Name": "Shadow Shield",
     "Frequency": "Static",
-    "Effect": "While at full Hit Points, the user resists all damage one step further. Defensive."
+    "Effect": "While at full Hit Points, the user resists all damage one step further. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Shadow Tag",
@@ -2171,7 +2171,7 @@
   {
     "Name": "Shell Armor",
     "Frequency": "Static",
-    "Effect": "The user is immune to Critical Hits; they are instead normal hits. Defensive."
+    "Effect": "The user is immune to Critical Hits; they are instead normal hits. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Shell Cannon",
@@ -2181,12 +2181,12 @@
   {
     "Name": "Shell Shield",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection - [[move:Withdraw]]. The user may activate this Ability to use [[move:Withdraw]] as an Standard Action Interrupt and gain +10 Damage Reduction for 1 full round."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Withdraw]]. The user may activate this Ability to use [[move:Withdraw]] as an Standard Action Interrupt and gain +10 Damage Reduction for 1 full round."
   },
   {
     "Name": "Shield Dust",
     "Frequency": "Static",
-    "Effect": "The user ignores the secondary effects that trigger during Accuracy Roll of damaging Moves that target the user. For example, Flamethrower can never inflict the [[status:Burned]](Burn) Condition. Defensive."
+    "Effect": "The user ignores the secondary effects that trigger during Accuracy Roll of damaging Moves that target the user. For example, Flamethrower can never inflict the [[status:Burned]](Burn) Condition. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Shields Down",
@@ -2201,7 +2201,7 @@
   {
     "Name": "Silk Threads",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:String Shot]]. Whenever the user uses [[move:String Shot]], all targets hit become [[status:Slowed]] and [[status:Vulnerable]] for 1 full round."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:String Shot]]. Whenever the user uses [[move:String Shot]], all targets hit become [[status:Slowed]] and [[status:Vulnerable]] for 1 full round."
   },
   {
     "Name": "Simple",
@@ -2270,18 +2270,18 @@
   {
     "Name": "Solid Rock",
     "Frequency": "Static",
-    "Effect": "The user gains +5 Damage Reduction against Super-Effective damage. Defensive."
+    "Effect": "The user gains +5 Damage Reduction against Super-Effective damage. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Sonic Courtship",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user uses [[move:Attract]]",
-    "Effect": "Connection - [[move:Attract]]. The user may use [[move:Attract]] as if it had a range of \"Burst 3, [[keyword:Sonic]], [[keyword:Friendly]]\"."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Attract]]. The user may use [[move:Attract]] as if it had a range of \"Burst 3, [[keyword:Sonic]], [[keyword:Friendly]]\"."
   },
   {
     "Name": "Soothing Tone",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:Heal Bell]]. Whenever the user uses a Move that targets allies, those allies gain temporary Hit Points equal to the user's Special Attack. This may affect a specific ally only once per Scene."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Heal Bell]]. Whenever the user uses a Move that targets allies, those allies gain temporary Hit Points equal to the user's Special Attack. This may affect a specific ally only once per Scene."
   },
   {
     "Name": "Sorcery",
@@ -2309,7 +2309,7 @@
   {
     "Name": "Soundproof",
     "Frequency": "Static",
-    "Effect": "The Pokémon is immune to Moves with the [[keyword:Sonic]] Keyword. Defensive."
+    "Effect": "The Pokémon is immune to Moves with the [[keyword:Sonic]] Keyword. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Speed Boost",
@@ -2371,7 +2371,7 @@
     "Name": "Stamina",
     "Frequency": "At-Will – Free Action",
     "Trigger": "The user is hit by a Damaging Attack",
-    "Effect": "The user receives +1 Defense Combat Stage. Defensive."
+    "Effect": "The user receives +1 Defense Combat Stage. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Stance Change",
@@ -2436,14 +2436,14 @@
   {
     "Name": "Sticky Smoke",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection - [[move:Smokescreen]]. All targets that begin or end their turn in the target's Smokescreen have their Accuracy lowered by -1. This penalty may occur multiple times. This stacks with the usual penalties from Smokescreen."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Smokescreen]]. All targets that begin or end their turn in the target's Smokescreen have their Accuracy lowered by -1. This penalty may occur multiple times. This stacks with the usual penalties from Smokescreen."
   },
   {
     "Name": "Storm Drain",
     "Frequency": "Scene – Free Action",
     "Trigger": "A ranged Water-Type Move is used within 10 Meters of the user.",
     "Effect": "The Move is turned into a 1-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or [[move:Mind Reader]]. the user's Special Attack is then raised by +1 Combat Stage.",
-    "Bonus": " The user is immune to the damage and effects of Water Type attacks. Defensive."
+    "Bonus": " The user is immune to the damage and effects of Water Type attacks. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Strange Tempo",
@@ -2458,13 +2458,13 @@
   {
     "Name": "Sturdy",
     "Frequency": "Static",
-    "Effect": "The user is immune to Moves with the [[keyword:Execute]] Keyword. If a single source of Damage or Hit Point Loss would cause the user to lose more than X Hit Points, the damage or Hit Point loss is instead reduced to X. X is equal to 50% of their Max Hit Points. Defensive."
+    "Effect": "The user is immune to Moves with the [[keyword:Execute]] Keyword. If a single source of Damage or Hit Point Loss would cause the user to lose more than X Hit Points, the damage or Hit Point loss is instead reduced to X. X is equal to 50% of their Max Hit Points. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Suction Cups",
     "Frequency": "At-Will – Shift Action",
     "Effect": "The user gains +5 Damage Reduction for 1 full round.",
-    "Bonus": " The user is immune to Push effects. Defensive."
+    "Bonus": " The user is immune to Push effects. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Sumo Stance",
@@ -2524,7 +2524,7 @@
   {
     "Name": "Sweet Veil",
     "Frequency": "Static",
-    "Effect": "The user and allies within 3 meters are immune to [[status:Sleep]]. Defensive."
+    "Effect": "The user and allies within 3 meters are immune to [[status:Sleep]]. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Swift Swim",
@@ -2587,7 +2587,7 @@
     "Name": "Tera Cudgel",
     "Frequency": "At-Will – Free Action",
     "Trigger": "The user hits a target with [[move:Ivy Cudgel]].",
-    "Effect": "Connection – [[move:Ivy Cudgel]]. Tera Cudgel's Effect depends on the user's current [[ability:Embody Aspect]] Forme. Innate.",
+    "Effect": "Connection – [[move:Ivy Cudgel]]. Tera Cudgel's Effect depends on the user's current [[ability:Embody Aspect]] Forme. [[abilitykeyword:Innate]].",
     "Forme Effect": "\n- Teal Mask: The user may choose to have the attack deal damage as though it were one step less Effective; if they do so, they may then Disengage 3m and attack a different target with Ivy Cudgel as a Free Action, ignoring Frequency, dealing damage as though it were one step less Effective.\n- Wellspring Mask: The triggering target becomes Thornbound by the user until the end of the user's next turn. Thornbound characters suffer a -2 Accuracy and -10 damage penalty when targeting characters other than the user, and are treated as Slowed when Shifting away from the user.\n- Hearthflame Mask: The triggering target is Slowed for one full Round and all foes cardinally adjacent to it become Burned. If the user has not used their Shift Action this turn, they may expend it to additionally have the target become Stuck and all foes adjacent to them Slowed for one full Round.\n- Cornerstone Mask: The user may create 5 squares of Rocks. Each square must be cardinally adjacent to another square, and at least one must be adjacent to the user. Rocks count as Blocking Terrain against foes' Ranged Attacks, and deal a Tick of Hit Point Loss to grounded foes who step onto them. This Hit Point Loss applies only once per turn. Rocks disappear at the start of the user's next turn."
   },
   {
@@ -2614,7 +2614,7 @@
     "Frequency": "At-Will – Free Action",
     "Trigger": "The user is hit by a Fire-Type Move.",
     "Effect": "The user receives +1 Attack Combat Stage.",
-    "Bonus": "The user is immune to [[status:Burned]](Burns). Defensive."
+    "Bonus": "The user is immune to [[status:Burned]](Burns). [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Thermosensitive",
@@ -2624,7 +2624,7 @@
   {
     "Name": "Thick Fat",
     "Frequency": "Static",
-    "Effect": "The user resists Fire-Type and Ice-Type attacks one step further. Defensive."
+    "Effect": "The user resists Fire-Type and Ice-Type attacks one step further. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Thrust",
@@ -2645,12 +2645,12 @@
   {
     "Name": "Tochukaso",
     "Frequency": "Static",
-    "Effect": "The user resists Bug-Type and Poison-Type attacks one step further. Defensive."
+    "Effect": "The user resists Bug-Type and Poison-Type attacks one step further. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Tolerance",
     "Frequency": "Static",
-    "Effect": "Any Types resisted by the user are resisted one step further. Defensive."
+    "Effect": "Any Types resisted by the user are resisted one step further. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Tonguelash",
@@ -2727,7 +2727,7 @@
   {
     "Name": "Trinity",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:Tri Attack]]. You may use [[move:Tri Attack]] as if it had a range of \"Melee, 3 Targets\". Make a different attack roll for each target. If Tri-Attack's effect range is activated, do not roll for the effect; the first target can only be [[status:Frozen]], the second can only be [[status:Burned]], and the third can only be [[status:Paralysis]](Paralyzed). Additionally, you may use Tri-Attack as a Physical Attack if you wish."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Tri Attack]]. You may use [[move:Tri Attack]] as if it had a range of \"Melee, 3 Targets\". Make a different attack roll for each target. If Tri-Attack's effect range is activated, do not roll for the effect; the first target can only be [[status:Frozen]], the second can only be [[status:Burned]], and the third can only be [[status:Paralysis]](Paralyzed). Additionally, you may use Tri-Attack as a Physical Attack if you wish."
   },
   {
     "Name": "Truant",
@@ -2753,7 +2753,7 @@
   {
     "Name": "Type Strategist",
     "Frequency": "Static",
-    "Effect": "Whenever the user uses a Move of the Type associated with Type Strategist, they gain +5 Damage Reduction for one full round. If they are under 1/3rd of their Maximum Hit Points, they instead gain +10 Damage Reduction. Defensive."
+    "Effect": "Whenever the user uses a Move of the Type associated with Type Strategist, they gain +5 Damage Reduction for one full round. If they are under 1/3rd of their Maximum Hit Points, they instead gain +10 Damage Reduction. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Ugly",
@@ -2795,7 +2795,7 @@
     "Name": "Variable Transmission",
     "Frequency": "Daily – Extended Action",
     "Trigger": "The user is having a [Training] Feature applied by its Trainer.",
-    "Effect": "Connection – See Below. The user may choose one of the following Types. Until that [Training] Feature no longer applies, the user gains STAB on Moves of that Type and grants the Ability associated with that Type, as well as letting the user learn the Move of that Type as if it was a Move with the Connection keyword for this Ability. Innate.",
+    "Effect": "Connection – See Below. The user may choose one of the following Types. Until that [Training] Feature no longer applies, the user gains STAB on Moves of that Type and grants the Ability associated with that Type, as well as letting the user learn the Move of that Type as if it was a Move with the [[abilitykeyword:Connection]] keyword for this Ability. [[abilitykeyword:Innate]].",
     "table": {
       "type": "table",
       "rows": [
@@ -2857,23 +2857,23 @@
     "Name": "Vigor",
     "Frequency": "Daily – Free Action",
     "Trigger": "The user uses [[move:Endure]]",
-    "Effect": "Connection – [[move:Endure]]. When this Ability is activated, after being set to 1 Hit Point, the user gains a Tick of Hit Points. Furthermore, if the Move that triggered Endure gave the user an Injury from Massive Damage, the user does not gain that Injury. Defensive."
+    "Effect": "Connection – [[move:Endure]]. When this Ability is activated, after being set to 1 Hit Point, the user gains a Tick of Hit Points. Furthermore, if the Move that triggered Endure gave the user an Injury from Massive Damage, the user does not gain that Injury. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Vital Spirit",
     "Frequency": "Static",
-    "Effect": "The user is immune to the [[status:Sleep]] condition, and cannot use the move [[move:Rest]]. Defensive."
+    "Effect": "The user is immune to the [[status:Sleep]] condition, and cannot use the move [[move:Rest]]. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Volt Absorb",
     "Frequency": "Static",
-    "Effect": "The user is immune to the damage and effects of Electric-Type attacks, and whenever they are hit with an Electric Type attack, they gain Hit Points equal to a Tick of Hit Points. Defensive."
+    "Effect": "The user is immune to the damage and effects of Electric-Type attacks, and whenever they are hit with an Electric Type attack, they gain Hit Points equal to a Tick of Hit Points. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Voodoo Doll",
     "Frequency": "Daily – Free Action",
     "Trigger": "The user uses the Move [[move:Curse]] as a Ghost Type",
-    "Effect": "Connection - [[move:Curse]]. Choose an additional target within 8 meters of the user to become [[status:Cursed]]."
+    "Effect": "[[abilitykeyword:Connection]] - [[move:Curse]]. Choose an additional target within 8 meters of the user to become [[status:Cursed]]."
   },
   {
     "Name": "Wallmaster",
@@ -2895,24 +2895,24 @@
   {
     "Name": "Water Absorb",
     "Frequency": "Static",
-    "Effect": "The user is immune to the damage and effects of Water-Type attacks, and whenever they are hit with a Water Type attack, they gain a Tick of Hit Points. Defensive."
+    "Effect": "The user is immune to the damage and effects of Water-Type attacks, and whenever they are hit with a Water Type attack, they gain a Tick of Hit Points. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Water Bubble",
     "Frequency": "Static",
-    "Effect": "The user resists Fire-Type attacks one step further, is immune to being [[status:Burned]], and may always act as though in Rainy Weather. Defensive.",
+    "Effect": "The user resists Fire-Type attacks one step further, is immune to being [[status:Burned]], and may always act as though in Rainy Weather. [[abilitykeyword:Defensive]].",
     "Bonus": " The user may attack with Water-Type Moves as if they had a range of \"Melee, 1 target\". If they do, that Move's Class is changed to Physical and it deals +1d6+2 damage."
   },
   {
     "Name": "Water Compaction",
     "Frequency": "At-Will – Free Action",
     "Trigger": "The user is hit by a Water Type Move",
-    "Effect": "The user receives +2 Defense Combat Stages. Defensive."
+    "Effect": "The user receives +2 Defense Combat Stages. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Water Veil",
     "Frequency": "Static",
-    "Effect": "The user is immune to [[status:Burned]](Burns). Defensive."
+    "Effect": "The user is immune to [[status:Burned]](Burns). [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Weak Armor",
@@ -2939,7 +2939,7 @@
   {
     "Name": "Well-Baked Body",
     "Frequency": "Static",
-    "Effect": "The user is immune to the damage and effects of Fire-Type attacks, and whenever they are hit with a Fire-Type attack, they gain +2 Defense Combat Stages. Defensive."
+    "Effect": "The user is immune to the damage and effects of Fire-Type attacks, and whenever they are hit with a Fire-Type attack, they gain +2 Defense Combat Stages. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Whirlwind Kicks",
@@ -2954,7 +2954,7 @@
   {
     "Name": "White Smoke",
     "Frequency": "Static",
-    "Effect": "The user's Combat Stages, Evasion, or Accuracy may not be lowered except by the user's own Moves and effects. Defensive."
+    "Effect": "The user's Combat Stages, Evasion, or Accuracy may not be lowered except by the user's own Moves and effects. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Wily",
@@ -2973,17 +2973,17 @@
     "Frequency": "At-Will – Free Action, Reaction",
     "Trigger": "A foe or ally within 4m uses a Move with the [[keyword:Wind]] keyword",
     "Effect": "The user may Disengage as a Free Action. Once per Scene, the user may also gain +1 CS in either Attack or Special Attack.",
-    "Bonus": "Whenever the user Disengages for any reason, they may Shift 2 meters instead of 1. Additionally, they are immune to the damage and effects of Moves with the [[keyword:Wind]] keyword. Defensive."
+    "Bonus": "Whenever the user Disengages for any reason, they may Shift 2 meters instead of 1. Additionally, they are immune to the damage and effects of Moves with the [[keyword:Wind]] keyword. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Windveiled",
     "Frequency": "Static",
-    "Effect": "The user is immune to the damage and effects of Flying-Type attacks. If the user is hit by a Flying-Type attack, the user gains +1 Speed CS. Defensive."
+    "Effect": "The user is immune to the damage and effects of Flying-Type attacks. If the user is hit by a Flying-Type attack, the user gains +1 Speed CS. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Winter's Kiss",
     "Frequency": "Static",
-    "Effect": "The user does not take damage from Ice-Type Moves. Whenever the user uses or is hit by an Ice-Type Move, the user is healed by a Tick of Hit Points. Defensive."
+    "Effect": "The user does not take damage from Ice-Type Moves. Whenever the user uses or is hit by an Ice-Type Move, the user is healed by a Tick of Hit Points. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Wishmaster",
@@ -3004,12 +3004,12 @@
   {
     "Name": "Wonder Guard",
     "Frequency": "Static",
-    "Effect": "Only damaging attacks that are Super-Effective affect the Pokémon with Wonder Guard; all other damaging attacks cannot hit the user or deal damage. Wonder Guard loses its effect if the user has no weaknesses. Defensive."
+    "Effect": "Only damaging attacks that are Super-Effective affect the Pokémon with Wonder Guard; all other damaging attacks cannot hit the user or deal damage. Wonder Guard loses its effect if the user has no weaknesses. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Wonder Skin",
     "Frequency": "Static",
-    "Effect": "The user gains +6 Evasion against Status Moves. Defensive."
+    "Effect": "The user gains +6 Evasion against Status Moves. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Zen Mode",
@@ -3026,6 +3026,6 @@
     "Frequency": "Scene – Shift Action",
     "Special": "The user has two sets of Base Stats and Abilities; Zero and Hero. The HP of both forms must be the same.",
     "Trigger": "An ally is [[status:Fainted]] by a foe",
-    "Effect": "The user is removed from the field. When they gain Initiative the next time, choose an ally or the triggering foe. The user reappears on a square adjacent to the chosen target in Hero forme. The user returns to Zero forme when combat ends. Innate."
+    "Effect": "The user is removed from the field. When they gain Initiative the next time, choose an ally or the triggering foe. The user reappears on a square adjacent to the chosen target in Hero forme. The user returns to Zero forme when combat ends. [[abilitykeyword:Innate]]."
   }
 ]

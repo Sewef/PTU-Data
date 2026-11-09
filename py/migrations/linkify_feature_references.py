@@ -38,6 +38,9 @@ REFERENCE_FILES = {
     ),
     "item": tuple((REPO_ROOT / "ptu" / "data" / "items").glob("items_*.json")),
     "keyword": tuple((REPO_ROOT / "ptu" / "data" / "moves").glob("keywords_*.json")),
+    "abilitykeyword": tuple(
+        (REPO_ROOT / "ptu" / "data" / "abilities").glob("keywords_*.json")
+    ),
 }
 NAME_FIELDS = {
     "move": ("Move", "Name"),
@@ -47,6 +50,7 @@ NAME_FIELDS = {
     "pokeedge": ("Name",),
     "item": ("Name",),
     "keyword": ("Name",),
+    "abilitykeyword": ("Name",),
 }
 REFERENCE_TOKEN_RE = re.compile(r"\[\[[^\]]+\]\](?:\([^)]*\))?")
 FEATURE_TOKEN_RE = re.compile(r"\[\[feature:([^\]]+)\]\]", re.IGNORECASE)
@@ -54,7 +58,7 @@ FEATURE_EDGE_TOKEN_RE = re.compile(
     r"\[\[(feature|edge):([^\]]+)\]\](?:\(([^)]*)\))?", re.IGNORECASE
 )
 TYPED_REFERENCE_TOKEN_RE = re.compile(
-    r"\[\[(move|ability|capability|status|edge|pokeedge|item|feature|keyword):"
+    r"\[\[(move|ability|capability|status|edge|pokeedge|item|feature|keyword|abilitykeyword):"
     r"([^\]]+)\]\](?:\(([^)]*)\))?",
     re.IGNORECASE,
 )

@@ -28,6 +28,9 @@ DEFAULT_FILES = (
     REPO_ROOT / "ptu/data/moves/fandex/moves_insurgence.json",
     REPO_ROOT / "ptu/data/moves/fandex/moves_sage.json",
     REPO_ROOT / "ptu/data/moves/fandex/moves_uranium.json",
+    REPO_ROOT / "ptu/data/abilities/fandex/abilities_insurgence.json",
+    REPO_ROOT / "ptu/data/abilities/fandex/abilities_sage.json",
+    REPO_ROOT / "ptu/data/abilities/fandex/abilities_uranium.json",
 )
 DESCRIPTIVE_FIELDS = {
     "Effect",
@@ -122,6 +125,35 @@ TYPE_CUE_MAP = {
     "edges": "edge",
 }
 
+ABILITY_KEYWORD_NAMES = {
+    shared.normalized_key(name)
+    for path in (
+        REPO_ROOT / "ptu/data/abilities/keywords_core.json",
+        REPO_ROOT / "ptu/data/abilities/keywords_community.json",
+    )
+    for name in shared.load_json(path)
+}
+
+
+def is_ability_keyword_usage(
+    canonical: str, before: str, after: str, current_type: str
+) -> bool:
+    if current_type != "ability" or shared.normalized_key(canonical) not in ABILITY_KEYWORD_NAMES:
+        return False
+
+    key = shared.normalized_key(canonical)
+    if key == "connection":
+        return bool(
+            re.search(r"(?:^|[.;]\s*)$", before)
+            and re.match(r"\s*[-â€“â€”:]", after)
+        )
+    if key in {"defensive", "innate"}:
+        return bool(
+            re.search(r"(?:^|[.!?]\s*|\bBonus:\s*)$", before, re.IGNORECASE)
+            and re.match(r"\s*(?:[.!?]|$)", after)
+        )
+    return False
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -214,6 +246,7 @@ def choose_ambiguous_type(
     after: str,
     candidates: list[tuple[str, str]],
     field: str,
+    current_type: str,
 ) -> tuple[str, str] | None:
     if field == "Range":
         return next(
@@ -222,6 +255,13 @@ def choose_ambiguous_type(
         )
     cue_type = explicit_cue_type(before, after)
     if cue_type:
+        if cue_type == "keyword" and current_type == "ability":
+            ability_keyword = next(
+                (candidate for candidate in candidates if candidate[0] == "abilitykeyword"),
+                None,
+            )
+            if ability_keyword:
+                return ability_keyword
         return next((candidate for candidate in candidates if candidate[0] == cue_type), None)
 
     if re.search(
@@ -279,6 +319,7 @@ def linkify_ambiguous_text(
                 segment[match.end() :],
                 candidates,
                 field,
+                current_type,
             )
             if not choice and key in fixed:
                 choice = next(
@@ -342,7 +383,11 @@ def linkify_text(
             cue_type = explicit_cue_type(
                 segment[: match.start()], segment[match.end() :]
             )
-            if cue_type and cue_type != ref_type:
+            if cue_type and cue_type != ref_type and not (
+                cue_type == "keyword"
+                and ref_type == "abilitykeyword"
+                and current_type == "ability"
+            ):
                 return match.group(0)
             if (
                 field == "Range"
@@ -352,9 +397,16 @@ def linkify_text(
                 return match.group(0)
             if field == "Range":
                 return f"[[{ref_type}:{canonical}]]"
-            if field in {"Keyword", "Keywords"} and ref_type == "keyword":
+            if field in {"Keyword", "Keywords"} and ref_type in {"keyword", "abilitykeyword"}:
                 return f"[[{ref_type}:{canonical}]]"
             if ref_type == "status":
+                return f"[[{ref_type}:{canonical}]]"
+            if ref_type == "abilitykeyword" and is_ability_keyword_usage(
+                canonical,
+                segment[: match.start()],
+                segment[match.end() :],
+                current_type,
+            ):
                 return f"[[{ref_type}:{canonical}]]"
             if " " not in canonical and not should_link_single_word(
                 segment[: match.start()], segment[match.end() :], value
@@ -462,7 +514,7 @@ def main() -> int:
             reference_index,
             ambiguity_pattern,
             ambiguities,
-            range_only=path.parent.name == "fandex",
+            range_only=source_type(path) == "move" and path.parent.name == "fandex",
         )
         total += len(changes)
         for _, before, after in changes:

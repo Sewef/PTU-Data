@@ -19,7 +19,7 @@
   {
     "Name": "Conditioning",
     "Frequency": "Static",
-    "Effect": "Whenever this Pokémon is damaged by a damaging Move, it resists that Move one step more for the rest of the Scene, to a maximum of one step resisted. This is cumulative. Defensive. "
+    "Effect": "Whenever this Pokémon is damaged by a damaging Move, it resists that Move one step more for the rest of the Scene, to a maximum of one step resisted. This is cumulative. [[abilitykeyword:Defensive]]. "
   },
   {
     "Name": "Content",
@@ -31,12 +31,12 @@
     "Name": "Conundrum",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user is hit with a Melee Attack",
-    "Effect": "The attacking foe becomes Confused."
+    "Effect": "The attacking foe becomes [[status:Confusion]](Confused)."
   },
   {
     "Name": "Discretion",
     "Frequency": "Static",
-    "Effect": "If the user misses with a Move that does not have the Smite keyword, the Move’s Frequency is not expended."
+    "Effect": "If the user misses with a Move that does not have the [[keyword:Smite]] keyword, the Move’s Frequency is not expended."
   },
   {
     "Name": "Eventide",
@@ -57,7 +57,7 @@
   {
     "Name": "Full Force",
     "Frequency": "Static",
-    "Effect": "When using a Move with a Damage Base that could be more than one value (not including Double Strike or Five Strike Moves), the Move is counted as being its highest Damage Base. This does not apply to moves that have a conditional damage boost that is of a different Frequency to the rest of the Move (such as Hex or Assurance)."
+    "Effect": "When using a Move with a Damage Base that could be more than one value (not including [[keyword:Double Strike]] or Five Strike Moves), the Move is counted as being its highest Damage Base. This does not apply to moves that have a conditional damage boost that is of a different Frequency to the rest of the Move (such as Hex or [[move:Assurance]])."
   },
   {
     "Name": "Glaciation",
@@ -67,7 +67,7 @@
   {
     "Name": "Malice",
     "Frequency": "Static",
-    "Effect": "Whenever foes within 3m of the user lose hit points from an effect that is not directly an Attack (so, Recoil and Night Shade would not be affected, but Hail and Toxic would be), the hit points lost are multiplied by 1.5x. More than one Malice Ability does not stack."
+    "Effect": "Whenever foes within 3m of the user lose hit points from an effect that is not directly an Attack (so, [[keyword:Recoil]] and [[move:Night Shade]] would not be affected, but Hail and [[move:Toxic]] would be), the hit points lost are multiplied by 1.5x. More than one Malice Ability does not stack."
   },
   {
     "Name": "Mooch",
@@ -83,7 +83,7 @@
   {
     "Name": "Overshadow",
     "Frequency": "Static",
-    "Effect": "The user gains 5 DR against Pokémon of a smaller size category than it. Defensive."
+    "Effect": "The user gains 5 DR against Pokémon of a smaller size category than it. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Perforate",
@@ -104,7 +104,7 @@
   {
     "Name": "Quickdraw",
     "Frequency": "Static",
-    "Effect": "Trainers and Pokémon within 5m of the user (including the user), may not use Priority or Interrupt Moves outside of their Initiative, except for those with the Shield Keyword."
+    "Effect": "Trainers and Pokémon within 5m of the user (including the user), may not use [[keyword:Priority]] or Interrupt Moves outside of their Initiative, except for those with the [[keyword:Shield]] Keyword."
   },
   {
     "Name": "Scavenger",
@@ -116,7 +116,7 @@
     "Name": "Siphon",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user hits with a single-target damaging Attack that does not restore Hit Points",
-    "Effect": "After the target takes damage, the user gains Hit Points equal to half of the damage they dealt to the target. This effect triggers Liquid Ooze."
+    "Effect": "After the target takes damage, the user gains Hit Points equal to half of the damage they dealt to the target. This effect triggers [[ability:Liquid Ooze]]."
   },
   {
     "Name": "Spectrum",

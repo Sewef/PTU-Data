@@ -2,7 +2,7 @@ import { DAMAGE_BASE_TABLE } from "/ptu/js/json_moves.js";
 import { renderShowHideBlock } from "/ptu/js/helpers.js";
 
 const DATA_BASE = "/ptu/data";
-const REFERENCE_TYPES = ["move", "ability", "capability", "status", "edge", "pokeedge", "item", "feature", "keyword"];
+const REFERENCE_TYPES = ["move", "ability", "capability", "status", "edge", "pokeedge", "item", "feature", "keyword", "abilitykeyword"];
 const VALID_TYPES = new Set(REFERENCE_TYPES);
 
 const FILES = {
@@ -50,6 +50,11 @@ const FILES = {
     Core: `${DATA_BASE}/moves/keywords_core.min.json`,
     Community: `${DATA_BASE}/moves/keywords_community.min.json`,
     Homebrew: `${DATA_BASE}/moves/keywords_community.min.json`
+  },
+  abilitykeyword: {
+    Core: `${DATA_BASE}/abilities/keywords_core.min.json`,
+    Community: `${DATA_BASE}/abilities/keywords_community.min.json`,
+    Homebrew: `${DATA_BASE}/abilities/keywords_community.min.json`
   }
 };
 
@@ -80,7 +85,8 @@ const NAME_FIELDS = {
   pokeedge: ["Name"],
   item: ["Name"],
   feature: ["Name"],
-  keyword: ["Name"]
+  keyword: ["Name"],
+  abilitykeyword: ["Name"]
 };
 
 const REFERENCE_TYPE_PATTERN = REFERENCE_TYPES.join("|");
@@ -531,7 +537,7 @@ function renderDetails(type, entry, requestedName) {
   if (type === "edge" || type === "pokeedge") return renderEdgeDetails(entry, type);
   if (type === "item") return renderItemDetails(entry);
   if (type === "feature") return renderFeatureDetails(entry);
-  if (type === "keyword") return renderKeywordDetails(entry);
+  if (type === "keyword" || type === "abilitykeyword") return renderKeywordDetails(entry);
   return renderReferenceGenericDetails(entry);
 }
 
@@ -943,6 +949,7 @@ function cleanLookupName(value) {
 
 function titleCase(value) {
   if (value === "pokeedge") return "Poke Edge";
+  if (value === "abilitykeyword") return "Ability Keyword";
   return String(value || "").replace(/^./, c => c.toUpperCase());
 }
 
