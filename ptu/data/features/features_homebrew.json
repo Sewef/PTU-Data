@@ -955,7 +955,7 @@
                 ],
                 [
                   {
-                    "text": "Enduring"
+                    "text": "[[feature:Enduring Soul]]"
                   },
                   {
                     "text": "[[feature:Staying Power]]"
@@ -1218,7 +1218,8 @@
             "Prerequisites": "[[feature:Focused Training]], Novice Focus",
             "Frequency": "At-Will — Swift Action",
             "Target": "A Pokémon or Trainer",
-            "Effect": "The Foe becomes Tagged; or if the foe is already Tagged, the foe loses the Tag. Only one foe can be Tagged this way at a time. If a new Foe is Tagged, all other Tags are lost.\nYour Pokémon under the effects of [[feature:Focused Training]] gain half their Momentum (rounded up) as a Bonus to Accuracy and Evasion against Tagged Foes, but as long as a Foe is Tagged, they do not benefit from [[feature:Focused Training]]'s Accuracy Bonus against other foes."
+            "Effect": "The Foe becomes Tagged; or if the foe is already Tagged, the foe loses the Tag. Only one foe can be Tagged this way at a time. If a new Foe is Tagged, all other Tags are lost.\nYour Pokémon under the effects of [[feature:Focused Training]] gain half their Momentum (rounded up) as a Bonus to Accuracy and Evasion against Tagged Foes, but as long as a Foe is Tagged, they do not benefit from [[feature:Focused Training]]'s Accuracy Bonus against other foes.",
+            "Mechanic – Momentum": "\n» Your Pokémon begins each Scene with 0 Momentum.\n» At the end of each Combat round, your Pokémon gains +1 Momentum.\n» Whenever your Pokémon hits a Tagged foe, they gain +1 Momentum.\n» Your Pokémon has a maximum of 6 Momentum. So use a d6 to track it.\n» All Momentum is lost when your Pokémon Faints, your Pokémon is recalled, or combat ends."
           },
           {
             "Name": "Expend Momentum",
