@@ -970,6 +970,9 @@
   "Friendly": {
     "Description": "Moves with the Friendly Keyword do not hit allies."
   },
+  "Full Action": {
+    "Description": "A Move with the Full Action Keyword requires both the user's Standard Action and Shift Action for the round."
+  },
   "Five Strike": {
     "Description": "Whenever a Move with Five Strike is used, roll 1d8. On a result of 1, the attack hits one time. On a result of 2 or 3, the attack hits two times. On a result of 4, 5, or 6, the attack hits three times. On a result of 7, the attack hits four times. On a roll of 8, the attack hits five times. Multiply the Move's Damage Base by the number of times hit; that becomes its new Damage Base. You may always apply Technician to Moves with Five Strike. Apply STAB and all other effects that raise Damage Base only after the Move's final Damage Base has been calculated."
   },
@@ -978,6 +981,9 @@
   },
   "Hazard": {
     "Description": "If a Move has the Hazard keyword, the effect covers a portion of the field of battle. A Hazard only affects the foes under certain circumstances. You may put extra Layers of the Move with Hazard if the Move allows, but only one per usage of the Move."
+  },
+  "Healing": {
+    "Description": "Moves with the Healing Keyword restore Hit Points or otherwise provide healing and may be affected by certain Abilities or effects, such as Triage."
   },
   "Illusion": {
     "Description": "These Moves are Illusions, and may be ignored by Trainers with the Clairsentient Feature."
@@ -1011,6 +1017,9 @@
   },
   "Shield": {
     "Description": "Moves with this Keyword are Interrupts that are triggered by foes' attacks. They usually prevent the effect of attacks in some manner."
+  },
+  "Slice": {
+    "Description": "Moves with this Keyword involve attacking with a sharpened blade and may be affected by certain effects such as the Sharpness Ability."
   },
   "Smite": {
     "Description": "When Moves with the Smite keyword Miss, instead of doing no damage, they deal damage as if the attack were resisted one step further. Targets dealt damage this way do not suffer any secondary effects of the Move."

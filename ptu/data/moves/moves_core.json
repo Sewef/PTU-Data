@@ -16,7 +16,7 @@
     "AC": "2",
     "Damage Base": "4",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Priority",
+    "Range": "Melee, 1 Target, [[keyword:Priority]]",
     "Effect": "None",
     "Contest Type": "Tough",
     "Contest Effect": "Saving Grace"
@@ -37,7 +37,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Set-Up",
+    "Range": "Self, [[keyword:Set-Up]]",
     "Set-Up Effect": "The user becomes Liquefied. While Liquefied, the user is Slowed and cannot take Standard Actions except to Resolve the effect of Acid Armor, and the user's Movement is never obstructed by rough or slow terrain, and they can shift even through the smallest openings. Furthermore, while liquefied, the user is completely immune to all Physical damage, and becomes completely invisible if fully submerged in any liquid.",
     "Resolution Effect": "The user gains +1 Defense Combat Stage, and then stops being liquified.",
     "Contest Type": "Tough",
@@ -60,7 +60,7 @@
     "AC": "2",
     "Damage Base": "6",
     "Class": "Physical",
-    "Range": "Melee, Dash, 1 Target",
+    "Range": "Melee, [[keyword:Dash]], 1 Target",
     "Effect": "If the user is not holding an item, Acrobatics instead has a Damage Base of 11 (3d10+10 / 27).",
     "Contest Type": "Smart",
     "Contest Effect": "Incentives"
@@ -135,7 +135,7 @@
     "Damage Base": "8",
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "Air Slash Flinches the target on 15+.",
+    "Effect": "Air Slash [[status:Flinch]](Flinches) the target on 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
   },
@@ -144,7 +144,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "6, 1 Target, Interrupt",
+    "Range": "6, 1 Target, [[keyword:Interrupt]]",
     "Effect": "Ally Switch may be declared during a foe's turn as an Interrupt. The user chooses one willing ally within 6 meters; the target and the user switch places. If the ally was a target of a Move, the user is now the target; If the user was a target of a Move, the ally is now the target.",
     "Contest Type": "Cool",
     "Contest Effect": "Tease"
@@ -198,7 +198,7 @@
     "AC": "2",
     "Damage Base": "4",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Priority",
+    "Range": "Melee, 1 Target, [[keyword:Priority]]",
     "Effect": "None",
     "Contest Type": "Beauty",
     "Contest Effect": "Saving Grace"
@@ -208,7 +208,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Coat",
+    "Range": "Self, [[keyword:Coat]]",
     "Effect": "Aqua Ring covers the user in a Coat that heals the user at the beginning of their turn. The user is healed a Tick of Hit Points each turn.",
     "Contest Type": "Beauty",
     "Contest Effect": "Safe Option"
@@ -219,7 +219,7 @@
     "AC": "4",
     "Damage Base": "9",
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, [[keyword:Pass]]",
     "Effect": "None",
     "Contest Type": "Cute",
     "Contest Effect": "Steady Performance"
@@ -240,7 +240,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Burst 1, Healing",
+    "Range": "Burst 1, [[keyword:Healing]]",
     "Effect": "All allies in the burst are cured of one status condition of their choice.",
     "Contest Type": "Smart",
     "Contest Effect": "Reflective Appeal"
@@ -283,7 +283,7 @@
     "Damage Base": "3",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Astonish Flinches the target on 15+. Once per scene, if the target is unaware of the user's presence, Astonish automatically Flinches the target.",
+    "Effect": "Astonish [[status:Flinch]](Flinches) the target on 15+. Once per scene, if the target is unaware of the user's presence, Astonish automatically [[status:Flinch]](Flinches) the target.",
     "Contest Type": "Smart",
     "Contest Effect": "Steady Performance"
   },
@@ -293,7 +293,7 @@
     "AC": "2",
     "Damage Base": "12",
     "Class": "Special",
-    "Range": "8, Ranged Blast 2, Smite, Friendly",
+    "Range": "8, Ranged Blast 2, [[keyword:Smite]], [[keyword:Friendly]]",
     "Effect": "Legal targets hit by Astral Barrage are [[status:Slowed]] for one full round.",
     "Contest Type": "Smart",
     "Contest Effect": "Unsettling"
@@ -314,8 +314,8 @@
     "Frequency": "Scene x2",
     "AC": "2",
     "Class": "Status",
-    "Range": "3, 1 Target, Social",
-    "Effect": "Attract Infatuates the target if its gender is the opposite of the user's. Attract fails when used by or against Genderless targets.",
+    "Range": "3, 1 Target, [[keyword:Social]]",
+    "Effect": "Attract [[status:Infatuation]](Infatuates) the target if its gender is the opposite of the user's. Attract fails when used by or against Genderless targets.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
   },
@@ -325,7 +325,7 @@
     "AC": "None",
     "Damage Base": "8",
     "Class": "Special",
-    "Range": "8, 1 Target, Aura",
+    "Range": "8, 1 Target, [[keyword:Aura]]",
     "Effect": "Aura Sphere cannot miss.",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
@@ -359,7 +359,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Blessing",
+    "Range": "[[keyword:Blessing]]",
     "Effect": "Blessing – Any user affected by Aurora Veil may activate it when receiving Damage to resist the Damage one step. Aurora Veil may be activated 2 times, and then disappears.",
     "Contest Type": "Beauty",
     "Contest Effect": "Excitement",
@@ -391,7 +391,7 @@
     "Frequency": "EOT",
     "AC": "2",
     "Class": "Status",
-    "Range": "4, 1 Target, Priority, Social",
+    "Range": "4, 1 Target, [[keyword:Priority]], [[keyword:Social]]",
     "Effect": "The target's Attack is lowered 1 Combat Stage.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
@@ -401,7 +401,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Interrupt, Shield, Trigger",
+    "Range": "Self, [[keyword:Interrupt]], [[keyword:Shield]], [[keyword:Trigger]]",
     "Effect": "If the user is hit by an attack, the user may use Baneful Bunker. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move's effects. In addition, if the triggering attack was Melee ranged, the attacker is [[status:Poisoned]].",
     "Contest Type": "Smart",
     "Contest Effect": "Inversed Appeal"
@@ -433,7 +433,7 @@
     "Frequency": "Scene x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Hazard",
+    "Range": "[[keyword:Hazard]]",
     "Effect": "The user creates a Barrier of psychic energy. The user places up to 4 segments of Barrier; each segment must be continuous with another segment, and at least one must be adjacent to the user. These barriers count as blocking terrain and last until the end of the encounter or until they are destroyed. Each Barrier segment is 2 meters tall, 1 meter wide, and 2 centimeters thick. Each segment has 20 Hit Points, 15 Damage Reduction, and takes damage as if it was Psychic Typed.",
     "Contest Type": "Cool",
     "Contest Effect": "Sabotage"
@@ -454,7 +454,7 @@
     "AC": "2",
     "Damage Base": "10",
     "Class": "Physical",
-    "Range": "6, 1 Target, Priority",
+    "Range": "6, 1 Target, [[keyword:Priority]]",
     "Effect": "Beak Blast must be declared at the start of the round. If the user is hit by a Melee attack this round, their attacker is [[status:Burned]]. At the end of the round, the user may shift and attack with Beak Blast.",
     "Contest Type": "Cool",
     "Contest Effect": "Special Attention"
@@ -526,7 +526,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Physical",
-    "Range": "Burst 1, Friendly",
+    "Range": "Burst 1, [[keyword:Friendly]]",
     "Effect": "The user may use Bide as a Reaction Move upon being Hit by a Damaging Move. During their next available turn, the user may Shift and then use Bide, causing all Adjacent foes to lose X HP, where X is the amount of Damage taken since declaring use of Bide (Loss of life through effects such as [[status:Poisoned]](Poison) is not ‘Damage').",
     "Contest Type": "Tough",
     "Contest Effect": "Double Time"
@@ -546,7 +546,7 @@
     "Damage Base": "6",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Bite Flinches the target on 15+.",
+    "Effect": "Bite [[status:Flinch]](Flinches) the target on 15+.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
@@ -567,7 +567,7 @@
     "AC": "4",
     "Damage Base": "15",
     "Class": "Special",
-    "Range": "Close Blast 3, Smite, Exhaust",
+    "Range": "Close Blast 3, [[keyword:Smite]], [[keyword:Exhaust]]",
     "Effect": "None",
     "Contest Type": "Beauty",
     "Contest Effect": "Seen Nothing Yet"
@@ -579,7 +579,7 @@
     "Damage Base": "9",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Blaze Kick Burns the target on 19+, and is a Critical Hit on 18+.",
+    "Effect": "Blaze Kick [[status:Burned]](Burns) the target on 19+, and is a Critical Hit on 18+.",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
   },
@@ -589,7 +589,7 @@
     "AC": "5",
     "Damage Base": "10",
     "Class": "Special",
-    "Range": "6, Ranged Blast 3, Smite",
+    "Range": "6, Ranged Blast 3, [[keyword:Smite]]",
     "Effect": "The target is [[status:Flinch]](Flinched) on a 15+ and [[status:Frozen]] on a 19+.",
     "Contest Type": "Cool",
     "Contest Effect": "Unsettling"
@@ -600,8 +600,8 @@
     "AC": "7",
     "Damage Base": "11",
     "Class": "Special",
-    "Range": "4, Ranged Blast 2, Smite",
-    "Effect": "Blizzard Freezes all legal target on 15+. If the target is in Hailing Weather, Blizzard cannot miss.",
+    "Range": "4, Ranged Blast 2, [[keyword:Smite]]",
+    "Effect": "Blizzard [[status:Frozen]](Freezes) all legal target on 15+. If the target is in Hailing Weather, Blizzard cannot miss.",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
   },
@@ -621,8 +621,8 @@
     "AC": "5",
     "Damage Base": "13",
     "Class": "Special",
-    "Range": "10, 1 Target, Smite",
-    "Effect": "Blue Flare Burns the target on 17+.",
+    "Range": "10, 1 Target, [[keyword:Smite]]",
+    "Effect": "Blue Flare [[status:Burned]](Burns) the target on 17+.",
     "Contest Type": "Beauty",
     "Contest Effect": "Steady Performance"
   },
@@ -644,7 +644,7 @@
     "Damage Base": "9",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Body Slam Paralyzes the target on 15+.",
+    "Effect": "Body Slam [[status:Paralysis]](Paralyzes) the target on 15+.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
@@ -665,8 +665,8 @@
     "AC": "5",
     "Damage Base": "13",
     "Class": "Physical",
-    "Range": "10, 1 Target, Smite",
-    "Effect": "Bolt Strike Paralyzes the target on 17+.",
+    "Range": "10, 1 Target, [[keyword:Smite]]",
+    "Effect": "Bolt Strike [[status:Paralysis]](Paralyzes) the target on 17+.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
   },
@@ -677,7 +677,7 @@
     "Damage Base": "7",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Bone Club Flinches the target on 18+.",
+    "Effect": "Bone Club [[status:Flinch]](Flinches) the target on 18+.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
@@ -709,7 +709,7 @@
     "AC": "2",
     "Damage Base": "14",
     "Class": "Special",
-    "Range": "Burst 1, Sonic",
+    "Range": "Burst 1, [[keyword:Sonic]]",
     "Effect": "None",
     "Contest Type": "Cool",
     "Contest Effect": "Seen Nothing Yet"
@@ -720,7 +720,7 @@
     "AC": "4",
     "Damage Base": "9",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Full Action",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Full Action]]",
     "Effect": "The user first Shifts, gaining a +1 Bonus to Movement Speed and to their Jump Capabilities. After the user Shifts, they may attack with Bounce. The target becomes [[status:Vulnerable]], and is [[status:Paralysis]](Paralyzed) on 16+.",
     "Contest Type": "Cute",
     "Contest Effect": "Special Attention",
@@ -743,7 +743,7 @@
     "AC": "2",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, Dash, Push, Recoil 1/3",
+    "Range": "Melee, [[keyword:Dash]], [[keyword:Push]], [[keyword:Recoil]] 1/3",
     "Effect": "The target is pushed back 2 meters.",
     "Contest Type": "Cute",
     "Contest Effect": "Desperation"
@@ -831,7 +831,7 @@
     "AC": "2",
     "Damage Base": "9",
     "Class": "Special",
-    "Range": "Cone 2 or Close Blast 2, Sonic, Smite",
+    "Range": "Cone 2 or Close Blast 2, [[keyword:Sonic]], [[keyword:Smite]]",
     "Effect": "Bug Buzz lowers the Special Defense of all targets on 19+.",
     "Contest Type": "Cute",
     "Contest Effect": "Incentives"
@@ -863,7 +863,7 @@
     "AC": "2",
     "Damage Base": "4",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Priority",
+    "Range": "Melee, 1 Target, [[keyword:Priority]]",
     "Effect": "None",
     "Contest Type": "Smart",
     "Contest Effect": "Saving Grace"
@@ -885,7 +885,7 @@
     "AC": "2",
     "Damage Base": "13",
     "Class": "Special",
-    "Range": "Burst 1, Smite",
+    "Range": "Burst 1, [[keyword:Smite]]",
     "Effect": "Until the end of the encounter, the user loses its Fire-Type. Pure Fire-Types instead become Normal-Type.",
     "Contest Type": "Beauty",
     "Contest Effect": "Attention Grabber"
@@ -927,7 +927,7 @@
     "Frequency": "Scene",
     "AC": "2",
     "Class": "Status",
-    "Range": "Cone 2, Friendly, Social",
+    "Range": "Cone 2, [[keyword:Friendly]], [[keyword:Social]]",
     "Effect": "Captivate lowers the target's Special Attack 2 Combat Stages. Captivate may not affect something that is the same gender as the user or something that is genderless.",
     "Contest Type": "Beauty",
     "Contest Effect": "Excitement"
@@ -969,7 +969,7 @@
     "Frequency": "EOT",
     "AC": "2",
     "Class": "Status",
-    "Range": "6, 1 Target, Social",
+    "Range": "6, 1 Target, [[keyword:Social]]",
     "Effect": "Charm lowers the target's Attack 2 Combat Stages.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
@@ -980,7 +980,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Special",
-    "Range": "4, 1 Target, Sonic",
+    "Range": "4, 1 Target, [[keyword:Sonic]]",
     "Effect": "Chatter confuses all targets on 16+.",
     "Contest Type": "Smart",
     "Contest Effect": "Catching Up"
@@ -1002,7 +1002,7 @@
     "AC": "3",
     "Damage Base": "12",
     "Class": "Special",
-    "Range": "Line 8, Smite, [[keyword:Spirit Surge]]",
+    "Range": "Line 8, [[keyword:Smite]], [[keyword:Spirit Surge]]",
     "Effect": "The user's Hit Points are reduced by 50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way.",
     "Contest Type": "Beauty",
     "Contest Effect": "Big Show"
@@ -1013,7 +1013,7 @@
     "AC": "4",
     "Damage Base": "6",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Push",
+    "Range": "Melee, 1 Target, [[keyword:Push]]",
     "Effect": "The target is Pushed 6 meters minus their [[keyword:Weight Class]]. On 15+, the target is also [[status:Tripped]].",
     "Contest Type": "Tough",
     "Contest Effect": "Big Show"
@@ -1064,7 +1064,7 @@
     "AC": "2",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Reckless",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[ability:Reckless]]",
     "Effect": "The user's Defense and Special Defense are each lowered by -1 Combat Stage.",
     "Contest Type": "Smart",
     "Contest Effect": "Seen Nothing Yet"
@@ -1105,7 +1105,7 @@
     "Frequency": "At-Will",
     "AC": "2",
     "Class": "Status",
-    "Range": "4, 1 Target, Social",
+    "Range": "4, 1 Target, [[keyword:Social]]",
     "Effect": "The target's Special Attack is lowered 1 Combat Stage.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
@@ -1127,7 +1127,7 @@
     "Damage Base": "5",
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "Confusion Confuses the target on 19+.",
+    "Effect": "Confusion [[status:Confusion]](Confuses) the target on 19+.",
     "Contest Type": "Smart",
     "Contest Effect": "Steady Performance"
   },
@@ -1228,7 +1228,7 @@
     "Frequency": "Scene x2",
     "AC": "None",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Reaction, Trigger",
+    "Range": "Melee, 1 Target, [[keyword:Reaction]], [[keyword:Trigger]]",
     "Effect": "Counter may be used as a Reaction when the user is hit by a damaging Physical Attack. Resolve the Triggering Attack, with Counter's user resisting the attack one step further. After the attack is resolved, if Counter's user was not [[status:Fainted]], the triggering foe then loses Hit Points equal to twice the amount of Hit Points lost by the user from the triggering attack. Note that Counter is Physical, and while it cannot miss, it cannot hit targets immune to Fighting-Type Moves.",
     "Contest Type": "Tough",
     "Contest Effect": "Double Time"
@@ -1270,7 +1270,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Burst 2, Interrupt, Shield, Trigger",
+    "Range": "Burst 2, [[keyword:Interrupt]], [[keyword:Shield]], [[keyword:Trigger]]",
     "Effect": "If the user or an Ally within 2 meters of Crafty Shield's user is hit by a Status Move, you may use Crafty Shield as an Interrupt. All targets in Crafty Shield's area- of-effect including the user, are instead not hit by the triggering Move and do not suffer any of its effects.",
     "Contest Type": "Smart",
     "Contest Effect": "Inversed Appeal"
@@ -1292,8 +1292,8 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, Pass",
-    "Effect": "Cross Poison is a Critical Hit on 18+, and Poisons the target on 19+.",
+    "Range": "Melee, [[keyword:Pass]]",
+    "Effect": "Cross Poison is a Critical Hit on 18+, and [[status:Poisoned]](Poisons) the target on 19+.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
   },
@@ -1314,7 +1314,7 @@
     "AC": "3",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
     "Effect": "Crush Claw lowers the target's Defense 1 Combat Stage on Even-Numbered Rolls.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -1346,7 +1346,7 @@
     "AC": "3",
     "Damage Base": "5",
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, [[keyword:Pass]]",
     "Effect": "Cut ignores up to 5 Damage Reduction (Defenses are not Damage Reduction).",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -1357,8 +1357,8 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Special",
-    "Range": "8, 1 Target, Aura",
-    "Effect": "Dark Pulse Flinches the target on 17+",
+    "Range": "8, 1 Target, [[keyword:Aura]]",
+    "Effect": "Dark Pulse [[status:Flinch]](Flinches) the target on 17+",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
   },
@@ -1429,7 +1429,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Field, Weather",
+    "Range": "Field, [[keyword:Weather]]",
     "Effect": "The Weather becomes Clear, and all Blessings, Coats, and Hazards are destroyed. Clear Weather is the default weather, conferring no innate bonuses or penalties of any sort.",
     "Contest Type": "Beauty",
     "Contest Effect": "Sabotage"
@@ -1439,7 +1439,7 @@
     "Frequency": "EOT",
     "AC": "None",
     "Class": "Status",
-    "Range": "Burst 10, Friendly",
+    "Range": "Burst 10, [[keyword:Friendly]]",
     "Effect": "All enemy targets in the burst become Bound to the user until the end of the user's next turn. If a Bound target causes the user to Faint through a Damaging Attack, the Bound target immediately faints after their attack is resolved.",
     "Contest Type": "Smart",
     "Contest Effect": "Big Show"
@@ -1449,7 +1449,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Interrupt, Shield, Trigger",
+    "Range": "Self, [[keyword:Interrupt]], [[keyword:Shield]], [[keyword:Trigger]]",
     "Effect": "If the user is hit by a Move, the user may use Detect. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move's effects.",
     "Contest Type": "Cool",
     "Contest Effect": "Inversed Appeal"
@@ -1460,7 +1460,7 @@
     "AC": "3",
     "Damage Base": "10",
     "Class": "Physical",
-    "Range": "Close Blast 3, Friendly, Smite",
+    "Range": "Close Blast 3, [[keyword:Friendly]], [[keyword:Smite]]",
     "Effect": "On Even-Numbered Rolls, Diamond Storm raises the User's Defense by 1 Combat Stage.",
     "Contest Type": "Beauty",
     "Contest Effect": "Seen Nothing Yet"
@@ -1471,7 +1471,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Burst 1, Set-Up, Full Action, Groundsource",
+    "Range": "Burst 1, [[keyword:Set-Up]], [[keyword:Full Action]], [[keyword:Groundsource]]",
     "Set-Up Effect": "The user shifts 25 meters underground and their turn ends.",
     "Resolution Effect": "The user may shift horizontally using their burrow or overland speed, and then shifts 25 meters straight up. Upon reaching the surface, the user attacks with Dig, creating a Burst 1.",
     "Contest Type": "Smart",
@@ -1494,7 +1494,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "1 Target, Trigger",
+    "Range": "1 Target, [[keyword:Trigger]]",
     "Effect": "Disable may be used as a Free Action that does not take up a Command whenever the user is hit by a Move. That Move becomes [[status:Disabled]] for the attacker.",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
@@ -1505,7 +1505,7 @@
     "AC": "None",
     "Damage Base": "4",
     "Class": "Special",
-    "Range": "Burst 1, Sonic",
+    "Range": "Burst 1, [[keyword:Sonic]]",
     "Effect": "Disarming Voice cannot miss.",
     "Contest Type": "Cute",
     "Contest Effect": "Exhausting Act"
@@ -1517,7 +1517,7 @@
     "Damage Base": "8",
     "Class": "Special",
     "Range": "All Cardinally Adjacent Targets",
-    "Effect": "Discharge Paralyzes all legal targets on 15+.",
+    "Effect": "Discharge [[status:Paralysis]](Paralyzes) all legal targets on 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
   },
@@ -1527,7 +1527,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Burst 1, Set-Up, Full Action",
+    "Range": "Burst 1, [[keyword:Set-Up]], [[keyword:Full Action]]",
     "Set-Up Effect": "The user moves underwater and their turn ends. The user must be in water at least 10 meters deep to use Dive. While underwater, the user may not be targeted by Moves.",
     "Resolution Effect": "The user may shift horizontally using their underwater speed, and then may shift straight up until reaching a target. The user then attacks with Dive, creating a Burst 1.",
     "Contest Type": "Beauty",
@@ -1541,7 +1541,7 @@
     "Damage Base": "7",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Dizzy Punch Confuses the target on 17+",
+    "Effect": "Dizzy Punch [[status:Confusion]](Confuses) the target on 17+",
     "Contest Type": "Cool",
     "Contest Effect": "Inversed Appeal"
   },
@@ -1574,7 +1574,7 @@
     "Damage Base": "6",
     "Class": "Physical",
     "Range": "Melee, 1 Target, [[keyword:Double Strike]]",
-    "Effect": "Double Iron Bash Flinches the targets on 15+. This move is affected by [[ability:Iron Fist]].",
+    "Effect": "Double Iron Bash [[status:Flinch]](Flinches) the targets on 15+. This move is affected by [[ability:Iron Fist]].",
     "Contest Type": "Tough",
     "Contest Effect": "Reliable"
   },
@@ -1605,7 +1605,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, [[keyword:Illusion]], Coat",
+    "Range": "Self, [[keyword:Illusion]], [[keyword:Coat]]",
     "Effect": "The user gains 3 activations of Double Team. The user may either activate Double Team when being targeted by an attack to increase their Evasion by +2 against that attack; or when making an attack to increase their Accuracy by +2 for that attack.",
     "Contest Type": "Cool",
     "Contest Effect": "Reliable"
@@ -1616,7 +1616,7 @@
     "AC": "2",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Recoil 1/3",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Recoil]] 1/3",
     "Effect": "None",
     "Contest Type": "Tough",
     "Contest Effect": "Big Show"
@@ -1627,7 +1627,7 @@
     "AC": "4",
     "Damage Base": "13",
     "Class": "Special",
-    "Range": "8, Ranged Blast 3, Smite, Reckless",
+    "Range": "8, Ranged Blast 3, [[keyword:Smite]], [[ability:Reckless]]",
     "Effect": "Lower the user's Special Attack 2 Combat Stages after damage.",
     "Contest Type": "Smart",
     "Contest Effect": "Seen Nothing Yet"
@@ -1638,7 +1638,7 @@
     "AC": "2",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
     "Effect": "The user's Defense and Special Defense are each lowered by -1 Combat Stage.",
     "Contest Type": "Beauty",
     "Contest Effect": "Seen Nothing Yet"
@@ -1650,7 +1650,7 @@
     "Damage Base": "6",
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "Dragon Breath Paralyzes the Target on 15+.",
+    "Effect": "Dragon Breath [[status:Paralysis]](Paralyzes) the Target on 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
   },
@@ -1714,7 +1714,7 @@
     "AC": "2",
     "Damage Base": "9",
     "Class": "Special",
-    "Range": "8, 1 Target, Aura",
+    "Range": "8, 1 Target, [[keyword:Aura]]",
     "Effect": "None",
     "Contest Type": "Smart",
     "Contest Effect": "Incentives"
@@ -1736,8 +1736,8 @@
     "AC": "4",
     "Damage Base": "10",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Push, Smite",
-    "Effect": "The target is Pushed 3 meters. Dragon Rush Flinches the target on 17+.",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Push]], [[keyword:Smite]]",
+    "Effect": "The target is Pushed 3 meters. Dragon Rush [[status:Flinch]](Flinches) the target on 17+.",
     "Contest Type": "Cool",
     "Contest Effect": "Desperation"
   },
@@ -1747,7 +1747,7 @@
     "AC": "3",
     "Damage Base": "6",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Push",
+    "Range": "Melee, 1 Target, [[keyword:Push]]",
     "Effect": "The target is Pushed 6 meters minus their [[keyword:Weight Class]]. On a roll of 15+, the target is also [[status:Tripped]].",
     "Contest Type": "Smart",
     "Contest Effect": "Big Show"
@@ -1758,7 +1758,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Aura",
+    "Range": "Melee, 1 Target, [[keyword:Aura]]",
     "Effect": "After the target takes damage, the user gains HP equal to half of the damage they dealt to the target.",
     "Contest Type": "Beauty",
     "Contest Effect": "Good Show!"
@@ -1791,7 +1791,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
     "Effect": "None",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -1847,7 +1847,7 @@
     "Damage Base": "10",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Dynamic Punch Confuses the target. Dynamic Punch ignores the target's Evasion if they are Flanked.",
+    "Effect": "Dynamic Punch [[status:Confusion]](Confuses) the target. Dynamic Punch ignores the target's Evasion if they are Flanked.",
     "Contest Type": "Cool",
     "Contest Effect": "Desperation"
   },
@@ -1857,7 +1857,7 @@
     "AC": "2",
     "Damage Base": "9",
     "Class": "Special",
-    "Range": "6, 1 Target, Groundsource",
+    "Range": "6, 1 Target, [[keyword:Groundsource]]",
     "Effect": "Earth Power lowers the Special Defense of all Legal Targets 1 Combat Stage on 16+.",
     "Contest Type": "Smart",
     "Contest Effect": "Desperation"
@@ -1868,7 +1868,7 @@
     "AC": "2",
     "Damage Base": "10",
     "Class": "Physical",
-    "Range": "Burst 3, Groundsource",
+    "Range": "Burst 3, [[keyword:Groundsource]]",
     "Effect": "Earthquake can hit targets that are underground, including those using the Move [[move:Dig]].",
     "Contest Type": "Tough",
     "Contest Effect": "Desperation",
@@ -1880,7 +1880,7 @@
     "AC": "2",
     "Damage Base": "4",
     "Class": "Special",
-    "Range": "3, 1 Target, Sonic",
+    "Range": "3, 1 Target, [[keyword:Sonic]]",
     "Effect": "If Echoed Voice was used by any Pokémon or Trainer in the Encounter on the previous round, increase its Damage Base by +4. If Echoed Voice was used by any Pokémon or Trainers during both the previous two rounds, increase its Damage Base by +8.",
     "Contest Type": "Smart",
     "Contest Effect": "Reliable"
@@ -1977,7 +1977,7 @@
     "Damage Base": "4",
     "Class": "Special",
     "Range": "4, 1 Target",
-    "Effect": "Ember Burns the target on 18+.",
+    "Effect": "Ember [[status:Burned]](Burns) the target on 18+.",
     "Contest Type": "Beauty",
     "Contest Effect": "Steady Performance",
     "Special": "Grants [[capability:Firestarter]]"
@@ -1987,7 +1987,7 @@
     "Frequency": "Scene x2",
     "AC": "2",
     "Class": "Status",
-    "Range": "4, 1 Target, Social",
+    "Range": "4, 1 Target, [[keyword:Social]]",
     "Effect": "Roll 1d6. On a result of 1 or 2, the target becomes [[status:Confusion]](Confused); on a result of 3 or 4 the target becomes [[status:Suppressed]]; on a result of 5 or 6 the target becomes [[status:Rage]](Enraged).",
     "Contest Type": "Cute",
     "Contest Effect": "Good Show!"
@@ -1998,7 +1998,7 @@
     "AC": "2",
     "Damage Base": "See Effect",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
     "Effect": "The target loses a Tick of Hit Points for each Injury the user has.",
     "Contest Type": "Tough",
     "Contest Effect": "Double Time"
@@ -2008,7 +2008,7 @@
     "Frequency": "Daily",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Reaction, Trigger",
+    "Range": "Self, [[keyword:Reaction]], [[keyword:Trigger]]",
     "Effect": "If the user is hit by a damaging Move, you may use Endure as a Free Action. If the Move would bring Endure's user down to 0 Hit Points or less, Endure's user instead is set to 1 Hit Point.",
     "Contest Type": "Tough",
     "Contest Effect": "Sabotage"
@@ -2051,7 +2051,7 @@
     "AC": "4",
     "Damage Base": "8",
     "Class": "Special",
-    "Range": "Melee, Pass, Priority",
+    "Range": "Melee, [[keyword:Pass]], [[keyword:Priority]]",
     "Effect": "Esper Wing is a Critical Hit on an 18+.",
     "Contest Type": "Smart",
     "Contest Effect": "Steady Performance"
@@ -2085,7 +2085,7 @@
     "Damage Base": "8",
     "Class": "Special",
     "Range": "5, 1 Target",
-    "Effect": "Extrasensory Flinches the target on 19+.",
+    "Effect": "Extrasensory [[status:Flinch]](Flinches) the target on 19+.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
   },
@@ -2095,7 +2095,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Priority",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Priority]]",
     "Effect": "None",
     "Contest Type": "Cool",
     "Contest Effect": "Saving Grace"
@@ -2105,7 +2105,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Burst 3, Friendly",
+    "Range": "Burst 3, [[keyword:Friendly]]",
     "Effect": "All legal targets become [[status:Trapped]] and [[status:Slowed]] while the user remains in the encounter. This effect ends if the user switches or is [[status:Fainted]].",
     "Contest Type": "Cute",
     "Contest Effect": "Unsettling"
@@ -2127,8 +2127,8 @@
     "AC": "2",
     "Damage Base": "4",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Priority",
-    "Effect": "You may only use Fake Out with Priority upon joining an encounter; if you do, Fake Out Flinches the target. Switching out resets the requirement of joining an encounter.",
+    "Range": "Melee, 1 Target, [[keyword:Priority]]",
+    "Effect": "You may only use Fake Out with Priority upon joining an encounter; if you do, Fake Out [[status:Flinch]](Flinches) the target. Switching out resets the requirement of joining an encounter.",
     "Contest Type": "Cute",
     "Contest Effect": "Exhausting Act"
   },
@@ -2137,7 +2137,7 @@
     "Frequency": "EOT",
     "AC": "2",
     "Class": "Status",
-    "Range": "8, 1 Target, Social",
+    "Range": "8, 1 Target, [[keyword:Social]]",
     "Effect": "Lower the target's Special Defense 2 Combat Stages.",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
@@ -2159,7 +2159,7 @@
     "AC": "2",
     "Damage Base": "4",
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, [[keyword:Pass]]",
     "Effect": "False Swipe's damage cannot bring a target lower than 1 Hit Point.",
     "Contest Type": "Cool",
     "Contest Effect": "Inversed Appeal"
@@ -2180,7 +2180,7 @@
     "Frequency": "EOT",
     "AC": "2",
     "Class": "Status",
-    "Range": "Burst 1, Friendly",
+    "Range": "Burst 1, [[keyword:Friendly]]",
     "Effect": "All legal targets have their Attack lowered 2 Combat Stages.",
     "Contest Type": "Beauty",
     "Contest Effect": "Excitement"
@@ -2189,7 +2189,7 @@
     "Type": "Normal",
     "Frequency": "Scene",
     "Class": "Status",
-    "Range": "Trigger",
+    "Range": "[[keyword:Trigger]]",
     "Effect": "If a foe uses a Move with the [[keyword:Shield]] Keyword in response to one of your actions, you may activate Feint to cause the triggering Move to Fail. Feint is activated as a Free Action.",
     "Contest Type": "Beauty",
     "Contest Effect": "Inversed Appeal"
@@ -2234,7 +2234,7 @@
     "Damage Base": "9",
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "Fiery Wrath Flinches the target on a 17+. Once per Scene, Fiery Wrath may instead be used as a Fire-Type Move.",
+    "Effect": "Fiery Wrath [[status:Flinch]](Flinches) the target on a 17+. Once per Scene, Fiery Wrath may instead be used as a Fire-Type Move.",
     "Contest Type": "Tough",
     "Contest Effect": "Inversed Appeal"
   },
@@ -2254,7 +2254,7 @@
     "AC": "4",
     "Damage Base": "11",
     "Class": "Special",
-    "Range": "6, 1 Target, Smite",
+    "Range": "6, 1 Target, [[keyword:Smite]]",
     "Effect": "Fire Blast burns the target on 19+.",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
@@ -2266,7 +2266,7 @@
     "Damage Base": "7",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Fire Fang Burns or Flinches on 18-19 during Accuracy Check; flip a coin to determine whether the foe gets [[status:Burned]] or Flinches. On 20 during Accuracy Check, the foe is [[status:Burned]] and Flinches.",
+    "Effect": "Fire Fang [[status:Burned]](Burns) or [[status:Flinch]](Flinches) on 18-19 during Accuracy Check; flip a coin to determine whether the foe gets [[status:Burned]] or [[status:Flinch]](Flinches). On 20 during Accuracy Check, the foe is [[status:Burned]] and [[status:Flinch]](Flinches).",
     "Contest Type": "Beauty",
     "Contest Effect": "Steady Performance"
   },
@@ -2287,7 +2287,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Special",
-    "Range": "6, 1 Target, Pledge",
+    "Range": "6, 1 Target, [[keyword:Pledge]]",
     "Effect": "If an ally uses [[move:Grass Pledge]] or [[move:Water Pledge]], you may use Fire Pledge as Priority (Advanced) immediately after their turn to target the same foe. If used in conjunction with [[move:Grass Pledge]], Fire Hazards are created in a Burst 1 around the target. If used in conjunction with [[move:Water Pledge]], a Rainbow is created that lasts for 5 rounds. Consult the [[keyword:Pledge]] keyword for additional details.",
     "Contest Type": "Beauty",
     "Contest Effect": "Safe Option"
@@ -2299,7 +2299,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Fire Punch Burns the target on 19+ during Accuracy Check.",
+    "Effect": "Fire Punch [[status:Burned]](Burns) the target on 19+ during Accuracy Check.",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
   },
@@ -2321,8 +2321,8 @@
     "AC": "2",
     "Damage Base": "9",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Priority",
-    "Effect": "You may only use First Impression with Priority upon joining an encounter; if you do, First Impression Flinches the target. Switching out resets the requirement of joining an encounter.",
+    "Range": "Melee, 1 Target, [[keyword:Priority]]",
+    "Effect": "You may only use First Impression with Priority upon joining an encounter; if you do, First Impression [[status:Flinch]](Flinches) the target. Switching out resets the requirement of joining an encounter.",
     "Contest Type": "Smart",
     "Contest Effect": "Exhausting Act"
   },
@@ -2342,7 +2342,7 @@
     "Frequency": "Daily",
     "AC": "None",
     "Class": "Status",
-    "Range": "5, 1 Target, Execute, Groundsource",
+    "Range": "5, 1 Target, [[keyword:Execute]], [[keyword:Groundsource]]",
     "Effect": "Roll 1d100. This roll may not be modified in any way. If you roll X or lower, the target Faints. X is equal to 30 + The User's Level - The Target's Level.",
     "Contest Type": "Tough",
     "Contest Effect": "Big Show",
@@ -2376,7 +2376,7 @@
     "AC": "2",
     "Damage Base": "5",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
     "Effect": "Raise the user's Speed 1 Combat Stage.",
     "Contest Type": "Tough",
     "Contest Effect": "Excitement"
@@ -2387,8 +2387,8 @@
     "AC": "2",
     "Damage Base": "6",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
-    "Effect": "Flame Wheel Burns the target on 19+.",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
+    "Effect": "Flame Wheel [[status:Burned]](Burns) the target on 19+.",
     "Contest Type": "Beauty",
     "Contest Effect": "Reliable"
   },
@@ -2399,7 +2399,7 @@
     "Damage Base": "9",
     "Class": "Special",
     "Range": "4, 1 Target",
-    "Effect": "Flamethrower Burns the target on 19+.",
+    "Effect": "Flamethrower [[status:Burned]](Burns) the target on 19+.",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
   },
@@ -2409,8 +2409,8 @@
     "AC": "2",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Recoil 1/3",
-    "Effect": "Flare Blitz Burns the target on 19+.",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Recoil]] 1/3",
+    "Effect": "Flare Blitz [[status:Burned]](Burns) the target on 19+.",
     "Contest Type": "Smart",
     "Contest Effect": "Seen Nothing Yet"
   },
@@ -2441,8 +2441,8 @@
     "Frequency": "At-Will",
     "AC": "2",
     "Class": "Status",
-    "Range": "6, 1 Target, Social",
-    "Effect": "The target's Special Attack is raised by +1 Combat Stage. Flatter Confuses the target.",
+    "Range": "6, 1 Target, [[keyword:Social]]",
+    "Effect": "The target's Special Attack is raised by +1 Combat Stage. Flatter [[status:Confusion]](Confuses) the target.",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
   },
@@ -2452,7 +2452,7 @@
     "AC": "4",
     "Damage Base": "13",
     "Class": "Special",
-    "Range": "Line 9, Smite",
+    "Range": "Line 9, [[keyword:Smite]]",
     "Effect": "Lower the user's Special Attack 2 Combat Stages after damage.",
     "Contest Type": "Beauty",
     "Contest Effect": "Seen Nothing Yet"
@@ -2474,7 +2474,7 @@
     "AC": "2",
     "Damage Base": "6",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
     "Effect": "If Flip Turn successfully hits its target, the user deals damage and then immediately is returned to its Poké Ball in the same turn. A New Pokémon may immediately be sent out. Using Flip Turn lets a [[status:Trapped]] user be recalled.",
     "Contest Type": "Cool",
     "Contest Effect": "Inversed Appeal"
@@ -2484,7 +2484,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Melee, 1 Target, Healing",
+    "Range": "Melee, 1 Target, [[keyword:Healing]]",
     "Effect": "The target regains Hit Points equal to half of its full Hit Point value. If the field is [[move:Grassy Terrain]], the target gains 2/3 of its full Hit Point value instead.",
     "Contest Type": "Beauty",
     "Contest Effect": "Reflective Appeal"
@@ -2505,7 +2505,7 @@
     "AC": "3",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, Dash, Set-Up",
+    "Range": "Melee, [[keyword:Dash]], [[keyword:Set-Up]]",
     "Set-Up Effect": "The user is moved up 25 meters into the air.",
     "Resolution Effect": "The user may shift twice while in the air, using their overland or sky speed, and then comes down next to a legal target, and attacks with Fly.",
     "Contest Type": "Smart",
@@ -2518,7 +2518,7 @@
     "AC": "3",
     "Damage Base": "10",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
     "Effect": "Flying Press may deal Flying Type damage if the user wishes.",
     "Contest Type": "Tough",
     "Contest Effect": "Big Show"
@@ -2529,7 +2529,7 @@
     "AC": "7",
     "Damage Base": "12",
     "Class": "Special",
-    "Range": "6, 1 Target, Smite, Aura",
+    "Range": "6, 1 Target, [[keyword:Smite]], [[keyword:Aura]]",
     "Effect": "Focus Blast lowers the target's Special Defense 1 Combat Stage on 18+.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
@@ -2550,7 +2550,7 @@
     "AC": "2",
     "Damage Base": "15",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Priority (Limited), Aura",
+    "Range": "Melee, 1 Target, [[keyword:Priority]] (Limited), [[keyword:Aura]]",
     "Effect": "Use of Focus Punch must be declared as a Priority (Limited) action at the beginning of the round. Nothing happens at this time. At the end of the round, if the target hasn't been hit by an attack dealing damage equal to at least 25% of the user's Maximum Hit Points, the user may Shift and use Focus Punch. Focus Punch's Frequency is not expended if it is negated by an attack.",
     "Contest Type": "Tough",
     "Contest Effect": "Special Attention"
@@ -2560,7 +2560,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Burst 5, Social",
+    "Range": "Burst 5, [[keyword:Social]]",
     "Effect": "Until the end of the user's next turn, all Foes must target the user when using a Move that targets their opponents. This effect ends if the user is [[status:Fainted]] or Switched out.",
     "Contest Type": "Cute",
     "Contest Effect": "Tease"
@@ -2571,8 +2571,8 @@
     "AC": "2",
     "Damage Base": "6",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Aura",
-    "Effect": "Force Palm Paralyzes the target on 18+.",
+    "Range": "Melee, 1 Target, [[keyword:Aura]]",
+    "Effect": "Force Palm [[status:Paralysis]](Paralyzes) the target on 18+.",
     "Contest Type": "Cool",
     "Contest Effect": "Desperation"
   },
@@ -2613,7 +2613,7 @@
     "AC": "4",
     "Damage Base": "14",
     "Class": "Physical",
-    "Range": "10, 1 Target, Set-Up, Full Action",
+    "Range": "10, 1 Target, [[keyword:Set-Up]], [[keyword:Full Action]]",
     "Set-Up Effect": "The user may shift, then ends their turn.",
     "Resolution Effect": "The user uses Freeze Shock. Freeze Shock paralyzes on 15+.",
     "Contest Type": "Beauty",
@@ -2637,7 +2637,7 @@
     "Damage Base": "9",
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "Freezing Glare Freezes the target on a 19+. Once per Scene, Freezing Glare may instead be used as an Ice-Type Move.",
+    "Effect": "Freezing Glare [[status:Frozen]](Freezes) the target on a 19+. Once per Scene, Freezing Glare may instead be used as an Ice-Type Move.",
     "Contest Type": "Beauty",
     "Contest Effect": "Unsettling"
   },
@@ -2647,7 +2647,7 @@
     "AC": "4",
     "Damage Base": "15",
     "Class": "Special",
-    "Range": "3, 5 Targets, Smite, Exhaust",
+    "Range": "3, 5 Targets, [[keyword:Smite]], [[keyword:Exhaust]]",
     "Effect": "None",
     "Contest Type": "Cool",
     "Contest Effect": "Seen Nothing Yet"
@@ -2714,7 +2714,7 @@
     "AC": "2",
     "Damage Base": "10",
     "Class": "Physical",
-    "Range": "8, 1 Target, Smite",
+    "Range": "8, 1 Target, [[keyword:Smite]]",
     "Effect": "If [[move:Fusion Flare]] was used this round or last round by any participant of the encounter, Fusion Bolt has its Damage Base increased by +3.",
     "Contest Type": "Beauty",
     "Contest Effect": "Seen Nothing Yet"
@@ -2725,7 +2725,7 @@
     "AC": "2",
     "Damage Base": "10",
     "Class": "Special",
-    "Range": "8, 1 Target, Smite",
+    "Range": "8, 1 Target, [[keyword:Smite]]",
     "Effect": "If [[move:Fusion Bolt]] was used this round or last round by any participant of the encounter, Fusion Flare has its Damage Base increased by +3.",
     "Contest Type": "Beauty",
     "Contest Effect": "Seen Nothing Yet"
@@ -2776,7 +2776,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Set-Up",
+    "Range": "Self, [[keyword:Set-Up]]",
     "Set-Up Effect": "The user may not shift this round. The user may create as many squares of Rough Terrain as it wants within a Burst 3 as plants burst through the ground, regardless of the surface material.",
     "Resolution Effect": "The user raises its Special Attack, Special Defense, and Speed by 2 Combat Stages each.",
     "Contest Type": "Beauty",
@@ -2799,7 +2799,7 @@
     "AC": "4",
     "Damage Base": "15",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Exhaust, Smite",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Exhaust]], [[keyword:Smite]]",
     "Effect": "None",
     "Contest Type": "Beauty",
     "Contest Effect": "Seen Nothing Yet"
@@ -2810,7 +2810,7 @@
     "AC": "2",
     "Damage Base": "13",
     "Class": "Physical",
-    "Range": "Line 8, Smite",
+    "Range": "Line 8, [[keyword:Smite]]",
     "Effect": "Legal targets hit by Glacial Lance are [[status:Stuck]] and [[status:Trapped]] until the end of their next turn.",
     "Contest Type": "Smart",
     "Contest Effect": "Special Attention"
@@ -2831,8 +2831,8 @@
     "Frequency": "Scene x2",
     "AC": "2",
     "Class": "Status",
-    "Range": "4, 1 Target, Social",
-    "Effect": "Glare Paralyzes the target.",
+    "Range": "4, 1 Target, [[keyword:Social]]",
+    "Effect": "Glare [[status:Paralysis]](Paralyzes) the target.",
     "Contest Type": "Tough",
     "Contest Effect": "Excitement"
   },
@@ -2853,7 +2853,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Special",
-    "Range": "6, 1 Target, Pledge",
+    "Range": "6, 1 Target, [[keyword:Pledge]]",
     "Effect": "If an ally uses [[move:Fire Pledge]] or [[move:Water Pledge]], you may use Grass Pledge as Priority (Advanced) immediately after their turn to target the same foe. If used in conjunction with [[move:Fire Pledge]], Fire Hazards are created in a Burst 1 around the target. If used in conjunction with [[move:Water Pledge]], the target and all foes adjacent to the target are slowed and have their Speed reduced by 2 Combat Stages. Consult the [[keyword:Pledge]] keyword for additional details.",
     "Contest Type": "Beauty",
     "Contest Effect": "Safe Option"
@@ -2863,7 +2863,7 @@
     "Frequency": "Scene x2",
     "AC": "6",
     "Class": "Status",
-    "Range": "6, 1 Target, Sonic",
+    "Range": "6, 1 Target, [[keyword:Sonic]]",
     "Effect": "The target falls [[status:Sleep]](Asleep).",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
@@ -2874,7 +2874,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, Pass, [[keyword:Spirit Surge]]",
+    "Range": "Melee, [[keyword:Pass]], [[keyword:Spirit Surge]]",
     "Effect": "If the user is on [[move:Grassy Terrain]], Grassy Glide may be used with Priority. After Grassy Glide has been resolved, the user may choose to create [[move:Grassy Terrain]] in the spaces Passed over (including those it started and ended in), that lasts for 5 turns. Any creatures in those spaces are affected as if by the Field Move [[move:Grassy Terrain]], rather than any other Field Move.",
     "Contest Type": "Smart",
     "Contest Effect": "Unsettling"
@@ -2915,7 +2915,7 @@
     "Frequency": "At-Will",
     "AC": "2",
     "Class": "Status",
-    "Range": "Burst 1, Friendly, Sonic, Social",
+    "Range": "Burst 1, [[keyword:Friendly]], [[keyword:Sonic]], [[keyword:Social]]",
     "Effect": "Growl lowers all Legal Targets Attack 1 Combat Stage.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
@@ -2936,7 +2936,7 @@
     "Frequency": "Daily",
     "AC": "None",
     "Class": "Status",
-    "Range": "6, 1 Target, Interrupt",
+    "Range": "6, 1 Target, [[keyword:Interrupt]]",
     "Effect": "You may use Grudge as an Interrupt when a Damaging Attack causes the user to faint. Grudge is activated as a Free Action (does not take up a Command). The attack is resolved as usual, and the user Faints. The attacker that caused the user to Faint becomes [[status:Suppressed]] for the remainder of the encounter; switching and Taking a Breather does not end Suppression when used this way.",
     "Contest Type": "Tough",
     "Contest Effect": "Unsettling"
@@ -2966,7 +2966,7 @@
     "Frequency": "Daily",
     "AC": "None",
     "Class": "Status",
-    "Range": "Melee, 1 Target, Execute",
+    "Range": "Melee, 1 Target, [[keyword:Execute]]",
     "Effect": "Roll 1d100. This roll may not be modified in any way. If you roll X or lower, the target Faints. X is equal to 30 + The User's Level - The Target's Level.",
     "Contest Type": "Cool",
     "Contest Effect": "Big Show"
@@ -2977,8 +2977,8 @@
     "AC": "5",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "6, 1 Target, Smite",
-    "Effect": "Gunk Shot Poisons the Target on 15+.",
+    "Range": "6, 1 Target, [[keyword:Smite]]",
+    "Effect": "Gunk Shot [[status:Poisoned]](Poisons) the Target on 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
   },
@@ -3010,7 +3010,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Field, Weather",
+    "Range": "Field, [[keyword:Weather]]",
     "Effect": "The weather changes to Hail for 5 rounds. While it is Hailing, all non-Ice Type Pokémon lose a Tick of Hit Points at the beginning of their turn.",
     "Contest Type": "Beauty",
     "Contest Effect": "Sabotage"
@@ -3021,7 +3021,7 @@
     "AC": "3",
     "Damage Base": "10",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Reckless",
+    "Range": "Melee, 1 Target, [[ability:Reckless]]",
     "Effect": "The user lowers their Speed 1 Combat Stage.",
     "Contest Type": "Cool",
     "Contest Effect": "Desperation"
@@ -3052,7 +3052,7 @@
     "AC": "2",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Push, Recoil 1/3",
+    "Range": "Melee, 1 Target, [[keyword:Push]], [[keyword:Recoil]] 1/3",
     "Effect": "The target is Pushed back 2 meters.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
@@ -3063,7 +3063,7 @@
     "AC": "5",
     "Damage Base": "15",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Push, Recoil 1/3",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Push]], [[keyword:Recoil]] 1/3",
     "Effect": "The target is pushed 2 meters.",
     "Contest Type": "Tough",
     "Contest Effect": "Seen Nothing Yet"
@@ -3075,7 +3075,7 @@
     "Damage Base": "7",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Headbutt Flinches the target on 15+.",
+    "Effect": "Headbutt [[status:Flinch]](Flinches) the target on 15+.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
@@ -3085,8 +3085,8 @@
     "AC": "2",
     "Damage Base": "10",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Smite, Reckless",
-    "Effect": "The user's Defense and Special Defense are each lowered by -1 Combat Stage. Headlong Rush may be used as a Free Action at the end of a Sprint Maneuver taken as a Standard Action, as long as the user Shifted at least 3 meters in a straight line towards the target. When used this way, Headlong Rush Trips the target on a hit.",
+    "Range": "Melee, 1 Target, [[keyword:Smite]], [[ability:Reckless]]",
+    "Effect": "The user's Defense and Special Defense are each lowered by -1 Combat Stage. Headlong Rush may be used as a Free Action at the end of a Sprint Maneuver taken as a Standard Action, as long as the user Shifted at least 3 meters in a straight line towards the target. When used this way, Headlong Rush [[status:Tripped]](Trips) the target on a hit.",
     "Contest Type": "Tough",
     "Contest Effect": "Big Show"
   },
@@ -3095,7 +3095,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Burst 3, Sonic, Healing",
+    "Range": "Burst 3, [[keyword:Sonic]], [[keyword:Healing]]",
     "Effect": "All targets are cured of any Persistent Status ailments.",
     "Contest Type": "Beauty",
     "Contest Effect": "Reflective Appeal"
@@ -3125,7 +3125,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "6, 1 Target, Aura, Healing",
+    "Range": "6, 1 Target, [[keyword:Aura]], [[keyword:Healing]]",
     "Effect": "Restores 50% of the target's max Hit Points. Heal Pulse's user may not target itself with Heal Pulse.",
     "Contest Type": "Beauty",
     "Contest Effect": "Reflective Appeal"
@@ -3135,7 +3135,7 @@
     "Frequency": "Daily",
     "AC": "None",
     "Class": "Status",
-    "Range": "6, 1 Target, Healing",
+    "Range": "6, 1 Target, [[keyword:Healing]]",
     "Effect": "The user immediately Faints, lowering its HP to 0. The user takes no Injuries from HP Markers when using Healing Wish. The target is immediately cured of up to 3 injuries, healed to their Maximum Hit Points, and has the Frequency of all Moves restored. Healing Wish may target a Pokémon in a Poké Ball. Healing Wish does not restore the Frequency of Healing Wish or [[move:Lunar Dance]]. Injuries healed through Healing Wish count toward the total number of Injuries that can be healed each day, and this healing is limited by the same.",
     "Contest Type": "Cute",
     "Contest Effect": "Safe Option"
@@ -3147,7 +3147,7 @@
     "Damage Base": "6",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Heart Stamp Flinches the target on 15+.",
+    "Effect": "Heart Stamp [[status:Flinch]](Flinches) the target on 15+.",
     "Contest Type": "Cute",
     "Contest Effect": "Steady Performance"
   },
@@ -3167,7 +3167,7 @@
     "AC": "2",
     "Damage Base": "4",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
     "Effect": "For each weight class the user is above the target, increase Heat Crash's Damage Base by +2.",
     "Contest Type": "Tough",
     "Contest Effect": "Incentives"
@@ -3178,8 +3178,8 @@
     "AC": "4",
     "Damage Base": "10",
     "Class": "Special",
-    "Range": "Close Blast 3, Smite",
-    "Effect": "Heat Wave Burns all Legal Targets on 18+.",
+    "Range": "Close Blast 3, [[keyword:Smite]]",
+    "Effect": "Heat Wave [[status:Burned]](Burns) all Legal Targets on 18+.",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
   },
@@ -3199,7 +3199,7 @@
     "Frequency": "EOT",
     "AC": "None",
     "Class": "Status",
-    "Range": "4, 1 Target, Priority",
+    "Range": "4, 1 Target, [[keyword:Priority]]",
     "Effect": "Helping Hand grants the target +2 on their next Accuracy Roll this round, and +10 to the next Damage Roll this round.",
     "Contest Type": "Smart",
     "Contest Effect": "Good Show!"
@@ -3243,7 +3243,7 @@
     "AC": "3",
     "Damage Base": "13",
     "Class": "Physical",
-    "Range": "Melee, Dash, 1 Target, Reckless",
+    "Range": "Melee, [[keyword:Dash]], 1 Target, [[ability:Reckless]]",
     "Effect": "If High Jump Kick misses, the user loses Hit Points equal to 1/4th of their Max Hit Points. A failure to hit due to a Move with the [[keyword:Shield]] keyword does not count as a miss. This Move cannot be used if Gravity is in effect.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -3272,7 +3272,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
     "Effect": "None",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -3282,7 +3282,7 @@
     "Frequency": "Daily",
     "AC": "None",
     "Class": "Status",
-    "Range": "Melee, 1 Target, Execute",
+    "Range": "Melee, 1 Target, [[keyword:Execute]]",
     "Effect": "Roll 1d100. This roll may not be modified in any way. If you roll X or lower, the target Faints. X is equal to 30 + The User's Level - The Target's Level.",
     "Contest Type": "Cool",
     "Contest Effect": "Big Show"
@@ -3293,7 +3293,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
     "Effect": "After the target takes damage, the user gains Hit Points equal to half of the damage they dealt to the target.",
     "Contest Type": "Smart",
     "Contest Effect": "Good Show!"
@@ -3314,8 +3314,8 @@
     "AC": "7",
     "Damage Base": "11",
     "Class": "Special",
-    "Range": "Burst 1, Smite",
-    "Effect": "Hurricane Confuses its target on 15+. If the target is in Sunny Weather, Hurricane's Accuracy Check is 11. If the target is in Rainy Weather, Hurricane cannot miss. If the target is airborne as a result of Fly or [[move:Sky Drop]], Hurricane cannot miss.",
+    "Range": "Burst 1, [[keyword:Smite]]",
+    "Effect": "Hurricane [[status:Confusion]](Confuses) its target on 15+. If the target is in Sunny Weather, Hurricane's Accuracy Check is 11. If the target is in Rainy Weather, Hurricane cannot miss. If the target is airborne as a result of Fly or [[move:Sky Drop]], Hurricane cannot miss.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
   },
@@ -3325,7 +3325,7 @@
     "AC": "4",
     "Damage Base": "15",
     "Class": "Special",
-    "Range": "Line 9, Smite, Exhaust",
+    "Range": "Line 9, [[keyword:Smite]], [[keyword:Exhaust]]",
     "Effect": "None",
     "Contest Type": "Beauty",
     "Contest Effect": "Seen Nothing Yet"
@@ -3336,7 +3336,7 @@
     "AC": "4",
     "Damage Base": "11",
     "Class": "Special",
-    "Range": "6, 1 Target, Push",
+    "Range": "6, 1 Target, [[keyword:Push]]",
     "Effect": "The target is pushed away from the user 3 meters.",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
@@ -3347,7 +3347,7 @@
     "AC": "4",
     "Damage Base": "15",
     "Class": "Special",
-    "Range": "10, 1 Target, Exhaust, Smite",
+    "Range": "10, 1 Target, [[keyword:Exhaust]], [[keyword:Smite]]",
     "Effect": "None",
     "Contest Type": "Cool",
     "Contest Effect": "Seen Nothing Yet"
@@ -3359,7 +3359,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Hyper Fang Flinches the target on 19+",
+    "Effect": "Hyper Fang [[status:Flinch]](Flinches) the target on 19+",
     "Contest Type": "Cool",
     "Contest Effect": "Desperation"
   },
@@ -3369,7 +3369,7 @@
     "AC": "2",
     "Damage Base": "9",
     "Class": "Special",
-    "Range": "Close Blast 3, Sonic, Smite",
+    "Range": "Close Blast 3, [[keyword:Sonic]], [[keyword:Smite]]",
     "Effect": "All Legal Targets are pushed back to the squares immediately outside the blast, away from the user.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -3424,7 +3424,7 @@
     "Damage Base": "9",
     "Class": "Special",
     "Range": "4, 1 Target",
-    "Effect": "Ice Beam Freezes on 19+ during Accuracy Check.",
+    "Effect": "Ice Beam [[status:Frozen]](Freezes) on 19+ during Accuracy Check.",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
   },
@@ -3434,7 +3434,7 @@
     "AC": "4",
     "Damage Base": "14",
     "Class": "Special",
-    "Range": "10, 1 Target, Set-Up, Full Action",
+    "Range": "10, 1 Target, [[keyword:Set-Up]], [[keyword:Full Action]]",
     "Set-Up Effect": "The user may shift, then ends their turn.",
     "Resolution Effect": "The user uses Ice Burn. Ice Burn Burns on 15+.",
     "Contest Type": "Beauty",
@@ -3447,7 +3447,7 @@
     "Damage Base": "7",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Ice Fang Freezes or Flinches on 18+ during Accuracy Check; flip a coin to determine whether the foe gets [[status:Frozen]] or Flinches. On 20 during Accuracy Check, the foe is [[status:Frozen]] and Flinches.",
+    "Effect": "Ice Fang [[status:Frozen]](Freezes) or [[status:Flinch]](Flinches) on 18+ during Accuracy Check; flip a coin to determine whether the foe gets [[status:Frozen]] or [[status:Flinch]](Flinches). On 20 during Accuracy Check, the foe is [[status:Frozen]] and [[status:Flinch]](Flinches).",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
   },
@@ -3469,7 +3469,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Ice Punch Freezes the target on 19+ during Accuracy Check.",
+    "Effect": "Ice Punch [[status:Frozen]](Freezes) the target on 19+ during Accuracy Check.",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
   },
@@ -3479,7 +3479,7 @@
     "AC": "2",
     "Damage Base": "4",
     "Class": "Physical",
-    "Range": "4, 1 Target, Priority",
+    "Range": "4, 1 Target, [[keyword:Priority]]",
     "Effect": "None",
     "Contest Type": "Beauty",
     "Contest Effect": "Saving Grace"
@@ -3491,7 +3491,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "6, 1 Target",
-    "Effect": "Icicle Crash Flinches the target on 15+.",
+    "Effect": "Icicle Crash [[status:Flinch]](Flinches) the target on 15+.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
@@ -3556,7 +3556,7 @@
     "Damage Base": "10",
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "Inferno Burns the target. Inferno ignores the target's Evasion if there are no other combatants or Rough or Blocking Terrain within 2 meters of the target.",
+    "Effect": "Inferno [[status:Burned]](Burns) the target. Inferno ignores the target's Evasion if there are no other combatants or Rough or Blocking Terrain within 2 meters of the target.",
     "Contest Type": "Beauty",
     "Contest Effect": "Steady Performance"
   },
@@ -3576,7 +3576,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Coat",
+    "Range": "Self, [[keyword:Coat]]",
     "Effect": "Ingrain applies a Coat to the user, which has the following effect; the user cannot be pushed or pulled, and cannot be switched out. At the beginning of each of the user's turn, the user gains a Tick of Hit Points.",
     "Contest Type": "Smart",
     "Contest Effect": "Safe Option"
@@ -3596,7 +3596,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "5, Ranged Blast 3, Interrupt",
+    "Range": "5, Ranged Blast 3, [[keyword:Interrupt]]",
     "Effect": "An ion cloud is dispersed in the targeted area. All Normal-Type Moves targeting into or originating from the area become Electric-Typed Moves.",
     "Contest Type": "Smart",
     "Contest Effect": "Attention Grabber"
@@ -3617,8 +3617,8 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
-    "Effect": "Iron Head Flinches the target on 15+.",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
+    "Effect": "Iron Head [[status:Flinch]](Flinches) the target on 15+.",
     "Contest Type": "Tough",
     "Contest Effect": "Desperation"
   },
@@ -3628,7 +3628,7 @@
     "AC": "6",
     "Damage Base": "10",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Smite",
+    "Range": "Melee, 1 Target, [[keyword:Smite]]",
     "Effect": "Iron Tail lowers the target's Defense 1 Combat Stage on 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Desperation"
@@ -3650,7 +3650,7 @@
     "AC": "2",
     "Damage Base": "10",
     "Class": "Special",
-    "Range": "6, Ranged Blast 3, Smite",
+    "Range": "6, Ranged Blast 3, [[keyword:Smite]]",
     "Effect": "Judgment's Type can be whatever Elemental Type the user wants it to be.",
     "Contest Type": "Smart",
     "Contest Effect": "Tease"
@@ -3661,7 +3661,7 @@
     "AC": "3",
     "Damage Base": "10",
     "Class": "Physical",
-    "Range": "Melee, Dash, 1 Target, Reckless",
+    "Range": "Melee, [[keyword:Dash]], 1 Target, [[ability:Reckless]]",
     "Effect": "If Jump Kick misses, the user loses Hit Points equal to 1/4th of their Max Hit Points. A failure to hit due to a Move with the [[keyword:Shield]] keyword does not count as a miss. This Move cannot be used if Gravity is in effect.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -3692,7 +3692,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "6, 1 Target, Trigger, Interrupt",
+    "Range": "6, 1 Target, [[keyword:Trigger]], [[keyword:Interrupt]]",
     "Effect": "If the user or an Ally within 6 meters is about to be hit by an attack, the user may use Kinesis as an interrupt. The triggering Accuracy Roll receives a -4 penalty. This may cause Moves to miss.",
     "Contest Type": "Smart",
     "Contest Effect": "Get Ready!"
@@ -3702,7 +3702,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Interrupt, Shield, Trigger",
+    "Range": "Self, [[keyword:Interrupt]], [[keyword:Shield]], [[keyword:Trigger]]",
     "Effect": "If the user is hit by an attack, the user may use King's Shield. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move's effects. In addition, if the triggering attack was Melee ranged, the attacker's Attack is lowered by 2 Combat Stages.",
     "Contest Type": "Cool",
     "Contest Effect": "Inversed Appeal"
@@ -3724,7 +3724,7 @@
     "AC": "2",
     "Damage Base": "9",
     "Class": "Physical",
-    "Range": "Burst 5, Friendly, Groundsource",
+    "Range": "Burst 5, [[keyword:Friendly]], [[keyword:Groundsource]]",
     "Effect": "None",
     "Contest Type": "Tough",
     "Contest Effect": "Big Show",
@@ -3757,7 +3757,7 @@
     "AC": "2",
     "Damage Base": "14",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
     "Effect": "Last Resort can only be used after the user has performed 5 other different Moves in its Move List during a single fight, without being switched out.",
     "Contest Type": "Cute",
     "Contest Effect": "Safe Option"
@@ -3779,7 +3779,7 @@
     "AC": "2",
     "Damage Base": "9",
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, [[keyword:Pass]]",
     "Effect": "Leaf Blade is a Critical Hit on 18+.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
@@ -3790,7 +3790,7 @@
     "AC": "4",
     "Damage Base": "13",
     "Class": "Special",
-    "Range": "8, Ranged Blast 3, Smite, Reckless",
+    "Range": "8, Ranged Blast 3, [[keyword:Smite]], [[ability:Reckless]]",
     "Effect": "Lower the user's Special Attack 2 Combat Stages after damage.",
     "Contest Type": "Cute",
     "Contest Effect": "Seen Nothing Yet"
@@ -3843,7 +3843,7 @@
     "Frequency": "At-Will",
     "AC": "2",
     "Class": "Status",
-    "Range": "Cone 2, Friendly, Social",
+    "Range": "Cone 2, [[keyword:Friendly]], [[keyword:Social]]",
     "Effect": "All legal targets have their Defense lowered by 1 Combat Stage.",
     "Contest Type": "Cool",
     "Contest Effect": "Excitement"
@@ -3855,7 +3855,7 @@
     "Damage Base": "3",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Lick Paralyzes the target on 15+ during Accuracy Check.",
+    "Effect": "Lick [[status:Paralysis]](Paralyzes) the target on 15+ during Accuracy Check.",
     "Contest Type": "Tough",
     "Contest Effect": "Inversed Appeal"
   },
@@ -3864,7 +3864,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Burst 1, Healing",
+    "Range": "Burst 1, [[keyword:Healing]]",
     "Effect": "The user and all allies in the burst regain Hit Points equal to 1/4 of their Maximum Hit Points.",
     "Contest Type": "Beauty",
     "Contest Effect": "Saving Grace"
@@ -3875,7 +3875,7 @@
     "AC": "4",
     "Damage Base": "14",
     "Class": "Special",
-    "Range": "8, Ranged Blast 3, Smite, Recoil 1/2",
+    "Range": "8, Ranged Blast 3, [[keyword:Smite]], [[keyword:Recoil]] 1/2",
     "Effect": "None",
     "Contest Type": "Beauty",
     "Contest Effect": "Seen Nothing Yet"
@@ -3885,7 +3885,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Blessing",
+    "Range": "[[keyword:Blessing]]",
     "Effect": "Blessing – Any user affected by Light Screen may activate it when receiving Special Damage to resist the Damage one step. Light Screen may be activated 2 times, and then disappears.",
     "Contest Type": "Beauty",
     "Contest Effect": "Sabotage"
@@ -3916,7 +3916,7 @@
     "Frequency": "Scene x2",
     "AC": "6",
     "Class": "Status",
-    "Range": "6, 1 Target, Social",
+    "Range": "6, 1 Target, [[keyword:Social]]",
     "Effect": "The target falls [[status:Sleep]](Asleep).",
     "Contest Type": "Beauty",
     "Contest Effect": "Excitement"
@@ -3948,7 +3948,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Blessing",
+    "Range": "[[keyword:Blessing]]",
     "Effect": "Blessing – Any user affected by Lucky Chant may activate it when receiving a Critical Hit to cause the attack to instead deal damage as if it was not a Critical Hit. Lucky Chant may be activated 3 times, and then disappears.",
     "Contest Type": "Cute",
     "Contest Effect": "Sabotage"
@@ -4001,7 +4001,7 @@
     "AC": "2",
     "Damage Base": "4",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Priority",
+    "Range": "Melee, 1 Target, [[keyword:Priority]]",
     "Effect": "None",
     "Contest Type": "Cool",
     "Contest Effect": "Saving Grace"
@@ -4011,7 +4011,7 @@
     "Frequency": "Daily",
     "AC": "None",
     "Class": "Status",
-    "Range": "4, Interrupt, Trigger",
+    "Range": "4, [[keyword:Interrupt]], [[keyword:Trigger]]",
     "Effect": "If the user is about to get a hit by a Move that does not have a Damage Dice Roll, they may use Magic Coat as an Interrupt. The Interrupted Move's user is treated as if they were the target of their own Move, with the user of Magic Coat as the user.",
     "Contest Type": "Beauty",
     "Contest Effect": "Double Time"
@@ -4098,7 +4098,7 @@
     "AC": "2",
     "Damage Base": "See Effect",
     "Class": "Physical",
-    "Range": "Burst 2, Groundsource",
+    "Range": "Burst 2, [[keyword:Groundsource]]",
     "Effect": "When you use Magnitude, roll 1d6. Magnitude's Damage Base is equal to 5+X, where X is the value of the d6. Magnitude can hit targets that are underground, including those using the Move [[move:Dig]].",
     "Contest Type": "Tough",
     "Contest Effect": "Desperation",
@@ -4109,7 +4109,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Interrupt, Shield, Trigger",
+    "Range": "Self, [[keyword:Interrupt]], [[keyword:Shield]], [[keyword:Trigger]]",
     "Effect": "If the user or an adjacent ally is hit by a damaging attack, the user may use Mat Block. The attack instead does not hit any targets, and it deals no damage and no has effects. You may only use Mat Block during the first round of an encounter.",
     "Contest Type": "Tough",
     "Contest Effect": "Reflective Appeal"
@@ -4119,7 +4119,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Trigger, Interrupt",
+    "Range": "Self, [[keyword:Trigger]], [[keyword:Interrupt]]",
     "Effect": "If an opponent declares a Damaging Attack against the user, and Me First's user has a higher Speed stat then the target, the user may use Me First as an Interrupt. The User will then use the same Move the triggering foe was about to use on that foe.",
     "Contest Type": "Cute",
     "Contest Effect": "Saving Grace"
@@ -4129,7 +4129,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "6, 1 Target, Social",
+    "Range": "6, 1 Target, [[keyword:Social]]",
     "Effect": "The user casts a foul spell on the target, causing it to become [[status:Trapped]] and [[status:Slowed]] for the remainder of the encounter.",
     "Contest Type": "Beauty",
     "Contest Effect": "Unsettling"
@@ -4161,7 +4161,7 @@
     "AC": "6",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Push, Smite",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Push]], [[keyword:Smite]]",
     "Effect": "The target is Pushed 2 meters.",
     "Contest Type": "Cool",
     "Contest Effect": "Desperation"
@@ -4183,7 +4183,7 @@
     "AC": "5",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Push",
+    "Range": "Melee, 1 Target, [[keyword:Push]]",
     "Effect": "The target is pushed 1 Meter.",
     "Contest Type": "Cool",
     "Contest Effect": "Desperation"
@@ -4193,7 +4193,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "8, 1 Target, Trigger, Free Action",
+    "Range": "8, 1 Target, [[keyword:Trigger]], Free Action",
     "Effect": "Memento may be used as a Free Action when the user becomes [[status:Fainted]]. Memento's target has each of their stats lowered by -2 CS.",
     "Contest Type": "Tough",
     "Contest Effect": "Big Show"
@@ -4225,7 +4225,7 @@
     "Frequency": "EOT",
     "AC": "4",
     "Class": "Status",
-    "Range": "Burst 2, Friendly, Sonic",
+    "Range": "Burst 2, [[keyword:Friendly]], [[keyword:Sonic]]",
     "Effect": "All Legal Targets have their Special Defense lowered 2 Combat Stages.",
     "Contest Type": "Smart",
     "Contest Effect": "Unsettling"
@@ -4236,7 +4236,7 @@
     "AC": "2",
     "Damage Base": "15",
     "Class": "Physical",
-    "Range": "Burst 1, Smite, Exhaust",
+    "Range": "Burst 1, [[keyword:Smite]], [[keyword:Exhaust]]",
     "Effect": "None",
     "Contest Type": "Tough",
     "Contest Effect": "Exhausting Act"
@@ -4247,7 +4247,7 @@
     "AC": "4",
     "Damage Base": "12",
     "Class": "Special",
-    "Range": "Cone 3, Set-Up",
+    "Range": "Cone 3, [[keyword:Set-Up]]",
     "Set-Up Effect": "The user's Special Attack is raised by +1 Combat Stage.",
     "Resolution Effect": "The user attacks with Meteor Beam.",
     "Contest Type": "Tough",
@@ -4259,7 +4259,7 @@
     "AC": "4",
     "Damage Base": "9",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, [[keyword:Spirit Surge]]",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Spirit Surge]]",
     "Effect": "Raise the user's Attack 1 Combat Stage on 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Desperation"
@@ -4300,7 +4300,7 @@
     "AC": "2",
     "Damage Base": "15",
     "Class": "Special",
-    "Range": "6, Ranged Blast 3, Smite",
+    "Range": "6, Ranged Blast 3, [[keyword:Smite]]",
     "Effect": "The user's Hit Points are reduced by 50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way.",
     "Contest Type": "Beauty",
     "Contest Effect": "Big Show"
@@ -4341,7 +4341,7 @@
     "Frequency": "Scene x2",
     "AC": "None",
     "Class": "Special",
-    "Range": "Any, 1 Target, Reaction",
+    "Range": "Any, 1 Target, [[keyword:Reaction]]",
     "Effect": "Mirror Coat may be used as a Reaction when the user is hit by a damaging Special Attack. Resolve the Triggering Attack, with Mirror Coat's user resisting the attack one step further. After the attack is resolved, if Mirror Coat's user was not [[status:Fainted]], the triggering foe then loses Hit Points equal to twice the amount of Hit Points lost by the user from the triggering attack. Note that Mirror Coat is Special, and while it cannot miss, it cannot hit targets immune to Psychic-Type Moves.",
     "Contest Type": "Beauty",
     "Contest Effect": "Double Time"
@@ -4372,7 +4372,7 @@
     "Frequency": "Scene x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Blessing",
+    "Range": "[[keyword:Blessing]]",
     "Effect": "Blessing – Any user affected by Mist may activate it when having Combat Stages lowered by any effect; if they do, those Combat Stages are instead not lowered. Mist may be activated 3 times, and then disappears.",
     "Contest Type": "Beauty",
     "Contest Effect": "Sabotage"
@@ -4394,7 +4394,7 @@
     "AC": "2",
     "Damage Base": "10",
     "Class": "Special",
-    "Range": "Burst 3, Friendly, Smite",
+    "Range": "Burst 3, [[keyword:Friendly]], [[keyword:Smite]]",
     "Effect": "The user's Hit Points are set to -50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way. After Misty Explosion is resolved, create [[move:Misty Terrain]] in a Blast 7, centered on the user, that lasts for 5 turns. Any creatures in those spaces are affected as if by the Field Move [[move:Misty Terrain]], rather than any other Field Move.",
     "Contest Type": "Cute",
     "Contest Effect": "Sabotage"
@@ -4436,7 +4436,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Healing",
+    "Range": "Self, [[keyword:Healing]]",
     "Effect": "The user regains Hit Points equal to half of its full Hit Point value. If it is Sunny, the user gains 2/3 of its full Hit Point value. If it is Rainy, Sand Storming or Hailing the user gains 1/4 of their full Hit Point value.",
     "Contest Type": "Beauty",
     "Contest Effect": "Reflective Appeal"
@@ -4565,7 +4565,7 @@
     "AC": "2",
     "Damage Base": "See Effect",
     "Class": "Physical",
-    "Range": "6, 1 Target, Berry",
+    "Range": "6, 1 Target, [[keyword:Berry]]",
     "Effect": "Refer to the Move Keywords [[keyword:Berry]] list. Natural Gift deals damage according to the Berry list and Natural Gift's Type is also defined there. The Berry's Digestion Buff is nullified and is not used.",
     "Contest Type": "Cool",
     "Contest Effect": "Desperation"
@@ -4598,7 +4598,7 @@
     "Damage Base": "6",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Needle Arm Flinches the target on 15+.",
+    "Effect": "Needle Arm [[status:Flinch]](Flinches) the target on 15+.",
     "Contest Type": "Smart",
     "Contest Effect": "Steady Performance"
   },
@@ -4629,7 +4629,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, [[keyword:Pass]]",
     "Effect": "Night Slash is a Critical Hit on 18+",
     "Contest Type": "Beauty",
     "Contest Effect": "Steady Performance"
@@ -4659,7 +4659,7 @@
     "Frequency": "EOT",
     "AC": "2",
     "Class": "Status",
-    "Range": "Burst 1, Sonic, Friendly, Social",
+    "Range": "Burst 1, [[keyword:Sonic]], [[keyword:Friendly]], [[keyword:Social]]",
     "Effect": "Noble Roar lowers all targets' Attack and Special Attack by 1 Combat Stage.",
     "Contest Type": "Cool",
     "Contest Effect": "Excitement"
@@ -4671,7 +4671,7 @@
     "Damage Base": "2",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Nuzzle Paralyzes the target.",
+    "Effect": "Nuzzle [[status:Paralysis]](Paralyzes) the target.",
     "Contest Type": "Cute",
     "Contest Effect": "Double Time"
   },
@@ -4691,7 +4691,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Interrupt, Shield, Trigger",
+    "Range": "Self, [[keyword:Interrupt]], [[keyword:Shield]], [[keyword:Trigger]]",
     "Effect": "If the user is hit by a Move, the user may use Obstruct. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move's effects. In addition, if the triggering attack was Melee ranged, the attacker's Defense is lowered by 2 Combat Stages.",
     "Contest Type": "Smart",
     "Contest Effect": "Inversed Appeal"
@@ -4745,7 +4745,7 @@
     "AC": "5",
     "Damage Base": "12",
     "Class": "Special",
-    "Range": "Close Blast 3, Smite",
+    "Range": "Close Blast 3, [[keyword:Smite]]",
     "Effect": "None",
     "Contest Type": "Beauty",
     "Contest Effect": "Desperation"
@@ -4756,7 +4756,7 @@
     "AC": "3",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, All Adjacent Foes, Smite, Reckless",
+    "Range": "Melee, All Adjacent Foes, [[keyword:Smite]], [[ability:Reckless]]",
     "Effect": "After damage is dealt, the user becomes [[status:Rage]](Enraged) and [[status:Confusion]](Confused).",
     "Contest Type": "Cool",
     "Contest Effect": "Reliable"
@@ -4767,7 +4767,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Special",
-    "Range": "Cone 2, Sonic",
+    "Range": "Cone 2, [[keyword:Sonic]]",
     "Effect": "None",
     "Contest Type": "Cool",
     "Contest Effect": "Attention Grabber"
@@ -4778,7 +4778,7 @@
     "AC": "4",
     "Damage Base": "13",
     "Class": "Special",
-    "Range": "8, Ranged Blast 3, Smite, Reckless",
+    "Range": "8, Ranged Blast 3, [[keyword:Smite]], [[ability:Reckless]]",
     "Effect": "Lower the user's Special Attack 2 Combat Stages after damage.",
     "Contest Type": "Beauty",
     "Contest Effect": "Seen Nothing Yet"
@@ -4809,7 +4809,7 @@
     "Frequency": "At-Will",
     "AC": "2",
     "Class": "Status",
-    "Range": "6, 1 Target, Social",
+    "Range": "6, 1 Target, [[keyword:Social]]",
     "Effect": "If Parting Shot successfully hits, the target's Attack and Special Attack stats are lowered by one Combat Stage and the user is immediately recalled in the same turn. A new Pokémon may immediately be sent out. Using Parting Shot lets a [[status:Trapped]] user be recalled.",
     "Contest Type": "Smart",
     "Contest Effect": "Catching Up"
@@ -4852,7 +4852,7 @@
     "Frequency": "Daily",
     "AC": "None",
     "Class": "Status",
-    "Range": "Burst 15, Sonic",
+    "Range": "Burst 15, [[keyword:Sonic]]",
     "Effect": "Perish Song cannot miss. All targets, including the user, receive a Perish Count of 3. At the beginning of each of the target's turns, their Perish count is lowered by 1. Once a Perish Count reaches 0, set the Pokémon's Hit Points to 0. A Perish Count disappears if a target returns to their Poké Ball, Takes a Breather, or is knocked out. Perish Song never causes Massive Damage.",
     "Contest Type": "Beauty",
     "Contest Effect": "Unsettling"
@@ -4874,7 +4874,7 @@
     "AC": "3",
     "Damage Base": "12",
     "Class": "Special",
-    "Range": "Melee, All Adjacent Foes, Smite, Reckless",
+    "Range": "Melee, All Adjacent Foes, [[keyword:Smite]], [[ability:Reckless]]",
     "Effect": "After damage is dealt, the user becomes [[status:Rage]](Enraged) and [[status:Confusion]](Confused).",
     "Contest Type": "Beauty",
     "Contest Effect": "Safe Option"
@@ -4885,7 +4885,7 @@
     "AC": "2",
     "Damage Base": "9",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Set-Up",
+    "Range": "Melee, 1 Target, [[keyword:Set-Up]]",
     "Set-Up Effect": "The user is removed from the field, and their turn ends.",
     "Resolution Effect": "Phantom Force's user appears adjacent to any legal target on the field, ignoring Movement Capabilities, and then uses Phantom Force's attack. Phantom Force cannot be avoided by Moves with the Shield Keyword, the Dodge Ability, or similar effects, and Intercepts may not be attempted in response.",
     "Contest Type": "Smart",
@@ -4919,7 +4919,7 @@
     "AC": "2",
     "Damage Base": "10",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Smite",
+    "Range": "Melee, 1 Target, [[keyword:Smite]]",
     "Effect": "The target's next damaging Normal Type Move instead becomes Electric Type.",
     "Contest Type": "Cool",
     "Contest Effect": "Special Attention"
@@ -4929,7 +4929,7 @@
     "Frequency": "At-Will",
     "AC": "2",
     "Class": "Status",
-    "Range": "6, 1 Target, Social",
+    "Range": "6, 1 Target, [[keyword:Social]]",
     "Effect": "Play Nice lowers the target's Attack by 1 Combat Stage.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
@@ -4963,7 +4963,7 @@
     "Damage Base": "5",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Poison Fang Badly Poisons the target on 17+.",
+    "Effect": "Poison Fang [[status:Badly Poisoned]](Badly Poisons) the target on 17+.",
     "Contest Type": "Smart",
     "Contest Effect": "Incentives"
   },
@@ -4973,7 +4973,7 @@
     "AC": "6",
     "Class": "Status",
     "Range": "Burst 1 or Cone 2",
-    "Effect": "Poison Gas Poisons all Legal Targets.",
+    "Effect": "Poison Gas [[status:Poisoned]](Poisons) all Legal Targets.",
     "Contest Type": "Smart",
     "Contest Effect": "Steady Performance"
   },
@@ -4984,7 +4984,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Poison Jab Poisons the target on 15+.",
+    "Effect": "Poison Jab [[status:Poisoned]](Poisons) the target on 15+.",
     "Contest Type": "Smart",
     "Contest Effect": "Incentives"
   },
@@ -5005,7 +5005,7 @@
     "Damage Base": "2",
     "Class": "Physical",
     "Range": "6, 1 Target",
-    "Effect": "Poison Sting Poisons the target on 17+.",
+    "Effect": "Poison Sting [[status:Poisoned]](Poisons) the target on 17+.",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
   },
@@ -5016,7 +5016,7 @@
     "Damage Base": "5",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Poison Tail is a Critical Hit on 18+, and Poisons the target on 19+.",
+    "Effect": "Poison Tail is a Critical Hit on 18+, and [[status:Poisoned]](Poisons) the target on 19+.",
     "Contest Type": "Smart",
     "Contest Effect": "Incentives"
   },
@@ -5027,7 +5027,7 @@
     "Damage Base": "9",
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "Once per Scene, Pollen Puff may instead be used on an ally; when used this way, the target recovers 50% of their maximum Hit Points and the Move has the Healing keyword.",
+    "Effect": "Once per Scene, Pollen Puff may instead be used on an ally; when used this way, the target recovers 50% of their maximum Hit Points and the Move has the [[keyword:Healing]] keyword.",
     "Contest Type": "Beauty",
     "Contest Effect": "Reflective Appeal"
   },
@@ -5037,7 +5037,7 @@
     "AC": "4",
     "Damage Base": "11",
     "Class": "Physical",
-    "Range": "8, Ranged Blast 3, Smite",
+    "Range": "8, Ranged Blast 3, [[keyword:Smite]]",
     "Effect": "If a target is holding a Held Item or Main or Off-Hand item, they must either drop it immediately or lose a Tick of Hit Points. This may only cause a target to lose at most one Tick of Hit Points, no matter how many items they were holding. On each of the target's subsequent turns, if it is still holding the item(s) in question it loses a Tick of Hit Points.",
     "Contest Type": "Smart",
     "Contest Effect": "Unsettling"
@@ -5058,7 +5058,7 @@
     "Frequency": "Scene x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "6, 1 Target, Interrupt, [[keyword:Powder]]",
+    "Range": "6, 1 Target, [[keyword:Interrupt]], [[keyword:Powder]]",
     "Effect": "The target is dusted with a Coat of flammable powder. If it uses a damaging Fire-Type attack, the attack is negated and instad creates a Blast 3 centered on itself as the powder explodes, and the Coat is removed. All targets within the Blast take damage equal to what the user of the Fire-Type attack would roll for the damage of their attack. This damage is Typeless or Fire-Type, whichever would be more effective.",
     "Contest Type": "Beauty",
     "Contest Effect": "Sabotage"
@@ -5070,7 +5070,7 @@
     "Damage Base": "4",
     "Class": "Special",
     "Range": "Line 4",
-    "Effect": "Powder Snow Freezes all Legal Targets on 19+.",
+    "Effect": "Powder Snow [[status:Frozen]](Freezes) all Legal Targets on 19+.",
     "Contest Type": "Beauty",
     "Contest Effect": "Steady Performance",
     "Special": "Grants [[capability:Freezer]]"
@@ -5143,7 +5143,7 @@
     "AC": "5",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "8, 1 Target, Smite",
+    "Range": "8, 1 Target, [[keyword:Smite]]",
     "Effect": "None",
     "Contest Type": "Beauty",
     "Contest Effect": "Steady Performance",
@@ -5166,7 +5166,7 @@
     "AC": "5",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Burst 1, Smite",
+    "Range": "Burst 1, [[keyword:Smite]]",
     "Effect": "None",
     "Contest Type": "Cool",
     "Contest Effect": "Desperation"
@@ -5188,7 +5188,7 @@
     "AC": "4",
     "Damage Base": "16",
     "Class": "Special",
-    "Range": "Line 8, Smite, Exhaust",
+    "Range": "Line 8, [[keyword:Smite]], [[keyword:Exhaust]]",
     "Effect": "None",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
@@ -5198,7 +5198,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Interrupt, Shield, Trigger",
+    "Range": "Self, [[keyword:Interrupt]], [[keyword:Shield]], [[keyword:Trigger]]",
     "Effect": "If the user is hit by a Move, the user may use Protect. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move's effects.",
     "Contest Type": "Cute",
     "Contest Effect": "Inversed Appeal"
@@ -5210,7 +5210,7 @@
     "Damage Base": "7",
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "Psybeam Confuses the target on 19+.",
+    "Effect": "Psybeam [[status:Confusion]](Confuses) the target on 19+.",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
   },
@@ -5230,7 +5230,7 @@
     "AC": "2",
     "Damage Base": "9",
     "Class": "Special",
-    "Range": "5, 1 Target, Push",
+    "Range": "5, 1 Target, [[keyword:Push]]",
     "Effect": "The target is Pushed 1 meter in any direction. Psychic lowers the target's Special Defense 1 Combat Stage on 17+.",
     "Contest Type": "Smart",
     "Contest Effect": "Exhausting Act",
@@ -5263,7 +5263,7 @@
     "AC": "4",
     "Damage Base": "14",
     "Class": "Special",
-    "Range": "8, Ranged Blast 3, Smite, Reckless",
+    "Range": "8, Ranged Blast 3, [[keyword:Smite]], [[ability:Reckless]]",
     "Effect": "Lower the user's Special Attack 2 Combat Stages after damage is resolved.",
     "Contest Type": "Smart",
     "Contest Effect": "Seen Nothing Yet"
@@ -5370,7 +5370,7 @@
     "AC": "4",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "6, 1 Target, Smite",
+    "Range": "6, 1 Target, [[keyword:Smite]]",
     "Effect": "The target is [[status:Burned]] on 19+.",
     "Contest Type": "Cool",
     "Contest Effect": "Attention Grabber"
@@ -5380,7 +5380,7 @@
     "Frequency": "At-Will",
     "AC": "2",
     "Class": "Status",
-    "Range": "10, 1 Target, Social",
+    "Range": "10, 1 Target, [[keyword:Social]]",
     "Effect": "Quash changes the target's Initiative to 0 for the remainder of the round.",
     "Contest Type": "Smart",
     "Contest Effect": "Saving Grace"
@@ -5391,7 +5391,7 @@
     "AC": "2",
     "Damage Base": "4",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Priority",
+    "Range": "Melee, 1 Target, [[keyword:Priority]]",
     "Effect": "None",
     "Contest Type": "Cool",
     "Contest Effect": "Saving Grace"
@@ -5401,7 +5401,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Melee, Interrupt, Shield, Trigger",
+    "Range": "Melee, [[keyword:Interrupt]], [[keyword:Shield]], [[keyword:Trigger]]",
     "Effect": "If the user or an adjacent ally is targeted by a Priority or Interrupt Attack, Quick Guard may be declared as an Interrupt, causing the triggering attack to have no effect.",
     "Contest Type": "Cool",
     "Contest Effect": "Inversed Appeal"
@@ -5453,7 +5453,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Field, Weather",
+    "Range": "Field, [[keyword:Weather]]",
     "Effect": "The weather becomes Rainy for 5 rounds. While Rainy, Water-Type Attacks gain a +5 bonus to Damage Rolls, and Fire-Type Attacks suffer a -5 Damage penalty.",
     "Contest Type": "Tough",
     "Contest Effect": "Sabotage"
@@ -5486,7 +5486,7 @@
     "AC": "3",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
     "Effect": "Razor Shell lowers the Target's Defense 1 Combat Stage on an Even-Numbered Roll.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -5497,7 +5497,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Special",
-    "Range": "10, 3 Targets, Set-Up",
+    "Range": "10, 3 Targets, [[keyword:Set-Up]]",
     "Set-Up Effect": "The user may not shift this round. The user whips up a whirlwind around themselves, granting +2 Evasion until the end of their next turn, and destroying any Smokescreen or Hazards on any squares they are standing on and in all squares adjacent to them.",
     "Resolution Effect": "The user attacks with Razor Wind. Razor Wind is a Critical Hit on 18+.",
     "Contest Type": "Cool",
@@ -5508,7 +5508,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Healing",
+    "Range": "Self, [[keyword:Healing]]",
     "Effect": "The user regains Hit Points equal to half of its full Hit Point value.",
     "Contest Type": "Smart",
     "Contest Effect": "Reflective Appeal"
@@ -5528,7 +5528,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Blessing",
+    "Range": "[[keyword:Blessing]]",
     "Effect": "Blessing – Any user affected by Reflect may activate it when receiving Physical Damage to resist the Damage one step. Reflect may be activated 2 times, and then disappears.",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
@@ -5549,7 +5549,7 @@
     "AC": "None",
     "Class": "Status",
     "Range": "Self",
-    "Effect": "The user is cured of all Poison, Burns, and [[status:Paralysis]].",
+    "Effect": "The user is cured of all Poison, [[status:Burned]](Burns), and [[status:Paralysis]].",
     "Contest Type": "Cute",
     "Contest Effect": "Reflective Appeal"
   },
@@ -5559,7 +5559,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Special",
-    "Range": "Burst 3, Friendly, Sonic",
+    "Range": "Burst 3, [[keyword:Friendly]], [[keyword:Sonic]]",
     "Effect": "All Legal Targets fall [[status:Sleep]](Asleep) on 16+. As long as Meloetta knows Relic Song, it may change between Aria Form and Step Form as a Swift Action when using Relic Song, or as a Standard Action otherwise. Both Aria and Step Form must be statted with the same HP Stat.",
     "Contest Type": "Beauty",
     "Contest Effect": "Excitement"
@@ -5569,7 +5569,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Healing",
+    "Range": "Self, [[keyword:Healing]]",
     "Effect": "The user is set to their full Hit Point value. The user is cured of any Status ailments. Then, the user falls [[status:Sleep]](Asleep). The user cannot make [[status:Sleep]] Checks at the beginning of their turn. They are cured of the [[status:Sleep]] at the end of their turn in 2 rounds.",
     "Contest Type": "Cute",
     "Contest Effect": "Reflective Appeal"
@@ -5613,7 +5613,7 @@
     "AC": "2",
     "Damage Base": "6",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Priority (Limited)",
+    "Range": "Melee, 1 Target, [[keyword:Priority]] (Limited)",
     "Effect": "When declaring Revenge, the user does nothing and may not Shift. At the end of the round, the user may shift and use Revenge. If the target has damaged the user this round, Revenge has a Damage Base of 12 (3d12+10 / 30).",
     "Contest Type": "Tough",
     "Contest Effect": "Double Time"
@@ -5635,7 +5635,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Special",
-    "Range": "Burst 2, Groundsource, [[keyword:Spirit Surge]]",
+    "Range": "Burst 2, [[keyword:Groundsource]], [[keyword:Spirit Surge]]",
     "Effect": "After Rising Voltage is resolved, you may create [[move:Electric Terrain]] in a Blast 7, centered on the user, that lasts for 5 turns. Any creatures in those spaces are affected as if by the Field Move [[move:Electric Terrain]], rather than any other Field Move. This Effect may trigger only once per Scene.",
     "Contest Type": "Cool",
     "Contest Effect": "Attention Grabber"
@@ -5645,7 +5645,7 @@
     "Frequency": "Scene",
     "AC": "2",
     "Class": "Status",
-    "Range": "Burst 1, Sonic, Social",
+    "Range": "Burst 1, [[keyword:Sonic]], [[keyword:Social]]",
     "Effect": "When declaring Roar, the user does nothing and may not Shift. At the end of the round, the user Shifts and uses Roar. Targets hit by Roar immediately Shift away from the target using their highest usable movement capability, and towards their Trainer if possible. If the target is an owned Pokémon and ends this shift within 6 meters of their Poké Ball, they are immediately recalled to their Poké Ball. If that Trainer sends out a replacement, they do not lose their Pokémon turn.",
     "Contest Type": "Cool",
     "Contest Effect": "Excitement"
@@ -5656,7 +5656,7 @@
     "AC": "4",
     "Damage Base": "15",
     "Class": "Special",
-    "Range": "Burst 8, Smite, Exhaust",
+    "Range": "Burst 8, [[keyword:Smite]], [[keyword:Exhaust]]",
     "Effect": "All legal targets are [[status:Slowed]], even if the attack misses.",
     "Contest Type": "Cool",
     "Contest Effect": "Seen Nothing Yet"
@@ -5679,8 +5679,8 @@
     "AC": "5",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
-    "Effect": "Rock Climb Confuses the target on 17+.",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
+    "Effect": "Rock Climb [[status:Confusion]](Confuses) the target on 17+.",
     "Contest Type": "Cool",
     "Contest Effect": "Desperation"
   },
@@ -5701,7 +5701,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "6, Ranged Blast 3",
-    "Effect": "Rock Slide Flinches all Legal Targets on 17+.",
+    "Effect": "Rock Slide [[status:Flinch]](Flinches) all Legal Targets on 17+.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
@@ -5745,7 +5745,7 @@
     "AC": "4",
     "Damage Base": "15",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Exhaust, Smite",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Exhaust]], [[keyword:Smite]]",
     "Effect": "None",
     "Contest Type": "Tough",
     "Contest Effect": "Seen Nothing Yet",
@@ -5768,7 +5768,7 @@
     "Damage Base": "6",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Rolling Kick Flinches the target on 15+.",
+    "Effect": "Rolling Kick [[status:Flinch]](Flinches) the target on 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
   },
@@ -5778,7 +5778,7 @@
     "AC": "4",
     "Damage Base": "3",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Pass",
+    "Range": "Melee, 1 Target, [[keyword:Pass]]",
     "Effect": "The user continues to use Rollout on each of its turns until they miss any target with Rollout, or are not able to hit any target with Rollout during their turn. Each successive use of Rollout increases Rollout's Damage Base by +4 to a maximum of DB 15.",
     "Contest Type": "Tough",
     "Contest Effect": "Reliable"
@@ -5809,7 +5809,7 @@
     "AC": "2",
     "Damage Base": "See Effect",
     "Class": "Special",
-    "Range": "Burst 1, Sonic",
+    "Range": "Burst 1, [[keyword:Sonic]]",
     "Effect": "Round's Damage Base is equal to 6, plus +2 more for each previous use of Round by any Trainer or Pokémon this round, up to a maximum of DB12.",
     "Contest Type": "Tough",
     "Contest Effect": "Reliable"
@@ -5821,7 +5821,7 @@
     "Damage Base": "10",
     "Class": "Physical",
     "Range": "6, 1 Target",
-    "Effect": "Sacred Fire Burns the target on Even-Numbered Rolls.",
+    "Effect": "Sacred Fire [[status:Burned]](Burns) the target on Even-Numbered Rolls.",
     "Contest Type": "Beauty",
     "Contest Effect": "Seen Nothing Yet"
   },
@@ -5841,7 +5841,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Blessing",
+    "Range": "[[keyword:Blessing]]",
     "Effect": "Blessing – Any user affected by Safeguard may activate it when receiving a Status Affliction to ignore the effects of that Status Affliction on their next turn. Safeguard may be activated 3 times, and then disappears.",
     "Contest Type": "Beauty",
     "Contest Effect": "Sabotage"
@@ -5872,7 +5872,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Field, Weather",
+    "Range": "Field, [[keyword:Weather]]",
     "Effect": "The weather changes to a Sandstorm for 5 rounds. While it is Sandstorming, all non-Ground, Rock, or Steel Type Pokémon lose a Tick of Hit Points at the beginning of their turn.",
     "Contest Type": "Tough",
     "Contest Effect": "Sabotage"
@@ -5883,7 +5883,7 @@
     "AC": "5",
     "Damage Base": "10",
     "Class": "Special",
-    "Range": "6, Ranged Blast 3, Smite",
+    "Range": "6, Ranged Blast 3, [[keyword:Smite]]",
     "Effect": "The target is [[status:Burned]] on a 15+",
     "Contest Type": "Tough",
     "Contest Effect": "Unsettling"
@@ -5895,7 +5895,7 @@
     "Damage Base": "8",
     "Class": "Special",
     "Range": "5, 1 Target",
-    "Effect": "Scald Burns the target on 15+.",
+    "Effect": "Scald [[status:Burned]](Burns) the target on 15+.",
     "Contest Type": "Smart",
     "Contest Effect": "Steady Performance"
   },
@@ -5915,7 +5915,7 @@
     "Frequency": "EOT",
     "AC": "2",
     "Class": "Status",
-    "Range": "4, 1 Target, Social",
+    "Range": "4, 1 Target, [[keyword:Social]]",
     "Effect": "The target's Speed is lowered 2 Combat Stages.",
     "Contest Type": "Tough",
     "Contest Effect": "Desperation"
@@ -5927,7 +5927,7 @@
     "Damage Base": "7",
     "Class": "Special",
     "Range": "5, 1 Target",
-    "Effect": "Scorching Sands Burns the target on 15+.",
+    "Effect": "Scorching Sands [[status:Burned]](Burns) the target on 15+.",
     "Contest Type": "Smart",
     "Contest Effect": "Steady Performance"
   },
@@ -5937,7 +5937,7 @@
     "AC": "2",
     "Damage Base": "4",
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, [[keyword:Pass]]",
     "Effect": "None",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
@@ -5947,7 +5947,7 @@
     "Frequency": "EOT",
     "AC": "4",
     "Class": "Status",
-    "Range": "Burst 2, Friendly, Sonic",
+    "Range": "Burst 2, [[keyword:Friendly]], [[keyword:Sonic]]",
     "Effect": "All Legal Targets have their Defense lowered 2 Combat Stages.",
     "Contest Type": "Smart",
     "Contest Effect": "Unsettling"
@@ -5959,7 +5959,7 @@
     "Damage Base": "10",
     "Class": "Special",
     "Range": "Burst 1",
-    "Effect": "Searing Shot Burns all targets on 15+.",
+    "Effect": "Searing Shot [[status:Burned]](Burns) all targets on 15+.",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
   },
@@ -5969,7 +5969,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Special",
-    "Range": "4, 1 Target, Environ",
+    "Range": "4, 1 Target, [[keyword:Environ]]",
     "Effect": "Secret Power's effect depends on Environ. Secret Power's effect activates on 17+.",
     "Contest Type": "Smart",
     "Contest Effect": "Tease"
@@ -6056,7 +6056,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, [[keyword:Pass]]",
     "Effect": "Shadow Claw is a Critical Hit on 18+.",
     "Contest Type": "Cute",
     "Contest Effect": "Exhausting Act"
@@ -6067,7 +6067,7 @@
     "AC": "2",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Set-Up",
+    "Range": "Melee, 1 Target, [[keyword:Set-Up]]",
     "Set-Up Effect": "The user is removed from the field, and their turn ends.",
     "Resolution Effect": "Shadow Force's user appears adjacent to any legal Target, ignoring Movement Capabilities, and then uses Shadow Force's attack. Shadow Force cannot be avoided by Moves with the Shield Keyword, the Dodge Ability, or similar effects, and Intercepts may not be attempted in response.",
     "Contest Type": "Smart",
@@ -6090,7 +6090,7 @@
     "AC": "2",
     "Damage Base": "4",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Priority",
+    "Range": "Melee, 1 Target, [[keyword:Priority]]",
     "Effect": "None",
     "Contest Type": "Smart",
     "Contest Effect": "Saving Grace"
@@ -6110,7 +6110,7 @@
     "Frequency": "Daily",
     "AC": "None",
     "Class": "Status",
-    "Range": "4, 1 Target, Execute",
+    "Range": "4, 1 Target, [[keyword:Execute]]",
     "Effect": "Roll 1d100. This roll may not be modified in any way. If you roll X or lower, the target Faints. X is equal to 30 + The User's Level - The Target's Level.",
     "Contest Type": "Beauty",
     "Contest Effect": "Big Show",
@@ -6143,7 +6143,7 @@
     "AC": "2",
     "Damage Base": "15",
     "Class": "Special",
-    "Range": "Melee, 1 Target, Interrupt, Trigger",
+    "Range": "Melee, 1 Target, [[keyword:Interrupt]], [[keyword:Trigger]]",
     "Effect": "If the user is hit by a Melee attack, they may use Shell Trap as an Interrupt.",
     "Contest Type": "Tough",
     "Contest Effect": "Desperation"
@@ -6225,7 +6225,7 @@
     "Frequency": "Scene",
     "AC": "10",
     "Class": "Status",
-    "Range": "Burst 2, Friendly, Sonic",
+    "Range": "Burst 2, [[keyword:Friendly]], [[keyword:Sonic]]",
     "Effect": "All legal Targets fall [[status:Sleep]](Asleep). On a miss, Sing instead causes targets to become [[status:Slowed]] and suffer a -2 penalty to their Evasion until the end of the user's next turn.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
@@ -6256,7 +6256,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Full Action",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Full Action]]",
     "Effect": "The user Shifts up to its Overland Capability, ignoring Attacks of Opportunity, before attacking with Skitter Smack. On a hit, the target's Special Attack is lowered 1 CS.",
     "Contest Type": "Smart",
     "Contest Effect": "Reliable"
@@ -6267,7 +6267,7 @@
     "AC": "2",
     "Damage Base": "13",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Push, Set-Up",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Push]], [[keyword:Set-Up]]",
     "Set-Up Effect": "The use gains +1 Defense CS.",
     "Resolution Effect": "The user may attack with Skull Bash. The target is pushed 3 meters.",
     "Contest Type": "Tough",
@@ -6279,7 +6279,7 @@
     "AC": "4",
     "Damage Base": "14",
     "Class": "Physical",
-    "Range": "Melee, Pass, Set-Up, Full Action",
+    "Range": "Melee, [[keyword:Pass]], [[keyword:Set-Up]], [[keyword:Full Action]]",
     "Set-Up Effect": "The user is moved up 25 meters into the air.",
     "Resolution Effect": "The user may shift until they are next to a legal target in the encounter. They may then shift again, and pass through legal targets to attack with Sky Attack. Sky Attack Flinches a target on 17-20 during Accuracy Check.",
     "Contest Type": "Cool",
@@ -6291,7 +6291,7 @@
     "AC": "3",
     "Damage Base": "6",
     "Class": "Physical",
-    "Range": "Melee, Target, Set-Up",
+    "Range": "Melee, Target, [[keyword:Set-Up]]",
     "Set-Up Effect": "Make Sky Drop's Accuracy Check. If the user hits, the user and target are moved 25 meters into the air. The target forfeits their next turn, and cannot Shift or take actions until Sky Drop is resolved.",
     "Resolution Effect": "Shift while in the air, and lower both the user and the target heights back to the ground. Then apply Sky Drop's damage. If the target has a Sky or Levitate Speed, Sky Drop fails to deal damage. If the user is Fainted after the Set-Up but before the Resolution, the target falls to the ground and takes damage as if Sky Drop had a Damage Base of 3 (1d6+5/8) unless they have a Sky or Levitate Speed, in which case they take no damage.",
     "Contest Type": "Smart",
@@ -6313,7 +6313,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Healing",
+    "Range": "Self, [[keyword:Healing]]",
     "Effect": "The user regains Hit Points equal to half of its full Hit Points.",
     "Contest Type": "Cute",
     "Contest Effect": "Reflective Appeal"
@@ -6324,7 +6324,7 @@
     "AC": "6",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
     "Effect": "Slam may be used as a Free Action at the end of a Sprint Maneuver taken as a Standard Action, as long as the user Shifted at least 3 meters in a straight line towards the target. When used this way, Slam gains the [[keyword:Smite]] keyword.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
@@ -6335,7 +6335,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, Pass",
+    "Range": "Melee, [[keyword:Pass]]",
     "Effect": "Slash is a Critical Hit on 18+.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -6367,7 +6367,7 @@
     "Damage Base": "7",
     "Class": "Special",
     "Range": "6, 1 Target",
-    "Effect": "Sludge Poisons the target on 15+.",
+    "Effect": "Sludge [[status:Poisoned]](Poisons) the target on 15+.",
     "Contest Type": "Tough",
     "Contest Effect": "Desperation"
   },
@@ -6378,7 +6378,7 @@
     "Damage Base": "9",
     "Class": "Special",
     "Range": "8, 1 Target",
-    "Effect": "Sludge Bomb Poisons the target on 15+.",
+    "Effect": "Sludge Bomb [[status:Poisoned]](Poisons) the target on 15+.",
     "Contest Type": "Tough",
     "Contest Effect": "Desperation"
   },
@@ -6389,7 +6389,7 @@
     "Damage Base": "10",
     "Class": "Special",
     "Range": "Burst 1 or Close Blast 2",
-    "Effect": "Sludge Wave Poisons targets on 19+.",
+    "Effect": "Sludge Wave [[status:Poisoned]](Poisons) targets on 19+.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
   },
@@ -6433,7 +6433,7 @@
     "Damage Base": "3",
     "Class": "Special",
     "Range": "Line 2",
-    "Effect": "Smog Poisons the target on an Even-Numbered Roll.",
+    "Effect": "Smog [[status:Poisoned]](Poisons) the target on an Even-Numbered Roll.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
@@ -6464,7 +6464,7 @@
     "AC": "3",
     "Damage Base": "6",
     "Class": "Special",
-    "Range": "Cone 2, Sonic",
+    "Range": "Cone 2, [[keyword:Sonic]]",
     "Effect": "All Legal Targets have their Special Attack lowered 1 Combat Stage.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
@@ -6474,7 +6474,7 @@
     "Frequency": "Scene x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "6, 1 Target, Interrupt",
+    "Range": "6, 1 Target, [[keyword:Interrupt]]",
     "Effect": "If the target uses a Self-Targeting Move, you may use Snatch. You gain the benefits of the Self-Targeting Move instead of the target.",
     "Contest Type": "Smart",
     "Contest Effect": "Attention Grabber"
@@ -6496,8 +6496,8 @@
     "AC": "2",
     "Damage Base": "5",
     "Class": "Special",
-    "Range": "Burst 1, Sonic",
-    "Effect": "Snore Flinches all legal targets on 15+. Snore may only be used by Sleeping users.",
+    "Range": "Burst 1, [[keyword:Sonic]]",
+    "Effect": "Snore [[status:Flinch]](Flinches) all legal targets on 15+. Snore may only be used by Sleeping users.",
     "Contest Type": "Cute",
     "Contest Effect": "Steady Performance"
   },
@@ -6527,7 +6527,7 @@
     "AC": "2",
     "Damage Base": "12",
     "Class": "Special",
-    "Range": "Line 6, Set-Up",
+    "Range": "Line 6, [[keyword:Set-Up]]",
     "Set-Up Effect": "If the weather is not Sunny, the user's turn ends. If the weather is Sunny, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword.",
     "Resolution Effect": "The user attacks with Solar Beam. If the weather is Rainy, Sandstorming, or Hailing, Solar Beam's Damage Base is lowered to 6 (2d6+8 / 15).",
     "Contest Type": "Cool",
@@ -6539,7 +6539,7 @@
     "AC": "2",
     "Damage Base": "13",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Set-Up",
+    "Range": "Melee, 1 Target, [[keyword:Set-Up]]",
     "Set-Up Effect": "If the weather is not Sunny, the user gains +1 Combat Stage in Attack and Special Defense, and the user's turn ends. If the weather is Sunny, immediately proceed to the Resolution Effect instead and this Move loses the Set-Up keyword.",
     "Resolution Effect": "The user attacks with Solar Blade. If the weather is Rainy, Sandstorming, or Hailing, Solar Blade’s Damage Base is lowered to 6 (2d6+8 / 15).",
     "Contest Type": "Cool",
@@ -6573,8 +6573,8 @@
     "AC": "2",
     "Damage Base": "6",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
-    "Effect": "Spark Paralyzes the target on 15+.",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
+    "Effect": "Spark [[status:Paralysis]](Paralyzes) the target on 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
   },
@@ -6637,7 +6637,7 @@
     "Frequency": "At-Will",
     "AC": "None",
     "Class": "Status",
-    "Range": "6, Hazard",
+    "Range": "6, [[keyword:Hazard]]",
     "Effect": "Set 8 square meters of Spikes within your range, all 8 meters must be adjacent with at least one other space of Spikes. Spikes cause terrain to count as Slow Terrain, and a grounded foe that runs into the hazards will lose a Tick of Hit Points and become [[status:Slowed]] until the end of their next turn.",
     "Contest Type": "Smart",
     "Contest Effect": "Sabotage"
@@ -6647,7 +6647,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Interrupt, Shield, Trigger",
+    "Range": "Self, [[keyword:Interrupt]], [[keyword:Shield]], [[keyword:Trigger]]",
     "Effect": "If the user is hit by an attack, the user may use Spiky Shield. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move's effects. In addition, if the triggering attack was Melee ranged, the attacker loses a Tick of Hit Points.",
     "Contest Type": "Tough",
     "Contest Effect": "Inversed Appeal"
@@ -6690,7 +6690,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "1 Target, Trigger",
+    "Range": "1 Target, [[keyword:Trigger]]",
     "Effect": "Spite may be used as a Free Action that does not take up a Command whenever the user is hit by a Move. That Move becomes [[status:Disabled]] for the attacker.",
     "Contest Type": "Tough",
     "Contest Effect": "Excitement"
@@ -6721,7 +6721,7 @@
     "Frequency": "Daily",
     "AC": "None",
     "Class": "Status",
-    "Range": "6, 1 Target, Priority",
+    "Range": "6, 1 Target, [[keyword:Priority]]",
     "Effect": "Until the end of the user's next turn, the target is Blinded and [[status:Vulnerable]].",
     "Contest Type": "Smart",
     "Contest Effect": "Attention Grabber"
@@ -6732,7 +6732,7 @@
     "AC": "5",
     "Damage Base": "10",
     "Class": "Special",
-    "Range": "6, Ranged Blast 3, Smite",
+    "Range": "6, Ranged Blast 3, [[keyword:Smite]]",
     "Effect": "If the user is not in Therian Forme, the user has each of its stats raised by +1 CS on a 16+. If the user is in Therian Form, the target has each of its stats lowered by -1 CS on a 16+.",
     "Contest Type": "Cute",
     "Contest Effect": "Desperation"
@@ -6742,7 +6742,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Field, Hazard",
+    "Range": "Field, [[keyword:Hazard]]",
     "Effect": "Set 4 square meters of Stealth Rock hazards within 6 meters. If a foe moves within 2 meters of a space occupied by Rocks, move at most one Rock to the offender, then destroy the Rock. When that happens, the Stealth Rock causes a foe to lose a Tick of Hit Points. Stealth Rock is considered to be dealing damage; Apply Weakness and Resistance. Do not apply stats. A Pokémon who has been hit by a Stealth Rock Hazard cannot get hit by another in the same encounter until it is returned to a Poké Ball and then sent back out.",
     "Contest Type": "Cool",
     "Contest Effect": "Sabotage",
@@ -6754,7 +6754,7 @@
     "AC": "3",
     "Damage Base": "11",
     "Class": "Special",
-    "Range": "Close Blast 3, Smite",
+    "Range": "Close Blast 3, [[keyword:Smite]]",
     "Effect": "Steam Eruption burns all legal targets on a 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Seen Nothing Yet"
@@ -6765,8 +6765,8 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, Pass",
-    "Effect": "Steamroller Flinches the target on 15+. If the target is Small, Steamroller deals an additional +5 Damage.",
+    "Range": "Melee, [[keyword:Pass]]",
+    "Effect": "Steamroller [[status:Flinch]](Flinches) the target on 15+. If the target is Small, Steamroller deals an additional +5 Damage.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
@@ -6776,7 +6776,7 @@
     "AC": "3",
     "Damage Base": "14",
     "Class": "Special",
-    "Range": "Cone 3, Smite",
+    "Range": "Cone 3, [[keyword:Smite]]",
     "Effect": "The user's Hit Points are reduced by 50% of their full Hit Point value. This Hit Point loss cannot be prevented or reduced in any way.",
     "Contest Type": "Smart",
     "Contest Effect": "Big Show"
@@ -6787,7 +6787,7 @@
     "AC": "2",
     "Damage Base": "13",
     "Class": "Physical",
-    "Range": "Melee, Pass, Dash, Smite, [[keyword:Spirit Surge]]",
+    "Range": "Melee, [[keyword:Pass]], [[keyword:Dash]], [[keyword:Smite]], [[keyword:Spirit Surge]]",
     "Effect": "Legal targets hit by Steel Roller are [[status:Tripped]] on a roll of 15+. Any Hazards in spaces Passed through or adjacent to those spaces are removed (they are removed before they can affect the user). If the user moves through an area of Terrain, or a Field-range Terrain is active, those effects immediately end.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
@@ -6798,7 +6798,7 @@
     "AC": "3",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Pass, [[keyword:Spirit Surge]]",
+    "Range": "Melee, 1 Target, [[keyword:Pass]], [[keyword:Spirit Surge]]",
     "Effect": "Raise the user's Defense 1 Combat Stage on 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -6808,7 +6808,7 @@
     "Frequency": "EOT",
     "AC": "None",
     "Class": "Status",
-    "Range": "6, Hazard",
+    "Range": "6, [[keyword:Hazard]]",
     "Effect": "Set 8 square meters of Sticky Web hazards within your range, all 8 meters must be adjacent with at least one other space of Sticky Web. Sticky Web causes Terrain to become Slow Terrain, and a foe that runs into the hazard has its Speed lowered by one stage, and they become [[status:Slowed]] until the end of their next turn. Flying- type Pokémon and Pokémon and Trainers with Levitate are not affected by Sticky Web. Bug-type Pokémon may move over Sticky Web harmlessly, destroying the Hazards as they do so.",
     "Contest Type": "Smart",
     "Contest Effect": "Sabotage",
@@ -6831,7 +6831,7 @@
     "Damage Base": "7",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Stomp Flinches the target on 15+. If the target is at least one size category smaller than the user, Stomp deals an additional 10 damage.",
+    "Effect": "Stomp [[status:Flinch]](Flinches) the target on 15+. If the target is at least one size category smaller than the user, Stomp deals an additional 10 damage.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
@@ -6907,7 +6907,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Push",
+    "Range": "Melee, 1 Target, [[keyword:Push]]",
     "Effect": "You may immediately initiate a Push Maneuver as a Free Action. The Maneuver automatically hits, but you must still make the Opposed Roll.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance",
@@ -6971,7 +6971,7 @@
     "AC": "6",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Recoil 1/3",
+    "Range": "Melee, 1 Target, [[keyword:Recoil]] 1/3",
     "Effect": "On an accuracy roll of 15+, the target is [[status:Tripped]].",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
@@ -6981,7 +6981,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, [[keyword:Illusion]], Coat",
+    "Range": "Self, [[keyword:Illusion]], [[keyword:Coat]]",
     "Effect": "The user loses 1/4 of their maximum Hit Points. This Hit Point loss cannot be prevented in any way. The user creates an Illusory Substitute Coat, which has Hit Points equal to 1/4th of the user's full Hit Points +1. If the user would be hit by a Move or attack, instead the Substitute gets hit. Apply weakness, resistance and stats to the Substitute. The Substitute is immune to Status Afflictions and Status Moves. Moves with the Social or [[keyword:Sonic]] keywords completely ignore and bypass the Substitute. Once the Substitute has been destroyed, the user may be hit as normal. Substitute cannot be used if the user has less than 1/4 of their full Hit Points.",
     "Contest Type": "Smart",
     "Contest Effect": "Catching Up"
@@ -6992,7 +6992,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Interrupt, Trigger",
+    "Range": "Melee, 1 Target, [[keyword:Interrupt]], [[keyword:Trigger]]",
     "Effect": "If an adjacent foe targets the user with a Damaging Attack, Sucker Punch may be used as an Interrupt Move against the triggering foe.",
     "Contest Type": "Smart",
     "Contest Effect": "Saving Grace"
@@ -7002,7 +7002,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Field, Weather",
+    "Range": "Field, [[keyword:Weather]]",
     "Effect": "The weather becomes Sunny for 5 rounds. While Sunny, Fire-Type Attacks gain a +5 bonus to Damage Rolls, and Water-Type Attacks suffer a -5 Damage penalty.",
     "Contest Type": "Beauty",
     "Contest Effect": "Sabotage"
@@ -7034,7 +7034,7 @@
     "AC": "2",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Reckless",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[ability:Reckless]]",
     "Effect": "Superpower lowers the user's Attack and Defense by 1 Combat Stage each.",
     "Contest Type": "Tough",
     "Contest Effect": "Desperation"
@@ -7044,7 +7044,7 @@
     "Frequency": "Scene x2",
     "AC": "6",
     "Class": "Status",
-    "Range": "4, 1 Target, Sonic",
+    "Range": "4, 1 Target, [[keyword:Sonic]]",
     "Effect": "The target becomes [[status:Confusion]](Confused). On miss, the target suffers a -2 penalty to Accuracy Rolls for one full round.",
     "Contest Type": "Smart",
     "Contest Effect": "Excitement"
@@ -7076,8 +7076,8 @@
     "Frequency": "EOT",
     "AC": "5",
     "Class": "Status",
-    "Range": "6, 1 Target, Social",
-    "Effect": "The target's Attack is raised 2 Combat Stages. Swagger Confuses the target.",
+    "Range": "6, 1 Target, [[keyword:Social]]",
+    "Effect": "The target's Attack is raised 2 Combat Stages. Swagger [[status:Confusion]](Confuses) the target.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
   },
@@ -7096,7 +7096,7 @@
     "Frequency": "Scene x2",
     "AC": "6",
     "Class": "Status",
-    "Range": "6, 1 Target, Social",
+    "Range": "6, 1 Target, [[keyword:Social]]",
     "Effect": "The target becomes [[status:Confusion]](Confused). On miss, the target suffers a -2 penalty to Accuracy Rolls for one full round.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
@@ -7106,7 +7106,7 @@
     "Frequency": "Scene",
     "AC": "2",
     "Class": "Status",
-    "Range": "Burst 2, Friendly",
+    "Range": "Burst 2, [[keyword:Friendly]]",
     "Effect": "Targets hit by Sweet Scent gain a -2 Penalty to Evasion. (Total Evasion may not be lowered to a negative value. )",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement",
@@ -7118,7 +7118,7 @@
     "AC": "None",
     "Damage Base": "6",
     "Class": "Special",
-    "Range": "8, Ranged Blast 2, Friendly",
+    "Range": "8, Ranged Blast 2, [[keyword:Friendly]]",
     "Effect": "Swift cannot Miss.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
@@ -7159,7 +7159,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Healing",
+    "Range": "Self, [[keyword:Healing]]",
     "Effect": "The user regains Hit Points equal to half of its full Hit Point value. If it is Sunny, the user gains 2/3 of its full Hit Point value instead. If it is Rainy, Sand Storming or Hailing the user gains 1/4 of their full Hit Point value instead.",
     "Contest Type": "Smart",
     "Contest Effect": "Reflective Appeal"
@@ -7170,7 +7170,7 @@
     "AC": "2",
     "Damage Base": "4",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Push",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Push]]",
     "Effect": "The target is pushed 2 Meters.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
@@ -7202,7 +7202,7 @@
     "Frequency": "At-Will",
     "AC": "2",
     "Class": "Status",
-    "Range": "Burst 1, Friendly",
+    "Range": "Burst 1, [[keyword:Friendly]]",
     "Effect": "All legal targets have their Defense lowered by 1 Combat Stage.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
@@ -7223,7 +7223,7 @@
     "AC": "5",
     "Damage Base": "9",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Recoil 1/3",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Recoil]] 1/3",
     "Effect": "You may perform a Trip Maneuver against the target as a Free Action.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
@@ -7253,7 +7253,7 @@
     "Frequency": "EOT",
     "AC": "3",
     "Class": "Status",
-    "Range": "6, 1 Target, Social",
+    "Range": "6, 1 Target, [[keyword:Social]]",
     "Effect": "The target becomes [[status:Rage]](Enraged).",
     "Contest Type": "Smart",
     "Contest Effect": "Inversed Appeal"
@@ -7263,7 +7263,7 @@
     "Frequency": "EOT",
     "AC": "2",
     "Class": "Status",
-    "Range": "Burst 1, Social, Friendly",
+    "Range": "Burst 1, [[keyword:Social]], [[keyword:Friendly]]",
     "Effect": "Tearful Look lowers all Legal Targets' Attack and Special Attack 1 Combat Stage.",
     "Contest Type": "Cute",
     "Contest Effect": "Sabotage"
@@ -7273,7 +7273,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Field, Social",
+    "Range": "Field, [[keyword:Social]]",
     "Effect": "All participants in the battle may choose to immediately consume one of their Food Buffs, regardless of if the conditions to do so are met.",
     "Contest Type": "Cute",
     "Contest Effect": "Safe Option"
@@ -7295,7 +7295,7 @@
     "AC": "2",
     "Class": "Status",
     "Range": "Burst 1",
-    "Effect": "Teeter Dance Confuses all Legal Targets.",
+    "Effect": "Teeter Dance [[status:Confusion]](Confuses) all Legal Targets.",
     "Contest Type": "Cute",
     "Contest Effect": "Tease"
   },
@@ -7315,7 +7315,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Self, Interrupt",
+    "Range": "Self, [[keyword:Interrupt]]",
     "Effect": "The user Teleports up to X meters, where X is its Teleporter Capability. Teleport can be used as an Interrupt at any time. Moves that targeted Teleport's user continue through the desired target's space if the Move allows for it as if the user hadn't been there; single target moves simply miss.",
     "Contest Type": "Cool",
     "Contest Effect": "Saving Grace",
@@ -7360,7 +7360,7 @@
     "AC": "2",
     "Damage Base": "9",
     "Class": "Physical",
-    "Range": "Burst 1, Groundsource",
+    "Range": "Burst 1, [[keyword:Groundsource]]",
     "Effect": "Legal Targets are [[status:Trapped]] for 2 rounds.",
     "Contest Type": "Tough",
     "Contest Effect": "Tease"
@@ -7371,7 +7371,7 @@
     "AC": "3",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, All Adjacent Foes, Smite, Reckless",
+    "Range": "Melee, All Adjacent Foes, [[keyword:Smite]], [[ability:Reckless]]",
     "Effect": "After damage is dealt, the user becomes [[status:Rage]](Enraged) and [[status:Confusion]](Confused).",
     "Contest Type": "Tough",
     "Contest Effect": "Reliable"
@@ -7393,8 +7393,8 @@
     "AC": "7",
     "Damage Base": "11",
     "Class": "Special",
-    "Range": "12, 1 Target, Smite",
-    "Effect": "Thunder Paralyzes its target on 15+. If the target is in Sunny Weather, Thunder's Accuracy Check is 11. If the target is in Rainy Weather, Thunder cannot miss. If the target is airborne as a result of Fly or [[move:Sky Drop]], Thunder cannot miss.",
+    "Range": "12, 1 Target, [[keyword:Smite]]",
+    "Effect": "Thunder [[status:Paralysis]](Paralyzes) its target on 15+. If the target is in Sunny Weather, Thunder's Accuracy Check is 11. If the target is in Rainy Weather, Thunder cannot miss. If the target is airborne as a result of Fly or [[move:Sky Drop]], Thunder cannot miss.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
   },
@@ -7416,7 +7416,7 @@
     "Damage Base": "7",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Thunder Fang Paralyzes or Flinches on 18- 19 during Accuracy Check; flip a coin to determine whether the foe gets [[status:Paralysis]](Paralyzed) or Flinches. On 20 during Accuracy Check, the foe is [[status:Paralysis]](Paralyzed) and [[status:Flinch]](Flinched).",
+    "Effect": "Thunder Fang [[status:Paralysis]](Paralyzes) or [[status:Flinch]](Flinches) on 18- 19 during Accuracy Check; flip a coin to determine whether the foe gets [[status:Paralysis]](Paralyzed) or [[status:Flinch]](Flinches). On 20 during Accuracy Check, the foe is [[status:Paralysis]](Paralyzed) and [[status:Flinch]](Flinched).",
     "Contest Type": "Smart",
     "Contest Effect": "Steady Performance"
   },
@@ -7427,7 +7427,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Thunder Punch Paralyzes the target on 19+.",
+    "Effect": "Thunder Punch [[status:Paralysis]](Paralyzes) the target on 19+.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
   },
@@ -7438,7 +7438,7 @@
     "Damage Base": "4",
     "Class": "Special",
     "Range": "4, 1 Target",
-    "Effect": "Thunder Shock Paralyzes the target on 17+.",
+    "Effect": "Thunder Shock [[status:Paralysis]](Paralyzes) the target on 17+.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance",
     "Special": "Grants [[capability:Zapper]]"
@@ -7449,7 +7449,7 @@
     "AC": "4",
     "Class": "Status",
     "Range": "6, 1 Target",
-    "Effect": "Thunder Wave Paralyzes the target. Targets immune to Electric Attacks are immune to Thunder Wave's effects.",
+    "Effect": "Thunder Wave [[status:Paralysis]](Paralyzes) the target. Targets immune to Electric Attacks are immune to Thunder Wave's effects.",
     "Contest Type": "Cool",
     "Contest Effect": "Excitement"
   },
@@ -7460,7 +7460,7 @@
     "Damage Base": "9",
     "Class": "Special",
     "Range": "4, 1 Target",
-    "Effect": "Thunderbolt Paralyzes the target on 19+.",
+    "Effect": "Thunderbolt [[status:Paralysis]](Paralyzes) the target on 19+.",
     "Contest Type": "Cool",
     "Contest Effect": "Exhausting Act"
   },
@@ -7500,7 +7500,7 @@
     "Frequency": "Scene x2",
     "AC": "2",
     "Class": "Status",
-    "Range": "10, 1 Target, Social",
+    "Range": "10, 1 Target, [[keyword:Social]]",
     "Effect": "The target becomes [[status:Suppressed]].",
     "Contest Type": "Tough",
     "Contest Effect": "Inversed Appeal"
@@ -7520,8 +7520,8 @@
     "Frequency": "EOT",
     "AC": "None",
     "Class": "Status",
-    "Range": "6, Hazard",
-    "Effect": "Set 8 square meters of Toxic Spikes, all 8 meters must be adjacent with at least one other space of Toxic Spikes next to each other. Toxic Spikes cause Terrain to become Slow Terrain, and a grounded foe that runs into the hazard becomes [[status:Poisoned]], and [[status:Slowed]] until the end of their next turn. If there are 2 Layers of Toxic Spikes on the same space, it Deadly Poisons the foes instead. Poison-Type Pokémon may move over Toxic Spikes harmlessly, destroying the Hazards as they do so.",
+    "Range": "6, [[keyword:Hazard]]",
+    "Effect": "Set 8 square meters of Toxic Spikes, all 8 meters must be adjacent with at least one other space of Toxic Spikes next to each other. Toxic Spikes cause Terrain to become Slow Terrain, and a grounded foe that runs into the hazard becomes [[status:Poisoned]], and [[status:Slowed]] until the end of their next turn. If there are 2 Layers of Toxic Spikes on the same space, it [[status:Badly Poisoned]](Deadly Poisons) the foes instead. Poison-Type Pokémon may move over Toxic Spikes harmlessly, destroying the Hazards as they do so.",
     "Contest Type": "Smart",
     "Contest Effect": "Sabotage"
   },
@@ -7648,7 +7648,7 @@
     "Damage Base": "3",
     "Class": "Physical",
     "Range": "Melee, 1 Target, [[keyword:Double Strike]]",
-    "Effect": "Twineedle Poisons the target on an Accuracy Check of 18+",
+    "Effect": "Twineedle [[status:Poisoned]](Poisons) the target on an Accuracy Check of 18+",
     "Contest Type": "Cool",
     "Contest Effect": "Reliable"
   },
@@ -7659,7 +7659,7 @@
     "Damage Base": "4",
     "Class": "Special",
     "Range": "6, Ranged Blast 3",
-    "Effect": "Small or Medium targets in the central square of the blast are not hit. Twister Flinches the target on 18-20 during Accuracy Check. Any Pokémon Airborne as a result of Fly or [[move:Sky Drop]] above the Blast are hit, ignoring range, and Twister has a Damage Base of 8 against those targets instead.",
+    "Effect": "Small or Medium targets in the central square of the blast are not hit. Twister [[status:Flinch]](Flinches) the target on 18-20 during Accuracy Check. Any Pokémon Airborne as a result of Fly or [[move:Sky Drop]] above the Blast are hit, ignoring range, and Twister has a Damage Base of 8 against those targets instead.",
     "Contest Type": "Cool",
     "Contest Effect": "Steady Performance"
   },
@@ -7669,7 +7669,7 @@
     "AC": "2",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
     "Effect": "If U-Turn successfully hits its target, the user deals damage and then immediately is returned to its Poké Ball in the same turn. A New Pokémon may immediately be sent out. Using U-Turn lets a [[status:Trapped]] user be recalled.",
     "Contest Type": "Cute",
     "Contest Effect": "Inversed Appeal"
@@ -7680,7 +7680,7 @@
     "AC": "2",
     "Damage Base": "5",
     "Class": "Special",
-    "Range": "Burst 1, [[keyword:Spirit Surge]], Sonic",
+    "Range": "Burst 1, [[keyword:Spirit Surge]], [[keyword:Sonic]]",
     "Effect": "All Pokémon and Trainers within 5 meters of the user are cured of sleep.",
     "Contest Type": "Cute",
     "Contest Effect": "Unsettling"
@@ -7691,7 +7691,7 @@
     "AC": "5",
     "Damage Base": "18",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Smite, Reckless",
+    "Range": "Melee, 1 Target, [[keyword:Smite]], [[ability:Reckless]]",
     "Effect": "Lower the user's Defense, Special Defense, and Speed by 1 CS each.",
     "Contest Type": "Beauty",
     "Contest Effect": "Seen Nothing Yet"
@@ -7702,7 +7702,7 @@
     "AC": "2",
     "Damage Base": "4",
     "Class": "Special",
-    "Range": "4, 1 Target, Priority, Aura",
+    "Range": "4, 1 Target, [[keyword:Priority]], [[keyword:Aura]]",
     "Effect": "None",
     "Contest Type": "Smart",
     "Contest Effect": "Saving Grace"
@@ -7767,7 +7767,7 @@
     "AC": "None",
     "Damage Base": "7",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Push, Reaction",
+    "Range": "Melee, 1 Target, [[keyword:Push]], [[keyword:Reaction]]",
     "Effect": "If the user is targeted by a Melee attack and has not yet taken a turn this round, the user may declare Vital Throw. After the triggering attack is resolved, the user may use Vital Throw against the triggering foe as a Reaction. Vital Throw cannot miss.",
     "Contest Type": "Cool",
     "Contest Effect": "Desperation"
@@ -7789,8 +7789,8 @@
     "AC": "2",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Recoil 1/3",
-    "Effect": "Volt Tackle Paralyzes the target on 19+.",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Recoil]] 1/3",
+    "Effect": "Volt Tackle [[status:Paralysis]](Paralyzes) the target on 19+.",
     "Contest Type": "Cool",
     "Contest Effect": "Seen Nothing Yet"
   },
@@ -7823,7 +7823,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Special",
-    "Range": "6, 1 Target, Pledge",
+    "Range": "6, 1 Target, [[keyword:Pledge]]",
     "Effect": "If an ally uses [[move:Fire Pledge]] or [[move:Grass Pledge]], you may use Water Pledge as Priority (Advanced) immediately after their turn to target the same foe. If used in conjunction with [[move:Fire Pledge]], a Rainbow is created that lasts for 5 rounds. If used in conjunction with [[move:Grass Pledge]], the target and all foes adjacent to the target are slowed and have their Speed reduced by 2 Combat Stages. Consult the [[keyword:Pledge]] keyword for additional details.",
     "Contest Type": "Beauty",
     "Contest Effect": "Safe Option"
@@ -7834,8 +7834,8 @@
     "AC": "2",
     "Damage Base": "6",
     "Class": "Special",
-    "Range": "8, 1 Target, Aura",
-    "Effect": "Water Pulse Confuses the target on 17+.",
+    "Range": "8, 1 Target, [[keyword:Aura]]",
+    "Effect": "Water Pulse [[status:Confusion]](Confuses) the target on 17+.",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
   },
@@ -7845,7 +7845,7 @@
     "AC": "2",
     "Damage Base": "2",
     "Class": "Physical",
-    "Range": "6, 1 Target, [[keyword:Five Strike]], Priority",
+    "Range": "6, 1 Target, [[keyword:Five Strike]], [[keyword:Priority]]",
     "Effect": "None",
     "Contest Type": "Cool",
     "Contest Effect": "Reliable"
@@ -7855,7 +7855,7 @@
     "Frequency": "EOT",
     "AC": "None",
     "Class": "Status",
-    "Range": "Burst 2, Coat",
+    "Range": "Burst 2, [[keyword:Coat]]",
     "Effect": "All targets in the burst, including the user, gain a Coat which grants them 1 Step of Resistance to Fire Type Moves. After a target has been hit by a damaging Fire Type Move, the coat is removed.",
     "Contest Type": "Cute",
     "Contest Effect": "Sabotage",
@@ -7879,7 +7879,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Waterfall Flinches the target on 17+.",
+    "Effect": "Waterfall [[status:Flinch]](Flinches) the target on 17+.",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
   },
@@ -7889,7 +7889,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Priority, Recoil 1/4",
+    "Range": "Melee, 1 Target, [[keyword:Priority]], [[keyword:Recoil]] 1/4",
     "Effect": "None",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
@@ -7932,7 +7932,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Push",
+    "Range": "Melee, 1 Target, [[keyword:Push]]",
     "Effect": "If Wicked Blow hits, it is a Critical Hit. The target is Pushed 6 meters minus their [[keyword:Weight Class]]. On a roll of 15+, the target is also [[status:Tripped]].",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
@@ -7942,7 +7942,7 @@
     "Frequency": "Scene",
     "AC": "None",
     "Class": "Status",
-    "Range": "Burst 1, Interrupt, Shield, Trigger",
+    "Range": "Burst 1, [[keyword:Interrupt]], [[keyword:Shield]], [[keyword:Trigger]]",
     "Effect": "If an Ally adjacent to Wide Guard's user is hit by a Move, you may use Wide Guard as an Interrupt. All targets adjacent to Wide Guard's user, including the user, are instead not hit by the triggering Move and do not suffer any of its effects.",
     "Contest Type": "Tough",
     "Contest Effect": "Inversed Appeal"
@@ -7953,7 +7953,7 @@
     "AC": "2",
     "Damage Base": "9",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Recoil 1/3",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Recoil]] 1/3",
     "Effect": "None",
     "Contest Type": "Tough",
     "Contest Effect": "Steady Performance"
@@ -7964,7 +7964,7 @@
     "AC": "5",
     "Damage Base": "10",
     "Class": "Special",
-    "Range": "6, Ranged Blast 3, Smite",
+    "Range": "6, Ranged Blast 3, [[keyword:Smite]]",
     "Effect": "The target is [[status:Paralysis]](Paralyzed) on a 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Unsettling"
@@ -7995,7 +7995,7 @@
     "Frequency": "Daily x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "15, 1 Target, Healing",
+    "Range": "15, 1 Target, [[keyword:Healing]]",
     "Effect": "At the end of the user's next turn, the target regains Hit Points equal to half of its full Hit Point value. If the user targets themselves and are replaced in battle, the replacement is healed.",
     "Contest Type": "Cute",
     "Contest Effect": "Reflective Appeal"
@@ -8026,7 +8026,7 @@
     "AC": "2",
     "Damage Base": "12",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash, Recoil 1/3",
+    "Range": "Melee, 1 Target, [[keyword:Dash]], [[keyword:Recoil]] 1/3",
     "Effect": "None",
     "Contest Type": "Tough",
     "Contest Effect": "Desperation"
@@ -8076,7 +8076,7 @@
     "AC": "2",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
     "Effect": "None",
     "Contest Type": "Beauty",
     "Contest Effect": "Exhausting Act"
@@ -8086,7 +8086,7 @@
     "Frequency": "Scene x2",
     "AC": "None",
     "Class": "Status",
-    "Range": "2, 1 Target, Social",
+    "Range": "2, 1 Target, [[keyword:Social]]",
     "Effect": "The target falls [[status:Sleep]](Asleep) at the end of their next turn. Yawn cannot miss.",
     "Contest Type": "Cute",
     "Contest Effect": "Excitement"
@@ -8098,7 +8098,7 @@
     "Damage Base": "12",
     "Class": "Special",
     "Range": "12, 1 Target",
-    "Effect": "Zap Cannon Paralyzes the target. Zap Cannon ignores the target's Evasion if there are no other combatants or Rough or Blocking Terrain within 2 meters of the target.",
+    "Effect": "Zap Cannon [[status:Paralysis]](Paralyzes) the target. Zap Cannon ignores the target's Evasion if there are no other combatants or Rough or Blocking Terrain within 2 meters of the target.",
     "Contest Type": "Cool",
     "Contest Effect": "Incentives"
   },
@@ -8108,8 +8108,8 @@
     "AC": "4",
     "Damage Base": "8",
     "Class": "Physical",
-    "Range": "Melee, 1 Target, Dash",
-    "Effect": "Zen Headbutt Flinches the target on 15+.",
+    "Range": "Melee, 1 Target, [[keyword:Dash]]",
+    "Effect": "Zen Headbutt [[status:Flinch]](Flinches) the target on 15+.",
     "Contest Type": "Beauty",
     "Contest Effect": "Desperation"
   },
@@ -8120,7 +8120,7 @@
     "Damage Base": "8",
     "Class": "Physical",
     "Range": "Melee, 1 Target",
-    "Effect": "Zing Zap Flinches the target on 15+.",
+    "Effect": "Zing Zap [[status:Flinch]](Flinches) the target on 15+.",
     "Contest Type": "Cool",
     "Contest Effect": "Tease"
   }

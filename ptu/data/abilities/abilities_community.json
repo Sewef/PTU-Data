@@ -72,7 +72,7 @@
   {
     "Name": "Aqua Bullet",
     "Frequency": "Static",
-    "Effect": "Connection - [[move:Aqua Jet]]. The user may use Water-Type Moves as a Full Action to gain Sky 10 and shift in a straight line before attempting to use their Move. When shifting this way, the user does not provoke attacks of opportunity."
+    "Effect": "Connection - [[move:Aqua Jet]]. The user may use Water-Type Moves as a [[keyword:Full Action]] to gain Sky 10 and shift in a straight line before attempting to use their Move. When shifting this way, the user does not provoke attacks of opportunity."
   },
   {
     "Name": "Arena Trap",
@@ -451,7 +451,7 @@
   {
     "Name": "Deadly Poison",
     "Frequency": "Daily – Free Action",
-    "Trigger": "The user Poisons a target",
+    "Trigger": "The user [[status:Poisoned]](Poisons) a target",
     "Effect": "The target is [[status:Badly Poisoned]] instead."
   },
   {
@@ -1970,8 +1970,8 @@
   {
     "Name": "Reckless",
     "Frequency": "Static",
-    "Effect": "Increases the Damage Base of Moves with the Exhaust, [[keyword:Recoil]], or Reckless Keywords by +3.",
-    "Reckless Moves": "Reckless Moves: Jump Kick, High Jump Kick, Close Combat, Draco Meteor, Hammer Arm, Leaf Storm, Outrage, Overheat, Petal Dance, Psycho Boost, Superpower, Thrash, and V-Create."
+    "Effect": "Increases the Damage Base of Moves with the [[keyword:Exhaust]], [[keyword:Recoil]], or Reckless Keywords by +3.",
+    "Reckless Moves": "[[move:Jump Kick]], [[move:High Jump Kick]], [[move:Close Combat]], [[move:Draco Meteor]], [[move:Hammer Arm]], [[move:Leaf Storm]], [[move:Outrage]], [[move:Overheat]], [[move:Petal Dance]], [[move:Psycho Boost]], [[move:Superpower]], [[move:Thrash]], and [[move:V-Create]]."
   },
   {
     "Name": "Refreshing Veil",
@@ -2161,7 +2161,7 @@
   {
     "Name": "Shed Skin",
     "Frequency": "Scene – Swift Action",
-    "Effect": "The user is cured of one of [[status:Paralysis]], Freezing, Burns, Poison, or [[status:Sleep]]."
+    "Effect": "The user is cured of one of [[status:Paralysis]], Freezing, [[status:Burned]](Burns), Poison, or [[status:Sleep]]."
   },
   {
     "Name": "Sheer Force",
@@ -2376,7 +2376,7 @@
   {
     "Name": "Stance Change",
     "Frequency": "Static",
-    "Effect": "Aegislash has two Stances: Shield Stance and Sword Stance. Its default Stance is Shield Stance. Whenever Aegislash uses a damaging attack, it switches to Sword Stance and swaps its Attack Stat with its Defense and its Special Attack Stat with its Special Defense, without changing Combat Stages. Whenever Aegislash uses [[move:King's Shield]], [[move:Protect]], a Status Move that raises Defense Combat Stages, or a Blessing, it switches to Shield Stance and swaps its offensive and defensive Stats back to their original arrangement. Aegislash may also change its Stance as a Full Action."
+    "Effect": "Aegislash has two Stances: Shield Stance and Sword Stance. Its default Stance is Shield Stance. Whenever Aegislash uses a damaging attack, it switches to Sword Stance and swaps its Attack Stat with its Defense and its Special Attack Stat with its Special Defense, without changing Combat Stages. Whenever Aegislash uses [[move:King's Shield]], [[move:Protect]], a Status Move that raises Defense Combat Stages, or a Blessing, it switches to Shield Stance and swaps its offensive and defensive Stats back to their original arrangement. Aegislash may also change its Stance as a [[keyword:Full Action]]."
   },
   {
     "Name": "Starlight",
@@ -2426,7 +2426,7 @@
   {
     "Name": "Stench",
     "Frequency": "Static",
-    "Effect": "The Pokémon's Moves Flinch Targets on a roll of 18+. If a move already has a chance of Flinching foes, the Effect Range is increased by +3 instead. Whenever the user Flinches a foe with an attack, that foe gains a -2 penalty to Accuracy Rolls for 1 full round."
+    "Effect": "The Pokémon's Moves Flinch Targets on a roll of 18+. If a move already has a chance of Flinching foes, the Effect Range is increased by +3 instead. Whenever the user [[status:Flinch]](Flinches) a foe with an attack, that foe gains a -2 penalty to Accuracy Rolls for 1 full round."
   },
   {
     "Name": "Sticky Hold",
@@ -2614,7 +2614,7 @@
     "Frequency": "At-Will – Free Action",
     "Trigger": "The user is hit by a Fire-Type Move.",
     "Effect": "The user receives +1 Attack Combat Stage.",
-    "Bonus": "The user is immune to Burns. Defensive."
+    "Bonus": "The user is immune to [[status:Burned]](Burns). Defensive."
   },
   {
     "Name": "Thermosensitive",
@@ -2656,7 +2656,7 @@
     "Name": "Tonguelash",
     "Frequency": "Scene x2 – Free Action",
     "Trigger": "The user hits a target with Lick",
-    "Effect": "Connection – [[move:Lick]]. Lick automatically Paralyzes and Flinches its target.",
+    "Effect": "Connection – [[move:Lick]]. Lick automatically [[status:Paralysis]](Paralyzes) and [[status:Flinch]](Flinches) its target.",
     "Bonus": " The user may use [[move:Lick]] as if it was Normal-Typed."
   },
   {
@@ -2682,7 +2682,7 @@
   {
     "Name": "Toxic Chain",
     "Frequency": "Scene – Swift Action",
-    "Trigger": "The user Poisons a foe",
+    "Trigger": "The user [[status:Poisoned]](Poisons) a foe",
     "Effect": "Choose another foe, they become [[status:Poisoned]], and it and the triggering foe become Chained to each other. Whenever a foe is damaged, every foe Chained to them becomes [[status:Vulnerable]] for one full round."
   },
   {
@@ -2722,7 +2722,7 @@
   {
     "Name": "Triage",
     "Frequency": "Static",
-    "Effect": "The user's moves with the Healing keyword may be used as Priority moves."
+    "Effect": "The user's moves with the [[keyword:Healing]] keyword may be used as Priority moves."
   },
   {
     "Name": "Trinity",
@@ -2912,7 +2912,7 @@
   {
     "Name": "Water Veil",
     "Frequency": "Static",
-    "Effect": "The user is immune to Burns. Defensive."
+    "Effect": "The user is immune to [[status:Burned]](Burns). Defensive."
   },
   {
     "Name": "Weak Armor",

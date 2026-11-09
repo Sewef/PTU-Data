@@ -74,10 +74,27 @@ STOP_REFERENCES = {
 }
 STATUS_LABEL_ALIASES = {
     "Asleep": "Sleep",
+    "Badly Poisons": "Badly Poisoned",
+    "Blinds": "Blindness",
+    "Burns": "Burned",
     "Confused": "Confusion",
+    "Confuses": "Confusion",
+    "Curses": "Cursed",
+    "Deadly Poisons": "Badly Poisoned",
+    "Disables": "Disabled",
     "Enraged": "Rage",
+    "Enrages": "Rage",
     "Flinched": "Flinch",
+    "Flinches": "Flinch",
+    "Freezes": "Frozen",
+    "Infatuates": "Infatuation",
     "Paralyzed": "Paralysis",
+    "Paralyzes": "Paralysis",
+    "Poisons": "Poisoned",
+    "Slows": "Slowed",
+    "Suppresses": "Suppressed",
+    "Traps": "Trapped",
+    "Trips": "Tripped",
 }
 CONTEXT_STATUS_ALIASES = {
     "Burn": "Burned",
@@ -143,7 +160,11 @@ def explicit_cue_type(before: str, after: str) -> str | None:
 
 def linkify_status_aliases(value: str) -> str:
     pattern = re.compile(
-        r"\b(" + "|".join(map(re.escape, STATUS_LABEL_ALIASES)) + r")\b"
+        r"\b("
+        + "|".join(
+            map(re.escape, sorted(STATUS_LABEL_ALIASES, key=len, reverse=True))
+        )
+        + r")\b"
     )
 
     def replace_segment(segment: str) -> str:
@@ -320,8 +341,14 @@ def linkify_text(
             )
             if cue_type and cue_type != ref_type:
                 return match.group(0)
-            if field == "Range" and ref_type != "keyword":
+            if (
+                field == "Range"
+                and ref_type != "keyword"
+                and not (ref_type == "ability" and canonical == "Reckless")
+            ):
                 return match.group(0)
+            if field == "Range":
+                return f"[[{ref_type}:{canonical}]]"
             if field in {"Keyword", "Keywords"} and ref_type == "keyword":
                 return f"[[{ref_type}:{canonical}]]"
             if ref_type == "status":

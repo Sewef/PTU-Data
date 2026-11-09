@@ -973,11 +973,17 @@
   "Friendly": {
     "Description": "Moves with the Friendly Keyword do not hit allies."
   },
+  "Full Action": {
+    "Description": "A Move with the Full Action Keyword requires both the user's Standard Action and Shift Action for the round."
+  },
   "Groundsource": {
     "Description": "Moves with the Groundsource keyword do not have their Accuracy modified by targeting into Rough Terrain and ignore Blocking Terrain."
   },
   "Hazard": {
     "Description": "If a Move has the Hazard keyword, the effect covers a portion of the field of battle. A Hazard only affects the foes under certain circumstances. You may put extra Layers of the Move with Hazard if the Move allows, but only one per usage of the Move."
+  },
+  "Healing": {
+    "Description": "Moves with the Healing Keyword restore Hit Points or otherwise provide healing and may be affected by certain Abilities or effects, such as Triage."
   },
   "Illusion": {
     "Description": "These Moves are Illusions, and may be ignored by Trainers with the Clairsentient Feature."
