@@ -46,7 +46,7 @@
             "Name": "Tutoring",
             "Prerequisites": "Novice Pokémon Education, a move that you or three of your Pokémon know",
             "Frequency": "One Time Use x 3 — Extended Action",
-            "Effect": "When activating this Feature, select a Move known either by yourself or by 3 Pokémon you own. This Move is Mastered. As an Extended Action, you may have Pokémon spend 2 Tutor Points to learn a Move you have Mastered. Pokémon targeted this way can only learn Moves that they could learn by Level Up, TM, Egg Move, or Move Tutor. You may take [[feature:Tutoring]] multiple times, each time gaining 3 uses of the Feature",
+            "Effect": "When activating this Feature, select a Move known either by yourself or by 3 Pokémon you own. This Move is Mastered. As an Extended Action, you may have Pokémon spend 2 Tutor Points to learn a Move you have Mastered. Pokémon targeted this way can only learn Moves that they could learn by Level Up, TM, Egg Move, or Move Tutor. You may take [[feature:Tutoring]] multiple times, each time gaining 3 uses of the Feature.",
             "Source": "Core",
             "Category": "Pokémon Raising and Battling"
           },
@@ -2736,7 +2736,7 @@
             "Prerequisites": "[[feature:Type Ace]] (Dragon)",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "Your Pokémon hits with a Dragon-Type Move",
-            "Effect": "Your Pokémon creates a Burst 2, Slowing all Foes in the area and causing those foes to lose 1 Combat Stage in any Stat in which they have positive Combat Stages",
+            "Effect": "Your Pokémon creates a Burst 2, Slowing all Foes in the area and causing those foes to lose 1 Combat Stage in any Stat in which they have positive Combat Stages.",
             "Source": "Core"
           },
           {
@@ -3817,7 +3817,7 @@
               {
                 "Name": "Meal Planner",
                 "Prerequisites": "[[feature:Chef]]",
-                "Effect": "You may create the following items, based on your Intuition Rank",
+                "Effect": "You may create the following items, based on your Intuition Rank.",
                 "\n» Novice": "\"[[item:Enriched Water]]\" for ₽40",
                 "\n» Adept": "\"[[item:Super Soda Pop]]\" for ₽65",
                 "\n» Expert": "\"[[item:Sparkling Lemonade]]\" for ₽125",
@@ -4580,7 +4580,7 @@
             "Name": "Engineer",
             "Prerequisites": "[[feature:Engineer]] Research Field, [[edge:Pokébot Training]]",
             "Frequency": "At-Will — Extended Action",
-            "Effect": "You may craft any Engineer Recipe for which you qualify"
+            "Effect": "You may craft any Engineer Recipe for which you qualify."
           },
           {
             "Name": "Robofighter",
@@ -5009,7 +5009,7 @@
             "Prerequisites": "[[feature:Athlete]], Expert Athletics",
             "Frequency": "Daily x3 — Free Action",
             "Trigger": "You are lowered to half or your Maximum Hit Points or less",
-            "Effect": "You gain +1 Combat Stage in each of your Trained Stats, are cured of up to two Status Afflictions, and gain a Tick of Temporary Hit Points. [[feature:Adrenaline Rush]] may be used only once per Scene"
+            "Effect": "You gain +1 Combat Stage in each of your Trained Stats, are cured of up to two Status Afflictions, and gain a Tick of Temporary Hit Points. [[feature:Adrenaline Rush]] may be used only once per Scene."
           },
           {
             "Name": "Athletic Moves",
@@ -5644,7 +5644,7 @@
                 "Name": "Heightened Intensity",
                 "Prerequisites": "[[ability:Inner Focus]] Ability",
                 "Frequency": "AP – Shift Action",
-                "Effect": "You may use [[move:Focus Energy]] as a Free Action"
+                "Effect": "You may use [[move:Focus Energy]] as a Free Action."
               }
             ]
           },
@@ -6848,7 +6848,7 @@
             "Tags": "[Class][+HP]",
             "Prerequisites": "Novice Occult Education",
             "Frequency": "Static",
-            "Effect": "Choose [[ability:Cursed Body]] or [[ability:Omen]]. You gain the Chosen Ability"
+            "Effect": "Choose [[ability:Cursed Body]] or [[ability:Omen]]. You gain the Chosen Ability."
           },
           {
             "Name": "Hex Maniac Studies",
@@ -6857,7 +6857,7 @@
             "Rank 2 Prerequisites": "[[feature:Hex Maniac]]",
             "Rank 3 Prerequisites": "[[feature:Hex Maniac]], Expert Occult Education",
             "Frequency": "Static",
-            "Effect": "Learn two [[feature:Hex Maniac]] Moves. You may choose any Move marked with the [[feature:Hex Maniac Studies]] Rank you are taking or lower.\n*Note: When using [[move:Curse]], you must use [[move:Curse]] as if you were a Ghost-Type Pokémon",
+            "Effect": "Learn two [[feature:Hex Maniac]] Moves. You may choose any Move marked with the [[feature:Hex Maniac Studies]] Rank you are taking or lower.\n*Note: When using [[move:Curse]], you must use [[move:Curse]] as if you were a Ghost-Type Pokémon.",
             "table": {
               "type": "table",
               "rows": [
@@ -7131,7 +7131,7 @@
             "Prerequisites": "[[feature:Sacred Shield]] or [[feature:Mystic Defense]], Adept Occult Education",
             "Frequency": "1 AP — Free Action",
             "Target": "An ally activates one of your Moves with the [[keyword:Blessing]] Keyword.",
-            "Effect": "The triggering ally gains an additional benefit as follows, depending on the Move used. The benefit takes effect after the [[keyword:Blessing]] and the attack that triggered it are resolved.\n» [[move:Reflect]]: +1 Defense Combat Stage\n» [[move:Light Screen]]: +1 Sp. Defense Combat Stage\n» [[move:Safeguard]]: +1 Evasion\n» [[move:Lucky Chant]]: +1 Accuracy"
+            "Effect": "The triggering ally gains an additional benefit as follows, depending on the Move used. The benefit takes effect after the [[keyword:Blessing]] and the attack that triggered it are resolved.\n» [[move:Reflect]]: +1 Defense Combat Stage\n» [[move:Light Screen]]: +1 Sp. Defense Combat Stage\n» [[move:Safeguard]]: +1 Evasion\n» [[move:Lucky Chant]]: +1 Accuracy."
           },
           {
             "Name": "Lay on Hands",
@@ -7673,7 +7673,7 @@
             "Prerequisites": "[[feature:Arcane Training]]",
             "Frequency": "At-Will — Extended Action",
             "Target": "An Arcane Weapon",
-            "Effect": "You create a Soul Bond with the target Weapon. You may make a Soul Bond with only one weapon at a time. If you create a new Soul Bond, previously Soul Bound weapons lose the Bond. Soul Bound Weapons gain the following benefits:\n» Increase the Damage Base and Effect Range of Struggle Attacks and Arcane Weapon Moves made with your Soul Bonded Weapon by +1 for each Occult Education Rank you have above Novice, up to a maximum of +3 at Master Rank.\n» As a Shift Action, you may beckon your Soul Bonded Weapon to your hands if it is within 10 meters. If it is being held by someone else who does not want to let go of the weapon, make an Occult vs Athletics Opposed Check. If you win, they their lose grip on your Weapon and it flies to your hand as normal"
+            "Effect": "You create a Soul Bond with the target Weapon. You may make a Soul Bond with only one weapon at a time. If you create a new Soul Bond, previously Soul Bound weapons lose the Bond. Soul Bound Weapons gain the following benefits:\n» Increase the Damage Base and Effect Range of Struggle Attacks and Arcane Weapon Moves made with your Soul Bonded Weapon by +1 for each Occult Education Rank you have above Novice, up to a maximum of +3 at Master Rank.\n» As a Shift Action, you may beckon your Soul Bonded Weapon to your hands if it is within 10 meters. If it is being held by someone else who does not want to let go of the weapon, make an Occult vs Athletics Opposed Check. If you win, they their lose grip on your Weapon and it flies to your hand as normal."
           },
           {
             "Name": "Metamagic",
@@ -8402,7 +8402,7 @@
             "Prerequisites": "[[feature:Herald of Pride]]",
             "Frequency": "1 AP — Free Action",
             "Trigger": "You use a Weapon Attack",
-            "Effect": "You may have the triggering attack deal Dragon-Type Damage if you wish. On 18+, all targets can only use At-Will Frequency Moves for one full round"
+            "Effect": "You may have the triggering attack deal Dragon-Type Damage if you wish. On 18+, all targets can only use At-Will Frequency Moves for one full round."
           },
           {
             "Name": "Bare the Dragon's Claws",
@@ -8632,7 +8632,7 @@
             "Tags": "[Class][+Attack and Special Attack]",
             "Prerequisites": "[[edge:Elemental Connection]] (Fire), Novice Combat",
             "Frequency": "Static",
-            "Effect": "Choose two of [[move:Flame Burst]], [[move:Flame Wheel]], [[move:Flame Charge]], or [[move:Will-O-Wisp]]. You learn the chosen Moves"
+            "Effect": "Choose two of [[move:Flame Burst]], [[move:Flame Wheel]], [[move:Flame Charge]], or [[move:Will-O-Wisp]]. You learn the chosen Moves."
           },
           {
             "Name": "Fiery Soul",
@@ -9436,7 +9436,7 @@
             "Prerequisites": "[[feature:Ground Out]]",
             "Frequency": "2 AP — Swift Action",
             "Trigger": "You hit with a damaging Ground Type Move",
-            "Effect": "You initiate a Trip Maneuver against 1 target of the Move. The Maneuver automatically hits, and you may use your Focus or Intuition for the opposed check"
+            "Effect": "You initiate a Trip Maneuver against 1 target of the Move. The Maneuver automatically hits, and you may use your Focus or Intuition for the opposed check."
           },
           {
             "Name": "Ground Out",
