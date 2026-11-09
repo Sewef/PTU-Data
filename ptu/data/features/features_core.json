@@ -1313,40 +1313,40 @@
           },
           {
             "Name": "Lessons",
-            "Prerequisites": "Mentor",
+            "Prerequisites": "[[feature:Mentor]]",
             "Frequency": "Daily x3 — Extended Action",
-            "Effect": "You may perform any Mentor Lesson for which you qualify."
+            "Effect": "You may perform any [[feature:Mentor Lesson]] for which you qualify."
           },
           {
             "Name": "Expand Horizons",
-            "Prerequisites": "Mentor",
+            "Prerequisites": "[[feature:Mentor]]",
             "Frequency": "At-Will — Extended Action",
             "Target": "Your Pokémon",
             "Effect": "Your Pokémon gains 3 Tutor Points. A Pokémon may be targeted by Expand Horizons only once."
           },
           {
             "Name": "Guidance",
-            "Prerequisites": "Mentor",
+            "Prerequisites": "[[feature:Mentor]]",
             "Frequency": "Static",
             "Effect": "Your Pokémon's base Move List Limit is increased by +1 (Reminder: The default Move List Limit is 6)."
           },
           {
             "Name": "Move Tutor",
-            "Prerequisites": "Mentor, one Mentor Skill at Expert Rank",
+            "Prerequisites": "[[feature:Mentor]], one Mentor Skill at Expert Rank",
             "Frequency": "Daily — Extended Action",
             "Target": "A Pokémon with at least 2 Tutor Points.",
             "Effect": "The target loses 2 Tutor Points, and learns any move from its Tutor List."
           },
           {
             "Name": "Egg Tutor",
-            "Prerequisites": "Move Tutor",
+            "Prerequisites": "[[feature:Move Tutor]]",
             "Frequency": "Daily — Extended Action",
             "Target": "A Pokémon with at least 2 Tutor Points.",
             "Effect": "The target loses 2 Tutor Points, and learns any Move from its Egg Move List. A Pokémon may be targeted by Egg Tutor only one time."
           },
           {
             "Name": "Lifelong Learning",
-            "Prerequisites": "Move Tutor, one Mentor Skill at Master Rank",
+            "Prerequisites": "[[feature:Move Tutor]], one Mentor Skill at Master Rank",
             "Frequency": "Static",
             "Effect": "Your Pokémon may have up to 4 Moves from their Move List come from TMs or Move Tutors."
           },
@@ -1355,25 +1355,25 @@
             "Mentor Lessons": [
               {
                 "Name": "Changing Viewpoints",
-                "Prerequisites": "Mentor, Intuition as a Mentor Skill",
+                "Prerequisites": "[[feature:Mentor]], Intuition as a Mentor Skill",
                 "Target": "A Pokémon with at least 1 Tutor Point.",
                 "Effect": "The target loses a Tutor Point, and you may change the target's Nature to any other Nature which either raises the same Stat as its current nature, or lowers the same Stat as its current Nature."
               },
               {
                 "Name": "Empowered Development",
-                "Prerequisites": "Mentor, Charm as a Mentor Skill",
+                "Prerequisites": "[[feature:Mentor]], Charm as a Mentor Skill",
                 "Target": "A Pokémon with at least 1 Tutor Point",
-                "Effect": "The target loses 1 Tutor Point, and gains any three of the following Poké Edges: Skill Improvement, Advanced Mobility, or Capability Training. A Pokémon may be targeted only once by Empowered Development. The target may gain Poké Edges this way even if they do not meet the \"Prerequisites\", however, they must still follow other limitations; Advanced Mobility can only improve a Movement Capability once, for example."
+                "Effect": "The target loses 1 Tutor Point, and gains any three of the following Poké Edges: [[pokeedge:Skill Improvement]], [[pokeedge:Advanced Mobility]], or [[pokeedge:Capability Training]]. A Pokémon may be targeted only once by Empowered Development. The target may gain Poké Edges this way even if they do not meet the \"Prerequisites\", however, they must still follow other limitations; [[pokeedge:Advanced Mobility]] can only improve a Movement Capability once, for example."
               },
               {
                 "Name": "Corrective Learning",
-                "Prerequisites": "Mentor, Intimidate as a Mentor Skill",
+                "Prerequisites": "[[feature:Mentor]], Intimidate as a Mentor Skill",
                 "Target": "A Pokémon that has spent Tutor Points on a Poké Edge or a Feature's effect",
                 "Effect": "The target loses one \"Effect\" gained from a Poké Edge or Feature and refunds all Tutor Points spent on it."
               },
               {
                 "Name": "Versatile Teachings",
-                "Prerequisites": "Mentor, Pokémon Education as a Mentor Skill",
+                "Prerequisites": "[[feature:Mentor]], Pokémon Education as a Mentor Skill",
                 "Target": "A Pokémon with at least 1 Tutor Point",
                 "Effect": "The target loses 1 Tutor Point and may exchange one of its Basic Abilities for any other of its species' Basic Abilities or one of its Advanced Abilities for any of its species' Basic or Advanced Abilities.",
                 "Note": "You may NOT activate Versatile Teachings to reroll Abilities that require a roll to determine characteristics, such as Serpent's Mark and Color Theory."
