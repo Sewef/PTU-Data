@@ -2,7 +2,7 @@
   {
     "Name": "Abominable",
     "Frequency": "Static",
-    "Effect": "The user's Base HP is increased by +5. Additionally, the user ignores the Recoil Keyword when attacking."
+    "Effect": "The user's Base HP is increased by +5. Additionally, the user ignores the [[keyword:Recoil]] Keyword when attacking."
   },
   {
     "Name": "Absorb Force",
@@ -29,7 +29,7 @@
   {
     "Name": "Aftermath",
     "Frequency": "Scene – Free Action",
-    "Trigger": "The user becomes Fainted",
+    "Trigger": "The user becomes [[status:Fainted]]",
     "Effect": "The user creates a Burst 1. Everything in the Burst loses three Ticks of Hit Points."
   },
   {
@@ -40,7 +40,7 @@
   {
     "Name": "Ambush",
     "Frequency": "Scene – Free Action",
-    "Effect": "The user may activate this Ability to use a Move with a Damage Base of 6 (before applying STAB or other modifiers) or lower as if it had the Priority keyword. If it hits, the target is Flinched and has a -2 penalty to Accuracy Rolls for 1 full round."
+    "Effect": "The user may activate this Ability to use a Move with a Damage Base of 6 (before applying STAB or other modifiers) or lower as if it had the [[keyword:Priority]] keyword. If it hits, the target is [[status:Flinch]](Flinched) and has a -2 penalty to Accuracy Rolls for 1 full round."
   },
   {
     "Name": "Analytic",
@@ -56,12 +56,12 @@
   {
     "Name": "Anger Point",
     "Frequency": "At-Will – Free Action",
-    "Effect": "When the Pokémon receives a Critical Hit, they become Enraged and gain +6 Attack Combat Stages."
+    "Effect": "When the Pokémon receives a Critical Hit, they become [[status:Rage]](Enraged) and gain +6 Attack Combat Stages."
   },
   {
     "Name": "Anger Shell",
     "Frequency": "At-Will – Free Action",
-    "Trigger": "The user becomes Enraged for the first time in a Scene, or receives one or more Injuries",
+    "Trigger": "The user becomes [[status:Rage]](Enraged) for the first time in a Scene, or receives one or more Injuries",
     "Effect": "The user receives +1 Attack, Special Attack, and Speed Combat Stages, but loses -1 Defense and Special Defense Combat Stages."
   },
   {
@@ -72,12 +72,12 @@
   {
     "Name": "Aqua Bullet",
     "Frequency": "Static",
-    "Effect": "Connection - Aqua Jet. The user may use Water-Type Moves as a Full Action to gain Sky 10 and shift in a straight line before attempting to use their Move. When shifting this way, the user does not provoke attacks of opportunity."
+    "Effect": "Connection - [[move:Aqua Jet]]. The user may use Water-Type Moves as a Full Action to gain Sky 10 and shift in a straight line before attempting to use their Move. When shifting this way, the user does not provoke attacks of opportunity."
   },
   {
     "Name": "Arena Trap",
     "Frequency": "Scene – Free Action",
-    "Effect": "Once Arena Trap is activated, all foes within 5 meters of the user are considered Slowed and Trapped. This does not affect targets of the Flying Type, or with a Levitate, Sky, or Burrow Speed of 4 or higher. The user may end the effect as a Free Action, and the effect ends if the user is Fainted or returned to a Poké Ball."
+    "Effect": "Once Arena Trap is activated, all foes within 5 meters of the user are considered [[status:Slowed]] and [[status:Trapped]]. This does not affect targets of the Flying Type, or with a Levitate, Sky, or Burrow Speed of 4 or higher. The user may end the effect as a Free Action, and the effect ends if the user is [[status:Fainted]] or returned to a Poké Ball."
   },
   {
     "Name": "Armor Tail",
@@ -88,7 +88,7 @@
   {
     "Name": "Aroma Veil",
     "Frequency": "Static",
-    "Effect": "The user and all adjacent Pokémon and Trainers cannot become Confused, Enraged, or Suppressed. Defensive."
+    "Effect": "The user and all adjacent Pokémon and Trainers cannot become [[status:Confusion]](Confused), [[status:Rage]](Enraged), or [[status:Suppressed]]. Defensive."
   },
   {
     "Name": "Aura Break",
@@ -114,7 +114,7 @@
   {
     "Name": "Ballistic",
     "Frequency": "Static",
-    "Effect": "Connection – Rollout. The user increases the Damage Base of Rollout, Steamroller, Steel Roller, and all Moves with \"Ball\" in the name by +2, and these Moves gain the Versatile Keyword for the user."
+    "Effect": "Connection – [[move:Rollout]]. The user increases the Damage Base of Rollout, Steamroller, [[move:Steel Roller]], and all Moves with \"Ball\" in the name by +2, and these Moves gain the [[keyword:Versatile]] Keyword for the user."
   },
   {
     "Name": "Battery",
@@ -145,12 +145,12 @@
   {
     "Name": "Beautiful",
     "Frequency": "Scene – Standard Action",
-    "Effect": "The user may activate Beautiful to either gain +2 Beauty Dice in a Contest, or to gain +1 Special Attack Combat Stage and cure all allies within 5 meters of the Enraged Condition."
+    "Effect": "The user may activate Beautiful to either gain +2 Beauty Dice in a Contest, or to gain +1 Special Attack Combat Stage and cure all allies within 5 meters of the [[status:Rage]](Enraged) Condition."
   },
   {
     "Name": "Berserk",
     "Frequency": "At-Will – Free Action",
-    "Trigger": "The user's drops to half HP or below for the first time in an encounter, or becomes Enraged",
+    "Trigger": "The user's drops to half HP or below for the first time in an encounter, or becomes [[status:Rage]](Enraged)",
     "Effect": "The user receives +1 Special Attack Combat Stage."
   },
   {
@@ -161,12 +161,12 @@
   {
     "Name": "Big Swallow",
     "Frequency": "Static",
-    "Effect": "Connection - Stockpile. Whenever the user uses Swallow or Spit Up, it may treat the Stockpile Count as if it was one higher. This Ability has no effect if the Stockpile Counter is already 3."
+    "Effect": "Connection - [[move:Stockpile]]. Whenever the user uses [[move:Swallow]] or [[move:Spit Up]], it may treat the Stockpile Count as if it was one higher. This Ability has no effect if the Stockpile Counter is already 3."
   },
   {
     "Name": "Blaze",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Fire."
+    "Effect": "The user gains [[ability:Last Chance]] with Fire."
   },
   {
     "Name": "Blessed Touch",
@@ -177,8 +177,8 @@
   {
     "Name": "Blow Away",
     "Frequency": "Static",
-    "Effect": "Connection – Whirlwind. When the user uses Whirlwind, all targets hit are pushed an additional 2 meters and lose a Tick of Hit Points.",
-    "Bonus": "The user may use Whirlwind as a Swift Action."
+    "Effect": "Connection – [[move:Whirlwind]]. When the user uses [[move:Whirlwind]], all targets hit are pushed an additional 2 meters and lose a Tick of Hit Points.",
+    "Bonus": "The user may use [[move:Whirlwind]] as a Swift Action."
   },
   {
     "Name": "Blur",
@@ -194,13 +194,13 @@
   {
     "Name": "Bone Lord",
     "Frequency": "At-Will – Free Action",
-    "Trigger": "The user hits with Bone Club, Bonemerang, or Bone Rush",
-    "Effect": "Connection – Bonemerang. Once per Scene per Move, the following Moves may be used as if they had the following bonuses: - Bone Club: Bone Club's target loses 1 Defense and Special Attack CS. - Bonemerang: Has a Range of Line 6 but loses the Double Strike keyword - Bone Rush: Bone Rush automatically ‘hits' four times (as per the Five Strike keyword)."
+    "Trigger": "The user hits with [[move:Bone Club]], [[move:Bonemerang]], or [[move:Bone Rush]]",
+    "Effect": "Connection – [[move:Bonemerang]]. Once per Scene per Move, the following Moves may be used as if they had the following bonuses: - [[move:Bone Club]]: [[move:Bone Club]]'s target loses 1 Defense and Special Attack CS. - Bonemerang: Has a Range of Line 6 but loses the [[keyword:Double Strike]] keyword - Bone Rush: [[move:Bone Rush]] automatically ‘hits' four times (as per the [[keyword:Five Strike]] keyword)."
   },
   {
     "Name": "Bone Wielder",
     "Frequency": "Static",
-    "Effect": "The user's Bone Club, Bonemerang, and Bone Rush Moves ignore immunity against Ground-Type Moves."
+    "Effect": "The user's [[move:Bone Club]], Bonemerang, and [[move:Bone Rush]] Moves ignore immunity against Ground-Type Moves."
   },
   {
     "Name": "Box Step",
@@ -211,24 +211,24 @@
   {
     "Name": "Brimstone",
     "Frequency": "Static",
-    "Effect": "Whenever the user inflicts Burn or Poison with a damaging Fire-Type or Poison-Type Attack, the target becomes both Burned and Poisoned."
+    "Effect": "Whenever the user inflicts [[status:Burned]](Burn) or [[status:Poisoned]](Poison) with a damaging Fire-Type or Poison-Type Attack, the target becomes both [[status:Burned]] and [[status:Poisoned]]."
   },
   {
     "Name": "Bulletproof",
     "Frequency": "Static",
-    "Effect": "The user resists all X target ranged attacks one step further. This refers to attacks and Moves that simply hit one target or specify hitting multiple targets, such as Razor Wind hitting three targets. It has no effect on Moves that are capable of hitting multiple targets through areas of effect, such as Bursts or Cones. Defensive."
+    "Effect": "The user resists all X target ranged attacks one step further. This refers to attacks and Moves that simply hit one target or specify hitting multiple targets, such as [[move:Razor Wind]] hitting three targets. It has no effect on Moves that are capable of hitting multiple targets through areas of effect, such as Bursts or Cones. Defensive."
   },
   {
     "Name": "Bully",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user hits a target for Super-Effective Damage with a Melee Move",
-    "Effect": "The target of the attack is pushed 2 Meters, becomes Tripped, and gains an Injury."
+    "Effect": "The target of the attack is pushed 2 Meters, becomes [[status:Tripped]], and gains an Injury."
   },
   {
     "Name": "Burning Blaze",
     "Frequency": "Scene x2 – Free Action",
     "Trigger": "The user hits a target with an Electric-Type Move",
-    "Effect": "The triggering target is Burned.",
+    "Effect": "The triggering target is [[status:Burned]].",
     "Bonus": "While in Sunny Weather, the user may also activate Moves as if in Rainy Weather."
   },
   {
@@ -246,7 +246,7 @@
   {
     "Name": "Chemical Romance",
     "Frequency": "Static",
-    "Effect": "Connection – Sweet Scent. Whenever the user hits a male target with Poison Gas, Smog, Sweet Scent, Toxic, or Venom Drench, that target becomes Infatuated with the user."
+    "Effect": "Connection – [[move:Sweet Scent]]. Whenever the user hits a male target with [[move:Poison Gas]], [[move:Smog]], [[move:Sweet Scent]], [[move:Toxic]], or [[move:Venom Drench]], that target becomes Infatuated with the user."
   },
   {
     "Name": "Cherry Power",
@@ -298,8 +298,8 @@
   {
     "Name": "Comatose",
     "Frequency": "At-Will – Move Action",
-    "Effect": "The user falls Asleep, and regains a Tick of Hit Points.",
-    "Bonus": " The user may act normally while Asleep and ignores all other penalties from being Asleep. While Asleep, the user does not make Save Checks to wake up, and wakes up from being hit only if they want to."
+    "Effect": "The user falls [[status:Sleep]](Asleep), and regains a Tick of Hit Points.",
+    "Bonus": " The user may act normally while [[status:Sleep]](Asleep) and ignores all other penalties from being [[status:Sleep]](Asleep). While [[status:Sleep]](Asleep), the user does not make Save Checks to wake up, and wakes up from being hit only if they want to."
   },
   {
     "Name": "Combo Striker",
@@ -312,8 +312,8 @@
     "Frequency": "At-Will – Swift Action",
     "Target": "An adjacent Ally",
     "Effect": "The user Attaches to the target. While Attached, the user occupies the target's square and replaces their Movement capabilities with the target's. Once per Round, the user and target may Intercept attacks for each other as a Free Action.",
-    "Bonus": "If the user is at least Level 30, while Attached, the target may use Order Up as though it were on their Move List.",
-    "Special": "If the target has the Mouthful Ability, they and the user may Intercept attacks any number of times per round for each other, instead of once."
+    "Bonus": "If the user is at least Level 30, while Attached, the target may use [[move:Order Up]] as though it were on their Move List.",
+    "Special": "If the target has the [[ability:Mouthful]] Ability, they and the user may Intercept attacks any number of times per round for each other, instead of once."
   },
   {
     "Name": "Competitive",
@@ -344,7 +344,7 @@
   {
     "Name": "Copy Master",
     "Frequency": "Static",
-    "Effect": "Connection - Copycat. Whenever the user uses Copycat or Mimic, it gains +1 Combat Stage in a Stat of its choice after the Move is resolved."
+    "Effect": "Connection - [[move:Copycat]]. Whenever the user uses [[move:Copycat]] or [[move:Mimic]], it gains +1 Combat Stage in a Stat of its choice after the Move is resolved."
   },
   {
     "Name": "Corrosion",
@@ -354,7 +354,7 @@
   {
     "Name": "Corrosive Toxins",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection - Toxic. The user may activate this Ability when using Toxic to allow the Move to ignore Immunity to the Status Affliction, Blessings, and the effects of Abilities that may prevent Hit Point loss from being Badly Poisoned (such as Magic Guard or Poison Heal)."
+    "Effect": "Connection - [[move:Toxic]]. The user may activate this Ability when using [[move:Toxic]] to allow the Move to ignore Immunity to the Status Affliction, Blessings, and the effects of Abilities that may prevent Hit Point loss from being [[status:Badly Poisoned]] (such as [[ability:Magic Guard]] or [[ability:Poison Heal]])."
   },
   {
     "Name": "Costar",
@@ -366,7 +366,7 @@
     "Name": "Cotton Down",
     "Frequency": "Scene – Free Action, Reaction",
     "Trigger": "The user is hit by an attack",
-    "Effect": "All Pokémon in a Burst 1 around the user have their speed lowered by 1 CS, and are Slowed for one full round."
+    "Effect": "All Pokémon in a Burst 1 around the user have their speed lowered by 1 CS, and are [[status:Slowed]] for one full round."
   },
   {
     "Name": "Courage",
@@ -377,13 +377,13 @@
     "Name": "Cruelty",
     "Frequency": "Scene – Swift Action",
     "Trigger": "The user hits a foe with a damaging attack",
-    "Effect": "After Damage is Resolved, the foe gains an Injury. The user is then informed of the total number of Injuries currently on the target, and may use that number to \"purchase\" the effects listed below. \n» 1 Injury: The target loses 2 Hit Points. May be \"purchased\" multiple times. \n» 1 Injury: The target is Slowed. \n» 2 Injuries: Until the end of the encounter, the target may not gain Hit Points or Temporary Hit Points from any source. This effect ends if the target is switched out or Takes a Breather."
+    "Effect": "After Damage is Resolved, the foe gains an Injury. The user is then informed of the total number of Injuries currently on the target, and may use that number to \"purchase\" the effects listed below. \n» 1 Injury: The target loses 2 Hit Points. May be \"purchased\" multiple times. \n» 1 Injury: The target is [[status:Slowed]]. \n» 2 Injuries: Until the end of the encounter, the target may not gain Hit Points or Temporary Hit Points from any source. This effect ends if the target is switched out or Takes a Breather."
   },
   {
     "Name": "Crush Trap",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user successfully Grapples a target",
-    "Effect": "Connection – Wrap. When you activate this ability, the user may immediately deal damage to the target as if the user had hit with a Struggle Attack. There is no Accuracy Roll and thus this damage cannot miss, be a Critical Hit, or trigger any Effect Ranges."
+    "Effect": "Connection – [[move:Wrap]]. When you activate this ability, the user may immediately deal damage to the target as if the user had hit with a Struggle Attack. There is no Accuracy Roll and thus this damage cannot miss, be a Critical Hit, or trigger any Effect Ranges."
   },
   {
     "Name": "Cud Chew",
@@ -400,7 +400,7 @@
     "Name": "Cursed Body",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user is hit by a Damaging Move.",
-    "Effect": "The Move becomes Disabled."
+    "Effect": "The Move becomes [[status:Disabled]]."
   },
   {
     "Name": "Cute Charm",
@@ -417,7 +417,7 @@
   {
     "Name": "Damp",
     "Frequency": "Static",
-    "Effect": "Whenever anyone within 10 meters would use the Moves Self-Destruct or Explosion or activate the Aftermath Ability, those effects fail and instead do nothing.",
+    "Effect": "Whenever anyone within 10 meters would use the Moves [[move:Self-Destruct]] or [[move:Explosion]] or activate the [[ability:Aftermath]] Ability, those effects fail and instead do nothing.",
     "Bonus": " The user gains a +1d10 Bonus to Damage Rolls with Water-Typed Moves."
   },
   {
@@ -430,12 +430,12 @@
     "Name": "Danger Syrup",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user is hit by an attack",
-    "Effect": "Connection - Sweet Scent. When this Ability is activated the user may use Sweet Scent as a Free Action, ignoring Frequency. Whenever the user hits a foe with Sweet Scent, that foe is Blinded for 1 full round."
+    "Effect": "Connection - [[move:Sweet Scent]]. When this Ability is activated the user may use [[move:Sweet Scent]] as a Free Action, ignoring Frequency. Whenever the user hits a foe with [[move:Sweet Scent]], that foe is Blinded for 1 full round."
   },
   {
     "Name": "Dark Art",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Dark."
+    "Effect": "The user gains [[ability:Last Chance]] with Dark."
   },
   {
     "Name": "Dauntless Shield",
@@ -452,12 +452,12 @@
     "Name": "Deadly Poison",
     "Frequency": "Daily – Free Action",
     "Trigger": "The user Poisons a target",
-    "Effect": "The target is Badly Poisoned instead."
+    "Effect": "The target is [[status:Badly Poisoned]] instead."
   },
   {
     "Name": "Decoy",
     "Frequency": "Scene – Full Action",
-    "Effect": "The user uses the Move \"Follow Me\" as if it was on their Move List, and their Evasion is raised by +2 until the end of their next turn."
+    "Effect": "The user uses the Move \"[[move:Follow Me]]\" as if it was on their Move List, and their Evasion is raised by +2 until the end of their next turn."
   },
   {
     "Name": "Deep Sleep",
@@ -498,22 +498,22 @@
   {
     "Name": "Diamond Defense",
     "Frequency": "Static",
-    "Effect": "Connection - Stealth Rock. Stealth Rock's Frequency is Scene x2, and the user's Stealth Rocks can be treated as dealing Rock-Type or Fairy-Type Damage, whichever is more effective."
+    "Effect": "Connection - [[move:Stealth Rock]]. [[move:Stealth Rock]]'s Frequency is Scene x2, and the user's Stealth Rocks can be treated as dealing Rock-Type or Fairy-Type Damage, whichever is more effective."
   },
   {
     "Name": "Dig Away",
     "Frequency": "Daily – Free Action",
-    "Effect": "Connection - Dig. When hit by a Move, this Pokémon may activate this Feature to use Dig, frequency allowing, as an interrupt to avoid the attack and shift underground immediately. This consumes a command as normal. The terrain must allow for Dig to be used."
+    "Effect": "Connection - [[move:Dig]]. When hit by a Move, this Pokémon may activate this Feature to use [[move:Dig]], frequency allowing, as an interrupt to avoid the attack and shift underground immediately. This consumes a command as normal. The terrain must allow for Dig to be used."
   },
   {
     "Name": "Dire Spore",
     "Frequency": "Static",
-    "Effect": "Connection - Spore. Whenever the user hits a target with Spore, that target is also Poisoned."
+    "Effect": "Connection - [[move:Spore]]. Whenever the user hits a target with Spore, that target is also [[status:Poisoned]]."
   },
   {
     "Name": "Discipline",
     "Frequency": "Scene – Free Action",
-    "Effect": "If the user gains initiative and is Confused, Enraged, Infatuated, or Flinched, they may activate Discipline to cure themselves of any of these conditions."
+    "Effect": "If the user gains initiative and is [[status:Confusion]](Confused), [[status:Rage]](Enraged), Infatuated, or [[status:Flinch]](Flinched), they may activate Discipline to cure themselves of any of these conditions."
   },
   {
     "Name": "Disguise",
@@ -542,7 +542,7 @@
     "Name": "Dream Smoke",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user is hit by a Melee Attack",
-    "Effect": "The attacking foe falls Asleep."
+    "Effect": "The attacking foe falls [[status:Sleep]](Asleep)."
   },
   {
     "Name": "Dreamspinner",
@@ -562,7 +562,7 @@
   {
     "Name": "Drown Out",
     "Frequency": "Scene x2 – Free Action",
-    "Trigger": "A foe uses a Move with the Sonic keyword",
+    "Trigger": "A foe uses a Move with the [[keyword:Sonic]] keyword",
     "Effect": "The triggering Move fails and has no effect."
   },
   {
@@ -573,12 +573,12 @@
   {
     "Name": "Dust Cloud",
     "Frequency": "Static",
-    "Effect": "Connection - Poison Powder. The user may use Moves with the Powder Keyword as if they had a Range of \"Burst 1\"."
+    "Effect": "Connection - Poison [[move:Powder]]. The user may use Moves with the [[keyword:Powder]] Keyword as if they had a Range of \"Burst 1\"."
   },
   {
     "Name": "Early Bird",
     "Frequency": "Static",
-    "Effect": "The user gains a bonus to Initiative equal to half its Speed, and a +3 Bonus on Save Checks against Sleep."
+    "Effect": "The user gains a bonus to Initiative equal to half its Speed, and a +3 Bonus on Save Checks against [[status:Sleep]]."
   },
   {
     "Name": "Earth Eater",
@@ -589,29 +589,29 @@
     "Name": "Effect Spore",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user is hit by a Melee Attack",
-    "Effect": "Roll 1d6. On a result of 1 or 2, the attacker is Poisoned. On a result of 3 or 4, the attacker is Paralyzed. On a result of 5 or 6, the attacker falls Asleep."
+    "Effect": "Roll 1d6. On a result of 1 or 2, the attacker is [[status:Poisoned]]. On a result of 3 or 4, the attacker is [[status:Paralysis]](Paralyzed). On a result of 5 or 6, the attacker falls [[status:Sleep]](Asleep)."
   },
   {
     "Name": "Eggscellence",
     "Frequency": "Static",
-    "Effect": "Connection – Barrage. The user receives STAB when using Barrage and Egg Bomb. If Normal Typed, these Moves deal Damage as if one step more effective on 16+."
+    "Effect": "Connection – [[move:Barrage]]. The user receives STAB when using [[move:Barrage]] and [[move:Egg Bomb]]. If Normal Typed, these Moves deal Damage as if one step more effective on 16+."
   },
   {
     "Name": "Electric Surge",
     "Frequency": "Scene x3 – Swift Action",
-    "Effect": "The Field becomes Electrified, as if affected by the Move Electric Terrain, for one full round."
+    "Effect": "The Field becomes Electrified, as if affected by the Move [[move:Electric Terrain]], for one full round."
   },
   {
     "Name": "Electrodash",
     "Frequency": "Scene x2 – Swift Action",
     "Effect": "The user may make a Sprint Action as a Free Action.",
-    "Bonus": " The user may free itself from the Stuck condition as a Shift Action. The user does not provoke Attacks of Opportunity when Sprinting."
+    "Bonus": " The user may free itself from the [[status:Stuck]] condition as a Shift Action. The user does not provoke Attacks of Opportunity when Sprinting."
   },
   {
     "Name": "Electromorphosis",
     "Frequency": "Scene – Swift Action, Reaction",
     "Trigger": "An adjacent foe hits the user with a damaging Move",
-    "Effect": "Connection – Charge. The user may use Charge as a Free Action."
+    "Effect": "Connection – [[move:Charge]]. The user may use [[move:Charge]] as a Free Action."
   },
   {
     "Name": "Embody Aspect",
@@ -654,7 +654,7 @@
     "Name": "Emergency Exit",
     "Frequency": "Scene – Free Action",
     "Effect": "When the user's Hit Points drop below half their maximum, their trainer may immediately recall the user and send out another Pokémon as a Free Action. If the user hasn't taken their turn yet, their replacement may act this round. Defensive.",
-    "Bonus": " The user is immune to being Trapped."
+    "Bonus": " The user is immune to being [[status:Trapped]]."
   },
   {
     "Name": "Empower",
@@ -664,12 +664,12 @@
   {
     "Name": "Enduring Rage",
     "Frequency": "Static",
-    "Effect": "The user may not make rolls to cure themselves from the Enraged condition. However, while Enraged, the user gains 5 Damage Reduction."
+    "Effect": "The user may not make rolls to cure themselves from the [[status:Rage]](Enraged) condition. However, while [[status:Rage]](Enraged), the user gains 5 Damage Reduction."
   },
   {
     "Name": "Enfeebling Lips",
     "Frequency": "Static",
-    "Effect": "Connection - Lovely Kiss. Whenever the user uses the Move Lovely Kiss, they may choose a Stat. If the Move successfully hits, the Pokémon or Trainer being targeted loses 2 Combat Stages in that Stat."
+    "Effect": "Connection - [[move:Lovely Kiss]]. Whenever the user uses the Move [[move:Lovely Kiss]], they may choose a Stat. If the Move successfully hits, the Pokémon or Trainer being targeted loses 2 Combat Stages in that Stat."
   },
   {
     "Name": "Exploit",
@@ -679,7 +679,7 @@
   {
     "Name": "Fabulous Trim",
     "Frequency": "Static",
-    "Effect": "Furfrou's Ability depends on its current hairstyle. A Furfrou's hairstyle can be changed as an Extended Action at an appropriate hair parlor. \nStar Trim: Celebrate \nDiamond Trim: Defiant \nHeart Trim: Cute Tears \nPharaoh Trim: Sand Veil \nKabuki Trim: Inner Focus \nLa Reine Trim: Intimidate \nMatron Trim: Friend Guard \nDandy Trim: Moxie \nDebutante Trim: Confidence"
+    "Effect": "Furfrou's Ability depends on its current hairstyle. A Furfrou's hairstyle can be changed as an Extended Action at an appropriate hair parlor. \nStar Trim: Celebrate \nDiamond Trim: Defiant \nHeart Trim: [[ability:Cute Tears]] \nPharaoh Trim: [[ability:Sand Veil]] \nKabuki Trim: [[ability:Inner Focus]] \nLa Reine Trim: Intimidate \nMatron Trim: [[ability:Friend Guard]] \nDandy Trim: Moxie \nDebutante Trim: Confidence"
   },
   {
     "Name": "Fade Away",
@@ -694,18 +694,18 @@
   {
     "Name": "Family Unit",
     "Frequency": "Static",
-    "Effect": "The user has two tokens instead of one, which may share a square, and do so when sent out. When the user Shifts, both tokens may move independently and do not need to remain adjacent. The user cannot be hit by a Move twice due to both tokens being targeted. The two tokens and their allies may treat each other as different Pokémon for the purposes of positioning effects such as flanking, Moves like Beat Up, or Abilities such as Friend Guard and Pack Hunt.",
+    "Effect": "The user has two tokens instead of one, which may share a square, and do so when sent out. When the user Shifts, both tokens may move independently and do not need to remain adjacent. The user cannot be hit by a Move twice due to both tokens being targeted. The two tokens and their allies may treat each other as different Pokémon for the purposes of positioning effects such as flanking, Moves like [[move:Beat Up]], or Abilities such as [[ability:Friend Guard]] and [[ability:Pack Hunt]].",
     "Bonus": "The user may make two Attacks of Opportunity per round instead of one."
   },
   {
     "Name": "Fashion Designer",
     "Frequency": "Daily – Extended Action",
-    "Effect": "The user knows how to make useful accessories from mere common leaves. The user may craft one of the consumable Held Items below by activating this ability.\nLucky Leaf - Grass Type Booster for one encounter.\nTasty Reeds - Bug Type Booster for one encounter.\nDew Cup - Same Effect as an Occa Berry.\nThorn Mantle - Same Effect as a Coba Berry.\nChewy Cluster - Same Effect as Leftovers.\nDecorative Twine – Roll +2d6 on any Move during a Contest."
+    "Effect": "The user knows how to make useful accessories from mere common leaves. The user may craft one of the consumable Held Items below by activating this ability.\nLucky Leaf - Grass Type Booster for one encounter.\nTasty Reeds - Bug Type Booster for one encounter.\nDew Cup - Same Effect as an [[item:Occa Berry]].\nThorn Mantle - Same Effect as a [[item:Coba Berry]].\nChewy Cluster - Same Effect as [[item:Leftovers]].\nDecorative Twine – Roll +2d6 on any Move during a Contest."
   },
   {
     "Name": "Fiery Crash",
     "Frequency": "Static",
-    "Effect": "Whenever the user uses a Move with the Dash keyword, they may either increase that Move's Damage Base by +2, or change the Move to be Fire-Type if it was not already. All Moves with the Dash keyword performed as Fire-Typed burn their target on 19+, or increase the effect range by +2 if they could already inflict Burn."
+    "Effect": "Whenever the user uses a Move with the [[keyword:Dash]] keyword, they may either increase that Move's Damage Base by +2, or change the Move to be Fire-Type if it was not already. All Moves with the [[keyword:Dash]] keyword performed as Fire-Typed burn their target on 19+, or increase the effect range by +2 if they could already inflict [[status:Burned]](Burn)."
   },
   {
     "Name": "Filter",
@@ -716,18 +716,18 @@
     "Name": "Flame Body",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user is hit by a Melee Attack",
-    "Effect": "The attacking foe becomes Burned."
+    "Effect": "The attacking foe becomes [[status:Burned]]."
   },
   {
     "Name": "Flame Tongue",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user hits a foe with Lick.",
-    "Effect": "Connection – Lick. The foe hit with Lick gains an Injury and becomes Burned."
+    "Effect": "Connection – [[move:Lick]]. The foe hit with Lick gains an Injury and becomes [[status:Burned]]."
   },
   {
     "Name": "Flare Boost",
     "Frequency": "Scene – Swift Action",
-    "Effect": "The user gains +3Attack and Special Attack Combat Stages. Flare Boost may only be used while Burned."
+    "Effect": "The user gains +3Attack and Special Attack Combat Stages. Flare Boost may only be used while [[status:Burned]]."
   },
   {
     "Name": "Flash Fire",
@@ -737,8 +737,8 @@
   {
     "Name": "Flavorful Aroma",
     "Frequency": "At-Will – Free Action",
-    "Trigger": "The user uses Aromatic Mist",
-    "Effect": "Connection – Aromatic Mist. All allies affected by Aromatic Mist gain +1 to Accuracy Rolls and +5 to Damage Rolls for one full round."
+    "Trigger": "The user uses [[move:Aromatic Mist]]",
+    "Effect": "Connection – [[move:Aromatic Mist]]. All allies affected by [[move:Aromatic Mist]] gain +1 to Accuracy Rolls and +5 to Damage Rolls for one full round."
   },
   {
     "Name": "Flower Gift",
@@ -763,7 +763,7 @@
   {
     "Name": "Fluffy Charge",
     "Frequency": "Static",
-    "Effect": "Connection – Charge. Whenever the user uses Charge, they gain +1 CS to Defense."
+    "Effect": "Connection – [[move:Charge]]. Whenever the user uses [[move:Charge]], they gain +1 CS to Defense."
   },
   {
     "Name": "Flutter",
@@ -778,7 +778,7 @@
   {
     "Name": "Focus",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Fighting."
+    "Effect": "The user gains [[ability:Last Chance]] with Fighting."
   },
   {
     "Name": "Forecast",
@@ -798,12 +798,12 @@
   {
     "Name": "Fox Fire",
     "Frequency": "Scene – Standard Action",
-    "Effect": "Connection - Ember. The user creates 3 Fire Wisps. Whenever the user is targeted by a foe within 6 meters, they may spend a Fire Wisp as to use the Move Ember against that foe as a Free Action after the triggering Move is resolved."
+    "Effect": "Connection - [[move:Ember]]. The user creates 3 Fire Wisps. Whenever the user is targeted by a foe within 6 meters, they may spend a Fire Wisp as to use the Move [[move:Ember]] against that foe as a Free Action after the triggering Move is resolved."
   },
   {
     "Name": "Freezing Point",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Ice."
+    "Effect": "The user gains [[ability:Last Chance]] with Ice."
   },
   {
     "Name": "Friend Guard",
@@ -815,7 +815,7 @@
     "Name": "Frighten",
     "Frequency": "Scene x2 – Swift Action",
     "Target": "Pokémon or Trainer within 5m",
-    "Effect": "The target immediately Shifts 3m away from the user using their highest usable movement capability, and towards their Trainer if possible. The target is then Slowed for 1 full round. You may target a specific foe only once per Scene with Frighten."
+    "Effect": "The target immediately Shifts 3m away from the user using their highest usable movement capability, and towards their Trainer if possible. The target is then [[status:Slowed]] for 1 full round. You may target a specific foe only once per Scene with Frighten."
   },
   {
     "Name": "Frisk",
@@ -825,7 +825,7 @@
   {
     "Name": "Frostbite",
     "Frequency": "Static",
-    "Effect": "The user's damaging Ice-Type attacks cause the target to become Slowed on 18+, and the Effect Range for Freeze on these Moves is increased by +1. If the Move does not cause Freezing, it now causes Freezing on a roll of 20."
+    "Effect": "The user's damaging Ice-Type attacks cause the target to become [[status:Slowed]] on 18+, and the Effect Range for Freeze on these Moves is increased by +1. If the Move does not cause Freezing, it now causes Freezing on a roll of 20."
   },
   {
     "Name": "Full Guard",
@@ -842,8 +842,8 @@
   {
     "Name": "Fungus Lord",
     "Frequency": "Scene – Shift Action",
-    "Effect": "The user creates Grassy Terrain in a Burst 2 that lasts until the end of the Scene. Any creatures in those squares are affected as if by the Field Move Grassy Terrain, rather than any other Field Move.",
-    "Bonus": "The user may originate a Move they gain STAB on from any square that is Grassy Terrain."
+    "Effect": "The user creates [[move:Grassy Terrain]] in a Burst 2 that lasts until the end of the Scene. Any creatures in those squares are affected as if by the Field Move [[move:Grassy Terrain]], rather than any other Field Move.",
+    "Bonus": "The user may originate a Move they gain STAB on from any square that is [[move:Grassy Terrain]]."
   },
   {
     "Name": "Fur Coat",
@@ -853,7 +853,7 @@
   {
     "Name": "Gale Wings",
     "Frequency": "Static",
-    "Effect": "Connection – Quick Attack. The user may use Quick Attack as a Flying-Type Move.",
+    "Effect": "Connection – [[move:Quick Attack]]. The user may use [[move:Quick Attack]] as a Flying-Type Move.",
     "Note": "This Ability was replaced by Accelerate in the Sun and Moon Pokédex."
   },
   {
@@ -870,7 +870,7 @@
   {
     "Name": "Giver",
     "Frequency": "Scene x2 – Swift Action",
-    "Effect": "Connection - Present. After rolling to determine Present's Damage Base, you may choose to ignore the roll and act as if you had rolled a 1 or a 5.",
+    "Effect": "Connection - [[move:Present]]. After rolling to determine Present's Damage Base, you may choose to ignore the roll and act as if you had rolled a 1 or a 5.",
     "Bonus": " The user may know any number of TM and Tutor Moves, instead of a maximum of three."
   },
   {
@@ -888,7 +888,7 @@
     "Name": "Good As Gold",
     "Frequency": "At-Will – Swift Action",
     "Trigger": "The user attacks a foe",
-    "Effect": "For one full round, if the triggering foe uses an Attack that doesn't target the user, that foe becomes Slowed for one full round. If the foe then is adjacent to the user, they instead become Stuck.",
+    "Effect": "For one full round, if the triggering foe uses an Attack that doesn't target the user, that foe becomes [[status:Slowed]] for one full round. If the foe then is adjacent to the user, they instead become [[status:Stuck]].",
     "Bonus": "The user is immune to Status Moves used by foes. Defensive."
   },
   {
@@ -900,8 +900,8 @@
   {
     "Name": "Gore",
     "Frequency": "Scene x2 – Swift Action",
-    "Trigger": "The user uses Horn Attack",
-    "Effect": "Connection - Horn Attack. Horn Attack gains the Double Strike keyword, and pushes its target 2 meters."
+    "Trigger": "The user uses [[move:Horn Attack]]",
+    "Effect": "Connection - [[move:Horn Attack]]. [[move:Horn Attack]] gains the [[keyword:Double Strike]] keyword, and pushes its target 2 meters."
   },
   {
     "Name": "Gorilla Tactics",
@@ -918,7 +918,7 @@
   {
     "Name": "Grassy Surge",
     "Frequency": "Scene x3 – Swift Action",
-    "Effect": "The Field becomes Grassy, as if affected by the Move Grassy Terrain, for one full round."
+    "Effect": "The Field becomes Grassy, as if affected by the Move [[move:Grassy Terrain]], for one full round."
   },
   {
     "Name": "Grim Neigh",
@@ -936,20 +936,20 @@
   {
     "Name": "Gulp Missile",
     "Frequency": "Scene x2 – Free Action",
-    "Trigger": "The user uses Stockpile, Surf, or Dive",
-    "Effect": "Connection – Stockpile. The next time the user is damaged, it rolls an AC 4 Physical Attack against the attacker, even if the user Faints. On a hit, the target loses 2 ticks of HP. In addition, if the hit roll was successful, on an even roll the target is Paralyzed; on an odd roll, the target instead loses 1 Defense CS."
+    "Trigger": "The user uses [[move:Stockpile]], [[move:Surf]], or [[move:Dive]]",
+    "Effect": "Connection – [[move:Stockpile]]. The next time the user is damaged, it rolls an AC 4 Physical Attack against the attacker, even if the user Faints. On a hit, the target loses 2 ticks of HP. In addition, if the hit roll was successful, on an even roll the target is [[status:Paralysis]](Paralyzed); on an odd roll, the target instead loses 1 Defense CS."
   },
   {
     "Name": "Guts",
     "Frequency": "Static",
-    "Effect": "While suffering from Burn, Poison, Paralysis, Freezing, or while Asleep, the user's Attack is raised 2 Combat Stages. If suffering from none of these conditions, the user loses any Combat Stages gained this way."
+    "Effect": "While suffering from [[status:Burned]](Burn), [[status:Poisoned]](Poison), [[status:Paralysis]], Freezing, or while [[status:Sleep]](Asleep), the user's Attack is raised 2 Combat Stages. If suffering from none of these conditions, the user loses any Combat Stages gained this way."
   },
   {
     "Name": "Hadron Engine",
     "Frequency": "Scene – Swift Action",
     "Trigger": "The user uses a Special Move",
-    "Effect": "The triggering Move gains Smite for this use. After resolving, create Electric Terrain in a Blast 5, centered on the user, that lasts until the end of the Encounter. Any combatants in those squares are affected as if by the Field Move Electric Terrain, rather than any other Field Move.",
-    "Bonus": "The squares in a Burst 1 around the user count as Electric Terrain."
+    "Effect": "The triggering Move gains [[keyword:Smite]] for this use. After resolving, create [[move:Electric Terrain]] in a Blast 5, centered on the user, that lasts until the end of the Encounter. Any combatants in those squares are affected as if by the Field Move [[move:Electric Terrain]], rather than any other Field Move.",
+    "Bonus": "The squares in a Burst 1 around the user count as [[move:Electric Terrain]]."
   },
   {
     "Name": "Handyman",
@@ -964,18 +964,18 @@
   {
     "Name": "Haunt",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Ghost."
+    "Effect": "The user gains [[ability:Last Chance]] with Ghost."
   },
   {
     "Name": "Haunting Elegy",
     "Frequency": "At-Will – Free Action",
-    "Trigger": "The user uses a Move with the Sonic keyword",
-    "Effect": "The triggering Move may be originated from any square within 3 meters of the user and may become Ghost Typed. If the Move was a Status Class Move, you may treat it as a Special Move with DB1. This ability may not be used with Perish Song."
+    "Trigger": "The user uses a Move with the [[keyword:Sonic]] keyword",
+    "Effect": "The triggering Move may be originated from any square within 3 meters of the user and may become Ghost Typed. If the Move was a Status Class Move, you may treat it as a Special Move with DB1. This ability may not be used with [[move:Perish Song]]."
   },
   {
     "Name": "Hay Fever",
     "Frequency": "At-Will – Swift Action",
-    "Trigger": "The user uses a Status Move; or the user ends their turn while Asleep.",
+    "Trigger": "The user uses a Status Move; or the user ends their turn while [[status:Sleep]](Asleep).",
     "Effect": "The user creates a Burst 2 or Close Blast 3 of allergenic pollen. All Trainers and Pokémon in the burst that are not Bug, Grass, or Poison Typed lose a Tick of Hit Points. This Ability cannot be activated in Rainy Weather, Sandstorms, or if it is Hailing."
   },
   {
@@ -992,12 +992,12 @@
   {
     "Name": "Heatproof",
     "Frequency": "Static",
-    "Effect": "The user resists Fire Type movesf one step further, and does not lose Hit Points from the Burn Condition."
+    "Effect": "The user resists Fire Type movesf one step further, and does not lose Hit Points from the [[status:Burned]](Burn) Condition."
   },
   {
     "Name": "Heavy Metal",
     "Frequency": "Static",
-    "Effect": "The user's Weight Class is increased by +2. Their Defense Base Stat is increased by +2, but their Speed Base Stat is decreased by 2."
+    "Effect": "The user's [[keyword:Weight Class]] is increased by +2. Their Defense Base Stat is increased by +2, but their Speed Base Stat is decreased by 2."
   },
   {
     "Name": "Heliovolt",
@@ -1008,17 +1008,17 @@
   {
     "Name": "Helper",
     "Frequency": "Static",
-    "Effect": "Connection - Helping Hand. Whenever the user uses a Move that targets a single Ally, that Ally gains a +1 Bonus to Accuracy and Skill Checks until the end of the user's next turn."
+    "Effect": "Connection - [[move:Helping Hand]]. Whenever the user uses a Move that targets a single Ally, that Ally gains a +1 Bonus to Accuracy and Skill Checks until the end of the user's next turn."
   },
   {
     "Name": "Honey Paws",
     "Frequency": "Static",
-    "Effect": "The user may consume Honey to gain a Food Buff as if they had consumed Leftovers. This Food Buff does not count against their normal limit."
+    "Effect": "The user may consume Honey to gain a Food Buff as if they had consumed [[item:Leftovers]]. This Food Buff does not count against their normal limit."
   },
   {
     "Name": "Honey Thief",
     "Frequency": "Static",
-    "Effect": "Connection - Bug Bite. If the user uses Bug Bite to steal the effects of a Digestion Buff, they gain a Tick of Temporary Hit Points."
+    "Effect": "Connection - [[move:Bug Bite]]. If the user uses [[move:Bug Bite]] to steal the effects of a Digestion Buff, they gain a Tick of Temporary Hit Points."
   },
   {
     "Name": "Horde Break",
@@ -1030,7 +1030,7 @@
     "Name": "Hospitality",
     "Frequency": "Scene x2 – Free Action",
     "Trigger": "The user uses a Move",
-    "Effect": "The triggering Move may gain the Friendly Keyword. After resolving, choose an ally that is adjacent to any target of the triggering move. The chosen Ally gains 2 ticks of temporary Hit Points. You may expend both uses of this Ability at once to choose an additional Ally."
+    "Effect": "The triggering Move may gain the [[keyword:Friendly]] Keyword. After resolving, choose an ally that is adjacent to any target of the triggering move. The chosen Ally gains 2 ticks of temporary Hit Points. You may expend both uses of this Ability at once to choose an additional Ally."
   },
   {
     "Name": "Huge Power",
@@ -1060,7 +1060,7 @@
   {
     "Name": "Hypnotic",
     "Frequency": "Static",
-    "Effect": "Connection - Hypnosis. When used by the user, Hypnosis cannot miss."
+    "Effect": "Connection - [[move:Hypnosis]]. When used by the user, Hypnosis cannot miss."
   },
   {
     "Name": "Ice Body",
@@ -1076,7 +1076,7 @@
   {
     "Name": "Ice Jet",
     "Frequency": "Scene – Shift Action",
-    "Effect": "The user creates an area of Snow in a Burst 2 around themselves, as per the Move Snowscape, which lasts until the end of the user's next round. The user may also choose to Shift as though they had a speed of Sky 6, and does not provoke Attacks of Opportunity when moving this way. This movement may be made before or after creating the Snowstorm.",
+    "Effect": "The user creates an area of Snow in a Burst 2 around themselves, as per the Move [[move:Snowscape]], which lasts until the end of the user's next round. The user may also choose to Shift as though they had a speed of Sky 6, and does not provoke Attacks of Opportunity when moving this way. This movement may be made before or after creating the Snowstorm.",
     "Bonus": "The user adds +1 to their Jump Capabilities."
   },
   {
@@ -1092,7 +1092,7 @@
   {
     "Name": "Illuminate",
     "Frequency": "Static",
-    "Effect": "Attacks that target the user have a -2 Accuracy Penalty against the user. Does not affect attackers with the Blindsense Capability. Defensive."
+    "Effect": "Attacks that target the user have a -2 Accuracy Penalty against the user. Does not affect attackers with the [[capability:Blindsense]] Capability. Defensive."
   },
   {
     "Name": "Illusion",
@@ -1102,17 +1102,17 @@
   {
     "Name": "Immunity",
     "Frequency": "Static",
-    "Effect": "The user cannot be Poisoned or Badly Poisoned. Defensive."
+    "Effect": "The user cannot be [[status:Poisoned]] or [[status:Badly Poisoned]]. Defensive."
   },
   {
     "Name": "Imposter",
     "Frequency": "Static",
-    "Effect": "If the user is not Transformed, they may use Transform as a Free-Action Interrupt."
+    "Effect": "If the user is not Transformed, they may use [[move:Transform]] as a Free-Action Interrupt."
   },
   {
     "Name": "Infiltrator",
     "Frequency": "Static",
-    "Effect": "The user gains a +2 Bonus to Stealth Checks, does not trigger Hazards, Blessings cannot be activated in response to its actions, and the user may bypass the effects of the move Substitute."
+    "Effect": "The user gains a +2 Bonus to Stealth Checks, does not trigger Hazards, Blessings cannot be activated in response to its actions, and the user may bypass the effects of the move [[move:Substitute]]."
   },
   {
     "Name": "Innards Out",
@@ -1123,12 +1123,12 @@
   {
     "Name": "Inner Focus",
     "Frequency": "Static",
-    "Effect": "The user cannot be Flinched, and their Initiative cannot be unwillingly lowered by any effects."
+    "Effect": "The user cannot be [[status:Flinch]](Flinched), and their Initiative cannot be unwillingly lowered by any effects."
   },
   {
     "Name": "Insomnia",
     "Frequency": "Static",
-    "Effect": "The user is immune to the Sleep condition, and cannot use the move Rest. Defensive."
+    "Effect": "The user is immune to the [[status:Sleep]] condition, and cannot use the move [[move:Rest]]. Defensive."
   },
   {
     "Name": "Interference",
@@ -1139,7 +1139,7 @@
     "Name": "Intimidate",
     "Frequency": "Scene x2 – Swift Action",
     "Target": "A Pokémon or Trainer within 5m",
-    "Effect": "The target is Flinched and loses 1 Combat Stage in your choice of Attack or Special Attack. You may target a specific foe only once per Scene with Intimidate."
+    "Effect": "The target is [[status:Flinch]](Flinched) and loses 1 Combat Stage in your choice of Attack or Special Attack. You may target a specific foe only once per Scene with Intimidate."
   },
   {
     "Name": "Intrepid Sword",
@@ -1155,7 +1155,7 @@
   {
     "Name": "Iron Fist",
     "Frequency": "Static",
-    "Effect": "The user increases the Damage Base of the following Moves by +2; Bullet Punch, Comet Punch, Dizzy Punch, Drain Punch, Dynamic Punch, Fire Punch, Meteor Mash, Shadow Punch, Ice Punch, Mach Punch, Mega Punch, Sky Uppercut, Thunder Punch, Focus Punch, Hammer Arm, and Power-Up Punch."
+    "Effect": "The user increases the Damage Base of the following Moves by +2; [[move:Bullet Punch]], [[move:Comet Punch]], [[move:Dizzy Punch]], [[move:Drain Punch]], [[move:Dynamic Punch]], [[move:Fire Punch]], [[move:Meteor Mash]], [[move:Shadow Punch]], [[move:Ice Punch]], [[move:Mach Punch]], [[move:Mega Punch]], [[move:Sky Uppercut]], [[move:Thunder Punch]], [[move:Focus Punch]], [[move:Hammer Arm]], and [[move:Power-Up Punch]]."
   },
   {
     "Name": "Juicy Energy",
@@ -1180,7 +1180,7 @@
   {
     "Name": "Keen Eye",
     "Frequency": "Static",
-    "Effect": "The user's Accuracy cannot be lowered, their attacks cannot have Accuracy Penalties (such as from Illuminate), the user is immune to the Blind condition (but not Total Blindness), and the user ignores any Evasion not directly derived from Stats (such as from the Instinct Ability, or from moves like Minimize)."
+    "Effect": "The user's Accuracy cannot be lowered, their attacks cannot have Accuracy Penalties (such as from Illuminate), the user is immune to the Blind condition (but not [[status:Total Blindness]]), and the user ignores any Evasion not directly derived from Stats (such as from the Instinct Ability, or from moves like Minimize)."
   },
   {
     "Name": "Klutz",
@@ -1197,7 +1197,7 @@
   {
     "Name": "Landslide",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Ground."
+    "Effect": "The user gains [[ability:Last Chance]] with Ground."
   },
   {
     "Name": "Last Chance",
@@ -1207,7 +1207,7 @@
   {
     "Name": "Leaf Gift",
     "Frequency": "Daily – Extended Action",
-    "Effect": "The user is adept at crafting clothes for itself out of common leaves. As an extended action, the user may craft a Leaf Suit listed below by activating this Ability; each suit has different effects on the user. The user may only wear one Leaf Suit at a time; building a new suit destroys previous suits. Nourishing Suit - Effect: Grants the Sun Blanket and Leaf Guard Abilities. Heavy Suit - Effect: Grants the Sturdy and Overcoat Abilities. Vibrant Suit - Effect: Grants the Chlorophyll and Photosynthesis Abilities."
+    "Effect": "The user is adept at crafting clothes for itself out of common leaves. As an extended action, the user may craft a Leaf Suit listed below by activating this Ability; each suit has different effects on the user. The user may only wear one Leaf Suit at a time; building a new suit destroys previous suits. Nourishing Suit - Effect: Grants the [[ability:Sun Blanket]] and [[ability:Leaf Guard]] Abilities. Heavy Suit - Effect: Grants the Sturdy and [[ability:Overcoat]] Abilities. Vibrant Suit - Effect: Grants the Chlorophyll and Photosynthesis Abilities."
   },
   {
     "Name": "Leaf Guard",
@@ -1223,12 +1223,12 @@
   {
     "Name": "Leafy Cloak",
     "Frequency": "Static",
-    "Effect": "Whenever the user activates Designer, theychoose two of Chlorophyll, Leaf Guard, or Overcoat. Until the user activates Designer again, they gain the chosen Abilities."
+    "Effect": "Whenever the user activates [[ability:Designer]], theychoose two of Chlorophyll, [[ability:Leaf Guard]], or Overcoat. Until the user activates [[ability:Designer]] again, they gain the chosen Abilities."
   },
   {
     "Name": "Leek Mastery",
     "Frequency": "Static",
-    "Effect": "Connection - Acrobatics. If the user is holding a Rare Leek, they may still use Acrobatics as if they were not holding an item. The user cannot be disarmed of their Stick, nor can be it be forcefully removed by Trick, Switcheroo, Thief, or any other Moves or effects unless the user wishes it."
+    "Effect": "Connection - Acrobatics. If the user is holding a [[item:Rare Leek]], they may still use Acrobatics as if they were not holding an item. The user cannot be disarmed of their Stick, nor can be it be forcefully removed by Trick, Switcheroo, Thief, or any other Moves or effects unless the user wishes it."
   },
   {
     "Name": "Levitate",
@@ -1243,7 +1243,7 @@
   {
     "Name": "Light Metal",
     "Frequency": "Static",
-    "Effect": "The user's Weight Class is decreased by 2. Their Speed Base Stat is increased by +2, but their Defense Base Stat is decreased by 2."
+    "Effect": "The user's [[keyword:Weight Class]] is decreased by 2. Their Speed Base Stat is increased by +2, but their Defense Base Stat is decreased by 2."
   },
   {
     "Name": "Lightning Kicks",
@@ -1254,13 +1254,13 @@
     "Name": "Lightning Rod",
     "Frequency": "Scene – Free Action",
     "Trigger": "A ranged Electric Type Move is used within 10 Meters of the user.",
-    "Effect": "The Move is turned into a 1-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or Mind Reader. The user's Special Attack is then raised by +1 Combat Stage.",
+    "Effect": "The Move is turned into a 1-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or [[move:Mind Reader]]. The user's Special Attack is then raised by +1 Combat Stage.",
     "Bonus": " The user is immune to the damage and effects of Electric Type attacks. Defensive."
   },
   {
     "Name": "Limber",
     "Frequency": "Static",
-    "Effect": "The user is immune to Paralysis. Defensive."
+    "Effect": "The user is immune to [[status:Paralysis]]. Defensive."
   },
   {
     "Name": "Line Charge",
@@ -1276,13 +1276,13 @@
   {
     "Name": "Liquid Ooze",
     "Frequency": "Static",
-    "Effect": "This user resists Poison-Type Damage one step further. Additionally, when this user is damaged by Absorb, Drain Punch, Giga Drain, Horn Leech, Leech Life, or Mega Drain, that Move gains Recoil ½ and the Move's user does not gain any HP. If the user is hit by Leech Seed, the user does not lose Hit Points from Leech Seed; instead Leech Seed's user loses Hit Points equal to this user's Tick Value."
+    "Effect": "This user resists Poison-Type Damage one step further. Additionally, when this user is damaged by Absorb, [[move:Drain Punch]], [[move:Giga Drain]], [[move:Horn Leech]], [[move:Leech Life]], or [[move:Mega Drain]], that Move gains [[keyword:Recoil]] ½ and the Move's user does not gain any HP. If the user is hit by [[move:Leech Seed]], the user does not lose Hit Points from [[move:Leech Seed]]; instead [[move:Leech Seed]]'s user loses Hit Points equal to this user's Tick Value."
   },
   {
     "Name": "Liquid Voice",
     "Frequency": "At-Will – Free Action",
-    "Trigger": "The user uses a Move with the Sonic keyword",
-    "Effect": "The triggering move loses the Sonic keyword, but gains the Friendly keyword and becomes Water Typed. If the Move was a Status Class Move, you may treat it as a Special Move with DB1."
+    "Trigger": "The user uses a Move with the [[keyword:Sonic]] keyword",
+    "Effect": "The triggering move loses the [[keyword:Sonic]] keyword, but gains the [[keyword:Friendly]] keyword and becomes Water Typed. If the Move was a Status Class Move, you may treat it as a Special Move with DB1."
   },
   {
     "Name": "Long Reach",
@@ -1292,7 +1292,7 @@
   {
     "Name": "Lullaby",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection - Sing. Whenever the user uses the Move \"Sing\", they may activate this Feature. The user then picks a Pokémon or Trainer being targeted by Sing; Sing automatically hits that target."
+    "Effect": "Connection - [[move:Sing]]. Whenever the user uses the Move \"[[move:Sing]]\", they may activate this Feature. The user then picks a Pokémon or Trainer being targeted by Sing; Sing automatically hits that target."
   },
   {
     "Name": "Lunchbox",
@@ -1303,7 +1303,7 @@
   {
     "Name": "Mach Speed",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Flying."
+    "Effect": "The user gains [[ability:Last Chance]] with Flying."
   },
   {
     "Name": "Maelstrom Pulse",
@@ -1320,7 +1320,7 @@
   {
     "Name": "Magic Guard",
     "Frequency": "Static",
-    "Effect": "The user is immune to damage and Hit Point loss from Hazards, Weather, Status Afflictions, Vortexes, Recoil, Hay Fever, Iron Barbs, Rough Skin, and Leech Seed. Defensive."
+    "Effect": "The user is immune to damage and Hit Point loss from Hazards, [[keyword:Weather]], Status Afflictions, Vortexes, [[keyword:Recoil]], [[ability:Hay Fever]], [[ability:Iron Barbs]], [[ability:Rough Skin]], and [[move:Leech Seed]]. Defensive."
   },
   {
     "Name": "Magician",
@@ -1332,27 +1332,27 @@
     "Name": "Magma Armor",
     "Frequency": "Static",
     "Effect": "Whenever a foe hits you with a Melee Attack or ends their turn grappling you, they lose a tick of Hit Points. Foes immune to Burn do not suffer this effect.",
-    "Bonus": " The user cannot be Frozen. Defensive."
+    "Bonus": " The user cannot be [[status:Frozen]]. Defensive."
   },
   {
     "Name": "Magnet Pull",
     "Frequency": "Scene x3 – Swift Action",
-    "Effect": "Pick Two Effects; \n- The target is pushed or pulled X meters directly away or towards the user. X is up to 6 meters minus the target's Weight Class. \n- Until the end of the user's next turn, the target may not move more then 6 meters away from the user. \n- Until the end of the user's next turn, the target may not move closer than 3 meters ot the user."
+    "Effect": "Pick Two Effects; \n- The target is pushed or pulled X meters directly away or towards the user. X is up to 6 meters minus the target's [[keyword:Weight Class]]. \n- Until the end of the user's next turn, the target may not move more then 6 meters away from the user. \n- Until the end of the user's next turn, the target may not move closer than 3 meters ot the user."
   },
   {
     "Name": "Marvel Scale",
     "Frequency": "Static",
-    "Effect": "When Asleep, Paralyzed, Burned, Frozen or Poisoned, Marvel Scale raises the user's Defense by +2 Combat Stages. The Combat Stages return to normal if the user is cured of their status affliction."
+    "Effect": "When [[status:Sleep]](Asleep), [[status:Paralysis]](Paralyzed), [[status:Burned]], [[status:Frozen]] or [[status:Poisoned]], Marvel Scale raises the user's Defense by +2 Combat Stages. The Combat Stages return to normal if the user is cured of their status affliction."
   },
   {
     "Name": "Mega Launcher",
     "Frequency": "Static",
-    "Effect": "The user increases the Damage Base of Aura Sphere, Dark Pulse, Dragon Pulse, and Water Pulse by +3."
+    "Effect": "The user increases the Damage Base of [[move:Aura Sphere]], [[move:Dark Pulse]], [[move:Dragon Pulse]], and [[move:Water Pulse]] by +3."
   },
   {
     "Name": "Memory Wipe",
     "Frequency": "Scene – Special",
-    "Effect": "If used as a Swift Action, the last Move used by the target becomes Disabled. If used as a Standard Action, the target is Flinched and Paralyzed. If used as an Extended Action that takes about 1 minute, it can erase up to 10 minutes that have occurred within the last 30 minutes from the target's memory."
+    "Effect": "If used as a Swift Action, the last Move used by the target becomes [[status:Disabled]]. If used as a Standard Action, the target is [[status:Flinch]](Flinched) and [[status:Paralysis]](Paralyzed). If used as an Extended Action that takes about 1 minute, it can erase up to 10 minutes that have occurred within the last 30 minutes from the target's memory."
   },
   {
     "Name": "Merciless",
@@ -1362,8 +1362,8 @@
   {
     "Name": "Migraine",
     "Frequency": "Scene x2 – Free Action",
-    "Trigger": "The user hits with Confusion while at 50% Hit Points or less",
-    "Effect": "Connection - Confusion. Confusion automatically gives its target the Confusion Affliction and is a Critical Hit."
+    "Trigger": "The user hits with [[move:Confusion]] while at 50% Hit Points or less",
+    "Effect": "Connection - [[move:Confusion]]. Confusion automatically gives its target the Confusion Affliction and is a Critical Hit."
   },
   {
     "Name": "Mimicry",
@@ -1449,23 +1449,23 @@
   {
     "Name": "Mimitree",
     "Frequency": "Static",
-    "Effect": "Connection - Mimic. Whenever the user uses a Move copied by Mimic, they may choose to replace that Move with Mimic once more. When used this way, the user ignores Mimic's Frequency."
+    "Effect": "Connection - [[move:Mimic]]. Whenever the user uses a Move copied by Mimic, they may choose to replace that Move with Mimic once more. When used this way, the user ignores Mimic's Frequency."
   },
   {
     "Name": "Mind Mold",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Psychic."
+    "Effect": "The user gains [[ability:Last Chance]] with Psychic."
   },
   {
     "Name": "Mind's Eye",
     "Frequency": "Static",
-    "Effect": "Connection – Blood Moon. Blood Moon deals damage one step more Effectively against the target in the end square of the Line, if that target has no cardinally adjacent allies.",
-    "Bonus": "The user's Accuracy cannot be lowered, their attacks cannot have Accuracy Penalties (such as from Illuminate), and the user is immune to the Blind condition (but not Total Blindness). Ghost-Types are not immune to the user's Normal-Type Moves."
+    "Effect": "Connection – [[move:Blood Moon]]. [[move:Blood Moon]] deals damage one step more Effectively against the target in the end square of the Line, if that target has no cardinally adjacent allies.",
+    "Bonus": "The user's Accuracy cannot be lowered, their attacks cannot have Accuracy Penalties (such as from Illuminate), and the user is immune to the Blind condition (but not [[status:Total Blindness]]). Ghost-Types are not immune to the user's Normal-Type Moves."
   },
   {
     "Name": "Mini-Noses",
     "Frequency": "Daily – Standard Action",
-    "Effect": "The user detaches up to three Mini-Noses from themselves and places them adjacent to them on the battlefield. These Mini-Noses have HP equal to the user's level but otherwise uses their user's stats. Each Mini-Nose has a Levitate Speed of 4. The user may Shift them each round on their turn, and they may originate any Ranged Move from one of the Mini-Noses instead of themselves if they choose. If a Mini-Nose is reduced to 0 HP, it is destroyed and takes a full 24 hours to regrow, one at a time. If the user has less than three grown Mini-Noses, then this ability can only place as many on the field as are available. All Mini-Noses deactivate, but are not destroyed, if the user is Fainted. Mini-Noses cannot be made to Shift more than 5 meters away from the user; if they are forced farther away, they will automatically Shift toward the user on the user's turn."
+    "Effect": "The user detaches up to three Mini-Noses from themselves and places them adjacent to them on the battlefield. These Mini-Noses have HP equal to the user's level but otherwise uses their user's stats. Each Mini-Nose has a Levitate Speed of 4. The user may Shift them each round on their turn, and they may originate any Ranged Move from one of the Mini-Noses instead of themselves if they choose. If a Mini-Nose is reduced to 0 HP, it is destroyed and takes a full 24 hours to regrow, one at a time. If the user has less than three grown Mini-Noses, then this ability can only place as many on the field as are available. All Mini-Noses deactivate, but are not destroyed, if the user is [[status:Fainted]]. Mini-Noses cannot be made to Shift more than 5 meters away from the user; if they are forced farther away, they will automatically Shift toward the user on the user's turn."
   },
   {
     "Name": "Minus",
@@ -1476,7 +1476,7 @@
   {
     "Name": "Miracle Mile",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Fairy."
+    "Effect": "The user gains [[ability:Last Chance]] with Fairy."
   },
   {
     "Name": "Mirror Armor",
@@ -1487,12 +1487,12 @@
   {
     "Name": "Missile Launch",
     "Frequency": "Scene x2 – Standard Action",
-    "Effect": "Connection – Dragon Darts. The user places two Dreepy Tokens within 6m. The user may move all Dreepy Tokens it controls 4m as a Swift Action. A Dreepy Token can freely enter other creatures' squares as part of this movement, which destroys the token, and causes the creature to suffer an AC2 DB 5 Physical Dragon-Type attack as if from the user of Missile Launch. Dreepy Tokens may be targeted. They have the same evasions as the user, and any damage destroys them (including from Smite damage)."
+    "Effect": "Connection – [[move:Dragon Darts]]. The user places two Dreepy Tokens within 6m. The user may move all Dreepy Tokens it controls 4m as a Swift Action. A Dreepy Token can freely enter other creatures' squares as part of this movement, which destroys the token, and causes the creature to suffer an AC2 DB 5 Physical Dragon-Type attack as if from the user of Missile Launch. Dreepy Tokens may be targeted. They have the same evasions as the user, and any damage destroys them (including from Smite damage)."
   },
   {
     "Name": "Misty Surge",
     "Frequency": "Scene x3 – Swift Action",
-    "Effect": "The Field becomes Misty, as if affected by the Move Misty Terrain, for one full round."
+    "Effect": "The Field becomes Misty, as if affected by the Move [[move:Misty Terrain]], for one full round."
   },
   {
     "Name": "Mojo",
@@ -1517,13 +1517,13 @@
   {
     "Name": "Mountain Peak",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Rock."
+    "Effect": "The user gains [[ability:Last Chance]] with Rock."
   },
   {
     "Name": "Mouthful",
     "Frequency": "Scene – Swift Action",
     "Trigger": "The user hits a smaller foe with a Melee Move",
-    "Effect": "Connection – Order Up. The user may attempt a Grapple as a Free Action; this Grapple automatically hits, but still requires an opposed Skill Check.",
+    "Effect": "Connection – [[move:Order Up]]. The user may attempt a Grapple as a Free Action; this Grapple automatically hits, but still requires an opposed Skill Check.",
     "Bonus": "While dominant in a Grapple, the user does not suffer the usual penalties for being in a Grapple."
   },
   {
@@ -1562,7 +1562,7 @@
     "Name": "Mycelium Might",
     "Frequency": "Scene – Free Action",
     "Trigger": "A Round of Initiative ends",
-    "Effect": "The user may target a foe with a Status-Class Move as a Free Action. The foe's Abilities are ignored for this Move, Grass-Types are affected even if the Move has the Powder keyword, and Blessings or Interrupts cannot be activated in response."
+    "Effect": "The user may target a foe with a Status-Class Move as a Free Action. The foe's Abilities are ignored for this Move, Grass-Types are affected even if the Move has the [[keyword:Powder]] keyword, and Blessings or Interrupts cannot be activated in response."
   },
   {
     "Name": "Natural Cure",
@@ -1572,7 +1572,7 @@
   {
     "Name": "Needles",
     "Frequency": "Static",
-    "Effect": "Connection – Needle Arm. Whenever the user hits a target with a Physical Melee attack, that target loses a Tick of Hit Points."
+    "Effect": "Connection – [[move:Needle Arm]]. Whenever the user hits a target with a Physical Melee attack, that target loses a Tick of Hit Points."
   },
   {
     "Name": "Neuroforce",
@@ -1582,12 +1582,12 @@
   {
     "Name": "Neurotoxin",
     "Frequency": "Static",
-    "Effect": "Connection – Poison Fang. Whenever the user inflicts Poisoned or Badly Poisoned with a damaging Poison-Type Attack, the target is also Paralyzed."
+    "Effect": "Connection – [[move:Poison Fang]]. Whenever the user inflicts [[status:Poisoned]] or [[status:Badly Poisoned]] with a damaging Poison-Type Attack, the target is also [[status:Paralysis]](Paralyzed)."
   },
   {
     "Name": "Neutralizing Gas",
     "Frequency": "Static",
-    "Effect": "Abilities may not be Triggered in a burst 1 around the user, and Defensive abilities do not function in that area (the user is unaffected by this). If the user uses Poison Gas, Smog, Clear Smog, or Strange Steam, targets hit by those Moves may not trigger Abilities or benefit from Defensive Abilities for one full round."
+    "Effect": "Abilities may not be Triggered in a burst 1 around the user, and Defensive abilities do not function in that area (the user is unaffected by this). If the user uses [[move:Poison Gas]], [[move:Smog]], [[move:Clear Smog]], or [[move:Strange Steam]], targets hit by those Moves may not trigger Abilities or benefit from Defensive Abilities for one full round."
   },
   {
     "Name": "Nimble Strikes",
@@ -1602,8 +1602,8 @@
   {
     "Name": "Noble Steed",
     "Frequency": "Scene – Free Action",
-    "Effect": "The user may use a 1-Target Damaging Move this turn as though it had the Pass keyword.",
-    "Bonus": "Whenever you Shift through a square occupied by an ally that is equal or smaller in size, you can move the ally with you. Allies moved this way do not provoke Attacks of Opportunity. At the end of the Shift, the user chooses if the ally is released in an adjacent square or if the ally begins mounting the user. In addition, the user's Pass moves gain the Friendly Keyword."
+    "Effect": "The user may use a 1-Target Damaging Move this turn as though it had the [[keyword:Pass]] keyword.",
+    "Bonus": "Whenever you Shift through a square occupied by an ally that is equal or smaller in size, you can move the ally with you. Allies moved this way do not provoke Attacks of Opportunity. At the end of the Shift, the user chooses if the ally is released in an adjacent square or if the ally begins mounting the user. In addition, the user's Pass moves gain the [[keyword:Friendly]] Keyword."
   },
   {
     "Name": "Normalize",
@@ -1613,12 +1613,12 @@
   {
     "Name": "Oblivious",
     "Frequency": "Static",
-    "Effect": "The user is immune to the Enraged and Infatuated conditions. Defensive."
+    "Effect": "The user is immune to the [[status:Rage]](Enraged) and Infatuated conditions. Defensive."
   },
   {
     "Name": "Odious Spray",
     "Frequency": "Static",
-    "Effect": "Connection - Poison Gas. The user may use Poison Gas as if it had a Range \"8, 1 Target\", an AC of 2, and Flinched its target when it hit."
+    "Effect": "Connection - [[move:Poison Gas]]. The user may use [[move:Poison Gas]] as if it had a Range \"8, 1 Target\", an AC of 2, and [[status:Flinch]](Flinched) its target when it hit."
   },
   {
     "Name": "Omen",
@@ -1635,28 +1635,28 @@
     "Name": "Orichalcum Pulse",
     "Frequency": "Scene – Swift Action",
     "Trigger": "The user uses a Physical Move",
-    "Effect": "The triggering Move gains Smite for this use. After resolving, create Prehistoric Weather in a Blast 5, centered on the user, that lasts until the end of the Encounter. Any combatants in those squares are affected by Prehistoric Weather, rather than any other Weather Effect. Prehistoric Weather counts as Sunny Weather for the purposes of any Abilities, Features or Moves, but Fire-type Moves gain a +10 damage bonus instead. Additionally, Combatants in Prehistoric Weather are immune to Frozen.",
+    "Effect": "The triggering Move gains [[keyword:Smite]] for this use. After resolving, create Prehistoric Weather in a Blast 5, centered on the user, that lasts until the end of the Encounter. Any combatants in those squares are affected by Prehistoric Weather, rather than any other Weather Effect. Prehistoric Weather counts as Sunny Weather for the purposes of any Abilities, Features or Moves, but Fire-type Moves gain a +10 damage bonus instead. Additionally, Combatants in Prehistoric Weather are immune to [[status:Frozen]].",
     "Bonus": "The squares in a Burst 1 around the user count as Prehistoric Weather."
   },
   {
     "Name": "Overcharge",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Electric."
+    "Effect": "The user gains [[ability:Last Chance]] with Electric."
   },
   {
     "Name": "Overcoat",
     "Frequency": "Static",
-    "Effect": "The user is immune to Moves with the Powder Keyword, and does not take damage from any Weather that would normally cause it to take damage. Defensive."
+    "Effect": "The user is immune to Moves with the [[keyword:Powder]] Keyword, and does not take damage from any Weather that would normally cause it to take damage. Defensive."
   },
   {
     "Name": "Overgrow",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Grass."
+    "Effect": "The user gains [[ability:Last Chance]] with Grass."
   },
   {
     "Name": "Own Tempo",
     "Frequency": "Static",
-    "Effect": "The user is immune to Confusion. Defensive."
+    "Effect": "The user is immune to [[status:Confusion]]. Defensive."
   },
   {
     "Name": "Pack Hunt",
@@ -1667,7 +1667,7 @@
   {
     "Name": "Parental Bond",
     "Frequency": "Static",
-    "Effect": "Only Kangaskhan with the Baby Template can be Mega Evolved and gain this Ability. While they have this Ability, the Baby gains 10 Damage Reduction, and will leave its mother's pouch and may be commanded to take action in battle. Both the Baby Kangaskhan with this Ability and its Mother may take their turn when the Mother takes its turn; the Baby will not willingly walk farther than 10 meters from its mother however. If the Baby Kangaskhan with this Ability is Fainted, its mother will become Enraged, and gain 5 Damage Reduction and +5 to Damage Rolls for the remainder of the Scene."
+    "Effect": "Only Kangaskhan with the Baby Template can be Mega Evolved and gain this Ability. While they have this Ability, the Baby gains 10 Damage Reduction, and will leave its mother's pouch and may be commanded to take action in battle. Both the Baby Kangaskhan with this Ability and its Mother may take their turn when the Mother takes its turn; the Baby will not willingly walk farther than 10 meters from its mother however. If the Baby Kangaskhan with this Ability is [[status:Fainted]], its mother will become [[status:Rage]](Enraged), and gain 5 Damage Reduction and +5 to Damage Rolls for the remainder of the Scene."
   },
   {
     "Name": "Parry",
@@ -1678,7 +1678,7 @@
   {
     "Name": "Pastel Veil",
     "Frequency": "Static",
-    "Effect": "The user and allies within 3 meters cannot be Poisoned or Badly Poisoned. Defensive."
+    "Effect": "The user and allies within 3 meters cannot be [[status:Poisoned]] or [[status:Badly Poisoned]]. Defensive."
   },
   {
     "Name": "Perception",
@@ -1694,7 +1694,7 @@
   {
     "Name": "Permafrost",
     "Frequency": "Static",
-    "Effect": "The user is immune to damage and Hit Point loss from Hazards, Weather, Status Afflictions, Vortexes, Recoil, Hay Fever, Iron Barbs, Rough Skin, and Leech Seed. Defensive."
+    "Effect": "The user is immune to damage and Hit Point loss from Hazards, [[keyword:Weather]], Status Afflictions, Vortexes, [[keyword:Recoil]], [[ability:Hay Fever]], [[ability:Iron Barbs]], [[ability:Rough Skin]], and [[move:Leech Seed]]. Defensive."
   },
   {
     "Name": "Pickpocket",
@@ -1707,7 +1707,7 @@
     "Frequency": "Scene – Swift Action",
     "Target": "A combatant within 5 meters that is holding an Item.",
     "Effect": "Choose an Item the target is holding. The user gains a faux copy of the Item. This copy has the same effects as the Item copied, but disappears at the end of the Encounter. If the Item was a consumable, the original is also destroyed at the same time if it wasn't consumed by then.",
-    "Bonus": "Grants Scavenger"
+    "Bonus": "Grants [[capability:Scavenger]]"
   },
   {
     "Name": "Pixilate",
@@ -1724,20 +1724,20 @@
   {
     "Name": "Poison Heal",
     "Frequency": "Daily – Free Action",
-    "Trigger": "The user becomes Poisoned",
-    "Effect": "For the rest of the encounter, while Poisoned or Badly Poisoned, the user gains a Tick of Hit Points at the beginning of each turn instead of losing any Hit Points from Poison. At the end of the encounter, the user is cured of the Poison Status. Additionally, the user does not have any Combat Stages lowered from being Poisoned."
+    "Trigger": "The user becomes [[status:Poisoned]]",
+    "Effect": "For the rest of the encounter, while [[status:Poisoned]] or [[status:Badly Poisoned]], the user gains a Tick of Hit Points at the beginning of each turn instead of losing any Hit Points from [[status:Poisoned]](Poison). At the end of the encounter, the user is cured of the Poison Status. Additionally, the user does not have any Combat Stages lowered from being [[status:Poisoned]]."
   },
   {
     "Name": "Poison Point",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user is hit by a Melee Move",
-    "Effect": "The attacking foe is Poisoned."
+    "Effect": "The attacking foe is [[status:Poisoned]]."
   },
   {
     "Name": "Poison Puppeteer",
     "Frequency": "At-Will – Swift Action",
-    "Target": "A Poisoned or Badly Poisoned foe within 3m",
-    "Effect": "The target is Pushed 3m in any direction of the user's choice. If this movement is stopped by Blocking Terrain, the target becomes Confused. If this movement is stopped by another foe, choose that foe or the target to become Poisoned or Confused."
+    "Target": "A [[status:Poisoned]] or [[status:Badly Poisoned]] foe within 3m",
+    "Effect": "The target is Pushed 3m in any direction of the user's choice. If this movement is stopped by Blocking Terrain, the target becomes [[status:Confusion]](Confused). If this movement is stopped by another foe, choose that foe or the target to become [[status:Poisoned]] or [[status:Confusion]](Confused)."
   },
   {
     "Name": "Poison Touch",
@@ -1747,7 +1747,7 @@
   {
     "Name": "Poltergeist",
     "Frequency": "Static",
-    "Effect": "Rotom gains an Ability depending on what Form it has taken. If Rotom is level 40 or higher, it also may use a Move based on its Forme as if it that Move was on their Move List. \nStandard Rotom: Levitate - None \nHeat Rotom: Flash Fire - Overheat \nWash Rotom: Water Absorb - Hydro Pump \nFrost Rotom: Winter's Kiss - Blizzard \nFan Rotom: Windveiled - Hurricane \nMow Rotom: Sap Sipper - Leaf Storm"
+    "Effect": "Rotom gains an Ability depending on what Form it has taken. If Rotom is level 40 or higher, it also may use a Move based on its Forme as if it that Move was on their Move List. \nStandard Rotom: Levitate - None \nHeat Rotom: [[ability:Flash Fire]] - Overheat \nWash Rotom: [[ability:Water Absorb]] - [[move:Hydro Pump]] \nFrost Rotom: [[ability:Winter's Kiss]] - Blizzard \nFan Rotom: Windveiled - Hurricane \nMow Rotom: [[ability:Sap Sipper]] - [[move:Leaf Storm]]"
   },
   {
     "Name": "Polycephaly",
@@ -1768,7 +1768,7 @@
   {
     "Name": "Power of Alchemy",
     "Frequency": "Scene – Free Action",
-    "Effect": "The Pokémon gains an Ability known by the Target for the remainder of the encounter, or until it is Fainted."
+    "Effect": "The Pokémon gains an Ability known by the Target for the remainder of the encounter, or until it is [[status:Fainted]]."
   },
   {
     "Name": "Prankster",
@@ -1779,17 +1779,17 @@
   {
     "Name": "Pressure",
     "Frequency": "Scene – Swift Action",
-    "Effect": "All foes within 3 meters are Suppressed for 1 full round."
+    "Effect": "All foes within 3 meters are [[status:Suppressed]] for 1 full round."
   },
   {
     "Name": "Pride",
     "Frequency": "Static",
-    "Effect": "While suffering from Burn, Poison, Paralysis, Freezing, or while Asleep, the user's Special Attack is raised 2 Combat Stages. If suffering from none of these conditions, the user loses any Combat Stages gained this way."
+    "Effect": "While suffering from [[status:Burned]](Burn), [[status:Poisoned]](Poison), [[status:Paralysis]], Freezing, or while [[status:Sleep]](Asleep), the user's Special Attack is raised 2 Combat Stages. If suffering from none of these conditions, the user loses any Combat Stages gained this way."
   },
   {
     "Name": "Prime Fury",
     "Frequency": "Scene – Swift Action",
-    "Effect": "The user becomes Enraged, and gains +1 Combat Stage in each of Attack and Special Attack."
+    "Effect": "The user becomes [[status:Rage]](Enraged), and gains +1 Combat Stage in each of Attack and Special Attack."
   },
   {
     "Name": "Prism Armor",
@@ -1805,7 +1805,7 @@
     "Name": "Propeller Tail",
     "Frequency": "Scene – Swift Action",
     "Effect": "The user may make a Sprint Maneuver as a Free Action.",
-    "Bonus": " The user may not be Intercepted, nor may any Abilities, Moves, or Features be activated to change the user's target. Any of those existing effects (such as Follow Me) fail."
+    "Bonus": " The user may not be Intercepted, nor may any Abilities, Moves, or Features be activated to change the user's target. Any of those existing effects (such as [[move:Follow Me]]) fail."
   },
   {
     "Name": "Protean",
@@ -1822,12 +1822,12 @@
     "Name": "Psionic Screech",
     "Frequency": "Scene x2 – Free Action",
     "Trigger": "The user uses a Flying-Type Move",
-    "Effect": "The Move is changed to be the Psychic Type. Any targets hit by the attack are Flinched."
+    "Effect": "The Move is changed to be the Psychic Type. Any targets hit by the attack are [[status:Flinch]](Flinched)."
   },
   {
     "Name": "Psychic Surge",
     "Frequency": "Scene x3 – Swift Action",
-    "Effect": "The Field becomes Weird, as if affected by the Move Psychic Terrain, for one full round."
+    "Effect": "The Field becomes Weird, as if affected by the Move [[move:Psychic Terrain]], for one full round."
   },
   {
     "Name": "Pumpkingrab",
@@ -1837,13 +1837,13 @@
   {
     "Name": "Punk Rock",
     "Frequency": "Static",
-    "Effect": "The user gains +2 DB to moves that have the Sonic keyword.",
-    "Bonus": " The user resists moves with the Sonic keyword one step further. Defensive."
+    "Effect": "The user gains +2 DB to moves that have the [[keyword:Sonic]] keyword.",
+    "Bonus": " The user resists moves with the [[keyword:Sonic]] keyword one step further. Defensive."
   },
   {
     "Name": "Pure Blooded",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Dragon."
+    "Effect": "The user gains [[ability:Last Chance]] with Dragon."
   },
   {
     "Name": "Pure Power",
@@ -1853,18 +1853,18 @@
   {
     "Name": "Purifying Salt",
     "Frequency": "Static",
-    "Effect": "The user gains resistance to Ghost-type moves, and cannot be Burned, Frozen, Paralyzed, Poisoned, Cursed, or put to Sleep. Defensive."
+    "Effect": "The user gains resistance to Ghost-type moves, and cannot be [[status:Burned]], [[status:Frozen]], [[status:Paralysis]](Paralyzed), [[status:Poisoned]], [[status:Cursed]], or put to [[status:Sleep]]. Defensive."
   },
   {
     "Name": "Quark Drive",
     "Frequency": "Static",
-    "Effect": "While in Electric Terrain or under 50% max hitpoints, the user receives +1 Combat Stage in their highest non-HP stat."
+    "Effect": "While in [[move:Electric Terrain]] or under 50% max hitpoints, the user receives +1 Combat Stage in their highest non-HP stat."
   },
   {
     "Name": "Queenly Majesty",
     "Frequency": "Scene x2 – Free Action",
     "Trigger": "An adjacent foe uses a Priority Move or an Interrupt action",
-    "Effect": "Connection – Stomp. The user may attack the triggering foe with Stomp as a Free Action Interrupt.",
+    "Effect": "Connection – [[move:Stomp]]. The user may attack the triggering foe with Stomp as a Free Action Interrupt.",
     "Bonus": " The user cannot be targeted by Interrupt Moves and Interrupts may not be declared in response to the user's actions."
   },
   {
@@ -1875,19 +1875,19 @@
   {
     "Name": "Quick Curl",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection - Defense Curl. The user may activate this Ability to use Defense Curl as an Standard Action Interrupt and gain +10 Damage Reduction for 1 full round."
+    "Effect": "Connection - [[move:Defense Curl]]. The user may activate this Ability to use [[move:Defense Curl]] as an Standard Action Interrupt and gain +10 Damage Reduction for 1 full round."
   },
   {
     "Name": "Quick Draw",
     "Frequency": "Scene – Free Action, Interrupt",
     "Trigger": "A foe uses a Move, and the user has not acted this round",
-    "Effect": "The user immediately uses a Move on the triggering foe as a Standard Action Interrupt (this Move must still obey Frequency and Range). If this Move hits, the foe also gains a -2 penalty to their attack roll for the triggering attack, unless the foe cannot Flinch.",
-    "Bonus": " The user cannot be Flinched. Defensive."
+    "Effect": "The user immediately uses a Move on the triggering foe as a Standard Action Interrupt (this Move must still obey Frequency and Range). If this Move hits, the foe also gains a -2 penalty to their attack roll for the triggering attack, unless the foe cannot [[status:Flinch]].",
+    "Bonus": " The user cannot be [[status:Flinch]](Flinched). Defensive."
   },
   {
     "Name": "Quick Feet",
     "Frequency": "Static",
-    "Effect": "When Poisoned, Burned, Paralyzed, Frozen or put to Sleep, the user's Speed is raised 2 Combat Stages. The user's Initiative is not halved by Paralysis. If the user is healed all Status Conditions, their Speed is lowered appropriately."
+    "Effect": "When [[status:Poisoned]], [[status:Burned]], [[status:Paralysis]](Paralyzed), [[status:Frozen]] or put to [[status:Sleep]], the user's Speed is raised 2 Combat Stages. The user's Initiative is not halved by [[status:Paralysis]]. If the user is healed all Status Conditions, their Speed is lowered appropriately."
   },
   {
     "Name": "Quill & Rock",
@@ -1939,7 +1939,7 @@
   {
     "Name": "Ragelope",
     "Frequency": "Static",
-    "Effect": "The user's Physical Attacks gain the following Effect Range: On 18+, the user becomes Enraged and gains +1 Speed CS. If the user is already Enraged, they gain +1 Attack CS instead."
+    "Effect": "The user's Physical Attacks gain the following Effect Range: On 18+, the user becomes [[status:Rage]](Enraged) and gains +1 Speed CS. If the user is already [[status:Rage]](Enraged), they gain +1 Attack CS instead."
   },
   {
     "Name": "Rain Dish",
@@ -1960,7 +1960,7 @@
   {
     "Name": "Razor Edge",
     "Frequency": "Static",
-    "Effect": "Connection - Poison Tail. The user's Critical Hit Range on all Moves is increased by +2; any Moves with \"Tail\" in their name have their Critical Hit Range increased by +3 instead."
+    "Effect": "Connection - [[move:Poison Tail]]. The user's Critical Hit Range on all Moves is increased by +2; any Moves with \"Tail\" in their name have their Critical Hit Range increased by +3 instead."
   },
   {
     "Name": "Receiver",
@@ -1970,13 +1970,13 @@
   {
     "Name": "Reckless",
     "Frequency": "Static",
-    "Effect": "Increases the Damage Base of Moves with the Exhaust, Recoil, or Reckless Keywords by +3.",
+    "Effect": "Increases the Damage Base of Moves with the Exhaust, [[keyword:Recoil]], or Reckless Keywords by +3.",
     "Reckless Moves": "Reckless Moves: Jump Kick, High Jump Kick, Close Combat, Draco Meteor, Hammer Arm, Leaf Storm, Outrage, Overheat, Petal Dance, Psycho Boost, Superpower, Thrash, and V-Create."
   },
   {
     "Name": "Refreshing Veil",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection – Aqua Ring. Whenever the user activates Aqua Ring, they may activate this Feature to cure themselves of all Persistent Status Effects."
+    "Effect": "Connection – [[move:Aqua Ring]]. Whenever the user activates [[move:Aqua Ring]], they may activate this Feature to cure themselves of all Persistent Status Effects."
   },
   {
     "Name": "Refrigerate",
@@ -2015,12 +2015,12 @@
   {
     "Name": "Rock Head",
     "Frequency": "Static",
-    "Effect": "The user ignores the Recoil keyword when attacking. If the user moves at least 4 meters in a straight line towards a foe before attacking that foe with a physical attack, they may add a +2d6 Bonus to the Damage Roll against that foe."
+    "Effect": "The user ignores the [[keyword:Recoil]] keyword when attacking. If the user moves at least 4 meters in a straight line towards a foe before attacking that foe with a physical attack, they may add a +2d6 Bonus to the Damage Roll against that foe."
   },
   {
     "Name": "Rockabilly",
     "Frequency": "Static",
-    "Effect": "The user's Sonic Moves gain the Versatile Keyword."
+    "Effect": "The user's Sonic Moves gain the [[keyword:Versatile]] Keyword."
   },
   {
     "Name": "Rocket",
@@ -2032,13 +2032,13 @@
   {
     "Name": "Rocky Payload",
     "Frequency": "Static",
-    "Effect": "Connection – Fling. The user may use Fling as if it was a Flying-Type or Rock-Type move. They may ignore the effects of held Items in their possession.",
+    "Effect": "Connection – [[move:Fling]]. The user may use [[move:Fling]] as if it was a Flying-Type or Rock-Type move. They may ignore the effects of held Items in their possession.",
     "Bonus": "The user gains STAB on Rock-Type Moves."
   },
   {
     "Name": "Root Down",
     "Frequency": "At-Will – Shift Action",
-    "Effect": "Connection - Ingrain. While the user has the Ingrain Coat, they may activate this Ability to gain 5 Damage Reduction."
+    "Effect": "Connection - [[move:Ingrain]]. While the user has the Ingrain Coat, they may activate this Ability to gain 5 Damage Reduction."
   },
   {
     "Name": "Rough Skin",
@@ -2049,7 +2049,7 @@
   {
     "Name": "Run Away",
     "Frequency": "Static",
-    "Effect": "The user does not provoke Attacks of Opportunity by Shifting. The user cannot be Trapped."
+    "Effect": "The user does not provoke Attacks of Opportunity by Shifting. The user cannot be [[status:Trapped]]."
   },
   {
     "Name": "Sacred Bell",
@@ -2072,7 +2072,7 @@
     "Name": "Sand Spit",
     "Frequency": "Scene – Free Action, Reaction",
     "Trigger": "The user is damaged by an attack from a foe within 2m",
-    "Effect": "Connection – Sand Attack. The user attacks the triggering foe with Sand Attack as a Free Action."
+    "Effect": "Connection – [[move:Sand Attack]]. The user attacks the triggering foe with [[move:Sand Attack]] as a Free Action."
   },
   {
     "Name": "Sand Stream",
@@ -2110,14 +2110,14 @@
   {
     "Name": "Seasonal",
     "Frequency": "Static",
-    "Effect": "The user gains an Ability based on the season. \n- Spring: Run Away \n- Summer: Grass Pelt \n- Autumn: Rivalry \n- Winter: Thick Fat"
+    "Effect": "The user gains an Ability based on the season. \n- Spring: [[ability:Run Away]] \n- Summer: [[ability:Grass Pelt]] \n- Autumn: Rivalry \n- Winter: [[ability:Thick Fat]]"
   },
   {
     "Name": "Seed Sower",
     "Frequency": "Scene – Free Action, Reaction",
     "Trigger": "The user is damaged by a foe within 2m",
-    "Effect": "Connection – Leech Seed. The user may use Leech Seed as a Free Action on the triggering foe. This attack cannot miss.",
-    "Bonus": "The user counts as in Grassy Terrain when targeting foes affected by Leech Seed."
+    "Effect": "Connection – [[move:Leech Seed]]. The user may use [[move:Leech Seed]] as a Free Action on the triggering foe. This attack cannot miss.",
+    "Bonus": "The user counts as in [[move:Grassy Terrain]] when targeting foes affected by [[move:Leech Seed]]."
   },
   {
     "Name": "Sequence",
@@ -2133,7 +2133,7 @@
   {
     "Name": "Serpent's Mark",
     "Frequency": "Static",
-    "Effect": "Arbok's Advanced and High Abilities depend on the Arbok's hood pattern. To determine its pattern, roll 1d6 upon evolution or upon generation. If an Arbok is bred, it will have the same pattern as its parent. If both parents are Arboks with different patterns, flip a coin to decide which pattern is inherited. \nPattern Name - Adv Ability / High Ability \n1) Attack Pattern - Strong Jaw / Guts \n2) Crush Pattern - Crush Trap / Frisk \n3) Fear Pattern - Unnerve / Regal Challenge \n4) Life Pattern – Regenerator / Defy Death \n5) Speed Pattern - Run Away / Speed Boost \n6) Stealth Pattern - Infiltrator / Ambush"
+    "Effect": "Arbok's Advanced and High Abilities depend on the Arbok's hood pattern. To determine its pattern, roll 1d6 upon evolution or upon generation. If an Arbok is bred, it will have the same pattern as its parent. If both parents are Arboks with different patterns, flip a coin to decide which pattern is inherited. \nPattern Name - Adv Ability / High Ability \n1) Attack Pattern - [[ability:Strong Jaw]] / Guts \n2) Crush Pattern - [[ability:Crush Trap]] / [[ability:Frisk]] \n3) Fear Pattern - Unnerve / [[ability:Regal Challenge]] \n4) Life Pattern – Regenerator / [[ability:Defy Death]] \n5) Speed Pattern - [[ability:Run Away]] / [[ability:Speed Boost]] \n6) Stealth Pattern - Infiltrator / Ambush"
   },
   {
     "Name": "Shackle",
@@ -2148,20 +2148,20 @@
   {
     "Name": "Shadow Tag",
     "Frequency": "Scene – Free Action",
-    "Effect": "The target's shadow becomes pinned to the target's current spot for 5 turns. During this time, the target is Slowed and Trapped, and cannot move more than 5 meters from the spot their shadow is pinned to; even being Pushed and other forced movement effects cannot force the target to Move more than 5 meters from that spot."
+    "Effect": "The target's shadow becomes pinned to the target's current spot for 5 turns. During this time, the target is [[status:Slowed]] and [[status:Trapped]], and cannot move more than 5 meters from the spot their shadow is pinned to; even being Pushed and other forced movement effects cannot force the target to Move more than 5 meters from that spot."
   },
   {
     "Name": "Sharpness",
     "Frequency": "Scene – Free Action",
-    "Trigger": "The user uses a Move with the Slice keyword",
+    "Trigger": "The user uses a Move with the [[keyword:Slice]] keyword",
     "Effect": "The triggering Move ignores non-Speed Evasion, any DR, and the target's positive CS. Blessings may not be activated against it. After the Move is resolved, the user may Disengage up to 3m into any square adjacent to a target, as a Free Action.",
-    "Bonus": "The user increases the Damage Base of Moves with the Slice keyword by +2.",
+    "Bonus": "The user increases the Damage Base of Moves with the [[keyword:Slice]] keyword by +2.",
     "Slice Moves": "Aerial Ace, Air Cutter, Air Slash, Aqua Cutter, Behemoth Blade, Bitter Blade, Butterfly Knife*, Ceaseless Edge, Cross Poison, Cut, Dragon Claw, Fury Cutter, Kowtow Cleave, Leaf Blade, Metal Claw, Mighty Cleave, Night Slash, Occult Razor*, Population Bomb, Psyblade, Psycho Cut, Razor Leaf, Razor Shell, Razor Wind, Sacred Sword, Secret Sword, Shadow Claw, Slash, Solar Blade, Spacial Rend, Stone Axe, Tachyon Cutter, X-Scissor"
   },
   {
     "Name": "Shed Skin",
     "Frequency": "Scene – Swift Action",
-    "Effect": "The user is cured of one of Paralysis, Freezing, Burns, Poison, or Sleep."
+    "Effect": "The user is cured of one of [[status:Paralysis]], Freezing, Burns, Poison, or [[status:Sleep]]."
   },
   {
     "Name": "Sheer Force",
@@ -2176,17 +2176,17 @@
   {
     "Name": "Shell Cannon",
     "Frequency": "Scene – Free Action",
-    "Effect": "When Blastoise uses Aqua Jet, Dive, Flash Cannon, Hydro Cannon, Hydro Pump, Tackle, Waterfall, Water Gun, and Water Spout they may activate this Ability to gain +2 to their Accuracy Roll and deals +4 Bonus Damage with Damage Rolls. When using Aqua Jet, Dive, Tackle, or Waterfall, Blastoise must shift in a straight line to their target to activate this Ability, but their Overland and Swim Speeds are increased by +2 when doing so."
+    "Effect": "When Blastoise uses [[move:Aqua Jet]], [[move:Dive]], [[move:Flash Cannon]], [[move:Hydro Cannon]], [[move:Hydro Pump]], Tackle, Waterfall, [[move:Water Gun]], and [[move:Water Spout]] they may activate this Ability to gain +2 to their Accuracy Roll and deals +4 Bonus Damage with Damage Rolls. When using [[move:Aqua Jet]], [[move:Dive]], Tackle, or Waterfall, Blastoise must shift in a straight line to their target to activate this Ability, but their Overland and Swim Speeds are increased by +2 when doing so."
   },
   {
     "Name": "Shell Shield",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection - Withdraw. The user may activate this Ability to use Withdraw as an Standard Action Interrupt and gain +10 Damage Reduction for 1 full round."
+    "Effect": "Connection - [[move:Withdraw]]. The user may activate this Ability to use [[move:Withdraw]] as an Standard Action Interrupt and gain +10 Damage Reduction for 1 full round."
   },
   {
     "Name": "Shield Dust",
     "Frequency": "Static",
-    "Effect": "The user ignores the secondary effects that trigger during Accuracy Roll of damaging Moves that target the user. For example, Flamethrower can never inflict the Burn Condition. Defensive."
+    "Effect": "The user ignores the secondary effects that trigger during Accuracy Roll of damaging Moves that target the user. For example, Flamethrower can never inflict the [[status:Burned]](Burn) Condition. Defensive."
   },
   {
     "Name": "Shields Down",
@@ -2201,7 +2201,7 @@
   {
     "Name": "Silk Threads",
     "Frequency": "Static",
-    "Effect": "Connection - String Shot. Whenever the user uses String Shot, all targets hit become Slowed and Vulnerable for 1 full round."
+    "Effect": "Connection - [[move:String Shot]]. Whenever the user uses [[move:String Shot]], all targets hit become [[status:Slowed]] and [[status:Vulnerable]] for 1 full round."
   },
   {
     "Name": "Simple",
@@ -2211,20 +2211,20 @@
   {
     "Name": "Skill Link",
     "Frequency": "Scene – Free Action",
-    "Trigger": "The user hits with a Move with the Five Strike keyword.",
+    "Trigger": "The user hits with a Move with the [[keyword:Five Strike]] keyword.",
     "Effect": "The Triggering Move automatically hits 5 Times."
   },
   {
     "Name": "Sleight of Hand",
     "Frequency": "At-Will – Free Action",
     "Trigger": "The user attacks with a damaging Move that cannot miss.",
-    "Effect": "The triggering Move instead has an AC of 2, but one legal target is Flinched on a successful hit. A target can only be flinched once per Scene by this effect. This effect must be declared before making the attack."
+    "Effect": "The triggering Move instead has an AC of 2, but one legal target is [[status:Flinch]](Flinched) on a successful hit. A target can only be flinched once per Scene by this effect. This effect must be declared before making the attack."
   },
   {
     "Name": "Slick Trail",
     "Frequency": "Scene – Swift Action",
-    "Effect": "The user leaves behind Slick Hazards in every square they move into this Turn, including the one their movement starts on.",
-    "Bonus": "The user may ignore Slick Hazards and does not have to stop shifting or become Vulnerable from them."
+    "Effect": "The user leaves behind [[keyword:Slick Hazards]] in every square they move into this Turn, including the one their movement starts on.",
+    "Bonus": "The user may ignore [[keyword:Slick Hazards]] and does not have to stop shifting or become [[status:Vulnerable]] from them."
   },
   {
     "Name": "Slow Start",
@@ -2275,13 +2275,13 @@
   {
     "Name": "Sonic Courtship",
     "Frequency": "Scene – Free Action",
-    "Trigger": "The user uses Attract",
-    "Effect": "Connection - Attract. The user may use Attract as if it had a range of \"Burst 3, Sonic, Friendly\"."
+    "Trigger": "The user uses [[move:Attract]]",
+    "Effect": "Connection - [[move:Attract]]. The user may use [[move:Attract]] as if it had a range of \"Burst 3, [[keyword:Sonic]], [[keyword:Friendly]]\"."
   },
   {
     "Name": "Soothing Tone",
     "Frequency": "Static",
-    "Effect": "Connection - Heal Bell. Whenever the user uses a Move that targets allies, those allies gain temporary Hit Points equal to the user's Special Attack. This may affect a specific ally only once per Scene."
+    "Effect": "Connection - [[move:Heal Bell]]. Whenever the user uses a Move that targets allies, those allies gain temporary Hit Points equal to the user's Special Attack. This may affect a specific ally only once per Scene."
   },
   {
     "Name": "Sorcery",
@@ -2303,13 +2303,13 @@
   {
     "Name": "Sound Lance",
     "Frequency": "Scene x2 – Swift Action",
-    "Trigger": "The user uses Supersonic",
-    "Effect": "Connection – Supersonic. The target of Supersonic loses Hit Points equal to the user's Special Attack. This occurs even if Supersonic misses."
+    "Trigger": "The user uses [[move:Supersonic]]",
+    "Effect": "Connection – [[move:Supersonic]]. The target of Supersonic loses Hit Points equal to the user's Special Attack. This occurs even if Supersonic misses."
   },
   {
     "Name": "Soundproof",
     "Frequency": "Static",
-    "Effect": "The Pokémon is immune to Moves with the Sonic Keyword. Defensive."
+    "Effect": "The Pokémon is immune to Moves with the [[keyword:Sonic]] Keyword. Defensive."
   },
   {
     "Name": "Speed Boost",
@@ -2325,12 +2325,12 @@
     "Name": "Spinning Dance",
     "Frequency": "At-Will – Free Action",
     "Trigger": "The user is targeted by an attack, but is missed",
-    "Effect": "If not Fainted, Paralyzed, or Asleep, the user gains +1 Evasion and may immediately Shift 1 meter."
+    "Effect": "If not [[status:Fainted]], [[status:Paralysis]](Paralyzed), or [[status:Sleep]](Asleep), the user gains +1 Evasion and may immediately Shift 1 meter."
   },
   {
     "Name": "Spiteful Intervention",
     "Frequency": "Static",
-    "Effect": "Connection – Spite. The user may use Spite in response to an attack hitting an ally, in addition to hitting themselves."
+    "Effect": "Connection – [[move:Spite]]. The user may use [[move:Spite]] in response to an attack hitting an ally, in addition to hitting themselves."
   },
   {
     "Name": "Splendorous Rider",
@@ -2365,7 +2365,7 @@
     "Frequency": "Scene – Free Action, Reaction",
     "Trigger": "The user receives Massive Damage",
     "Effect": "The user's Attack, Special Attack, Defense, and Special Defense all increase by 1 CS.",
-    "Bonus": " The user may not be Intercepted, nor may any Abilities, Moves, or Features be activated to change the user's target. Any of those existing effects (such as Follow Me) fail."
+    "Bonus": " The user may not be Intercepted, nor may any Abilities, Moves, or Features be activated to change the user's target. Any of those existing effects (such as [[move:Follow Me]]) fail."
   },
   {
     "Name": "Stamina",
@@ -2376,7 +2376,7 @@
   {
     "Name": "Stance Change",
     "Frequency": "Static",
-    "Effect": "Aegislash has two Stances: Shield Stance and Sword Stance. Its default Stance is Shield Stance. Whenever Aegislash uses a damaging attack, it switches to Sword Stance and swaps its Attack Stat with its Defense and its Special Attack Stat with its Special Defense, without changing Combat Stages. Whenever Aegislash uses King's Shield, Protect, a Status Move that raises Defense Combat Stages, or a Blessing, it switches to Shield Stance and swaps its offensive and defensive Stats back to their original arrangement. Aegislash may also change its Stance as a Full Action."
+    "Effect": "Aegislash has two Stances: Shield Stance and Sword Stance. Its default Stance is Shield Stance. Whenever Aegislash uses a damaging attack, it switches to Sword Stance and swaps its Attack Stat with its Defense and its Special Attack Stat with its Special Defense, without changing Combat Stages. Whenever Aegislash uses [[move:King's Shield]], [[move:Protect]], a Status Move that raises Defense Combat Stages, or a Blessing, it switches to Shield Stance and swaps its offensive and defensive Stats back to their original arrangement. Aegislash may also change its Stance as a Full Action."
   },
   {
     "Name": "Starlight",
@@ -2386,18 +2386,18 @@
   {
     "Name": "Starswirl",
     "Frequency": "Scene – Swift Action",
-    "Effect": "Connection – Rapid Spin. The user may activate this Ability to user Rapid Spin as a Swift Action."
+    "Effect": "Connection – [[move:Rapid Spin]]. The user may activate this Ability to user [[move:Rapid Spin]] as a Swift Action."
   },
   {
     "Name": "Static",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user is hit by a Melee Attack",
-    "Effect": "The attacking foe becomes Paralyzed."
+    "Effect": "The attacking foe becomes [[status:Paralysis]](Paralyzed)."
   },
   {
     "Name": "Steadfast",
     "Frequency": "At-Will – Free Action",
-    "Trigger": "The user would be Flinched",
+    "Trigger": "The user would be [[status:Flinch]](Flinched)",
     "Effect": "The user's Speed is raised by +1 Combat Stage.",
     "Bonus": "The user's Initiative is increased by +5."
   },
@@ -2405,7 +2405,7 @@
     "Name": "Steam Engine",
     "Frequency": "Scene x2 – Swift Action, Reaction",
     "Trigger": "The user is hit by a damaging Fire-Type or Water-Type Move, or begins their turn in Rainy Weather",
-    "Effect": "Connection – Smokescreen. The user may use Smokescreen as a Free Action, ignoring frequency, centered on the user."
+    "Effect": "Connection – [[move:Smokescreen]]. The user may use [[move:Smokescreen]] as a Free Action, ignoring frequency, centered on the user."
   },
   {
     "Name": "Steelworker",
@@ -2418,8 +2418,8 @@
     "Name": "Stellar Blast",
     "Frequency": "At-Will – Swift Action",
     "Trigger": "The user hits a foe with a Move",
-    "Effect": "Connection – Tera Blast. Choose a Type of the triggering foe. The user then Radiates that Type until the end of the Encounter or they begin Radiating another Type. While Radiating, the user and all allies within a Burst 2 around them receive a +10 Damage Bonus when using Moves of that Type.",
-    "Bonus": "While Radiating a Type, the user may use Tera Blast as that Type. This does not change whether or not they gain STAB. Additionally, when using Tera Blast against a target that has changed Forme, it is one step more effective. This may not cause the Effectiveness to be raised above Doubly Super Effective.",
+    "Effect": "Connection – [[move:Tera Blast]]. Choose a Type of the triggering foe. The user then Radiates that Type until the end of the Encounter or they begin Radiating another Type. While Radiating, the user and all allies within a Burst 2 around them receive a +10 Damage Bonus when using Moves of that Type.",
+    "Bonus": "While Radiating a Type, the user may use [[move:Tera Blast]] as that Type. This does not change whether or not they gain STAB. Additionally, when using [[move:Tera Blast]] against a target that has changed Forme, it is one step more effective. This may not cause the Effectiveness to be raised above Doubly Super Effective.",
     "Notes 1": "Changing Forme includes any effect that switches Base Stat Sets, such as the Abilities like Stance Change or Schooling; Mega Evolution; Dynamax; Terastilization; or being in any Altered, Origin, or Primal Forme; even if they started the encounter that way.",
     "Notes 2": "If a GM desires to emulate a Pokémon being Stellar Type, they should grant this Ability."
   },
@@ -2436,29 +2436,29 @@
   {
     "Name": "Sticky Smoke",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection - Smokescreen. All targets that begin or end their turn in the target's Smokescreen have their Accuracy lowered by -1. This penalty may occur multiple times. This stacks with the usual penalties from Smokescreen."
+    "Effect": "Connection - [[move:Smokescreen]]. All targets that begin or end their turn in the target's Smokescreen have their Accuracy lowered by -1. This penalty may occur multiple times. This stacks with the usual penalties from Smokescreen."
   },
   {
     "Name": "Storm Drain",
     "Frequency": "Scene – Free Action",
     "Trigger": "A ranged Water-Type Move is used within 10 Meters of the user.",
-    "Effect": "The Move is turned into a 1-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or Mind Reader. the user's Special Attack is then raised by +1 Combat Stage.",
+    "Effect": "The Move is turned into a 1-Target Move and is re-directed at the user without fail, and cannot miss. This negates Lock-On or [[move:Mind Reader]]. the user's Special Attack is then raised by +1 Combat Stage.",
     "Bonus": " The user is immune to the damage and effects of Water Type attacks. Defensive."
   },
   {
     "Name": "Strange Tempo",
     "Frequency": "At-Will – Special",
-    "Effect": "While Confused, the user may choose either to 1) As a Free Action, not to roll for Confusion, instead acting normally or 2) As a Standard Action, cure themselves of Confusion and gain +2 Combat Stages to the Stat of their choice."
+    "Effect": "While [[status:Confusion]](Confused), the user may choose either to 1) As a Free Action, not to roll for Confusion, instead acting normally or 2) As a Standard Action, cure themselves of [[status:Confusion]] and gain +2 Combat Stages to the Stat of their choice."
   },
   {
     "Name": "Strong Jaw",
     "Frequency": "Static",
-    "Effect": "The user has the Damage Base of the following Moves increased by +2; Bite, Bug Bite, Crunch, Fire Fang, Ice Fang, Thunder Fang, Poison Fang, and Hyper Fang."
+    "Effect": "The user has the Damage Base of the following Moves increased by +2; Bite, [[move:Bug Bite]], Crunch, [[move:Fire Fang]], [[move:Ice Fang]], [[move:Thunder Fang]], [[move:Poison Fang]], and [[move:Hyper Fang]]."
   },
   {
     "Name": "Sturdy",
     "Frequency": "Static",
-    "Effect": "The user is immune to Moves with the Execute Keyword. If a single source of Damage or Hit Point Loss would cause the user to lose more than X Hit Points, the damage or Hit Point loss is instead reduced to X. X is equal to 50% of their Max Hit Points. Defensive."
+    "Effect": "The user is immune to Moves with the [[keyword:Execute]] Keyword. If a single source of Damage or Hit Point Loss would cause the user to lose more than X Hit Points, the damage or Hit Point loss is instead reduced to X. X is equal to 50% of their Max Hit Points. Defensive."
   },
   {
     "Name": "Suction Cups",
@@ -2471,7 +2471,7 @@
     "Frequency": "At-Will – Shift Action",
     "Trigger": "The user hits a foe with a Melee Attack",
     "Effect": "The triggering foe is Pushed 1 meter away from the user and the user is immune to Push Effects for 1 full round.",
-    "Bonus": " The user's Weight Class is increased by +1."
+    "Bonus": " The user's [[keyword:Weight Class]] is increased by +1."
   },
   {
     "Name": "Sun Blanket",
@@ -2498,22 +2498,22 @@
     "Name": "Supremacy",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user hits with a Move that cannot miss",
-    "Effect": "Choose a legal target of the triggering Move. That target then reveals its Moves. Choose one of those Moves. That Move becomes Disabled for that target."
+    "Effect": "Choose a legal target of the triggering Move. That target then reveals its Moves. Choose one of those Moves. That Move becomes [[status:Disabled]] for that target."
   },
   {
     "Name": "Supreme Overlord",
     "Frequency": "Static",
-    "Effect": "The user gains a +1d6 bonus to Damage Rolls, and an additional +1d6 bonus to Damage Rolls for each ally that Fainted during this encounter."
+    "Effect": "The user gains a +1d6 bonus to Damage Rolls, and an additional +1d6 bonus to Damage Rolls for each ally that [[status:Fainted]] during this encounter."
   },
   {
     "Name": "Surge Surfer",
     "Frequency": "Static",
-    "Effect": "On Electric Terrain or while under half maximum Hit Points, the user's Initiative is doubled."
+    "Effect": "On [[move:Electric Terrain]] or while under half maximum Hit Points, the user's Initiative is doubled."
   },
   {
     "Name": "Swarm",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Bug."
+    "Effect": "The user gains [[ability:Last Chance]] with Bug."
   },
   {
     "Name": "Sway",
@@ -2524,7 +2524,7 @@
   {
     "Name": "Sweet Veil",
     "Frequency": "Static",
-    "Effect": "The user and allies within 3 meters are immune to Sleep. Defensive."
+    "Effect": "The user and allies within 3 meters are immune to [[status:Sleep]]. Defensive."
   },
   {
     "Name": "Swift Swim",
@@ -2544,7 +2544,7 @@
   {
     "Name": "Synchronize",
     "Frequency": "Scene – Free Action",
-    "Trigger": "The user is Paralyzed, Frozen, Burned, Poisoned, or put to Sleep.",
+    "Trigger": "The user is [[status:Paralysis]](Paralyzed), [[status:Frozen]], [[status:Burned]], [[status:Poisoned]], or put to [[status:Sleep]].",
     "Effect": "The foe which caused the Status Condition is given the same Status they inflicted."
   },
   {
@@ -2555,18 +2555,18 @@
   {
     "Name": "Tangled Feet",
     "Frequency": "Static",
-    "Effect": "While Confused or Slowed, the user gains +3 Evasion. The user is immune to the Vulnerable Condition."
+    "Effect": "While [[status:Confusion]](Confused) or [[status:Slowed]], the user gains +3 Evasion. The user is immune to the [[status:Vulnerable]] Condition."
   },
   {
     "Name": "Tangling Hair",
     "Frequency": "At-Will – Free Action",
     "Trigger": "The user is hit by a Melee Attack",
-    "Effect": "The attacker receives -1 Speed Combat Stage and is Slowed until the end of its next turn."
+    "Effect": "The attacker receives -1 Speed Combat Stage and is [[status:Slowed]] until the end of its next turn."
   },
   {
     "Name": "Targeting System",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection – Lock-On. The user may activate this Ability to use Lock-On as a Swift Action."
+    "Effect": "Connection – [[move:Lock-On]]. The user may activate this Ability to use [[move:Lock-On]] as a Swift Action."
   },
   {
     "Name": "Teamwork",
@@ -2576,7 +2576,7 @@
   {
     "Name": "Technician",
     "Frequency": "Static",
-    "Effect": "Moves with a Damage Base of 6 or lower have their Damage Base increased by +2. This bonus always applies to Moves with the Double Strike or Fivestrike Keywords."
+    "Effect": "Moves with a Damage Base of 6 or lower have their Damage Base increased by +2. This bonus always applies to Moves with the [[keyword:Double Strike]] or Fivestrike Keywords."
   },
   {
     "Name": "Telepathy",
@@ -2586,8 +2586,8 @@
   {
     "Name": "Tera Cudgel",
     "Frequency": "At-Will – Free Action",
-    "Trigger": "The user hits a target with Ivy Cudgel.",
-    "Effect": "Connection – Ivy Cudgel. Tera Cudgel's Effect depends on the user's current Embody Aspect Forme. Innate.",
+    "Trigger": "The user hits a target with [[move:Ivy Cudgel]].",
+    "Effect": "Connection – [[move:Ivy Cudgel]]. Tera Cudgel's Effect depends on the user's current [[ability:Embody Aspect]] Forme. Innate.",
     "Forme Effect": "\n- Teal Mask: The user may choose to have the attack deal damage as though it were one step less Effective; if they do so, they may then Disengage 3m and attack a different target with Ivy Cudgel as a Free Action, ignoring Frequency, dealing damage as though it were one step less Effective.\n- Wellspring Mask: The triggering target becomes Thornbound by the user until the end of the user's next turn. Thornbound characters suffer a -2 Accuracy and -10 damage penalty when targeting characters other than the user, and are treated as Slowed when Shifting away from the user.\n- Hearthflame Mask: The triggering target is Slowed for one full Round and all foes cardinally adjacent to it become Burned. If the user has not used their Shift Action this turn, they may expend it to additionally have the target become Stuck and all foes adjacent to them Slowed for one full Round.\n- Cornerstone Mask: The user may create 5 squares of Rocks. Each square must be cardinally adjacent to another square, and at least one must be adjacent to the user. Rocks count as Blocking Terrain against foes' Ranged Attacks, and deal a Tick of Hit Point Loss to grounded foes who step onto them. This Hit Point Loss applies only once per turn. Rocks disappear at the start of the user's next turn."
   },
   {
@@ -2601,8 +2601,8 @@
     "Name": "Teraform Zero",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user starts their turn while having changed Type, or Radiating a Type.",
-    "Effect": "Connection – Tera Starstorm. All Weather and Terrain effects currently on the Field end, and the user may choose any Weather Effect to replace them. The user may then change their Type to the one associated with the chosen Weather. Additionally, choose one and create the chosen Terrain anywhere within a Burst 4: \n» Three continuous squares of Blocking Terrain. \n» Two Blasts 3 of Slow Terrain \n» Two Blasts 3 of Rough Terrain",
-    "Bonus": "When using Tera Starstorm, it always changes to match the user's Type."
+    "Effect": "Connection – [[move:Tera Starstorm]]. All Weather and Terrain effects currently on the Field end, and the user may choose any Weather Effect to replace them. The user may then change their Type to the one associated with the chosen Weather. Additionally, choose one and create the chosen Terrain anywhere within a Burst 4: \n» Three continuous squares of Blocking Terrain. \n» Two Blasts 3 of Slow Terrain \n» Two Blasts 3 of Rough Terrain",
+    "Bonus": "When using [[move:Tera Starstorm]], it always changes to match the user's Type."
   },
   {
     "Name": "Teravolt",
@@ -2629,7 +2629,7 @@
   {
     "Name": "Thrust",
     "Frequency": "Static",
-    "Effect": "All moves used by this Pokémon which consult the Attack stat now have the Push keyword. The default push for moves is 1 meter. If a move already has the Push Keyword, that move may push 1 additional meter."
+    "Effect": "All moves used by this Pokémon which consult the Attack stat now have the [[keyword:Push]] keyword. The default push for moves is 1 meter. If a move already has the [[keyword:Push]] Keyword, that move may push 1 additional meter."
   },
   {
     "Name": "Tingle",
@@ -2656,13 +2656,13 @@
     "Name": "Tonguelash",
     "Frequency": "Scene x2 – Free Action",
     "Trigger": "The user hits a target with Lick",
-    "Effect": "Connection – Lick. Lick automatically Paralyzes and Flinches its target.",
-    "Bonus": " The user may use Lick as if it was Normal-Typed."
+    "Effect": "Connection – [[move:Lick]]. Lick automatically Paralyzes and Flinches its target.",
+    "Bonus": " The user may use [[move:Lick]] as if it was Normal-Typed."
   },
   {
     "Name": "Torrent",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Water."
+    "Effect": "The user gains [[ability:Last Chance]] with Water."
   },
   {
     "Name": "Tough Claws",
@@ -2677,19 +2677,19 @@
   {
     "Name": "Toxic Boost",
     "Frequency": "Scene – Swift Action",
-    "Effect": "The user gains +3 Attack and Special Attack Combat Stages. Toxic Boost may only be used while Poisoned or Badly Poisoned. Special: If the user has the Immunity Ability, they can still become Poisoned and Badly Poisoned but do not lose Hit Points from these conditions."
+    "Effect": "The user gains +3 Attack and Special Attack Combat Stages. Toxic Boost may only be used while [[status:Poisoned]] or [[status:Badly Poisoned]]. Special: If the user has the Immunity Ability, they can still become [[status:Poisoned]] and [[status:Badly Poisoned]] but do not lose Hit Points from these conditions."
   },
   {
     "Name": "Toxic Chain",
     "Frequency": "Scene – Swift Action",
     "Trigger": "The user Poisons a foe",
-    "Effect": "Choose another foe, they become Poisoned, and it and the triggering foe become Chained to each other. Whenever a foe is damaged, every foe Chained to them becomes Vulnerable for one full round."
+    "Effect": "Choose another foe, they become [[status:Poisoned]], and it and the triggering foe become Chained to each other. Whenever a foe is damaged, every foe Chained to them becomes [[status:Vulnerable]] for one full round."
   },
   {
     "Name": "Toxic Debris",
     "Frequency": "Scene x2 – Free Action",
     "Trigger": "The Target is hit by a damaging Physical Move",
-    "Effect": "Connection – Toxic Spikes. The user may use the Move Toxic Spikes as a Free Action Reaction, ignoring frequency, targeting all tiles in a Burst 1 around the user."
+    "Effect": "Connection – [[move:Toxic Spikes]]. The user may use the Move [[move:Toxic Spikes]] as a Free Action Reaction, ignoring frequency, targeting all tiles in a Burst 1 around the user."
   },
   {
     "Name": "Toxic Nourishment",
@@ -2699,13 +2699,13 @@
   {
     "Name": "Trace",
     "Frequency": "Scene – Free Action",
-    "Effect": "The Pokémon gains an Ability known by the Target for the remainder of the encounter, or until it is Fainted."
+    "Effect": "The Pokémon gains an Ability known by the Target for the remainder of the encounter, or until it is [[status:Fainted]]."
   },
   {
     "Name": "Transporter",
     "Frequency": "Daily x3 – Free Action",
     "Trigger": "You Teleport",
-    "Effect": "Connection – Teleport.\nChoose one effect: You activate Teleporter as if your Teleporter value were three times its normal value; or you may take one willing adjacent Pokémon or Trainer along with you as you teleport so long as you are touching them when you activate Transporter. You may expend two uses of Transporter at once to choose both effects."
+    "Effect": "Connection – [[move:Teleport]].\nChoose one effect: You activate Teleporter as if your Teleporter value were three times its normal value; or you may take one willing adjacent Pokémon or Trainer along with you as you teleport so long as you are touching them when you activate Transporter. You may expend two uses of Transporter at once to choose both effects."
   },
   {
     "Name": "Transistor",
@@ -2727,7 +2727,7 @@
   {
     "Name": "Trinity",
     "Frequency": "Static",
-    "Effect": "Connection - Tri Attack. You may use Tri Attack as if it had a range of \"Melee, 3 Targets\". Make a different attack roll for each target. If Tri-Attack's effect range is activated, do not roll for the effect; the first target can only be Frozen, the second can only be Burned, and the third can only be Paralyzed. Additionally, you may use Tri-Attack as a Physical Attack if you wish."
+    "Effect": "Connection - [[move:Tri Attack]]. You may use [[move:Tri Attack]] as if it had a range of \"Melee, 3 Targets\". Make a different attack roll for each target. If Tri-Attack's effect range is activated, do not roll for the effect; the first target can only be [[status:Frozen]], the second can only be [[status:Burned]], and the third can only be [[status:Paralysis]](Paralyzed). Additionally, you may use Tri-Attack as a Physical Attack if you wish."
   },
   {
     "Name": "Truant",
@@ -2768,7 +2768,7 @@
   {
     "Name": "Unbreakable",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Steel."
+    "Effect": "The user gains [[ability:Last Chance]] with Steel."
   },
   {
     "Name": "Unburden",
@@ -2779,7 +2779,7 @@
     "Name": "Unnerve",
     "Frequency": "At-Will – Swift Action",
     "Target": "A Pokémon or Trainer within 6m",
-    "Effect": "The target cannot trade in Food Buffs or gain positive Combat Stages until the user targets a different foe with this Ability, and becomes Suppressed. Any target may only be Suppressed by this Ability once per Scene."
+    "Effect": "The target cannot trade in Food Buffs or gain positive Combat Stages until the user targets a different foe with this Ability, and becomes [[status:Suppressed]]. Any target may only be [[status:Suppressed]] by this Ability once per Scene."
   },
   {
     "Name": "Unseen Fist",
@@ -2835,7 +2835,7 @@
   {
     "Name": "Vename",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Poison."
+    "Effect": "The user gains [[ability:Last Chance]] with Poison."
   },
   {
     "Name": "Vessel of Ruin",
@@ -2845,8 +2845,8 @@
   {
     "Name": "Vicious",
     "Frequency": "Scene – Special",
-    "Trigger": "The user uses Hone Claws",
-    "Effect": "Connection – Hone Claws. When this Ability is activated, choose one effect; the user gains another Standard Action this round; or the user increase their Critical Hit Range on all attacks by +2 for the remainder of the encounter."
+    "Trigger": "The user uses [[move:Hone Claws]]",
+    "Effect": "Connection – [[move:Hone Claws]]. When this Ability is activated, choose one effect; the user gains another Standard Action this round; or the user increase their Critical Hit Range on all attacks by +2 for the remainder of the encounter."
   },
   {
     "Name": "Victory Star",
@@ -2856,13 +2856,13 @@
   {
     "Name": "Vigor",
     "Frequency": "Daily – Free Action",
-    "Trigger": "The user uses Endure",
-    "Effect": "Connection – Endure. When this Ability is activated, after being set to 1 Hit Point, the user gains a Tick of Hit Points. Furthermore, if the Move that triggered Endure gave the user an Injury from Massive Damage, the user does not gain that Injury. Defensive."
+    "Trigger": "The user uses [[move:Endure]]",
+    "Effect": "Connection – [[move:Endure]]. When this Ability is activated, after being set to 1 Hit Point, the user gains a Tick of Hit Points. Furthermore, if the Move that triggered Endure gave the user an Injury from Massive Damage, the user does not gain that Injury. Defensive."
   },
   {
     "Name": "Vital Spirit",
     "Frequency": "Static",
-    "Effect": "The user is immune to the Sleep condition, and cannot use the move Rest. Defensive."
+    "Effect": "The user is immune to the [[status:Sleep]] condition, and cannot use the move [[move:Rest]]. Defensive."
   },
   {
     "Name": "Volt Absorb",
@@ -2872,25 +2872,25 @@
   {
     "Name": "Voodoo Doll",
     "Frequency": "Daily – Free Action",
-    "Trigger": "The user uses the Move Curse as a Ghost Type",
-    "Effect": "Connection - Curse. Choose an additional target within 8 meters of the user to become Cursed."
+    "Trigger": "The user uses the Move [[move:Curse]] as a Ghost Type",
+    "Effect": "Connection - [[move:Curse]]. Choose an additional target within 8 meters of the user to become [[status:Cursed]]."
   },
   {
     "Name": "Wallmaster",
     "Frequency": "Static",
-    "Effect": "Connection – Barrier. Whenever the user uses Barrier, they may choose to either gain +2 Defense Combat Stages, or place 2 additional segments of Barrier."
+    "Effect": "Connection – [[move:Barrier]]. Whenever the user uses [[move:Barrier]], they may choose to either gain +2 Defense Combat Stages, or place 2 additional segments of Barrier."
   },
   {
     "Name": "Wandering Spirit",
     "Frequency": "Scene – Free Action, Reaction",
     "Trigger": "The user is hit by a Melee attack",
-    "Effect": "The user exchanges Wandering Spirit with a random Ability of the opposing Pokémon, as per the Move Skill Swap."
+    "Effect": "The user exchanges Wandering Spirit with a random Ability of the opposing Pokémon, as per the Move [[move:Skill Swap]]."
   },
   {
     "Name": "Wash Away",
     "Frequency": "Daily – Free Action",
     "Trigger": "The user hits with a Water Type Move",
-    "Effect": "Before the Move \"hits\", all Combat Stages on targets hit by the Move are reset to their default (usually 0), and all coats on the targets, except ones placed by Water Sport, are destroyed."
+    "Effect": "Before the Move \"hits\", all Combat Stages on targets hit by the Move are reset to their default (usually 0), and all coats on the targets, except ones placed by [[move:Water Sport]], are destroyed."
   },
   {
     "Name": "Water Absorb",
@@ -2900,7 +2900,7 @@
   {
     "Name": "Water Bubble",
     "Frequency": "Static",
-    "Effect": "The user resists Fire-Type attacks one step further, is immune to being Burned, and may always act as though in Rainy Weather. Defensive.",
+    "Effect": "The user resists Fire-Type attacks one step further, is immune to being [[status:Burned]], and may always act as though in Rainy Weather. Defensive.",
     "Bonus": " The user may attack with Water-Type Moves as if they had a range of \"Melee, 1 target\". If they do, that Move's Class is changed to Physical and it deals +1d6+2 damage."
   },
   {
@@ -2923,7 +2923,7 @@
   {
     "Name": "Weaponize",
     "Frequency": "Static",
-    "Effect": "While being wielded as a Living Weapon and being actively Commanded as a Pokémon, the user may Intercept for its Wielder as a Free Action."
+    "Effect": "While being wielded as a [[capability:Living Weapon]] and being actively Commanded as a Pokémon, the user may Intercept for its Wielder as a Free Action."
   },
   {
     "Name": "Weeble",
@@ -2944,12 +2944,12 @@
   {
     "Name": "Whirlwind Kicks",
     "Frequency": "Static",
-    "Effect": "Connection – Triple Kick. When the user uses the Moves \"Rapid Spin\" or \"Triple Kick\", they have a range of \"Burst 1\"."
+    "Effect": "Connection – [[move:Triple Kick]]. When the user uses the Moves \"[[move:Rapid Spin]]\" or \"[[move:Triple Kick]]\", they have a range of \"Burst 1\"."
   },
   {
     "Name": "White Flame",
     "Frequency": "Static",
-    "Effect": "The user may not make rolls to cure themselves from the Enraged condition. However, while Enraged, the user gains a +5 Bonus to all Damage Rolls."
+    "Effect": "The user may not make rolls to cure themselves from the [[status:Rage]](Enraged) condition. However, while [[status:Rage]](Enraged), the user gains a +5 Bonus to all Damage Rolls."
   },
   {
     "Name": "White Smoke",
@@ -2964,16 +2964,16 @@
   {
     "Name": "Wind Power",
     "Frequency": "Scene – Swift Action, Reaction",
-    "Trigger": "A foe or ally within 4m uses a Move with the Wind keyword",
-    "Effect": "Connection – Charge. The user may use Charge as a Free Action.",
+    "Trigger": "A foe or ally within 4m uses a Move with the [[keyword:Wind]] keyword",
+    "Effect": "Connection – [[move:Charge]]. The user may use [[move:Charge]] as a Free Action.",
     "Wind Moves": "Air Cutter, Bleakwind Storm, Blizzard, Fairy Wind, Gust, Heat Wave, Hurricane, Icy Wind, Ominous Wind, Petal Blizzard, Sandsear Storm, Sandstorm, Silver Wind, Springtide Storm, Tailwind, Twister, Whirlwind, Wildbolt Storm"
   },
   {
     "Name": "Wind Rider",
     "Frequency": "At-Will – Free Action, Reaction",
-    "Trigger": "A foe or ally within 4m uses a Move with the Wind keyword",
+    "Trigger": "A foe or ally within 4m uses a Move with the [[keyword:Wind]] keyword",
     "Effect": "The user may Disengage as a Free Action. Once per Scene, the user may also gain +1 CS in either Attack or Special Attack.",
-    "Bonus": "Whenever the user Disengages for any reason, they may Shift 2 meters instead of 1. Additionally, they are immune to the damage and effects of Moves with the Wind keyword. Defensive."
+    "Bonus": "Whenever the user Disengages for any reason, they may Shift 2 meters instead of 1. Additionally, they are immune to the damage and effects of Moves with the [[keyword:Wind]] keyword. Defensive."
   },
   {
     "Name": "Windveiled",
@@ -2988,18 +2988,18 @@
   {
     "Name": "Wishmaster",
     "Frequency": "Static",
-    "Effect": "Connection – Wish. Whenever the user uses Wish, the user may pick one of the following effects: the target is healed instantly instead of the following round; or the target gains +2 CS to the Stat of their choice upon being healed; or the target is cured of any Status Affliction."
+    "Effect": "Connection – [[move:Wish]]. Whenever the user uses [[move:Wish]], the user may pick one of the following effects: the target is healed instantly instead of the following round; or the target gains +2 CS to the Stat of their choice upon being healed; or the target is cured of any Status Affliction."
   },
   {
     "Name": "Wistful Melody",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection – Sing. Whenever the user uses Sing, they may activate to his Ability to cause targets that are targeted by Sing have their Attack and Special Attack lowered by -2 CS each, whether Sing successfully hits that target or not. This Ability does not affect targets with the Soundproof Ability."
+    "Effect": "Connection – [[move:Sing]]. Whenever the user uses [[move:Sing]], they may activate to his Ability to cause targets that are targeted by Sing have their Attack and Special Attack lowered by -2 CS each, whether Sing successfully hits that target or not. This Ability does not affect targets with the [[ability:Soundproof]] Ability."
   },
   {
     "Name": "Wobble",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user is hit by a damaging attack",
-    "Effect": "The user may use either Counter or Mirror Coat as a Reaction, ignoring Frequency."
+    "Effect": "The user may use either Counter or [[move:Mirror Coat]] as a Reaction, ignoring Frequency."
   },
   {
     "Name": "Wonder Guard",
@@ -3014,18 +3014,18 @@
   {
     "Name": "Zen Mode",
     "Frequency": "Scene – Swift Action",
-    "Effect": "The user changes into Zen Mode forme for the rest of the Scene, and may use the Moves \"Flamethrower\" and \"Psychic\" as if they were on its Move List."
+    "Effect": "The user changes into Zen Mode forme for the rest of the Scene, and may use the Moves \"[[move:Flamethrower]]\" and \"Psychic\" as if they were on its Move List."
   },
   {
     "Name": "Zen Snowed",
     "Frequency": "Scene – Swift Action",
-    "Effect": "The user changes into Zen Mode forme for the rest of the Scene, and may use the Moves \"Ice Punch\" and \"Fire Punch\" as if they were on its Move List."
+    "Effect": "The user changes into [[ability:Zen Mode]] forme for the rest of the Scene, and may use the Moves \"[[move:Ice Punch]]\" and \"[[move:Fire Punch]]\" as if they were on its Move List."
   },
   {
     "Name": "Zero to Hero",
     "Frequency": "Scene – Shift Action",
     "Special": "The user has two sets of Base Stats and Abilities; Zero and Hero. The HP of both forms must be the same.",
-    "Trigger": "An ally is Fainted by a foe",
+    "Trigger": "An ally is [[status:Fainted]] by a foe",
     "Effect": "The user is removed from the field. When they gain Initiative the next time, choose an ally or the triggering foe. The user reappears on a square adjacent to the chosen target in Hero forme. The user returns to Zero forme when combat ends. Innate."
   }
 ]
