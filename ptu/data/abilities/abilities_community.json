@@ -114,7 +114,7 @@
   {
     "Name": "Ballistic",
     "Frequency": "Static",
-    "Effect": "Connection – [[move:Rollout]]. The user increases the Damage Base of Rollout, Steamroller, [[move:Steel Roller]], and all Moves with \"Ball\" in the name by +2, and these Moves gain the [[keyword:Versatile]] Keyword for the user."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Rollout]]. The user increases the Damage Base of Rollout, Steamroller, [[move:Steel Roller]], and all Moves with \"Ball\" in the name by +2, and these Moves gain the [[keyword:Versatile]] Keyword for the user."
   },
   {
     "Name": "Battery",
@@ -177,7 +177,7 @@
   {
     "Name": "Blow Away",
     "Frequency": "Static",
-    "Effect": "Connection – [[move:Whirlwind]]. When the user uses [[move:Whirlwind]], all targets hit are pushed an additional 2 meters and lose a Tick of Hit Points.",
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Whirlwind]]. When the user uses [[move:Whirlwind]], all targets hit are pushed an additional 2 meters and lose a Tick of Hit Points.",
     "Bonus": "The user may use [[move:Whirlwind]] as a Swift Action."
   },
   {
@@ -195,7 +195,7 @@
     "Name": "Bone Lord",
     "Frequency": "At-Will – Free Action",
     "Trigger": "The user hits with [[move:Bone Club]], [[move:Bonemerang]], or [[move:Bone Rush]]",
-    "Effect": "Connection – [[move:Bonemerang]]. Once per Scene per Move, the following Moves may be used as if they had the following bonuses: - [[move:Bone Club]]: [[move:Bone Club]]'s target loses 1 Defense and Special Attack CS. - Bonemerang: Has a Range of Line 6 but loses the [[keyword:Double Strike]] keyword - Bone Rush: [[move:Bone Rush]] automatically ‘hits' four times (as per the [[keyword:Five Strike]] keyword)."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Bonemerang]]. Once per Scene per Move, the following Moves may be used as if they had the following bonuses: - [[move:Bone Club]]: [[move:Bone Club]]'s target loses 1 Defense and Special Attack CS. - Bonemerang: Has a Range of Line 6 but loses the [[keyword:Double Strike]] keyword - Bone Rush: [[move:Bone Rush]] automatically ‘hits' four times (as per the [[keyword:Five Strike]] keyword)."
   },
   {
     "Name": "Bone Wielder",
@@ -246,7 +246,7 @@
   {
     "Name": "Chemical Romance",
     "Frequency": "Static",
-    "Effect": "Connection – [[move:Sweet Scent]]. Whenever the user hits a male target with [[move:Poison Gas]], [[move:Smog]], [[move:Sweet Scent]], [[move:Toxic]], or [[move:Venom Drench]], that target becomes Infatuated with the user."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Sweet Scent]]. Whenever the user hits a male target with [[move:Poison Gas]], [[move:Smog]], [[move:Sweet Scent]], [[move:Toxic]], or [[move:Venom Drench]], that target becomes Infatuated with the user."
   },
   {
     "Name": "Cherry Power",
@@ -383,7 +383,7 @@
     "Name": "Crush Trap",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user successfully Grapples a target",
-    "Effect": "Connection – [[move:Wrap]]. When you activate this ability, the user may immediately deal damage to the target as if the user had hit with a Struggle Attack. There is no Accuracy Roll and thus this damage cannot miss, be a Critical Hit, or trigger any Effect Ranges."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Wrap]]. When you activate this ability, the user may immediately deal damage to the target as if the user had hit with a Struggle Attack. There is no Accuracy Roll and thus this damage cannot miss, be a Critical Hit, or trigger any Effect Ranges."
   },
   {
     "Name": "Cud Chew",
@@ -594,7 +594,7 @@
   {
     "Name": "Eggscellence",
     "Frequency": "Static",
-    "Effect": "Connection – [[move:Barrage]]. The user receives STAB when using [[move:Barrage]] and [[move:Egg Bomb]]. If Normal Typed, these Moves deal Damage as if one step more effective on 16+."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Barrage]]. The user receives STAB when using [[move:Barrage]] and [[move:Egg Bomb]]. If Normal Typed, these Moves deal Damage as if one step more effective on 16+."
   },
   {
     "Name": "Electric Surge",
@@ -611,7 +611,7 @@
     "Name": "Electromorphosis",
     "Frequency": "Scene – Swift Action, Reaction",
     "Trigger": "An adjacent foe hits the user with a damaging Move",
-    "Effect": "Connection – [[move:Charge]]. The user may use [[move:Charge]] as a Free Action."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Charge]]. The user may use [[move:Charge]] as a Free Action."
   },
   {
     "Name": "Embody Aspect",
@@ -722,7 +722,7 @@
     "Name": "Flame Tongue",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user hits a foe with Lick.",
-    "Effect": "Connection – [[move:Lick]]. The foe hit with Lick gains an Injury and becomes [[status:Burned]]."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Lick]]. The foe hit with Lick gains an Injury and becomes [[status:Burned]]."
   },
   {
     "Name": "Flare Boost",
@@ -738,7 +738,7 @@
     "Name": "Flavorful Aroma",
     "Frequency": "At-Will – Free Action",
     "Trigger": "The user uses [[move:Aromatic Mist]]",
-    "Effect": "Connection – [[move:Aromatic Mist]]. All allies affected by [[move:Aromatic Mist]] gain +1 to Accuracy Rolls and +5 to Damage Rolls for one full round."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Aromatic Mist]]. All allies affected by [[move:Aromatic Mist]] gain +1 to Accuracy Rolls and +5 to Damage Rolls for one full round."
   },
   {
     "Name": "Flower Gift",
@@ -763,7 +763,7 @@
   {
     "Name": "Fluffy Charge",
     "Frequency": "Static",
-    "Effect": "Connection – [[move:Charge]]. Whenever the user uses [[move:Charge]], they gain +1 CS to Defense."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Charge]]. Whenever the user uses [[move:Charge]], they gain +1 CS to Defense."
   },
   {
     "Name": "Flutter",
@@ -853,7 +853,7 @@
   {
     "Name": "Gale Wings",
     "Frequency": "Static",
-    "Effect": "Connection – [[move:Quick Attack]]. The user may use [[move:Quick Attack]] as a Flying-Type Move.",
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Quick Attack]]. The user may use [[move:Quick Attack]] as a Flying-Type Move.",
     "Note": "This Ability was replaced by Accelerate in the Sun and Moon Pokédex."
   },
   {
@@ -937,7 +937,7 @@
     "Name": "Gulp Missile",
     "Frequency": "Scene x2 – Free Action",
     "Trigger": "The user uses [[move:Stockpile]], [[move:Surf]], or [[move:Dive]]",
-    "Effect": "Connection – [[move:Stockpile]]. The next time the user is damaged, it rolls an AC 4 Physical Attack against the attacker, even if the user Faints. On a hit, the target loses 2 ticks of HP. In addition, if the hit roll was successful, on an even roll the target is [[status:Paralysis]](Paralyzed); on an odd roll, the target instead loses 1 Defense CS."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Stockpile]]. The next time the user is damaged, it rolls an AC 4 Physical Attack against the attacker, even if the user Faints. On a hit, the target loses 2 ticks of HP. In addition, if the hit roll was successful, on an even roll the target is [[status:Paralysis]](Paralyzed); on an odd roll, the target instead loses 1 Defense CS."
   },
   {
     "Name": "Guts",
@@ -1459,7 +1459,7 @@
   {
     "Name": "Mind's Eye",
     "Frequency": "Static",
-    "Effect": "Connection – [[move:Blood Moon]]. [[move:Blood Moon]] deals damage one step more Effectively against the target in the end square of the Line, if that target has no cardinally adjacent allies.",
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Blood Moon]]. [[move:Blood Moon]] deals damage one step more Effectively against the target in the end square of the Line, if that target has no cardinally adjacent allies.",
     "Bonus": "The user's Accuracy cannot be lowered, their attacks cannot have Accuracy Penalties (such as from Illuminate), and the user is immune to the Blind condition (but not [[status:Total Blindness]]). Ghost-Types are not immune to the user's Normal-Type Moves."
   },
   {
@@ -1487,7 +1487,7 @@
   {
     "Name": "Missile Launch",
     "Frequency": "Scene x2 – Standard Action",
-    "Effect": "Connection – [[move:Dragon Darts]]. The user places two Dreepy Tokens within 6m. The user may move all Dreepy Tokens it controls 4m as a Swift Action. A Dreepy Token can freely enter other creatures' squares as part of this movement, which destroys the token, and causes the creature to suffer an AC2 DB 5 Physical Dragon-Type attack as if from the user of Missile Launch. Dreepy Tokens may be targeted. They have the same evasions as the user, and any damage destroys them (including from Smite damage)."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Dragon Darts]]. The user places two Dreepy Tokens within 6m. The user may move all Dreepy Tokens it controls 4m as a Swift Action. A Dreepy Token can freely enter other creatures' squares as part of this movement, which destroys the token, and causes the creature to suffer an AC2 DB 5 Physical Dragon-Type attack as if from the user of Missile Launch. Dreepy Tokens may be targeted. They have the same evasions as the user, and any damage destroys them (including from Smite damage)."
   },
   {
     "Name": "Misty Surge",
@@ -1523,7 +1523,7 @@
     "Name": "Mouthful",
     "Frequency": "Scene – Swift Action",
     "Trigger": "The user hits a smaller foe with a Melee Move",
-    "Effect": "Connection – [[move:Order Up]]. The user may attempt a Grapple as a Free Action; this Grapple automatically hits, but still requires an opposed Skill Check.",
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Order Up]]. The user may attempt a Grapple as a Free Action; this Grapple automatically hits, but still requires an opposed Skill Check.",
     "Bonus": "While dominant in a Grapple, the user does not suffer the usual penalties for being in a Grapple."
   },
   {
@@ -1572,7 +1572,7 @@
   {
     "Name": "Needles",
     "Frequency": "Static",
-    "Effect": "Connection – [[move:Needle Arm]]. Whenever the user hits a target with a Physical Melee attack, that target loses a Tick of Hit Points."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Needle Arm]]. Whenever the user hits a target with a Physical Melee attack, that target loses a Tick of Hit Points."
   },
   {
     "Name": "Neuroforce",
@@ -1582,7 +1582,7 @@
   {
     "Name": "Neurotoxin",
     "Frequency": "Static",
-    "Effect": "Connection – [[move:Poison Fang]]. Whenever the user inflicts [[status:Poisoned]] or [[status:Badly Poisoned]] with a damaging Poison-Type Attack, the target is also [[status:Paralysis]](Paralyzed)."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Poison Fang]]. Whenever the user inflicts [[status:Poisoned]] or [[status:Badly Poisoned]] with a damaging Poison-Type Attack, the target is also [[status:Paralysis]](Paralyzed)."
   },
   {
     "Name": "Neutralizing Gas",
@@ -1864,7 +1864,7 @@
     "Name": "Queenly Majesty",
     "Frequency": "Scene x2 – Free Action",
     "Trigger": "An adjacent foe uses a Priority Move or an Interrupt action",
-    "Effect": "Connection – [[move:Stomp]]. The user may attack the triggering foe with Stomp as a Free Action Interrupt.",
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Stomp]]. The user may attack the triggering foe with Stomp as a Free Action Interrupt.",
     "Bonus": " The user cannot be targeted by Interrupt Moves and Interrupts may not be declared in response to the user's actions."
   },
   {
@@ -1976,7 +1976,7 @@
   {
     "Name": "Refreshing Veil",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection – [[move:Aqua Ring]]. Whenever the user activates [[move:Aqua Ring]], they may activate this Feature to cure themselves of all Persistent Status Effects."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Aqua Ring]]. Whenever the user activates [[move:Aqua Ring]], they may activate this Feature to cure themselves of all Persistent Status Effects."
   },
   {
     "Name": "Refrigerate",
@@ -2032,7 +2032,7 @@
   {
     "Name": "Rocky Payload",
     "Frequency": "Static",
-    "Effect": "Connection – [[move:Fling]]. The user may use [[move:Fling]] as if it was a Flying-Type or Rock-Type move. They may ignore the effects of held Items in their possession.",
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Fling]]. The user may use [[move:Fling]] as if it was a Flying-Type or Rock-Type move. They may ignore the effects of held Items in their possession.",
     "Bonus": "The user gains STAB on Rock-Type Moves."
   },
   {
@@ -2072,7 +2072,7 @@
     "Name": "Sand Spit",
     "Frequency": "Scene – Free Action, Reaction",
     "Trigger": "The user is damaged by an attack from a foe within 2m",
-    "Effect": "Connection – [[move:Sand Attack]]. The user attacks the triggering foe with [[move:Sand Attack]] as a Free Action."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Sand Attack]]. The user attacks the triggering foe with [[move:Sand Attack]] as a Free Action."
   },
   {
     "Name": "Sand Stream",
@@ -2116,7 +2116,7 @@
     "Name": "Seed Sower",
     "Frequency": "Scene – Free Action, Reaction",
     "Trigger": "The user is damaged by a foe within 2m",
-    "Effect": "Connection – [[move:Leech Seed]]. The user may use [[move:Leech Seed]] as a Free Action on the triggering foe. This attack cannot miss.",
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Leech Seed]]. The user may use [[move:Leech Seed]] as a Free Action on the triggering foe. This attack cannot miss.",
     "Bonus": "The user counts as in [[move:Grassy Terrain]] when targeting foes affected by [[move:Leech Seed]]."
   },
   {
@@ -2304,7 +2304,7 @@
     "Name": "Sound Lance",
     "Frequency": "Scene x2 – Swift Action",
     "Trigger": "The user uses [[move:Supersonic]]",
-    "Effect": "Connection – [[move:Supersonic]]. The target of Supersonic loses Hit Points equal to the user's Special Attack. This occurs even if Supersonic misses."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Supersonic]]. The target of Supersonic loses Hit Points equal to the user's Special Attack. This occurs even if Supersonic misses."
   },
   {
     "Name": "Soundproof",
@@ -2330,7 +2330,7 @@
   {
     "Name": "Spiteful Intervention",
     "Frequency": "Static",
-    "Effect": "Connection – [[move:Spite]]. The user may use [[move:Spite]] in response to an attack hitting an ally, in addition to hitting themselves."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Spite]]. The user may use [[move:Spite]] in response to an attack hitting an ally, in addition to hitting themselves."
   },
   {
     "Name": "Splendorous Rider",
@@ -2386,7 +2386,7 @@
   {
     "Name": "Starswirl",
     "Frequency": "Scene – Swift Action",
-    "Effect": "Connection – [[move:Rapid Spin]]. The user may activate this Ability to user [[move:Rapid Spin]] as a Swift Action."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Rapid Spin]]. The user may activate this Ability to user [[move:Rapid Spin]] as a Swift Action."
   },
   {
     "Name": "Static",
@@ -2405,7 +2405,7 @@
     "Name": "Steam Engine",
     "Frequency": "Scene x2 – Swift Action, Reaction",
     "Trigger": "The user is hit by a damaging Fire-Type or Water-Type Move, or begins their turn in Rainy Weather",
-    "Effect": "Connection – [[move:Smokescreen]]. The user may use [[move:Smokescreen]] as a Free Action, ignoring frequency, centered on the user."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Smokescreen]]. The user may use [[move:Smokescreen]] as a Free Action, ignoring frequency, centered on the user."
   },
   {
     "Name": "Steelworker",
@@ -2418,7 +2418,7 @@
     "Name": "Stellar Blast",
     "Frequency": "At-Will – Swift Action",
     "Trigger": "The user hits a foe with a Move",
-    "Effect": "Connection – [[move:Tera Blast]]. Choose a Type of the triggering foe. The user then Radiates that Type until the end of the Encounter or they begin Radiating another Type. While Radiating, the user and all allies within a Burst 2 around them receive a +10 Damage Bonus when using Moves of that Type.",
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Tera Blast]]. Choose a Type of the triggering foe. The user then Radiates that Type until the end of the Encounter or they begin Radiating another Type. While Radiating, the user and all allies within a Burst 2 around them receive a +10 Damage Bonus when using Moves of that Type.",
     "Bonus": "While Radiating a Type, the user may use [[move:Tera Blast]] as that Type. This does not change whether or not they gain STAB. Additionally, when using [[move:Tera Blast]] against a target that has changed Forme, it is one step more effective. This may not cause the Effectiveness to be raised above Doubly Super Effective.",
     "Notes 1": "Changing Forme includes any effect that switches Base Stat Sets, such as the Abilities like Stance Change or Schooling; Mega Evolution; Dynamax; Terastilization; or being in any Altered, Origin, or Primal Forme; even if they started the encounter that way.",
     "Notes 2": "If a GM desires to emulate a Pokémon being Stellar Type, they should grant this Ability."
@@ -2566,7 +2566,7 @@
   {
     "Name": "Targeting System",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection – [[move:Lock-On]]. The user may activate this Ability to use [[move:Lock-On]] as a Swift Action."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Lock-On]]. The user may activate this Ability to use [[move:Lock-On]] as a Swift Action."
   },
   {
     "Name": "Teamwork",
@@ -2587,7 +2587,7 @@
     "Name": "Tera Cudgel",
     "Frequency": "At-Will – Free Action",
     "Trigger": "The user hits a target with [[move:Ivy Cudgel]].",
-    "Effect": "Connection – [[move:Ivy Cudgel]]. Tera Cudgel's Effect depends on the user's current [[ability:Embody Aspect]] Forme. [[abilitykeyword:Innate]].",
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Ivy Cudgel]]. Tera Cudgel's Effect depends on the user's current [[ability:Embody Aspect]] Forme. [[abilitykeyword:Innate]].",
     "Forme Effect": "\n- Teal Mask: The user may choose to have the attack deal damage as though it were one step less Effective; if they do so, they may then Disengage 3m and attack a different target with Ivy Cudgel as a Free Action, ignoring Frequency, dealing damage as though it were one step less Effective.\n- Wellspring Mask: The triggering target becomes Thornbound by the user until the end of the user's next turn. Thornbound characters suffer a -2 Accuracy and -10 damage penalty when targeting characters other than the user, and are treated as Slowed when Shifting away from the user.\n- Hearthflame Mask: The triggering target is Slowed for one full Round and all foes cardinally adjacent to it become Burned. If the user has not used their Shift Action this turn, they may expend it to additionally have the target become Stuck and all foes adjacent to them Slowed for one full Round.\n- Cornerstone Mask: The user may create 5 squares of Rocks. Each square must be cardinally adjacent to another square, and at least one must be adjacent to the user. Rocks count as Blocking Terrain against foes' Ranged Attacks, and deal a Tick of Hit Point Loss to grounded foes who step onto them. This Hit Point Loss applies only once per turn. Rocks disappear at the start of the user's next turn."
   },
   {
@@ -2601,7 +2601,7 @@
     "Name": "Teraform Zero",
     "Frequency": "Scene – Free Action",
     "Trigger": "The user starts their turn while having changed Type, or Radiating a Type.",
-    "Effect": "Connection – [[move:Tera Starstorm]]. All Weather and Terrain effects currently on the Field end, and the user may choose any Weather Effect to replace them. The user may then change their Type to the one associated with the chosen Weather. Additionally, choose one and create the chosen Terrain anywhere within a Burst 4: \n» Three continuous squares of Blocking Terrain. \n» Two Blasts 3 of Slow Terrain \n» Two Blasts 3 of Rough Terrain",
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Tera Starstorm]]. All Weather and Terrain effects currently on the Field end, and the user may choose any Weather Effect to replace them. The user may then change their Type to the one associated with the chosen Weather. Additionally, choose one and create the chosen Terrain anywhere within a Burst 4: \n» Three continuous squares of Blocking Terrain. \n» Two Blasts 3 of Slow Terrain \n» Two Blasts 3 of Rough Terrain",
     "Bonus": "When using [[move:Tera Starstorm]], it always changes to match the user's Type."
   },
   {
@@ -2656,7 +2656,7 @@
     "Name": "Tonguelash",
     "Frequency": "Scene x2 – Free Action",
     "Trigger": "The user hits a target with Lick",
-    "Effect": "Connection – [[move:Lick]]. Lick automatically [[status:Paralysis]](Paralyzes) and [[status:Flinch]](Flinches) its target.",
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Lick]]. Lick automatically [[status:Paralysis]](Paralyzes) and [[status:Flinch]](Flinches) its target.",
     "Bonus": " The user may use [[move:Lick]] as if it was Normal-Typed."
   },
   {
@@ -2689,7 +2689,7 @@
     "Name": "Toxic Debris",
     "Frequency": "Scene x2 – Free Action",
     "Trigger": "The Target is hit by a damaging Physical Move",
-    "Effect": "Connection – [[move:Toxic Spikes]]. The user may use the Move [[move:Toxic Spikes]] as a Free Action Reaction, ignoring frequency, targeting all tiles in a Burst 1 around the user."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Toxic Spikes]]. The user may use the Move [[move:Toxic Spikes]] as a Free Action Reaction, ignoring frequency, targeting all tiles in a Burst 1 around the user."
   },
   {
     "Name": "Toxic Nourishment",
@@ -2705,7 +2705,7 @@
     "Name": "Transporter",
     "Frequency": "Daily x3 – Free Action",
     "Trigger": "You Teleport",
-    "Effect": "Connection – [[move:Teleport]].\nChoose one effect: You activate Teleporter as if your Teleporter value were three times its normal value; or you may take one willing adjacent Pokémon or Trainer along with you as you teleport so long as you are touching them when you activate Transporter. You may expend two uses of Transporter at once to choose both effects."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Teleport]].\nChoose one effect: You activate Teleporter as if your Teleporter value were three times its normal value; or you may take one willing adjacent Pokémon or Trainer along with you as you teleport so long as you are touching them when you activate Transporter. You may expend two uses of Transporter at once to choose both effects."
   },
   {
     "Name": "Transistor",
@@ -2795,7 +2795,7 @@
     "Name": "Variable Transmission",
     "Frequency": "Daily – Extended Action",
     "Trigger": "The user is having a [Training] Feature applied by its Trainer.",
-    "Effect": "Connection – See Below. The user may choose one of the following Types. Until that [Training] Feature no longer applies, the user gains STAB on Moves of that Type and grants the Ability associated with that Type, as well as letting the user learn the Move of that Type as if it was a Move with the [[abilitykeyword:Connection]] keyword for this Ability. [[abilitykeyword:Innate]].",
+    "Effect": "[[abilitykeyword:Connection]] – See Below. The user may choose one of the following Types. Until that [Training] Feature no longer applies, the user gains STAB on Moves of that Type and grants the Ability associated with that Type, as well as letting the user learn the Move of that Type as if it was a Move with the [[abilitykeyword:Connection]] keyword for this Ability. [[abilitykeyword:Innate]].",
     "table": {
       "type": "table",
       "rows": [
@@ -2846,7 +2846,7 @@
     "Name": "Vicious",
     "Frequency": "Scene – Special",
     "Trigger": "The user uses [[move:Hone Claws]]",
-    "Effect": "Connection – [[move:Hone Claws]]. When this Ability is activated, choose one effect; the user gains another Standard Action this round; or the user increase their Critical Hit Range on all attacks by +2 for the remainder of the encounter."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Hone Claws]]. When this Ability is activated, choose one effect; the user gains another Standard Action this round; or the user increase their Critical Hit Range on all attacks by +2 for the remainder of the encounter."
   },
   {
     "Name": "Victory Star",
@@ -2857,7 +2857,7 @@
     "Name": "Vigor",
     "Frequency": "Daily – Free Action",
     "Trigger": "The user uses [[move:Endure]]",
-    "Effect": "Connection – [[move:Endure]]. When this Ability is activated, after being set to 1 Hit Point, the user gains a Tick of Hit Points. Furthermore, if the Move that triggered Endure gave the user an Injury from Massive Damage, the user does not gain that Injury. [[abilitykeyword:Defensive]]."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Endure]]. When this Ability is activated, after being set to 1 Hit Point, the user gains a Tick of Hit Points. Furthermore, if the Move that triggered Endure gave the user an Injury from Massive Damage, the user does not gain that Injury. [[abilitykeyword:Defensive]]."
   },
   {
     "Name": "Vital Spirit",
@@ -2878,7 +2878,7 @@
   {
     "Name": "Wallmaster",
     "Frequency": "Static",
-    "Effect": "Connection – [[move:Barrier]]. Whenever the user uses [[move:Barrier]], they may choose to either gain +2 Defense Combat Stages, or place 2 additional segments of Barrier."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Barrier]]. Whenever the user uses [[move:Barrier]], they may choose to either gain +2 Defense Combat Stages, or place 2 additional segments of Barrier."
   },
   {
     "Name": "Wandering Spirit",
@@ -2944,7 +2944,7 @@
   {
     "Name": "Whirlwind Kicks",
     "Frequency": "Static",
-    "Effect": "Connection – [[move:Triple Kick]]. When the user uses the Moves \"[[move:Rapid Spin]]\" or \"[[move:Triple Kick]]\", they have a range of \"Burst 1\"."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Triple Kick]]. When the user uses the Moves \"[[move:Rapid Spin]]\" or \"[[move:Triple Kick]]\", they have a range of \"Burst 1\"."
   },
   {
     "Name": "White Flame",
@@ -2965,7 +2965,7 @@
     "Name": "Wind Power",
     "Frequency": "Scene – Swift Action, Reaction",
     "Trigger": "A foe or ally within 4m uses a Move with the [[keyword:Wind]] keyword",
-    "Effect": "Connection – [[move:Charge]]. The user may use [[move:Charge]] as a Free Action.",
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Charge]]. The user may use [[move:Charge]] as a Free Action.",
     "Wind Moves": "Air Cutter, Bleakwind Storm, Blizzard, Fairy Wind, Gust, Heat Wave, Hurricane, Icy Wind, Ominous Wind, Petal Blizzard, Sandsear Storm, Sandstorm, Silver Wind, Springtide Storm, Tailwind, Twister, Whirlwind, Wildbolt Storm"
   },
   {
@@ -2988,12 +2988,12 @@
   {
     "Name": "Wishmaster",
     "Frequency": "Static",
-    "Effect": "Connection – [[move:Wish]]. Whenever the user uses [[move:Wish]], the user may pick one of the following effects: the target is healed instantly instead of the following round; or the target gains +2 CS to the Stat of their choice upon being healed; or the target is cured of any Status Affliction."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Wish]]. Whenever the user uses [[move:Wish]], the user may pick one of the following effects: the target is healed instantly instead of the following round; or the target gains +2 CS to the Stat of their choice upon being healed; or the target is cured of any Status Affliction."
   },
   {
     "Name": "Wistful Melody",
     "Frequency": "Scene – Free Action",
-    "Effect": "Connection – [[move:Sing]]. Whenever the user uses [[move:Sing]], they may activate to his Ability to cause targets that are targeted by Sing have their Attack and Special Attack lowered by -2 CS each, whether Sing successfully hits that target or not. This Ability does not affect targets with the [[ability:Soundproof]] Ability."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Sing]]. Whenever the user uses [[move:Sing]], they may activate to his Ability to cause targets that are targeted by Sing have their Attack and Special Attack lowered by -2 CS each, whether Sing successfully hits that target or not. This Ability does not affect targets with the [[ability:Soundproof]] Ability."
   },
   {
     "Name": "Wobble",
