@@ -1,4 +1,5 @@
 import {
+  applyInitialSearchParam,
   debounce,
   buildPillSection,
   getSelectedPills
@@ -1538,7 +1539,6 @@ function filterRows(rows) {
 function wireSearch(all) {
   const inp = $("#dex-search");
   if (inp) inp.addEventListener("input", debounce(() => {
-    savePokedexState(inp.value, activeTypes(), activeHabitats(), currentTypeMatchMode());
     renderGrid(filterRows(window.__POKEDEX || all));
   }, 120));
   $("#clear-filters")?.addEventListener("click", () => {
@@ -1846,16 +1846,15 @@ export async function loadPokedexPage() {
 
   // Build filtres + grille
   buildTypeSidebar(data, () => {
-    savePokedexState($("#dex-search")?.value || "", activeTypes(), activeHabitats(), currentTypeMatchMode());
+    savePokedexState("", activeTypes(), activeHabitats(), currentTypeMatchMode());
     renderGrid(filterRows(data));
   });
 
   // Restaurer l'état depuis le hash après que les filtres soient construits
   const state = loadPokedexState();
-  if (state.query) {
-    const inp = $("#dex-search");
-    if (inp) inp.value = state.query;
-  }
+  const searchInput = $("#dex-search");
+  const initialSearch = applyInitialSearchParam(searchInput);
+  if (initialSearch === null && state.query && searchInput) searchInput.value = state.query;
   if (state.typeStr) {
     const types = state.typeStr.split(",").filter(t => t);
     types.forEach(t => {

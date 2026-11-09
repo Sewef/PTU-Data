@@ -5,7 +5,7 @@
 // d'indiquer l'affichage des sous-catégories, ex.:
 // "_display": { "Tiers": { type: "table", rowPerField: true, idField: "Name" } }
 
-import { escapeHTML, renderSimpleTable } from "/ptu/js/helpers.js";
+import { applyInitialSearchParam, escapeHTML, renderSimpleTable } from "/ptu/js/helpers.js";
 
 let itemsData = {};
 let activeCategory = null;
@@ -21,6 +21,7 @@ export function loadItems(path, container = document.getElementById("cards-conta
       edgeContainer = container;
       edgeColSize = Math.floor(12 / col);
       buildCategoryMenu();
+      const initialSearch = applyInitialSearchParam(document.getElementById("items-search"));
       setupGlobalItemSearch();
       const firstCat = Object.keys(itemsData)[0];
       if (firstCat) {
@@ -29,6 +30,9 @@ export function loadItems(path, container = document.getElementById("cards-conta
         const defaultBtn = [...document.querySelectorAll("#sidebar .list-group-item")]
           .find(btn => btn.textContent === firstCat);
         if (defaultBtn) defaultBtn.classList.add("active");
+      }
+      if (initialSearch !== null) {
+        document.getElementById("items-search")?.dispatchEvent(new Event("input"));
       }
     })
     .catch(err => console.error("JSON load error:", err));

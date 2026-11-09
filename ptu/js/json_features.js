@@ -1,4 +1,5 @@
 import {
+  applyInitialSearchParam,
   renderSimpleTable as renderSimpleTableShared,
   renderHierarchicalTable as renderHierarchicalTableShared,
   renderShowHideBlock
@@ -132,6 +133,8 @@ export function loadClasses(path) {
 
       // Setup global search (once only)
       setupGlobalSearch();
+      const initialSearch = applyInitialSearchParam(document.getElementById("features-search"));
+      if (initialSearch !== null) renderFeatureSearch(initialSearch);
     })
     .catch(err => console.error("JSON load error:", err));
 }

@@ -1,6 +1,8 @@
 // === Edges Viewer — Category-based navigation with dynamic options =====
 // Displays categories as clickable buttons. Column and container adjustable.
 
+import { applyInitialSearchParam } from "/ptu/js/helpers.js";
+
 let edgesData = {};
 let activeCategory = null;
 let selectedSources = new Set();
@@ -16,12 +18,16 @@ export function loadEdges(path, defaultCat, container = document.getElementById(
       edgeContainer = container;
       edgeColSize = Math.floor(12 / col);
       buildCategoryMenu();
+      const initialSearch = applyInitialSearchParam(document.getElementById("filter-search"));
       setupGlobalEdgeSearch();
       const defaultBtn = [...document.querySelectorAll("#sidebar .list-group-item")].find(btn => btn.textContent === defaultCat);
       if (defaultBtn) {
         defaultBtn.classList.add("active");
         activeCategory = defaultCat;
         renderCategory(defaultCat);
+      }
+      if (initialSearch !== null) {
+        document.getElementById("filter-search")?.dispatchEvent(new Event("input"));
       }
     })
     .catch(err => console.error("JSON load error:", err));

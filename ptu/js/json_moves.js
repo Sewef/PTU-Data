@@ -1,4 +1,5 @@
 import {
+  applyInitialSearchParam,
   debounce,
   jsonToItems,
   applyCustomShowHideTags,
@@ -432,9 +433,10 @@ export function loadMovesAsCard(file, container, cols = 3) {
     const allItems = jsonToItems(data);
 
     buildSidebarMoves(allItems, container, cols);
+    const searchInput = document.getElementById("card-search");
+    applyInitialSearchParam(searchInput);
     refreshMoves(allItems, container, cols);
 
-    const searchInput = document.getElementById("card-search");
     if (searchInput) {
       searchInput.oninput = debounce(() => refreshMoves(allItems, container, cols), 150);
     }

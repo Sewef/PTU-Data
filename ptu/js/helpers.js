@@ -97,6 +97,17 @@ export function debounce(fn, delay = 150) {
   };
 }
 
+// Initialise a page's primary search field from ?search=... without ever
+// writing subsequent user input back to the URL.
+export function applyInitialSearchParam(input, paramName = "search") {
+  if (!input) return null;
+  const params = new URLSearchParams(window.location.search);
+  if (!params.has(paramName)) return null;
+  const value = params.get(paramName) || "";
+  input.value = value;
+  return value;
+}
+
 // --- JSON utils ---
 export function jsonToItems(obj) {
   return Object.entries(obj).map(([name, value]) =>
@@ -550,6 +561,7 @@ export function filterByTargeting(item, targeting) {
 export function setupVersionSwitcher() {
   const links = document.querySelectorAll('.dropdown-menu a.dropdown-item');
   const currentPath = window.location.pathname;
+  const search = window.location.search; // Preserve URL-provided search state.
   const hash = window.location.hash; // Préserver le hash (état de la page)
   const currentFile = currentPath.split('/').pop() || 'index.html';
 
@@ -557,6 +569,6 @@ export function setupVersionSwitcher() {
     const href = link.getAttribute('href');
     if (!href) return; // Skip if no href
     const newPath = href.replace(/[^/]*\.html$/, currentFile);
-    link.href = newPath + hash;
+    link.href = newPath + search + hash;
   });
 }

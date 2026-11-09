@@ -5,6 +5,7 @@
    ============================================================ */
 
 import {
+    applyInitialSearchParam,
     applyCustomShowHideTags,
     renderHierarchicalTable,
     renderShowHideBlock,
@@ -220,9 +221,14 @@ export function loadJsonAsCard(file, container, cols = 3) {
         }
 
         const allItems = ptuNormalizeEntries(data);
-        renderPTUCards(allItems, container, cols);
-
         const searchInput = document.getElementById("dex-search");
+        applyInitialSearchParam(searchInput);
+        renderPTUCards(
+            searchInput ? ptuFilter(allItems, searchInput.value) : allItems,
+            container,
+            cols
+        );
+
         if (!searchInput) return;
 
         searchInput.oninput = () => {
@@ -274,15 +280,18 @@ export function loadJsonAsCard_2(file, container, searchInputId) {
             }
         }
 
-        // initial
-        renderSections(data);
-
-        if (!searchInputId) return;
+        if (!searchInputId) {
+            renderSections(data);
+            return;
+        }
 
         const searchInput = document.getElementById(searchInputId);
-        if (!searchInput) return;
+        if (!searchInput) {
+            renderSections(data);
+            return;
+        }
 
-        searchInput.addEventListener("input", () => {
+        const updateSearch = () => {
             const q = searchInput.value.toLowerCase();
             const filtered = {};
 
@@ -301,7 +310,11 @@ export function loadJsonAsCard_2(file, container, searchInputId) {
             }
 
             renderSections(filtered);
-        });
+        };
+
+        applyInitialSearchParam(searchInput);
+        searchInput.addEventListener("input", updateSearch);
+        updateSearch();
     });
 }
 
