@@ -9,7 +9,7 @@ except ImportError:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "rcssmin"])
     from rcssmin import cssmin
 
-def minify_css_folder(folder):
+def minify_css_folder(folder, force=False):
     folder = folder.rstrip("/\\")
     if not os.path.isdir(folder):
         print(f"Error: '{folder}' is not a directory.")
@@ -24,6 +24,13 @@ def minify_css_folder(folder):
             source_path = os.path.join(root, filename)
             dest_filename = filename.replace(".css", ".min.css")
             dest_path = os.path.join(root, dest_filename)
+
+            if (
+                not force
+                and os.path.exists(dest_path)
+                and os.path.getmtime(dest_path) >= os.path.getmtime(source_path)
+            ):
+                continue
 
             try:
                 with open(source_path, "r", encoding="utf-8") as f:
@@ -41,7 +48,7 @@ def minify_css_folder(folder):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python minify_css.py <folder>")
+        print("Usage: python minify_css.py <folder> [--force]")
         sys.exit(1)
 
-    minify_css_folder(sys.argv[1])
+    minify_css_folder(sys.argv[1], force="--force" in sys.argv[2:])

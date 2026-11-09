@@ -2,7 +2,7 @@ import json
 import os
 import sys
 
-def minify_json_folder(folder):
+def minify_json_folder(folder, force=False):
     folder = folder.rstrip("/\\")
     if not os.path.isdir(folder):
         print(f"Error: '{folder}' is not a directory.")
@@ -15,6 +15,13 @@ def minify_json_folder(folder):
 
             source_path = os.path.join(root, filename)
             dest_path = os.path.join(root, filename.replace(".json", ".min.json"))
+
+            if (
+                not force
+                and os.path.exists(dest_path)
+                and os.path.getmtime(dest_path) >= os.path.getmtime(source_path)
+            ):
+                continue
 
             try:
                 with open(source_path, "r", encoding="utf-8") as f:
@@ -35,7 +42,7 @@ def minify_json_folder(folder):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python minify_json.py <folder>")
+        print("Usage: python minify_json.py <folder> [--force]")
         sys.exit(1)
 
-    minify_json_folder(sys.argv[1])
+    minify_json_folder(sys.argv[1], force="--force" in sys.argv[2:])
