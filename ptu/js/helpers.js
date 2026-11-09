@@ -108,6 +108,15 @@ export function applyInitialSearchParam(input, paramName = "search") {
   return value;
 }
 
+// Convert explicit reference syntax to the text shown to readers. Useful for
+// filters and comparisons, which must never expose or match the token markup.
+export function referenceLabelText(value) {
+  return String(value ?? "").replace(
+    /\[\[[^:\]]+\s*:\s*([^\]]+?)\s*\]\](?:\(([^)]*)\))?/g,
+    (_match, target, label) => (label || target).trim()
+  );
+}
+
 // --- JSON utils ---
 export function jsonToItems(obj) {
   return Object.entries(obj).map(([name, value]) =>
@@ -431,7 +440,7 @@ export function filterByFrequency(item, frequencies) {
 // --- Range Distance filter ---
 export function filterByRangeDistance(item, rangeDistances) {
   if (!rangeDistances.length) return true;
-  const range = item.Range || "";
+  const range = referenceLabelText(item.Range || "");
   
   // Split by "; or " to separate variants
   const variants = range.split(/;\s*or\s+/i).map(v => v.trim());
@@ -464,7 +473,7 @@ export function filterByRangeDistance(item, rangeDistances) {
 // --- Range Keyword filter ---
 export function filterByRangeKeyword(item, rangeKeywords) {
   if (!rangeKeywords.length) return true;
-  const range = item.Range || "";
+  const range = referenceLabelText(item.Range || "");
   
   // Split by "; or " to separate variants
   const variants = range.split(/;\s*or\s+/i).map(v => v.trim());
@@ -524,7 +533,7 @@ export function filterByRangeKeyword(item, rangeKeywords) {
 // --- Targeting filter (Single vs Multi) ---
 export function filterByTargeting(item, targeting) {
   if (!targeting.length) return true;
-  const range = item.Range || "";
+  const range = referenceLabelText(item.Range || "");
   
   const hasSingleTarget = targeting.includes("Single Target");
   const hasMultiTarget = targeting.includes("Multi Target");

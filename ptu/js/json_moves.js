@@ -1,5 +1,6 @@
 import {
   applyInitialSearchParam,
+  referenceLabelText,
   debounce,
   jsonToItems,
   applyCustomShowHideTags,
@@ -190,7 +191,7 @@ function buildSidebarMoves(allItems, container, cols) {
   // ====================
   const rangeDistances = new Set();
   allItems.forEach(m => {
-    const range = m.Range || "";
+    const range = referenceLabelText(m.Range || "");
     // Split by "; or " to separate variants
     const variants = range.split(/;\s*or\s+/i).map(v => v.trim());
     
@@ -245,7 +246,7 @@ function buildSidebarMoves(allItems, container, cols) {
   // ====================
   const rangeKeywords = new Set();
   allItems.forEach(m => {
-    const range = m.Range || "";
+    const range = referenceLabelText(m.Range || "");
     // Split by "; or " to separate variants
     const variants = range.split(/;\s*or\s+/i).map(v => v.trim());
     

@@ -25,6 +25,9 @@ DEFAULT_FILES = (
     REPO_ROOT / "ptu/data/moves/moves_core.json",
     REPO_ROOT / "ptu/data/moves/moves_community.json",
     REPO_ROOT / "ptu/data/moves/moves_homebrew.json",
+    REPO_ROOT / "ptu/data/moves/fandex/moves_insurgence.json",
+    REPO_ROOT / "ptu/data/moves/fandex/moves_sage.json",
+    REPO_ROOT / "ptu/data/moves/fandex/moves_uranium.json",
 )
 DESCRIPTIVE_FIELDS = {
     "Effect",
@@ -378,6 +381,7 @@ def migrate_document(
     reference_index: dict[str, tuple[str, str]],
     ambiguity_pattern: re.Pattern[str],
     ambiguities: dict[str, list[tuple[str, str]]],
+    range_only: bool = False,
 ) -> list[tuple[str, str, str]]:
     changes: list[tuple[str, str, str]] = []
 
@@ -400,7 +404,11 @@ def migrate_document(
             entry_name = object_name
             if current_type == "move" and path == "$" and isinstance(child, dict):
                 entry_name = key
-            if isinstance(child, str) and key in DESCRIPTIVE_FIELDS:
+            if (
+                isinstance(child, str)
+                and key in DESCRIPTIVE_FIELDS
+                and (not range_only or key == "Range")
+            ):
                 updated = linkify_text(
                     child,
                     key,
@@ -454,6 +462,7 @@ def main() -> int:
             reference_index,
             ambiguity_pattern,
             ambiguities,
+            range_only=path.parent.name == "fandex",
         )
         total += len(changes)
         for _, before, after in changes:
