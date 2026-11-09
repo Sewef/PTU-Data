@@ -46,7 +46,7 @@
             "Name": "Tutoring",
             "Prerequisites": "Novice Pokémon Education, a move that you or three of your Pokémon know",
             "Frequency": "One Time Use x 3 — Extended Action",
-            "Effect": "When activating this Feature, select a Move known either by yourself or by 3 Pokémon you own. This Move is Mastered. As an Extended Action, you may have Pokémon spend 2 Tutor Points to learn a Move you have Mastered. Pokémon targeted this way can only learn Moves that they could learn by Level Up, TM, Egg Move, or [[feature:Move Tutor]]. You may take [[feature:Tutoring]] multiple times, each time gaining 3 uses of the Feature",
+            "Effect": "When activating this Feature, select a Move known either by yourself or by 3 Pokémon you own. This Move is Mastered. As an Extended Action, you may have Pokémon spend 2 Tutor Points to learn a Move you have Mastered. Pokémon targeted this way can only learn Moves that they could learn by Level Up, TM, Egg Move, or Move Tutor. You may take [[feature:Tutoring]] multiple times, each time gaining 3 uses of the Feature",
             "Source": "Core",
             "Category": "Pokémon Raising and Battling"
           },
@@ -3576,7 +3576,7 @@
             "Prerequisites": "Technique Archive, Expert Perception",
             "Frequency": "Daily — Extended Action",
             "Target": "A Pokémon with 2 Tutor Points.",
-            "Effect": "Select a Record in your Technique Archive that is of a Move that the target can learn by Level Up, TM or by [[feature:Move Tutor]]. The target learns the Move and loses 2 Tutor Points. You can target someone else's Pokémon only once with [[feature:Archive Tutor]]; you may target your own Pokémon any number of times with [[feature:Archive Tutor]], but they must still abide by any Move Pool Limitations (ie: no more than 3 of the user's Move Pool can come from TMs or Tutor Moves)."
+            "Effect": "Select a Record in your Technique Archive that is of a Move that the target can learn by Level Up, TM or by Move Tutor. The target learns the Move and loses 2 Tutor Points. You can target someone else's Pokémon only once with [[feature:Archive Tutor]]; you may target your own Pokémon any number of times with [[feature:Archive Tutor]], but they must still abide by any Move Pool Limitations (ie: no more than 3 of the user's Move Pool can come from TMs or Tutor Moves)."
           },
           {
             "Name": "Targeted Profiling",
@@ -3599,7 +3599,7 @@
             "Frequency": "Daily x3 — Free Action",
             "Effect": "You analyze a Record in one of your Archives. [[feature:Cinematic Analysis]]'s eﬀect depends on the Archive the Record is in. Each of these effects may only be used once per Scene.",
             "Character Study — Profile Archive": "You may trigger Character Study when you or an ally makes an Opposed Check against the subject of your Record. Make a Perception Check and substitute the triggering Skill Check with the result. This Perception Check is still an Opposed Check.",
-            "Recreation — Technique Archive": "Recreation may be triggered as your Pokémon gains Initiative. Select a Record of a Move in your Technique Archive that your Pokémon can learn by Level Up, TM, or [[feature:Move Tutor]]. Your Pokémon may perform that Move as if it was on its Move List. You may select a specific Move only once per day.",
+            "Recreation — Technique Archive": "Recreation may be triggered as your Pokémon gains Initiative. Select a Record of a Move in your Technique Archive that your Pokémon can learn by Level Up, TM, or Move Tutor. Your Pokémon may perform that Move as if it was on its Move List. You may select a specific Move only once per day.",
             "Situational Awareness — Travel Archive": "You may only use Situational Awareness if you analyze a Record of your current Location. When used this way, you may activate it as an [[keyword:Interrupt]]. Choose an ally; that ally may take their next action as [[keyword:Priority]] (Advanced)."
           }
         ]
@@ -3989,7 +3989,7 @@
             "Name": "Playing God",
             "Prerequisites": "[[feature:Chemist]], Expert Technology Education",
             "Frequency": "At-Will — Extended Action",
-            "Effect": "Cost: $3500\nChoose Castform, Grimer, Koffing, Magnemite, Porygon, Solosis, Trubbish, or Voltorb. Using your chemistry set, you create an artificial Egg of the Chosen Pokémon, that hatches within a day. The resulting Pokémon is born at level 5, with the Nature and Ability of your choice (Abilities chosen from its species' Basic Abilities). Additionally, you may enhance the Pokémon in several ways. Choose a number of upgrades below equal to your Technology Education Rank.\n» The Pokémon is of an unusual coloration, gaining a +2d6 Bonus to the Introduction Stage of a Contest toward a single Contest Stat.\n» The Pokémon adds a Move from its Egg Move or [[feature:Move Tutor]] List to its Inheritance List. This may be performed up to 3 times.\n» Increase one of the Pokémon's Base Stats by +1. This counts as use of a Vitamin. This may be performed up to 5 times."
+            "Effect": "Cost: $3500\nChoose Castform, Grimer, Koffing, Magnemite, Porygon, Solosis, Trubbish, or Voltorb. Using your chemistry set, you create an artificial Egg of the Chosen Pokémon, that hatches within a day. The resulting Pokémon is born at level 5, with the Nature and Ability of your choice (Abilities chosen from its species' Basic Abilities). Additionally, you may enhance the Pokémon in several ways. Choose a number of upgrades below equal to your Technology Education Rank.\n» The Pokémon is of an unusual coloration, gaining a +2d6 Bonus to the Introduction Stage of a Contest toward a single Contest Stat.\n» The Pokémon adds a Move from its Egg Move or Move Tutor List to its Inheritance List. This may be performed up to 3 times.\n» Increase one of the Pokémon's Base Stats by +1. This counts as use of a Vitamin. This may be performed up to 5 times."
           },
           {
             "Name": "Chemistry Recipes",
