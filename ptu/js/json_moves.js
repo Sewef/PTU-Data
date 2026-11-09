@@ -458,13 +458,28 @@ export function loadKeywordsAsCard(file, container, cols = 3) {
     // ��Ļ Ajout du filtre texte
     const searchInput = document.getElementById("keyword-search");
     if (searchInput) {
-      searchInput.addEventListener("input", function () {
-        const q = this.value.toLowerCase();
+      const filterKeywords = () => {
+        const q = searchInput.value.toLowerCase();
         container.querySelectorAll(".card").forEach(card => {
           const content = card.textContent.toLowerCase();
           card.closest('[class*="col-"]')?.style.setProperty("display", content.includes(q) ? "" : "none");
         });
-      });
+      };
+
+      const initialKeyword = applyInitialSearchParam(searchInput, "keyword");
+      if (initialKeyword !== null) {
+        const keywordsSection = document.getElementById("keywords-section");
+        if (keywordsSection) {
+          if (window.bootstrap?.Collapse) {
+            window.bootstrap.Collapse.getOrCreateInstance(keywordsSection, { toggle: false }).show();
+          } else {
+            keywordsSection.classList.add("show");
+          }
+        }
+      }
+
+      filterKeywords();
+      searchInput.addEventListener("input", filterKeywords);
     }
   });
 }
