@@ -1738,7 +1738,7 @@ function buildSourceMenu(onChange) {
   });
 
   wrap.querySelector("#btn-ptugen")?.addEventListener("click", () => {
-    window.open("https://ptu-gen.onrender.com", "_blank", "noopener,noreferrer");
+    window.open("https://ptu-gen.sewef.workers.dev", "_blank", "noopener,noreferrer");
   });
 
   // single handler for radios
