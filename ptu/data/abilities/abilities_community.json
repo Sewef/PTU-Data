@@ -195,7 +195,7 @@
     "Name": "Bone Lord",
     "Frequency": "At-Will – Free Action",
     "Trigger": "The user hits with [[move:Bone Club]], [[move:Bonemerang]], or [[move:Bone Rush]]",
-    "Effect": "[[abilitykeyword:Connection]] – [[move:Bonemerang]]. Once per Scene per Move, the following Moves may be used as if they had the following bonuses: - [[move:Bone Club]]: [[move:Bone Club]]'s target loses 1 Defense and Special Attack CS. - Bonemerang: Has a Range of Line 6 but loses the [[keyword:Double Strike]] keyword - Bone Rush: [[move:Bone Rush]] automatically ‘hits' four times (as per the [[keyword:Five Strike]] keyword)."
+    "Effect": "[[abilitykeyword:Connection]] – [[move:Bonemerang]]. Once per Scene per Move, the following Moves may be used as if they had the following bonuses: \n- [[move:Bone Club]]: [[move:Bone Club]]'s target loses 1 Defense and Special Attack CS. - Bonemerang: Has a Range of Line 6 but loses the [[keyword:Double Strike]] keyword - Bone Rush: [[move:Bone Rush]] automatically ‘hits' four times (as per the [[keyword:Five Strike]] keyword)."
   },
   {
     "Name": "Bone Wielder",
@@ -1202,7 +1202,7 @@
   {
     "Name": "Last Chance",
     "Frequency": "Static",
-    "Effect": "The user gains Last Chance with Normal."
+    "Effect": "Last Chance Abilities are always associated with an Elemental Type. The user gains a +5 bonus to Damage Rolls when using attacks of that Type. This bonus increases to +10 when the user is under 1/3rd of their Maximum Hit Points."
   },
   {
     "Name": "Leaf Gift",
