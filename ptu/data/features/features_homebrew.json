@@ -330,7 +330,7 @@
             "Name": "Poké Ball Crafter",
             "Prerequisites": "[[edge:Basic Balls]], Poké Ball Repair, Expert Technology",
             "Frequency": "Static",
-            "Effect": "You may craft Dusk, [[item:Dive Ball]](Dive), Heal, Luxury, Net, Nest, Quick, Repeat, or Timer Balls for $700. Requires access to a [[item:Poké Ball Tool Box]].",
+            "Effect": "You may craft Dusk, [[item:Dive Ball]](Dive), Heal, Luxury, Net, Nest, Quick, Repeat, or Timer Balls for ₽700. Requires access to a [[item:Poké Ball Tool Box]].",
             "Source": "Core",
             "Category": "Other"
           },
@@ -376,8 +376,8 @@
             "Rank 1 Prerequisites": "Novice Focus, Novice Athletics",
             "Rank 2 Prerequisites": "Adept Focus, Adept Athletics",
             "Frequency": "Static",
-            "Rank 1 Effect": " You may create Simple Weapons for $1000, Light Shields for $1,500, and [[item:Light Armor]] for $4,000.",
-            "Rank 2 Effect": " You may create Fine Weapons for $2,000, Helmets for $1,125, Heavy Shields for $2,250 and [[item:Heavy Armor]] for $5,000.",
+            "Rank 1 Effect": " You may create Simple Weapons for ₽1000, Light Shields for ₽1,500, and [[item:Light Armor]] for ₽4,000.",
+            "Rank 2 Effect": " You may create Fine Weapons for ₽2,000, Helmets for ₽1,125, Heavy Shields for ₽2,250 and [[item:Heavy Armor]] for ₽5,000.",
             "Source": "Game of Throhs",
             "Category": "Uncategorized"
           },
@@ -3504,7 +3504,7 @@
               {
                 "Name": "Meal Planner",
                 "Prerequisites": "[[feature:Chef]]",
-                "Effect": "You may create the following items, based on your Intuition Rank\n» Novice: \"[[item:Enriched Water]]\" for $40\n» Adept: \"[[item:Super Soda Pop]]\" for $65\n» Expert: \"[[item:Sparkling Lemonade]]\" for $125\n» Master: \"[[item:MooMoo Milk]]\" for $250"
+                "Effect": "You may create the following items, based on your Intuition Rank\n» Novice: \"[[item:Enriched Water]]\" for ₽40\n» Adept: \"[[item:Super Soda Pop]]\" for ₽65\n» Expert: \"[[item:Sparkling Lemonade]]\" for ₽125\n» Master: \"[[item:MooMoo Milk]]\" for ₽250"
               },
               {
                 "Name": "Hearty Meal",
@@ -3516,12 +3516,12 @@
                 "Name": "Bait Mixer",
                 "Prerequisites": "[[feature:Culinary Appreciation]]",
                 "Cost": "₽150 or Honey.",
-                "Effect": "You may create [[item:Bait]]. For $50 more, you may create [[item:Bait]] as Super Bait or Vile Bait instead. Super Bait works like regular [[item:Bait]], but you may add your Intuition Rank to 1d20 Rolls made to attract Pokémon. Vile Bait works like regular [[item:Bait]], but Pokémon that eat it are [[status:Poisoned]]."
+                "Effect": "You may create [[item:Bait]]. For ₽50 more, you may create [[item:Bait]] as Super Bait or Vile Bait instead. Super Bait works like regular [[item:Bait]], but you may add your Intuition Rank to 1d20 Rolls made to attract Pokémon. Vile Bait works like regular [[item:Bait]], but Pokémon that eat it are [[status:Poisoned]]."
               },
               {
                 "Name": "Preserves",
                 "Prerequisites": "[[feature:Accentuated Taste]]",
-                "Ingredients": "$50, any [[keyword:Berry]], Herb, or Mushroom",
+                "Ingredients": "₽50, any [[keyword:Berry]], Herb, or Mushroom",
                 "Effect": "The user creates x2 Units of [[feature:Preserves]] from the [[keyword:Berry]], Herb, or Mushroom. [[feature:Preserves]] have the same effect as the consumable from which they were made."
               },
               {
@@ -3533,7 +3533,7 @@
               {
                 "Name": "Vitamins",
                 "Prerequisites": "[[feature:Dietician]]",
-                "Effect": "You create an [[item:HP Up]], [[item:Protein]], [[item:Iron]], [[item:Calcium]], [[item:Zinc]], or [[item:Carbos]] for $2450, or [[item:Stat Suppressants]] for $200."
+                "Effect": "You create an [[item:HP Up]], [[item:Protein]], [[item:Iron]], [[item:Calcium]], [[item:Zinc]], or [[item:Carbos]] for ₽2450, or [[item:Stat Suppressants]] for ₽200."
               }
             ]
           }
@@ -3679,7 +3679,7 @@
             "Tags": "[+Any]",
             "Prerequisites": "4 [[feature:Fashionista]] Features, Two Fashionista Skills at Master",
             "Frequency": "Static",
-            "Effect": "You gain the [[ability:Designer]] Ability. You may create the clothes out of suitable material you like, and you may design the outfit for any Trainer or Pokémon instead of yourself. Using the [[ability:Designer]] Ability costs $2000 each time, and you may only have one outfit active at a time; if another is created, any previous outfit loses its potency."
+            "Effect": "You gain the [[ability:Designer]] Ability. You may create the clothes out of suitable material you like, and you may design the outfit for any Trainer or Pokémon instead of yourself. Using the [[ability:Designer]] Ability costs ₽2000 each time, and you may only have one outfit active at a time; if another is created, any previous outfit loses its potency."
           },
           {
             "Name": "Fashionista Recipes",
@@ -3690,7 +3690,7 @@
                   {
                     "Name": "Contest Trends",
                     "Prerequisites": "[[feature:Fashionista]]",
-                    "Effect": "You can create Contest Accessories for $750, [[item:Contest Fashion]] Items for $500, and [[item:Fancy Clothes]] for $2500."
+                    "Effect": "You can create Contest Accessories for ₽750, [[item:Contest Fashion]] Items for ₽500, and [[item:Fancy Clothes]] for ₽2500."
                   },
                   {
                     "Name": "Basic Fashion",
@@ -3728,17 +3728,17 @@
                   {
                     "Name": "Practical Fashion",
                     "Prerequisites": "[[feature:Dashing Makeover]]",
-                    "Effect": "You can create [[item:Go-Goggles]], [[item:Safety Goggles]], or Winter Cloaks for $750."
+                    "Effect": "You can create [[item:Go-Goggles]], [[item:Safety Goggles]], or Winter Cloaks for ₽750."
                   },
                   {
                     "Name": "Focused Fashion",
                     "Prerequisites": "[[feature:Style is Eternal]]",
-                    "Effect": "You can create Focus Bands and Focus Sashes for $2000."
+                    "Effect": "You can create Focus Bands and Focus Sashes for ₽2000."
                   },
                   {
                     "Name": "Incense Maker",
                     "Prerequisites": "[[feature:Parfumier]]",
-                    "Effect": "You can create [[item:Lax Incense]] for $1000, [[item:Luck Incense]] for $900, and [[item:Full Incense]] for $450."
+                    "Effect": "You can create [[item:Lax Incense]] for ₽1000, [[item:Luck Incense]] for ₽900, and [[item:Full Incense]] for ₽450."
                   }
                 ]
               }
@@ -3851,7 +3851,7 @@
               {
                 "Name": "Hyper Cures",
                 "Prerequisites": "[[feature:Affliction Techniques]]",
-                "Effect": "You can create Full Heals for $300, Hyper Potions for $400, and Full Restores for $700."
+                "Effect": "You can create Full Heals for ₽300, Hyper Potions for ₽400, and Full Restores for ₽700."
               },
               {
                 "Name": "Performance Enhancers",
@@ -3989,7 +3989,7 @@
             "Name": "Playing God",
             "Prerequisites": "[[feature:Chemist]], Expert Technology Education",
             "Frequency": "At-Will — Extended Action",
-            "Effect": "Cost: $3500\nChoose Castform, Grimer, Koffing, Magnemite, Porygon, Solosis, Trubbish, or Voltorb. Using your chemistry set, you create an artificial Egg of the Chosen Pokémon, that hatches within a day. The resulting Pokémon is born at level 5, with the Nature and Ability of your choice (Abilities chosen from its species' Basic Abilities). Additionally, you may enhance the Pokémon in several ways. Choose a number of upgrades below equal to your Technology Education Rank.\n» The Pokémon is of an unusual coloration, gaining a +2d6 Bonus to the Introduction Stage of a Contest toward a single Contest Stat.\n» The Pokémon adds a Move from its Egg Move or Move Tutor List to its Inheritance List. This may be performed up to 3 times.\n» Increase one of the Pokémon's Base Stats by +1. This counts as use of a Vitamin. This may be performed up to 5 times."
+            "Effect": "Cost: ₽3500\nChoose Castform, Grimer, Koffing, Magnemite, Porygon, Solosis, Trubbish, or Voltorb. Using your chemistry set, you create an artificial Egg of the Chosen Pokémon, that hatches within a day. The resulting Pokémon is born at level 5, with the Nature and Ability of your choice (Abilities chosen from its species' Basic Abilities). Additionally, you may enhance the Pokémon in several ways. Choose a number of upgrades below equal to your Technology Education Rank.\n» The Pokémon is of an unusual coloration, gaining a +2d6 Bonus to the Introduction Stage of a Contest toward a single Contest Stat.\n» The Pokémon adds a Move from its Egg Move or Move Tutor List to its Inheritance List. This may be performed up to 3 times.\n» Increase one of the Pokémon's Base Stats by +1. This counts as use of a Vitamin. This may be performed up to 5 times."
           },
           {
             "Name": "Chemistry Recipes",
@@ -4228,7 +4228,7 @@
               {
                 "Name": "Robotics 101",
                 "Prerequisites": "[[feature:Engineer]]",
-                "Effect": "You can create a Small Pokébot for $1000, a Medium Pokébot for $2000, or a Large Pokébot for $3000. Pokébots you create begin at Level 5. You can create and install Basic Combat and Basic Utility Parts for Pokébots."
+                "Effect": "You can create a Small Pokébot for ₽1000, a Medium Pokébot for ₽2000, or a Large Pokébot for ₽3000. Pokébots you create begin at Level 5. You can create and install Basic Combat and Basic Utility Parts for Pokébots."
               },
               {
                 "Name": "Firmware Update",
@@ -4284,17 +4284,17 @@
               {
                 "Name": "Basic Cases",
                 "Prerequisites": "[[feature:Jailbreaker]]",
-                "Effect": "You may create a [[item:Contest Case]], [[item:Lock Case]], or [[item:Medicine Case]] for $200."
+                "Effect": "You may create a [[item:Contest Case]], [[item:Lock Case]], or [[item:Medicine Case]] for ₽200."
               },
               {
                 "Name": "Trick Cases",
                 "Prerequisites": "[[feature:Case Specialist]]",
-                "Effect": "You may create a [[item:Spray Case]], [[item:Flash Case]], or [[item:Bounce Case]] for $400."
+                "Effect": "You may create a [[item:Spray Case]], [[item:Flash Case]], or [[item:Bounce Case]] for ₽400."
               },
               {
                 "Name": "Advanced Cases",
                 "Prerequisites": "[[feature:Fusion Cases]]",
-                "Effect": "You may create a [[item:Zap Case]] for $500, a [[item:Devil Case]] for $1000, or a [[item:Storage Case]] for $5000."
+                "Effect": "You may create a [[item:Zap Case]] for ₽500, a [[item:Devil Case]] for ₽1000, or a [[item:Storage Case]] for ₽5000."
               }
             ]
           }
@@ -4336,27 +4336,27 @@
               {
                 "Name": "Datajack",
                 "Prerequisites": "[[feature:Upgrader]]",
-                "Effect": "You may build and install the Datajack Augmentaion for $250."
+                "Effect": "You may build and install the Datajack Augmentaion for ₽250."
               },
               {
                 "Name": "Eye Augments",
                 "Prerequisites": "[[feature:Upgrader]]",
-                "Effect": "You may build and install the Enhanced Sight Augmentation for $1000 and Smart Vision Augmentation for $1500."
+                "Effect": "You may build and install the Enhanced Sight Augmentation for ₽1000 and Smart Vision Augmentation for ₽1500."
               },
               {
                 "Name": "Limb Augments",
                 "Prerequisites": "[[feature:Emergency Reactivation]]",
-                "Effect": "You build and install the Synthetic Muscle Augmentation for $1000 and the Embedded Weaponry Augmentation for $2000."
+                "Effect": "You build and install the Synthetic Muscle Augmentation for ₽1000 and the Embedded Weaponry Augmentation for ₽2000."
               },
               {
                 "Name": "Body Augments",
                 "Prerequisites": "[[feature:Efficient Installation]]",
-                "Effect": "You may build and install the Medical Nanobots Augmentation for $1000 and the Wired Reflexes Augmentation for $1500."
+                "Effect": "You may build and install the Medical Nanobots Augmentation for ₽1000 and the Wired Reflexes Augmentation for ₽1500."
               },
               {
                 "Name": "Dermal Augments",
                 "Prerequisites": "[[feature:Experimental Designs]]",
-                "Effect": "You may build and install the Dermal Plating Augmentation for $2000 and the Thermal-Optic Camo Augmentation for $4000."
+                "Effect": "You may build and install the Dermal Plating Augmentation for ₽2000 and the Thermal-Optic Camo Augmentation for ₽4000."
               }
             ]
           }
@@ -6409,7 +6409,7 @@
             "Tags": "[+Speed]",
             "Prerequisites": "[[feature:Ninja]]",
             "Frequency": "At-Will — Extended Action",
-            "Effect": "You may craft an [[item:Antidote]], [[item:Smoke Ball]], Caltrops, or Toxic Caltrops for $100. You are treated as if you know the Moves [[move:Smokescreen]], [[move:Spikes]], and [[move:Toxic Spikes]] for any Features or Prerequisites."
+            "Effect": "You may craft an [[item:Antidote]], [[item:Smoke Ball]], Caltrops, or Toxic Caltrops for ₽100. You are treated as if you know the Moves [[move:Smokescreen]], [[move:Spikes]], and [[move:Toxic Spikes]] for any Features or Prerequisites."
           },
           {
             "Name": "Poison Weapons",
@@ -6795,7 +6795,7 @@
             "Tags": "[+Speed]",
             "Prerequisites": "[[feature:Warper]], Expert Guile",
             "Frequency": "Daily — Free Action",
-            "Effect": "You are able to subconsciously alter the fabric of reality to change small facts or circumstances. If your character is confronting a \"random\" event such as a die roll, coin flip, or cards being dealt, the character may activate this Feature to influence the event. In this scenario, the GM provides you with two possible outcomes, and you pick one of them to actually occur. This means you always decide the outcome of binary events such as a coin flip; cheating cards or slot machines is much harder, as there are multiple outcomes and you only get to pick between two. This Feature can also be used to generate common items worth $250 or less that the character might normally possess, such as a [[item:Potion]] or Poké Ball, when in a pinch. The character just happens to find the needed item among their belongings. This Feature can only create items you wish to use at that moment, and of which you have none available; such as needing to heal a Pokémon but having no Potions left. Items created with [[feature:Reality Bender]] must be used quickly after activating the feature and cannot be stored for later."
+            "Effect": "You are able to subconsciously alter the fabric of reality to change small facts or circumstances. If your character is confronting a \"random\" event such as a die roll, coin flip, or cards being dealt, the character may activate this Feature to influence the event. In this scenario, the GM provides you with two possible outcomes, and you pick one of them to actually occur. This means you always decide the outcome of binary events such as a coin flip; cheating cards or slot machines is much harder, as there are multiple outcomes and you only get to pick between two. This Feature can also be used to generate common items worth ₽250 or less that the character might normally possess, such as a [[item:Potion]] or Poké Ball, when in a pinch. The character just happens to find the needed item among their belongings. This Feature can only create items you wish to use at that moment, and of which you have none available; such as needing to heal a Pokémon but having no Potions left. Items created with [[feature:Reality Bender]] must be used quickly after activating the feature and cannot be stored for later."
           }
         ]
       }
@@ -6865,7 +6865,7 @@
               {
                 "Name": "Hat Trick",
                 "Frequency": "Static",
-                "Effect": "While wearing Head Equipment worth at least $1000, you gain 15 Damage Reduction against Critical Hits. This does not stack with any Damage Reduction granted by any Head Equipment."
+                "Effect": "While wearing Head Equipment worth at least ₽1000, you gain 15 Damage Reduction against Critical Hits. This does not stack with any Damage Reduction granted by any Head Equipment."
               },
               {
                 "Name": "Movement Mastery",
@@ -6875,7 +6875,7 @@
               {
                 "Name": "Sole Power",
                 "Frequency": "Static",
-                "Effect": "While wearing Feet Equipment worth at least $1000, you do not trigger Hazards while Shifting. However, you still trigger any Hazards that you are standing on at the start or end of your turn. Reactive Hazards such as [[move:Stealth Rock]] cannot be triggered against you."
+                "Effect": "While wearing Feet Equipment worth at least ₽1000, you do not trigger Hazards while Shifting. However, you still trigger any Hazards that you are standing on at the start or end of your turn. Reactive Hazards such as [[move:Stealth Rock]] cannot be triggered against you."
               },
               {
                 "Name": "Wayfarer",
@@ -6886,7 +6886,7 @@
                 "Name": "Wear it Better",
                 "Prerequisites": "Expert Survival",
                 "Frequency": "Static",
-                "Effect": "While wearing Body Equipment worth at least $1000, you gain +5 Damage Reduction. This does not stack with any Damage Reduction granted by any Body Equipment."
+                "Effect": "While wearing Body Equipment worth at least ₽1000, you gain +5 Damage Reduction. This does not stack with any Damage Reduction granted by any Body Equipment."
               }
             ]
           }
