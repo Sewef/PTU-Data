@@ -52,7 +52,7 @@ export function includeHTML(callback) {
 
 function initPTUReferenceLinks() {
   if (window.PTU_REFERENCE_LINKS_DISABLED === true) return;
-  import("/ptu/js/ptu_reference_modal.js")
+  import("/ptu/js/ptu_reference_modal.js?v=20261109-6")
     .then(module => module.initReferenceLinks?.())
     .catch(err => console.warn("[helpers] Reference links unavailable:", err));
 }

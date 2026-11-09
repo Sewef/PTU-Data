@@ -175,7 +175,7 @@ export async function openReferenceModal(typeRaw, nameRaw) {
 }
 
 function handleReferenceClick(ev) {
-  const a = ev.target.closest("a.js-reference-link, a.js-reference-link, a.js-reference-link, a.js-capability-link");
+  const a = ev.target.closest("a.js-reference-link, a.js-capability-link");
   if (!a) return;
 
   const type = a.dataset.refType || REFERENCE_TYPES.find(candidate => a.dataset[candidate]);
@@ -187,12 +187,13 @@ function handleReferenceClick(ev) {
 }
 
 function ensureReferenceModal() {
+  ensureReferenceModalStyles();
   let el = document.querySelector("#moveAbilityModal");
   if (!el) {
     document.body.insertAdjacentHTML("beforeend", `
-      <div class="modal fade" id="moveAbilityModal" data-bs-scroll="true" tabindex="-1" aria-hidden="true">
+      <div class="modal fade ptu-reference-modal" id="moveAbilityModal" data-bs-scroll="true" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
-          <div class="modal-content">
+          <div class="modal-content ptu-reference-modal__content">
             <div class="modal-header">
               <h5 class="modal-title" id="moveAbilityModalLabel">Details</h5>
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -209,6 +210,55 @@ function ensureReferenceModal() {
   if (!el || !window.bootstrap?.Modal) return null;
   modalInstance = window.bootstrap.Modal.getOrCreateInstance(el, { backdrop: true });
   return modalInstance;
+}
+
+function ensureReferenceModalStyles() {
+  if (document.querySelector("#ptu-reference-modal-styles")) return;
+  const style = document.createElement("style");
+  style.id = "ptu-reference-modal-styles";
+  style.textContent = `
+    .ptu-reference-modal .modal-body { padding: 1.25rem; }
+    .ptu-reference-modal__content { overflow: hidden; }
+    .ptu-reference-summary {
+      margin-bottom: .65rem;
+    }
+    .ptu-reference-summary__item {
+      display: grid;
+      grid-template-columns: minmax(7.5rem, 22%) 1fr;
+      gap: .75rem;
+      padding: .28rem 0;
+      min-width: 0;
+    }
+    .ptu-reference-summary__label {
+      font-weight: 600;
+      opacity: .7;
+    }
+    .ptu-reference-panel {
+      display: grid;
+      grid-template-columns: minmax(7.5rem, 22%) 1fr;
+      gap: .75rem;
+      padding: .55rem 0;
+      margin: 0;
+      border-top: 1px solid rgba(127, 127, 127, .24);
+    }
+    .ptu-reference-panel__title {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      opacity: .7;
+    }
+    .ptu-reference-copy { line-height: 1.55; overflow-wrap: anywhere; }
+    .ptu-reference-copy > :last-child { margin-bottom: 0; }
+    .ptu-reference-extra { margin-top: .8rem; }
+    .ptu-reference-extra > summary { cursor: pointer; user-select: none; }
+    .ptu-reference-modal .js-reference-link { font-weight: 600; text-decoration-thickness: .08em; }
+    .ptu-reference-modal .table td, .ptu-reference-modal .table th { vertical-align: top; }
+    @media (max-width: 575.98px) {
+      .ptu-reference-summary__item,
+      .ptu-reference-panel { grid-template-columns: 1fr; gap: .15rem; }
+    }
+  `;
+  document.head.appendChild(style);
 }
 
 function hasReferenceToken(text) {
@@ -477,6 +527,11 @@ function renderDetails(type, entry, requestedName) {
   if (type === "move") return renderMoveDetails(entry);
   if (type === "ability") return renderAbilityDetails(entry);
   if (type === "capability") return renderCapabilityDetails(entry);
+  if (type === "status") return renderStatusDetails(entry);
+  if (type === "edge" || type === "pokeedge") return renderEdgeDetails(entry, type);
+  if (type === "item") return renderItemDetails(entry);
+  if (type === "feature") return renderFeatureDetails(entry);
+  if (type === "keyword") return renderKeywordDetails(entry);
   return renderReferenceGenericDetails(entry);
 }
 
@@ -486,7 +541,7 @@ function renderMoveDetails(mv) {
 }
 
 function renderMoveDetailsCore(mv) {
-  const row = (k, v) => isBlank(v) ? "" : `<div><span class="text-muted">${escapeHtml(k)}:</span> ${escapeHtml(String(v))}</div>`;
+  const row = (k, v) => isBlank(v) ? "" : `<div><span class="text-muted">${escapeHtml(k)}:</span> ${renderRichText(v, true)}</div>`;
   const tags = Array.isArray(mv.Tags) && mv.Tags.length ? mv.Tags.join(", ") : (mv.Keywords || mv.Keyword || "");
   const effectKeys = Object.keys(mv).filter(k =>
     /(effect|special)/i.test(k) && !["Contest Type", "Contest Effect"].includes(k)
@@ -495,8 +550,8 @@ function renderMoveDetailsCore(mv) {
     const value = mv[k];
     if (isBlank(value)) return "";
     return /^effect$/i.test(k)
-      ? `<div style="white-space:pre-wrap">${escapeHtml(String(value))}</div>`
-      : `<div style="white-space:pre-wrap"><strong>${escapeHtml(k)}:</strong> ${escapeHtml(String(value))}</div>`;
+      ? `<div class="ptu-reference-copy">${renderRichText(value)}</div>`
+      : `<div class="ptu-reference-copy"><strong>${escapeHtml(k)}:</strong> ${renderRichText(value)}</div>`;
   }).filter(Boolean);
 
   return `
@@ -518,14 +573,14 @@ function renderAbilityDetails(ab) {
 }
 
 function renderAbilityDetailsCore(ab) {
-  const row = (k, v) => isBlank(v) ? "" : `<div><span class="text-muted">${escapeHtml(k)}:</span> ${escapeHtml(String(v))}</div>`;
+  const row = (k, v) => isBlank(v) ? "" : `<div><span class="text-muted">${escapeHtml(k)}:</span> ${renderRichText(v, true)}</div>`;
   const effectKeys = Object.keys(ab).filter(k => /(effect|bonus|special)/i.test(k));
   const effects = effectKeys.map(k => {
     const value = ab[k];
     if (isBlank(value)) return "";
     return /^effect$/i.test(k)
-      ? `<div style="white-space:pre-wrap">${escapeHtml(String(value))}</div>`
-      : `<div style="white-space:pre-wrap"><strong>${escapeHtml(k)}:</strong> ${escapeHtml(String(value))}</div>`;
+      ? `<div class="ptu-reference-copy">${renderRichText(value)}</div>`
+      : `<div class="ptu-reference-copy"><strong>${escapeHtml(k)}:</strong> ${renderRichText(value)}</div>`;
   }).filter(Boolean);
 
   const shownKeys = new Set(["Name", "Frequency", "Target", "Trigger", "Source", "source", "Category", "category", ...effectKeys]);
@@ -537,15 +592,133 @@ function renderAbilityDetailsCore(ab) {
 }
 
 function renderCapabilityDetails(cap) {
-  const source = renderSourceAndOverride(cap, "capability", base => escapeHtml(base.Effect || base.effect || String(base) || ""));
+  const source = renderSourceAndOverride(cap, "capability", base => renderCapabilityDetailsCore(base));
+  return source + renderCapabilityDetailsCore(cap);
+}
+
+function renderCapabilityDetailsCore(cap) {
   const text = cap.Effect || cap.effect || cap.Description || "";
-  return `${source}<div style="white-space:pre-wrap">${escapeHtml(text)}</div>`;
+  const extras = renderEntryExtras(cap, new Set(["Name", "Effect", "effect", "Description", "Source", "source", "Category", "category"]));
+  return `<div class="ptu-reference-copy">${renderRichText(text)}</div>${extras}`;
+}
+
+function renderStatusDetails(status) {
+  const description = status.Description || status.Effect || "";
+  const summary = renderSummaryGrid([
+    ["Category", status.Section],
+    ["Source", status.Source || status.source]
+  ]);
+  const extras = renderEntryExtras(status, new Set(["Name", "Description", "Effect", "Section", "Source", "source"]));
+  return `${summary}${renderPanel("Condition", renderRichText(description))}${extras}`;
+}
+
+function renderEdgeDetails(edge, type) {
+  const prerequisiteFields = Object.entries(edge)
+    .filter(([key, value]) => /prerequisites$/i.test(key) && !isBlank(value));
+  const summary = renderSummaryGrid([
+    ["Cost", edge.Cost],
+    ["Frequency", edge.Frequency],
+    ["Tag", edge.Tag || edge.Tags]
+  ]);
+  const prerequisites = prerequisiteFields.length
+    ? renderPanel("Prerequisites", prerequisiteFields.map(([key, value]) => {
+      const label = /^prerequisites$/i.test(key) ? "" : `<strong>${escapeHtml(key)}:</strong> `;
+      return `<div>${label}${renderRichText(value, true)}</div>`;
+    }).join(""))
+    : "";
+  const mainText = edge.Description || edge.Effect || "";
+  const notes = Object.entries(edge)
+    .filter(([key, value]) => /^note(?:\s+\d+)?$/i.test(key) && !isBlank(value))
+    .map(([key, value]) => renderPanel(key, renderRichText(value)))
+    .join("");
+  const consumed = new Set([
+    "Name", "Description", "Effect", "Cost", "Frequency", "Tag", "Tags",
+    "Category", "category", "Source", "source", ...prerequisiteFields.map(([key]) => key),
+    ...Object.keys(edge).filter(key => /^note(?:\s+\d+)?$/i.test(key))
+  ]);
+  return `${summary}${prerequisites}${mainText ? renderPanel(type === "pokeedge" ? "Effect" : "Description", renderRichText(mainText)) : ""}${notes}${renderEntryExtras(edge, consumed)}`;
+}
+
+function renderItemDetails(item) {
+  const summary = renderSummaryGrid([
+    ["Price", formatPrice(item.Price)],
+    ["Category", item.Category],
+    ["Subcategory", item.Subcategory],
+    ["Type", item.Type],
+    ["Modifier", item.Modifier],
+    ["Range", item.Range],
+    ["Damage Base", item["Damage Base"] || item.DB]
+  ]);
+  const sections = [
+    ["Effect", item.Effect],
+    ["Special", item.Special],
+    ["Description", item.Description],
+    ["Recipe", item.Recipe]
+  ].filter(([, value]) => !isBlank(value))
+    .map(([label, value]) => renderPanel(label, renderReferenceGenericValue(value)))
+    .join("");
+  const consumed = new Set([
+    "Name", "Price", "Category", "Subcategory", "Type", "Modifier", "Range",
+    "Damage Base", "DB", "Effect", "Special", "Description", "Recipe", "Source", "source"
+  ]);
+  return `${summary}${sections}${renderEntryExtras(item, consumed)}`;
+}
+
+function renderFeatureDetails(feature) {
+  const prerequisiteFields = Object.entries(feature)
+    .filter(([key, value]) => /prerequisites$/i.test(key) && !isBlank(value));
+  const summary = renderSummaryGrid([
+    ["Frequency", feature.Frequency],
+    ["Action", feature.Action],
+    ["Target", feature.Target],
+    ["Trigger", feature.Trigger],
+    ["Tags", feature.Tags],
+    ["Class", feature.Class],
+    ["Branch", normalizeKey(feature.Branch) === "default" ? "" : feature.Branch]
+  ]);
+  const prerequisites = prerequisiteFields.length
+    ? renderPanel("Prerequisites", prerequisiteFields.map(([key, value]) => {
+      const label = /^prerequisites$/i.test(key) ? "" : `<strong>${escapeHtml(key)}:</strong> `;
+      return `<div>${label}${renderRichText(value, true)}</div>`;
+    }).join(""))
+    : "";
+  const effects = Object.entries(feature)
+    .filter(([key, value]) => /^(?:effect|rank \d+ effect|special)$/i.test(key) && !isBlank(value))
+    .map(([key, value]) => renderPanel(key, renderReferenceGenericValue(value)))
+    .join("");
+  const notes = Object.entries(feature)
+    .filter(([key, value]) => /^note(?:\s+\d+)?$/i.test(key) && !isBlank(value))
+    .map(([key, value]) => renderPanel(key, renderReferenceGenericValue(value)))
+    .join("");
+  const consumed = new Set([
+    "Name", "Frequency", "Action", "Target", "Trigger", "Tags", "Class", "Branch",
+    "Category", "category", "Source", "source", ...prerequisiteFields.map(([key]) => key),
+    ...Object.keys(feature).filter(key => /^(?:effect|rank \d+ effect|special|note(?:\s+\d+)?)$/i.test(key))
+  ]);
+  return `${summary}${prerequisites}${effects}${notes}${renderEntryExtras(feature, consumed)}`;
+}
+
+function renderKeywordDetails(keyword) {
+  const description = keyword.Description || keyword.Effect || "";
+  const consumed = new Set(["Name", "Description", "Effect", "Source", "source", "Category", "category"]);
+  const content = description
+    ? `<div class="ptu-reference-copy">${renderRichText(description)}</div>`
+    : "";
+  return `${content}${renderEntryExtras(keyword, consumed)}`;
 }
 
 function renderReferenceTitle(type, display, entry) {
   if (type === "move") {
     const typeHtml = entry?.Type ? wrapTypes([entry.Type]) : "";
-    return `<div><div class="fw-semibold">Move — ${escapeHtml(display)}</div><div class="mt-1">${typeHtml}</div></div>`;
+    const classHtml = entry?.Class
+      ? `<span class="badge bg-secondary">${escapeHtml(String(entry.Class))}</span>`
+      : "";
+    return `
+      <div class="d-flex flex-wrap align-items-center gap-2">
+        <span class="fw-semibold">Move — ${escapeHtml(display)}</span>
+        ${typeHtml}
+        ${classHtml}
+      </div>`;
   }
   return `
     <div>
@@ -559,11 +732,59 @@ function renderReferenceTitle(type, display, entry) {
 function renderReferenceTitleBadges(entry) {
   if (!entry) return "";
   const badges = [];
+  const seen = new Set();
   const source = entry.Source || entry.source || entry.__fandexLabel;
-  const category = entry.Category || entry.category || entry.Subcategory || entry.Class;
-  if (source) badges.push(`<span class="badge bg-info">${escapeHtml(String(source))}</span>`);
-  if (category) badges.push(`<span class="badge bg-secondary">${escapeHtml(String(category))}</span>`);
-  return badges.join("");
+  const category = entry.Category || entry.category || entry.Class;
+  const subcategory = entry.Subcategory || entry.subcategory;
+  const addBadge = (value, className) => {
+    if (isBlank(value)) return;
+    const key = normalizeKey(value);
+    if (seen.has(key)) return;
+    seen.add(key);
+    badges.push(`<span class="badge ${className}">${escapeHtml(String(value))}</span>`);
+  };
+  addBadge(source, "bg-info");
+  addBadge(category, "bg-secondary");
+  addBadge(subcategory, "bg-dark");
+  return badges.join('<span class="text-muted" aria-hidden="true"></span>');
+}
+
+function renderSummaryGrid(fields) {
+  const items = fields
+    .filter(([, value]) => !isBlank(value))
+    .map(([label, value]) => `
+      <div class="ptu-reference-summary__item">
+        <span class="ptu-reference-summary__label">${escapeHtml(label)}</span>
+        <div>${renderRichText(value, true)}</div>
+      </div>`);
+  return items.length ? `<div class="ptu-reference-summary">${items.join("")}</div>` : "";
+}
+
+function renderPanel(title, content) {
+  if (isBlank(content)) return "";
+  return `
+    <section class="ptu-reference-panel">
+      <h6 class="ptu-reference-panel__title">${escapeHtml(title)}</h6>
+      <div class="ptu-reference-copy">${content}</div>
+    </section>`;
+}
+
+function renderEntryExtras(entry, consumedKeys) {
+  const fields = Object.entries(entry)
+    .filter(([key, value]) => !key.startsWith("__") && !consumedKeys.has(key) && !isBlank(value))
+    .map(([key, value]) => renderReferenceField(key, value, "mb-2"));
+  if (!fields.length) return "";
+  return `
+    <details class="ptu-reference-extra">
+      <summary>Additional details</summary>
+      <div class="mt-2">${fields.join("")}</div>
+    </details>`;
+}
+
+function formatPrice(value) {
+  if (isBlank(value)) return "";
+  const number = Number(value);
+  return Number.isFinite(number) ? `₽${number.toLocaleString("en-US")}` : value;
 }
 
 function renderReferenceGenericDetails(entry) {
@@ -575,7 +796,7 @@ function renderReferenceGenericDetails(entry) {
 
 function renderReferenceField(key, value, className = "mb-2") {
   if (isReferenceTable(value)) {
-    return `<div class="${className}">${renderReferenceGenericValue(value)}</div>`;
+    return `<div class="${className}">${renderPanel(key, renderReferenceGenericValue(value))}</div>`;
   }
   return `<div class="${className}"><span class="text-muted">${escapeHtml(key)}:</span> ${renderReferenceGenericValue(value)}</div>`;
 }
@@ -593,7 +814,7 @@ function renderReferenceGenericValue(value) {
       .map(([key, child]) => `<div><span class="text-muted">${escapeHtml(key)}:</span> ${renderReferenceGenericValue(child)}</div>`)
       .join("")}</div>`;
   }
-  return escapeHtml(String(value)).replaceAll("\n", "<br>");
+  return renderRichText(value);
 }
 
 function isReferenceTable(value) {
@@ -665,7 +886,7 @@ function renderReferenceTableRow(row, cellTag = "td", columns = []) {
 function renderReferenceTableCell(value, tag) {
   const text = value && typeof value === "object" && "text" in value ? value.text : value;
   const colspan = value && typeof value === "object" && value.colspan ? ` colspan="${Number(value.colspan) || 1}"` : "";
-  return `<${tag}${colspan}>${escapeHtml(text ?? "")}</${tag}>`;
+  return `<${tag}${colspan}>${renderRichText(text ?? "")}</${tag}>`;
 }
 
 function renderSourceAndOverride(entry, noun, renderBase) {
@@ -723,6 +944,46 @@ function cleanLookupName(value) {
 function titleCase(value) {
   if (value === "pokeedge") return "Poke Edge";
   return String(value || "").replace(/^./, c => c.toUpperCase());
+}
+
+function renderRichText(value, inline = false) {
+  const text = String(value ?? "");
+  const tokenPattern = new RegExp(
+    `\\[\\[\\s*(${REFERENCE_TYPE_PATTERN})\\s*:\\s*([^\\]]+?)\\s*\\]\\](?:\\(([^)]*)\\))?`,
+    "gi"
+  );
+  let html = "";
+  let cursor = 0;
+  let match;
+
+  while ((match = tokenPattern.exec(text))) {
+    html += renderRichTextChunk(text.slice(cursor, match.index), inline);
+    const type = normalizeType(match[1]);
+    const name = match[2].trim();
+    const label = (match[3] || "").trim() || name;
+    html += renderReferenceLinkHtml(type, name, label);
+    cursor = tokenPattern.lastIndex;
+  }
+  html += renderRichTextChunk(text.slice(cursor), inline);
+  return html;
+}
+
+function renderRichTextChunk(value, inline) {
+  let html = escapeHtml(value);
+  // Data files contain a small amount of intentional emphasis. Restore only a
+  // strict, attribute-free allowlist after escaping everything else.
+  html = html
+    .replace(/&lt;(\/?)strong&gt;/gi, "<$1strong>")
+    .replace(/&lt;(\/?)em&gt;/gi, "<$1em>")
+    .replace(/&lt;(\/?)b&gt;/gi, "<$1b>")
+    .replace(/&lt;(\/?)i&gt;/gi, "<$1i>")
+    .replace(/&lt;br\s*\/?&gt;/gi, "<br>");
+  return inline ? html.replaceAll("\n", " ") : html.replaceAll("\n", "<br>");
+}
+
+function renderReferenceLinkHtml(type, name, label) {
+  if (!type) return escapeHtml(label);
+  return `<a href="#" class="js-reference-link js-${escapeHtml(type)}-link" data-ref-type="${escapeHtml(type)}" data-ref-name="${escapeHtml(name)}" data-${escapeHtml(type)}="${escapeHtml(name)}">${escapeHtml(label)}</a>`;
 }
 
 function isBlank(value) {

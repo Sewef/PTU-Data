@@ -3,7 +3,7 @@ import {
   buildPillSection,
   getSelectedPills
 } from "/ptu/js/helpers.js";
-import { configureReferenceModal } from "/ptu/js/ptu_reference_modal.js";
+import { configureReferenceModal } from "/ptu/js/ptu_reference_modal.js?v=20261109-6";
 
 // =========================
 // Config
