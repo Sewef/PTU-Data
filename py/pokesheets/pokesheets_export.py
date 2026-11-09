@@ -7,6 +7,24 @@ from typing import Any, Dict, List, Optional, Tuple
 
 # ---------------- Utils I/O ----------------
 
+REFERENCE_LINK_RE = re.compile(
+    r"\[\[[^:\]\s]+\s*:\s*([^\]]+?)\s*\]\](?:\(([^)]*)\))?"
+)
+
+
+def strip_reference_links(value: Any) -> Any:
+    """Replace site reference tokens with their visible label for Pokesheets."""
+    if isinstance(value, str):
+        return REFERENCE_LINK_RE.sub(
+            lambda match: (match.group(2) or match.group(1)).strip(),
+            value,
+        )
+    if isinstance(value, list):
+        return [strip_reference_links(item) for item in value]
+    if isinstance(value, dict):
+        return {key: strip_reference_links(item) for key, item in value.items()}
+    return value
+
 def read_json(path: Path):
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
@@ -754,7 +772,9 @@ def main():
         warn("no species found in directory")
 
     log(f"[info] transforming {len(src_entries)} species…")
-    transformed = [transform_entry(e, abilities_db, args.tag) for e in src_entries]
+    transformed = strip_reference_links(
+        [transform_entry(e, abilities_db, args.tag) for e in src_entries]
+    )
     
     out_path = Path(args.out)
     if args.minimize:

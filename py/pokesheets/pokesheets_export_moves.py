@@ -2,6 +2,22 @@ import json, re, sys
 from typing import Any, Dict
 
 crit_regex = re.compile(r"Critical Hit on.*?(\d+)\+")
+reference_link_regex = re.compile(
+    r"\[\[[^:\]\s]+\s*:\s*([^\]]+?)\s*\]\](?:\(([^)]*)\))?"
+)
+
+def strip_reference_links(value: Any) -> Any:
+    """Replace site reference tokens with their visible label for Pokesheets."""
+    if isinstance(value, str):
+        return reference_link_regex.sub(
+            lambda match: (match.group(2) or match.group(1)).strip(),
+            value,
+        )
+    if isinstance(value, list):
+        return [strip_reference_links(item) for item in value]
+    if isinstance(value, dict):
+        return {key: strip_reference_links(item) for key, item in value.items()}
+    return value
 
 def norm_frequency(freq: str) -> str:
     if not isinstance(freq, str):
@@ -88,7 +104,7 @@ def main():
 
     result = []
     for raw_name, payload in data.items():
-        result.append(transform_entry(raw_name, payload or {}))
+        result.append(strip_reference_links(transform_entry(raw_name, payload or {})))
     result.sort(key=lambda x: x["name"].lower())
 
     with open(out_path, "w", encoding="utf-8") as f:
