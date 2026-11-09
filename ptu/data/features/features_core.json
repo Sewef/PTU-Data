@@ -906,23 +906,23 @@
           {
             "Name": "Dilettante",
             "Tags": "[Ranked 4]",
-            "Rank 1 Prerequisites": "Hobbyist",
-            "Rank 2 Prerequisites": "Hobbyist",
-            "Rank 3 Prerequisites": "Hobbyist",
-            "Rank 4 Prerequisites": "Hobbyist",
+            "Rank 1 Prerequisites": "[[feature:Hobbyist]]",
+            "Rank 2 Prerequisites": "[[feature:Hobbyist]]",
+            "Rank 3 Prerequisites": "[[feature:Hobbyist]]",
+            "Rank 4 Prerequisites": "[[feature:Hobbyist]]",
             "Frequency": "Static",
-            "Effect": "Each Rank of Dilettante, you gain both an Edge and a General Feature from the lists below. You may gain the chosen Edge and Feature even if you do not meet the Skill prerequisites. You must meet any other Prerequisites. Whenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead.\n» Edges: Acrobat, Apricorn Balls, Basic Balls, Basic Cooking, Basic Martial Arts, Beast Master, Breeder, Dynamism, Gem Lore, Grace, Green Thumb, Groomer, Instinctive Aptitude, Instruction, Intimidating Presence, Iron Mind, Medic Training, Mounted Prowess, Repel Crafter, Slippery, Swimmer, Train the Reserves.\n» Features: Command Versatility, Commander's Voice, Defender, Dive, First Aid Expertise, Let Me Help You With That, Poké Ball Crafter, PokéManiac, Press, Quick Switch, Skill Monkey, Species Savant, any [Training] Feature, Tutoring, Walk It Off.\nWhenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead."
+            "Effect": "Each Rank of Dilettante, you gain both an Edge and a General Feature from the lists below. You may gain the chosen Edge and Feature even if you do not meet the Skill prerequisites. You must meet any other Prerequisites. Whenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead.\n» Edges: [[edge:Acrobat]], [[edge:Apricorn Balls]], [[edge:Basic Balls]], [[edge:Basic Cooking]], [[edge:Basic Martial Arts]], [[edge:Beast Master]], [[edge:Breeder]], [[edge:Dynamism]], [[edge:Gem Lore]], [[edge:Grace]], [[edge:Green Thumb]], [[edge:Groomer]], [[edge:Instinctive Aptitude]], [[edge:Instruction]], [[edge:Intimidating Presence]], [[edge:Iron Mind]], [[edge:Medic Training]], [[edge:Mounted Prowess]], [[edge:Repel Crafter]], [[edge:Slippery]], [[edge:Swimmer]], [[edge:Train the Reserves]].\n» Features: [[feature:Command Versatility]], [[feature:Commander's Voice]], [[feature:Defender]], [[feature:Dive]], [[feature:First Aid Expertise]], [[feature:Let Me Help You With That]], [[feature:Poké Ball Crafter]], [[feature:PokéManiac]], [[feature:Press]], [[feature:Quick Switch]], [[feature:Skill Monkey]], [[feature:Species Savant]], any [Training] Feature, [[feature:Tutoring]], [[feature:Walk It Off]].\nWhenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead."
           },
           {
             "Name": "Dabbler",
-            "Prerequisites": "Hobbyist, Expert General Education or Perception",
+            "Prerequisites": "[[feature:Hobbyist]], Expert General Education or Perception",
             "Frequency": "Static",
             "Effect": "At the Level 5, 10, 20, 30, and 40 Character Advancement Level Milestones, if you choose to gain Bonus Stats, you also gain an Edge for which you qualify. If you choose Bonus Edges or Features, you also gain +2 to your choice of Attack or Special Attack. This applies retroactively.",
             "Note": "It takes a long time for this Feature to bear fruit. Talk to your GM about how long the campaign will last and whether you will reach higher Levels."
           },
           {
             "Name": "Look and Learn",
-            "Prerequisites": "Hobbyist, Expert General Education or Perception",
+            "Prerequisites": "[[feature:Hobbyist]], Expert General Education or Perception",
             "Frequency": "x2 Uses — Extended Action",
             "Effect": "When you activate Look and Learn, you may gain any of the Features below even though they are Features from other Classes. You do not need to meet their normal prerequisites, but you must meet their Prerequisites listed here. Look and Learn can be used two times; once to learn a Feature from the \"Scene Features\" List, and once to learn a Feature from the \"Action Point Features List\".",
             "table": {
@@ -964,19 +964,19 @@
                     "text": "Ace Trainer"
                   },
                   {
-                    "text": "Critical Moment"
+                    "text": "[[feature:Critical Moment]]"
                   },
                   {
-                    "text": "Commander's Voice"
+                    "text": "[[feature:Commander's Voice]]"
                   },
                   {
                     "text": "Coordinator"
                   },
                   {
-                    "text": "Nuanced Performance"
+                    "text": "[[feature:Nuanced Performance]]"
                   },
                   {
-                    "text": "Grace"
+                    "text": "[[feature:Grace]]"
                   }
                 ],
                 [
@@ -984,19 +984,19 @@
                     "text": "Capture Specialist"
                   },
                   {
-                    "text": "Capture Techniques\n(False Strike and Catch Combo only)"
+                    "text": "[[feature:Capture Techniques]]\n(False Strike and Catch Combo only)"
                   },
                   {
-                    "text": "Poké Ball Crafter"
+                    "text": "[[feature:Poké Ball Crafter]]"
                   },
                   {
                     "text": "Juggler"
                   },
                   {
-                    "text": "Round Trip"
+                    "text": "[[feature:Round Trip]]"
                   },
                   {
-                    "text": "Quick Switch"
+                    "text": "[[feature:Quick Switch]]"
                   }
                 ],
                 [
@@ -1004,19 +1004,19 @@
                     "text": "Enduring"
                   },
                   {
-                    "text": "Staying Power"
+                    "text": "[[feature:Staying Power]]"
                   },
                   {
-                    "text": "Medic Training"
+                    "text": "[[feature:Medic Training]]"
                   },
                   {
                     "text": "Chef"
                   },
                   {
-                    "text": "Hits the Spot"
+                    "text": "[[feature:Hits the Spot]]"
                   },
                   {
-                    "text": "Basic Cooking"
+                    "text": "[[feature:Basic Cooking]]"
                   }
                 ],
                 [
@@ -1024,19 +1024,19 @@
                     "text": "Trickster"
                   },
                   {
-                    "text": "Sleight"
+                    "text": "[[feature:Sleight]]"
                   },
                   {
-                    "text": "Command Versatility"
+                    "text": "[[feature:Command Versatility]]"
                   },
                   {
                     "text": "Fashionista"
                   },
                   {
-                    "text": "Style is Eternal"
+                    "text": "[[feature:Style is Eternal]]"
                   },
                   {
-                    "text": "Groomer"
+                    "text": "[[feature:Groomer]]"
                   }
                 ],
                 [
@@ -1044,19 +1044,19 @@
                     "text": "Researcher"
                   },
                   {
-                    "text": "Chemical Warfare"
+                    "text": "[[feature:Chemical Warfare]]"
                   },
                   {
-                    "text": "Repel Crafter"
+                    "text": "[[feature:Repel Crafter]]"
                   },
                   {
                     "text": "Athlete"
                   },
                   {
-                    "text": "Coaching"
+                    "text": "[[feature:Coaching]]"
                   },
                   {
-                    "text": "Swimmer"
+                    "text": "[[feature:Swimmer]]"
                   }
                 ],
                 [
@@ -1064,19 +1064,19 @@
                     "text": "Roughneck"
                   },
                   {
-                    "text": "Mettle"
+                    "text": "[[feature:Mettle]]"
                   },
                   {
-                    "text": "Defender"
+                    "text": "[[feature:Defender]]"
                   },
                   {
                     "text": "Tumbler"
                   },
                   {
-                    "text": "Quick Gymnastics"
+                    "text": "[[feature:Quick Gymnastics]]"
                   },
                   {
-                    "text": "Acrobat"
+                    "text": "[[feature:Acrobat]]"
                   }
                 ]
               ]
