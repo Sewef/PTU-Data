@@ -1399,42 +1399,42 @@
           {
             "Name": "Cheerleader",
             "Tags": "[Class]",
-            "Prerequisites": "Inspired Training, Novice Charm",
+            "Prerequisites": "[[feature:Inspired Training]], Novice Charm",
             "Frequency": "At-Will — Extended Action",
             "Target": "Your Pokémon with at least 2 Tutor Points remaining",
-            "Effect": "Your Pokémon loses 2 Tutor Points and gains the Friend Guard Ability."
+            "Effect": "Your Pokémon loses 2 Tutor Points and gains the [[ability:Friend Guard]] Ability."
           },
           {
             "Name": "Moment of Action",
             "Tags": "[Orders]",
-            "Prerequisites": "Cheerleader",
+            "Prerequisites": "[[feature:Cheerleader]]",
             "Frequency": "At-Will — Standard Action",
             "Target": "Up to two Allied Trainers",
             "Effect": "Each target gains 1 Temporary Action Point. These Action Points disappear after one full Round."
           },
           {
             "Name": "Inspirational Support",
-            "Prerequisites": "Cheerleader",
+            "Prerequisites": "[[feature:Cheerleader]]",
             "Frequency": "Static",
-            "Effect": "Whenever your Pokémon with Friend Guard targets an Ally with an Ability or Status Move, the targeted Ally becomes Cheered."
+            "Effect": "Whenever your Pokémon with [[ability:Friend Guard]] targets an Ally with an Ability or Status Move, the targeted Ally becomes Cheered."
           },
           {
             "Name": "Cheers",
-            "Prerequisites": "Cheerleader, Adept Charm",
+            "Prerequisites": "[[feature:Cheerleader]], Adept Charm",
             "Frequency": "X AP — Swift Action",
             "Trigger": "You use [Orders]",
             "Effect": "The target or targets of the triggering [Orders] are Cheered for 1 full round. While Cheered, the target's Combat Stages cannot be lowered by foe's attacks, features, or abilities. This Feature costs 0 AP if the triggering effect affects only one ally, and costs 1 AP if it affects two or more."
           },
           {
             "Name": "Bring it On!",
-            "Prerequisites": "Cheers",
+            "Prerequisites": "[[feature:Cheers]]",
             "Frequency": "Scene x2 — Free Action",
             "Effect": "You may trigger Bring It On! whenever...\n» A Cheered Ally takes Damage, to grant them 5 Damage Reduction agains the triggering Damage.\n» A Cheered Ally makes a Save Check, to let them roll an additional Save Check and use the best result.\n» A Cheered Ally Takes a Breather, to grant them Temporary Hit Points equal to your Charm Rank."
           },
           {
             "Name": "Go, Fight, Win!",
             "Tags": "[Orders]",
-            "Prerequisites": "Moment of Action, Cheers, Expert Charm",
+            "Prerequisites": "[[feature:Moment of Action]], Cheers, Expert Charm",
             "Frequency": "2 AP — Standard Action",
             "Effect": "Choose and perform one of the cheers below. You may perform each Cheer only once per Scene.\n» Show Your Best!: Choose Def or Sp.Def, all allies on the field gain +1 CS in the Chosen Stat.\n» Don't Stop Now!: All allies on the Field gain Temporary Hit Points equal to your Charm Rank.\n» I Believe In You!: All allies on the Field gain a +2 bonus to Evasion for one full Round."
           },
@@ -1464,36 +1464,36 @@
           {
             "Name": "Cheerleader",
             "Tags": "[Class]",
-            "Prerequisites": "Inspired Training, Novice Charm",
+            "Prerequisites": "[[feature:Inspired Training]], Novice Charm",
             "Frequency": "X AP — Free Action",
             "Trigger": "You use Orders",
             "Effect": "Choose Cheered, Excited, or Motivated. All allies affected by the triggering effect gain the chosen condition. This Feature costs 0 AP if the triggering effect affects only one ally, and costs 1 AP if it affects two or more."
           },
           {
             "Name": "Cheer Brigade",
-            "Prerequisites": "Cheerleader",
+            "Prerequisites": "[[feature:Cheerleader]]",
             "Frequency": "At-Will — Extended Action",
             "Trigger": "Your Pokémon with at least 2 Tutor Points remaining",
-            "Effect": "Your Pokémon loses 2 Tutor Points and gains the Friend Guard Ability."
+            "Effect": "Your Pokémon loses 2 Tutor Points and gains the [[ability:Friend Guard]] Ability."
           },
           {
             "Name": "Gleeful Interference",
-            "Prerequisites": "Cheer Brigade, Adept Charm",
+            "Prerequisites": "[[feature:Cheer Brigade]], Adept Charm",
             "Frequency": "1 AP — Free Action",
-            "Trigger": "Your Pokémon with the Friend Guard Ability hits a foe with a damaging attack",
+            "Trigger": "Your Pokémon with the [[ability:Friend Guard]] Ability hits a foe with a damaging attack",
             "Effect": "The triggering foe gains a -2 penalty to Accuracy for one full Round."
           },
           {
             "Name": "Inspirational Support",
-            "Prerequisites": "Cheer Brigade, Adept Charm",
+            "Prerequisites": "[[feature:Cheer Brigade]], Adept Charm",
             "Frequency": "Static",
-            "Effect": "You may trigger Cheerleader as a Free Action when your Pokémon with Friend Guard activate an Ability or Status Move that affects only allies.",
-            "Note": "When considering effects that could trigger Cheerleader this way, aside from the obvious Moves like Helping Hand and Abilities like Plus and Minus, think about Blessings, Coats, etc too!"
+            "Effect": "You may trigger [[feature:Cheerleader]] as a Free Action when your Pokémon with Friend Guard activate an Ability or Status Move that affects only allies.",
+            "Note": "When considering effects that could trigger Cheerleader this way, aside from the obvious Moves like Helping Hand and Abilities like [[ability:Plus]] and [[ability:Minus]], think about [[keyword:Blessings]], [[keyword:Coats]], etc too!"
           },
           {
             "Name": "Moment of Action",
             "Tags": "[Orders]",
-            "Prerequisites": "Cheerleader",
+            "Prerequisites": "[[feature:Cheerleader]]",
             "Frequency": "At-Will — Standard Action",
             "Target": "Up to two Allied Trainers",
             "Effect": "Each target gains 1 Temporary Action Point. These Action Points disappear after one full Round."
@@ -1501,7 +1501,7 @@
           {
             "Name": "Go, Fight, Win!",
             "Tags": "[Orders]",
-            "Prerequisites": "Moment of Action, Expert Charm",
+            "Prerequisites": "[[feature:Moment of Action]], Expert Charm",
             "Frequency": "At-Will — Standard Action + Swift Action",
             "Effect": "Choose and perform one of the cheers below. You may perform each Cheer only once per Scene.\n» Show Your Best!: Choose Defense or Special Defense. All allies on the field gain +1 Combat Stage in the Chosen Stat and become Motivated.\n» Don't Stop Now!: All allies on the field gain Temporary Hit Points equal to your Charm Rank and become Excited.\n I Believe In You!: All allies on the field gain a +2 bonus to Evasion for one full Round, and become Cheered."
           },
