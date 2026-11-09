@@ -778,7 +778,7 @@ function renderPanel(title, content) {
 function renderEntryExtras(entry, consumedKeys) {
   const fields = Object.entries(entry)
     .filter(([key, value]) => !key.startsWith("__") && !consumedKeys.has(key) && !isBlank(value))
-    .map(([key, value]) => renderReferenceField(key, value, "mb-2"));
+    .map(([key, value]) => renderReferenceFieldValueOnly(key, value, "mb-2"));
   if (!fields.length) return "";
   return `
     <details class="ptu-reference-extra">
@@ -807,6 +807,13 @@ function renderReferenceField(key, value, className = "mb-2") {
   return `<div class="${className}"><span class="text-muted">${escapeHtml(key)}:</span> ${renderReferenceGenericValue(value)}</div>`;
 }
 
+function renderReferenceFieldValueOnly(key, value, className = "mb-2") {
+  if (isReferenceTable(value)) {
+    return `<div class="${className}">${renderReferenceGenericValue(value)}</div>`;
+  }
+  return `<div class="${className}">${renderReferenceGenericValueNoKeys(value)}</div>`;
+}
+
 function renderReferenceGenericValue(value) {
   if (isReferenceTable(value)) return renderReferenceTable(value);
 
@@ -818,6 +825,22 @@ function renderReferenceGenericValue(value) {
     return `<div class="mt-1 ms-3">${Object.entries(value)
       .filter(([key, child]) => !key.startsWith("__") && !isBlank(child))
       .map(([key, child]) => `<div><span class="text-muted">${escapeHtml(key)}:</span> ${renderReferenceGenericValue(child)}</div>`)
+      .join("")}</div>`;
+  }
+  return renderRichText(value);
+}
+
+function renderReferenceGenericValueNoKeys(value) {
+  if (isReferenceTable(value)) return renderReferenceTable(value);
+
+  if (Array.isArray(value)) {
+    if (!value.length) return "";
+    return `<div class="mt-1 ms-3">${value.map(item => `<div>${renderReferenceGenericValueNoKeys(item)}</div>`).join("")}</div>`;
+  }
+  if (value && typeof value === "object") {
+    return `<div class="mt-1 ms-3">${Object.entries(value)
+      .filter(([key, child]) => !key.startsWith("__") && !isBlank(child))
+      .map(([key, child]) => `<div>${renderReferenceGenericValueNoKeys(child)}</div>`)
       .join("")}</div>`;
   }
   return renderRichText(value);
