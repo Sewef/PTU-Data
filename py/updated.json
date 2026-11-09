@@ -2259,7 +2259,7 @@
         "Chef Recipes": {
             "Tasty Snacks": {
                 "Prerequisites": "Chef",
-                "Cost": "$100",
+                "Cost": "₽100",
                 "Effect": "You create a Salty Surprise, Spicy Wrap, Sour Candy, Dry Wafer, Bitter Treat, or Sweet Confection."
             },
             "Salty Surprise": {
@@ -2295,7 +2295,7 @@
             },
             "Bait Mixer": {
                 "Prerequisites": "Culinary Appreciation",
-                "Cost": "$150 or Honey.",
+                "Cost": "₽150 or Honey.",
                 "Effect": "You may create Bait. For $50 more, you may create Bait as Super Bait or Vile Bait instead. Super Bait works like regular Bait, but you may add your Intuition Rank to 1d20 Rolls made to attract Pokémon. Vile Bait works like regular Bait, but Pokémon that eat it are Poisoned."
             },
             "Preserves": {
@@ -2305,7 +2305,7 @@
             },
             "Leftovers": {
                 "Prerequisites": "Complex Aftertaste",
-                "Cost": "$100",
+                "Cost": "₽100",
                 "Effect": "You create Leftovers."
             },
             "Vitamins": {
@@ -2408,7 +2408,7 @@
             },
             "Basic Fashion": {
                 "Prerequisites": "Fashionista",
-                "Cost": "$500",
+                "Cost": "₽500",
                 "Effect": "You create one of the Basic Fashion Items below for which you have the chosen Fashionista Skill. These are Accessory Slot Items and may be used as Held Items by Pokémon.",
                 "Adorable Fashion": {
                     "Fashionista Skill": "Charm",
@@ -2527,12 +2527,12 @@
             "Apothecary Recipes": {
                 "Restorative Science": {
                     "Prerequisites": "Apothecary",
-                    "Cost": "$100",
+                    "Cost": "₽100",
                     "Effect": "You create an Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal, or Potion."
                 },
                 "Super Cures": {
                     "Prerequisites": "Patch Cure",
-                    "Cost": "$200",
+                    "Cost": "₽200",
                     "Effect": "You can create Revives and Super Potions."
                 },
                 "Hyper Cures": {
@@ -2541,7 +2541,7 @@
                 },
                 "Performance Enhancers": {
                     "Prerequisites": "Medicinal Blend",
-                    "Cost": "$4900",
+                    "Cost": "₽4900",
                     "Effect": "You create a PP Up or Heart Booster. If you have a Heart Scale, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost."
                 }
             }
@@ -2573,12 +2573,12 @@
             "Apothecary Recipes": {
                 "Restorative Science": {
                     "Prerequisites": "Apothecary",
-                    "Cost": "$100",
+                    "Cost": "₽100",
                     "Effect": "You create an Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal, or Potion."
                 },
                 "Super Cures": {
                     "Prerequisites": "Patch Cure",
-                    "Cost": "$200",
+                    "Cost": "₽200",
                     "Effect": "You can create Revives and Super Potions."
                 },
                 "Hyper Cures": {
@@ -2587,7 +2587,7 @@
                 },
                 "Performance Enhancers": {
                     "Prerequisites": "Medicinal Blend",
-                    "Cost": "$4900",
+                    "Cost": "₽4900",
                     "Effect": "You create a PP Up or Heart Booster. If you have a Heart Scale, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost."
                 }
             }
@@ -2694,22 +2694,22 @@
             "Chemistry Recipes": {
                 "Enhancers": {
                     "Prerequisites": "Chemist",
-                    "Cost": "$100",
+                    "Cost": "₽100",
                     "Effect": "You can create any X-Item, Dire Hit, or Guard Spec."
                 },
                 "Pester Balls: Disorient": {
                     "Prerequisites": "Chemist",
-                    "Cost": "$50",
+                    "Cost": "₽50",
                     "Effect": "You create Pester Balls that can inflict Rage or Confusion."
                 },
                 "Pester Balls: Pain": {
                     "Prerequisites": "Chemical Warfare",
-                    "Cost": "$50",
+                    "Cost": "₽50",
                     "Effect": "You create Pester Balls that can inflict Burn or Poison."
                 },
                 "Pester Balls: Shut Down": {
                     "Prerequisites": "Caustic Chemistry",
-                    "Cost": "$50",
+                    "Cost": "₽50",
                     "Effect": "You create Pester Balls that can inflict Paralysis or Sleep."
                 }
             }

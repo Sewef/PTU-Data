@@ -3784,7 +3784,7 @@
               {
                 "Name": "Tasty Snacks",
                 "Prerequisites": "[[feature:Chef]]",
-                "Cost": "$100",
+                "Cost": "₽100",
                 "Effect": "You create a [[feature:Salty Surprise]], [[feature:Spicy Wrap]], [[feature:Sour Candy]], [[feature:Dry Wafer]], [[feature:Bitter Treat]], or [[feature:Sweet Confection]].",
                 "recipes": [
                   {
@@ -3831,7 +3831,7 @@
               {
                 "Name": "Bait Mixer",
                 "Prerequisites": "[[feature:Culinary Appreciation]]",
-                "Cost": "$150 or Honey.",
+                "Cost": "₽150 or Honey.",
                 "Effect": "You may create [[item:Bait]]. For $50 more, you may create [[item:Bait]] as Super Bait or Vile Bait instead. Super Bait works like regular [[item:Bait]], but you may add your Intuition Rank to 1d20 Rolls made to attract Pokémon. Vile Bait works like regular [[item:Bait]], but Pokémon that eat it are [[status:Poisoned]]."
               },
               {
@@ -3843,7 +3843,7 @@
               {
                 "Name": "Leftovers",
                 "Prerequisites": "[[feature:Complex Aftertaste]]",
-                "Cost": "$100",
+                "Cost": "₽100",
                 "Effect": "You create [[item:Leftovers]]."
               },
               {
@@ -3996,7 +3996,7 @@
               {
                 "Name": "Basic Fashion",
                 "Prerequisites": "[[feature:Fashionista]]",
-                "Cost": "$500",
+                "Cost": "₽500",
                 "Effect": "You create one of the [[feature:Basic Fashion]] Items below for which you have the chosen Fashionista Skill. These are Accessory Slot Items and may be used as Held Items by Pokémon.",
                 "recipes": [
                   {
@@ -4170,13 +4170,13 @@
               {
                 "Name": "Restorative Science",
                 "Prerequisites": "[[feature:Apothecary]]",
-                "Cost": "$100",
+                "Cost": "₽100",
                 "Effect": "You create an [[item:Antidote]], [[item:Paralyze Heal]], Awakening, [[item:Burn Heal]], [[item:Ice Heal]], or [[item:Potion]]."
               },
               {
                 "Name": "Super Cures",
                 "Prerequisites": "[[feature:Patch Cure]]",
-                "Cost": "$200",
+                "Cost": "₽200",
                 "Effect": "You can create Revives and Super Potions."
               },
               {
@@ -4187,7 +4187,7 @@
               {
                 "Name": "Performance Enhancers",
                 "Prerequisites": "[[feature:Medicinal Blend]]",
-                "Cost": "$4900",
+                "Cost": "₽4900",
                 "Effect": "You create a [[item:PP Up]] or [[item:Heart Booster]]. If you have a [[item:Heart Scale]], you may destroy the [[item:Heart Scale]] to create a [[item:Heart Booster]] without paying the monetary cost."
               }
             ]
@@ -4230,13 +4230,13 @@
               {
                 "Name": "Restorative Science",
                 "Prerequisites": "[[feature:Apothecary]]",
-                "Cost": "$100",
+                "Cost": "₽100",
                 "Effect": "You create an [[item:Antidote]], [[item:Paralyze Heal]], Awakening, [[item:Burn Heal]], [[item:Ice Heal]], or [[item:Potion]]."
               },
               {
                 "Name": "Super Cures",
                 "Prerequisites": "[[feature:Patch Cure]]",
-                "Cost": "$200",
+                "Cost": "₽200",
                 "Effect": "You can create Revives and Super Potions."
               },
               {
@@ -4247,7 +4247,7 @@
               {
                 "Name": "Performance Enhancers",
                 "Prerequisites": "[[feature:Medicinal Blend]]",
-                "Cost": "$4900",
+                "Cost": "₽4900",
                 "Effect": "You create a [[item:PP Up]] or [[item:Heart Booster]]. If you have a [[item:Heart Scale]], you may destroy the [[item:Heart Scale]] to create a [[item:Heart Booster]] without paying the monetary cost."
               }
             ]
@@ -4387,25 +4387,25 @@
               {
                 "Name": "Enhancers",
                 "Prerequisites": "[[feature:Chemist]]",
-                "Cost": "$100",
+                "Cost": "₽100",
                 "Effect": "You can create any X-Item, [[item:Dire Hit]], or [[item:Guard Spec]]."
               },
               {
                 "Name": "Pester Balls: Disorient",
                 "Prerequisites": "[[feature:Chemist]]",
-                "Cost": "$50",
+                "Cost": "₽50",
                 "Effect": "You create [[item:Pester Balls]] that can inflict [[status:Rage]] or [[status:Confusion]]."
               },
               {
                 "Name": "Pester Balls: Pain",
                 "Prerequisites": "[[feature:Chemical Warfare]]",
-                "Cost": "$50",
+                "Cost": "₽50",
                 "Effect": "You create [[item:Pester Balls]] that can inflict Burn or Poison."
               },
               {
                 "Name": "Pester Balls: Shut Down",
                 "Prerequisites": "[[feature:Caustic Chemistry]]",
-                "Cost": "$50",
+                "Cost": "₽50",
                 "Effect": "You create [[item:Pester Balls]] that can inflict [[status:Paralysis]] or [[status:Sleep]]."
               }
             ]
@@ -9801,7 +9801,20 @@
             "Tags": "[+Defense][Weapon]",
             "Prerequisites": "[[feature:Steelheart]], Expert Athletics or Focus",
             "Frequency": "Static",
-            "Effect": "You learn the Call to Arms and Unlimited Steel Works Talents."
+            "Effect": "You learn the Call to Arms and Unlimited Steel Works Talents.",
+            "talents": [
+              {
+                "Name": "Call to Arms",
+                "Frequency": "At-Will – Extended Action",
+                "Effect": "You create a Steelheart Bond with the target Weapon. You may only have one Steelheart Bond at a time; if you create a new Bond, all old Bonds are lost. As a Shift Action, you may beckon your Steelheart Bonded Weapon to your hands if it is within 10 meters. If it is being held by someone else who does not want to let go of the weapon, make an Athletics or Focus vs Athletics Opposed Check. If you win, they their lose grip on your Weapon and it flies to your hand as normal."
+              },
+              {
+                "Name": "Unlimited Steel Works",
+                "Frequency": "At-Will – Extended Action",
+                "Target": "Your Steelheart Bond Weapon",
+                "Effect": "You may replace the Move(s) granted by the target Weapon with any other standard Weapon Moves, within Limitations. Weapons may still only grant one Adept and one Master Move at a maximum."
+              }
+            ]
           },
           {
             "Name": "Man of Steel",

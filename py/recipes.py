@@ -36,7 +36,7 @@ if __name__ == "__main__":
             "Tasty Snacks": {
               "name": "Tasty Snacks",
               "Prerequisites": "Chef",
-              "Cost": "$100",
+              "Cost": "₽100",
               "Effect": "You create a Salty Surprise, Spicy Wrap, Sour Candy, Dry Wafer, Bitter Treat, or Sweet Confection."
             },
             "Salty Surprise": {
@@ -81,7 +81,7 @@ if __name__ == "__main__":
             "Bait Mixer": {
               "name": "Bait Mixer",
               "Prerequisites": "Culinary Appreciation",
-              "Cost": "$150 or Honey.",
+              "Cost": "₽150 or Honey.",
               "Effect": "You may create Bait. For $50 more, you may create Bait as Super Bait or Vile Bait instead. Super Bait works like regular Bait, but you may add your Intuition Rank to 1d20 Rolls made to attract Pokémon. Vile Bait works like regular Bait, but Pokémon that eat it are Poisoned."
             },
             "Preserves": {
@@ -93,7 +93,7 @@ if __name__ == "__main__":
             "Leftovers": {
               "name": "Leftovers",
               "Prerequisites": "Complex Aftertaste",
-              "Cost": "$100",
+              "Cost": "₽100",
               "Effect": "You create Leftovers."
             },
             "Vitamins": {
