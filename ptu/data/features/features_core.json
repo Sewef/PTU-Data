@@ -1633,7 +1633,7 @@
             "Prerequisites": "[[feature:Enduring Soul]], Expert Athletics or Focus",
             "Frequency": "Scene — Free Action",
             "Trigger": "Your Pokémon is [[status:Fainted]], but is not at less than -100% Hit Points.",
-            "Effect": "Before fainting, the targeted Pokémon gains an Injury, and may then use a Move as an [[keyword:Interrupt]]. When the Move is resolved, the Pokémon then immediately faints. This consumes a Pokémon turn as normal. This cannot be used with the Moves Explosion, [[move:Pain Split]], or [[move:Self-Destruct]]."
+            "Effect": "Before fainting, the targeted Pokémon gains an Injury, and may then use a Move as an [[keyword:Interrupt]]. When the Move is resolved, the Pokémon then immediately faints. This consumes a Pokémon turn as normal. This cannot be used with the Moves [[move:Explosion]], [[move:Pain Split]], or [[move:Self-Destruct]]."
           },
           {
             "Name": "Vim and Vigor",
@@ -1838,7 +1838,7 @@
             "Prerequisites": "[[feature:Taskmaster]], Expert Intimidate",
             "Frequency": "Static",
             "Effect": "Your Hardened Pokemon gain the following benefits, based on your Intimidate Rank\n» Expert: When your Pokemon Faints, you may pay 1 AP. If you do, your Pokemon Faints at -30% Hit Points instead.\n» Master: While acting at 0 Hit Points or less, your Pokemon's Critical Hit, Effect Range, Evasion, Initiative, Damage Reduction, and Resistance Bonuses from being Hardened are doubled.",
-            "Note": "Pokémon cannot use the Moves Explosion, [[move:Endure]], [[move:Pain Split]], or [[move:Self-Destruct]] while they have 0 Hit Points or less. Pokémon with the [[capability:Soulless]] capability cannot benefit from [[feature:Press On!]]"
+            "Note": "Pokémon cannot use the Moves [[move:Explosion]], [[move:Endure]], [[move:Pain Split]], or [[move:Self-Destruct]] while they have 0 Hit Points or less. Pokémon with the [[capability:Soulless]] capability cannot benefit from [[feature:Press On!]]"
           },
           {
             "Name": "Desperate Strike",
@@ -1906,7 +1906,7 @@
                 ],
                 [
                   {
-                    "text": "[[ability:Bad Dreams]], [[status:Cursed]], Seeded, Burn, Poison"
+                    "text": "[[status:Bad Sleep]](Bad Dreams), [[status:Cursed]], [[status:Seeded]], [[status:Burned]](Burn), [[status:Poisoned]](Poison)"
                   },
                   {
                     "text": "Whenever the target loses Hit Points from the chosen condition, they lose an additional 5 Hit Points."
@@ -3320,7 +3320,7 @@
             "Prerequisites": "[[feature:Glacial Ice]], Expert Athletics or Survival",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "Your Ice-Type Pokémon uses an Ice-Type Move",
-            "Effect": "Your Pokémon uses the Move Mist as if it were on their Move List. When used this way, in addition to its normal effects, your Ice-Type Pokémon may expend uses of the Mist Blessing to do the following:\n» As a Swift Action on their turn to cause a foe within 5 meters to take a -5 penalty to Damage Rolls and become [[status:Slowed]] for one full round.\n» As a Free Action when being hit by a Fighting, Fire, Rock, or Steel-Typed attack dealing Super-Effective Damage to add their Tick Value to their Damage Reduction gained from [[feature:Glacial Ice]].\n» As a Swift Action on their turn to increase their Defense or Special Defense by 1 Combat Stage.",
+            "Effect": "Your Pokémon uses the Move [[move:Mist]] as if it were on their Move List. When used this way, in addition to its normal effects, your Ice-Type Pokémon may expend uses of the Mist Blessing to do the following:\n» As a Swift Action on their turn to cause a foe within 5 meters to take a -5 penalty to Damage Rolls and become [[status:Slowed]] for one full round.\n» As a Free Action when being hit by a Fighting, Fire, Rock, or Steel-Typed attack dealing Super-Effective Damage to add their Tick Value to their Damage Reduction gained from [[feature:Glacial Ice]].\n» As a Swift Action on their turn to increase their Defense or Special Defense by 1 Combat Stage.",
             "Source": "Core"
           },
           {
@@ -3511,7 +3511,7 @@
             "Prerequisites": "[[feature:Psionic Sponge]], Expert Focus or Occult Education",
             "Frequency": "Scene x2 — Free Action",
             "Trigger": "Your Pokémon hits a foe with a Psychic-Type Status Move",
-            "Effect": "Your Pokémon may use the Move Encore against the triggering foe, as if it was on their Move List.",
+            "Effect": "Your Pokémon may use the Move [[move:Encore]] against the triggering foe, as if it was on their Move List.",
             "Source": "Core"
           },
           {
@@ -4281,7 +4281,7 @@
             "Prerequisites": "[[feature:Crystal Artificer]], Master Occult Education",
             "Frequency": "Scene — Standard Action",
             "Trigger": "You must have a Shard in your Main Hand or Off-Hand to use [[feature:Fistful of Force]].",
-            "Effect": "You may destroy the Shard to use the Move Judgment. [[move:Judgment]]'s Type must be one of the Types associated with the used Shard. Instead of adding your Special Attack when using this attack, you may choose to add your Occult Education Rank tripled."
+            "Effect": "You may destroy the Shard to use the Move [[move:Judgment]]. [[move:Judgment]]'s Type must be one of the Types associated with the used Shard. Instead of adding your Special Attack when using this attack, you may choose to add your Occult Education Rank tripled."
           },
           {
             "Name": "Artificer Recipes",
@@ -4654,7 +4654,7 @@
             "Prerequisites": "[[feature:Jailbreaker]], Adept Technology Education",
             "Frequency": "1 AP — Swift Action",
             "Trigger": "You hit a target with a Poké Ball with a Spray, [[move:Flash]], [[move:Bounce]], or [[item:Zap Case]] applied to it.",
-            "Effect": "The Case has additional effects according to its type(s).\n» [[item:Spray Case]]: After resolving the effects of the Case, the target loses a Tick of Health Points for each Persistent or Volatile Status Affliction they have. This may only affect a target once per Scene.\n» [[item:Flash Case]]: The Case uses the Move Flash as a Burst 2 instead of a Cone 2\n» [[item:Bounce Case]]: The Poké Ball bounces an additional time. This may not cause it to hit a target more than once.\n» [[item:Zap Case]]: The target can only use At-Will actions until the end of their next turn. This may only affect a target once per Scene."
+            "Effect": "The Case has additional effects according to its type(s).\n» [[item:Spray Case]]: After resolving the effects of the Case, the target loses a Tick of Health Points for each Persistent or Volatile Status Affliction they have. This may only affect a target once per Scene.\n» [[item:Flash Case]]: The Case uses the Move [[move:Flash]] as a Burst 2 instead of a Cone 2\n» [[item:Bounce Case]]: The Poké Ball bounces an additional time. This may not cause it to hit a target more than once.\n» [[item:Zap Case]]: The target can only use At-Will actions until the end of their next turn. This may only affect a target once per Scene."
           },
           {
             "Name": "Jailbreaker Recipes",
@@ -4706,7 +4706,7 @@
             "Prerequisites": "[[feature:Upgrader]], Master Technology Edu",
             "Frequency": "At-Will — Extended Action",
             "Target": "You or your Pokémon with Augmentations",
-            "Effect": "Choose an Augmentation the target has and apply the upgrade below. [[feature:Experimental Designs]] may affect a target twice.\n» Enhanced Sight: The user gains the [[capability:X-Ray Vision]] Capability.\n» Smart Vision: The user learns the Move Feint without taking a Move Slot.\n» Synthetic Muscle: The user recovers from Injuries twice as fast and heals one more Injury per day.\n» Embedded Weaponry: The weapon is Fine and gains Deadly Strike as a Master Move.\n» Wired Reflexes: The user gains one more Reflex Point per Scene and may also spend Reflex Points to gain +2 Critical Hit Range for one full round.\n» Medical Nanobots: Once a Scene, the user may cure themselves of all Persistent Status Afflictions as a Standard Action.\n» Dermal Plating: The user may also activate Dermal Plating to resist Special Damage.\n» Thermal-Optic Camo: While active, the user is invisible to Aura Reading and [[feature:Thought Detection]]."
+            "Effect": "Choose an Augmentation the target has and apply the upgrade below. [[feature:Experimental Designs]] may affect a target twice.\n» Enhanced Sight: The user gains the [[capability:X-Ray Vision]] Capability.\n» Smart Vision: The user learns the Move [[move:Feint]] without taking a Move Slot.\n» Synthetic Muscle: The user recovers from Injuries twice as fast and heals one more Injury per day.\n» Embedded Weaponry: The weapon is Fine and gains Deadly Strike as a Master Move.\n» Wired Reflexes: The user gains one more Reflex Point per Scene and may also spend Reflex Points to gain +2 Critical Hit Range for one full round.\n» Medical Nanobots: Once a Scene, the user may cure themselves of all Persistent Status Afflictions as a Standard Action.\n» Dermal Plating: The user may also activate Dermal Plating to resist Special Damage.\n» Thermal-Optic Camo: While active, the user is invisible to Aura Reading and [[feature:Thought Detection]]."
           },
           {
             "Name": "Upgrader Recipes",
@@ -5184,7 +5184,7 @@
             "Tags": "[Class][+Speed]",
             "Prerequisites": "Novice Survival, Novice Stealth",
             "Frequency": "Static",
-            "Effect": "Choose Teamwork or [[ability:Pack Hunt]]. You gain the Chosen Ability."
+            "Effect": "Choose [[ability:Teamwork]] or [[ability:Pack Hunt]]. You gain the Chosen Ability."
           },
           {
             "Name": "Pack Tactics",
@@ -5253,7 +5253,7 @@
             "Tags": "[Class][+Speed]",
             "Prerequisites": "Novice Survival, Novice Stealth",
             "Frequency": "Static",
-            "Effect": "Choose Teamwork or [[ability:Pack Hunt]]. You gain the Chosen Ability."
+            "Effect": "Choose [[ability:Teamwork]] or [[ability:Pack Hunt]]. You gain the Chosen Ability."
           },
           {
             "Name": "Pack Tactics",
@@ -6400,21 +6400,21 @@
             "Tags": "[+Special Attack]",
             "Prerequisites": "[[feature:Musician]]",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Sing and [[move:Supersonic]]"
+            "Effect": "You learn the Moves [[move:Sing]] and [[move:Supersonic]]"
           },
           {
             "Name": "Cacophony",
             "Tags": "[+Special Attack]",
             "Prerequisites": "[[feature:Mt. Moon Blues]], Adept Charm or Focus",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Screech and [[move:Metal Sound]]."
+            "Effect": "You learn the Moves [[move:Screech]] and [[move:Metal Sound]]."
           },
           {
             "Name": "Noise Complaint",
             "Tags": "[+Special Attack]",
             "Prerequisites": "[[feature:Cacophony]], Expert Charm or Focus",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Uproar and [[move:Hyper Voice]]."
+            "Effect": "You learn the Moves [[move:Uproar]] and [[move:Hyper Voice]]."
           },
           {
             "Name": "Voice Lessons",
@@ -6540,7 +6540,7 @@
             "Tags": "[+Attack]",
             "Prerequisites": "[[feature:Rogue]], two Rogue Skills at Adept Rank",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Pursuit and [[move:Sucker Punch]]."
+            "Effect": "You learn the Moves [[move:Pursuit]] and [[move:Sucker Punch]]."
           },
           {
             "Name": "Underhanded Tactics",
@@ -6554,7 +6554,7 @@
             "Tags": "[+Attack]",
             "Prerequisites": "[[feature:Unexpected Attacks]], two Rogue Skills at Expert Rank",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Assurance and [[move:Payback]]."
+            "Effect": "You learn the Moves [[move:Assurance]] and [[move:Payback]]."
           },
           {
             "Name": "Scoundrel's Strike",
@@ -6623,14 +6623,14 @@
             "Tags": "[+Defense]",
             "Prerequisites": "[[feature:Roughneck]], Expert Intimidate",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Glare and [[move:Headbutt]]."
+            "Effect": "You learn the Moves [[move:Glare]] and [[move:Headbutt]]."
           },
           {
             "Name": "Tough as Nails",
             "Tags": "[+Defense]",
             "Prerequisites": "3 [[feature:Roughneck]] Features, Master Intimidate",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Endure and [[move:Slack Off]]."
+            "Effect": "You learn the Moves [[move:Endure]] and [[move:Slack Off]]."
           }
         ]
       }
@@ -7006,7 +7006,7 @@
             "Tags": "[+Speed]",
             "Prerequisites": "[[feature:Poison Weapons]], Master Stealth",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Substitute and [[move:Toxic]]."
+            "Effect": "You learn the Moves [[move:Substitute]] and [[move:Toxic]]."
           }
         ]
       }
@@ -7115,7 +7115,7 @@
             "Tags": "[+HP]",
             "Prerequisites": "[[feature:Sage]]",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Reflect and [[move:Lucky Chant]]."
+            "Effect": "You learn the Moves [[move:Reflect]] and [[move:Lucky Chant]]."
           },
           {
             "Name": "Mystic Defense",
@@ -7183,21 +7183,21 @@
             "Tags": "[+Special Attack]",
             "Prerequisites": "[[feature:Telekinetic]]",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Kinesis and [[move:Barrier]]."
+            "Effect": "You learn the Moves [[move:Kinesis]] and [[move:Barrier]]."
           },
           {
             "Name": "PK Omega",
             "Tags": "[+Special Attack]",
             "Prerequisites": "[[feature:PK Alpha]], Expert Focus",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Telekinesis and Psychic."
+            "Effect": "You learn the Moves [[move:Telekinesis]] and Psychic."
           },
           {
             "Name": "Power of the Mind",
             "Tags": "[+Special Attack]",
             "Prerequisites": "[[feature:Telekinetic]]",
             "Frequency": "Static",
-            "Effect": "Choose Interference or [[ability:Levitate]]. You gain the chosen Ability."
+            "Effect": "Choose [[ability:Interference]] or [[ability:Levitate]]. You gain the chosen Ability."
           },
           {
             "Name": "PK Combat",
@@ -7278,7 +7278,7 @@
             "Tags": "[+Special Defense]",
             "Prerequisites": "[[feature:Telepath]], Expert Focus or Intuition",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Extrasensory and [[move:Psyshock]]."
+            "Effect": "You learn the Moves [[move:Extrasensory]] and [[move:Psyshock]]."
           },
           {
             "Name": "Suggestion",
@@ -7316,14 +7316,14 @@
             "Tags": "[+Speed]",
             "Prerequisites": "[[feature:Warper]]",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Teleport and [[move:Ally Switch]]."
+            "Effect": "You learn the Moves [[move:Teleport]] and [[move:Ally Switch]]."
           },
           {
             "Name": "Warping Ground",
             "Tags": "[+Speed]",
             "Prerequisites": "[[feature:Warper]]",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Gravity and [[move:Trick]]."
+            "Effect": "You learn the Moves [[move:Gravity]] and [[move:Trick]]."
           },
           {
             "Name": "Strange Energy",
@@ -7337,7 +7337,7 @@
             "Tags": "[+Speed]",
             "Prerequisites": "[[feature:Space Distortion]], Expert Guile",
             "Frequency": "Daily x3 — Free Action",
-            "Trigger": "You use the Move Teleport or activate the Teleporter Capability",
+            "Trigger": "You use the Move [[move:Teleport]] or activate the Teleporter Capability",
             "Effect": "Choose One: You activate Teleporter as if your Teleporter value were three times its normal value or you may take one willing Pokémon or Trainer along with you as you teleport so long as you are touching them when you activate [[feature:Farcast]]. You may expend two uses of [[feature:Farcast]] at once to choose both effects."
           },
           {
@@ -7562,7 +7562,7 @@
             "Tags": "[+HP][Weapon]",
             "Prerequisites": "[[feature:Frenzy]], Expert Combat",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Double-Edge and [[move:Thrash]]. You may use these moves as a Weapon Attack when wielding Melee Weapons."
+            "Effect": "You learn the Moves [[move:Double-Edge]] and [[move:Thrash]]. You may use these moves as a Weapon Attack when wielding Melee Weapons."
           },
           {
             "Name": "Push it to the Limit",
@@ -7793,7 +7793,7 @@
             "Tags": "[+Defense]",
             "Prerequisites": "[[feature:Fortress]]",
             "Frequency": "Static",
-            "Effect": "Choose Analytic or [[ability:Battle Armor]]. You gain the chosen ability."
+            "Effect": "Choose [[ability:Analytic]] or [[ability:Battle Armor]]. You gain the chosen ability."
           },
           {
             "Name": "Stalwart Bastion",
@@ -7916,7 +7916,7 @@
             "Tags": "[Class][+Speed][Weapon]",
             "Prerequisites": "Novice Combat, Novice Acrobatics",
             "Frequency": "Static",
-            "Effect": "Choose Flutter or [[ability:Vanguard]]. You gain the Chosen Ability."
+            "Effect": "Choose [[ability:Flutter]] or [[ability:Vanguard]]. You gain the Chosen Ability."
           },
           {
             "Name": "Nimble Steps",
@@ -8587,7 +8587,7 @@
             "Tags": "[+Special Attack]",
             "Prerequisites": "[[feature:Passionato Harmony]], Master Charm or Occult Education",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Moonblast and [[move:Aromatic Mist]]."
+            "Effect": "You learn the Moves [[move:Moonblast]] and [[move:Aromatic Mist]]."
           },
           {
             "Name": "Glamour Mastery",
@@ -8756,7 +8756,7 @@
             "Tags": "[+Speed]",
             "Prerequisites": "[[feature:Raging Winds]] Rank 1, Master Acrobatics or Perception",
             "Frequency": "Static",
-            "Effect": "Choose Celebrate or [[ability:Gale Wings]]. You gain the chosen Ability."
+            "Effect": "Choose [[ability:Celebrate]] or [[ability:Gale Wings]]. You gain the chosen Ability."
           },
           {
             "Name": "Raging Winds",
@@ -8862,7 +8862,7 @@
             "Tags": "[+Attack]",
             "Prerequisites": "[[feature:Apparition]]",
             "Frequency": "Static",
-            "Effect": "Choose Pressure or [[ability:Frighten]]. You gain the chosen Ability."
+            "Effect": "Choose [[ability:Pressure]] or [[ability:Frighten]]. You gain the chosen Ability."
           },
           {
             "Name": "Silent Assassin",
@@ -9576,7 +9576,7 @@
             "Tags": "[Class][+Special Attack]",
             "Prerequisites": "[[edge:Elemental Connection]] (Normal), Novice General Education, Novice Charm",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Flash and Swift."
+            "Effect": "You learn the Moves [[move:Flash]] and Swift."
           },
           {
             "Name": "Blinding Brightness",
@@ -9611,7 +9611,7 @@
             "Tags": "[+Special Attack]",
             "Prerequisites": "[[feature:Blinding Brightness]], Adept Charm or General Education",
             "Frequency": "Static",
-            "Effect": "Choose Starlight or [[ability:Sunglow]]. You gain the Chosen Ability."
+            "Effect": "Choose [[ability:Starlight]] or [[ability:Sunglow]]. You gain the Chosen Ability."
           },
           {
             "Name": "Prismatic Alignment",
@@ -9641,7 +9641,7 @@
             "Tags": "[Class][+Defense]",
             "Prerequisites": "[[edge:Elemental Connection]] (Poison), Novice Stealth, Novice Guile",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Acid and [[move:Clear Smog]]."
+            "Effect": "You learn the Moves [[move:Acid]] and [[move:Clear Smog]]."
           },
           {
             "Name": "Corrupt Blood",
@@ -9949,7 +9949,7 @@
             "Tags": "[+Special Defense]",
             "Prerequisites": "[[feature:Glitch Bender]]",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Disable and [[move:Snatch]]."
+            "Effect": "You learn the Moves [[move:Disable]] and [[move:Snatch]]."
           },
           {
             "Name": "Corrupt Reality",
@@ -9972,7 +9972,7 @@
             "Tags": "[+Special Defense]",
             "Prerequisites": "[[feature:Glitch Bender]], Expert Perception, Occult Education, or Focus",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Metronome and [[move:Topsy-Turvy]]"
+            "Effect": "You learn the Moves [[move:Metronome]] and [[move:Topsy-Turvy]]"
           },
           {
             "Name": "Glitch Burst",

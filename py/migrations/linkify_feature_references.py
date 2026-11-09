@@ -133,6 +133,13 @@ REFERENCE_CUE_WORDS = {
     "Keyword",
     "Keywords",
 }
+REFERENCE_LEADING_WORDS = REFERENCE_CUE_WORDS | {
+    "Choose",
+    "Gain",
+    "Learn",
+    "Pick",
+    "Use",
+}
 
 # Old hand-authored links sometimes use an inflected label as their target. Keep
 # that label on screen, but point the token at the exact name in the data index.
@@ -147,8 +154,11 @@ REFERENCE_ALIASES: dict[tuple[str, str], str] = {
     ("keyword", "coats"): "Coat",
     ("keyword", "priority (advanced)"): "Priority",
     ("status", "enraged"): "Rage",
+    ("status", "bad dreams"): "Bad Sleep",
+    ("status", "burn"): "Burned",
     ("status", "flinched"): "Flinch",
     ("status", "paralyzed"): "Paralysis",
+    ("status", "poison"): "Poisoned",
     ("status", "trip"): "Tripped",
 }
 
@@ -507,7 +517,12 @@ def linkify_edges_in_text(
 
             # Avoid matching the last word of another named game entry, such as
             # the Grace Edge inside the Serene Grace Ability.
-            if " " not in canonical and re.search(r"\b[A-Z][\w'-]*\s+$", before):
+            preceding_word = re.search(r"\b([A-Z][\w'-]*)\s+$", before)
+            if (
+                " " not in canonical
+                and preceding_word
+                and preceding_word.group(1) not in REFERENCE_LEADING_WORDS
+            ):
                 return match.group(0)
 
             following_word = re.match(r"\s+([A-Z][\w'-]*)", after)
@@ -552,7 +567,12 @@ def linkify_unique_references_in_text(
 
             # A single-word entry at the end of another capitalized name is
             # usually a different game entry (for example Grace in Serene Grace).
-            if " " not in canonical and re.search(r"\b[A-Z][\w'-]*\s+$", before):
+            preceding_word = re.search(r"\b([A-Z][\w'-]*)\s+$", before)
+            if (
+                " " not in canonical
+                and preceding_word
+                and preceding_word.group(1) not in REFERENCE_LEADING_WORDS
+            ):
                 return match.group(0)
 
             following_word = re.match(r"\s+([A-Z][\w'-]*)", after)
@@ -699,6 +719,16 @@ def normalize_explicit_reference_targets(value: str) -> str:
     return TYPED_REFERENCE_TOKEN_RE.sub(replace, value)
 
 
+def normalize_known_status_contexts(value: str) -> str:
+    """Resolve inflected condition labels that are unsafe to link globally."""
+
+    return value.replace(
+        "[[ability:Bad Dreams]], [[status:Cursed]], Seeded, Burn, Poison",
+        "[[status:Bad Sleep]](Bad Dreams), [[status:Cursed]], "
+        "[[status:Seeded]], [[status:Burned]](Burn), [[status:Poisoned]](Poison)",
+    )
+
+
 def validate_explicit_references(
     documents: list[Any], indexes: dict[str, dict[str, str]]
 ) -> tuple[dict[str, int], list[tuple[str, str]]]:
@@ -745,6 +775,7 @@ def migrate_document(
 
                 if isinstance(updated, str):
                     updated = normalize_explicit_reference_targets(updated)
+                    updated = normalize_known_status_contexts(updated)
                     updated = re.sub(
                         r"\[\[feature:Lessons\]\]\s+in Rage and Pain",
                         "[[feature:Lessons In Rage and Pain]]",
