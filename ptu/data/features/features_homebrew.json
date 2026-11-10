@@ -6113,14 +6113,14 @@
             "Tags": "[+Speed]",
             "Prerequisites": "[[feature:Aerialist]], Adept Acrobatics",
             "Frequency": "Static",
-            "Effect": "Your Tumbler Moves gain additional effects.\n» [[move:Aerial Ace]]: If you choose not to test for a Critical Hit, [[move:Aerial Ace]] gains the [[keyword:Pass]] Keyword.\n» [[move:Splash]]: Once a Scene, you may use [[move:Splash]] as if it had the [[keyword:Interrupt]] keyword upon getting hit with an attack. If you do, you gain Damage Reduction against that attack equal to twice your Acrobatics Rank.\n» Acrobatics: You may activate Acrobatics's extra damage even while holding an Item.\n» [[move:Bounce]]: When you use [[move:Bounce]], you don't trigger Hazards that turn and may choose to destroy all Hazards in your landing square and adjacent squares."
+            "Effect": "Your Tumbler Moves gain additional effects.\n» [[move:Aerial Ace]]: If you choose not to test for a Critical Hit, [[move:Aerial Ace]] gains the [[keyword:Pass]] Keyword.\n» [[move:Splash]]: Once a Scene, you may use [[move:Splash]] as if it had the [[keyword:Interrupt]] keyword upon getting hit with an attack. If you do, you gain Damage Reduction against that attack equal to twice your Acrobatics Rank.\n» [[move:Acrobatics]]: You may activate [[move:Acrobatics]]'s extra damage even while holding an Item.\n» [[move:Bounce]]: When you use [[move:Bounce]], you don't trigger Hazards that turn and may choose to destroy all Hazards in your landing square and adjacent squares."
           },
           {
             "Name": "Death From Above",
             "Tags": "[+Speed]",
             "Prerequisites": "[[feature:Aerialist]], Expert Acrobatics",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Acrobatics and [[move:Bounce]]."
+            "Effect": "You learn the Moves [[move:Acrobatics]] and [[move:Bounce]]."
           },
           {
             "Name": "Quick Reflexes",
