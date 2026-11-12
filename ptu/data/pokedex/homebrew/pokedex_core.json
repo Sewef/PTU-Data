@@ -16709,6 +16709,32 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution X": {
+        "Icon": "26-mega-x",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Electric Surge",
+        "Stats": {
+          "Attack": 5,
+          "Defense": 4,
+          "Special Defense": 2
+        }
+      },
+      "Mega Evolution Y": {
+        "Icon": "26-mega-y",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "No Guard",
+        "Stats": {
+          "Attack": 1,
+          "Special Attack": 7,
+          "Speed": 2
+        }
+      }
     }
   },
   {
@@ -25484,6 +25510,23 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "36-mega",
+        "Type": [
+          "Fairy",
+          "Flying"
+        ],
+        "Ability": "Magic Bounce",
+        "Stats": {
+          "Attack": 1,
+          "Defense": 2,
+          "Special Attack": 4,
+          "Special Defense": 2,
+          "Speed": 1
+        }
+      }
     }
   },
   {
@@ -54620,6 +54663,21 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "71-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Innards Out",
+        "Stats": {
+          "Attack": 2,
+          "Defense": 2,
+          "Special Attack": 4,
+          "Special Defense": 3
+        }
+      }
     }
   },
   {
@@ -94948,6 +95006,22 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "121-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Huge Power",
+        "Stats": {
+          "Attack": 7,
+          "Defense": 2,
+          "Special Attack": 3,
+          "Special Defense": 2,
+          "Speed": 1
+        }
+      }
     }
   },
   {
@@ -116569,6 +116643,22 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "149-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Multiscale",
+        "Stats": {
+          "Attack": -1,
+          "Defense": 2,
+          "Special Attack": 5,
+          "Special Defense": 3,
+          "Speed": 2
+        }
+      }
     }
   },
   {
@@ -122684,6 +122774,22 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "154-mega",
+        "Type": [
+          "Grass",
+          "Fairy"
+        ],
+        "Ability": "Mega Sol",
+        "Stats": {
+          "Attack": 1,
+          "Defense": 2,
+          "Special Attack": 6,
+          "Special Defense": 2
+        }
+      }
     }
   },
   {
@@ -127385,6 +127491,22 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "160-mega",
+        "Type": [
+          "Water",
+          "Dragon"
+        ],
+        "Ability": "Dragonize",
+        "Stats": {
+          "Attack": 6,
+          "Defense": 3,
+          "Special Attack": 1,
+          "Special Defense": 1
+        }
+      }
     }
   },
   {
@@ -180218,6 +180340,21 @@
           "Method": "Egg"
         }
       ]
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "227-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Stalwart",
+        "Stats": {
+          "Attack": 6,
+          "Defense": -3,
+          "Special Defense": 3,
+          "Speed": 4
+        }
+      }
     }
   },
   {
@@ -281795,6 +281932,21 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "358-mega",
+        "Type": [
+          "Psychic",
+          "Steel"
+        ],
+        "Ability": "Levitate",
+        "Stats": {
+          "Defense": 3,
+          "Special Attack": 4,
+          "Special Defense": 3
+        }
+      }
     }
   },
   {
@@ -282804,6 +282956,18 @@
           "Attack": 2,
           "Special Attack": 4,
           "Speed": 4
+        }
+      },
+      "Mega Evolution Z": {
+        "Icon": "359-mega-z",
+        "Type": [
+          "Dark",
+          "Ghost"
+        ],
+        "Ability": "Sharpness",
+        "Stats": {
+          "Attack": 2,
+          "Speed": 8
         }
       }
     }
@@ -314476,6 +314640,23 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "398-mega",
+        "Type": [
+          "Fightning",
+          "Flying"
+        ],
+        "Ability": "Contrary",
+        "Stats": {
+          "Attack": 2,
+          "Defense": 3,
+          "Special Attack": 1,
+          "Special Defense": 3,
+          "Speed": 1
+        }
+      }
     }
   },
   {
@@ -350072,6 +350253,18 @@
           "Special Defense": 1,
           "Speed": -1
         }
+      },
+      "Mega Evolution Z": {
+        "Icon": "445-mega-z",
+        "Type": [
+          "Dragon"
+        ],
+        "Ability": "Levitate",
+        "Stats": {
+          "Defense": -1,
+          "Special Attack": 6,
+          "Speed": 5
+        }
       }
     }
   },
@@ -353134,6 +353327,18 @@
           "Defense": 2,
           "Special Attack": 2,
           "Speed": 2
+        }
+      },
+      "Mega Evolution Z": {
+        "Icon": "448-mega-z",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Aura Guard",
+        "Stats": {
+          "Attack": -1,
+          "Special Attack": 5,
+          "Speed": 6
         }
       }
     }
@@ -378435,6 +378640,20 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "478-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Snow Warning",
+        "Stats": {
+          "Special Attack": 6,
+          "Special Defense": 3,
+          "Speed": 1
+        }
+      }
     }
   },
   {
@@ -387729,6 +387948,21 @@
       ],
       "Egg Move List": []
     },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "485-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Earth Eater",
+        "Stats": {
+          "Attack": 3,
+          "Special Attack": 5,
+          "Special Defense": 4,
+          "Speed": -1
+        }
+      }
+    },
     "Legendary": true
   },
   {
@@ -393170,6 +393404,22 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "491-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Dark Aura",
+        "Stats": {
+          "Attack": 3,
+          "Defense": 4,
+          "Special Attack": 3,
+          "Special Defense": 4,
+          "Speed": -4
+        }
+      }
     },
     "Legendary": true
   },
@@ -400972,6 +401222,22 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "500-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Mold Breaker",
+        "Stats": {
+          "Attack": 3,
+          "Defense": 1,
+          "Special Attack": 1,
+          "Special Defense": 5,
+          "Speed": 1
+        }
+      }
     }
   },
   {
@@ -419229,6 +419495,21 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "530-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Piercing Drill",
+        "Stats": {
+          "Attack": 3,
+          "Defense": 4,
+          "Special Attack": 2,
+          "Speed": 2
+        }
+      }
     }
   },
   {
@@ -428818,6 +429099,22 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "545-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Shell Armor",
+        "Stats": {
+          "Attack": 4,
+          "Defense": 6,
+          "Special Attack": 2,
+          "Special Defense": 3,
+          "Speed": -5
+        }
+      }
     }
   },
   {
@@ -440811,6 +441108,22 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "560-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Intimidate",
+        "Stats": {
+          "Attack": 4,
+          "Defense": 2,
+          "Special Attack": 1,
+          "Special Defense": 2,
+          "Speed": 1
+        }
+      }
     }
   },
   {
@@ -469241,6 +469554,21 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "604-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Eelevate",
+        "Stats": {
+          "Attack": 3,
+          "Special Attack": 3,
+          "Special Defense": 1,
+          "Speed": 3
+        }
+      }
     }
   },
   {
@@ -472907,6 +473235,22 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "609-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Infiltrator",
+        "Stats": {
+          "Attack": 2,
+          "Defense": 2,
+          "Special Attack": 3,
+          "Special Defense": 2,
+          "Speed": 1
+        }
+      }
     }
   },
   {
@@ -483192,6 +483536,21 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "623-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Unseen First",
+        "Stats": {
+          "Attack": 4,
+          "Defense": 3,
+          "Special Attack": 2,
+          "Special Defense": 3
+        }
+      }
     }
   },
   {
@@ -510149,6 +510508,21 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "652-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Bulletproof",
+        "Stats": {
+          "Attack": 3,
+          "Defense": 5,
+          "Special Defense": 4,
+          "Speed": -2
+        }
+      }
     }
   },
   {
@@ -512474,6 +512848,20 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "655-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Levitate",
+        "Stats": {
+          "Special Attack": 5,
+          "Special Defense": 3,
+          "Speed": 3
+        }
+      }
     }
   },
   {
@@ -514520,6 +514908,22 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "658-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Protean",
+        "Stats": {
+          "Attack": 3,
+          "Defense": 1,
+          "Special Attack": 3,
+          "Special Defense": 1,
+          "Speed": 2
+        }
+      }
     }
   },
   {
@@ -520018,6 +520422,22 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "668-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Fire Mane",
+        "Stats": {
+          "Attack": 2,
+          "Defense": 2,
+          "Special Attack": 2,
+          "Special Defense": 2,
+          "Speed": 2
+        }
+      }
     }
   },
   {
@@ -521135,6 +521555,23 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "670-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Fairy Aura",
+        "Stats": {
+          "HP": 2,
+          "Attack": 4,
+          "Defense": 4,
+          "Special Attack": 8,
+          "Special Defense": 5,
+          "Speed": 5
+        }
+      }
     }
   },
   {
@@ -526686,6 +527123,20 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "678-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Trace",
+        "Stats": {
+          "Special Attack": 6,
+          "Special Defense": 2,
+          "Speed": 2
+        }
+      }
     }
   },
   {
@@ -527479,6 +527930,22 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "678-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Trace",
+        "Stats": {
+          "Attack": 1,
+          "Defense": 2,
+          "Special Attack": 4,
+          "Special Defense": 2,
+          "Speed": 1
+        }
+      }
     }
   },
   {
@@ -532654,6 +533121,21 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "687-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Contrary",
+        "Stats": {
+          "Attack": 1,
+          "Special Attack": 3,
+          "Special Defense": 5,
+          "Speed": 2
+        }
+      }
     }
   },
   {
@@ -534123,6 +534605,23 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "689-mega",
+        "Type": [
+          "Rock",
+          "Fighting"
+        ],
+        "Ability": "Tough Claws",
+        "Stats": {
+          "Attack": 4,
+          "Defense": 2,
+          "Special Attack": 1,
+          "Special Defense": 2,
+          "Speed": 2
+        }
+      }
     }
   },
   {
@@ -535500,6 +535999,21 @@
         }
       ],
       "Egg Move List": []
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "691-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "Regenerator",
+        "Stats": {
+          "Attack": 1,
+          "Defense": 2,
+          "Special Attack": 4,
+          "Special Defense": 4
+        }
+      }
     }
   },
   {
@@ -542746,6 +543260,20 @@
           "Method": "Egg"
         }
       ]
+    },
+    "Battle-Only Forms": {
+      "Mega Evolution": {
+        "Icon": "701-mega",
+        "Type": [
+          "Unchanged"
+        ],
+        "Ability": "No Guard",
+        "Stats": {
+          "Attack": 5,
+          "Defense": 3,
+          "Special Defense": 3
+        }
+      }
     }
   },
   {
