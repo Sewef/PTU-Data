@@ -84591,7 +84591,7 @@
       "Beach",
       "Mountain",
       "Ocean",
-      "River"
+      "Freshwater"
     ],
     "diets": [
       "Carnivore"
@@ -86528,8 +86528,8 @@
     "size": "Large",
     "weight": "683.4",
     "genderless": false,
-    "malePercent": 0.0,
-    "femalePercent": 0.0,
+    "malePercent": 50.0,
+    "femalePercent": 50.0,
     "eggGroups": [],
     "hatchRate": null,
     "habitats": [
@@ -91840,9 +91840,9 @@
       "Power": 9,
       "Sky": 0,
       "Levitate": 0,
-      "Darkvison, Mountable": -1
+      "Darkvision, Mountable": -1
     },
-    "otherCapabilities": "Darkvison, Mountable"
+    "otherCapabilities": "Darkvision, Mountable"
   },
   {
     "pokedexEntryDocumentId": null,
@@ -97547,9 +97547,9 @@
       "Sky": 0,
       "Levitate": 0,
       "Burrow": 0,
-      "Mountable, Darkvison, Groundshaper, Tracker": -1
+      "Mountable, Darkvision, Groundshaper, Tracker": -1
     },
-    "otherCapabilities": "Mountable, Darkvison, Groundshaper, Tracker"
+    "otherCapabilities": "Mountable, Darkvision, Groundshaper, Tracker"
   },
   {
     "pokedexEntryDocumentId": null,

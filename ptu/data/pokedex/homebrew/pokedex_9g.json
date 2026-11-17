@@ -26848,7 +26848,7 @@
       },
       "Genders": "50.0% Male / 50.0% Female",
       "Diet": "Carnivore",
-      "Habitat": "Beach, Mountain, Ocean, River"
+      "Habitat": "Beach, Mountain, Ocean, Freshwater"
     },
     "Capabilities": [
       "Overland 5",
@@ -30248,7 +30248,7 @@
         "Height": "8'02\" / 2.5m (Large)",
         "Weight": "683.4 lbs / 310.0 kg (Weight Class 6)"
       },
-      "Genders": "00.0% Male / 00.0% Female",
+      "Genders": "50.0% Male / 50.0% Female",
       "Diet": "Terravore",
       "Habitat": "Mountain, Desert"
     },
@@ -38968,7 +38968,7 @@
       "Burrow 6",
       "Jump 3/3",
       "Power 9",
-      "Darkvison",
+      "Darkvision",
       "Mountable 2"
     ],
     "Skills": {
@@ -49080,7 +49080,7 @@
       "Jump 2/2",
       "Power 10",
       "Mountable 1",
-      "Darkvison",
+      "Darkvision",
       "Groundshaper",
       "Tracker"
     ],
@@ -56094,7 +56094,7 @@
         },
         {
           "Level": 5,
-          "Move": "Spook",
+          "Move": "Spook* [Ember, -1SpD]",
           "Type": "Ghost",
           "Tags": [
             "Stab"
@@ -56548,7 +56548,7 @@
         },
         {
           "Level": 5,
-          "Move": "Spook",
+          "Move": "Spook* [Ember, -1SpD]",
           "Type": "Ghost",
           "Tags": [
             "Stab"
@@ -60529,7 +60529,7 @@
         },
         {
           "Level": 1,
-          "Move": "Spook* [Ember]",
+          "Move": "Spook* [Ember, -1SpD]",
           "Type": "Ghost",
           "Tags": [
             "Stab"
