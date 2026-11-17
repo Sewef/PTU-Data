@@ -71,6 +71,30 @@ function buildSidebarMoves(allItems, container, cols) {
   const sidebar = document.getElementById("sidebar");
   sidebar.innerHTML = "";
 
+  const contestGroups = [];
+  const showContestGroup = document.createElement("div");
+  showContestGroup.className = "form-check mb-3";
+
+  const showContestInput = document.createElement("input");
+  showContestInput.type = "checkbox";
+  showContestInput.id = "show-contest";
+  showContestInput.className = "form-check-input";
+  showContestInput.checked = false;
+
+  const showContestLabel = document.createElement("label");
+  showContestLabel.htmlFor = showContestInput.id;
+  showContestLabel.className = "form-check-label";
+  showContestLabel.textContent = "Show Contest Data";
+
+  showContestGroup.appendChild(showContestInput);
+  showContestGroup.appendChild(showContestLabel);
+  sidebar.appendChild(showContestGroup);
+
+  showContestInput.addEventListener("change", () => {
+    contestGroups.forEach(group => { group.hidden = !showContestInput.checked; });
+    refreshMoves(allItems, container, cols);
+  });
+
   // ====================
   // Types
   // ====================
@@ -187,6 +211,25 @@ function buildSidebarMoves(allItems, container, cols) {
   }
 
   // ====================
+  // Targeting (Single, Multi, Self)
+  // ====================
+  const targetingGroup = document.createElement("div");
+  targetingGroup.className = "mt-3";
+
+  const targetingLabel = document.createElement("label");
+  targetingLabel.className = "form-label";
+  targetingLabel.textContent = "Targeting";
+  targetingGroup.appendChild(targetingLabel);
+
+  buildPillSection(targetingGroup, "targeting-filters", ["Single Target", "Multi Target", "Self"], {
+    attr: "data-targeting",
+    onChange: () => refreshMoves(allItems, container, cols),
+    useTypeClass: false
+  });
+
+  sidebar.appendChild(targetingGroup);
+
+  // ====================
   // Range Distance
   // ====================
   const rangeDistances = new Set();
@@ -291,7 +334,7 @@ function buildSidebarMoves(allItems, container, cols) {
           const cleaned = subPart.replace(/\d+/g, '').trim();
           // Exclure 'melee', 'target' et 'targets' (g+�r+�s par d'autres filtres)
           const lowerCleaned = cleaned.toLowerCase();
-          if (cleaned && lowerCleaned !== 'melee' && lowerCleaned !== 'target' && lowerCleaned !== 'targets') {
+          if (cleaned && lowerCleaned !== 'melee' && lowerCleaned !== 'target' && lowerCleaned !== 'targets' && lowerCleaned !== 'self') {
             rangeKeywords.add(cleaned);
           }
         });
@@ -320,25 +363,6 @@ function buildSidebarMoves(allItems, container, cols) {
   }
 
   // ====================
-  // Targeting (Single vs Multi)
-  // ====================
-  const targetingGroup = document.createElement("div");
-  targetingGroup.className = "mt-3";
-
-  const targetingLabel = document.createElement("label");
-  targetingLabel.className = "form-label";
-  targetingLabel.textContent = "Targeting";
-  targetingGroup.appendChild(targetingLabel);
-
-  buildPillSection(targetingGroup, "targeting-filters", ["Single Target", "Multi Target"], {
-    attr: "data-targeting",
-    onChange: () => refreshMoves(allItems, container, cols),
-    useTypeClass: false
-  });
-
-  sidebar.appendChild(targetingGroup);
-
-  // ====================
   // Contest Type
   // ====================
   const contestTypes = [...new Set(
@@ -350,6 +374,8 @@ function buildSidebarMoves(allItems, container, cols) {
   if (contestTypes.length > 0) {
     const contestTypeGroup = document.createElement("div");
     contestTypeGroup.className = "mt-3";
+    contestTypeGroup.hidden = true;
+    contestGroups.push(contestTypeGroup);
 
     const contestTypeLabel = document.createElement("label");
     contestTypeLabel.className = "form-label";
@@ -377,6 +403,8 @@ function buildSidebarMoves(allItems, container, cols) {
   if (contestEffects.length > 0) {
     const contestEffectGroup = document.createElement("div");
     contestEffectGroup.className = "mt-3";
+    contestEffectGroup.hidden = true;
+    contestGroups.push(contestEffectGroup);
 
     const contestEffectLabel = document.createElement("label");
     contestEffectLabel.className = "form-label";
@@ -405,8 +433,9 @@ function refreshMoves(allItems, container, cols) {
   const rangeDistances = getSelectedPills(document, "range-distance-filters", "data-range-distance");
   const rangeKeywords = getSelectedPills(document, "range-keyword-filters", "data-range-keyword");
   const targeting = getSelectedPills(document, "targeting-filters", "data-targeting");
-  const contestTypes = getSelectedPills(document, "contest-type-filters", "data-contest-type");
-  const contestEffects = getSelectedPills(document, "contest-effect-filters", "data-contest-effect");
+  const showContest = document.getElementById("show-contest")?.checked ?? false;
+  const contestTypes = showContest ? getSelectedPills(document, "contest-type-filters", "data-contest-type") : [];
+  const contestEffects = showContest ? getSelectedPills(document, "contest-effect-filters", "data-contest-effect") : [];
 
   const filtered = allItems
     .filter(item => filterText(query, item))
@@ -421,7 +450,7 @@ function refreshMoves(allItems, container, cols) {
     .filter(item => filterByContestType(item, contestTypes))
     .filter(item => filterByContestEffect(item, contestEffects));
 
-  renderFilteredCards(filtered, container, cols);
+  renderFilteredCards(filtered, container, cols, showContest);
 }
 
 export function loadMovesAsCard(file, container, cols = 3) {
@@ -513,7 +542,7 @@ function loadJsonAsCard(file, container, cols = 3) {
   });
 }
 
-function renderFilteredCards(data, container, cols) {
+function renderFilteredCards(data, container, cols, showContest = true) {
   container.innerHTML = "";
   const colSize = Math.floor(12 / cols);
   const frag = document.createDocumentFragment();
@@ -529,7 +558,7 @@ function renderFilteredCards(data, container, cols) {
 
     const body = document.createElement("div");
     body.className = `card-body bg-body-secondary ${typeClass} lh-1`;
-    body.innerHTML = renderMoveCard(item);
+    body.innerHTML = renderMoveCard(item, showContest);
 
     card.appendChild(body);
     wrapper.appendChild(card);
@@ -578,7 +607,7 @@ function renderItemAsCard(item, depth = 0) {
   return str;
 }
 
-function renderMoveCard(item) {
+function renderMoveCard(item, showContest = true) {
   let html = "";
   let pendingTableHtml = "";
 
@@ -612,6 +641,7 @@ function renderMoveCard(item) {
   // ----- Best-PTU rendering -----
   for (const [key, value] of Object.entries(item)) {
     if (["Name", "Type"].includes(key)) continue;
+    if (!showContest && ["Contest Type", "Contest Effect"].includes(key)) continue;
 
     // ----- TABLE OBJECT -----
     if (key === "table" && typeof value === "object" && value?.type === "table") {
@@ -629,7 +659,7 @@ function renderMoveCard(item) {
     // Sous-objet
     if (typeof value === "object" && value !== null && !Array.isArray(value)) {
       html += `<p><strong>${key}:</strong></p>`;
-      html += `<div class="ms-3">${renderMoveCard(value)}</div>`;
+      html += `<div class="ms-3">${renderMoveCard(value, showContest)}</div>`;
       continue;
     }
 

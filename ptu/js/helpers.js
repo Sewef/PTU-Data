@@ -397,7 +397,7 @@ export function filterByEffect(item, hasEffectFilter) {
   const hasWithEffect = hasEffectFilter.includes("With Effect");
   const hasNoEffect = hasEffectFilter.includes("No Effect");
   
-  // Si les deux sont sélectionnés, montrer tout
+  // Si les trois sont sélectionnés, montrer tout
   if (hasWithEffect && hasNoEffect) return true;
   
   // Helper pour vérifier si une valeur est vide ou "None"
@@ -520,7 +520,7 @@ export function filterByRangeKeyword(item, rangeKeywords) {
         const cleaned = subPart.replace(/\d+/g, '').trim();
         // Exclure 'melee', 'target' et 'targets' (gérés par d'autres filtres)
         const lowerCleaned = cleaned.toLowerCase();
-        if (cleaned && lowerCleaned !== 'melee' && lowerCleaned !== 'target' && lowerCleaned !== 'targets') {
+        if (cleaned && lowerCleaned !== 'melee' && lowerCleaned !== 'target' && lowerCleaned !== 'targets' && lowerCleaned !== 'self') {
           keywords.add(cleaned);
         }
       });
@@ -530,16 +530,17 @@ export function filterByRangeKeyword(item, rangeKeywords) {
   return rangeKeywords.some(k => keywords.has(k));
 }
 
-// --- Targeting filter (Single vs Multi) ---
+// --- Targeting filter (Single, Multi, Self) ---
 export function filterByTargeting(item, targeting) {
   if (!targeting.length) return true;
   const range = referenceLabelText(item.Range || "");
   
   const hasSingleTarget = targeting.includes("Single Target");
   const hasMultiTarget = targeting.includes("Multi Target");
+  const hasSelf = targeting.includes("Self");
   
   // Si les deux sont sélectionnés, montrer tout
-  if (hasSingleTarget && hasMultiTarget) return true;
+  if (hasSingleTarget && hasMultiTarget && hasSelf) return true;
   
   // Split by "; or " to separate variants and check each one
   const variants = range.split(/;\s*or\s+/i).map(v => v.trim());
@@ -562,6 +563,7 @@ export function filterByTargeting(item, targeting) {
   
   if (hasSingleTarget && isSingleTarget) return true;
   if (hasMultiTarget && isMultiTarget) return true;
+  if (hasSelf && /\bself\b/i.test(range)) return true;
   
   return false;
 }
