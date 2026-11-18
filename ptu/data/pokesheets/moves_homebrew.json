@@ -5046,11 +5046,11 @@
   {
     "name": "Kinesis",
     "type": "Psychic",
-    "frequency": "Scene, Swift Action",
+    "frequency": "Scene",
     "accuracyCheck": "",
     "damageBase": "",
     "damageClass": "Status",
-    "range": "6, 1 Target, Trigger, Interrupt",
+    "range": "6, 1 Target, Swift Action, Trigger, Interrupt",
     "effects": "If the user or an Ally within 6 meters is about to be hit by an attack, the user may use Kinesis as an interrupt. The triggering Accuracy Roll receives a -4 penalty. This may cause Moves to miss.",
     "contestType": "Smart",
     "contestEffect": "Get Ready!",
