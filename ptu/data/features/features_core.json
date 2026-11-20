@@ -4848,7 +4848,7 @@
               {
                 "Name": "Dune Walker – Desert Terrain",
                 "Frequency": "Static",
-                "Effect": "Your long hours in the unforgiving desert have made you inured to sand and heat. You're immune to the effects of [[move:Sandstorm]], Sand-Attack, and [[move:Sand Tomb]], and you gain 5 Damage Reduction against Fire-Type attacks."
+                "Effect": "Your long hours in the unforgiving desert have made you inured to sand and heat. You're immune to the effects of [[move:Sandstorm]], [[move:Sand Attack]], and [[move:Sand Tomb]], and you gain 5 Damage Reduction against Fire-Type attacks."
               }
             ]
           }
@@ -4961,7 +4961,7 @@
               {
                 "Name": "Dune Walker – Desert Terrain",
                 "Frequency": "Static",
-                "Effect": "Your long hours in the unforgiving desert have made you inured to sand and heat. You're immune to the effects of [[move:Sandstorm]], Sand-Attack, and [[move:Sand Tomb]], and you gain 5 Damage Reduction against Fire-Type attacks."
+                "Effect": "Your long hours in the unforgiving desert have made you inured to sand and heat. You're immune to the effects of [[move:Sandstorm]], [[move:Sand Attack]], and [[move:Sand Tomb]], and you gain 5 Damage Reduction against Fire-Type attacks."
               }
             ]
           }
@@ -7191,7 +7191,7 @@
             "Tags": "[+Special Attack]",
             "Prerequisites": "[[feature:PK Alpha]], Expert Focus",
             "Frequency": "Static",
-            "Effect": "You learn the Moves [[move:Telekinesis]] and Psychic."
+            "Effect": "You learn the Moves [[move:Telekinesis]] and [[move:Psychic]]."
           },
           {
             "Name": "Power of the Mind",
@@ -8323,7 +8323,7 @@
             "Tags": "[Class][+Attack or Special Attack]",
             "Prerequisites": "[[edge:Elemental Connection]] (Dark), Novice Guile, Novice Stealth",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Faint Attack and [[move:Snarl]]."
+            "Effect": "You learn the Moves [[move:Feint Attack]] and [[move:Snarl]]."
           },
           {
             "Name": "Twisted Soul",
@@ -8454,7 +8454,7 @@
             "Tags": "[Class][+Speed]",
             "Prerequisites": "[[edge:Elemental Connection]] (Electric), Novice Focus, Novice Acrobatics",
             "Frequency": "Static",
-            "Effect": "Choose Static or [[ability:Electrodash]]. You gain the Chosen Ability."
+            "Effect": "Choose [[ability:Static]] or [[ability:Electrodash]]. You gain the Chosen Ability."
           },
           {
             "Name": "Magnetize",
@@ -9413,7 +9413,7 @@
             "Tags": "[Class][+Defense]",
             "Prerequisites": "[[edge:Elemental Connection]] (Ground), Novice Intuition, Novice Focus",
             "Frequency": "Static",
-            "Effect": "Pick two of [[move:Bulldoze]], [[move:Mud Shot]], or Sand-Attack. You learn the chosen Moves."
+            "Effect": "Pick two of [[move:Bulldoze]], [[move:Mud Shot]], or [[move:Sand Attack]]. You learn the chosen Moves."
           },
           {
             "Name": "Earthen Bond",
@@ -9577,7 +9577,7 @@
             "Tags": "[Class][+Special Attack]",
             "Prerequisites": "[[edge:Elemental Connection]] (Normal), Novice General Education, Novice Charm",
             "Frequency": "Static",
-            "Effect": "You learn the Moves [[move:Flash]] and Swift."
+            "Effect": "You learn the Moves [[move:Flash]] and [[move:Swift]]."
           },
           {
             "Name": "Blinding Brightness",
@@ -9591,7 +9591,7 @@
             "Tags": "[+Special Attack]",
             "Prerequisites": "[[feature:Prism]], Expert Charm or General Education",
             "Frequency": "Static",
-            "Effect": "You learn the Moves Tri-Attack and [[move:Weather Ball]]."
+            "Effect": "You learn the Moves [[move:Tri Attack]] and [[move:Weather Ball]]."
           },
           {
             "Name": "Rainbow Surge",
